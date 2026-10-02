@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
@@ -26,6 +27,24 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+    }
+
+    // Two versions of the app, each connected to its own Firebase project:
+    //   dev  -> Firebase "ai-tutor-dev", package pk.aitutor.app.dev (for testing)
+    //   prod -> Firebase "ai-tutor",     package pk.aitutor.app     (for students)
+    // Both can be installed on the same phone. Each flavor's Firebase config
+    // is in android/app/src/<flavor>/google-services.json.
+    flavorDimensions += "env"
+    productFlavors {
+        create("dev") {
+            dimension = "env"
+            applicationIdSuffix = ".dev"
+            manifestPlaceholders["appName"] = "AI Tutor Dev"
+        }
+        create("prod") {
+            dimension = "env"
+            manifestPlaceholders["appName"] = "AI Tutor"
+        }
     }
 
     buildTypes {

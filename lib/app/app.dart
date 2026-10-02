@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -26,6 +27,15 @@ class AiTutorApp extends ConsumerWidget {
       theme: buildTheme(tier, locale),
       locale: locale,
       supportedLocales: supportedLocales,
+      // A "DEV" ribbon so the test version is never mistaken for the real one.
+      builder: appFlavor == 'dev'
+          ? (context, child) => Banner(
+              message: 'DEV',
+              location: BannerLocation.topStart,
+              child: child!,
+            )
+          : null,
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
