@@ -1,0 +1,193 @@
+import '../checkers/chem_equation_checker.dart';
+import '../checkers/fraction_checker.dart';
+import '../checkers/linear_equation_checker.dart';
+import '../checkers/normalize.dart';
+import '../checkers/numeric_checker.dart';
+import '../checkers/rational.dart';
+import '../l10n/app_localizations.dart';
+import '../models/lesson_step.dart';
+
+/// The result of checking one answer, ready to show to the student.
+class AnswerCheck {
+  const AnswerCheck.correct()
+    : correct = true,
+      countsAsAttempt = true,
+      message = null,
+      misconceptionId = null;
+
+  const AnswerCheck.wrong(this.message, {this.misconceptionId})
+    : correct = false,
+      countsAsAttempt = true;
+
+  /// The answer couldn't be read. Doesn't use up an attempt.
+  const AnswerCheck.unreadable(this.message)
+    : correct = false,
+      countsAsAttempt = false,
+      misconceptionId = null;
+
+  /// Right value but not in the required form (e.g. not simplified).
+  /// Doesn't use up an attempt either.
+  const AnswerCheck.almost(this.message)
+    : correct = false,
+      countsAsAttempt = false,
+      misconceptionId = null;
+
+  final bool correct;
+  final bool countsAsAttempt;
+
+  /// Feedback naming the exact mistake, in the student's language.
+  /// null means: show the general "try again" and the hint.
+  final String? message;
+  final String? misconceptionId;
+}
+
+/// Checks the answer to a `number` step.
+AnswerCheck checkNumberStep(
+  NumberStep step,
+  String input,
+  AppLocalizations l10n,
+  String languageCode,
+) {
+  final value = parseRational(input);
+  if (value == null) {
+    return AnswerCheck.unreadable(
+      step.checker == 'fraction' ? l10n.fractionUnreadable : l10n.typeANumber,
+    );
+  }
+
+  if (step.checker == 'fraction') {
+    final expected = _rationalOf(step.answer);
+    final result = checkFraction(
+      input,
+      expected,
+      requireSimplest: step.requireSimplest,
+    );
+    if (result.verdict == FractionVerdict.notSimplest) {
+      return AnswerCheck.almost(l10n.fractionNotSimplest);
+    }
+    if (result.isCorrect) return const AnswerCheck.correct();
+  } else if (numbersMatch(
+    value.toDouble(),
+    step.answer,
+    tolerance: step.tolerance,
+  )) {
+    return const AnswerCheck.correct();
+  }
+
+  final known = step.commonWrong
+      .where((w) => numbersMatch(value.toDouble(), w.answer))
+      .firstOrNull;
+  return AnswerCheck.wrong(
+    known?.feedback.inLanguage(languageCode),
+    misconceptionId: known?.misconceptionId,
+  );
+}
+
+/// Checks the answer to a `text_check` step with the step's checker.
+AnswerCheck checkTextStep(
+  TextCheckStep step,
+  String input,
+  AppLocalizations l10n,
+  String languageCode,
+) {
+  // A known common wrong answer gets its own feedback first.
+  final squashed = _squash(input);
+  final known = step.commonWrong
+      .where((w) => _squash(w.answer) == squashed)
+      .firstOrNull;
+  if (known != null) {
+    return AnswerCheck.wrong(
+      known.feedback.inLanguage(languageCode),
+      misconceptionId: known.misconceptionId,
+    );
+  }
+
+  switch (step.checker) {
+    case 'fraction':
+      final result = checkFraction(
+        input,
+        parseRational(step.expected)!,
+        requireSimplest: step.requireSimplest,
+      );
+      return switch (result.verdict) {
+        FractionVerdict.correct => const AnswerCheck.correct(),
+        FractionVerdict.notSimplest => AnswerCheck.almost(
+          l10n.fractionNotSimplest,
+        ),
+        FractionVerdict.unreadable => AnswerCheck.unreadable(
+          l10n.fractionUnreadable,
+        ),
+        FractionVerdict.wrong => const AnswerCheck.wrong(null),
+      };
+
+    case 'chem_equation':
+      final result = checkChemEquation(input, step.expected);
+      final d = result.details;
+      return switch (result.mistake) {
+        null => const AnswerCheck.correct(),
+        ChemMistake.unreadable => AnswerCheck.unreadable(l10n.chemUnreadable),
+        ChemMistake.unknownElement => AnswerCheck.unreadable(
+          l10n.chemUnknownElement(d['symbol']! as String),
+        ),
+        ChemMistake.wrongSubstances => AnswerCheck.wrong(
+          l10n.chemWrongSubstances,
+        ),
+        ChemMistake.changedSubscript => AnswerCheck.wrong(
+          l10n.chemChangedSubscript(
+            d['student']! as String,
+            d['expected']! as String,
+          ),
+        ),
+        ChemMistake.unbalanced => AnswerCheck.wrong(
+          l10n.chemUnbalanced(
+            d['element']! as String,
+            d['left']! as int,
+            d['right']! as int,
+          ),
+        ),
+        ChemMistake.notLowestCoefficients => AnswerCheck.almost(
+          l10n.chemNotLowest(d['divisor']! as int),
+        ),
+      };
+
+    case 'linear_equation':
+      final result = checkLinearWorking(
+        input,
+        step.expected,
+        variable: step.variable,
+      );
+      return switch (result.mistake) {
+        null => const AnswerCheck.correct(),
+        LinearMistake.unreadable => AnswerCheck.unreadable(
+          l10n.linearUnreadable(result.details['line']! as int),
+        ),
+        LinearMistake.brokenStep => AnswerCheck.wrong(
+          l10n.linearBrokenStep(result.details['line']! as int),
+        ),
+        LinearMistake.notFinished => AnswerCheck.almost(
+          l10n.linearNotFinished(step.variable),
+        ),
+      };
+
+    case 'text':
+      if (squashed.isEmpty) {
+        return AnswerCheck.unreadable(l10n.answerUnreadable);
+      }
+      final accepted = [step.expected, ...step.accept].map(_squash);
+      return accepted.contains(squashed)
+          ? const AnswerCheck.correct()
+          : const AnswerCheck.wrong(null);
+
+    default:
+      throw ArgumentError('Unknown checker ${step.checker}');
+  }
+}
+
+/// Lower case, standard digits and symbols, no spaces: for comparing
+/// typed answers.
+String _squash(String text) =>
+    normalizeInput(text).toLowerCase().replaceAll(RegExp(r'\s+'), '');
+
+/// The exact fraction for a lesson's number (e.g. 0.75 -> 3/4).
+Rational _rationalOf(double value) =>
+    parseRational(value.toString()) ?? Rational.zero;

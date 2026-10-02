@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:ai_tutor/checkers/linear_equation_checker.dart';
 import 'package:ai_tutor/models/lesson.dart';
 import 'package:ai_tutor/models/lesson_step.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,15 @@ String toUrduDigits(num n) => n
 
 String formatNumber(double n) =>
     n == n.roundToDouble() ? n.toInt().toString() : n.toString();
+
+/// A correct answer for a text_check step.
+String rightAnswer(TextCheckStep step) {
+  if (step.checker != 'linear_equation') return step.expected;
+  final solution =
+      parseLinearEquation(step.expected, variable: step.variable).solution
+          as OneSolution;
+  return '${step.variable} = ${solution.value}';
+}
 
 Future<void> tapKey(WidgetTester tester, String key) async {
   final finder = find.byKey(Key(key));
@@ -56,7 +66,7 @@ Future<void> playLesson(
         await tapKey(tester, 'option-${right.id}');
         expect(find.byKey(const Key('feedback-good')), findsOneWidget);
       case NumberStep():
-        final input = find.byKey(const Key('number-input'));
+        final input = find.byKey(const Key('answer-input'));
         if (step.commonWrong.isNotEmpty) {
           await tester.enterText(
             input,
@@ -70,6 +80,23 @@ Future<void> playLesson(
           input,
           urdu ? toUrduDigits(num.parse(answer)) : answer,
         );
+        await tapKey(tester, 'step-check');
+        expect(find.byKey(const Key('feedback-good')), findsOneWidget);
+      case TextCheckStep():
+        final input = find.byKey(const Key('answer-input'));
+        final wrong = step.commonWrong.isNotEmpty
+            ? step.commonWrong.first.answer
+            : switch (step.checker) {
+                'chem_equation' => 'Xx2 -> Xx',
+                'linear_equation' => '${step.variable} = 999',
+                'fraction' => '999/1000',
+                _ => 'zzz',
+              };
+        await tester.enterText(input, wrong);
+        await tapKey(tester, 'step-check');
+        expect(find.byKey(const Key('feedback-try')), findsOneWidget);
+
+        await tester.enterText(input, rightAnswer(step));
         await tapKey(tester, 'step-check');
         expect(find.byKey(const Key('feedback-good')), findsOneWidget);
       case ExplainStep() || SummaryStep() || UnsupportedStep():
@@ -145,7 +172,7 @@ void main() {
     }
 
     final step = lesson.steps.whereType<NumberStep>().first;
-    final input = find.byKey(const Key('number-input'));
+    final input = find.byKey(const Key('answer-input'));
 
     await tester.enterText(input, 'abc');
     await tapKey(tester, 'step-check');

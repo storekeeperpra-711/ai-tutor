@@ -53,6 +53,20 @@ Right-to-left: when the app is in Urdu, Flutter mirrors every screen. Use `EdgeI
 
 `flutter test` also plays every lesson end to end in both languages (`test/lessons/lesson_playthrough_test.dart`), answering wrong first and then right, so a lesson that can't be completed fails CI.
 
+## Checkers (Phase 2)
+
+Answers are checked on the phone by pure Dart code in `lib/checkers/`, never by AI, so checking works offline.
+
+| Checker | Used by | Accepts | Mistakes it names |
+|---|---|---|---|
+| `numeric` | `number` step | `8`, `۸`, `2.5`, `aath`, `آٹھ` | (lesson's `common_wrong`) |
+| `fraction` | `number` or `text_check` | `3/4`, `1 1/2`, `0.75`, Urdu digits | not in lowest terms (if `require_simplest`) |
+| `chem_equation` | `text_check` | `2H2 + O2 -> 2H2O`, `→`, `H₂O`, `Ca(OH)2`, `(aq)` | unknown element, wrong substances, changed subscript, unbalanced element (with counts), coefficients not lowest |
+| `linear_equation` | `text_check` | working line by line, ending `x = 4` | unreadable line, first broken line, not finished |
+| `text` | `text_check` | exact text, ignoring case and spaces, plus `accept` list | (lesson's `common_wrong`) |
+
+`lib/lessons/answer_checking.dart` turns a checker's result into the feedback text in English or Urdu (strings in the ARB files).
+
 ## Change the Dart models
 
 The files `lib/models/*.g.dart` are generated. After editing a model, run `dart run build_runner build` and commit the `.g.dart` files too; CI checks they are up to date.

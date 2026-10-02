@@ -235,6 +235,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Switch language'**
   String get switchLanguage;
+
+  /// Fraction answer could not be read.
+  ///
+  /// In en, this message translates to:
+  /// **'Write a fraction like 3/4, or a mixed number like 1 1/2.'**
+  String get fractionUnreadable;
+
+  /// Fraction answer is equal but can be simplified.
+  ///
+  /// In en, this message translates to:
+  /// **'That\'s the right value! Now write it in lowest terms: divide the top and bottom by the same number.'**
+  String get fractionNotSimplest;
+
+  /// Chemical equation could not be read.
+  ///
+  /// In en, this message translates to:
+  /// **'I couldn\'t read that equation. Write it like this: 2H2 + O2 -> 2H2O'**
+  String get chemUnreadable;
+
+  /// Unknown element symbol in a chemical equation.
+  ///
+  /// In en, this message translates to:
+  /// **'\"{symbol}\" is not an element symbol. A symbol starts with a capital letter and any second letter is small: Co is cobalt, but CO is carbon and oxygen.'**
+  String chemUnknownElement(String symbol);
+
+  /// Chemical equation has wrong or missing substances.
+  ///
+  /// In en, this message translates to:
+  /// **'Check the substances. Use exactly the ones in the question, without adding or leaving out any.'**
+  String get chemWrongSubstances;
+
+  /// Student changed a subscript to balance.
+  ///
+  /// In en, this message translates to:
+  /// **'You wrote {student}. To balance an equation, change only the big numbers in front. The small numbers inside {expected} must stay the same, or it becomes a different substance.'**
+  String chemChangedSubscript(String student, String expected);
+
+  /// Atoms of one element are not balanced.
+  ///
+  /// In en, this message translates to:
+  /// **'Count the {element} atoms: {left} on the left and {right} on the right. Change a number in front of a substance to make them equal.'**
+  String chemUnbalanced(String element, int left, int right);
+
+  /// Balanced but coefficients not in lowest terms.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'s balanced! But all the numbers in front can be divided by {divisor}. Use the smallest whole numbers.'**
+  String chemNotLowest(int divisor);
+
+  /// A line of algebra working could not be read.
+  ///
+  /// In en, this message translates to:
+  /// **'I couldn\'t read line {line}. Write each line as an equation, like 2x + 3 = 11.'**
+  String linearUnreadable(int line);
+
+  /// A line of working is not equivalent to the previous one.
+  ///
+  /// In en, this message translates to:
+  /// **'Line {line} doesn\'t keep the scale balanced. Whatever you do to one side, do exactly the same to the other side.'**
+  String linearBrokenStep(int line);
+
+  /// Working is correct but has not reached the answer.
+  ///
+  /// In en, this message translates to:
+  /// **'Good so far! Keep going until one line says {variable} = a number.'**
+  String linearNotFinished(String variable);
+
+  /// Fallback when an answer can't be read.
+  ///
+  /// In en, this message translates to:
+  /// **'I couldn\'t read that answer. Please try writing it again.'**
+  String get answerUnreadable;
+
+  /// Helper text under a multi-line answer box.
+  ///
+  /// In en, this message translates to:
+  /// **'Write each step on a new line.'**
+  String get answerHintMultiline;
+
+  /// Small label on feedback that the app's own checker (not AI) decided.
+  ///
+  /// In en, this message translates to:
+  /// **'Checked by the app'**
+  String get checkedByCode;
 }
 
 class _AppLocalizationsDelegate

@@ -81,6 +81,17 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
             if step["answer"] in answers:
                 problems.append(f"{where}/{step['id']}: the correct answer is also listed in common_wrong")
 
+        if step.get("type") == "text_check":
+            def squash(text: str) -> str:
+                return "".join(text.split()).lower()
+            right = {squash(step["expected"]), *(squash(a) for a in step.get("accept", []))}
+            if step["checker"] != "linear_equation" and any(
+                squash(w["answer"]) in right for w in step.get("common_wrong", [])
+            ):
+                problems.append(f"{where}/{step['id']}: a correct answer is also listed in common_wrong")
+            if "accept" in step and step["checker"] != "text":
+                problems.append(f"{where}/{step['id']}: 'accept' only works with the text checker")
+
     skills = set(lesson["skills"])
     for field in ("mastery_criteria", "question_bank"):
         for skill in lesson[field]:
