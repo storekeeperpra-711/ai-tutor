@@ -17,6 +17,9 @@ sealed class LessonStep {
         'number' => NumberStep.fromJson(json),
         'text_check' => TextCheckStep.fromJson(json),
         'summary' => SummaryStep.fromJson(json),
+        'sim' => SimStep.fromJson(json),
+        'video' => VideoStep.fromJson(json),
+        'lottie' => LottieStep.fromJson(json),
         _ => UnsupportedStep(
           id: json['id'] as String,
           type: json['type'] as String,
@@ -271,8 +274,134 @@ class SummaryStep extends LessonStep {
   final CharacterLine? character;
 }
 
+/// A simulation (HTML in a WebView, or a native interactive) and,
+/// optionally, a question about its result (Phase 5).
+@JsonSerializable()
+class SimStep extends LessonStep implements QuestionStep {
+  const SimStep({
+    required super.id,
+    required super.type,
+    this.questionType,
+    this.skill,
+    required this.prompt,
+    required this.renderer,
+    this.src,
+    this.simId,
+    this.params = const {},
+    this.expected,
+    this.hint,
+    this.feedbackCorrect,
+    this.feedbackWrong,
+    this.maxAttempts = 3,
+    this.commonWrong = const [],
+    this.character,
+  });
+
+  factory SimStep.fromJson(Map<String, dynamic> json) =>
+      _$SimStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
+
+  final LocalizedText prompt;
+
+  /// webview or native.
+  final String renderer;
+
+  /// webview: file name in assets/sims/.
+  final String? src;
+
+  /// native: which interactive, e.g. fraction_bars.
+  final String? simId;
+  final Map<String, dynamic> params;
+
+  /// What to check in the result; null = explore only.
+  final SimExpected? expected;
+  final LocalizedText? hint;
+  final LocalizedText? feedbackCorrect;
+  final LocalizedText? feedbackWrong;
+  final int maxAttempts;
+  final List<CommonWrongText> commonWrong;
+  final CharacterLine? character;
+
+  bool get isWebView => renderer == 'webview';
+}
+
+/// Which value of a simulation's result is the answer, and its checker.
+@JsonSerializable()
+class SimExpected {
+  const SimExpected({
+    required this.result,
+    required this.checker,
+    required this.answer,
+    this.tolerance = 0,
+  });
+
+  factory SimExpected.fromJson(Map<String, dynamic> json) =>
+      _$SimExpectedFromJson(json);
+
+  /// Key in the result data, e.g. `pieces`.
+  final String result;
+
+  /// numeric, fraction, chem_equation or text.
+  final String checker;
+  final String answer;
+  final double tolerance;
+}
+
+/// A short explainer video, one file per language, with captions.
+@JsonSerializable()
+class VideoStep extends LessonStep {
+  const VideoStep({
+    required super.id,
+    required super.type,
+    required this.src,
+    required this.summary,
+    this.title,
+    this.captions,
+    this.durationSeconds,
+    this.character,
+  });
+
+  factory VideoStep.fromJson(Map<String, dynamic> json) =>
+      _$VideoStepFromJson(json);
+
+  /// Per language: a file in assets/videos/ or an https link.
+  final LocalizedText src;
+  final LocalizedText? captions;
+
+  /// Shown when the video can't play, so the lesson can go on.
+  final LocalizedText summary;
+  final LocalizedText? title;
+  final double? durationSeconds;
+  final CharacterLine? character;
+}
+
+/// A small animation (assets/lottie/), with an optional line of text.
+@JsonSerializable()
+class LottieStep extends LessonStep {
+  const LottieStep({
+    required super.id,
+    required super.type,
+    required this.src,
+    this.text,
+    this.loop = false,
+    this.character,
+  });
+
+  factory LottieStep.fromJson(Map<String, dynamic> json) =>
+      _$LottieStepFromJson(json);
+
+  final String src;
+  final LocalizedText? text;
+  final bool loop;
+  final CharacterLine? character;
+}
+
 /// A step type that is valid in the schema but not playable yet
-/// (sim, video, lottie, ai_explain, photo_check).
+/// (ai_explain, photo_check).
 class UnsupportedStep extends LessonStep {
   const UnsupportedStep({required super.id, required super.type});
 }

@@ -71,21 +71,35 @@ void main() {
       'explain',
       'choice',
       'choice',
+      'sim',
       'explain',
       'number',
+      'video',
       'explain',
+      'sim',
       'choice',
       'number',
       'summary',
     ]);
-    final quarters = lesson.steps[4] as NumberStep;
+    final roti = lesson.steps[3] as SimStep;
+    expect(roti.isWebView, isTrue);
+    expect(roti.src, 'roti_strips.html');
+    expect(roti.params, {'rotis': 3, 'piece': 2});
+    expect(roti.expected!.answer, '6');
+    final thirds = lesson.steps[8] as SimStep;
+    expect((thirds.simId, thirds.questionType), ('fraction_bars', 'apply'));
+    final video = lesson.steps[6] as VideoStep;
+    expect(video.src.ur, 'fractions_roti_ur.mp4');
+    expect(video.captions!.en, 'fractions_roti_en.vtt');
+    expect(lesson.alternatives.first.steps.first, isA<LottieStep>());
+    final quarters = lesson.steps[5] as NumberStep;
     expect(quarters.answer, 8);
     expect(quarters.commonWrong.first.misconceptionId, 'divide_by_denominator');
   });
 
   test('unknown step types load as UnsupportedStep', () {
-    final step = LessonStep.fromJson({'id': 'v1', 'type': 'video'});
+    final step = LessonStep.fromJson({'id': 'p1', 'type': 'photo_check'});
     expect(step, isA<UnsupportedStep>());
-    expect(step.type, 'video');
+    expect(step.type, 'photo_check');
   });
 }

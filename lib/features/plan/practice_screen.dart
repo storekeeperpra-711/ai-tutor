@@ -9,7 +9,9 @@ import '../../mastery/skill_state.dart';
 import '../../services/local_db.dart';
 import '../../services/mastery_service.dart';
 import '../../services/profiles.dart';
+import '../common/celebration.dart';
 import '../common/sync_status.dart';
+import 'mastery_level.dart';
 
 /// The plan's questions not yet answered today, one after another.
 class PracticeScreen extends ConsumerStatefulWidget {
@@ -44,9 +46,22 @@ class _PracticeScreenState extends ConsumerState<PracticeScreen> {
     final item = _items![_index];
     if (result.correct ?? false) _right++;
     if (student != null) {
-      await ref
+      final change = await ref
           .read(masteryServiceProvider)
           .recordQuestion(student.id, item.question, result);
+      if (change != null && change.levelledUp && mounted) {
+        final curriculum = await ref.read(curriculumProvider.future);
+        if (!mounted) return;
+        final l10n = AppLocalizations.of(context);
+        final skill = change.state.skill;
+        celebrate(
+          context,
+          l10n.levelUp(
+            curriculum.titleOf(skill)?.of(context) ?? skill,
+            levelName(l10n, change.after),
+          ),
+        );
+      }
     }
     if (mounted) setState(() => _index++);
   }

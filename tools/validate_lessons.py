@@ -20,6 +20,13 @@ from jsonschema import Draft202012Validator
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = ROOT / "content" / "schema" / "lesson.schema.json"
 LESSONS_DIR = ROOT / "content" / "lessons"
+ASSETS = ROOT / "assets"
+
+# Simulations must work offline: no links to anything outside the file.
+EXTERNAL = re.compile(r"""(?:src|href)\s*=\s*["']?(?:https?:)?//|url\(\s*["']?(?:https?:)?//|\bfetch\s*\(|XMLHttpRequest|WebSocket|@import""", re.I)
+
+# Params each native interactive can't do without.
+NATIVE_PARAMS = {"balance_scale": ["equation"], "atom_balancer": ["equation"]}
 
 FILE_NAME = re.compile(r"^g([0-9]|1[0-2])-[a-z][a-z_]*-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*\.json$")
 
@@ -92,6 +99,9 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
             if "accept" in step and step["checker"] != "text":
                 problems.append(f"{where}/{step['id']}: 'accept' only works with the text checker")
 
+    for where, step in all_steps(lesson):
+        problems += [f"{where}/{step.get('id')}: {p}" for p in check_media(step)]
+
     skills = set(lesson["skills"])
     for field in ("mastery_criteria", "question_bank"):
         for skill in lesson[field]:
@@ -121,6 +131,45 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
                     f"mastery_criteria/{skill}: no '{qtype}' question (tag a step with question_type or add one to question_bank)"
                 )
 
+    return problems
+
+
+def check_media(step: dict) -> list[str]:
+    """Files used by sim, video and lottie steps exist and are allowed."""
+    problems = []
+    kind = step.get("type")
+    if kind == "sim":
+        if step["renderer"] == "webview":
+            path = ASSETS / "sims" / step["src"]
+            if not path.exists():
+                problems.append(f"simulation file assets/sims/{step['src']} doesn't exist")
+            elif EXTERNAL.search(path.read_text(encoding="utf-8")):
+                problems.append(f"assets/sims/{step['src']} loads something from outside the file (it must work offline)")
+        else:
+            for key in NATIVE_PARAMS.get(step["sim_id"], []):
+                if key not in step.get("params", {}):
+                    problems.append(f"{step['sim_id']} needs params.{key}")
+        expected = step.get("expected")
+        if expected and expected["checker"] == "numeric":
+            try:
+                float(expected["answer"])
+            except ValueError:
+                problems.append(f"expected answer '{expected['answer']}' is not a number")
+        if "question_type" in step and not expected:
+            problems.append("question_type needs 'expected' (a sim without a question can't show mastery)")
+    elif kind == "video":
+        for field in ("src", "captions"):
+            for lang, path in step.get(field, {}).items():
+                if path.startswith("https://"):
+                    continue
+                file = ASSETS / "videos" / path
+                if not file.exists():
+                    problems.append(f"{field}.{lang}: assets/videos/{path} doesn't exist")
+                elif field == "captions" and not file.read_text(encoding="utf-8").startswith("WEBVTT"):
+                    problems.append(f"captions.{lang}: assets/videos/{path} is not a WebVTT file")
+    elif kind == "lottie":
+        if not (ASSETS / "lottie" / step["src"]).exists():
+            problems.append(f"assets/lottie/{step['src']} doesn't exist")
     return problems
 
 

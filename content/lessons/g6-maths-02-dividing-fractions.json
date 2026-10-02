@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-02-dividing-fractions",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -287,6 +287,47 @@
       ]
     },
     {
+      "id": "s3_test_it",
+      "type": "sim",
+      "renderer": "webview",
+      "src": "roti_strips.html",
+      "prompt": {
+        "en": "Now test your guess. Cut the 3 rotis into halves, then tap each piece to give it to a friend. Press Check when every piece is given.",
+        "ur": "اب اپنا اندازہ آزمائیں۔ 3 روٹیوں کو آدھوں میں کاٹیں، پھر ہر ٹکڑے کو چھو کر ایک دوست کو دیں۔ جب سارے ٹکڑے بٹ جائیں تو \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "rotis": 3,
+        "piece": 2
+      },
+      "expected": {
+        "result": "children",
+        "checker": "numeric",
+        "answer": "6"
+      },
+      "hint": {
+        "en": "Give away every piece first. How many halves are there in 3 rotis?",
+        "ur": "پہلے سارے ٹکڑے بانٹ دیں۔ 3 روٹیوں میں کتنے آدھے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Yes! 3 rotis make 6 halves, so 6 friends can eat. Was your guess right?",
+        "ur": "جی ہاں! 3 روٹیوں کے 6 آدھے بنتے ہیں، اس لیے 6 دوست کھا سکتے ہیں۔ کیا آپ کا اندازہ درست تھا؟"
+      },
+      "feedback_wrong": {
+        "en": "Each roti makes 2 halves, so 3 rotis make 6 halves: 6 friends can eat.",
+        "ur": "ہر روٹی کے 2 آدھے بنتے ہیں، اس لیے 3 روٹیوں کے 6 آدھے: 6 دوست کھا سکتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "1.5",
+          "misconception_id": "division_makes_smaller",
+          "feedback": {
+            "en": "That is 3 ÷ 2. But each friend needs half a roti. Will more friends or fewer than 3 get a piece?",
+            "ur": "یہ 3 ÷ 2 ہے۔ لیکن ہر دوست کو آدھی روٹی چاہیے۔ 3 سے زیادہ دوستوں کو ٹکڑا ملے گا یا کم کو؟"
+          }
+        }
+      ]
+    },
+    {
       "id": "s4_see_it",
       "type": "explain",
       "text": {
@@ -339,6 +380,27 @@
       ]
     },
     {
+      "id": "s5_video",
+      "type": "video",
+      "title": {
+        "en": "Watch: 2 ÷ 1/4 with rotis",
+        "ur": "دیکھیں: روٹیوں کے ساتھ 2 ÷ 1/4"
+      },
+      "src": {
+        "en": "fractions_roti_en.mp4",
+        "ur": "fractions_roti_ur.mp4"
+      },
+      "captions": {
+        "en": "fractions_roti_en.vtt",
+        "ur": "fractions_roti_ur.vtt"
+      },
+      "summary": {
+        "en": "2 rotis are cut into quarters. Each roti makes 4 quarters, so there are 8 quarters and 8 children can eat. 2 ÷ 1/4 = 8, the same as 2 × 4 = 8.",
+        "ur": "2 روٹیوں کو چوتھائیوں میں کاٹا جاتا ہے۔ ہر روٹی کی 4 چوتھائیاں بنتی ہیں، اس لیے کل 8 چوتھائیاں ہیں اور 8 بچے کھا سکتے ہیں۔ 2 ÷ 1/4 = 8، یعنی 2 × 4 = 8"
+      },
+      "duration_seconds": 48
+    },
+    {
       "id": "s6_pattern",
       "type": "explain",
       "character": {
@@ -351,6 +413,38 @@
       "text": {
         "en": "Look at what we found: 3 ÷ 1/2 = 6 is the same as 3 × 2. And 2 ÷ 1/4 = 8 is the same as 2 × 4. Flip the fraction and multiply! Flipping 3/4 gives 4/3. The flipped fraction is called the reciprocal. So 3 ÷ 3/4 = 3 × 4/3 = 4.",
         "ur": "دیکھیں ہم نے کیا پایا: 3 ÷ 1/2 = 6 وہی ہے جو 3 × 2 ہے۔ اور 2 ÷ 1/4 = 8 وہی ہے جو 2 × 4 ہے۔ کسر کو الٹیں اور ضرب دیں! 3/4 کو الٹنے سے 4/3 بنتا ہے۔ الٹی کسر کو معکوس (Reciprocal) کہتے ہیں۔ اس لیے 3 ÷ 3/4 = 3 × 4/3 = 4"
+      }
+    },
+    {
+      "id": "s6_thirds",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "fraction_bars",
+      "prompt": {
+        "en": "What is 2 ÷ 1/3? Cut each bar into thirds, then tap every third to count them. Press Check.",
+        "ur": "2 ÷ 1/3 کتنا ہے؟ ہر پٹی کو تہائیوں میں کاٹیں، پھر ہر تہائی کو چھو کر گنیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "wholes": 2,
+        "max_cut": 6
+      },
+      "expected": {
+        "result": "pieces",
+        "checker": "numeric",
+        "answer": "6"
+      },
+      "hint": {
+        "en": "Use + to cut each bar into 3 pieces. Then tap all the pieces.",
+        "ur": "+ دبا کر ہر پٹی کو 3 ٹکڑوں میں کاٹیں۔ پھر سارے ٹکڑوں کو چھوئیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 wholes make 6 thirds, so 2 ÷ 1/3 = 6, the same as 2 × 3.",
+        "ur": "درست! 2 پورے کی 6 تہائیاں بنتی ہیں، اس لیے 2 ÷ 1/3 = 6، یعنی 2 × 3"
+      },
+      "feedback_wrong": {
+        "en": "Each bar makes 3 thirds, so 2 bars make 6 thirds: 2 ÷ 1/3 = 2 × 3 = 6.",
+        "ur": "ہر پٹی کی 3 تہائیاں بنتی ہیں، اس لیے 2 پٹیوں کی 6 تہائیاں: 2 ÷ 1/3 = 2 × 3 = 6"
       }
     },
     {
@@ -520,7 +614,8 @@
       "steps": [
         {
           "id": "alt_one_roti",
-          "type": "explain",
+          "type": "lottie",
+          "src": "roti_quarters.json",
           "text": {
             "en": "Let's go slowly. Cut one roti into quarters: that makes 4 pieces. A second roti makes 4 more pieces.",
             "ur": "آہستہ آہستہ چلتے ہیں۔ ایک روٹی کو چوتھائیوں میں کاٹیں: 4 ٹکڑے بنتے ہیں۔ دوسری روٹی سے 4 ٹکڑے اور بنتے ہیں۔"

@@ -133,3 +133,79 @@ class ValidateLessonsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RichStepsTest(unittest.TestCase):
+    """sim, video and lottie steps (Phase 5)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.validator = v.load_validator()
+        cls.lesson = json.loads(SAMPLE.read_text(encoding="utf-8"))
+
+    def step(self, kind):
+        lesson = copy.deepcopy(self.lesson)
+        return lesson, next(s for s in lesson["steps"] if s["type"] == kind)
+
+    def problems(self, lesson):
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / f"{lesson['id']}.json"
+            path.write_text(json.dumps(lesson, ensure_ascii=False), encoding="utf-8")
+            return v.validate_file(path, self.validator)
+
+    def assertProblem(self, problems, text):
+        self.assertTrue(any(text in p for p in problems), f"'{text}' not in {problems}")
+
+    def test_missing_simulation_file(self):
+        lesson, sim = self.step("sim")
+        sim["src"] = "nothing_here.html"
+        self.assertProblem(self.problems(lesson), "assets/sims/nothing_here.html doesn't exist")
+
+    def test_webview_sim_needs_src_and_native_needs_sim_id(self):
+        lesson, sim = self.step("sim")
+        del sim["src"]
+        self.assertProblem(self.problems(lesson), "'src' is a required property")
+        sim.update(renderer="native", sim_id="magic_box")
+        self.assertProblem(self.problems(lesson), "sim_id")
+
+    def test_question_needs_feedback_and_a_number(self):
+        lesson, sim = self.step("sim")
+        del sim["hint"]
+        self.assertProblem(self.problems(lesson), "'hint' is a required property")
+        lesson, sim = self.step("sim")
+        sim["expected"]["answer"] = "six"
+        self.assertProblem(self.problems(lesson), "is not a number")
+
+    def test_explore_sim_cant_be_evidence(self):
+        lesson, sim = self.step("sim")
+        for key in ("expected", "hint", "feedback_correct", "feedback_wrong", "common_wrong"):
+            sim.pop(key, None)
+        self.assertEqual(self.problems(lesson), [])
+        sim["question_type"] = "apply"
+        self.assertProblem(self.problems(lesson), "question_type needs 'expected'")
+
+    def test_native_params(self):
+        lesson, sim = self.step("sim")
+        for key in ("src", "params"):
+            sim.pop(key)
+        sim.update(renderer="native", sim_id="balance_scale")
+        self.assertProblem(self.problems(lesson), "balance_scale needs params.equation")
+
+    def test_video_files(self):
+        lesson, video = self.step("video")
+        video["src"]["ur"] = "missing_ur.mp4"
+        video["captions"]["en"] = "https://example.com/a.vtt"
+        problems = self.problems(lesson)
+        self.assertProblem(problems, "src.ur: assets/videos/missing_ur.mp4 doesn't exist")
+        self.assertEqual(len(problems), 1, problems)
+
+    def test_lottie_file(self):
+        lesson = copy.deepcopy(self.lesson)
+        lesson["alternatives"][0]["steps"][0]["src"] = "nope.json"
+        self.assertProblem(self.problems(lesson), "assets/lottie/nope.json doesn't exist")
+
+    def test_simulations_must_work_offline(self):
+        for page in v.ASSETS.joinpath("sims").glob("*.html"):
+            self.assertIsNone(v.EXTERNAL.search(page.read_text(encoding="utf-8")), page.name)
+        for bad in ['<script src="https://cdn.example.com/x.js">', "fetch('/api')", "url(//x.png)"]:
+            self.assertIsNotNone(v.EXTERNAL.search(bad), bad)

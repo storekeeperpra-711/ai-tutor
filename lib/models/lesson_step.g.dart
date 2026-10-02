@@ -297,3 +297,152 @@ SummaryStep _$SummaryStepFromJson(
   );
   return val;
 });
+
+SimStep _$SimStepFromJson(Map<String, dynamic> json) => $checkedCreate(
+  'SimStep',
+  json,
+  ($checkedConvert) {
+    final val = SimStep(
+      id: $checkedConvert('id', (v) => v as String),
+      type: $checkedConvert('type', (v) => v as String),
+      questionType: $checkedConvert('question_type', (v) => v as String?),
+      skill: $checkedConvert('skill', (v) => v as String?),
+      prompt: $checkedConvert(
+        'prompt',
+        (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      renderer: $checkedConvert('renderer', (v) => v as String),
+      src: $checkedConvert('src', (v) => v as String?),
+      simId: $checkedConvert('sim_id', (v) => v as String?),
+      params: $checkedConvert(
+        'params',
+        (v) => v as Map<String, dynamic>? ?? const {},
+      ),
+      expected: $checkedConvert(
+        'expected',
+        (v) =>
+            v == null ? null : SimExpected.fromJson(v as Map<String, dynamic>),
+      ),
+      hint: $checkedConvert(
+        'hint',
+        (v) => v == null
+            ? null
+            : LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      feedbackCorrect: $checkedConvert(
+        'feedback_correct',
+        (v) => v == null
+            ? null
+            : LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      feedbackWrong: $checkedConvert(
+        'feedback_wrong',
+        (v) => v == null
+            ? null
+            : LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      maxAttempts: $checkedConvert(
+        'max_attempts',
+        (v) => (v as num?)?.toInt() ?? 3,
+      ),
+      commonWrong: $checkedConvert(
+        'common_wrong',
+        (v) =>
+            (v as List<dynamic>?)
+                ?.map(
+                  (e) => CommonWrongText.fromJson(e as Map<String, dynamic>),
+                )
+                .toList() ??
+            const [],
+      ),
+      character: $checkedConvert(
+        'character',
+        (v) => v == null
+            ? null
+            : CharacterLine.fromJson(v as Map<String, dynamic>),
+      ),
+    );
+    return val;
+  },
+  fieldKeyMap: const {
+    'questionType': 'question_type',
+    'simId': 'sim_id',
+    'feedbackCorrect': 'feedback_correct',
+    'feedbackWrong': 'feedback_wrong',
+    'maxAttempts': 'max_attempts',
+    'commonWrong': 'common_wrong',
+  },
+);
+
+SimExpected _$SimExpectedFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('SimExpected', json, ($checkedConvert) {
+      final val = SimExpected(
+        result: $checkedConvert('result', (v) => v as String),
+        checker: $checkedConvert('checker', (v) => v as String),
+        answer: $checkedConvert('answer', (v) => v as String),
+        tolerance: $checkedConvert(
+          'tolerance',
+          (v) => (v as num?)?.toDouble() ?? 0,
+        ),
+      );
+      return val;
+    });
+
+VideoStep _$VideoStepFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('VideoStep', json, ($checkedConvert) {
+  final val = VideoStep(
+    id: $checkedConvert('id', (v) => v as String),
+    type: $checkedConvert('type', (v) => v as String),
+    src: $checkedConvert(
+      'src',
+      (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+    ),
+    summary: $checkedConvert(
+      'summary',
+      (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+    ),
+    title: $checkedConvert(
+      'title',
+      (v) =>
+          v == null ? null : LocalizedText.fromJson(v as Map<String, dynamic>),
+    ),
+    captions: $checkedConvert(
+      'captions',
+      (v) =>
+          v == null ? null : LocalizedText.fromJson(v as Map<String, dynamic>),
+    ),
+    durationSeconds: $checkedConvert(
+      'duration_seconds',
+      (v) => (v as num?)?.toDouble(),
+    ),
+    character: $checkedConvert(
+      'character',
+      (v) =>
+          v == null ? null : CharacterLine.fromJson(v as Map<String, dynamic>),
+    ),
+  );
+  return val;
+}, fieldKeyMap: const {'durationSeconds': 'duration_seconds'});
+
+LottieStep _$LottieStepFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('LottieStep', json, ($checkedConvert) {
+  final val = LottieStep(
+    id: $checkedConvert('id', (v) => v as String),
+    type: $checkedConvert('type', (v) => v as String),
+    src: $checkedConvert('src', (v) => v as String),
+    text: $checkedConvert(
+      'text',
+      (v) =>
+          v == null ? null : LocalizedText.fromJson(v as Map<String, dynamic>),
+    ),
+    loop: $checkedConvert('loop', (v) => v as bool? ?? false),
+    character: $checkedConvert(
+      'character',
+      (v) =>
+          v == null ? null : CharacterLine.fromJson(v as Map<String, dynamic>),
+    ),
+  );
+  return val;
+});

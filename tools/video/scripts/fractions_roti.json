@@ -1,0 +1,64 @@
+{
+  "name": "fractions_roti",
+  "fps": 12,
+  "size": [1280, 720],
+  "scenes": [
+    {
+      "seconds": 5,
+      "draw": "title",
+      "params": {
+        "title": {"en": "Dividing by a fraction", "ur": "کسر سے تقسیم"},
+        "subtitle": "2 ÷ 1/4 = ?"
+      },
+      "caption": {
+        "en": "How many children can share 2 rotis, if each gets a quarter?",
+        "ur": "اگر ہر بچے کو چوتھائی روٹی ملے، تو 2 روٹیاں کتنے بچوں میں بٹ سکتی ہیں؟"
+      }
+    },
+    {
+      "seconds": 7,
+      "draw": "rotis",
+      "params": {"rotis": 2, "cut": 1, "label": {"en": "2 rotis", "ur": "2 روٹیاں"}},
+      "caption": {
+        "en": "Bilal has 2 rotis. Each child gets a quarter of a roti.",
+        "ur": "بلال کے پاس 2 روٹیاں ہیں۔ ہر بچے کو روٹی کا چوتھائی حصہ ملتا ہے۔"
+      }
+    },
+    {
+      "seconds": 8,
+      "draw": "rotis",
+      "params": {"rotis": 2, "cut": 4, "animate_cut": true, "label": {"en": "Cut each roti into 4 quarters", "ur": "ہر روٹی کو 4 چوتھائیوں میں کاٹیں"}},
+      "caption": {
+        "en": "Cut each roti into quarters. One roti makes 4 quarters.",
+        "ur": "ہر روٹی کو چوتھائیوں میں کاٹیں۔ ایک روٹی سے 4 چوتھائیاں بنتی ہیں۔"
+      }
+    },
+    {
+      "seconds": 10,
+      "draw": "rotis",
+      "params": {"rotis": 2, "cut": 4, "count": true, "label_at": 0.85, "label": {"en": "8 quarters, so 8 children", "ur": "8 چوتھائیاں، یعنی 8 بچے"}},
+      "caption": {
+        "en": "Count the quarters: 2 rotis make 8 quarters. So 8 children can eat.",
+        "ur": "چوتھائیاں گنیں: 2 روٹیوں سے 8 چوتھائیاں بنتی ہیں۔ یعنی 8 بچے کھا سکتے ہیں۔"
+      }
+    },
+    {
+      "seconds": 9,
+      "draw": "equations",
+      "params": {"lines": ["2 ÷ 1/4 = 8", "2 × 4 = 8"], "label": {"en": "The same answer!", "ur": "جواب ایک جیسا!"}},
+      "caption": {
+        "en": "Dividing by a quarter gives the same answer as multiplying by 4.",
+        "ur": "چوتھائی سے تقسیم کرنے کا جواب وہی ہے جو 4 سے ضرب دینے کا۔"
+      }
+    },
+    {
+      "seconds": 9,
+      "draw": "equations",
+      "params": {"lines": ["÷ 1/4", "× 4"], "label": {"en": "How many quarters fit in 2?", "ur": "2 میں کتنی چوتھائیاں سماتی ہیں؟"}},
+      "caption": {
+        "en": "Dividing by 1/4 asks: how many quarters fit? That is why the answer is bigger than 2.",
+        "ur": "1/4 سے تقسیم کا مطلب ہے: کتنی چوتھائیاں سماتی ہیں؟ اسی لیے جواب 2 سے بڑا ہے۔"
+      }
+    }
+  ]
+}

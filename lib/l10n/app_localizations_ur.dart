@@ -422,4 +422,101 @@ class AppLocalizationsUr extends AppLocalizations {
   String needsHelpWith(String topics) {
     return 'ان میں مدد چاہیے: $topics';
   }
+
+  @override
+  String get simNoResult => 'سرگرمی مکمل کریں، پھر \"جانچیں\" دبائیں۔';
+
+  @override
+  String get simUseActivity =>
+      'سرگرمی کر کے دیکھیں، پھر اس کا \"جانچیں\" بٹن دبائیں۔';
+
+  @override
+  String get simCouldNotStart =>
+      'یہ سرگرمی اس فون پر شروع نہیں ہو سکی۔ آئیں آگے چلیں۔';
+
+  @override
+  String get simUndo => 'واپس';
+
+  @override
+  String get fractionBarsCut => 'ہر ایک میں کتنے ٹکڑے';
+
+  @override
+  String fractionBarsChosen(int count) {
+    return 'چُنے گئے ٹکڑے: $count';
+  }
+
+  @override
+  String get scaleTakeOne => '1 ہٹائیں';
+
+  @override
+  String get scaleTakeX => 'x ہٹائیں';
+
+  @override
+  String get scaleLeft => 'بائیں طرف';
+
+  @override
+  String get scaleRight => 'دائیں طرف';
+
+  @override
+  String get scaleBalanced => 'برابر';
+
+  @override
+  String get scaleTipped => 'برابر نہیں!';
+
+  @override
+  String scaleShare(int n) {
+    return '$n برابر حصوں میں بانٹیں';
+  }
+
+  @override
+  String get atomsLeft => 'بائیں';
+
+  @override
+  String get atomsRight => 'دائیں';
+
+  @override
+  String get atomsBalanced => 'ہر عنصر برابر ہے!';
+
+  @override
+  String numberLineValue(String value) {
+    return 'آپ کا عدد: $value';
+  }
+
+  @override
+  String get graphHint =>
+      'کسی نقطے کو کھینچیں، یا A یا B چُن کر تیر استعمال کریں۔';
+
+  @override
+  String get videoCouldNotPlay =>
+      'ویڈیو ابھی نہیں چل سکتی۔ اس میں یہ دکھایا گیا ہے:';
+
+  @override
+  String get videoPlay => 'چلائیں';
+
+  @override
+  String get videoPause => 'روکیں';
+
+  @override
+  String get videoReplay => 'دوبارہ دیکھیں';
+
+  @override
+  String get videoCaptions => 'سب ٹائٹل';
+
+  @override
+  String get lessMotion => 'کم حرکت';
+
+  @override
+  String get lessMotionHint =>
+      'کم اینیمیشن۔ کچھ بچے بہتر توجہ دیتے ہیں، اور بیٹری بچتی ہے۔';
+
+  @override
+  String get lessonFinished => 'سبق مکمل! شاباش۔';
+
+  @override
+  String levelUp(String topic, String level) {
+    return '$topic: $level!';
+  }
+
+  @override
+  String get simGalleryTitle => 'سمولیشنز (ڈویلپر)';
 }

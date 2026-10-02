@@ -81,12 +81,7 @@ void main() {
 
     // Move to the first number step, answering correctly.
     for (final step in lesson.steps.takeWhile((s) => s is! NumberStep)) {
-      if (step is ChoiceStep) {
-        await tapKey(
-          tester,
-          'option-${step.options.firstWhere((o) => o.correct).id}',
-        );
-      }
+      await answerStep(tester, step, tryWrongFirst: false);
       await tapKey(tester, 'step-continue');
     }
 

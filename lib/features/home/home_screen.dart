@@ -85,6 +85,14 @@ class HomeScreen extends ConsumerWidget {
             const SizedBox(height: 12),
             Center(
               child: OutlinedButton(
+                key: const Key('open-sim-gallery'),
+                onPressed: () => context.push('/dev/sims'),
+                child: Text(l10n.simGalleryTitle),
+              ),
+            ),
+            const SizedBox(height: 12),
+            Center(
+              child: OutlinedButton(
                 onPressed: () => context.push('/debug/urdu'),
                 child: Text(l10n.urduTestTitle),
               ),

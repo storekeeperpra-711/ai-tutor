@@ -1,0 +1,195 @@
+<!doctype html>
+<!--
+  Falling objects: a stone and a feather fall, with or without air.
+  Simulation protocol (docs/master-prompt.md, Part C): one file, no network,
+  initSim(config) starts it, results go to the TutorBridge channel.
+  config: {lang: "en"|"ur", height: 2 (metres), air: true, reduce_motion: false}
+  Reports: {event: "result", data: {air, stone_time, feather_time, same_time}}
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin: 0; font-family: sans-serif; background: #f3f8fb; color: #263238;
+         display: flex; flex-direction: column; height: 100vh; user-select: none; }
+  canvas { flex: 1; width: 100%; min-height: 0; }
+  #status { text-align: center; font-size: 18px; padding: 4px 8px; min-height: 2.6em; }
+  #bar { display: flex; gap: 8px; padding: 8px; justify-content: center; flex-wrap: wrap; }
+  button { font-size: 19px; padding: 13px 16px; border-radius: 14px; border: 2px solid #455a64;
+           background: #fff; color: #263238; min-width: 110px; }
+  button.main { background: #4dd0e1; border-color: #00838f; }
+  button:disabled { opacity: .4; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="status"></div>
+<div id="bar">
+  <button id="air"></button>
+  <button id="drop" class="main"></button>
+  <button id="check"></button>
+</div>
+<script>
+'use strict';
+var TEXT = {
+  en: { airOn: 'Air: on', airOff: 'Air: off (vacuum)', drop: 'Drop', check: 'Check',
+        ready: 'Which will land first? Think, then press Drop.',
+        landed: 'Stone: {s} s   Feather: {f} s', slow: 'slow motion', stone: 'stone', feather: 'feather' },
+  ur: { airOn: 'ہوا: موجود', airOff: 'ہوا: نہیں (خلا)', drop: 'گرائیں', check: 'جانچیں',
+        ready: 'پہلے کون زمین پر پہنچے گا؟ سوچیں، پھر "گرائیں" دبائیں۔',
+        landed: 'پتھر: {s} سیکنڈ   پر: {f} سیکنڈ', slow: 'آہستہ', stone: 'پتھر', feather: 'پر' }
+};
+var G = 9.8;
+var SLOW = 2; // Shown twice as slow, so the fall can be seen.
+var s = { t: TEXT.en, height: 2, air: true, running: false, result: null, reduce: false };
+var bodies = [];
+var canvas = document.getElementById('c');
+var ctx = canvas.getContext('2d');
+
+function say(key, values) {
+  var text = s.t[key];
+  for (var k in values) text = text.replace('{' + k + '}', values[k]);
+  return text;
+}
+
+function post(event, data) {
+  if (window.TutorBridge) TutorBridge.postMessage(JSON.stringify({ event: event, data: data || {} }));
+}
+
+// Feather in air: drag quickly limits it to a slow speed.
+function accel(body, v) {
+  if (!s.air || body.name === 'stone') return G;
+  var terminal = 1.2;
+  return G * (1 - (v * v) / (terminal * terminal));
+}
+
+// Time to fall the height, by small steps (the same physics as the picture).
+function fallTime(body) {
+  var y = 0, v = 0, t = 0, dt = 0.001;
+  while (y < s.height) { v += accel(body, v) * dt; y += v * dt; t += dt; }
+  return t;
+}
+
+function resize() {
+  canvas.width = canvas.clientWidth * devicePixelRatio;
+  canvas.height = canvas.clientHeight * devicePixelRatio;
+  draw();
+}
+
+function draw() {
+  var w = canvas.width, h = canvas.height, d = devicePixelRatio;
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = s.air ? '#e1f5fe' : '#263238';
+  ctx.fillRect(0, 0, w, h);
+  ctx.fillStyle = '#8d6e63';
+  ctx.fillRect(0, h - 16 * d, w, 16 * d);
+  var top = 30 * d, bottom = h - 16 * d - 20 * d;
+  bodies.forEach(function (b) {
+    var x = w * b.x, y = top + (bottom - top) * Math.min(1, b.y / s.height);
+    if (b.name === 'stone') {
+      ctx.fillStyle = '#607d8b';
+      ctx.beginPath(); ctx.arc(x, y, 18 * d, 0, 2 * Math.PI); ctx.fill();
+    } else {
+      ctx.strokeStyle = s.air ? '#5d4037' : '#ffffff';
+      ctx.lineWidth = 3 * d;
+      ctx.beginPath(); ctx.moveTo(x, y - 20 * d); ctx.lineTo(x, y + 20 * d); ctx.stroke();
+      ctx.fillStyle = s.air ? 'rgba(121,85,72,.5)' : 'rgba(255,255,255,.7)';
+      ctx.beginPath(); ctx.ellipse(x + 6 * d, y - 4 * d, 8 * d, 18 * d, 0.3, 0, 2 * Math.PI); ctx.fill();
+    }
+    ctx.fillStyle = s.air ? '#263238' : '#ffffff';
+    ctx.font = (14 * d) + 'px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(say(b.name), x, top - 10 * d);
+  });
+  if (s.running) {
+    ctx.fillStyle = s.air ? '#263238' : '#ffffff';
+    ctx.textAlign = 'left';
+    ctx.fillText('×' + SLOW + ' ' + say('slow'), 8 * d, h - 24 * d);
+  }
+}
+
+function reset() {
+  bodies = [
+    { name: 'stone', x: 0.33, y: 0, v: 0, landed: null },
+    { name: 'feather', x: 0.67, y: 0, v: 0, landed: null }
+  ];
+  draw();
+}
+
+function finish() {
+  var stone = fallTime(bodies[0]), feather = fallTime(bodies[1]);
+  s.running = false;
+  s.result = {
+    air: s.air,
+    stone_time: Math.round(stone * 100) / 100,
+    feather_time: Math.round(feather * 100) / 100,
+    same_time: Math.abs(stone - feather) < 0.05
+  };
+  bodies.forEach(function (b) { b.y = s.height; });
+  draw();
+  document.getElementById('status').textContent =
+    say('landed', { s: s.result.stone_time.toFixed(2), f: s.result.feather_time.toFixed(2) });
+  setButtons();
+}
+
+function drop() {
+  reset();
+  s.running = true;
+  s.result = null;
+  setButtons();
+  if (s.reduce) { finish(); return; }
+  var last = null, time = 0;
+  function frame(now) {
+    if (!s.running) return;
+    var dt = last === null ? 0 : Math.min(0.05, (now - last) / 1000) / SLOW;
+    last = now; time += dt;
+    var steps = 20, h = dt / steps;
+    bodies.forEach(function (b) {
+      for (var i = 0; i < steps && b.y < s.height; i++) { b.v += accel(b, b.v) * h; b.y += b.v * h; }
+    });
+    draw();
+    if (bodies.every(function (b) { return b.y >= s.height; })) finish();
+    else requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+function setButtons() {
+  document.getElementById('air').textContent = s.air ? say('airOn') : say('airOff');
+  document.getElementById('air').disabled = s.running;
+  document.getElementById('drop').disabled = s.running;
+}
+
+function initSim(config) {
+  config = config || {};
+  s.t = TEXT[config.lang] || TEXT.en;
+  s.height = Math.max(1, Math.min(50, config.height || 2));
+  s.air = config.air !== false;
+  s.reduce = !!config.reduce_motion;
+  s.running = false;
+  s.result = null;
+  document.body.dir = config.lang === 'ur' ? 'rtl' : 'ltr';
+  document.getElementById('drop').textContent = say('drop');
+  document.getElementById('check').textContent = say('check');
+  document.getElementById('status').textContent = say('ready');
+  setButtons();
+  resize();
+  reset();
+  post('ready');
+}
+
+document.getElementById('air').addEventListener('click', function () {
+  s.air = !s.air; s.result = null; setButtons(); reset();
+  document.getElementById('status').textContent = say('ready');
+});
+document.getElementById('drop').addEventListener('click', drop);
+document.getElementById('check').addEventListener('click', function () {
+  post('result', s.result || {});
+});
+window.addEventListener('resize', resize);
+window.onerror = function (message) { post('error', { message: String(message) }); };
+</script>
+</body>
+</html>

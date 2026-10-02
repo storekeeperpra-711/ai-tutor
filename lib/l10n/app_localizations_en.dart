@@ -422,4 +422,99 @@ class AppLocalizationsEn extends AppLocalizations {
   String needsHelpWith(String topics) {
     return 'Needs help with: $topics';
   }
+
+  @override
+  String get simNoResult => 'Finish the activity, then press Check.';
+
+  @override
+  String get simUseActivity => 'Try the activity, then press its Check button.';
+
+  @override
+  String get simCouldNotStart =>
+      'This activity can\'t start on this phone. Let\'s carry on.';
+
+  @override
+  String get simUndo => 'Undo';
+
+  @override
+  String get fractionBarsCut => 'Pieces in each one';
+
+  @override
+  String fractionBarsChosen(int count) {
+    return 'Pieces chosen: $count';
+  }
+
+  @override
+  String get scaleTakeOne => 'Take 1';
+
+  @override
+  String get scaleTakeX => 'Take x';
+
+  @override
+  String get scaleLeft => 'Left side';
+
+  @override
+  String get scaleRight => 'Right side';
+
+  @override
+  String get scaleBalanced => 'Balanced';
+
+  @override
+  String get scaleTipped => 'Not balanced!';
+
+  @override
+  String scaleShare(int n) {
+    return 'Share into $n groups';
+  }
+
+  @override
+  String get atomsLeft => 'Left';
+
+  @override
+  String get atomsRight => 'Right';
+
+  @override
+  String get atomsBalanced => 'Every element is balanced!';
+
+  @override
+  String numberLineValue(String value) {
+    return 'Your number: $value';
+  }
+
+  @override
+  String get graphHint => 'Drag a point, or pick A or B and use the arrows.';
+
+  @override
+  String get videoCouldNotPlay =>
+      'The video can\'t play right now. Here is what it shows:';
+
+  @override
+  String get videoPlay => 'Play';
+
+  @override
+  String get videoPause => 'Pause';
+
+  @override
+  String get videoReplay => 'Watch again';
+
+  @override
+  String get videoCaptions => 'Captions';
+
+  @override
+  String get lessMotion => 'Less movement';
+
+  @override
+  String get lessMotionHint =>
+      'Fewer animations. Some children focus better, and it saves battery.';
+
+  @override
+  String get lessonFinished => 'Lesson finished! Well done.';
+
+  @override
+  String levelUp(String topic, String level) {
+    return '$topic: $level!';
+  }
+
+  @override
+  String get simGalleryTitle => 'Simulations (developer)';
 }

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../features/account/account_screen.dart';
 import '../features/debug/urdu_test_screen.dart';
 import '../features/home/home_screen.dart';
+import '../features/debug/sim_gallery_screen.dart';
 import '../features/plan/flashcards_screen.dart';
 import '../features/plan/practice_screen.dart';
 import '../features/previewer/lesson_list_screen.dart';
@@ -42,6 +43,10 @@ final routerProvider = Provider<GoRouter>(
         path: '/lesson/:id',
         builder: (context, state) =>
             LessonPlayerScreen(lessonId: state.pathParameters['id']!),
+      ),
+      GoRoute(
+        path: '/dev/sims',
+        builder: (context, state) => const SimGalleryScreen(),
       ),
       GoRoute(
         path: '/dev/lessons',

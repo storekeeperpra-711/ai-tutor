@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/locale_controller.dart';
+import '../../app/motion.dart';
 import '../../app/theme/age_tier.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -42,6 +43,14 @@ class SettingsScreen extends ConsumerWidget {
                   ),
               ],
             ),
+          ),
+          const Divider(height: 32),
+          SwitchListTile(
+            key: const Key('less-motion'),
+            title: Text(l10n.lessMotion),
+            subtitle: Text(l10n.lessMotionHint),
+            value: ref.watch(lessMotionProvider),
+            onChanged: (v) => ref.read(lessMotionProvider.notifier).set(v),
           ),
           const Divider(height: 32),
           Text(l10n.ageTierLabel, style: heading),
