@@ -1,0 +1,6 @@
+# Generates lib/l10n/app_localizations*.dart from the ARB files.
+# Run `flutter gen-l10n` after editing an ARB file (flutter run does it automatically).
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+nullable-getter: false

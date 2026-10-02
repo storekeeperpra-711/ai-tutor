@@ -1,0 +1,510 @@
+{
+  "id": "g6-maths-02-dividing-fractions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Divide a whole number by a fraction and solve real-life problems involving division by fractions.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed)"
+    }
+  ],
+  "skills": [
+    "maths.fractions.divide_by_fraction"
+  ],
+  "title": {
+    "en": "Dividing by a fraction",
+    "ur": "کسر سے تقسیم"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.fractions.unit_fraction_meaning"
+    },
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "division_makes_smaller",
+      "description": "Believes dividing always gives a smaller answer."
+    },
+    {
+      "id": "divide_by_denominator",
+      "description": "Divides the whole number by the denominator (e.g. 6 ÷ 1/3 = 2) instead of counting how many parts fit."
+    },
+    {
+      "id": "multiply_not_reciprocal",
+      "description": "Multiplies by the fraction itself instead of by its reciprocal (e.g. 6 ÷ 2/3 = 4)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.fractions.divide_by_fraction": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.fractions.divide_by_fraction": [
+      {
+        "id": "qb_reciprocal",
+        "type": "recall",
+        "step": {
+          "id": "qb_reciprocal",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the reciprocal of 2/5?",
+            "ur": "2/5 کا معکوس کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "5/2",
+                "ur": "5/2"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Flip the fraction: 2/5 becomes 5/2.",
+                "ur": "جی ہاں! کسر کو الٹیں: 2/5 سے 5/2 بنتا ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "2/5",
+                "ur": "2/5"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the same fraction. The reciprocal is the fraction turned upside down.",
+                "ur": "یہ تو وہی کسر ہے۔ معکوس کسر کو الٹا کرنے سے بنتا ہے۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "1/5",
+                "ur": "1/5"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Not quite. Swap the top and bottom numbers of 2/5.",
+                "ur": "ابھی نہیں۔ 2/5 کے اوپر اور نیچے والے عدد کی جگہ بدلیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_five_halves",
+        "type": "apply",
+        "step": {
+          "id": "qb_five_halves",
+          "type": "number",
+          "prompt": {
+            "en": "Zara has 5 rotis. Each child gets half a roti. How many children can eat?",
+            "ur": "زارا کے پاس 5 روٹیاں ہیں۔ ہر بچے کو آدھی روٹی ملتی ہے۔ کتنے بچے کھا سکتے ہیں؟"
+          },
+          "answer": 10,
+          "checker": "numeric",
+          "hint": {
+            "en": "How many halves are in one roti?",
+            "ur": "ایک روٹی میں کتنے آدھے ہوتے ہیں؟"
+          },
+          "feedback_correct": {
+            "en": "Right! 5 ÷ 1/2 = 5 × 2 = 10.",
+            "ur": "درست! 5 ÷ 1/2 = 5 × 2 = 10"
+          },
+          "feedback_wrong": {
+            "en": "Each roti makes 2 halves, so 5 rotis make 5 × 2 = 10 halves. 10 children can eat.",
+            "ur": "ہر روٹی کے 2 آدھے بنتے ہیں، اس لیے 5 روٹیوں کے 5 × 2 = 10 آدھے۔ 10 بچے کھا سکتے ہیں۔"
+          }
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_divide_rule",
+      "front": {
+        "en": "How do you divide by a fraction?",
+        "ur": "کسر سے تقسیم کیسے کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Multiply by its reciprocal. Example: 3 ÷ 3/4 = 3 × 4/3 = 4",
+        "ur": "اس کے معکوس سے ضرب دیں۔ مثال: 3 ÷ 3/4 = 3 × 4/3 = 4"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_fold_quarters",
+      "text": {
+        "en": "Fold two paper circles (or look at two rotis) into 4 equal pieces each. How many quarters are there in 2 circles? Count them.",
+        "ur": "کاغذ کے دو گول ٹکڑوں کو (یا دو روٹیوں کو) 4، 4 برابر حصوں میں تہہ کریں۔ 2 گول ٹکڑوں میں کتنی چوتھائیاں ہیں؟ گن کر دیکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Fraction",
+      "ur": "کسر"
+    },
+    {
+      "en": "Division",
+      "ur": "تقسیم"
+    },
+    {
+      "en": "Reciprocal",
+      "ur": "معکوس"
+    },
+    {
+      "en": "Numerator",
+      "ur": "شمار کنندہ"
+    },
+    {
+      "en": "Denominator",
+      "ur": "نسب نما"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I have 3 rotis. Each friend wants half a roti. How many friends can I feed?",
+          "ur": "میرے پاس 3 روٹیاں ہیں۔ ہر دوست کو آدھی روٹی چاہیے۔ میں کتنے دوستوں کو کھلا سکتا ہوں؟"
+        }
+      },
+      "text": {
+        "en": "Let's find out together. First, a quick check.",
+        "ur": "آئیں مل کر معلوم کریں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "prompt": {
+        "en": "One roti is cut into 2 equal pieces. What is each piece called?",
+        "ur": "ایک روٹی کو 2 برابر ٹکڑوں میں کاٹا گیا۔ ہر ٹکڑے کو کیا کہتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "half",
+          "text": {
+            "en": "Half (1/2)",
+            "ur": "آدھی (1/2)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Two equal pieces are two halves.",
+            "ur": "جی ہاں! دو برابر ٹکڑے دو آدھے ہوتے ہیں۔"
+          }
+        },
+        {
+          "id": "quarter",
+          "text": {
+            "en": "Quarter (1/4)",
+            "ur": "چوتھائی (1/4)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A quarter is one of 4 equal pieces. Here there are only 2.",
+            "ur": "چوتھائی 4 برابر ٹکڑوں میں سے ایک ہوتی ہے۔ یہاں صرف 2 ٹکڑے ہیں۔"
+          }
+        },
+        {
+          "id": "whole",
+          "text": {
+            "en": "Whole (1)",
+            "ur": "پوری (1)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The whole roti is both pieces together. Each piece is smaller.",
+            "ur": "پوری روٹی دونوں ٹکڑوں سے مل کر بنتی ہے۔ ہر ٹکڑا اس سے چھوٹا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_predict",
+      "type": "choice",
+      "prompt": {
+        "en": "Guess first: 3 rotis, and each friend needs half a roti. How many friends can eat?",
+        "ur": "پہلے اندازہ لگائیں: 3 روٹیاں ہیں اور ہر دوست کو آدھی روٹی چاہیے۔ کتنے دوست کھا سکتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "fewer",
+          "text": {
+            "en": "Fewer than 3",
+            "ur": "3 سے کم"
+          },
+          "correct": false,
+          "misconception_id": "division_makes_smaller",
+          "feedback": {
+            "en": "Many people think dividing always gives a smaller number. Let's test it: is half a roti more or less than a whole roti?",
+            "ur": "بہت سے لوگ سمجھتے ہیں کہ تقسیم سے جواب ہمیشہ چھوٹا آتا ہے۔ آئیں جانچیں: آدھی روٹی پوری روٹی سے زیادہ ہے یا کم؟"
+          }
+        },
+        {
+          "id": "same",
+          "text": {
+            "en": "Exactly 3",
+            "ur": "پورے 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "If each friend got a whole roti, 3 friends could eat. But each needs only half, so the rotis go further.",
+            "ur": "اگر ہر دوست کو پوری روٹی ملتی تو 3 دوست کھا سکتے۔ لیکن ہر ایک کو صرف آدھی چاہیے، اس لیے روٹیاں زیادہ دوستوں تک پہنچیں گی۔"
+          }
+        },
+        {
+          "id": "more",
+          "text": {
+            "en": "More than 3",
+            "ur": "3 سے زیادہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Good thinking! Each friend needs less than a whole roti, so more friends can eat.",
+            "ur": "بہت خوب سوچا! ہر دوست کو پوری روٹی سے کم چاہیے، اس لیے زیادہ دوست کھا سکتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4_see_it",
+      "type": "explain",
+      "text": {
+        "en": "Cut each roti into 2 halves. 3 rotis give 3 × 2 = 6 halves, so 6 friends can eat. We write this as 3 ÷ 1/2 = 6. It means: how many halves fit in 3?",
+        "ur": "ہر روٹی کے 2 آدھے حصے کریں۔ 3 روٹیوں سے 3 × 2 = 6 آدھے حصے بنتے ہیں، یعنی 6 دوست کھا سکتے ہیں۔ اسے ہم یوں لکھتے ہیں: 3 ÷ 1/2 = 6۔ اس کا مطلب ہے: 3 میں کتنے آدھے سماتے ہیں؟"
+      }
+    },
+    {
+      "id": "s5_quarters",
+      "type": "number",
+      "prompt": {
+        "en": "Bilal has 2 rotis. Each child gets a quarter (1/4) of a roti. How many children can eat?",
+        "ur": "بلال کے پاس 2 روٹیاں ہیں۔ ہر بچے کو چوتھائی (1/4) روٹی ملتی ہے۔ کتنے بچے کھا سکتے ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "unit": {
+        "en": "children",
+        "ur": "بچے"
+      },
+      "hint": {
+        "en": "How many quarters are in 1 roti? Then think about 2 rotis.",
+        "ur": "1 روٹی میں کتنی چوتھائیاں ہوتی ہیں؟ پھر 2 روٹیوں کے بارے میں سوچیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Each roti makes 4 quarters, so 2 rotis make 2 × 4 = 8 quarters.",
+        "ur": "درست! ہر روٹی کی 4 چوتھائیاں بنتی ہیں، اس لیے 2 روٹیوں کی 2 × 4 = 8 چوتھائیاں۔"
+      },
+      "feedback_wrong": {
+        "en": "Each roti has 4 quarters. 2 rotis have 2 × 4 = 8 quarters, so 8 children can eat: 2 ÷ 1/4 = 8.",
+        "ur": "ہر روٹی میں 4 چوتھائیاں ہیں۔ 2 روٹیوں میں 2 × 4 = 8 چوتھائیاں ہیں، اس لیے 8 بچے کھا سکتے ہیں: 2 ÷ 1/4 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.5,
+          "misconception_id": "divide_by_denominator",
+          "feedback": {
+            "en": "You found 2 ÷ 4. But we want to know how many quarters fit in 2 rotis. Will that be more or less than 2?",
+            "ur": "آپ نے 2 ÷ 4 نکالا۔ لیکن ہمیں یہ جاننا ہے کہ 2 روٹیوں میں کتنی چوتھائیاں سماتی ہیں۔ کیا یہ 2 سے زیادہ ہوں گی یا کم؟"
+          }
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 quarters fit in 1 roti. How many fit in 2 rotis?",
+            "ur": "1 روٹی میں 4 چوتھائیاں سماتی ہیں۔ 2 روٹیوں میں کتنی سمائیں گی؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_pattern",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Can you see a pattern?",
+          "ur": "کیا آپ کو کوئی نمونہ (pattern) نظر آیا؟"
+        }
+      },
+      "text": {
+        "en": "Look at what we found: 3 ÷ 1/2 = 6 is the same as 3 × 2. And 2 ÷ 1/4 = 8 is the same as 2 × 4. Flip the fraction and multiply! Flipping 3/4 gives 4/3. The flipped fraction is called the reciprocal. So 3 ÷ 3/4 = 3 × 4/3 = 4.",
+        "ur": "دیکھیں ہم نے کیا پایا: 3 ÷ 1/2 = 6 وہی ہے جو 3 × 2 ہے۔ اور 2 ÷ 1/4 = 8 وہی ہے جو 2 × 4 ہے۔ کسر کو الٹیں اور ضرب دیں! 3/4 کو الٹنے سے 4/3 بنتا ہے۔ الٹی کسر کو معکوس (Reciprocal) کہتے ہیں۔ اس لیے 3 ÷ 3/4 = 3 × 4/3 = 4"
+      }
+    },
+    {
+      "id": "s7_find_error",
+      "type": "choice",
+      "prompt": {
+        "en": "Hamza says: 6 ÷ 1/3 = 2. What went wrong?",
+        "ur": "حمزہ کہتا ہے: 6 ÷ 1/3 = 2۔ اس نے کیا غلطی کی؟"
+      },
+      "options": [
+        {
+          "id": "divided_by_3",
+          "text": {
+            "en": "He divided 6 by 3. The question asks how many thirds fit in 6.",
+            "ur": "اس نے 6 کو 3 سے تقسیم کر دیا۔ سوال یہ ہے کہ 6 میں کتنی تہائیاں سماتی ہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each whole has 3 thirds, so 6 wholes have 6 × 3 = 18 thirds. 6 ÷ 1/3 = 18.",
+            "ur": "جی ہاں! ہر پوری چیز میں 3 تہائیاں ہوتی ہیں، اس لیے 6 میں 6 × 3 = 18 تہائیاں۔ 6 ÷ 1/3 = 18"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 2 is right.",
+            "ur": "کوئی غلطی نہیں، 2 درست ہے۔"
+          },
+          "correct": false,
+          "misconception_id": "divide_by_denominator",
+          "feedback": {
+            "en": "Check it: are 2 thirds the same as 6 rotis? 2 thirds is less than one roti, so 2 can't be right.",
+            "ur": "جانچیں: کیا 2 تہائیاں 6 روٹیوں کے برابر ہیں؟ 2 تہائیاں تو ایک روٹی سے بھی کم ہیں، اس لیے 2 درست نہیں ہو سکتا۔"
+          }
+        },
+        {
+          "id": "should_add",
+          "text": {
+            "en": "He should have added: 6 + 3 = 9.",
+            "ur": "اسے جمع کرنا چاہیے تھا: 6 + 3 = 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Dividing is not adding. Think: how many thirds fit in 6?",
+            "ur": "تقسیم جمع نہیں ہے۔ سوچیں: 6 میں کتنی تہائیاں سماتی ہیں؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_ribbon",
+      "type": "number",
+      "prompt": {
+        "en": "Ayesha has a ribbon 6 metres long. She cuts it into pieces 2/3 of a metre long. How many pieces does she get?",
+        "ur": "عائشہ کے پاس 6 میٹر لمبا فیتہ ہے۔ وہ اس کے 2/3 میٹر لمبے ٹکڑے کاٹتی ہے۔ اسے کتنے ٹکڑے ملیں گے؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "unit": {
+        "en": "pieces",
+        "ur": "ٹکڑے"
+      },
+      "hint": {
+        "en": "Flip 2/3 and multiply.",
+        "ur": "2/3 کو الٹیں اور ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! 6 ÷ 2/3 = 6 × 3/2 = 9 pieces.",
+        "ur": "شاباش! 6 ÷ 2/3 = 6 × 3/2 = 9 ٹکڑے۔"
+      },
+      "feedback_wrong": {
+        "en": "Flip 2/3 to get 3/2. Then 6 × 3/2 = 18/2 = 9. Ayesha gets 9 pieces.",
+        "ur": "2/3 کو الٹنے سے 3/2 بنتا ہے۔ پھر 6 × 3/2 = 18/2 = 9۔ عائشہ کو 9 ٹکڑے ملیں گے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "misconception_id": "multiply_not_reciprocal",
+          "feedback": {
+            "en": "You found 6 × 2/3. When we divide by a fraction, we multiply by its reciprocal, 3/2.",
+            "ur": "آپ نے 6 × 2/3 نکالا۔ کسر سے تقسیم کرتے وقت ہم اس کے معکوس 3/2 سے ضرب دیتے ہیں۔"
+          }
+        },
+        {
+          "answer": 3,
+          "misconception_id": "divide_by_denominator",
+          "feedback": {
+            "en": "You divided 6 by 2. How many pieces of 2/3 metre fit in 6 metres? Each metre holds more than one piece.",
+            "ur": "آپ نے 6 کو 2 سے تقسیم کیا۔ 6 میٹر میں 2/3 میٹر کے کتنے ٹکڑے سماتے ہیں؟ ہر میٹر میں ایک سے زیادہ ٹکڑا آتا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You worked hard and found the rule yourself!",
+          "ur": "آپ نے محنت کی اور اصول خود ڈھونڈ لیا!"
+        }
+      },
+      "text": {
+        "en": "Dividing by a fraction asks: how many of these pieces fit? To divide by a fraction, multiply by its reciprocal.",
+        "ur": "کسر سے تقسیم کا مطلب ہے: یہ ٹکڑے کتنی بار سماتے ہیں؟ کسر سے تقسیم کرنے کے لیے اس کے معکوس سے ضرب دیں۔"
+      },
+      "points": [
+        {
+          "en": "Dividing by a fraction smaller than 1 gives a bigger answer.",
+          "ur": "1 سے چھوٹی کسر سے تقسیم کرنے پر جواب بڑا آتا ہے۔"
+        },
+        {
+          "en": "The reciprocal of 3/4 is 4/3.",
+          "ur": "3/4 کا معکوس 4/3 ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_four_thirds",
+      "type": "apply",
+      "skill": "maths.fractions.divide_by_fraction",
+      "step": {
+        "id": "r_four_thirds",
+        "type": "number",
+        "prompt": {
+          "en": "How many thirds are in 4? Work out 4 ÷ 1/3.",
+          "ur": "4 میں کتنی تہائیاں ہیں؟ 4 ÷ 1/3 حل کریں۔"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "Each whole has 3 thirds.",
+          "ur": "ہر پوری چیز میں 3 تہائیاں ہوتی ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Yes! 4 × 3 = 12.",
+          "ur": "جی ہاں! 4 × 3 = 12"
+        },
+        "feedback_wrong": {
+          "en": "Each whole has 3 thirds, so 4 wholes have 4 × 3 = 12 thirds.",
+          "ur": "ہر پوری چیز میں 3 تہائیاں ہوتی ہیں، اس لیے 4 میں 4 × 3 = 12 تہائیاں۔"
+        }
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 1: the original dividing-fractions demo is not in the repository yet. No textbook text or exercises were used.",
+    "Grade and unit are not confirmed: check where division of fractions sits in NCP 2023 / PCTB (Grade 5 or 6) and fix the file name and curriculum_refs.",
+    "Urdu terms to check against the Punjab textbook: معکوس (reciprocal), تہائی (third), چوتھائی (quarter), شمار کنندہ (numerator), نسب نما (denominator), and نمونہ for 'pattern' in step s6.",
+    "Steps follow the lesson pattern: foundation check (s2), prediction (s3), concrete then symbolic (s4), discover the rule from a pattern (s5, s6), find the error (s7), new context (s8)."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

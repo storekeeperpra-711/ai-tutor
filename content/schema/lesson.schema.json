@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/storekeeperpra-711/ai-tutor/content/schema/lesson.schema.json",
+  "title": "AI Tutor lesson, schema 0.2",
+  "description": "One lesson per file. See docs/master-prompt.md Part E2. Rules a schema cannot express (id equals file name, references between fields) are checked by tools/validate_lessons.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "version", "schema", "subject", "grade", "tier", "curriculum_refs",
+    "skills", "title", "estimated_minutes", "prerequisites", "misconceptions",
+    "mastery_criteria", "question_bank", "glossary", "steps", "review"
+  ],
+  "properties": {
+    "id": {"$ref": "#/$defs/lessonId"},
+    "version": {"type": "integer", "minimum": 1},
+    "schema": {"const": "0.2"},
+    "subject": {"type": "string", "pattern": "^[a-z][a-z_]*$", "examples": ["maths", "physics", "chemistry", "biology", "general_science", "english", "urdu"]},
+    "grade": {"type": "integer", "minimum": 0, "maximum": 12, "description": "0 = nursery/prep, then grades 1 to 12."},
+    "tier": {"enum": ["early", "primary", "middle", "older"]},
+    "curriculum_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["outcome"],
+        "properties": {
+          "code": {"type": "string", "description": "Learning outcome code, if the curriculum gives one."},
+          "outcome": {"type": "string", "minLength": 1, "description": "Learning outcome in words."},
+          "textbook": {"type": "string", "description": "Textbook chapter reference, e.g. 'PCTB Grade 6 Maths, Unit 2'."}
+        }
+      }
+    },
+    "skills": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/skillId"}},
+    "title": {"$ref": "#/$defs/text"},
+    "estimated_minutes": {"type": "integer", "minimum": 1, "maximum": 30},
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["skill"],
+        "properties": {
+          "skill": {"$ref": "#/$defs/skillId"},
+          "lesson": {"$ref": "#/$defs/lessonId", "description": "Earlier-grade lesson that teaches this skill."}
+        }
+      }
+    },
+    "misconceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "description"],
+        "properties": {
+          "id": {"$ref": "#/$defs/localId"},
+          "description": {"type": "string", "minLength": 1, "description": "For teachers, in English."}
+        }
+      }
+    },
+    "mastery_criteria": {
+      "type": "object",
+      "description": "Per skill ID: which question types must be answered correctly, and on how many separate days.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question_types", "days"],
+        "properties": {
+          "question_types": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/questionType"}},
+          "days": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "question_bank": {
+      "type": "object",
+      "description": "Per skill ID: questions tagged by type.",
+      "additionalProperties": {"type": "array", "items": {"$ref": "#/$defs/question"}}
+    },
+    "alternatives": {
+      "type": "array",
+      "description": "Other explanations or step sequences to use when a student is stuck.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "description", "steps"],
+        "properties": {
+          "id": {"$ref": "#/$defs/localId"},
+          "for_step": {"$ref": "#/$defs/localId", "description": "Step this replaces or supports."},
+          "description": {"type": "string", "description": "For teachers, in English."},
+          "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}}
+        }
+      }
+    },
+    "flashcards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "front", "back"],
+        "properties": {
+          "id": {"$ref": "#/$defs/localId"},
+          "front": {"$ref": "#/$defs/text"},
+          "back": {"$ref": "#/$defs/text"}
+        }
+      }
+    },
+    "home_tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "text"],
+        "properties": {
+          "id": {"$ref": "#/$defs/localId"},
+          "text": {"$ref": "#/$defs/text"}
+        }
+      }
+    },
+    "glossary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["en", "ur"],
+        "properties": {"en": {"$ref": "#/$defs/nonEmpty"}, "ur": {"$ref": "#/$defs/nonEmpty"}}
+      }
+    },
+    "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}},
+    "review_questions": {"type": "array", "items": {"$ref": "#/$defs/question"}},
+    "teacher_notes": {"type": "array", "items": {"type": "string"}},
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewed_by", "date"],
+      "properties": {
+        "status": {"enum": ["draft", "in_review", "approved"]},
+        "reviewed_by": {"type": ["string", "null"]},
+        "date": {"type": ["string", "null"], "format": "date"}
+      }
+    }
+  },
+
+  "$defs": {
+    "nonEmpty": {"type": "string", "minLength": 1},
+    "text": {
+      "description": "Student-facing text in English and Urdu.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "ur"],
+      "properties": {"en": {"$ref": "#/$defs/nonEmpty"}, "ur": {"$ref": "#/$defs/nonEmpty"}}
+    },
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {"en": {"type": "string"}, "ur": {"type": "string"}, "pa": {"type": "string"}}
+    },
+    "lessonId": {"type": "string", "pattern": "^g([0-9]|1[0-2])-[a-z][a-z_]*-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$"},
+    "skillId": {"type": "string", "pattern": "^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+$", "description": "Dotted, e.g. maths.fractions.divide_by_fraction"},
+    "localId": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "questionType": {"enum": ["recall", "explain", "apply", "find_error", "exam_style"]},
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "step"],
+      "properties": {
+        "id": {"$ref": "#/$defs/localId"},
+        "type": {"$ref": "#/$defs/questionType"},
+        "skill": {"$ref": "#/$defs/skillId"},
+        "step": {"$ref": "#/$defs/step"}
+      }
+    },
+    "character": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["emotion", "say"],
+      "properties": {
+        "emotion": {"enum": ["idle", "talking", "happy", "thinking", "curious", "encouraging", "surprised", "celebrating"]},
+        "say": {"$ref": "#/$defs/text"},
+        "audio": {"$ref": "#/$defs/audio"}
+      }
+    },
+
+    "step": {
+      "type": "object",
+      "required": ["id", "type"],
+      "properties": {
+        "id": {"$ref": "#/$defs/localId"},
+        "type": {"enum": ["explain", "choice", "number", "text_check", "sim", "video", "lottie", "ai_explain", "photo_check", "summary"]}
+      },
+      "allOf": [
+        {"if": {"properties": {"type": {"const": "explain"}}}, "then": {"$ref": "#/$defs/explainStep"}},
+        {"if": {"properties": {"type": {"const": "choice"}}}, "then": {"$ref": "#/$defs/choiceStep"}},
+        {"if": {"properties": {"type": {"const": "number"}}}, "then": {"$ref": "#/$defs/numberStep"}},
+        {"if": {"properties": {"type": {"const": "summary"}}}, "then": {"$ref": "#/$defs/summaryStep"}}
+      ],
+      "$comment": "text_check, sim, video, lottie, ai_explain and photo_check get full definitions in the phase that implements them (2, 5, 6)."
+    },
+    "explainStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "text"],
+      "properties": {
+        "id": true, "type": true,
+        "text": {"$ref": "#/$defs/text"},
+        "character": {"$ref": "#/$defs/character"},
+        "image": {"type": "string", "description": "Asset path, optional."}
+      }
+    },
+    "choiceStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "prompt", "options"],
+      "properties": {
+        "id": true, "type": true,
+        "prompt": {"$ref": "#/$defs/text"},
+        "character": {"$ref": "#/$defs/character"},
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "text", "correct", "feedback"],
+            "properties": {
+              "id": {"$ref": "#/$defs/localId"},
+              "text": {"$ref": "#/$defs/text"},
+              "correct": {"type": "boolean"},
+              "feedback": {"$ref": "#/$defs/text"},
+              "misconception_id": {"$ref": "#/$defs/localId"}
+            }
+          }
+        }
+      }
+    },
+    "numberStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "prompt", "answer", "checker", "hint", "feedback_correct", "feedback_wrong"],
+      "properties": {
+        "id": true, "type": true,
+        "prompt": {"$ref": "#/$defs/text"},
+        "character": {"$ref": "#/$defs/character"},
+        "answer": {"type": "number"},
+        "tolerance": {"type": "number", "minimum": 0, "default": 0},
+        "unit": {"$ref": "#/$defs/text"},
+        "checker": {"enum": ["numeric"], "description": "More checkers arrive in Phase 2."},
+        "hint": {"$ref": "#/$defs/text"},
+        "feedback_correct": {"$ref": "#/$defs/text"},
+        "feedback_wrong": {"$ref": "#/$defs/text", "description": "Shown after the last attempt; includes the working."},
+        "max_attempts": {"type": "integer", "minimum": 1, "default": 3},
+        "common_wrong": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["answer", "feedback"],
+            "properties": {
+              "answer": {"type": "number"},
+              "feedback": {"$ref": "#/$defs/text"},
+              "misconception_id": {"$ref": "#/$defs/localId"}
+            }
+          }
+        }
+      }
+    },
+    "summaryStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "text"],
+      "properties": {
+        "id": true, "type": true,
+        "text": {"$ref": "#/$defs/text"},
+        "character": {"$ref": "#/$defs/character"},
+        "points": {"type": "array", "items": {"$ref": "#/$defs/text"}}
+      }
+    }
+  }
+}
