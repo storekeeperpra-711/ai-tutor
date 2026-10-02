@@ -157,6 +157,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Urdu text test'**
   String get urduTestTitle;
+
+  /// Button that moves to the next lesson step.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueButton;
+
+  /// Button that checks the student's answer.
+  ///
+  /// In en, this message translates to:
+  /// **'Check'**
+  String get checkButton;
+
+  /// Button on the last lesson step.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish'**
+  String get finishButton;
+
+  /// Label of the answer box in number questions.
+  ///
+  /// In en, this message translates to:
+  /// **'Your answer'**
+  String get answerLabel;
+
+  /// Label before a hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Hint'**
+  String get hintLabel;
+
+  /// Shown after a wrong answer that has no specific feedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Not yet. Look at the hint and try again.'**
+  String get tryAgain;
+
+  /// Shown when the answer box doesn't contain a number.
+  ///
+  /// In en, this message translates to:
+  /// **'Please type a number, like 8 or ۸.'**
+  String get typeANumber;
+
+  /// Shown for lesson step types added in later phases.
+  ///
+  /// In en, this message translates to:
+  /// **'This kind of step ({type}) can\'t be played yet. Tap Continue to skip it.'**
+  String stepNotSupported(String type);
+
+  /// Progress label in the lesson player.
+  ///
+  /// In en, this message translates to:
+  /// **'Step {current} of {total}'**
+  String stepProgress(int current, int total);
+
+  /// Shown when a lesson file can't be read.
+  ///
+  /// In en, this message translates to:
+  /// **'This lesson could not be opened.'**
+  String get lessonLoadError;
+
+  /// Title of the developer lesson list. Shows drafts too.
+  ///
+  /// In en, this message translates to:
+  /// **'Lessons (developer preview)'**
+  String get lessonsPreviewTitle;
+
+  /// Lesson length.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} min'**
+  String minutesShort(int count);
+
+  /// Tooltip of the English/Urdu toggle button.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch language'**
+  String get switchLanguage;
 }
 
 class _AppLocalizationsDelegate

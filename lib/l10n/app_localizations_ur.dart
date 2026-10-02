@@ -38,4 +38,49 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get urduTestTitle => 'اردو متن کی جانچ';
+
+  @override
+  String get continueButton => 'آگے چلیں';
+
+  @override
+  String get checkButton => 'جانچیں';
+
+  @override
+  String get finishButton => 'ختم کریں';
+
+  @override
+  String get answerLabel => 'آپ کا جواب';
+
+  @override
+  String get hintLabel => 'اشارہ';
+
+  @override
+  String get tryAgain => 'ابھی نہیں۔ اشارہ دیکھیں اور دوبارہ کوشش کریں۔';
+
+  @override
+  String get typeANumber => 'براہِ کرم کوئی عدد لکھیں، جیسے 8 یا ۸۔';
+
+  @override
+  String stepNotSupported(String type) {
+    return 'اس قسم کا مرحلہ ($type) ابھی نہیں چل سکتا۔ آگے بڑھنے کے لیے \"آگے چلیں\" دبائیں۔';
+  }
+
+  @override
+  String stepProgress(int current, int total) {
+    return 'مرحلہ $current از $total';
+  }
+
+  @override
+  String get lessonLoadError => 'یہ سبق نہیں کھل سکا۔';
+
+  @override
+  String get lessonsPreviewTitle => 'اسباق (ڈویلپر پیش منظر)';
+
+  @override
+  String minutesShort(int count) {
+    return '$count منٹ';
+  }
+
+  @override
+  String get switchLanguage => 'زبان بدلیں';
 }

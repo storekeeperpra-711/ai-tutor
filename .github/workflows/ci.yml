@@ -27,20 +27,36 @@ jobs:
           channel: stable
           cache: true
       - run: flutter pub get
-      - name: Generated translations are up to date
+      - name: Generated code is up to date
         run: |
           flutter gen-l10n
-          git diff --exit-code lib/l10n
+          dart run build_runner build
+          git diff --exit-code lib
       - run: dart format --output=none --set-exit-if-changed lib test
       - run: flutter analyze
       - run: flutter test
+
+  lessons:
+    name: Validate lessons
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: tools/requirements.txt
+      - run: pip install -r tools/requirements.txt
+      - run: python tools/validate_lessons.py
+      - run: python -m unittest discover -s tools -p 'test_*.py'
 
   # Builds an installable debug APK. Runs only on main and on manual runs,
   # because Android builds use many more CI minutes than the checks above.
   apk:
     name: Build debug APK
     if: github.event_name != 'pull_request'
-    needs: check
+    needs: [check, lessons]
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:

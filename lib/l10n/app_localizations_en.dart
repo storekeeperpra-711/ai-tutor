@@ -38,4 +38,49 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get urduTestTitle => 'Urdu text test';
+
+  @override
+  String get continueButton => 'Continue';
+
+  @override
+  String get checkButton => 'Check';
+
+  @override
+  String get finishButton => 'Finish';
+
+  @override
+  String get answerLabel => 'Your answer';
+
+  @override
+  String get hintLabel => 'Hint';
+
+  @override
+  String get tryAgain => 'Not yet. Look at the hint and try again.';
+
+  @override
+  String get typeANumber => 'Please type a number, like 8 or ۸.';
+
+  @override
+  String stepNotSupported(String type) {
+    return 'This kind of step ($type) can\'t be played yet. Tap Continue to skip it.';
+  }
+
+  @override
+  String stepProgress(int current, int total) {
+    return 'Step $current of $total';
+  }
+
+  @override
+  String get lessonLoadError => 'This lesson could not be opened.';
+
+  @override
+  String get lessonsPreviewTitle => 'Lessons (developer preview)';
+
+  @override
+  String minutesShort(int count) {
+    return '$count min';
+  }
+
+  @override
+  String get switchLanguage => 'Switch language';
 }

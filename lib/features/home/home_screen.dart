@@ -36,6 +36,12 @@ class HomeScreen extends StatelessWidget {
               ),
               if (kDebugMode) ...[
                 const SizedBox(height: 24),
+                FilledButton(
+                  key: const Key('open-previewer'),
+                  onPressed: () => context.push('/dev/lessons'),
+                  child: Text(l10n.lessonsPreviewTitle),
+                ),
+                const SizedBox(height: 12),
                 OutlinedButton(
                   onPressed: () => context.push('/debug/urdu'),
                   child: Text(l10n.urduTestTitle),

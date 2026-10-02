@@ -1,23 +1,113 @@
 {
   "@@locale": "en",
   "appTitle": "AI Tutor",
-  "@appTitle": {"description": "App name shown in the title bar."},
+  "@appTitle": {
+    "description": "App name shown in the title bar."
+  },
   "homeWelcome": "Welcome! Your lessons will appear here.",
-  "@homeWelcome": {"description": "Placeholder text on the home screen until lessons exist (Phase 1)."},
+  "@homeWelcome": {
+    "description": "Placeholder text on the home screen until lessons exist (Phase 1)."
+  },
   "settingsTitle": "Settings",
-  "@settingsTitle": {"description": "Title of the settings screen and tooltip of the settings button."},
+  "@settingsTitle": {
+    "description": "Title of the settings screen and tooltip of the settings button."
+  },
   "languageLabel": "Language",
-  "@languageLabel": {"description": "Heading above the language choice."},
+  "@languageLabel": {
+    "description": "Heading above the language choice."
+  },
   "ageTierLabel": "Age group (developer setting)",
-  "@ageTierLabel": {"description": "Heading above the age-tier choice. Developer-only for now; later the tier comes from the student's grade."},
+  "@ageTierLabel": {
+    "description": "Heading above the age-tier choice. Developer-only for now; later the tier comes from the student's grade."
+  },
   "tierEarly": "Nursery to Grade 2",
-  "@tierEarly": {"description": "Age tier name."},
+  "@tierEarly": {
+    "description": "Age tier name."
+  },
   "tierPrimary": "Grades 3 to 5",
-  "@tierPrimary": {"description": "Age tier name."},
+  "@tierPrimary": {
+    "description": "Age tier name."
+  },
   "tierMiddle": "Grades 6 to 8",
-  "@tierMiddle": {"description": "Age tier name."},
+  "@tierMiddle": {
+    "description": "Age tier name."
+  },
   "tierOlder": "Grades 9 to 12",
-  "@tierOlder": {"description": "Age tier name."},
+  "@tierOlder": {
+    "description": "Age tier name."
+  },
   "urduTestTitle": "Urdu text test",
-  "@urduTestTitle": {"description": "Developer screen for checking Urdu font rendering."}
+  "@urduTestTitle": {
+    "description": "Developer screen for checking Urdu font rendering."
+  },
+  "continueButton": "Continue",
+  "@continueButton": {
+    "description": "Button that moves to the next lesson step."
+  },
+  "checkButton": "Check",
+  "@checkButton": {
+    "description": "Button that checks the student's answer."
+  },
+  "finishButton": "Finish",
+  "@finishButton": {
+    "description": "Button on the last lesson step."
+  },
+  "answerLabel": "Your answer",
+  "@answerLabel": {
+    "description": "Label of the answer box in number questions."
+  },
+  "hintLabel": "Hint",
+  "@hintLabel": {
+    "description": "Label before a hint."
+  },
+  "tryAgain": "Not yet. Look at the hint and try again.",
+  "@tryAgain": {
+    "description": "Shown after a wrong answer that has no specific feedback."
+  },
+  "typeANumber": "Please type a number, like 8 or ۸.",
+  "@typeANumber": {
+    "description": "Shown when the answer box doesn't contain a number."
+  },
+  "stepNotSupported": "This kind of step ({type}) can't be played yet. Tap Continue to skip it.",
+  "@stepNotSupported": {
+    "description": "Shown for lesson step types added in later phases.",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "stepProgress": "Step {current} of {total}",
+  "@stepProgress": {
+    "description": "Progress label in the lesson player.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "lessonLoadError": "This lesson could not be opened.",
+  "@lessonLoadError": {
+    "description": "Shown when a lesson file can't be read."
+  },
+  "lessonsPreviewTitle": "Lessons (developer preview)",
+  "@lessonsPreviewTitle": {
+    "description": "Title of the developer lesson list. Shows drafts too."
+  },
+  "minutesShort": "{count} min",
+  "@minutesShort": {
+    "description": "Lesson length.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "switchLanguage": "Switch language",
+  "@switchLanguage": {
+    "description": "Tooltip of the English/Urdu toggle button."
+  }
 }

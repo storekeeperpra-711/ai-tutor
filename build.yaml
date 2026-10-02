@@ -1,0 +1,11 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          # Lesson JSON uses snake_case keys (estimated_minutes); Dart uses camelCase.
+          field_rename: snake
+          # The app only reads lessons, so no toJson code is generated.
+          create_to_json: false
+          # Clearer error messages when a lesson file has a wrong field.
+          checked: true
