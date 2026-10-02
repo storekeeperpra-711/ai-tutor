@@ -1,6 +1,6 @@
 {
   "id": "g10-chemistry-15-balancing-equations",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "chemistry",
   "grade": 10,
@@ -295,6 +295,37 @@
       "feedback_wrong": {
         "en": "2H2 + O2 → 2H2O. Left: 4 H, 2 O. Right: 4 H, 2 O.",
         "ur": "2H2 + O2 → 2H2O۔ بائیں: 4 H، 2 O۔ دائیں: 4 H، 2 O"
+      }
+    },
+    {
+      "id": "s4_ammonia",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "atom_balancer",
+      "prompt": {
+        "en": "Fertiliser factories make ammonia: N2 + H2 → NH3. Change the big numbers until every element is balanced, then press Check.",
+        "ur": "کھاد کے کارخانے امونیا بناتے ہیں: N2 + H2 → NH3۔ بڑے نمبر بدلیں یہاں تک کہ ہر عنصر برابر ہو جائے، پھر \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "equation": "N2 + H2 -> NH3"
+      },
+      "expected": {
+        "result": "equation",
+        "checker": "chem_equation",
+        "answer": "N2 + 3H2 -> 2NH3"
+      },
+      "hint": {
+        "en": "Balance nitrogen first: 2 N on the left needs 2 NH3 on the right. Then count the hydrogen.",
+        "ur": "پہلے نائٹروجن برابر کریں: بائیں طرف 2 N کے لیے دائیں طرف 2 NH3 چاہئیں۔ پھر ہائیڈروجن گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Balanced! N2 + 3H2 → 2NH3: 2 nitrogen and 6 hydrogen on each side.",
+        "ur": "برابر ہو گئی! N2 + 3H2 → 2NH3: ہر طرف 2 نائٹروجن اور 6 ہائیڈروجن۔"
+      },
+      "feedback_wrong": {
+        "en": "2 NH3 gives 2 N, matching N2. It also has 6 H, so we need 3 H2: N2 + 3H2 → 2NH3.",
+        "ur": "2 NH3 میں 2 N ہیں، جو N2 کے برابر ہیں۔ اس میں 6 H بھی ہیں، اس لیے 3 H2 چاہئیں: N2 + 3H2 → 2NH3"
       }
     },
     {

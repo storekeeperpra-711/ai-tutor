@@ -610,5 +610,140 @@
         "type": "String"
       }
     }
+  },
+  "simNoResult": "Finish the activity, then press Check.",
+  "@simNoResult": {
+    "description": "A simulation reported no answer yet."
+  },
+  "simUseActivity": "Try the activity, then press its Check button.",
+  "@simUseActivity": {
+    "description": "Under a simulation before the child has answered."
+  },
+  "simCouldNotStart": "This activity can't start on this phone. Let's carry on.",
+  "@simCouldNotStart": {
+    "description": "A simulation failed to load."
+  },
+  "simUndo": "Undo",
+  "@simUndo": {
+    "description": "Undo the last move in an interactive."
+  },
+  "fractionBarsCut": "Pieces in each one",
+  "@fractionBarsCut": {
+    "description": "Fraction bars: stepper for how many pieces to cut each whole into."
+  },
+  "fractionBarsChosen": "Pieces chosen: {count}",
+  "@fractionBarsChosen": {
+    "description": "Fraction bars: how many pieces are tapped.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "scaleTakeOne": "Take 1",
+  "@scaleTakeOne": {
+    "description": "Balance scale: remove one weight from this side."
+  },
+  "scaleTakeX": "Take x",
+  "@scaleTakeX": {
+    "description": "Balance scale: remove one x-box from this side."
+  },
+  "scaleLeft": "Left side",
+  "@scaleLeft": {
+    "description": "Balance scale: left pan."
+  },
+  "scaleRight": "Right side",
+  "@scaleRight": {
+    "description": "Balance scale: right pan."
+  },
+  "scaleBalanced": "Balanced",
+  "@scaleBalanced": {
+    "description": "Balance scale: both sides weigh the same."
+  },
+  "scaleTipped": "Not balanced!",
+  "@scaleTipped": {
+    "description": "Balance scale: the scale has tipped."
+  },
+  "scaleShare": "Share into {n} groups",
+  "@scaleShare": {
+    "description": "Balance scale: divide both sides into n equal groups and keep one.",
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "atomsLeft": "Left",
+  "@atomsLeft": {
+    "description": "Atom balancer: atoms on the left side."
+  },
+  "atomsRight": "Right",
+  "@atomsRight": {
+    "description": "Atom balancer: atoms on the right side."
+  },
+  "atomsBalanced": "Every element is balanced!",
+  "@atomsBalanced": {
+    "description": "Atom balancer: equation is balanced."
+  },
+  "numberLineValue": "Your number: {value}",
+  "@numberLineValue": {
+    "description": "Number line: the marked value.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "graphHint": "Drag a point, or pick A or B and use the arrows.",
+  "@graphHint": {
+    "description": "Graph plotter: how to move the points."
+  },
+  "videoCouldNotPlay": "The video can't play right now. Here is what it shows:",
+  "@videoCouldNotPlay": {
+    "description": "A video failed to load; the summary follows."
+  },
+  "videoPlay": "Play",
+  "@videoPlay": {
+    "description": "Video play button."
+  },
+  "videoPause": "Pause",
+  "@videoPause": {
+    "description": "Video pause button."
+  },
+  "videoReplay": "Watch again",
+  "@videoReplay": {
+    "description": "Video replay button."
+  },
+  "videoCaptions": "Captions",
+  "@videoCaptions": {
+    "description": "Toggle captions on a video."
+  },
+  "lessMotion": "Less movement",
+  "@lessMotion": {
+    "description": "Settings switch that turns off most animations."
+  },
+  "lessMotionHint": "Fewer animations. Some children focus better, and it saves battery.",
+  "@lessMotionHint": {
+    "description": "Explains the Less movement setting."
+  },
+  "lessonFinished": "Lesson finished! Well done.",
+  "@lessonFinished": {
+    "description": "Celebration after the last step of a lesson."
+  },
+  "levelUp": "{topic}: {level}!",
+  "@levelUp": {
+    "description": "Celebration when a skill reaches a new mastery level.",
+    "placeholders": {
+      "topic": {
+        "type": "String"
+      },
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "simGalleryTitle": "Simulations (developer)",
+  "@simGalleryTitle": {
+    "description": "Developer screen listing every simulation."
   }
 }

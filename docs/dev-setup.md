@@ -91,6 +91,18 @@ Each lesson question step can say which `skill` it tests (default: the lesson's 
 - Today's plan is built once per child per day and saved in shared preferences (`plan.{studentId}`), so it doesn't change while the child works through it.
 - To change the database, bump `schemaVersion` in `local_db.dart`, add a step to `onUpgrade`, and add a test like `a version 1 database gets the skill states table`.
 
+## Simulations, videos and animations (Phase 5)
+
+Three step types: `sim` (an HTML simulation in a WebView, or a native interactive), `video` and `lottie`. Plan and decisions: [docs/plan/05-phase-5.md](plan/05-phase-5.md).
+
+- A `sim` step's `expected` names the value to check in the simulation's result and the checker (`numeric`, `fraction`, `chem_equation`, `text`). With a `question_type` it counts towards mastery like any question.
+- HTML simulations live in `assets/sims/` and follow the protocol in `lib/sims/README.md`. Native interactives (`fraction_bars`, `balance_scale`, `atom_balancer`, `number_line`, `graph_plotter`) are in `lib/sims/native/`.
+- In debug builds, **Simulations (developer)** on the home screen opens every simulation and interactive, to try them on the phone.
+- Videos and captions go in `assets/videos/` (or an https link). Make them with `tools/video/make_video.py` (see `tools/README.md`).
+- Lottie files go in `assets/lottie/` (`tools/lottie/make_lottie.py` makes the current ones).
+- **Less movement** in Settings (or the phone's "remove animations" setting) turns off celebrations and UI motion. Code checks `reduceMotion(context)` from `lib/app/motion.dart`.
+- Widget tests have no WebView and can't play video, so `test/helpers.dart` swaps both for fakes; tests report simulation results straight to the step (`SimStepViewState.onSimEvent`).
+
 ## Where things are
 
 | Path | What |
@@ -99,12 +111,16 @@ Each lesson question step can say which `skill` it tests (default: the lesson's 
 | `lib/models/` | Lesson and step data classes (json_serializable) |
 | `lib/lessons/` | Lesson player, step registry (`step_registry.dart`), one widget per step type (`steps/`) |
 | `lib/checkers/` | Answer checkers (pure Dart) |
+| `lib/sims/` | Simulation host, WebView simulations and native interactives |
+| `lib/media/` | Video and caption files: bundled or downloaded once and cached |
 | `lib/mastery/` | Mastery engine: skills graph, levels, reviews, stuck advice, daily plan (pure Dart) |
 | `lib/features/` | Screens: home and profiles, add learner, PIN pad, account, today's plan, practice, flashcards, the developer lesson previewer |
 | `lib/services/` | On-phone database, sign-in, Firestore, sync, connection state |
 | `firestore.rules`, `tools/firestore-rules/` | Firestore security rules and their tests |
 | `content/lessons/`, `content/schema/` | Lesson files (bundled into the app) and their JSON Schema |
 | `tools/validate_lessons.py` | Lesson validator |
+| `tools/video/`, `tools/lottie/` | Video and Lottie generators |
+| `assets/sims/`, `assets/videos/`, `assets/lottie/` | HTML simulations, videos with captions, animations |
 | `lib/l10n/` | Translations (ARB files) |
 | `assets/fonts/` | Noto Nastaliq Urdu (SIL Open Font License) |
 | `functions/` | Cloud Functions (Phase 6) |

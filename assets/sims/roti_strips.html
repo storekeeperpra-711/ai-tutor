@@ -1,0 +1,142 @@
+<!doctype html>
+<!--
+  Roti sharing: how many children can each have a piece?
+  Simulation protocol (docs/master-prompt.md, Part C): one file, no network,
+  initSim(config) starts it, results go to the TutorBridge channel.
+  config: {lang: "en"|"ur", rotis: 2, piece: 4, reduce_motion: false}
+  Reports: {event: "result", data: {children, pieces_left, piece}}
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin: 0; font-family: sans-serif; background: #fffaf2; color: #3e2723;
+         display: flex; flex-direction: column; height: 100vh; user-select: none; }
+  #rotis { flex: 1; display: flex; flex-wrap: wrap; justify-content: center;
+           align-content: center; gap: 8px; padding: 8px; }
+  svg.roti { width: 42vw; max-width: 180px; height: auto; }
+  .piece { cursor: pointer; transition: opacity .25s, transform .25s; }
+  .piece.given { opacity: 0.15; pointer-events: none; }
+  #children { min-height: 56px; display: flex; flex-wrap: wrap; justify-content: center;
+              gap: 4px; padding: 4px 8px; direction: ltr; }
+  .child { font-size: 26px; }
+  #status { text-align: center; font-size: 20px; padding: 4px; }
+  #bar { display: flex; gap: 8px; padding: 8px; justify-content: center; }
+  button { font-size: 20px; padding: 14px 18px; border-radius: 14px; border: 2px solid #8d6e63;
+           background: #fff; color: #3e2723; min-width: 120px; }
+  button.main { background: #ffb74d; border-color: #e65100; }
+  button:disabled { opacity: .4; }
+  .reduce * { transition: none !important; }
+</style>
+</head>
+<body>
+<div id="rotis"></div>
+<div id="status"></div>
+<div id="children"></div>
+<div id="bar">
+  <button id="cut" class="main"></button>
+  <button id="check"></button>
+</div>
+<script>
+'use strict';
+var TEXT = {
+  en: { cut: 'Cut into {p}', check: 'Check', tap: 'Tap a piece to give it to a child.',
+        start: 'Each child gets 1/{p} of a roti. Cut the rotis first.',
+        fed: 'Children with a piece: {n}', piece: 'piece' },
+  ur: { cut: '{p} حصوں میں کاٹیں', check: 'جانچیں', tap: 'کسی ٹکڑے کو چھو کر بچے کو دیں۔',
+        start: 'ہر بچے کو روٹی کا 1/{p} حصہ ملتا ہے۔ پہلے روٹیاں کاٹیں۔',
+        fed: 'ٹکڑا پانے والے بچے: {n}', piece: 'ٹکڑا' }
+};
+var state = { rotis: 2, piece: 4, cut: false, given: 0, t: TEXT.en };
+
+function say(key, values) {
+  var s = state.t[key];
+  for (var k in values) s = s.replace('{' + k + '}', values[k]);
+  return s;
+}
+
+function post(event, data) {
+  if (window.TutorBridge) TutorBridge.postMessage(JSON.stringify({ event: event, data: data || {} }));
+}
+
+function sector(cx, cy, r, a0, a1) {
+  var x0 = cx + r * Math.cos(a0), y0 = cy + r * Math.sin(a0);
+  var x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
+  var large = a1 - a0 > Math.PI ? 1 : 0;
+  return 'M' + cx + ' ' + cy + ' L' + x0 + ' ' + y0 + ' A' + r + ' ' + r + ' 0 ' + large + ' 1 ' + x1 + ' ' + y1 + ' Z';
+}
+
+function drawRotis() {
+  var box = document.getElementById('rotis');
+  box.innerHTML = '';
+  for (var i = 0; i < state.rotis; i++) {
+    var svg = '<svg class="roti" viewBox="0 0 100 100">';
+    if (!state.cut) {
+      svg += '<circle cx="50" cy="50" r="46" fill="#f5c873" stroke="#8d5a33" stroke-width="3"/>';
+    } else {
+      for (var j = 0; j < state.piece; j++) {
+        var a0 = -Math.PI / 2 + j * 2 * Math.PI / state.piece;
+        var a1 = a0 + 2 * Math.PI / state.piece;
+        svg += '<path class="piece" fill="#f5c873" stroke="#8d5a33" stroke-width="3" d="' +
+               sector(50, 50, 46, a0, a1) + '"/>';
+      }
+    }
+    box.insertAdjacentHTML('beforeend', svg + '</svg>');
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.piece'), function (p) {
+    p.addEventListener('click', function () { give(p); });
+  });
+}
+
+function give(p) {
+  if (p.classList.contains('given')) return;
+  p.classList.add('given');
+  state.given++;
+  document.getElementById('children').insertAdjacentHTML('beforeend', '<span class="child">🧒</span>');
+  update();
+}
+
+function update() {
+  document.getElementById('status').textContent = state.cut
+    ? (state.given ? say('fed', { n: state.given }) : say('tap'))
+    : say('start', { p: state.piece });
+  document.getElementById('cut').disabled = state.cut;
+}
+
+function initSim(config) {
+  config = config || {};
+  state.t = TEXT[config.lang] || TEXT.en;
+  state.rotis = Math.max(1, Math.min(4, config.rotis || 2));
+  state.piece = Math.max(2, Math.min(8, config.piece || 4));
+  state.cut = false;
+  state.given = 0;
+  document.body.dir = config.lang === 'ur' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('reduce', !!config.reduce_motion);
+  document.getElementById('children').innerHTML = '';
+  document.getElementById('cut').textContent = say('cut', { p: state.piece });
+  document.getElementById('check').textContent = say('check');
+  drawRotis();
+  update();
+  post('ready');
+}
+
+document.getElementById('cut').addEventListener('click', function () {
+  state.cut = true;
+  drawRotis();
+  update();
+});
+
+document.getElementById('check').addEventListener('click', function () {
+  post('result', {
+    children: state.given,
+    pieces_left: state.cut ? state.rotis * state.piece - state.given : 0,
+    piece: state.piece
+  });
+});
+
+window.onerror = function (message) { post('error', { message: String(message) }); };
+</script>
+</body>
+</html>

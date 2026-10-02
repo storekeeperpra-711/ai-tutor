@@ -520,9 +520,45 @@
           "then": {
             "$ref": "#/$defs/summaryStep"
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "sim"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/simStep"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "video"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/videoStep"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "lottie"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/lottieStep"
+          }
         }
       ],
-      "$comment": "sim, video, lottie, ai_explain and photo_check get full definitions in the phase that implements them (5, 6)."
+      "$comment": "ai_explain and photo_check get full definitions in Phase 6."
     },
     "explainStep": {
       "type": "object",
@@ -826,6 +862,272 @@
           "items": {
             "$ref": "#/$defs/text"
           }
+        }
+      }
+    },
+    "simStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "renderer",
+        "prompt"
+      ],
+      "properties": {
+        "id": true,
+        "type": true,
+        "question_type": {
+          "$ref": "#/$defs/questionType",
+          "description": "Makes this step count as mastery evidence of this kind. Steps without it don't count."
+        },
+        "skill": {
+          "$ref": "#/$defs/skillId",
+          "description": "Skill this step tests. Default: the lesson's first skill."
+        },
+        "prompt": {
+          "$ref": "#/$defs/text",
+          "description": "What to do with the simulation, and the question about it."
+        },
+        "character": {
+          "$ref": "#/$defs/character"
+        },
+        "renderer": {
+          "enum": [
+            "webview",
+            "native"
+          ]
+        },
+        "src": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+\\.html$",
+          "description": "webview: an HTML file in assets/sims/."
+        },
+        "sim_id": {
+          "enum": [
+            "fraction_bars",
+            "balance_scale",
+            "atom_balancer",
+            "number_line",
+            "graph_plotter"
+          ],
+          "description": "native: which interactive."
+        },
+        "params": {
+          "type": "object",
+          "description": "Passed to the simulation (initSim config) or the interactive."
+        },
+        "expected": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "result",
+            "checker",
+            "answer"
+          ],
+          "description": "Which reported value to check, and how. Without it the step is for exploring.",
+          "properties": {
+            "result": {
+              "$ref": "#/$defs/localId",
+              "description": "Key in the simulation's result data, e.g. pieces."
+            },
+            "checker": {
+              "enum": [
+                "numeric",
+                "fraction",
+                "chem_equation",
+                "text"
+              ]
+            },
+            "answer": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The right value, written as a student would (8, 3/4, 2H2 + O2 -> 2H2O)."
+            },
+            "tolerance": {
+              "type": "number",
+              "minimum": 0,
+              "default": 0
+            }
+          }
+        },
+        "hint": {
+          "$ref": "#/$defs/text"
+        },
+        "feedback_correct": {
+          "$ref": "#/$defs/text"
+        },
+        "feedback_wrong": {
+          "$ref": "#/$defs/text",
+          "description": "Shown after the last attempt; includes the working."
+        },
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 3
+        },
+        "common_wrong": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "answer",
+              "feedback"
+            ],
+            "properties": {
+              "answer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "feedback": {
+                "$ref": "#/$defs/text"
+              },
+              "misconception_id": {
+                "$ref": "#/$defs/localId"
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "renderer": {
+                "const": "webview"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "src"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "renderer": {
+                "const": "native"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "sim_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "expected"
+            ]
+          },
+          "then": {
+            "required": [
+              "hint",
+              "feedback_correct",
+              "feedback_wrong"
+            ]
+          }
+        }
+      ]
+    },
+    "mediaPath": {
+      "type": "string",
+      "pattern": "^(https://[^\\s]+|[a-z0-9_\\-/]+\\.[a-z0-9]+)$",
+      "description": "A file in the app's assets folder for this kind (e.g. fractions_roti_en.mp4) or an https link."
+    },
+    "videoStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "src",
+        "summary"
+      ],
+      "properties": {
+        "id": true,
+        "type": true,
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "src": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "en",
+            "ur"
+          ],
+          "properties": {
+            "en": {
+              "$ref": "#/$defs/mediaPath"
+            },
+            "ur": {
+              "$ref": "#/$defs/mediaPath"
+            }
+          },
+          "description": "Video per language: a file in assets/videos/ or an https link."
+        },
+        "captions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "en",
+            "ur"
+          ],
+          "properties": {
+            "en": {
+              "$ref": "#/$defs/mediaPath"
+            },
+            "ur": {
+              "$ref": "#/$defs/mediaPath"
+            }
+          },
+          "description": "WebVTT captions per language."
+        },
+        "summary": {
+          "$ref": "#/$defs/text",
+          "description": "What the video shows, in a few sentences. Shown if the video can't play."
+        },
+        "duration_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 180
+        },
+        "character": {
+          "$ref": "#/$defs/character"
+        }
+      }
+    },
+    "lottieStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "src"
+      ],
+      "properties": {
+        "id": true,
+        "type": true,
+        "src": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+\\.json$",
+          "description": "A file in assets/lottie/."
+        },
+        "text": {
+          "$ref": "#/$defs/text"
+        },
+        "loop": {
+          "type": "boolean",
+          "default": false
+        },
+        "character": {
+          "$ref": "#/$defs/character"
         }
       }
     }

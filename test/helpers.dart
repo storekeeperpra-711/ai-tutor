@@ -5,6 +5,8 @@ import 'package:ai_tutor/services/connectivity.dart';
 import 'package:ai_tutor/services/local_db.dart';
 import 'package:ai_tutor/services/remote_store.dart';
 import 'package:flutter/services.dart';
+import 'package:ai_tutor/lessons/steps/video_step_view.dart';
+import 'package:ai_tutor/sims/sim_host.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,6 +32,13 @@ Future<Widget> buildTestApp({
       authServiceProvider.overrideWithValue(fake.auth),
       remoteStoreProvider.overrideWithValue(fake.remote),
       onlineProvider.overrideWith((ref) => fake.onlineStream),
+      // Widget tests have no WebView and can't play video.
+      webSimBuilderProvider.overrideWithValue(
+        (args) => SizedBox.expand(key: Key('fake-web-sim-${args.step.src}')),
+      ),
+      videoControllerFactoryProvider.overrideWithValue(
+        (video, captions) async => throw UnsupportedError('no video in tests'),
+      ),
     ],
     child: const AiTutorApp(),
   );

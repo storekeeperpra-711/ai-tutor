@@ -4,10 +4,13 @@ import '../models/lesson_step.dart';
 import 'step_result.dart';
 import 'steps/choice_step_view.dart';
 import 'steps/explain_step_view.dart';
+import 'steps/lottie_step_view.dart';
 import 'steps/number_step_view.dart';
+import 'steps/sim_step_view.dart';
 import 'steps/summary_step_view.dart';
 import 'steps/text_check_step_view.dart';
 import 'steps/unsupported_step_view.dart';
+import 'steps/video_step_view.dart';
 
 typedef StepBuilder = Widget Function(LessonStep step, StepDone onDone);
 
@@ -20,6 +23,9 @@ final stepBuilders = <String, StepBuilder>{
   'text_check': (s, done) =>
       TextCheckStepView(step: s as TextCheckStep, onDone: done),
   'summary': (s, done) => SummaryStepView(step: s as SummaryStep, onDone: done),
+  'sim': (s, done) => SimStepView(step: s as SimStep, onDone: done),
+  'video': (s, done) => VideoStepView(step: s as VideoStep, onDone: done),
+  'lottie': (s, done) => LottieStepView(step: s as LottieStep, onDone: done),
 };
 
 Widget buildStep(LessonStep step, StepDone onDone) {

@@ -799,6 +799,174 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Needs help with: {topics}'**
   String needsHelpWith(String topics);
+
+  /// A simulation reported no answer yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish the activity, then press Check.'**
+  String get simNoResult;
+
+  /// Under a simulation before the child has answered.
+  ///
+  /// In en, this message translates to:
+  /// **'Try the activity, then press its Check button.'**
+  String get simUseActivity;
+
+  /// A simulation failed to load.
+  ///
+  /// In en, this message translates to:
+  /// **'This activity can\'t start on this phone. Let\'s carry on.'**
+  String get simCouldNotStart;
+
+  /// Undo the last move in an interactive.
+  ///
+  /// In en, this message translates to:
+  /// **'Undo'**
+  String get simUndo;
+
+  /// Fraction bars: stepper for how many pieces to cut each whole into.
+  ///
+  /// In en, this message translates to:
+  /// **'Pieces in each one'**
+  String get fractionBarsCut;
+
+  /// Fraction bars: how many pieces are tapped.
+  ///
+  /// In en, this message translates to:
+  /// **'Pieces chosen: {count}'**
+  String fractionBarsChosen(int count);
+
+  /// Balance scale: remove one weight from this side.
+  ///
+  /// In en, this message translates to:
+  /// **'Take 1'**
+  String get scaleTakeOne;
+
+  /// Balance scale: remove one x-box from this side.
+  ///
+  /// In en, this message translates to:
+  /// **'Take x'**
+  String get scaleTakeX;
+
+  /// Balance scale: left pan.
+  ///
+  /// In en, this message translates to:
+  /// **'Left side'**
+  String get scaleLeft;
+
+  /// Balance scale: right pan.
+  ///
+  /// In en, this message translates to:
+  /// **'Right side'**
+  String get scaleRight;
+
+  /// Balance scale: both sides weigh the same.
+  ///
+  /// In en, this message translates to:
+  /// **'Balanced'**
+  String get scaleBalanced;
+
+  /// Balance scale: the scale has tipped.
+  ///
+  /// In en, this message translates to:
+  /// **'Not balanced!'**
+  String get scaleTipped;
+
+  /// Balance scale: divide both sides into n equal groups and keep one.
+  ///
+  /// In en, this message translates to:
+  /// **'Share into {n} groups'**
+  String scaleShare(int n);
+
+  /// Atom balancer: atoms on the left side.
+  ///
+  /// In en, this message translates to:
+  /// **'Left'**
+  String get atomsLeft;
+
+  /// Atom balancer: atoms on the right side.
+  ///
+  /// In en, this message translates to:
+  /// **'Right'**
+  String get atomsRight;
+
+  /// Atom balancer: equation is balanced.
+  ///
+  /// In en, this message translates to:
+  /// **'Every element is balanced!'**
+  String get atomsBalanced;
+
+  /// Number line: the marked value.
+  ///
+  /// In en, this message translates to:
+  /// **'Your number: {value}'**
+  String numberLineValue(String value);
+
+  /// Graph plotter: how to move the points.
+  ///
+  /// In en, this message translates to:
+  /// **'Drag a point, or pick A or B and use the arrows.'**
+  String get graphHint;
+
+  /// A video failed to load; the summary follows.
+  ///
+  /// In en, this message translates to:
+  /// **'The video can\'t play right now. Here is what it shows:'**
+  String get videoCouldNotPlay;
+
+  /// Video play button.
+  ///
+  /// In en, this message translates to:
+  /// **'Play'**
+  String get videoPlay;
+
+  /// Video pause button.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get videoPause;
+
+  /// Video replay button.
+  ///
+  /// In en, this message translates to:
+  /// **'Watch again'**
+  String get videoReplay;
+
+  /// Toggle captions on a video.
+  ///
+  /// In en, this message translates to:
+  /// **'Captions'**
+  String get videoCaptions;
+
+  /// Settings switch that turns off most animations.
+  ///
+  /// In en, this message translates to:
+  /// **'Less movement'**
+  String get lessMotion;
+
+  /// Explains the Less movement setting.
+  ///
+  /// In en, this message translates to:
+  /// **'Fewer animations. Some children focus better, and it saves battery.'**
+  String get lessMotionHint;
+
+  /// Celebration after the last step of a lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Lesson finished! Well done.'**
+  String get lessonFinished;
+
+  /// Celebration when a skill reaches a new mastery level.
+  ///
+  /// In en, this message translates to:
+  /// **'{topic}: {level}!'**
+  String levelUp(String topic, String level);
+
+  /// Developer screen listing every simulation.
+  ///
+  /// In en, this message translates to:
+  /// **'Simulations (developer)'**
+  String get simGalleryTitle;
 }
 
 class _AppLocalizationsDelegate

@@ -1,5 +1,7 @@
 import 'package:ai_tutor/checkers/linear_equation_checker.dart';
+import 'package:ai_tutor/lessons/steps/sim_step_view.dart';
 import 'package:ai_tutor/models/lesson_step.dart';
+import 'package:ai_tutor/sims/sim_host.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -36,6 +38,27 @@ Future<void> tapKey(WidgetTester tester, String key) async {
   await tester.pumpAndSettle();
   await tester.tap(finder);
   await tester.pumpAndSettle();
+}
+
+/// The right result for a sim step, as the simulation would report it.
+Object rightSimAnswer(SimStep step) {
+  final e = step.expected!;
+  return e.checker == 'numeric' ? num.parse(e.answer) : e.answer;
+}
+
+/// A wrong result: a known common mistake if the step has one.
+Object wrongSimAnswer(SimStep step) {
+  final e = step.expected!;
+  if (step.commonWrong.isNotEmpty) {
+    final w = step.commonWrong.first.answer;
+    return e.checker == 'numeric' ? num.parse(w) : w;
+  }
+  return switch (e.checker) {
+    'numeric' => num.parse(e.answer) + 1,
+    'chem_equation' => 'N2 + H2 -> NH3',
+    'fraction' => '999/1000',
+    _ => 'zzz',
+  };
 }
 
 /// Answers [step]: with [tryWrongFirst], a wrong answer first (to check
@@ -92,6 +115,24 @@ Future<void> answerStep(
       await tester.enterText(input, rightAnswer(step));
       await tapKey(tester, 'step-check');
       expect(find.byKey(const Key('feedback-good')), findsOneWidget);
+    case SimStep(:final expected?):
+      // Widget tests have no WebView, so report results straight to the
+      // step, as the simulation would.
+      final sim = tester.state<SimStepViewState>(find.byType(SimStepView));
+      if (tryWrongFirst) {
+        sim.onSimEvent(
+          SimEvent('result', {expected.result: wrongSimAnswer(step)}),
+        );
+        await tester.pumpAndSettle();
+        expect(find.byKey(const Key('feedback-try')), findsOneWidget);
+      }
+      sim.onSimEvent(
+        SimEvent('result', {expected.result: rightSimAnswer(step)}),
+      );
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('feedback-good')), findsOneWidget);
+    case SimStep() || VideoStep() || LottieStep():
+      break;
     case ExplainStep() || SummaryStep() || UnsupportedStep():
       break;
   }

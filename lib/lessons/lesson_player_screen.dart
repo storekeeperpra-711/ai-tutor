@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../features/common/celebration.dart';
 import '../features/common/language_toggle.dart';
 import '../features/common/sync_status.dart';
+import '../features/plan/mastery_level.dart';
+import '../media/media_cache.dart';
 import '../l10n/app_localizations.dart';
 import '../mastery/skill_state.dart';
 import '../mastery/stuck.dart';
@@ -108,6 +111,24 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     unawaited(ref.read(syncServiceProvider).sync());
   }
 
+  var _prefetched = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Start downloading the lesson's linked videos now, so they are
+    // ready by the time the child reaches them.
+    if (!_prefetched) {
+      _prefetched = true;
+      ref
+          .read(mediaCacheProvider)
+          .prefetch(
+            widget.lesson,
+            Localizations.localeOf(context).languageCode,
+          );
+    }
+  }
+
   /// Alternative explanations already shown in this visit.
   final _shownAlternatives = <String>{};
 
@@ -122,13 +143,20 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
       final step = widget.lesson.steps[_index];
       await _save(_index, result);
       _results.add(result);
-      final state = await _recordMastery(step, result);
+      final change = await _recordMastery(step, result);
       if (!mounted) return;
-      if (state != null && result.correct == false) {
-        final keepGoing = await _helpWhenStuck(step, state);
+      if (change != null && result.correct == false) {
+        final keepGoing = await _helpWhenStuck(step, change.state);
         if (!keepGoing || !mounted) return;
       }
-      if (_index < widget.lesson.steps.length - 1) {
+      final last = _index == widget.lesson.steps.length - 1;
+      if (last) {
+        celebrate(context, AppLocalizations.of(context).lessonFinished);
+      } else if (change != null && change.levelledUp) {
+        await _celebrateLevel(change);
+      }
+      if (!mounted) return;
+      if (!last) {
         setState(() => _index++);
       } else {
         await Navigator.of(context).maybePop(_results);
@@ -138,8 +166,22 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     }
   }
 
+  Future<void> _celebrateLevel(SkillChange change) async {
+    final curriculum = await ref.read(curriculumProvider.future);
+    if (!mounted) return;
+    final l10n = AppLocalizations.of(context);
+    final skill = change.state.skill;
+    celebrate(
+      context,
+      l10n.levelUp(
+        curriculum.titleOf(skill)?.of(context) ?? skill,
+        levelName(l10n, change.after),
+      ),
+    );
+  }
+
   /// Feeds the answer to the mastery engine (learners only).
-  Future<SkillState?> _recordMastery(LessonStep step, StepResult result) {
+  Future<SkillChange?> _recordMastery(LessonStep step, StepResult result) {
     final student = widget.student;
     if (student == null) return Future.value();
     return ref

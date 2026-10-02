@@ -191,3 +191,64 @@ String _squash(String text) =>
 /// The exact fraction for a lesson's number (e.g. 0.75 -> 3/4).
 Rational _rationalOf(double value) =>
     parseRational(value.toString()) ?? Rational.zero;
+
+/// Checks a simulation's result against the `sim` step's `expected`,
+/// with the same checkers (and feedback) as typed answers.
+AnswerCheck checkSimResult(
+  SimStep step,
+  Map<String, dynamic> data,
+  AppLocalizations l10n,
+  String languageCode,
+) {
+  final expected = step.expected!;
+  final value = data[expected.result];
+  if (value == null) return AnswerCheck.unreadable(l10n.simNoResult);
+  final input = switch (value) {
+    final num n when n == n.roundToDouble() => n.toInt().toString(),
+    _ => value.toString(),
+  };
+
+  if (expected.checker == 'numeric') {
+    return checkNumberStep(
+      NumberStep(
+        id: step.id,
+        type: 'number',
+        prompt: step.prompt,
+        answer: double.parse(expected.answer),
+        checker: 'numeric',
+        tolerance: expected.tolerance,
+        hint: step.hint!,
+        feedbackCorrect: step.feedbackCorrect!,
+        feedbackWrong: step.feedbackWrong!,
+        commonWrong: [
+          for (final w in step.commonWrong)
+            if (double.tryParse(w.answer) case final a?)
+              CommonWrong(
+                answer: a,
+                feedback: w.feedback,
+                misconceptionId: w.misconceptionId,
+              ),
+        ],
+      ),
+      input,
+      l10n,
+      languageCode,
+    );
+  }
+  return checkTextStep(
+    TextCheckStep(
+      id: step.id,
+      type: 'text_check',
+      prompt: step.prompt,
+      checker: expected.checker,
+      expected: expected.answer,
+      hint: step.hint!,
+      feedbackCorrect: step.feedbackCorrect!,
+      feedbackWrong: step.feedbackWrong!,
+      commonWrong: step.commonWrong,
+    ),
+    input,
+    l10n,
+    languageCode,
+  );
+}

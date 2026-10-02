@@ -47,7 +47,7 @@ class MasteryService {
 
   /// Records a finished lesson step. Returns the new skill state, or null
   /// if the step isn't mastery evidence.
-  Future<SkillState?> recordStep(
+  Future<SkillChange?> recordStep(
     String studentId,
     Lesson lesson,
     LessonStep step,
@@ -59,7 +59,7 @@ class MasteryService {
   }
 
   /// Records a question from the daily plan.
-  Future<SkillState?> recordQuestion(
+  Future<SkillChange?> recordQuestion(
     String studentId,
     PlanQuestion q,
     StepResult result, {
@@ -80,20 +80,40 @@ class MasteryService {
     return e == null ? null : _record(studentId, e);
   }
 
-  Future<SkillState> _record(String studentId, Evidence e) async {
+  Future<SkillChange> _record(String studentId, Evidence e) async {
     final curriculum = await ref.read(curriculumProvider.future);
     final criteria = curriculum.criteriaFor(e.skill);
-    final state = await ref
-        .read(localDbProvider)
-        .updateSkillState(
-          studentId,
-          e.skill,
-          (s) => s.record(e, criteria),
-          now: e.at,
-        );
+    late SkillState before;
+    final after = await ref.read(localDbProvider).updateSkillState(
+      studentId,
+      e.skill,
+      (s) {
+        before = s;
+        return s.record(e, criteria);
+      },
+      now: e.at,
+    );
     unawaited(ref.read(syncServiceProvider).sync());
-    return state;
+    return SkillChange(
+      after,
+      before: before.level(criteria),
+      after: after.level(criteria),
+    );
   }
+}
+
+/// A skill's state after an answer, and its level before and after.
+class SkillChange {
+  const SkillChange(this.state, {required this.before, required this.after});
+
+  final SkillState state;
+  final MasteryLevel before;
+  final MasteryLevel after;
+
+  /// Reached Practising or above for the first time (worth celebrating).
+  bool get levelledUp =>
+      after.index > before.index &&
+      after.index >= MasteryLevel.practising.index;
 }
 
 final masteryServiceProvider = Provider<MasteryService>(MasteryService.new);

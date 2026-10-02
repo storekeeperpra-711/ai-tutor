@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../l10n/app_localizations.dart';
 import '../services/sync_service.dart';
 import 'locale_controller.dart';
+import 'motion.dart';
 import 'router.dart';
 import 'theme/age_tier.dart';
 import 'theme/app_theme.dart';
@@ -30,14 +31,18 @@ class AiTutorApp extends ConsumerWidget {
       theme: buildTheme(tier, locale),
       locale: locale,
       supportedLocales: supportedLocales,
-      // A "DEV" ribbon so the test version is never mistaken for the real one.
-      builder: appFlavor == 'dev'
-          ? (context, child) => Banner(
-              message: 'DEV',
-              location: BannerLocation.topStart,
-              child: child!,
-            )
-          : null,
+      builder: (context, child) {
+        final app = MotionScope(child: child!);
+        // A "DEV" ribbon so the test version is never mistaken for the
+        // real one.
+        return appFlavor == 'dev'
+            ? Banner(
+                message: 'DEV',
+                location: BannerLocation.topStart,
+                child: app,
+              )
+            : app;
+      },
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         AppLocalizations.delegate,
