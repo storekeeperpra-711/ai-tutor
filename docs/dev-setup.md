@@ -7,10 +7,19 @@
 3. In this folder:
    ```sh
    flutter pub get
-   flutter run
+   flutter run --flavor dev
    ```
 
-No Flutter on the computer? Every push to `main` builds a debug APK in GitHub Actions: open the latest **CI** run → **Artifacts** → `ai-tutor-debug-apk`, download it to the phone and install it (allow "install unknown apps").
+### Two versions: dev and prod
+
+| Flavor | Firebase project | Package | Use |
+|---|---|---|---|
+| `dev` | ai-tutor-dev | `pk.aitutor.app.dev` | Everyday testing; shows a red "DEV" ribbon |
+| `prod` | ai-tutor | `pk.aitutor.app` | The real app for students |
+
+Always pass `--flavor dev` or `--flavor prod` to `flutter run` and `flutter build`. Both can be installed on the same phone. Each flavor's Firebase config file is `android/app/src/<flavor>/google-services.json` (downloaded from the Firebase console; it identifies the project and is not a secret).
+
+No Flutter on the computer? Every push to `main` builds both debug APKs in GitHub Actions: open the latest **CI** run → **Artifacts** → `ai-tutor-debug-apks`, unzip, copy `app-dev-debug.apk` to the phone and install it (allow "install unknown apps").
 
 ## Checks (the same ones CI runs)
 
