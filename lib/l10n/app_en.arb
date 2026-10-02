@@ -443,5 +443,172 @@
   "removeButton": "Remove",
   "@removeButton": {
     "description": "Button."
+  },
+  "todaysPlan": "Today's plan",
+  "@todaysPlan": {
+    "description": "Heading of the daily plan card."
+  },
+  "planMinutes": "About {minutes} minutes",
+  "@planMinutes": {
+    "description": "How long today's plan takes.",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "planReview": "Review: {title}",
+  "@planReview": {
+    "description": "Plan item: a spaced review question.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planPractice": "Practice: {title}",
+  "@planPractice": {
+    "description": "Plan item: practice on the current skill.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planMixed": "A mixed question",
+  "@planMixed": {
+    "description": "Plan item: one question from another topic."
+  },
+  "planExplain": "Explain it or find the mistake",
+  "@planExplain": {
+    "description": "Plan item: an explain or find-the-error question."
+  },
+  "planLesson": "Lesson: {title}",
+  "@planLesson": {
+    "description": "Plan item: a lesson to start or continue.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planHomeTask": "A task to do at home",
+  "@planHomeTask": {
+    "description": "Plan item: a real-world task away from the phone."
+  },
+  "planFlashcards": "Flashcards: {title}",
+  "@planFlashcards": {
+    "description": "Plan item: flashcards for a topic already understood.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "startPractice": "Start practice",
+  "@startPractice": {
+    "description": "Button that starts the plan's questions."
+  },
+  "planAllDone": "All done for today. Well done!",
+  "@planAllDone": {
+    "description": "Shown when every plan item is done."
+  },
+  "markDone": "Done",
+  "@markDone": {
+    "description": "Button that marks a home task or flashcards as done."
+  },
+  "flashcardsTitle": "Flashcards",
+  "@flashcardsTitle": {
+    "description": "Flashcards screen title."
+  },
+  "flashcardTapToTurn": "Tap the card to turn it over.",
+  "@flashcardTapToTurn": {
+    "description": "Help text on the flashcards screen."
+  },
+  "nextCard": "Next card",
+  "@nextCard": {
+    "description": "Button on the flashcards screen."
+  },
+  "homeTaskTitle": "Home task",
+  "@homeTaskTitle": {
+    "description": "Title of the home task dialog."
+  },
+  "practiceTitle": "Practice",
+  "@practiceTitle": {
+    "description": "Practice screen title."
+  },
+  "practiceDone": "Well done! {right} of {total} right the first time.",
+  "@practiceDone": {
+    "description": "Shown after a practice session.",
+    "placeholders": {
+      "right": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "levelNotStarted": "Not started",
+  "@levelNotStarted": {
+    "description": "Mastery level."
+  },
+  "levelLearning": "Learning",
+  "@levelLearning": {
+    "description": "Mastery level."
+  },
+  "levelPractising": "Practising",
+  "@levelPractising": {
+    "description": "Mastery level."
+  },
+  "levelMastered": "Mastered",
+  "@levelMastered": {
+    "description": "Mastery level."
+  },
+  "levelSecure": "Secure",
+  "@levelSecure": {
+    "description": "Mastery level: still remembered weeks later."
+  },
+  "tryAnotherWay": "Let's try it another way.",
+  "@tryAnotherWay": {
+    "description": "Title when an alternative explanation is shown to a stuck student."
+  },
+  "stuckPrerequisite": "Let's look at an earlier idea first: {title}",
+  "@stuckPrerequisite": {
+    "description": "Offer to go back to a prerequisite lesson.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "openLesson": "Open that lesson",
+  "@openLesson": {
+    "description": "Button to open the prerequisite lesson."
+  },
+  "keepGoing": "Keep going",
+  "@keepGoing": {
+    "description": "Button to continue the current lesson."
+  },
+  "stuckBreak": "This one is tricky. A short break can help. Your work is saved.",
+  "@stuckBreak": {
+    "description": "Suggests a break after repeated mistakes."
+  },
+  "stuckHelp": "This one is tricky. Ask a parent or teacher to look at it with you. Your work is saved.",
+  "@stuckHelp": {
+    "description": "Suggests asking an adult after many mistakes."
+  },
+  "takeBreak": "Take a break",
+  "@takeBreak": {
+    "description": "Button that leaves the lesson for a break."
+  },
+  "needsHelpWith": "Needs help with: {topics}",
+  "@needsHelpWith": {
+    "description": "On the account screen, under a learner who is stuck.",
+    "placeholders": {
+      "topics": {
+        "type": "String"
+      }
+    }
   }
 }

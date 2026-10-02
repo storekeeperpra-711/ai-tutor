@@ -93,6 +93,7 @@ class _AnswerStepViewState extends State<AnswerStepView> {
     StepResult(
       stepId: widget.stepId,
       correct: _phase == _Phase.correct && _attempts == 1,
+      solved: _phase == _Phase.correct,
       attempts: _attempts,
       misconceptionIds: _misconceptions,
     ),

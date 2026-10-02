@@ -1,3 +1,4 @@
+import 'package:ai_tutor/mastery/skill_state.dart';
 import 'package:ai_tutor/services/remote_store.dart';
 import 'package:ai_tutor/services/sync_service.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -142,5 +143,39 @@ void main() {
     expect((await newPhone.db.student('ayesha'))!.firstName, 'Ayesha');
     expect((await newPhone.db.progress('ayesha', 'lesson-a'))!.nextStep, 2);
     expect(await newPhone.db.pendingCount(), 0);
+  });
+
+  test('skill states sync, and come back on a new phone', () async {
+    final at = DateTime(2026, 10, 5, 17);
+    await backend.db.updateSkillState(
+      'ayesha',
+      'maths.fractions.divide_by_fraction',
+      (s) => s.record(
+        Evidence(
+          skill: s.skill,
+          itemId: 'lesson-a/s0',
+          at: at,
+          firstTry: true,
+          solved: true,
+          questionType: 'recall',
+        ),
+        null,
+      ),
+      now: at,
+    );
+    expect(await backend.db.unsyncedSkillStates(), hasLength(1));
+    await sync.sync();
+    expect(await backend.db.unsyncedSkillStates(), isEmpty);
+    final doc = backend
+        .remote
+        .docs['accounts/${uidNow()}/students/ayesha/skills/maths.fractions.divide_by_fraction']!;
+    expect(doc['first_try_correct'], 1);
+
+    final newPhone = FakeBackend();
+    addTearDown(newPhone.db.close);
+    await newPhone.db.mergeRemote(await backend.remote.fetchAll(uidNow()));
+    final states = await newPhone.db.skillStatesOf('ayesha');
+    expect(states['maths.fractions.divide_by_fraction']!.firstTryCorrect, 1);
+    expect(await newPhone.db.unsyncedSkillStates(), isEmpty);
   });
 }

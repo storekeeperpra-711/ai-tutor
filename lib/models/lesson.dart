@@ -56,11 +56,78 @@ class Lesson {
   final List<HomeTask> homeTasks;
   final List<String> teacherNotes;
 
-  // Kept as raw JSON until the mastery engine needs them (Phase 4).
-  final Map<String, dynamic> masteryCriteria;
-  final Map<String, dynamic> questionBank;
-  final List<dynamic> alternatives;
-  final List<dynamic> reviewQuestions;
+  /// Per skill: what a student must show to reach Mastered.
+  final Map<String, MasteryCriteria> masteryCriteria;
+
+  /// Per skill: practice questions, tagged by type.
+  final Map<String, List<Question>> questionBank;
+
+  /// Other explanations for when a student is stuck.
+  final List<Alternative> alternatives;
+
+  /// Questions for spaced review.
+  final List<Question> reviewQuestions;
+
+  /// The skill a step or question tests when it doesn't name one.
+  String get mainSkill => skills.first;
+}
+
+@JsonSerializable()
+class MasteryCriteria {
+  const MasteryCriteria({required this.questionTypes, required this.days});
+
+  factory MasteryCriteria.fromJson(Map<String, dynamic> json) =>
+      _$MasteryCriteriaFromJson(json);
+
+  /// recall, explain, apply, find_error, exam_style.
+  final List<String> questionTypes;
+
+  /// Correct answers needed on this many different days.
+  final int days;
+}
+
+/// A question outside the lesson's main steps (question bank, review).
+@JsonSerializable()
+class Question {
+  const Question({
+    required this.id,
+    required this.type,
+    required this.step,
+    this.skill,
+  });
+
+  factory Question.fromJson(Map<String, dynamic> json) =>
+      _$QuestionFromJson(json);
+
+  final String id;
+
+  /// recall, explain, apply, find_error or exam_style.
+  final String type;
+  final String? skill;
+  final LessonStep step;
+}
+
+@JsonSerializable()
+class Alternative {
+  const Alternative({
+    required this.id,
+    required this.description,
+    required this.steps,
+    this.forStep,
+  });
+
+  factory Alternative.fromJson(Map<String, dynamic> json) =>
+      _$AlternativeFromJson(json);
+
+  final String id;
+
+  /// The step this explains another way.
+  final String? forStep;
+
+  /// For teachers.
+  final String description;
+  @JsonKey(fromJson: _stepsFromJson)
+  final List<LessonStep> steps;
 }
 
 List<LessonStep> _stepsFromJson(List<dynamic> json) => json

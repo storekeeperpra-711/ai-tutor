@@ -27,6 +27,18 @@ sealed class LessonStep {
   final String type;
 }
 
+/// A step that asks a question. With a [questionType], its answers count
+/// as mastery evidence (Phase 4).
+abstract interface class QuestionStep {
+  String get id;
+
+  /// recall, explain, apply, find_error or exam_style; null = practice only.
+  String? get questionType;
+
+  /// The skill tested; null = the lesson's first skill.
+  String? get skill;
+}
+
 /// What Mithu says (and how Mithu looks) at a step.
 @JsonSerializable()
 class CharacterLine {
@@ -61,10 +73,12 @@ class ExplainStep extends LessonStep {
 }
 
 @JsonSerializable()
-class ChoiceStep extends LessonStep {
+class ChoiceStep extends LessonStep implements QuestionStep {
   const ChoiceStep({
     required super.id,
     required super.type,
+    this.questionType,
+    this.skill,
     required this.prompt,
     required this.options,
     this.character,
@@ -72,6 +86,11 @@ class ChoiceStep extends LessonStep {
 
   factory ChoiceStep.fromJson(Map<String, dynamic> json) =>
       _$ChoiceStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
 
   final LocalizedText prompt;
   final List<ChoiceOption> options;
@@ -101,10 +120,12 @@ class ChoiceOption {
 }
 
 @JsonSerializable()
-class NumberStep extends LessonStep {
+class NumberStep extends LessonStep implements QuestionStep {
   const NumberStep({
     required super.id,
     required super.type,
+    this.questionType,
+    this.skill,
     required this.prompt,
     required this.answer,
     required this.checker,
@@ -121,6 +142,11 @@ class NumberStep extends LessonStep {
 
   factory NumberStep.fromJson(Map<String, dynamic> json) =>
       _$NumberStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
 
   final LocalizedText prompt;
   final double answer;
@@ -164,10 +190,12 @@ class CommonWrong {
 /// The student types text (or several lines of working) and a checker
 /// decides: `fraction`, `chem_equation`, `linear_equation` or `text`.
 @JsonSerializable()
-class TextCheckStep extends LessonStep {
+class TextCheckStep extends LessonStep implements QuestionStep {
   const TextCheckStep({
     required super.id,
     required super.type,
+    this.questionType,
+    this.skill,
     required this.prompt,
     required this.checker,
     required this.expected,
@@ -185,6 +213,11 @@ class TextCheckStep extends LessonStep {
 
   factory TextCheckStep.fromJson(Map<String, dynamic> json) =>
       _$TextCheckStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
 
   final LocalizedText prompt;
   final String checker;

@@ -1486,6 +1486,373 @@ class StepResultsCompanion extends UpdateCompanion<StepResultRow> {
   }
 }
 
+class $SkillStatesTable extends SkillStates
+    with TableInfo<$SkillStatesTable, SkillStateRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SkillStatesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _studentIdMeta = const VerificationMeta(
+    'studentId',
+  );
+  @override
+  late final GeneratedColumn<String> studentId = GeneratedColumn<String>(
+    'student_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES students (id)',
+    ),
+  );
+  static const VerificationMeta _skillMeta = const VerificationMeta('skill');
+  @override
+  late final GeneratedColumn<String> skill = GeneratedColumn<String>(
+    'skill',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _dataMeta = const VerificationMeta('data');
+  @override
+  late final GeneratedColumn<String> data = GeneratedColumn<String>(
+    'data',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _syncedMeta = const VerificationMeta('synced');
+  @override
+  late final GeneratedColumn<bool> synced = GeneratedColumn<bool>(
+    'synced',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("synced" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    studentId,
+    skill,
+    data,
+    updatedAt,
+    synced,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'skill_states';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SkillStateRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('student_id')) {
+      context.handle(
+        _studentIdMeta,
+        studentId.isAcceptableOrUnknown(data['student_id']!, _studentIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_studentIdMeta);
+    }
+    if (data.containsKey('skill')) {
+      context.handle(
+        _skillMeta,
+        skill.isAcceptableOrUnknown(data['skill']!, _skillMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_skillMeta);
+    }
+    if (data.containsKey('data')) {
+      context.handle(
+        _dataMeta,
+        this.data.isAcceptableOrUnknown(data['data']!, _dataMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_dataMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    if (data.containsKey('synced')) {
+      context.handle(
+        _syncedMeta,
+        synced.isAcceptableOrUnknown(data['synced']!, _syncedMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {studentId, skill};
+  @override
+  SkillStateRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SkillStateRow(
+      studentId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}student_id'],
+      )!,
+      skill: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}skill'],
+      )!,
+      data: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}data'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+      synced: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}synced'],
+      )!,
+    );
+  }
+
+  @override
+  $SkillStatesTable createAlias(String alias) {
+    return $SkillStatesTable(attachedDatabase, alias);
+  }
+}
+
+class SkillStateRow extends DataClass implements Insertable<SkillStateRow> {
+  final String studentId;
+  final String skill;
+
+  /// [SkillState] as JSON.
+  final String data;
+  final DateTime updatedAt;
+  final bool synced;
+  const SkillStateRow({
+    required this.studentId,
+    required this.skill,
+    required this.data,
+    required this.updatedAt,
+    required this.synced,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['student_id'] = Variable<String>(studentId);
+    map['skill'] = Variable<String>(skill);
+    map['data'] = Variable<String>(data);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    map['synced'] = Variable<bool>(synced);
+    return map;
+  }
+
+  SkillStatesCompanion toCompanion(bool nullToAbsent) {
+    return SkillStatesCompanion(
+      studentId: Value(studentId),
+      skill: Value(skill),
+      data: Value(data),
+      updatedAt: Value(updatedAt),
+      synced: Value(synced),
+    );
+  }
+
+  factory SkillStateRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SkillStateRow(
+      studentId: serializer.fromJson<String>(json['studentId']),
+      skill: serializer.fromJson<String>(json['skill']),
+      data: serializer.fromJson<String>(json['data']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      synced: serializer.fromJson<bool>(json['synced']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'studentId': serializer.toJson<String>(studentId),
+      'skill': serializer.toJson<String>(skill),
+      'data': serializer.toJson<String>(data),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'synced': serializer.toJson<bool>(synced),
+    };
+  }
+
+  SkillStateRow copyWith({
+    String? studentId,
+    String? skill,
+    String? data,
+    DateTime? updatedAt,
+    bool? synced,
+  }) => SkillStateRow(
+    studentId: studentId ?? this.studentId,
+    skill: skill ?? this.skill,
+    data: data ?? this.data,
+    updatedAt: updatedAt ?? this.updatedAt,
+    synced: synced ?? this.synced,
+  );
+  SkillStateRow copyWithCompanion(SkillStatesCompanion data) {
+    return SkillStateRow(
+      studentId: data.studentId.present ? data.studentId.value : this.studentId,
+      skill: data.skill.present ? data.skill.value : this.skill,
+      data: data.data.present ? data.data.value : this.data,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      synced: data.synced.present ? data.synced.value : this.synced,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SkillStateRow(')
+          ..write('studentId: $studentId, ')
+          ..write('skill: $skill, ')
+          ..write('data: $data, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('synced: $synced')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(studentId, skill, data, updatedAt, synced);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SkillStateRow &&
+          other.studentId == this.studentId &&
+          other.skill == this.skill &&
+          other.data == this.data &&
+          other.updatedAt == this.updatedAt &&
+          other.synced == this.synced);
+}
+
+class SkillStatesCompanion extends UpdateCompanion<SkillStateRow> {
+  final Value<String> studentId;
+  final Value<String> skill;
+  final Value<String> data;
+  final Value<DateTime> updatedAt;
+  final Value<bool> synced;
+  final Value<int> rowid;
+  const SkillStatesCompanion({
+    this.studentId = const Value.absent(),
+    this.skill = const Value.absent(),
+    this.data = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.synced = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SkillStatesCompanion.insert({
+    required String studentId,
+    required String skill,
+    required String data,
+    required DateTime updatedAt,
+    this.synced = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : studentId = Value(studentId),
+       skill = Value(skill),
+       data = Value(data),
+       updatedAt = Value(updatedAt);
+  static Insertable<SkillStateRow> custom({
+    Expression<String>? studentId,
+    Expression<String>? skill,
+    Expression<String>? data,
+    Expression<DateTime>? updatedAt,
+    Expression<bool>? synced,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (studentId != null) 'student_id': studentId,
+      if (skill != null) 'skill': skill,
+      if (data != null) 'data': data,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (synced != null) 'synced': synced,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SkillStatesCompanion copyWith({
+    Value<String>? studentId,
+    Value<String>? skill,
+    Value<String>? data,
+    Value<DateTime>? updatedAt,
+    Value<bool>? synced,
+    Value<int>? rowid,
+  }) {
+    return SkillStatesCompanion(
+      studentId: studentId ?? this.studentId,
+      skill: skill ?? this.skill,
+      data: data ?? this.data,
+      updatedAt: updatedAt ?? this.updatedAt,
+      synced: synced ?? this.synced,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (studentId.present) {
+      map['student_id'] = Variable<String>(studentId.value);
+    }
+    if (skill.present) {
+      map['skill'] = Variable<String>(skill.value);
+    }
+    if (data.present) {
+      map['data'] = Variable<String>(data.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (synced.present) {
+      map['synced'] = Variable<bool>(synced.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SkillStatesCompanion(')
+          ..write('studentId: $studentId, ')
+          ..write('skill: $skill, ')
+          ..write('data: $data, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('synced: $synced, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$LocalDb extends GeneratedDatabase {
   _$LocalDb(QueryExecutor e) : super(e);
   $LocalDbManager get managers => $LocalDbManager(this);
@@ -1493,6 +1860,7 @@ abstract class _$LocalDb extends GeneratedDatabase {
   late final $LessonProgressTableTable lessonProgressTable =
       $LessonProgressTableTable(this);
   late final $StepResultsTable stepResults = $StepResultsTable(this);
+  late final $SkillStatesTable skillStates = $SkillStatesTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1501,6 +1869,7 @@ abstract class _$LocalDb extends GeneratedDatabase {
     students,
     lessonProgressTable,
     stepResults,
+    skillStates,
   ];
 }
 
@@ -1564,6 +1933,24 @@ final class $$StudentsTableReferences
     ).filter((f) => f.studentId.id.sqlEquals($_itemColumn<String>('id')!));
 
     final cache = $_typedResult.readTableOrNull(_stepResultsRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+
+  static MultiTypedResultKey<$SkillStatesTable, List<SkillStateRow>>
+  _skillStatesRefsTable(_$LocalDb db) => MultiTypedResultKey.fromTable(
+    db.skillStates,
+    aliasName: 'students__id__skill_states__student_id',
+  );
+
+  $$SkillStatesTableProcessedTableManager get skillStatesRefs {
+    final manager = $$SkillStatesTableTableManager(
+      $_db,
+      $_db.skillStates,
+    ).filter((f) => f.studentId.id.sqlEquals($_itemColumn<String>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(_skillStatesRefsTable($_db));
     return ProcessedTableManager(
       manager.$state.copyWith(prefetchedData: cache),
     );
@@ -1660,6 +2047,31 @@ class $$StudentsTableFilterComposer
           }) => $$StepResultsTableFilterComposer(
             $db: $db,
             $table: $db.stepResults,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+
+  Expression<bool> skillStatesRefs(
+    Expression<bool> Function($$SkillStatesTableFilterComposer f) f,
+  ) {
+    final $$SkillStatesTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.skillStates,
+      getReferencedColumn: (t) => t.studentId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$SkillStatesTableFilterComposer(
+            $db: $db,
+            $table: $db.skillStates,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
             $removeJoinBuilderFromRootComposer:
@@ -1803,6 +2215,31 @@ class $$StudentsTableAnnotationComposer
     );
     return f(composer);
   }
+
+  Expression<T> skillStatesRefs<T extends Object>(
+    Expression<T> Function($$SkillStatesTableAnnotationComposer a) f,
+  ) {
+    final $$SkillStatesTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.skillStates,
+      getReferencedColumn: (t) => t.studentId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$SkillStatesTableAnnotationComposer(
+            $db: $db,
+            $table: $db.skillStates,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
 class $$StudentsTableTableManager
@@ -1821,6 +2258,7 @@ class $$StudentsTableTableManager
           PrefetchHooks Function({
             bool lessonProgressTableRefs,
             bool stepResultsRefs,
+            bool skillStatesRefs,
           })
         > {
   $$StudentsTableTableManager(_$LocalDb db, $StudentsTable table)
@@ -1887,12 +2325,17 @@ class $$StudentsTableTableManager
               )
               .toList(),
           prefetchHooksCallback:
-              ({lessonProgressTableRefs = false, stepResultsRefs = false}) {
+              ({
+                lessonProgressTableRefs = false,
+                stepResultsRefs = false,
+                skillStatesRefs = false,
+              }) {
                 return PrefetchHooks(
                   db: db,
                   explicitlyWatchedTables: [
                     if (lessonProgressTableRefs) db.lessonProgressTable,
                     if (stepResultsRefs) db.stepResults,
+                    if (skillStatesRefs) db.skillStates,
                   ],
                   addJoins: null,
                   getPrefetchedDataCallback: (items) async {
@@ -1939,6 +2382,27 @@ class $$StudentsTableTableManager
                               ),
                           typedResults: items,
                         ),
+                      if (skillStatesRefs)
+                        await $_getPrefetchedData<
+                          Student,
+                          $StudentsTable,
+                          SkillStateRow
+                        >(
+                          currentTable: table,
+                          referencedTable: $$StudentsTableReferences
+                              ._skillStatesRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$StudentsTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).skillStatesRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.studentId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
                     ];
                   },
                 );
@@ -1962,6 +2426,7 @@ typedef $$StudentsTableProcessedTableManager =
       PrefetchHooks Function({
         bool lessonProgressTableRefs,
         bool stepResultsRefs,
+        bool skillStatesRefs,
       })
     >;
 typedef $$LessonProgressTableTableCreateCompanionBuilder =
@@ -2689,6 +3154,321 @@ typedef $$StepResultsTableProcessedTableManager =
       StepResultRow,
       PrefetchHooks Function({bool studentId})
     >;
+typedef $$SkillStatesTableCreateCompanionBuilder =
+    SkillStatesCompanion Function({
+      required String studentId,
+      required String skill,
+      required String data,
+      required DateTime updatedAt,
+      Value<bool> synced,
+      Value<int> rowid,
+    });
+typedef $$SkillStatesTableUpdateCompanionBuilder =
+    SkillStatesCompanion Function({
+      Value<String> studentId,
+      Value<String> skill,
+      Value<String> data,
+      Value<DateTime> updatedAt,
+      Value<bool> synced,
+      Value<int> rowid,
+    });
+
+final class $$SkillStatesTableReferences
+    extends BaseReferences<_$LocalDb, $SkillStatesTable, SkillStateRow> {
+  $$SkillStatesTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static $StudentsTable _studentIdTable(_$LocalDb db) =>
+      db.students.createAlias('skill_states__student_id__students__id');
+
+  $$StudentsTableProcessedTableManager get studentId {
+    final $_column = $_itemColumn<String>('student_id')!;
+
+    final manager = $$StudentsTableTableManager(
+      $_db,
+      $_db.students,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_studentIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$SkillStatesTableFilterComposer
+    extends Composer<_$LocalDb, $SkillStatesTable> {
+  $$SkillStatesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get skill => $composableBuilder(
+    column: $table.skill,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get data => $composableBuilder(
+    column: $table.data,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get synced => $composableBuilder(
+    column: $table.synced,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$StudentsTableFilterComposer get studentId {
+    final $$StudentsTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.studentId,
+      referencedTable: $db.students,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$StudentsTableFilterComposer(
+            $db: $db,
+            $table: $db.students,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$SkillStatesTableOrderingComposer
+    extends Composer<_$LocalDb, $SkillStatesTable> {
+  $$SkillStatesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get skill => $composableBuilder(
+    column: $table.skill,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get data => $composableBuilder(
+    column: $table.data,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get synced => $composableBuilder(
+    column: $table.synced,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$StudentsTableOrderingComposer get studentId {
+    final $$StudentsTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.studentId,
+      referencedTable: $db.students,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$StudentsTableOrderingComposer(
+            $db: $db,
+            $table: $db.students,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$SkillStatesTableAnnotationComposer
+    extends Composer<_$LocalDb, $SkillStatesTable> {
+  $$SkillStatesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get skill =>
+      $composableBuilder(column: $table.skill, builder: (column) => column);
+
+  GeneratedColumn<String> get data =>
+      $composableBuilder(column: $table.data, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<bool> get synced =>
+      $composableBuilder(column: $table.synced, builder: (column) => column);
+
+  $$StudentsTableAnnotationComposer get studentId {
+    final $$StudentsTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.studentId,
+      referencedTable: $db.students,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$StudentsTableAnnotationComposer(
+            $db: $db,
+            $table: $db.students,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$SkillStatesTableTableManager
+    extends
+        RootTableManager<
+          _$LocalDb,
+          $SkillStatesTable,
+          SkillStateRow,
+          $$SkillStatesTableFilterComposer,
+          $$SkillStatesTableOrderingComposer,
+          $$SkillStatesTableAnnotationComposer,
+          $$SkillStatesTableCreateCompanionBuilder,
+          $$SkillStatesTableUpdateCompanionBuilder,
+          (SkillStateRow, $$SkillStatesTableReferences),
+          SkillStateRow,
+          PrefetchHooks Function({bool studentId})
+        > {
+  $$SkillStatesTableTableManager(_$LocalDb db, $SkillStatesTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SkillStatesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SkillStatesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SkillStatesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> studentId = const Value.absent(),
+                Value<String> skill = const Value.absent(),
+                Value<String> data = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<bool> synced = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SkillStatesCompanion(
+                studentId: studentId,
+                skill: skill,
+                data: data,
+                updatedAt: updatedAt,
+                synced: synced,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String studentId,
+                required String skill,
+                required String data,
+                required DateTime updatedAt,
+                Value<bool> synced = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SkillStatesCompanion.insert(
+                studentId: studentId,
+                skill: skill,
+                data: data,
+                updatedAt: updatedAt,
+                synced: synced,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$SkillStatesTable, SkillStateRow>(table),
+                  $$SkillStatesTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({studentId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (studentId) {
+                      state = state.withJoin(
+                        currentTable: table,
+                        currentColumn: table.studentId,
+                        referencedTable: $$SkillStatesTableReferences
+                            ._studentIdTable(db),
+                        referencedColumn: $$SkillStatesTableReferences
+                            ._studentIdTable(db)
+                            .id,
+                      ) as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$SkillStatesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$LocalDb,
+      $SkillStatesTable,
+      SkillStateRow,
+      $$SkillStatesTableFilterComposer,
+      $$SkillStatesTableOrderingComposer,
+      $$SkillStatesTableAnnotationComposer,
+      $$SkillStatesTableCreateCompanionBuilder,
+      $$SkillStatesTableUpdateCompanionBuilder,
+      (SkillStateRow, $$SkillStatesTableReferences),
+      SkillStateRow,
+      PrefetchHooks Function({bool studentId})
+    >;
 
 class $LocalDbManager {
   final _$LocalDb _db;
@@ -2699,4 +3479,6 @@ class $LocalDbManager {
       $$LessonProgressTableTableTableManager(_db, _db.lessonProgressTable);
   $$StepResultsTableTableManager get stepResults =>
       $$StepResultsTableTableManager(_db, _db.stepResults);
+  $$SkillStatesTableTableManager get skillStates =>
+      $$SkillStatesTableTableManager(_db, _db.skillStates);
 }

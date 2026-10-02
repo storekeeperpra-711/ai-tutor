@@ -613,6 +613,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Remove'**
   String get removeButton;
+
+  /// Heading of the daily plan card.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s plan'**
+  String get todaysPlan;
+
+  /// How long today's plan takes.
+  ///
+  /// In en, this message translates to:
+  /// **'About {minutes} minutes'**
+  String planMinutes(int minutes);
+
+  /// Plan item: a spaced review question.
+  ///
+  /// In en, this message translates to:
+  /// **'Review: {title}'**
+  String planReview(String title);
+
+  /// Plan item: practice on the current skill.
+  ///
+  /// In en, this message translates to:
+  /// **'Practice: {title}'**
+  String planPractice(String title);
+
+  /// Plan item: one question from another topic.
+  ///
+  /// In en, this message translates to:
+  /// **'A mixed question'**
+  String get planMixed;
+
+  /// Plan item: an explain or find-the-error question.
+  ///
+  /// In en, this message translates to:
+  /// **'Explain it or find the mistake'**
+  String get planExplain;
+
+  /// Plan item: a lesson to start or continue.
+  ///
+  /// In en, this message translates to:
+  /// **'Lesson: {title}'**
+  String planLesson(String title);
+
+  /// Plan item: a real-world task away from the phone.
+  ///
+  /// In en, this message translates to:
+  /// **'A task to do at home'**
+  String get planHomeTask;
+
+  /// Plan item: flashcards for a topic already understood.
+  ///
+  /// In en, this message translates to:
+  /// **'Flashcards: {title}'**
+  String planFlashcards(String title);
+
+  /// Button that starts the plan's questions.
+  ///
+  /// In en, this message translates to:
+  /// **'Start practice'**
+  String get startPractice;
+
+  /// Shown when every plan item is done.
+  ///
+  /// In en, this message translates to:
+  /// **'All done for today. Well done!'**
+  String get planAllDone;
+
+  /// Button that marks a home task or flashcards as done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get markDone;
+
+  /// Flashcards screen title.
+  ///
+  /// In en, this message translates to:
+  /// **'Flashcards'**
+  String get flashcardsTitle;
+
+  /// Help text on the flashcards screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the card to turn it over.'**
+  String get flashcardTapToTurn;
+
+  /// Button on the flashcards screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Next card'**
+  String get nextCard;
+
+  /// Title of the home task dialog.
+  ///
+  /// In en, this message translates to:
+  /// **'Home task'**
+  String get homeTaskTitle;
+
+  /// Practice screen title.
+  ///
+  /// In en, this message translates to:
+  /// **'Practice'**
+  String get practiceTitle;
+
+  /// Shown after a practice session.
+  ///
+  /// In en, this message translates to:
+  /// **'Well done! {right} of {total} right the first time.'**
+  String practiceDone(int right, int total);
+
+  /// Mastery level.
+  ///
+  /// In en, this message translates to:
+  /// **'Not started'**
+  String get levelNotStarted;
+
+  /// Mastery level.
+  ///
+  /// In en, this message translates to:
+  /// **'Learning'**
+  String get levelLearning;
+
+  /// Mastery level.
+  ///
+  /// In en, this message translates to:
+  /// **'Practising'**
+  String get levelPractising;
+
+  /// Mastery level.
+  ///
+  /// In en, this message translates to:
+  /// **'Mastered'**
+  String get levelMastered;
+
+  /// Mastery level: still remembered weeks later.
+  ///
+  /// In en, this message translates to:
+  /// **'Secure'**
+  String get levelSecure;
+
+  /// Title when an alternative explanation is shown to a stuck student.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s try it another way.'**
+  String get tryAnotherWay;
+
+  /// Offer to go back to a prerequisite lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s look at an earlier idea first: {title}'**
+  String stuckPrerequisite(String title);
+
+  /// Button to open the prerequisite lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Open that lesson'**
+  String get openLesson;
+
+  /// Button to continue the current lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep going'**
+  String get keepGoing;
+
+  /// Suggests a break after repeated mistakes.
+  ///
+  /// In en, this message translates to:
+  /// **'This one is tricky. A short break can help. Your work is saved.'**
+  String get stuckBreak;
+
+  /// Suggests asking an adult after many mistakes.
+  ///
+  /// In en, this message translates to:
+  /// **'This one is tricky. Ask a parent or teacher to look at it with you. Your work is saved.'**
+  String get stuckHelp;
+
+  /// Button that leaves the lesson for a break.
+  ///
+  /// In en, this message translates to:
+  /// **'Take a break'**
+  String get takeBreak;
+
+  /// On the account screen, under a learner who is stuck.
+  ///
+  /// In en, this message translates to:
+  /// **'Needs help with: {topics}'**
+  String needsHelpWith(String topics);
 }
 
 class _AppLocalizationsDelegate

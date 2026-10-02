@@ -82,6 +82,15 @@ The app is local first. Each finished step is saved in the on-phone SQLite datab
 - Firebase, sign-in and the connection are behind small interfaces (`AuthService`, `RemoteStore`, `onlineProvider`), so widget tests use the in-memory fakes in `test/fakes.dart`. `FakeBackend.setOnline(false)` simulates losing the connection.
 - In widget tests, read the database with one-off queries (`db.pendingCount()`), not `stream.first`: a drift stream read inside the test's fake clock can hang the next `pump`.
 
+## Mastery, reviews and the daily plan (Phase 4)
+
+Each lesson question step can say which `skill` it tests (default: the lesson's first skill) and its `question_type` (recall, explain, apply, find_error, exam_style). Only tagged steps count as mastery evidence. The validator checks that every type in `mastery_criteria` has at least one question somewhere in the lesson (steps, alternatives, question bank or review questions); otherwise a child could never reach Mastered.
+
+- The engine is pure Dart in `lib/mastery/` (see its README). Levels, review gaps and the stuck ladder: [docs/plan/04-phase-4.md](plan/04-phase-4.md).
+- Skill states are stored in the `skill_states` table (database version 2) and synced to `accounts/{uid}/students/{id}/skills/{skillId}`. After changing `firestore.rules`, republish them in both Firebase projects.
+- Today's plan is built once per child per day and saved in shared preferences (`plan.{studentId}`), so it doesn't change while the child works through it.
+- To change the database, bump `schemaVersion` in `local_db.dart`, add a step to `onUpgrade`, and add a test like `a version 1 database gets the skill states table`.
+
 ## Where things are
 
 | Path | What |
@@ -90,7 +99,8 @@ The app is local first. Each finished step is saved in the on-phone SQLite datab
 | `lib/models/` | Lesson and step data classes (json_serializable) |
 | `lib/lessons/` | Lesson player, step registry (`step_registry.dart`), one widget per step type (`steps/`) |
 | `lib/checkers/` | Answer checkers (pure Dart) |
-| `lib/features/` | Screens: home and profiles, add learner, PIN pad, account, the developer lesson previewer |
+| `lib/mastery/` | Mastery engine: skills graph, levels, reviews, stuck advice, daily plan (pure Dart) |
+| `lib/features/` | Screens: home and profiles, add learner, PIN pad, account, today's plan, practice, flashcards, the developer lesson previewer |
 | `lib/services/` | On-phone database, sign-in, Firestore, sync, connection state |
 | `firestore.rules`, `tools/firestore-rules/` | Firestore security rules and their tests |
 | `content/lessons/`, `content/schema/` | Lesson files (bundled into the app) and their JSON Schema |

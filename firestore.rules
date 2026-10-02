@@ -28,6 +28,11 @@ service cloud.firestore {
         match /progress/{lessonId} {
           allow read, write: if isOwner(uid);
         }
+
+        // Mastery engine state per skill (Phase 4).
+        match /skills/{skillId} {
+          allow read, write: if isOwner(uid);
+        }
       }
     }
 

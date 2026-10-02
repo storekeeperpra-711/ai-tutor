@@ -7,8 +7,11 @@ import '../../l10n/app_localizations.dart';
 import '../../lessons/lesson_repository.dart';
 import '../../lessons/lesson_text.dart';
 import '../../services/local_db.dart';
+import '../../services/mastery_service.dart';
 import '../../services/profiles.dart';
 import '../common/sync_status.dart';
+import '../plan/mastery_level.dart';
+import '../plan/today_plan_card.dart';
 import '../profiles/avatar.dart';
 import '../profiles/pin_pad.dart';
 
@@ -166,6 +169,8 @@ class _StudentHome extends ConsumerWidget {
     final l10n = AppLocalizations.of(context);
     final ids = ref.watch(lessonIdsProvider).value ?? const <String>[];
     final progress = ref.watch(progressProvider(student.id)).value ?? const {};
+    final states = ref.watch(skillStatesProvider(student.id)).value ?? {};
+    final curriculum = ref.watch(curriculumProvider).value;
     final lessons = [
       for (final id in ids)
         if (ref.watch(lessonProvider(id)).value case final lesson?)
@@ -195,6 +200,8 @@ class _StudentHome extends ConsumerWidget {
           ],
         ),
         const SizedBox(height: 16),
+        TodayPlanCard(student: student),
+        const SizedBox(height: 16),
         Text(l10n.lessonsTitle, style: Theme.of(context).textTheme.titleLarge),
         if (lessons.isEmpty)
           Padding(
@@ -206,14 +213,24 @@ class _StudentHome extends ConsumerWidget {
             child: ListTile(
               key: Key('home-lesson-${lesson.id}'),
               title: LessonText(lesson.title),
-              subtitle: Text(switch (progress[lesson.id]) {
-                null => l10n.lessonStart,
-                LessonProgress(completed: true) => l10n.lessonDone,
-                final p => l10n.lessonContinue(
-                  p.nextStep + 1,
-                  lesson.steps.length,
-                ),
-              }, key: Key('home-lesson-status-${lesson.id}')),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(switch (progress[lesson.id]) {
+                    null => l10n.lessonStart,
+                    LessonProgress(completed: true) => l10n.lessonDone,
+                    final p => l10n.lessonContinue(
+                      p.nextStep + 1,
+                      lesson.steps.length,
+                    ),
+                  }, key: Key('home-lesson-status-${lesson.id}')),
+                  if (states[lesson.mainSkill] case final s?)
+                    MasteryDots(
+                      key: Key('mastery-${lesson.id}'),
+                      level: s.level(curriculum?.criteriaFor(lesson.mainSkill)),
+                    ),
+                ],
+              ),
               trailing: progress[lesson.id]?.completed == true
                   ? const Icon(Icons.check_circle, color: Colors.green)
                   : const Icon(Icons.play_circle_outline),

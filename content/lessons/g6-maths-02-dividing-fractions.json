@@ -194,6 +194,8 @@
     {
       "id": "s2_foundation",
       "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.fractions.unit_fraction_meaning",
       "prompt": {
         "en": "One roti is cut into 2 equal pieces. What is each piece called?",
         "ur": "ایک روٹی کو 2 برابر ٹکڑوں میں کاٹا گیا۔ ہر ٹکڑے کو کیا کہتے ہیں؟"
@@ -295,6 +297,7 @@
     {
       "id": "s5_quarters",
       "type": "number",
+      "question_type": "apply",
       "prompt": {
         "en": "Bilal has 2 rotis. Each child gets a quarter (1/4) of a roti. How many children can eat?",
         "ur": "بلال کے پاس 2 روٹیاں ہیں۔ ہر بچے کو چوتھائی (1/4) روٹی ملتی ہے۔ کتنے بچے کھا سکتے ہیں؟"
@@ -353,6 +356,7 @@
     {
       "id": "s7_find_error",
       "type": "choice",
+      "question_type": "find_error",
       "prompt": {
         "en": "Hamza says: 6 ÷ 1/3 = 2. What went wrong?",
         "ur": "حمزہ کہتا ہے: 6 ÷ 1/3 = 2۔ اس نے کیا غلطی کی؟"
@@ -400,6 +404,7 @@
     {
       "id": "s8_ribbon",
       "type": "number",
+      "question_type": "apply",
       "prompt": {
         "en": "Ayesha has a ribbon 6 metres long. She cuts it into pieces 2/3 of a metre long. How many pieces does she get?",
         "ur": "عائشہ کے پاس 6 میٹر لمبا فیتہ ہے۔ وہ اس کے 2/3 میٹر لمبے ٹکڑے کاٹتی ہے۔ اسے کتنے ٹکڑے ملیں گے؟"
@@ -506,5 +511,45 @@
     "status": "draft",
     "reviewed_by": null,
     "date": null
-  }
+  },
+  "alternatives": [
+    {
+      "id": "alt_count_quarters",
+      "for_step": "s5_quarters",
+      "description": "Count the pieces one roti at a time, then add, before using the rule.",
+      "steps": [
+        {
+          "id": "alt_one_roti",
+          "type": "explain",
+          "text": {
+            "en": "Let's go slowly. Cut one roti into quarters: that makes 4 pieces. A second roti makes 4 more pieces.",
+            "ur": "آہستہ آہستہ چلتے ہیں۔ ایک روٹی کو چوتھائیوں میں کاٹیں: 4 ٹکڑے بنتے ہیں۔ دوسری روٹی سے 4 ٹکڑے اور بنتے ہیں۔"
+          }
+        },
+        {
+          "id": "alt_count",
+          "type": "number",
+          "question_type": "apply",
+          "prompt": {
+            "en": "4 pieces from the first roti and 4 pieces from the second. How many pieces altogether?",
+            "ur": "پہلی روٹی سے 4 ٹکڑے اور دوسری سے 4 ٹکڑے۔ کل کتنے ٹکڑے ہیں؟"
+          },
+          "answer": 8,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add 4 and 4.",
+            "ur": "4 اور 4 جمع کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Yes! 8 pieces, so 8 children can eat. That is 2 ÷ 1/4 = 2 × 4 = 8.",
+            "ur": "جی ہاں! 8 ٹکڑے، یعنی 8 بچے کھا سکتے ہیں۔ یہی 2 ÷ 1/4 = 2 × 4 = 8 ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "4 + 4 = 8 pieces, so 8 children can eat: 2 ÷ 1/4 = 2 × 4 = 8.",
+            "ur": "4 + 4 = 8 ٹکڑے، یعنی 8 بچے کھا سکتے ہیں: 2 ÷ 1/4 = 2 × 4 = 8"
+          }
+        }
+      ]
+    }
+  ]
 }

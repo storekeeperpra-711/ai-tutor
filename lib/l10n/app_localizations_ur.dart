@@ -311,4 +311,115 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get removeButton => 'ہٹائیں';
+
+  @override
+  String get todaysPlan => 'آج کا منصوبہ';
+
+  @override
+  String planMinutes(int minutes) {
+    return 'تقریباً $minutes منٹ';
+  }
+
+  @override
+  String planReview(String title) {
+    return 'دہرائی: $title';
+  }
+
+  @override
+  String planPractice(String title) {
+    return 'مشق: $title';
+  }
+
+  @override
+  String get planMixed => 'ملا جلا سوال';
+
+  @override
+  String get planExplain => 'وضاحت کریں یا غلطی ڈھونڈیں';
+
+  @override
+  String planLesson(String title) {
+    return 'سبق: $title';
+  }
+
+  @override
+  String get planHomeTask => 'گھر پر کرنے کا کام';
+
+  @override
+  String planFlashcards(String title) {
+    return 'فلیش کارڈ: $title';
+  }
+
+  @override
+  String get startPractice => 'مشق شروع کریں';
+
+  @override
+  String get planAllDone => 'آج کا کام مکمل۔ شاباش!';
+
+  @override
+  String get markDone => 'ہو گیا';
+
+  @override
+  String get flashcardsTitle => 'فلیش کارڈ';
+
+  @override
+  String get flashcardTapToTurn => 'کارڈ پلٹنے کے لیے اس پر ٹیپ کریں۔';
+
+  @override
+  String get nextCard => 'اگلا کارڈ';
+
+  @override
+  String get homeTaskTitle => 'گھر کا کام';
+
+  @override
+  String get practiceTitle => 'مشق';
+
+  @override
+  String practiceDone(int right, int total) {
+    return 'شاباش! $total میں سے $right پہلی کوشش میں درست۔';
+  }
+
+  @override
+  String get levelNotStarted => 'شروع نہیں ہوا';
+
+  @override
+  String get levelLearning => 'سیکھ رہے ہیں';
+
+  @override
+  String get levelPractising => 'مشق جاری ہے';
+
+  @override
+  String get levelMastered => 'سیکھ لیا';
+
+  @override
+  String get levelSecure => 'پکا یاد ہے';
+
+  @override
+  String get tryAnotherWay => 'آئیے اسے دوسرے طریقے سے دیکھتے ہیں۔';
+
+  @override
+  String stuckPrerequisite(String title) {
+    return 'پہلے ایک پچھلا خیال دوبارہ دیکھتے ہیں: $title';
+  }
+
+  @override
+  String get openLesson => 'وہ سبق کھولیں';
+
+  @override
+  String get keepGoing => 'جاری رکھیں';
+
+  @override
+  String get stuckBreak =>
+      'یہ مشکل ہے۔ تھوڑا سا وقفہ مدد کر سکتا ہے۔ آپ کا کام محفوظ ہے۔';
+
+  @override
+  String get stuckHelp =>
+      'یہ مشکل ہے۔ والدین یا استاد سے کہیں کہ آپ کے ساتھ اسے دیکھیں۔ آپ کا کام محفوظ ہے۔';
+
+  @override
+  String get takeBreak => 'وقفہ لیں';
+
+  @override
+  String needsHelpWith(String topics) {
+    return 'ان میں مدد چاہیے: $topics';
+  }
 }

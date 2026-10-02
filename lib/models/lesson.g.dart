@@ -81,19 +81,43 @@ Lesson _$LessonFromJson(Map<String, dynamic> json) => $checkedCreate(
       ),
       masteryCriteria: $checkedConvert(
         'mastery_criteria',
-        (v) => v as Map<String, dynamic>? ?? const {},
+        (v) =>
+            (v as Map<String, dynamic>?)?.map(
+              (k, e) => MapEntry(
+                k,
+                MasteryCriteria.fromJson(e as Map<String, dynamic>),
+              ),
+            ) ??
+            const {},
       ),
       questionBank: $checkedConvert(
         'question_bank',
-        (v) => v as Map<String, dynamic>? ?? const {},
+        (v) =>
+            (v as Map<String, dynamic>?)?.map(
+              (k, e) => MapEntry(
+                k,
+                (e as List<dynamic>)
+                    .map((e) => Question.fromJson(e as Map<String, dynamic>))
+                    .toList(),
+              ),
+            ) ??
+            const {},
       ),
       alternatives: $checkedConvert(
         'alternatives',
-        (v) => v as List<dynamic>? ?? const [],
+        (v) =>
+            (v as List<dynamic>?)
+                ?.map((e) => Alternative.fromJson(e as Map<String, dynamic>))
+                .toList() ??
+            const [],
       ),
       reviewQuestions: $checkedConvert(
         'review_questions',
-        (v) => v as List<dynamic>? ?? const [],
+        (v) =>
+            (v as List<dynamic>?)
+                ?.map((e) => Question.fromJson(e as Map<String, dynamic>))
+                .toList() ??
+            const [],
       ),
     );
     return val;
@@ -108,6 +132,43 @@ Lesson _$LessonFromJson(Map<String, dynamic> json) => $checkedCreate(
     'reviewQuestions': 'review_questions',
   },
 );
+
+MasteryCriteria _$MasteryCriteriaFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('MasteryCriteria', json, ($checkedConvert) {
+      final val = MasteryCriteria(
+        questionTypes: $checkedConvert(
+          'question_types',
+          (v) => (v as List<dynamic>).map((e) => e as String).toList(),
+        ),
+        days: $checkedConvert('days', (v) => (v as num).toInt()),
+      );
+      return val;
+    }, fieldKeyMap: const {'questionTypes': 'question_types'});
+
+Question _$QuestionFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('Question', json, ($checkedConvert) {
+      final val = Question(
+        id: $checkedConvert('id', (v) => v as String),
+        type: $checkedConvert('type', (v) => v as String),
+        step: $checkedConvert(
+          'step',
+          (v) => LessonStep.fromJson(v as Map<String, dynamic>),
+        ),
+        skill: $checkedConvert('skill', (v) => v as String?),
+      );
+      return val;
+    });
+
+Alternative _$AlternativeFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('Alternative', json, ($checkedConvert) {
+      final val = Alternative(
+        id: $checkedConvert('id', (v) => v as String),
+        description: $checkedConvert('description', (v) => v as String),
+        steps: $checkedConvert('steps', (v) => _stepsFromJson(v as List)),
+        forStep: $checkedConvert('for_step', (v) => v as String?),
+      );
+      return val;
+    }, fieldKeyMap: const {'forStep': 'for_step'});
 
 CurriculumRef _$CurriculumRefFromJson(Map<String, dynamic> json) =>
     $checkedCreate('CurriculumRef', json, ($checkedConvert) {

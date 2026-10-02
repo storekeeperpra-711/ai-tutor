@@ -2,18 +2,24 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../features/common/language_toggle.dart';
 import '../features/common/sync_status.dart';
 import '../l10n/app_localizations.dart';
+import '../mastery/skill_state.dart';
+import '../mastery/stuck.dart';
 import '../models/lesson.dart';
+import '../models/lesson_step.dart';
 import '../services/local_db.dart';
+import '../services/mastery_service.dart';
 import '../services/profiles.dart';
 import '../services/sync_service.dart';
 import 'lesson_repository.dart';
 import 'lesson_text.dart';
 import 'step_registry.dart';
 import 'step_result.dart';
+import 'steps_screen.dart';
 
 /// Plays a lesson step by step. With a learner chosen, each finished step
 /// is saved and the lesson reopens where they stopped.
@@ -102,14 +108,116 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     unawaited(ref.read(syncServiceProvider).sync());
   }
 
-  void _onStepDone(StepResult result) {
-    unawaited(_save(_index, result));
-    _results.add(result);
-    if (_index < widget.lesson.steps.length - 1) {
-      setState(() => _index++);
-    } else {
-      Navigator.of(context).maybePop(_results);
+  /// Alternative explanations already shown in this visit.
+  final _shownAlternatives = <String>{};
+
+  /// Waits for the step to be saved and scored, then helps a stuck
+  /// student (spec B3) before moving on.
+  var _busy = false;
+
+  Future<void> _onStepDone(StepResult result) async {
+    if (_busy) return;
+    _busy = true;
+    try {
+      final step = widget.lesson.steps[_index];
+      await _save(_index, result);
+      _results.add(result);
+      final state = await _recordMastery(step, result);
+      if (!mounted) return;
+      if (state != null && result.correct == false) {
+        final keepGoing = await _helpWhenStuck(step, state);
+        if (!keepGoing || !mounted) return;
+      }
+      if (_index < widget.lesson.steps.length - 1) {
+        setState(() => _index++);
+      } else {
+        await Navigator.of(context).maybePop(_results);
+      }
+    } finally {
+      _busy = false;
     }
+  }
+
+  /// Feeds the answer to the mastery engine (learners only).
+  Future<SkillState?> _recordMastery(LessonStep step, StepResult result) {
+    final student = widget.student;
+    if (student == null) return Future.value();
+    return ref
+        .read(masteryServiceProvider)
+        .recordStep(student.id, widget.lesson, step, result);
+  }
+
+  /// Shows the next idea on the stuck ladder. Returns false if the student
+  /// chose to stop for now (the lesson closes; their place is saved).
+  Future<bool> _helpWhenStuck(LessonStep step, SkillState state) async {
+    final student = widget.student!;
+    final curriculum = await ref.read(curriculumProvider.future);
+    final states = await ref.read(localDbProvider).skillStatesOf(student.id);
+    if (!mounted) return true;
+    final advice = adviseWhenStuck(
+      state: state,
+      lesson: widget.lesson,
+      stepId: step.id,
+      curriculum: curriculum,
+      states: states,
+      shownAlternatives: _shownAlternatives,
+    );
+    final l10n = AppLocalizations.of(context);
+    switch (advice) {
+      case null:
+        return true;
+      case ShowAlternative(:final alternative):
+        _shownAlternatives.add(alternative.id);
+        await Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (_) => StepsScreen(
+              title: l10n.tryAnotherWay,
+              steps: alternative.steps,
+              onStepDone: (s, r) => _recordMastery(s, r),
+            ),
+          ),
+        );
+        return true;
+      case GoBackToPrerequisite(:final skill, :final lessonId):
+        final title = curriculum.titleOf(skill)?.of(context) ?? skill;
+        final open = await _ask(l10n.stuckPrerequisite(title), l10n.openLesson);
+        if (open && mounted) unawaited(context.push('/lesson/$lessonId'));
+        return true;
+      case TakeABreak():
+        return !await _ask(l10n.stuckBreak, l10n.takeBreak);
+      case GetHelp():
+        return !await _ask(l10n.stuckHelp, l10n.takeBreak);
+    }
+  }
+
+  /// A small dialog with "Keep going" and [action]. True if [action] was
+  /// chosen.
+  Future<bool> _ask(String message, String action) async {
+    final l10n = AppLocalizations.of(context);
+    final chosen = await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        key: const Key('stuck-dialog'),
+        content: Text(message),
+        actions: [
+          TextButton(
+            key: const Key('stuck-action'),
+            onPressed: () => Navigator.pop(context, true),
+            child: Text(action),
+          ),
+          FilledButton(
+            key: const Key('stuck-keep-going'),
+            onPressed: () => Navigator.pop(context, false),
+            child: Text(l10n.keepGoing),
+          ),
+        ],
+      ),
+    );
+    if (chosen == true && action == l10n.takeBreak && mounted) {
+      await Navigator.of(context).maybePop(_results);
+    }
+    return chosen ?? false;
   }
 
   @override
@@ -150,7 +258,7 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
             // The key gives each step a fresh state.
             child: KeyedSubtree(
               key: ValueKey(step.id),
-              child: buildStep(step, _onStepDone),
+              child: buildStep(step, (r) => unawaited(_onStepDone(r))),
             ),
           ),
         ],

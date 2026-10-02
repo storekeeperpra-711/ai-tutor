@@ -39,6 +39,8 @@ class _ChoiceStepViewState extends State<ChoiceStepView> {
       StepResult(
         stepId: widget.step.id,
         correct: wrong.isEmpty,
+        // The right option is always found in the end.
+        solved: true,
         attempts: _tried.length,
         misconceptionIds: [
           for (final o in wrong)
