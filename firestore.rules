@@ -1,0 +1,39 @@
+rules_version = '2';
+
+// Each account (a family phone, a parent or a teacher) can read and write
+// only its own data. Teacher access to classes comes in Phase 9.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    match /accounts/{uid} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.role in ['device', 'parent', 'teacher'];
+
+      match /students/{studentId} {
+        allow read, delete: if isOwner(uid);
+        // Minimal personal data: only these fields are allowed.
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(
+               ['first_name', 'grade', 'avatar', 'pin_hash', 'created_at', 'consent_at'])
+          && request.resource.data.first_name is string
+          && request.resource.data.first_name.size() >= 1
+          && request.resource.data.first_name.size() <= 30
+          && request.resource.data.grade is int
+          && request.resource.data.consent_at is timestamp;
+
+        match /progress/{lessonId} {
+          allow read, write: if isOwner(uid);
+        }
+      }
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

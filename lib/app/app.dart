@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
+import '../services/sync_service.dart';
 import 'locale_controller.dart';
 import 'router.dart';
 import 'theme/age_tier.dart';
@@ -20,6 +21,8 @@ class AiTutorApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(localeProvider);
     final tier = ref.watch(ageTierProvider);
+    // Keeps the sync service running for the whole app.
+    ref.watch(syncServiceProvider);
 
     return MaterialApp.router(
       onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,

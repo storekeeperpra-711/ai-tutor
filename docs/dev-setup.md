@@ -29,6 +29,8 @@ flutter analyze
 flutter test
 python tools/validate_lessons.py
 python -m unittest discover -s tools -p 'test_*.py'
+# Firestore security rules (needs Node and Java; uses the emulator, not a real project)
+cd tools/firestore-rules && npm ci && npm test
 ```
 
 ## Add or change a string
@@ -69,7 +71,16 @@ Answers are checked on the phone by pure Dart code in `lib/checkers/`, never by 
 
 ## Change the Dart models
 
-The files `lib/models/*.g.dart` are generated. After editing a model, run `dart run build_runner build` and commit the `.g.dart` files too; CI checks they are up to date.
+The files `lib/models/*.g.dart` and `lib/services/local_db.g.dart` are generated. After editing a model or a database table, run `dart run build_runner build` and commit the `.g.dart` files too; CI checks they are up to date.
+
+## Accounts, profiles and progress (Phase 3)
+
+The app is local first. Each finished step is saved in the on-phone SQLite database (`lib/services/local_db.dart`, drift) and then copied to Firestore by the sync service (`sync_service.dart`) when there is a connection. Lessons never wait for the internet.
+
+- The phone signs in to Firebase anonymously by itself. Parents and teachers create an email account on the account screen (the family icon on the home screen); the phone's data moves into it.
+- Firestore layout and the reasons behind it: [docs/plan/03-phase-3.md](plan/03-phase-3.md). Security rules: `firestore.rules`. After changing the rules, run their tests, then paste the file into Firebase console > Firestore Database > Rules in both projects and click Publish.
+- Firebase, sign-in and the connection are behind small interfaces (`AuthService`, `RemoteStore`, `onlineProvider`), so widget tests use the in-memory fakes in `test/fakes.dart`. `FakeBackend.setOnline(false)` simulates losing the connection.
+- In widget tests, read the database with one-off queries (`db.pendingCount()`), not `stream.first`: a drift stream read inside the test's fake clock can hang the next `pump`.
 
 ## Where things are
 
@@ -79,7 +90,9 @@ The files `lib/models/*.g.dart` are generated. After editing a model, run `dart 
 | `lib/models/` | Lesson and step data classes (json_serializable) |
 | `lib/lessons/` | Lesson player, step registry (`step_registry.dart`), one widget per step type (`steps/`) |
 | `lib/checkers/` | Answer checkers (pure Dart) |
-| `lib/features/` | Screens, including the developer lesson previewer |
+| `lib/features/` | Screens: home and profiles, add learner, PIN pad, account, the developer lesson previewer |
+| `lib/services/` | On-phone database, sign-in, Firestore, sync, connection state |
+| `firestore.rules`, `tools/firestore-rules/` | Firestore security rules and their tests |
 | `content/lessons/`, `content/schema/` | Lesson files (bundled into the app) and their JSON Schema |
 | `tools/validate_lessons.py` | Lesson validator |
 | `lib/l10n/` | Translations (ARB files) |

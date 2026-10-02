@@ -13,7 +13,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get appTitle => 'اے آئی ٹیوٹر';
 
   @override
-  String get homeWelcome => 'خوش آمدید! آپ کے سبق یہاں نظر آئیں گے۔';
+  String get homeWelcome => 'خوش آمدید! شروع کرنے کے لیے طالب علم شامل کریں۔';
 
   @override
   String get settingsTitle => 'ترتیبات';
@@ -144,4 +144,171 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get checkedByCode => 'ایپ نے جانچا';
+
+  @override
+  String get whoIsLearning => 'کون پڑھ رہا ہے؟';
+
+  @override
+  String get addLearner => 'نیا طالب علم شامل کریں';
+
+  @override
+  String get firstNameLabel => 'پہلا نام';
+
+  @override
+  String get firstNameHelp => 'صرف پہلا نام لکھیں۔';
+
+  @override
+  String get gradeLabel => 'جماعت';
+
+  @override
+  String get gradeNursery => 'نرسری';
+
+  @override
+  String get gradePrep => 'پریپ';
+
+  @override
+  String gradeNumber(int grade) {
+    return 'جماعت $grade';
+  }
+
+  @override
+  String get pictureLabel => 'تصویر چنیں';
+
+  @override
+  String get pinOptionalLabel => 'پن (اختیاری، 4 ہندسے)';
+
+  @override
+  String get pinHelp => 'پن سے بہن بھائی یہ پروفائل نہیں کھول سکیں گے۔';
+
+  @override
+  String get pinTooShort => 'پن میں 4 ہندسے ہوتے ہیں۔';
+
+  @override
+  String get consentLabel =>
+      'میں اس بچے کا والد، والدہ یا سرپرست ہوں، اور اس کا پہلا نام، جماعت اور پیش رفت محفوظ کرنے کی اجازت دیتا ہوں۔';
+
+  @override
+  String get saveButton => 'محفوظ کریں';
+
+  @override
+  String get cancelButton => 'منسوخ کریں';
+
+  @override
+  String get enterPin => 'اپنا پن لکھیں';
+
+  @override
+  String get wrongPin => 'یہ پن درست نہیں۔ دوبارہ کوشش کریں۔';
+
+  @override
+  String helloName(String name) {
+    return 'السلام علیکم، $name!';
+  }
+
+  @override
+  String get switchLearner => 'طالب علم بدلیں';
+
+  @override
+  String get lessonsTitle => 'آپ کے سبق';
+
+  @override
+  String get noLessonsYet => 'نئے سبق جلد آ رہے ہیں۔';
+
+  @override
+  String get lessonStart => 'شروع کریں';
+
+  @override
+  String lessonContinue(int step, int total) {
+    return 'مرحلہ $step از $total سے جاری رکھیں';
+  }
+
+  @override
+  String get lessonDone => 'مکمل';
+
+  @override
+  String get offlineStatus => 'آف لائن: آپ کا کام اس فون پر محفوظ ہے';
+
+  @override
+  String waitingToSync(int count) {
+    return 'آن لائن جانے کے منتظر جوابات: $count';
+  }
+
+  @override
+  String get accountTitle => 'والدین اور اساتذہ کا اکاؤنٹ';
+
+  @override
+  String get accountPhoneOnly =>
+      'طلبہ کا کام آن لائن محفوظ ہوتا ہے۔ سائن اِن کریں یا اکاؤنٹ بنائیں تاکہ نئے فون پر بھی یہ واپس مل سکے۔';
+
+  @override
+  String signedInAs(String email) {
+    return '$email کے طور پر سائن اِن ہیں';
+  }
+
+  @override
+  String get emailLabel => 'ای میل';
+
+  @override
+  String get passwordLabel => 'پاس ورڈ (کم از کم 6 حروف)';
+
+  @override
+  String get roleParent => 'والدین';
+
+  @override
+  String get roleTeacher => 'استاد';
+
+  @override
+  String get createAccount => 'اکاؤنٹ بنائیں';
+
+  @override
+  String get signIn => 'سائن اِن';
+
+  @override
+  String get signOut => 'سائن آؤٹ';
+
+  @override
+  String get signOutConfirm =>
+      'سائن آؤٹ کر کے طلبہ کو اس فون سے ہٹا دیں؟ ان کا کام آپ کے اکاؤنٹ میں محفوظ رہے گا۔';
+
+  @override
+  String signOutUnsynced(int count) {
+    return '$count جوابات ابھی آن لائن نہیں گئے، اور ابھی سائن آؤٹ کرنے سے ضائع ہو جائیں گے۔';
+  }
+
+  @override
+  String get authWrongPassword => 'ای میل یا پاس ورڈ درست نہیں۔';
+
+  @override
+  String get authEmailInUse =>
+      'اس ای میل کا اکاؤنٹ پہلے سے موجود ہے۔ سائن اِن کریں۔';
+
+  @override
+  String get authWeakPassword => 'کم از کم 6 حروف استعمال کریں۔';
+
+  @override
+  String get authInvalidEmail => 'ای میل ایڈریس چیک کریں۔';
+
+  @override
+  String get authNoConnection =>
+      'انٹرنیٹ نہیں ہے۔ آن لائن ہونے پر دوبارہ کوشش کریں۔';
+
+  @override
+  String get authOther => 'کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔';
+
+  @override
+  String get teacherToolsSoon =>
+      'اساتذہ کے ٹولز (کلاسیں اور ہوم ورک) جلد آ رہے ہیں۔';
+
+  @override
+  String get learnersTitle => 'اس فون پر طلبہ';
+
+  @override
+  String get removeLearner => 'طالب علم ہٹائیں';
+
+  @override
+  String removeLearnerConfirm(String name) {
+    return '$name اور ان کی تمام پیش رفت ہٹا دیں؟';
+  }
+
+  @override
+  String get removeButton => 'ہٹائیں';
 }
