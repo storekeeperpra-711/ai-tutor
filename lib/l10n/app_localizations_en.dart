@@ -311,4 +311,115 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get removeButton => 'Remove';
+
+  @override
+  String get todaysPlan => 'Today\'s plan';
+
+  @override
+  String planMinutes(int minutes) {
+    return 'About $minutes minutes';
+  }
+
+  @override
+  String planReview(String title) {
+    return 'Review: $title';
+  }
+
+  @override
+  String planPractice(String title) {
+    return 'Practice: $title';
+  }
+
+  @override
+  String get planMixed => 'A mixed question';
+
+  @override
+  String get planExplain => 'Explain it or find the mistake';
+
+  @override
+  String planLesson(String title) {
+    return 'Lesson: $title';
+  }
+
+  @override
+  String get planHomeTask => 'A task to do at home';
+
+  @override
+  String planFlashcards(String title) {
+    return 'Flashcards: $title';
+  }
+
+  @override
+  String get startPractice => 'Start practice';
+
+  @override
+  String get planAllDone => 'All done for today. Well done!';
+
+  @override
+  String get markDone => 'Done';
+
+  @override
+  String get flashcardsTitle => 'Flashcards';
+
+  @override
+  String get flashcardTapToTurn => 'Tap the card to turn it over.';
+
+  @override
+  String get nextCard => 'Next card';
+
+  @override
+  String get homeTaskTitle => 'Home task';
+
+  @override
+  String get practiceTitle => 'Practice';
+
+  @override
+  String practiceDone(int right, int total) {
+    return 'Well done! $right of $total right the first time.';
+  }
+
+  @override
+  String get levelNotStarted => 'Not started';
+
+  @override
+  String get levelLearning => 'Learning';
+
+  @override
+  String get levelPractising => 'Practising';
+
+  @override
+  String get levelMastered => 'Mastered';
+
+  @override
+  String get levelSecure => 'Secure';
+
+  @override
+  String get tryAnotherWay => 'Let\'s try it another way.';
+
+  @override
+  String stuckPrerequisite(String title) {
+    return 'Let\'s look at an earlier idea first: $title';
+  }
+
+  @override
+  String get openLesson => 'Open that lesson';
+
+  @override
+  String get keepGoing => 'Keep going';
+
+  @override
+  String get stuckBreak =>
+      'This one is tricky. A short break can help. Your work is saved.';
+
+  @override
+  String get stuckHelp =>
+      'This one is tricky. Ask a parent or teacher to look at it with you. Your work is saved.';
+
+  @override
+  String get takeBreak => 'Take a break';
+
+  @override
+  String needsHelpWith(String topics) {
+    return 'Needs help with: $topics';
+  }
 }

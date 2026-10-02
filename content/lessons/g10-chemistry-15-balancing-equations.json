@@ -71,6 +71,58 @@
             "ur": "بائیں طرف 2 N ہیں، اس لیے 2NH3 چاہیے۔ اس میں 6 H ہیں، اس لیے 3H2: N2 + 3H2 → 2NH3"
           }
         }
+      },
+      {
+        "id": "qb_find_error_subscript",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_subscript",
+          "type": "choice",
+          "prompt": {
+            "en": "Ali balanced Mg + O2 → MgO by writing Mg + O2 → MgO2. What went wrong?",
+            "ur": "علی نے Mg + O2 → MgO کو Mg + O2 → MgO2 لکھ کر متوازن کیا۔ غلطی کہاں ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "He changed the formula of magnesium oxide. He should put numbers in front instead: 2Mg + O2 → 2MgO.",
+                "ur": "اس نے میگنیشیم آکسائیڈ کا فارمولا بدل دیا۔ اسے فارمولوں کے آگے عدد لگانے چاہیے تھے: 2Mg + O2 → 2MgO"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Changing a small number makes a different substance. Balance with numbers in front.",
+                "ur": "جی ہاں! چھوٹا عدد بدلنے سے مادہ ہی بدل جاتا ہے۔ فارمولوں کے آگے عدد لگا کر متوازن کریں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. The atoms are balanced, so it is right.",
+                "ur": "کوئی غلطی نہیں۔ ایٹم برابر ہیں، اس لیے درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The atoms are balanced, but MgO2 is not magnesium oxide. Never change the small numbers in a formula.",
+                "ur": "ایٹم برابر ہیں، لیکن MgO2 میگنیشیم آکسائیڈ نہیں۔ فارمولے کے چھوٹے عدد کبھی نہ بدلیں۔"
+              },
+              "misconception_id": "change_subscript"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "He should have written O instead of O2.",
+                "ur": "اسے O2 کے بجائے O لکھنا چاہیے تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Oxygen gas is O2. Keep every formula as it is and change only the numbers in front.",
+                "ur": "آکسیجن گیس O2 ہے۔ ہر فارمولا ویسا ہی رکھیں اور صرف آگے والے عدد بدلیں۔"
+              },
+              "misconception_id": "change_subscript"
+            }
+          ]
+        }
       }
     ]
   },
@@ -128,6 +180,7 @@
     {
       "id": "s2_count",
       "type": "choice",
+      "question_type": "recall",
       "prompt": {
         "en": "Hydrogen burns to make water: H2 + O2 → H2O. How many oxygen atoms are on each side?",
         "ur": "ہائیڈروجن جل کر پانی بناتی ہے: H2 + O2 → H2O۔ ہر طرف آکسیجن کے کتنے ایٹم ہیں؟"
@@ -175,6 +228,7 @@
     {
       "id": "s3_fix",
       "type": "choice",
+      "question_type": "apply",
       "prompt": {
         "en": "How can we get 2 oxygen atoms on the right?",
         "ur": "دائیں طرف آکسیجن کے 2 ایٹم کیسے لائیں؟"
@@ -223,6 +277,7 @@
     {
       "id": "s4_water",
       "type": "text_check",
+      "question_type": "apply",
       "checker": "chem_equation",
       "expected": "2H2 + O2 -> 2H2O",
       "prompt": {
@@ -245,6 +300,7 @@
     {
       "id": "s5_magnesium",
       "type": "text_check",
+      "question_type": "apply",
       "checker": "chem_equation",
       "expected": "2Mg + O2 -> 2MgO",
       "prompt": {
@@ -267,6 +323,7 @@
     {
       "id": "s6_methane",
       "type": "text_check",
+      "question_type": "apply",
       "checker": "chem_equation",
       "expected": "CH4 + 2O2 -> CO2 + 2H2O",
       "prompt": {
@@ -321,5 +378,34 @@
     "status": "draft",
     "reviewed_by": null,
     "date": null
-  }
+  },
+  "review_questions": [
+    {
+      "id": "r_hydrogen_chlorine",
+      "type": "apply",
+      "skill": "chemistry.stoichiometry.balance_equations",
+      "step": {
+        "id": "r_hydrogen_chlorine",
+        "type": "text_check",
+        "checker": "chem_equation",
+        "expected": "H2 + Cl2 -> 2HCl",
+        "prompt": {
+          "en": "Balance: H2 + Cl2 → HCl",
+          "ur": "متوازن کریں: H2 + Cl2 → HCl"
+        },
+        "hint": {
+          "en": "Count the Cl atoms on each side.",
+          "ur": "ہر طرف Cl کے ایٹم گنیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: H2 + Cl2 → 2HCl.",
+          "ur": "درست: H2 + Cl2 → 2HCl"
+        },
+        "feedback_wrong": {
+          "en": "There are 2 H and 2 Cl on the left, so you need 2HCl: H2 + Cl2 → 2HCl.",
+          "ur": "بائیں طرف 2 H اور 2 Cl ہیں، اس لیے 2HCl چاہیے: H2 + Cl2 → 2HCl"
+        }
+      }
+    }
+  ]
 }

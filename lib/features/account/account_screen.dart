@@ -6,6 +6,7 @@ import '../../l10n/app_localizations.dart';
 import '../../services/account_actions.dart';
 import '../../services/auth_service.dart';
 import '../../services/local_db.dart';
+import '../../services/mastery_service.dart';
 import '../../services/profiles.dart';
 import '../../services/remote_store.dart';
 import '../../services/sync_service.dart';
@@ -214,7 +215,7 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
               ListTile(
                 leading: StudentAvatar(avatar: s.avatar, size: 40),
                 title: Text(s.firstName),
-                subtitle: Text(gradeName(l10n, s.grade)),
+                subtitle: _LearnerSubtitle(student: s),
                 trailing: IconButton(
                   key: Key('remove-${s.id}'),
                   icon: const Icon(Icons.delete_outline),
@@ -225,6 +226,36 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
           ],
         ],
       ),
+    );
+  }
+}
+
+/// Grade, and the topics a learner is stuck on (spec B3: tell an adult).
+class _LearnerSubtitle extends ConsumerWidget {
+  const _LearnerSubtitle({required this.student});
+
+  final Student student;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
+    final states = ref.watch(skillStatesProvider(student.id)).value ?? {};
+    final curriculum = ref.watch(curriculumProvider).value;
+    final topics = [
+      for (final s in states.values)
+        if (s.needsHelp) curriculum?.titleOf(s.skill)?.of(context) ?? s.skill,
+    ];
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(gradeName(l10n, student.grade)),
+        if (topics.isNotEmpty)
+          Text(
+            l10n.needsHelpWith(topics.join(', ')),
+            key: Key('needs-help-${student.id}'),
+            style: TextStyle(color: Theme.of(context).colorScheme.error),
+          ),
+      ],
     );
   }
 }

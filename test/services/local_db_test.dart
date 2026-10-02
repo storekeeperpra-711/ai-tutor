@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:ai_tutor/services/local_db.dart';
+import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../fakes.dart';
@@ -97,5 +100,22 @@ void main() {
     expect((await db.progress('ayesha', 'lesson-a'))!.nextStep, 1);
     expect((await db.progress('zara', 'lesson-a'))!.nextStep, 2);
     expect((await db.student('zara'))!.synced, isTrue);
+  });
+
+  test('a version 1 database gets the skill states table', () async {
+    final dir = Directory.systemTemp.createTempSync('ai_tutor_db');
+    addTearDown(() => dir.deleteSync(recursive: true));
+    final file = File('${dir.path}/app.sqlite');
+
+    final old = LocalDb(NativeDatabase(file));
+    await old.addStudent(student('ayesha'));
+    await old.customStatement('DROP TABLE skill_states');
+    await old.customStatement('PRAGMA user_version = 1');
+    await old.close();
+
+    final upgraded = LocalDb(NativeDatabase(file));
+    addTearDown(upgraded.close);
+    expect(await upgraded.skillStatesOf('ayesha'), isEmpty);
+    expect((await upgraded.student('ayesha'))!.firstName, 'Ayesha');
   });
 }

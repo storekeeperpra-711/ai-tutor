@@ -176,6 +176,12 @@ class FakeRemoteStore implements RemoteStore {
   });
 
   @override
+  Future<void> putSkill(String uid, SkillStateRow row) => _write(() {
+    docs['accounts/$uid/students/${row.studentId}/skills/${row.skill}'] =
+        skillToJson(row);
+  });
+
+  @override
   Future<void> deleteStudent(String uid, String studentId) => _write(() {
     docs.removeWhere(
       (path, _) => path.startsWith('accounts/$uid/students/$studentId'),
@@ -188,6 +194,10 @@ class FakeRemoteStore implements RemoteStore {
     final students = <Student>[];
     final progress = <LessonProgress>[];
     final steps = <StepResultRow>[];
+    final skills = <SkillStateRow>[];
+    final skillPath = RegExp(
+      '^accounts/$uid/students/([^/]+)/skills/([^/]+)\$',
+    );
     final studentPath = RegExp('^accounts/$uid/students/([^/]+)\$');
     final progressPath = RegExp(
       '^accounts/$uid/students/([^/]+)/progress/([^/]+)\$',
@@ -199,6 +209,8 @@ class FakeRemoteStore implements RemoteStore {
         final (row, rows) = progressFromJson(m[1]!, m[2]!, Map.of(data));
         progress.add(row);
         steps.addAll(rows);
+      } else if (skillPath.firstMatch(path) case final m?) {
+        skills.add(skillFromJson(m[1]!, Map.of(data)));
       }
     });
     return RemoteData(
@@ -206,6 +218,7 @@ class FakeRemoteStore implements RemoteStore {
       students: students,
       progress: progress,
       steps: steps,
+      skills: skills,
     );
   }
 

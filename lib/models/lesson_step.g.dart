@@ -49,6 +49,8 @@ ChoiceStep _$ChoiceStepFromJson(Map<String, dynamic> json) =>
       final val = ChoiceStep(
         id: $checkedConvert('id', (v) => v as String),
         type: $checkedConvert('type', (v) => v as String),
+        questionType: $checkedConvert('question_type', (v) => v as String?),
+        skill: $checkedConvert('skill', (v) => v as String?),
         prompt: $checkedConvert(
           'prompt',
           (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
@@ -67,7 +69,7 @@ ChoiceStep _$ChoiceStepFromJson(Map<String, dynamic> json) =>
         ),
       );
       return val;
-    });
+    }, fieldKeyMap: const {'questionType': 'question_type'});
 
 ChoiceOption _$ChoiceOptionFromJson(Map<String, dynamic> json) =>
     $checkedCreate('ChoiceOption', json, ($checkedConvert) {
@@ -97,6 +99,8 @@ NumberStep _$NumberStepFromJson(Map<String, dynamic> json) => $checkedCreate(
     final val = NumberStep(
       id: $checkedConvert('id', (v) => v as String),
       type: $checkedConvert('type', (v) => v as String),
+      questionType: $checkedConvert('question_type', (v) => v as String?),
+      skill: $checkedConvert('skill', (v) => v as String?),
       prompt: $checkedConvert(
         'prompt',
         (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
@@ -151,6 +155,7 @@ NumberStep _$NumberStepFromJson(Map<String, dynamic> json) => $checkedCreate(
     return val;
   },
   fieldKeyMap: const {
+    'questionType': 'question_type',
     'feedbackCorrect': 'feedback_correct',
     'feedbackWrong': 'feedback_wrong',
     'requireSimplest': 'require_simplest',
@@ -184,6 +189,8 @@ TextCheckStep _$TextCheckStepFromJson(Map<String, dynamic> json) =>
         final val = TextCheckStep(
           id: $checkedConvert('id', (v) => v as String),
           type: $checkedConvert('type', (v) => v as String),
+          questionType: $checkedConvert('question_type', (v) => v as String?),
+          skill: $checkedConvert('skill', (v) => v as String?),
           prompt: $checkedConvert(
             'prompt',
             (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
@@ -239,6 +246,7 @@ TextCheckStep _$TextCheckStepFromJson(Map<String, dynamic> json) =>
         return val;
       },
       fieldKeyMap: const {
+        'questionType': 'question_type',
         'feedbackCorrect': 'feedback_correct',
         'feedbackWrong': 'feedback_wrong',
         'requireSimplest': 'require_simplest',

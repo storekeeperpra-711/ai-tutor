@@ -50,6 +50,12 @@ test('an account can save and read its own learners and progress', async () => {
     }),
   );
   await assertSucceeds(getDoc(doc(mine, 'accounts/phone1/students/s1/progress/lesson-a')));
+  await assertSucceeds(
+    setDoc(doc(mine, 'accounts/phone1/students/s1/skills/maths.fractions.divide_by_fraction'), {
+      skill: 'maths.fractions.divide_by_fraction',
+      needs_help: false,
+    }),
+  );
   await assertSucceeds(deleteDoc(doc(mine, 'accounts/phone1/students/s1')));
 });
 
@@ -60,6 +66,8 @@ test("an account can't see or change another account's children", async () => {
   const other = db('phone2');
   await assertFails(getDoc(doc(other, 'accounts/phone1/students/s1')));
   await assertFails(getDoc(doc(other, 'accounts/phone1/students/s1/progress/lesson-a')));
+  await assertFails(getDoc(doc(other, 'accounts/phone1/students/s1/skills/maths.x.y')));
+  await assertFails(setDoc(doc(other, 'accounts/phone1/students/s1/skills/maths.x.y'), { a: 1 }));
   await assertFails(setDoc(doc(other, 'accounts/phone1/students/s2'), student));
   await assertFails(deleteDoc(doc(other, 'accounts/phone1/students/s1')));
 });

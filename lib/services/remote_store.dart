@@ -23,6 +23,9 @@ abstract class RemoteStore {
   /// One merged write per upload: where to resume plus the new answers.
   Future<void> putProgress(String uid, ProgressUpload upload);
 
+  /// The mastery engine's state for one child and skill.
+  Future<void> putSkill(String uid, SkillStateRow row);
+
   Future<void> deleteStudent(String uid, String studentId);
 
   /// Everything saved in the account, to restore it on a new phone.
@@ -57,11 +60,20 @@ class FirestoreRemoteStore implements RemoteStore {
           .set(progressToJson(upload), SetOptions(merge: true));
 
   @override
+  Future<void> putSkill(String uid, SkillStateRow row) =>
+      _students(uid)
+          .doc(row.studentId)
+          .collection('skills')
+          .doc(row.skill)
+          .set(skillToJson(row));
+
+  @override
   Future<void> deleteStudent(String uid, String studentId) async {
     final student = _students(uid).doc(studentId);
     final progress = await student.collection('progress').get();
+    final skills = await student.collection('skills').get();
     final batch = _db.batch();
-    for (final doc in progress.docs) {
+    for (final doc in [...progress.docs, ...skills.docs]) {
       batch.delete(doc.reference);
     }
     batch.delete(student);
@@ -74,6 +86,7 @@ class FirestoreRemoteStore implements RemoteStore {
     final students = <Student>[];
     final progress = <LessonProgress>[];
     final steps = <StepResultRow>[];
+    final skills = <SkillStateRow>[];
     for (final doc in (await _students(uid).get()).docs) {
       students.add(studentFromJson(doc.id, doc.data()));
       final lessons = await doc.reference.collection('progress').get();
@@ -82,12 +95,16 @@ class FirestoreRemoteStore implements RemoteStore {
         progress.add(row);
         steps.addAll(stepRows);
       }
+      for (final k in (await doc.reference.collection('skills').get()).docs) {
+        skills.add(skillFromJson(doc.id, k.data()));
+      }
     }
     return RemoteData(
       role: account.data()?['role'] as String?,
       students: students,
       progress: progress,
       steps: steps,
+      skills: skills,
     );
   }
 }
@@ -168,6 +185,23 @@ Map<String, Object?> progressToJson(ProgressUpload upload) {
       updatedAt: _date(json['updated_at']),
     ),
     steps,
+  );
+}
+
+/// The skill state's own fields (snake_case JSON) plus `updated_at`.
+Map<String, Object?> skillToJson(SkillStateRow row) => {
+  ...jsonDecode(row.data) as Map<String, dynamic>,
+  'updated_at': Timestamp.fromDate(row.updatedAt),
+};
+
+SkillStateRow skillFromJson(String studentId, Map<String, dynamic> json) {
+  final data = Map.of(json)..remove('updated_at');
+  return SkillStateRow(
+    studentId: studentId,
+    skill: json['skill'] as String,
+    data: jsonEncode(data),
+    updatedAt: _date(json['updated_at']),
+    synced: true,
   );
 }
 

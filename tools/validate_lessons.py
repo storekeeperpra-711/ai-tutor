@@ -101,6 +101,68 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
         if "skill" in q and q["skill"] not in skills:
             problems.append(f"review_questions/{q['id']}: skill '{q['skill']}' is not in skills")
 
+    # Steps may test the lesson's skills or a prerequisite (foundation check).
+    known = skills | {p["skill"] for p in lesson["prerequisites"]}
+    for where, step in all_steps(lesson):
+        if "skill" in step and step["skill"] not in known:
+            problems.append(f"{where}/{step['id']}: skill '{step['skill']}' is not a skill or prerequisite of this lesson")
+
+    step_ids = {step["id"] for step in lesson["steps"]}
+    for alt in lesson.get("alternatives", []):
+        if "for_step" in alt and alt["for_step"] not in step_ids:
+            problems.append(f"alternatives/{alt['id']}: for_step '{alt['for_step']}' is not a step")
+
+    # Mastery must be reachable: every required question type needs a question.
+    available = evidence_types(lesson)
+    for skill, criteria in lesson["mastery_criteria"].items():
+        for qtype in criteria["question_types"]:
+            if qtype not in available.get(skill, set()):
+                problems.append(
+                    f"mastery_criteria/{skill}: no '{qtype}' question (tag a step with question_type or add one to question_bank)"
+                )
+
+    return problems
+
+
+def evidence_types(lesson: dict) -> dict[str, set[str]]:
+    """Question types the lesson can ask, per skill (steps, alternatives, bank, reviews)."""
+    default = lesson["skills"][0]
+    found: dict[str, set[str]] = {}
+    for step in lesson["steps"] + [s for alt in lesson.get("alternatives", []) for s in alt["steps"]]:
+        if "question_type" in step:
+            found.setdefault(step.get("skill", default), set()).add(step["question_type"])
+    for skill, questions in lesson["question_bank"].items():
+        for q in questions:
+            found.setdefault(q.get("skill", skill), set()).add(q["type"])
+    for q in lesson.get("review_questions", []):
+        found.setdefault(q.get("skill", default), set()).add(q["type"])
+    return found
+
+
+def check_prerequisite_loops(lessons: list[dict]) -> list[str]:
+    """Skills must not depend on themselves through prerequisites."""
+    needs: dict[str, set[str]] = {}
+    for lesson in lessons:
+        for skill in lesson["skills"]:
+            needs.setdefault(skill, set()).update(p["skill"] for p in lesson["prerequisites"])
+
+    problems = []
+    state: dict[str, str] = {}
+
+    def visit(skill: str, path: list[str]) -> None:
+        if state.get(skill) == "done":
+            return
+        if state.get(skill) == "visiting":
+            loop = path[path.index(skill):] + [skill]
+            problems.append("prerequisite loop: " + " -> ".join(loop))
+            return
+        state[skill] = "visiting"
+        for need in sorted(needs.get(skill, ())):
+            visit(need, path + [skill])
+        state[skill] = "done"
+
+    for skill in sorted(needs):
+        visit(skill, [])
     return problems
 
 
@@ -124,8 +186,11 @@ def main(argv: list[str]) -> int:
         return 0
 
     failed = 0
+    valid = []
     for path in paths:
         problems = validate_file(path, validator)
+        if not problems:
+            valid.append(json.loads(path.read_text(encoding="utf-8")))
         if problems:
             failed += 1
             print(f"FAIL {path.name}")
@@ -134,8 +199,12 @@ def main(argv: list[str]) -> int:
         else:
             print(f"ok   {path.name}")
 
+    loops = check_prerequisite_loops(valid)
+    for problem in loops:
+        print(f"FAIL {problem}")
+
     print(f"\n{len(paths) - failed} of {len(paths)} lessons valid.")
-    return 1 if failed else 0
+    return 1 if failed or loops else 0
 
 
 if __name__ == "__main__":

@@ -31,10 +31,9 @@ void main() {
       final questionSteps = [
         ...lesson.steps,
         for (final qs in lesson.questionBank.values)
-          for (final q in qs as List<dynamic>)
-            LessonStep.fromJson(
-              (q as Map<String, dynamic>)['step'] as Map<String, dynamic>,
-            ),
+          for (final q in qs) q.step,
+        for (final q in lesson.reviewQuestions) q.step,
+        for (final alt in lesson.alternatives) ...alt.steps,
       ];
       for (final step in questionSteps.whereType<TextCheckStep>()) {
         final reason = '${lesson.id}/${step.id}';

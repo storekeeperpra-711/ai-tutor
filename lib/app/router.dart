@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import '../features/account/account_screen.dart';
 import '../features/debug/urdu_test_screen.dart';
 import '../features/home/home_screen.dart';
+import '../features/plan/flashcards_screen.dart';
+import '../features/plan/practice_screen.dart';
 import '../features/previewer/lesson_list_screen.dart';
 import '../features/profiles/add_student_screen.dart';
 import '../features/settings/settings_screen.dart';
@@ -22,6 +24,15 @@ final routerProvider = Provider<GoRouter>(
       GoRoute(
         path: '/learners/new',
         builder: (context, state) => const AddStudentScreen(),
+      ),
+      GoRoute(
+        path: '/practice',
+        builder: (context, state) => const PracticeScreen(),
+      ),
+      GoRoute(
+        path: '/flashcards/:lessonId',
+        builder: (context, state) =>
+            FlashcardsScreen(lessonId: state.pathParameters['lessonId']!),
       ),
       GoRoute(
         path: '/account',

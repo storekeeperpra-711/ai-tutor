@@ -66,6 +66,10 @@ class SyncService {
       await remote.putProgress(uid, upload);
       await db.markStepsSynced(upload.steps);
     }
+    for (final row in await db.unsyncedSkillStates()) {
+      await remote.putSkill(uid, row);
+      await db.markSkillSynced(row);
+    }
   }
 
   /// Call when [user] may be a different account from the last upload:

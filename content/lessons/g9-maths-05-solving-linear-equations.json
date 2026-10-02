@@ -72,6 +72,108 @@
             "ur": "5x − 4 = 21، اس لیے 5x = 25، اس لیے x = 5"
           }
         }
+      },
+      {
+        "id": "qb_why_both_sides",
+        "type": "explain",
+        "step": {
+          "id": "qb_why_both_sides",
+          "type": "choice",
+          "prompt": {
+            "en": "To solve 2x + 7 = 15, Sara takes 7 away from both sides. Which is the best explanation of why?",
+            "ur": "2x + 7 = 15 حل کرنے کے لیے سارہ دونوں طرف سے 7 گھٹاتی ہے۔ اس کی سب سے اچھی وجہ کون سی ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "To keep the scale balanced: both sides stay equal, and 2x is left alone.",
+                "ur": "ترازو کو برابر رکھنے کے لیے: دونوں طرف برابر رہتے ہیں، اور 2x اکیلا رہ جاتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Exactly! Do the same thing to both sides and the scale stays balanced.",
+                "ur": "بالکل! جو کام ایک طرف کریں وہی دوسری طرف بھی کریں تو ترازو برابر رہتا ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Because 7 is the biggest number.",
+                "ur": "کیونکہ 7 سب سے بڑا عدد ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The size of the number doesn't matter. What matters is keeping both sides equal.",
+                "ur": "عدد کے بڑا یا چھوٹا ہونے سے فرق نہیں پڑتا۔ اصل بات دونوں طرف کو برابر رکھنا ہے۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only the left side needs it; the right side can stay 15.",
+                "ur": "صرف بائیں طرف ضرورت ہے؛ دائیں طرف 15 ہی رہ سکتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "If only one side changes, the scale tips over. Both sides must change the same way.",
+                "ur": "اگر صرف ایک طرف بدلے تو ترازو جھک جاتا ہے۔ دونوں طرف ایک جیسا بدلنا ضروری ہے۔"
+              },
+              "misconception_id": "one_side_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_sign",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_sign",
+          "type": "choice",
+          "prompt": {
+            "en": "Usman solved 3x + 6 = 21 like this: 3x = 21 + 6, so 3x = 27, so x = 9. What went wrong?",
+            "ur": "عثمان نے 3x + 6 = 21 ایسے حل کیا: 3x = 21 + 6، پھر 3x = 27، پھر x = 9۔ غلطی کہاں ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "He added 6 on the right. He should take 6 away from both sides: 3x = 15, x = 5.",
+                "ur": "اس نے دائیں طرف 6 جمع کر دیا۔ اسے دونوں طرف سے 6 گھٹانا تھا: 3x = 15، x = 5"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Check: 3 × 5 + 6 = 21.",
+                "ur": "درست! جانچ: 3 × 5 + 6 = 21"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "He should have divided by 6 first.",
+                "ur": "اسے پہلے 6 سے تقسیم کرنا چاہیے تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Look at the first line: what happened to the 6 when it moved across?",
+                "ur": "پہلی سطر دیکھیں: دوسری طرف جاتے ہوئے 6 کے ساتھ کیا ہوا؟"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Nothing. x = 9 is right.",
+                "ur": "کوئی غلطی نہیں، x = 9 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check it: 3 × 9 + 6 = 33, not 21. So x = 9 can't be right.",
+                "ur": "جانچ کر دیکھیں: 3 × 9 + 6 = 33 بنتا ہے، 21 نہیں۔ اس لیے x = 9 درست نہیں۔"
+              },
+              "misconception_id": "move_without_sign_change"
+            }
+          ]
+        }
       }
     ]
   },
@@ -125,6 +227,7 @@
     {
       "id": "s2_first_move",
       "type": "choice",
+      "question_type": "apply",
       "prompt": {
         "en": "What can Bilal do first, and keep the scale balanced?",
         "ur": "بلال پہلے کیا کرے کہ ترازو برابر رہے؟"
@@ -181,6 +284,7 @@
     {
       "id": "s4_solve",
       "type": "text_check",
+      "question_type": "apply",
       "checker": "linear_equation",
       "expected": "3x + 5 = 20",
       "multiline": true,
@@ -214,6 +318,7 @@
     {
       "id": "s5_pencils",
       "type": "text_check",
+      "question_type": "apply",
       "checker": "linear_equation",
       "expected": "4x + 10 = 50",
       "multiline": true,
@@ -265,5 +370,35 @@
     "status": "draft",
     "reviewed_by": null,
     "date": null
-  }
+  },
+  "review_questions": [
+    {
+      "id": "r_solve_eggs",
+      "type": "apply",
+      "skill": "maths.linear_equations.solve_two_step",
+      "step": {
+        "id": "r_solve_eggs",
+        "type": "text_check",
+        "checker": "linear_equation",
+        "expected": "2x + 3 = 13",
+        "multiline": true,
+        "prompt": {
+          "en": "Solve 2x + 3 = 13. Write each step on a new line.",
+          "ur": "2x + 3 = 13 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+        },
+        "hint": {
+          "en": "Take 3 away from both sides first.",
+          "ur": "پہلے دونوں طرف سے 3 گھٹائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: x = 5. Check: 2 × 5 + 3 = 13.",
+          "ur": "درست: x = 5۔ جانچ: 2 × 5 + 3 = 13"
+        },
+        "feedback_wrong": {
+          "en": "2x + 3 = 13, so 2x = 10, so x = 5.",
+          "ur": "2x + 3 = 13، اس لیے 2x = 10، اس لیے x = 5"
+        }
+      }
+    }
+  ]
 }

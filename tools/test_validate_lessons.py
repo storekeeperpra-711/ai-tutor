@@ -108,5 +108,28 @@ class ValidateLessonsTest(unittest.TestCase):
         self.assertTrue(self.check(lesson))
 
 
+    def test_mastery_needs_a_question_of_each_type(self):
+        lesson = self.mutated()
+        lesson["mastery_criteria"]["maths.fractions.divide_by_fraction"]["question_types"].append("exam_style")
+        self.assertProblem(self.check(lesson), "no 'exam_style' question")
+
+    def test_step_skill_must_be_known(self):
+        lesson = self.mutated()
+        lesson["steps"][1]["skill"] = "maths.unknown.skill"
+        self.assertProblem(self.check(lesson), "is not a skill or prerequisite")
+
+    def test_alternative_must_point_at_a_step(self):
+        lesson = self.mutated()
+        lesson["alternatives"][0]["for_step"] = "no_such_step"
+        self.assertProblem(self.check(lesson), "for_step 'no_such_step'")
+
+    def test_prerequisite_loop(self):
+        a = {"skills": ["maths.a.one"], "prerequisites": [{"skill": "maths.b.two"}]}
+        b = {"skills": ["maths.b.two"], "prerequisites": [{"skill": "maths.a.one"}]}
+        problems = v.check_prerequisite_loops([a, b])
+        self.assertProblem(problems, "prerequisite loop")
+        self.assertEqual(v.check_prerequisite_loops([a]), [])
+
+
 if __name__ == "__main__":
     unittest.main()
