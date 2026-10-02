@@ -4,9 +4,9 @@
   "@appTitle": {
     "description": "App name shown in the title bar."
   },
-  "homeWelcome": "Welcome! Your lessons will appear here.",
+  "homeWelcome": "Welcome! Add a learner to begin.",
   "@homeWelcome": {
-    "description": "Placeholder text on the home screen until lessons exist (Phase 1)."
+    "description": "Home screen text before any child profile exists."
   },
   "settingsTitle": "Settings",
   "@settingsTitle": {
@@ -209,5 +209,239 @@
   "checkedByCode": "Checked by the app",
   "@checkedByCode": {
     "description": "Small label on feedback that the app's own checker (not AI) decided."
+  },
+  "whoIsLearning": "Who is learning?",
+  "@whoIsLearning": {
+    "description": "Heading of the profile picker."
+  },
+  "addLearner": "Add a learner",
+  "@addLearner": {
+    "description": "Button and screen title for adding a child profile."
+  },
+  "firstNameLabel": "First name",
+  "@firstNameLabel": {
+    "description": "Label of the child's first-name box."
+  },
+  "firstNameHelp": "Only the first name, please.",
+  "@firstNameHelp": {
+    "description": "Helper text: we keep minimal personal data."
+  },
+  "gradeLabel": "Class",
+  "@gradeLabel": {
+    "description": "Label of the class (grade) choice."
+  },
+  "gradeNursery": "Nursery",
+  "@gradeNursery": {
+    "description": "School class name."
+  },
+  "gradePrep": "Prep",
+  "@gradePrep": {
+    "description": "School class name (the year before Grade 1)."
+  },
+  "gradeNumber": "Grade {grade}",
+  "@gradeNumber": {
+    "description": "School class name, e.g. Grade 6.",
+    "placeholders": {
+      "grade": {
+        "type": "int"
+      }
+    }
+  },
+  "pictureLabel": "Choose a picture",
+  "@pictureLabel": {
+    "description": "Heading above the profile pictures."
+  },
+  "pinOptionalLabel": "PIN (optional, 4 digits)",
+  "@pinOptionalLabel": {
+    "description": "Label of the optional PIN box."
+  },
+  "pinHelp": "A PIN keeps brothers and sisters out of this profile.",
+  "@pinHelp": {
+    "description": "Helper text under the PIN box."
+  },
+  "pinTooShort": "A PIN has 4 digits.",
+  "@pinTooShort": {
+    "description": "Error when the PIN is not 4 digits."
+  },
+  "consentLabel": "I am this child's parent or guardian, and I agree to save their first name, class and progress.",
+  "@consentLabel": {
+    "description": "Parental consent tick box when adding a child."
+  },
+  "saveButton": "Save",
+  "@saveButton": {
+    "description": "Save button."
+  },
+  "cancelButton": "Cancel",
+  "@cancelButton": {
+    "description": "Cancel button."
+  },
+  "enterPin": "Enter your PIN",
+  "@enterPin": {
+    "description": "Title of the PIN pad."
+  },
+  "wrongPin": "That PIN is not right. Try again.",
+  "@wrongPin": {
+    "description": "Shown after a wrong PIN."
+  },
+  "helloName": "Hello, {name}!",
+  "@helloName": {
+    "description": "Greeting on the home screen.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "switchLearner": "Switch learner",
+  "@switchLearner": {
+    "description": "Button to go back to the profile picker."
+  },
+  "lessonsTitle": "Your lessons",
+  "@lessonsTitle": {
+    "description": "Heading above the lesson list."
+  },
+  "noLessonsYet": "New lessons are coming soon.",
+  "@noLessonsYet": {
+    "description": "Shown when no lessons are published yet."
+  },
+  "lessonStart": "Start",
+  "@lessonStart": {
+    "description": "Lesson not started yet."
+  },
+  "lessonContinue": "Continue at step {step} of {total}",
+  "@lessonContinue": {
+    "description": "Lesson started but not finished.",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "lessonDone": "Done",
+  "@lessonDone": {
+    "description": "Lesson finished."
+  },
+  "offlineStatus": "Offline: your work is saved on this phone",
+  "@offlineStatus": {
+    "description": "Friendly connection state. Never blocks the lesson."
+  },
+  "waitingToSync": "Answers waiting to go online: {count}",
+  "@waitingToSync": {
+    "description": "Number of saved answers not yet copied to the account.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "accountTitle": "Parent and teacher account",
+  "@accountTitle": {
+    "description": "Account screen title and button tooltip."
+  },
+  "accountPhoneOnly": "Learners' work is backed up online. Sign in or create an account so you can get it back on a new phone.",
+  "@accountPhoneOnly": {
+    "description": "Shown when the phone is not linked to an adult account."
+  },
+  "signedInAs": "Signed in as {email}",
+  "@signedInAs": {
+    "description": "Account status.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "emailLabel": "Email",
+  "@emailLabel": {
+    "description": "Email box label."
+  },
+  "passwordLabel": "Password (at least 6 characters)",
+  "@passwordLabel": {
+    "description": "Password box label."
+  },
+  "roleParent": "Parent",
+  "@roleParent": {
+    "description": "Account type."
+  },
+  "roleTeacher": "Teacher",
+  "@roleTeacher": {
+    "description": "Account type."
+  },
+  "createAccount": "Create account",
+  "@createAccount": {
+    "description": "Button."
+  },
+  "signIn": "Sign in",
+  "@signIn": {
+    "description": "Button."
+  },
+  "signOut": "Sign out",
+  "@signOut": {
+    "description": "Button."
+  },
+  "signOutConfirm": "Sign out and remove the learners from this phone? Their work stays in your account.",
+  "@signOutConfirm": {
+    "description": "Confirmation before signing out."
+  },
+  "signOutUnsynced": "{count} answers are not online yet and will be lost if you sign out now.",
+  "@signOutUnsynced": {
+    "description": "Warning before signing out with unsynced answers.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "authWrongPassword": "The email or password is not right.",
+  "@authWrongPassword": {
+    "description": "Sign-in error."
+  },
+  "authEmailInUse": "This email already has an account. Please sign in instead.",
+  "@authEmailInUse": {
+    "description": "Sign-up error."
+  },
+  "authWeakPassword": "Please use at least 6 characters.",
+  "@authWeakPassword": {
+    "description": "Sign-up error."
+  },
+  "authInvalidEmail": "Please check the email address.",
+  "@authInvalidEmail": {
+    "description": "Sign-in error."
+  },
+  "authNoConnection": "No internet. Please try again when you are online.",
+  "@authNoConnection": {
+    "description": "Sign-in error."
+  },
+  "authOther": "Something went wrong. Please try again.",
+  "@authOther": {
+    "description": "Sign-in error."
+  },
+  "teacherToolsSoon": "Teacher tools (classes and homework) are coming soon.",
+  "@teacherToolsSoon": {
+    "description": "Shown to teachers until Phase 9."
+  },
+  "learnersTitle": "Learners on this phone",
+  "@learnersTitle": {
+    "description": "Heading of the learner list on the account screen."
+  },
+  "removeLearner": "Remove learner",
+  "@removeLearner": {
+    "description": "Tooltip of the remove button."
+  },
+  "removeLearnerConfirm": "Remove {name} and all of their progress?",
+  "@removeLearnerConfirm": {
+    "description": "Confirmation before removing a child profile.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "removeButton": "Remove",
+  "@removeButton": {
+    "description": "Button."
   }
 }
