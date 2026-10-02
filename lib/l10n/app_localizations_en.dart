@@ -83,4 +83,65 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get switchLanguage => 'Switch language';
+
+  @override
+  String get fractionUnreadable =>
+      'Write a fraction like 3/4, or a mixed number like 1 1/2.';
+
+  @override
+  String get fractionNotSimplest =>
+      'That\'s the right value! Now write it in lowest terms: divide the top and bottom by the same number.';
+
+  @override
+  String get chemUnreadable =>
+      'I couldn\'t read that equation. Write it like this: 2H2 + O2 -> 2H2O';
+
+  @override
+  String chemUnknownElement(String symbol) {
+    return '\"$symbol\" is not an element symbol. A symbol starts with a capital letter and any second letter is small: Co is cobalt, but CO is carbon and oxygen.';
+  }
+
+  @override
+  String get chemWrongSubstances =>
+      'Check the substances. Use exactly the ones in the question, without adding or leaving out any.';
+
+  @override
+  String chemChangedSubscript(String student, String expected) {
+    return 'You wrote $student. To balance an equation, change only the big numbers in front. The small numbers inside $expected must stay the same, or it becomes a different substance.';
+  }
+
+  @override
+  String chemUnbalanced(String element, int left, int right) {
+    return 'Count the $element atoms: $left on the left and $right on the right. Change a number in front of a substance to make them equal.';
+  }
+
+  @override
+  String chemNotLowest(int divisor) {
+    return 'It\'s balanced! But all the numbers in front can be divided by $divisor. Use the smallest whole numbers.';
+  }
+
+  @override
+  String linearUnreadable(int line) {
+    return 'I couldn\'t read line $line. Write each line as an equation, like 2x + 3 = 11.';
+  }
+
+  @override
+  String linearBrokenStep(int line) {
+    return 'Line $line doesn\'t keep the scale balanced. Whatever you do to one side, do exactly the same to the other side.';
+  }
+
+  @override
+  String linearNotFinished(String variable) {
+    return 'Good so far! Keep going until one line says $variable = a number.';
+  }
+
+  @override
+  String get answerUnreadable =>
+      'I couldn\'t read that answer. Please try writing it again.';
+
+  @override
+  String get answerHintMultiline => 'Write each step on a new line.';
+
+  @override
+  String get checkedByCode => 'Checked by the app';
 }

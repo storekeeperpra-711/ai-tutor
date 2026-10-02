@@ -23,9 +23,14 @@ class StepScaffold extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          child: ListView(
+          // A step has only a few widgets, so build them all at once
+          // (a ListView would skip feedback that is still off-screen).
+          child: SingleChildScrollView(
             padding: const EdgeInsets.all(16),
-            children: children,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: children,
+            ),
           ),
         ),
         SafeArea(

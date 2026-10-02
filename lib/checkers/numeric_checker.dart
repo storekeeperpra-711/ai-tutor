@@ -1,43 +1,45 @@
-/// Minimal number checking for Phase 1. Phase 2 replaces this with the
-/// full set of checkers (fractions, mixed numbers, units, ...).
+/// Checks number answers: `8`, `۸`, `2.5`, `-3`, `3/4`, `1 1/2`, `aath`.
 library;
 
-/// Reads a number the way students type it: `8`, `۸`, `2.5`, `-3`, `3/4`.
-/// Returns null if the text is not a number.
-double? parseNumber(String input) {
-  final text = _normalizeDigits(input).replaceAll(' ', '');
+import 'normalize.dart';
+import 'rational.dart';
+
+/// Reads a number the way students type it. Returns null if the text is
+/// not a number.
+double? parseNumber(String input) => parseRational(input)?.toDouble();
+
+/// Like [parseNumber] but exact: whole numbers, decimals, fractions
+/// (`3/4`), mixed numbers (`1 1/2`, `-2 3/4`) and number words.
+Rational? parseRational(String input) {
+  final word = numberFromWord(input);
+  if (word != null) return Rational(word);
+
+  final text = normalizeInput(input).replaceAll(RegExp(r'\s+'), ' ').trim();
   if (text.isEmpty) return null;
 
-  final slash = text.indexOf('/');
-  if (slash > 0) {
-    final top = double.tryParse(text.substring(0, slash));
-    final bottom = double.tryParse(text.substring(slash + 1));
-    if (top == null || bottom == null || bottom == 0) return null;
+  // Mixed number: whole, space, fraction.
+  final mixed = RegExp(r'^([+-]?)(\d+) (\d+) ?/ ?(\d+)$').firstMatch(text);
+  if (mixed != null) {
+    final bottom = int.parse(mixed[4]!);
+    if (bottom == 0) return null;
+    final value =
+        Rational(int.parse(mixed[2]!)) + Rational(int.parse(mixed[3]!), bottom);
+    return mixed[1] == '-' ? -value : value;
+  }
+
+  // Spaces are fine around "/" but not inside a number ("1 2 3").
+  final compact = text.replaceAll(RegExp(r' ?/ ?'), '/');
+  if (compact.contains(' ')) return null;
+  final slash = compact.indexOf('/');
+  if (slash >= 0) {
+    final top = Rational.tryParseDecimal(compact.substring(0, slash));
+    final bottom = Rational.tryParseDecimal(compact.substring(slash + 1));
+    if (top == null || bottom == null || bottom.isZero) return null;
     return top / bottom;
   }
-  return double.tryParse(text);
+  return Rational.tryParseDecimal(compact);
 }
 
 /// True if [value] equals [target] within [tolerance].
 bool numbersMatch(double value, double target, {double tolerance = 0}) =>
     (value - target).abs() <= tolerance + 1e-9;
-
-/// Turns Urdu (۰–۹) and Arabic (٠–٩) digits into 0–9, and the Arabic
-/// decimal separator and minus sign into `.` and `-`.
-String _normalizeDigits(String input) {
-  final out = StringBuffer();
-  for (final rune in input.trim().runes) {
-    if (rune >= 0x06F0 && rune <= 0x06F9) {
-      out.writeCharCode(0x30 + rune - 0x06F0);
-    } else if (rune >= 0x0660 && rune <= 0x0669) {
-      out.writeCharCode(0x30 + rune - 0x0660);
-    } else if (rune == 0x066B) {
-      out.write('.');
-    } else if (rune == 0x2212) {
-      out.write('-');
-    } else {
-      out.writeCharCode(rune);
-    }
-  }
-  return out.toString();
-}

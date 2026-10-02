@@ -1,6 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:ai_tutor/checkers/chem_equation_checker.dart';
+import 'package:ai_tutor/checkers/linear_equation_checker.dart';
+import 'package:ai_tutor/checkers/numeric_checker.dart';
 import 'package:ai_tutor/models/lesson.dart';
 import 'package:ai_tutor/models/lesson_step.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -22,6 +25,39 @@ void main() {
       expect(lesson.schema, '0.2');
       expect(lesson.steps, isNotEmpty);
       expect(lesson.steps.last, isA<SummaryStep>());
+
+      // Every checked answer in the lesson must be readable by its checker,
+      // so a typo in a lesson file can't make a question impossible.
+      final questionSteps = [
+        ...lesson.steps,
+        for (final qs in lesson.questionBank.values)
+          for (final q in qs as List<dynamic>)
+            LessonStep.fromJson(
+              (q as Map<String, dynamic>)['step'] as Map<String, dynamic>,
+            ),
+      ];
+      for (final step in questionSteps.whereType<TextCheckStep>()) {
+        final reason = '${lesson.id}/${step.id}';
+        switch (step.checker) {
+          case 'chem_equation':
+            expect(
+              checkChemEquation(step.expected, step.expected).isCorrect,
+              isTrue,
+              reason: reason,
+            );
+          case 'linear_equation':
+            expect(
+              parseLinearEquation(
+                step.expected,
+                variable: step.variable,
+              ).solution,
+              isA<OneSolution>(),
+              reason: reason,
+            );
+          case 'fraction':
+            expect(parseRational(step.expected), isNotNull, reason: reason);
+        }
+      }
     });
   }
 

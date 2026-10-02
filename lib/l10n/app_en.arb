@@ -109,5 +109,105 @@
   "switchLanguage": "Switch language",
   "@switchLanguage": {
     "description": "Tooltip of the English/Urdu toggle button."
+  },
+  "fractionUnreadable": "Write a fraction like 3/4, or a mixed number like 1 1/2.",
+  "@fractionUnreadable": {
+    "description": "Fraction answer could not be read."
+  },
+  "fractionNotSimplest": "That's the right value! Now write it in lowest terms: divide the top and bottom by the same number.",
+  "@fractionNotSimplest": {
+    "description": "Fraction answer is equal but can be simplified."
+  },
+  "chemUnreadable": "I couldn't read that equation. Write it like this: 2H2 + O2 -> 2H2O",
+  "@chemUnreadable": {
+    "description": "Chemical equation could not be read."
+  },
+  "chemUnknownElement": "\"{symbol}\" is not an element symbol. A symbol starts with a capital letter and any second letter is small: Co is cobalt, but CO is carbon and oxygen.",
+  "@chemUnknownElement": {
+    "description": "Unknown element symbol in a chemical equation.",
+    "placeholders": {
+      "symbol": {
+        "type": "String"
+      }
+    }
+  },
+  "chemWrongSubstances": "Check the substances. Use exactly the ones in the question, without adding or leaving out any.",
+  "@chemWrongSubstances": {
+    "description": "Chemical equation has wrong or missing substances."
+  },
+  "chemChangedSubscript": "You wrote {student}. To balance an equation, change only the big numbers in front. The small numbers inside {expected} must stay the same, or it becomes a different substance.",
+  "@chemChangedSubscript": {
+    "description": "Student changed a subscript to balance.",
+    "placeholders": {
+      "student": {
+        "type": "String"
+      },
+      "expected": {
+        "type": "String"
+      }
+    }
+  },
+  "chemUnbalanced": "Count the {element} atoms: {left} on the left and {right} on the right. Change a number in front of a substance to make them equal.",
+  "@chemUnbalanced": {
+    "description": "Atoms of one element are not balanced.",
+    "placeholders": {
+      "element": {
+        "type": "String"
+      },
+      "left": {
+        "type": "int"
+      },
+      "right": {
+        "type": "int"
+      }
+    }
+  },
+  "chemNotLowest": "It's balanced! But all the numbers in front can be divided by {divisor}. Use the smallest whole numbers.",
+  "@chemNotLowest": {
+    "description": "Balanced but coefficients not in lowest terms.",
+    "placeholders": {
+      "divisor": {
+        "type": "int"
+      }
+    }
+  },
+  "linearUnreadable": "I couldn't read line {line}. Write each line as an equation, like 2x + 3 = 11.",
+  "@linearUnreadable": {
+    "description": "A line of algebra working could not be read.",
+    "placeholders": {
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "linearBrokenStep": "Line {line} doesn't keep the scale balanced. Whatever you do to one side, do exactly the same to the other side.",
+  "@linearBrokenStep": {
+    "description": "A line of working is not equivalent to the previous one.",
+    "placeholders": {
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "linearNotFinished": "Good so far! Keep going until one line says {variable} = a number.",
+  "@linearNotFinished": {
+    "description": "Working is correct but has not reached the answer.",
+    "placeholders": {
+      "variable": {
+        "type": "String"
+      }
+    }
+  },
+  "answerUnreadable": "I couldn't read that answer. Please try writing it again.",
+  "@answerUnreadable": {
+    "description": "Fallback when an answer can't be read."
+  },
+  "answerHintMultiline": "Write each step on a new line.",
+  "@answerHintMultiline": {
+    "description": "Helper text under a multi-line answer box."
+  },
+  "checkedByCode": "Checked by the app",
+  "@checkedByCode": {
+    "description": "Small label on feedback that the app's own checker (not AI) decided."
   }
 }

@@ -83,4 +83,65 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get switchLanguage => 'زبان بدلیں';
+
+  @override
+  String get fractionUnreadable =>
+      'کسر اس طرح لکھیں: 3/4، یا مخلوط عدد اس طرح: 1 1/2';
+
+  @override
+  String get fractionNotSimplest =>
+      'قیمت بالکل درست ہے! اب اسے مختصر ترین شکل میں لکھیں: اوپر اور نیچے والے عدد کو ایک ہی عدد سے تقسیم کریں۔';
+
+  @override
+  String get chemUnreadable =>
+      'یہ مساوات پڑھی نہیں جا سکی۔ اسے اس طرح لکھیں: 2H2 + O2 -> 2H2O';
+
+  @override
+  String chemUnknownElement(String symbol) {
+    return '\"$symbol\" کسی عنصر کی علامت نہیں ہے۔ علامت بڑے حرف سے شروع ہوتی ہے اور دوسرا حرف چھوٹا ہوتا ہے: Co کوبالٹ ہے، لیکن CO کاربن اور آکسیجن ہیں۔';
+  }
+
+  @override
+  String get chemWrongSubstances =>
+      'مادّے دوبارہ دیکھیں۔ بالکل وہی مادّے لکھیں جو سوال میں ہیں، نہ کوئی زیادہ کریں نہ کوئی چھوڑیں۔';
+
+  @override
+  String chemChangedSubscript(String student, String expected) {
+    return 'آپ نے $student لکھا۔ مساوات متوازن کرنے کے لیے صرف آگے والے بڑے عدد بدلیں۔ $expected کے اندر والے چھوٹے عدد ویسے ہی رہنے چاہئیں، ورنہ مادّہ ہی بدل جاتا ہے۔';
+  }
+
+  @override
+  String chemUnbalanced(String element, int left, int right) {
+    return '$element کے ایٹم گنیں: بائیں طرف $left اور دائیں طرف $right۔ کسی مادّے کے آگے والا عدد بدل کر انہیں برابر کریں۔';
+  }
+
+  @override
+  String chemNotLowest(int divisor) {
+    return 'مساوات متوازن ہے! لیکن آگے والے سب عدد $divisor سے تقسیم ہو سکتے ہیں۔ سب سے چھوٹے مکمل عدد استعمال کریں۔';
+  }
+
+  @override
+  String linearUnreadable(int line) {
+    return 'سطر $line پڑھی نہیں جا سکی۔ ہر سطر مساوات کی شکل میں لکھیں، جیسے 2x + 3 = 11';
+  }
+
+  @override
+  String linearBrokenStep(int line) {
+    return 'سطر $line میں ترازو کا توازن نہیں رہا۔ ایک طرف جو بھی کریں، دوسری طرف بھی بالکل وہی کریں۔';
+  }
+
+  @override
+  String linearNotFinished(String variable) {
+    return 'اب تک ٹھیک ہے! اس وقت تک جاری رکھیں جب تک کسی سطر میں $variable = کوئی عدد نہ آ جائے۔';
+  }
+
+  @override
+  String get answerUnreadable =>
+      'یہ جواب پڑھا نہیں جا سکا۔ براہِ کرم دوبارہ لکھیں۔';
+
+  @override
+  String get answerHintMultiline => 'ہر قدم نئی سطر میں لکھیں۔';
+
+  @override
+  String get checkedByCode => 'ایپ نے جانچا';
 }

@@ -15,6 +15,7 @@ sealed class LessonStep {
         'explain' => ExplainStep.fromJson(json),
         'choice' => ChoiceStep.fromJson(json),
         'number' => NumberStep.fromJson(json),
+        'text_check' => TextCheckStep.fromJson(json),
         'summary' => SummaryStep.fromJson(json),
         _ => UnsupportedStep(
           id: json['id'] as String,
@@ -111,6 +112,7 @@ class NumberStep extends LessonStep {
     required this.feedbackCorrect,
     required this.feedbackWrong,
     this.tolerance = 0,
+    this.requireSimplest = false,
     this.unit,
     this.maxAttempts = 3,
     this.commonWrong = const [],
@@ -124,7 +126,12 @@ class NumberStep extends LessonStep {
   final double answer;
   final double tolerance;
   final LocalizedText? unit;
+
+  /// `numeric` or `fraction`.
   final String checker;
+
+  /// Fraction checker: a right value not in lowest terms gets its own feedback.
+  final bool requireSimplest;
 
   /// Shown after the first wrong answer.
   final LocalizedText hint;
@@ -154,6 +161,65 @@ class CommonWrong {
   final String? misconceptionId;
 }
 
+/// The student types text (or several lines of working) and a checker
+/// decides: `fraction`, `chem_equation`, `linear_equation` or `text`.
+@JsonSerializable()
+class TextCheckStep extends LessonStep {
+  const TextCheckStep({
+    required super.id,
+    required super.type,
+    required this.prompt,
+    required this.checker,
+    required this.expected,
+    required this.hint,
+    required this.feedbackCorrect,
+    required this.feedbackWrong,
+    this.accept = const [],
+    this.variable = 'x',
+    this.requireSimplest = false,
+    this.multiline = false,
+    this.maxAttempts = 3,
+    this.commonWrong = const [],
+    this.character,
+  });
+
+  factory TextCheckStep.fromJson(Map<String, dynamic> json) =>
+      _$TextCheckStepFromJson(json);
+
+  final LocalizedText prompt;
+  final String checker;
+
+  /// What `expected` means depends on the checker; see the lesson schema.
+  final String expected;
+  final List<String> accept;
+  final String variable;
+  final bool requireSimplest;
+  final bool multiline;
+  final LocalizedText hint;
+  final LocalizedText feedbackCorrect;
+  final LocalizedText feedbackWrong;
+  final int maxAttempts;
+  final List<CommonWrongText> commonWrong;
+  final CharacterLine? character;
+}
+
+/// A typed wrong answer students often give, with feedback for it.
+@JsonSerializable()
+class CommonWrongText {
+  const CommonWrongText({
+    required this.answer,
+    required this.feedback,
+    this.misconceptionId,
+  });
+
+  factory CommonWrongText.fromJson(Map<String, dynamic> json) =>
+      _$CommonWrongTextFromJson(json);
+
+  final String answer;
+  final LocalizedText feedback;
+  final String? misconceptionId;
+}
+
 @JsonSerializable()
 class SummaryStep extends LessonStep {
   const SummaryStep({
@@ -173,7 +239,7 @@ class SummaryStep extends LessonStep {
 }
 
 /// A step type that is valid in the schema but not playable yet
-/// (text_check, sim, video, lottie, ai_explain, photo_check).
+/// (sim, video, lottie, ai_explain, photo_check).
 class UnsupportedStep extends LessonStep {
   const UnsupportedStep({required super.id, required super.type});
 }

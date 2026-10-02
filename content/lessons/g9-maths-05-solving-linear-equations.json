@@ -1,0 +1,269 @@
+{
+  "id": "g9-maths-05-solving-linear-equations",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 9,
+  "tier": "older",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve linear equations in one variable and check the solution by substitution.",
+      "textbook": "PCTB Grade 9 Mathematics (NCP 2023), Unit 5: Linear Equations and Inequalities"
+    }
+  ],
+  "skills": [
+    "maths.linear_equations.solve_two_step"
+  ],
+  "title": {
+    "en": "Solving equations like a balance",
+    "ur": "مساوات کا حل: ترازو کی طرح"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.expressions_basic"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "one_side_only",
+      "description": "Does an operation to one side of the equation only."
+    },
+    {
+      "id": "move_without_sign_change",
+      "description": "Moves a term to the other side without changing its sign (2x + 3 = 11 becomes 2x = 11 + 3)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.linear_equations.solve_two_step": {
+      "question_types": [
+        "apply",
+        "explain",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.linear_equations.solve_two_step": [
+      {
+        "id": "qb_solve",
+        "type": "apply",
+        "step": {
+          "id": "qb_solve",
+          "type": "text_check",
+          "checker": "linear_equation",
+          "expected": "5x - 4 = 21",
+          "multiline": true,
+          "prompt": {
+            "en": "Solve 5x − 4 = 21. Write each step on a new line.",
+            "ur": "5x − 4 = 21 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+          },
+          "hint": {
+            "en": "Add 4 to both sides first.",
+            "ur": "پہلے دونوں طرف 4 جمع کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: x = 5. Check: 5 × 5 − 4 = 21.",
+            "ur": "درست: x = 5۔ جانچ: 5 × 5 − 4 = 21"
+          },
+          "feedback_wrong": {
+            "en": "5x − 4 = 21, so 5x = 25, so x = 5.",
+            "ur": "5x − 4 = 21، اس لیے 5x = 25، اس لیے x = 5"
+          }
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_balance",
+      "text": {
+        "en": "Make a balance from a ruler and a pencil. Put equal coins on both ends, then add one coin to one side only. What happens? What must you do to the other side?",
+        "ur": "ایک فٹے اور پنسل سے ترازو بنائیں۔ دونوں سروں پر برابر سکے رکھیں، پھر صرف ایک طرف ایک سکہ اور رکھیں۔ کیا ہوتا ہے؟ دوسری طرف کیا کرنا ہوگا؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Equation",
+      "ur": "مساوات"
+    },
+    {
+      "en": "Linear equation",
+      "ur": "خطی مساوات"
+    },
+    {
+      "en": "Variable",
+      "ur": "متغیر"
+    },
+    {
+      "en": "Solution",
+      "ur": "حل"
+    },
+    {
+      "en": "Substitution",
+      "ur": "قیمت رکھنا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_scale",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "At the village shop, Bilal's scale balances. On the left: 2 equal bags of sugar and a 3 kg weight. On the right: 11 kg of weights. How heavy is one bag?",
+          "ur": "گاؤں کی دکان پر بلال کا ترازو برابر ہے۔ بائیں پلڑے میں چینی کے 2 برابر تھیلے اور 3 کلو کا باٹ ہے۔ دائیں پلڑے میں 11 کلو کے باٹ ہیں۔ ایک تھیلا کتنا بھاری ہے؟"
+        }
+      },
+      "text": {
+        "en": "Call the weight of one bag x. The balanced scale says: 2x + 3 = 11.",
+        "ur": "ایک تھیلے کے وزن کو x کہیں۔ برابر ترازو بتاتا ہے: 2x + 3 = 11"
+      }
+    },
+    {
+      "id": "s2_first_move",
+      "type": "choice",
+      "prompt": {
+        "en": "What can Bilal do first, and keep the scale balanced?",
+        "ur": "بلال پہلے کیا کرے کہ ترازو برابر رہے؟"
+      },
+      "options": [
+        {
+          "id": "both_sides",
+          "text": {
+            "en": "Take 3 kg off both sides",
+            "ur": "دونوں پلڑوں سے 3 کلو اتار دے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Taking the same weight off both sides keeps it balanced: 2x = 8.",
+            "ur": "جی ہاں! دونوں طرف سے برابر وزن اتارنے سے توازن رہتا ہے: 2x = 8"
+          }
+        },
+        {
+          "id": "left_only",
+          "text": {
+            "en": "Take 3 kg off the left side only",
+            "ur": "صرف بائیں پلڑے سے 3 کلو اتار دے"
+          },
+          "correct": false,
+          "misconception_id": "one_side_only",
+          "feedback": {
+            "en": "Then the left side becomes lighter and the scale tips. What you do to one side, you must do to the other.",
+            "ur": "اس سے بایاں پلڑا ہلکا ہو جائے گا اور ترازو جھک جائے گا۔ جو ایک طرف کریں، وہی دوسری طرف بھی کریں۔"
+          }
+        },
+        {
+          "id": "add_right",
+          "text": {
+            "en": "Add 3 kg to the right side",
+            "ur": "دائیں پلڑے میں 3 کلو اور رکھ دے"
+          },
+          "correct": false,
+          "misconception_id": "move_without_sign_change",
+          "feedback": {
+            "en": "That makes the right side heavier, so the scale tips. This is the same mistake as writing 2x = 11 + 3.",
+            "ur": "اس سے دایاں پلڑا بھاری ہو جائے گا اور ترازو جھک جائے گا۔ یہ وہی غلطی ہے جو 2x = 11 + 3 لکھنے میں ہوتی ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_finish",
+      "type": "explain",
+      "text": {
+        "en": "Now 2 bags weigh 8 kg: 2x = 8. Split both sides into 2 equal parts: x = 4. Check by putting 4 back in: 2 × 4 + 3 = 11. It balances!",
+        "ur": "اب 2 تھیلوں کا وزن 8 کلو ہے: 2x = 8۔ دونوں طرف کو 2 برابر حصوں میں بانٹیں: x = 4۔ جانچنے کے لیے 4 واپس رکھیں: 2 × 4 + 3 = 11۔ ترازو برابر ہے!"
+      }
+    },
+    {
+      "id": "s4_solve",
+      "type": "text_check",
+      "checker": "linear_equation",
+      "expected": "3x + 5 = 20",
+      "multiline": true,
+      "prompt": {
+        "en": "Your turn. Solve 3x + 5 = 20. Write each step on a new line, ending with x = your answer.",
+        "ur": "اب آپ کی باری۔ 3x + 5 = 20 حل کریں۔ ہر قدم نئی سطر میں لکھیں، اور آخر میں x = آپ کا جواب۔"
+      },
+      "hint": {
+        "en": "Take 5 off both sides first.",
+        "ur": "پہلے دونوں طرف سے 5 گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! x = 5. Check: 3 × 5 + 5 = 20.",
+        "ur": "شاباش! x = 5۔ جانچ: 3 × 5 + 5 = 20"
+      },
+      "feedback_wrong": {
+        "en": "3x + 5 = 20. Take 5 off both sides: 3x = 15. Divide both sides by 3: x = 5.",
+        "ur": "3x + 5 = 20۔ دونوں طرف سے 5 گھٹائیں: 3x = 15۔ دونوں طرف کو 3 سے تقسیم کریں: x = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": "x = 25/3",
+          "misconception_id": "move_without_sign_change",
+          "feedback": {
+            "en": "It looks like you added 5 to the right side instead of taking it off both sides. Check: does 3 × 25/3 + 5 make 20?",
+            "ur": "لگتا ہے آپ نے 5 دونوں طرف سے گھٹانے کی بجائے دائیں طرف جمع کر دیا۔ جانچیں: کیا 3 × 25/3 + 5 کا جواب 20 آتا ہے؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_pencils",
+      "type": "text_check",
+      "checker": "linear_equation",
+      "expected": "4x + 10 = 50",
+      "multiline": true,
+      "prompt": {
+        "en": "Ayesha buys 4 pencils and a 10-rupee eraser. She pays 50 rupees. One pencil costs x rupees, so 4x + 10 = 50. Solve it.",
+        "ur": "عائشہ 4 پنسلیں اور 10 روپے کا ربڑ خریدتی ہے۔ وہ 50 روپے دیتی ہے۔ ایک پنسل x روپے کی ہے، اس لیے 4x + 10 = 50۔ اسے حل کریں۔"
+      },
+      "hint": {
+        "en": "First remove the eraser's 10 rupees from both sides.",
+        "ur": "پہلے دونوں طرف سے ربڑ کے 10 روپے نکال دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One pencil costs 10 rupees. Check: 4 × 10 + 10 = 50.",
+        "ur": "درست! ایک پنسل 10 روپے کی ہے۔ جانچ: 4 × 10 + 10 = 50"
+      },
+      "feedback_wrong": {
+        "en": "4x + 10 = 50, so 4x = 40, so x = 10. One pencil costs 10 rupees.",
+        "ur": "4x + 10 = 50، اس لیے 4x = 40، اس لیے x = 10۔ ایک پنسل 10 روپے کی ہے۔"
+      }
+    },
+    {
+      "id": "s6_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You kept the scale balanced every time!",
+          "ur": "آپ نے ہر بار ترازو برابر رکھا!"
+        }
+      },
+      "text": {
+        "en": "An equation is like a balanced scale. Do the same thing to both sides until x is alone, then check by putting your answer back in.",
+        "ur": "مساوات ایک برابر ترازو کی طرح ہے۔ دونوں طرف ایک جیسا عمل کریں یہاں تک کہ x اکیلا رہ جائے، پھر جواب واپس رکھ کر جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "Moving +3 to the other side really means taking 3 off both sides, so it becomes −3.",
+          "ur": "+3 کو دوسری طرف لے جانے کا اصل مطلب دونوں طرف سے 3 گھٹانا ہے، اس لیے وہ −3 بن جاتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 2 to test the linear_equation checker. No textbook text or exercises were used.",
+    "Urdu terms to check against the PCTB book: خطی مساوات (linear equation), متغیر (variable), and قیمت رکھنا for substitution.",
+    "The balance-scale interactive from the mockup comes in Phase 5; this lesson uses words only."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

@@ -95,5 +95,18 @@ class ValidateLessonsTest(unittest.TestCase):
         self.assertProblem(self.check(lesson), "'hint' is a required property")
 
 
+    def test_text_check_common_wrong_must_be_wrong(self):
+        lesson = json.loads((v.LESSONS_DIR / "g10-chemistry-15-balancing-equations.json").read_text(encoding="utf-8"))
+        step = next(s for s in lesson["steps"] if s["type"] == "text_check")
+        step["common_wrong"] = [{"answer": step["expected"].replace(" ", ""), "feedback": {"en": "x", "ur": "x"}}]
+        self.assertProblem(self.check(lesson), "a correct answer is also listed in common_wrong")
+
+    def test_text_check_needs_known_checker(self):
+        lesson = json.loads((v.LESSONS_DIR / "g10-chemistry-15-balancing-equations.json").read_text(encoding="utf-8"))
+        step = next(s for s in lesson["steps"] if s["type"] == "text_check")
+        step["checker"] = "magic"
+        self.assertTrue(self.check(lesson))
+
+
 if __name__ == "__main__":
     unittest.main()

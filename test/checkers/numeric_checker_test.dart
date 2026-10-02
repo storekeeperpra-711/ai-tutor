@@ -16,6 +16,11 @@ void main() {
       expect(parseNumber('−۴'), -4);
     });
 
+    test('reads number words', () {
+      expect(parseNumber('aath'), 8);
+      expect(parseNumber('آٹھ'), 8);
+    });
+
     test('reads simple fractions', () {
       expect(parseNumber('3/4'), 0.75);
       expect(parseNumber('۱/۲'), 0.5);
@@ -24,8 +29,8 @@ void main() {
 
     test('rejects things that are not numbers', () {
       expect(parseNumber(''), isNull);
-      expect(parseNumber('eight'), isNull);
-      expect(parseNumber('آٹھ'), isNull);
+      expect(parseNumber('eighty eight'), isNull);
+      expect(parseNumber('آٹھ سو'), isNull);
       expect(parseNumber('3/0'), isNull);
       expect(parseNumber('/4'), isNull);
     });
