@@ -456,7 +456,9 @@
             "lottie",
             "ai_explain",
             "photo_check",
-            "summary"
+            "summary",
+            "tap_count",
+            "pick_picture"
           ]
         }
       },
@@ -579,6 +581,30 @@
           },
           "then": {
             "$ref": "#/$defs/photoCheckStep"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "tap_count"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/tapCountStep"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "pick_picture"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/pickPictureStep"
           }
         }
       ]
@@ -1368,6 +1394,140 @@
           "minimum": 1,
           "maximum": 5,
           "default": 3
+        }
+      }
+    },
+    "numberPicture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "value"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "mangoes",
+            "dots",
+            "fingers",
+            "digit"
+          ],
+          "description": "How the number is drawn. fingers: 0 to 5 only."
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        }
+      }
+    },
+    "tapCountStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "prompt",
+        "count"
+      ],
+      "description": "Tap things into a basket while Mithu counts aloud. For children who can't read: give it a character line.",
+      "properties": {
+        "id": true,
+        "type": true,
+        "question_type": {
+          "$ref": "#/$defs/questionType",
+          "description": "Makes this step count as mastery evidence of this kind."
+        },
+        "skill": {
+          "$ref": "#/$defs/skillId",
+          "description": "Skill this step tests. Default: the lesson's first skill."
+        },
+        "prompt": {
+          "$ref": "#/$defs/text"
+        },
+        "character": {
+          "$ref": "#/$defs/character"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "How many to put in the basket."
+        },
+        "available": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12,
+          "description": "How many to choose from. Default: count + 2."
+        },
+        "object": {
+          "enum": [
+            "mango"
+          ]
+        },
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        }
+      }
+    },
+    "pickPictureStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "prompt",
+        "show",
+        "options"
+      ],
+      "description": "Pick the picture card with the same number as 'show'. The app compares the numbers, so there is no 'correct' field.",
+      "properties": {
+        "id": true,
+        "type": true,
+        "question_type": {
+          "$ref": "#/$defs/questionType",
+          "description": "Makes this step count as mastery evidence of this kind."
+        },
+        "skill": {
+          "$ref": "#/$defs/skillId",
+          "description": "Skill this step tests. Default: the lesson's first skill."
+        },
+        "prompt": {
+          "$ref": "#/$defs/text"
+        },
+        "character": {
+          "$ref": "#/$defs/character"
+        },
+        "show": {
+          "$ref": "#/$defs/numberPicture"
+        },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "picture"
+            ],
+            "properties": {
+              "id": {
+                "$ref": "#/$defs/localId"
+              },
+              "picture": {
+                "$ref": "#/$defs/numberPicture"
+              }
+            }
+          }
+        },
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
         }
       }
     }

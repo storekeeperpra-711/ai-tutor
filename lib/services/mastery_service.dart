@@ -154,6 +154,7 @@ final todayPlanProvider = FutureProvider.family<DailyPlan, String>((
     lessons: positions,
     now: now,
     studentId: studentId,
+    tier: student == null ? null : tierForGrade(student.grade),
     // Shorter for the youngest children (spec C1).
     minutes: student != null && tierForGrade(student.grade) == AgeTier.early
         ? 10

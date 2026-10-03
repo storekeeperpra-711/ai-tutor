@@ -1,0 +1,527 @@
+{
+  "id": "g0-maths-01-count-the-mangoes",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 0,
+  "tier": "early",
+  "curriculum_refs": [
+    {
+      "outcome": "Count objects up to 5 and match a number of objects to its numeral.",
+      "textbook": "Early years (Nursery/Prep) numeracy; unit to be confirmed"
+    }
+  ],
+  "skills": [
+    "maths.numbers.count_to_5"
+  ],
+  "title": {
+    "en": "Count the mangoes",
+    "ur": "آم گنیں"
+  },
+  "estimated_minutes": 8,
+  "prerequisites": [],
+  "misconceptions": [
+    {
+      "id": "skips_or_double_counts",
+      "description": "Skips an object or counts one object twice when counting aloud."
+    },
+    {
+      "id": "last_word_not_total",
+      "description": "Counts correctly but doesn't understand that the last number said is how many there are."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.numbers.count_to_5": {
+      "question_types": [
+        "recall",
+        "apply"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.numbers.count_to_5": [
+      {
+        "id": "qb_tap3",
+        "type": "apply",
+        "step": {
+          "id": "qb_tap3",
+          "type": "tap_count",
+          "prompt": {
+            "en": "Put 3 mangoes in the basket.",
+            "ur": "ٹوکری میں 3 آم ڈالیں۔"
+          },
+          "count": 3,
+          "character": {
+            "emotion": "happy",
+            "say": {
+              "en": "Put 3 mangoes in the basket.",
+              "ur": "ٹوکری میں 3 آم ڈالیں۔"
+            }
+          }
+        }
+      },
+      {
+        "id": "qb_tap5",
+        "type": "apply",
+        "step": {
+          "id": "qb_tap5",
+          "type": "tap_count",
+          "prompt": {
+            "en": "Put 5 mangoes in the basket.",
+            "ur": "ٹوکری میں 5 آم ڈالیں۔"
+          },
+          "count": 5,
+          "available": 6,
+          "character": {
+            "emotion": "happy",
+            "say": {
+              "en": "Can you put 5 mangoes in the basket?",
+              "ur": "کیا آپ ٹوکری میں 5 آم ڈال سکتے ہیں؟"
+            }
+          }
+        }
+      },
+      {
+        "id": "qb_pick4",
+        "type": "recall",
+        "step": {
+          "id": "qb_pick4",
+          "type": "pick_picture",
+          "question_type": "recall",
+          "prompt": {
+            "en": "How many mangoes? Pick the number.",
+            "ur": "کتنے آم ہیں؟ عدد چنیں۔"
+          },
+          "show": {
+            "kind": "mangoes",
+            "value": 4
+          },
+          "options": [
+            {
+              "id": "a",
+              "picture": {
+                "kind": "digit",
+                "value": 4
+              }
+            },
+            {
+              "id": "b",
+              "picture": {
+                "kind": "digit",
+                "value": 3
+              }
+            },
+            {
+              "id": "c",
+              "picture": {
+                "kind": "digit",
+                "value": 5
+              }
+            }
+          ],
+          "character": {
+            "emotion": "curious",
+            "say": {
+              "en": "How many mangoes? Find the number.",
+              "ur": "کتنے آم ہیں؟ عدد ڈھونڈیں۔"
+            }
+          }
+        }
+      },
+      {
+        "id": "qb_fingers3",
+        "type": "recall",
+        "step": {
+          "id": "qb_fingers3",
+          "type": "pick_picture",
+          "question_type": "recall",
+          "prompt": {
+            "en": "Which hand shows this number?",
+            "ur": "کون سا ہاتھ یہ عدد دکھاتا ہے؟"
+          },
+          "show": {
+            "kind": "digit",
+            "value": 3
+          },
+          "options": [
+            {
+              "id": "a",
+              "picture": {
+                "kind": "fingers",
+                "value": 2
+              }
+            },
+            {
+              "id": "b",
+              "picture": {
+                "kind": "fingers",
+                "value": 3
+              }
+            },
+            {
+              "id": "c",
+              "picture": {
+                "kind": "fingers",
+                "value": 5
+              }
+            }
+          ],
+          "character": {
+            "emotion": "curious",
+            "say": {
+              "en": "Show me this many fingers. Which hand is right?",
+              "ur": "اتنی انگلیاں دکھائیں۔ کون سا ہاتھ ٹھیک ہے؟"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_count",
+      "front": {
+        "en": "How many fingers on one hand?",
+        "ur": "ایک ہاتھ پر کتنی انگلیاں ہیں؟"
+      },
+      "back": {
+        "en": "5",
+        "ur": "5"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_spoons",
+      "text": {
+        "en": "With a grown-up, count the spoons or cups in the kitchen. Touch each one as you say the number.",
+        "ur": "کسی بڑے کے ساتھ باورچی خانے میں چمچ یا کپ گنیں۔ ہر ایک کو چھو کر عدد بولیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "count",
+      "ur": "گننا"
+    },
+    {
+      "en": "mango",
+      "ur": "آم"
+    },
+    {
+      "en": "basket",
+      "ur": "ٹوکری"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hello",
+      "type": "explain",
+      "text": {
+        "en": "Mithu has a mango tree. Let's count the mangoes!",
+        "ur": "مٹھو کے پاس آم کا درخت ہے۔ آئیں آم گنیں!"
+      },
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Assalam o Alaikum! I have a mango tree. Let's count the mangoes together!",
+          "ur": "السلام علیکم! میرے پاس آم کا درخت ہے۔ آئیں مل کر آم گنیں!"
+        }
+      }
+    },
+    {
+      "id": "s2_one",
+      "type": "tap_count",
+      "prompt": {
+        "en": "Put 1 mango in the basket.",
+        "ur": "ٹوکری میں 1 آم ڈالیں۔"
+      },
+      "count": 1,
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Tap one mango. It will jump into the basket. Then tap the tick.",
+          "ur": "ایک آم کو چھوئیں۔ وہ ٹوکری میں چلا جائے گا۔ پھر ٹک کو چھوئیں۔"
+        }
+      }
+    },
+    {
+      "id": "s3_two",
+      "type": "tap_count",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Put 2 mangoes in the basket.",
+        "ur": "ٹوکری میں 2 آم ڈالیں۔"
+      },
+      "count": 2,
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Now put 2 mangoes in the basket. I will count with you.",
+          "ur": "اب ٹوکری میں 2 آم ڈالیں۔ میں آپ کے ساتھ گنوں گا۔"
+        }
+      }
+    },
+    {
+      "id": "s4_pick3",
+      "type": "pick_picture",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many mangoes? Pick the number.",
+        "ur": "کتنے آم ہیں؟ عدد چنیں۔"
+      },
+      "show": {
+        "kind": "mangoes",
+        "value": 3
+      },
+      "options": [
+        {
+          "id": "a",
+          "picture": {
+            "kind": "digit",
+            "value": 2
+          }
+        },
+        {
+          "id": "b",
+          "picture": {
+            "kind": "digit",
+            "value": 3
+          }
+        },
+        {
+          "id": "c",
+          "picture": {
+            "kind": "digit",
+            "value": 5
+          }
+        }
+      ],
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How many mangoes do you see? Tap the number.",
+          "ur": "آپ کو کتنے آم نظر آ رہے ہیں؟ عدد کو چھوئیں۔"
+        }
+      }
+    },
+    {
+      "id": "s5_four",
+      "type": "tap_count",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Put 4 mangoes in the basket.",
+        "ur": "ٹوکری میں 4 آم ڈالیں۔"
+      },
+      "count": 4,
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Put 4 mangoes in the basket. Count slowly, one by one.",
+          "ur": "ٹوکری میں 4 آم ڈالیں۔ آہستہ آہستہ، ایک ایک کر کے گنیں۔"
+        }
+      }
+    },
+    {
+      "id": "s6_dots",
+      "type": "pick_picture",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which card has this many dots?",
+        "ur": "کس کارڈ پر اتنے نقطے ہیں؟"
+      },
+      "show": {
+        "kind": "digit",
+        "value": 5
+      },
+      "options": [
+        {
+          "id": "a",
+          "picture": {
+            "kind": "dots",
+            "value": 4
+          }
+        },
+        {
+          "id": "b",
+          "picture": {
+            "kind": "dots",
+            "value": 5
+          }
+        },
+        {
+          "id": "c",
+          "picture": {
+            "kind": "dots",
+            "value": 3
+          }
+        }
+      ],
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "This is five. Which card has five dots?",
+          "ur": "یہ پانچ ہے۔ کس کارڈ پر پانچ نقطے ہیں؟"
+        }
+      }
+    },
+    {
+      "id": "s7_fingers",
+      "type": "pick_picture",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which hand shows how many mangoes?",
+        "ur": "کون سا ہاتھ آموں کی گنتی دکھاتا ہے؟"
+      },
+      "show": {
+        "kind": "mangoes",
+        "value": 2
+      },
+      "options": [
+        {
+          "id": "a",
+          "picture": {
+            "kind": "fingers",
+            "value": 1
+          }
+        },
+        {
+          "id": "b",
+          "picture": {
+            "kind": "fingers",
+            "value": 4
+          }
+        },
+        {
+          "id": "c",
+          "picture": {
+            "kind": "fingers",
+            "value": 2
+          }
+        }
+      ],
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two mangoes! Which hand shows two fingers?",
+          "ur": "دو آم! کون سا ہاتھ دو انگلیاں دکھا رہا ہے؟"
+        }
+      }
+    },
+    {
+      "id": "s8_five",
+      "type": "tap_count",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Put 5 mangoes in the basket.",
+        "ur": "ٹوکری میں 5 آم ڈالیں۔"
+      },
+      "count": 5,
+      "available": 6,
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Last one! Put 5 mangoes in the basket. Be careful, there are 6 on the tree.",
+          "ur": "آخری! ٹوکری میں 5 آم ڈالیں۔ دھیان سے، درخت پر 6 ہیں۔"
+        }
+      }
+    },
+    {
+      "id": "s9_summary",
+      "type": "summary",
+      "text": {
+        "en": "You can count to 5!",
+        "ur": "آپ 5 تک گن سکتے ہیں!"
+      },
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You counted to five. Count the mangoes at home too!",
+          "ur": "شاباش! آپ نے پانچ تک گنا۔ گھر میں بھی آم گنیں!"
+        }
+      }
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_tap4",
+      "type": "apply",
+      "skill": "maths.numbers.count_to_5",
+      "step": {
+        "id": "r_tap4",
+        "type": "tap_count",
+        "prompt": {
+          "en": "Put 4 mangoes in the basket.",
+          "ur": "ٹوکری میں 4 آم ڈالیں۔"
+        },
+        "count": 4,
+        "character": {
+          "emotion": "happy",
+          "say": {
+            "en": "Do you remember? Put 4 mangoes in the basket.",
+            "ur": "یاد ہے؟ ٹوکری میں 4 آم ڈالیں۔"
+          }
+        }
+      }
+    },
+    {
+      "id": "r_pick5",
+      "type": "recall",
+      "skill": "maths.numbers.count_to_5",
+      "step": {
+        "id": "r_pick5",
+        "type": "pick_picture",
+        "question_type": "recall",
+        "prompt": {
+          "en": "How many mangoes? Pick the number.",
+          "ur": "کتنے آم ہیں؟ عدد چنیں۔"
+        },
+        "show": {
+          "kind": "mangoes",
+          "value": 5
+        },
+        "options": [
+          {
+            "id": "a",
+            "picture": {
+              "kind": "digit",
+              "value": 5
+            }
+          },
+          {
+            "id": "b",
+            "picture": {
+              "kind": "digit",
+              "value": 4
+            }
+          },
+          {
+            "id": "c",
+            "picture": {
+              "kind": "digit",
+              "value": 2
+            }
+          }
+        ],
+        "character": {
+          "emotion": "curious",
+          "say": {
+            "en": "How many mangoes now? Tap the number.",
+            "ur": "اب کتنے آم ہیں؟ عدد کو چھوئیں۔"
+          }
+        }
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written for Phase 7: a lesson a child who can't read can finish. Every instruction is said by Mithu (recorded voice once recorded, the phone's voice until then).",
+    "Right and wrong show in Mithu's face and a sound, not text. The app decides right and wrong by comparing numbers.",
+    "Check the Urdu wording with a Nursery teacher, and record the lines with the narration recorder."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

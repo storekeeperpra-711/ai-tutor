@@ -1,3 +1,5 @@
+import 'package:ai_tutor/app/theme/age_tier.dart';
+
 import 'dart:math';
 
 import 'package:ai_tutor/lessons/step_result.dart';
@@ -121,7 +123,10 @@ class SimulatedStudent {
 final start = DateTime(2026, 10, 5, 17); // a Monday, after school
 
 void main() {
-  final curriculum = Curriculum(loadLessons());
+  // A secondary student: the Nursery lessons aren't theirs.
+  final curriculum = Curriculum(
+    loadLessons().where((l) => l.tier != 'early').toList(),
+  );
   MasteryLevel levelOf(SimulatedStudent s, String skill) =>
       s.states[skill]?.level(curriculum.criteriaFor(skill)) ??
       MasteryLevel.notStarted;
@@ -290,6 +295,27 @@ void main() {
       (plan.items.single as LessonItem).lesson.id,
       'g6-maths-02-dividing-fractions',
     );
+  });
+
+  test('new lessons come from the student\'s age group', () {
+    final all = Curriculum(loadLessons());
+    String first(AgeTier? tier) =>
+        (buildDailyPlan(
+                  curriculum: all,
+                  states: const {},
+                  lessons: const {},
+                  now: start,
+                  studentId: 'new',
+                  tier: tier,
+                ).items.single
+                as LessonItem)
+            .lesson
+            .id;
+    expect(first(AgeTier.early), 'g0-maths-01-count-the-mangoes');
+    expect(first(AgeTier.middle), 'g6-maths-02-dividing-fractions');
+    expect(first(AgeTier.older), 'g9-maths-05-solving-linear-equations');
+    // No Grade 3-5 lessons yet: anything but the Nursery ones.
+    expect(first(AgeTier.primary), 'g6-maths-02-dividing-fractions');
   });
 
   test('the plan is the same all day and can be saved and rebuilt', () {

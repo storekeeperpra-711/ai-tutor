@@ -88,6 +88,18 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
             if step["answer"] in answers:
                 problems.append(f"{where}/{step['id']}: the correct answer is also listed in common_wrong")
 
+        if step.get("type") == "pick_picture":
+            value = step["show"]["value"]
+            matching = [o["id"] for o in step["options"] if o["picture"]["value"] == value]
+            if len(matching) != 1:
+                problems.append(f"{where}/{step['id']}: exactly one picture must show {value} (found {len(matching)})")
+            pictures = [step["show"]] + [o["picture"] for o in step["options"]]
+            if any(p["kind"] == "fingers" and p["value"] > 5 for p in pictures):
+                problems.append(f"{where}/{step['id']}: one hand can only show 0 to 5 fingers")
+
+        if step.get("type") == "tap_count" and step.get("available", step["count"] + 2) < step["count"]:
+            problems.append(f"{where}/{step['id']}: 'available' must be at least 'count'")
+
         if step.get("type") == "text_check":
             def squash(text: str) -> str:
                 return "".join(text.split()).lower()

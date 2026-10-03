@@ -69,6 +69,19 @@ class ValidateLessonsTest(unittest.TestCase):
             finally:
                 v.AUDIO = old
 
+    def test_counting_lesson_rules(self):
+        lesson = json.loads((v.LESSONS_DIR / "g0-maths-01-count-the-mangoes.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.check(lesson), [])
+        pick = next(s for s in lesson["steps"] if s["type"] == "pick_picture")
+        pick["options"][0]["picture"]["value"] = pick["show"]["value"]
+        self.assertProblem(self.check(lesson), "exactly one picture must show")
+        pick["options"][0]["picture"] = {"kind": "fingers", "value": 7}
+        self.assertProblem(self.check(lesson), "0 to 5 fingers")
+        tap = next(s for s in lesson["steps"] if s["type"] == "tap_count")
+        tap["count"] = 3
+        tap["available"] = 2
+        self.assertProblem(self.check(lesson), "'available' must be at least 'count'")
+
     def test_missing_urdu_text(self):
         lesson = self.mutated()
         del lesson["title"]["ur"]
