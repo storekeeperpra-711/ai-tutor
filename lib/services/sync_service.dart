@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../app/preferences.dart';
+import '../classes/class_service.dart';
 import 'auth_service.dart';
 import 'connectivity.dart';
 import 'local_db.dart';
@@ -20,12 +21,16 @@ class SyncService {
     required this.remote,
     required this.auth,
     required this.prefs,
+    this.classes,
   });
 
   final LocalDb db;
   final RemoteStore remote;
   final AuthService auth;
   final SharedPreferences prefs;
+
+  /// Shares class summaries and fetches assigned lessons (Phase 9).
+  final Future<void> Function(String uid)? classes;
 
   /// The account the phone's data was last uploaded to.
   static const syncedUidKey = 'syncedUid';
@@ -72,6 +77,7 @@ class SyncService {
       await db.markSkillSynced(row);
     }
     await _syncAiQueue(uid);
+    await classes?.call(uid);
   }
 
   /// Sends answers that wait for AI feedback, and fetches Mithu's replies
@@ -117,6 +123,7 @@ final syncServiceProvider = Provider<SyncService>((ref) {
     remote: ref.watch(remoteStoreProvider),
     auth: ref.watch(authServiceProvider),
     prefs: ref.watch(sharedPreferencesProvider),
+    classes: (uid) => ref.read(classServiceProvider).sync(uid),
   );
   // Back online: sign in if needed, then upload the queue.
   ref.listen(onlineProvider, (previous, next) {

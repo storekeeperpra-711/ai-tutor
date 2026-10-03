@@ -135,6 +135,38 @@ class DownloadedLessons extends Table {
   Set<Column> get primaryKey => {id};
 }
 
+/// The classes a child has joined (Phase 9). Joining shares a short
+/// summary with the class's teacher, after a parent agreed.
+@DataClassName('ClassMembership')
+class ClassMemberships extends Table {
+  TextColumn get studentId => text().references(Students, #id)();
+  TextColumn get classId => text()();
+  TextColumn get className => text()();
+  DateTimeColumn get joinedAt => dateTime()();
+
+  /// The account the summary was last shared from, when, and what was
+  /// shared (as JSON), so an unchanged summary isn't written again.
+  TextColumn get sharedUid => text().nullable()();
+  DateTimeColumn get sharedAt => dateTime().nullable()();
+  TextColumn get sharedSummary => text().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {studentId, classId};
+}
+
+/// Lessons a teacher assigned to a class (Phase 9), copied from Firestore.
+@DataClassName('ClassAssignment')
+class ClassAssignments extends Table {
+  TextColumn get classId => text()();
+  TextColumn get id => text()();
+  TextColumn get lessonId => text()();
+  DateTimeColumn get due => dateTime().nullable()();
+  DateTimeColumn get createdAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {classId, id};
+}
+
 /// The pictures a child can choose from.
 const avatarIds = [
   'cat',
@@ -167,13 +199,15 @@ class ProgressUpload {
     SkillStates,
     AiQueue,
     DownloadedLessons,
+    ClassMemberships,
+    ClassAssignments,
   ],
 )
 class LocalDb extends _$LocalDb {
   LocalDb(super.executor);
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -181,6 +215,10 @@ class LocalDb extends _$LocalDb {
       if (from < 2) await m.createTable(skillStates);
       if (from < 3) await m.createTable(aiQueue);
       if (from < 4) await m.createTable(downloadedLessons);
+      if (from < 5) {
+        await m.createTable(classMemberships);
+        await m.createTable(classAssignments);
+      }
     },
     beforeOpen: (details) async {
       await customStatement('PRAGMA foreign_keys = ON');
@@ -215,6 +253,9 @@ class LocalDb extends _$LocalDb {
       into(students).insert(student.copyWith(synced: false));
 
   Future<void> deleteStudent(String id) => transaction(() async {
+    for (final m in await membershipsOf(id)) {
+      await leaveClass(id, m.classId);
+    }
     await (delete(aiQueue)..where((r) => r.studentId.equals(id))).go();
     await (delete(stepResults)..where((r) => r.studentId.equals(id))).go();
     await (delete(skillStates)..where((r) => r.studentId.equals(id))).go();
@@ -224,7 +265,97 @@ class LocalDb extends _$LocalDb {
     await (delete(students)..where((s) => s.id.equals(id))).go();
   });
 
+  // Classes (Phase 9)
+
+  Future<List<ClassMembership>> allMemberships() =>
+      select(classMemberships).get();
+
+  Future<List<ClassMembership>> membershipsOf(String studentId) => (select(
+    classMemberships,
+  )..where((m) => m.studentId.equals(studentId))).get();
+
+  Stream<List<ClassMembership>> watchMemberships(String studentId) =>
+      (select(classMemberships)
+            ..where((m) => m.studentId.equals(studentId))
+            ..orderBy([(m) => OrderingTerm(expression: m.joinedAt)]))
+          .watch();
+
+  Future<void> joinClass(ClassMembership membership) =>
+      into(classMemberships).insertOnConflictUpdate(membership);
+
+  /// Removes the membership, and the class's lessons once no child on the
+  /// phone is in it.
+  Future<void> leaveClass(String studentId, String classId) =>
+      transaction(() async {
+        await (delete(classMemberships)..where(
+              (m) => m.studentId.equals(studentId) & m.classId.equals(classId),
+            ))
+            .go();
+        final others = await (select(
+          classMemberships,
+        )..where((m) => m.classId.equals(classId))).get();
+        if (others.isEmpty) {
+          await (delete(
+            classAssignments,
+          )..where((a) => a.classId.equals(classId))).go();
+        }
+      });
+
+  Future<void> markShared(
+    String studentId,
+    String classId, {
+    required String uid,
+    required String summary,
+    required DateTime at,
+  }) =>
+      (update(classMemberships)..where(
+            (m) => m.studentId.equals(studentId) & m.classId.equals(classId),
+          ))
+          .write(
+            ClassMembershipsCompanion(
+              sharedUid: Value(uid),
+              sharedSummary: Value(summary),
+              sharedAt: Value(at),
+            ),
+          );
+
+  /// Replaces a class's lessons with what the teacher assigned now.
+  Future<void> replaceAssignments(
+    String classId,
+    List<ClassAssignment> assignments,
+  ) => transaction(() async {
+    await (delete(
+      classAssignments,
+    )..where((a) => a.classId.equals(classId))).go();
+    for (final a in assignments) {
+      await into(classAssignments).insertOnConflictUpdate(a);
+    }
+  });
+
+  /// Lessons assigned to any class [studentId] is in, oldest first.
+  Stream<List<ClassAssignment>> watchAssignmentsFor(String studentId) {
+    final query =
+        select(classAssignments).join([
+            innerJoin(
+              classMemberships,
+              classMemberships.classId.equalsExp(classAssignments.classId),
+            ),
+          ])
+          ..where(classMemberships.studentId.equals(studentId))
+          ..orderBy([OrderingTerm(expression: classAssignments.createdAt)]);
+    return query.watch().map(
+      (rows) => [for (final r in rows) r.readTable(classAssignments)],
+    );
+  }
+
   // Progress
+
+  Future<Map<String, LessonProgress>> progressOf(String studentId) async => {
+    for (final r in await (select(
+      lessonProgressTable,
+    )..where((p) => p.studentId.equals(studentId))).get())
+      r.lessonId: r,
+  };
 
   Future<LessonProgress?> progress(String studentId, String lessonId) =>
       (select(lessonProgressTable)..where(
@@ -496,6 +627,8 @@ class LocalDb extends _$LocalDb {
 
   /// Removes every profile from this phone (when an adult signs out).
   Future<void> clearAll() => transaction(() async {
+    await delete(classAssignments).go();
+    await delete(classMemberships).go();
     await delete(aiQueue).go();
     await delete(stepResults).go();
     await delete(skillStates).go();

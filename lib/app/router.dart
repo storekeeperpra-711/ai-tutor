@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/account/account_screen.dart';
+import '../features/classes/teacher_classes_screen.dart';
 import '../features/ai/ai_costs_screen.dart';
 import '../features/ai/mithu_notes.dart';
 import '../features/debug/narration_recorder_screen.dart';
@@ -50,6 +51,15 @@ final routerProvider = Provider<GoRouter>(
       GoRoute(
         path: '/account',
         builder: (context, state) => const AccountScreen(),
+      ),
+      GoRoute(
+        path: '/classes',
+        builder: (context, state) => const TeacherClassesScreen(),
+      ),
+      GoRoute(
+        path: '/classes/:id',
+        builder: (context, state) =>
+            ClassDetailScreen(classId: state.pathParameters['id']!),
       ),
       GoRoute(
         path: '/lesson/:id',

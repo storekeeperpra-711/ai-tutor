@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../ai/weekly_report.dart';
+import '../classes/student_classes_dialog.dart';
 import '../../app/preferences.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/account_actions.dart';
@@ -132,7 +134,12 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
             ),
             if (role == AccountRole.teacher.name) ...[
               const SizedBox(height: 8),
-              Text(l10n.teacherToolsSoon),
+              FilledButton.icon(
+                key: const Key('my-classes'),
+                icon: const Icon(Icons.groups_outlined),
+                label: Text(l10n.myClasses),
+                onPressed: () => context.push('/classes'),
+              ),
             ],
             const SizedBox(height: 16),
             OutlinedButton(
@@ -220,6 +227,12 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    IconButton(
+                      key: Key('classes-${s.id}'),
+                      icon: const Icon(Icons.groups_outlined),
+                      tooltip: l10n.classesButton,
+                      onPressed: () => showStudentClasses(context, s),
+                    ),
                     IconButton(
                       key: Key('report-${s.id}'),
                       icon: const Icon(Icons.summarize_outlined),

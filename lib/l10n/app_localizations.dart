@@ -584,12 +584,6 @@ abstract class AppLocalizations {
   /// **'Something went wrong. Please try again.'**
   String get authOther;
 
-  /// Shown to teachers until Phase 9.
-  ///
-  /// In en, this message translates to:
-  /// **'Teacher tools (classes and homework) are coming soon.'**
-  String get teacherToolsSoon;
-
   /// Heading of the learner list on the account screen.
   ///
   /// In en, this message translates to:
@@ -1855,6 +1849,204 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No corners marked yet.'**
   String get regionNoCorners;
+
+  /// Tooltip of the button next to a learner that opens their classes.
+  ///
+  /// In en, this message translates to:
+  /// **'Classes'**
+  String get classesButton;
+
+  /// Title of the classes dialog for one learner.
+  ///
+  /// In en, this message translates to:
+  /// **'{name}\'s classes'**
+  String classesTitle(String name);
+
+  /// When a learner has joined no class.
+  ///
+  /// In en, this message translates to:
+  /// **'Not in a class yet.'**
+  String get classesNone;
+
+  /// Label of the field where a parent types the class code.
+  ///
+  /// In en, this message translates to:
+  /// **'Class code from the teacher'**
+  String get classCodeLabel;
+
+  /// Button that looks up the class code.
+  ///
+  /// In en, this message translates to:
+  /// **'Find class'**
+  String get findClass;
+
+  /// When the class code is wrong.
+  ///
+  /// In en, this message translates to:
+  /// **'No class has this code. Please check the code with the teacher.'**
+  String get classNotFound;
+
+  /// When joining a class or loading classes fails without internet.
+  ///
+  /// In en, this message translates to:
+  /// **'This needs internet. Please try again when you are online.'**
+  String get classNoConnection;
+
+  /// The class found for the typed code.
+  ///
+  /// In en, this message translates to:
+  /// **'Class: {className}'**
+  String classFound(String className);
+
+  /// Consent checkbox a parent must tick before a learner joins a class.
+  ///
+  /// In en, this message translates to:
+  /// **'I agree that this class\'s teacher can see {name}\'s first name, grade and progress in lessons. The name is never sent to AI. I can take {name} out of the class at any time.'**
+  String classConsent(String name);
+
+  /// Button that joins the learner to the class.
+  ///
+  /// In en, this message translates to:
+  /// **'Join class'**
+  String get joinClass;
+
+  /// Button that takes a learner out of a class.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave'**
+  String get leaveClass;
+
+  /// Confirmation before leaving a class.
+  ///
+  /// In en, this message translates to:
+  /// **'Take {name} out of {className}? The teacher will no longer see {name}\'s progress.'**
+  String leaveClassConfirm(String name, String className);
+
+  /// A lesson the teacher assigned, at the top of today's plan.
+  ///
+  /// In en, this message translates to:
+  /// **'From your teacher: {title}'**
+  String planAssigned(String title);
+
+  /// Due date of an assigned lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'By {date}'**
+  String planDue(String date);
+
+  /// Teacher's screen and button listing their classes.
+  ///
+  /// In en, this message translates to:
+  /// **'My classes'**
+  String get myClasses;
+
+  /// Button and dialog title for creating a class.
+  ///
+  /// In en, this message translates to:
+  /// **'New class'**
+  String get newClass;
+
+  /// Field for the new class's name.
+  ///
+  /// In en, this message translates to:
+  /// **'Class name (for example: 9 A Maths)'**
+  String get classNameLabel;
+
+  /// Button that creates something.
+  ///
+  /// In en, this message translates to:
+  /// **'Create'**
+  String get createButton;
+
+  /// Teacher with no classes.
+  ///
+  /// In en, this message translates to:
+  /// **'No classes yet. Create one and give its code to the parents.'**
+  String get noClassesYet;
+
+  /// A class's code.
+  ///
+  /// In en, this message translates to:
+  /// **'Code: {code}'**
+  String classCode(String code);
+
+  /// How parents use the class code.
+  ///
+  /// In en, this message translates to:
+  /// **'Parents open Account in the app, tap the classes button next to their child, and type this code.'**
+  String get classCodeHelp;
+
+  /// Heading of the class's student list.
+  ///
+  /// In en, this message translates to:
+  /// **'Students'**
+  String get classMembers;
+
+  /// A class nobody joined.
+  ///
+  /// In en, this message translates to:
+  /// **'No students yet.'**
+  String get noMembersYet;
+
+  /// Under a student in the teacher's class list.
+  ///
+  /// In en, this message translates to:
+  /// **'{mastered} of {started} skills mastered'**
+  String memberProgress(int mastered, int started);
+
+  /// Heading of the class's assigned lessons.
+  ///
+  /// In en, this message translates to:
+  /// **'Assigned lessons'**
+  String get classAssignments;
+
+  /// Button and dialog title for assigning a lesson to a class.
+  ///
+  /// In en, this message translates to:
+  /// **'Assign a lesson'**
+  String get assignLesson;
+
+  /// A class with no assigned lessons.
+  ///
+  /// In en, this message translates to:
+  /// **'No lessons assigned yet.'**
+  String get noAssignments;
+
+  /// How many students finished an assigned lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} finished'**
+  String assignmentDone(int done, int total);
+
+  /// Button that picks a due date for an assigned lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a due date'**
+  String get setDueDate;
+
+  /// Button that deletes a class.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete class'**
+  String get deleteClass;
+
+  /// Confirmation before deleting a class.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete {className}? Its code stops working and the students\' summaries are deleted.'**
+  String deleteClassConfirm(String className);
+
+  /// Heading of the misconceptions that came up most in a class.
+  ///
+  /// In en, this message translates to:
+  /// **'Common mistakes'**
+  String get commonMistakes;
+
+  /// Which students made a common mistake.
+  ///
+  /// In en, this message translates to:
+  /// **'Made by: {names}'**
+  String mistakeStudents(String names);
 }
 
 class _AppLocalizationsDelegate

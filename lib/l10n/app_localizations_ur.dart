@@ -295,10 +295,6 @@ class AppLocalizationsUr extends AppLocalizations {
   String get authOther => 'کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔';
 
   @override
-  String get teacherToolsSoon =>
-      'اساتذہ کے ٹولز (کلاسیں اور ہوم ورک) جلد آ رہے ہیں۔';
-
-  @override
   String get learnersTitle => 'اس فون پر طلبہ';
 
   @override
@@ -1049,4 +1045,129 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get regionNoCorners => 'ابھی کوئی کونا نہیں چنا۔';
+
+  @override
+  String get classesButton => 'کلاسیں';
+
+  @override
+  String classesTitle(String name) {
+    return '$name کی کلاسیں';
+  }
+
+  @override
+  String get classesNone => 'ابھی کسی کلاس میں نہیں۔';
+
+  @override
+  String get classCodeLabel => 'استاد کا دیا ہوا کلاس کوڈ';
+
+  @override
+  String get findClass => 'کلاس تلاش کریں';
+
+  @override
+  String get classNotFound =>
+      'اس کوڈ کی کوئی کلاس نہیں ملی۔ براہِ کرم استاد سے کوڈ دوبارہ پوچھیں۔';
+
+  @override
+  String get classNoConnection =>
+      'اس کے لیے انٹرنیٹ چاہیے۔ انٹرنیٹ ملنے پر دوبارہ کوشش کریں۔';
+
+  @override
+  String classFound(String className) {
+    return 'کلاس: $className';
+  }
+
+  @override
+  String classConsent(String name) {
+    return 'میں اجازت دیتا/دیتی ہوں کہ اس کلاس کا استاد $name کا پہلا نام، جماعت اور اسباق میں ترقی دیکھ سکے۔ نام کبھی AI کو نہیں بھیجا جاتا۔ میں جب چاہوں $name کو کلاس سے نکال سکتا/سکتی ہوں۔';
+  }
+
+  @override
+  String get joinClass => 'کلاس میں شامل کریں';
+
+  @override
+  String get leaveClass => 'چھوڑیں';
+
+  @override
+  String leaveClassConfirm(String name, String className) {
+    return '$name کو $className سے نکالیں؟ اس کے بعد استاد $name کی ترقی نہیں دیکھ سکے گا۔';
+  }
+
+  @override
+  String planAssigned(String title) {
+    return 'استاد کی طرف سے: $title';
+  }
+
+  @override
+  String planDue(String date) {
+    return '$date تک';
+  }
+
+  @override
+  String get myClasses => 'میری کلاسیں';
+
+  @override
+  String get newClass => 'نئی کلاس';
+
+  @override
+  String get classNameLabel => 'کلاس کا نام (مثلاً: 9 A ریاضی)';
+
+  @override
+  String get createButton => 'بنائیں';
+
+  @override
+  String get noClassesYet =>
+      'ابھی کوئی کلاس نہیں۔ ایک کلاس بنائیں اور اس کا کوڈ والدین کو دیں۔';
+
+  @override
+  String classCode(String code) {
+    return 'کوڈ: $code';
+  }
+
+  @override
+  String get classCodeHelp =>
+      'والدین ایپ میں اکاؤنٹ کھولیں، اپنے بچے کے ساتھ کلاسوں والا بٹن دبائیں، اور یہ کوڈ لکھیں۔';
+
+  @override
+  String get classMembers => 'طلبہ';
+
+  @override
+  String get noMembersYet => 'ابھی کوئی طالب علم نہیں۔';
+
+  @override
+  String memberProgress(int mastered, int started) {
+    return '$started میں سے $mastered مہارتیں پکی';
+  }
+
+  @override
+  String get classAssignments => 'دیے گئے اسباق';
+
+  @override
+  String get assignLesson => 'سبق دیں';
+
+  @override
+  String get noAssignments => 'ابھی کوئی سبق نہیں دیا گیا۔';
+
+  @override
+  String assignmentDone(int done, int total) {
+    return '$total میں سے $done نے مکمل کیا';
+  }
+
+  @override
+  String get setDueDate => 'آخری تاریخ مقرر کریں';
+
+  @override
+  String get deleteClass => 'کلاس ختم کریں';
+
+  @override
+  String deleteClassConfirm(String className) {
+    return '$className ختم کریں؟ اس کا کوڈ کام نہیں کرے گا اور طلبہ کی معلومات مٹ جائیں گی۔';
+  }
+
+  @override
+  String get commonMistakes => 'عام غلطیاں';
+
+  @override
+  String mistakeStudents(String names) {
+    return 'جنہوں نے کی: $names';
+  }
 }

@@ -295,10 +295,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get authOther => 'Something went wrong. Please try again.';
 
   @override
-  String get teacherToolsSoon =>
-      'Teacher tools (classes and homework) are coming soon.';
-
-  @override
   String get learnersTitle => 'Learners on this phone';
 
   @override
@@ -1044,4 +1040,129 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get regionNoCorners => 'No corners marked yet.';
+
+  @override
+  String get classesButton => 'Classes';
+
+  @override
+  String classesTitle(String name) {
+    return '$name\'s classes';
+  }
+
+  @override
+  String get classesNone => 'Not in a class yet.';
+
+  @override
+  String get classCodeLabel => 'Class code from the teacher';
+
+  @override
+  String get findClass => 'Find class';
+
+  @override
+  String get classNotFound =>
+      'No class has this code. Please check the code with the teacher.';
+
+  @override
+  String get classNoConnection =>
+      'This needs internet. Please try again when you are online.';
+
+  @override
+  String classFound(String className) {
+    return 'Class: $className';
+  }
+
+  @override
+  String classConsent(String name) {
+    return 'I agree that this class\'s teacher can see $name\'s first name, grade and progress in lessons. The name is never sent to AI. I can take $name out of the class at any time.';
+  }
+
+  @override
+  String get joinClass => 'Join class';
+
+  @override
+  String get leaveClass => 'Leave';
+
+  @override
+  String leaveClassConfirm(String name, String className) {
+    return 'Take $name out of $className? The teacher will no longer see $name\'s progress.';
+  }
+
+  @override
+  String planAssigned(String title) {
+    return 'From your teacher: $title';
+  }
+
+  @override
+  String planDue(String date) {
+    return 'By $date';
+  }
+
+  @override
+  String get myClasses => 'My classes';
+
+  @override
+  String get newClass => 'New class';
+
+  @override
+  String get classNameLabel => 'Class name (for example: 9 A Maths)';
+
+  @override
+  String get createButton => 'Create';
+
+  @override
+  String get noClassesYet =>
+      'No classes yet. Create one and give its code to the parents.';
+
+  @override
+  String classCode(String code) {
+    return 'Code: $code';
+  }
+
+  @override
+  String get classCodeHelp =>
+      'Parents open Account in the app, tap the classes button next to their child, and type this code.';
+
+  @override
+  String get classMembers => 'Students';
+
+  @override
+  String get noMembersYet => 'No students yet.';
+
+  @override
+  String memberProgress(int mastered, int started) {
+    return '$mastered of $started skills mastered';
+  }
+
+  @override
+  String get classAssignments => 'Assigned lessons';
+
+  @override
+  String get assignLesson => 'Assign a lesson';
+
+  @override
+  String get noAssignments => 'No lessons assigned yet.';
+
+  @override
+  String assignmentDone(int done, int total) {
+    return '$done of $total finished';
+  }
+
+  @override
+  String get setDueDate => 'Set a due date';
+
+  @override
+  String get deleteClass => 'Delete class';
+
+  @override
+  String deleteClassConfirm(String className) {
+    return 'Delete $className? Its code stops working and the students\' summaries are deleted.';
+  }
+
+  @override
+  String get commonMistakes => 'Common mistakes';
+
+  @override
+  String mistakeStudents(String names) {
+    return 'Made by: $names';
+  }
 }
