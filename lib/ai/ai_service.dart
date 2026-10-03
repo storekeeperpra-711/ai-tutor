@@ -283,7 +283,10 @@ class HttpAiService implements AiService {
 /// The AI server's address for each app version. Empty until the Worker
 /// is deployed (docs/setup/ai-setup.md); until then every AI step uses its
 /// offline check. A build can also set it: --dart-define=AI_URL=https://...
-const aiServerUrls = {'dev': '', 'prod': ''};
+const aiServerUrls = {
+  'dev': 'https://ai-tutor-ai-dev.aitutor1.workers.dev',
+  'prod': '',
+};
 
 String aiServerUrl() {
   const override = String.fromEnvironment('AI_URL');
