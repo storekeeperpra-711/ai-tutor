@@ -295,6 +295,40 @@ class RichStepsTest(unittest.TestCase):
         sim.update(renderer="native", sim_id="balance_scale")
         self.assertProblem(self.problems(lesson), "balance_scale needs params.equation")
 
+    def region_step(self, **expected):
+        lesson, sim = self.step("sim")
+        for key in ("src", "common_wrong"):
+            sim.pop(key, None)
+        sim.update(renderer="native", sim_id="feasible_region", params={
+            "constraints": ["x + y <= 6", "x <= 4", "x >= 0", "y >= 0"], "x_max": 7, "y_max": 7})
+        sim["expected"] = {"result": "corners", "checker": "points", "answer": "(0, 0), (4, 0), (4, 2), (0, 6)", **expected}
+        return lesson, sim
+
+    def test_region_corners_are_worked_out(self):
+        lesson, _ = self.region_step()
+        self.assertEqual(self.problems(lesson), [])
+        lesson, _ = self.region_step(answer="(0, 0), (4, 0), (0, 6)")
+        self.assertProblem(self.problems(lesson), "but the constraints give (0, 0), (0, 6), (4, 0), (4, 2)")
+        lesson, sim = self.region_step()
+        sim["params"]["x_max"] = 3
+        self.assertProblem(self.problems(lesson), "corner (4, 0) is outside the grid")
+        lesson, sim = self.region_step()
+        sim["params"]["constraints"].append("x + y >= 7")
+        self.assertProblem(self.problems(lesson), "no corner in common")
+        lesson, sim = self.region_step()
+        sim["params"]["constraints"] = ["x + 2y <= 5", "x >= 0", "y >= 0"]
+        self.assertProblem(self.problems(lesson), "not a whole-number point")
+
+    def test_inequality_plane_answer_fits_the_grid(self):
+        lesson, sim = self.region_step()
+        sim.update(sim_id="inequality_plane", params={"size": 5})
+        sim["expected"] = {"result": "inequality", "checker": "linear_inequality_2d", "answer": "y <= 2x + 1"}
+        self.assertEqual(self.problems(lesson), [])
+        sim["expected"]["answer"] = "y <= 2x + 1/3"
+        self.assertProblem(self.problems(lesson), "doesn't pass through two grid points")
+        sim["expected"]["answer"] = "y = 2x"
+        self.assertProblem(self.problems(lesson), "must be one inequality in x and y")
+
     def test_video_files(self):
         lesson, video = self.step("video")
         video["src"]["ur"] = "missing_ur.mp4"

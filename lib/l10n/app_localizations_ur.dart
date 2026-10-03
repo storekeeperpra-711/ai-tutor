@@ -992,4 +992,61 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get dotOpen => 'خالی';
+
+  @override
+  String get halfPlaneUnreadable =>
+      'x اور y کے ساتھ ایک نامساوات لکھیں، جیسے y <= 2x + 1';
+
+  @override
+  String get halfPlaneWrongLine =>
+      'حدی خط درست نہیں۔ خط پر دو نقطے ڈھونڈیں اور انہیں جانچیں۔';
+
+  @override
+  String get halfPlaneWrongSide =>
+      'خط درست ہے، مگر جواب اس کی دوسری طرف ہے۔ کوئی نقطہ جیسے (0, 0) آزمائیں۔';
+
+  @override
+  String get halfPlaneWrongBoundary =>
+      'تقریباً! کیا خط خود شامل ہے؟ ≤ اور ≥ میں شامل ہے (سیدھی لکیر)؛ < اور > میں نہیں (ٹوٹی لکیر)۔';
+
+  @override
+  String get pointsUnreadable =>
+      'نقطے (2, 3) کی طرح لکھیں، ان کے درمیان کاما لگائیں۔';
+
+  @override
+  String pointsWrongPoint(String point) {
+    return '$point کونوں میں سے نہیں۔ اسے ہر نامساوات میں جانچیں۔';
+  }
+
+  @override
+  String pointsMissing(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'اب تک درست، مگر $count کونے رہ گئے ہیں۔',
+      one: 'اب تک درست، مگر ایک کونا رہ گیا ہے۔',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get lineSolid => 'سیدھی';
+
+  @override
+  String get lineDashed => 'ٹوٹی';
+
+  @override
+  String get shadeOtherSide => 'دوسری طرف';
+
+  @override
+  String get planeNoSide => 'خط کی وہ طرف ٹیپ کریں جسے رنگنا ہے۔';
+
+  @override
+  String get regionHint => 'رنگے ہوئے حصے کے کونوں پر ٹیپ کریں۔';
+
+  @override
+  String get regionClear => 'مٹائیں';
+
+  @override
+  String get regionNoCorners => 'ابھی کوئی کونا نہیں چنا۔';
 }

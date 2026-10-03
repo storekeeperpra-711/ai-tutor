@@ -1423,5 +1423,72 @@
   "dotOpen": "Open",
   "@dotOpen": {
     "description": "Number line dot that leaves the number out (< >)."
+  },
+  "halfPlaneUnreadable": "Write one inequality with x and y, like y <= 2x + 1.",
+  "@halfPlaneUnreadable": {
+    "description": "A two-variable inequality answer can't be read."
+  },
+  "halfPlaneWrongLine": "The boundary line is not right. Find two points on the line and check them.",
+  "@halfPlaneWrongLine": {
+    "description": "A two-variable inequality has the wrong boundary line."
+  },
+  "halfPlaneWrongSide": "The line is right, but the answer is on its other side. Test a point such as (0, 0).",
+  "@halfPlaneWrongSide": {
+    "description": "A two-variable inequality has the right line but the wrong side."
+  },
+  "halfPlaneWrongBoundary": "Nearly! Is the line itself included? ≤ and ≥ include it (a solid line); < and > do not (a dashed line).",
+  "@halfPlaneWrongBoundary": {
+    "description": "A two-variable inequality has the right side but the line should or shouldn't be included."
+  },
+  "pointsUnreadable": "Write the points like (2, 3), with commas between them.",
+  "@pointsUnreadable": {
+    "description": "A list of points can't be read."
+  },
+  "pointsWrongPoint": "{point} is not one of the corners. Check it in every inequality.",
+  "@pointsWrongPoint": {
+    "description": "One of the points given is not an expected corner.",
+    "placeholders": {
+      "point": {
+        "type": "String",
+        "example": "(4, 1)"
+      }
+    }
+  },
+  "pointsMissing": "{count, plural, =1{Right so far, but one corner is missing.} other{Right so far, but {count} corners are missing.}}",
+  "@pointsMissing": {
+    "description": "All points are right but some corners are missing.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "lineSolid": "Solid",
+  "@lineSolid": {
+    "description": "Inequality graph: the boundary line is included (≤ ≥)."
+  },
+  "lineDashed": "Dashed",
+  "@lineDashed": {
+    "description": "Inequality graph: the boundary line is not included (< >)."
+  },
+  "shadeOtherSide": "Other side",
+  "@shadeOtherSide": {
+    "description": "Inequality graph: button to shade the other side of the line."
+  },
+  "planeNoSide": "Tap the side of the line to shade.",
+  "@planeNoSide": {
+    "description": "Inequality graph: no side has been shaded yet."
+  },
+  "regionHint": "Tap the corners of the shaded region.",
+  "@regionHint": {
+    "description": "Feasible region: how to mark corners."
+  },
+  "regionClear": "Clear",
+  "@regionClear": {
+    "description": "Feasible region: remove all marked points."
+  },
+  "regionNoCorners": "No corners marked yet.",
+  "@regionNoCorners": {
+    "description": "Feasible region: nothing marked."
   }
 }

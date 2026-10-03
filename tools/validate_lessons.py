@@ -17,6 +17,9 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import plane  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = ROOT / "content" / "schema" / "lesson.schema.json"
 LESSONS_DIR = ROOT / "content" / "lessons"
@@ -26,7 +29,7 @@ ASSETS = ROOT / "assets"
 EXTERNAL = re.compile(r"""(?:src|href)\s*=\s*["']?(?:https?:)?//|url\(\s*["']?(?:https?:)?//|\bfetch\s*\(|XMLHttpRequest|WebSocket|@import""", re.I)
 
 # Params each native interactive can't do without.
-NATIVE_PARAMS = {"balance_scale": ["equation"], "atom_balancer": ["equation"]}
+NATIVE_PARAMS = {"balance_scale": ["equation"], "atom_balancer": ["equation"], "feasible_region": ["constraints"]}
 
 FILE_NAME = re.compile(r"^g([0-9]|1[0-2])-[a-z][a-z_]*-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*\.json$")
 
@@ -100,6 +103,10 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
         expected = step.get("expected") if step.get("type") == "sim" else None
         if expected and expected["checker"] == "linear_inequality" and not is_inequality(expected["answer"]):
             problems.append(f"{where}/{step['id']}: expected.answer must be one inequality, like x <= 4")
+        if expected:
+            problems += [f"{where}/{step['id']}: expected.answer {p}" for p in check_answer(expected["checker"], expected["answer"])]
+        if step.get("type") == "sim" and step.get("renderer") == "native":
+            problems += [f"{where}/{step['id']}: {p}" for p in check_plane_sim(step)]
 
         if step.get("type") == "tap_count" and step.get("available", step["count"] + 2) < step["count"]:
             problems.append(f"{where}/{step['id']}: 'available' must be at least 'count'")
@@ -112,6 +119,7 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
                 squash(w["answer"]) in right for w in step.get("common_wrong", [])
             ):
                 problems.append(f"{where}/{step['id']}: a correct answer is also listed in common_wrong")
+            problems += [f"{where}/{step['id']}: expected {p}" for p in check_answer(step["checker"], step["expected"])]
             if step["checker"] == "linear_inequality" and not is_inequality(step["expected"]):
                 problems.append(f"{where}/{step['id']}: expected must be one inequality, like 2x - 3 < 7")
             if "accept" in step and step["checker"] != "text":
@@ -168,6 +176,59 @@ def is_inequality(text: str) -> bool:
     ops = re.findall(r"<=|>=|<|>", text)
     rest = re.sub(r"<=|>=|<|>", "|", text)
     return len(ops) == 1 and "=" not in rest and all(side.strip() for side in rest.split("|"))
+
+
+def check_answer(checker: str, answer: str) -> list[str]:
+    """The expected answer can be read by its checker."""
+    if checker == "linear_inequality_2d" and not plane.is_half_plane(answer):
+        return ["must be one inequality in x and y, like y <= 2x + 1"]
+    if checker == "points":
+        try:
+            plane.parse_points(answer)
+        except ValueError:
+            return ["must be points like (0, 0), (4, 0)"]
+    return []
+
+
+def check_plane_sim(step: dict) -> list[str]:
+    """The graph interactives can show the answer, and a region's corners
+    are worked out here, not trusted from the lesson."""
+    problems = []
+    params, expected = step.get("params", {}), step.get("expected")
+    if step["sim_id"] == "inequality_plane" and expected and plane.is_half_plane(expected["answer"]):
+        size = params.get("size", 5)
+        h = plane.parse_half_plane(expected["answer"])
+        grid = [(plane.Fraction(x), plane.Fraction(y)) for x in range(-size, size + 1) for y in range(-size, size + 1)]
+        if sum(h.on_line(p) for p in grid) < 2:
+            problems.append(f"the line of {expected['answer']} doesn't pass through two grid points between -{size} and {size}")
+    if step["sim_id"] == "feasible_region":
+        constraints = params.get("constraints", [])
+        bad = [c for c in constraints if not plane.is_half_plane(c)]
+        if bad:
+            return [f"constraint '{c}' is not an inequality in x and y" for c in bad]
+        try:
+            found = plane.corners(constraints)
+        except ValueError as e:
+            return [f"constraints: {e}"]
+        box = (params.get("x_min", 0), params.get("x_max", 10), params.get("y_min", 0), params.get("y_max", 10))
+        for p in found:
+            if not (box[0] <= p[0] <= box[1] and box[2] <= p[1] <= box[3]):
+                problems.append(f"corner {plane.describe(p)} is outside the grid")
+        if expected and expected["checker"] == "points":
+            if any(c.denominator != 1 for p in found for c in p):
+                problems.append("a corner is not a whole-number point, so it can't be tapped")
+            try:
+                given = set(plane.parse_points(expected["answer"]))
+            except ValueError:
+                return problems
+            if given != set(found):
+                problems.append(f"expected corners are {expected['answer']}, but the constraints give {', '.join(map(plane.describe, found))}")
+        if "objective" in params:
+            try:
+                plane.parse_linear(params["objective"])
+            except (ValueError, ZeroDivisionError):
+                problems.append(f"objective '{params['objective']}' is not an expression in x and y")
+    return problems
 
 
 def check_media(step: dict) -> list[str]:

@@ -88,6 +88,8 @@ Object wrongSimAnswer(SimStep step) {
     'chem_equation' => 'N2 + H2 -> NH3',
     'fraction' => '999/1000',
     'linear_inequality' => 'x < 999',
+    'linear_inequality_2d' => 'y > 999',
+    'points' => '(99, 99)',
     _ => 'zzz',
   };
 }
@@ -135,6 +137,8 @@ Future<void> answerStep(
               'chem_equation' => 'Xx2 -> Xx',
               'linear_equation' => '${step.variable} = 999',
               'linear_inequality' => '${step.variable} < 999',
+              'linear_inequality_2d' => 'y > 999',
+              'points' => '(99, 99)',
               'fraction' => '999/1000',
               _ => 'zzz',
             };

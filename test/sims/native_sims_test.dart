@@ -5,6 +5,7 @@ import 'package:ai_tutor/models/localized_text.dart';
 import 'package:ai_tutor/sims/native/balance_scale.dart';
 import 'package:ai_tutor/sims/native/graph_plotter.dart';
 import 'package:ai_tutor/sims/native/native_sims.dart';
+import 'package:ai_tutor/sims/native/plane_grid.dart';
 import 'package:ai_tutor/sims/sim_host.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -50,6 +51,27 @@ Future<void> tap(WidgetTester tester, String key, [int times = 1]) async {
     await tester.tap(find.byKey(Key(key)));
     await tester.pumpAndSettle();
   }
+}
+
+/// Taps the grid point (x, y) of the interactive with [key], which shows
+/// [view] as (x min, x max, y min, y max).
+Future<void> tapGrid(
+  WidgetTester tester,
+  String key,
+  (int, int, int, int) view,
+  int x,
+  int y,
+) async {
+  final box = find.byKey(Key(key));
+  final plane = PlaneView(
+    xMin: view.$1,
+    xMax: view.$2,
+    yMin: view.$3,
+    yMax: view.$4,
+    box: tester.getSize(box),
+  );
+  await tester.tapAt(tester.getTopLeft(box) + plane.at(x, y));
+  await tester.pumpAndSettle();
 }
 
 Map<String, dynamic> lastResult(List<SimEvent> events) =>
@@ -214,6 +236,63 @@ void main() {
     await tap(tester, 'move-left', 2);
     await tap(tester, 'sim-check');
     expect(lastResult(events)['vertical'], isTrue);
+  });
+
+  testWidgets('inequality plane: a line, solid or dashed, and a side', (
+    tester,
+  ) async {
+    final events = await showSim(tester, 'inequality_plane', {
+      'points': [
+        [0, 1],
+        [1, 3],
+      ],
+    });
+    await tap(tester, 'sim-check');
+    expect(events, isEmpty, reason: 'no side shaded yet');
+    expect(find.text('Tap the side of the line to shade.'), findsOneWidget);
+
+    await tapGrid(tester, 'plane', (-5, 5, -5, 5), -3, 3);
+    expect(find.text('y ≥ 2x + 1'), findsOneWidget);
+    await tester.tap(find.text('Dashed'));
+    await tester.pumpAndSettle();
+    await tap(tester, 'sim-check');
+    expect(lastResult(events), {'inequality': 'y > 2x + 1'});
+
+    await tap(tester, 'shade-swap');
+    await tap(tester, 'sim-check');
+    expect(lastResult(events), {'inequality': 'y < 2x + 1'});
+
+    // An upright line: x < 0 or x > 0.
+    await tap(tester, 'point-1');
+    await tap(tester, 'move-left');
+    await tapGrid(tester, 'plane', (-5, 5, -5, 5), 3, 0);
+    await tap(tester, 'sim-check');
+    expect(lastResult(events), {'inequality': 'x > 0'});
+  });
+
+  testWidgets('feasible region: mark the corners, see the objective', (
+    tester,
+  ) async {
+    final events = await showSim(tester, 'feasible_region', {
+      'constraints': ['x + y <= 6', 'x <= 4', 'x >= 0', 'y >= 0'],
+      'x_max': 7,
+      'y_max': 7,
+      'objective': '3x + 2y',
+    });
+    await tap(tester, 'sim-check');
+    expect(events, isEmpty);
+
+    const view = (0, 7, 0, 7);
+    for (final (x, y) in [(0, 0), (4, 0), (4, 2), (0, 6), (5, 5)]) {
+      await tapGrid(tester, 'region', view, x, y);
+    }
+    expect(find.text('(4, 2): 3x + 2y = 16'), findsOneWidget);
+    await tapGrid(tester, 'region', view, 5, 5); // Unmark.
+    await tap(tester, 'sim-check');
+    expect(lastResult(events), {'corners': '(0, 0), (4, 0), (4, 2), (0, 6)'});
+
+    await tap(tester, 'region-clear');
+    expect(find.text('No corners marked yet.'), findsOneWidget);
   });
 
   testWidgets('a bad equation reports an error instead of crashing', (

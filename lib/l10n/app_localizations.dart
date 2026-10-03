@@ -1771,6 +1771,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Open'**
   String get dotOpen;
+
+  /// A two-variable inequality answer can't be read.
+  ///
+  /// In en, this message translates to:
+  /// **'Write one inequality with x and y, like y <= 2x + 1.'**
+  String get halfPlaneUnreadable;
+
+  /// A two-variable inequality has the wrong boundary line.
+  ///
+  /// In en, this message translates to:
+  /// **'The boundary line is not right. Find two points on the line and check them.'**
+  String get halfPlaneWrongLine;
+
+  /// A two-variable inequality has the right line but the wrong side.
+  ///
+  /// In en, this message translates to:
+  /// **'The line is right, but the answer is on its other side. Test a point such as (0, 0).'**
+  String get halfPlaneWrongSide;
+
+  /// A two-variable inequality has the right side but the line should or shouldn't be included.
+  ///
+  /// In en, this message translates to:
+  /// **'Nearly! Is the line itself included? ≤ and ≥ include it (a solid line); < and > do not (a dashed line).'**
+  String get halfPlaneWrongBoundary;
+
+  /// A list of points can't be read.
+  ///
+  /// In en, this message translates to:
+  /// **'Write the points like (2, 3), with commas between them.'**
+  String get pointsUnreadable;
+
+  /// One of the points given is not an expected corner.
+  ///
+  /// In en, this message translates to:
+  /// **'{point} is not one of the corners. Check it in every inequality.'**
+  String pointsWrongPoint(String point);
+
+  /// All points are right but some corners are missing.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{Right so far, but one corner is missing.} other{Right so far, but {count} corners are missing.}}'**
+  String pointsMissing(int count);
+
+  /// Inequality graph: the boundary line is included (≤ ≥).
+  ///
+  /// In en, this message translates to:
+  /// **'Solid'**
+  String get lineSolid;
+
+  /// Inequality graph: the boundary line is not included (< >).
+  ///
+  /// In en, this message translates to:
+  /// **'Dashed'**
+  String get lineDashed;
+
+  /// Inequality graph: button to shade the other side of the line.
+  ///
+  /// In en, this message translates to:
+  /// **'Other side'**
+  String get shadeOtherSide;
+
+  /// Inequality graph: no side has been shaded yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the side of the line to shade.'**
+  String get planeNoSide;
+
+  /// Feasible region: how to mark corners.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the corners of the shaded region.'**
+  String get regionHint;
+
+  /// Feasible region: remove all marked points.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get regionClear;
+
+  /// Feasible region: nothing marked.
+  ///
+  /// In en, this message translates to:
+  /// **'No corners marked yet.'**
+  String get regionNoCorners;
 }
 
 class _AppLocalizationsDelegate

@@ -19,6 +19,17 @@ class SimGalleryScreen extends StatelessWidget {
     ('native', 'inequality_line', {'min': -6, 'max': 6}),
     ('native', 'number_line', {'min': 0, 'max': 3, 'step': 0.5}),
     ('native', 'graph_plotter', {'size': 5}),
+    ('native', 'inequality_plane', {'size': 5}),
+    (
+      'native',
+      'feasible_region',
+      {
+        'constraints': ['x + y <= 6', 'x <= 4', 'x >= 0', 'y >= 0'],
+        'x_max': 7,
+        'y_max': 7,
+        'objective': '3x + 2y',
+      },
+    ),
   ];
 
   @override

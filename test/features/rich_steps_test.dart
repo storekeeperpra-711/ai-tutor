@@ -93,14 +93,18 @@ void main() {
     await tester.pumpWidget(await buildTestApp());
     await tester.pumpAndSettle();
     await tapKey(tester, 'open-sim-gallery');
+    // In the gallery's order, so the list only scrolls down.
     for (final id in [
+      'roti_strips.html',
       'fraction_bars',
       'balance_scale',
       'atom_balancer',
       'number_line',
       'graph_plotter',
-      'roti_strips.html',
+      'inequality_plane',
+      'feasible_region',
     ]) {
+      await tester.scrollUntilVisible(find.byKey(Key('gallery-$id')), 100);
       await tapKey(tester, 'gallery-$id');
       expect(find.byKey(const Key('sim-area')), findsOneWidget, reason: id);
       expect(tester.takeException(), isNull, reason: id);

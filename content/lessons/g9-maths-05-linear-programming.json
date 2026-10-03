@@ -1,0 +1,602 @@
+{
+  "id": "g9-maths-05-linear-programming",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 9,
+  "tier": "older",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the maximum or minimum value of a linear objective function over a feasible region, using its corner points.",
+      "textbook": "PCTB Grade 9 Mathematics (NCP 2023), Unit 5: Linear Equations and Inequalities"
+    }
+  ],
+  "skills": [
+    "maths.linear_programming.optimize"
+  ],
+  "title": {
+    "en": "Linear programming: the best corner",
+    "ur": "خطی پروگرامنگ: بہترین کونا"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.inequalities.feasible_region"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "farthest_point",
+      "description": "Picks the corner farthest from the origin, or with the biggest x, instead of working out the objective at every corner."
+    },
+    {
+      "id": "max_min_mixed",
+      "description": "Gives the largest value when the question asks for the smallest (or the other way round)."
+    },
+    {
+      "id": "inside_point",
+      "description": "Thinks the best value can be at a point inside the region rather than at a corner."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.linear_programming.optimize": {
+      "question_types": [
+        "apply",
+        "explain",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.linear_programming.optimize": [
+      {
+        "id": "qb_max_value",
+        "type": "apply",
+        "step": {
+          "id": "qb_max_value",
+          "type": "number",
+          "checker": "numeric",
+          "answer": 23,
+          "prompt": {
+            "en": "The corners of a region are (0, 0), (0, 5), (3, 0), (3, 2). Find the maximum of z = 5x + 4y.",
+            "ur": "ایک خطے کے کونے (0, 0), (0, 5), (3, 0), (3, 2) ہیں۔ z = 5x + 4y کی زیادہ سے زیادہ قیمت معلوم کریں۔"
+          },
+          "hint": {
+            "en": "Work out 5x + 4y at each corner and pick the biggest.",
+            "ur": "ہر کونے پر 5x + 4y نکالیں اور سب سے بڑی قیمت چنیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 23 at (3, 2).",
+            "ur": "درست: (3, 2) پر 23۔"
+          },
+          "feedback_wrong": {
+            "en": "(0, 0): z = 0; (0, 5): z = 20; (3, 0): z = 15; (3, 2): z = 23. The biggest is 23.",
+            "ur": "(0, 0): z = 0; (0, 5): z = 20; (3, 0): z = 15; (3, 2): z = 23۔ سب سے بڑی 23 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 20,
+              "misconception_id": "farthest_point",
+              "feedback": {
+                "en": "20 is at (0, 5). Check (3, 2) too: 15 + 8.",
+                "ur": "20، (0, 5) پر ہے۔ (3, 2) بھی جانچیں: 15 + 8۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_why_corner",
+        "type": "explain",
+        "step": {
+          "id": "qb_why_corner",
+          "type": "choice",
+          "prompt": {
+            "en": "Why can't the largest value of z = 3x + 2y be at a point in the middle of the region?",
+            "ur": "z = 3x + 2y کی سب سے بڑی قیمت خطے کے درمیان کسی نقطے پر کیوں نہیں ہو سکتی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "From a middle point you can always move right or up a little, and z gets bigger.",
+                "ur": "درمیانی نقطے سے ہمیشہ تھوڑا دائیں یا اوپر جا سکتے ہیں، اور z بڑا ہو جاتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Exactly! You keep going until you hit an edge, and then slide along it to a corner.",
+                "ur": "بالکل! آپ کنارے تک جاتے ہیں، پھر اس کے ساتھ ساتھ کونے تک۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Because the middle point is always (0, 0).",
+                "ur": "کیونکہ درمیانی نقطہ ہمیشہ (0, 0) ہوتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The middle of the region isn't (0, 0). Think about moving a little from a point inside.",
+                "ur": "خطے کا درمیان (0, 0) نہیں۔ سوچیں کہ اندر کے نقطے سے تھوڑا ہلیں تو کیا ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It can: the middle is often the best.",
+                "ur": "ہو سکتی ہے: درمیان اکثر بہترین ہوتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Try it: at (2, 1), z = 8. Move to (2, 2): z = 10. You could always do better.",
+                "ur": "آزمائیں: (2, 1) پر z = 8۔ (2, 2) پر جائیں: z = 10۔ ہمیشہ بہتر ہو سکتا ہے۔"
+              },
+              "misconception_id": "inside_point"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_min",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_min",
+          "type": "choice",
+          "prompt": {
+            "en": "Asked for the minimum of z = 2x + 5y, with corners (0, 2), (0, 3), (2, 0), (4, 0), (4, 3), Rabia answers 23. What went wrong?",
+            "ur": "z = 2x + 5y کی کم سے کم قیمت پوچھی گئی، کونے (0, 2), (0, 3), (2, 0), (4, 0), (4, 3) ہیں، اور رابعہ کا جواب 23 ہے۔ غلطی کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "23 is the maximum. The minimum is 4, at (2, 0).",
+                "ur": "23 زیادہ سے زیادہ قیمت ہے۔ کم سے کم 4 ہے، (2, 0) پر۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Always read whether the question wants the biggest or the smallest.",
+                "ur": "درست! ہمیشہ پڑھیں کہ سوال سب سے بڑی قیمت مانگ رہا ہے یا سب سے چھوٹی۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The minimum is 0, at (0, 0).",
+                "ur": "کم سے کم 0 ہے، (0, 0) پر۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "(0, 0) breaks x + y ≥ 2, so it isn't in the region.",
+                "ur": "(0, 0)، x + y ≥ 2 کو توڑتا ہے، اس لیے خطے میں نہیں۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Nothing, 23 is right.",
+                "ur": "کچھ نہیں، 23 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "23 is at (4, 3). Is it the smallest value?",
+                "ur": "23، (4, 3) پر ہے۔ کیا یہ سب سے چھوٹی قیمت ہے؟"
+              },
+              "misconception_id": "max_min_mixed"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_best_buy",
+      "text": {
+        "en": "Think of a choice with limits at home, like buying apples and bananas with 200 rupees when the bag holds 10 fruits. Write the inequalities, find the corners, and decide which corner gives the most fruit or the most vitamins.",
+        "ur": "گھر میں کسی ایسے انتخاب کا سوچیں جس پر حدیں ہوں، جیسے 200 روپے میں سیب اور کیلے خریدنا جبکہ تھیلے میں 10 پھل آتے ہیں۔ نامساوات لکھیں، کونے معلوم کریں، اور طے کریں کون سا کونا سب سے زیادہ پھل یا وٹامن دیتا ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Linear programming",
+      "ur": "خطی پروگرامنگ"
+    },
+    {
+      "en": "Objective function",
+      "ur": "مقصدی تفاعل"
+    },
+    {
+      "en": "Maximum",
+      "ur": "زیادہ سے زیادہ (اعظم)"
+    },
+    {
+      "en": "Minimum",
+      "ur": "کم سے کم (اقل)"
+    },
+    {
+      "en": "Optimal solution",
+      "ur": "بہترین حل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_best_choice",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "In the feasible region, every point is allowed. But which point is the best? That is linear programming!",
+          "ur": "قابلِ عمل خطے میں ہر نقطے کی اجازت ہے۔ لیکن بہترین نقطہ کون سا ہے؟ یہی خطی پروگرامنگ ہے!"
+        }
+      },
+      "text": {
+        "en": "We want to make a quantity, like profit z = 3x + 2y, as big as possible (or a cost as small as possible). This z is the objective function. The rule that makes it easy: the maximum and the minimum are always at a corner of the feasible region. So work out z at every corner and compare.",
+        "ur": "ہم کسی مقدار، جیسے منافع z = 3x + 2y، کو زیادہ سے زیادہ (یا خرچ کو کم سے کم) کرنا چاہتے ہیں۔ یہ z مقصدی تفاعل ہے۔ کام آسان کرنے والا اصول: زیادہ سے زیادہ اور کم سے کم قیمت ہمیشہ قابلِ عمل خطے کے کسی کونے پر ہوتی ہے۔ اس لیے ہر کونے پر z نکالیں اور موازنہ کریں۔"
+      }
+    },
+    {
+      "id": "s2_corners_with_z",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "feasible_region",
+      "prompt": {
+        "en": "Mark the corners of x + y ≤ 6, x ≤ 4, x ≥ 0, y ≥ 0. Each corner you mark shows z = 3x + 2y. Press Check when all are marked.",
+        "ur": "x + y ≤ 6، x ≤ 4، x ≥ 0، y ≥ 0 کے کونے نشان زد کریں۔ ہر نشان زد کونا z = 3x + 2y دکھاتا ہے۔ سب نشان زد ہوں تو \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "constraints": [
+          "x + y <= 6",
+          "x <= 4",
+          "x >= 0",
+          "y >= 0"
+        ],
+        "x_min": 0,
+        "x_max": 7,
+        "y_min": 0,
+        "y_max": 7,
+        "objective": "3x + 2y"
+      },
+      "expected": {
+        "result": "corners",
+        "checker": "points",
+        "answer": "(0, 0), (0, 6), (4, 0), (4, 2)"
+      },
+      "hint": {
+        "en": "There are 4 corners, including (0, 0) and (4, 2).",
+        "ur": "4 کونے ہیں، جن میں (0, 0) اور (4, 2) بھی ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! (0, 0): z = 0; (0, 6): z = 12; (4, 0): z = 12; (4, 2): z = 16.",
+        "ur": "شاباش! (0, 0): z = 0; (0, 6): z = 12; (4, 0): z = 12; (4, 2): z = 16۔"
+      },
+      "feedback_wrong": {
+        "en": "The corners are (0, 0), (0, 6), (4, 0), (4, 2). (0, 0): z = 0; (0, 6): z = 12; (4, 0): z = 12; (4, 2): z = 16.",
+        "ur": "کونے (0, 0), (0, 6), (4, 0), (4, 2) ہیں۔ (0, 0): z = 0; (0, 6): z = 12; (4, 0): z = 12; (4, 2): z = 16۔"
+      }
+    },
+    {
+      "id": "s3_maximum",
+      "type": "number",
+      "question_type": "apply",
+      "checker": "numeric",
+      "answer": 16,
+      "prompt": {
+        "en": "What is the maximum value of z = 3x + 2y in this region?",
+        "ur": "اس خطے میں z = 3x + 2y کی زیادہ سے زیادہ قیمت کیا ہے؟"
+      },
+      "hint": {
+        "en": "Compare z at the four corners and take the biggest.",
+        "ur": "چاروں کونوں پر z کا موازنہ کریں اور سب سے بڑی لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! The maximum is 16, at (4, 2).",
+        "ur": "درست! زیادہ سے زیادہ 16 ہے، (4, 2) پر۔"
+      },
+      "feedback_wrong": {
+        "en": "(0, 0): z = 0; (0, 6): z = 12; (4, 0): z = 12; (4, 2): z = 16. The biggest is 16, at (4, 2).",
+        "ur": "(0, 0): z = 0; (0, 6): z = 12; (4, 0): z = 12; (4, 2): z = 16۔ سب سے بڑی 16 ہے، (4, 2) پر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "misconception_id": "farthest_point",
+          "feedback": {
+            "en": "12 is z at (4, 0) and at (0, 6). Check every corner: what is z at (4, 2)?",
+            "ur": "12، (4, 0) اور (0, 6) پر z ہے۔ ہر کونا جانچیں: (4, 2) پر z کیا ہے؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4_why_corners",
+      "type": "choice",
+      "question_type": "explain",
+      "prompt": {
+        "en": "Why do we only need to check the corners, not every point in the region?",
+        "ur": "ہمیں صرف کونے کیوں جانچنے ہیں، خطے کا ہر نقطہ کیوں نہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Moving in a straight line changes z steadily, so the best value is at an end of an edge: a corner.",
+            "ur": "سیدھی لائن میں چلنے سے z یکساں بدلتا ہے، اس لیے بہترین قیمت کسی کنارے کے سرے پر، یعنی کونے پر، ہوتی ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Exactly! z keeps growing in one direction, so it is biggest where the region ends.",
+            "ur": "بالکل! z ایک سمت میں بڑھتا رہتا ہے، اس لیے یہ وہاں سب سے بڑا ہے جہاں خطہ ختم ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Because corners are easy to calculate.",
+            "ur": "کیونکہ کونوں کا حساب آسان ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "They are easy, but that isn't the reason. Think about what happens to z along an edge.",
+            "ur": "آسان تو ہیں، مگر وجہ یہ نہیں۔ سوچیں کنارے کے ساتھ z کا کیا ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Because the region has no points inside.",
+            "ur": "کیونکہ خطے کے اندر کوئی نقطہ نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are lots of points inside, like (2, 1). They just can't beat the best corner.",
+            "ur": "اندر بہت سے نقطے ہیں، جیسے (2, 1)۔ وہ بس بہترین کونے سے آگے نہیں جا سکتے۔"
+          },
+          "misconception_id": "inside_point"
+        }
+      ]
+    },
+    {
+      "id": "s5_corners_for_min",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "feasible_region",
+      "prompt": {
+        "en": "A new region: x + y ≥ 2, x ≤ 4, y ≤ 3, x ≥ 0, y ≥ 0. Mark its corners; each shows z = 2x + 5y.",
+        "ur": "نیا خطہ: x + y ≥ 2، x ≤ 4، y ≤ 3، x ≥ 0، y ≥ 0۔ اس کے کونے نشان زد کریں؛ ہر ایک z = 2x + 5y دکھاتا ہے۔"
+      },
+      "params": {
+        "constraints": [
+          "x + y >= 2",
+          "x <= 4",
+          "y <= 3",
+          "x >= 0",
+          "y >= 0"
+        ],
+        "x_min": 0,
+        "x_max": 5,
+        "y_min": 0,
+        "y_max": 4,
+        "objective": "2x + 5y"
+      },
+      "expected": {
+        "result": "corners",
+        "checker": "points",
+        "answer": "(0, 2), (0, 3), (2, 0), (4, 0), (4, 3)"
+      },
+      "hint": {
+        "en": "x + y ≥ 2 cuts off the corner at (0, 0), so the region has 5 corners.",
+        "ur": "x + y ≥ 2، (0, 0) والا کونا کاٹ دیتا ہے، اس لیے خطے کے 5 کونے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! (0, 2): z = 10; (0, 3): z = 15; (2, 0): z = 4; (4, 0): z = 8; (4, 3): z = 23.",
+        "ur": "شاباش! (0, 2): z = 10; (0, 3): z = 15; (2, 0): z = 4; (4, 0): z = 8; (4, 3): z = 23۔"
+      },
+      "feedback_wrong": {
+        "en": "The corners are (0, 2), (0, 3), (2, 0), (4, 0), (4, 3). (0, 0) is not in the region: 0 + 0 is less than 2.",
+        "ur": "کونے (0, 2), (0, 3), (2, 0), (4, 0), (4, 3) ہیں۔ (0, 0) خطے میں نہیں: 0 + 0، 2 سے کم ہے۔"
+      }
+    },
+    {
+      "id": "s6_minimum",
+      "type": "number",
+      "question_type": "apply",
+      "checker": "numeric",
+      "answer": 4,
+      "prompt": {
+        "en": "What is the minimum value of z = 2x + 5y in this region?",
+        "ur": "اس خطے میں z = 2x + 5y کی کم سے کم قیمت کیا ہے؟"
+      },
+      "hint": {
+        "en": "This time take the smallest value at the corners.",
+        "ur": "اس بار کونوں پر سب سے چھوٹی قیمت لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! The minimum is 4, at (2, 0).",
+        "ur": "درست! کم سے کم 4 ہے، (2, 0) پر۔"
+      },
+      "feedback_wrong": {
+        "en": "(0, 2): z = 10; (0, 3): z = 15; (2, 0): z = 4; (4, 0): z = 8; (4, 3): z = 23. The smallest is 4, at (2, 0).",
+        "ur": "(0, 2): z = 10; (0, 3): z = 15; (2, 0): z = 4; (4, 0): z = 8; (4, 3): z = 23۔ سب سے چھوٹی 4 ہے، (2, 0) پر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 23,
+          "misconception_id": "max_min_mixed",
+          "feedback": {
+            "en": "23 is the biggest value. The question asks for the smallest.",
+            "ur": "23 سب سے بڑی قیمت ہے۔ سوال سب سے چھوٹی مانگ رہا ہے۔"
+          }
+        },
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "(0, 0) is not in this region: x + y ≥ 2 is false there.",
+            "ur": "(0, 0) اس خطے میں نہیں: وہاں x + y ≥ 2 غلط ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "For the region x + y ≤ 6, x ≤ 4, x ≥ 0, y ≥ 0, Usman says z = x + 3y is biggest at (4, 0), because x is biggest there. What is wrong?",
+        "ur": "خطہ x + y ≤ 6، x ≤ 4، x ≥ 0، y ≥ 0 کے لیے عثمان کہتا ہے کہ z = x + 3y، (4, 0) پر سب سے بڑا ہے، کیونکہ وہاں x سب سے بڑا ہے۔ غلطی کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "check_all",
+          "text": {
+            "en": "He didn't work out z at every corner. At (4, 0), z = 4, but at (0, 6), z = 18.",
+            "ur": "اس نے ہر کونے پر z نہیں نکالا۔ (4, 0) پر z = 4، مگر (0, 6) پر z = 18۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Right! y counts 3 times in z, so the corner with the most y wins here.",
+            "ur": "درست! z میں y تین گنا گنا جاتا ہے، اس لیے یہاں سب سے زیادہ y والا کونا جیتتا ہے۔"
+          }
+        },
+        {
+          "id": "inside",
+          "text": {
+            "en": "The maximum is inside the region, not at a corner.",
+            "ur": "زیادہ سے زیادہ قیمت خطے کے اندر ہے، کونے پر نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The maximum is always at a corner. The mistake is which corner.",
+            "ur": "زیادہ سے زیادہ قیمت ہمیشہ کونے پر ہوتی ہے۔ غلطی یہ ہے کہ کون سا کونا۔"
+          },
+          "misconception_id": "inside_point"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, (4, 0) is right.",
+            "ur": "کچھ نہیں، (4, 0) درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Work out z = x + 3y at (0, 6).",
+            "ur": "(0, 6) پر z = x + 3y نکالیں۔"
+          },
+          "misconception_id": "farthest_point"
+        }
+      ]
+    },
+    {
+      "id": "s8_notebook",
+      "type": "photo_check",
+      "question_type": "apply",
+      "checker": "numeric",
+      "expected": "23",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Notebook time! Show every corner and its value, like in the exam.",
+          "ur": "کاپی کا وقت! ہر کونا اور اس کی قیمت لکھیں، جیسے امتحان میں۔"
+        }
+      },
+      "problem": {
+        "en": "In your notebook, maximise z = 5x + 4y subject to x + y ≤ 5, x ≤ 3, x ≥ 0, y ≥ 0. Draw the region, list the corners with z at each, and end with z = your answer. Then take a photo.",
+        "ur": "اپنی کاپی میں z = 5x + 4y کو زیادہ سے زیادہ کریں، شرائط x + y ≤ 5، x ≤ 3، x ≥ 0، y ≥ 0 کے ساتھ۔ خطہ بنائیں، کونے اور ہر ایک پر z لکھیں، اور آخر میں z = آپ کا جواب لکھیں۔ پھر تصویر لیں۔"
+      },
+      "hint": {
+        "en": "The corners are where the lines meet: (0, 0), (3, 0), (3, 2) and (0, 5).",
+        "ur": "کونے وہاں ہیں جہاں خطوط ملتے ہیں: (0, 0)، (3, 0)، (3, 2) اور (0, 5)۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! The maximum is z = 23, at (3, 2).",
+        "ur": "درست! زیادہ سے زیادہ z = 23، (3, 2) پر۔"
+      },
+      "correct_working": {
+        "en": "Corners: (0, 0), (0, 5), (3, 0), (3, 2). (0, 0): z = 0; (0, 5): z = 20; (3, 0): z = 15; (3, 2): z = 23. Maximum: z = 23 at (3, 2).",
+        "ur": "کونے: (0, 0), (0, 5), (3, 0), (3, 2)۔ (0, 0): z = 0; (0, 5): z = 20; (3, 0): z = 15; (3, 2): z = 23۔ زیادہ سے زیادہ: z = 23، (3, 2) پر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "20",
+          "misconception_id": "farthest_point",
+          "feedback": {
+            "en": "20 is at (0, 5). Did you check (3, 2)?",
+            "ur": "20، (0, 5) پر ہے۔ کیا آپ نے (3, 2) جانچا؟"
+          }
+        }
+      ],
+      "limit_per_day": 2,
+      "max_attempts": 3
+    },
+    {
+      "id": "s9_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can find the best choice with linear programming!",
+          "ur": "اب آپ خطی پروگرامنگ سے بہترین انتخاب ڈھونڈ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "To find the maximum or minimum of an objective function: draw the feasible region, find its corners, work out the function at every corner, and pick the biggest or the smallest.",
+        "ur": "مقصدی تفاعل کی زیادہ سے زیادہ یا کم سے کم قیمت کے لیے: قابلِ عمل خطہ بنائیں، اس کے کونے معلوم کریں، ہر کونے پر تفاعل کی قیمت نکالیں، اور سب سے بڑی یا سب سے چھوٹی چنیں۔"
+      },
+      "points": [
+        {
+          "en": "Make a table of corners and values: it's easy to check and examiners like it.",
+          "ur": "کونوں اور قیمتوں کا جدول بنائیں: جانچنا آسان ہے اور ممتحن اسے پسند کرتے ہیں۔"
+        },
+        {
+          "en": "Read the question again: maximum or minimum?",
+          "ur": "سوال دوبارہ پڑھیں: زیادہ سے زیادہ یا کم سے کم؟"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 8. No textbook text or exercises were copied.",
+    "Urdu terms to check against the PCTB book: خطی پروگرامنگ (linear programming), مقصدی تفاعل (objective function), زیادہ سے زیادہ / کم سے کم (maximum / minimum; the book may say اعظم / اقل).",
+    "Every corner and value in this lesson is worked out by a script from the inequalities (tools/plane.py), not typed by hand. The feasible_region interactive shows the objective's value at each corner the student marks.",
+    "The notebook step reads the student's photo; the code checks only the final value (z = 23), and the AI comments on the working.",
+    "Next lesson: word problems (writing the inequalities from a story)."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  },
+  "review_questions": [
+    {
+      "id": "r_max",
+      "type": "apply",
+      "skill": "maths.linear_programming.optimize",
+      "step": {
+        "id": "r_max",
+        "type": "number",
+        "checker": "numeric",
+        "answer": 18,
+        "prompt": {
+          "en": "The corners of a region are (0, 0), (0, 6), (4, 0), (4, 2). Find the maximum of z = x + 3y.",
+          "ur": "ایک خطے کے کونے (0, 0), (0, 6), (4, 0), (4, 2) ہیں۔ z = x + 3y کی زیادہ سے زیادہ قیمت معلوم کریں۔"
+        },
+        "hint": {
+          "en": "Work out x + 3y at each corner.",
+          "ur": "ہر کونے پر x + 3y نکالیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 18, at (0, 6).",
+          "ur": "درست: 18، (0, 6) پر۔"
+        },
+        "feedback_wrong": {
+          "en": "(0, 0): z = 0; (0, 6): z = 18; (4, 0): z = 4; (4, 2): z = 10. The biggest is 18.",
+          "ur": "(0, 0): z = 0; (0, 6): z = 18; (4, 0): z = 4; (4, 2): z = 10۔ سب سے بڑی 18 ہے۔"
+        }
+      }
+    }
+  ]
+}

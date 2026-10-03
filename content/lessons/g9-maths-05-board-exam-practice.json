@@ -1,0 +1,789 @@
+{
+  "id": "g9-maths-05-board-exam-practice",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 9,
+  "tier": "older",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer board-exam questions on linear equations, inequalities and linear programming, with working set out as examiners expect.",
+      "textbook": "PCTB Grade 9 Mathematics (NCP 2023), Unit 5: Linear Equations and Inequalities"
+    }
+  ],
+  "skills": [
+    "maths.unit5.board_exam"
+  ],
+  "title": {
+    "en": "Unit 5 board-exam practice",
+    "ur": "یونٹ 5: بورڈ امتحان کی تیاری"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.linear_equations.brackets_fractions"
+    },
+    {
+      "skill": "maths.inequalities.one_variable"
+    },
+    {
+      "skill": "maths.linear_programming.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgot_to_flip",
+      "description": "Divides an inequality by a negative number without reversing the sign."
+    },
+    {
+      "id": "boundary_point",
+      "description": "Counts a point on the line of a strict (< or >) inequality as a solution."
+    },
+    {
+      "id": "max_min_mixed",
+      "description": "Gives the largest value when the question asks for the smallest."
+    },
+    {
+      "id": "fraction_one_term",
+      "description": "Multiplies only some terms when clearing fractions."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.unit5.board_exam": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.unit5.board_exam": [
+      {
+        "id": "qb_exam_max",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_max",
+          "type": "number",
+          "checker": "numeric",
+          "answer": 24,
+          "prompt": {
+            "en": "Maximise z = 4x + 3y subject to x + 2y ≤ 8, x + y ≤ 6, x ≥ 0, y ≥ 0.",
+            "ur": "z = 4x + 3y کو زیادہ سے زیادہ کریں، شرائط x + 2y ≤ 8، x + y ≤ 6، x ≥ 0، y ≥ 0۔"
+          },
+          "hint": {
+            "en": "The corners are (0, 0), (0, 4), (4, 2), (6, 0).",
+            "ur": "کونے (0, 0), (0, 4), (4, 2), (6, 0) ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: z = 24 at (6, 0).",
+            "ur": "درست: z = 24، (6, 0) پر۔"
+          },
+          "feedback_wrong": {
+            "en": "(0, 0): z = 0; (0, 4): z = 12; (4, 2): z = 22; (6, 0): z = 24. Maximum z = 24 at (6, 0).",
+            "ur": "(0, 0): z = 0; (0, 4): z = 12; (4, 2): z = 22; (6, 0): z = 24۔ زیادہ سے زیادہ z = 24، (6, 0) پر۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 22,
+              "feedback": {
+                "en": "22 is at (4, 2). Check (6, 0) too.",
+                "ur": "22، (4, 2) پر ہے۔ (6, 0) بھی جانچیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_solve",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_solve",
+          "type": "text_check",
+          "checker": "linear_inequality",
+          "expected": "2(x - 3) > 5x + 3",
+          "multiline": true,
+          "prompt": {
+            "en": "Solve 2(x − 3) > 5x + 3. Write each step on a new line.",
+            "ur": "2(x − 3) > 5x + 3 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+          },
+          "hint": {
+            "en": "Open the bracket: 2x − 6 > 5x + 3. Then take 5x from both sides.",
+            "ur": "قوس کھولیں: 2x − 6 > 5x + 3۔ پھر دونوں طرف سے 5x گھٹائیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: x < −3.",
+            "ur": "درست: x < −3۔"
+          },
+          "feedback_wrong": {
+            "en": "2x − 6 > 5x + 3, so −3x > 9, so x < −3 (flipped, dividing by −3).",
+            "ur": "2x − 6 > 5x + 3، اس لیے −3x > 9، اس لیے x < −3 (−3 سے تقسیم پر علامت الٹی)۔"
+          }
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_past_paper",
+      "text": {
+        "en": "Ask a teacher or an older student for a past BISE Grade 9 maths paper. Find the Unit 5 questions and answer them in your notebook, setting out the working like the model answers in this practice.",
+        "ur": "کسی استاد یا بڑے طالب علم سے نویں جماعت ریاضی کا پرانا بورڈ پرچہ لیں۔ یونٹ 5 کے سوال ڈھونڈیں اور اپنی کاپی میں حل کریں، کام اس مشق کے نمونہ جوابات کی طرح لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Marks",
+      "ur": "نمبر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Let's practise Unit 5 the way the board exam asks it. Write neatly and show every step!",
+          "ur": "آئیں یونٹ 5 کی مشق ویسے کریں جیسے بورڈ امتحان پوچھتا ہے۔ صاف لکھیں اور ہر قدم دکھائیں!"
+        }
+      },
+      "text": {
+        "en": "The paper has three kinds of question: multiple choice (1 mark each, choose one answer), short questions (about 2 marks, a few lines of working), and long questions (4 marks or more, full working). In short and long questions, marks are for the working, not just the answer.",
+        "ur": "پرچے میں تین طرح کے سوال ہوتے ہیں: کثیر انتخابی (ہر ایک کا 1 نمبر، ایک جواب چنیں)، مختصر سوال (تقریباً 2 نمبر، چند سطروں کا کام)، اور تفصیلی سوال (4 یا زیادہ نمبر، پورا کام)۔ مختصر اور تفصیلی سوالوں میں نمبر کام کے ہیں، صرف جواب کے نہیں۔"
+      }
+    },
+    {
+      "id": "m1_solve",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The solution of 3x − 5 = 7 is:",
+        "ur": "کثیر انتخابی: 3x − 5 = 7 کا حل ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "x = 4",
+            "ur": "x = 4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 3x = 12, so x = 4.",
+            "ur": "درست: 3x = 12، اس لیے x = 4۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "x = 2/3",
+            "ur": "x = 2/3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That comes from 3x = 2. Add 5 to both sides first: 3x = 12.",
+            "ur": "یہ 3x = 2 سے آتا ہے۔ پہلے دونوں طرف 5 جمع کریں: 3x = 12۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "x = 12",
+            "ur": "x = 12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3x = 12; now divide by 3.",
+            "ur": "3x = 12؛ اب 3 سے تقسیم کریں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "x = −4",
+            "ur": "x = −4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: 3 × (−4) − 5 = −17, not 7.",
+            "ur": "جانچیں: 3 × (−4) − 5 = −17، نہ کہ 7۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2_flip",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The solution of −2x > 6 is:",
+        "ur": "کثیر انتخابی: −2x > 6 کا حل ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "x < −3",
+            "ur": "x < −3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: dividing by −2 flips > to <.",
+            "ur": "درست: −2 سے تقسیم پر > بدل کر < ہو جاتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "x > −3",
+            "ur": "x > −3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "You divided by −2, so the sign must flip.",
+            "ur": "آپ نے −2 سے تقسیم کیا، اس لیے علامت الٹنی چاہیے۔"
+          },
+          "misconception_id": "forgot_to_flip"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "x < 3",
+            "ur": "x < 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 ÷ (−2) = −3, not 3.",
+            "ur": "6 ÷ (−2) = −3، نہ کہ 3۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "x > 3",
+            "ur": "x > 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Try x = 4: −8 > 6 is false.",
+            "ur": "x = 4 آزمائیں: −8 > 6 غلط ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m3_point",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which point satisfies 2x + y < 5?",
+        "ur": "کثیر انتخابی: کون سا نقطہ 2x + y < 5 پر پورا اترتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "(1, 2)",
+            "ur": "(1, 2)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 2 + 2 = 4, and 4 < 5.",
+            "ur": "درست: 2 + 2 = 4، اور 4 < 5۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "(2, 1)",
+            "ur": "(2, 1)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 + 1 = 5, and 5 < 5 is false: the point is on the dashed line.",
+            "ur": "4 + 1 = 5، اور 5 < 5 غلط ہے: نقطہ ٹوٹی لکیر پر ہے۔"
+          },
+          "misconception_id": "boundary_point"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "(3, 0)",
+            "ur": "(3, 0)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 + 0 = 6, which is not less than 5.",
+            "ur": "6 + 0 = 6، جو 5 سے کم نہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "(0, 5)",
+            "ur": "(0, 5)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 + 5 = 5, and 5 < 5 is false.",
+            "ur": "0 + 5 = 5، اور 5 < 5 غلط ہے۔"
+          },
+          "misconception_id": "boundary_point"
+        }
+      ]
+    },
+    {
+      "id": "m4_names",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: In linear programming, x ≥ 0 and y ≥ 0 are called:",
+        "ur": "کثیر انتخابی: خطی پروگرامنگ میں x ≥ 0 اور y ≥ 0 کہلاتے ہیں:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "non-negative constraints",
+            "ur": "غیر منفی شرطیں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct.",
+            "ur": "درست۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "the objective function",
+            "ur": "مقصدی تفاعل"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The objective function is what you maximise or minimise, like z = 3x + 2y.",
+            "ur": "مقصدی تفاعل وہ ہے جسے زیادہ یا کم کرتے ہیں، جیسے z = 3x + 2y۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "the feasible region",
+            "ur": "قابلِ عمل خطہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The feasible region is the area where all the constraints are true.",
+            "ur": "قابلِ عمل خطہ وہ حصہ ہے جہاں سب شرطیں درست ہوں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "corner points",
+            "ur": "کونے کے نقطے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Corner points are where boundary lines meet.",
+            "ur": "کونے کے نقطے وہاں ہیں جہاں حدی خطوط ملتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_corner",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The maximum or minimum of the objective function is found at:",
+        "ur": "کثیر انتخابی: مقصدی تفاعل کی زیادہ سے زیادہ یا کم سے کم قیمت ملتی ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "a corner point of the feasible region",
+            "ur": "قابلِ عمل خطے کے کسی کونے پر"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct.",
+            "ur": "درست۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "the origin",
+            "ur": "مبدا (0, 0) پر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "(0, 0) is only sometimes a corner, and only sometimes the best.",
+            "ur": "(0, 0) صرف کبھی کبھی کونا ہوتا ہے، اور صرف کبھی کبھی بہترین۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "the centre of the region",
+            "ur": "خطے کے مرکز پر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "From the centre you can always move to a better point.",
+            "ur": "مرکز سے ہمیشہ بہتر نقطے کی طرف جا سکتے ہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "any point of the region",
+            "ur": "خطے کے کسی بھی نقطے پر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Different points give different values; the best is at a corner.",
+            "ur": "مختلف نقطے مختلف قیمتیں دیتے ہیں؛ بہترین کونے پر ہوتی ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q1_fractions",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "checker": "linear_equation",
+      "expected": "(x - 1)/3 = (x + 3)/5",
+      "multiline": true,
+      "prompt": {
+        "en": "Short question: Solve (x − 1)/3 = (x + 3)/5. Write each step on a new line.",
+        "ur": "مختصر سوال: (x − 1)/3 = (x + 3)/5 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+      },
+      "hint": {
+        "en": "Multiply both sides by 15, the LCM of 3 and 5.",
+        "ur": "دونوں طرف کو 15 سے ضرب دیں، جو 3 اور 5 کا ذو اضعاف اقل ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: x = 7. Check: (7 − 1)/3 = 2 and (7 + 3)/5 = 2.",
+        "ur": "درست: x = 7۔ جانچ: (7 − 1)/3 = 2 اور (7 + 3)/5 = 2۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: multiply by 15: 5(x − 1) = 3(x + 3). So 5x − 5 = 3x + 9. So 2x = 14. So x = 7.",
+        "ur": "نمونہ جواب: 15 سے ضرب: 5(x − 1) = 3(x + 3)۔ پھر 5x − 5 = 3x + 9۔ پھر 2x = 14۔ پھر x = 7۔"
+      }
+    },
+    {
+      "id": "q2_inequality",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "checker": "linear_inequality",
+      "expected": "4 - 3x <= 13",
+      "multiline": true,
+      "prompt": {
+        "en": "Short question: Solve 4 − 3x ≤ 13. Write each step on a new line. (Type ≤ as <=.)",
+        "ur": "مختصر سوال: 4 − 3x ≤ 13 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔ (≤ کو <= لکھیں۔)"
+      },
+      "hint": {
+        "en": "Take 4 from both sides, then divide by −3 and flip the sign.",
+        "ur": "دونوں طرف سے 4 گھٹائیں، پھر −3 سے تقسیم کریں اور علامت الٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: x ≥ −3.",
+        "ur": "درست: x ≥ −3۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 4 − 3x ≤ 13. Take 4 from both sides: −3x ≤ 9. Divide by −3 and reverse the sign: x ≥ −3.",
+        "ur": "نمونہ جواب: 4 − 3x ≤ 13۔ دونوں طرف سے 4 گھٹائیں: −3x ≤ 9۔ −3 سے تقسیم کریں اور علامت الٹیں: x ≥ −3۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "x <= -3",
+          "misconception_id": "forgot_to_flip",
+          "feedback": {
+            "en": "You divided by −3, so ≤ must turn into ≥.",
+            "ur": "آپ نے −3 سے تقسیم کیا، اس لیے ≤ کو ≥ بننا چاہیے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3_graph",
+      "type": "sim",
+      "question_type": "exam_style",
+      "renderer": "native",
+      "sim_id": "inequality_plane",
+      "prompt": {
+        "en": "Short question: Graph x − 2y ≥ 4. Draw the line, choose solid or dashed, and shade the region.",
+        "ur": "مختصر سوال: x − 2y ≥ 4 کا گراف بنائیں۔ خط بنائیں، سیدھی یا ٹوٹی لکیر چنیں، اور خطہ رنگیں۔"
+      },
+      "params": {
+        "size": 5,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "result": "inequality",
+        "checker": "linear_inequality_2d",
+        "answer": "x - 2y >= 4"
+      },
+      "hint": {
+        "en": "The line goes through (4, 0) and (0, −2). Test (0, 0): 0 ≥ 4 is false.",
+        "ur": "خط (4, 0) اور (0, −2) سے گزرتا ہے۔ (0, 0) آزمائیں: 0 ≥ 4 غلط ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! A solid line through (4, 0) and (0, −2), shaded away from (0, 0).",
+        "ur": "درست! (4, 0) اور (0, −2) سے سیدھی لکیر، (0, 0) سے دور والی طرف رنگی ہوئی۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the line x − 2y = 4 goes through (4, 0) and (0, −2); ≥ means solid. (0, 0) gives 0 ≥ 4, false, so shade the side without (0, 0).",
+        "ur": "نمونہ جواب: خط x − 2y = 4، (4, 0) اور (0, −2) سے گزرتا ہے؛ ≥ کا مطلب سیدھی لکیر۔ (0, 0) سے 0 ≥ 4، غلط، اس لیے وہ طرف رنگیں جس میں (0, 0) نہیں۔"
+      }
+    },
+    {
+      "id": "q4_meet",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "checker": "points",
+      "expected": "(3, 2)",
+      "prompt": {
+        "en": "Short question: Find the point where 2x + y = 8 and x + y = 5 meet. Write it like (1, 2).",
+        "ur": "مختصر سوال: وہ نقطہ معلوم کریں جہاں 2x + y = 8 اور x + y = 5 ملتے ہیں۔ (1, 2) کی طرح لکھیں۔"
+      },
+      "hint": {
+        "en": "Subtract the second equation from the first.",
+        "ur": "پہلی مساوات میں سے دوسری گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: (3, 2).",
+        "ur": "درست: (3, 2)۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: subtracting gives x = 3. Then 3 + y = 5, so y = 2. The point is (3, 2).",
+        "ur": "نمونہ جواب: تفریق سے x = 3۔ پھر 3 + y = 5، یعنی y = 2۔ نقطہ (3, 2) ہے۔"
+      }
+    },
+    {
+      "id": "l1_layout",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "Long questions next. Here is how to set out a linear programming answer.",
+          "ur": "اب تفصیلی سوال۔ خطی پروگرامنگ کا جواب ایسے لکھیں۔"
+        }
+      },
+      "text": {
+        "en": "1) Write the constraints and change each to an equation to draw its line, with two points on it. 2) Draw all lines on one graph and shade the feasible region. 3) Find the corners (solve the equations where two lines meet). 4) Make a table of corners and the objective's value at each. 5) Write the answer: 'The minimum value is ... at (..., ...)'.",
+        "ur": "1) شرطیں لکھیں اور ہر ایک کو مساوات بنا کر اس کے دو نقطوں سے خط بنائیں۔ 2) سب خطوط ایک گراف پر بنائیں اور قابلِ عمل خطہ رنگیں۔ 3) کونے معلوم کریں (جہاں دو خطوط ملیں، مساواتیں حل کریں)۔ 4) کونوں اور ہر ایک پر مقصدی تفاعل کی قیمت کا جدول بنائیں۔ 5) جواب لکھیں: 'کم سے کم قیمت ... ہے، (..., ...) پر'۔"
+      }
+    },
+    {
+      "id": "l2_corners",
+      "type": "sim",
+      "question_type": "exam_style",
+      "renderer": "native",
+      "sim_id": "feasible_region",
+      "prompt": {
+        "en": "Long question: Minimise z = 2x + 3y subject to x + y ≥ 3, x ≤ 4, y ≤ 4, x ≥ 0, y ≥ 0. First, mark the corners of the feasible region.",
+        "ur": "تفصیلی سوال: z = 2x + 3y کو کم سے کم کریں، شرائط x + y ≥ 3، x ≤ 4، y ≤ 4، x ≥ 0، y ≥ 0۔ پہلے قابلِ عمل خطے کے کونے نشان زد کریں۔"
+      },
+      "params": {
+        "constraints": [
+          "x + y >= 3",
+          "x <= 4",
+          "y <= 4",
+          "x >= 0",
+          "y >= 0"
+        ],
+        "x_min": 0,
+        "x_max": 5,
+        "y_min": 0,
+        "y_max": 5,
+        "objective": "2x + 3y"
+      },
+      "expected": {
+        "result": "corners",
+        "checker": "points",
+        "answer": "(0, 3), (0, 4), (3, 0), (4, 0), (4, 4)"
+      },
+      "hint": {
+        "en": "The region has 5 corners. x + y ≥ 3 cuts off the corner at (0, 0).",
+        "ur": "خطے کے 5 کونے ہیں۔ x + y ≥ 3، (0, 0) والا کونا کاٹ دیتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! (0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20.",
+        "ur": "درست! (0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20۔"
+      },
+      "feedback_wrong": {
+        "en": "The corners are (0, 3), (0, 4), (3, 0), (4, 0), (4, 4). (0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20.",
+        "ur": "کونے (0, 3), (0, 4), (3, 0), (4, 0), (4, 4) ہیں۔ (0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20۔"
+      }
+    },
+    {
+      "id": "l3_minimum",
+      "type": "number",
+      "question_type": "exam_style",
+      "checker": "numeric",
+      "answer": 6,
+      "prompt": {
+        "en": "What is the minimum value of z = 2x + 3y?",
+        "ur": "z = 2x + 3y کی کم سے کم قیمت کیا ہے؟"
+      },
+      "hint": {
+        "en": "Take the smallest value in your table.",
+        "ur": "اپنے جدول میں سب سے چھوٹی قیمت لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! The minimum value is 6, at (3, 0).",
+        "ur": "درست! کم سے کم قیمت 6 ہے، (3, 0) پر۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: (0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20. The minimum value is 6 at (3, 0).",
+        "ur": "نمونہ جواب: (0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20۔ کم سے کم قیمت 6 ہے، (3, 0) پر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "misconception_id": "max_min_mixed",
+          "feedback": {
+            "en": "20 is the maximum. The question asks for the minimum.",
+            "ur": "20 زیادہ سے زیادہ قیمت ہے۔ سوال کم سے کم مانگ رہا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "l4_notebook",
+      "type": "photo_check",
+      "question_type": "exam_style",
+      "checker": "numeric",
+      "expected": "21",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Last one: a full long question in your notebook, set out like the model answer.",
+          "ur": "آخری سوال: پورا تفصیلی سوال اپنی کاپی میں، نمونہ جواب کی طرح۔"
+        }
+      },
+      "problem": {
+        "en": "Long question: Maximise z = 2x + 5y subject to x + y ≤ 6, x + 3y ≤ 12, x ≥ 0, y ≥ 0. Draw the graph, find the corners, make the table, and end with z = your answer. Then take a photo.",
+        "ur": "تفصیلی سوال: z = 2x + 5y کو زیادہ سے زیادہ کریں، شرائط x + y ≤ 6، x + 3y ≤ 12، x ≥ 0، y ≥ 0۔ گراف بنائیں، کونے معلوم کریں، جدول بنائیں، اور آخر میں z = آپ کا جواب لکھیں۔ پھر تصویر لیں۔"
+      },
+      "hint": {
+        "en": "The two slanted lines meet where x + y = 6 and x + 3y = 12: subtract to get 2y = 6.",
+        "ur": "دونوں ترچھے خطوط وہاں ملتے ہیں جہاں x + y = 6 اور x + 3y = 12: تفریق سے 2y = 6۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! The maximum is z = 21, at (3, 3).",
+        "ur": "درست! زیادہ سے زیادہ z = 21، (3, 3) پر۔"
+      },
+      "correct_working": {
+        "en": "Model answer: lines x + y = 6 through (6, 0) and (0, 6); x + 3y = 12 through (12, 0) and (0, 4). They meet at (3, 3). Corners: (0, 0), (0, 4), (3, 3), (6, 0). (0, 0): z = 0; (0, 4): z = 20; (3, 3): z = 21; (6, 0): z = 12. The maximum value is z = 21 at (3, 3).",
+        "ur": "نمونہ جواب: خط x + y = 6، (6, 0) اور (0, 6) سے؛ x + 3y = 12، (12, 0) اور (0, 4) سے۔ یہ (3, 3) پر ملتے ہیں۔ کونے: (0, 0), (0, 4), (3, 3), (6, 0)۔ (0, 0): z = 0; (0, 4): z = 20; (3, 3): z = 21; (6, 0): z = 12۔ زیادہ سے زیادہ قیمت z = 21، (3, 3) پر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "20",
+          "feedback": {
+            "en": "20 is at (0, 4). Did you find where the two slanted lines meet?",
+            "ur": "20، (0, 4) پر ہے۔ کیا آپ نے دیکھا کہ دونوں ترچھے خطوط کہاں ملتے ہیں؟"
+          }
+        }
+      ],
+      "limit_per_day": 2,
+      "max_attempts": 3
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! Practise like this and the exam will feel easy.",
+          "ur": "شاباش! ایسے مشق کریں تو امتحان آسان لگے گا۔"
+        }
+      },
+      "text": {
+        "en": "In the exam: show every step, check your answer by putting it back in, flip the sign when you multiply or divide an inequality by a negative number, and set out linear programming answers with a table of corners.",
+        "ur": "امتحان میں: ہر قدم دکھائیں، جواب واپس رکھ کر جانچیں، نامساوات کو منفی عدد سے ضرب یا تقسیم کریں تو علامت الٹیں، اور خطی پروگرامنگ کے جواب کونوں کے جدول کے ساتھ لکھیں۔"
+      },
+      "points": [
+        {
+          "en": "Label the axes and the lines on your graph.",
+          "ur": "اپنے گراف پر محور اور خطوط کے نام لکھیں۔"
+        },
+        {
+          "en": "End with a sentence that answers the question.",
+          "ur": "آخر میں ایک جملہ لکھیں جو سوال کا جواب دے۔"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 8 in the style of BISE Punjab Grade 9 papers (multiple choice, short and long questions). No past-paper questions were copied; please check that the marks and layout match your board's current paper.",
+    "Every answer is checked by code: equations and inequalities line by line, graphs with the linear_inequality_2d checker, corners and objective values worked out by tools/plane.py. The notebook question checks the final value; the AI comments on the working.",
+    "This practice set is offered after the unit's lessons (its prerequisites are the unit's skills).",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), ذو اضعاف اقل (LCM), مبدا (origin)."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  },
+  "review_questions": [
+    {
+      "id": "r_exam_min",
+      "type": "exam_style",
+      "skill": "maths.unit5.board_exam",
+      "step": {
+        "id": "r_exam_min",
+        "type": "number",
+        "checker": "numeric",
+        "answer": 6,
+        "prompt": {
+          "en": "The corners of a feasible region are (0, 3), (0, 4), (3, 0), (4, 0), (4, 4). Find the minimum of z = 2x + 3y.",
+          "ur": "ایک قابلِ عمل خطے کے کونے (0, 3), (0, 4), (3, 0), (4, 0), (4, 4) ہیں۔ z = 2x + 3y کی کم سے کم قیمت معلوم کریں۔"
+        },
+        "hint": {
+          "en": "Work out 2x + 3y at each corner and take the smallest.",
+          "ur": "ہر کونے پر 2x + 3y نکالیں اور سب سے چھوٹی لیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 6 at (3, 0).",
+          "ur": "درست: 6، (3, 0) پر۔"
+        },
+        "feedback_wrong": {
+          "en": "(0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20. The minimum is 6.",
+          "ur": "(0, 3): z = 9; (0, 4): z = 12; (3, 0): z = 6; (4, 0): z = 8; (4, 4): z = 20۔ کم سے کم 6 ہے۔"
+        }
+      }
+    }
+  ]
+}
