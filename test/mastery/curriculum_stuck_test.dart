@@ -24,7 +24,7 @@ void main() {
     expect(curriculum.criteriaFor(fractions)!.days, 2);
     expect(curriculum.titleOf(fractions)!.en, g6.title.en);
     // Lessons come in grade order.
-    expect(curriculum.lessons.map((l) => l.grade), [6, 9, 10]);
+    expect(curriculum.lessons.map((l) => l.grade), [0, 6, 9, 10]);
   });
 
   test('every mastery criterion can be met with the questions available', () {

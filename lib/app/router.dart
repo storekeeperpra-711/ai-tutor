@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../features/account/account_screen.dart';
 import '../features/ai/ai_costs_screen.dart';
 import '../features/ai/mithu_notes.dart';
+import '../features/debug/narration_recorder_screen.dart';
 import '../features/debug/urdu_test_screen.dart';
 import '../features/home/home_screen.dart';
 import '../features/debug/sim_gallery_screen.dart';
@@ -61,6 +62,10 @@ final routerProvider = Provider<GoRouter>(
       GoRoute(
         path: '/dev/lessons',
         builder: (context, state) => const LessonListScreen(),
+      ),
+      GoRoute(
+        path: '/dev/voice',
+        builder: (context, state) => const NarrationRecorderScreen(),
       ),
       GoRoute(
         path: '/debug/urdu',

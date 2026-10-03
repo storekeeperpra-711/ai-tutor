@@ -645,4 +645,226 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aiCostsEmpty => 'No AI use in the last 7 days.';
+
+  @override
+  String get listenToMithu => 'Listen to Mithu';
+
+  @override
+  String get phoneVoiceLabel => 'Phone voice (no recording yet)';
+
+  @override
+  String get recorderTitle => 'Record Mithu\'s voice';
+
+  @override
+  String get recorderHelp =>
+      'Find a quiet room. Hold the phone a hand\'s width from your mouth, tap Record, read the line warmly, and tap Stop. Keep each line under 30 seconds.';
+
+  @override
+  String get recorderMissingOnly => 'Only lines without a voice';
+
+  @override
+  String get recorderRecord => 'Record';
+
+  @override
+  String get recorderStop => 'Stop';
+
+  @override
+  String get recorderPlay => 'Listen';
+
+  @override
+  String get recorderDelete => 'Delete';
+
+  @override
+  String get recorderStatusPhone => 'Recorded on this phone (not sent yet)';
+
+  @override
+  String get recorderStatusApp => 'Voice is in the app';
+
+  @override
+  String get recorderStatusMissing => 'No voice yet';
+
+  @override
+  String get recorderTooLong =>
+      'Longer than 30 seconds: please record it shorter.';
+
+  @override
+  String get recorderNoMic =>
+      'The app may not use the microphone. Allow it in the phone\'s settings.';
+
+  @override
+  String get recorderExport => 'Send recordings';
+
+  @override
+  String get recorderExportHelp =>
+      'Send them to yourself (for example to Google Drive), then attach all the files in the project chat. Claude adds them to the app.';
+
+  @override
+  String get recorderNothingToSend => 'No recordings on this phone yet.';
+
+  @override
+  String get soundsSetting => 'Sounds';
+
+  @override
+  String get soundsSettingHint => 'Small sounds for taps and answers';
+
+  @override
+  String get mithuSetting => 'Show Mithu';
+
+  @override
+  String get mithuSettingHint => 'Mithu the parrot helps in lessons';
+
+  @override
+  String get badgeFirstLesson => 'First lesson finished';
+
+  @override
+  String get badgeTriedAgain => 'Tried again after a mistake';
+
+  @override
+  String get badgeExplained => 'Explained in your own words';
+
+  @override
+  String get badgeCheckedPhoto => 'Fixed your work after a photo check';
+
+  @override
+  String get badgeCameBack => 'Came back to review';
+
+  @override
+  String get badgeFiveDays => 'Learned on 5 different days this month';
+
+  @override
+  String get badgesTitle => 'Your badges';
+
+  @override
+  String badgesEarned(int count, int total) {
+    return '$count of $total badges';
+  }
+
+  @override
+  String get starFinished => 'You finished';
+
+  @override
+  String get starKeptTrying => 'You kept trying';
+
+  @override
+  String get starExplained => 'You explained your thinking';
+
+  @override
+  String get praise1 => 'Well done! Your hard work is paying off.';
+
+  @override
+  String get praise2 => 'Great effort! Mithu is proud of you.';
+
+  @override
+  String get praise3 => 'You did it! Mistakes help us learn.';
+
+  @override
+  String nextLesson(String title) {
+    return 'Next: $title';
+  }
+
+  @override
+  String get comeBackTomorrow => 'Come back tomorrow for a quick review.';
+
+  @override
+  String get backHome => 'Home';
+
+  @override
+  String earlyGreeting(String name) {
+    return 'Assalam o Alaikum, $name! Let\'s play and learn.';
+  }
+
+  @override
+  String get playButton => 'Play';
+
+  @override
+  String get mithuTip1 =>
+      'Tip: if you get stuck, read the question again slowly.';
+
+  @override
+  String get mithuTip2 => 'Tip: mistakes are how our brains grow. Try again!';
+
+  @override
+  String get mithuTip3 => 'Tip: explain your answer to someone at home.';
+
+  @override
+  String questTitle(String subject) {
+    return '$subject quest';
+  }
+
+  @override
+  String questProgress(int done, int total) {
+    return '$done of $total lessons done';
+  }
+
+  @override
+  String get questDone => 'Quest complete! Keep reviewing to stay strong.';
+
+  @override
+  String secureSkills(int count, int total) {
+    return '$count of $total skills secure';
+  }
+
+  @override
+  String subjectLevel(int level) {
+    return 'Level $level';
+  }
+
+  @override
+  String get subjectsTitle => 'Your subjects';
+
+  @override
+  String get masteryBySubject => 'Mastery by subject';
+
+  @override
+  String masteredSkills(int count, int total) {
+    return '$count of $total skills mastered';
+  }
+
+  @override
+  String examCountdown(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: '$days days to your board exam',
+      one: '1 day to your board exam',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get examToday =>
+      'Your board exam is today. You\'ve prepared well. Good luck!';
+
+  @override
+  String get examSetPrompt => 'Set your board exam date to see a countdown';
+
+  @override
+  String get examDateSetting => 'Board exam date';
+
+  @override
+  String get examDateNotSet => 'Not set';
+
+  @override
+  String get examDateClear => 'Clear';
+
+  @override
+  String get subjectMaths => 'Maths';
+
+  @override
+  String get subjectChemistry => 'Chemistry';
+
+  @override
+  String get subjectPhysics => 'Physics';
+
+  @override
+  String get subjectBiology => 'Biology';
+
+  @override
+  String get subjectScience => 'Science';
+
+  @override
+  String get subjectEnglish => 'English';
+
+  @override
+  String get subjectUrdu => 'Urdu';
 }

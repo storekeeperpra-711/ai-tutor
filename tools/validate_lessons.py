@@ -88,6 +88,18 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
             if step["answer"] in answers:
                 problems.append(f"{where}/{step['id']}: the correct answer is also listed in common_wrong")
 
+        if step.get("type") == "pick_picture":
+            value = step["show"]["value"]
+            matching = [o["id"] for o in step["options"] if o["picture"]["value"] == value]
+            if len(matching) != 1:
+                problems.append(f"{where}/{step['id']}: exactly one picture must show {value} (found {len(matching)})")
+            pictures = [step["show"]] + [o["picture"] for o in step["options"]]
+            if any(p["kind"] == "fingers" and p["value"] > 5 for p in pictures):
+                problems.append(f"{where}/{step['id']}: one hand can only show 0 to 5 fingers")
+
+        if step.get("type") == "tap_count" and step.get("available", step["count"] + 2) < step["count"]:
+            problems.append(f"{where}/{step['id']}: 'available' must be at least 'count'")
+
         if step.get("type") == "text_check":
             def squash(text: str) -> str:
                 return "".join(text.split()).lower()
@@ -102,6 +114,8 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
     for where, step in all_steps(lesson):
         problems += [f"{where}/{step.get('id')}: {p}" for p in check_media(step)]
         problems += [f"{where}/{step.get('id')}: {p}" for p in check_ai_step(step)]
+
+    problems += check_voice(lesson)
 
     # The AI server finds AI steps by id anywhere in the lesson.
     ai_ids = [s["id"] for _, s in all_steps(lesson) if s.get("type") in AI_STEPS]
@@ -182,6 +196,76 @@ def check_media(step: dict) -> list[str]:
 
 
 AI_STEPS = ("ai_explain", "photo_check")
+
+AUDIO = ASSETS / "audio"
+LANGUAGES = ("en", "ur")
+# Mithu speaks at about 2.5 words a second; a line must fit in 30 seconds.
+MAX_LINE_SECONDS = 30
+WORDS_PER_SECOND = 2.5
+MOUTH_PER_SECOND = 20
+
+
+def voice_file(lesson_id: str, step_id: str, lang: str) -> str:
+    """The recording's name in assets/audio (see lib/character/voice_lines.dart)."""
+    return f"{lesson_id}__{step_id}_{lang}.m4a"
+
+
+def mouth_file(audio: str) -> str:
+    return audio.rsplit(".", 1)[0] + ".mouth"
+
+
+def voice_files(lesson: dict) -> set[str]:
+    """Every recording file name this lesson's Mithu lines can use."""
+    names = set()
+    for _, step in all_steps(lesson):
+        line = step.get("character")
+        if line:
+            for lang in LANGUAGES:
+                names.add(line.get("audio", {}).get(lang) or voice_file(lesson["id"], step["id"], lang))
+    return names
+
+
+def check_voice(lesson: dict) -> list[str]:
+    """Mithu's lines: short enough to say, and recordings that exist and fit."""
+    problems = []
+    seen: dict[str, str] = {}
+    for where, step in all_steps(lesson):
+        line = step.get("character")
+        if not line:
+            continue
+        name = f"{where}/{step['id']}"
+        if step["id"] in seen and seen[step["id"]] != where:
+            problems.append(f"{name}: steps where Mithu speaks need an id unique in the whole lesson (recordings are named after it)")
+        seen.setdefault(step["id"], where)
+        for lang in LANGUAGES:
+            words = len(line["say"][lang].split())
+            if words / WORDS_PER_SECOND > MAX_LINE_SECONDS:
+                problems.append(f"{name}: Mithu's {lang} line has {words} words, more than {MAX_LINE_SECONDS} seconds to say")
+            explicit = line.get("audio", {}).get(lang)
+            audio = explicit or voice_file(lesson["id"], step["id"], lang)
+            if not (AUDIO / audio).exists():
+                if explicit:
+                    problems.append(f"{name}: audio.{lang}: assets/audio/{audio} doesn't exist")
+                continue
+            mouth = AUDIO / mouth_file(audio)
+            if not mouth.exists():
+                problems.append(f"{name}: assets/audio/{mouth.name} is missing (the recorder makes it with the recording)")
+            elif len(mouth.read_text(encoding="utf-8").strip()) > MAX_LINE_SECONDS * MOUTH_PER_SECOND:
+                problems.append(f"{name}: the {lang} recording is longer than {MAX_LINE_SECONDS} seconds")
+    return problems
+
+
+def check_unused_audio(lessons: list[dict]) -> list[str]:
+    """Recordings no lesson line uses (a typo in a name, or a deleted step)."""
+    used = set()
+    for lesson in lessons:
+        for audio in voice_files(lesson):
+            used |= {audio, mouth_file(audio)}
+    return [
+        f"assets/audio/{f.name} isn't used by any Mithu line"
+        for f in sorted(AUDIO.glob("*"))
+        if f.is_file() and not f.name.startswith(".") and f.name not in used
+    ]
 
 
 def check_ai_step(step: dict) -> list[str]:
@@ -281,6 +365,8 @@ def main(argv: list[str]) -> int:
             print(f"ok   {path.name}")
 
     loops = check_prerequisite_loops(valid)
+    if not argv:
+        loops += check_unused_audio(valid)
     for problem in loops:
         print(f"FAIL {problem}")
 

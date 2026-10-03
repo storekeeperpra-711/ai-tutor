@@ -593,3 +593,103 @@ PhotoCheckStep _$PhotoCheckStepFromJson(Map<String, dynamic> json) =>
         'maxAttempts': 'max_attempts',
       },
     );
+
+TapCountStep _$TapCountStepFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      'TapCountStep',
+      json,
+      ($checkedConvert) {
+        final val = TapCountStep(
+          id: $checkedConvert('id', (v) => v as String),
+          type: $checkedConvert('type', (v) => v as String),
+          questionType: $checkedConvert('question_type', (v) => v as String?),
+          skill: $checkedConvert('skill', (v) => v as String?),
+          prompt: $checkedConvert(
+            'prompt',
+            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+          ),
+          count: $checkedConvert('count', (v) => (v as num).toInt()),
+          available: $checkedConvert('available', (v) => (v as num?)?.toInt()),
+          object: $checkedConvert('object', (v) => v as String? ?? 'mango'),
+          maxAttempts: $checkedConvert(
+            'max_attempts',
+            (v) => (v as num?)?.toInt() ?? 3,
+          ),
+          character: $checkedConvert(
+            'character',
+            (v) => v == null
+                ? null
+                : CharacterLine.fromJson(v as Map<String, dynamic>),
+          ),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'questionType': 'question_type',
+        'maxAttempts': 'max_attempts',
+      },
+    );
+
+NumberPicture _$NumberPictureFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('NumberPicture', json, ($checkedConvert) {
+      final val = NumberPicture(
+        kind: $checkedConvert('kind', (v) => v as String),
+        value: $checkedConvert('value', (v) => (v as num).toInt()),
+      );
+      return val;
+    });
+
+PictureOption _$PictureOptionFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('PictureOption', json, ($checkedConvert) {
+      final val = PictureOption(
+        id: $checkedConvert('id', (v) => v as String),
+        picture: $checkedConvert(
+          'picture',
+          (v) => NumberPicture.fromJson(v as Map<String, dynamic>),
+        ),
+      );
+      return val;
+    });
+
+PickPictureStep _$PickPictureStepFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      'PickPictureStep',
+      json,
+      ($checkedConvert) {
+        final val = PickPictureStep(
+          id: $checkedConvert('id', (v) => v as String),
+          type: $checkedConvert('type', (v) => v as String),
+          questionType: $checkedConvert('question_type', (v) => v as String?),
+          skill: $checkedConvert('skill', (v) => v as String?),
+          prompt: $checkedConvert(
+            'prompt',
+            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+          ),
+          show: $checkedConvert(
+            'show',
+            (v) => NumberPicture.fromJson(v as Map<String, dynamic>),
+          ),
+          options: $checkedConvert(
+            'options',
+            (v) => (v as List<dynamic>)
+                .map((e) => PictureOption.fromJson(e as Map<String, dynamic>))
+                .toList(),
+          ),
+          maxAttempts: $checkedConvert(
+            'max_attempts',
+            (v) => (v as num?)?.toInt() ?? 3,
+          ),
+          character: $checkedConvert(
+            'character',
+            (v) => v == null
+                ? null
+                : CharacterLine.fromJson(v as Map<String, dynamic>),
+          ),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'questionType': 'question_type',
+        'maxAttempts': 'max_attempts',
+      },
+    );

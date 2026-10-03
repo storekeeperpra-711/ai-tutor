@@ -235,6 +235,14 @@ class LocalDb extends _$LocalDb {
     });
   }
 
+  /// Every finished step of [studentId], in all lessons.
+  Stream<List<StepResultRow>> watchStepResults(String studentId) => (select(
+    stepResults,
+  )..where((r) => r.studentId.equals(studentId))).watch();
+
+  Future<List<StepResultRow>> stepResultsOf(String studentId) =>
+      (select(stepResults)..where((r) => r.studentId.equals(studentId))).get();
+
   // Mastery (Phase 4)
 
   static Map<String, SkillState> _decode(List<SkillStateRow> rows) => {

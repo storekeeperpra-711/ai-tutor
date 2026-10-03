@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import '../../app/locale_controller.dart';
 import '../../app/motion.dart';
 import '../../app/theme/age_tier.dart';
+import '../../character/feel_settings.dart';
+import '../home/home_parts.dart';
 import '../../l10n/app_localizations.dart';
 
 /// Language names are always shown in their own language, so a student
@@ -53,6 +55,22 @@ class SettingsScreen extends ConsumerWidget {
             value: ref.watch(lessMotionProvider),
             onChanged: (v) => ref.read(lessMotionProvider.notifier).set(v),
           ),
+          SwitchListTile(
+            key: const Key('sounds-on'),
+            title: Text(l10n.soundsSetting),
+            subtitle: Text(l10n.soundsSettingHint),
+            value: ref.watch(soundsOnProvider),
+            onChanged: (v) => ref.read(soundsOnProvider.notifier).set(v),
+          ),
+          SwitchListTile(
+            key: const Key('mithu-on'),
+            title: Text(l10n.mithuSetting),
+            subtitle: Text(l10n.mithuSettingHint),
+            value: ref.watch(mithuOnProvider),
+            onChanged: (v) => ref.read(mithuOnProvider.notifier).set(v),
+          ),
+          if (tier == AgeTier.middle || tier == AgeTier.older)
+            const _ExamDateTile(),
           ListTile(
             key: const Key('open-ai-costs'),
             leading: const Icon(Icons.payments_outlined),
@@ -90,3 +108,43 @@ String _tierName(AppLocalizations l10n, AgeTier tier) => switch (tier) {
   AgeTier.middle => l10n.tierMiddle,
   AgeTier.older => l10n.tierOlder,
 };
+
+/// The board exam date, for the countdown on the home screen.
+class _ExamDateTile extends ConsumerWidget {
+  const _ExamDateTile();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
+    final date = ref.watch(examDateProvider);
+    final now = DateTime.now();
+    return ListTile(
+      key: const Key('exam-date'),
+      leading: const Icon(Icons.event_rounded),
+      title: Text(l10n.examDateSetting),
+      subtitle: Text(
+        date == null
+            ? l10n.examDateNotSet
+            : MaterialLocalizations.of(context).formatFullDate(date),
+      ),
+      trailing: date == null
+          ? null
+          : TextButton(
+              key: const Key('exam-date-clear'),
+              onPressed: () => ref.read(examDateProvider.notifier).set(null),
+              child: Text(l10n.examDateClear),
+            ),
+      onTap: () async {
+        final picked = await showDatePicker(
+          context: context,
+          initialDate: date ?? now.add(const Duration(days: 120)),
+          firstDate: DateTime(now.year, now.month, now.day),
+          lastDate: DateTime(now.year + 2, 12, 31),
+        );
+        if (picked != null) {
+          await ref.read(examDateProvider.notifier).set(picked);
+        }
+      },
+    );
+  }
+}

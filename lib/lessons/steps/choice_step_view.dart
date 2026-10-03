@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../character/mithu_bubble.dart';
+import '../../character/sounds.dart';
 import '../../l10n/app_localizations.dart';
 import '../../models/lesson_step.dart';
 import '../lesson_text.dart';
@@ -10,23 +12,28 @@ import 'step_scaffold.dart';
 /// Multiple choice. Every option has its own feedback. A wrong option is
 /// greyed out and the student tries again, so the step always ends with
 /// the right idea (and the options run out, so it can't loop forever).
-class ChoiceStepView extends StatefulWidget {
+class ChoiceStepView extends ConsumerStatefulWidget {
   const ChoiceStepView({super.key, required this.step, required this.onDone});
 
   final ChoiceStep step;
   final StepDone onDone;
 
   @override
-  State<ChoiceStepView> createState() => _ChoiceStepViewState();
+  ConsumerState<ChoiceStepView> createState() => _ChoiceStepViewState();
 }
 
-class _ChoiceStepViewState extends State<ChoiceStepView> {
+class _ChoiceStepViewState extends ConsumerState<ChoiceStepView> {
   final _tried = <String>{};
   ChoiceOption? _last;
 
   bool get _solved => _last?.correct ?? false;
 
-  void _pick(ChoiceOption option) => setState(() {
+  void _pick(ChoiceOption option) {
+    ref.playSound(option.correct ? Sound.right : Sound.tryAgain);
+    _select(option);
+  }
+
+  void _select(ChoiceOption option) => setState(() {
     _tried.add(option.id);
     _last = option;
   });
@@ -59,7 +66,12 @@ class _ChoiceStepViewState extends State<ChoiceStepView> {
       onPressed: _solved ? _finish : null,
       children: [
         if (step.character != null) ...[
-          MithuBubble(line: step.character!),
+          MithuBubble(
+            line: step.character!,
+            reaction: _last == null
+                ? null
+                : (correct: _last!.correct, attempt: _tried.length),
+          ),
           const SizedBox(height: 24),
         ],
         LessonText(step.prompt, style: textTheme.titleLarge),

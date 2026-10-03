@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import '../app/theme/age_tier.dart';
 import '../models/lesson.dart';
 import 'curriculum.dart';
 import 'skill_state.dart';
@@ -120,6 +121,7 @@ DailyPlan buildDailyPlan({
   required DateTime now,
   required String studentId,
   int minutes = 15,
+  AgeTier? tier,
 }) {
   final today = dayOf(now);
   final random = Random(_seed('$studentId ${dayKey(today)}'));
@@ -197,7 +199,7 @@ DailyPlan buildDailyPlan({
   }
 
   // 3. Continue the unfinished lesson, or start the next one that is ready.
-  final lessonItem = _nextLesson(curriculum, lessons, levelOf);
+  final lessonItem = _nextLesson(curriculum, lessons, levelOf, tier);
   // A lesson can be stopped half way (progress is saved), so it only
   // needs half its time to fit; then only part of it is planned today.
   if (lessonItem != null && left * 2 >= lessonItem.minutesLeft) {
@@ -321,6 +323,7 @@ LessonItem? _nextLesson(
   Curriculum curriculum,
   Map<String, LessonPosition> positions,
   MasteryLevel Function(String) levelOf,
+  AgeTier? tier,
 ) {
   // An unfinished lesson comes first.
   for (final lesson in curriculum.lessons) {
@@ -336,8 +339,16 @@ LessonItem? _nextLesson(
       .every((l) => levelOf(l.mainSkill).index >= MasteryLevel.mastered.index);
   if (!allMastered) return null;
 
-  // Then the first new lesson whose prerequisites aren't known gaps.
-  for (final lesson in curriculum.lessons) {
+  // Then the first new lesson, made for the student's age group, whose
+  // prerequisites aren't known gaps. (Without lessons for their group
+  // yet, any lesson except the youngest children's.)
+  var fitting = curriculum.lessons.where(
+    (l) => tier == null || l.tier == tier.name,
+  );
+  if (fitting.isEmpty) {
+    fitting = curriculum.lessons.where((l) => l.tier != AgeTier.early.name);
+  }
+  for (final lesson in fitting) {
     if (positions[lesson.id] != null) continue;
     if (levelOf(lesson.mainSkill) != MasteryLevel.notStarted) continue;
     final gap = lesson.prerequisites.any(

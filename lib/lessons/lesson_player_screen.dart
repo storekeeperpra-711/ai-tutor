@@ -7,6 +7,8 @@ import 'package:go_router/go_router.dart';
 import '../features/common/celebration.dart';
 import '../features/common/language_toggle.dart';
 import '../features/common/sync_status.dart';
+import '../features/effort/celebration_view.dart';
+import '../features/effort/effort.dart';
 import '../features/plan/mastery_level.dart';
 import '../media/media_cache.dart';
 import '../l10n/app_localizations.dart';
@@ -151,19 +153,45 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
       }
       final last = _index == widget.lesson.steps.length - 1;
       if (last) {
-        celebrate(context, AppLocalizations.of(context).lessonFinished);
-      } else if (change != null && change.levelledUp) {
-        await _celebrateLevel(change);
+        await _finish();
+        return;
       }
-      if (!mounted) return;
-      if (!last) {
-        setState(() => _index++);
-      } else {
-        await Navigator.of(context).maybePop(_results);
-      }
+      if (change != null && change.levelledUp) await _celebrateLevel(change);
+      if (mounted) setState(() => _index++);
     } finally {
       _busy = false;
     }
+  }
+
+  /// Shown when the lesson is finished.
+  ({LessonStars stars, Lesson? next})? _finished;
+
+  Future<void> _finish() async {
+    final student = widget.student;
+    final answers = <String, StepAnswer>{};
+    var progress = const <String, LessonProgress>{};
+    if (student != null) {
+      final db = ref.read(localDbProvider);
+      for (final r in await db.stepResultsOf(student.id)) {
+        if (r.lessonId == widget.lesson.id) answers[r.stepId] = answerOf(r);
+      }
+      progress = ref.read(progressProvider(student.id)).value ?? progress;
+    }
+    for (final r in _results) {
+      answers[r.stepId] = (
+        stepId: r.stepId,
+        correct: r.correct,
+        attempts: r.attempts,
+      );
+    }
+    final curriculum = await ref.read(curriculumProvider.future);
+    if (!mounted) return;
+    setState(
+      () => _finished = (
+        stars: starsFor(widget.lesson, answers.values, completed: true),
+        next: nextLessonAfter(curriculum, widget.lesson, progress),
+      ),
+    );
   }
 
   Future<void> _celebrateLevel(SkillChange change) async {
@@ -268,6 +296,18 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     final steps = widget.lesson.steps;
     final step = steps[_index];
     final l10n = AppLocalizations.of(context);
+    if (_finished case (:final stars, :final next)) {
+      return Scaffold(
+        appBar: AppBar(title: LessonText(widget.lesson.title)),
+        body: CelebrationView(
+          lesson: widget.lesson,
+          stars: stars,
+          next: next,
+          onNext: () => context.pushReplacement('/lesson/${next!.id}'),
+          onHome: () => Navigator.of(context).maybePop(_results),
+        ),
+      );
+    }
 
     return Scaffold(
       appBar: AppBar(

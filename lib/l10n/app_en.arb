@@ -932,5 +932,318 @@
   "aiCostsEmpty": "No AI use in the last 7 days.",
   "@aiCostsEmpty": {
     "description": "Cost dashboard is empty."
+  },
+  "listenToMithu": "Listen to Mithu",
+  "@listenToMithu": {
+    "description": "Speaker button next to Mithu's speech bubble."
+  },
+  "phoneVoiceLabel": "Phone voice (no recording yet)",
+  "@phoneVoiceLabel": {
+    "description": "Dev builds only: this line has no recorded voice yet."
+  },
+  "recorderTitle": "Record Mithu's voice",
+  "@recorderTitle": {
+    "description": "Dev screen title: narration recorder."
+  },
+  "recorderHelp": "Find a quiet room. Hold the phone a hand's width from your mouth, tap Record, read the line warmly, and tap Stop. Keep each line under 30 seconds.",
+  "@recorderHelp": {
+    "description": "Instructions at the top of the narration recorder."
+  },
+  "recorderMissingOnly": "Only lines without a voice",
+  "@recorderMissingOnly": {
+    "description": "Filter switch in the narration recorder."
+  },
+  "recorderRecord": "Record",
+  "@recorderRecord": {
+    "description": "Start recording a line."
+  },
+  "recorderStop": "Stop",
+  "@recorderStop": {
+    "description": "Stop recording."
+  },
+  "recorderPlay": "Listen",
+  "@recorderPlay": {
+    "description": "Play back a recorded line."
+  },
+  "recorderDelete": "Delete",
+  "@recorderDelete": {
+    "description": "Delete a recording made on this phone."
+  },
+  "recorderStatusPhone": "Recorded on this phone (not sent yet)",
+  "@recorderStatusPhone": {
+    "description": "Line status: recorded with the dev recorder."
+  },
+  "recorderStatusApp": "Voice is in the app",
+  "@recorderStatusApp": {
+    "description": "Line status: a recording is bundled with the app."
+  },
+  "recorderStatusMissing": "No voice yet",
+  "@recorderStatusMissing": {
+    "description": "Line status: no recording."
+  },
+  "recorderTooLong": "Longer than 30 seconds: please record it shorter.",
+  "@recorderTooLong": {
+    "description": "Warning after a recording over 30 seconds."
+  },
+  "recorderNoMic": "The app may not use the microphone. Allow it in the phone's settings.",
+  "@recorderNoMic": {
+    "description": "Microphone permission was refused."
+  },
+  "recorderExport": "Send recordings",
+  "@recorderExport": {
+    "description": "Share all recordings made on this phone."
+  },
+  "recorderExportHelp": "Send them to yourself (for example to Google Drive), then attach all the files in the project chat. Claude adds them to the app.",
+  "@recorderExportHelp": {
+    "description": "Explains what to do with exported recordings."
+  },
+  "recorderNothingToSend": "No recordings on this phone yet.",
+  "@recorderNothingToSend": {
+    "description": "Export with nothing recorded."
+  },
+  "soundsSetting": "Sounds",
+  "@soundsSetting": {
+    "description": "Settings switch for sound effects."
+  },
+  "soundsSettingHint": "Small sounds for taps and answers",
+  "@soundsSettingHint": {
+    "description": "Subtitle of the Sounds switch."
+  },
+  "mithuSetting": "Show Mithu",
+  "@mithuSetting": {
+    "description": "Settings switch: show the parrot character."
+  },
+  "mithuSettingHint": "Mithu the parrot helps in lessons",
+  "@mithuSettingHint": {
+    "description": "Subtitle of the Show Mithu switch."
+  },
+  "badgeFirstLesson": "First lesson finished",
+  "@badgeFirstLesson": {
+    "description": "Effort badge."
+  },
+  "badgeTriedAgain": "Tried again after a mistake",
+  "@badgeTriedAgain": {
+    "description": "Effort badge."
+  },
+  "badgeExplained": "Explained in your own words",
+  "@badgeExplained": {
+    "description": "Effort badge."
+  },
+  "badgeCheckedPhoto": "Fixed your work after a photo check",
+  "@badgeCheckedPhoto": {
+    "description": "Effort badge."
+  },
+  "badgeCameBack": "Came back to review",
+  "@badgeCameBack": {
+    "description": "Effort badge."
+  },
+  "badgeFiveDays": "Learned on 5 different days this month",
+  "@badgeFiveDays": {
+    "description": "Effort badge. Not a streak: any 5 days."
+  },
+  "badgesTitle": "Your badges",
+  "@badgesTitle": {
+    "description": "Heading of the badge shelf."
+  },
+  "badgesEarned": "{count} of {total} badges",
+  "@badgesEarned": {
+    "description": "Badge shelf count.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "starFinished": "You finished",
+  "@starFinished": {
+    "description": "Celebration: star for finishing the lesson."
+  },
+  "starKeptTrying": "You kept trying",
+  "@starKeptTrying": {
+    "description": "Celebration: star for trying again after mistakes."
+  },
+  "starExplained": "You explained your thinking",
+  "@starExplained": {
+    "description": "Celebration: star for explaining (or answering every question)."
+  },
+  "praise1": "Well done! Your hard work is paying off.",
+  "@praise1": {
+    "description": "Celebration praise line."
+  },
+  "praise2": "Great effort! Mithu is proud of you.",
+  "@praise2": {
+    "description": "Celebration praise line."
+  },
+  "praise3": "You did it! Mistakes help us learn.",
+  "@praise3": {
+    "description": "Celebration praise line."
+  },
+  "nextLesson": "Next: {title}",
+  "@nextLesson": {
+    "description": "Celebration: button to the next lesson.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "comeBackTomorrow": "Come back tomorrow for a quick review.",
+  "@comeBackTomorrow": {
+    "description": "Celebration: next step when there's no next lesson."
+  },
+  "backHome": "Home",
+  "@backHome": {
+    "description": "Celebration: go back to the home screen."
+  },
+  "earlyGreeting": "Assalam o Alaikum, {name}! Let's play and learn.",
+  "@earlyGreeting": {
+    "description": "Mithu greets a young child on the home screen (spoken by the phone, never sent to the AI).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "playButton": "Play",
+  "@playButton": {
+    "description": "Big button on the youngest children's home: opens the next lesson."
+  },
+  "mithuTip1": "Tip: if you get stuck, read the question again slowly.",
+  "@mithuTip1": {
+    "description": "Mithu's tip on the Grades 3-5 home."
+  },
+  "mithuTip2": "Tip: mistakes are how our brains grow. Try again!",
+  "@mithuTip2": {
+    "description": "Mithu's tip on the Grades 3-5 home."
+  },
+  "mithuTip3": "Tip: explain your answer to someone at home.",
+  "@mithuTip3": {
+    "description": "Mithu's tip on the Grades 3-5 home."
+  },
+  "questTitle": "{subject} quest",
+  "@questTitle": {
+    "description": "Quest card title on the Grades 3-5 home.",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "questProgress": "{done} of {total} lessons done",
+  "@questProgress": {
+    "description": "Quest card progress.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "questDone": "Quest complete! Keep reviewing to stay strong.",
+  "@questDone": {
+    "description": "Quest card when every lesson is done."
+  },
+  "secureSkills": "{count} of {total} skills secure",
+  "@secureSkills": {
+    "description": "Subject tile: skills at the Secure level.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subjectLevel": "Level {level}",
+  "@subjectLevel": {
+    "description": "Grades 6-8 home: a subject's level (1 + skills mastered).",
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "subjectsTitle": "Your subjects",
+  "@subjectsTitle": {
+    "description": "Heading above subject tiles."
+  },
+  "masteryBySubject": "Mastery by subject",
+  "@masteryBySubject": {
+    "description": "Grades 9-12 home heading."
+  },
+  "masteredSkills": "{count} of {total} skills mastered",
+  "@masteredSkills": {
+    "description": "Grades 9-12 home: skills mastered or secure in a subject.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "examCountdown": "{days, plural, =1{1 day to your board exam} other{{days} days to your board exam}}",
+  "@examCountdown": {
+    "description": "Grades 9-12 home: days until the board exam.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "examToday": "Your board exam is today. You've prepared well. Good luck!",
+  "@examToday": {
+    "description": "Exam countdown on the exam day."
+  },
+  "examSetPrompt": "Set your board exam date to see a countdown",
+  "@examSetPrompt": {
+    "description": "Exam card when no date is set."
+  },
+  "examDateSetting": "Board exam date",
+  "@examDateSetting": {
+    "description": "Settings: the student's board exam date."
+  },
+  "examDateNotSet": "Not set",
+  "@examDateNotSet": {
+    "description": "Settings: no exam date yet."
+  },
+  "examDateClear": "Clear",
+  "@examDateClear": {
+    "description": "Settings: remove the exam date."
+  },
+  "subjectMaths": "Maths",
+  "@subjectMaths": {
+    "description": "Subject name."
+  },
+  "subjectChemistry": "Chemistry",
+  "@subjectChemistry": {
+    "description": "Subject name."
+  },
+  "subjectPhysics": "Physics",
+  "@subjectPhysics": {
+    "description": "Subject name."
+  },
+  "subjectBiology": "Biology",
+  "@subjectBiology": {
+    "description": "Subject name."
+  },
+  "subjectScience": "Science",
+  "@subjectScience": {
+    "description": "Subject name."
+  },
+  "subjectEnglish": "English",
+  "@subjectEnglish": {
+    "description": "Subject name."
+  },
+  "subjectUrdu": "Urdu",
+  "@subjectUrdu": {
+    "description": "Subject name."
   }
 }

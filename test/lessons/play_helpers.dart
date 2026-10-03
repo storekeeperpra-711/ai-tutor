@@ -177,6 +177,30 @@ Future<void> answerStep(
       await tester.enterText(input, rightPhotoAnswer(step));
       await tapKey(tester, 'step-check');
       expect(find.byKey(const Key('feedback-good')), findsOneWidget);
+    case TapCountStep():
+      // Tap mangoes into the basket and the tick: pictures only.
+      final extra = tryWrongFirst && step.count < step.shown ? 1 : 0;
+      for (var i = 0; i < step.count + extra; i++) {
+        await tapKey(tester, 'mango-$i');
+      }
+      if (extra > 0) {
+        await tapKey(tester, 'step-check');
+        expect(find.byKey(const Key('step-continue')), findsNothing);
+        await tapKey(tester, 'basket-mango-${step.count}');
+      }
+      await tapKey(tester, 'step-check');
+      expect(find.byKey(const Key('step-continue')), findsOneWidget);
+    case PickPictureStep():
+      final wrong = step.options.where((o) => !step.isRight(o)).firstOrNull;
+      if (wrong != null && tryWrongFirst) {
+        await tapKey(tester, 'picture-${wrong.id}');
+        expect(find.byKey(const Key('step-continue')), findsNothing);
+      }
+      await tapKey(
+        tester,
+        'picture-${step.options.firstWhere(step.isRight).id}',
+      );
+      expect(find.byKey(const Key('step-continue')), findsOneWidget);
     case SimStep() || VideoStep() || LottieStep():
       break;
     case ExplainStep() || SummaryStep() || UnsupportedStep():

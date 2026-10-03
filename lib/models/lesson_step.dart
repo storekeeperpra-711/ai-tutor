@@ -22,6 +22,8 @@ sealed class LessonStep {
         'lottie' => LottieStep.fromJson(json),
         'ai_explain' => AiExplainStep.fromJson(json),
         'photo_check' => PhotoCheckStep.fromJson(json),
+        'tap_count' => TapCountStep.fromJson(json),
+        'pick_picture' => PickPictureStep.fromJson(json),
         _ => UnsupportedStep(
           id: json['id'] as String,
           type: json['type'] as String,
@@ -30,6 +32,9 @@ sealed class LessonStep {
 
   final String id;
   final String type;
+
+  /// What Mithu says at this step, if anything.
+  CharacterLine? get character => null;
 }
 
 /// A step that asks a question. With a [questionType], its answers count
@@ -73,6 +78,7 @@ class ExplainStep extends LessonStep {
       _$ExplainStepFromJson(json);
 
   final LocalizedText text;
+  @override
   final CharacterLine? character;
   final String? image;
 }
@@ -99,6 +105,7 @@ class ChoiceStep extends LessonStep implements QuestionStep {
 
   final LocalizedText prompt;
   final List<ChoiceOption> options;
+  @override
   final CharacterLine? character;
 }
 
@@ -172,6 +179,7 @@ class NumberStep extends LessonStep implements QuestionStep {
   final LocalizedText feedbackWrong;
   final int maxAttempts;
   final List<CommonWrong> commonWrong;
+  @override
   final CharacterLine? character;
 }
 
@@ -238,6 +246,7 @@ class TextCheckStep extends LessonStep implements QuestionStep {
   final LocalizedText feedbackWrong;
   final int maxAttempts;
   final List<CommonWrongText> commonWrong;
+  @override
   final CharacterLine? character;
 }
 
@@ -273,6 +282,7 @@ class SummaryStep extends LessonStep {
 
   final LocalizedText text;
   final List<LocalizedText> points;
+  @override
   final CharacterLine? character;
 }
 
@@ -326,6 +336,7 @@ class SimStep extends LessonStep implements QuestionStep {
   final LocalizedText? feedbackWrong;
   final int maxAttempts;
   final List<CommonWrongText> commonWrong;
+  @override
   final CharacterLine? character;
 
   bool get isWebView => renderer == 'webview';
@@ -378,6 +389,7 @@ class VideoStep extends LessonStep {
   final LocalizedText summary;
   final LocalizedText? title;
   final double? durationSeconds;
+  @override
   final CharacterLine? character;
 }
 
@@ -399,6 +411,7 @@ class LottieStep extends LessonStep {
   final String src;
   final LocalizedText? text;
   final bool loop;
+  @override
   final CharacterLine? character;
 }
 
@@ -439,6 +452,7 @@ class AiExplainStep extends LessonStep implements QuestionStep {
   final FeedbackLevels fallbackFeedback;
   final int limitPerDay;
   final int maxAttempts;
+  @override
   final CharacterLine? character;
 }
 
@@ -506,6 +520,7 @@ class PhotoCheckStep extends LessonStep implements QuestionStep {
   final List<CommonWrongText> commonWrong;
   final int limitPerDay;
   final int maxAttempts;
+  @override
   final CharacterLine? character;
 
   /// linear_equation checks every line; the others the final answer.
@@ -516,4 +531,103 @@ class PhotoCheckStep extends LessonStep implements QuestionStep {
 /// can't play.
 class UnsupportedStep extends LessonStep {
   const UnsupportedStep({required super.id, required super.type});
+}
+
+/// Tap things (mangoes) to drop [count] of them into a basket, while Mithu
+/// counts aloud. Made for children who can't read yet (Phase 7).
+@JsonSerializable()
+class TapCountStep extends LessonStep implements QuestionStep {
+  const TapCountStep({
+    required super.id,
+    required super.type,
+    this.questionType,
+    this.skill,
+    required this.prompt,
+    required this.count,
+    this.available,
+    this.object = 'mango',
+    this.maxAttempts = 3,
+    this.character,
+  });
+
+  factory TapCountStep.fromJson(Map<String, dynamic> json) =>
+      _$TapCountStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
+  final LocalizedText prompt;
+
+  /// How many to put in the basket.
+  final int count;
+
+  /// How many there are to choose from; default [count] + 2.
+  final int? available;
+
+  /// What is counted: mango (the only picture so far).
+  final String object;
+  final int maxAttempts;
+  @override
+  final CharacterLine? character;
+
+  int get shown => available ?? count + 2;
+}
+
+/// A number shown as a picture: mangoes, dots, fingers or the digit.
+@JsonSerializable()
+class NumberPicture {
+  const NumberPicture({required this.kind, required this.value});
+
+  factory NumberPicture.fromJson(Map<String, dynamic> json) =>
+      _$NumberPictureFromJson(json);
+
+  /// mangoes, dots, fingers or digit.
+  final String kind;
+  final int value;
+}
+
+@JsonSerializable()
+class PictureOption {
+  const PictureOption({required this.id, required this.picture});
+
+  factory PictureOption.fromJson(Map<String, dynamic> json) =>
+      _$PictureOptionFromJson(json);
+
+  final String id;
+  final NumberPicture picture;
+}
+
+/// Pick the big picture card with the same number as [show]. The app
+/// decides what's right by comparing the numbers, so the lesson can't get
+/// it wrong (Phase 7).
+@JsonSerializable()
+class PickPictureStep extends LessonStep implements QuestionStep {
+  const PickPictureStep({
+    required super.id,
+    required super.type,
+    this.questionType,
+    this.skill,
+    required this.prompt,
+    required this.show,
+    required this.options,
+    this.maxAttempts = 3,
+    this.character,
+  });
+
+  factory PickPictureStep.fromJson(Map<String, dynamic> json) =>
+      _$PickPictureStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
+  final LocalizedText prompt;
+  final NumberPicture show;
+  final List<PictureOption> options;
+  final int maxAttempts;
+  @override
+  final CharacterLine? character;
+
+  bool isRight(PictureOption option) => option.picture.value == show.value;
 }

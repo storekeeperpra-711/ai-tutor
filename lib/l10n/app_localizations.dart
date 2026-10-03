@@ -1195,6 +1195,390 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No AI use in the last 7 days.'**
   String get aiCostsEmpty;
+
+  /// Speaker button next to Mithu's speech bubble.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen to Mithu'**
+  String get listenToMithu;
+
+  /// Dev builds only: this line has no recorded voice yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone voice (no recording yet)'**
+  String get phoneVoiceLabel;
+
+  /// Dev screen title: narration recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Record Mithu\'s voice'**
+  String get recorderTitle;
+
+  /// Instructions at the top of the narration recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Find a quiet room. Hold the phone a hand\'s width from your mouth, tap Record, read the line warmly, and tap Stop. Keep each line under 30 seconds.'**
+  String get recorderHelp;
+
+  /// Filter switch in the narration recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Only lines without a voice'**
+  String get recorderMissingOnly;
+
+  /// Start recording a line.
+  ///
+  /// In en, this message translates to:
+  /// **'Record'**
+  String get recorderRecord;
+
+  /// Stop recording.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get recorderStop;
+
+  /// Play back a recorded line.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen'**
+  String get recorderPlay;
+
+  /// Delete a recording made on this phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get recorderDelete;
+
+  /// Line status: recorded with the dev recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Recorded on this phone (not sent yet)'**
+  String get recorderStatusPhone;
+
+  /// Line status: a recording is bundled with the app.
+  ///
+  /// In en, this message translates to:
+  /// **'Voice is in the app'**
+  String get recorderStatusApp;
+
+  /// Line status: no recording.
+  ///
+  /// In en, this message translates to:
+  /// **'No voice yet'**
+  String get recorderStatusMissing;
+
+  /// Warning after a recording over 30 seconds.
+  ///
+  /// In en, this message translates to:
+  /// **'Longer than 30 seconds: please record it shorter.'**
+  String get recorderTooLong;
+
+  /// Microphone permission was refused.
+  ///
+  /// In en, this message translates to:
+  /// **'The app may not use the microphone. Allow it in the phone\'s settings.'**
+  String get recorderNoMic;
+
+  /// Share all recordings made on this phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Send recordings'**
+  String get recorderExport;
+
+  /// Explains what to do with exported recordings.
+  ///
+  /// In en, this message translates to:
+  /// **'Send them to yourself (for example to Google Drive), then attach all the files in the project chat. Claude adds them to the app.'**
+  String get recorderExportHelp;
+
+  /// Export with nothing recorded.
+  ///
+  /// In en, this message translates to:
+  /// **'No recordings on this phone yet.'**
+  String get recorderNothingToSend;
+
+  /// Settings switch for sound effects.
+  ///
+  /// In en, this message translates to:
+  /// **'Sounds'**
+  String get soundsSetting;
+
+  /// Subtitle of the Sounds switch.
+  ///
+  /// In en, this message translates to:
+  /// **'Small sounds for taps and answers'**
+  String get soundsSettingHint;
+
+  /// Settings switch: show the parrot character.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Mithu'**
+  String get mithuSetting;
+
+  /// Subtitle of the Show Mithu switch.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu the parrot helps in lessons'**
+  String get mithuSettingHint;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'First lesson finished'**
+  String get badgeFirstLesson;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Tried again after a mistake'**
+  String get badgeTriedAgain;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Explained in your own words'**
+  String get badgeExplained;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Fixed your work after a photo check'**
+  String get badgeCheckedPhoto;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Came back to review'**
+  String get badgeCameBack;
+
+  /// Effort badge. Not a streak: any 5 days.
+  ///
+  /// In en, this message translates to:
+  /// **'Learned on 5 different days this month'**
+  String get badgeFiveDays;
+
+  /// Heading of the badge shelf.
+  ///
+  /// In en, this message translates to:
+  /// **'Your badges'**
+  String get badgesTitle;
+
+  /// Badge shelf count.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} badges'**
+  String badgesEarned(int count, int total);
+
+  /// Celebration: star for finishing the lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'You finished'**
+  String get starFinished;
+
+  /// Celebration: star for trying again after mistakes.
+  ///
+  /// In en, this message translates to:
+  /// **'You kept trying'**
+  String get starKeptTrying;
+
+  /// Celebration: star for explaining (or answering every question).
+  ///
+  /// In en, this message translates to:
+  /// **'You explained your thinking'**
+  String get starExplained;
+
+  /// Celebration praise line.
+  ///
+  /// In en, this message translates to:
+  /// **'Well done! Your hard work is paying off.'**
+  String get praise1;
+
+  /// Celebration praise line.
+  ///
+  /// In en, this message translates to:
+  /// **'Great effort! Mithu is proud of you.'**
+  String get praise2;
+
+  /// Celebration praise line.
+  ///
+  /// In en, this message translates to:
+  /// **'You did it! Mistakes help us learn.'**
+  String get praise3;
+
+  /// Celebration: button to the next lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Next: {title}'**
+  String nextLesson(String title);
+
+  /// Celebration: next step when there's no next lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Come back tomorrow for a quick review.'**
+  String get comeBackTomorrow;
+
+  /// Celebration: go back to the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get backHome;
+
+  /// Mithu greets a young child on the home screen (spoken by the phone, never sent to the AI).
+  ///
+  /// In en, this message translates to:
+  /// **'Assalam o Alaikum, {name}! Let\'s play and learn.'**
+  String earlyGreeting(String name);
+
+  /// Big button on the youngest children's home: opens the next lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Play'**
+  String get playButton;
+
+  /// Mithu's tip on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: if you get stuck, read the question again slowly.'**
+  String get mithuTip1;
+
+  /// Mithu's tip on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: mistakes are how our brains grow. Try again!'**
+  String get mithuTip2;
+
+  /// Mithu's tip on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: explain your answer to someone at home.'**
+  String get mithuTip3;
+
+  /// Quest card title on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} quest'**
+  String questTitle(String subject);
+
+  /// Quest card progress.
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} lessons done'**
+  String questProgress(int done, int total);
+
+  /// Quest card when every lesson is done.
+  ///
+  /// In en, this message translates to:
+  /// **'Quest complete! Keep reviewing to stay strong.'**
+  String get questDone;
+
+  /// Subject tile: skills at the Secure level.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} skills secure'**
+  String secureSkills(int count, int total);
+
+  /// Grades 6-8 home: a subject's level (1 + skills mastered).
+  ///
+  /// In en, this message translates to:
+  /// **'Level {level}'**
+  String subjectLevel(int level);
+
+  /// Heading above subject tiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Your subjects'**
+  String get subjectsTitle;
+
+  /// Grades 9-12 home heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Mastery by subject'**
+  String get masteryBySubject;
+
+  /// Grades 9-12 home: skills mastered or secure in a subject.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} skills mastered'**
+  String masteredSkills(int count, int total);
+
+  /// Grades 9-12 home: days until the board exam.
+  ///
+  /// In en, this message translates to:
+  /// **'{days, plural, =1{1 day to your board exam} other{{days} days to your board exam}}'**
+  String examCountdown(int days);
+
+  /// Exam countdown on the exam day.
+  ///
+  /// In en, this message translates to:
+  /// **'Your board exam is today. You\'ve prepared well. Good luck!'**
+  String get examToday;
+
+  /// Exam card when no date is set.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your board exam date to see a countdown'**
+  String get examSetPrompt;
+
+  /// Settings: the student's board exam date.
+  ///
+  /// In en, this message translates to:
+  /// **'Board exam date'**
+  String get examDateSetting;
+
+  /// Settings: no exam date yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Not set'**
+  String get examDateNotSet;
+
+  /// Settings: remove the exam date.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get examDateClear;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Maths'**
+  String get subjectMaths;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Chemistry'**
+  String get subjectChemistry;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Physics'**
+  String get subjectPhysics;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Biology'**
+  String get subjectBiology;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Science'**
+  String get subjectScience;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get subjectEnglish;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Urdu'**
+  String get subjectUrdu;
 }
 
 class _AppLocalizationsDelegate

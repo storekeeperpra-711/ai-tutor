@@ -9,8 +9,10 @@ import 'steps/explain_step_view.dart';
 import 'steps/lottie_step_view.dart';
 import 'steps/number_step_view.dart';
 import 'steps/photo_check_step_view.dart';
+import 'steps/pick_picture_step_view.dart';
 import 'steps/sim_step_view.dart';
 import 'steps/summary_step_view.dart';
+import 'steps/tap_count_step_view.dart';
 import 'steps/text_check_step_view.dart';
 import 'steps/unsupported_step_view.dart';
 import 'steps/video_step_view.dart';
@@ -33,6 +35,10 @@ final stepBuilders = <String, StepBuilder>{
       AiExplainStepView(step: s as AiExplainStep, onDone: done),
   'photo_check': (s, done) =>
       PhotoCheckStepView(step: s as PhotoCheckStep, onDone: done),
+  'tap_count': (s, done) =>
+      TapCountStepView(step: s as TapCountStep, onDone: done),
+  'pick_picture': (s, done) =>
+      PickPictureStepView(step: s as PickPictureStep, onDone: done),
 };
 
 /// The widget for [step] of lesson [lessonId].
@@ -41,5 +47,9 @@ Widget buildStep(LessonStep step, StepDone onDone, {required String lessonId}) {
   if (builder == null || step is UnsupportedStep) {
     return UnsupportedStepView(step: step, onDone: onDone);
   }
-  return StepContext(lessonId: lessonId, child: builder(step, onDone));
+  return StepContext(
+    lessonId: lessonId,
+    stepId: step.id,
+    child: builder(step, onDone),
+  );
 }

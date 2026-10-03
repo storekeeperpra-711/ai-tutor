@@ -2,6 +2,8 @@ import 'package:ai_tutor/ai/ai_service.dart';
 import 'package:ai_tutor/ai/photo_picker.dart';
 import 'package:ai_tutor/app/app.dart';
 import 'package:ai_tutor/app/preferences.dart';
+import 'package:ai_tutor/character/narrator.dart';
+import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/connectivity.dart';
 import 'package:ai_tutor/services/local_db.dart';
@@ -35,6 +37,8 @@ Future<Widget> buildTestApp({
       remoteStoreProvider.overrideWithValue(fake.remote),
       onlineProvider.overrideWith((ref) => fake.onlineStream),
       aiServiceProvider.overrideWithValue(fake.ai),
+      narratorProvider.overrideWithValue(fake.narrator),
+      soundPlayerProvider.overrideWithValue(fake.sounds),
       photoPickerProvider.overrideWithValue((source) async => fake.photo),
       // Widget tests have no WebView and can't play video.
       webSimBuilderProvider.overrideWithValue(

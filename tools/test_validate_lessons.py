@@ -34,6 +34,54 @@ class ValidateLessonsTest(unittest.TestCase):
     def test_sample_lesson_is_valid(self):
         self.assertEqual(v.validate_file(SAMPLE, self.validator), [])
 
+    def first_spoken(self, lesson):
+        return next(s for s in lesson["steps"] if "character" in s)
+
+    def test_mithu_line_must_fit_in_30_seconds(self):
+        lesson = self.mutated()
+        self.first_spoken(lesson)["character"]["say"]["en"] = "word " * 80
+        self.assertProblem(self.check(lesson), "more than 30 seconds to say")
+
+    def test_named_recording_must_exist(self):
+        lesson = self.mutated()
+        self.first_spoken(lesson)["character"]["audio"] = {"ur": "nope.m4a"}
+        self.assertProblem(self.check(lesson), "assets/audio/nope.m4a doesn't exist")
+
+    def test_recordings_need_a_short_mouth_file(self):
+        lesson = self.mutated()
+        step = self.first_spoken(lesson)
+        audio = v.voice_file(lesson["id"], step["id"], "ur")
+        old = v.AUDIO
+        with tempfile.TemporaryDirectory() as d:
+            v.AUDIO = Path(d)
+            try:
+                (v.AUDIO / audio).write_bytes(b"x")
+                self.assertProblem(self.check(lesson), "is missing (the recorder makes it")
+                (v.AUDIO / v.mouth_file(audio)).write_text("5" * 700)
+                self.assertProblem(self.check(lesson), "recording is longer than 30 seconds")
+                (v.AUDIO / v.mouth_file(audio)).write_text("5" * 100)
+                self.assertEqual(self.check(lesson), [])
+                (v.AUDIO / "typo__s1_ur.m4a").write_bytes(b"x")
+                self.assertEqual(
+                    v.check_unused_audio([lesson]),
+                    ["assets/audio/typo__s1_ur.m4a isn't used by any Mithu line"],
+                )
+            finally:
+                v.AUDIO = old
+
+    def test_counting_lesson_rules(self):
+        lesson = json.loads((v.LESSONS_DIR / "g0-maths-01-count-the-mangoes.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.check(lesson), [])
+        pick = next(s for s in lesson["steps"] if s["type"] == "pick_picture")
+        pick["options"][0]["picture"]["value"] = pick["show"]["value"]
+        self.assertProblem(self.check(lesson), "exactly one picture must show")
+        pick["options"][0]["picture"] = {"kind": "fingers", "value": 7}
+        self.assertProblem(self.check(lesson), "0 to 5 fingers")
+        tap = next(s for s in lesson["steps"] if s["type"] == "tap_count")
+        tap["count"] = 3
+        tap["available"] = 2
+        self.assertProblem(self.check(lesson), "'available' must be at least 'count'")
+
     def test_missing_urdu_text(self):
         lesson = self.mutated()
         del lesson["title"]["ur"]

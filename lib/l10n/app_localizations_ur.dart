@@ -648,4 +648,227 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get aiCostsEmpty => 'پچھلے 7 دنوں میں اے آئی استعمال نہیں ہوا۔';
+
+  @override
+  String get listenToMithu => 'مٹھو کو سنیں';
+
+  @override
+  String get phoneVoiceLabel => 'فون کی آواز (ابھی ریکارڈنگ نہیں)';
+
+  @override
+  String get recorderTitle => 'مٹھو کی آواز ریکارڈ کریں';
+
+  @override
+  String get recorderHelp =>
+      'خاموش کمرہ چنیں۔ فون منہ سے ایک ہاتھ دور رکھیں، ریکارڈ دبائیں، جملہ پیار سے پڑھیں اور روکیں دبائیں۔ ہر جملہ 30 سیکنڈ سے کم رکھیں۔';
+
+  @override
+  String get recorderMissingOnly => 'صرف بغیر آواز والے جملے';
+
+  @override
+  String get recorderRecord => 'ریکارڈ';
+
+  @override
+  String get recorderStop => 'روکیں';
+
+  @override
+  String get recorderPlay => 'سنیں';
+
+  @override
+  String get recorderDelete => 'مٹائیں';
+
+  @override
+  String get recorderStatusPhone => 'اس فون پر ریکارڈ ہوا (ابھی بھیجا نہیں)';
+
+  @override
+  String get recorderStatusApp => 'آواز ایپ میں ہے';
+
+  @override
+  String get recorderStatusMissing => 'ابھی آواز نہیں';
+
+  @override
+  String get recorderTooLong =>
+      '30 سیکنڈ سے لمبا ہے: براہ کرم چھوٹا ریکارڈ کریں۔';
+
+  @override
+  String get recorderNoMic =>
+      'ایپ کو مائیکروفون کی اجازت نہیں۔ فون کی سیٹنگز میں اجازت دیں۔';
+
+  @override
+  String get recorderExport => 'ریکارڈنگز بھیجیں';
+
+  @override
+  String get recorderExportHelp =>
+      'انہیں خود کو بھیجیں (مثلاً گوگل ڈرائیو پر)، پھر تمام فائلیں پروجیکٹ چیٹ میں لگائیں۔ Claude انہیں ایپ میں شامل کر دے گا۔';
+
+  @override
+  String get recorderNothingToSend => 'اس فون پر ابھی کوئی ریکارڈنگ نہیں۔';
+
+  @override
+  String get soundsSetting => 'آوازیں';
+
+  @override
+  String get soundsSettingHint => 'ٹیپ اور جوابات کے لیے چھوٹی آوازیں';
+
+  @override
+  String get mithuSetting => 'مٹھو دکھائیں';
+
+  @override
+  String get mithuSettingHint => 'مٹھو طوطا اسباق میں مدد کرتا ہے';
+
+  @override
+  String get badgeFirstLesson => 'پہلا سبق مکمل';
+
+  @override
+  String get badgeTriedAgain => 'غلطی کے بعد دوبارہ کوشش کی';
+
+  @override
+  String get badgeExplained => 'اپنے الفاظ میں سمجھایا';
+
+  @override
+  String get badgeCheckedPhoto => 'تصویر کی جانچ کے بعد اپنا کام درست کیا';
+
+  @override
+  String get badgeCameBack => 'دہرائی کے لیے واپس آئے';
+
+  @override
+  String get badgeFiveDays => 'اس مہینے 5 مختلف دن پڑھا';
+
+  @override
+  String get badgesTitle => 'آپ کے بیجز';
+
+  @override
+  String badgesEarned(int count, int total) {
+    return '$total میں سے $count بیجز';
+  }
+
+  @override
+  String get starFinished => 'آپ نے مکمل کیا';
+
+  @override
+  String get starKeptTrying => 'آپ کوشش کرتے رہے';
+
+  @override
+  String get starExplained => 'آپ نے اپنی سوچ سمجھائی';
+
+  @override
+  String get praise1 => 'شاباش! آپ کی محنت رنگ لا رہی ہے۔';
+
+  @override
+  String get praise2 => 'زبردست کوشش! مٹھو کو آپ پر فخر ہے۔';
+
+  @override
+  String get praise3 => 'آپ نے کر دکھایا! غلطیاں ہمیں سکھاتی ہیں۔';
+
+  @override
+  String nextLesson(String title) {
+    return 'اگلا: $title';
+  }
+
+  @override
+  String get comeBackTomorrow => 'کل ایک چھوٹی سی دہرائی کے لیے واپس آئیں۔';
+
+  @override
+  String get backHome => 'ہوم';
+
+  @override
+  String earlyGreeting(String name) {
+    return 'السلام علیکم $name! آئیں کھیلیں اور سیکھیں۔';
+  }
+
+  @override
+  String get playButton => 'کھیلیں';
+
+  @override
+  String get mithuTip1 => 'مشورہ: اگر اٹک جائیں تو سوال دوبارہ آہستہ پڑھیں۔';
+
+  @override
+  String get mithuTip2 =>
+      'مشورہ: غلطیوں سے ہمارا دماغ بڑھتا ہے۔ دوبارہ کوشش کریں!';
+
+  @override
+  String get mithuTip3 => 'مشورہ: اپنا جواب گھر میں کسی کو سمجھائیں۔';
+
+  @override
+  String questTitle(String subject) {
+    return '$subject کی مہم';
+  }
+
+  @override
+  String questProgress(int done, int total) {
+    return '$total میں سے $done اسباق مکمل';
+  }
+
+  @override
+  String get questDone => 'مہم مکمل! مضبوط رہنے کے لیے دہرائی کرتے رہیں۔';
+
+  @override
+  String secureSkills(int count, int total) {
+    return '$total میں سے $count مہارتیں پکی';
+  }
+
+  @override
+  String subjectLevel(int level) {
+    return 'لیول $level';
+  }
+
+  @override
+  String get subjectsTitle => 'آپ کے مضامین';
+
+  @override
+  String get masteryBySubject => 'مضمون کے لحاظ سے مہارت';
+
+  @override
+  String masteredSkills(int count, int total) {
+    return '$total میں سے $count مہارتیں حاصل';
+  }
+
+  @override
+  String examCountdown(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'بورڈ امتحان میں $days دن',
+      one: 'بورڈ امتحان میں 1 دن',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get examToday =>
+      'آپ کا بورڈ امتحان آج ہے۔ آپ نے اچھی تیاری کی ہے۔ کامیابی ہو!';
+
+  @override
+  String get examSetPrompt =>
+      'الٹی گنتی دیکھنے کے لیے اپنے بورڈ امتحان کی تاریخ لکھیں';
+
+  @override
+  String get examDateSetting => 'بورڈ امتحان کی تاریخ';
+
+  @override
+  String get examDateNotSet => 'طے نہیں';
+
+  @override
+  String get examDateClear => 'ہٹائیں';
+
+  @override
+  String get subjectMaths => 'ریاضی';
+
+  @override
+  String get subjectChemistry => 'کیمسٹری';
+
+  @override
+  String get subjectPhysics => 'فزکس';
+
+  @override
+  String get subjectBiology => 'حیاتیات';
+
+  @override
+  String get subjectScience => 'سائنس';
+
+  @override
+  String get subjectEnglish => 'انگریزی';
+
+  @override
+  String get subjectUrdu => 'اردو';
 }
