@@ -83,6 +83,11 @@ class ParsedEquation {
   }
 }
 
+/// Reads one side, like `3(x - 1)` or `x/2 + 4`, as `a·x + b`.
+/// Throws [FormatException] if it can't.
+Linear parseLinearExpression(String text, {String variable = 'x'}) =>
+    _ExpressionParser(text, variable).parseAll();
+
 /// Reads one equation like `2x + 3 = 11` or `3(x - 1) = x/2 + 4`.
 /// Throws [FormatException] if it can't.
 ParsedEquation parseLinearEquation(String input, {String variable = 'x'}) {

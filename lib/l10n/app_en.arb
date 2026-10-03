@@ -1379,5 +1379,49 @@
         "type": "String"
       }
     }
+  },
+  "inequalityUnreadable": "I couldn't read line {line}. Write each line as an inequality, like 2x + 3 < 11.",
+  "@inequalityUnreadable": {
+    "description": "A line of inequality working could not be read.",
+    "placeholders": {
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "inequalityBrokenStep": "Line {line} changes the answer. Whatever you do to one side, do exactly the same to the other side.",
+  "@inequalityBrokenStep": {
+    "description": "A line of inequality working is not equivalent to the previous one.",
+    "placeholders": {
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "inequalityWrongDirection": "Look at the sign in line {line}. When you multiply or divide both sides by a negative number, the sign flips: < becomes >. Otherwise it stays the same.",
+  "@inequalityWrongDirection": {
+    "description": "The direction of the inequality sign is wrong on a line.",
+    "placeholders": {
+      "line": {
+        "type": "int"
+      }
+    }
+  },
+  "inequalityNotFinished": "Good so far! Keep going until one line says {variable} < a number (or >, ≤, ≥).",
+  "@inequalityNotFinished": {
+    "description": "Inequality working is correct but has not reached the answer.",
+    "placeholders": {
+      "variable": {
+        "type": "String"
+      }
+    }
+  },
+  "dotFilled": "Filled",
+  "@dotFilled": {
+    "description": "Number line dot that includes the number (≤ ≥)."
+  },
+  "dotOpen": "Open",
+  "@dotOpen": {
+    "description": "Number line dot that leaves the number out (< >)."
   }
 }

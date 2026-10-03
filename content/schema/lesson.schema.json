@@ -818,13 +818,14 @@
             "fraction",
             "chem_equation",
             "linear_equation",
+            "linear_inequality",
             "text"
           ]
         },
         "expected": {
           "type": "string",
           "minLength": 1,
-          "description": "fraction: the answer (3/4). chem_equation: the balanced equation (2H2 + O2 -> 2H2O). linear_equation: the equation to solve (2x + 3 = 11); the student writes working that ends in x = value. text: the answer."
+          "description": "fraction: the answer (3/4). chem_equation: the balanced equation (2H2 + O2 -> 2H2O). linear_equation: the equation to solve (2x + 3 = 11); the student writes working that ends in x = value. linear_inequality: the inequality to solve (2x - 3 < 7); the working ends in x < value (or >, <=, >=). text: the answer."
         },
         "accept": {
           "type": "array",
@@ -958,7 +959,8 @@
             "balance_scale",
             "atom_balancer",
             "number_line",
-            "graph_plotter"
+            "graph_plotter",
+            "inequality_line"
           ],
           "description": "native: which interactive."
         },
@@ -985,6 +987,7 @@
                 "numeric",
                 "fraction",
                 "chem_equation",
+                "linear_inequality",
                 "text"
               ]
             },

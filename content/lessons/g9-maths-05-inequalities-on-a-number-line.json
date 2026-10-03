@@ -1,0 +1,587 @@
+{
+  "id": "g9-maths-05-inequalities-on-a-number-line",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 9,
+  "tier": "older",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve linear inequalities in one variable and represent the solution on the real line.",
+      "textbook": "PCTB Grade 9 Mathematics (NCP 2023), Unit 5: Linear Equations and Inequalities"
+    }
+  ],
+  "skills": [
+    "maths.inequalities.one_variable"
+  ],
+  "title": {
+    "en": "Inequalities on a number line",
+    "ur": "نامساوات اور عددی خط"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.linear_equations.solve_two_step"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgot_to_flip",
+      "description": "Multiplies or divides an inequality by a negative number without reversing the sign."
+    },
+    {
+      "id": "dot_meaning",
+      "description": "Uses a filled dot for < or > (or an open dot for ≤ or ≥)."
+    },
+    {
+      "id": "sign_reading",
+      "description": "Reads 'at least' or 'at most' with the wrong sign."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.inequalities.one_variable": {
+      "question_types": [
+        "apply",
+        "explain",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.inequalities.one_variable": [
+      {
+        "id": "qb_solve_ineq",
+        "type": "apply",
+        "step": {
+          "id": "qb_solve_ineq",
+          "type": "text_check",
+          "checker": "linear_inequality",
+          "expected": "3x + 4 > 10",
+          "multiline": true,
+          "prompt": {
+            "en": "Solve 3x + 4 > 10. Write each step on a new line.",
+            "ur": "3x + 4 > 10 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+          },
+          "hint": {
+            "en": "Take 4 off both sides first.",
+            "ur": "پہلے دونوں طرف سے 4 گھٹائیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: x > 2. Check with x = 3: 3 × 3 + 4 = 13, and 13 > 10.",
+            "ur": "درست: x > 2۔ x = 3 سے جانچ: 3 × 3 + 4 = 13، اور 13 > 10"
+          },
+          "feedback_wrong": {
+            "en": "3x + 4 > 10, so 3x > 6, so x > 2.",
+            "ur": "3x + 4 > 10، اس لیے 3x > 6، اس لیے x > 2"
+          }
+        }
+      },
+      {
+        "id": "qb_why_flip",
+        "type": "explain",
+        "step": {
+          "id": "qb_why_flip",
+          "type": "choice",
+          "prompt": {
+            "en": "2 < 5 is true. Multiply both sides by −1. Why must the sign flip?",
+            "ur": "2 < 5 درست ہے۔ دونوں طرف کو −1 سے ضرب دیں۔ علامت کیوں الٹنی چاہیے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Because −2 is bigger than −5: multiplying by a negative swaps which side is bigger.",
+                "ur": "کیونکہ −2، −5 سے بڑا ہے: منفی سے ضرب دینے سے بڑا اور چھوٹا آپس میں بدل جاتے ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Exactly! −2 > −5, so the sign had to turn round.",
+                "ur": "بالکل! −2 > −5، اس لیے علامت کو پلٹنا پڑا۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It doesn't have to: −2 < −5.",
+                "ur": "ضرورت نہیں: −2 < −5"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Look at a number line: −2 is to the right of −5, so −2 is bigger.",
+                "ur": "عددی خط دیکھیں: −2، −5 کے دائیں طرف ہے، اس لیے −2 بڑا ہے۔"
+              },
+              "misconception_id": "forgot_to_flip"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Because you always flip the sign when you move a number to the other side.",
+                "ur": "کیونکہ عدد دوسری طرف لے جاتے وقت ہمیشہ علامت الٹتی ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Adding or subtracting never flips it. Only multiplying or dividing by a negative does.",
+                "ur": "جمع یا تفریق سے کبھی نہیں الٹتی۔ صرف منفی عدد سے ضرب یا تقسیم سے الٹتی ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_flip",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_flip",
+          "type": "choice",
+          "prompt": {
+            "en": "Ahmed solved 4 − 2x > 10 like this: −2x > 6, so x > −3. What went wrong?",
+            "ur": "احمد نے 4 − 2x > 10 ایسے حل کیا: −2x > 6، پھر x > −3۔ غلطی کہاں ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "He divided by −2 without flipping the sign. It should be x < −3.",
+                "ur": "اس نے −2 سے تقسیم کیا مگر علامت نہیں الٹی۔ ہونا چاہیے x < −3"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Check with x = −4: 4 − 2 × (−4) = 12, and 12 > 10.",
+                "ur": "درست! x = −4 سے جانچ: 4 − 2 × (−4) = 12، اور 12 > 10"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "He should have added 4 to both sides.",
+                "ur": "اسے دونوں طرف 4 جمع کرنا چاہیے تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Taking 4 off both sides was right. Look at the last step.",
+                "ur": "دونوں طرف سے 4 گھٹانا درست تھا۔ آخری قدم دیکھیں۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Nothing. x > −3 is right.",
+                "ur": "کوئی غلطی نہیں، x > −3 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Try x = 0, which is more than −3: 4 − 0 = 4, and 4 is not more than 10.",
+                "ur": "x = 0 آزمائیں، جو −3 سے بڑا ہے: 4 − 0 = 4، اور 4، 10 سے بڑا نہیں۔"
+              },
+              "misconception_id": "forgot_to_flip"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_limits",
+      "text": {
+        "en": "Find two signs or rules around you that are inequalities, like 'Speed limit 60' (speed ≤ 60) or 'Age 18 and over' (age ≥ 18). Write each one with a sign and draw it on a number line.",
+        "ur": "اپنے ارد گرد دو نشان یا اصول ڈھونڈیں جو نامساوات ہوں، جیسے 'حد رفتار 60' (رفتار ≤ 60) یا '18 سال اور زیادہ' (عمر ≥ 18)۔ ہر ایک کو علامت کے ساتھ لکھیں اور عددی خط پر بنائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Inequality",
+      "ur": "نامساوات"
+    },
+    {
+      "en": "Less than",
+      "ur": "سے کم"
+    },
+    {
+      "en": "Greater than",
+      "ur": "سے زیادہ"
+    },
+    {
+      "en": "Number line",
+      "ur": "عددی خط"
+    },
+    {
+      "en": "Solution set",
+      "ur": "حل کا سیٹ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_pens",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Hamza has 50 rupees. A pen costs 8 rupees. How many pens can he buy? Not exactly one number: 1, 2, 3, 4, 5 or 6 pens all work!",
+          "ur": "حمزہ کے پاس 50 روپے ہیں۔ ایک قلم 8 روپے کا ہے۔ وہ کتنے قلم خرید سکتا ہے؟ کوئی ایک عدد نہیں: 1، 2، 3، 4، 5 یا 6 قلم سب ممکن ہیں!"
+        }
+      },
+      "text": {
+        "en": "For x pens he pays 8x, and that must be at most 50: 8x ≤ 50. This is an inequality. It has many answers. The signs: < less than, ≤ less than or equal to, > greater than, ≥ greater than or equal to.",
+        "ur": "x قلموں کے لیے وہ 8x دیتا ہے، اور یہ زیادہ سے زیادہ 50 ہو سکتا ہے: 8x ≤ 50۔ یہ نامساوات ہے۔ اس کے کئی جواب ہیں۔ علامتیں: < سے کم، ≤ سے کم یا برابر، > سے زیادہ، ≥ سے زیادہ یا برابر۔"
+      }
+    },
+    {
+      "id": "s2_at_least",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "To vote in Pakistan you must be at least 18 years old. Which inequality says this about age a?",
+        "ur": "پاکستان میں ووٹ دینے کے لیے عمر کم از کم 18 سال ہونی چاہیے۔ عمر a کے بارے میں کون سی نامساوات یہ بتاتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "a ≥ 18",
+            "ur": "a ≥ 18"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 'At least 18' means 18 or more.",
+            "ur": "جی ہاں! 'کم از کم 18' کا مطلب ہے 18 یا زیادہ۔"
+          }
+        },
+        {
+          "id": "strict",
+          "text": {
+            "en": "a > 18",
+            "ur": "a > 18"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Then someone who is exactly 18 could not vote. 'At least' includes 18.",
+            "ur": "پھر ٹھیک 18 سال والا ووٹ نہیں دے سکتا۔ 'کم از کم' میں 18 شامل ہے۔"
+          },
+          "misconception_id": "sign_reading"
+        },
+        {
+          "id": "backwards",
+          "text": {
+            "en": "a ≤ 18",
+            "ur": "a ≤ 18"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That says 18 or less: a 10-year-old could vote!",
+            "ur": "یہ کہتی ہے 18 یا کم: پھر 10 سال کا بچہ بھی ووٹ دے سکتا!"
+          },
+          "misconception_id": "sign_reading"
+        }
+      ]
+    },
+    {
+      "id": "s3_number_line",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "A number line shows all the answers at once.",
+          "ur": "عددی خط سب جواب ایک ساتھ دکھاتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "Draw a dot at the number and an arrow towards the answers. A filled dot ● means the number is included (≤ or ≥). An open dot ○ means it is not (< or >). So x ≤ 4 is a filled dot at 4 with the arrow going left.",
+        "ur": "عدد پر نقطہ لگائیں اور جوابوں کی طرف تیر بنائیں۔ بھرا ہوا نقطہ ● مطلب عدد شامل ہے (≤ یا ≥)۔ خالی نقطہ ○ مطلب شامل نہیں (< یا >)۔ یوں x ≤ 4 کا مطلب ہے 4 پر بھرا ہوا نقطہ اور تیر بائیں طرف۔"
+      }
+    },
+    {
+      "id": "s4_show_greater",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "inequality_line",
+      "prompt": {
+        "en": "Show x > −2 on the number line: tap the number, choose the dot and the arrow, then press Check.",
+        "ur": "عددی خط پر x > −2 دکھائیں: عدد پر ٹیپ کریں، نقطہ اور تیر چنیں، پھر \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -6,
+        "max": 6
+      },
+      "expected": {
+        "result": "inequality",
+        "checker": "linear_inequality",
+        "answer": "x > -2"
+      },
+      "hint": {
+        "en": "−2 is not included, so the dot is open. Numbers bigger than −2 are to the right.",
+        "ur": "−2 شامل نہیں، اس لیے نقطہ خالی ہے۔ −2 سے بڑے عدد دائیں طرف ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! An open dot at −2 and an arrow to the right.",
+        "ur": "شاباش! −2 پر خالی نقطہ اور دائیں طرف تیر۔"
+      },
+      "feedback_wrong": {
+        "en": "x > −2: an open dot at −2 (it is not included) and the arrow to the right (bigger numbers).",
+        "ur": "x > −2: −2 پر خالی نقطہ (یہ شامل نہیں) اور دائیں طرف تیر (بڑے عدد)۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "x >= -2",
+          "misconception_id": "dot_meaning",
+          "feedback": {
+            "en": "Nearly! A filled dot means −2 is included, but x > −2 leaves −2 out. Use an open dot.",
+            "ur": "تقریباً! بھرا نقطہ مطلب −2 شامل ہے، مگر x > −2 میں −2 شامل نہیں۔ خالی نقطہ لگائیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_solve",
+      "type": "text_check",
+      "question_type": "apply",
+      "checker": "linear_inequality",
+      "expected": "2x - 3 < 7",
+      "multiline": true,
+      "prompt": {
+        "en": "Solve an inequality like an equation: do the same to both sides. Solve 2x − 3 < 7, one step on each line, ending with x < ...",
+        "ur": "نامساوات کو مساوات کی طرح حل کریں: دونوں طرف ایک جیسا عمل کریں۔ 2x − 3 < 7 حل کریں، ہر سطر میں ایک قدم، آخر میں x < ..."
+      },
+      "hint": {
+        "en": "Add 3 to both sides: 2x < 10.",
+        "ur": "دونوں طرف 3 جمع کریں: 2x < 10"
+      },
+      "feedback_correct": {
+        "en": "Right! x < 5. Check with x = 4: 2 × 4 − 3 = 5, and 5 < 7.",
+        "ur": "درست! x < 5۔ x = 4 سے جانچ: 2 × 4 − 3 = 5، اور 5 < 7"
+      },
+      "feedback_wrong": {
+        "en": "2x − 3 < 7. Add 3 to both sides: 2x < 10. Divide both sides by 2: x < 5.",
+        "ur": "2x − 3 < 7۔ دونوں طرف 3 جمع کریں: 2x < 10۔ دونوں طرف کو 2 سے تقسیم کریں: x < 5"
+      }
+    },
+    {
+      "id": "s6_flip",
+      "type": "explain",
+      "character": {
+        "emotion": "surprised",
+        "say": {
+          "en": "There is one big difference from equations. Watch this!",
+          "ur": "مساوات سے ایک بڑا فرق ہے۔ یہ دیکھیں!"
+        }
+      },
+      "text": {
+        "en": "3 < 5 is true. Multiply both sides by −1: −3 and −5. But −3 is BIGGER than −5, so now −3 > −5. When you multiply or divide both sides by a negative number, flip the sign: < becomes >, ≤ becomes ≥.",
+        "ur": "3 < 5 درست ہے۔ دونوں طرف کو −1 سے ضرب دیں: −3 اور −5۔ لیکن −3، −5 سے بڑا ہے، اس لیے اب −3 > −5۔ جب دونوں طرف کو منفی عدد سے ضرب یا تقسیم کریں تو علامت الٹ دیں: < بن جاتا ہے >، ≤ بن جاتا ہے ≥۔"
+      }
+    },
+    {
+      "id": "s7_solve_flip",
+      "type": "text_check",
+      "question_type": "apply",
+      "checker": "linear_inequality",
+      "expected": "7 - 2x >= 1",
+      "multiline": true,
+      "prompt": {
+        "en": "Solve 7 − 2x ≥ 1. Watch the sign when you divide by a negative number. (Type ≥ as >=.)",
+        "ur": "7 − 2x ≥ 1 حل کریں۔ منفی عدد سے تقسیم کرتے وقت علامت کا خیال رکھیں۔ (≥ کو >= لکھیں۔)"
+      },
+      "hint": {
+        "en": "Take 7 off both sides: −2x ≥ −6. Now divide by −2 and flip the sign.",
+        "ur": "دونوں طرف سے 7 گھٹائیں: −2x ≥ −6۔ اب −2 سے تقسیم کریں اور علامت الٹ دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Excellent! x ≤ 3. Check with x = 0: 7 − 0 = 7, and 7 ≥ 1.",
+        "ur": "زبردست! x ≤ 3۔ x = 0 سے جانچ: 7 − 0 = 7، اور 7 ≥ 1"
+      },
+      "feedback_wrong": {
+        "en": "7 − 2x ≥ 1. Take 7 off both sides: −2x ≥ −6. Divide by −2 and flip: x ≤ 3.",
+        "ur": "7 − 2x ≥ 1۔ دونوں طرف سے 7 گھٹائیں: −2x ≥ −6۔ −2 سے تقسیم کریں اور علامت الٹیں: x ≤ 3"
+      },
+      "common_wrong": [
+        {
+          "answer": "x >= 3",
+          "misconception_id": "forgot_to_flip",
+          "feedback": {
+            "en": "Almost! You divided by −2, so the sign must flip: x ≤ 3. Try x = 4: 7 − 8 = −1, which is not ≥ 1.",
+            "ur": "تقریباً! آپ نے −2 سے تقسیم کیا، اس لیے علامت الٹے گی: x ≤ 3۔ x = 4 آزمائیں: 7 − 8 = −1، جو 1 سے بڑا یا برابر نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_show_answer",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "inequality_line",
+      "prompt": {
+        "en": "Now show your answer, x ≤ 3, on the number line.",
+        "ur": "اب اپنا جواب x ≤ 3 عددی خط پر دکھائیں۔"
+      },
+      "params": {
+        "min": -6,
+        "max": 6
+      },
+      "expected": {
+        "result": "inequality",
+        "checker": "linear_inequality",
+        "answer": "x <= 3"
+      },
+      "hint": {
+        "en": "3 is included, so the dot is filled. Smaller numbers are to the left.",
+        "ur": "3 شامل ہے، اس لیے نقطہ بھرا ہوا ہے۔ چھوٹے عدد بائیں طرف ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Perfect! A filled dot at 3 and an arrow to the left.",
+        "ur": "بہترین! 3 پر بھرا ہوا نقطہ اور بائیں طرف تیر۔"
+      },
+      "feedback_wrong": {
+        "en": "x ≤ 3: a filled dot at 3 (it is included) and the arrow to the left (smaller numbers).",
+        "ur": "x ≤ 3: 3 پر بھرا ہوا نقطہ (یہ شامل ہے) اور بائیں طرف تیر (چھوٹے عدد)۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "x >= 3",
+          "misconception_id": "forgot_to_flip",
+          "feedback": {
+            "en": "The arrow points the wrong way. x ≤ 3 means 3 and the numbers smaller than 3.",
+            "ur": "تیر غلط طرف ہے۔ x ≤ 3 کا مطلب ہے 3 اور اس سے چھوٹے عدد۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_explain_flip",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "task": {
+        "en": "Explain in your own words: why does the inequality sign flip when you divide both sides by a negative number?",
+        "ur": "اپنے الفاظ میں سمجھائیں: جب دونوں طرف کو منفی عدد سے تقسیم کریں تو نامساوات کی علامت کیوں الٹ جاتی ہے؟"
+      },
+      "key_idea": "Multiplying or dividing by a negative number reverses the order of numbers: the bigger number becomes the smaller one (3 < 5 but −3 > −5). So to keep the inequality true, the sign must be reversed. Adding or subtracting never changes the order.",
+      "levels": {
+        "got_it": "Says that a negative swaps which number is bigger (with an example or the number line), so the sign must turn round to stay true.",
+        "partly": "Says the sign flips because of the negative, or gives a correct example, but does not connect it to which side is bigger.",
+        "not_yet": "Gives a rule without a reason, or a wrong reason (for example 'because you move it to the other side')."
+      },
+      "keywords": [
+        [
+          "negative",
+          "minus",
+          "منفی",
+          "manfi",
+          "minus wala"
+        ],
+        [
+          "bigger",
+          "smaller",
+          "larger",
+          "greater",
+          "less",
+          "بڑا",
+          "چھوٹا",
+          "زیادہ",
+          "کم",
+          "bara",
+          "chota",
+          "zyada",
+          "kam"
+        ],
+        [
+          "swap",
+          "reverse",
+          "opposite",
+          "order",
+          "turn",
+          "الٹ",
+          "پلٹ",
+          "ulat",
+          "palat",
+          "ulta"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! A negative swaps which number is bigger, so the sign turns round to stay true.",
+          "ur": "بہت خوب! منفی سے بڑا اور چھوٹا بدل جاتے ہیں، اس لیے درست رہنے کے لیے علامت الٹتی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Compare 3 < 5 with −3 and −5. Which one is bigger now?",
+          "ur": "اچھا آغاز! 3 < 5 کا −3 اور −5 سے موازنہ کریں۔ اب کون سا بڑا ہے؟"
+        },
+        "not_yet": {
+          "en": "Put −3 and −5 on a number line. Which one is further right, and so bigger?",
+          "ur": "−3 اور −5 کو عددی خط پر رکھیں۔ کون سا زیادہ دائیں طرف ہے، یعنی بڑا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s10_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can solve inequalities and draw them!",
+          "ur": "اب آپ نامساوات حل بھی کر سکتے ہیں اور بنا بھی سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Solve an inequality like an equation, doing the same to both sides. When you multiply or divide by a negative number, flip the sign. Show the answer with a dot (filled for ≤ ≥, open for < >) and an arrow.",
+        "ur": "نامساوات کو مساوات کی طرح حل کریں، دونوں طرف ایک جیسا عمل کر کے۔ منفی عدد سے ضرب یا تقسیم کریں تو علامت الٹ دیں۔ جواب نقطے (≤ ≥ کے لیے بھرا ہوا، < > کے لیے خالی) اور تیر سے دکھائیں۔"
+      },
+      "points": [
+        {
+          "en": "Check your answer with any number from it, like x = 0.",
+          "ur": "جواب میں سے کسی بھی عدد، جیسے x = 0، سے جانچ کریں۔"
+        },
+        {
+          "en": "Adding or subtracting never flips the sign.",
+          "ur": "جمع یا تفریق سے علامت کبھی نہیں الٹتی۔"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 8. No textbook text or exercises were copied.",
+    "Urdu terms to check against the PCTB book: نامساوات (inequality), عددی خط (number line; the book may say حقیقی خط for real line).",
+    "Typed answers are checked by the linear_inequality checker, which names the line where the sign should have flipped. The number line steps use the inequality_line interactive.",
+    "Two-variable inequalities (shading in the xy-plane) are the next lesson."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  },
+  "review_questions": [
+    {
+      "id": "r_solve_ineq",
+      "type": "apply",
+      "skill": "maths.inequalities.one_variable",
+      "step": {
+        "id": "r_solve_ineq",
+        "type": "text_check",
+        "checker": "linear_inequality",
+        "expected": "5 - 3x <= 11",
+        "multiline": true,
+        "prompt": {
+          "en": "Solve 5 − 3x ≤ 11. Write each step on a new line.",
+          "ur": "5 − 3x ≤ 11 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+        },
+        "hint": {
+          "en": "−3x ≤ 6. Divide by −3 and flip the sign.",
+          "ur": "−3x ≤ 6۔ −3 سے تقسیم کریں اور علامت الٹیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: x ≥ −2. Check with x = 0: 5 ≤ 11.",
+          "ur": "درست: x ≥ −2۔ x = 0 سے جانچ: 5 ≤ 11"
+        },
+        "feedback_wrong": {
+          "en": "5 − 3x ≤ 11, so −3x ≤ 6, so x ≥ −2 (flipped, because we divided by −3).",
+          "ur": "5 − 3x ≤ 11، اس لیے −3x ≤ 6، اس لیے x ≥ −2 (الٹی، کیونکہ −3 سے تقسیم کیا)"
+        }
+      }
+    }
+  ]
+}

@@ -16,6 +16,7 @@ class SimGalleryScreen extends StatelessWidget {
     ('native', 'fraction_bars', {'wholes': 2}),
     ('native', 'balance_scale', {'equation': '2x + 3 = 11'}),
     ('native', 'atom_balancer', {'equation': 'CH4 + O2 -> CO2 + H2O'}),
+    ('native', 'inequality_line', {'min': -6, 'max': 6}),
     ('native', 'number_line', {'min': 0, 'max': 3, 'step': 0.5}),
     ('native', 'graph_plotter', {'size': 5}),
   ];

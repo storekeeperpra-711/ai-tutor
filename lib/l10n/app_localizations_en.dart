@@ -961,4 +961,30 @@ class AppLocalizationsEn extends AppLocalizations {
   String reviewDecidedBy(String email) {
     return 'Decided by $email';
   }
+
+  @override
+  String inequalityUnreadable(int line) {
+    return 'I couldn\'t read line $line. Write each line as an inequality, like 2x + 3 < 11.';
+  }
+
+  @override
+  String inequalityBrokenStep(int line) {
+    return 'Line $line changes the answer. Whatever you do to one side, do exactly the same to the other side.';
+  }
+
+  @override
+  String inequalityWrongDirection(int line) {
+    return 'Look at the sign in line $line. When you multiply or divide both sides by a negative number, the sign flips: < becomes >. Otherwise it stays the same.';
+  }
+
+  @override
+  String inequalityNotFinished(String variable) {
+    return 'Good so far! Keep going until one line says $variable < a number (or >, ≤, ≥).';
+  }
+
+  @override
+  String get dotFilled => 'Filled';
+
+  @override
+  String get dotOpen => 'Open';
 }

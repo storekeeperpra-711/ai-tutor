@@ -1,0 +1,574 @@
+{
+  "id": "g9-maths-05-brackets-and-fractions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 9,
+  "tier": "older",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve linear equations in one variable with brackets and fractions, and check the solution by substitution.",
+      "textbook": "PCTB Grade 9 Mathematics (NCP 2023), Unit 5: Linear Equations and Inequalities"
+    }
+  ],
+  "skills": [
+    "maths.linear_equations.brackets_fractions"
+  ],
+  "title": {
+    "en": "Equations with brackets and fractions",
+    "ur": "قوسین اور کسور والی مساوات"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.linear_equations.solve_two_step"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "bracket_first_term_only",
+      "description": "Multiplies only the first term inside a bracket: 3(x − 2) becomes 3x − 2."
+    },
+    {
+      "id": "fraction_one_term",
+      "description": "Clears a fraction by multiplying only one term of a side by the denominator."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.linear_equations.brackets_fractions": {
+      "question_types": [
+        "apply",
+        "explain",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.linear_equations.brackets_fractions": [
+      {
+        "id": "qb_brackets",
+        "type": "apply",
+        "step": {
+          "id": "qb_brackets",
+          "type": "text_check",
+          "checker": "linear_equation",
+          "expected": "2(x + 4) = 3x - 1",
+          "multiline": true,
+          "prompt": {
+            "en": "Solve 2(x + 4) = 3x − 1. Write each step on a new line.",
+            "ur": "2(x + 4) = 3x − 1 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+          },
+          "hint": {
+            "en": "Open the bracket first: 2x + 8 = 3x − 1.",
+            "ur": "پہلے قوسین کھولیں: 2x + 8 = 3x − 1"
+          },
+          "feedback_correct": {
+            "en": "Correct: x = 9. Check: 2 × 13 = 26 and 3 × 9 − 1 = 26.",
+            "ur": "درست: x = 9۔ جانچ: 2 × 13 = 26 اور 3 × 9 − 1 = 26"
+          },
+          "feedback_wrong": {
+            "en": "2x + 8 = 3x − 1. Take 2x from both sides: 8 = x − 1. Add 1 to both sides: x = 9.",
+            "ur": "2x + 8 = 3x − 1۔ دونوں طرف سے 2x گھٹائیں: 8 = x − 1۔ دونوں طرف 1 جمع کریں: x = 9"
+          }
+        }
+      },
+      {
+        "id": "qb_why_every_term",
+        "type": "explain",
+        "step": {
+          "id": "qb_why_every_term",
+          "type": "choice",
+          "prompt": {
+            "en": "To clear the fraction in x/4 + 2 = 5, Hina multiplies both sides by 4. Why must she multiply the 2 as well?",
+            "ur": "x/4 + 2 = 5 سے کسر ختم کرنے کے لیے حنا دونوں طرف کو 4 سے ضرب دیتی ہے۔ اسے 2 کو بھی ضرب کیوں دینی ہوگی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Because the whole left side is multiplied by 4, so every term on it is.",
+                "ur": "کیونکہ پوری بائیں طرف کو 4 سے ضرب دی جاتی ہے، اس لیے اس کی ہر رقم کو بھی۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Exactly! 4 × (x/4 + 2) = x + 8. Both sides stay equal: x + 8 = 20, so x = 12.",
+                "ur": "بالکل! 4 × (x/4 + 2) = x + 8۔ دونوں طرف برابر رہتے ہیں: x + 8 = 20، اس لیے x = 12"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "She doesn't need to: only the fraction gets multiplied.",
+                "ur": "ضرورت نہیں: صرف کسر کو ضرب دی جاتی ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Then the left side becomes x + 2, which is not 4 times x/4 + 2. The scale tips.",
+                "ur": "پھر بائیں طرف x + 2 بنتی ہے، جو x/4 + 2 کا چار گنا نہیں۔ ترازو جھک جاتا ہے۔"
+              },
+              "misconception_id": "fraction_one_term"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Because 2 is smaller than 4.",
+                "ur": "کیونکہ 2، 4 سے چھوٹا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The size of the number doesn't matter. Every term on the side is multiplied.",
+                "ur": "عدد کے سائز سے فرق نہیں پڑتا۔ اس طرف کی ہر رقم کو ضرب دی جاتی ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_bracket",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_bracket",
+          "type": "choice",
+          "prompt": {
+            "en": "Zain solved 4(x − 3) = 20 like this: 4x − 3 = 20, so 4x = 23, so x = 23/4. What went wrong?",
+            "ur": "زین نے 4(x − 3) = 20 ایسے حل کیا: 4x − 3 = 20، پھر 4x = 23، پھر x = 23/4۔ غلطی کہاں ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "He multiplied only x by 4. It should be 4x − 12 = 20, so x = 8.",
+                "ur": "اس نے صرف x کو 4 سے ضرب دی۔ ہونا چاہیے 4x − 12 = 20، اس لیے x = 8"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Check: 4 × (8 − 3) = 20.",
+                "ur": "درست! جانچ: 4 × (8 − 3) = 20"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "He should have added 3 instead of subtracting it.",
+                "ur": "اسے 3 گھٹانے کے بجائے جمع کرنا چاہیے تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Look at the first line. What happened to the −3 inside the bracket?",
+                "ur": "پہلی سطر دیکھیں۔ قوسین کے اندر والے −3 کا کیا ہوا؟"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Nothing. x = 23/4 is right.",
+                "ur": "کوئی غلطی نہیں، x = 23/4 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check it: 23/4 − 3 = 11/4, and 4 × 11/4 = 11, not 20.",
+                "ur": "جانچ کریں: 23/4 − 3 = 11/4، اور 4 × 11/4 = 11، 20 نہیں۔"
+              },
+              "misconception_id": "bracket_first_term_only"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_shop",
+      "text": {
+        "en": "At home, make up an equation with a bracket from a real price. For example: 3 packets of biscuits, each 5 rupees cheaper than usual, cost 60 rupees. Write it as 3(x − 5) = 60 and solve it.",
+        "ur": "گھر پر کسی اصل قیمت سے قوسین والی مساوات بنائیں۔ مثال: بسکٹ کے 3 پیکٹ، ہر ایک معمول سے 5 روپے سستا، 60 روپے کے ہیں۔ اسے 3(x − 5) = 60 لکھ کر حل کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Bracket",
+      "ur": "قوسین"
+    },
+    {
+      "en": "Expand",
+      "ur": "پھیلانا"
+    },
+    {
+      "en": "Denominator",
+      "ur": "نسب نما"
+    },
+    {
+      "en": "Term",
+      "ur": "رقم"
+    },
+    {
+      "en": "Substitution",
+      "ur": "قیمت رکھنا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_samosas",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Three friends buy one plate of samosas each. The shopkeeper gives each of them 2 rupees off. Together they pay 60 rupees. What is the normal price of a plate?",
+          "ur": "تین دوست ایک ایک پلیٹ سموسے خریدتے ہیں۔ دکاندار ہر ایک کو 2 روپے کم کر دیتا ہے۔ وہ مل کر 60 روپے دیتے ہیں۔ ایک پلیٹ کی اصل قیمت کتنی ہے؟"
+        }
+      },
+      "text": {
+        "en": "Call the normal price x. Each friend pays x − 2, and three of them pay 3(x − 2) = 60. To open the bracket, multiply EVERY term inside by 3: 3(x − 2) = 3x − 6.",
+        "ur": "اصل قیمت کو x کہیں۔ ہر دوست x − 2 دیتا ہے، اور تینوں مل کر 3(x − 2) = 60 دیتے ہیں۔ قوسین کھولنے کے لیے اندر کی ہر رقم کو 3 سے ضرب دیں: 3(x − 2) = 3x − 6"
+      }
+    },
+    {
+      "id": "s2_expand",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is 3(x − 2) without the bracket?",
+        "ur": "قوسین کے بغیر 3(x − 2) کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "3x − 6",
+            "ur": "3x − 6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3 × x = 3x and 3 × 2 = 6.",
+            "ur": "جی ہاں! 3 × x = 3x اور 3 × 2 = 6"
+          }
+        },
+        {
+          "id": "first_only",
+          "text": {
+            "en": "3x − 2",
+            "ur": "3x − 2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 3 multiplies everything inside, the 2 as well: 3 plates each 2 rupees cheaper is 6 rupees off.",
+            "ur": "3 اندر کی ہر چیز کو ضرب دیتا ہے، 2 کو بھی: 3 پلیٹیں، ہر ایک 2 روپے سستی، یعنی 6 روپے کم۔"
+          },
+          "misconception_id": "bracket_first_term_only"
+        },
+        {
+          "id": "x_only",
+          "text": {
+            "en": "x − 6",
+            "ur": "x − 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The x is inside the bracket too, so it becomes 3x.",
+            "ur": "x بھی قوسین کے اندر ہے، اس لیے یہ 3x بنتا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_solve_samosas",
+      "type": "text_check",
+      "question_type": "apply",
+      "checker": "linear_equation",
+      "expected": "3(x - 2) = 60",
+      "multiline": true,
+      "prompt": {
+        "en": "Now solve 3(x − 2) = 60. Open the bracket first. Write each step on a new line, ending with x = ...",
+        "ur": "اب 3(x − 2) = 60 حل کریں۔ پہلے قوسین کھولیں۔ ہر قدم نئی سطر میں لکھیں، آخر میں x = ..."
+      },
+      "hint": {
+        "en": "3x − 6 = 60. Then add 6 to both sides.",
+        "ur": "3x − 6 = 60۔ پھر دونوں طرف 6 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! A plate normally costs 22 rupees. Check: 3 × (22 − 2) = 60.",
+        "ur": "شاباش! ایک پلیٹ کی اصل قیمت 22 روپے ہے۔ جانچ: 3 × (22 − 2) = 60"
+      },
+      "feedback_wrong": {
+        "en": "3x − 6 = 60. Add 6 to both sides: 3x = 66. Divide both sides by 3: x = 22.",
+        "ur": "3x − 6 = 60۔ دونوں طرف 6 جمع کریں: 3x = 66۔ دونوں طرف کو 3 سے تقسیم کریں: x = 22"
+      },
+      "common_wrong": [
+        {
+          "answer": "x = 62/3",
+          "misconception_id": "bracket_first_term_only",
+          "feedback": {
+            "en": "It looks like you wrote 3x − 2 = 60. The 3 multiplies the 2 as well: 3x − 6 = 60.",
+            "ur": "لگتا ہے آپ نے 3x − 2 = 60 لکھا۔ 3 سے 2 کو بھی ضرب دینی ہے: 3x − 6 = 60"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4_fractions",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Fractions look scary, but there is a trick to make them disappear.",
+          "ur": "کسور مشکل لگتی ہیں، لیکن انہیں غائب کرنے کی ایک ترکیب ہے۔"
+        }
+      },
+      "text": {
+        "en": "Look at (x + 5)/3 = 1 − x. Multiply BOTH sides by 3, the denominator. The left side becomes x + 5. On the right, every term is multiplied: 3 × (1 − x) = 3 − 3x. So x + 5 = 3 − 3x, which has no fractions.",
+        "ur": "(x + 5)/3 = 1 − x دیکھیں۔ دونوں طرف کو نسب نما 3 سے ضرب دیں۔ بائیں طرف x + 5 بن جاتی ہے۔ دائیں طرف ہر رقم کو ضرب ملتی ہے: 3 × (1 − x) = 3 − 3x۔ یوں x + 5 = 3 − 3x بنتی ہے، جس میں کوئی کسر نہیں۔"
+      }
+    },
+    {
+      "id": "s5_clear",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Multiply both sides of (x + 5)/3 = 1 − x by 3. What do you get?",
+        "ur": "(x + 5)/3 = 1 − x کے دونوں طرف کو 3 سے ضرب دیں۔ کیا بنتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "x + 5 = 3 − 3x",
+            "ur": "x + 5 = 3 − 3x"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Every term on the right was multiplied by 3.",
+            "ur": "جی ہاں! دائیں طرف کی ہر رقم کو 3 سے ضرب دی گئی۔"
+          }
+        },
+        {
+          "id": "one_term",
+          "text": {
+            "en": "x + 5 = 3 − x",
+            "ur": "x + 5 = 3 − x"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The −x was multiplied too: 3 × (−x) = −3x.",
+            "ur": "−x کو بھی ضرب دینی ہے: 3 × (−x) = −3x"
+          },
+          "misconception_id": "fraction_one_term"
+        },
+        {
+          "id": "top_too",
+          "text": {
+            "en": "3x + 15 = 3 − 3x",
+            "ur": "3x + 15 = 3 − 3x"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Multiplying (x + 5)/3 by 3 cancels the 3 underneath, leaving just x + 5.",
+            "ur": "(x + 5)/3 کو 3 سے ضرب دینے سے نیچے والا 3 ختم ہو جاتا ہے، صرف x + 5 بچتا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_solve_fraction",
+      "type": "text_check",
+      "question_type": "apply",
+      "checker": "linear_equation",
+      "expected": "(x + 5)/3 = 1 - x",
+      "multiline": true,
+      "prompt": {
+        "en": "Solve (x + 5)/3 = 1 − x. Start with x + 5 = 3 − 3x. The answer can be a fraction, like x = 1/2.",
+        "ur": "(x + 5)/3 = 1 − x حل کریں۔ x + 5 = 3 − 3x سے شروع کریں۔ جواب کسر بھی ہو سکتا ہے، جیسے x = 1/2"
+      },
+      "hint": {
+        "en": "Add 3x to both sides: 4x + 5 = 3. Then take 5 off both sides.",
+        "ur": "دونوں طرف 3x جمع کریں: 4x + 5 = 3۔ پھر دونوں طرف سے 5 گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Excellent! x = −1/2. Check: (−1/2 + 5)/3 = 3/2, and 1 − (−1/2) = 3/2.",
+        "ur": "زبردست! x = −1/2۔ جانچ: (−1/2 + 5)/3 = 3/2، اور 1 − (−1/2) = 3/2"
+      },
+      "feedback_wrong": {
+        "en": "x + 5 = 3 − 3x. Add 3x: 4x + 5 = 3. Take 5 off: 4x = −2. Divide by 4: x = −2/4 = −1/2.",
+        "ur": "x + 5 = 3 − 3x۔ 3x جمع کریں: 4x + 5 = 3۔ 5 گھٹائیں: 4x = −2۔ 4 سے تقسیم کریں: x = −2/4 = −1/2"
+      }
+    },
+    {
+      "id": "s7_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Maryam solved x/2 + 3 = 7 like this: x + 3 = 14, so x = 11. Where is the mistake?",
+        "ur": "مریم نے x/2 + 3 = 7 ایسے حل کیا: x + 3 = 14، پھر x = 11۔ غلطی کہاں ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "She multiplied x/2 by 2 but not the 3. It should be x + 6 = 14, so x = 8.",
+            "ur": "اس نے x/2 کو 2 سے ضرب دی مگر 3 کو نہیں۔ ہونا چاہیے x + 6 = 14، اس لیے x = 8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Right! Check: 8/2 + 3 = 7.",
+            "ur": "درست! جانچ: 8/2 + 3 = 7"
+          }
+        },
+        {
+          "id": "wrong_side",
+          "text": {
+            "en": "She should not have multiplied the 7.",
+            "ur": "اسے 7 کو ضرب نہیں دینی چاہیے تھی۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Multiplying both sides is right. The question is whether every term was multiplied.",
+            "ur": "دونوں طرف ضرب دینا درست ہے۔ سوال یہ ہے کہ کیا ہر رقم کو ضرب دی گئی۔"
+          }
+        },
+        {
+          "id": "none",
+          "text": {
+            "en": "Nothing. x = 11 is right.",
+            "ur": "کوئی غلطی نہیں، x = 11 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check it: 11/2 + 3 = 8.5, not 7.",
+            "ur": "جانچ کریں: 11/2 + 3 = 8.5، 7 نہیں۔"
+          },
+          "misconception_id": "fraction_one_term"
+        }
+      ]
+    },
+    {
+      "id": "s8_explain_every_term",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "task": {
+        "en": "Explain in your own words: when you multiply a side of an equation by a number, why must you multiply every term on that side?",
+        "ur": "اپنے الفاظ میں سمجھائیں: جب مساوات کی ایک طرف کو کسی عدد سے ضرب دیں تو اس طرف کی ہر رقم کو ضرب کیوں دینی ہوتی ہے؟"
+      },
+      "key_idea": "Multiplying a side by a number multiplies its whole value. The value of the side is the sum of all its terms, so each term must be multiplied (3(a + b) = 3a + 3b). Missing a term changes the value, so the two sides are no longer equal.",
+      "levels": {
+        "got_it": "Says the whole side (its whole value) is multiplied, so every term is, and that skipping a term makes the sides unequal or changes the answer.",
+        "partly": "Says every term must be multiplied, or mentions keeping the sides equal, but not both.",
+        "not_yet": "Gives a rule without a reason, or the reason is wrong."
+      },
+      "keywords": [
+        [
+          "whole",
+          "all",
+          "every",
+          "each",
+          "پوری",
+          "سب",
+          "ہر",
+          "poori",
+          "puri",
+          "sab",
+          "har"
+        ],
+        [
+          "equal",
+          "same",
+          "balance",
+          "برابر",
+          "توازن",
+          "barabar",
+          "tawazun"
+        ],
+        [
+          "value",
+          "changes",
+          "قیمت",
+          "بدل",
+          "qeemat",
+          "badal"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The whole side is multiplied, so every term is, and the sides stay equal.",
+          "ur": "بہت خوب! پوری طرف کو ضرب ملتی ہے، اس لیے ہر رقم کو، اور دونوں طرف برابر رہتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! What happens to the value of the side if one term is not multiplied?",
+          "ur": "اچھا آغاز! اگر ایک رقم کو ضرب نہ دی جائے تو اس طرف کی قیمت کا کیا ہوگا؟"
+        },
+        "not_yet": {
+          "en": "Think of 3 plates of samosas, each 2 rupees off. Is the discount 2 rupees or 6 rupees?",
+          "ur": "سموسوں کی 3 پلیٹیں سوچیں، ہر ایک پر 2 روپے کمی۔ کل کمی 2 روپے ہے یا 6 روپے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s9_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Brackets and fractions can't scare you now!",
+          "ur": "اب قوسین اور کسور آپ کو نہیں ڈرا سکتیں!"
+        }
+      },
+      "text": {
+        "en": "Open brackets by multiplying every term inside. Clear fractions by multiplying both sides, every term, by the denominator. Then solve as before and check by putting your answer back.",
+        "ur": "قوسین کھولنے کے لیے اندر کی ہر رقم کو ضرب دیں۔ کسر ختم کرنے کے لیے دونوں طرف کی ہر رقم کو نسب نما سے ضرب دیں۔ پھر پہلے کی طرح حل کریں اور جواب واپس رکھ کر جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "3(x − 2) = 3x − 6, not 3x − 2.",
+          "ur": "3(x − 2) = 3x − 6 ہے، 3x − 2 نہیں۔"
+        },
+        {
+          "en": "A fraction answer like x = −1/2 is fine. Always check it.",
+          "ur": "x = −1/2 جیسا کسری جواب بھی ٹھیک ہے۔ ہمیشہ جانچ کریں۔"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 8. No textbook text or exercises were copied; the example (x + 5)/3 = 1 − x is in the style of Review Exercise 5.",
+    "Urdu terms to check against the PCTB book: قوسین (brackets), نسب نما (denominator), رقم (term).",
+    "Every answer is checked by the linear_equation checker, which accepts any correct working."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  },
+  "review_questions": [
+    {
+      "id": "r_brackets",
+      "type": "apply",
+      "skill": "maths.linear_equations.brackets_fractions",
+      "step": {
+        "id": "r_brackets",
+        "type": "text_check",
+        "checker": "linear_equation",
+        "expected": "5(x + 1) = 2x + 11",
+        "multiline": true,
+        "prompt": {
+          "en": "Solve 5(x + 1) = 2x + 11. Write each step on a new line.",
+          "ur": "5(x + 1) = 2x + 11 حل کریں۔ ہر قدم نئی سطر میں لکھیں۔"
+        },
+        "hint": {
+          "en": "Open the bracket: 5x + 5 = 2x + 11.",
+          "ur": "قوسین کھولیں: 5x + 5 = 2x + 11"
+        },
+        "feedback_correct": {
+          "en": "Correct: x = 2. Check: 5 × 3 = 15 and 2 × 2 + 11 = 15.",
+          "ur": "درست: x = 2۔ جانچ: 5 × 3 = 15 اور 2 × 2 + 11 = 15"
+        },
+        "feedback_wrong": {
+          "en": "5x + 5 = 2x + 11, so 3x + 5 = 11, so 3x = 6, so x = 2.",
+          "ur": "5x + 5 = 2x + 11، اس لیے 3x + 5 = 11، اس لیے 3x = 6، اس لیے x = 2"
+        }
+      }
+    }
+  ]
+}

@@ -97,6 +97,10 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
             if any(p["kind"] == "fingers" and p["value"] > 5 for p in pictures):
                 problems.append(f"{where}/{step['id']}: one hand can only show 0 to 5 fingers")
 
+        expected = step.get("expected") if step.get("type") == "sim" else None
+        if expected and expected["checker"] == "linear_inequality" and not is_inequality(expected["answer"]):
+            problems.append(f"{where}/{step['id']}: expected.answer must be one inequality, like x <= 4")
+
         if step.get("type") == "tap_count" and step.get("available", step["count"] + 2) < step["count"]:
             problems.append(f"{where}/{step['id']}: 'available' must be at least 'count'")
 
@@ -108,6 +112,8 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
                 squash(w["answer"]) in right for w in step.get("common_wrong", [])
             ):
                 problems.append(f"{where}/{step['id']}: a correct answer is also listed in common_wrong")
+            if step["checker"] == "linear_inequality" and not is_inequality(step["expected"]):
+                problems.append(f"{where}/{step['id']}: expected must be one inequality, like 2x - 3 < 7")
             if "accept" in step and step["checker"] != "text":
                 problems.append(f"{where}/{step['id']}: 'accept' only works with the text checker")
 
@@ -154,6 +160,14 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
                 )
 
     return problems
+
+
+def is_inequality(text: str) -> bool:
+    """One of < <= > >= (or ≤ ≥) between two sides, and no =."""
+    text = text.replace("≤", "<=").replace("≥", ">=")
+    ops = re.findall(r"<=|>=|<|>", text)
+    rest = re.sub(r"<=|>=|<|>", "|", text)
+    return len(ops) == 1 and "=" not in rest and all(side.strip() for side in rest.split("|"))
 
 
 def check_media(step: dict) -> list[str]:

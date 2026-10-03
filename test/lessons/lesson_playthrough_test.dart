@@ -17,6 +17,15 @@ Future<void> playLesson(
   required bool urdu,
 }) async {
   await tapKey(tester, 'open-previewer');
+  // The list is longer than the screen: scroll the lesson into view.
+  final tile = find.byKey(Key('lesson-${lesson.id}'));
+  for (var i = 0; i < 100 && find.byType(ListTile).evaluate().isEmpty; i++) {
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 10)),
+    );
+    await tester.pump();
+  }
+  await tester.scrollUntilVisible(tile, 200);
   await tapKey(tester, 'lesson-${lesson.id}');
 
   for (final step in lesson.steps) {
