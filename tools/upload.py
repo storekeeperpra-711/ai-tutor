@@ -16,7 +16,11 @@ Firestore layout, in each project:
     lesson_catalog/current     lessons: {id: {version, hash}}, updated_at
     published_lessons/{id}     version, hash, content (the lesson's JSON), published_at
     lesson_reviews/{id}        hash, status (in_review | approved | changes_requested),
-                               ... (dev only; written by the review screens)
+                               approved_hash, reviewer, decided_at (dev only; the
+                               review screens write the decision)
+    lesson_reviews/{id}/notes  a teacher's notes on the lesson (dev only)
+    config/reviewers           emails: who may review (dev only), from the
+                               ADMIN_EMAILS and REVIEWER_EMAILS variables
 
 A lesson's hash is a fingerprint of its content, so any change makes a new
 version. Prod gets a lesson only when its exact hash was approved in dev; a
@@ -39,6 +43,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import validate_lessons  # noqa: E402
 
 CATALOG = "lesson_catalog/current"
+REVIEWERS = "config/reviewers"
 PUBLISHED = "published_lessons"
 REVIEWS = "lesson_reviews"
 
@@ -99,9 +104,23 @@ def load_local(lessons_dir: Path) -> list[LocalLesson]:
 
 def approved_hash(reviews: Store, lesson_id: str) -> str | None:
     review = reviews.get(f"{REVIEWS}/{lesson_id}")
-    if review and review.get("status") == "approved":
+    if review and review.get("status") == "approved" and review.get("approved_hash") == review.get("hash"):
         return review.get("hash")
     return None
+
+
+def reviewer_emails(*lists: str) -> list[str]:
+    """Comma- or space-separated email lists, merged and lower-cased."""
+    emails = {e.strip().lower() for text in lists for e in text.replace(",", " ").split()}
+    return sorted(e for e in emails if "@" in e)
+
+
+def set_reviewers(target: Store, emails: list[str], now: str) -> bool:
+    """Writes the reviewer list if it changed. Returns whether it did."""
+    if (target.get(REVIEWERS) or {}).get("emails") == emails:
+        return False
+    target.set(REVIEWERS, {"emails": emails, "updated_at": now})
+    return True
 
 
 def plan(lessons: list[LocalLesson], target: Store, reviews: Store | None) -> list[Change]:
@@ -224,6 +243,10 @@ def main(argv: list[str]) -> int:
 
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     apply(changes, lessons, target, now, mark_for_review=args.target == "dev")
+    if args.target == "dev":
+        emails = reviewer_emails(os.environ.get("ADMIN_EMAILS", ""), os.environ.get("REVIEWER_EMAILS", ""))
+        if set_reviewers(target, emails, now):
+            print(f"Reviewers: {len(emails)} email(s).")
     published = sum(c.action in ("new", "update") for c in changes)
     removed = sum(c.action == "remove" for c in changes)
     print(f"\nPublished {published}, removed {removed}.")

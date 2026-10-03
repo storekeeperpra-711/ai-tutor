@@ -108,7 +108,20 @@ class ProdTest(unittest.TestCase):
         publish([lesson("a"), lesson("b")], self.reviews)
 
     def approve(self, found):
-        self.reviews.docs[f"lesson_reviews/{found.id}"] = {"hash": found.hash, "status": "approved"}
+        self.reviews.docs[f"lesson_reviews/{found.id}"] = {
+            "hash": found.hash,
+            "approved_hash": found.hash,
+            "status": "approved",
+        }
+
+    def test_approval_of_another_version_does_not_count(self):
+        self.reviews.docs["lesson_reviews/a"] = {
+            "hash": lesson("a").hash,
+            "approved_hash": "0" * 16,
+            "status": "approved",
+        }
+        changes = publish([lesson("a")], DictStore(), self.reviews)
+        self.assertEqual(changes["a"].action, "waiting")
 
     def test_only_approved_lessons_are_published(self):
         self.approve(lesson("a"))
@@ -145,6 +158,20 @@ class ProdTest(unittest.TestCase):
         changes = publish([lesson("a", "Changed")], prod, self.reviews)
         self.assertEqual(changes["a"].action, "update")
         self.assertEqual(prod.docs["published_lessons/a"]["version"], 2)
+
+
+class ReviewersTest(unittest.TestCase):
+    def test_lists_are_merged_and_lower_cased(self):
+        self.assertEqual(
+            upload.reviewer_emails("Shahid@Example.com, a@b.pk", "teacher@school.pk a@b.pk", ""),
+            ["a@b.pk", "shahid@example.com", "teacher@school.pk"],
+        )
+
+    def test_written_only_when_changed(self):
+        dev = DictStore()
+        self.assertTrue(upload.set_reviewers(dev, ["a@b.pk"], "now"))
+        self.assertFalse(upload.set_reviewers(dev, ["a@b.pk"], "later"))
+        self.assertEqual(dev.docs["config/reviewers"]["emails"], ["a@b.pk"])
 
 
 if __name__ == "__main__":

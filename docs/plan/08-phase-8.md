@@ -1,6 +1,6 @@
 # Phase 8 plan: content pipeline and first chapter
 
-Status: plan approved 2026-10-03. Step 1 (publishing pipeline) built.
+Status: plan approved 2026-10-03. Step 1 (publishing pipeline) merged (PR #11). Step 2 (teacher review) built.
 Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 8.
 
 **Goal:** a repeatable way to write, review and ship lessons.
@@ -40,10 +40,10 @@ Teachers review in the dev app on their own phone. No GitHub, no computer needed
 
 - A teacher account (role `teacher`, which exists already) sees a **Review** list: lessons waiting, approved, and needing changes.
 - **Preview:** the teacher plays the lesson exactly as a child would, at any age tier.
-- **Notes:** on any step, the teacher taps **Note** and types or records a comment.
+- **Notes:** on any step, the teacher taps **Note** and types a comment. *(Typed only for now: recorded voice notes need file storage, which comes with audio in step 3.)*
 - **Decision:** **Approve** or **Needs changes**. This is saved with the lesson version, the teacher and the date.
 - I read the notes, fix the lesson, and it returns to the list as a new version.
-- Only an admin email (ADMIN_EMAILS) can make an account a reviewer, so a random sign-up can't approve lessons.
+- Reviewers are the emails in the GitHub secrets ADMIN_EMAILS and REVIEWER_EMAILS, and the teacher must confirm their email with a link, so a random sign-up can't approve lessons.
 
 ### The pilot chapter (task 8.3, decision 2)
 

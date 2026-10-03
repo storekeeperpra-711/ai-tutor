@@ -867,4 +867,98 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get subjectUrdu => 'Urdu';
+
+  @override
+  String get reviewTitle => 'Review lessons';
+
+  @override
+  String get reviewSignIn =>
+      'Sign in with your teacher account to review lessons.';
+
+  @override
+  String get reviewSignInButton => 'Sign in';
+
+  @override
+  String reviewVerify(String email) {
+    return 'First we check that $email is your email. Tap the button, then open the link we email you.';
+  }
+
+  @override
+  String get reviewSendLink => 'Email me the link';
+
+  @override
+  String get reviewLinkSent => 'Sent. Check your inbox, and the spam folder.';
+
+  @override
+  String get reviewCheckAgain => 'I\'ve opened the link';
+
+  @override
+  String reviewNotReviewer(String email) {
+    return '$email can\'t review lessons yet. Ask the app\'s owner to add it.';
+  }
+
+  @override
+  String get reviewNothing => 'No lessons to review.';
+
+  @override
+  String get reviewStatusInReview => 'Waiting for review';
+
+  @override
+  String get reviewStatusApproved => 'Approved';
+
+  @override
+  String get reviewStatusChanges => 'Needs changes';
+
+  @override
+  String reviewVersion(int version) {
+    return 'Version $version';
+  }
+
+  @override
+  String get reviewPlay => 'Play the lesson';
+
+  @override
+  String get reviewPlayHint =>
+      'Play it as a child would. On any step, tap the note button to write what should change.';
+
+  @override
+  String get reviewWholeLesson => 'Whole lesson';
+
+  @override
+  String reviewStep(int number) {
+    return 'Step $number';
+  }
+
+  @override
+  String get reviewAddNote => 'Add a note';
+
+  @override
+  String get reviewNoteHint => 'What should change?';
+
+  @override
+  String get reviewSave => 'Save';
+
+  @override
+  String get reviewApprove => 'Approve';
+
+  @override
+  String reviewApproveConfirm(int version) {
+    return 'Approve version $version? Children will get it the next time lessons are published.';
+  }
+
+  @override
+  String get reviewOldVersion =>
+      'This phone has a different version of this lesson. Update before reviewing.';
+
+  @override
+  String get reviewUpdate => 'Update lessons';
+
+  @override
+  String get reviewError =>
+      'Couldn\'t reach the server. Check the internet and try again.';
+
+  @override
+  String reviewDecidedBy(String email) {
+    return 'Decided by $email';
+  }
 }

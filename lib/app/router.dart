@@ -13,6 +13,7 @@ import '../features/plan/practice_screen.dart';
 import '../features/previewer/lesson_list_screen.dart';
 import '../features/profiles/add_student_screen.dart';
 import '../features/settings/settings_screen.dart';
+import '../features/review/review_screens.dart';
 import '../lessons/lesson_player_screen.dart';
 
 /// All screens and their paths. Add new screens here.
@@ -54,6 +55,20 @@ final routerProvider = Provider<GoRouter>(
         path: '/lesson/:id',
         builder: (context, state) =>
             LessonPlayerScreen(lessonId: state.pathParameters['id']!),
+      ),
+      GoRoute(
+        path: '/review',
+        builder: (context, state) => const ReviewListScreen(),
+      ),
+      GoRoute(
+        path: '/review/:id',
+        builder: (context, state) =>
+            ReviewLessonScreen(lessonId: state.pathParameters['id']!),
+      ),
+      GoRoute(
+        path: '/review/:id/play',
+        builder: (context, state) =>
+            ReviewPlayerScreen(lessonId: state.pathParameters['id']!),
       ),
       GoRoute(
         path: '/dev/sims',

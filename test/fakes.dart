@@ -9,6 +9,7 @@ import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/character/voice_lines.dart';
 import 'package:ai_tutor/lessons/lesson_updates.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
+import 'package:ai_tutor/review/review_store.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/local_db.dart';
 import 'package:ai_tutor/services/remote_store.dart';
@@ -22,11 +23,13 @@ class FakeBackend {
   FakeBackend() {
     auth = FakeAuthService(this);
     remote = FakeRemoteStore(this);
+    reviews = FakeReviewStore(this);
     ai = FakeAiService(this);
   }
 
   late final FakeAuthService auth;
   late final FakeRemoteStore remote;
+  late final FakeReviewStore reviews;
   late final FakeAiService ai;
   final narrator = FakeNarrator();
   final sounds = FakeSounds();
@@ -218,13 +221,42 @@ class FakeAuthService implements AuthService {
     if (account == null || account.$1 != password) {
       throw const AuthException(AuthProblem.wrongPassword);
     }
-    final user = AppUser(uid: account.$2, email: email);
+    final user = AppUser(
+      uid: account.$2,
+      email: email,
+      emailVerified: verified.contains(email),
+    );
     _set(user);
     return user;
   }
 
   @override
   Future<void> signOut() async => _set(null);
+
+  /// Emails a verification link went to.
+  final verificationsSent = <String>[];
+
+  /// Emails whose link was tapped.
+  final verified = <String>{};
+
+  @override
+  Future<void> sendVerificationEmail() async {
+    if (!_backend.online) throw const AuthException(AuthProblem.noConnection);
+    if (_user?.email case final email?) verificationsSent.add(email);
+  }
+
+  @override
+  Future<AppUser?> refreshUser() async {
+    final user = _user;
+    if (user?.email == null) return user;
+    final updated = AppUser(
+      uid: user!.uid,
+      email: user.email,
+      emailVerified: verified.contains(user.email),
+    );
+    _set(updated);
+    return updated;
+  }
 }
 
 class FakeRemoteStore implements RemoteStore {
@@ -401,9 +433,8 @@ class FakeRemoteStore implements RemoteStore {
       'format': 1,
       'content': content,
     };
-    final catalog = Map<String, Object?>.of(
-      (docs['lesson_catalog/current']?['lessons'] as Map<String, Object?>?) ??
-          const {},
+    final catalog = Map<String, Object?>.from(
+      (docs['lesson_catalog/current']?['lessons'] as Map?) ?? const {},
     );
     catalog[id] = {'version': version, 'hash': hash};
     docs['lesson_catalog/current'] = {'lessons': catalog};
@@ -481,4 +512,92 @@ class FakeSounds implements SoundPlayer {
 
   @override
   void play(Sound sound) => played.add(sound);
+}
+
+/// Teacher review on the pretend server, checked like firestore.rules: only
+/// a listed reviewer with a verified email gets in.
+class FakeReviewStore implements ReviewStore {
+  FakeReviewStore(this._backend);
+
+  final FakeBackend _backend;
+
+  /// config/reviewers.
+  final reviewers = <String>{};
+
+  /// lesson_reviews, by lesson id.
+  final docs = <String, LessonReview>{};
+
+  /// Notes, by lesson id.
+  final notesOf = <String, List<ReviewNote>>{};
+
+  /// Puts [lessonId]'s published version up for review, like
+  /// tools/upload.py.
+  void submit(String lessonId) {
+    final published = _backend.remote.docs['published_lessons/$lessonId']!;
+    docs[lessonId] = LessonReview(
+      lessonId: lessonId,
+      hash: published['hash']! as String,
+      version: published['version']! as int,
+      status: ReviewStatus.inReview,
+    );
+  }
+
+  void _check() {
+    if (!_backend.online) throw StateError('offline');
+    final user = _backend.auth.currentUser;
+    if (user == null ||
+        !user.emailVerified ||
+        !reviewers.contains(user.email?.toLowerCase())) {
+      throw StateError('permission-denied');
+    }
+  }
+
+  @override
+  Future<bool> isReviewer() async {
+    if (!_backend.online) throw StateError('offline');
+    try {
+      _check();
+      return true;
+    } on StateError {
+      return false;
+    }
+  }
+
+  @override
+  Future<List<LessonReview>> reviews() async {
+    _check();
+    return docs.values.toList();
+  }
+
+  @override
+  Future<List<ReviewNote>> notes(String lessonId) async {
+    _check();
+    return List.of(notesOf[lessonId] ?? const <ReviewNote>[]);
+  }
+
+  @override
+  Future<void> addNote(String lessonId, ReviewNote note) async {
+    _check();
+    if (note.hash != docs[lessonId]?.hash) throw StateError('wrong version');
+    (notesOf[lessonId] ??= []).add(note);
+  }
+
+  @override
+  Future<void> decide(
+    String lessonId, {
+    required String hash,
+    required bool approved,
+    required String reviewer,
+  }) async {
+    _check();
+    final review = docs[lessonId]!;
+    if (approved && hash != review.hash) throw StateError('wrong version');
+    docs[lessonId] = LessonReview(
+      lessonId: lessonId,
+      hash: review.hash,
+      version: review.version,
+      status: approved ? ReviewStatus.approved : ReviewStatus.changesRequested,
+      reviewer: reviewer,
+    );
+  }
 }

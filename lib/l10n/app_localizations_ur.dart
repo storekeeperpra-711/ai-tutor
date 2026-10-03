@@ -871,4 +871,99 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get subjectUrdu => 'اردو';
+
+  @override
+  String get reviewTitle => 'اسباق کا جائزہ';
+
+  @override
+  String get reviewSignIn =>
+      'اسباق کا جائزہ لینے کے لیے اپنے استاد اکاؤنٹ سے سائن ان کریں۔';
+
+  @override
+  String get reviewSignInButton => 'سائن ان کریں';
+
+  @override
+  String reviewVerify(String email) {
+    return 'پہلے ہم تصدیق کریں گے کہ $email آپ کی ای میل ہے۔ بٹن دبائیں، پھر ای میل میں آنے والا لنک کھولیں۔';
+  }
+
+  @override
+  String get reviewSendLink => 'مجھے لنک ای میل کریں';
+
+  @override
+  String get reviewLinkSent =>
+      'بھیج دیا گیا۔ اپنا ان باکس اور اسپام فولڈر دیکھیں۔';
+
+  @override
+  String get reviewCheckAgain => 'میں نے لنک کھول لیا';
+
+  @override
+  String reviewNotReviewer(String email) {
+    return '$email ابھی اسباق کا جائزہ نہیں لے سکتا۔ ایپ کے مالک سے کہیں کہ اسے شامل کریں۔';
+  }
+
+  @override
+  String get reviewNothing => 'جائزے کے لیے کوئی سبق نہیں۔';
+
+  @override
+  String get reviewStatusInReview => 'جائزے کا منتظر';
+
+  @override
+  String get reviewStatusApproved => 'منظور شدہ';
+
+  @override
+  String get reviewStatusChanges => 'تبدیلی درکار';
+
+  @override
+  String reviewVersion(int version) {
+    return 'ورژن $version';
+  }
+
+  @override
+  String get reviewPlay => 'سبق چلائیں';
+
+  @override
+  String get reviewPlayHint =>
+      'اسے بچے کی طرح چلائیں۔ کسی بھی مرحلے پر نوٹ کا بٹن دبا کر لکھیں کہ کیا بدلنا چاہیے۔';
+
+  @override
+  String get reviewWholeLesson => 'پورا سبق';
+
+  @override
+  String reviewStep(int number) {
+    return 'مرحلہ $number';
+  }
+
+  @override
+  String get reviewAddNote => 'نوٹ لکھیں';
+
+  @override
+  String get reviewNoteHint => 'کیا بدلنا چاہیے؟';
+
+  @override
+  String get reviewSave => 'محفوظ کریں';
+
+  @override
+  String get reviewApprove => 'منظور کریں';
+
+  @override
+  String reviewApproveConfirm(int version) {
+    return 'ورژن $version منظور کریں؟ اگلی بار اسباق شائع ہونے پر یہ بچوں تک پہنچ جائے گا۔';
+  }
+
+  @override
+  String get reviewOldVersion =>
+      'اس فون پر اس سبق کا دوسرا ورژن ہے۔ جائزے سے پہلے اپ ڈیٹ کریں۔';
+
+  @override
+  String get reviewUpdate => 'اسباق اپ ڈیٹ کریں';
+
+  @override
+  String get reviewError =>
+      'سرور سے رابطہ نہیں ہو سکا۔ انٹرنیٹ دیکھ کر دوبارہ کوشش کریں۔';
+
+  @override
+  String reviewDecidedBy(String email) {
+    return 'فیصلہ: $email';
+  }
 }

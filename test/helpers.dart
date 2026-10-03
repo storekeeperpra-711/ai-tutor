@@ -4,6 +4,7 @@ import 'package:ai_tutor/app/app.dart';
 import 'package:ai_tutor/app/preferences.dart';
 import 'package:ai_tutor/character/narrator.dart';
 import 'package:ai_tutor/character/sounds.dart';
+import 'package:ai_tutor/review/review_store.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/connectivity.dart';
 import 'package:ai_tutor/services/local_db.dart';
@@ -22,6 +23,7 @@ import 'fakes.dart';
 Future<Widget> buildTestApp({
   Map<String, Object> prefs = const {},
   FakeBackend? backend,
+  bool reviewOffered = false,
 }) async {
   // Each test starts with fresh asset loading (cached futures from an
   // earlier test belong to that test's fake clock).
@@ -35,6 +37,8 @@ Future<Widget> buildTestApp({
       localDbProvider.overrideWithValue(fake.db),
       authServiceProvider.overrideWithValue(fake.auth),
       remoteStoreProvider.overrideWithValue(fake.remote),
+      reviewStoreProvider.overrideWithValue(fake.reviews),
+      reviewOfferedProvider.overrideWithValue(reviewOffered),
       onlineProvider.overrideWith((ref) => fake.onlineStream),
       aiServiceProvider.overrideWithValue(fake.ai),
       narratorProvider.overrideWithValue(fake.narrator),
