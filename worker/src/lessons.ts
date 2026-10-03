@@ -1,10 +1,9 @@
 /**
- * The server's own copy of the lessons (copied in at build time by
+ * The server's own copy of the lessons (bundled in at build time by
  * scripts/copy-lessons.mjs). Prompts are built from these, so the app can
  * only name a lesson and a step, never send prompt text.
  */
-import { readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { LESSONS } from "./generated/lessons";
 
 export interface Text {
   en: string;
@@ -55,13 +54,10 @@ export interface FoundStep<T extends AiStep> {
 export class LessonLibrary {
   constructor(private readonly lessons: Map<string, Record<string, unknown>>) {}
 
-  /** Loads every lesson file in [dir] (default: functions/lessons). */
-  static fromDirectory(dir = join(__dirname, "..", "lessons")): LessonLibrary {
+  /** Every lesson in content/lessons/, as bundled at build time. */
+  static bundled(): LessonLibrary {
     const lessons = new Map<string, Record<string, unknown>>();
-    for (const file of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
-      const lesson = JSON.parse(readFileSync(join(dir, file), "utf8"));
-      lessons.set(lesson.id, lesson);
-    }
+    for (const lesson of LESSONS as Record<string, unknown>[]) lessons.set(String(lesson.id), lesson);
     return new LessonLibrary(lessons);
   }
 

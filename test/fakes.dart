@@ -153,6 +153,10 @@ class FakeAiService implements AiService {
 class FakeAuthService implements AuthService {
   FakeAuthService(this._backend);
 
+  @override
+  Future<String?> idToken() async =>
+      _user == null ? null : 'token-${_user!.uid}';
+
   final FakeBackend _backend;
   final _changes = StreamController<AppUser?>.broadcast();
 

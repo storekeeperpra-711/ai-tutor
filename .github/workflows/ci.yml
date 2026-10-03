@@ -73,6 +73,24 @@ jobs:
       # Runs the tests against the Firestore emulator (no real project).
       - run: npm test
 
+  functions:
+    name: AI server tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: worker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+      - run: npm ci
+      # Type-checks and runs the tests with a fake Claude (no API key, no cost).
+      - run: npm test
+
   # Builds an installable debug APK. Runs only on main and on manual runs,
   # because Android builds use many more CI minutes than the checks above.
   apk:

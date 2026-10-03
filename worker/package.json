@@ -1,0 +1,22 @@
+{
+  "name": "ai-tutor-worker",
+  "description": "AI server for AI Tutor (Phase 6): a Cloudflare Worker that calls Claude",
+  "private": true,
+  "scripts": {
+    "copy-lessons": "node scripts/copy-lessons.mjs",
+    "build": "npm run copy-lessons && tsc",
+    "test": "npm run build && node --test \"lib/test/**/*.test.js\"",
+    "deploy:dev": "npm run copy-lessons && wrangler deploy --env dev",
+    "deploy:prod": "npm run copy-lessons && wrangler deploy"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "jose": "^6.2.12"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261003.1",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.147.0"
+  }
+}

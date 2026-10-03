@@ -1,8 +1,5 @@
 /** Settings for the AI features. Change limits and the daily cap here. */
 
-/** Cloud Functions region, next to Firestore (Mumbai). */
-export const REGION = "asia-south1";
-
 /** Models (spec A3). Prices are checked on Anthropic's pricing page. */
 export const MODELS = {
   /** Short text feedback, verdict explanations, weekly reports. */
@@ -30,7 +27,7 @@ export const LIMITS = {
 
 export type Limits = { [K in keyof typeof LIMITS]: number };
 
-/** How long AI logs are kept (Firestore TTL on `expire_at`). */
+/** How long AI logs are kept (the batch job deletes older ones). */
 export const LOG_DAYS = 90;
 
 /** Pakistan Standard Time (UTC+5, no daylight saving). */

@@ -11,9 +11,7 @@ Future<Student> start(WidgetTester tester, FakeBackend backend) async {
   await tester.pumpWidget(await buildTestApp(backend: backend));
   await tester.pumpAndSettle();
   await addLearner(tester, name: 'Ayesha', grade: 'Grade 9');
-  return (await tester.runAsync(
-    () => backend.db.select(backend.db.students).get(),
-  ))!.single;
+  return (await backend.db.select(backend.db.students).get()).single;
 }
 
 void main() {
@@ -37,31 +35,29 @@ void main() {
     final ayesha = await start(tester, backend);
     expect(find.byKey(const Key('mithu-notes-card')), findsNothing);
 
-    await tester.runAsync(() async {
-      for (final id in ['q1', 'q2']) {
-        await backend.db.queueAnswer(
-          QueuedAnswer(
-            id: id,
-            studentId: ayesha.id,
-            lessonId: 'g9-maths-05-solving-linear-equations',
-            stepId: 's5_explain_balance',
-            task: 'Why do we do the same to both sides?',
-            lang: 'en',
-            answer: 'answer $id',
-            createdAt: DateTime(2026, 10, 3),
-            uploaded: true,
-            status: 'waiting',
-            seen: false,
-          ),
-        );
-      }
-      await backend.db.saveReply(
-        'q1',
-        status: 'answered',
-        level: 'partly',
-        reply: 'Good start!',
+    for (final id in ['q1', 'q2']) {
+      await backend.db.queueAnswer(
+        QueuedAnswer(
+          id: id,
+          studentId: ayesha.id,
+          lessonId: 'g9-maths-05-solving-linear-equations',
+          stepId: 's5_explain_balance',
+          task: 'Why do we do the same to both sides?',
+          lang: 'en',
+          answer: 'answer $id',
+          createdAt: DateTime(2026, 10, 3),
+          uploaded: true,
+          status: 'waiting',
+          seen: false,
+        ),
       );
-    });
+    }
+    await backend.db.saveReply(
+      'q1',
+      status: 'answered',
+      level: 'partly',
+      reply: 'Good start!',
+    );
     await tester.pumpAndSettle();
 
     expect(find.text('Mithu has new notes for you (1)'), findsOneWidget);
@@ -71,7 +67,6 @@ void main() {
     expect(find.textContaining('Checked by AI'), findsOneWidget);
 
     await goBack(tester);
-    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('mithu-notes-card')), findsNothing);
   });

@@ -1,88 +1,90 @@
-# Setting up the AI features (Phase 6)
+# Setting up the AI server (Phase 6)
 
-Do these steps for the **dev** project (`ai-tutor-dev-ebb83`) first. Repeat them for **prod** (`ai-tutor-cb74d`) when you are happy with dev.
+The AI features run on a small server in `worker/`, hosted free on **Cloudflare Workers**. Firebase stays on the free **Spark** plan. Only Claude itself costs money, paid from credit you add in advance.
 
-Everything here is done in the browser. **Never paste the Claude API key or the service-account key into a chat, an issue or a file in the repository.** They go only into the places named below.
+**Never paste a key in a chat, an issue, a commit or a message.** Keys go only into the Cloudflare dashboard or GitHub secrets, as described below.
 
-## 1. Upgrade to the Blaze plan
+Do the steps for **dev** first (Firebase project `ai-tutor-dev`). Do **prod** later, in the same way, when dev works.
 
-Cloud Functions, scheduled jobs and Storage need the pay-as-you-go Blaze plan. The free amounts stay free. At pilot size, Firebase itself should cost close to $0; the cost is the Claude API.
+## 1. Claude: credit and a spending limit
 
-1. Open <https://console.firebase.google.com> and select **AI Tutor dev**.
-2. Bottom left, next to "Spark", click **Upgrade**.
-3. Choose **Blaze**, and create or select a billing account (a card is needed).
+1. Open https://console.anthropic.com and sign in.
+2. **Settings → Billing**: add a small amount of credit (for example $5).
+3. **Settings → Limits**: set a **monthly spend limit** (for example $10). Claude stops answering above it, and the app falls back to its own feedback.
+4. You already have an API key. If you want a separate one for dev: **API keys → Create key**, name it `ai-tutor-dev`.
 
-## 2. Budget alert (Google Cloud)
+Keep the key somewhere private for step 5. You can't see it again after closing the dialog; if it's lost, create a new one.
 
-1. Open <https://console.cloud.google.com/billing>, then choose your billing account and **Budgets & alerts**.
-2. Click **Create budget**.
-   - **Name:** `ai-tutor`.
-   - **Projects:** both AI Tutor projects.
-3. Set the amount to **$5 per month**.
-4. Keep the alerts at 50%, 90% and 100%, and keep **Email alerts to billing admins** ticked.
+## 2. Cloudflare: a free account
 
-A budget only sends emails; it doesn't stop spending. The real stop is the daily cap in the functions (step 6) plus the Anthropic limit below.
+1. Sign up at https://dash.cloudflare.com/sign-up (free, no card).
+2. Open **Workers & Pages** in the left menu. If it asks you to choose a **workers.dev subdomain**, pick one (for example `aitutor`).
+3. Copy your **Account ID**. It is on the right side of the **Workers & Pages** overview page (or in the address bar after `dash.cloudflare.com/`). It is not secret.
 
-## 3. Claude API key and spending limit (Anthropic)
+## 3. A Cloudflare token for GitHub (so GitHub can deploy)
 
-1. Open <https://console.anthropic.com>, sign in, and go to **Settings → Billing**. Add credit, for example $5.
-2. Go to **Settings → Limits** and set a **monthly spend limit**, for example $10.
-3. Go to **Settings → API keys → Create key**.
-   - **Name:** `ai-tutor-dev`.
-   - Copy it. You will paste it only in step 4.
+1. In Cloudflare, click the person icon (top right) → **My Profile → API Tokens → Create Token**.
+2. Next to **Edit Cloudflare Workers**, click **Use template**.
+3. Under **Account Resources**, choose your account. Under **Zone Resources**, leave **All zones**.
+4. **Continue to summary → Create Token**, and copy the token.
 
-## 4. Store the key as a secret (Google Cloud Secret Manager)
+## 4. GitHub secrets
 
-1. Open <https://console.cloud.google.com/security/secret-manager?project=ai-tutor-dev-ebb83>.
-2. If asked, click **Enable** for the Secret Manager API.
-3. Click **Create secret**.
-   - **Name:** `ANTHROPIC_API_KEY`, exactly like this.
-   - **Secret value:** paste the key from step 3.
-4. Click **Create secret**.
+In GitHub, open the `ai-tutor` repository → **Settings → Secrets and variables → Actions → New repository secret**, and add:
 
-This is the same place `firebase functions:secrets:set ANTHROPIC_API_KEY` writes to. Only the functions can read it.
+| Name | Value |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | the token from step 3 |
+| `CLOUDFLARE_ACCOUNT_ID` | the Account ID from step 2 |
 
-## 5. A deploy key for GitHub (one time per project)
+## 5. First deploy
 
-GitHub Actions deploys the functions and the Firestore rules, so you don't need to install anything.
+1. In GitHub, open **Actions → Deploy AI server → Run workflow**, choose **dev**, and click **Run workflow**.
+2. When it finishes (green tick), open the run. The summary shows the address, like `https://ai-tutor-ai-dev.aitutor.workers.dev`.
+3. Send that address in the project chat. It isn't secret: Claude puts it into the app.
 
-1. Open <https://console.cloud.google.com/iam-admin/serviceaccounts?project=ai-tutor-dev-ebb83> and click **Create service account**.
-   - **Name:** `github-deploy`.
-2. Click **Create and continue**, then give it these roles:
-   - **Editor**
-   - **Cloud Functions Admin**
-   - **Cloud Run Admin**
-   - **Secret Manager Admin**
-   - **Service Account User**
-3. Click **Done**.
-4. Open the new account, then go to **Keys → Add key → Create new key → JSON**. A file downloads.
-5. Open <https://github.com/storekeeperpra-711/ai-tutor/settings/secrets/actions> and click **New repository secret**.
-   - **Name:** `FIREBASE_SA_DEV` (for prod, `FIREBASE_SA_PROD`).
-   - **Secret:** open the downloaded file in Notepad, copy everything, and paste it.
-6. Add one more secret.
-   - **Name:** `ADMIN_EMAILS`.
-   - **Secret:** the email address you sign in with in the app as a parent. This account sees every student's AI cost.
-7. Delete the downloaded file from your computer.
+The server now exists but answers "not set up" until it has its secrets (next step). Until then the app uses its offline feedback.
 
-## 6. Deploy
+## 6. The server's secrets (in Cloudflare)
 
-1. Open <https://github.com/storekeeperpra-711/ai-tutor/actions/workflows/deploy.yml> and click **Run workflow**.
-2. Choose `dev`.
+In Cloudflare: **Workers & Pages → ai-tutor-ai-dev → Settings → Variables and Secrets → Add**. Add three entries and click **Deploy** after each:
 
-This uploads the functions, the Firestore rules and indexes, and the 90-day expiry for AI logs. After this, the Firestore rules come from the repository, and you no longer paste them by hand.
+| Type | Name | Value |
+|---|---|---|
+| Secret | `ANTHROPIC_API_KEY` | your Claude API key from step 1 |
+| Secret | `FIREBASE_SERVICE_ACCOUNT` | the whole text of the Firebase key file (below) |
+| Text | `ADMIN_EMAILS` | your email, for the cost dashboard (several: separate with commas) |
 
-You can also ask me to run it.
+**The Firebase key file:**
+1. Open https://console.firebase.google.com → **ai-tutor-dev** → the gear icon → **Project settings → Service accounts**.
+2. Click **Generate new private key → Generate key**. A `.json` file downloads.
+3. Open it with Notepad, select everything (Ctrl+A), copy, and paste it as the `FIREBASE_SERVICE_ACCOUNT` value.
+4. **Delete the downloaded file** (and empty the Recycle Bin). This key can read and write all of Firestore, so it must live only in Cloudflare. If it is ever exposed, delete it in the Google Cloud console (**IAM & Admin → Service accounts → firebase-adminsdk → Keys**) and generate a new one.
 
-**Limits** are in `functions/src/config.ts`:
-- 10 text checks and 3 photos per student per day;
-- each step's own `limit_per_day`;
-- a **global cap of $0.50 a day** for the whole project.
+The admin email must be the email of an app account that has signed in with a verified email. Other accounts see only their own children's costs.
 
-When a limit is reached, the app shows its pre-written feedback instead of AI.
+## 7. Firestore rules
 
-## 7. Check it
+Paste the updated `firestore.rules` into **Firestore Database → Rules → Publish** in both Firebase projects, as before. They add the offline answer queue and the weekly reports.
 
-1. Install the dev APK.
-2. Open the fractions lesson and answer the "explain in your own words" step. The reply should say **Checked by AI**.
-3. Turn on airplane mode and answer again. The reply should say **Checked by keywords**, and the answer waits for Mithu.
-4. Open Settings → **AI use and cost**. Today's calls and cost per student are shown.
+## 8. Check that it works
+
+1. Install the dev app (after Claude has added the server address), sign in, and open the **Dividing fractions** lesson.
+2. At the "Explain why" step, write an explanation. Mithu's reply should say **Checked by AI**.
+3. Turn on flight mode and try again: the reply says **Checked by keywords** and the answer waits for Mithu. Turn flight mode off; usually within an hour **Mithu has new notes for you** appears on the home screen.
+4. In the **Solving linear equations** lesson, photograph a notebook solution with a deliberate mistake. The app should mark the wrong line.
+5. **Settings → AI use and cost** shows the calls and the cost.
+
+If something fails: Cloudflare → **ai-tutor-ai-dev → Logs** shows the server's errors.
+
+## Prod
+
+Repeat steps 5–8 with **prod**: run the workflow with **prod** (it creates `ai-tutor-ai`), use the **ai-tutor** Firebase project's key file, and a separate Claude key `ai-tutor-prod` if you like.
+
+## Free plan limits
+
+| Service | Free limit | Our use (30 students) |
+|---|---|---|
+| Cloudflare Workers | 100,000 requests a day; 10 ms CPU and 50 outside requests per request | about 150 requests a day |
+| Firebase Spark (Firestore) | 50,000 reads and 20,000 writes a day | a few hundred |
+| Claude | prepaid credit only | about $8 a month; the server stops at $0.50 a day |

@@ -1,8 +1,11 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/services.dart' show appFlavor;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
+
+import '../services/auth_service.dart';
 
 /// How well an explanation shows the idea.
 enum AiLevel {
@@ -103,7 +106,7 @@ class CostReport {
   final double totalUsd;
 }
 
-/// The app's only way to the AI: Cloud Functions that check the student,
+/// The app's only way to the AI: the AI server (worker/) checks the student,
 /// the limits and the prompts on the server (spec D6). The Claude API is
 /// never called from the app.
 abstract class AiService {
@@ -139,23 +142,47 @@ abstract class AiService {
   Future<CostReport> costs();
 }
 
-class FunctionsAiService implements AiService {
-  FunctionsAiService(this._functions);
+/// The AI server (worker/, a Cloudflare Worker), called over HTTPS with the
+/// user's Firebase sign-in. Any failure becomes [AiUnavailable], and the
+/// step falls back to its offline check.
+class HttpAiService implements AiService {
+  HttpAiService({
+    required this.baseUrl,
+    required this.idToken,
+    http.Client? client,
+  }) : _client = client ?? http.Client();
 
-  final FirebaseFunctions _functions;
+  /// e.g. https://ai-tutor-ai-dev.example.workers.dev (no trailing slash).
+  final String baseUrl;
+  final Future<String?> Function() idToken;
+  final http.Client _client;
 
   Future<Map<String, dynamic>> _call(
-    String name,
+    String path,
     Map<String, Object?> data,
     Duration timeout,
   ) async {
+    if (baseUrl.isEmpty) throw const AiUnavailable('not set up');
     try {
-      final result = await _functions
-          .httpsCallable(name, options: HttpsCallableOptions(timeout: timeout))
-          .call<Map<String, dynamic>>(data);
-      return Map<String, dynamic>.from(result.data);
-    } on FirebaseFunctionsException catch (e) {
-      throw AiUnavailable(e.code);
+      final token = await idToken();
+      if (token == null) throw const AiUnavailable('not signed in');
+      final response = await _client
+          .post(
+            Uri.parse('$baseUrl$path'),
+            headers: {
+              'authorization': 'Bearer $token',
+              'content-type': 'application/json',
+            },
+            body: jsonEncode(data),
+          )
+          .timeout(timeout);
+      if (response.statusCode != 200) {
+        throw AiUnavailable('HTTP ${response.statusCode}');
+      }
+      return jsonDecode(utf8.decode(response.bodyBytes))
+          as Map<String, dynamic>;
+    } on AiUnavailable {
+      rethrow;
     } on Exception catch (e) {
       throw AiUnavailable(e);
     }
@@ -178,7 +205,7 @@ class FunctionsAiService implements AiService {
     required String language,
     required String answer,
   }) async => _feedback(
-    await _call('aiFeedback', {
+    await _call('/v1/feedback', {
       'student_id': studentId,
       'lesson_id': lessonId,
       'step_id': stepId,
@@ -197,7 +224,7 @@ class FunctionsAiService implements AiService {
     required String working,
     required String checkerMessage,
   }) async => _feedback(
-    await _call('aiFeedback', {
+    await _call('/v1/feedback', {
       'student_id': studentId,
       'lesson_id': lessonId,
       'step_id': stepId,
@@ -215,7 +242,7 @@ class FunctionsAiService implements AiService {
     required String stepId,
     required Uint8List photo,
   }) async {
-    final data = await _call('photoRead', {
+    final data = await _call('/v1/photo', {
       'student_id': studentId,
       'lesson_id': lessonId,
       'step_id': stepId,
@@ -233,13 +260,13 @@ class FunctionsAiService implements AiService {
 
   @override
   Future<CostReport> costs() async {
-    final data = await _call('aiCosts', {}, const Duration(seconds: 20));
+    final data = await _call('/v1/costs', {}, const Duration(seconds: 20));
     return CostReport(
       all: data['all'] == true,
       totalUsd: (data['total_usd'] as num? ?? 0).toDouble(),
       rows: [
         for (final r
-            in (data['rows'] as List? ?? []).cast<Map<Object?, Object?>>())
+            in (data['rows'] as List? ?? []).cast<Map<String, dynamic>>())
           CostRow(
             day: r['day'] as String,
             studentId: r['student_id'] as String,
@@ -253,11 +280,18 @@ class FunctionsAiService implements AiService {
   }
 }
 
-/// Region next to Firestore (functions/src/config.ts).
-const functionsRegion = 'asia-south1';
+/// The AI server's address for each app version. Empty until the Worker
+/// is deployed (docs/setup/ai-setup.md); until then every AI step uses its
+/// offline check. A build can also set it: --dart-define=AI_URL=https://...
+const aiServerUrls = {'dev': '', 'prod': ''};
 
-final aiServiceProvider = Provider<AiService>(
-  (ref) => FunctionsAiService(
-    FirebaseFunctions.instanceFor(region: functionsRegion),
-  ),
-);
+String aiServerUrl() {
+  const override = String.fromEnvironment('AI_URL');
+  if (override.isNotEmpty) return override;
+  return aiServerUrls[appFlavor ?? 'dev'] ?? '';
+}
+
+final aiServiceProvider = Provider<AiService>((ref) {
+  final auth = ref.watch(authServiceProvider);
+  return HttpAiService(baseUrl: aiServerUrl(), idToken: auth.idToken);
+});

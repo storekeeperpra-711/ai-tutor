@@ -16,12 +16,10 @@ import type {
   UsageRow,
 } from "../store";
 
-import { join } from "node:path";
-
 export const USAGE: TokenUsage = { input_tokens: 900, output_tokens: 120 };
 
 export function lessons(): LessonLibrary {
-  return LessonLibrary.fromDirectory(join(__dirname, "..", "..", "lessons"));
+  return LessonLibrary.bundled();
 }
 
 interface Usage {
@@ -131,6 +129,15 @@ export class MemoryStore implements Store {
 
   async studentsOf(uid: string) {
     return [...this.students].filter((k) => k.startsWith(`${uid}/`)).map((k) => k.split("/")[1]);
+  }
+
+  flushed = 0;
+  async flush() {
+    this.flushed++;
+  }
+
+  async deleteOldLogs() {
+    return 0;
   }
 
   async usageFor(days: string[], students: { uid: string; studentId: string }[] | "all"): Promise<UsageRow[]> {

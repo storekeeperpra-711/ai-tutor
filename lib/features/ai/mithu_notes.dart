@@ -46,13 +46,21 @@ class MithuNotesScreen extends ConsumerStatefulWidget {
 }
 
 class _MithuNotesScreenState extends ConsumerState<MithuNotesScreen> {
+  late final LocalDb _db;
+  String? _studentId;
+
+  @override
+  void initState() {
+    super.initState();
+    // Kept for dispose, where `ref` can't be used any more.
+    _db = ref.read(localDbProvider);
+    _studentId = ref.read(currentStudentProvider)?.id;
+  }
+
   @override
   void dispose() {
-    // Opening the notes counts as reading them.
-    final student = ref.read(currentStudentProvider);
-    if (student != null) {
-      ref.read(localDbProvider).markRepliesSeen(student.id);
-    }
+    // Leaving the notes counts as having read them.
+    if (_studentId case final id?) _db.markRepliesSeen(id);
     super.dispose();
   }
 

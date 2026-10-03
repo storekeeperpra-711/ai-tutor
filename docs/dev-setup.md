@@ -123,7 +123,7 @@ Three step types: `sim` (an HTML simulation in a WebView, or a native interactiv
 | `assets/sims/`, `assets/videos/`, `assets/lottie/` | HTML simulations, videos with captions, animations |
 | `lib/l10n/` | Translations (ARB files) |
 | `assets/fonts/` | Noto Nastaliq Urdu (SIL Open Font License) |
-| `functions/` | Cloud Functions (Phase 6) |
+| `worker/` | AI server, a Cloudflare Worker (Phase 6) |
 
 ## Developer screens
 
@@ -133,4 +133,4 @@ The age-tier setting in Settings is for developers only for now; later the tier 
 
 ## Secrets
 
-The Claude API key is **never** put in this repository or in the app. It is stored only as a Firebase secret for Cloud Functions (Phase 6). See `functions/README.md`.
+The Claude API key is **never** put in this repository or in the app. It is stored only as a secret of the AI server in the Cloudflare dashboard (Phase 6). See `worker/README.md` and `docs/setup/ai-setup.md`.

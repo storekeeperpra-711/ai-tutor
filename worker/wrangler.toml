@@ -1,0 +1,24 @@
+# The AI server for AI Tutor. Deployed by .github/workflows/deploy-worker.yml.
+# Secrets (ANTHROPIC_API_KEY, FIREBASE_SERVICE_ACCOUNT) and ADMIN_EMAILS are
+# set in the Cloudflare dashboard, never here: see docs/setup/ai-setup.md.
+
+# Production: talks to the ai-tutor Firebase project.
+name = "ai-tutor-ai"
+main = "src/worker.ts"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+# Keep the variables set in the dashboard when deploying (all environments).
+keep_vars = true
+
+[triggers]
+crons = ["*/30 * * * *", "0 13 * * SUN"]
+
+[observability]
+enabled = true
+
+# Development: talks to the ai-tutor-dev Firebase project.
+[env.dev]
+name = "ai-tutor-ai-dev"
+
+[env.dev.triggers]
+crons = ["*/30 * * * *", "0 13 * * SUN"]
