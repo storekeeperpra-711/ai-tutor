@@ -29,7 +29,11 @@ final classLessonsProvider = FutureProvider.family<List<Assignment>, String>(
 
 /// For teachers: their classes, and making a new one (Phase 9).
 class TeacherClassesScreen extends ConsumerWidget {
-  const TeacherClassesScreen({super.key});
+  const TeacherClassesScreen({super.key, this.title, this.actions});
+
+  /// Shown instead of "My classes" (the web dashboard's own title).
+  final String? title;
+  final List<Widget>? actions;
 
   Future<void> _create(BuildContext context, WidgetRef ref) async {
     final text = await showDialog<String>(
@@ -44,7 +48,7 @@ class TeacherClassesScreen extends ConsumerWidget {
       ref.invalidate(teacherClassesProvider);
       if (context.mounted) unawaited(context.push('/classes/${created.id}'));
     } catch (_) {
-      if (context.mounted) _showProblem(context);
+      if (context.mounted) showClassProblem(context);
     }
   }
 
@@ -53,7 +57,7 @@ class TeacherClassesScreen extends ConsumerWidget {
     final l10n = AppLocalizations.of(context);
     final classes = ref.watch(teacherClassesProvider);
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.myClasses)),
+      appBar: AppBar(title: Text(title ?? l10n.myClasses), actions: actions),
       floatingActionButton: FloatingActionButton.extended(
         key: const Key('new-class'),
         icon: const Icon(Icons.add),
@@ -77,7 +81,7 @@ class TeacherClassesScreen extends ConsumerWidget {
               ),
           ],
         ),
-        AsyncError() => _Retry(
+        AsyncError() => ClassesRetry(
           onRetry: () => ref.invalidate(teacherClassesProvider),
         ),
         _ => const Center(child: CircularProgressIndicator()),
@@ -95,7 +99,7 @@ class ClassDetailScreen extends ConsumerWidget {
   Future<void> _assign(BuildContext context, WidgetRef ref) async {
     final picked = await showDialog<(String, DateTime?)>(
       context: context,
-      builder: (context) => const _AssignDialog(),
+      builder: (context) => const AssignLessonDialog(),
     );
     if (picked == null) return;
     try {
@@ -104,40 +108,7 @@ class ClassDetailScreen extends ConsumerWidget {
           .assign(classId, lessonId: picked.$1, due: picked.$2);
       ref.invalidate(classLessonsProvider(classId));
     } catch (_) {
-      if (context.mounted) _showProblem(context);
-    }
-  }
-
-  Future<void> _delete(
-    BuildContext context,
-    WidgetRef ref,
-    SchoolClass schoolClass,
-  ) async {
-    final l10n = AppLocalizations.of(context);
-    final ok = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        content: Text(l10n.deleteClassConfirm(schoolClass.name)),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: Text(l10n.cancelButton),
-          ),
-          FilledButton(
-            key: const Key('confirm-delete-class'),
-            onPressed: () => Navigator.pop(context, true),
-            child: Text(l10n.deleteClass),
-          ),
-        ],
-      ),
-    );
-    if (ok != true) return;
-    try {
-      await ref.read(classStoreProvider).deleteClass(schoolClass);
-      ref.invalidate(teacherClassesProvider);
-      if (context.mounted) context.pop();
-    } catch (_) {
-      if (context.mounted) _showProblem(context);
+      if (context.mounted) showClassProblem(context);
     }
   }
 
@@ -175,7 +146,7 @@ class ClassDetailScreen extends ConsumerWidget {
             key: const Key('delete-class'),
             icon: const Icon(Icons.delete_outline),
             tooltip: l10n.deleteClass,
-            onPressed: () => _delete(context, ref, schoolClass),
+            onPressed: () => confirmDeleteClass(context, ref, schoolClass),
           ),
         ],
       ),
@@ -197,7 +168,7 @@ class ClassDetailScreen extends ConsumerWidget {
             const Divider(height: 32),
             Text(l10n.classMembers, style: textTheme.titleMedium),
             if (members.hasError)
-              _Retry(
+              ClassesRetry(
                 onRetry: () => ref.invalidate(classMembersProvider(classId)),
               )
             else if (members.isLoading)
@@ -253,14 +224,14 @@ class ClassDetailScreen extends ConsumerWidget {
                                 .unassign(classId, a.id);
                             ref.invalidate(classLessonsProvider(classId));
                           } catch (_) {
-                            if (context.mounted) _showProblem(context);
+                            if (context.mounted) showClassProblem(context);
                           }
                         },
                       ),
                     ),
                 ],
               ),
-              AsyncError() => _Retry(
+              AsyncError() => ClassesRetry(
                 onRetry: () => ref.invalidate(classLessonsProvider(classId)),
               ),
               _ => const Center(child: CircularProgressIndicator()),
@@ -406,14 +377,15 @@ class _NewClassDialogState extends State<_NewClassDialog> {
 }
 
 /// Picks a lesson and an optional due date.
-class _AssignDialog extends ConsumerStatefulWidget {
-  const _AssignDialog();
+/// Returns the lesson id and the due date (or null).
+class AssignLessonDialog extends ConsumerStatefulWidget {
+  const AssignLessonDialog({super.key});
 
   @override
-  ConsumerState<_AssignDialog> createState() => _AssignDialogState();
+  ConsumerState<AssignLessonDialog> createState() => _AssignLessonDialogState();
 }
 
-class _AssignDialogState extends ConsumerState<_AssignDialog> {
+class _AssignLessonDialogState extends ConsumerState<AssignLessonDialog> {
   String? _lesson;
   DateTime? _due;
 
@@ -486,8 +458,9 @@ class _AssignDialogState extends ConsumerState<_AssignDialog> {
   }
 }
 
-class _Retry extends StatelessWidget {
-  const _Retry({required this.onRetry});
+/// "This needs internet" with a Try again button.
+class ClassesRetry extends StatelessWidget {
+  const ClassesRetry({super.key, required this.onRetry});
 
   final VoidCallback onRetry;
 
@@ -510,7 +483,42 @@ class _Retry extends StatelessWidget {
   }
 }
 
-void _showProblem(BuildContext context) => ScaffoldMessenger.of(context)
+/// Asks, then deletes the class and goes back.
+Future<void> confirmDeleteClass(
+  BuildContext context,
+  WidgetRef ref,
+  SchoolClass schoolClass,
+) async {
+  final l10n = AppLocalizations.of(context);
+  final ok = await showDialog<bool>(
+    context: context,
+    builder: (context) => AlertDialog(
+      content: Text(l10n.deleteClassConfirm(schoolClass.name)),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.pop(context, false),
+          child: Text(l10n.cancelButton),
+        ),
+        FilledButton(
+          key: const Key('confirm-delete-class'),
+          onPressed: () => Navigator.pop(context, true),
+          child: Text(l10n.deleteClass),
+        ),
+      ],
+    ),
+  );
+  if (ok != true) return;
+  try {
+    await ref.read(classStoreProvider).deleteClass(schoolClass);
+    ref.invalidate(teacherClassesProvider);
+    if (context.mounted) context.pop();
+  } catch (_) {
+    if (context.mounted) showClassProblem(context);
+  }
+}
+
+/// A short "this needs internet" message.
+void showClassProblem(BuildContext context) => ScaffoldMessenger.of(context)
     .showSnackBar(
       SnackBar(content: Text(AppLocalizations.of(context).classNoConnection)),
     );

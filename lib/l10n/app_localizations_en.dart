@@ -1165,4 +1165,52 @@ class AppLocalizationsEn extends AppLocalizations {
   String mistakeStudents(String names) {
     return 'Made by: $names';
   }
+
+  @override
+  String get dashboardTitle => 'Teacher dashboard';
+
+  @override
+  String get dashboardSignIn =>
+      'Sign in with your teacher account from the app.';
+
+  @override
+  String get createTeacherAccount => 'Create a teacher account';
+
+  @override
+  String get tabMastery => 'Mastery';
+
+  @override
+  String get tabMistakes => 'Mistakes';
+
+  @override
+  String get tabNeedsHelp => 'Needs help';
+
+  @override
+  String get tabLessons => 'Lessons';
+
+  @override
+  String get noMistakesYet => 'No mistakes recorded yet.';
+
+  @override
+  String get nobodyStuck => 'Nobody is stuck right now.';
+
+  @override
+  String lastTried(String day) {
+    return 'Last tried $day';
+  }
+
+  @override
+  String mistakeIn(String lesson) {
+    return 'In: $lesson';
+  }
+
+  @override
+  String finishedBy(String names) {
+    return 'Finished: $names';
+  }
+
+  @override
+  String notFinishedBy(String names) {
+    return 'Not yet: $names';
+  }
 }

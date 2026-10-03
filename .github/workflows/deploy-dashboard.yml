@@ -1,0 +1,76 @@
+name: Deploy teacher dashboard
+
+# Run by hand: Actions -> Deploy teacher dashboard -> Run workflow -> choose
+# dev or prod. Builds the teacher website (lib/dashboard/) and puts it on
+# Firebase Hosting, which is free on the Spark plan. The address is shown
+# in the run's summary (https://<project>.web.app).
+# Needs the GitHub secrets FIREBASE_SERVICE_ACCOUNT_DEV and _PROD, the same
+# key files the AI server uses. The first run registers a "Teacher
+# dashboard" web app in the Firebase project; its settings are public.
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Which Firebase project
+        type: choice
+        options: [dev, prod]
+        default: dev
+
+concurrency:
+  group: deploy-dashboard-${{ inputs.target }}
+  cancel-in-progress: false
+
+env:
+  FLUTTER_VERSION: 3.47.6
+
+jobs:
+  deploy:
+    name: Deploy to ${{ inputs.target }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+          cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: flutter pub get
+      # Never deploy code whose tests fail.
+      - run: flutter test
+      - name: Sign in to Firebase
+        env:
+          TARGET: ${{ inputs.target }}
+          SA_DEV: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEV }}
+          SA_PROD: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROD }}
+        run: |
+          if [ "$TARGET" = "dev" ]; then sa="$SA_DEV"; else sa="$SA_PROD"; fi
+          if [ -z "$sa" ]; then
+            echo "::error::The GitHub secret FIREBASE_SERVICE_ACCOUNT_${TARGET^^} is missing."
+            exit 1
+          fi
+          key="$RUNNER_TEMP/firebase-key.json"
+          printf '%s' "$sa" > "$key"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$key" >> "$GITHUB_ENV"
+          echo "PROJECT=$(jq -r .project_id "$key")" >> "$GITHUB_ENV"
+      - name: Get the web app's settings
+        run: |
+          set -o pipefail
+          fb="npx --yes firebase-tools@15"
+          app=$($fb apps:list WEB --project "$PROJECT" --json --non-interactive \
+            | jq -r '[.result[] | select(.displayName == "Teacher dashboard")][0].appId // empty')
+          if [ -z "$app" ]; then
+            app=$($fb apps:create WEB "Teacher dashboard" --project "$PROJECT" --json --non-interactive | jq -r '.result.appId')
+          fi
+          $fb apps:sdkconfig WEB "$app" --project "$PROJECT" --json --non-interactive > sdkconfig.json
+          jq -e '.result.sdkConfig' sdkconfig.json > config.json
+          jq -r '"--dart-define=FIREBASE_API_KEY=\(.apiKey) --dart-define=FIREBASE_APP_ID=\(.appId) --dart-define=FIREBASE_SENDER_ID=\(.messagingSenderId) --dart-define=FIREBASE_PROJECT_ID=\(.projectId) --dart-define=FIREBASE_AUTH_DOMAIN=\(.authDomain) --dart-define=FIREBASE_STORAGE_BUCKET=\(.storageBucket // "")"' config.json > defines.txt
+      - name: Build
+        run: flutter build web --release -t lib/dashboard/main_dashboard.dart $(cat defines.txt)
+      - name: Deploy
+        run: |
+          npx --yes firebase-tools@15 deploy --only hosting --project "$PROJECT" --non-interactive
+          echo "Teacher dashboard (${{ inputs.target }}): https://$PROJECT.web.app" >> "$GITHUB_STEP_SUMMARY"

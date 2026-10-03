@@ -1170,4 +1170,51 @@ class AppLocalizationsUr extends AppLocalizations {
   String mistakeStudents(String names) {
     return 'جنہوں نے کی: $names';
   }
+
+  @override
+  String get dashboardTitle => 'اساتذہ کا ڈیش بورڈ';
+
+  @override
+  String get dashboardSignIn => 'ایپ والے اپنے استاد اکاؤنٹ سے سائن اِن کریں۔';
+
+  @override
+  String get createTeacherAccount => 'استاد اکاؤنٹ بنائیں';
+
+  @override
+  String get tabMastery => 'مہارت';
+
+  @override
+  String get tabMistakes => 'غلطیاں';
+
+  @override
+  String get tabNeedsHelp => 'مدد چاہیے';
+
+  @override
+  String get tabLessons => 'اسباق';
+
+  @override
+  String get noMistakesYet => 'ابھی کوئی غلطی درج نہیں ہوئی۔';
+
+  @override
+  String get nobodyStuck => 'اس وقت کوئی نہیں اٹکا۔';
+
+  @override
+  String lastTried(String day) {
+    return 'آخری کوشش $day';
+  }
+
+  @override
+  String mistakeIn(String lesson) {
+    return 'سبق: $lesson';
+  }
+
+  @override
+  String finishedBy(String names) {
+    return 'مکمل کیا: $names';
+  }
+
+  @override
+  String notFinishedBy(String names) {
+    return 'ابھی نہیں: $names';
+  }
 }

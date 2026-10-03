@@ -1,6 +1,6 @@
 # Phase 9 plan: parents and teachers
 
-Status: approved 2026-10-03. Step 1 (classes) built; steps 2 and 3 next.
+Status: approved 2026-10-03. Steps 1 (classes) and 2 (teacher dashboard) built; step 3 next.
 Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 9.
 
 **Goal:** adults can see and support learning.
@@ -72,3 +72,17 @@ Each step is one pull request. Testing with a real teacher and parent comes afte
 - **Rules:** only a teacher account creates classes, each code is used once, a code can be looked up but codes can't be listed, only the family's own phone writes its child's summary (with only the fields above), only the class's teacher reads the summaries, and only the teacher assigns lessons. Tested on the emulator in `tools/firestore-rules`.
 
 **For Shahid after merging:** paste the new `firestore.rules` into both Firebase projects (Firestore → Rules → Publish), as before.
+
+## Step 2 as built
+
+- **The website** is the same Flutter code built for the web from `lib/dashboard/main_dashboard.dart`. It reads Firestore directly with the teacher's sign-in, so it needs no server and no AI. Lessons come from the app's bundle plus newer ones published to Firestore.
+- **Sign in** with the teacher account from the app, or create a teacher account there. The home page lists the teacher's classes; **New class** works as in the app.
+- **A class** has four tabs:
+  - **Mastery:** students down, skills across, each cell coloured by level with its first letter; a red border means "needs help".
+  - **Mistakes:** the class's misconceptions in the lesson's own words, the ones most students made first, with who made them and how often.
+  - **Needs help:** each stuck student, the skill, and the day they last tried it.
+  - **Lessons:** assign a lesson with a due date, and see who has finished and who has not.
+- **Content review** stays in the dev app for now: its screens play lessons, which needs the phone's database.
+- **Deploying:** Actions → **Deploy teacher dashboard** → Run workflow → dev or prod. The first run registers a "Teacher dashboard" web app in that Firebase project. The address is shown in the run's summary: `https://<project>.web.app`.
+
+**For Shahid:** run the workflow for dev. If it stops with "permission denied", the Firebase key needs one more role; see the steps in the thread.

@@ -2047,6 +2047,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Made by: {names}'**
   String mistakeStudents(String names);
+
+  /// Title of the teacher website.
+  ///
+  /// In en, this message translates to:
+  /// **'Teacher dashboard'**
+  String get dashboardTitle;
+
+  /// On the teacher website before signing in.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with your teacher account from the app.'**
+  String get dashboardSignIn;
+
+  /// Button on the teacher website.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a teacher account'**
+  String get createTeacherAccount;
+
+  /// Tab with the students × skills grid.
+  ///
+  /// In en, this message translates to:
+  /// **'Mastery'**
+  String get tabMastery;
+
+  /// Tab with the class's recurring mistakes.
+  ///
+  /// In en, this message translates to:
+  /// **'Mistakes'**
+  String get tabMistakes;
+
+  /// Tab with stuck students.
+  ///
+  /// In en, this message translates to:
+  /// **'Needs help'**
+  String get tabNeedsHelp;
+
+  /// Tab with assigned lessons.
+  ///
+  /// In en, this message translates to:
+  /// **'Lessons'**
+  String get tabLessons;
+
+  /// Mistakes tab with nothing in it.
+  ///
+  /// In en, this message translates to:
+  /// **'No mistakes recorded yet.'**
+  String get noMistakesYet;
+
+  /// Needs-help tab with nobody in it.
+  ///
+  /// In en, this message translates to:
+  /// **'Nobody is stuck right now.'**
+  String get nobodyStuck;
+
+  /// When a stuck student last practised the skill.
+  ///
+  /// In en, this message translates to:
+  /// **'Last tried {day}'**
+  String lastTried(String day);
+
+  /// Which lesson a mistake came from.
+  ///
+  /// In en, this message translates to:
+  /// **'In: {lesson}'**
+  String mistakeIn(String lesson);
+
+  /// Students who finished an assigned lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Finished: {names}'**
+  String finishedBy(String names);
+
+  /// Students who haven't finished an assigned lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Not yet: {names}'**
+  String notFinishedBy(String names);
 }
 
 class _AppLocalizationsDelegate
