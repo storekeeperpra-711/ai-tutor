@@ -609,18 +609,6 @@ class AppLocalizationsUr extends AppLocalizations {
   String get mithuNotesEmpty => 'ابھی کوئی نوٹ نہیں۔';
 
   @override
-  String get weeklyReport => 'ہفتہ وار رپورٹ';
-
-  @override
-  String get weeklyReportNone =>
-      'ابھی کوئی رپورٹ نہیں۔ رپورٹ اتوار کی شام ان بچوں کے لیے لکھی جاتی ہے جنہوں نے اس ہفتے مشق کی۔';
-
-  @override
-  String weeklyReportStats(int days, int lessons, int questions) {
-    return 'مشق کے $days دن · $lessons سبق مکمل · $questions سوالوں کے جواب';
-  }
-
-  @override
   String get needsInternet => 'انٹرنیٹ سے جڑیں اور دوبارہ کوشش کریں۔';
 
   @override
@@ -1217,4 +1205,77 @@ class AppLocalizationsUr extends AppLocalizations {
   String notFinishedBy(String names) {
     return 'ابھی نہیں: $names';
   }
+
+  @override
+  String get reportButton => 'رپورٹ';
+
+  @override
+  String reportTitle(String name) {
+    return '$name کا ہفتہ';
+  }
+
+  @override
+  String get reportListen => 'سنیں';
+
+  @override
+  String get reportStop => 'روکیں';
+
+  @override
+  String get reportLearnedHeading => 'سیکھا';
+
+  @override
+  String get reportPracticeHeading => 'مشق';
+
+  @override
+  String get reportHomeHeading => 'گھر پر';
+
+  @override
+  String get reportEffortHeading => 'محنت';
+
+  @override
+  String reportLearned(String name, String skills) {
+    return 'اس ہفتے $name نے سیکھا: $skills۔';
+  }
+
+  @override
+  String reportLearnedNone(String name) {
+    return '$name کی اگلی مہارت پر محنت جاری ہے۔ یہ معمول کی بات ہے؛ سمجھنے میں وقت لگتا ہے۔';
+  }
+
+  @override
+  String reportWorkingOn(String skills) {
+    return 'ابھی اس پر کام جاری ہے: $skills۔';
+  }
+
+  @override
+  String reportNeedsHelp(String name, String skill) {
+    return '$name کو $skill مشکل لگ رہا ہے۔ مشق کے وقت چند منٹ $name کے ساتھ بیٹھیں۔';
+  }
+
+  @override
+  String reportReview(String skill, String day) {
+    return '$skill کی مشق $day کو دوبارہ آئے گی۔';
+  }
+
+  @override
+  String get reportPracticeNone => 'اس وقت کسی چیز کی اضافی مشق کی ضرورت نہیں۔';
+
+  @override
+  String get reportHomeNone => 'اس ہفتے گھر کی کوئی سرگرمی نہیں۔';
+
+  @override
+  String reportEffort(String name, int days, int questions) {
+    return '$name نے پچھلے 7 دنوں میں سے $days دن مشق کی اور $questions سوالوں کے جواب دیے۔';
+  }
+
+  @override
+  String get reportNoUrduVoice =>
+      'اس فون میں ابھی اردو آواز نہیں، اس لیے رپورٹ انگریزی میں پڑھی جائے گی۔ اردو شامل کرنے کے لیے: فون کی سیٹنگز کھولیں، \"Text-to-speech\" تلاش کریں، Google چنیں، پھر \"Install voice data\" اور Urdu۔';
+
+  @override
+  String get reportNoVoice =>
+      'یہ فون بول کر نہیں پڑھ سکتا۔ تصویریں رپورٹ دکھاتی ہیں۔';
+
+  @override
+  String get reportMithuNote => 'مٹھو کا پیغام';
 }

@@ -71,7 +71,7 @@ void main() {
     expect(find.byKey(const Key('mithu-notes-card')), findsNothing);
   });
 
-  testWidgets('a parent reads the weekly report, and offline is explained', (
+  testWidgets("Mithu's weekly note ends the report when online", (
     tester,
   ) async {
     final backend = FakeBackend();
@@ -82,23 +82,26 @@ void main() {
         .docs['accounts/$uid/students/${ayesha.id}/reports/2026-10-04'] = {
       'week': '2026-10-04',
       'note': {'en': 'Ayesha practised well.', 'ur': 'عائشہ نے اچھی مشق کی۔'},
-      'stats': {
-        'active_days': 4,
-        'lessons_finished': 2,
-        'questions_answered': 30,
-      },
+      'stats': {'active_days': 4},
     };
 
     await tapKey(tester, 'open-account');
     await tapKey(tester, 'report-${ayesha.id}');
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('report-mithu-note')),
+      300,
+    );
     expect(find.text('Ayesha practised well.'), findsOneWidget);
-    expect(find.textContaining('4 days of practice'), findsOneWidget);
-    await tester.tap(find.text('Close'));
-    await tester.pumpAndSettle();
+    await goBack(tester);
 
+    // Offline, the report still works, without the note.
     backend.setOnline(false);
     await tapKey(tester, 'report-${ayesha.id}');
-    expect(find.byKey(const Key('report-error')), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('report-part-effort')),
+      300,
+    );
+    expect(find.byKey(const Key('report-mithu-note')), findsNothing);
   });
 
   testWidgets('the cost dashboard shows AI use per student per day', (
