@@ -2,8 +2,12 @@ name: Deploy AI server
 
 # Run by hand: Actions -> Deploy AI server -> Run workflow -> choose dev or prod.
 # Needs the GitHub secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID
-# (docs/setup/ai-setup.md). The Claude key and the Firebase service account
-# are never here: they are secrets in the Cloudflare dashboard.
+# (docs/setup/ai-setup.md). It also copies the server's own secrets from
+# GitHub secrets into the Worker, when they are set:
+#   ANTHROPIC_API_KEY                                   the Claude API key
+#   FIREBASE_SERVICE_ACCOUNT_DEV / _PROD                the Firebase key file's text
+#   ADMIN_EMAILS                                        who sees every student's cost
+# GitHub never shows a secret again, and the logs hide them.
 on:
   workflow_dispatch:
     inputs:
@@ -49,3 +53,27 @@ jobs:
           # The Worker's address, for the app (lib/ai/ai_service.dart).
           url=$(grep -o 'https://[a-z0-9.-]*workers\.dev' deploy.log | head -n 1)
           echo "AI server ($TARGET): ${url:-see the log above}" >> "$GITHUB_STEP_SUMMARY"
+      - name: Give the server its secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TARGET: ${{ inputs.target }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SA_DEV: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEV }}
+          SA_PROD: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROD }}
+          ADMIN_EMAILS: ${{ secrets.ADMIN_EMAILS }}
+        run: |
+          # Each server gets its own Firebase project's key.
+          if [ "$TARGET" = "dev" ]; then export FIREBASE_SERVICE_ACCOUNT="$SA_DEV"; else export FIREBASE_SERVICE_ACCOUNT="$SA_PROD"; fi
+          # Only the secrets that are set; ones added in the Cloudflare
+          # dashboard instead are left alone.
+          secrets=$(jq -n 'env | {ANTHROPIC_API_KEY, FIREBASE_SERVICE_ACCOUNT, ADMIN_EMAILS}
+            | with_entries(select(.value != null and .value != ""))')
+          names=$(echo "$secrets" | jq -r 'keys | join(", ")')
+          if [ -z "$names" ]; then
+            echo "No server secrets in GitHub; skipping." | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if [ "$TARGET" = "dev" ]; then env_flag="--env=dev"; else env_flag=""; fi
+          echo "$secrets" | npx wrangler secret bulk $env_flag
+          echo "Server secrets set: $names" >> "$GITHUB_STEP_SUMMARY"

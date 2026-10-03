@@ -18,7 +18,7 @@ The AI server for AI Tutor (Phase 6): a Cloudflare Worker that calls Claude. The
 
 ## Secrets
 
-The Claude API key and the Firebase service account key are **never** in this repository or the app. They are Worker secrets, set in the Cloudflare dashboard: `ANTHROPIC_API_KEY`, `FIREBASE_SERVICE_ACCOUNT`, plus the text variable `ADMIN_EMAILS`. Setup steps: [docs/setup/ai-setup.md](../docs/setup/ai-setup.md).
+The Claude API key and the Firebase service account key are **never** in this repository or the app. They are Worker secrets, copied from GitHub secrets by the deploy workflow (or set in the Cloudflare dashboard): `ANTHROPIC_API_KEY`, `FIREBASE_SERVICE_ACCOUNT`, and `ADMIN_EMAILS`. Setup steps: [docs/setup/ai-setup.md](../docs/setup/ai-setup.md).
 
 ## Commands
 
