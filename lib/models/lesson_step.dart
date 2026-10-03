@@ -20,6 +20,8 @@ sealed class LessonStep {
         'sim' => SimStep.fromJson(json),
         'video' => VideoStep.fromJson(json),
         'lottie' => LottieStep.fromJson(json),
+        'ai_explain' => AiExplainStep.fromJson(json),
+        'photo_check' => PhotoCheckStep.fromJson(json),
         _ => UnsupportedStep(
           id: json['id'] as String,
           type: json['type'] as String,
@@ -400,8 +402,118 @@ class LottieStep extends LessonStep {
   final CharacterLine? character;
 }
 
-/// A step type that is valid in the schema but not playable yet
-/// (ai_explain, photo_check).
+/// The student explains an idea in their own words, or makes up their own
+/// question (Phase 6). The server writes AI feedback from the step's
+/// `key_idea` and `levels` (which only the server reads); offline, the
+/// [keywords] score the answer on the phone.
+@JsonSerializable()
+class AiExplainStep extends LessonStep implements QuestionStep {
+  const AiExplainStep({
+    required super.id,
+    required super.type,
+    this.questionType,
+    this.skill,
+    required this.task,
+    required this.keywords,
+    required this.fallbackFeedback,
+    this.taskKind = 'explain',
+    this.limitPerDay = 3,
+    this.maxAttempts = 2,
+    this.character,
+  });
+
+  factory AiExplainStep.fromJson(Map<String, dynamic> json) =>
+      _$AiExplainStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
+
+  /// explain or own_question.
+  final String taskKind;
+  final LocalizedText task;
+
+  /// Groups of words; each group is one idea (English, Urdu, Roman Urdu).
+  final List<List<String>> keywords;
+  final FeedbackLevels fallbackFeedback;
+  final int limitPerDay;
+  final int maxAttempts;
+  final CharacterLine? character;
+}
+
+/// Feedback for each level of an explanation.
+@JsonSerializable()
+class FeedbackLevels {
+  const FeedbackLevels({
+    required this.gotIt,
+    required this.partly,
+    required this.notYet,
+  });
+
+  factory FeedbackLevels.fromJson(Map<String, dynamic> json) =>
+      _$FeedbackLevelsFromJson(json);
+
+  final LocalizedText gotIt;
+  final LocalizedText partly;
+  final LocalizedText notYet;
+}
+
+/// The student solves a problem in their notebook and sends a photo
+/// (Phase 6). AI reads the working, the student confirms it, and the
+/// [checker] decides.
+@JsonSerializable()
+class PhotoCheckStep extends LessonStep implements QuestionStep {
+  const PhotoCheckStep({
+    required super.id,
+    required super.type,
+    this.questionType,
+    this.skill,
+    required this.problem,
+    required this.checker,
+    required this.expected,
+    required this.hint,
+    required this.feedbackCorrect,
+    required this.correctWorking,
+    this.variable = 'x',
+    this.tolerance = 0,
+    this.requireSimplest = false,
+    this.commonWrong = const [],
+    this.limitPerDay = 2,
+    this.maxAttempts = 3,
+    this.character,
+  });
+
+  factory PhotoCheckStep.fromJson(Map<String, dynamic> json) =>
+      _$PhotoCheckStepFromJson(json);
+
+  @override
+  final String? questionType;
+  @override
+  final String? skill;
+
+  final LocalizedText problem;
+
+  /// numeric, fraction, chem_equation or linear_equation.
+  final String checker;
+  final String expected;
+  final String variable;
+  final double tolerance;
+  final bool requireSimplest;
+  final LocalizedText hint;
+  final LocalizedText feedbackCorrect;
+  final LocalizedText correctWorking;
+  final List<CommonWrongText> commonWrong;
+  final int limitPerDay;
+  final int maxAttempts;
+  final CharacterLine? character;
+
+  /// linear_equation checks every line; the others the final answer.
+  bool get checksWorking => checker == 'linear_equation';
+}
+
+/// A step type that is valid in the schema but this version of the app
+/// can't play.
 class UnsupportedStep extends LessonStep {
   const UnsupportedStep({required super.id, required super.type});
 }

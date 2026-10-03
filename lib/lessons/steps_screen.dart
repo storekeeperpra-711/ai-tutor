@@ -10,11 +10,13 @@ class StepsScreen extends StatefulWidget {
   const StepsScreen({
     super.key,
     required this.title,
+    required this.lessonId,
     required this.steps,
     required this.onStepDone,
   });
 
   final String title;
+  final String lessonId;
   final List<LessonStep> steps;
   final Future<void> Function(LessonStep step, StepResult result) onStepDone;
 
@@ -40,7 +42,10 @@ class _StepsScreenState extends State<StepsScreen> {
     final step = widget.steps[_index];
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
-      body: KeyedSubtree(key: ValueKey(step.id), child: buildStep(step, _done)),
+      body: KeyedSubtree(
+        key: ValueKey(step.id),
+        child: buildStep(step, _done, lessonId: widget.lessonId),
+      ),
     );
   }
 }

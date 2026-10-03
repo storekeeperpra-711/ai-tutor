@@ -111,7 +111,11 @@ class _PracticeScreenState extends ConsumerState<PracticeScreen> {
             Expanded(
               child: KeyedSubtree(
                 key: ValueKey(items[_index].key),
-                child: buildStep(items[_index].question.step, _done),
+                child: buildStep(
+                  items[_index].question.step,
+                  _done,
+                  lessonId: items[_index].question.lessonId,
+                ),
               ),
             ),
           ],

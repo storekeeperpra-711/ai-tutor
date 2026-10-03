@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:ai_tutor/ai/ai_service.dart';
+import 'package:ai_tutor/ai/keyword_fallback.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/local_db.dart';
@@ -14,10 +16,15 @@ class FakeBackend {
   FakeBackend() {
     auth = FakeAuthService(this);
     remote = FakeRemoteStore(this);
+    ai = FakeAiService(this);
   }
 
   late final FakeAuthService auth;
   late final FakeRemoteStore remote;
+  late final FakeAiService ai;
+
+  /// What the fake camera returns; null = the child cancelled.
+  Uint8List? photo = Uint8List.fromList([0xff, 0xd8, 0xff]);
 
   /// The phone's database, in memory.
   final db = LocalDb(
@@ -44,8 +51,111 @@ class FakeBackend {
   }
 }
 
+/// A pretend AI proxy. Offline it throws [AiUnavailable], like the real
+/// one. By default it scores explanations with the keywords and reads
+/// photos as [photoLines].
+class FakeAiService implements AiService {
+  FakeAiService(this._backend);
+
+  final FakeBackend _backend;
+
+  /// Keyword groups by step id, so the fake can grade like a teacher would.
+  final keywords = <String, List<List<String>>>{};
+
+  /// Set to make the server answer with a fallback (e.g. step_limit).
+  String? fallbackReason;
+
+  /// What the "AI" reads in the next photo.
+  List<String> photoLines = const [];
+  bool photoReadable = true;
+
+  final explained = <String>[];
+  final verdicts = <String>[];
+  var photosRead = 0;
+
+  void _online() {
+    if (!_backend.online) throw const AiUnavailable('offline');
+  }
+
+  @override
+  Future<AiFeedback> explain({
+    required String studentId,
+    required String lessonId,
+    required String stepId,
+    required String language,
+    required String answer,
+  }) async {
+    _online();
+    explained.add(answer);
+    if (fallbackReason case final reason?) return AiFeedback.fallback(reason);
+    // Without keywords for the step: a long answer "gets it".
+    final groups = keywords[stepId];
+    final level = groups != null
+        ? scoreByKeywords(answer, groups)
+        : answer.length >= 20
+        ? AiLevel.gotIt
+        : AiLevel.notYet;
+    return AiFeedback.ai(level, 'AI ($language): ${level.id}');
+  }
+
+  @override
+  Future<AiFeedback> explainVerdict({
+    required String studentId,
+    required String lessonId,
+    required String stepId,
+    required String language,
+    required String working,
+    required String checkerMessage,
+  }) async {
+    _online();
+    verdicts.add(checkerMessage);
+    if (fallbackReason case final reason?) return AiFeedback.fallback(reason);
+    return AiFeedback.ai(AiLevel.notYet, 'AI explains: $checkerMessage');
+  }
+
+  @override
+  Future<PhotoReading> readPhoto({
+    required String studentId,
+    required String lessonId,
+    required String stepId,
+    required Uint8List photo,
+  }) async {
+    _online();
+    photosRead++;
+    if (fallbackReason case final reason?) return PhotoReading.fallback(reason);
+    return PhotoReading.ai(
+      readable: photoReadable,
+      lines: photoLines,
+      finalAnswer: photoLines.isEmpty ? '' : photoLines.last,
+    );
+  }
+
+  @override
+  Future<CostReport> costs() async {
+    _online();
+    return const CostReport(
+      all: false,
+      totalUsd: 0.0045,
+      rows: [
+        CostRow(
+          day: '2026-10-03',
+          studentId: 's1',
+          calls: 3,
+          text: 2,
+          photo: 1,
+          costUsd: 0.0045,
+        ),
+      ],
+    );
+  }
+}
+
 class FakeAuthService implements AuthService {
   FakeAuthService(this._backend);
+
+  @override
+  Future<String?> idToken() async =>
+      _user == null ? null : 'token-${_user!.uid}';
 
   final FakeBackend _backend;
   final _changes = StreamController<AppUser?>.broadcast();
@@ -220,6 +330,48 @@ class FakeRemoteStore implements RemoteStore {
       steps: steps,
       skills: skills,
     );
+  }
+
+  @override
+  Future<void> putQueuedAnswer(String uid, QueuedAnswer answer) => _write(() {
+    docs['ai_queue/${answer.id}'] = queuedToJson(uid, answer);
+  });
+
+  @override
+  Future<Map<String, QueueReply>> fetchReplies(
+    String uid,
+    List<String> ids,
+  ) async {
+    if (!_backend.online) throw StateError('offline');
+    return {
+      for (final id in ids)
+        if (docs['ai_queue/$id'] case final d?
+            when d['uid'] == uid && d['status'] != 'waiting')
+          id: QueueReply(
+            status: d['status'] == 'answered' ? 'answered' : 'failed',
+            level: d['level'] as String?,
+            reply: d['reply'] as String?,
+          ),
+    };
+  }
+
+  @override
+  Future<List<WeeklyReport>> fetchReports(String uid, String studentId) async {
+    if (!_backend.online) throw StateError('offline');
+    final prefix = 'accounts/$uid/students/$studentId/reports/';
+    final paths = docs.keys.where((p) => p.startsWith(prefix)).toList()
+      ..sort((a, b) => b.compareTo(a));
+    return [for (final p in paths) reportFromJson(Map.of(docs[p]!))];
+  }
+
+  /// The batch job answering a queued answer on the "server".
+  void answerQueued(String id, {required String level, required String reply}) {
+    docs['ai_queue/$id'] = {
+      ...docs['ai_queue/$id']!,
+      'status': 'answered',
+      'level': level,
+      'reply': reply,
+    };
   }
 
   /// The progress document of one lesson, for checks.

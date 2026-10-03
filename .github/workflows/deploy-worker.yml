@@ -1,0 +1,51 @@
+name: Deploy AI server
+
+# Run by hand: Actions -> Deploy AI server -> Run workflow -> choose dev or prod.
+# Needs the GitHub secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID
+# (docs/setup/ai-setup.md). The Claude key and the Firebase service account
+# are never here: they are secrets in the Cloudflare dashboard.
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Which AI server to deploy
+        type: choice
+        options: [dev, prod]
+        default: dev
+
+concurrency:
+  group: deploy-worker-${{ inputs.target }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to ${{ inputs.target }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: worker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+      - run: npm ci
+      # Never deploy code whose tests fail. This also bundles the lessons.
+      - run: npm test
+      - name: Deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TARGET: ${{ inputs.target }}
+        run: |
+          if [ "$TARGET" = "dev" ]; then
+            npx wrangler deploy --env dev | tee deploy.log
+          else
+            npx wrangler deploy | tee deploy.log
+          fi
+          # The Worker's address, for the app (lib/ai/ai_service.dart).
+          url=$(grep -o 'https://[a-z0-9.-]*workers\.dev' deploy.log | head -n 1)
+          echo "AI server ($TARGET): ${url:-see the log above}" >> "$GITHUB_STEP_SUMMARY"

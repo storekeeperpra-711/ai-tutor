@@ -15,6 +15,9 @@ enum AccountRole { device, parent, teacher }
 /// accounts/{uid}                                   role
 /// accounts/{uid}/students/{studentId}              first_name, grade, ...
 /// accounts/{uid}/students/{studentId}/progress/{lessonId}
+/// accounts/{uid}/students/{studentId}/skills/{skill}
+/// accounts/{uid}/students/{studentId}/reports/{week}   (written by the server)
+/// ai_queue/{id}                                    answers waiting for AI
 /// ```
 abstract class RemoteStore {
   Future<void> setRole(String uid, AccountRole role);
@@ -30,6 +33,44 @@ abstract class RemoteStore {
 
   /// Everything saved in the account, to restore it on a new phone.
   Future<RemoteData> fetchAll(String uid);
+
+  /// An answer that waits for the batch job's AI reply (Phase 6).
+  Future<void> putQueuedAnswer(String uid, QueuedAnswer answer);
+
+  /// The server's replies to queued answers, by id. Answers still waiting
+  /// are left out.
+  Future<Map<String, QueueReply>> fetchReplies(String uid, List<String> ids);
+
+  /// Weekly notes for parents, newest first.
+  Future<List<WeeklyReport>> fetchReports(String uid, String studentId);
+}
+
+/// The batch job's reply to a queued answer.
+class QueueReply {
+  const QueueReply({required this.status, this.level, this.reply});
+
+  /// answered or failed.
+  final String status;
+  final String? level;
+  final String? reply;
+}
+
+/// A weekly note for parents (Phase 6).
+class WeeklyReport {
+  const WeeklyReport({
+    required this.week,
+    required this.noteEn,
+    required this.noteUr,
+    required this.stats,
+  });
+
+  /// The Sunday it was written, e.g. 2026-10-04.
+  final String week;
+  final String noteEn;
+  final String noteUr;
+
+  /// lessons_finished, questions_answered, active_days, skills_mastered, ...
+  final Map<String, int> stats;
 }
 
 class FirestoreRemoteStore implements RemoteStore {
@@ -72,8 +113,19 @@ class FirestoreRemoteStore implements RemoteStore {
     final student = _students(uid).doc(studentId);
     final progress = await student.collection('progress').get();
     final skills = await student.collection('skills').get();
+    final reports = await student.collection('reports').get();
+    final queued = await _db
+        .collection('ai_queue')
+        .where('uid', isEqualTo: uid)
+        .where('student_id', isEqualTo: studentId)
+        .get();
     final batch = _db.batch();
-    for (final doc in [...progress.docs, ...skills.docs]) {
+    for (final doc in [
+      ...progress.docs,
+      ...skills.docs,
+      ...reports.docs,
+      ...queued.docs,
+    ]) {
       batch.delete(doc.reference);
     }
     batch.delete(student);
@@ -107,9 +159,77 @@ class FirestoreRemoteStore implements RemoteStore {
       skills: skills,
     );
   }
+
+  @override
+  Future<void> putQueuedAnswer(String uid, QueuedAnswer answer) =>
+      _db.collection('ai_queue').doc(answer.id).set(queuedToJson(uid, answer));
+
+  @override
+  Future<Map<String, QueueReply>> fetchReplies(
+    String uid,
+    List<String> ids,
+  ) async {
+    final replies = <String, QueueReply>{};
+    // Firestore allows up to 30 ids in one `whereIn`.
+    for (var i = 0; i < ids.length; i += 30) {
+      final chunk = ids.sublist(i, (i + 30).clamp(0, ids.length));
+      final snap = await _db
+          .collection('ai_queue')
+          .where('uid', isEqualTo: uid)
+          .where(FieldPath.documentId, whereIn: chunk)
+          .get();
+      for (final doc in snap.docs) {
+        final status = doc.data()['status'] as String?;
+        if (status == 'answered' || status == 'failed' || status == 'skipped') {
+          replies[doc.id] = QueueReply(
+            status: status == 'answered' ? 'answered' : 'failed',
+            level: doc.data()['level'] as String?,
+            reply: doc.data()['reply'] as String?,
+          );
+        }
+      }
+    }
+    return replies;
+  }
+
+  @override
+  Future<List<WeeklyReport>> fetchReports(String uid, String studentId) async {
+    final snap = await _students(uid)
+        .doc(studentId)
+        .collection('reports')
+        .orderBy('week', descending: true)
+        .limit(8)
+        .get();
+    return [for (final doc in snap.docs) reportFromJson(doc.data())];
+  }
 }
 
 // JSON conversion, shared with the test fake.
+
+Map<String, Object?> queuedToJson(String uid, QueuedAnswer a) => {
+  'uid': uid,
+  'student_id': a.studentId,
+  'lesson_id': a.lessonId,
+  'step_id': a.stepId,
+  'lang': a.lang,
+  'answer': a.answer,
+  'created_at': Timestamp.fromDate(a.createdAt),
+  'status': 'waiting',
+};
+
+WeeklyReport reportFromJson(Map<String, dynamic> json) {
+  final note = json['note'] as Map<String, dynamic>? ?? {};
+  final stats = json['stats'] as Map<String, dynamic>? ?? {};
+  return WeeklyReport(
+    week: json['week'] as String? ?? '',
+    noteEn: note['en'] as String? ?? '',
+    noteUr: note['ur'] as String? ?? '',
+    stats: {
+      for (final e in stats.entries)
+        if (e.value is num) e.key: (e.value as num).toInt(),
+    },
+  );
+}
 
 DateTime _date(Object? value) => switch (value) {
   final Timestamp t => t.toDate(),

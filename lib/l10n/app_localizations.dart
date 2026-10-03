@@ -967,6 +967,234 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Simulations (developer)'**
   String get simGalleryTitle;
+
+  /// Shown while the AI checks an explanation.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu is reading your answer…'**
+  String get aiThinking;
+
+  /// Small label on feedback written by AI.
+  ///
+  /// In en, this message translates to:
+  /// **'Checked by AI'**
+  String get checkedByAi;
+
+  /// Small label on feedback from the offline keyword check.
+  ///
+  /// In en, this message translates to:
+  /// **'Checked by keywords'**
+  String get checkedByKeywords;
+
+  /// The answer was checked offline and waits for AI feedback.
+  ///
+  /// In en, this message translates to:
+  /// **'No internet right now. Mithu will look at your answer later.'**
+  String get aiQueued;
+
+  /// A daily AI limit was reached.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu has helped a lot today, so the app checked this one.'**
+  String get aiLimitReached;
+
+  /// Button to edit an explanation and check it again.
+  ///
+  /// In en, this message translates to:
+  /// **'Improve my answer'**
+  String get improveAnswer;
+
+  /// Help under the explanation box.
+  ///
+  /// In en, this message translates to:
+  /// **'Write in English, Urdu or Roman Urdu.'**
+  String get explainInputHelp;
+
+  /// Explanation level: shows the idea.
+  ///
+  /// In en, this message translates to:
+  /// **'Got it!'**
+  String get levelGotIt;
+
+  /// Explanation level: part of the idea.
+  ///
+  /// In en, this message translates to:
+  /// **'Partly there'**
+  String get levelPartly;
+
+  /// Explanation level: not the idea yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Not yet'**
+  String get levelNotYet;
+
+  /// Button: open the camera for notebook working.
+  ///
+  /// In en, this message translates to:
+  /// **'Take a photo'**
+  String get photoTake;
+
+  /// Button: pick a photo from the gallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a photo'**
+  String get photoChoose;
+
+  /// Button: type the working instead of a photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Type my answer instead'**
+  String get photoTypeInstead;
+
+  /// Shown while the AI reads a photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu is reading your working…'**
+  String get photoReading;
+
+  /// Above the working the AI read from the photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu read this. Fix anything that is wrong, then press Check.'**
+  String get photoConfirm;
+
+  /// The photo could not be read.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu couldn\'t read that photo. Try again in good light, or type your answer.'**
+  String get photoUnreadable;
+
+  /// No connection for a photo check.
+  ///
+  /// In en, this message translates to:
+  /// **'Photos need internet. Type your working instead.'**
+  String get photoOffline;
+
+  /// Daily photo limit reached.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu has read enough photos today. Type your working instead.'**
+  String get photoLimit;
+
+  /// Label of the box with the working.
+  ///
+  /// In en, this message translates to:
+  /// **'Your working (one step per line)'**
+  String get photoWorkingLabel;
+
+  /// Small label: the AI read the photo.
+  ///
+  /// In en, this message translates to:
+  /// **'Read by AI'**
+  String get readByAi;
+
+  /// Small label: the AI explained the checker's verdict.
+  ///
+  /// In en, this message translates to:
+  /// **'Explained by AI'**
+  String get explainedByAi;
+
+  /// Shown while the AI explains a wrong answer.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu is looking at where it went wrong…'**
+  String get photoExplaining;
+
+  /// Button to try a photo step again.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get tryAgainButton;
+
+  /// Screen with AI replies to answers that waited offline.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu\'s notes'**
+  String get mithuNotesTitle;
+
+  /// Home card when AI replies arrived.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu has new notes for you ({count})'**
+  String mithuNotesNew(int count);
+
+  /// An answer still waiting for AI feedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for Mithu'**
+  String get mithuNotesWaiting;
+
+  /// AI feedback for a queued answer failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu couldn\'t look at this one.'**
+  String get mithuNotesFailed;
+
+  /// No queued answers.
+  ///
+  /// In en, this message translates to:
+  /// **'No notes yet.'**
+  String get mithuNotesEmpty;
+
+  /// Button and title for the weekly parent report.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly report'**
+  String get weeklyReport;
+
+  /// No weekly report exists.
+  ///
+  /// In en, this message translates to:
+  /// **'No report yet. Reports are written on Sunday evenings for children who practised that week.'**
+  String get weeklyReportNone;
+
+  /// Numbers of a weekly report.
+  ///
+  /// In en, this message translates to:
+  /// **'{days} days of practice · {lessons} lessons finished · {questions} questions answered'**
+  String weeklyReportStats(int days, int lessons, int questions);
+
+  /// Something needs a connection.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect to the internet and try again.'**
+  String get needsInternet;
+
+  /// Cost dashboard title.
+  ///
+  /// In en, this message translates to:
+  /// **'AI use and cost'**
+  String get aiCostsTitle;
+
+  /// Cost dashboard shows every student (admin).
+  ///
+  /// In en, this message translates to:
+  /// **'All students in the project'**
+  String get aiCostsAll;
+
+  /// Cost dashboard shows this account's students.
+  ///
+  /// In en, this message translates to:
+  /// **'Students on this account'**
+  String get aiCostsMine;
+
+  /// Total estimated AI cost.
+  ///
+  /// In en, this message translates to:
+  /// **'Last 7 days: {cost}'**
+  String aiCostsTotal(String cost);
+
+  /// One student's AI use on one day.
+  ///
+  /// In en, this message translates to:
+  /// **'{calls} calls · {text} text · {photo} photos · {cost}'**
+  String aiCostsRow(int calls, int text, int photo, String cost);
+
+  /// Cost dashboard is empty.
+  ///
+  /// In en, this message translates to:
+  /// **'No AI use in the last 7 days.'**
+  String get aiCostsEmpty;
 }
 
 class _AppLocalizationsDelegate

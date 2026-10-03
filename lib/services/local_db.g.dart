@@ -1853,6 +1853,754 @@ class SkillStatesCompanion extends UpdateCompanion<SkillStateRow> {
   }
 }
 
+class $AiQueueTable extends AiQueue
+    with TableInfo<$AiQueueTable, QueuedAnswer> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $AiQueueTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _studentIdMeta = const VerificationMeta(
+    'studentId',
+  );
+  @override
+  late final GeneratedColumn<String> studentId = GeneratedColumn<String>(
+    'student_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES students (id)',
+    ),
+  );
+  static const VerificationMeta _lessonIdMeta = const VerificationMeta(
+    'lessonId',
+  );
+  @override
+  late final GeneratedColumn<String> lessonId = GeneratedColumn<String>(
+    'lesson_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _stepIdMeta = const VerificationMeta('stepId');
+  @override
+  late final GeneratedColumn<String> stepId = GeneratedColumn<String>(
+    'step_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _taskMeta = const VerificationMeta('task');
+  @override
+  late final GeneratedColumn<String> task = GeneratedColumn<String>(
+    'task',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _langMeta = const VerificationMeta('lang');
+  @override
+  late final GeneratedColumn<String> lang = GeneratedColumn<String>(
+    'lang',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _answerMeta = const VerificationMeta('answer');
+  @override
+  late final GeneratedColumn<String> answer = GeneratedColumn<String>(
+    'answer',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _uploadedMeta = const VerificationMeta(
+    'uploaded',
+  );
+  @override
+  late final GeneratedColumn<bool> uploaded = GeneratedColumn<bool>(
+    'uploaded',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("uploaded" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('waiting'),
+  );
+  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  @override
+  late final GeneratedColumn<String> level = GeneratedColumn<String>(
+    'level',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _replyMeta = const VerificationMeta('reply');
+  @override
+  late final GeneratedColumn<String> reply = GeneratedColumn<String>(
+    'reply',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _seenMeta = const VerificationMeta('seen');
+  @override
+  late final GeneratedColumn<bool> seen = GeneratedColumn<bool>(
+    'seen',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("seen" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    studentId,
+    lessonId,
+    stepId,
+    task,
+    lang,
+    answer,
+    createdAt,
+    uploaded,
+    status,
+    level,
+    reply,
+    seen,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'ai_queue';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<QueuedAnswer> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('student_id')) {
+      context.handle(
+        _studentIdMeta,
+        studentId.isAcceptableOrUnknown(data['student_id']!, _studentIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_studentIdMeta);
+    }
+    if (data.containsKey('lesson_id')) {
+      context.handle(
+        _lessonIdMeta,
+        lessonId.isAcceptableOrUnknown(data['lesson_id']!, _lessonIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_lessonIdMeta);
+    }
+    if (data.containsKey('step_id')) {
+      context.handle(
+        _stepIdMeta,
+        stepId.isAcceptableOrUnknown(data['step_id']!, _stepIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_stepIdMeta);
+    }
+    if (data.containsKey('task')) {
+      context.handle(
+        _taskMeta,
+        task.isAcceptableOrUnknown(data['task']!, _taskMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_taskMeta);
+    }
+    if (data.containsKey('lang')) {
+      context.handle(
+        _langMeta,
+        lang.isAcceptableOrUnknown(data['lang']!, _langMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_langMeta);
+    }
+    if (data.containsKey('answer')) {
+      context.handle(
+        _answerMeta,
+        answer.isAcceptableOrUnknown(data['answer']!, _answerMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_answerMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('uploaded')) {
+      context.handle(
+        _uploadedMeta,
+        uploaded.isAcceptableOrUnknown(data['uploaded']!, _uploadedMeta),
+      );
+    }
+    if (data.containsKey('status')) {
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
+    }
+    if (data.containsKey('level')) {
+      context.handle(
+        _levelMeta,
+        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+      );
+    }
+    if (data.containsKey('reply')) {
+      context.handle(
+        _replyMeta,
+        reply.isAcceptableOrUnknown(data['reply']!, _replyMeta),
+      );
+    }
+    if (data.containsKey('seen')) {
+      context.handle(
+        _seenMeta,
+        seen.isAcceptableOrUnknown(data['seen']!, _seenMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  QueuedAnswer map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return QueuedAnswer(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      studentId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}student_id'],
+      )!,
+      lessonId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}lesson_id'],
+      )!,
+      stepId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}step_id'],
+      )!,
+      task: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}task'],
+      )!,
+      lang: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}lang'],
+      )!,
+      answer: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}answer'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+      uploaded: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}uploaded'],
+      )!,
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      level: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}level'],
+      ),
+      reply: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}reply'],
+      ),
+      seen: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}seen'],
+      )!,
+    );
+  }
+
+  @override
+  $AiQueueTable createAlias(String alias) {
+    return $AiQueueTable(attachedDatabase, alias);
+  }
+}
+
+class QueuedAnswer extends DataClass implements Insertable<QueuedAnswer> {
+  /// Also the Firestore document id in `ai_queue`.
+  final String id;
+  final String studentId;
+  final String lessonId;
+  final String stepId;
+
+  /// The question, so the notes screen can show it without the lesson.
+  final String task;
+  final String lang;
+  final String answer;
+  final DateTime createdAt;
+  final bool uploaded;
+
+  /// waiting, answered or failed (the server's status).
+  final String status;
+  final String? level;
+  final String? reply;
+
+  /// The child has opened Mithu's reply.
+  final bool seen;
+  const QueuedAnswer({
+    required this.id,
+    required this.studentId,
+    required this.lessonId,
+    required this.stepId,
+    required this.task,
+    required this.lang,
+    required this.answer,
+    required this.createdAt,
+    required this.uploaded,
+    required this.status,
+    this.level,
+    this.reply,
+    required this.seen,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['student_id'] = Variable<String>(studentId);
+    map['lesson_id'] = Variable<String>(lessonId);
+    map['step_id'] = Variable<String>(stepId);
+    map['task'] = Variable<String>(task);
+    map['lang'] = Variable<String>(lang);
+    map['answer'] = Variable<String>(answer);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    map['uploaded'] = Variable<bool>(uploaded);
+    map['status'] = Variable<String>(status);
+    if (!nullToAbsent || level != null) {
+      map['level'] = Variable<String>(level);
+    }
+    if (!nullToAbsent || reply != null) {
+      map['reply'] = Variable<String>(reply);
+    }
+    map['seen'] = Variable<bool>(seen);
+    return map;
+  }
+
+  AiQueueCompanion toCompanion(bool nullToAbsent) {
+    return AiQueueCompanion(
+      id: Value(id),
+      studentId: Value(studentId),
+      lessonId: Value(lessonId),
+      stepId: Value(stepId),
+      task: Value(task),
+      lang: Value(lang),
+      answer: Value(answer),
+      createdAt: Value(createdAt),
+      uploaded: Value(uploaded),
+      status: Value(status),
+      level: level == null && nullToAbsent
+          ? const Value.absent()
+          : Value(level),
+      reply: reply == null && nullToAbsent
+          ? const Value.absent()
+          : Value(reply),
+      seen: Value(seen),
+    );
+  }
+
+  factory QueuedAnswer.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return QueuedAnswer(
+      id: serializer.fromJson<String>(json['id']),
+      studentId: serializer.fromJson<String>(json['studentId']),
+      lessonId: serializer.fromJson<String>(json['lessonId']),
+      stepId: serializer.fromJson<String>(json['stepId']),
+      task: serializer.fromJson<String>(json['task']),
+      lang: serializer.fromJson<String>(json['lang']),
+      answer: serializer.fromJson<String>(json['answer']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      uploaded: serializer.fromJson<bool>(json['uploaded']),
+      status: serializer.fromJson<String>(json['status']),
+      level: serializer.fromJson<String?>(json['level']),
+      reply: serializer.fromJson<String?>(json['reply']),
+      seen: serializer.fromJson<bool>(json['seen']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'studentId': serializer.toJson<String>(studentId),
+      'lessonId': serializer.toJson<String>(lessonId),
+      'stepId': serializer.toJson<String>(stepId),
+      'task': serializer.toJson<String>(task),
+      'lang': serializer.toJson<String>(lang),
+      'answer': serializer.toJson<String>(answer),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+      'uploaded': serializer.toJson<bool>(uploaded),
+      'status': serializer.toJson<String>(status),
+      'level': serializer.toJson<String?>(level),
+      'reply': serializer.toJson<String?>(reply),
+      'seen': serializer.toJson<bool>(seen),
+    };
+  }
+
+  QueuedAnswer copyWith({
+    String? id,
+    String? studentId,
+    String? lessonId,
+    String? stepId,
+    String? task,
+    String? lang,
+    String? answer,
+    DateTime? createdAt,
+    bool? uploaded,
+    String? status,
+    Value<String?> level = const Value.absent(),
+    Value<String?> reply = const Value.absent(),
+    bool? seen,
+  }) => QueuedAnswer(
+    id: id ?? this.id,
+    studentId: studentId ?? this.studentId,
+    lessonId: lessonId ?? this.lessonId,
+    stepId: stepId ?? this.stepId,
+    task: task ?? this.task,
+    lang: lang ?? this.lang,
+    answer: answer ?? this.answer,
+    createdAt: createdAt ?? this.createdAt,
+    uploaded: uploaded ?? this.uploaded,
+    status: status ?? this.status,
+    level: level.present ? level.value : this.level,
+    reply: reply.present ? reply.value : this.reply,
+    seen: seen ?? this.seen,
+  );
+  QueuedAnswer copyWithCompanion(AiQueueCompanion data) {
+    return QueuedAnswer(
+      id: data.id.present ? data.id.value : this.id,
+      studentId: data.studentId.present ? data.studentId.value : this.studentId,
+      lessonId: data.lessonId.present ? data.lessonId.value : this.lessonId,
+      stepId: data.stepId.present ? data.stepId.value : this.stepId,
+      task: data.task.present ? data.task.value : this.task,
+      lang: data.lang.present ? data.lang.value : this.lang,
+      answer: data.answer.present ? data.answer.value : this.answer,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      uploaded: data.uploaded.present ? data.uploaded.value : this.uploaded,
+      status: data.status.present ? data.status.value : this.status,
+      level: data.level.present ? data.level.value : this.level,
+      reply: data.reply.present ? data.reply.value : this.reply,
+      seen: data.seen.present ? data.seen.value : this.seen,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('QueuedAnswer(')
+          ..write('id: $id, ')
+          ..write('studentId: $studentId, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('stepId: $stepId, ')
+          ..write('task: $task, ')
+          ..write('lang: $lang, ')
+          ..write('answer: $answer, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('uploaded: $uploaded, ')
+          ..write('status: $status, ')
+          ..write('level: $level, ')
+          ..write('reply: $reply, ')
+          ..write('seen: $seen')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    studentId,
+    lessonId,
+    stepId,
+    task,
+    lang,
+    answer,
+    createdAt,
+    uploaded,
+    status,
+    level,
+    reply,
+    seen,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is QueuedAnswer &&
+          other.id == this.id &&
+          other.studentId == this.studentId &&
+          other.lessonId == this.lessonId &&
+          other.stepId == this.stepId &&
+          other.task == this.task &&
+          other.lang == this.lang &&
+          other.answer == this.answer &&
+          other.createdAt == this.createdAt &&
+          other.uploaded == this.uploaded &&
+          other.status == this.status &&
+          other.level == this.level &&
+          other.reply == this.reply &&
+          other.seen == this.seen);
+}
+
+class AiQueueCompanion extends UpdateCompanion<QueuedAnswer> {
+  final Value<String> id;
+  final Value<String> studentId;
+  final Value<String> lessonId;
+  final Value<String> stepId;
+  final Value<String> task;
+  final Value<String> lang;
+  final Value<String> answer;
+  final Value<DateTime> createdAt;
+  final Value<bool> uploaded;
+  final Value<String> status;
+  final Value<String?> level;
+  final Value<String?> reply;
+  final Value<bool> seen;
+  final Value<int> rowid;
+  const AiQueueCompanion({
+    this.id = const Value.absent(),
+    this.studentId = const Value.absent(),
+    this.lessonId = const Value.absent(),
+    this.stepId = const Value.absent(),
+    this.task = const Value.absent(),
+    this.lang = const Value.absent(),
+    this.answer = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.uploaded = const Value.absent(),
+    this.status = const Value.absent(),
+    this.level = const Value.absent(),
+    this.reply = const Value.absent(),
+    this.seen = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  AiQueueCompanion.insert({
+    required String id,
+    required String studentId,
+    required String lessonId,
+    required String stepId,
+    required String task,
+    required String lang,
+    required String answer,
+    required DateTime createdAt,
+    this.uploaded = const Value.absent(),
+    this.status = const Value.absent(),
+    this.level = const Value.absent(),
+    this.reply = const Value.absent(),
+    this.seen = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       studentId = Value(studentId),
+       lessonId = Value(lessonId),
+       stepId = Value(stepId),
+       task = Value(task),
+       lang = Value(lang),
+       answer = Value(answer),
+       createdAt = Value(createdAt);
+  static Insertable<QueuedAnswer> custom({
+    Expression<String>? id,
+    Expression<String>? studentId,
+    Expression<String>? lessonId,
+    Expression<String>? stepId,
+    Expression<String>? task,
+    Expression<String>? lang,
+    Expression<String>? answer,
+    Expression<DateTime>? createdAt,
+    Expression<bool>? uploaded,
+    Expression<String>? status,
+    Expression<String>? level,
+    Expression<String>? reply,
+    Expression<bool>? seen,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (studentId != null) 'student_id': studentId,
+      if (lessonId != null) 'lesson_id': lessonId,
+      if (stepId != null) 'step_id': stepId,
+      if (task != null) 'task': task,
+      if (lang != null) 'lang': lang,
+      if (answer != null) 'answer': answer,
+      if (createdAt != null) 'created_at': createdAt,
+      if (uploaded != null) 'uploaded': uploaded,
+      if (status != null) 'status': status,
+      if (level != null) 'level': level,
+      if (reply != null) 'reply': reply,
+      if (seen != null) 'seen': seen,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  AiQueueCompanion copyWith({
+    Value<String>? id,
+    Value<String>? studentId,
+    Value<String>? lessonId,
+    Value<String>? stepId,
+    Value<String>? task,
+    Value<String>? lang,
+    Value<String>? answer,
+    Value<DateTime>? createdAt,
+    Value<bool>? uploaded,
+    Value<String>? status,
+    Value<String?>? level,
+    Value<String?>? reply,
+    Value<bool>? seen,
+    Value<int>? rowid,
+  }) {
+    return AiQueueCompanion(
+      id: id ?? this.id,
+      studentId: studentId ?? this.studentId,
+      lessonId: lessonId ?? this.lessonId,
+      stepId: stepId ?? this.stepId,
+      task: task ?? this.task,
+      lang: lang ?? this.lang,
+      answer: answer ?? this.answer,
+      createdAt: createdAt ?? this.createdAt,
+      uploaded: uploaded ?? this.uploaded,
+      status: status ?? this.status,
+      level: level ?? this.level,
+      reply: reply ?? this.reply,
+      seen: seen ?? this.seen,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (studentId.present) {
+      map['student_id'] = Variable<String>(studentId.value);
+    }
+    if (lessonId.present) {
+      map['lesson_id'] = Variable<String>(lessonId.value);
+    }
+    if (stepId.present) {
+      map['step_id'] = Variable<String>(stepId.value);
+    }
+    if (task.present) {
+      map['task'] = Variable<String>(task.value);
+    }
+    if (lang.present) {
+      map['lang'] = Variable<String>(lang.value);
+    }
+    if (answer.present) {
+      map['answer'] = Variable<String>(answer.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (uploaded.present) {
+      map['uploaded'] = Variable<bool>(uploaded.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (level.present) {
+      map['level'] = Variable<String>(level.value);
+    }
+    if (reply.present) {
+      map['reply'] = Variable<String>(reply.value);
+    }
+    if (seen.present) {
+      map['seen'] = Variable<bool>(seen.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('AiQueueCompanion(')
+          ..write('id: $id, ')
+          ..write('studentId: $studentId, ')
+          ..write('lessonId: $lessonId, ')
+          ..write('stepId: $stepId, ')
+          ..write('task: $task, ')
+          ..write('lang: $lang, ')
+          ..write('answer: $answer, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('uploaded: $uploaded, ')
+          ..write('status: $status, ')
+          ..write('level: $level, ')
+          ..write('reply: $reply, ')
+          ..write('seen: $seen, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$LocalDb extends GeneratedDatabase {
   _$LocalDb(QueryExecutor e) : super(e);
   $LocalDbManager get managers => $LocalDbManager(this);
@@ -1861,6 +2609,7 @@ abstract class _$LocalDb extends GeneratedDatabase {
       $LessonProgressTableTable(this);
   late final $StepResultsTable stepResults = $StepResultsTable(this);
   late final $SkillStatesTable skillStates = $SkillStatesTable(this);
+  late final $AiQueueTable aiQueue = $AiQueueTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -1870,6 +2619,7 @@ abstract class _$LocalDb extends GeneratedDatabase {
     lessonProgressTable,
     stepResults,
     skillStates,
+    aiQueue,
   ];
 }
 
@@ -1951,6 +2701,24 @@ final class $$StudentsTableReferences
     ).filter((f) => f.studentId.id.sqlEquals($_itemColumn<String>('id')!));
 
     final cache = $_typedResult.readTableOrNull(_skillStatesRefsTable($_db));
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+
+  static MultiTypedResultKey<$AiQueueTable, List<QueuedAnswer>>
+  _aiQueueRefsTable(_$LocalDb db) => MultiTypedResultKey.fromTable(
+    db.aiQueue,
+    aliasName: 'students__id__ai_queue__student_id',
+  );
+
+  $$AiQueueTableProcessedTableManager get aiQueueRefs {
+    final manager = $$AiQueueTableTableManager(
+      $_db,
+      $_db.aiQueue,
+    ).filter((f) => f.studentId.id.sqlEquals($_itemColumn<String>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(_aiQueueRefsTable($_db));
     return ProcessedTableManager(
       manager.$state.copyWith(prefetchedData: cache),
     );
@@ -2072,6 +2840,31 @@ class $$StudentsTableFilterComposer
           }) => $$SkillStatesTableFilterComposer(
             $db: $db,
             $table: $db.skillStates,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
+
+  Expression<bool> aiQueueRefs(
+    Expression<bool> Function($$AiQueueTableFilterComposer f) f,
+  ) {
+    final $$AiQueueTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.aiQueue,
+      getReferencedColumn: (t) => t.studentId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$AiQueueTableFilterComposer(
+            $db: $db,
+            $table: $db.aiQueue,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
             $removeJoinBuilderFromRootComposer:
@@ -2240,6 +3033,31 @@ class $$StudentsTableAnnotationComposer
     );
     return f(composer);
   }
+
+  Expression<T> aiQueueRefs<T extends Object>(
+    Expression<T> Function($$AiQueueTableAnnotationComposer a) f,
+  ) {
+    final $$AiQueueTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.aiQueue,
+      getReferencedColumn: (t) => t.studentId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$AiQueueTableAnnotationComposer(
+            $db: $db,
+            $table: $db.aiQueue,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
 class $$StudentsTableTableManager
@@ -2259,6 +3077,7 @@ class $$StudentsTableTableManager
             bool lessonProgressTableRefs,
             bool stepResultsRefs,
             bool skillStatesRefs,
+            bool aiQueueRefs,
           })
         > {
   $$StudentsTableTableManager(_$LocalDb db, $StudentsTable table)
@@ -2329,6 +3148,7 @@ class $$StudentsTableTableManager
                 lessonProgressTableRefs = false,
                 stepResultsRefs = false,
                 skillStatesRefs = false,
+                aiQueueRefs = false,
               }) {
                 return PrefetchHooks(
                   db: db,
@@ -2336,6 +3156,7 @@ class $$StudentsTableTableManager
                     if (lessonProgressTableRefs) db.lessonProgressTable,
                     if (stepResultsRefs) db.stepResults,
                     if (skillStatesRefs) db.skillStates,
+                    if (aiQueueRefs) db.aiQueue,
                   ],
                   addJoins: null,
                   getPrefetchedDataCallback: (items) async {
@@ -2403,6 +3224,27 @@ class $$StudentsTableTableManager
                               ),
                           typedResults: items,
                         ),
+                      if (aiQueueRefs)
+                        await $_getPrefetchedData<
+                          Student,
+                          $StudentsTable,
+                          QueuedAnswer
+                        >(
+                          currentTable: table,
+                          referencedTable: $$StudentsTableReferences
+                              ._aiQueueRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$StudentsTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).aiQueueRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.studentId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
                     ];
                   },
                 );
@@ -2427,6 +3269,7 @@ typedef $$StudentsTableProcessedTableManager =
         bool lessonProgressTableRefs,
         bool stepResultsRefs,
         bool skillStatesRefs,
+        bool aiQueueRefs,
       })
     >;
 typedef $$LessonProgressTableTableCreateCompanionBuilder =
@@ -3469,6 +4312,470 @@ typedef $$SkillStatesTableProcessedTableManager =
       SkillStateRow,
       PrefetchHooks Function({bool studentId})
     >;
+typedef $$AiQueueTableCreateCompanionBuilder = AiQueueCompanion Function({
+  required String id,
+  required String studentId,
+  required String lessonId,
+  required String stepId,
+  required String task,
+  required String lang,
+  required String answer,
+  required DateTime createdAt,
+  Value<bool> uploaded,
+  Value<String> status,
+  Value<String?> level,
+  Value<String?> reply,
+  Value<bool> seen,
+  Value<int> rowid,
+});
+typedef $$AiQueueTableUpdateCompanionBuilder = AiQueueCompanion Function({
+  Value<String> id,
+  Value<String> studentId,
+  Value<String> lessonId,
+  Value<String> stepId,
+  Value<String> task,
+  Value<String> lang,
+  Value<String> answer,
+  Value<DateTime> createdAt,
+  Value<bool> uploaded,
+  Value<String> status,
+  Value<String?> level,
+  Value<String?> reply,
+  Value<bool> seen,
+  Value<int> rowid,
+});
+
+final class $$AiQueueTableReferences
+    extends BaseReferences<_$LocalDb, $AiQueueTable, QueuedAnswer> {
+  $$AiQueueTableReferences(super.$_db, super.$_table, super.$_typedResult);
+
+  static $StudentsTable _studentIdTable(_$LocalDb db) =>
+      db.students.createAlias('ai_queue__student_id__students__id');
+
+  $$StudentsTableProcessedTableManager get studentId {
+    final $_column = $_itemColumn<String>('student_id')!;
+
+    final manager = $$StudentsTableTableManager(
+      $_db,
+      $_db.students,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_studentIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$AiQueueTableFilterComposer extends Composer<_$LocalDb, $AiQueueTable> {
+  $$AiQueueTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get stepId => $composableBuilder(
+    column: $table.stepId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get task => $composableBuilder(
+    column: $table.task,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get lang => $composableBuilder(
+    column: $table.lang,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get answer => $composableBuilder(
+    column: $table.answer,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get uploaded => $composableBuilder(
+    column: $table.uploaded,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get reply => $composableBuilder(
+    column: $table.reply,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get seen => $composableBuilder(
+    column: $table.seen,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$StudentsTableFilterComposer get studentId {
+    final $$StudentsTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.studentId,
+      referencedTable: $db.students,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$StudentsTableFilterComposer(
+            $db: $db,
+            $table: $db.students,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$AiQueueTableOrderingComposer
+    extends Composer<_$LocalDb, $AiQueueTable> {
+  $$AiQueueTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get lessonId => $composableBuilder(
+    column: $table.lessonId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get stepId => $composableBuilder(
+    column: $table.stepId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get task => $composableBuilder(
+    column: $table.task,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get lang => $composableBuilder(
+    column: $table.lang,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get answer => $composableBuilder(
+    column: $table.answer,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get uploaded => $composableBuilder(
+    column: $table.uploaded,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get level => $composableBuilder(
+    column: $table.level,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get reply => $composableBuilder(
+    column: $table.reply,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get seen => $composableBuilder(
+    column: $table.seen,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$StudentsTableOrderingComposer get studentId {
+    final $$StudentsTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.studentId,
+      referencedTable: $db.students,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$StudentsTableOrderingComposer(
+            $db: $db,
+            $table: $db.students,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$AiQueueTableAnnotationComposer
+    extends Composer<_$LocalDb, $AiQueueTable> {
+  $$AiQueueTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get lessonId =>
+      $composableBuilder(column: $table.lessonId, builder: (column) => column);
+
+  GeneratedColumn<String> get stepId =>
+      $composableBuilder(column: $table.stepId, builder: (column) => column);
+
+  GeneratedColumn<String> get task =>
+      $composableBuilder(column: $table.task, builder: (column) => column);
+
+  GeneratedColumn<String> get lang =>
+      $composableBuilder(column: $table.lang, builder: (column) => column);
+
+  GeneratedColumn<String> get answer =>
+      $composableBuilder(column: $table.answer, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<bool> get uploaded =>
+      $composableBuilder(column: $table.uploaded, builder: (column) => column);
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<String> get level =>
+      $composableBuilder(column: $table.level, builder: (column) => column);
+
+  GeneratedColumn<String> get reply =>
+      $composableBuilder(column: $table.reply, builder: (column) => column);
+
+  GeneratedColumn<bool> get seen =>
+      $composableBuilder(column: $table.seen, builder: (column) => column);
+
+  $$StudentsTableAnnotationComposer get studentId {
+    final $$StudentsTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.studentId,
+      referencedTable: $db.students,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$StudentsTableAnnotationComposer(
+            $db: $db,
+            $table: $db.students,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$AiQueueTableTableManager
+    extends
+        RootTableManager<
+          _$LocalDb,
+          $AiQueueTable,
+          QueuedAnswer,
+          $$AiQueueTableFilterComposer,
+          $$AiQueueTableOrderingComposer,
+          $$AiQueueTableAnnotationComposer,
+          $$AiQueueTableCreateCompanionBuilder,
+          $$AiQueueTableUpdateCompanionBuilder,
+          (QueuedAnswer, $$AiQueueTableReferences),
+          QueuedAnswer,
+          PrefetchHooks Function({bool studentId})
+        > {
+  $$AiQueueTableTableManager(_$LocalDb db, $AiQueueTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$AiQueueTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$AiQueueTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$AiQueueTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> studentId = const Value.absent(),
+                Value<String> lessonId = const Value.absent(),
+                Value<String> stepId = const Value.absent(),
+                Value<String> task = const Value.absent(),
+                Value<String> lang = const Value.absent(),
+                Value<String> answer = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<bool> uploaded = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String?> level = const Value.absent(),
+                Value<String?> reply = const Value.absent(),
+                Value<bool> seen = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => AiQueueCompanion(
+                id: id,
+                studentId: studentId,
+                lessonId: lessonId,
+                stepId: stepId,
+                task: task,
+                lang: lang,
+                answer: answer,
+                createdAt: createdAt,
+                uploaded: uploaded,
+                status: status,
+                level: level,
+                reply: reply,
+                seen: seen,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String studentId,
+                required String lessonId,
+                required String stepId,
+                required String task,
+                required String lang,
+                required String answer,
+                required DateTime createdAt,
+                Value<bool> uploaded = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String?> level = const Value.absent(),
+                Value<String?> reply = const Value.absent(),
+                Value<bool> seen = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => AiQueueCompanion.insert(
+                id: id,
+                studentId: studentId,
+                lessonId: lessonId,
+                stepId: stepId,
+                task: task,
+                lang: lang,
+                answer: answer,
+                createdAt: createdAt,
+                uploaded: uploaded,
+                status: status,
+                level: level,
+                reply: reply,
+                seen: seen,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$AiQueueTable, QueuedAnswer>(table),
+                  $$AiQueueTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({studentId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (studentId) {
+                      state = state.withJoin(
+                        currentTable: table,
+                        currentColumn: table.studentId,
+                        referencedTable: $$AiQueueTableReferences
+                            ._studentIdTable(db),
+                        referencedColumn: $$AiQueueTableReferences
+                            ._studentIdTable(db)
+                            .id,
+                      ) as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$AiQueueTableProcessedTableManager =
+    ProcessedTableManager<
+      _$LocalDb,
+      $AiQueueTable,
+      QueuedAnswer,
+      $$AiQueueTableFilterComposer,
+      $$AiQueueTableOrderingComposer,
+      $$AiQueueTableAnnotationComposer,
+      $$AiQueueTableCreateCompanionBuilder,
+      $$AiQueueTableUpdateCompanionBuilder,
+      (QueuedAnswer, $$AiQueueTableReferences),
+      QueuedAnswer,
+      PrefetchHooks Function({bool studentId})
+    >;
 
 class $LocalDbManager {
   final _$LocalDb _db;
@@ -3481,4 +4788,6 @@ class $LocalDbManager {
       $$StepResultsTableTableManager(_db, _db.stepResults);
   $$SkillStatesTableTableManager get skillStates =>
       $$SkillStatesTableTableManager(_db, _db.skillStates);
+  $$AiQueueTableTableManager get aiQueue =>
+      $$AiQueueTableTableManager(_db, _db.aiQueue);
 }

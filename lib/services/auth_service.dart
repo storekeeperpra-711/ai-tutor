@@ -45,6 +45,10 @@ abstract class AuthService {
   Future<AppUser> signIn(String email, String password);
 
   Future<void> signOut();
+
+  /// A short-lived sign-in token that proves to the AI server who is
+  /// calling; null when nobody is signed in.
+  Future<String?> idToken();
 }
 
 class FirebaseAuthService implements AuthService {
@@ -98,6 +102,9 @@ class FirebaseAuthService implements AuthService {
 
   @override
   Future<void> signOut() => _auth.signOut();
+
+  @override
+  Future<String?> idToken() async => _auth.currentUser?.getIdToken();
 
   Future<T> _guard<T>(Future<T> Function() action) async {
     try {

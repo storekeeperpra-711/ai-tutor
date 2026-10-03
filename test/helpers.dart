@@ -1,3 +1,5 @@
+import 'package:ai_tutor/ai/ai_service.dart';
+import 'package:ai_tutor/ai/photo_picker.dart';
 import 'package:ai_tutor/app/app.dart';
 import 'package:ai_tutor/app/preferences.dart';
 import 'package:ai_tutor/services/auth_service.dart';
@@ -32,6 +34,8 @@ Future<Widget> buildTestApp({
       authServiceProvider.overrideWithValue(fake.auth),
       remoteStoreProvider.overrideWithValue(fake.remote),
       onlineProvider.overrideWith((ref) => fake.onlineStream),
+      aiServiceProvider.overrideWithValue(fake.ai),
+      photoPickerProvider.overrideWithValue((source) async => fake.photo),
       // Widget tests have no WebView and can't play video.
       webSimBuilderProvider.overrideWithValue(
         (args) => SizedBox.expand(key: Key('fake-web-sim-${args.step.src}')),

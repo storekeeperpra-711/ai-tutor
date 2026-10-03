@@ -1,6 +1,6 @@
 {
   "id": "g10-chemistry-15-balancing-equations",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "chemistry",
   "grade": 10,
@@ -373,6 +373,65 @@
         "en": "C is already 1 and 1. 4 H needs 2H2O. Now the right has 2 + 2 = 4 O, so use 2O2: CH4 + 2O2 → CO2 + 2H2O.",
         "ur": "C پہلے ہی 1 اور 1 ہے۔ 4 H کے لیے 2H2O چاہیے۔ اب دائیں طرف 2 + 2 = 4 O ہیں، اس لیے 2O2: CH4 + 2O2 → CO2 + 2H2O"
       }
+    },
+    {
+      "id": "s6_own_question",
+      "type": "ai_explain",
+      "task_kind": "own_question",
+      "task": {
+        "en": "Make up your own question: write an unbalanced equation (for example with H2, O2, N2 or Cl2), then say how you would balance it.",
+        "ur": "اپنا سوال خود بنائیں: کوئی غیر متوازن مساوات لکھیں (مثلاً H2، O2، N2 یا Cl2 کے ساتھ)، پھر بتائیں کہ آپ اسے کیسے متوازن کریں گے۔"
+      },
+      "key_idea": "A good own question has a real reaction written with correct formulas, is unbalanced at first, and the student balances it by changing only the big numbers in front (coefficients), never the small numbers inside formulas, then counts atoms on both sides.",
+      "levels": {
+        "got_it": "Writes an unbalanced equation with sensible formulas and explains balancing by changing coefficients only and counting atoms on both sides.",
+        "partly": "Writes an equation or a method, but one part is missing or unclear (for example it is already balanced, or the atom counting is not mentioned).",
+        "not_yet": "No equation, or balances by changing the small numbers inside formulas."
+      },
+      "keywords": [
+        [
+          "->",
+          "→",
+          "=",
+          "+"
+        ],
+        [
+          "coefficient",
+          "big number",
+          "number in front",
+          "ضریب",
+          "بڑا عدد",
+          "aage",
+          "agay",
+          "zarb"
+        ],
+        [
+          "atom",
+          "count",
+          "both sides",
+          "ایٹم",
+          "گن",
+          "دونوں طرف",
+          "dono taraf",
+          "gin"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Great question! You changed only the numbers in front and counted the atoms on both sides.",
+          "ur": "زبردست سوال! آپ نے صرف آگے والے عدد بدلے اور دونوں طرف ایٹم گنے۔"
+        },
+        "partly": {
+          "en": "Nice idea! Now count each kind of atom on both sides. Which number in front would you change?",
+          "ur": "اچھا خیال! اب دونوں طرف ہر قسم کے ایٹم گنیں۔ آپ آگے والا کون سا عدد بدلیں گے؟"
+        },
+        "not_yet": {
+          "en": "Start with H2 + O2 → H2O. Count the oxygen atoms on each side. What could you put in front of H2O?",
+          "ur": "H2 + O2 → H2O سے شروع کریں۔ دونوں طرف آکسیجن کے ایٹم گنیں۔ H2O کے آگے کیا لکھ سکتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
     },
     {
       "id": "s7_summary",

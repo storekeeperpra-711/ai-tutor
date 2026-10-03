@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -69,6 +70,29 @@ class SyncService {
     for (final row in await db.unsyncedSkillStates()) {
       await remote.putSkill(uid, row);
       await db.markSkillSynced(row);
+    }
+    await _syncAiQueue(uid);
+  }
+
+  /// Sends answers that wait for AI feedback, and fetches Mithu's replies
+  /// from the batch job (Phase 6). Reads only while something waits.
+  Future<void> _syncAiQueue(String uid) async {
+    for (final answer in await db.answersToUpload()) {
+      try {
+        await remote.putQueuedAnswer(uid, answer);
+      } on FirebaseException catch (e) {
+        // The server already took it (it can't be changed any more).
+        if (e.code != 'permission-denied') rethrow;
+      }
+      await db.markAnswerUploaded(answer.id);
+    }
+    final waiting = await db.answersAwaitingReply();
+    if (waiting.isEmpty) return;
+    final replies = await remote.fetchReplies(uid, [
+      for (final a in waiting) a.id,
+    ]);
+    for (final MapEntry(key: id, value: r) in replies.entries) {
+      await db.saveReply(id, status: r.status, level: r.level, reply: r.reply);
     }
   }
 

@@ -519,4 +519,133 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get simGalleryTitle => 'سمولیشنز (ڈویلپر)';
+
+  @override
+  String get aiThinking => 'مٹھو آپ کا جواب پڑھ رہا ہے…';
+
+  @override
+  String get checkedByAi => 'اے آئی نے جانچا';
+
+  @override
+  String get checkedByKeywords => 'اہم الفاظ سے جانچا';
+
+  @override
+  String get aiQueued =>
+      'ابھی انٹرنیٹ نہیں ہے۔ مٹھو بعد میں آپ کا جواب دیکھے گا۔';
+
+  @override
+  String get aiLimitReached =>
+      'مٹھو آج بہت مدد کر چکا ہے، اس لیے اس جواب کو ایپ نے جانچا۔';
+
+  @override
+  String get improveAnswer => 'اپنا جواب بہتر کریں';
+
+  @override
+  String get explainInputHelp => 'انگریزی، اردو یا رومن اردو میں لکھیں۔';
+
+  @override
+  String get levelGotIt => 'سمجھ گئے!';
+
+  @override
+  String get levelPartly => 'کچھ حد تک';
+
+  @override
+  String get levelNotYet => 'ابھی نہیں';
+
+  @override
+  String get photoTake => 'تصویر لیں';
+
+  @override
+  String get photoChoose => 'تصویر منتخب کریں';
+
+  @override
+  String get photoTypeInstead => 'اس کے بجائے جواب لکھیں';
+
+  @override
+  String get photoReading => 'مٹھو آپ کا حل پڑھ رہا ہے…';
+
+  @override
+  String get photoConfirm =>
+      'مٹھو نے یہ پڑھا۔ جو غلط پڑھا گیا ہو اسے ٹھیک کریں، پھر جانچیں دبائیں۔';
+
+  @override
+  String get photoUnreadable =>
+      'مٹھو یہ تصویر نہیں پڑھ سکا۔ اچھی روشنی میں دوبارہ کوشش کریں، یا اپنا جواب لکھیں۔';
+
+  @override
+  String get photoOffline =>
+      'تصویر کے لیے انٹرنیٹ چاہیے۔ اس کے بجائے اپنا حل لکھیں۔';
+
+  @override
+  String get photoLimit =>
+      'مٹھو آج کافی تصویریں پڑھ چکا ہے۔ اس کے بجائے اپنا حل لکھیں۔';
+
+  @override
+  String get photoWorkingLabel => 'آپ کا حل (ہر قدم الگ لائن پر)';
+
+  @override
+  String get readByAi => 'اے آئی نے پڑھا';
+
+  @override
+  String get explainedByAi => 'اے آئی نے سمجھایا';
+
+  @override
+  String get photoExplaining => 'مٹھو دیکھ رہا ہے کہ غلطی کہاں ہوئی…';
+
+  @override
+  String get tryAgainButton => 'دوبارہ کوشش کریں';
+
+  @override
+  String get mithuNotesTitle => 'مٹھو کے نوٹس';
+
+  @override
+  String mithuNotesNew(int count) {
+    return 'مٹھو کے آپ کے لیے نئے نوٹس ($count)';
+  }
+
+  @override
+  String get mithuNotesWaiting => 'مٹھو کا انتظار ہے';
+
+  @override
+  String get mithuNotesFailed => 'مٹھو اسے نہیں دیکھ سکا۔';
+
+  @override
+  String get mithuNotesEmpty => 'ابھی کوئی نوٹ نہیں۔';
+
+  @override
+  String get weeklyReport => 'ہفتہ وار رپورٹ';
+
+  @override
+  String get weeklyReportNone =>
+      'ابھی کوئی رپورٹ نہیں۔ رپورٹ اتوار کی شام ان بچوں کے لیے لکھی جاتی ہے جنہوں نے اس ہفتے مشق کی۔';
+
+  @override
+  String weeklyReportStats(int days, int lessons, int questions) {
+    return 'مشق کے $days دن · $lessons سبق مکمل · $questions سوالوں کے جواب';
+  }
+
+  @override
+  String get needsInternet => 'انٹرنیٹ سے جڑیں اور دوبارہ کوشش کریں۔';
+
+  @override
+  String get aiCostsTitle => 'اے آئی کا استعمال اور خرچ';
+
+  @override
+  String get aiCostsAll => 'پروجیکٹ کے تمام طلبہ';
+
+  @override
+  String get aiCostsMine => 'اس اکاؤنٹ کے طلبہ';
+
+  @override
+  String aiCostsTotal(String cost) {
+    return 'پچھلے 7 دن: $cost';
+  }
+
+  @override
+  String aiCostsRow(int calls, int text, int photo, String cost) {
+    return '$calls بار · $text تحریر · $photo تصاویر · $cost';
+  }
+
+  @override
+  String get aiCostsEmpty => 'پچھلے 7 دنوں میں اے آئی استعمال نہیں ہوا۔';
 }

@@ -252,3 +252,76 @@ AnswerCheck checkSimResult(
     languageCode,
   );
 }
+
+/// Checks a `photo_check` answer: working read from a photo (and confirmed
+/// by the student) or typed. `linear_equation` checks every line; the other
+/// checkers check the final answer.
+AnswerCheck checkPhotoStep(
+  PhotoCheckStep step,
+  String input,
+  AppLocalizations l10n,
+  String languageCode,
+) {
+  final lines = input
+      .split('\n')
+      .map((l) => l.trim())
+      .where((l) => l.isNotEmpty);
+  if (lines.isEmpty) return AnswerCheck.unreadable(l10n.answerUnreadable);
+  final last = lines.last;
+
+  if (step.checker == 'numeric') {
+    return checkNumberStep(
+      NumberStep(
+        id: step.id,
+        type: 'number',
+        prompt: step.problem,
+        answer: double.parse(step.expected),
+        checker: 'numeric',
+        tolerance: step.tolerance,
+        hint: step.hint,
+        feedbackCorrect: step.feedbackCorrect,
+        feedbackWrong: step.correctWorking,
+        commonWrong: [
+          for (final w in step.commonWrong)
+            if (double.tryParse(w.answer) case final a?)
+              CommonWrong(
+                answer: a,
+                feedback: w.feedback,
+                misconceptionId: w.misconceptionId,
+              ),
+        ],
+      ),
+      _afterEquals(last),
+      l10n,
+      languageCode,
+    );
+  }
+  return checkTextStep(
+    TextCheckStep(
+      id: step.id,
+      type: 'text_check',
+      prompt: step.problem,
+      checker: step.checker,
+      expected: step.expected,
+      variable: step.variable,
+      requireSimplest: step.requireSimplest,
+      multiline: step.checksWorking,
+      hint: step.hint,
+      feedbackCorrect: step.feedbackCorrect,
+      feedbackWrong: step.correctWorking,
+      commonWrong: step.commonWrong,
+    ),
+    switch (step.checker) {
+      'linear_equation' => lines.join('\n'),
+      'fraction' => _afterEquals(last),
+      _ => last,
+    },
+    l10n,
+    languageCode,
+  );
+}
+
+/// "x = 3/4" -> "3/4": a final answer written as an equation.
+String _afterEquals(String line) => line.contains('=')
+    ? line.substring(line.lastIndexOf('=') + 1).trim()
+    : line;

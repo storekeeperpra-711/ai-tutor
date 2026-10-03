@@ -33,8 +33,39 @@ service cloud.firestore {
         match /skills/{skillId} {
           allow read, write: if isOwner(uid);
         }
+
+        // Weekly notes for parents, written by the server (Phase 6).
+        match /reports/{week} {
+          allow read, delete: if isOwner(uid);
+        }
       }
     }
+
+    // Answers that waited offline for AI feedback (Phase 6). The phone
+    // adds them; the server's batch job writes the reply. Only the owner
+    // can read them.
+    match /ai_queue/{id} {
+      function validQueued() {
+        let d = request.resource.data;
+        return id.matches('^[A-Za-z0-9]{20}$')
+          && d.keys().hasOnly(['uid', 'student_id', 'lesson_id', 'step_id', 'lang', 'answer', 'created_at', 'status'])
+          && d.uid == request.auth.uid
+          && d.status == 'waiting'
+          && d.lang in ['en', 'ur']
+          && d.answer is string && d.answer.size() >= 1 && d.answer.size() <= 1500
+          && d.lesson_id is string && d.step_id is string
+          && d.created_at is timestamp
+          && exists(/databases/$(database)/documents/accounts/$(request.auth.uid)/students/$(d.student_id));
+      }
+      allow read, delete: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow create: if request.auth != null && validQueued();
+      // Sending the same answer again is fine until the batch job takes it.
+      allow update: if request.auth != null && resource.data.uid == request.auth.uid
+        && resource.data.status == 'waiting' && validQueued();
+    }
+
+    // ai_usage, ai_usage_total, ai_logs and ai_batches are only for the
+    // server (and the Firebase console): they fall under the rule below.
 
     // Everything else is closed.
     match /{document=**} {

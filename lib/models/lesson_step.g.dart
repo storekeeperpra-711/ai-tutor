@@ -446,3 +446,150 @@ LottieStep _$LottieStepFromJson(
   );
   return val;
 });
+
+AiExplainStep _$AiExplainStepFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate(
+  'AiExplainStep',
+  json,
+  ($checkedConvert) {
+    final val = AiExplainStep(
+      id: $checkedConvert('id', (v) => v as String),
+      type: $checkedConvert('type', (v) => v as String),
+      questionType: $checkedConvert('question_type', (v) => v as String?),
+      skill: $checkedConvert('skill', (v) => v as String?),
+      task: $checkedConvert(
+        'task',
+        (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      keywords: $checkedConvert(
+        'keywords',
+        (v) => (v as List<dynamic>)
+            .map((e) => (e as List<dynamic>).map((e) => e as String).toList())
+            .toList(),
+      ),
+      fallbackFeedback: $checkedConvert(
+        'fallback_feedback',
+        (v) => FeedbackLevels.fromJson(v as Map<String, dynamic>),
+      ),
+      taskKind: $checkedConvert('task_kind', (v) => v as String? ?? 'explain'),
+      limitPerDay: $checkedConvert(
+        'limit_per_day',
+        (v) => (v as num?)?.toInt() ?? 3,
+      ),
+      maxAttempts: $checkedConvert(
+        'max_attempts',
+        (v) => (v as num?)?.toInt() ?? 2,
+      ),
+      character: $checkedConvert(
+        'character',
+        (v) => v == null
+            ? null
+            : CharacterLine.fromJson(v as Map<String, dynamic>),
+      ),
+    );
+    return val;
+  },
+  fieldKeyMap: const {
+    'questionType': 'question_type',
+    'fallbackFeedback': 'fallback_feedback',
+    'taskKind': 'task_kind',
+    'limitPerDay': 'limit_per_day',
+    'maxAttempts': 'max_attempts',
+  },
+);
+
+FeedbackLevels _$FeedbackLevelsFromJson(Map<String, dynamic> json) =>
+    $checkedCreate('FeedbackLevels', json, ($checkedConvert) {
+      final val = FeedbackLevels(
+        gotIt: $checkedConvert(
+          'got_it',
+          (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+        ),
+        partly: $checkedConvert(
+          'partly',
+          (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+        ),
+        notYet: $checkedConvert(
+          'not_yet',
+          (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+        ),
+      );
+      return val;
+    }, fieldKeyMap: const {'gotIt': 'got_it', 'notYet': 'not_yet'});
+
+PhotoCheckStep _$PhotoCheckStepFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      'PhotoCheckStep',
+      json,
+      ($checkedConvert) {
+        final val = PhotoCheckStep(
+          id: $checkedConvert('id', (v) => v as String),
+          type: $checkedConvert('type', (v) => v as String),
+          questionType: $checkedConvert('question_type', (v) => v as String?),
+          skill: $checkedConvert('skill', (v) => v as String?),
+          problem: $checkedConvert(
+            'problem',
+            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+          ),
+          checker: $checkedConvert('checker', (v) => v as String),
+          expected: $checkedConvert('expected', (v) => v as String),
+          hint: $checkedConvert(
+            'hint',
+            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+          ),
+          feedbackCorrect: $checkedConvert(
+            'feedback_correct',
+            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+          ),
+          correctWorking: $checkedConvert(
+            'correct_working',
+            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+          ),
+          variable: $checkedConvert('variable', (v) => v as String? ?? 'x'),
+          tolerance: $checkedConvert(
+            'tolerance',
+            (v) => (v as num?)?.toDouble() ?? 0,
+          ),
+          requireSimplest: $checkedConvert(
+            'require_simplest',
+            (v) => v as bool? ?? false,
+          ),
+          commonWrong: $checkedConvert(
+            'common_wrong',
+            (v) =>
+                (v as List<dynamic>?)
+                    ?.map(
+                      (e) =>
+                          CommonWrongText.fromJson(e as Map<String, dynamic>),
+                    )
+                    .toList() ??
+                const [],
+          ),
+          limitPerDay: $checkedConvert(
+            'limit_per_day',
+            (v) => (v as num?)?.toInt() ?? 2,
+          ),
+          maxAttempts: $checkedConvert(
+            'max_attempts',
+            (v) => (v as num?)?.toInt() ?? 3,
+          ),
+          character: $checkedConvert(
+            'character',
+            (v) => v == null
+                ? null
+                : CharacterLine.fromJson(v as Map<String, dynamic>),
+          ),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'questionType': 'question_type',
+        'feedbackCorrect': 'feedback_correct',
+        'correctWorking': 'correct_working',
+        'requireSimplest': 'require_simplest',
+        'commonWrong': 'common_wrong',
+        'limitPerDay': 'limit_per_day',
+        'maxAttempts': 'max_attempts',
+      },
+    );

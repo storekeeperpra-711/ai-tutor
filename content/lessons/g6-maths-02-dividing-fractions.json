@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-02-dividing-fractions",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -414,6 +414,84 @@
         "en": "Look at what we found: 3 ÷ 1/2 = 6 is the same as 3 × 2. And 2 ÷ 1/4 = 8 is the same as 2 × 4. Flip the fraction and multiply! Flipping 3/4 gives 4/3. The flipped fraction is called the reciprocal. So 3 ÷ 3/4 = 3 × 4/3 = 4.",
         "ur": "دیکھیں ہم نے کیا پایا: 3 ÷ 1/2 = 6 وہی ہے جو 3 × 2 ہے۔ اور 2 ÷ 1/4 = 8 وہی ہے جو 2 × 4 ہے۔ کسر کو الٹیں اور ضرب دیں! 3/4 کو الٹنے سے 4/3 بنتا ہے۔ الٹی کسر کو معکوس (Reciprocal) کہتے ہیں۔ اس لیے 3 ÷ 3/4 = 3 × 4/3 = 4"
       }
+    },
+    {
+      "id": "s6_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? I always think dividing makes things smaller!",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ میں تو سمجھتا تھا کہ تقسیم سے چیز ہمیشہ چھوٹی ہو جاتی ہے!"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is 3 ÷ ½ bigger than 3? Explain it to a friend. You can use rotis.",
+        "ur": "اپنے الفاظ میں بتائیں: 3 ÷ ½ کا جواب 3 سے بڑا کیوں ہے؟ کسی دوست کو سمجھائیں۔ آپ روٹیوں کی مثال دے سکتے ہیں۔"
+      },
+      "key_idea": "Dividing by 1/2 asks how many halves fit into 3. Each whole has 2 halves, so 3 wholes have 6 halves. The answer is bigger than 3 because the pieces we count are smaller than 1.",
+      "levels": {
+        "got_it": "Says we are counting how many halves (half pieces) fit into 3, and that each whole gives 2 halves, so there are 6.",
+        "partly": "Mentions halves or pieces, or gives the answer 6, but does not explain why there are more pieces than wholes.",
+        "not_yet": "Says division always makes things smaller, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "half",
+          "halves",
+          "piece",
+          "آدھا",
+          "آدھے",
+          "ٹکڑ",
+          "aadha",
+          "adha",
+          "aadhe",
+          "tukr",
+          "tukd"
+        ],
+        [
+          "how many",
+          "fit",
+          "count",
+          "کتنے",
+          "گن",
+          "kitne",
+          "kitnay",
+          "gin"
+        ],
+        [
+          "6",
+          "six",
+          "double",
+          "twice",
+          "2 halves",
+          "two halves",
+          "چھ",
+          "دگنا",
+          "dugna",
+          "do guna",
+          "chay",
+          "chhe"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Dividing by ½ counts how many halves fit, and every roti has 2 halves, so 3 rotis give 6.",
+          "ur": "بہت خوب سمجھایا! ½ سے تقسیم کا مطلب ہے کہ کتنے آدھے پورے آتے ہیں۔ ہر روٹی کے 2 آدھے ہوتے ہیں، اس لیے 3 روٹیوں کے 6 آدھے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why there are more pieces: how many halves are in one roti?",
+          "ur": "اچھی شروعات! اب بتائیں کہ ٹکڑے زیادہ کیوں ہیں: ایک روٹی میں کتنے آدھے ہوتے ہیں؟"
+        },
+        "not_yet": {
+          "en": "Think of 3 rotis, each cut in half. How many half pieces can you count? That number is 3 ÷ ½.",
+          "ur": "سوچیں: 3 روٹیاں ہیں اور ہر ایک کو آدھا کاٹا ہے۔ آپ کتنے آدھے ٹکڑے گن سکتے ہیں؟ یہی 3 ÷ ½ کا جواب ہے۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
     },
     {
       "id": "s6_thirds",

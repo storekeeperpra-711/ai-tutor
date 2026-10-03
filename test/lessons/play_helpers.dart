@@ -40,6 +40,26 @@ Future<void> tapKey(WidgetTester tester, String key) async {
   await tester.pumpAndSettle();
 }
 
+/// An explanation with one word from every keyword group.
+String goodExplanation(AiExplainStep step) =>
+    'I think ${step.keywords.map((g) => g.first).join(' and ')} is the idea';
+
+/// Typed working or answer that the photo step's checker accepts.
+String rightPhotoAnswer(PhotoCheckStep step) {
+  if (step.checker != 'linear_equation') return step.expected;
+  final solution =
+      parseLinearEquation(step.expected, variable: step.variable).solution
+          as OneSolution;
+  return '${step.expected}\n${step.variable} = ${solution.value}';
+}
+
+String wrongPhotoAnswer(PhotoCheckStep step) => switch (step.checker) {
+  'linear_equation' => '${step.expected}\n${step.variable} = 999',
+  'chem_equation' => 'H2 + O2 -> H2O',
+  'fraction' => '999/1000',
+  _ => '999',
+};
+
 /// The right result for a sim step, as the simulation would report it.
 Object rightSimAnswer(SimStep step) {
   final e = step.expected!;
@@ -130,6 +150,32 @@ Future<void> answerStep(
         SimEvent('result', {expected.result: rightSimAnswer(step)}),
       );
       await tester.pumpAndSettle();
+      expect(find.byKey(const Key('feedback-good')), findsOneWidget);
+    case AiExplainStep():
+      // One word from each idea group: a full answer for the keywords.
+      final input = find.byKey(const Key('answer-input'));
+      if (tryWrongFirst) {
+        await tester.enterText(input, 'I do not know');
+        await tapKey(tester, 'step-check');
+        expect(find.byKey(const Key('feedback-try')), findsOneWidget);
+        await tapKey(tester, 'ai-improve');
+      }
+      await tester.enterText(input, goodExplanation(step));
+      await tapKey(tester, 'step-check');
+      expect(find.byKey(const Key('feedback-good')), findsOneWidget);
+    case PhotoCheckStep():
+      // Widget tests have no camera: type the working instead.
+      final input = find.byKey(const Key('answer-input'));
+      if (tryWrongFirst) {
+        await tapKey(tester, 'photo-type');
+        await tester.enterText(input, wrongPhotoAnswer(step));
+        await tapKey(tester, 'step-check');
+        expect(find.byKey(const Key('feedback-try')), findsOneWidget);
+        await tapKey(tester, 'photo-try-again');
+      }
+      await tapKey(tester, 'photo-type');
+      await tester.enterText(input, rightPhotoAnswer(step));
+      await tapKey(tester, 'step-check');
       expect(find.byKey(const Key('feedback-good')), findsOneWidget);
     case SimStep() || VideoStep() || LottieStep():
       break;

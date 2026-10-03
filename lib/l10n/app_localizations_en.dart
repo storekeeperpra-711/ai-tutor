@@ -517,4 +517,132 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get simGalleryTitle => 'Simulations (developer)';
+
+  @override
+  String get aiThinking => 'Mithu is reading your answer…';
+
+  @override
+  String get checkedByAi => 'Checked by AI';
+
+  @override
+  String get checkedByKeywords => 'Checked by keywords';
+
+  @override
+  String get aiQueued =>
+      'No internet right now. Mithu will look at your answer later.';
+
+  @override
+  String get aiLimitReached =>
+      'Mithu has helped a lot today, so the app checked this one.';
+
+  @override
+  String get improveAnswer => 'Improve my answer';
+
+  @override
+  String get explainInputHelp => 'Write in English, Urdu or Roman Urdu.';
+
+  @override
+  String get levelGotIt => 'Got it!';
+
+  @override
+  String get levelPartly => 'Partly there';
+
+  @override
+  String get levelNotYet => 'Not yet';
+
+  @override
+  String get photoTake => 'Take a photo';
+
+  @override
+  String get photoChoose => 'Choose a photo';
+
+  @override
+  String get photoTypeInstead => 'Type my answer instead';
+
+  @override
+  String get photoReading => 'Mithu is reading your working…';
+
+  @override
+  String get photoConfirm =>
+      'Mithu read this. Fix anything that is wrong, then press Check.';
+
+  @override
+  String get photoUnreadable =>
+      'Mithu couldn\'t read that photo. Try again in good light, or type your answer.';
+
+  @override
+  String get photoOffline => 'Photos need internet. Type your working instead.';
+
+  @override
+  String get photoLimit =>
+      'Mithu has read enough photos today. Type your working instead.';
+
+  @override
+  String get photoWorkingLabel => 'Your working (one step per line)';
+
+  @override
+  String get readByAi => 'Read by AI';
+
+  @override
+  String get explainedByAi => 'Explained by AI';
+
+  @override
+  String get photoExplaining => 'Mithu is looking at where it went wrong…';
+
+  @override
+  String get tryAgainButton => 'Try again';
+
+  @override
+  String get mithuNotesTitle => 'Mithu\'s notes';
+
+  @override
+  String mithuNotesNew(int count) {
+    return 'Mithu has new notes for you ($count)';
+  }
+
+  @override
+  String get mithuNotesWaiting => 'Waiting for Mithu';
+
+  @override
+  String get mithuNotesFailed => 'Mithu couldn\'t look at this one.';
+
+  @override
+  String get mithuNotesEmpty => 'No notes yet.';
+
+  @override
+  String get weeklyReport => 'Weekly report';
+
+  @override
+  String get weeklyReportNone =>
+      'No report yet. Reports are written on Sunday evenings for children who practised that week.';
+
+  @override
+  String weeklyReportStats(int days, int lessons, int questions) {
+    return '$days days of practice · $lessons lessons finished · $questions questions answered';
+  }
+
+  @override
+  String get needsInternet => 'Connect to the internet and try again.';
+
+  @override
+  String get aiCostsTitle => 'AI use and cost';
+
+  @override
+  String get aiCostsAll => 'All students in the project';
+
+  @override
+  String get aiCostsMine => 'Students on this account';
+
+  @override
+  String aiCostsTotal(String cost) {
+    return 'Last 7 days: $cost';
+  }
+
+  @override
+  String aiCostsRow(int calls, int text, int photo, String cost) {
+    return '$calls calls · $text text · $photo photos · $cost';
+  }
+
+  @override
+  String get aiCostsEmpty => 'No AI use in the last 7 days.';
 }
