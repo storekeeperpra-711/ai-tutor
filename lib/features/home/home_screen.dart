@@ -194,11 +194,16 @@ class _StudentHome extends ConsumerWidget {
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
-            TextButton(
-              key: const Key('switch-learner'),
-              onPressed: () =>
-                  ref.read(currentStudentProvider.notifier).clear(),
-              child: Text(l10n.switchLearner),
+            Flexible(
+              child: TextButton(
+                key: const Key('switch-learner'),
+                onPressed: () =>
+                    ref.read(currentStudentProvider.notifier).clear(),
+                child: Text(
+                  l10n.switchLearner,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
             ),
           ],
         ),

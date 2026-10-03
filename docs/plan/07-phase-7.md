@@ -1,6 +1,6 @@
 # Phase 7 plan: age-tiered UI and Mithu
 
-Status: plan, waiting for Shahid's confirmation. Date: 2026-10-03.
+Status: built, waiting for testing with children ([checklist](07-test-with-children.md)). Plan approved 2026-10-03.
 Spec: [master-prompt.md](../master-prompt.md), C1 (age tiers), C2 (Mithu), C3 (engagement rules), C4 (mockups) and Part F, Phase 7.
 
 **Goal:** the app feels alive and right for each age.
@@ -115,3 +115,12 @@ At the end of a lesson:
 4. **Stars count effort**, not perfect answers, following the spec's engagement rules.
 5. **Mithu is off by default for Grades 9–12** and small for Grades 6–8, with a switch for anyone.
 6. **The board exam date is entered once** in Settings, rather than built into the app, because dates differ between boards and years.
+
+## What was built (notes)
+
+- **Stars and badges are worked out from the saved answers**, so they sync with them and come back on a new phone; no new storage.
+- **Stars:** finished; kept trying (tried again after a mistake, or needed no second try); explained in own words (in lessons with nothing to explain: answered every question).
+- **Badge "fixed a mistake the photo checker found"** counts trying again after the photo check, because the app saves attempts, not whether the last try was right.
+- **Recordings** are files named `<lesson>__<step>_<language>.m4a` in `assets/audio/`, each with a `.mouth` file the recorder makes. The microphone is only in debug builds.
+- **New lessons in the daily plan now come from the student's own age group**, so older students aren't given the Nursery lesson.
+- **Sounds, Mithu on/off and the exam date are per child** on a shared phone.

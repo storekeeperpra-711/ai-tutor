@@ -172,7 +172,7 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     var progress = const <String, LessonProgress>{};
     if (student != null) {
       final db = ref.read(localDbProvider);
-      for (final r in await db.watchStepResults(student.id).first) {
+      for (final r in await db.stepResultsOf(student.id)) {
         if (r.lessonId == widget.lesson.id) answers[r.stepId] = answerOf(r);
       }
       progress = ref.read(progressProvider(student.id)).value ?? progress;
