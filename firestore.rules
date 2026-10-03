@@ -64,6 +64,15 @@ service cloud.firestore {
         && resource.data.status == 'waiting' && validQueued();
     }
 
+    // Published lessons (Phase 8): written only by tools/upload.py, read by
+    // every signed-in phone.
+    match /lesson_catalog/{doc} {
+      allow read: if request.auth != null;
+    }
+    match /published_lessons/{lessonId} {
+      allow read: if request.auth != null;
+    }
+
     // ai_usage, ai_usage_total, ai_logs and ai_batches are only for the
     // server (and the Firebase console): they fall under the rule below.
 

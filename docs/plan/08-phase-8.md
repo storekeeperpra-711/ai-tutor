@@ -1,6 +1,6 @@
 # Phase 8 plan: content pipeline and first chapter
 
-Status: plan, waiting for Shahid's ok.
+Status: plan approved 2026-10-03. Step 1 (publishing pipeline) built.
 Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 8.
 
 **Goal:** a repeatable way to write, review and ship lessons.
@@ -20,7 +20,7 @@ Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 8.
 The spec says Firebase Storage. On the free Spark plan, new projects can't create a Storage bucket, so I suggest:
 
 - **Lesson text (JSON) in Firestore**, one document per lesson version. A lesson is small (well under Firestore's 1 MB limit), and Firestore already works offline in the app.
-- **Audio and pictures in Cloudflare R2** (free up to 10 GB, no download fees), served through the AI server we already run. Nothing to set up by hand: the publish workflow does it.
+- **Audio and pictures in Cloudflare R2** (free up to 10 GB, no download fees), served through the AI server we already run. Nothing to set up by hand: the publish workflow does it. *(Built with the chapter's content in step 3: no lesson has recordings yet, so step 1 publishes lesson text only.)*
 - **Bundled lessons stay** as the starting set, so the app works on first open without internet.
 
 The app checks for new or updated lessons when online, saves them on the phone, and then works offline.
