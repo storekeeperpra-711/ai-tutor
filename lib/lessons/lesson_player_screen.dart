@@ -214,6 +214,7 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
           MaterialPageRoute<void>(
             builder: (_) => StepsScreen(
               title: l10n.tryAnotherWay,
+              lessonId: widget.lesson.id,
               steps: alternative.steps,
               onStepDone: (s, r) => _recordMastery(s, r),
             ),
@@ -300,7 +301,11 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
             // The key gives each step a fresh state.
             child: KeyedSubtree(
               key: ValueKey(step.id),
-              child: buildStep(step, (r) => unawaited(_onStepDone(r))),
+              child: buildStep(
+                step,
+                (r) => unawaited(_onStepDone(r)),
+                lessonId: widget.lesson.id,
+              ),
             ),
           ),
         ],

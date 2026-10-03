@@ -88,6 +88,35 @@ class SkillStates extends Table {
   Set<Column> get primaryKey => {studentId, skill};
 }
 
+/// Answers to `ai_explain` steps that were checked by keywords (offline or
+/// on an error) and wait for Mithu's AI reply from the batch job (Phase 6).
+@DataClassName('QueuedAnswer')
+class AiQueue extends Table {
+  /// Also the Firestore document id in `ai_queue`.
+  TextColumn get id => text()();
+  TextColumn get studentId => text().references(Students, #id)();
+  TextColumn get lessonId => text()();
+  TextColumn get stepId => text()();
+
+  /// The question, so the notes screen can show it without the lesson.
+  TextColumn get task => text()();
+  TextColumn get lang => text()();
+  TextColumn get answer => text()();
+  DateTimeColumn get createdAt => dateTime()();
+  BoolColumn get uploaded => boolean().withDefault(const Constant(false))();
+
+  /// waiting, answered or failed (the server's status).
+  TextColumn get status => text().withDefault(const Constant('waiting'))();
+  TextColumn get level => text().nullable()();
+  TextColumn get reply => text().nullable()();
+
+  /// The child has opened Mithu's reply.
+  BoolColumn get seen => boolean().withDefault(const Constant(false))();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
 /// The pictures a child can choose from.
 const avatarIds = [
   'cat',
@@ -113,18 +142,19 @@ class ProgressUpload {
 /// The on-phone database. Everything is saved here first, so lessons work
 /// without internet; the sync service copies it to Firestore.
 @DriftDatabase(
-  tables: [Students, LessonProgressTable, StepResults, SkillStates],
+  tables: [Students, LessonProgressTable, StepResults, SkillStates, AiQueue],
 )
 class LocalDb extends _$LocalDb {
   LocalDb(super.executor);
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
     onUpgrade: (m, from, to) async {
       if (from < 2) await m.createTable(skillStates);
+      if (from < 3) await m.createTable(aiQueue);
     },
     beforeOpen: (details) async {
       await customStatement('PRAGMA foreign_keys = ON');
@@ -144,6 +174,7 @@ class LocalDb extends _$LocalDb {
       into(students).insert(student.copyWith(synced: false));
 
   Future<void> deleteStudent(String id) => transaction(() async {
+    await (delete(aiQueue)..where((r) => r.studentId.equals(id))).go();
     await (delete(stepResults)..where((r) => r.studentId.equals(id))).go();
     await (delete(skillStates)..where((r) => r.studentId.equals(id))).go();
     await (delete(
@@ -335,6 +366,9 @@ class LocalDb extends _$LocalDb {
         .write(const StepResultsCompanion(synced: Value(false)));
     await update(skillStates)
         .write(const SkillStatesCompanion(synced: Value(false)));
+    await (update(aiQueue)..where((q) => q.status.equals('waiting'))).write(
+      const AiQueueCompanion(uploaded: Value(false)),
+    );
   });
 
   /// Adds profiles and progress saved in the account (for example from
@@ -367,8 +401,53 @@ class LocalDb extends _$LocalDb {
     }
   });
 
+  // AI answers waiting for Mithu (Phase 6)
+
+  Future<void> queueAnswer(QueuedAnswer answer) =>
+      into(aiQueue).insertOnConflictUpdate(answer);
+
+  Future<List<QueuedAnswer>> answersToUpload() =>
+      (select(aiQueue)..where((q) => q.uploaded.equals(false))).get();
+
+  Future<void> markAnswerUploaded(String id) =>
+      (update(aiQueue)..where((q) => q.id.equals(id))).write(
+        const AiQueueCompanion(uploaded: Value(true)),
+      );
+
+  /// Uploaded answers the server hasn't replied to yet.
+  Future<List<QueuedAnswer>> answersAwaitingReply() => (select(
+    aiQueue,
+  )..where((q) => q.uploaded.equals(true) & q.status.equals('waiting'))).get();
+
+  Future<void> saveReply(
+    String id, {
+    required String status,
+    String? level,
+    String? reply,
+  }) => (update(aiQueue)..where((q) => q.id.equals(id))).write(
+    AiQueueCompanion(
+      status: Value(status),
+      level: Value(level),
+      reply: Value(reply),
+    ),
+  );
+
+  /// A child's queued answers, newest first.
+  Stream<List<QueuedAnswer>> watchQueuedAnswers(String studentId) =>
+      (select(aiQueue)
+            ..where((q) => q.studentId.equals(studentId))
+            ..orderBy([(q) => OrderingTerm.desc(q.createdAt)]))
+          .watch();
+
+  Future<void> markRepliesSeen(String studentId) =>
+      (update(aiQueue)..where(
+            (q) => q.studentId.equals(studentId) & q.status.equals('answered'),
+          ))
+          .write(const AiQueueCompanion(seen: Value(true)));
+
   /// Removes every profile from this phone (when an adult signs out).
   Future<void> clearAll() => transaction(() async {
+    await delete(aiQueue).go();
     await delete(stepResults).go();
     await delete(skillStates).go();
     await delete(lessonProgressTable).go();

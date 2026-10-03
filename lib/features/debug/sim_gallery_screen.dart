@@ -39,6 +39,7 @@ class SimGalleryScreen extends StatelessWidget {
                 MaterialPageRoute<void>(
                   builder: (_) => StepsScreen(
                     title: name,
+                    lessonId: 'dev-sim-gallery',
                     steps: [
                       SimStep(
                         id: 'try',

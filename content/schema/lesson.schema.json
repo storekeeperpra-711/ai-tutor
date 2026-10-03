@@ -556,9 +556,32 @@
           "then": {
             "$ref": "#/$defs/lottieStep"
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "ai_explain"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/aiExplainStep"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "photo_check"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/photoCheckStep"
+          }
         }
-      ],
-      "$comment": "ai_explain and photo_check get full definitions in Phase 6."
+      ]
     },
     "explainStep": {
       "type": "object",
@@ -1128,6 +1151,223 @@
         },
         "character": {
           "$ref": "#/$defs/character"
+        }
+      }
+    },
+    "aiExplainStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "The student explains an idea in their own words (or makes up their own question). AI gives feedback through the server; offline, keywords score it on the phone.",
+      "required": [
+        "id",
+        "type",
+        "task",
+        "key_idea",
+        "levels",
+        "keywords",
+        "fallback_feedback"
+      ],
+      "properties": {
+        "id": true,
+        "type": true,
+        "question_type": {
+          "$ref": "#/$defs/questionType",
+          "description": "Makes this step count as mastery evidence of this kind. Steps without it (e.g. a prediction) don't count."
+        },
+        "skill": {
+          "$ref": "#/$defs/skillId",
+          "description": "Skill this step tests. Default: the lesson's first skill."
+        },
+        "character": {
+          "$ref": "#/$defs/character"
+        },
+        "task_kind": {
+          "enum": [
+            "explain",
+            "own_question"
+          ],
+          "default": "explain",
+          "description": "explain: explain the idea in your own words. own_question: make up your own question about it (and answer it)."
+        },
+        "task": {
+          "$ref": "#/$defs/text",
+          "description": "What the student is asked, shown on screen."
+        },
+        "key_idea": {
+          "$ref": "#/$defs/nonEmpty",
+          "description": "In English, for the AI and teachers: what a good answer contains."
+        },
+        "levels": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "got_it",
+            "partly",
+            "not_yet"
+          ],
+          "description": "In English, for the AI: what each level means for this task.",
+          "properties": {
+            "got_it": {
+              "$ref": "#/$defs/nonEmpty"
+            },
+            "partly": {
+              "$ref": "#/$defs/nonEmpty"
+            },
+            "not_yet": {
+              "$ref": "#/$defs/nonEmpty"
+            }
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/$defs/nonEmpty"
+            }
+          },
+          "description": "Offline fallback. Each group is one idea, written as words in English, Urdu and Roman Urdu. All groups found = got_it, some = partly, none = not_yet."
+        },
+        "fallback_feedback": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "got_it",
+            "partly",
+            "not_yet"
+          ],
+          "description": "Shown when the answer is checked by keywords (offline, limit reached or an error).",
+          "properties": {
+            "got_it": {
+              "$ref": "#/$defs/text"
+            },
+            "partly": {
+              "$ref": "#/$defs/text"
+            },
+            "not_yet": {
+              "$ref": "#/$defs/text"
+            }
+          }
+        },
+        "limit_per_day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "default": 3,
+          "description": "AI checks of this step per student per day."
+        },
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "default": 2
+        }
+      }
+    },
+    "photoCheckStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "The student solves a problem in their notebook and sends a photo. AI reads it, the student confirms, a checker in the app decides, and AI explains a wrong answer.",
+      "required": [
+        "id",
+        "type",
+        "problem",
+        "checker",
+        "expected",
+        "hint",
+        "feedback_correct",
+        "correct_working"
+      ],
+      "properties": {
+        "id": true,
+        "type": true,
+        "question_type": {
+          "$ref": "#/$defs/questionType",
+          "description": "Makes this step count as mastery evidence of this kind. Steps without it (e.g. a prediction) don't count."
+        },
+        "skill": {
+          "$ref": "#/$defs/skillId",
+          "description": "Skill this step tests. Default: the lesson's first skill."
+        },
+        "character": {
+          "$ref": "#/$defs/character"
+        },
+        "problem": {
+          "$ref": "#/$defs/text"
+        },
+        "checker": {
+          "enum": [
+            "numeric",
+            "fraction",
+            "chem_equation",
+            "linear_equation"
+          ],
+          "description": "linear_equation checks every line of working; the others check the final answer."
+        },
+        "expected": {
+          "$ref": "#/$defs/nonEmpty",
+          "description": "linear_equation: the equation to solve, e.g. 4x - 7 = 2x + 5. chem_equation: the balanced equation. numeric and fraction: the answer."
+        },
+        "variable": {
+          "type": "string",
+          "pattern": "^[a-z]$",
+          "default": "x"
+        },
+        "tolerance": {
+          "type": "number",
+          "minimum": 0,
+          "default": 0
+        },
+        "require_simplest": {
+          "type": "boolean",
+          "default": false
+        },
+        "hint": {
+          "$ref": "#/$defs/text"
+        },
+        "feedback_correct": {
+          "$ref": "#/$defs/text"
+        },
+        "correct_working": {
+          "$ref": "#/$defs/text",
+          "description": "Full working, shown after the last attempt."
+        },
+        "common_wrong": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "answer",
+              "feedback"
+            ],
+            "properties": {
+              "answer": {
+                "type": "string"
+              },
+              "feedback": {
+                "$ref": "#/$defs/text"
+              },
+              "misconception_id": {
+                "$ref": "#/$defs/localId"
+              }
+            }
+          }
+        },
+        "limit_per_day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "default": 2,
+          "description": "Photos of this step per student per day."
+        },
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "default": 3
         }
       }
     }

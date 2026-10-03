@@ -100,3 +100,70 @@ test('other collections are closed', async () => {
   await assertFails(setDoc(doc(db('phone1'), 'lessons/x'), { a: 1 }));
   await assertFails(getDoc(doc(db('phone1'), 'lessons/x')));
 });
+
+// Phase 6: AI queue, reports, and server-only AI collections.
+
+const queued = (uid, studentId = 's1') => ({
+  uid,
+  student_id: studentId,
+  lesson_id: 'g6-maths-02-dividing-fractions',
+  step_id: 's6_explain_why',
+  lang: 'ur',
+  answer: 'ہر روٹی کے دو آدھے',
+  created_at: Timestamp.now(),
+  status: 'waiting',
+});
+const QID = 'Ab3dEf6hIj9kLm2nOp5q';
+
+async function withStudent(uid) {
+  await env.withSecurityRulesDisabled((ctx) =>
+    setDoc(doc(ctx.firestore(), `accounts/${uid}/students/s1`), student),
+  );
+}
+
+test('a phone can queue an answer for its own student and read it back', async () => {
+  await withStudent('phone1');
+  const mine = db('phone1');
+  await assertSucceeds(setDoc(doc(mine, `ai_queue/${QID}`), queued('phone1')));
+  await assertSucceeds(setDoc(doc(mine, `ai_queue/${QID}`), queued('phone1')));
+  await assertSucceeds(getDoc(doc(mine, `ai_queue/${QID}`)));
+  await assertFails(getDoc(doc(db('phone2'), `ai_queue/${QID}`)));
+});
+
+test('queued answers are checked', async () => {
+  await withStudent('phone1');
+  const mine = db('phone1');
+  await assertFails(setDoc(doc(mine, `ai_queue/${QID}`), queued('phone2')));
+  await assertFails(setDoc(doc(mine, `ai_queue/${QID}`), queued('phone1', 'not-my-child')));
+  await assertFails(setDoc(doc(mine, `ai_queue/${QID}`), { ...queued('phone1'), status: 'answered' }));
+  await assertFails(setDoc(doc(mine, `ai_queue/${QID}`), { ...queued('phone1'), reply: 'Great!' }));
+  await assertFails(setDoc(doc(mine, `ai_queue/${QID}`), { ...queued('phone1'), answer: 'x'.repeat(1501) }));
+  await assertFails(setDoc(doc(mine, 'ai_queue/short'), queued('phone1')));
+  await assertFails(setDoc(doc(db(null), `ai_queue/${QID}`), queued('phone1')));
+});
+
+test('a phone cannot change an answer after the server took it', async () => {
+  await withStudent('phone1');
+  await env.withSecurityRulesDisabled((ctx) =>
+    setDoc(doc(ctx.firestore(), `ai_queue/${QID}`), { ...queued('phone1'), status: 'answered', reply: 'Well done' }),
+  );
+  await assertFails(setDoc(doc(db('phone1'), `ai_queue/${QID}`), queued('phone1')));
+  await assertSucceeds(getDoc(doc(db('phone1'), `ai_queue/${QID}`)));
+});
+
+test('parents read weekly reports but only the server writes them', async () => {
+  await withStudent('phone1');
+  const path = 'accounts/phone1/students/s1/reports/2026-10-04';
+  await env.withSecurityRulesDisabled((ctx) => setDoc(doc(ctx.firestore(), path), { note: { en: 'Good week' } }));
+  await assertSucceeds(getDoc(doc(db('phone1'), path)));
+  await assertFails(getDoc(doc(db('phone2'), path)));
+  await assertFails(setDoc(doc(db('phone1'), path), { note: { en: 'Best week ever' } }));
+});
+
+test('AI usage, logs and batches are server only', async () => {
+  const mine = db('phone1');
+  for (const path of ['ai_usage/2026-10-04_s1', 'ai_usage_total/2026-10-04', 'ai_logs/x', 'ai_batches/b1']) {
+    await assertFails(getDoc(doc(mine, path)));
+    await assertFails(setDoc(doc(mine, path), { cost_usd: 0 }));
+  }
+});

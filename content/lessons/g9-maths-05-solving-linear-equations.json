@@ -1,6 +1,6 @@
 {
   "id": "g9-maths-05-solving-linear-equations",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 9,
@@ -369,6 +369,99 @@
         "en": "4x + 10 = 50, so 4x = 40, so x = 10. One pencil costs 10 rupees.",
         "ur": "4x + 10 = 50، اس لیے 4x = 40، اس لیے x = 10۔ ایک پنسل 10 روپے کی ہے۔"
       }
+    },
+    {
+      "id": "s5_explain_balance",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "task": {
+        "en": "Explain in your own words: when you solve an equation, why must you do the same thing to both sides?",
+        "ur": "اپنے الفاظ میں سمجھائیں: مساوات حل کرتے وقت دونوں طرف ایک ہی کام کیوں کرنا ضروری ہے؟"
+      },
+      "key_idea": "An equation is like a balanced scale: both sides are equal. Doing the same thing to both sides keeps them equal (balanced), so the solution does not change. Doing something to one side only breaks the balance.",
+      "levels": {
+        "got_it": "Says both sides are equal (like a balance) and that doing the same to both keeps them equal, so the answer stays correct.",
+        "partly": "Mentions balance or equal sides, but does not say what goes wrong if only one side changes, or the other way round.",
+        "not_yet": "Gives a rule without a reason (for example 'because the teacher said so'), or the reason is wrong."
+      },
+      "keywords": [
+        [
+          "balance",
+          "scale",
+          "ترازو",
+          "توازن",
+          "متوازن",
+          "tarazu",
+          "taraazu",
+          "tawazun",
+          "mutawazin"
+        ],
+        [
+          "equal",
+          "same",
+          "برابر",
+          "ایک جیسا",
+          "barabar",
+          "braber",
+          "same value"
+        ],
+        [
+          "both sides",
+          "each side",
+          "دونوں طرف",
+          "dono taraf",
+          "dono side"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! An equation is a balanced scale, and doing the same to both sides keeps it balanced.",
+          "ur": "بہت خوب! مساوات ایک متوازن ترازو کی طرح ہے، اور دونوں طرف ایک ہی کام کرنے سے توازن قائم رہتا ہے۔"
+        },
+        "partly": {
+          "en": "Good thinking! What would happen to the scale if you took 3 away from one side only?",
+          "ur": "اچھی سوچ! اگر آپ صرف ایک طرف سے 3 نکال دیں تو ترازو کا کیا ہوگا؟"
+        },
+        "not_yet": {
+          "en": "Picture the balance scale from the start of the lesson. Both sides weigh the same. What keeps them level?",
+          "ur": "سبق کے شروع والا ترازو سوچیں۔ دونوں طرف وزن برابر ہے۔ کون سی چیز انہیں برابر رکھتی ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s5_notebook",
+      "type": "photo_check",
+      "question_type": "apply",
+      "checker": "linear_equation",
+      "expected": "4x - 7 = 2x + 5",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Time for your notebook! Write each step on its own line.",
+          "ur": "اب اپنی کاپی نکالیں! ہر قدم الگ لائن پر لکھیں۔"
+        }
+      },
+      "problem": {
+        "en": "In your notebook, solve 4x - 7 = 2x + 5. Write one step on each line, then take a photo of your working.",
+        "ur": "اپنی کاپی میں 4x - 7 = 2x + 5 حل کریں۔ ہر قدم الگ لائن پر لکھیں، پھر اپنے حل کی تصویر لیں۔"
+      },
+      "hint": {
+        "en": "First take 2x away from both sides. Then add 7 to both sides.",
+        "ur": "پہلے دونوں طرف سے 2x نکالیں۔ پھر دونوں طرف 7 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Every line keeps the scale balanced, and x = 6 is right. Check: 4×6 − 7 = 17 and 2×6 + 5 = 17.",
+        "ur": "ہر لائن پر ترازو متوازن ہے، اور x = 6 درست ہے۔ جانچ: 4×6 − 7 = 17 اور 2×6 + 5 = 17۔"
+      },
+      "correct_working": {
+        "en": "4x − 7 = 2x + 5 → take 2x from both sides: 2x − 7 = 5 → add 7 to both sides: 2x = 12 → divide both sides by 2: x = 6.",
+        "ur": "4x − 7 = 2x + 5 ← دونوں طرف سے 2x نکالیں: 2x − 7 = 5 ← دونوں طرف 7 جمع کریں: 2x = 12 ← دونوں طرف 2 سے تقسیم کریں: x = 6۔"
+      },
+      "limit_per_day": 2,
+      "max_attempts": 3
     },
     {
       "id": "s6_summary",

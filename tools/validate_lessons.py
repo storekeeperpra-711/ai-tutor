@@ -101,6 +101,14 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
 
     for where, step in all_steps(lesson):
         problems += [f"{where}/{step.get('id')}: {p}" for p in check_media(step)]
+        problems += [f"{where}/{step.get('id')}: {p}" for p in check_ai_step(step)]
+
+    # The AI server finds AI steps by id anywhere in the lesson.
+    ai_ids = [s["id"] for _, s in all_steps(lesson) if s.get("type") in AI_STEPS]
+    all_ids = [s.get("id") for _, s in all_steps(lesson)]
+    for step_id in sorted(set(ai_ids)):
+        if all_ids.count(step_id) > 1:
+            problems.append(f"AI step id '{step_id}' must be unique in the whole lesson")
 
     skills = set(lesson["skills"])
     for field in ("mastery_criteria", "question_bank"):
@@ -170,6 +178,30 @@ def check_media(step: dict) -> list[str]:
     elif kind == "lottie":
         if not (ASSETS / "lottie" / step["src"]).exists():
             problems.append(f"assets/lottie/{step['src']} doesn't exist")
+    return problems
+
+
+AI_STEPS = ("ai_explain", "photo_check")
+
+
+def check_ai_step(step: dict) -> list[str]:
+    """Rules for ai_explain and photo_check steps."""
+    problems = []
+    if step.get("type") == "ai_explain":
+        for i, group in enumerate(step["keywords"]):
+            if any(word != word.strip() or not word.strip() for word in group):
+                problems.append(f"keywords group {i + 1} has an empty word or extra spaces")
+    elif step.get("type") == "photo_check":
+        expected, checker = step["expected"], step["checker"]
+        if checker == "numeric":
+            try:
+                float(expected)
+            except ValueError:
+                problems.append(f"expected '{expected}' is not a number")
+        elif checker == "linear_equation" and expected.count("=") != 1:
+            problems.append(f"expected '{expected}' must be one equation with one '='")
+        elif checker == "chem_equation" and "->" not in expected:
+            problems.append(f"expected '{expected}' must be an equation with '->'")
     return problems
 
 

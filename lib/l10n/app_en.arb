@@ -745,5 +745,192 @@
   "simGalleryTitle": "Simulations (developer)",
   "@simGalleryTitle": {
     "description": "Developer screen listing every simulation."
+  },
+  "aiThinking": "Mithu is reading your answer…",
+  "@aiThinking": {
+    "description": "Shown while the AI checks an explanation."
+  },
+  "checkedByAi": "Checked by AI",
+  "@checkedByAi": {
+    "description": "Small label on feedback written by AI."
+  },
+  "checkedByKeywords": "Checked by keywords",
+  "@checkedByKeywords": {
+    "description": "Small label on feedback from the offline keyword check."
+  },
+  "aiQueued": "No internet right now. Mithu will look at your answer later.",
+  "@aiQueued": {
+    "description": "The answer was checked offline and waits for AI feedback."
+  },
+  "aiLimitReached": "Mithu has helped a lot today, so the app checked this one.",
+  "@aiLimitReached": {
+    "description": "A daily AI limit was reached."
+  },
+  "improveAnswer": "Improve my answer",
+  "@improveAnswer": {
+    "description": "Button to edit an explanation and check it again."
+  },
+  "explainInputHelp": "Write in English, Urdu or Roman Urdu.",
+  "@explainInputHelp": {
+    "description": "Help under the explanation box."
+  },
+  "levelGotIt": "Got it!",
+  "@levelGotIt": {
+    "description": "Explanation level: shows the idea."
+  },
+  "levelPartly": "Partly there",
+  "@levelPartly": {
+    "description": "Explanation level: part of the idea."
+  },
+  "levelNotYet": "Not yet",
+  "@levelNotYet": {
+    "description": "Explanation level: not the idea yet."
+  },
+  "photoTake": "Take a photo",
+  "@photoTake": {
+    "description": "Button: open the camera for notebook working."
+  },
+  "photoChoose": "Choose a photo",
+  "@photoChoose": {
+    "description": "Button: pick a photo from the gallery."
+  },
+  "photoTypeInstead": "Type my answer instead",
+  "@photoTypeInstead": {
+    "description": "Button: type the working instead of a photo."
+  },
+  "photoReading": "Mithu is reading your working…",
+  "@photoReading": {
+    "description": "Shown while the AI reads a photo."
+  },
+  "photoConfirm": "Mithu read this. Fix anything that is wrong, then press Check.",
+  "@photoConfirm": {
+    "description": "Above the working the AI read from the photo."
+  },
+  "photoUnreadable": "Mithu couldn't read that photo. Try again in good light, or type your answer.",
+  "@photoUnreadable": {
+    "description": "The photo could not be read."
+  },
+  "photoOffline": "Photos need internet. Type your working instead.",
+  "@photoOffline": {
+    "description": "No connection for a photo check."
+  },
+  "photoLimit": "Mithu has read enough photos today. Type your working instead.",
+  "@photoLimit": {
+    "description": "Daily photo limit reached."
+  },
+  "photoWorkingLabel": "Your working (one step per line)",
+  "@photoWorkingLabel": {
+    "description": "Label of the box with the working."
+  },
+  "readByAi": "Read by AI",
+  "@readByAi": {
+    "description": "Small label: the AI read the photo."
+  },
+  "explainedByAi": "Explained by AI",
+  "@explainedByAi": {
+    "description": "Small label: the AI explained the checker's verdict."
+  },
+  "photoExplaining": "Mithu is looking at where it went wrong…",
+  "@photoExplaining": {
+    "description": "Shown while the AI explains a wrong answer."
+  },
+  "tryAgainButton": "Try again",
+  "@tryAgainButton": {
+    "description": "Button to try a photo step again."
+  },
+  "mithuNotesTitle": "Mithu's notes",
+  "@mithuNotesTitle": {
+    "description": "Screen with AI replies to answers that waited offline."
+  },
+  "mithuNotesNew": "Mithu has new notes for you ({count})",
+  "@mithuNotesNew": {
+    "description": "Home card when AI replies arrived.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mithuNotesWaiting": "Waiting for Mithu",
+  "@mithuNotesWaiting": {
+    "description": "An answer still waiting for AI feedback."
+  },
+  "mithuNotesFailed": "Mithu couldn't look at this one.",
+  "@mithuNotesFailed": {
+    "description": "AI feedback for a queued answer failed."
+  },
+  "mithuNotesEmpty": "No notes yet.",
+  "@mithuNotesEmpty": {
+    "description": "No queued answers."
+  },
+  "weeklyReport": "Weekly report",
+  "@weeklyReport": {
+    "description": "Button and title for the weekly parent report."
+  },
+  "weeklyReportNone": "No report yet. Reports are written on Sunday evenings for children who practised that week.",
+  "@weeklyReportNone": {
+    "description": "No weekly report exists."
+  },
+  "weeklyReportStats": "{days} days of practice · {lessons} lessons finished · {questions} questions answered",
+  "@weeklyReportStats": {
+    "description": "Numbers of a weekly report.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "lessons": {
+        "type": "int"
+      },
+      "questions": {
+        "type": "int"
+      }
+    }
+  },
+  "needsInternet": "Connect to the internet and try again.",
+  "@needsInternet": {
+    "description": "Something needs a connection."
+  },
+  "aiCostsTitle": "AI use and cost",
+  "@aiCostsTitle": {
+    "description": "Cost dashboard title."
+  },
+  "aiCostsAll": "All students in the project",
+  "@aiCostsAll": {
+    "description": "Cost dashboard shows every student (admin)."
+  },
+  "aiCostsMine": "Students on this account",
+  "@aiCostsMine": {
+    "description": "Cost dashboard shows this account's students."
+  },
+  "aiCostsTotal": "Last 7 days: {cost}",
+  "@aiCostsTotal": {
+    "description": "Total estimated AI cost.",
+    "placeholders": {
+      "cost": {
+        "type": "String"
+      }
+    }
+  },
+  "aiCostsRow": "{calls} calls · {text} text · {photo} photos · {cost}",
+  "@aiCostsRow": {
+    "description": "One student's AI use on one day.",
+    "placeholders": {
+      "calls": {
+        "type": "int"
+      },
+      "text": {
+        "type": "int"
+      },
+      "photo": {
+        "type": "int"
+      },
+      "cost": {
+        "type": "String"
+      }
+    }
+  },
+  "aiCostsEmpty": "No AI use in the last 7 days.",
+  "@aiCostsEmpty": {
+    "description": "Cost dashboard is empty."
   }
 }

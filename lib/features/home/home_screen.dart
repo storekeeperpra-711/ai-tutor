@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../ai/mithu_notes.dart';
 import '../../l10n/app_localizations.dart';
 import '../../lessons/lesson_repository.dart';
 import '../../lessons/lesson_text.dart';
@@ -209,6 +210,7 @@ class _StudentHome extends ConsumerWidget {
         ),
         const SizedBox(height: 16),
         TodayPlanCard(student: student),
+        MithuNotesCard(student: student),
         const SizedBox(height: 16),
         Text(l10n.lessonsTitle, style: Theme.of(context).textTheme.titleLarge),
         if (lessons.isEmpty)

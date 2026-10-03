@@ -8,6 +8,7 @@ from pathlib import Path
 
 import validate_lessons as v
 
+EQUATIONS = v.LESSONS_DIR / "g9-maths-05-solving-linear-equations.json"
 SAMPLE = v.LESSONS_DIR / "g6-maths-02-dividing-fractions.json"
 
 
@@ -131,8 +132,63 @@ class ValidateLessonsTest(unittest.TestCase):
         self.assertEqual(v.check_prerequisite_loops([a]), [])
 
 
-if __name__ == "__main__":
-    unittest.main()
+class AiStepsTest(unittest.TestCase):
+    """ai_explain and photo_check steps (Phase 6)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.validator = v.load_validator()
+        cls.lesson = json.loads(EQUATIONS.read_text(encoding="utf-8"))
+
+    def step(self, kind):
+        lesson = copy.deepcopy(self.lesson)
+        return lesson, next(s for s in lesson["steps"] if s["type"] == kind)
+
+    def problems(self, lesson):
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / f"{lesson['id']}.json"
+            path.write_text(json.dumps(lesson, ensure_ascii=False), encoding="utf-8")
+            return v.validate_file(path, self.validator)
+
+    def assertProblem(self, problems, text):
+        self.assertTrue(any(text in p for p in problems), f"'{text}' not in {problems}")
+
+    def test_lesson_is_valid(self):
+        self.assertEqual(self.problems(copy.deepcopy(self.lesson)), [])
+
+    def test_ai_explain_needs_keywords_and_all_fallback_levels(self):
+        lesson, step = self.step("ai_explain")
+        del step["fallback_feedback"]["partly"]
+        self.assertProblem(self.problems(lesson), "'partly' is a required property")
+        lesson, step = self.step("ai_explain")
+        step["keywords"] = []
+        self.assertProblem(self.problems(lesson), "should be non-empty")
+
+    def test_keywords_without_extra_spaces(self):
+        lesson, step = self.step("ai_explain")
+        step["keywords"][0].append(" balance")
+        self.assertProblem(self.problems(lesson), "extra spaces")
+
+    def test_photo_check_expected_fits_the_checker(self):
+        lesson, step = self.step("photo_check")
+        step["expected"] = "4x - 7"
+        self.assertProblem(self.problems(lesson), "one equation with one '='")
+        step.update(checker="numeric", expected="six")
+        self.assertProblem(self.problems(lesson), "is not a number")
+        step.update(checker="chem_equation", expected="H2 + O2")
+        self.assertProblem(self.problems(lesson), "with '->'")
+
+    def test_photo_check_needs_correct_working(self):
+        lesson, step = self.step("photo_check")
+        del step["correct_working"]
+        self.assertProblem(self.problems(lesson), "'correct_working' is a required property")
+
+    def test_ai_step_ids_unique_in_whole_lesson(self):
+        lesson, step = self.step("photo_check")
+        bank = next(iter(lesson["question_bank"].values()))
+        bank[0]["step"]["id"] = step["id"]
+        bank[0]["id"] = step["id"]
+        self.assertProblem(self.problems(lesson), "must be unique in the whole lesson")
 
 
 class RichStepsTest(unittest.TestCase):
@@ -209,3 +265,7 @@ class RichStepsTest(unittest.TestCase):
             self.assertIsNone(v.EXTERNAL.search(page.read_text(encoding="utf-8")), page.name)
         for bad in ['<script src="https://cdn.example.com/x.js">', "fetch('/api')", "url(//x.png)"]:
             self.assertIsNotNone(v.EXTERNAL.search(bad), bad)
+
+
+if __name__ == "__main__":
+    unittest.main()

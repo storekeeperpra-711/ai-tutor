@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../ai/weekly_report.dart';
 import '../../app/preferences.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/account_actions.dart';
@@ -216,11 +217,22 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
                 leading: StudentAvatar(avatar: s.avatar, size: 40),
                 title: Text(s.firstName),
                 subtitle: _LearnerSubtitle(student: s),
-                trailing: IconButton(
-                  key: Key('remove-${s.id}'),
-                  icon: const Icon(Icons.delete_outline),
-                  tooltip: l10n.removeLearner,
-                  onPressed: () => _remove(s),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(
+                      key: Key('report-${s.id}'),
+                      icon: const Icon(Icons.summarize_outlined),
+                      tooltip: l10n.weeklyReport,
+                      onPressed: () => showWeeklyReport(context, ref, s),
+                    ),
+                    IconButton(
+                      key: Key('remove-${s.id}'),
+                      icon: const Icon(Icons.delete_outline),
+                      tooltip: l10n.removeLearner,
+                      onPressed: () => _remove(s),
+                    ),
+                  ],
                 ),
               ),
           ],
