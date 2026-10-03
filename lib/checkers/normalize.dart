@@ -6,7 +6,7 @@ const _superscriptDigits = '⁰¹²³⁴⁵⁶⁷⁸⁹';
 
 /// Turns Urdu (۰–۹) and Arabic (٠–٩) digits into 0–9, subscript and
 /// superscript digits (H₂O) into plain digits, and maths symbols
-/// (× ÷ − → and the Arabic decimal point) into their keyboard forms.
+/// (× ÷ − → ≤ ≥ and the Arabic decimal point) into their keyboard forms.
 String normalizeInput(String input) {
   final out = StringBuffer();
   for (final rune in input.trim().runes) {
@@ -28,6 +28,8 @@ String normalizeInput(String input) {
         0x00F7 => '/', // ÷
         0x2192 || 0x27F6 => '->', // → ⟶
         0x00A0 => ' ', // no-break space
+        0x2264 || 0x2A7D => '<=', // ≤ ⩽
+        0x2265 || 0x2A7E => '>=', // ≥ ⩾
         _ => char,
       });
     }

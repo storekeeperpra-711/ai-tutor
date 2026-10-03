@@ -340,19 +340,25 @@ LessonItem? _nextLesson(
   if (!allMastered) return null;
 
   // Then the first new lesson, made for the student's age group, whose
-  // prerequisites aren't known gaps. (Without lessons for their group
-  // yet, any lesson except the youngest children's.)
+  // prerequisites aren't gaps: not still being learned, and not taught by
+  // another lesson the student hasn't done yet. (Without lessons for their
+  // group yet, any lesson except the youngest children's.)
   var fitting = curriculum.lessons.where(
     (l) => tier == null || l.tier == tier.name,
   );
   if (fitting.isEmpty) {
     fitting = curriculum.lessons.where((l) => l.tier != AgeTier.early.name);
   }
+  final taught = {for (final l in curriculum.lessons) ...l.skills};
   for (final lesson in fitting) {
     if (positions[lesson.id] != null) continue;
     if (levelOf(lesson.mainSkill) != MasteryLevel.notStarted) continue;
     final gap = lesson.prerequisites.any(
-      (p) => levelOf(p.skill) == MasteryLevel.learning,
+      (p) => switch (levelOf(p.skill)) {
+        MasteryLevel.learning => true,
+        MasteryLevel.notStarted => taught.contains(p.skill),
+        _ => false,
+      },
     );
     if (!gap) return LessonItem(lesson, fromStep: 0);
   }

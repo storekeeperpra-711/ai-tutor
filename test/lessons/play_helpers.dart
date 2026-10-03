@@ -1,4 +1,5 @@
 import 'package:ai_tutor/checkers/linear_equation_checker.dart';
+import 'package:ai_tutor/checkers/linear_inequality_checker.dart';
 import 'package:ai_tutor/lessons/steps/sim_step_view.dart';
 import 'package:ai_tutor/models/lesson_step.dart';
 import 'package:ai_tutor/sims/sim_host.dart';
@@ -17,12 +18,20 @@ String formatNumber(double n) =>
 
 /// A correct answer for a text_check step.
 String rightAnswer(TextCheckStep step) {
+  if (step.checker == 'linear_inequality') {
+    return inequalityAnswer(step.expected, step.variable);
+  }
   if (step.checker != 'linear_equation') return step.expected;
   final solution =
       parseLinearEquation(step.expected, variable: step.variable).solution
           as OneSolution;
   return '${step.variable} = ${solution.value}';
 }
+
+/// The solved form of [inequality], like `x <= 4`.
+String inequalityAnswer(String inequality, String variable) =>
+    (parseLinearInequality(inequality, variable: variable).solutions as Ray)
+        .describe(variable);
 
 Future<void> tapKey(WidgetTester tester, String key) async {
   final finder = find.byKey(Key(key));
@@ -63,6 +72,7 @@ String wrongPhotoAnswer(PhotoCheckStep step) => switch (step.checker) {
 /// The right result for a sim step, as the simulation would report it.
 Object rightSimAnswer(SimStep step) {
   final e = step.expected!;
+  if (e.checker == 'linear_inequality') return inequalityAnswer(e.answer, 'x');
   return e.checker == 'numeric' ? num.parse(e.answer) : e.answer;
 }
 
@@ -77,6 +87,7 @@ Object wrongSimAnswer(SimStep step) {
     'numeric' => num.parse(e.answer) + 1,
     'chem_equation' => 'N2 + H2 -> NH3',
     'fraction' => '999/1000',
+    'linear_inequality' => 'x < 999',
     _ => 'zzz',
   };
 }
@@ -123,6 +134,7 @@ Future<void> answerStep(
           : switch (step.checker) {
               'chem_equation' => 'Xx2 -> Xx',
               'linear_equation' => '${step.variable} = 999',
+              'linear_inequality' => '${step.variable} < 999',
               'fraction' => '999/1000',
               _ => 'zzz',
             };

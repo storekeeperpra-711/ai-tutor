@@ -1735,6 +1735,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Decided by {email}'**
   String reviewDecidedBy(String email);
+
+  /// A line of inequality working could not be read.
+  ///
+  /// In en, this message translates to:
+  /// **'I couldn\'t read line {line}. Write each line as an inequality, like 2x + 3 < 11.'**
+  String inequalityUnreadable(int line);
+
+  /// A line of inequality working is not equivalent to the previous one.
+  ///
+  /// In en, this message translates to:
+  /// **'Line {line} changes the answer. Whatever you do to one side, do exactly the same to the other side.'**
+  String inequalityBrokenStep(int line);
+
+  /// The direction of the inequality sign is wrong on a line.
+  ///
+  /// In en, this message translates to:
+  /// **'Look at the sign in line {line}. When you multiply or divide both sides by a negative number, the sign flips: < becomes >. Otherwise it stays the same.'**
+  String inequalityWrongDirection(int line);
+
+  /// Inequality working is correct but has not reached the answer.
+  ///
+  /// In en, this message translates to:
+  /// **'Good so far! Keep going until one line says {variable} < a number (or >, ≤, ≥).'**
+  String inequalityNotFinished(String variable);
+
+  /// Number line dot that includes the number (≤ ≥).
+  ///
+  /// In en, this message translates to:
+  /// **'Filled'**
+  String get dotFilled;
+
+  /// Number line dot that leaves the number out (< >).
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get dotOpen;
 }
 
 class _AppLocalizationsDelegate

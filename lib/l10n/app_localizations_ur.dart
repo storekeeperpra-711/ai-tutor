@@ -966,4 +966,30 @@ class AppLocalizationsUr extends AppLocalizations {
   String reviewDecidedBy(String email) {
     return 'فیصلہ: $email';
   }
+
+  @override
+  String inequalityUnreadable(int line) {
+    return 'سطر $line پڑھی نہیں جا سکی۔ ہر سطر نامساوات کی شکل میں لکھیں، جیسے 2x + 3 < 11';
+  }
+
+  @override
+  String inequalityBrokenStep(int line) {
+    return 'سطر $line سے جواب بدل گیا۔ ایک طرف جو بھی کریں، دوسری طرف بھی بالکل وہی کریں۔';
+  }
+
+  @override
+  String inequalityWrongDirection(int line) {
+    return 'سطر $line میں علامت دیکھیں۔ جب دونوں طرف کو منفی عدد سے ضرب یا تقسیم کریں تو علامت الٹ جاتی ہے: < بن جاتا ہے >۔ ورنہ وہی رہتی ہے۔';
+  }
+
+  @override
+  String inequalityNotFinished(String variable) {
+    return 'اب تک ٹھیک ہے! اس وقت تک جاری رکھیں جب تک کسی سطر میں $variable < کوئی عدد (یا >، ≤، ≥) نہ آ جائے۔';
+  }
+
+  @override
+  String get dotFilled => 'بھرا ہوا';
+
+  @override
+  String get dotOpen => 'خالی';
 }

@@ -1,6 +1,6 @@
 # Phase 8 plan: content pipeline and first chapter
 
-Status: plan approved 2026-10-03. Step 1 (publishing pipeline) merged (PR #11). Step 2 (teacher review) built.
+Status: plan approved 2026-10-03. Step 1 (publishing pipeline) merged (PR #11). Step 2 (teacher review) merged (PR #12). Step 3 in progress: lessons 2 and 3 of Unit 5 built.
 Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 8.
 
 **Goal:** a repeatable way to write, review and ship lessons.
@@ -53,7 +53,17 @@ I suggest **Grade 9 Maths, Unit 5: Linear Equations and Inequalities**:
 - it builds on the balance-scale lesson we have;
 - the answers are checked by code, so it's safe.
 
-About 6–8 lessons following the Punjab textbook's sections. I draft the list from the textbook's contents page and the teacher confirms it before I write the lessons. Each lesson has explanations, worked examples, practice steps, an AI "explain your thinking" step, and a summary, in English and Urdu.
+About 6–8 lessons following the Punjab textbook's sections. Draft list (from the PCTB Grade 9 book, Exercises 5.1 and 5.2):
+
+1. Solving linear equations: the balance scale (exists).
+2. Equations with brackets and fractions.
+3. Inequalities in one variable on a number line (sign flip with negatives).
+4. Inequalities in two variables: shading a region.
+5. Several inequalities: the feasible region and its corners.
+6. Linear programming: the biggest or smallest value at a corner.
+7. Linear programming word problems.
+
+ I draft the list from the textbook's contents page and the teacher confirms it before I write the lessons. Each lesson has explanations, worked examples, practice steps, an AI "explain your thinking" step, and a summary, in English and Urdu.
 
 Grade 10 Chemistry Chapter 15 and Grades 3–5 Maths come next, through the same pipeline, once the first chapter has gone through it.
 

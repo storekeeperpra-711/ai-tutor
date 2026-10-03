@@ -1,6 +1,7 @@
 import '../checkers/chem_equation_checker.dart';
 import '../checkers/fraction_checker.dart';
 import '../checkers/linear_equation_checker.dart';
+import '../checkers/linear_inequality_checker.dart';
 import '../checkers/normalize.dart';
 import '../checkers/numeric_checker.dart';
 import '../checkers/rational.dart';
@@ -169,6 +170,29 @@ AnswerCheck checkTextStep(
         ),
       };
 
+    case 'linear_inequality':
+      final result = checkInequalityWorking(
+        input,
+        step.expected,
+        variable: step.variable,
+      );
+      final line = result.details['line'] as int?;
+      return switch (result.mistake) {
+        null => const AnswerCheck.correct(),
+        InequalityMistake.unreadable => AnswerCheck.unreadable(
+          l10n.inequalityUnreadable(line!),
+        ),
+        InequalityMistake.brokenStep => AnswerCheck.wrong(
+          l10n.inequalityBrokenStep(line!),
+        ),
+        InequalityMistake.wrongDirection => AnswerCheck.wrong(
+          l10n.inequalityWrongDirection(line!),
+        ),
+        InequalityMistake.notFinished => AnswerCheck.almost(
+          l10n.inequalityNotFinished(step.variable),
+        ),
+      };
+
     case 'text':
       if (squashed.isEmpty) {
         return AnswerCheck.unreadable(l10n.answerUnreadable);
@@ -312,7 +336,7 @@ AnswerCheck checkPhotoStep(
       commonWrong: step.commonWrong,
     ),
     switch (step.checker) {
-      'linear_equation' => lines.join('\n'),
+      'linear_equation' || 'linear_inequality' => lines.join('\n'),
       'fraction' => _afterEquals(last),
       _ => last,
     },

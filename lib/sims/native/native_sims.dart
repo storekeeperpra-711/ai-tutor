@@ -3,6 +3,7 @@ import 'atom_balancer.dart';
 import 'balance_scale.dart';
 import 'fraction_bars.dart';
 import 'graph_plotter.dart';
+import 'inequality_line.dart';
 import 'number_line.dart';
 
 /// Native interactives by `sim_id`. Keep in step with the schema's
@@ -13,4 +14,5 @@ final nativeSims = <String, SimBuilder>{
   'atom_balancer': (args) => AtomBalancer(args: args),
   'number_line': (args) => NumberLine(args: args),
   'graph_plotter': (args) => GraphPlotter(args: args),
+  'inequality_line': (args) => InequalityLine(args: args),
 };

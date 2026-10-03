@@ -317,3 +317,11 @@ class RichStepsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class InequalityTest(unittest.TestCase):
+    def test_one_inequality(self):
+        for good in ["2x - 3 < 7", "x <= 4", "5 >= (x + 1)/2", "x ≥ -2"]:
+            self.assertTrue(v.is_inequality(good), good)
+        for bad in ["2x - 3 = 7", "x < 3 < 4", "x <= ", "x < 3 = 4", "x"]:
+            self.assertFalse(v.is_inequality(bad), bad)

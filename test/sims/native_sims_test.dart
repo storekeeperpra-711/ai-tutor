@@ -175,6 +175,24 @@ void main() {
     expect(lastResult(events), {'value': '3/2'});
   });
 
+  testWidgets('inequality line: pick a number, a dot and a direction', (
+    tester,
+  ) async {
+    final events = await showSim(tester, 'inequality_line', {
+      'min': -6,
+      'max': 6,
+    });
+    expect(find.text('x ≥ 0'), findsOneWidget);
+    await tap(tester, 'line-left', 2);
+    await tester.tap(find.byIcon(Icons.circle_outlined));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.arrow_back));
+    await tester.pumpAndSettle();
+    expect(find.text('x < -2'), findsOneWidget);
+    await tap(tester, 'sim-check');
+    expect(lastResult(events), {'inequality': 'x < -2'});
+  });
+
   testWidgets('graph plotter: move a point and read y = mx + c', (
     tester,
   ) async {
