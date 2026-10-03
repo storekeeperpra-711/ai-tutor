@@ -1245,5 +1245,139 @@
   "subjectUrdu": "Urdu",
   "@subjectUrdu": {
     "description": "Subject name."
+  },
+  "reviewTitle": "Review lessons",
+  "@reviewTitle": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewSignIn": "Sign in with your teacher account to review lessons.",
+  "@reviewSignIn": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewSignInButton": "Sign in",
+  "@reviewSignInButton": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewVerify": "First we check that {email} is your email. Tap the button, then open the link we email you.",
+  "@reviewVerify": {
+    "description": "Teacher review screens (Phase 8).",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewSendLink": "Email me the link",
+  "@reviewSendLink": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewLinkSent": "Sent. Check your inbox, and the spam folder.",
+  "@reviewLinkSent": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewCheckAgain": "I've opened the link",
+  "@reviewCheckAgain": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewNotReviewer": "{email} can't review lessons yet. Ask the app's owner to add it.",
+  "@reviewNotReviewer": {
+    "description": "Teacher review screens (Phase 8).",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewNothing": "No lessons to review.",
+  "@reviewNothing": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewStatusInReview": "Waiting for review",
+  "@reviewStatusInReview": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewStatusApproved": "Approved",
+  "@reviewStatusApproved": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewStatusChanges": "Needs changes",
+  "@reviewStatusChanges": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewVersion": "Version {version}",
+  "@reviewVersion": {
+    "description": "Teacher review screens (Phase 8).",
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewPlay": "Play the lesson",
+  "@reviewPlay": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewPlayHint": "Play it as a child would. On any step, tap the note button to write what should change.",
+  "@reviewPlayHint": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewWholeLesson": "Whole lesson",
+  "@reviewWholeLesson": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewStep": "Step {number}",
+  "@reviewStep": {
+    "description": "Teacher review screens (Phase 8).",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewAddNote": "Add a note",
+  "@reviewAddNote": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewNoteHint": "What should change?",
+  "@reviewNoteHint": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewSave": "Save",
+  "@reviewSave": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewApprove": "Approve",
+  "@reviewApprove": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewApproveConfirm": "Approve version {version}? Children will get it the next time lessons are published.",
+  "@reviewApproveConfirm": {
+    "description": "Teacher review screens (Phase 8).",
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewOldVersion": "This phone has a different version of this lesson. Update before reviewing.",
+  "@reviewOldVersion": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewUpdate": "Update lessons",
+  "@reviewUpdate": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewError": "Couldn't reach the server. Check the internet and try again.",
+  "@reviewError": {
+    "description": "Teacher review screens (Phase 8)."
+  },
+  "reviewDecidedBy": "Decided by {email}",
+  "@reviewDecidedBy": {
+    "description": "Teacher review screens (Phase 8).",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
   }
 }

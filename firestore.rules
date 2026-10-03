@@ -73,6 +73,49 @@ service cloud.firestore {
       allow read: if request.auth != null;
     }
 
+    // Teacher review (Phase 8, dev project). Reviewers are listed by email
+    // in config/reviewers, written by tools/upload.py; the email must be
+    // verified, so nobody can sign up with a teacher's address.
+    function isReviewer() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() in
+          get(/databases/$(database)/documents/config/reviewers).data.emails;
+    }
+
+    match /config/reviewers {
+      allow get: if isReviewer();
+    }
+
+    match /lesson_reviews/{lessonId} {
+      allow read: if isReviewer();
+      // A reviewer decides on the exact version they saw; anything else
+      // is the upload tool's.
+      allow update: if isReviewer()
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['status', 'approved_hash', 'reviewer', 'decided_at'])
+        && (request.resource.data.status == 'changes_requested'
+            || (request.resource.data.status == 'approved'
+                && request.resource.data.approved_hash == resource.data.hash))
+        && request.resource.data.reviewer == request.auth.token.email.lower()
+        && request.resource.data.decided_at == request.time;
+
+      match /notes/{noteId} {
+        allow read: if isReviewer();
+        allow create: if isReviewer()
+          && request.resource.data.keys().hasOnly(['step_id', 'text', 'author', 'hash', 'created_at'])
+          && request.resource.data.step_id is string
+          && request.resource.data.step_id.size() <= 100
+          && request.resource.data.text is string
+          && request.resource.data.text.size() >= 1
+          && request.resource.data.text.size() <= 2000
+          && request.resource.data.author == request.auth.token.email.lower()
+          && request.resource.data.hash ==
+               get(/databases/$(database)/documents/lesson_reviews/$(lessonId)).data.hash
+          && request.resource.data.created_at == request.time;
+      }
+    }
+
     // ai_usage, ai_usage_total, ai_logs and ai_batches are only for the
     // server (and the Firebase console): they fall under the rule below.
 

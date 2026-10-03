@@ -29,14 +29,18 @@ import 'steps_screen.dart';
 /// Plays a lesson step by step. With a learner chosen, each finished step
 /// is saved and the lesson reopens where they stopped.
 class LessonPlayerScreen extends ConsumerWidget {
-  const LessonPlayerScreen({super.key, required this.lessonId});
+  const LessonPlayerScreen({super.key, required this.lessonId, this.onNote});
 
   final String lessonId;
+
+  /// Set when a teacher reviews the lesson (Phase 8): a note button on
+  /// every step calls it, and nothing is saved for any learner.
+  final void Function(BuildContext context, LessonStep step)? onNote;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lesson = ref.watch(lessonProvider(lessonId));
-    final student = ref.watch(currentStudentProvider);
+    final student = onNote != null ? null : ref.watch(currentStudentProvider);
     final progress = student == null
         ? const AsyncData(<String, LessonProgress>{})
         : ref.watch(progressProvider(student.id));
@@ -45,6 +49,7 @@ class LessonPlayerScreen extends ConsumerWidget {
         lesson: l,
         student: student,
         startIndex: resumeIndex(l, p[l.id]),
+        onNote: onNote,
       ),
       (AsyncError(:final error), _) ||
       (_, AsyncError(:final error)) => Scaffold(
@@ -77,9 +82,11 @@ class _LessonPlayer extends ConsumerStatefulWidget {
     required this.lesson,
     required this.student,
     required this.startIndex,
+    this.onNote,
   });
 
   final Lesson lesson;
+  final void Function(BuildContext context, LessonStep step)? onNote;
 
   /// null in the previewer without a learner: nothing is saved.
   final Student? student;
@@ -312,7 +319,16 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     return Scaffold(
       appBar: AppBar(
         title: LessonText(widget.lesson.title),
-        actions: const [LanguageToggle()],
+        actions: [
+          if (widget.onNote case final onNote?)
+            IconButton(
+              key: const Key('review-note'),
+              tooltip: l10n.reviewAddNote,
+              icon: const Icon(Icons.edit_note),
+              onPressed: () => onNote(context, step),
+            ),
+          const LanguageToggle(),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(28),
           child: Padding(

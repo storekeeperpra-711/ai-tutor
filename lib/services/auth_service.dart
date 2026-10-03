@@ -3,12 +3,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// Who is signed in: the phone itself (anonymous) or a parent or teacher.
 class AppUser {
-  const AppUser({required this.uid, this.email});
+  const AppUser({required this.uid, this.email, this.emailVerified = false});
 
   final String uid;
 
   /// null for the phone's own anonymous account.
   final String? email;
+
+  /// The owner tapped the link Firebase emailed them (needed to review
+  /// lessons, so nobody can sign up with a teacher's address).
+  final bool emailVerified;
 
   bool get isAdult => email != null;
 }
@@ -49,6 +53,12 @@ abstract class AuthService {
   /// A short-lived sign-in token that proves to the AI server who is
   /// calling; null when nobody is signed in.
   Future<String?> idToken();
+
+  /// Emails the signed-in adult a link that proves the address is theirs.
+  Future<void> sendVerificationEmail();
+
+  /// Checks again whether the link was tapped. Returns the updated user.
+  Future<AppUser?> refreshUser();
 }
 
 class FirebaseAuthService implements AuthService {
@@ -56,8 +66,13 @@ class FirebaseAuthService implements AuthService {
 
   final FirebaseAuth _auth;
 
-  static AppUser? _toAppUser(User? user) =>
-      user == null ? null : AppUser(uid: user.uid, email: user.email);
+  static AppUser? _toAppUser(User? user) => user == null
+      ? null
+      : AppUser(
+          uid: user.uid,
+          email: user.email,
+          emailVerified: user.emailVerified,
+        );
 
   @override
   AppUser? get currentUser => _toAppUser(_auth.currentUser);
@@ -105,6 +120,21 @@ class FirebaseAuthService implements AuthService {
 
   @override
   Future<String?> idToken() async => _auth.currentUser?.getIdToken();
+
+  @override
+  Future<void> sendVerificationEmail() => _guard(() async {
+    await _auth.currentUser?.sendEmailVerification();
+  });
+
+  @override
+  Future<AppUser?> refreshUser() => _guard(() async {
+    final user = _auth.currentUser;
+    if (user == null) return null;
+    await user.reload();
+    // A fresh token carries email_verified, which Firestore's rules read.
+    await _auth.currentUser?.getIdToken(true);
+    return _toAppUser(_auth.currentUser);
+  });
 
   Future<T> _guard<T>(Future<T> Function() action) async {
     try {

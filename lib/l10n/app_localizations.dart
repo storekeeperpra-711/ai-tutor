@@ -1579,6 +1579,162 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Urdu'**
   String get subjectUrdu;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Review lessons'**
+  String get reviewTitle;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with your teacher account to review lessons.'**
+  String get reviewSignIn;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get reviewSignInButton;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'First we check that {email} is your email. Tap the button, then open the link we email you.'**
+  String reviewVerify(String email);
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Email me the link'**
+  String get reviewSendLink;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Sent. Check your inbox, and the spam folder.'**
+  String get reviewLinkSent;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'I\'ve opened the link'**
+  String get reviewCheckAgain;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'{email} can\'t review lessons yet. Ask the app\'s owner to add it.'**
+  String reviewNotReviewer(String email);
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'No lessons to review.'**
+  String get reviewNothing;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting for review'**
+  String get reviewStatusInReview;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Approved'**
+  String get reviewStatusApproved;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Needs changes'**
+  String get reviewStatusChanges;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Version {version}'**
+  String reviewVersion(int version);
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Play the lesson'**
+  String get reviewPlay;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Play it as a child would. On any step, tap the note button to write what should change.'**
+  String get reviewPlayHint;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Whole lesson'**
+  String get reviewWholeLesson;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Step {number}'**
+  String reviewStep(int number);
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Add a note'**
+  String get reviewAddNote;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'What should change?'**
+  String get reviewNoteHint;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get reviewSave;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Approve'**
+  String get reviewApprove;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Approve version {version}? Children will get it the next time lessons are published.'**
+  String reviewApproveConfirm(int version);
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'This phone has a different version of this lesson. Update before reviewing.'**
+  String get reviewOldVersion;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Update lessons'**
+  String get reviewUpdate;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t reach the server. Check the internet and try again.'**
+  String get reviewError;
+
+  /// Teacher review screens (Phase 8).
+  ///
+  /// In en, this message translates to:
+  /// **'Decided by {email}'**
+  String reviewDecidedBy(String email);
 }
 
 class _AppLocalizationsDelegate

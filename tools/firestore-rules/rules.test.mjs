@@ -10,8 +10,13 @@ import {
 import {
   deleteDoc,
   doc,
+  addDoc,
+  collection,
   getDoc,
+  getDocs,
+  serverTimestamp,
   setDoc,
+  updateDoc,
   Timestamp,
 } from 'firebase/firestore';
 
@@ -180,3 +185,81 @@ test('signed-in phones read published lessons but only the upload tool writes th
   }
   await assertFails(getDoc(doc(db('phone1'), 'lesson_reviews/g9-maths-05-x')));
 });
+
+describeReviews();
+
+function describeReviews() {
+  const reviewer = (email, verified = true) =>
+    env.authenticatedContext(`uid-${email}`, { email, email_verified: verified }).firestore();
+  const HASH = 'aaaaaaaaaaaaaaaa';
+
+  async function seed() {
+    await env.withSecurityRulesDisabled(async (ctx) => {
+      await setDoc(doc(ctx.firestore(), 'config/reviewers'), { emails: ['teacher@school.pk'] });
+      await setDoc(doc(ctx.firestore(), 'lesson_reviews/g9-maths-05-x'), {
+        hash: HASH,
+        version: 1,
+        status: 'in_review',
+      });
+    });
+  }
+
+  const decision = (status, approvedHash = HASH) => ({
+    status,
+    approved_hash: approvedHash,
+    reviewer: 'teacher@school.pk',
+    decided_at: serverTimestamp(),
+  });
+
+  const note = (overrides = {}) => ({
+    step_id: 's1',
+    text: 'Use the Urdu word for equation here.',
+    author: 'teacher@school.pk',
+    hash: HASH,
+    created_at: serverTimestamp(),
+    ...overrides,
+  });
+
+  test('a listed teacher with a verified email reviews lessons', async () => {
+    await seed();
+    const teacher = reviewer('Teacher@School.pk');
+    await assertSucceeds(getDoc(doc(teacher, 'config/reviewers')));
+    await assertSucceeds(getDocs(collection(teacher, 'lesson_reviews')));
+    await assertSucceeds(addDoc(collection(teacher, 'lesson_reviews/g9-maths-05-x/notes'), note()));
+    await assertSucceeds(getDocs(collection(teacher, 'lesson_reviews/g9-maths-05-x/notes')));
+    await assertSucceeds(updateDoc(doc(teacher, 'lesson_reviews/g9-maths-05-x'), decision('approved')));
+  });
+
+  test('nobody else can review, even with the same email unverified', async () => {
+    await seed();
+    for (const someone of [reviewer('teacher@school.pk', false), reviewer('other@school.pk'), db('phone1')]) {
+      await assertFails(getDoc(doc(someone, 'config/reviewers')));
+      await assertFails(getDoc(doc(someone, 'lesson_reviews/g9-maths-05-x')));
+      await assertFails(updateDoc(doc(someone, 'lesson_reviews/g9-maths-05-x'), decision('approved')));
+      await assertFails(addDoc(collection(someone, 'lesson_reviews/g9-maths-05-x/notes'), note()));
+    }
+  });
+
+  test('a reviewer approves only the version they saw, and only decides', async () => {
+    await seed();
+    const teacher = reviewer('teacher@school.pk');
+    const review = doc(teacher, 'lesson_reviews/g9-maths-05-x');
+    await assertFails(updateDoc(review, decision('approved', 'bbbbbbbbbbbbbbbb')));
+    await assertFails(updateDoc(review, { ...decision('approved'), hash: 'bbbbbbbbbbbbbbbb' }));
+    await assertFails(updateDoc(review, { ...decision('approved'), reviewer: 'shahid@x.pk' }));
+    await assertFails(updateDoc(review, { ...decision('published') }));
+    await assertFails(setDoc(doc(teacher, 'lesson_reviews/new-lesson'), decision('approved')));
+    await assertFails(setDoc(doc(teacher, 'config/reviewers'), { emails: ['me@x.pk'] }));
+    await assertSucceeds(updateDoc(review, decision('changes_requested')));
+  });
+
+  test('notes are checked', async () => {
+    await seed();
+    const notes = collection(reviewer('teacher@school.pk'), 'lesson_reviews/g9-maths-05-x/notes');
+    await assertFails(addDoc(notes, note({ text: '' })));
+    await assertFails(addDoc(notes, note({ text: 'x'.repeat(2001) })));
+    await assertFails(addDoc(notes, note({ author: 'someone@else.pk' })));
+    await assertFails(addDoc(notes, note({ hash: 'bbbbbbbbbbbbbbbb' })));
+    await assertFails(addDoc(notes, note({ extra: true })));
+  });
+}

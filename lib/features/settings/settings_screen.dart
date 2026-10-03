@@ -8,6 +8,7 @@ import '../../app/theme/age_tier.dart';
 import '../../character/feel_settings.dart';
 import '../home/home_parts.dart';
 import '../../l10n/app_localizations.dart';
+import '../../review/review_store.dart';
 
 /// Language names are always shown in their own language, so a student
 /// can find their language even if the app is in the other one.
@@ -78,6 +79,14 @@ class SettingsScreen extends ConsumerWidget {
             trailing: const Icon(Icons.chevron_right),
             onTap: () => context.push('/ai-costs'),
           ),
+          if (ref.watch(reviewOfferedProvider))
+            ListTile(
+              key: const Key('open-review'),
+              leading: const Icon(Icons.fact_check_outlined),
+              title: Text(l10n.reviewTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/review'),
+            ),
           const Divider(height: 32),
           Text(l10n.ageTierLabel, style: heading),
           RadioGroup<AgeTier>(

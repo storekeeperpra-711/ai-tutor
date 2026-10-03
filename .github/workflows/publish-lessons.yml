@@ -5,7 +5,8 @@ name: Publish lessons
 #   prod: only lessons a teacher approved (in dev) go to the real app.
 # Then the AI server is deployed too, so it knows the same lessons.
 # Needs the GitHub secrets FIREBASE_SERVICE_ACCOUNT_DEV and _PROD
-# (docs/setup/ai-setup.md). See tools/upload.py.
+# (docs/setup/ai-setup.md). ADMIN_EMAILS and REVIEWER_EMAILS say who may
+# review lessons. See tools/upload.py.
 on:
   workflow_dispatch:
     inputs:
@@ -42,6 +43,9 @@ jobs:
           DRY_RUN: ${{ inputs.dry_run }}
           SA_DEV: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEV }}
           SA_PROD: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROD }}
+          # Who may review lessons in the dev app.
+          ADMIN_EMAILS: ${{ secrets.ADMIN_EMAILS }}
+          REVIEWER_EMAILS: ${{ secrets.REVIEWER_EMAILS }}
         run: |
           set -o pipefail
           if [ "$TARGET" = "dev" ]; then

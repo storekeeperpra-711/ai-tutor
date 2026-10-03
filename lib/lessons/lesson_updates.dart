@@ -113,14 +113,7 @@ final lessonUpdaterProvider = Provider<LessonUpdater>((ref) {
     db: ref.watch(localDbProvider),
     remote: ref.watch(remoteStoreProvider),
   );
-  Future<void> check() async {
-    // Published lessons are only readable when signed in.
-    if (ref.read(authServiceProvider).currentUser == null) return;
-    if (!await updater.update() || !ref.mounted) return;
-    ref
-      ..invalidate(lessonIdsProvider)
-      ..invalidate(lessonProvider);
-  }
+  Future<void> check() => checkLessons(ref, updater);
 
   ref.listen(onlineProvider, (previous, next) {
     if (next.value ?? false) unawaited(check());
@@ -130,3 +123,28 @@ final lessonUpdaterProvider = Provider<LessonUpdater>((ref) {
   });
   return updater;
 });
+
+/// Checks for lessons (at most hourly unless [force]) and refreshes the
+/// lesson lists if any changed. Returns whether any did.
+Future<bool> checkLessons(
+  Ref ref,
+  LessonUpdater updater, {
+  bool force = false,
+}) async {
+  // Published lessons are only readable when signed in.
+  if (ref.read(authServiceProvider).currentUser == null) return false;
+  final changed = await updater.update(force: force);
+  if (changed && ref.mounted) {
+    ref
+      ..invalidate(lessonIdsProvider)
+      ..invalidate(lessonProvider);
+  }
+  return changed;
+}
+
+/// Checks for new lessons right now, e.g. when a teacher opens the review
+/// list.
+final checkLessonsNowProvider = Provider<Future<bool> Function()>(
+  (ref) =>
+      () => checkLessons(ref, ref.read(lessonUpdaterProvider), force: true),
+);

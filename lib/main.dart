@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app/app.dart';
 import 'app/preferences.dart';
+import 'review/review_store.dart';
 import 'services/auth_service.dart';
 import 'services/local_db.dart';
 import 'services/remote_store.dart';
@@ -35,6 +36,9 @@ Future<void> main() async {
         ),
         remoteStoreProvider.overrideWithValue(
           FirestoreRemoteStore(FirebaseFirestore.instance),
+        ),
+        reviewStoreProvider.overrideWithValue(
+          FirestoreReviewStore(FirebaseFirestore.instance),
         ),
       ],
       child: const AiTutorApp(),
