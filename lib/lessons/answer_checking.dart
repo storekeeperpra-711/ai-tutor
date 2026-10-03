@@ -1,9 +1,11 @@
 import '../checkers/chem_equation_checker.dart';
 import '../checkers/fraction_checker.dart';
+import '../checkers/half_plane_checker.dart';
 import '../checkers/linear_equation_checker.dart';
 import '../checkers/linear_inequality_checker.dart';
 import '../checkers/normalize.dart';
 import '../checkers/numeric_checker.dart';
+import '../checkers/points_checker.dart';
 import '../checkers/rational.dart';
 import '../l10n/app_localizations.dart';
 import '../models/lesson_step.dart';
@@ -190,6 +192,38 @@ AnswerCheck checkTextStep(
         ),
         InequalityMistake.notFinished => AnswerCheck.almost(
           l10n.inequalityNotFinished(step.variable),
+        ),
+      };
+
+    case 'linear_inequality_2d':
+      return switch (checkHalfPlane(input, step.expected)) {
+        null => const AnswerCheck.correct(),
+        HalfPlaneMistake.unreadable => AnswerCheck.unreadable(
+          l10n.halfPlaneUnreadable,
+        ),
+        HalfPlaneMistake.wrongLine => AnswerCheck.wrong(
+          l10n.halfPlaneWrongLine,
+        ),
+        HalfPlaneMistake.wrongSide => AnswerCheck.wrong(
+          l10n.halfPlaneWrongSide,
+        ),
+        HalfPlaneMistake.wrongBoundary => AnswerCheck.wrong(
+          l10n.halfPlaneWrongBoundary,
+        ),
+      };
+
+    case 'points':
+      final result = checkPoints(input, step.expected);
+      return switch (result.mistake) {
+        null => const AnswerCheck.correct(),
+        PointsMistake.unreadable => AnswerCheck.unreadable(
+          l10n.pointsUnreadable,
+        ),
+        PointsMistake.wrongPoint => AnswerCheck.wrong(
+          l10n.pointsWrongPoint(result.details['point']! as String),
+        ),
+        PointsMistake.missing => AnswerCheck.almost(
+          l10n.pointsMissing(result.details['count']! as int),
         ),
       };
 

@@ -95,8 +95,8 @@ Each lesson question step can say which `skill` it tests (default: the lesson's 
 
 Three step types: `sim` (an HTML simulation in a WebView, or a native interactive), `video` and `lottie`. Plan and decisions: [docs/plan/05-phase-5.md](plan/05-phase-5.md).
 
-- A `sim` step's `expected` names the value to check in the simulation's result and the checker (`numeric`, `fraction`, `chem_equation`, `text`). With a `question_type` it counts towards mastery like any question.
-- HTML simulations live in `assets/sims/` and follow the protocol in `lib/sims/README.md`. Native interactives (`fraction_bars`, `balance_scale`, `atom_balancer`, `number_line`, `graph_plotter`) are in `lib/sims/native/`.
+- A `sim` step's `expected` names the value to check in the simulation's result and the checker (`numeric`, `fraction`, `chem_equation`, `linear_inequality`, `linear_inequality_2d`, `points`, `text`). With a `question_type` it counts towards mastery like any question.
+- HTML simulations live in `assets/sims/` and follow the protocol in `lib/sims/README.md`. Native interactives (`fraction_bars`, `balance_scale`, `atom_balancer`, `number_line`, `graph_plotter`, `inequality_line`, `inequality_plane`, `feasible_region`) are in `lib/sims/native/`.
 - In debug builds, **Simulations (developer)** on the home screen opens every simulation and interactive, to try them on the phone.
 - Videos and captions go in `assets/videos/` (or an https link). Make them with `tools/video/make_video.py` (see `tools/README.md`).
 - Lottie files go in `assets/lottie/` (`tools/lottie/make_lottie.py` makes the current ones).

@@ -987,4 +987,61 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dotOpen => 'Open';
+
+  @override
+  String get halfPlaneUnreadable =>
+      'Write one inequality with x and y, like y <= 2x + 1.';
+
+  @override
+  String get halfPlaneWrongLine =>
+      'The boundary line is not right. Find two points on the line and check them.';
+
+  @override
+  String get halfPlaneWrongSide =>
+      'The line is right, but the answer is on its other side. Test a point such as (0, 0).';
+
+  @override
+  String get halfPlaneWrongBoundary =>
+      'Nearly! Is the line itself included? ≤ and ≥ include it (a solid line); < and > do not (a dashed line).';
+
+  @override
+  String get pointsUnreadable =>
+      'Write the points like (2, 3), with commas between them.';
+
+  @override
+  String pointsWrongPoint(String point) {
+    return '$point is not one of the corners. Check it in every inequality.';
+  }
+
+  @override
+  String pointsMissing(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Right so far, but $count corners are missing.',
+      one: 'Right so far, but one corner is missing.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get lineSolid => 'Solid';
+
+  @override
+  String get lineDashed => 'Dashed';
+
+  @override
+  String get shadeOtherSide => 'Other side';
+
+  @override
+  String get planeNoSide => 'Tap the side of the line to shade.';
+
+  @override
+  String get regionHint => 'Tap the corners of the shaded region.';
+
+  @override
+  String get regionClear => 'Clear';
+
+  @override
+  String get regionNoCorners => 'No corners marked yet.';
 }

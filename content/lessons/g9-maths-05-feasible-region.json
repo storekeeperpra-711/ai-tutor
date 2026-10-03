@@ -1,0 +1,607 @@
+{
+  "id": "g9-maths-05-feasible-region",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 9,
+  "tier": "older",
+  "curriculum_refs": [
+    {
+      "outcome": "Graph a system of linear inequalities in two variables, find the feasible region and its corner points.",
+      "textbook": "PCTB Grade 9 Mathematics (NCP 2023), Unit 5: Linear Equations and Inequalities"
+    }
+  ],
+  "skills": [
+    "maths.inequalities.feasible_region"
+  ],
+  "title": {
+    "en": "The feasible region and its corners",
+    "ur": "قابلِ عمل خطہ اور اس کے کونے"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.inequalities.two_variable"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "one_constraint_only",
+      "description": "Checks a point in one inequality only instead of all of them."
+    },
+    {
+      "id": "corner_outside",
+      "description": "Takes a crossing point of two boundary lines as a corner even though it breaks another inequality."
+    },
+    {
+      "id": "forgets_axes",
+      "description": "Forgets the corners on the axes, such as (0, 0)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.inequalities.feasible_region": {
+      "question_types": [
+        "apply",
+        "explain",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.inequalities.feasible_region": [
+      {
+        "id": "qb_corners",
+        "type": "apply",
+        "step": {
+          "id": "qb_corners",
+          "type": "sim",
+          "question_type": "apply",
+          "renderer": "native",
+          "sim_id": "feasible_region",
+          "prompt": {
+            "en": "Mark every corner of the region for 2x + y ≤ 8, y ≤ 4, x ≥ 0, y ≥ 0, then press Check.",
+            "ur": "2x + y ≤ 8، y ≤ 4، x ≥ 0، y ≥ 0 کے خطے کے سب کونے نشان زد کریں، پھر \"جانچیں\" دبائیں۔"
+          },
+          "params": {
+            "constraints": [
+              "2x + y <= 8",
+              "y <= 4",
+              "x >= 0",
+              "y >= 0"
+            ],
+            "x_min": 0,
+            "x_max": 6,
+            "y_min": 0,
+            "y_max": 8
+          },
+          "expected": {
+            "result": "corners",
+            "checker": "points",
+            "answer": "(0, 0), (0, 4), (2, 4), (4, 0)"
+          },
+          "hint": {
+            "en": "Where does 2x + y = 8 meet y = 4? Put y = 4 in: 2x + 4 = 8.",
+            "ur": "2x + y = 8 اور y = 4 کہاں ملتے ہیں؟ y = 4 رکھیں: 2x + 4 = 8۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: (0, 0), (0, 4), (2, 4), (4, 0).",
+            "ur": "درست: (0, 0), (0, 4), (2, 4), (4, 0)۔"
+          },
+          "feedback_wrong": {
+            "en": "The corners are (0, 0), (0, 4), (2, 4), (4, 0). (2, 4) is where 2x + y = 8 meets y = 4.",
+            "ur": "کونے (0, 0), (0, 4), (2, 4), (4, 0) ہیں۔ (2, 4) وہاں ہے جہاں 2x + y = 8، y = 4 سے ملتا ہے۔"
+          }
+        }
+      },
+      {
+        "id": "qb_why_all",
+        "type": "explain",
+        "step": {
+          "id": "qb_why_all",
+          "type": "choice",
+          "prompt": {
+            "en": "Why is the feasible region only the part where all the shadings overlap?",
+            "ur": "قابلِ عمل خطہ صرف وہ حصہ کیوں ہے جہاں سب رنگ ایک دوسرے پر آتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Because a point must make every inequality true at the same time.",
+                "ur": "کیونکہ نقطے کو سب نامساوات ایک ساتھ درست کرنی ہوتی ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Exactly! Breaking even one condition is not allowed.",
+                "ur": "بالکل! ایک شرط توڑنا بھی منع ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Because it is the biggest part of the graph.",
+                "ur": "کیونکہ یہ گراف کا سب سے بڑا حصہ ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Size doesn't matter. Think about what each inequality asks.",
+                "ur": "سائز سے فرق نہیں پڑتا۔ سوچیں ہر نامساوات کیا مانگتی ہے۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Because a point only needs to make one inequality true.",
+                "ur": "کیونکہ نقطے کو صرف ایک نامساوات درست کرنی ہوتی ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Then Ayesha could study 10 hours just because 10 ≥ 0! All the conditions must hold.",
+                "ur": "پھر تو عائشہ 10 گھنٹے پڑھ سکتی کیونکہ 10 ≥ 0! سب شرطیں پوری ہونی چاہئیں۔"
+              },
+              "misconception_id": "one_constraint_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_corner",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_corner",
+          "type": "choice",
+          "prompt": {
+            "en": "For x + 2y ≤ 8, x + y ≤ 6, x ≥ 0, y ≥ 0, Zain lists the corners (0, 0), (6, 0), (4, 2), (0, 6). What is wrong?",
+            "ur": "x + 2y ≤ 8، x + y ≤ 6، x ≥ 0، y ≥ 0 کے لیے زین کونے (0, 0)، (6, 0)، (4, 2)، (0, 6) لکھتا ہے۔ غلطی کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "(0, 6) breaks x + 2y ≤ 8: 0 + 12 = 12. The corner on the y-axis is (0, 4).",
+                "ur": "(0, 6)، x + 2y ≤ 8 کو توڑتا ہے: 0 + 12 = 12۔ y محور پر کونا (0, 4) ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! A corner must make every inequality true.",
+                "ur": "درست! کونے کو ہر نامساوات درست کرنی چاہیے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "(4, 2) is not a corner.",
+                "ur": "(4, 2) کونا نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check: 4 + 4 = 8 and 4 + 2 = 6. It is on both lines, so it is a corner.",
+                "ur": "جانچیں: 4 + 4 = 8 اور 4 + 2 = 6۔ یہ دونوں خطوط پر ہے، اس لیے کونا ہے۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Nothing is wrong.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Put (0, 6) into x + 2y ≤ 8.",
+                "ur": "(0, 6) کو x + 2y ≤ 8 میں رکھیں۔"
+              },
+              "misconception_id": "corner_outside"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_draw_region",
+      "text": {
+        "en": "On squared paper, draw x + y ≤ 5, x ≤ 3, x ≥ 0 and y ≥ 0 on one graph. Shade the feasible region and write down its corners. Check each corner in all four inequalities.",
+        "ur": "خانوں والے کاغذ پر ایک ہی گراف میں x + y ≤ 5، x ≤ 3، x ≥ 0 اور y ≥ 0 بنائیں۔ قابلِ عمل خطہ رنگیں اور اس کے کونے لکھیں۔ ہر کونے کو چاروں نامساوات میں جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "System of inequalities",
+      "ur": "نامساوات کا نظام"
+    },
+    {
+      "en": "Feasible region",
+      "ur": "قابلِ عمل خطہ"
+    },
+    {
+      "en": "Corner point",
+      "ur": "کونے کا نقطہ"
+    },
+    {
+      "en": "Non-negative",
+      "ur": "غیر منفی"
+    },
+    {
+      "en": "Constraint",
+      "ur": "قید (شرط)"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_many_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ayesha has at most 6 hours, and at most 4 hours can be maths. Now two rules must be true together!",
+          "ur": "عائشہ کے پاس زیادہ سے زیادہ 6 گھنٹے ہیں، اور ریاضی زیادہ سے زیادہ 4 گھنٹے ہو سکتی ہے۔ اب دو اصول ایک ساتھ درست ہونے چاہئیں!"
+        }
+      },
+      "text": {
+        "en": "x + y ≤ 6 and x ≤ 4. Hours can't be negative, so also x ≥ 0 and y ≥ 0 (the non-negative constraints). Drawn together, the part of the graph where all of them are true is called the feasible region. A point is in it only if it makes every inequality true.",
+        "ur": "x + y ≤ 6 اور x ≤ 4۔ گھنٹے منفی نہیں ہو سکتے، اس لیے x ≥ 0 اور y ≥ 0 بھی (غیر منفی شرطیں)۔ سب کو ایک ساتھ بنائیں تو گراف کا وہ حصہ جہاں سب درست ہوں قابلِ عمل خطہ کہلاتا ہے۔ کوئی نقطہ اس میں تبھی ہے جب وہ ہر نامساوات کو درست کرے۔"
+      }
+    },
+    {
+      "id": "s2_which_point",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which point is in the feasible region of x + y ≤ 6, x ≤ 4, x ≥ 0, y ≥ 0?",
+        "ur": "x + y ≤ 6، x ≤ 4، x ≥ 0، y ≥ 0 کے قابلِ عمل خطے میں کون سا نقطہ ہے؟"
+      },
+      "options": [
+        {
+          "id": "in",
+          "text": {
+            "en": "(3, 2)",
+            "ur": "(3, 2)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3 + 2 = 5 ≤ 6, 3 ≤ 4, and both are not negative.",
+            "ur": "جی ہاں! 3 + 2 = 5 ≤ 6، 3 ≤ 4، اور دونوں منفی نہیں۔"
+          }
+        },
+        {
+          "id": "too_much_maths",
+          "text": {
+            "en": "(5, 1)",
+            "ur": "(5, 1)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 + 1 = 6 is fine, but x = 5 breaks x ≤ 4. Every inequality must be true.",
+            "ur": "5 + 1 = 6 ٹھیک ہے، مگر x = 5، x ≤ 4 کو توڑتا ہے۔ ہر نامساوات درست ہونی چاہیے۔"
+          },
+          "misconception_id": "one_constraint_only"
+        },
+        {
+          "id": "negative",
+          "text": {
+            "en": "(−1, 3)",
+            "ur": "(−1, 3)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "x = −1 breaks x ≥ 0: Ayesha can't study for −1 hours!",
+            "ur": "x = −1، x ≥ 0 کو توڑتا ہے: عائشہ −1 گھنٹے نہیں پڑھ سکتی!"
+          },
+          "misconception_id": "one_constraint_only"
+        }
+      ]
+    },
+    {
+      "id": "s3_corners",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "The corners of the region are very important. Next lesson shows why!",
+          "ur": "خطے کے کونے بہت اہم ہیں۔ اگلا سبق بتائے گا کیوں!"
+        }
+      },
+      "text": {
+        "en": "The feasible region has straight edges, and its corners are where two boundary lines meet. Some corners are easy, on the axes, like (0, 0). For the others, solve the two line equations together. For example, x + y = 6 and x = 4 meet where 4 + y = 6, so y = 2: the corner is (4, 2).",
+        "ur": "قابلِ عمل خطے کے کنارے سیدھے ہیں، اور اس کے کونے وہاں ہیں جہاں دو حدی خطوط ملتے ہیں۔ کچھ کونے آسان ہیں، محوروں پر، جیسے (0, 0)۔ باقی کے لیے دونوں خطوط کی مساواتیں ایک ساتھ حل کریں۔ مثلاً x + y = 6 اور x = 4 وہاں ملتے ہیں جہاں 4 + y = 6، یعنی y = 2: کونا (4, 2) ہے۔"
+      }
+    },
+    {
+      "id": "s4_mark_corners",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "feasible_region",
+      "prompt": {
+        "en": "Here is the region for x + y ≤ 6, x ≤ 4, x ≥ 0, y ≥ 0. Tap each of its corners, then press Check.",
+        "ur": "یہ x + y ≤ 6، x ≤ 4، x ≥ 0، y ≥ 0 کا خطہ ہے۔ اس کے ہر کونے پر ٹیپ کریں، پھر \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "constraints": [
+          "x + y <= 6",
+          "x <= 4",
+          "x >= 0",
+          "y >= 0"
+        ],
+        "x_min": 0,
+        "x_max": 7,
+        "y_min": 0,
+        "y_max": 7
+      },
+      "expected": {
+        "result": "corners",
+        "checker": "points",
+        "answer": "(0, 0), (0, 6), (4, 0), (4, 2)"
+      },
+      "hint": {
+        "en": "There are 4 corners. Don't forget (0, 0), and the corner where x + y = 6 meets x = 4.",
+        "ur": "4 کونے ہیں۔ (0, 0) اور وہ کونا مت بھولیں جہاں x + y = 6، x = 4 سے ملتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! The corners are (0, 0), (0, 6), (4, 0), (4, 2).",
+        "ur": "شاباش! کونے (0, 0), (0, 6), (4, 0), (4, 2) ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "The corners are (0, 0), (0, 6), (4, 0), (4, 2).",
+        "ur": "کونے (0, 0), (0, 6), (4, 0), (4, 2) ہیں۔"
+      }
+    },
+    {
+      "id": "s5_solve_corner",
+      "type": "text_check",
+      "question_type": "apply",
+      "checker": "points",
+      "expected": "(4, 2)",
+      "prompt": {
+        "en": "Where do the lines x + 2y = 8 and x + y = 6 meet? Write the point like (1, 2).",
+        "ur": "خطوط x + 2y = 8 اور x + y = 6 کہاں ملتے ہیں؟ نقطہ (1, 2) کی طرح لکھیں۔"
+      },
+      "hint": {
+        "en": "Take the second equation from the first: (x + 2y) − (x + y) = 8 − 6, so y = 2.",
+        "ur": "پہلی مساوات میں سے دوسری گھٹائیں: (x + 2y) − (x + y) = 8 − 6، یعنی y = 2۔"
+      },
+      "feedback_correct": {
+        "en": "Correct! (4, 2): 4 + 4 = 8 and 4 + 2 = 6.",
+        "ur": "درست! (4, 2): 4 + 4 = 8 اور 4 + 2 = 6۔"
+      },
+      "feedback_wrong": {
+        "en": "Subtract: y = 2. Then x + 2 = 6, so x = 4. They meet at (4, 2).",
+        "ur": "تفریق کریں: y = 2۔ پھر x + 2 = 6، یعنی x = 4۔ یہ (4, 2) پر ملتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "(2, 4)",
+          "feedback": {
+            "en": "x and y are swapped: (x, y) means x first. Check x + 2y with (2, 4): 2 + 8 = 10, not 8.",
+            "ur": "x اور y الٹ گئے: (x, y) میں پہلے x آتا ہے۔ (2, 4) سے x + 2y جانچیں: 2 + 8 = 10، نہ کہ 8۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_mark_corners",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "feasible_region",
+      "prompt": {
+        "en": "Now the region for x + 2y ≤ 8, x + y ≤ 6, x ≥ 0, y ≥ 0. Mark all its corners.",
+        "ur": "اب x + 2y ≤ 8، x + y ≤ 6، x ≥ 0، y ≥ 0 کا خطہ۔ اس کے سب کونے نشان زد کریں۔"
+      },
+      "params": {
+        "constraints": [
+          "x + 2y <= 8",
+          "x + y <= 6",
+          "x >= 0",
+          "y >= 0"
+        ],
+        "x_min": 0,
+        "x_max": 9,
+        "y_min": 0,
+        "y_max": 7
+      },
+      "expected": {
+        "result": "corners",
+        "checker": "points",
+        "answer": "(0, 0), (0, 4), (4, 2), (6, 0)"
+      },
+      "hint": {
+        "en": "You found one corner already: (4, 2). Where does each line meet the axes, inside the region?",
+        "ur": "ایک کونا آپ ڈھونڈ چکے: (4, 2)۔ ہر خط محوروں سے کہاں ملتا ہے، خطے کے اندر؟"
+      },
+      "feedback_correct": {
+        "en": "Excellent! The corners are (0, 0), (0, 4), (4, 2), (6, 0).",
+        "ur": "زبردست! کونے (0, 0), (0, 4), (4, 2), (6, 0) ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "The corners are (0, 0), (0, 4), (4, 2), (6, 0). (0, 6) is not one: it breaks x + 2y ≤ 8.",
+        "ur": "کونے (0, 0), (0, 4), (4, 2), (6, 0) ہیں۔ (0, 6) کونا نہیں: یہ x + 2y ≤ 8 کو توڑتا ہے۔"
+      }
+    },
+    {
+      "id": "s7_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "For x + y ≤ 6, x ≤ 4, x ≥ 0, y ≥ 0, Hina says the corners are (0, 0), (4, 0), (0, 6) and (4, 6). What is wrong?",
+        "ur": "x + y ≤ 6، x ≤ 4، x ≥ 0، y ≥ 0 کے لیے حنا کہتی ہے کونے (0, 0)، (4, 0)، (0, 6) اور (4, 6) ہیں۔ غلطی کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "outside",
+          "text": {
+            "en": "(4, 6) breaks x + y ≤ 6. The real corner is (4, 2).",
+            "ur": "(4, 6)، x + y ≤ 6 کو توڑتا ہے۔ اصل کونا (4, 2) ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Right! 4 + 6 = 10. She drew a rectangle and forgot the slanted line.",
+            "ur": "درست! 4 + 6 = 10۔ اس نے مستطیل بنا لیا اور ترچھا خط بھول گئی۔"
+          }
+        },
+        {
+          "id": "origin",
+          "text": {
+            "en": "(0, 0) is not a corner.",
+            "ur": "(0, 0) کونا نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "(0, 0) is where x = 0 meets y = 0, and it makes all four true.",
+            "ur": "(0, 0) وہاں ہے جہاں x = 0، y = 0 سے ملتا ہے، اور یہ چاروں کو درست کرتا ہے۔"
+          },
+          "misconception_id": "forgets_axes"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, those are the corners.",
+            "ur": "کوئی غلطی نہیں، یہی کونے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Put (4, 6) into x + y ≤ 6.",
+            "ur": "(4, 6) کو x + y ≤ 6 میں رکھیں۔"
+          },
+          "misconception_id": "corner_outside"
+        }
+      ]
+    },
+    {
+      "id": "s8_explain_region",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "task": {
+        "en": "Explain how you would check whether a point, like (3, 4), is in the feasible region of several inequalities, and why.",
+        "ur": "سمجھائیں کہ آپ کیسے جانچیں گے کہ کوئی نقطہ، جیسے (3, 4)، کئی نامساوات کے قابلِ عمل خطے میں ہے یا نہیں، اور کیوں۔"
+      },
+      "key_idea": "Put the point's x and y into every inequality. It is in the feasible region only if every inequality is true; if even one is false, it is outside. The feasible region is where all the conditions hold at the same time.",
+      "levels": {
+        "got_it": "Puts the point into each inequality and says it must make all of them true (one false is enough to be outside), because the region is where all conditions hold together.",
+        "partly": "Says to put the point into the inequalities but not that all must be true, or checks only one.",
+        "not_yet": "Judges by looking (e.g. 'near the origin') or gives no method."
+      },
+      "keywords": [
+        [
+          "put",
+          "substitute",
+          "check",
+          "test",
+          "رکھ",
+          "آزما",
+          "جانچ",
+          "rakh",
+          "check kar",
+          "aazma"
+        ],
+        [
+          "every",
+          "all",
+          "each",
+          "both",
+          "سب",
+          "ہر",
+          "تمام",
+          "sab",
+          "har",
+          "tamam"
+        ],
+        [
+          "true",
+          "false",
+          "satisfy",
+          "درست",
+          "غلط",
+          "sahi",
+          "ghalat",
+          "durust"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Every inequality must be true for the point to be in the region.",
+          "ur": "بہت خوب! نقطہ خطے میں تبھی ہے جب ہر نامساوات درست ہو۔"
+        },
+        "partly": {
+          "en": "Good start! Must the point satisfy one inequality, or all of them?",
+          "ur": "اچھا آغاز! کیا نقطے کو ایک نامساوات پوری کرنی ہے، یا سب؟"
+        },
+        "not_yet": {
+          "en": "Try it: put (3, 4) into x + y ≤ 6. True or false? What does that mean for the region?",
+          "ur": "آزمائیں: (3, 4) کو x + y ≤ 6 میں رکھیں۔ درست یا غلط؟ خطے کے لیے اس کا کیا مطلب ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s9_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Great work! You can find a feasible region and its corners.",
+          "ur": "بہت اچھا! آپ قابلِ عمل خطہ اور اس کے کونے ڈھونڈ سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Draw every inequality on one graph. The feasible region is where all of them are true. Its corners are where two boundary lines meet; check each corner in every inequality.",
+        "ur": "ہر نامساوات ایک ہی گراف پر بنائیں۔ قابلِ عمل خطہ وہ ہے جہاں سب درست ہوں۔ اس کے کونے وہاں ہیں جہاں دو حدی خطوط ملتے ہیں؛ ہر کونے کو ہر نامساوات میں جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "x ≥ 0 and y ≥ 0 keep the region in the first quarter of the graph.",
+          "ur": "x ≥ 0 اور y ≥ 0 خطے کو گراف کے پہلے حصے (ربع) میں رکھتے ہیں۔"
+        },
+        {
+          "en": "Not every crossing of two lines is a corner: it must be inside all the other inequalities too.",
+          "ur": "دو خطوط کا ہر ملاپ کونا نہیں: اسے باقی سب نامساوات کے اندر بھی ہونا چاہیے۔"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 8. No textbook text or exercises were copied.",
+    "Urdu terms to check against the PCTB book: قابلِ عمل خطہ (feasible region), کونے کا نقطہ (corner point; the book may say راس), غیر منفی شرطیں (non-negative constraints), قید (constraint).",
+    "Corner steps use the new feasible_region interactive: the region is drawn from the inequalities, and the student taps the corners. tools/validate_lessons.py works out the corners from the inequalities and fails if the lesson's answer differs, so a typing mistake in a corner can't reach students.",
+    "Next lesson: linear programming (the biggest or smallest value at a corner)."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  },
+  "review_questions": [
+    {
+      "id": "r_meet",
+      "type": "apply",
+      "skill": "maths.inequalities.feasible_region",
+      "step": {
+        "id": "r_meet",
+        "type": "text_check",
+        "checker": "points",
+        "expected": "(3, 2)",
+        "prompt": {
+          "en": "Where do the lines 2x + y = 8 and x + y = 5 meet? Write the point like (1, 2).",
+          "ur": "خطوط 2x + y = 8 اور x + y = 5 کہاں ملتے ہیں؟ نقطہ (1, 2) کی طرح لکھیں۔"
+        },
+        "hint": {
+          "en": "Take the second equation from the first: x = 3.",
+          "ur": "پہلی مساوات میں سے دوسری گھٹائیں: x = 3۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: (3, 2). 6 + 2 = 8 and 3 + 2 = 5.",
+          "ur": "درست: (3, 2)۔ 6 + 2 = 8 اور 3 + 2 = 5۔"
+        },
+        "feedback_wrong": {
+          "en": "Subtract: x = 3. Then 3 + y = 5, so y = 2. The point is (3, 2).",
+          "ur": "تفریق کریں: x = 3۔ پھر 3 + y = 5، یعنی y = 2۔ نقطہ (3, 2) ہے۔"
+        }
+      }
+    }
+  ]
+}

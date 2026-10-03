@@ -1,6 +1,6 @@
 # Phase 8 plan: content pipeline and first chapter
 
-Status: plan approved 2026-10-03. Step 1 (publishing pipeline) merged (PR #11). Step 2 (teacher review) merged (PR #12). Step 3 in progress: lessons 2 and 3 of Unit 5 built.
+Status: plan approved 2026-10-03. Step 1 (publishing pipeline) merged (PR #11). Step 2 (teacher review) merged (PR #12). Step 3: all 7 lessons of Unit 5 and a board-exam practice set built (PR #13 merged; lessons 4–7 and the practice set in the next PR). Audio hosting (Cloudflare KV, since R2 needs a card) waits until lessons have recordings.
 Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 8.
 
 **Goal:** a repeatable way to write, review and ship lessons.
@@ -62,6 +62,8 @@ About 6–8 lessons following the Punjab textbook's sections. Draft list (from t
 5. Several inequalities: the feasible region and its corners.
 6. Linear programming: the biggest or smallest value at a corner.
 7. Linear programming word problems.
+
+Built: `g9-maths-05-` `solving-linear-equations`, `brackets-and-fractions`, `inequalities-on-a-number-line`, `inequalities-in-two-variables`, `feasible-region`, `linear-programming`, `linear-programming-word-problems`, and `board-exam-practice` (multiple choice, short and long questions with model answers). Lessons 4–7 use two new interactives, `inequality_plane` (draw a line, solid or dashed, shade a side) and `feasible_region` (tap the corners; shows the objective's value), and two new checkers, `linear_inequality_2d` and `points`. Every corner and objective value is worked out by `tools/plane.py`, and the validator re-checks corners from the inequalities.
 
  I draft the list from the textbook's contents page and the teacher confirms it before I write the lessons. Each lesson has explanations, worked examples, practice steps, an AI "explain your thinking" step, and a summary, in English and Urdu.
 

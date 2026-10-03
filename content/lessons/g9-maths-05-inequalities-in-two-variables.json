@@ -1,0 +1,615 @@
+{
+  "id": "g9-maths-05-inequalities-in-two-variables",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 9,
+  "tier": "older",
+  "curriculum_refs": [
+    {
+      "outcome": "Represent a linear inequality in two variables as a region of the xy-plane.",
+      "textbook": "PCTB Grade 9 Mathematics (NCP 2023), Unit 5: Linear Equations and Inequalities"
+    }
+  ],
+  "skills": [
+    "maths.inequalities.two_variable"
+  ],
+  "title": {
+    "en": "Inequalities in two variables",
+    "ur": "دو متغیرات کی نامساوات"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.inequalities.one_variable"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "wrong_side",
+      "description": "Shades the wrong side of the boundary line (does not test a point)."
+    },
+    {
+      "id": "line_style",
+      "description": "Uses a solid line for < or > (or a dashed line for ≤ or ≥)."
+    },
+    {
+      "id": "boundary_point",
+      "description": "Thinks a point on a dashed boundary line is a solution."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.inequalities.two_variable": {
+      "question_types": [
+        "apply",
+        "explain",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.inequalities.two_variable": [
+      {
+        "id": "qb_write_region",
+        "type": "apply",
+        "step": {
+          "id": "qb_write_region",
+          "type": "text_check",
+          "checker": "linear_inequality_2d",
+          "expected": "y > x - 2",
+          "prompt": {
+            "en": "A dashed line goes through (0, −2) and (2, 0). The shaded side contains (0, 0). Write the inequality.",
+            "ur": "ایک ٹوٹی لکیر (0, −2) اور (2, 0) سے گزرتی ہے۔ رنگی ہوئی طرف میں (0, 0) ہے۔ نامساوات لکھیں۔"
+          },
+          "hint": {
+            "en": "The line is y = x − 2. Test (0, 0): is 0 bigger or smaller than 0 − 2?",
+            "ur": "خط y = x − 2 ہے۔ (0, 0) آزمائیں: کیا 0، 0 − 2 سے بڑا ہے یا چھوٹا؟"
+          },
+          "feedback_correct": {
+            "en": "Correct: y > x − 2. Dashed, so > and not ≥.",
+            "ur": "درست: y > x − 2۔ لکیر ٹوٹی ہے، اس لیے > نہ کہ ≥۔"
+          },
+          "feedback_wrong": {
+            "en": "The line is y = x − 2. (0, 0) gives 0 > −2, true, so y > x − 2. Dashed means > (not ≥).",
+            "ur": "خط y = x − 2 ہے۔ (0, 0) سے 0 > −2، درست، اس لیے y > x − 2۔ ٹوٹی لکیر کا مطلب > (نہ کہ ≥)۔"
+          }
+        }
+      },
+      {
+        "id": "qb_why_test_point",
+        "type": "explain",
+        "step": {
+          "id": "qb_why_test_point",
+          "type": "choice",
+          "prompt": {
+            "en": "Why is testing just one point enough to know which side to shade?",
+            "ur": "صرف ایک نقطہ آزمانا یہ جاننے کے لیے کافی کیوں ہے کہ کون سی طرف رنگنی ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Every point on one side gives the same answer, true or false; only crossing the line changes it.",
+                "ur": "ایک طرف کا ہر نقطہ ایک ہی جواب دیتا ہے، درست یا غلط؛ صرف خط پار کرنے سے جواب بدلتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Exactly! The line is where the two sides are equal, so the answer can only change there.",
+                "ur": "بالکل! خط وہ جگہ ہے جہاں دونوں طرف برابر ہیں، اس لیے جواب صرف وہیں بدل سکتا ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Because (0, 0) is always a solution.",
+                "ur": "کیونکہ (0, 0) ہمیشہ حل ہوتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Not always: for x + y > 4, (0, 0) gives 0 > 4, which is false.",
+                "ur": "ہمیشہ نہیں: x + y > 4 کے لیے (0, 0) سے 0 > 4 آتا ہے، جو غلط ہے۔"
+              },
+              "misconception_id": "wrong_side"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It isn't: you must test every point.",
+                "ur": "کافی نہیں: ہر نقطہ آزمانا پڑتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "There are endless points! One test is enough, because a whole side behaves the same way.",
+                "ur": "نقطے تو بے شمار ہیں! ایک ہی کافی ہے، کیونکہ پوری ایک طرف ایک جیسی ہوتی ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_dashed",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_dashed",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana says (2, 2) is a solution of x + y < 4. What is wrong?",
+            "ur": "ثنا کہتی ہے (2, 2)، x + y < 4 کا حل ہے۔ غلطی کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "2 + 2 = 4, and 4 < 4 is false: (2, 2) is on the dashed line, which is not included.",
+                "ur": "2 + 2 = 4، اور 4 < 4 غلط ہے: (2, 2) ٹوٹی لکیر پر ہے، جو شامل نہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Points on a dashed line are not solutions.",
+                "ur": "درست! ٹوٹی لکیر کے نقطے حل نہیں ہوتے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing: (2, 2) is a solution.",
+                "ur": "کوئی غلطی نہیں: (2, 2) حل ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Put it in: 2 + 2 = 4. Is 4 < 4?",
+                "ur": "رکھ کر دیکھیں: 2 + 2 = 4۔ کیا 4 < 4 ہے؟"
+              },
+              "misconception_id": "boundary_point"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "She should have used (0, 0) instead.",
+                "ur": "اسے (0, 0) لینا چاہیے تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Any point can be tested. The problem is this point's answer.",
+                "ur": "کوئی بھی نقطہ آزمایا جا سکتا ہے۔ مسئلہ اس نقطے کا جواب ہے۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_budget",
+      "text": {
+        "en": "You have 100 rupees for x samosas at 20 rupees and y bottles of water at 30 rupees: 20x + 30y ≤ 100. Find three pairs (x, y) that fit and one that does not. Check each one in the inequality.",
+        "ur": "آپ کے پاس 100 روپے ہیں، x سموسے 20 روپے کے اور y پانی کی بوتلیں 30 روپے کی: 20x + 30y ≤ 100۔ تین جوڑے (x, y) ڈھونڈیں جو پورے آئیں اور ایک جو نہ آئے۔ ہر ایک کو نامساوات میں جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Two variables",
+      "ur": "دو متغیرات"
+    },
+    {
+      "en": "Boundary line",
+      "ur": "حدی خط"
+    },
+    {
+      "en": "Half-plane",
+      "ur": "نصف مستوی"
+    },
+    {
+      "en": "Test point",
+      "ur": "آزمائشی نقطہ"
+    },
+    {
+      "en": "Shaded region",
+      "ur": "رنگا ہوا حصہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_study_hours",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ayesha has at most 6 hours to study maths and English. How many hours for each? Lots of answers: 2 and 3, 1 and 5, 4 and 2...",
+          "ur": "عائشہ کے پاس ریاضی اور انگریزی پڑھنے کے لیے زیادہ سے زیادہ 6 گھنٹے ہیں۔ ہر ایک کو کتنے گھنٹے؟ بہت سے جواب: 2 اور 3، 1 اور 5، 4 اور 2..."
+        }
+      },
+      "text": {
+        "en": "Call the maths hours x and the English hours y. Then x + y ≤ 6. This inequality has two variables, so each answer is a pair (x, y), a point on a graph. A point is a solution if it makes the inequality true: (2, 3) gives 2 + 3 = 5, and 5 ≤ 6.",
+        "ur": "ریاضی کے گھنٹوں کو x اور انگریزی کے گھنٹوں کو y کہیں۔ پھر x + y ≤ 6۔ اس نامساوات میں دو متغیرات ہیں، اس لیے ہر جواب ایک جوڑا (x, y) ہے، یعنی گراف پر ایک نقطہ۔ نقطہ حل ہے اگر نامساوات درست ہو جائے: (2, 3) سے 2 + 3 = 5، اور 5 ≤ 6۔"
+      }
+    },
+    {
+      "id": "s2_is_it_a_solution",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Is (4, 3) a solution of x + y ≤ 6?",
+        "ur": "کیا (4, 3)، x + y ≤ 6 کا حل ہے؟"
+      },
+      "options": [
+        {
+          "id": "no",
+          "text": {
+            "en": "No: 4 + 3 = 7, and 7 is more than 6.",
+            "ur": "نہیں: 4 + 3 = 7، اور 7، 6 سے زیادہ ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Right! 7 ≤ 6 is false, so (4, 3) is not a solution. Ayesha can't study for 7 hours.",
+            "ur": "درست! 7 ≤ 6 غلط ہے، اس لیے (4, 3) حل نہیں۔ عائشہ 7 گھنٹے نہیں پڑھ سکتی۔"
+          }
+        },
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes: 4 and 3 are both less than 6.",
+            "ur": "ہاں: 4 اور 3 دونوں 6 سے کم ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Add them first: x + y = 4 + 3 = 7. Is 7 ≤ 6?",
+            "ur": "پہلے جمع کریں: x + y = 4 + 3 = 7۔ کیا 7 ≤ 6 ہے؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_boundary",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "Here is the trick: draw the line first, then pick a side.",
+          "ur": "ترکیب یہ ہے: پہلے خط بنائیں، پھر ایک طرف چنیں۔"
+        }
+      },
+      "text": {
+        "en": "The line x + y = 6 is the boundary: it splits the graph into two halves. All the solutions are on one side. 1) Draw the line: solid for ≤ or ≥ (the line is included), dashed for < or > (it is not). 2) Test a point not on the line, such as (0, 0). If it makes the inequality true, shade its side; if not, shade the other side.",
+        "ur": "خط x + y = 6 حدی خط ہے: یہ گراف کو دو حصوں میں بانٹتا ہے۔ سارے حل ایک طرف ہیں۔ 1) خط بنائیں: ≤ یا ≥ کے لیے سیدھی لکیر (خط شامل ہے)، < یا > کے لیے ٹوٹی لکیر (شامل نہیں)۔ 2) خط سے باہر کا کوئی نقطہ آزمائیں، جیسے (0, 0)۔ اگر نامساوات درست ہو تو اس کی طرف رنگیں؛ ورنہ دوسری طرف رنگیں۔"
+      }
+    },
+    {
+      "id": "s4_draw_first",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "inequality_plane",
+      "prompt": {
+        "en": "Show y ≤ x + 2. Move A and B onto the line y = x + 2, choose a solid or dashed line, tap the side to shade, then press Check.",
+        "ur": "y ≤ x + 2 دکھائیں۔ A اور B کو خط y = x + 2 پر لائیں، سیدھی یا ٹوٹی لکیر چنیں، رنگنے والی طرف ٹیپ کریں، پھر \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "size": 5,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "result": "inequality",
+        "checker": "linear_inequality_2d",
+        "answer": "y <= x + 2"
+      },
+      "hint": {
+        "en": "(0, 2) and (1, 3) are on the line. ≤ means solid. Test (0, 0): 0 ≤ 0 + 2 is true, so shade the side with (0, 0).",
+        "ur": "(0, 2) اور (1, 3) خط پر ہیں۔ ≤ کا مطلب سیدھی لکیر۔ (0, 0) آزمائیں: 0 ≤ 0 + 2 درست ہے، اس لیے (0, 0) والی طرف رنگیں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! A solid line y = x + 2, with the side below it shaded.",
+        "ur": "شاباش! سیدھی لکیر y = x + 2، اور اس کے نیچے کی طرف رنگی ہوئی۔"
+      },
+      "feedback_wrong": {
+        "en": "Put A at (0, 2) and B at (1, 3), choose Solid (≤), and shade the side with (0, 0), below the line.",
+        "ur": "A کو (0, 2) اور B کو (1, 3) پر رکھیں، سیدھی (≤) چنیں، اور (0, 0) والی طرف، خط کے نیچے، رنگیں۔"
+      }
+    },
+    {
+      "id": "s5_which_side",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "For 2x + 3y > 6, test (0, 0): 2 × 0 + 3 × 0 = 0, and 0 > 6 is false. Which side do you shade?",
+        "ur": "2x + 3y > 6 کے لیے (0, 0) آزمائیں: 2 × 0 + 3 × 0 = 0، اور 0 > 6 غلط ہے۔ کون سی طرف رنگیں گے؟"
+      },
+      "options": [
+        {
+          "id": "other",
+          "text": {
+            "en": "The side without (0, 0).",
+            "ur": "وہ طرف جس میں (0, 0) نہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! (0, 0) is not a solution, so the solutions are on the other side.",
+            "ur": "جی ہاں! (0, 0) حل نہیں، اس لیے حل دوسری طرف ہیں۔"
+          }
+        },
+        {
+          "id": "origin",
+          "text": {
+            "en": "The side with (0, 0).",
+            "ur": "وہ طرف جس میں (0, 0) ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The test gave false, so (0, 0) is not a solution. Its side is the wrong one.",
+            "ur": "آزمائش کا جواب غلط آیا، اس لیے (0, 0) حل نہیں۔ اس کی طرف غلط ہے۔"
+          },
+          "misconception_id": "wrong_side"
+        },
+        {
+          "id": "line",
+          "text": {
+            "en": "Only the line itself.",
+            "ur": "صرف خط خود۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A > inequality doesn't even include its line. The answer is a whole side.",
+            "ur": "> والی نامساوات میں تو خط بھی شامل نہیں۔ جواب پوری ایک طرف ہے۔"
+          },
+          "misconception_id": "boundary_point"
+        }
+      ]
+    },
+    {
+      "id": "s6_draw_dashed",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "inequality_plane",
+      "prompt": {
+        "en": "Now show 2x + 3y > 6. The line goes through (3, 0) and (0, 2).",
+        "ur": "اب 2x + 3y > 6 دکھائیں۔ خط (3, 0) اور (0, 2) سے گزرتا ہے۔"
+      },
+      "params": {
+        "size": 5,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "result": "inequality",
+        "checker": "linear_inequality_2d",
+        "answer": "2x + 3y > 6"
+      },
+      "hint": {
+        "en": "> means a dashed line. You found that (0, 0) is not a solution, so shade the other side.",
+        "ur": "> کا مطلب ٹوٹی لکیر۔ آپ نے دیکھا کہ (0, 0) حل نہیں، اس لیے دوسری طرف رنگیں۔"
+      },
+      "feedback_correct": {
+        "en": "Excellent! A dashed line, with the side away from (0, 0) shaded.",
+        "ur": "زبردست! ٹوٹی لکیر، اور (0, 0) سے دور والی طرف رنگی ہوئی۔"
+      },
+      "feedback_wrong": {
+        "en": "Put A at (3, 0) and B at (0, 2), choose Dashed (>), and shade the side that does not contain (0, 0).",
+        "ur": "A کو (3, 0) اور B کو (0, 2) پر رکھیں، ٹوٹی (>) چنیں، اور وہ طرف رنگیں جس میں (0, 0) نہیں۔"
+      }
+    },
+    {
+      "id": "s7_write_it",
+      "type": "text_check",
+      "question_type": "apply",
+      "checker": "linear_inequality_2d",
+      "expected": "x + y <= 4",
+      "prompt": {
+        "en": "A solid line goes through (0, 4) and (4, 0). The shaded side contains (0, 0). Write the inequality. (Type ≤ as <=.)",
+        "ur": "ایک سیدھی لکیر (0, 4) اور (4, 0) سے گزرتی ہے۔ رنگی ہوئی طرف میں (0, 0) ہے۔ نامساوات لکھیں۔ (≤ کو <= لکھیں۔)"
+      },
+      "hint": {
+        "en": "On this line x + y is always 4. Solid means ≤ or ≥. Test (0, 0): 0 + 0 = 0.",
+        "ur": "اس خط پر x + y ہمیشہ 4 ہے۔ سیدھی لکیر کا مطلب ≤ یا ≥۔ (0, 0) آزمائیں: 0 + 0 = 0۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: x + y ≤ 4. Writing y ≤ 4 − x is right too.",
+        "ur": "درست: x + y ≤ 4۔ y ≤ 4 − x لکھنا بھی درست ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The line is x + y = 4. (0, 0) gives 0, and 0 ≤ 4, so the answer is x + y ≤ 4 (solid, so ≤).",
+        "ur": "خط x + y = 4 ہے۔ (0, 0) سے 0 آتا ہے، اور 0 ≤ 4، اس لیے جواب x + y ≤ 4 ہے (سیدھی لکیر، اس لیے ≤)۔"
+      }
+    },
+    {
+      "id": "s8_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal drew y > 2x − 1 with a solid line and shaded the side with (0, 0). What did he get wrong?",
+        "ur": "بلال نے y > 2x − 1 سیدھی لکیر سے بنایا اور (0, 0) والی طرف رنگی۔ اس سے کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "line",
+          "text": {
+            "en": "The line should be dashed, because > does not include the line.",
+            "ur": "لکیر ٹوٹی ہونی چاہیے، کیونکہ > میں خط شامل نہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Right! His side is correct: 0 > 2 × 0 − 1 is true. Only the line was wrong.",
+            "ur": "درست! اس کی طرف ٹھیک ہے: 0 > 2 × 0 − 1 درست ہے۔ صرف لکیر غلط تھی۔"
+          }
+        },
+        {
+          "id": "side",
+          "text": {
+            "en": "He shaded the wrong side.",
+            "ur": "اس نے غلط طرف رنگی۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Test (0, 0): 0 > −1 is true, so his side is right. Look at the line.",
+            "ur": "(0, 0) آزمائیں: 0 > −1 درست ہے، اس لیے اس کی طرف ٹھیک ہے۔ لکیر دیکھیں۔"
+          },
+          "misconception_id": "wrong_side"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, it is all correct.",
+            "ur": "کچھ نہیں، سب درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A solid line means the points on it are solutions. Is (0, −1) a solution of y > 2x − 1?",
+            "ur": "سیدھی لکیر کا مطلب ہے اس کے نقطے حل ہیں۔ کیا (0, −1)، y > 2x − 1 کا حل ہے؟"
+          },
+          "misconception_id": "line_style"
+        }
+      ]
+    },
+    {
+      "id": "s9_explain_test_point",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "task": {
+        "en": "Explain how you decide which side of the line to shade for an inequality like x + y ≤ 6, and why your method works.",
+        "ur": "سمجھائیں کہ x + y ≤ 6 جیسی نامساوات میں آپ کیسے طے کرتے ہیں کہ خط کی کون سی طرف رنگنی ہے، اور آپ کا طریقہ کیوں درست ہے۔"
+      },
+      "key_idea": "Pick a test point not on the line, such as (0, 0), and put it in the inequality. If it is true, shade that point's side; if false, shade the other side. It works because every point on one side gives the same result: the answer can only change at the line, where both sides are equal.",
+      "levels": {
+        "got_it": "Describes testing a point (like (0, 0)) and shading its side if true, the other side if false, and says why: one whole side behaves the same, the result only changes at the line.",
+        "partly": "Describes testing a point and shading correctly, but gives no reason why one point is enough.",
+        "not_yet": "Shades by a rule such as 'always above' or 'always towards (0, 0)', or gives no method."
+      },
+      "keywords": [
+        [
+          "test",
+          "point",
+          "check",
+          "put",
+          "substitute",
+          "آزما",
+          "نقطہ",
+          "رکھ",
+          "aazma",
+          "nuqta",
+          "check kar"
+        ],
+        [
+          "true",
+          "false",
+          "correct",
+          "درست",
+          "غلط",
+          "sahi",
+          "ghalat",
+          "durust"
+        ],
+        [
+          "side",
+          "shade",
+          "region",
+          "طرف",
+          "رنگ",
+          "taraf",
+          "rang"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! One test point decides the whole side.",
+          "ur": "بہت خوب! ایک آزمائشی نقطہ پوری طرف کا فیصلہ کر دیتا ہے۔"
+        },
+        "partly": {
+          "en": "Good method! Now say why one point is enough for the whole side.",
+          "ur": "اچھا طریقہ! اب بتائیں کہ پوری طرف کے لیے ایک نقطہ کیوں کافی ہے۔"
+        },
+        "not_yet": {
+          "en": "Try this: put (0, 0) into x + y ≤ 6. Is it true? What does that tell you about its side?",
+          "ur": "یہ آزمائیں: (0, 0) کو x + y ≤ 6 میں رکھیں۔ کیا یہ درست ہے؟ اس سے اس کی طرف کے بارے میں کیا پتا چلتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s10_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can draw inequalities in two variables now!",
+          "ur": "اب آپ دو متغیرات کی نامساوات بنا سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "An inequality in x and y is a region of the graph. Draw the boundary line (solid for ≤ ≥, dashed for < >), test a point such as (0, 0), and shade the side where it is true.",
+        "ur": "x اور y کی نامساوات گراف کا ایک حصہ ہوتی ہے۔ حدی خط بنائیں (≤ ≥ کے لیے سیدھی، < > کے لیے ٹوٹی لکیر)، کوئی نقطہ جیسے (0, 0) آزمائیں، اور وہ طرف رنگیں جہاں یہ درست ہو۔"
+      },
+      "points": [
+        {
+          "en": "If the line goes through (0, 0), test another point, like (1, 0).",
+          "ur": "اگر خط (0, 0) سے گزرے تو کوئی اور نقطہ، جیسے (1, 0)، آزمائیں۔"
+        },
+        {
+          "en": "Points on a dashed line are not solutions.",
+          "ur": "ٹوٹی لکیر کے نقطے حل نہیں ہوتے۔"
+        }
+      ]
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for Phase 8. No textbook text or exercises were copied.",
+    "Urdu terms to check against the PCTB book: دو متغیرات (two variables), حدی خط (boundary line), نصف مستوی (half-plane), سیدھی لکیر / ٹوٹی لکیر (solid / dashed line).",
+    "Graph steps use the new inequality_plane interactive: the student places the boundary line through two grid points, picks solid or dashed, and taps a side. Typed answers use the linear_inequality_2d checker, which accepts any form of the same region (x + y <= 4, y <= 4 - x, ...) and says whether the line, the side or the solid/dashed choice is wrong.",
+    "Next lesson: several inequalities together (the feasible region)."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  },
+  "review_questions": [
+    {
+      "id": "r_write_region",
+      "type": "apply",
+      "skill": "maths.inequalities.two_variable",
+      "step": {
+        "id": "r_write_region",
+        "type": "text_check",
+        "checker": "linear_inequality_2d",
+        "expected": "y >= 2x",
+        "prompt": {
+          "en": "A solid line goes through (0, 0) and (1, 2). The shaded side contains (0, 3). Write the inequality.",
+          "ur": "ایک سیدھی لکیر (0, 0) اور (1, 2) سے گزرتی ہے۔ رنگی ہوئی طرف میں (0, 3) ہے۔ نامساوات لکھیں۔"
+        },
+        "hint": {
+          "en": "The line is y = 2x. The line goes through (0, 0), so test (0, 3) instead.",
+          "ur": "خط y = 2x ہے۔ خط (0, 0) سے گزرتا ہے، اس لیے (0, 3) آزمائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: y ≥ 2x. (0, 3) gives 3 ≥ 0.",
+          "ur": "درست: y ≥ 2x۔ (0, 3) سے 3 ≥ 0۔"
+        },
+        "feedback_wrong": {
+          "en": "The line is y = 2x. (0, 3) gives 3 ≥ 0, true, so y ≥ 2x (solid, so ≥).",
+          "ur": "خط y = 2x ہے۔ (0, 3) سے 3 ≥ 0، درست، اس لیے y ≥ 2x (سیدھی لکیر، اس لیے ≥)۔"
+        }
+      }
+    }
+  ]
+}
