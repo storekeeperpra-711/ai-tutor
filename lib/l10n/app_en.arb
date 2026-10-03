@@ -1682,5 +1682,77 @@
         "type": "String"
       }
     }
+  },
+  "dashboardTitle": "Teacher dashboard",
+  "@dashboardTitle": {
+    "description": "Title of the teacher website."
+  },
+  "dashboardSignIn": "Sign in with your teacher account from the app.",
+  "@dashboardSignIn": {
+    "description": "On the teacher website before signing in."
+  },
+  "createTeacherAccount": "Create a teacher account",
+  "@createTeacherAccount": {
+    "description": "Button on the teacher website."
+  },
+  "tabMastery": "Mastery",
+  "@tabMastery": {
+    "description": "Tab with the students × skills grid."
+  },
+  "tabMistakes": "Mistakes",
+  "@tabMistakes": {
+    "description": "Tab with the class's recurring mistakes."
+  },
+  "tabNeedsHelp": "Needs help",
+  "@tabNeedsHelp": {
+    "description": "Tab with stuck students."
+  },
+  "tabLessons": "Lessons",
+  "@tabLessons": {
+    "description": "Tab with assigned lessons."
+  },
+  "noMistakesYet": "No mistakes recorded yet.",
+  "@noMistakesYet": {
+    "description": "Mistakes tab with nothing in it."
+  },
+  "nobodyStuck": "Nobody is stuck right now.",
+  "@nobodyStuck": {
+    "description": "Needs-help tab with nobody in it."
+  },
+  "lastTried": "Last tried {day}",
+  "@lastTried": {
+    "description": "When a stuck student last practised the skill.",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "mistakeIn": "In: {lesson}",
+  "@mistakeIn": {
+    "description": "Which lesson a mistake came from.",
+    "placeholders": {
+      "lesson": {
+        "type": "String"
+      }
+    }
+  },
+  "finishedBy": "Finished: {names}",
+  "@finishedBy": {
+    "description": "Students who finished an assigned lesson.",
+    "placeholders": {
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "notFinishedBy": "Not yet: {names}",
+  "@notFinishedBy": {
+    "description": "Students who haven't finished an assigned lesson.",
+    "placeholders": {
+      "names": {
+        "type": "String"
+      }
+    }
   }
 }

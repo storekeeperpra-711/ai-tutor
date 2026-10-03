@@ -124,6 +124,12 @@ Three step types: `sim` (an HTML simulation in a WebView, or a native interactiv
 | `lib/l10n/` | Translations (ARB files) |
 | `assets/fonts/` | Noto Nastaliq Urdu (SIL Open Font License) |
 | `worker/` | AI server, a Cloudflare Worker (Phase 6) |
+| `lib/classes/` | Classes, class codes and children's summaries (Phase 9) |
+| `lib/dashboard/`, `web/` | Teacher dashboard website (Phase 9), deployed by the "Deploy teacher dashboard" workflow |
+
+## Teacher dashboard
+
+The website is built from the same code: `flutter build web -t lib/dashboard/main_dashboard.dart`. It needs the Firebase web app's settings as `--dart-define=FIREBASE_API_KEY=...` and so on (see `main_dashboard.dart`); the deploy workflow fetches them itself. To try it locally, run `flutter run -d chrome -t lib/dashboard/main_dashboard.dart` with the same defines.
 
 ## Developer screens
 
