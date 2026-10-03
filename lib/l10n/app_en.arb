@@ -419,10 +419,6 @@
   "@authOther": {
     "description": "Sign-in error."
   },
-  "teacherToolsSoon": "Teacher tools (classes and homework) are coming soon.",
-  "@teacherToolsSoon": {
-    "description": "Shown to teachers until Phase 9."
-  },
   "learnersTitle": "Learners on this phone",
   "@learnersTitle": {
     "description": "Heading of the learner list on the account screen."
@@ -1490,5 +1486,201 @@
   "regionNoCorners": "No corners marked yet.",
   "@regionNoCorners": {
     "description": "Feasible region: nothing marked."
+  },
+  "classesButton": "Classes",
+  "@classesButton": {
+    "description": "Tooltip of the button next to a learner that opens their classes."
+  },
+  "classesTitle": "{name}'s classes",
+  "@classesTitle": {
+    "description": "Title of the classes dialog for one learner.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "classesNone": "Not in a class yet.",
+  "@classesNone": {
+    "description": "When a learner has joined no class."
+  },
+  "classCodeLabel": "Class code from the teacher",
+  "@classCodeLabel": {
+    "description": "Label of the field where a parent types the class code."
+  },
+  "findClass": "Find class",
+  "@findClass": {
+    "description": "Button that looks up the class code."
+  },
+  "classNotFound": "No class has this code. Please check the code with the teacher.",
+  "@classNotFound": {
+    "description": "When the class code is wrong."
+  },
+  "classNoConnection": "This needs internet. Please try again when you are online.",
+  "@classNoConnection": {
+    "description": "When joining a class or loading classes fails without internet."
+  },
+  "classFound": "Class: {className}",
+  "@classFound": {
+    "description": "The class found for the typed code.",
+    "placeholders": {
+      "className": {
+        "type": "String"
+      }
+    }
+  },
+  "classConsent": "I agree that this class's teacher can see {name}'s first name, grade and progress in lessons. The name is never sent to AI. I can take {name} out of the class at any time.",
+  "@classConsent": {
+    "description": "Consent checkbox a parent must tick before a learner joins a class.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "joinClass": "Join class",
+  "@joinClass": {
+    "description": "Button that joins the learner to the class."
+  },
+  "leaveClass": "Leave",
+  "@leaveClass": {
+    "description": "Button that takes a learner out of a class."
+  },
+  "leaveClassConfirm": "Take {name} out of {className}? The teacher will no longer see {name}'s progress.",
+  "@leaveClassConfirm": {
+    "description": "Confirmation before leaving a class.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "className": {
+        "type": "String"
+      }
+    }
+  },
+  "planAssigned": "From your teacher: {title}",
+  "@planAssigned": {
+    "description": "A lesson the teacher assigned, at the top of today's plan.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "planDue": "By {date}",
+  "@planDue": {
+    "description": "Due date of an assigned lesson.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "myClasses": "My classes",
+  "@myClasses": {
+    "description": "Teacher's screen and button listing their classes."
+  },
+  "newClass": "New class",
+  "@newClass": {
+    "description": "Button and dialog title for creating a class."
+  },
+  "classNameLabel": "Class name (for example: 9 A Maths)",
+  "@classNameLabel": {
+    "description": "Field for the new class's name."
+  },
+  "createButton": "Create",
+  "@createButton": {
+    "description": "Button that creates something."
+  },
+  "noClassesYet": "No classes yet. Create one and give its code to the parents.",
+  "@noClassesYet": {
+    "description": "Teacher with no classes."
+  },
+  "classCode": "Code: {code}",
+  "@classCode": {
+    "description": "A class's code.",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "classCodeHelp": "Parents open Account in the app, tap the classes button next to their child, and type this code.",
+  "@classCodeHelp": {
+    "description": "How parents use the class code."
+  },
+  "classMembers": "Students",
+  "@classMembers": {
+    "description": "Heading of the class's student list."
+  },
+  "noMembersYet": "No students yet.",
+  "@noMembersYet": {
+    "description": "A class nobody joined."
+  },
+  "memberProgress": "{mastered} of {started} skills mastered",
+  "@memberProgress": {
+    "description": "Under a student in the teacher's class list.",
+    "placeholders": {
+      "mastered": {
+        "type": "int"
+      },
+      "started": {
+        "type": "int"
+      }
+    }
+  },
+  "classAssignments": "Assigned lessons",
+  "@classAssignments": {
+    "description": "Heading of the class's assigned lessons."
+  },
+  "assignLesson": "Assign a lesson",
+  "@assignLesson": {
+    "description": "Button and dialog title for assigning a lesson to a class."
+  },
+  "noAssignments": "No lessons assigned yet.",
+  "@noAssignments": {
+    "description": "A class with no assigned lessons."
+  },
+  "assignmentDone": "{done} of {total} finished",
+  "@assignmentDone": {
+    "description": "How many students finished an assigned lesson.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "setDueDate": "Set a due date",
+  "@setDueDate": {
+    "description": "Button that picks a due date for an assigned lesson."
+  },
+  "deleteClass": "Delete class",
+  "@deleteClass": {
+    "description": "Button that deletes a class."
+  },
+  "deleteClassConfirm": "Delete {className}? Its code stops working and the students' summaries are deleted.",
+  "@deleteClassConfirm": {
+    "description": "Confirmation before deleting a class.",
+    "placeholders": {
+      "className": {
+        "type": "String"
+      }
+    }
+  },
+  "commonMistakes": "Common mistakes",
+  "@commonMistakes": {
+    "description": "Heading of the misconceptions that came up most in a class."
+  },
+  "mistakeStudents": "Made by: {names}",
+  "@mistakeStudents": {
+    "description": "Which students made a common mistake.",
+    "placeholders": {
+      "names": {
+        "type": "String"
+      }
+    }
   }
 }

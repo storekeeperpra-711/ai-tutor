@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../app/preferences.dart';
+import '../classes/class_service.dart';
 import 'auth_service.dart';
 import 'local_db.dart';
 import 'profiles.dart';
@@ -85,6 +86,7 @@ class AccountActions {
     if (ref.read(currentStudentProvider)?.id == student.id) {
       ref.read(currentStudentProvider.notifier).clear();
     }
+    await ref.read(classServiceProvider).leaveAll(student.id);
     await _db.deleteStudent(student.id);
     final uid = _auth.currentUser?.uid;
     if (uid != null) {

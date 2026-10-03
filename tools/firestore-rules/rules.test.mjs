@@ -17,6 +17,9 @@ import {
   serverTimestamp,
   setDoc,
   updateDoc,
+  writeBatch,
+  query,
+  where,
   Timestamp,
 } from 'firebase/firestore';
 
@@ -187,6 +190,7 @@ test('signed-in phones read published lessons but only the upload tool writes th
 });
 
 describeReviews();
+describeClasses();
 
 function describeReviews() {
   const reviewer = (email, verified = true) =>
@@ -261,5 +265,171 @@ function describeReviews() {
     await assertFails(addDoc(notes, note({ author: 'someone@else.pk' })));
     await assertFails(addDoc(notes, note({ hash: 'bbbbbbbbbbbbbbbb' })));
     await assertFails(addDoc(notes, note({ extra: true })));
+  });
+}
+
+// Phase 9: classes, class codes, children's summaries and assigned lessons.
+function describeClasses() {
+  const CODE = 'ABC234';
+
+  async function teacherAccount(uid = 'teacher1') {
+    await env.withSecurityRulesDisabled((ctx) =>
+      setDoc(doc(ctx.firestore(), `accounts/${uid}`), { role: 'teacher' }),
+    );
+  }
+
+  function createClass(firestore, { uid = 'teacher1', id = 'class1', code = CODE, name = '9 A' } = {}) {
+    const batch = writeBatch(firestore);
+    batch.set(doc(firestore, `classes/${id}`), {
+      teacher_uid: uid,
+      name,
+      code,
+      created_at: serverTimestamp(),
+    });
+    batch.set(doc(firestore, `class_codes/${code}`), { class_id: id, name });
+    return batch.commit();
+  }
+
+  async function seedClass() {
+    await teacherAccount();
+    await createClass(db('teacher1'));
+  }
+
+  const member = (uid, studentId = 's1', overrides = {}) => ({
+    uid,
+    student_id: studentId,
+    first_name: 'Ayesha',
+    grade: 9,
+    joined_at: Timestamp.now(),
+    updated_at: serverTimestamp(),
+    skills: [{ skill: 'maths.unit5.x', level: 'learning', needs_help: false }],
+    misconceptions: [],
+    lessons: [],
+    ...overrides,
+  });
+
+  function join(firestore, uid, studentId = 's1', overrides = {}) {
+    const batch = writeBatch(firestore);
+    batch.set(doc(firestore, `classes/class1/families/${uid}`), { joined_at: serverTimestamp() });
+    batch.set(doc(firestore, `classes/class1/members/${uid}_${studentId}`), member(uid, studentId, overrides));
+    return batch.commit();
+  }
+
+  test('a teacher creates a class with its code and lists their classes', async () => {
+    await teacherAccount();
+    const teacher = db('teacher1');
+    await assertSucceeds(createClass(teacher));
+    await assertSucceeds(getDoc(doc(teacher, 'classes/class1')));
+    await assertSucceeds(getDocs(query(collection(teacher, 'classes'), where('teacher_uid', '==', 'teacher1'))));
+  });
+
+  test('only a teacher account creates classes, and a code is used once', async () => {
+    await assertFails(createClass(db('phone1'), { uid: 'phone1' }));
+    await teacherAccount();
+    await teacherAccount('teacher2');
+    await assertSucceeds(createClass(db('teacher1')));
+    // The same code for another class is refused.
+    await assertFails(createClass(db('teacher2'), { uid: 'teacher2', id: 'class2' }));
+    // A class can't be made without its code, or for another teacher.
+    await assertFails(
+      setDoc(doc(db('teacher2'), 'classes/class3'), {
+        teacher_uid: 'teacher2',
+        name: 'x',
+        code: 'QQQQQQ',
+        created_at: serverTimestamp(),
+      }),
+    );
+    await assertFails(createClass(db('teacher2'), { uid: 'teacher1', id: 'class4', code: 'WWWWWW' }));
+    await assertFails(createClass(db('teacher2'), { uid: 'teacher2', id: 'class5', code: 'abc234' }));
+    await assertFails(createClass(db('teacher2'), { uid: 'teacher2', id: 'class6', code: 'ZZZZZZ', name: '' }));
+  });
+
+  test('anyone signed in looks up one code, but nobody lists codes or reads other classes', async () => {
+    await seedClass();
+    await assertSucceeds(getDoc(doc(db('phone1'), `class_codes/${CODE}`)));
+    await assertFails(getDoc(doc(db(null), `class_codes/${CODE}`)));
+    await assertFails(getDocs(collection(db('phone1'), 'class_codes')));
+    await assertFails(getDoc(doc(db('phone1'), 'classes/class1')));
+    await assertFails(getDocs(query(collection(db('phone1'), 'classes'), where('teacher_uid', '==', 'teacher1'))));
+    await assertFails(getDocs(collection(db('teacher2'), 'classes/class1/members')));
+  });
+
+  test('a family joins a child, and the teacher sees the summary', async () => {
+    await seedClass();
+    const family = db('phone1');
+    await assertSucceeds(join(family, 'phone1'));
+    await assertSucceeds(getDoc(doc(family, 'classes/class1')));
+    await assertSucceeds(getDoc(doc(family, 'classes/class1/members/phone1_s1')));
+    await assertSucceeds(setDoc(doc(family, 'classes/class1/members/phone1_s1'), member('phone1')));
+    const teacher = db('teacher1');
+    await assertSucceeds(getDocs(collection(teacher, 'classes/class1/members')));
+    await assertSucceeds(getDocs(collection(teacher, 'classes/class1/families')));
+    // Another family can't read it.
+    await assertFails(getDoc(doc(db('phone2'), 'classes/class1/members/phone1_s1')));
+  });
+
+  test("summaries are checked and can't be written for another family", async () => {
+    await seedClass();
+    const family = db('phone1');
+    await assertFails(join(family, 'phone2'));
+    await assertFails(join(family, 'phone1', 's1', { first_name: '' }));
+    await assertFails(join(family, 'phone1', 's1', { first_name: 'x'.repeat(31) }));
+    await assertFails(join(family, 'phone1', 's1', { pin_hash: 'abc' }));
+    await assertFails(join(family, 'phone1', 's1', { surname: 'Khan' }));
+    await assertFails(join(family, 'phone1', 's1', { grade: 'nine' }));
+    // Without joining the class first.
+    await assertFails(setDoc(doc(family, 'classes/class1/members/phone1_s1'), member('phone1')));
+    // The id must match the family and child.
+    await assertSucceeds(join(family, 'phone1'));
+    await assertFails(setDoc(doc(family, 'classes/class1/members/phone1_s2'), member('phone1', 's1')));
+    // Not into a class that doesn't exist.
+    const batch = writeBatch(family);
+    batch.set(doc(family, 'classes/nope/families/phone1'), { joined_at: serverTimestamp() });
+    await assertFails(batch.commit());
+  });
+
+  test('a family leaves, and the teacher can remove a child', async () => {
+    await seedClass();
+    await join(db('phone1'), 'phone1');
+    await join(db('phone2'), 'phone2', 's9');
+    await assertFails(deleteDoc(doc(db('phone2'), 'classes/class1/members/phone1_s1')));
+    await assertSucceeds(deleteDoc(doc(db('phone1'), 'classes/class1/members/phone1_s1')));
+    await assertSucceeds(deleteDoc(doc(db('phone1'), 'classes/class1/families/phone1')));
+    await assertSucceeds(deleteDoc(doc(db('teacher1'), 'classes/class1/members/phone2_s9')));
+  });
+
+  test('the teacher assigns lessons, families in the class read them', async () => {
+    await seedClass();
+    await join(db('phone1'), 'phone1');
+    const teacher = db('teacher1');
+    const lesson = {
+      lesson_id: 'g9-maths-05-feasible-region',
+      due: Timestamp.now(),
+      created_at: serverTimestamp(),
+    };
+    await assertSucceeds(setDoc(doc(teacher, 'classes/class1/assignments/a1'), lesson));
+    await assertSucceeds(setDoc(doc(teacher, 'classes/class1/assignments/a2'), { ...lesson, due: null }));
+    await assertFails(setDoc(doc(teacher, 'classes/class1/assignments/a3'), { ...lesson, extra: 1 }));
+    await assertFails(setDoc(doc(teacher, 'classes/class1/assignments/a4'), { ...lesson, lesson_id: '' }));
+    await assertSucceeds(getDocs(collection(db('phone1'), 'classes/class1/assignments')));
+    await assertFails(getDocs(collection(db('phone2'), 'classes/class1/assignments')));
+    await assertFails(setDoc(doc(db('phone1'), 'classes/class1/assignments/a5'), lesson));
+    await assertFails(deleteDoc(doc(db('phone1'), 'classes/class1/assignments/a1')));
+    await assertSucceeds(deleteDoc(doc(teacher, 'classes/class1/assignments/a1')));
+  });
+
+  test('the teacher deletes the class with its code; then the family can no longer write', async () => {
+    await seedClass();
+    await join(db('phone1'), 'phone1');
+    await assertFails(deleteDoc(doc(db('phone1'), 'classes/class1')));
+    await assertFails(deleteDoc(doc(db('teacher1'), `class_codes/${CODE}`)));
+    const teacher = db('teacher1');
+    const batch = writeBatch(teacher);
+    batch.delete(doc(teacher, 'classes/class1/members/phone1_s1'));
+    batch.delete(doc(teacher, 'classes/class1/families/phone1'));
+    batch.delete(doc(teacher, `class_codes/${CODE}`));
+    batch.delete(doc(teacher, 'classes/class1'));
+    await assertSucceeds(batch.commit());
+    await assertFails(setDoc(doc(db('phone1'), 'classes/class1/members/phone1_s1'), member('phone1')));
   });
 }

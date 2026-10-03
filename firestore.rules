@@ -1,7 +1,8 @@
 rules_version = '2';
 
 // Each account (a family phone, a parent or a teacher) can read and write
-// only its own data. Teacher access to classes comes in Phase 9.
+// only its own data. A teacher sees a child only through a class the
+// child's family joined with the class code (Phase 9).
 service cloud.firestore {
   match /databases/{database}/documents {
     function isOwner(uid) {
@@ -113,6 +114,109 @@ service cloud.firestore {
           && request.resource.data.hash ==
                get(/databases/$(database)/documents/lesson_reviews/$(lessonId)).data.hash
           && request.resource.data.created_at == request.time;
+      }
+    }
+
+    // Classes (Phase 9). A teacher creates a class and its code in one
+    // batch; a family looks up the code, then shares each child's summary
+    // with the class after a parent agreed on the phone.
+    function signedIn() {
+      return request.auth != null;
+    }
+    function isTeacher() {
+      return signedIn()
+        && get(/databases/$(database)/documents/accounts/$(request.auth.uid)).data.role == 'teacher';
+    }
+    function classPath(classId) {
+      return /databases/$(database)/documents/classes/$(classId);
+    }
+    function teaches(classId) {
+      return signedIn() && get(classPath(classId)).data.teacher_uid == request.auth.uid;
+    }
+    function familyIn(classId) {
+      return signedIn()
+        && exists(/databases/$(database)/documents/classes/$(classId)/families/$(request.auth.uid));
+    }
+
+    // Anyone signed in can look up one code, but not list them.
+    match /class_codes/{code} {
+      allow get: if signedIn();
+      // Only together with its class (create only: a taken code fails).
+      allow create: if isTeacher()
+        && code.matches('^[A-HJ-NP-Z2-9]{6}$')
+        && request.resource.data.keys().hasOnly(['class_id', 'name'])
+        && getAfter(classPath(request.resource.data.class_id)).data.teacher_uid == request.auth.uid
+        && getAfter(classPath(request.resource.data.class_id)).data.code == code
+        && getAfter(classPath(request.resource.data.class_id)).data.name == request.resource.data.name;
+      allow delete: if signedIn()
+        && resource.data.class_id is string
+        && !existsAfter(classPath(resource.data.class_id))
+        && get(classPath(resource.data.class_id)).data.teacher_uid == request.auth.uid;
+    }
+
+    match /classes/{classId} {
+      allow get: if signedIn()
+        && (resource.data.teacher_uid == request.auth.uid || familyIn(classId));
+      allow list: if signedIn() && resource.data.teacher_uid == request.auth.uid;
+      allow create: if isTeacher()
+        && request.resource.data.keys().hasOnly(['teacher_uid', 'name', 'code', 'created_at'])
+        && request.resource.data.teacher_uid == request.auth.uid
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 1
+        && request.resource.data.name.size() <= 60
+        && request.resource.data.created_at == request.time
+        && existsAfter(/databases/$(database)/documents/class_codes/$(request.resource.data.code));
+      allow delete: if signedIn() && resource.data.teacher_uid == request.auth.uid;
+
+      // A family's phone is in the class: it may read the class and its
+      // assigned lessons.
+      match /families/{uid} {
+        allow read: if isOwner(uid) || teaches(classId);
+        allow create, update: if isOwner(uid)
+          && exists(classPath(classId))
+          && request.resource.data.keys().hasOnly(['joined_at'])
+          && request.resource.data.joined_at == request.time;
+        allow delete: if isOwner(uid) || teaches(classId);
+      }
+
+      // One child's summary, written only by the child's family phone.
+      // First name and grade only; no PIN, picture or other family data.
+      match /members/{memberId} {
+        function validMember() {
+          let d = request.resource.data;
+          return d.keys().hasOnly(['uid', 'student_id', 'first_name', 'grade', 'joined_at',
+                                   'updated_at', 'skills', 'misconceptions', 'lessons'])
+            && d.uid == request.auth.uid
+            && d.student_id is string
+            && memberId == request.auth.uid + '_' + d.student_id
+            && d.first_name is string
+            && d.first_name.size() >= 1
+            && d.first_name.size() <= 30
+            && d.grade is int
+            && d.joined_at is timestamp
+            && d.updated_at == request.time
+            && d.skills is list && d.skills.size() <= 500
+            && d.misconceptions is list && d.misconceptions.size() <= 500
+            && d.lessons is list && d.lessons.size() <= 500
+            && existsAfter(/databases/$(database)/documents/classes/$(classId)/families/$(request.auth.uid));
+        }
+        allow read: if teaches(classId)
+          || (signedIn() && resource.data.uid == request.auth.uid);
+        allow create, update: if signedIn() && validMember();
+        allow delete: if teaches(classId)
+          || (signedIn() && resource.data.uid == request.auth.uid);
+      }
+
+      match /assignments/{assignmentId} {
+        allow read: if teaches(classId) || familyIn(classId);
+        allow create: if teaches(classId)
+          && request.resource.data.keys().hasOnly(['lesson_id', 'due', 'created_at'])
+          && request.resource.data.lesson_id is string
+          && request.resource.data.lesson_id.size() >= 1
+          && request.resource.data.lesson_id.size() <= 100
+          && (request.resource.data.due == null || request.resource.data.due is timestamp)
+          && request.resource.data.created_at == request.time;
+        allow delete: if teaches(classId);
       }
     }
 

@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:ai_tutor/ai/ai_service.dart';
 import 'package:ai_tutor/ai/keyword_fallback.dart';
 import 'package:ai_tutor/character/mithu_controller.dart';
+import 'package:ai_tutor/classes/class_store.dart';
 import 'package:ai_tutor/character/narrator.dart';
 import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/character/voice_lines.dart';
@@ -15,6 +16,7 @@ import 'package:ai_tutor/services/local_db.dart';
 import 'package:ai_tutor/services/remote_store.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 /// A pretend Firebase for tests: an in-memory "server" that holds writes
 /// back while [online] is false, like Firestore does, and sends them when
@@ -24,12 +26,14 @@ class FakeBackend {
     auth = FakeAuthService(this);
     remote = FakeRemoteStore(this);
     reviews = FakeReviewStore(this);
+    classes = FakeClassStore(this);
     ai = FakeAiService(this);
   }
 
   late final FakeAuthService auth;
   late final FakeRemoteStore remote;
   late final FakeReviewStore reviews;
+  late final FakeClassStore classes;
   late final FakeAiService ai;
   final narrator = FakeNarrator();
   final sounds = FakeSounds();
@@ -599,5 +603,173 @@ class FakeReviewStore implements ReviewStore {
       status: approved ? ReviewStatus.approved : ReviewStatus.changesRequested,
       reviewer: reviewer,
     );
+  }
+}
+
+/// Classes on the pretend server, checked like firestore.rules.
+class FakeClassStore implements ClassStore {
+  FakeClassStore(this._backend);
+
+  final FakeBackend _backend;
+
+  final classes = <String, SchoolClass>{};
+
+  /// Members by class id, then by document id.
+  final membersOf = <String, Map<String, ClassMember>>{};
+
+  /// Family uids by class id.
+  final families = <String, Set<String>>{};
+  final assignmentsOf = <String, List<Assignment>>{};
+
+  /// Writes of children's summaries.
+  var memberWrites = 0;
+  var _ids = 0;
+
+  String _signedIn() {
+    if (!_backend.online) throw StateError('offline');
+    final uid = _backend.auth.currentUser?.uid;
+    if (uid == null) throw StateError('signed out');
+    return uid;
+  }
+
+  static FirebaseException _denied() =>
+      FirebaseException(plugin: 'cloud_firestore', code: 'permission-denied');
+
+  SchoolClass _teaching(String classId) {
+    final uid = _signedIn();
+    final c = classes[classId];
+    if (c == null || c.teacherUid != uid) throw _denied();
+    return c;
+  }
+
+  /// A class made by [teacherUid] straight on the server, for tests.
+  SchoolClass addClass({
+    String id = 'class1',
+    String name = '9 A',
+    String code = 'ABC234',
+    String teacherUid = 'teacher1',
+  }) => classes[id] = SchoolClass(
+    id: id,
+    name: name,
+    code: code,
+    teacherUid: teacherUid,
+  );
+
+  /// The teacher assigning a lesson, straight on the server.
+  Future<void> assignAs(
+    String classId,
+    String lessonId, {
+    DateTime? due,
+  }) async {
+    (assignmentsOf[classId] ??= []).add(
+      Assignment(
+        id: 'a${++_ids}',
+        lessonId: lessonId,
+        due: due,
+        createdAt: DateTime(2026, 10, 3, 9, _ids),
+      ),
+    );
+  }
+
+  @override
+  Future<SchoolClass> createClass(String teacherUid, String name) async {
+    if (_signedIn() != teacherUid) throw _denied();
+    return addClass(
+      id: 'class${++_ids}',
+      name: name,
+      code: newClassCode(),
+      teacherUid: teacherUid,
+    );
+  }
+
+  @override
+  Future<List<SchoolClass>> classesOf(String teacherUid) async {
+    if (_signedIn() != teacherUid) throw _denied();
+    return [
+      for (final c in classes.values)
+        if (c.teacherUid == teacherUid) c,
+    ];
+  }
+
+  @override
+  Future<List<ClassMember>> members(String classId) async {
+    _teaching(classId);
+    return [...?membersOf[classId]?.values];
+  }
+
+  @override
+  Future<List<Assignment>> assignments(String classId) async {
+    final uid = _signedIn();
+    final c = classes[classId];
+    if (c == null ||
+        (c.teacherUid != uid && !(families[classId]?.contains(uid) ?? false))) {
+      throw _denied();
+    }
+    return [...?assignmentsOf[classId]];
+  }
+
+  @override
+  Future<void> assign(
+    String classId, {
+    required String lessonId,
+    DateTime? due,
+  }) async {
+    _teaching(classId);
+    (assignmentsOf[classId] ??= []).add(
+      Assignment(
+        id: 'a${++_ids}',
+        lessonId: lessonId,
+        due: due,
+        createdAt: DateTime(2026, 10, 3, 9, _ids),
+      ),
+    );
+  }
+
+  @override
+  Future<void> unassign(String classId, String assignmentId) async {
+    _teaching(classId);
+    assignmentsOf[classId]?.removeWhere((a) => a.id == assignmentId);
+  }
+
+  @override
+  Future<void> deleteClass(SchoolClass schoolClass) async {
+    _teaching(schoolClass.id);
+    classes.remove(schoolClass.id);
+    membersOf.remove(schoolClass.id);
+    families.remove(schoolClass.id);
+    assignmentsOf.remove(schoolClass.id);
+  }
+
+  @override
+  Future<ClassInfo?> findClass(String code) async {
+    _signedIn();
+    final c = classes.values.where((c) => c.code == code).firstOrNull;
+    return c == null ? null : (id: c.id, name: c.name);
+  }
+
+  @override
+  Future<void> putMember(
+    String classId,
+    ClassMember member, {
+    bool join = false,
+  }) async {
+    final uid = _signedIn();
+    if (!classes.containsKey(classId) || member.uid != uid) throw _denied();
+    if (join) (families[classId] ??= {}).add(uid);
+    if (!(families[classId]?.contains(uid) ?? false)) throw _denied();
+    memberWrites++;
+    (membersOf[classId] ??= {})[member.docId] = member;
+  }
+
+  @override
+  Future<void> removeMember(
+    String classId,
+    String uid,
+    String studentId, {
+    bool lastChild = false,
+  }) async {
+    if (_signedIn() != uid) throw _denied();
+    membersOf[classId]?.remove(memberDocId(uid, studentId));
+    if (lastChild) families[classId]?.remove(uid);
   }
 }

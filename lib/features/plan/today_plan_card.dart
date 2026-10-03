@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../classes/class_service.dart';
 import '../../l10n/app_localizations.dart';
 import '../../lessons/lesson_text.dart';
 import '../../mastery/daily_plan.dart';
@@ -28,10 +29,23 @@ class TodayPlanCard extends ConsumerWidget {
     final progress = ref.watch(progressProvider(student.id)).value ?? {};
     final marked = ref.watch(planDoneProvider(student.id));
     final curriculum = ref.watch(curriculumProvider).value;
-    if (plan == null || curriculum == null || plan.items.isEmpty) {
+    final assigned = ref.watch(assignmentsProvider(student.id)).value ?? [];
+    if (plan == null || curriculum == null) return const SizedBox.shrink();
+    final now = DateTime.now();
+
+    // Lessons from the child's teachers come first, until finished
+    // (Phase 9). The same lesson from two classes shows once.
+    final seen = <String>{};
+    final teacherLessons = [
+      for (final a in assigned)
+        if (curriculum.lesson(a.lessonId) case final lesson?
+            when progress[a.lessonId]?.completed != true &&
+                seen.add(a.lessonId))
+          (lesson: lesson, due: a.due),
+    ];
+    if (plan.items.isEmpty && teacherLessons.isEmpty) {
       return const SizedBox.shrink();
     }
-    final now = DateTime.now();
 
     bool done(PlanItem item) => switch (item) {
       QuestionItem() => questionDoneToday(item, states, now),
@@ -48,7 +62,7 @@ class TodayPlanCard extends ConsumerWidget {
     final questionsLeft = plan.items.whereType<QuestionItem>().any(
       (i) => !done(i),
     );
-    final allDone = plan.items.every(done);
+    final allDone = teacherLessons.isEmpty && plan.items.every(done);
 
     return Card(
       key: const Key('today-plan'),
@@ -69,6 +83,23 @@ class TodayPlanCard extends ConsumerWidget {
               ],
             ),
             const SizedBox(height: 8),
+            for (final (:lesson, :due) in teacherLessons)
+              ListTile(
+                key: Key('plan-assigned-${lesson.id}'),
+                dense: true,
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Icons.school_outlined),
+                title: _Localized(lesson.title, (t) => l10n.planAssigned(t)),
+                subtitle: due == null
+                    ? null
+                    : Text(
+                        l10n.planDue(
+                          MaterialLocalizations.of(context)
+                              .formatShortDate(due),
+                        ),
+                      ),
+                onTap: () => context.push('/lesson/${lesson.id}'),
+              ),
             for (final item in plan.items)
               ListTile(
                 key: Key('plan-${item.key}'),
