@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show appFlavor;
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../app/theme/age_tier.dart';
+import '../l10n/app_localizations.dart';
 import '../lessons/lesson_text.dart';
+import '../lessons/step_context.dart';
 import '../models/lesson_step.dart';
 import 'mithu.dart';
 import 'mithu_controller.dart';
+import 'narrator.dart';
+import 'voice_lines.dart';
 
 /// An answer Mithu reacts to. [attempt] tells two wrong answers in a row
 /// apart, so Mithu reacts to each.
 typedef MithuReaction = ({bool correct, int attempt});
 
-/// Mithu with a speech bubble, at the top of a lesson step.
+/// Mithu with a speech bubble and a speaker button, at the top of a step.
 ///
 /// The lesson's `character.emotion` sets the mood; [reaction] (the last
 /// checked answer) moves it to happy, or curious and then encouraging.
-class MithuBubble extends StatefulWidget {
+/// For Nursery to Grade 2 Mithu says the line by itself.
+class MithuBubble extends ConsumerStatefulWidget {
   const MithuBubble({
     super.key,
     required this.line,
@@ -29,11 +37,13 @@ class MithuBubble extends StatefulWidget {
   final MithuController? controller;
 
   @override
-  State<MithuBubble> createState() => _MithuBubbleState();
+  ConsumerState<MithuBubble> createState() => _MithuBubbleState();
 }
 
-class _MithuBubbleState extends State<MithuBubble> {
+class _MithuBubbleState extends ConsumerState<MithuBubble> {
   MithuController? _own;
+  late final Narrator _narrator;
+  var _phoneVoice = false;
 
   MithuController get _controller =>
       widget.controller ??
@@ -43,7 +53,31 @@ class _MithuBubbleState extends State<MithuBubble> {
   void initState() {
     super.initState();
     _controller.base = MithuMood.parse(widget.line.emotion);
+    _narrator = ref.read(narratorProvider);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _start());
   }
+
+  VoiceLine _voice() {
+    final step = StepContext.of(context);
+    return VoiceLine(
+      line: widget.line,
+      language: Localizations.localeOf(context).languageCode,
+      lessonId: step?.lessonId,
+      stepId: step?.stepId,
+    );
+  }
+
+  Future<void> _start() async {
+    if (!mounted) return;
+    final voice = _voice();
+    if (appFlavor == 'dev') {
+      final recorded = await _narrator.hasRecording(voice);
+      if (mounted) setState(() => _phoneVoice = !recorded);
+    }
+    if (mounted && ref.read(ageTierProvider) == AgeTier.early) _say();
+  }
+
+  void _say() => _narrator.say(_voice(), _controller);
 
   @override
   void didUpdateWidget(MithuBubble old) {
@@ -61,13 +95,16 @@ class _MithuBubbleState extends State<MithuBubble> {
 
   @override
   void dispose() {
+    if (_controller.speaking) _narrator.stop();
     _own?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context);
+    final theme = Theme.of(context);
+    final early = ref.watch(ageTierProvider) == AgeTier.early;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -76,7 +113,7 @@ class _MithuBubbleState extends State<MithuBubble> {
           builder: (context, _) => MithuView(
             key: const Key('mithu'),
             mood: _controller.mood,
-            size: 72,
+            size: early ? 96 : 72,
             mouth: _controller.speaking ? _controller.mouth : null,
           ),
         ),
@@ -84,14 +121,38 @@ class _MithuBubbleState extends State<MithuBubble> {
         Expanded(
           child: Container(
             margin: const EdgeInsets.only(top: 8),
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsetsDirectional.fromSTEB(16, 8, 4, 8),
             decoration: BoxDecoration(
-              color: colors.secondaryContainer,
+              color: theme.colorScheme.secondaryContainer,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: LessonText(
-              widget.line.say,
-              style: Theme.of(context).textTheme.titleMedium,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: LessonText(
+                          widget.line.say,
+                          style: theme.textTheme.titleMedium,
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                      key: const Key('mithu-listen'),
+                      tooltip: l10n.listenToMithu,
+                      iconSize: early ? 40 : 24,
+                      onPressed: _say,
+                      icon: const Icon(Icons.volume_up_rounded),
+                    ),
+                  ],
+                ),
+                if (_phoneVoice)
+                  Text(l10n.phoneVoiceLabel, style: theme.textTheme.labelSmall),
+              ],
             ),
           ),
         ),

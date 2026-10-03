@@ -41,5 +41,9 @@ Widget buildStep(LessonStep step, StepDone onDone, {required String lessonId}) {
   if (builder == null || step is UnsupportedStep) {
     return UnsupportedStepView(step: step, onDone: onDone);
   }
-  return StepContext(lessonId: lessonId, child: builder(step, onDone));
+  return StepContext(
+    lessonId: lessonId,
+    stepId: step.id,
+    child: builder(step, onDone),
+  );
 }

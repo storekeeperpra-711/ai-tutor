@@ -34,6 +34,41 @@ class ValidateLessonsTest(unittest.TestCase):
     def test_sample_lesson_is_valid(self):
         self.assertEqual(v.validate_file(SAMPLE, self.validator), [])
 
+    def first_spoken(self, lesson):
+        return next(s for s in lesson["steps"] if "character" in s)
+
+    def test_mithu_line_must_fit_in_30_seconds(self):
+        lesson = self.mutated()
+        self.first_spoken(lesson)["character"]["say"]["en"] = "word " * 80
+        self.assertProblem(self.check(lesson), "more than 30 seconds to say")
+
+    def test_named_recording_must_exist(self):
+        lesson = self.mutated()
+        self.first_spoken(lesson)["character"]["audio"] = {"ur": "nope.m4a"}
+        self.assertProblem(self.check(lesson), "assets/audio/nope.m4a doesn't exist")
+
+    def test_recordings_need_a_short_mouth_file(self):
+        lesson = self.mutated()
+        step = self.first_spoken(lesson)
+        audio = v.voice_file(lesson["id"], step["id"], "ur")
+        old = v.AUDIO
+        with tempfile.TemporaryDirectory() as d:
+            v.AUDIO = Path(d)
+            try:
+                (v.AUDIO / audio).write_bytes(b"x")
+                self.assertProblem(self.check(lesson), "is missing (the recorder makes it")
+                (v.AUDIO / v.mouth_file(audio)).write_text("5" * 700)
+                self.assertProblem(self.check(lesson), "recording is longer than 30 seconds")
+                (v.AUDIO / v.mouth_file(audio)).write_text("5" * 100)
+                self.assertEqual(self.check(lesson), [])
+                (v.AUDIO / "typo__s1_ur.m4a").write_bytes(b"x")
+                self.assertEqual(
+                    v.check_unused_audio([lesson]),
+                    ["assets/audio/typo__s1_ur.m4a isn't used by any Mithu line"],
+                )
+            finally:
+                v.AUDIO = old
+
     def test_missing_urdu_text(self):
         lesson = self.mutated()
         del lesson["title"]["ur"]

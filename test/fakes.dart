@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:ai_tutor/ai/ai_service.dart';
 import 'package:ai_tutor/ai/keyword_fallback.dart';
+import 'package:ai_tutor/character/mithu_controller.dart';
+import 'package:ai_tutor/character/narrator.dart';
+import 'package:ai_tutor/character/voice_lines.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/local_db.dart';
@@ -22,6 +25,7 @@ class FakeBackend {
   late final FakeAuthService auth;
   late final FakeRemoteStore remote;
   late final FakeAiService ai;
+  final narrator = FakeNarrator();
 
   /// What the fake camera returns; null = the child cancelled.
   Uint8List? photo = Uint8List.fromList([0xff, 0xd8, 0xff]);
@@ -410,3 +414,22 @@ Future<void> answer(
   result: StepResult(stepId: 's$index', correct: true, attempts: 1),
   now: now,
 );
+
+/// Records what Mithu was asked to say; plays nothing.
+class FakeNarrator implements Narrator {
+  final said = <VoiceLine>[];
+  final recorded = <String>{};
+
+  @override
+  Future<bool> hasRecording(VoiceLine voice) async =>
+      recorded.contains(voice.fileName);
+
+  @override
+  Future<VoiceKind> say(VoiceLine voice, MithuController mithu) async {
+    said.add(voice);
+    return VoiceKind.none;
+  }
+
+  @override
+  Future<void> stop() async {}
+}

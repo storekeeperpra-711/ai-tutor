@@ -645,4 +645,59 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aiCostsEmpty => 'No AI use in the last 7 days.';
+
+  @override
+  String get listenToMithu => 'Listen to Mithu';
+
+  @override
+  String get phoneVoiceLabel => 'Phone voice (no recording yet)';
+
+  @override
+  String get recorderTitle => 'Record Mithu\'s voice';
+
+  @override
+  String get recorderHelp =>
+      'Find a quiet room. Hold the phone a hand\'s width from your mouth, tap Record, read the line warmly, and tap Stop. Keep each line under 30 seconds.';
+
+  @override
+  String get recorderMissingOnly => 'Only lines without a voice';
+
+  @override
+  String get recorderRecord => 'Record';
+
+  @override
+  String get recorderStop => 'Stop';
+
+  @override
+  String get recorderPlay => 'Listen';
+
+  @override
+  String get recorderDelete => 'Delete';
+
+  @override
+  String get recorderStatusPhone => 'Recorded on this phone (not sent yet)';
+
+  @override
+  String get recorderStatusApp => 'Voice is in the app';
+
+  @override
+  String get recorderStatusMissing => 'No voice yet';
+
+  @override
+  String get recorderTooLong =>
+      'Longer than 30 seconds: please record it shorter.';
+
+  @override
+  String get recorderNoMic =>
+      'The app may not use the microphone. Allow it in the phone\'s settings.';
+
+  @override
+  String get recorderExport => 'Send recordings';
+
+  @override
+  String get recorderExportHelp =>
+      'Send them to yourself (for example to Google Drive), then attach all the files in the project chat. Claude adds them to the app.';
+
+  @override
+  String get recorderNothingToSend => 'No recordings on this phone yet.';
 }

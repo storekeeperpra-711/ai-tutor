@@ -94,6 +94,14 @@ class HomeScreen extends ConsumerWidget {
             const SizedBox(height: 12),
             Center(
               child: OutlinedButton(
+                key: const Key('open-recorder'),
+                onPressed: () => context.push('/dev/voice'),
+                child: Text(l10n.recorderTitle),
+              ),
+            ),
+            const SizedBox(height: 12),
+            Center(
+              child: OutlinedButton(
                 onPressed: () => context.push('/debug/urdu'),
                 child: Text(l10n.urduTestTitle),
               ),

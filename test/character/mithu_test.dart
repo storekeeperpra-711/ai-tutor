@@ -1,8 +1,19 @@
 import 'package:ai_tutor/character/mithu.dart';
 import 'package:ai_tutor/character/mithu_bubble.dart';
 import 'package:ai_tutor/character/mithu_controller.dart';
+import 'package:ai_tutor/character/voice_lines.dart';
 import 'package:ai_tutor/models/lesson_step.dart';
+import 'package:ai_tutor/app/preferences.dart';
+import 'package:ai_tutor/app/theme/age_tier.dart';
+import 'package:ai_tutor/character/narrator.dart';
+import 'package:ai_tutor/l10n/app_localizations.dart';
+import 'package:ai_tutor/lessons/step_context.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../fakes.dart';
+
 import 'package:flutter_test/flutter_test.dart';
 
 CharacterLine _line(String emotion) => CharacterLine.fromJson({
@@ -13,12 +24,23 @@ CharacterLine _line(String emotion) => CharacterLine.fromJson({
 MithuMood _shown(WidgetTester tester) =>
     tester.widget<MithuView>(find.byKey(const Key('mithu'))).mood;
 
-Widget _app(Widget child, {bool still = false}) => MaterialApp(
-  home: MediaQuery(
-    data: MediaQueryData(disableAnimations: still),
-    child: Scaffold(body: child),
-  ),
-);
+Widget _app(Widget child, {bool still = false, FakeNarrator? narrator}) =>
+    ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(_prefs),
+        narratorProvider.overrideWithValue(narrator ?? FakeNarrator()),
+      ],
+      child: MaterialApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: MediaQuery(
+          data: MediaQueryData(disableAnimations: still),
+          child: Scaffold(body: child),
+        ),
+      ),
+    );
+
+late SharedPreferences _prefs;
 
 class _Host extends StatefulWidget {
   const _Host();
@@ -35,6 +57,11 @@ class _HostState extends State<_Host> {
 }
 
 void main() {
+  setUp(() async {
+    SharedPreferences.setMockInitialValues({});
+    _prefs = await SharedPreferences.getInstance();
+  });
+
   test('parses lesson emotions; unknown ones are idle', () {
     expect(MithuMood.parse('curious'), MithuMood.curious);
     expect(MithuMood.parse('celebrating'), MithuMood.celebrating);
@@ -93,5 +120,47 @@ void main() {
     await tester.pump();
     expect(_shown(tester), MithuMood.happy);
     await tester.pumpAndSettle();
+  });
+
+  testWidgets('Mithu speaks by itself only for Nursery to Grade 2', (
+    tester,
+  ) async {
+    Future<FakeNarrator> show(AgeTier tier) async {
+      SharedPreferences.setMockInitialValues({'ageTier': tier.name});
+      _prefs = await SharedPreferences.getInstance();
+      final narrator = FakeNarrator();
+      await tester.pumpWidget(const SizedBox());
+      await tester.pumpWidget(
+        _app(
+          StepContext(
+            lessonId: 'g0-maths-01-count',
+            stepId: 's1',
+            child: MithuBubble(line: _line('happy')),
+          ),
+          narrator: narrator,
+        ),
+      );
+      await tester.pumpAndSettle();
+      return narrator;
+    }
+
+    final early = await show(AgeTier.early);
+    expect(early.said.single.fileName, 'g0-maths-01-count__s1_en.m4a');
+    final older = await show(AgeTier.primary);
+    expect(older.said, isEmpty);
+    await tester.tap(find.byKey(const Key('mithu-listen')));
+    expect(older.said.single.text, 'Hello');
+  });
+
+  test('mouth tracks round-trip and follow the recording', () {
+    final track = MouthTrack.parse('0369');
+    expect(track.levels, [0, 3 / 9, 6 / 9, 1]);
+    expect(track.encode(), '0369');
+    expect(track.at(const Duration(milliseconds: 120)), 6 / 9);
+    expect(track.at(const Duration(seconds: 5)), 0);
+    expect(track.length, const Duration(milliseconds: 200));
+    expect(MouthTrack.levelFromDb(-60), 0);
+    expect(MouthTrack.levelFromDb(0), 1);
+    expect(mouthFileName('a__s1_ur.m4a'), 'a__s1_ur.mouth');
   });
 }

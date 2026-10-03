@@ -648,4 +648,59 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get aiCostsEmpty => 'پچھلے 7 دنوں میں اے آئی استعمال نہیں ہوا۔';
+
+  @override
+  String get listenToMithu => 'مٹھو کو سنیں';
+
+  @override
+  String get phoneVoiceLabel => 'فون کی آواز (ابھی ریکارڈنگ نہیں)';
+
+  @override
+  String get recorderTitle => 'مٹھو کی آواز ریکارڈ کریں';
+
+  @override
+  String get recorderHelp =>
+      'خاموش کمرہ چنیں۔ فون منہ سے ایک ہاتھ دور رکھیں، ریکارڈ دبائیں، جملہ پیار سے پڑھیں اور روکیں دبائیں۔ ہر جملہ 30 سیکنڈ سے کم رکھیں۔';
+
+  @override
+  String get recorderMissingOnly => 'صرف بغیر آواز والے جملے';
+
+  @override
+  String get recorderRecord => 'ریکارڈ';
+
+  @override
+  String get recorderStop => 'روکیں';
+
+  @override
+  String get recorderPlay => 'سنیں';
+
+  @override
+  String get recorderDelete => 'مٹائیں';
+
+  @override
+  String get recorderStatusPhone => 'اس فون پر ریکارڈ ہوا (ابھی بھیجا نہیں)';
+
+  @override
+  String get recorderStatusApp => 'آواز ایپ میں ہے';
+
+  @override
+  String get recorderStatusMissing => 'ابھی آواز نہیں';
+
+  @override
+  String get recorderTooLong =>
+      '30 سیکنڈ سے لمبا ہے: براہ کرم چھوٹا ریکارڈ کریں۔';
+
+  @override
+  String get recorderNoMic =>
+      'ایپ کو مائیکروفون کی اجازت نہیں۔ فون کی سیٹنگز میں اجازت دیں۔';
+
+  @override
+  String get recorderExport => 'ریکارڈنگز بھیجیں';
+
+  @override
+  String get recorderExportHelp =>
+      'انہیں خود کو بھیجیں (مثلاً گوگل ڈرائیو پر)، پھر تمام فائلیں پروجیکٹ چیٹ میں لگائیں۔ Claude انہیں ایپ میں شامل کر دے گا۔';
+
+  @override
+  String get recorderNothingToSend => 'اس فون پر ابھی کوئی ریکارڈنگ نہیں۔';
 }

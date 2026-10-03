@@ -30,6 +30,9 @@ sealed class LessonStep {
 
   final String id;
   final String type;
+
+  /// What Mithu says at this step, if anything.
+  CharacterLine? get character => null;
 }
 
 /// A step that asks a question. With a [questionType], its answers count
@@ -73,6 +76,7 @@ class ExplainStep extends LessonStep {
       _$ExplainStepFromJson(json);
 
   final LocalizedText text;
+  @override
   final CharacterLine? character;
   final String? image;
 }
@@ -99,6 +103,7 @@ class ChoiceStep extends LessonStep implements QuestionStep {
 
   final LocalizedText prompt;
   final List<ChoiceOption> options;
+  @override
   final CharacterLine? character;
 }
 
@@ -172,6 +177,7 @@ class NumberStep extends LessonStep implements QuestionStep {
   final LocalizedText feedbackWrong;
   final int maxAttempts;
   final List<CommonWrong> commonWrong;
+  @override
   final CharacterLine? character;
 }
 
@@ -238,6 +244,7 @@ class TextCheckStep extends LessonStep implements QuestionStep {
   final LocalizedText feedbackWrong;
   final int maxAttempts;
   final List<CommonWrongText> commonWrong;
+  @override
   final CharacterLine? character;
 }
 
@@ -273,6 +280,7 @@ class SummaryStep extends LessonStep {
 
   final LocalizedText text;
   final List<LocalizedText> points;
+  @override
   final CharacterLine? character;
 }
 
@@ -326,6 +334,7 @@ class SimStep extends LessonStep implements QuestionStep {
   final LocalizedText? feedbackWrong;
   final int maxAttempts;
   final List<CommonWrongText> commonWrong;
+  @override
   final CharacterLine? character;
 
   bool get isWebView => renderer == 'webview';
@@ -378,6 +387,7 @@ class VideoStep extends LessonStep {
   final LocalizedText summary;
   final LocalizedText? title;
   final double? durationSeconds;
+  @override
   final CharacterLine? character;
 }
 
@@ -399,6 +409,7 @@ class LottieStep extends LessonStep {
   final String src;
   final LocalizedText? text;
   final bool loop;
+  @override
   final CharacterLine? character;
 }
 
@@ -439,6 +450,7 @@ class AiExplainStep extends LessonStep implements QuestionStep {
   final FeedbackLevels fallbackFeedback;
   final int limitPerDay;
   final int maxAttempts;
+  @override
   final CharacterLine? character;
 }
 
@@ -506,6 +518,7 @@ class PhotoCheckStep extends LessonStep implements QuestionStep {
   final List<CommonWrongText> commonWrong;
   final int limitPerDay;
   final int maxAttempts;
+  @override
   final CharacterLine? character;
 
   /// linear_equation checks every line; the others the final answer.

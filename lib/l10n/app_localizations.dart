@@ -1195,6 +1195,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No AI use in the last 7 days.'**
   String get aiCostsEmpty;
+
+  /// Speaker button next to Mithu's speech bubble.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen to Mithu'**
+  String get listenToMithu;
+
+  /// Dev builds only: this line has no recorded voice yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone voice (no recording yet)'**
+  String get phoneVoiceLabel;
+
+  /// Dev screen title: narration recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Record Mithu\'s voice'**
+  String get recorderTitle;
+
+  /// Instructions at the top of the narration recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Find a quiet room. Hold the phone a hand\'s width from your mouth, tap Record, read the line warmly, and tap Stop. Keep each line under 30 seconds.'**
+  String get recorderHelp;
+
+  /// Filter switch in the narration recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Only lines without a voice'**
+  String get recorderMissingOnly;
+
+  /// Start recording a line.
+  ///
+  /// In en, this message translates to:
+  /// **'Record'**
+  String get recorderRecord;
+
+  /// Stop recording.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get recorderStop;
+
+  /// Play back a recorded line.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen'**
+  String get recorderPlay;
+
+  /// Delete a recording made on this phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get recorderDelete;
+
+  /// Line status: recorded with the dev recorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Recorded on this phone (not sent yet)'**
+  String get recorderStatusPhone;
+
+  /// Line status: a recording is bundled with the app.
+  ///
+  /// In en, this message translates to:
+  /// **'Voice is in the app'**
+  String get recorderStatusApp;
+
+  /// Line status: no recording.
+  ///
+  /// In en, this message translates to:
+  /// **'No voice yet'**
+  String get recorderStatusMissing;
+
+  /// Warning after a recording over 30 seconds.
+  ///
+  /// In en, this message translates to:
+  /// **'Longer than 30 seconds: please record it shorter.'**
+  String get recorderTooLong;
+
+  /// Microphone permission was refused.
+  ///
+  /// In en, this message translates to:
+  /// **'The app may not use the microphone. Allow it in the phone\'s settings.'**
+  String get recorderNoMic;
+
+  /// Share all recordings made on this phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Send recordings'**
+  String get recorderExport;
+
+  /// Explains what to do with exported recordings.
+  ///
+  /// In en, this message translates to:
+  /// **'Send them to yourself (for example to Google Drive), then attach all the files in the project chat. Claude adds them to the app.'**
+  String get recorderExportHelp;
+
+  /// Export with nothing recorded.
+  ///
+  /// In en, this message translates to:
+  /// **'No recordings on this phone yet.'**
+  String get recorderNothingToSend;
 }
 
 class _AppLocalizationsDelegate

@@ -932,5 +932,73 @@
   "aiCostsEmpty": "No AI use in the last 7 days.",
   "@aiCostsEmpty": {
     "description": "Cost dashboard is empty."
+  },
+  "listenToMithu": "Listen to Mithu",
+  "@listenToMithu": {
+    "description": "Speaker button next to Mithu's speech bubble."
+  },
+  "phoneVoiceLabel": "Phone voice (no recording yet)",
+  "@phoneVoiceLabel": {
+    "description": "Dev builds only: this line has no recorded voice yet."
+  },
+  "recorderTitle": "Record Mithu's voice",
+  "@recorderTitle": {
+    "description": "Dev screen title: narration recorder."
+  },
+  "recorderHelp": "Find a quiet room. Hold the phone a hand's width from your mouth, tap Record, read the line warmly, and tap Stop. Keep each line under 30 seconds.",
+  "@recorderHelp": {
+    "description": "Instructions at the top of the narration recorder."
+  },
+  "recorderMissingOnly": "Only lines without a voice",
+  "@recorderMissingOnly": {
+    "description": "Filter switch in the narration recorder."
+  },
+  "recorderRecord": "Record",
+  "@recorderRecord": {
+    "description": "Start recording a line."
+  },
+  "recorderStop": "Stop",
+  "@recorderStop": {
+    "description": "Stop recording."
+  },
+  "recorderPlay": "Listen",
+  "@recorderPlay": {
+    "description": "Play back a recorded line."
+  },
+  "recorderDelete": "Delete",
+  "@recorderDelete": {
+    "description": "Delete a recording made on this phone."
+  },
+  "recorderStatusPhone": "Recorded on this phone (not sent yet)",
+  "@recorderStatusPhone": {
+    "description": "Line status: recorded with the dev recorder."
+  },
+  "recorderStatusApp": "Voice is in the app",
+  "@recorderStatusApp": {
+    "description": "Line status: a recording is bundled with the app."
+  },
+  "recorderStatusMissing": "No voice yet",
+  "@recorderStatusMissing": {
+    "description": "Line status: no recording."
+  },
+  "recorderTooLong": "Longer than 30 seconds: please record it shorter.",
+  "@recorderTooLong": {
+    "description": "Warning after a recording over 30 seconds."
+  },
+  "recorderNoMic": "The app may not use the microphone. Allow it in the phone's settings.",
+  "@recorderNoMic": {
+    "description": "Microphone permission was refused."
+  },
+  "recorderExport": "Send recordings",
+  "@recorderExport": {
+    "description": "Share all recordings made on this phone."
+  },
+  "recorderExportHelp": "Send them to yourself (for example to Google Drive), then attach all the files in the project chat. Claude adds them to the app.",
+  "@recorderExportHelp": {
+    "description": "Explains what to do with exported recordings."
+  },
+  "recorderNothingToSend": "No recordings on this phone yet.",
+  "@recorderNothingToSend": {
+    "description": "Export with nothing recorded."
   }
 }
