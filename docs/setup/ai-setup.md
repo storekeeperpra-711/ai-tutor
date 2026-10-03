@@ -39,6 +39,8 @@ In GitHub, open the `ai-tutor` repository → **Settings → Secrets and variabl
 
 ## 5. First deploy
 
+The **Deploy AI server** workflow appears in GitHub only once it is on the main branch, so do this after the Phase 6 pull request is merged.
+
 1. In GitHub, open **Actions → Deploy AI server → Run workflow**, choose **dev**, and click **Run workflow**.
 2. When it finishes (green tick), open the run. The summary shows the address, like `https://ai-tutor-ai-dev.aitutor.workers.dev`.
 3. Send that address in the project chat. It isn't secret: Claude puts it into the app.
