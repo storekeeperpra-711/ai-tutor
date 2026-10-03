@@ -3,22 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../ai/mithu_notes.dart';
+import '../../app/theme/age_tier.dart';
 import '../../l10n/app_localizations.dart';
-import '../../lessons/lesson_repository.dart';
-import '../../lessons/lesson_text.dart';
 import '../../services/local_db.dart';
-import '../../services/mastery_service.dart';
 import '../../services/profiles.dart';
 import '../common/sync_status.dart';
-import '../plan/mastery_level.dart';
-import '../plan/today_plan_card.dart';
 import '../profiles/avatar.dart';
 import '../profiles/pin_pad.dart';
+import 'early_home.dart';
+import 'tier_homes.dart';
 
-/// Home: "Who is learning?" until a child picks their picture, then that
-/// child's lessons and progress. The real home screens per age tier come
-/// in Phase 7.
+/// Home: "Who is learning?" until a child picks their picture, then the
+/// home for that child's age group (spec C4).
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
@@ -175,7 +171,7 @@ class _WhoIsLearning extends ConsumerWidget {
   }
 }
 
-/// The current child's greeting and lessons.
+/// The current child's greeting, then the home for their age group.
 class _StudentHome extends ConsumerWidget {
   const _StudentHome({required this.student});
 
@@ -184,17 +180,7 @@ class _StudentHome extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
-    final ids = ref.watch(lessonIdsProvider).value ?? const <String>[];
-    final progress = ref.watch(progressProvider(student.id)).value ?? const {};
-    final states = ref.watch(skillStatesProvider(student.id)).value ?? {};
-    final curriculum = ref.watch(curriculumProvider).value;
-    final lessons = [
-      for (final id in ids)
-        if (ref.watch(lessonProvider(id)).value case final lesson?)
-          // Students see reviewed lessons; debug builds show drafts too.
-          if (lesson.review.status == 'approved' || kDebugMode) lesson,
-    ];
-
+    final tier = ref.watch(ageTierProvider);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -217,44 +203,12 @@ class _StudentHome extends ConsumerWidget {
           ],
         ),
         const SizedBox(height: 16),
-        TodayPlanCard(student: student),
-        MithuNotesCard(student: student),
-        const SizedBox(height: 16),
-        Text(l10n.lessonsTitle, style: Theme.of(context).textTheme.titleLarge),
-        if (lessons.isEmpty)
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: Text(l10n.noLessonsYet),
-          ),
-        for (final lesson in lessons)
-          Card(
-            child: ListTile(
-              key: Key('home-lesson-${lesson.id}'),
-              title: LessonText(lesson.title),
-              subtitle: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(switch (progress[lesson.id]) {
-                    null => l10n.lessonStart,
-                    LessonProgress(completed: true) => l10n.lessonDone,
-                    final p => l10n.lessonContinue(
-                      p.nextStep + 1,
-                      lesson.steps.length,
-                    ),
-                  }, key: Key('home-lesson-status-${lesson.id}')),
-                  if (states[lesson.mainSkill] case final s?)
-                    MasteryDots(
-                      key: Key('mastery-${lesson.id}'),
-                      level: s.level(curriculum?.criteriaFor(lesson.mainSkill)),
-                    ),
-                ],
-              ),
-              trailing: progress[lesson.id]?.completed == true
-                  ? const Icon(Icons.check_circle, color: Colors.green)
-                  : const Icon(Icons.play_circle_outline),
-              onTap: () => context.push('/lesson/${lesson.id}'),
-            ),
-          ),
+        switch (tier) {
+          AgeTier.early => EarlyHome(student: student),
+          AgeTier.primary => PrimaryHome(student: student),
+          AgeTier.middle => MiddleHome(student: student),
+          AgeTier.older => OlderHome(student: student),
+        },
       ],
     );
   }

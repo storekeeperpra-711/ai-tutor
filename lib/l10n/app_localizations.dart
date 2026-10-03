@@ -1423,6 +1423,162 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Home'**
   String get backHome;
+
+  /// Mithu greets a young child on the home screen (spoken by the phone, never sent to the AI).
+  ///
+  /// In en, this message translates to:
+  /// **'Assalam o Alaikum, {name}! Let\'s play and learn.'**
+  String earlyGreeting(String name);
+
+  /// Big button on the youngest children's home: opens the next lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Play'**
+  String get playButton;
+
+  /// Mithu's tip on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: if you get stuck, read the question again slowly.'**
+  String get mithuTip1;
+
+  /// Mithu's tip on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: mistakes are how our brains grow. Try again!'**
+  String get mithuTip2;
+
+  /// Mithu's tip on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: explain your answer to someone at home.'**
+  String get mithuTip3;
+
+  /// Quest card title on the Grades 3-5 home.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} quest'**
+  String questTitle(String subject);
+
+  /// Quest card progress.
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} lessons done'**
+  String questProgress(int done, int total);
+
+  /// Quest card when every lesson is done.
+  ///
+  /// In en, this message translates to:
+  /// **'Quest complete! Keep reviewing to stay strong.'**
+  String get questDone;
+
+  /// Subject tile: skills at the Secure level.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} skills secure'**
+  String secureSkills(int count, int total);
+
+  /// Grades 6-8 home: a subject's level (1 + skills mastered).
+  ///
+  /// In en, this message translates to:
+  /// **'Level {level}'**
+  String subjectLevel(int level);
+
+  /// Heading above subject tiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Your subjects'**
+  String get subjectsTitle;
+
+  /// Grades 9-12 home heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Mastery by subject'**
+  String get masteryBySubject;
+
+  /// Grades 9-12 home: skills mastered or secure in a subject.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} skills mastered'**
+  String masteredSkills(int count, int total);
+
+  /// Grades 9-12 home: days until the board exam.
+  ///
+  /// In en, this message translates to:
+  /// **'{days, plural, =1{1 day to your board exam} other{{days} days to your board exam}}'**
+  String examCountdown(int days);
+
+  /// Exam countdown on the exam day.
+  ///
+  /// In en, this message translates to:
+  /// **'Your board exam is today. You\'ve prepared well. Good luck!'**
+  String get examToday;
+
+  /// Exam card when no date is set.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your board exam date to see a countdown'**
+  String get examSetPrompt;
+
+  /// Settings: the student's board exam date.
+  ///
+  /// In en, this message translates to:
+  /// **'Board exam date'**
+  String get examDateSetting;
+
+  /// Settings: no exam date yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Not set'**
+  String get examDateNotSet;
+
+  /// Settings: remove the exam date.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get examDateClear;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Maths'**
+  String get subjectMaths;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Chemistry'**
+  String get subjectChemistry;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Physics'**
+  String get subjectPhysics;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Biology'**
+  String get subjectBiology;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Science'**
+  String get subjectScience;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get subjectEnglish;
+
+  /// Subject name.
+  ///
+  /// In en, this message translates to:
+  /// **'Urdu'**
+  String get subjectUrdu;
 }
 
 class _AppLocalizationsDelegate

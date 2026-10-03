@@ -770,4 +770,105 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get backHome => 'ہوم';
+
+  @override
+  String earlyGreeting(String name) {
+    return 'السلام علیکم $name! آئیں کھیلیں اور سیکھیں۔';
+  }
+
+  @override
+  String get playButton => 'کھیلیں';
+
+  @override
+  String get mithuTip1 => 'مشورہ: اگر اٹک جائیں تو سوال دوبارہ آہستہ پڑھیں۔';
+
+  @override
+  String get mithuTip2 =>
+      'مشورہ: غلطیوں سے ہمارا دماغ بڑھتا ہے۔ دوبارہ کوشش کریں!';
+
+  @override
+  String get mithuTip3 => 'مشورہ: اپنا جواب گھر میں کسی کو سمجھائیں۔';
+
+  @override
+  String questTitle(String subject) {
+    return '$subject کی مہم';
+  }
+
+  @override
+  String questProgress(int done, int total) {
+    return '$total میں سے $done اسباق مکمل';
+  }
+
+  @override
+  String get questDone => 'مہم مکمل! مضبوط رہنے کے لیے دہرائی کرتے رہیں۔';
+
+  @override
+  String secureSkills(int count, int total) {
+    return '$total میں سے $count مہارتیں پکی';
+  }
+
+  @override
+  String subjectLevel(int level) {
+    return 'لیول $level';
+  }
+
+  @override
+  String get subjectsTitle => 'آپ کے مضامین';
+
+  @override
+  String get masteryBySubject => 'مضمون کے لحاظ سے مہارت';
+
+  @override
+  String masteredSkills(int count, int total) {
+    return '$total میں سے $count مہارتیں حاصل';
+  }
+
+  @override
+  String examCountdown(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'بورڈ امتحان میں $days دن',
+      one: 'بورڈ امتحان میں 1 دن',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get examToday =>
+      'آپ کا بورڈ امتحان آج ہے۔ آپ نے اچھی تیاری کی ہے۔ کامیابی ہو!';
+
+  @override
+  String get examSetPrompt =>
+      'الٹی گنتی دیکھنے کے لیے اپنے بورڈ امتحان کی تاریخ لکھیں';
+
+  @override
+  String get examDateSetting => 'بورڈ امتحان کی تاریخ';
+
+  @override
+  String get examDateNotSet => 'طے نہیں';
+
+  @override
+  String get examDateClear => 'ہٹائیں';
+
+  @override
+  String get subjectMaths => 'ریاضی';
+
+  @override
+  String get subjectChemistry => 'کیمسٹری';
+
+  @override
+  String get subjectPhysics => 'فزکس';
+
+  @override
+  String get subjectBiology => 'حیاتیات';
+
+  @override
+  String get subjectScience => 'سائنس';
+
+  @override
+  String get subjectEnglish => 'انگریزی';
+
+  @override
+  String get subjectUrdu => 'اردو';
 }

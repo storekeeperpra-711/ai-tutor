@@ -66,6 +66,8 @@ void main() {
 
     await tester.tap(find.byIcon(Icons.settings));
     await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('tier-early')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('tier-early')));
     await tester.pumpAndSettle();
 

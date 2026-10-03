@@ -767,4 +767,104 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backHome => 'Home';
+
+  @override
+  String earlyGreeting(String name) {
+    return 'Assalam o Alaikum, $name! Let\'s play and learn.';
+  }
+
+  @override
+  String get playButton => 'Play';
+
+  @override
+  String get mithuTip1 =>
+      'Tip: if you get stuck, read the question again slowly.';
+
+  @override
+  String get mithuTip2 => 'Tip: mistakes are how our brains grow. Try again!';
+
+  @override
+  String get mithuTip3 => 'Tip: explain your answer to someone at home.';
+
+  @override
+  String questTitle(String subject) {
+    return '$subject quest';
+  }
+
+  @override
+  String questProgress(int done, int total) {
+    return '$done of $total lessons done';
+  }
+
+  @override
+  String get questDone => 'Quest complete! Keep reviewing to stay strong.';
+
+  @override
+  String secureSkills(int count, int total) {
+    return '$count of $total skills secure';
+  }
+
+  @override
+  String subjectLevel(int level) {
+    return 'Level $level';
+  }
+
+  @override
+  String get subjectsTitle => 'Your subjects';
+
+  @override
+  String get masteryBySubject => 'Mastery by subject';
+
+  @override
+  String masteredSkills(int count, int total) {
+    return '$count of $total skills mastered';
+  }
+
+  @override
+  String examCountdown(int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: '$days days to your board exam',
+      one: '1 day to your board exam',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get examToday =>
+      'Your board exam is today. You\'ve prepared well. Good luck!';
+
+  @override
+  String get examSetPrompt => 'Set your board exam date to see a countdown';
+
+  @override
+  String get examDateSetting => 'Board exam date';
+
+  @override
+  String get examDateNotSet => 'Not set';
+
+  @override
+  String get examDateClear => 'Clear';
+
+  @override
+  String get subjectMaths => 'Maths';
+
+  @override
+  String get subjectChemistry => 'Chemistry';
+
+  @override
+  String get subjectPhysics => 'Physics';
+
+  @override
+  String get subjectBiology => 'Biology';
+
+  @override
+  String get subjectScience => 'Science';
+
+  @override
+  String get subjectEnglish => 'English';
+
+  @override
+  String get subjectUrdu => 'Urdu';
 }

@@ -1097,5 +1097,153 @@
   "backHome": "Home",
   "@backHome": {
     "description": "Celebration: go back to the home screen."
+  },
+  "earlyGreeting": "Assalam o Alaikum, {name}! Let's play and learn.",
+  "@earlyGreeting": {
+    "description": "Mithu greets a young child on the home screen (spoken by the phone, never sent to the AI).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "playButton": "Play",
+  "@playButton": {
+    "description": "Big button on the youngest children's home: opens the next lesson."
+  },
+  "mithuTip1": "Tip: if you get stuck, read the question again slowly.",
+  "@mithuTip1": {
+    "description": "Mithu's tip on the Grades 3-5 home."
+  },
+  "mithuTip2": "Tip: mistakes are how our brains grow. Try again!",
+  "@mithuTip2": {
+    "description": "Mithu's tip on the Grades 3-5 home."
+  },
+  "mithuTip3": "Tip: explain your answer to someone at home.",
+  "@mithuTip3": {
+    "description": "Mithu's tip on the Grades 3-5 home."
+  },
+  "questTitle": "{subject} quest",
+  "@questTitle": {
+    "description": "Quest card title on the Grades 3-5 home.",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "questProgress": "{done} of {total} lessons done",
+  "@questProgress": {
+    "description": "Quest card progress.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "questDone": "Quest complete! Keep reviewing to stay strong.",
+  "@questDone": {
+    "description": "Quest card when every lesson is done."
+  },
+  "secureSkills": "{count} of {total} skills secure",
+  "@secureSkills": {
+    "description": "Subject tile: skills at the Secure level.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subjectLevel": "Level {level}",
+  "@subjectLevel": {
+    "description": "Grades 6-8 home: a subject's level (1 + skills mastered).",
+    "placeholders": {
+      "level": {
+        "type": "int"
+      }
+    }
+  },
+  "subjectsTitle": "Your subjects",
+  "@subjectsTitle": {
+    "description": "Heading above subject tiles."
+  },
+  "masteryBySubject": "Mastery by subject",
+  "@masteryBySubject": {
+    "description": "Grades 9-12 home heading."
+  },
+  "masteredSkills": "{count} of {total} skills mastered",
+  "@masteredSkills": {
+    "description": "Grades 9-12 home: skills mastered or secure in a subject.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "examCountdown": "{days, plural, =1{1 day to your board exam} other{{days} days to your board exam}}",
+  "@examCountdown": {
+    "description": "Grades 9-12 home: days until the board exam.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "examToday": "Your board exam is today. You've prepared well. Good luck!",
+  "@examToday": {
+    "description": "Exam countdown on the exam day."
+  },
+  "examSetPrompt": "Set your board exam date to see a countdown",
+  "@examSetPrompt": {
+    "description": "Exam card when no date is set."
+  },
+  "examDateSetting": "Board exam date",
+  "@examDateSetting": {
+    "description": "Settings: the student's board exam date."
+  },
+  "examDateNotSet": "Not set",
+  "@examDateNotSet": {
+    "description": "Settings: no exam date yet."
+  },
+  "examDateClear": "Clear",
+  "@examDateClear": {
+    "description": "Settings: remove the exam date."
+  },
+  "subjectMaths": "Maths",
+  "@subjectMaths": {
+    "description": "Subject name."
+  },
+  "subjectChemistry": "Chemistry",
+  "@subjectChemistry": {
+    "description": "Subject name."
+  },
+  "subjectPhysics": "Physics",
+  "@subjectPhysics": {
+    "description": "Subject name."
+  },
+  "subjectBiology": "Biology",
+  "@subjectBiology": {
+    "description": "Subject name."
+  },
+  "subjectScience": "Science",
+  "@subjectScience": {
+    "description": "Subject name."
+  },
+  "subjectEnglish": "English",
+  "@subjectEnglish": {
+    "description": "Subject name."
+  },
+  "subjectUrdu": "Urdu",
+  "@subjectUrdu": {
+    "description": "Subject name."
   }
 }
