@@ -59,7 +59,12 @@ class _ChoiceStepViewState extends State<ChoiceStepView> {
       onPressed: _solved ? _finish : null,
       children: [
         if (step.character != null) ...[
-          MithuBubble(line: step.character!),
+          MithuBubble(
+            line: step.character!,
+            reaction: _last == null
+                ? null
+                : (correct: _last!.correct, attempt: _tried.length),
+          ),
           const SizedBox(height: 24),
         ],
         LessonText(step.prompt, style: textTheme.titleLarge),

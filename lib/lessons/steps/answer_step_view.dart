@@ -62,6 +62,7 @@ class _AnswerStepViewState extends State<AnswerStepView> {
   var _attempts = 0;
   final _misconceptions = <String>[];
   AnswerCheck? _last;
+  var _checks = 0;
 
   @override
   void dispose() {
@@ -75,6 +76,7 @@ class _AnswerStepViewState extends State<AnswerStepView> {
     final result = widget.check(_controller.text, l10n, language);
     setState(() {
       _last = result;
+      _checks++;
       if (result.correct) {
         _attempts++;
         _phase = _Phase.correct;
@@ -112,7 +114,12 @@ class _AnswerStepViewState extends State<AnswerStepView> {
       onPressed: answering ? _check : _finish,
       children: [
         if (widget.character != null) ...[
-          MithuBubble(line: widget.character!),
+          MithuBubble(
+            line: widget.character!,
+            reaction: _last == null
+                ? null
+                : (correct: _last!.correct, attempt: _checks),
+          ),
           const SizedBox(height: 24),
         ],
         LessonText(widget.prompt, style: textTheme.titleLarge),
