@@ -712,4 +712,59 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mithuSettingHint => 'Mithu the parrot helps in lessons';
+
+  @override
+  String get badgeFirstLesson => 'First lesson finished';
+
+  @override
+  String get badgeTriedAgain => 'Tried again after a mistake';
+
+  @override
+  String get badgeExplained => 'Explained in your own words';
+
+  @override
+  String get badgeCheckedPhoto => 'Fixed your work after a photo check';
+
+  @override
+  String get badgeCameBack => 'Came back to review';
+
+  @override
+  String get badgeFiveDays => 'Learned on 5 different days this month';
+
+  @override
+  String get badgesTitle => 'Your badges';
+
+  @override
+  String badgesEarned(int count, int total) {
+    return '$count of $total badges';
+  }
+
+  @override
+  String get starFinished => 'You finished';
+
+  @override
+  String get starKeptTrying => 'You kept trying';
+
+  @override
+  String get starExplained => 'You explained your thinking';
+
+  @override
+  String get praise1 => 'Well done! Your hard work is paying off.';
+
+  @override
+  String get praise2 => 'Great effort! Mithu is proud of you.';
+
+  @override
+  String get praise3 => 'You did it! Mistakes help us learn.';
+
+  @override
+  String nextLesson(String title) {
+    return 'Next: $title';
+  }
+
+  @override
+  String get comeBackTomorrow => 'Come back tomorrow for a quick review.';
+
+  @override
+  String get backHome => 'Home';
 }

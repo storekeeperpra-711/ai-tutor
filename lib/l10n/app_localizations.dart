@@ -1321,6 +1321,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Mithu the parrot helps in lessons'**
   String get mithuSettingHint;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'First lesson finished'**
+  String get badgeFirstLesson;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Tried again after a mistake'**
+  String get badgeTriedAgain;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Explained in your own words'**
+  String get badgeExplained;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Fixed your work after a photo check'**
+  String get badgeCheckedPhoto;
+
+  /// Effort badge.
+  ///
+  /// In en, this message translates to:
+  /// **'Came back to review'**
+  String get badgeCameBack;
+
+  /// Effort badge. Not a streak: any 5 days.
+  ///
+  /// In en, this message translates to:
+  /// **'Learned on 5 different days this month'**
+  String get badgeFiveDays;
+
+  /// Heading of the badge shelf.
+  ///
+  /// In en, this message translates to:
+  /// **'Your badges'**
+  String get badgesTitle;
+
+  /// Badge shelf count.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} badges'**
+  String badgesEarned(int count, int total);
+
+  /// Celebration: star for finishing the lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'You finished'**
+  String get starFinished;
+
+  /// Celebration: star for trying again after mistakes.
+  ///
+  /// In en, this message translates to:
+  /// **'You kept trying'**
+  String get starKeptTrying;
+
+  /// Celebration: star for explaining (or answering every question).
+  ///
+  /// In en, this message translates to:
+  /// **'You explained your thinking'**
+  String get starExplained;
+
+  /// Celebration praise line.
+  ///
+  /// In en, this message translates to:
+  /// **'Well done! Your hard work is paying off.'**
+  String get praise1;
+
+  /// Celebration praise line.
+  ///
+  /// In en, this message translates to:
+  /// **'Great effort! Mithu is proud of you.'**
+  String get praise2;
+
+  /// Celebration praise line.
+  ///
+  /// In en, this message translates to:
+  /// **'You did it! Mistakes help us learn.'**
+  String get praise3;
+
+  /// Celebration: button to the next lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Next: {title}'**
+  String nextLesson(String title);
+
+  /// Celebration: next step when there's no next lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Come back tomorrow for a quick review.'**
+  String get comeBackTomorrow;
+
+  /// Celebration: go back to the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get backHome;
 }
 
 class _AppLocalizationsDelegate

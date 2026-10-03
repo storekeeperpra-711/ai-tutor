@@ -1016,5 +1016,86 @@
   "mithuSettingHint": "Mithu the parrot helps in lessons",
   "@mithuSettingHint": {
     "description": "Subtitle of the Show Mithu switch."
+  },
+  "badgeFirstLesson": "First lesson finished",
+  "@badgeFirstLesson": {
+    "description": "Effort badge."
+  },
+  "badgeTriedAgain": "Tried again after a mistake",
+  "@badgeTriedAgain": {
+    "description": "Effort badge."
+  },
+  "badgeExplained": "Explained in your own words",
+  "@badgeExplained": {
+    "description": "Effort badge."
+  },
+  "badgeCheckedPhoto": "Fixed your work after a photo check",
+  "@badgeCheckedPhoto": {
+    "description": "Effort badge."
+  },
+  "badgeCameBack": "Came back to review",
+  "@badgeCameBack": {
+    "description": "Effort badge."
+  },
+  "badgeFiveDays": "Learned on 5 different days this month",
+  "@badgeFiveDays": {
+    "description": "Effort badge. Not a streak: any 5 days."
+  },
+  "badgesTitle": "Your badges",
+  "@badgesTitle": {
+    "description": "Heading of the badge shelf."
+  },
+  "badgesEarned": "{count} of {total} badges",
+  "@badgesEarned": {
+    "description": "Badge shelf count.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "starFinished": "You finished",
+  "@starFinished": {
+    "description": "Celebration: star for finishing the lesson."
+  },
+  "starKeptTrying": "You kept trying",
+  "@starKeptTrying": {
+    "description": "Celebration: star for trying again after mistakes."
+  },
+  "starExplained": "You explained your thinking",
+  "@starExplained": {
+    "description": "Celebration: star for explaining (or answering every question)."
+  },
+  "praise1": "Well done! Your hard work is paying off.",
+  "@praise1": {
+    "description": "Celebration praise line."
+  },
+  "praise2": "Great effort! Mithu is proud of you.",
+  "@praise2": {
+    "description": "Celebration praise line."
+  },
+  "praise3": "You did it! Mistakes help us learn.",
+  "@praise3": {
+    "description": "Celebration praise line."
+  },
+  "nextLesson": "Next: {title}",
+  "@nextLesson": {
+    "description": "Celebration: button to the next lesson.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "comeBackTomorrow": "Come back tomorrow for a quick review.",
+  "@comeBackTomorrow": {
+    "description": "Celebration: next step when there's no next lesson."
+  },
+  "backHome": "Home",
+  "@backHome": {
+    "description": "Celebration: go back to the home screen."
   }
 }

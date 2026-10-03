@@ -715,4 +715,59 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get mithuSettingHint => 'مٹھو طوطا اسباق میں مدد کرتا ہے';
+
+  @override
+  String get badgeFirstLesson => 'پہلا سبق مکمل';
+
+  @override
+  String get badgeTriedAgain => 'غلطی کے بعد دوبارہ کوشش کی';
+
+  @override
+  String get badgeExplained => 'اپنے الفاظ میں سمجھایا';
+
+  @override
+  String get badgeCheckedPhoto => 'تصویر کی جانچ کے بعد اپنا کام درست کیا';
+
+  @override
+  String get badgeCameBack => 'دہرائی کے لیے واپس آئے';
+
+  @override
+  String get badgeFiveDays => 'اس مہینے 5 مختلف دن پڑھا';
+
+  @override
+  String get badgesTitle => 'آپ کے بیجز';
+
+  @override
+  String badgesEarned(int count, int total) {
+    return '$total میں سے $count بیجز';
+  }
+
+  @override
+  String get starFinished => 'آپ نے مکمل کیا';
+
+  @override
+  String get starKeptTrying => 'آپ کوشش کرتے رہے';
+
+  @override
+  String get starExplained => 'آپ نے اپنی سوچ سمجھائی';
+
+  @override
+  String get praise1 => 'شاباش! آپ کی محنت رنگ لا رہی ہے۔';
+
+  @override
+  String get praise2 => 'زبردست کوشش! مٹھو کو آپ پر فخر ہے۔';
+
+  @override
+  String get praise3 => 'آپ نے کر دکھایا! غلطیاں ہمیں سکھاتی ہیں۔';
+
+  @override
+  String nextLesson(String title) {
+    return 'اگلا: $title';
+  }
+
+  @override
+  String get comeBackTomorrow => 'کل ایک چھوٹی سی دہرائی کے لیے واپس آئیں۔';
+
+  @override
+  String get backHome => 'ہوم';
 }

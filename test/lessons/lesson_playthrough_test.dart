@@ -61,7 +61,11 @@ void main() {
 
         await playLesson(tester, lesson, urdu: language == 'ur');
 
-        // Finishing the lesson returns to the previewer.
+        // Mithu celebrates with three effort stars (wrong answers were
+        // tried again), then Home returns to the previewer.
+        expect(find.byKey(const Key('lesson-celebration')), findsOneWidget);
+        expect(find.byKey(const Key('star-2-on')), findsOneWidget);
+        await tapKey(tester, 'celebration-done');
         expect(find.byKey(Key('lesson-${lesson.id}')), findsOneWidget);
         expect(tester.takeException(), isNull);
       });
