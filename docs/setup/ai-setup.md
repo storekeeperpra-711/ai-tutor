@@ -47,23 +47,27 @@ The **Deploy AI server** workflow appears in GitHub only once it is on the main 
 
 The server now exists but answers "not set up" until it has its secrets (next step). Until then the app uses its offline feedback.
 
-## 6. The server's secrets (in Cloudflare)
+## 6. The server's secrets (added in GitHub, copied by the deploy)
 
-In Cloudflare: **Workers & Pages → ai-tutor-ai-dev → Settings → Variables and Secrets → Add**. Add three entries and click **Deploy** after each:
+Add three more GitHub secrets, the same way as in step 4 (**Settings → Secrets and variables → Actions → New repository secret**):
 
-| Type | Name | Value |
-|---|---|---|
-| Secret | `ANTHROPIC_API_KEY` | your Claude API key from step 1 |
-| Secret | `FIREBASE_SERVICE_ACCOUNT` | the whole text of the Firebase key file (below) |
-| Text | `ADMIN_EMAILS` | your email, for the cost dashboard (several: separate with commas) |
+| Name | Value |
+|---|---|
+| `ANTHROPIC_API_KEY` | your Claude API key from step 1 |
+| `FIREBASE_SERVICE_ACCOUNT_DEV` | the whole text of the dev Firebase key file (below) |
+| `ADMIN_EMAILS` | your email, for the cost dashboard (several: separate with commas) |
+
+Then run **Actions → Deploy AI server → dev** again. The deploy copies these secrets into the server; the run's summary lists the ones it set.
 
 **The Firebase key file:**
 1. Open https://console.firebase.google.com → **ai-tutor-dev** → the gear icon → **Project settings → Service accounts**.
 2. Click **Generate new private key → Generate key**. A `.json` file downloads.
-3. Open it with Notepad, select everything (Ctrl+A), copy, and paste it as the `FIREBASE_SERVICE_ACCOUNT` value.
-4. **Delete the downloaded file** (and empty the Recycle Bin). This key can read and write all of Firestore, so it must live only in Cloudflare. If it is ever exposed, delete it in the Google Cloud console (**IAM & Admin → Service accounts → firebase-adminsdk → Keys**) and generate a new one.
+3. Open it with Notepad, select everything (Ctrl+A), copy, and paste it as the secret's value.
+4. **Delete the downloaded file** (and empty the Recycle Bin). This key can read and write all of Firestore, so it must live only in secrets. If it is ever exposed, delete it in the Google Cloud console (**IAM & Admin → Service accounts → firebase-adminsdk → Keys**) and generate a new one.
 
 The admin email must be the email of an app account that has signed in with a verified email. Other accounts see only their own children's costs.
+
+You can instead add these three directly in Cloudflare (**ai-tutor-ai-dev → Settings → Variables and Secrets**, named `ANTHROPIC_API_KEY`, `FIREBASE_SERVICE_ACCOUNT`, `ADMIN_EMAILS`); the deploy leaves those alone when the GitHub secret is missing.
 
 ## 7. Firestore rules
 
@@ -81,7 +85,7 @@ If something fails: Cloudflare → **ai-tutor-ai-dev → Logs** shows the server
 
 ## Prod
 
-Repeat steps 5–8 with **prod**: run the workflow with **prod** (it creates `ai-tutor-ai`), use the **ai-tutor** Firebase project's key file, and a separate Claude key `ai-tutor-prod` if you like.
+Repeat steps 5–8 with **prod**: add the **ai-tutor** Firebase project's key file as `FIREBASE_SERVICE_ACCOUNT_PROD`, run the workflow with **prod** (it creates `ai-tutor-ai`). Both servers use the same `ANTHROPIC_API_KEY` and `ADMIN_EMAILS`.
 
 ## Free plan limits
 

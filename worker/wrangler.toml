@@ -1,6 +1,7 @@
 # The AI server for AI Tutor. Deployed by .github/workflows/deploy-worker.yml.
 # Secrets (ANTHROPIC_API_KEY, FIREBASE_SERVICE_ACCOUNT) and ADMIN_EMAILS are
-# set in the Cloudflare dashboard, never here: see docs/setup/ai-setup.md.
+# copied from GitHub secrets by the deploy workflow (or set in the Cloudflare
+# dashboard), never here: see docs/setup/ai-setup.md.
 
 # Production: talks to the ai-tutor Firebase project.
 name = "ai-tutor-ai"
