@@ -700,4 +700,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get recorderNothingToSend => 'No recordings on this phone yet.';
+
+  @override
+  String get soundsSetting => 'Sounds';
+
+  @override
+  String get soundsSettingHint => 'Small sounds for taps and answers';
+
+  @override
+  String get mithuSetting => 'Show Mithu';
+
+  @override
+  String get mithuSettingHint => 'Mithu the parrot helps in lessons';
 }

@@ -1,4 +1,5 @@
 import 'package:ai_tutor/character/narrator.dart';
+import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/ai/ai_service.dart';
 import 'package:ai_tutor/ai/photo_picker.dart';
 import 'package:ai_tutor/app/preferences.dart';
@@ -64,6 +65,7 @@ class StepHarness {
           onlineProvider.overrideWith((ref) => backend.onlineStream),
           aiServiceProvider.overrideWithValue(backend.ai),
           narratorProvider.overrideWithValue(backend.narrator),
+          soundPlayerProvider.overrideWithValue(backend.sounds),
           photoPickerProvider.overrideWithValue(
             (source) async => backend.photo,
           ),

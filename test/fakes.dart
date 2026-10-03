@@ -4,6 +4,7 @@ import 'package:ai_tutor/ai/ai_service.dart';
 import 'package:ai_tutor/ai/keyword_fallback.dart';
 import 'package:ai_tutor/character/mithu_controller.dart';
 import 'package:ai_tutor/character/narrator.dart';
+import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/character/voice_lines.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
 import 'package:ai_tutor/services/auth_service.dart';
@@ -26,6 +27,7 @@ class FakeBackend {
   late final FakeRemoteStore remote;
   late final FakeAiService ai;
   final narrator = FakeNarrator();
+  final sounds = FakeSounds();
 
   /// What the fake camera returns; null = the child cancelled.
   Uint8List? photo = Uint8List.fromList([0xff, 0xd8, 0xff]);
@@ -387,10 +389,10 @@ class FakeRemoteStore implements RemoteStore {
 }
 
 /// A learner for tests.
-Student student(String id, {String name = 'Ayesha'}) => Student(
+Student student(String id, {String name = 'Ayesha', int grade = 6}) => Student(
   id: id,
   firstName: name,
-  grade: 6,
+  grade: grade,
   avatar: 'star',
   createdAt: DateTime(2026, 10, 1),
   consentAt: DateTime(2026, 10, 1),
@@ -432,4 +434,12 @@ class FakeNarrator implements Narrator {
 
   @override
   Future<void> stop() async {}
+}
+
+/// Records the sound effects the app played.
+class FakeSounds implements SoundPlayer {
+  final played = <Sound>[];
+
+  @override
+  void play(Sound sound) => played.add(sound);
 }

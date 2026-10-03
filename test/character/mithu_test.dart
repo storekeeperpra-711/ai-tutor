@@ -6,6 +6,7 @@ import 'package:ai_tutor/models/lesson_step.dart';
 import 'package:ai_tutor/app/preferences.dart';
 import 'package:ai_tutor/app/theme/age_tier.dart';
 import 'package:ai_tutor/character/narrator.dart';
+import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/l10n/app_localizations.dart';
 import 'package:ai_tutor/lessons/step_context.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ Widget _app(Widget child, {bool still = false, FakeNarrator? narrator}) =>
       overrides: [
         sharedPreferencesProvider.overrideWithValue(_prefs),
         narratorProvider.overrideWithValue(narrator ?? FakeNarrator()),
+        soundPlayerProvider.overrideWithValue(FakeSounds()),
       ],
       child: MaterialApp(
         localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -58,7 +60,7 @@ class _HostState extends State<_Host> {
 
 void main() {
   setUp(() async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'ageTier': 'primary'});
     _prefs = await SharedPreferences.getInstance();
   });
 

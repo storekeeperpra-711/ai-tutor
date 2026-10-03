@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../app/locale_controller.dart';
 import '../../app/motion.dart';
 import '../../app/theme/age_tier.dart';
+import '../../character/feel_settings.dart';
 import '../../l10n/app_localizations.dart';
 
 /// Language names are always shown in their own language, so a student
@@ -52,6 +53,20 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: Text(l10n.lessMotionHint),
             value: ref.watch(lessMotionProvider),
             onChanged: (v) => ref.read(lessMotionProvider.notifier).set(v),
+          ),
+          SwitchListTile(
+            key: const Key('sounds-on'),
+            title: Text(l10n.soundsSetting),
+            subtitle: Text(l10n.soundsSettingHint),
+            value: ref.watch(soundsOnProvider),
+            onChanged: (v) => ref.read(soundsOnProvider.notifier).set(v),
+          ),
+          SwitchListTile(
+            key: const Key('mithu-on'),
+            title: Text(l10n.mithuSetting),
+            subtitle: Text(l10n.mithuSettingHint),
+            value: ref.watch(mithuOnProvider),
+            onChanged: (v) => ref.read(mithuOnProvider.notifier).set(v),
           ),
           ListTile(
             key: const Key('open-ai-costs'),

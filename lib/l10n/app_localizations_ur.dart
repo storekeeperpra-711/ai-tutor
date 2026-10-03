@@ -703,4 +703,16 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get recorderNothingToSend => 'اس فون پر ابھی کوئی ریکارڈنگ نہیں۔';
+
+  @override
+  String get soundsSetting => 'آوازیں';
+
+  @override
+  String get soundsSettingHint => 'ٹیپ اور جوابات کے لیے چھوٹی آوازیں';
+
+  @override
+  String get mithuSetting => 'مٹھو دکھائیں';
+
+  @override
+  String get mithuSettingHint => 'مٹھو طوطا اسباق میں مدد کرتا ہے';
 }

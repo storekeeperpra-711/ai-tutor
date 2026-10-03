@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../character/mithu_bubble.dart';
+import '../../character/sounds.dart';
 import '../../l10n/app_localizations.dart';
 import '../../models/lesson_step.dart';
 import '../../models/localized_text.dart';
@@ -20,7 +22,7 @@ typedef AnswerChecker = AnswerCheck Function(
 /// hint. After `maxAttempts` wrong answers the full working is shown and
 /// the student moves on (never an endless loop). Unreadable answers and
 /// "almost" answers (right value, wrong form) don't use up an attempt.
-class AnswerStepView extends StatefulWidget {
+class AnswerStepView extends ConsumerStatefulWidget {
   const AnswerStepView({
     super.key,
     required this.stepId,
@@ -51,12 +53,12 @@ class AnswerStepView extends StatefulWidget {
   final bool numberKeyboard;
 
   @override
-  State<AnswerStepView> createState() => _AnswerStepViewState();
+  ConsumerState<AnswerStepView> createState() => _AnswerStepViewState();
 }
 
 enum _Phase { answering, correct, outOfAttempts }
 
-class _AnswerStepViewState extends State<AnswerStepView> {
+class _AnswerStepViewState extends ConsumerState<AnswerStepView> {
   final _controller = TextEditingController();
   var _phase = _Phase.answering;
   var _attempts = 0;
@@ -74,6 +76,7 @@ class _AnswerStepViewState extends State<AnswerStepView> {
     final l10n = AppLocalizations.of(context);
     final language = Localizations.localeOf(context).languageCode;
     final result = widget.check(_controller.text, l10n, language);
+    ref.playSound(result.correct ? Sound.right : Sound.tryAgain);
     setState(() {
       _last = result;
       _checks++;

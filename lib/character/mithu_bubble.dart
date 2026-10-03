@@ -7,6 +7,7 @@ import '../l10n/app_localizations.dart';
 import '../lessons/lesson_text.dart';
 import '../lessons/step_context.dart';
 import '../models/lesson_step.dart';
+import 'feel_settings.dart';
 import 'mithu.dart';
 import 'mithu_controller.dart';
 import 'narrator.dart';
@@ -17,6 +18,7 @@ import 'voice_lines.dart';
 typedef MithuReaction = ({bool correct, int attempt});
 
 /// Mithu with a speech bubble and a speaker button, at the top of a step.
+/// With Mithu switched off in Settings, only the bubble shows.
 ///
 /// The lesson's `character.emotion` sets the mood; [reaction] (the last
 /// checked answer) moves it to happy, or curious and then encouraging.
@@ -105,22 +107,25 @@ class _MithuBubbleState extends ConsumerState<MithuBubble> {
     final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final early = ref.watch(ageTierProvider) == AgeTier.early;
+    final showMithu = ref.watch(mithuOnProvider);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ListenableBuilder(
-          listenable: _controller,
-          builder: (context, _) => MithuView(
-            key: const Key('mithu'),
-            mood: _controller.mood,
-            size: early ? 96 : 72,
-            mouth: _controller.speaking ? _controller.mouth : null,
+        if (showMithu) ...[
+          ListenableBuilder(
+            listenable: _controller,
+            builder: (context, _) => MithuView(
+              key: const Key('mithu'),
+              mood: _controller.mood,
+              size: early ? 96 : 72,
+              mouth: _controller.speaking ? _controller.mouth : null,
+            ),
           ),
-        ),
-        const SizedBox(width: 8),
+          const SizedBox(width: 8),
+        ],
         Expanded(
           child: Container(
-            margin: const EdgeInsets.only(top: 8),
+            margin: EdgeInsets.only(top: showMithu ? 8 : 0),
             padding: const EdgeInsetsDirectional.fromSTEB(16, 8, 4, 8),
             decoration: BoxDecoration(
               color: theme.colorScheme.secondaryContainer,

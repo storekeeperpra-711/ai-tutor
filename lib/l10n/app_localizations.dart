@@ -1297,6 +1297,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No recordings on this phone yet.'**
   String get recorderNothingToSend;
+
+  /// Settings switch for sound effects.
+  ///
+  /// In en, this message translates to:
+  /// **'Sounds'**
+  String get soundsSetting;
+
+  /// Subtitle of the Sounds switch.
+  ///
+  /// In en, this message translates to:
+  /// **'Small sounds for taps and answers'**
+  String get soundsSettingHint;
+
+  /// Settings switch: show the parrot character.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Mithu'**
+  String get mithuSetting;
+
+  /// Subtitle of the Show Mithu switch.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu the parrot helps in lessons'**
+  String get mithuSettingHint;
 }
 
 class _AppLocalizationsDelegate
