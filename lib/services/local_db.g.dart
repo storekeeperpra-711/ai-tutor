@@ -2601,6 +2601,376 @@ class AiQueueCompanion extends UpdateCompanion<QueuedAnswer> {
   }
 }
 
+class $DownloadedLessonsTable extends DownloadedLessons
+    with TableInfo<$DownloadedLessonsTable, DownloadedLesson> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $DownloadedLessonsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _versionMeta = const VerificationMeta(
+    'version',
+  );
+  @override
+  late final GeneratedColumn<int> version = GeneratedColumn<int>(
+    'version',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _hashMeta = const VerificationMeta('hash');
+  @override
+  late final GeneratedColumn<String> hash = GeneratedColumn<String>(
+    'hash',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _contentMeta = const VerificationMeta(
+    'content',
+  );
+  @override
+  late final GeneratedColumn<String> content = GeneratedColumn<String>(
+    'content',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _downloadedAtMeta = const VerificationMeta(
+    'downloadedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> downloadedAt = GeneratedColumn<DateTime>(
+    'downloaded_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    version,
+    hash,
+    content,
+    downloadedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'downloaded_lessons';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<DownloadedLesson> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('version')) {
+      context.handle(
+        _versionMeta,
+        version.isAcceptableOrUnknown(data['version']!, _versionMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_versionMeta);
+    }
+    if (data.containsKey('hash')) {
+      context.handle(
+        _hashMeta,
+        hash.isAcceptableOrUnknown(data['hash']!, _hashMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_hashMeta);
+    }
+    if (data.containsKey('content')) {
+      context.handle(
+        _contentMeta,
+        content.isAcceptableOrUnknown(data['content']!, _contentMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_contentMeta);
+    }
+    if (data.containsKey('downloaded_at')) {
+      context.handle(
+        _downloadedAtMeta,
+        downloadedAt.isAcceptableOrUnknown(
+          data['downloaded_at']!,
+          _downloadedAtMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_downloadedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  DownloadedLesson map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return DownloadedLesson(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      version: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}version'],
+      )!,
+      hash: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}hash'],
+      )!,
+      content: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}content'],
+      )!,
+      downloadedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}downloaded_at'],
+      )!,
+    );
+  }
+
+  @override
+  $DownloadedLessonsTable createAlias(String alias) {
+    return $DownloadedLessonsTable(attachedDatabase, alias);
+  }
+}
+
+class DownloadedLesson extends DataClass
+    implements Insertable<DownloadedLesson> {
+  final String id;
+  final int version;
+
+  /// The upload tool's fingerprint of [content] (tools/upload.py).
+  final String hash;
+
+  /// The lesson's JSON.
+  final String content;
+  final DateTime downloadedAt;
+  const DownloadedLesson({
+    required this.id,
+    required this.version,
+    required this.hash,
+    required this.content,
+    required this.downloadedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['version'] = Variable<int>(version);
+    map['hash'] = Variable<String>(hash);
+    map['content'] = Variable<String>(content);
+    map['downloaded_at'] = Variable<DateTime>(downloadedAt);
+    return map;
+  }
+
+  DownloadedLessonsCompanion toCompanion(bool nullToAbsent) {
+    return DownloadedLessonsCompanion(
+      id: Value(id),
+      version: Value(version),
+      hash: Value(hash),
+      content: Value(content),
+      downloadedAt: Value(downloadedAt),
+    );
+  }
+
+  factory DownloadedLesson.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return DownloadedLesson(
+      id: serializer.fromJson<String>(json['id']),
+      version: serializer.fromJson<int>(json['version']),
+      hash: serializer.fromJson<String>(json['hash']),
+      content: serializer.fromJson<String>(json['content']),
+      downloadedAt: serializer.fromJson<DateTime>(json['downloadedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'version': serializer.toJson<int>(version),
+      'hash': serializer.toJson<String>(hash),
+      'content': serializer.toJson<String>(content),
+      'downloadedAt': serializer.toJson<DateTime>(downloadedAt),
+    };
+  }
+
+  DownloadedLesson copyWith({
+    String? id,
+    int? version,
+    String? hash,
+    String? content,
+    DateTime? downloadedAt,
+  }) => DownloadedLesson(
+    id: id ?? this.id,
+    version: version ?? this.version,
+    hash: hash ?? this.hash,
+    content: content ?? this.content,
+    downloadedAt: downloadedAt ?? this.downloadedAt,
+  );
+  DownloadedLesson copyWithCompanion(DownloadedLessonsCompanion data) {
+    return DownloadedLesson(
+      id: data.id.present ? data.id.value : this.id,
+      version: data.version.present ? data.version.value : this.version,
+      hash: data.hash.present ? data.hash.value : this.hash,
+      content: data.content.present ? data.content.value : this.content,
+      downloadedAt: data.downloadedAt.present
+          ? data.downloadedAt.value
+          : this.downloadedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('DownloadedLesson(')
+          ..write('id: $id, ')
+          ..write('version: $version, ')
+          ..write('hash: $hash, ')
+          ..write('content: $content, ')
+          ..write('downloadedAt: $downloadedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, version, hash, content, downloadedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is DownloadedLesson &&
+          other.id == this.id &&
+          other.version == this.version &&
+          other.hash == this.hash &&
+          other.content == this.content &&
+          other.downloadedAt == this.downloadedAt);
+}
+
+class DownloadedLessonsCompanion extends UpdateCompanion<DownloadedLesson> {
+  final Value<String> id;
+  final Value<int> version;
+  final Value<String> hash;
+  final Value<String> content;
+  final Value<DateTime> downloadedAt;
+  final Value<int> rowid;
+  const DownloadedLessonsCompanion({
+    this.id = const Value.absent(),
+    this.version = const Value.absent(),
+    this.hash = const Value.absent(),
+    this.content = const Value.absent(),
+    this.downloadedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  DownloadedLessonsCompanion.insert({
+    required String id,
+    required int version,
+    required String hash,
+    required String content,
+    required DateTime downloadedAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       version = Value(version),
+       hash = Value(hash),
+       content = Value(content),
+       downloadedAt = Value(downloadedAt);
+  static Insertable<DownloadedLesson> custom({
+    Expression<String>? id,
+    Expression<int>? version,
+    Expression<String>? hash,
+    Expression<String>? content,
+    Expression<DateTime>? downloadedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (version != null) 'version': version,
+      if (hash != null) 'hash': hash,
+      if (content != null) 'content': content,
+      if (downloadedAt != null) 'downloaded_at': downloadedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  DownloadedLessonsCompanion copyWith({
+    Value<String>? id,
+    Value<int>? version,
+    Value<String>? hash,
+    Value<String>? content,
+    Value<DateTime>? downloadedAt,
+    Value<int>? rowid,
+  }) {
+    return DownloadedLessonsCompanion(
+      id: id ?? this.id,
+      version: version ?? this.version,
+      hash: hash ?? this.hash,
+      content: content ?? this.content,
+      downloadedAt: downloadedAt ?? this.downloadedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (version.present) {
+      map['version'] = Variable<int>(version.value);
+    }
+    if (hash.present) {
+      map['hash'] = Variable<String>(hash.value);
+    }
+    if (content.present) {
+      map['content'] = Variable<String>(content.value);
+    }
+    if (downloadedAt.present) {
+      map['downloaded_at'] = Variable<DateTime>(downloadedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('DownloadedLessonsCompanion(')
+          ..write('id: $id, ')
+          ..write('version: $version, ')
+          ..write('hash: $hash, ')
+          ..write('content: $content, ')
+          ..write('downloadedAt: $downloadedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$LocalDb extends GeneratedDatabase {
   _$LocalDb(QueryExecutor e) : super(e);
   $LocalDbManager get managers => $LocalDbManager(this);
@@ -2610,6 +2980,8 @@ abstract class _$LocalDb extends GeneratedDatabase {
   late final $StepResultsTable stepResults = $StepResultsTable(this);
   late final $SkillStatesTable skillStates = $SkillStatesTable(this);
   late final $AiQueueTable aiQueue = $AiQueueTable(this);
+  late final $DownloadedLessonsTable downloadedLessons =
+      $DownloadedLessonsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -2620,6 +2992,7 @@ abstract class _$LocalDb extends GeneratedDatabase {
     stepResults,
     skillStates,
     aiQueue,
+    downloadedLessons,
   ];
 }
 
@@ -4776,6 +5149,226 @@ typedef $$AiQueueTableProcessedTableManager =
       QueuedAnswer,
       PrefetchHooks Function({bool studentId})
     >;
+typedef $$DownloadedLessonsTableCreateCompanionBuilder =
+    DownloadedLessonsCompanion Function({
+      required String id,
+      required int version,
+      required String hash,
+      required String content,
+      required DateTime downloadedAt,
+      Value<int> rowid,
+    });
+typedef $$DownloadedLessonsTableUpdateCompanionBuilder =
+    DownloadedLessonsCompanion Function({
+      Value<String> id,
+      Value<int> version,
+      Value<String> hash,
+      Value<String> content,
+      Value<DateTime> downloadedAt,
+      Value<int> rowid,
+    });
+
+class $$DownloadedLessonsTableFilterComposer
+    extends Composer<_$LocalDb, $DownloadedLessonsTable> {
+  $$DownloadedLessonsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get hash => $composableBuilder(
+    column: $table.hash,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get content => $composableBuilder(
+    column: $table.content,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get downloadedAt => $composableBuilder(
+    column: $table.downloadedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$DownloadedLessonsTableOrderingComposer
+    extends Composer<_$LocalDb, $DownloadedLessonsTable> {
+  $$DownloadedLessonsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get version => $composableBuilder(
+    column: $table.version,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get hash => $composableBuilder(
+    column: $table.hash,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get content => $composableBuilder(
+    column: $table.content,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get downloadedAt => $composableBuilder(
+    column: $table.downloadedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$DownloadedLessonsTableAnnotationComposer
+    extends Composer<_$LocalDb, $DownloadedLessonsTable> {
+  $$DownloadedLessonsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<int> get version =>
+      $composableBuilder(column: $table.version, builder: (column) => column);
+
+  GeneratedColumn<String> get hash =>
+      $composableBuilder(column: $table.hash, builder: (column) => column);
+
+  GeneratedColumn<String> get content =>
+      $composableBuilder(column: $table.content, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get downloadedAt => $composableBuilder(
+    column: $table.downloadedAt,
+    builder: (column) => column,
+  );
+}
+
+class $$DownloadedLessonsTableTableManager
+    extends
+        RootTableManager<
+          _$LocalDb,
+          $DownloadedLessonsTable,
+          DownloadedLesson,
+          $$DownloadedLessonsTableFilterComposer,
+          $$DownloadedLessonsTableOrderingComposer,
+          $$DownloadedLessonsTableAnnotationComposer,
+          $$DownloadedLessonsTableCreateCompanionBuilder,
+          $$DownloadedLessonsTableUpdateCompanionBuilder,
+          (
+            DownloadedLesson,
+            BaseReferences<
+              _$LocalDb,
+              $DownloadedLessonsTable,
+              DownloadedLesson
+            >,
+          ),
+          DownloadedLesson,
+          PrefetchHooks Function()
+        > {
+  $$DownloadedLessonsTableTableManager(
+    _$LocalDb db,
+    $DownloadedLessonsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$DownloadedLessonsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$DownloadedLessonsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$DownloadedLessonsTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<int> version = const Value.absent(),
+                Value<String> hash = const Value.absent(),
+                Value<String> content = const Value.absent(),
+                Value<DateTime> downloadedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => DownloadedLessonsCompanion(
+                id: id,
+                version: version,
+                hash: hash,
+                content: content,
+                downloadedAt: downloadedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required int version,
+                required String hash,
+                required String content,
+                required DateTime downloadedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => DownloadedLessonsCompanion.insert(
+                id: id,
+                version: version,
+                hash: hash,
+                content: content,
+                downloadedAt: downloadedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable<$DownloadedLessonsTable, DownloadedLesson>(table),
+                  BaseReferences<
+                    _$LocalDb,
+                    $DownloadedLessonsTable,
+                    DownloadedLesson
+                  >(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$DownloadedLessonsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$LocalDb,
+      $DownloadedLessonsTable,
+      DownloadedLesson,
+      $$DownloadedLessonsTableFilterComposer,
+      $$DownloadedLessonsTableOrderingComposer,
+      $$DownloadedLessonsTableAnnotationComposer,
+      $$DownloadedLessonsTableCreateCompanionBuilder,
+      $$DownloadedLessonsTableUpdateCompanionBuilder,
+      (
+        DownloadedLesson,
+        BaseReferences<_$LocalDb, $DownloadedLessonsTable, DownloadedLesson>,
+      ),
+      DownloadedLesson,
+      PrefetchHooks Function()
+    >;
 
 class $LocalDbManager {
   final _$LocalDb _db;
@@ -4790,4 +5383,6 @@ class $LocalDbManager {
       $$SkillStatesTableTableManager(_db, _db.skillStates);
   $$AiQueueTableTableManager get aiQueue =>
       $$AiQueueTableTableManager(_db, _db.aiQueue);
+  $$DownloadedLessonsTableTableManager get downloadedLessons =>
+      $$DownloadedLessonsTableTableManager(_db, _db.downloadedLessons);
 }

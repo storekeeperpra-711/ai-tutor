@@ -7,6 +7,7 @@ import 'package:ai_tutor/character/voice_lines.dart';
 import 'package:ai_tutor/character/voice_recorder.dart';
 import 'package:ai_tutor/features/debug/narration_recorder_screen.dart';
 import 'package:ai_tutor/l10n/app_localizations.dart';
+import 'package:ai_tutor/services/local_db.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -42,8 +43,15 @@ Future<void> tapKey(WidgetTester tester, String key) async {
 
 void main() {
   late Directory dir;
-  setUp(() => dir = Directory.systemTemp.createTempSync('voice'));
-  tearDown(() => dir.deleteSync(recursive: true));
+  late LocalDb db;
+  setUp(() {
+    dir = Directory.systemTemp.createTempSync('voice');
+    db = FakeBackend().db;
+  });
+  tearDown(() async {
+    dir.deleteSync(recursive: true);
+    await db.close();
+  });
 
   testWidgets('records a line with its mouth track, then lists it', (
     tester,
@@ -57,6 +65,7 @@ void main() {
       ProviderScope(
         overrides: [
           sharedPreferencesProvider.overrideWithValue(prefs),
+          localDbProvider.overrideWithValue(db),
           voiceLibraryProvider.overrideWithValue(
             VoiceLibrary(recordingsDir: dir),
           ),

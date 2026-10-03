@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:ai_tutor/ai/ai_service.dart';
 import 'package:ai_tutor/ai/keyword_fallback.dart';
@@ -6,6 +7,7 @@ import 'package:ai_tutor/character/mithu_controller.dart';
 import 'package:ai_tutor/character/narrator.dart';
 import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/character/voice_lines.dart';
+import 'package:ai_tutor/lessons/lesson_updates.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/local_db.dart';
@@ -368,6 +370,43 @@ class FakeRemoteStore implements RemoteStore {
     final paths = docs.keys.where((p) => p.startsWith(prefix)).toList()
       ..sort((a, b) => b.compareTo(a));
     return [for (final p in paths) reportFromJson(Map.of(docs[p]!))];
+  }
+
+  @override
+  Future<Map<String, CatalogEntry>> fetchLessonCatalog() async {
+    if (!_backend.online) throw StateError('offline');
+    lessonReads++;
+    return catalogFromJson(docs['lesson_catalog/current']);
+  }
+
+  @override
+  Future<PublishedLesson?> fetchPublishedLesson(String lessonId) async {
+    if (!_backend.online) throw StateError('offline');
+    lessonReads++;
+    final data = docs['published_lessons/$lessonId'];
+    return data == null ? null : publishedLessonFromJson(Map.of(data));
+  }
+
+  /// Reads of the lesson catalog and published lessons.
+  var lessonReads = 0;
+
+  /// Publishes [lesson] on the "server", like tools/upload.py.
+  void publishLesson(Map<String, Object?> lesson, {int version = 1}) {
+    final content = jsonEncode(lesson);
+    final hash = lessonFingerprint(content);
+    final id = lesson['id']! as String;
+    docs['published_lessons/$id'] = {
+      'version': version,
+      'hash': hash,
+      'format': 1,
+      'content': content,
+    };
+    final catalog = Map<String, Object?>.of(
+      (docs['lesson_catalog/current']?['lessons'] as Map<String, Object?>?) ??
+          const {},
+    );
+    catalog[id] = {'version': version, 'hash': hash};
+    docs['lesson_catalog/current'] = {'lessons': catalog};
   }
 
   /// The batch job answering a queued answer on the "server".

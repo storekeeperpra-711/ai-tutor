@@ -7,6 +7,7 @@ Python and Node helpers. Install the Python ones once with `pip install -r tools
 | `validate_lessons.py` | Checks lesson files against the schema and the rules a schema can't express (also that simulation, video and Lottie files exist, and that simulations make no network requests). |
 | `video/make_video.py` | Makes a short explainer video from a scene script in `video/scripts/`, in English and Urdu, with WebVTT captions. Needs ffmpeg. Example: `python tools/video/make_video.py tools/video/scripts/fractions_roti.json` writes `assets/videos/fractions_roti_{en,ur}.{mp4,vtt}`. |
 | `lottie/make_lottie.py` | Writes the small Lottie animations in `assets/lottie/` from code. |
+| `upload.py` | Publishes lessons to Firestore with versions: every lesson to dev for teacher review, only approved ones to prod. Run by the **Publish lessons** GitHub Action ([docs/setup/publish-lessons.md](../docs/setup/publish-lessons.md)); needs `pip install -r tools/upload-requirements.txt` to run by hand. |
 | `firestore-rules/` | Firestore security rules tests on the emulator (`npm test` there). |
 
 Tests: `python -m unittest discover -s tools -p 'test_*.py'`.

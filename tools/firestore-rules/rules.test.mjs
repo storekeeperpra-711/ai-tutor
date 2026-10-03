@@ -167,3 +167,16 @@ test('AI usage, logs and batches are server only', async () => {
     await assertFails(setDoc(doc(mine, path), { cost_usd: 0 }));
   }
 });
+
+test('signed-in phones read published lessons but only the upload tool writes them', async () => {
+  await env.withSecurityRulesDisabled(async (ctx) => {
+    await setDoc(doc(ctx.firestore(), 'lesson_catalog/current'), { lessons: {} });
+    await setDoc(doc(ctx.firestore(), 'published_lessons/g9-maths-05-x'), { version: 1, content: '{}' });
+  });
+  for (const path of ['lesson_catalog/current', 'published_lessons/g9-maths-05-x']) {
+    await assertSucceeds(getDoc(doc(db('phone1'), path)));
+    await assertFails(getDoc(doc(db(null), path)));
+    await assertFails(setDoc(doc(db('phone1'), path), { version: 99 }));
+  }
+  await assertFails(getDoc(doc(db('phone1'), 'lesson_reviews/g9-maths-05-x')));
+});

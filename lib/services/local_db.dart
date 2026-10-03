@@ -117,6 +117,24 @@ class AiQueue extends Table {
   Set<Column> get primaryKey => {id};
 }
 
+/// Lessons downloaded from Firestore (Phase 8). They replace the bundled
+/// copy of the same lesson, and work offline once saved.
+@DataClassName('DownloadedLesson')
+class DownloadedLessons extends Table {
+  TextColumn get id => text()();
+  IntColumn get version => integer()();
+
+  /// The upload tool's fingerprint of [content] (tools/upload.py).
+  TextColumn get hash => text()();
+
+  /// The lesson's JSON.
+  TextColumn get content => text()();
+  DateTimeColumn get downloadedAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
 /// The pictures a child can choose from.
 const avatarIds = [
   'cat',
@@ -142,24 +160,47 @@ class ProgressUpload {
 /// The on-phone database. Everything is saved here first, so lessons work
 /// without internet; the sync service copies it to Firestore.
 @DriftDatabase(
-  tables: [Students, LessonProgressTable, StepResults, SkillStates, AiQueue],
+  tables: [
+    Students,
+    LessonProgressTable,
+    StepResults,
+    SkillStates,
+    AiQueue,
+    DownloadedLessons,
+  ],
 )
 class LocalDb extends _$LocalDb {
   LocalDb(super.executor);
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
     onUpgrade: (m, from, to) async {
       if (from < 2) await m.createTable(skillStates);
       if (from < 3) await m.createTable(aiQueue);
+      if (from < 4) await m.createTable(downloadedLessons);
     },
     beforeOpen: (details) async {
       await customStatement('PRAGMA foreign_keys = ON');
     },
   );
+
+  // Downloaded lessons
+
+  Future<List<DownloadedLesson>> allDownloadedLessons() =>
+      select(downloadedLessons).get();
+
+  Future<DownloadedLesson?> downloadedLesson(String id) => (select(
+    downloadedLessons,
+  )..where((l) => l.id.equals(id))).getSingleOrNull();
+
+  Future<void> saveDownloadedLesson(DownloadedLesson lesson) =>
+      into(downloadedLessons).insertOnConflictUpdate(lesson);
+
+  Future<void> deleteDownloadedLesson(String id) =>
+      (delete(downloadedLessons)..where((l) => l.id.equals(id))).go();
 
   // Profiles
 

@@ -18,6 +18,7 @@ enum AccountRole { device, parent, teacher }
 /// accounts/{uid}/students/{studentId}/skills/{skill}
 /// accounts/{uid}/students/{studentId}/reports/{week}   (written by the server)
 /// ai_queue/{id}                                    answers waiting for AI
+/// lesson_catalog/current, published_lessons/{id}   lessons (tools/upload.py)
 /// ```
 abstract class RemoteStore {
   Future<void> setRole(String uid, AccountRole role);
@@ -43,7 +44,54 @@ abstract class RemoteStore {
 
   /// Weekly notes for parents, newest first.
   Future<List<WeeklyReport>> fetchReports(String uid, String studentId);
+
+  /// Every published lesson's version, by lesson id (Phase 8).
+  Future<Map<String, CatalogEntry>> fetchLessonCatalog();
+
+  /// One published lesson, or null if it was removed.
+  Future<PublishedLesson?> fetchPublishedLesson(String lessonId);
 }
+
+/// A lesson's entry in `lesson_catalog/current`.
+typedef CatalogEntry = ({int version, String hash});
+
+/// A lesson as tools/upload.py publishes it.
+class PublishedLesson {
+  const PublishedLesson({
+    required this.version,
+    required this.hash,
+    required this.format,
+    required this.content,
+  });
+
+  final int version;
+  final String hash;
+
+  /// The upload tool's CONTENT_FORMAT.
+  final int format;
+
+  /// The lesson's JSON.
+  final String content;
+}
+
+Map<String, CatalogEntry> catalogFromJson(Map<String, dynamic>? json) {
+  final lessons = (json?['lessons'] as Map?) ?? const {};
+  return {
+    for (final MapEntry(:key, :value) in lessons.entries)
+      key as String: (
+        version: ((value as Map)['version'] as num).toInt(),
+        hash: value['hash'] as String,
+      ),
+  };
+}
+
+PublishedLesson publishedLessonFromJson(Map<String, dynamic> json) =>
+    PublishedLesson(
+      version: (json['version'] as num).toInt(),
+      hash: json['hash'] as String,
+      format: (json['format'] as num? ?? 1).toInt(),
+      content: json['content'] as String,
+    );
 
 /// The batch job's reply to a queued answer.
 class QueueReply {
@@ -201,6 +249,25 @@ class FirestoreRemoteStore implements RemoteStore {
         .limit(8)
         .get();
     return [for (final doc in snap.docs) reportFromJson(doc.data())];
+  }
+
+  // Straight from the server: an old cached catalog would hide new lessons.
+  static const _fresh = GetOptions(source: Source.server);
+
+  @override
+  Future<Map<String, CatalogEntry>> fetchLessonCatalog() async {
+    final snap = await _db.doc('lesson_catalog/current').get(_fresh);
+    return catalogFromJson(snap.data());
+  }
+
+  @override
+  Future<PublishedLesson?> fetchPublishedLesson(String lessonId) async {
+    final snap = await _db
+        .collection('published_lessons')
+        .doc(lessonId)
+        .get(_fresh);
+    final data = snap.data();
+    return data == null ? null : publishedLessonFromJson(data);
   }
 }
 

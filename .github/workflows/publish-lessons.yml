@@ -1,0 +1,69 @@
+name: Publish lessons
+
+# Run by hand: Actions -> Publish lessons -> Run workflow -> choose dev or prod.
+#   dev:  every lesson goes to the dev app as a draft, for teacher review.
+#   prod: only lessons a teacher approved (in dev) go to the real app.
+# Then the AI server is deployed too, so it knows the same lessons.
+# Needs the GitHub secrets FIREBASE_SERVICE_ACCOUNT_DEV and _PROD
+# (docs/setup/ai-setup.md). See tools/upload.py.
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Where to publish
+        type: choice
+        options: [dev, prod]
+        default: dev
+      dry_run:
+        description: Only show what would change
+        type: boolean
+        default: false
+
+concurrency:
+  group: publish-lessons-${{ inputs.target }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish to ${{ inputs.target }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r tools/requirements.txt -r tools/upload-requirements.txt
+      - run: python -m unittest discover -s tools -p 'test_*.py'
+      - name: Publish
+        env:
+          TARGET: ${{ inputs.target }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          SA_DEV: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEV }}
+          SA_PROD: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROD }}
+        run: |
+          set -o pipefail
+          if [ "$TARGET" = "dev" ]; then
+            export FIREBASE_SERVICE_ACCOUNT="$SA_DEV"
+          else
+            export FIREBASE_SERVICE_ACCOUNT="$SA_PROD"
+            export FIREBASE_SERVICE_ACCOUNT_DEV="$SA_DEV"
+          fi
+          flags=""
+          if [ "$DRY_RUN" = "true" ]; then flags="--dry-run"; fi
+          python tools/upload.py "$TARGET" $flags | tee publish.log
+          {
+            echo '```'
+            sed -n '/^Lessons for/,$p' publish.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  server:
+    name: Update the AI server
+    needs: publish
+    if: ${{ !inputs.dry_run }}
+    uses: ./.github/workflows/deploy-worker.yml
+    with:
+      target: ${{ inputs.target }}
+    secrets: inherit

@@ -16,6 +16,12 @@ on:
         type: choice
         options: [dev, prod]
         default: dev
+  # Also run by "Publish lessons", so the server knows the published lessons.
+  workflow_call:
+    inputs:
+      target:
+        type: string
+        required: true
 
 concurrency:
   group: deploy-worker-${{ inputs.target }}
