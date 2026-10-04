@@ -68,8 +68,14 @@ describe("Scheduled jobs", () => {
   it("sends the held writes at the end of each job", async () => {
     const store = new MemoryStore();
     const deps = { store, batches: new FakeBatches(), lessons: lessons(), now: () => new Date("2026-10-04T13:00:00Z") };
-    assert.deepEqual(await runScheduled(CRON.batchJob, deps), { collected: 0, submitted: 0, skipped: 0, logsDeleted: 0 });
+    assert.deepEqual(await runScheduled(CRON.batchJob, deps), {
+      collected: 0, submitted: 0, skipped: 0, logsDeleted: 0, counted: "2026-10-03",
+    });
+    // Yesterday is counted once; later runs that day skip it.
+    assert.deepEqual(await runScheduled(CRON.batchJob, deps), {
+      collected: 0, submitted: 0, skipped: 0, logsDeleted: 0, counted: null,
+    });
     assert.deepEqual(await runScheduled(CRON.weeklyReports, deps), { reports: 0 });
-    assert.equal(store.flushed, 2);
+    assert.equal(store.flushed, 3);
   });
 });

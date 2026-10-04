@@ -1,3 +1,4 @@
+import 'package:ai_tutor/ai/ai_service.dart';
 import 'package:ai_tutor/services/local_db.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -120,5 +121,37 @@ void main() {
     backend.setOnline(false);
     await tapKey(tester, 'open-ai-costs');
     expect(find.byKey(const Key('costs-error')), findsOneWidget);
+  });
+
+  testWidgets('an admin also sees the daily learning totals', (tester) async {
+    final backend = FakeBackend();
+    backend.ai.costReport = const CostReport(
+      all: true,
+      totalUsd: 0,
+      rows: [],
+      learning: [
+        LearningDay(
+          day: '2026-10-03',
+          students: 5,
+          lessons: 7,
+          lessonsFinished: 3,
+          questions: 40,
+          firstTry: 25,
+          aiCalls: 12,
+        ),
+      ],
+    );
+    await start(tester, backend);
+    await tester.tap(find.byTooltip('Settings'));
+    await tester.pumpAndSettle();
+    await tapKey(tester, 'open-ai-costs');
+    expect(find.text('Learning in the whole project'), findsOneWidget);
+    expect(
+      find.text(
+        '5 children · 7 lessons (3 finished) · 40 questions '
+        '(25 right first time) · 12 AI checks',
+      ),
+      findsOneWidget,
+    );
   });
 }

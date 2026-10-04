@@ -1429,4 +1429,29 @@ class AppLocalizationsUr extends AppLocalizations {
   @override
   String get photoAiOff =>
       'مٹھو کی اے آئی مدد بند ہے، اس لیے اپنا جواب لکھ دیں۔';
+
+  @override
+  String get learningTotalsTitle => 'پورے منصوبے میں پڑھائی';
+
+  @override
+  String learningTotalsRow(
+    int students,
+    int lessons,
+    int finished,
+    int questions,
+    int firstTry,
+    int aiCalls,
+  ) {
+    return '$students بچے · $lessons اسباق ($finished مکمل) · $questions سوالات ($firstTry پہلی بار درست) · $aiCalls اے آئی جانچ';
+  }
+
+  @override
+  String get phoneCheckCrashes => 'کریش، پچھلے 7 دن';
+
+  @override
+  String get privacyCrashTitle => 'کریش کی رپورٹیں';
+
+  @override
+  String get privacyCrash =>
+      'اگر ایپ بند ہو جائے (کریش)، تو اسے ٹھیک کرنے کے لیے ایک رپورٹ گوگل کے فائر بیس کریش لِٹکس کو جاتی ہے۔ اس میں فون کا ماڈل، اینڈرائیڈ کا ورژن اور یہ کہ ایپ کہاں بند ہوئی شامل ہوتا ہے، کبھی کوئی نام یا ای میل نہیں۔ ایپ میں کوئی اشتہار اور کوئی گوگل اینالیٹکس نہیں ہے۔';
 }

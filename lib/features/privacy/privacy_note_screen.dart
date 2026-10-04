@@ -13,6 +13,7 @@ List<(String?, String)> privacyNoteParts(AppLocalizations l10n) => [
   (l10n.privacyKeptTitle, l10n.privacyKept),
   (l10n.privacyWhereTitle, l10n.privacyWhere),
   (l10n.privacyAiTitle, l10n.privacyAi),
+  (l10n.privacyCrashTitle, l10n.privacyCrash),
   (l10n.privacyWhoTitle, l10n.privacyWho),
   (l10n.privacyHowLongTitle, l10n.privacyHowLong),
   (l10n.privacySafetyTitle, l10n.privacySafety),

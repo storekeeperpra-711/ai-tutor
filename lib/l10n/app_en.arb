@@ -2045,5 +2045,45 @@
   "photoAiOff": "Mithu's AI help is off, so please type your answer instead.",
   "@photoAiOff": {
     "description": "On a photo step when a parent has turned AI help off."
+  },
+  "learningTotalsTitle": "Learning in the whole project",
+  "@learningTotalsTitle": {
+    "description": "Heading of the daily learning totals on the AI costs screen (admins)."
+  },
+  "learningTotalsRow": "{students} children · {lessons} lessons ({finished} finished) · {questions} questions ({firstTry} right first time) · {aiCalls} AI checks",
+  "@learningTotalsRow": {
+    "description": "One day's learning totals for the whole project.",
+    "placeholders": {
+      "students": {
+        "type": "int"
+      },
+      "lessons": {
+        "type": "int"
+      },
+      "finished": {
+        "type": "int"
+      },
+      "questions": {
+        "type": "int"
+      },
+      "firstTry": {
+        "type": "int"
+      },
+      "aiCalls": {
+        "type": "int"
+      }
+    }
+  },
+  "phoneCheckCrashes": "Crashes, last 7 days",
+  "@phoneCheckCrashes": {
+    "description": "Phone check row: how often the app crashed on this phone this week."
+  },
+  "privacyCrashTitle": "Crash reports",
+  "@privacyCrashTitle": {
+    "description": "Privacy note heading."
+  },
+  "privacyCrash": "If the app crashes, a report goes to Google's Firebase Crashlytics so we can fix it. It has the phone model, the Android version and where in the app it crashed, never a name or an email. There is no advertising and no Google Analytics in the app.",
+  "@privacyCrash": {
+    "description": "Privacy note paragraph: crash reports. Firebase Crashlytics and Google Analytics are product names."
   }
 }

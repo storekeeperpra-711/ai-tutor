@@ -2485,6 +2485,43 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Mithu\'s AI help is off, so please type your answer instead.'**
   String get photoAiOff;
+
+  /// Heading of the daily learning totals on the AI costs screen (admins).
+  ///
+  /// In en, this message translates to:
+  /// **'Learning in the whole project'**
+  String get learningTotalsTitle;
+
+  /// One day's learning totals for the whole project.
+  ///
+  /// In en, this message translates to:
+  /// **'{students} children · {lessons} lessons ({finished} finished) · {questions} questions ({firstTry} right first time) · {aiCalls} AI checks'**
+  String learningTotalsRow(
+    int students,
+    int lessons,
+    int finished,
+    int questions,
+    int firstTry,
+    int aiCalls,
+  );
+
+  /// Phone check row: how often the app crashed on this phone this week.
+  ///
+  /// In en, this message translates to:
+  /// **'Crashes, last 7 days'**
+  String get phoneCheckCrashes;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Crash reports'**
+  String get privacyCrashTitle;
+
+  /// Privacy note paragraph: crash reports. Firebase Crashlytics and Google Analytics are product names.
+  ///
+  /// In en, this message translates to:
+  /// **'If the app crashes, a report goes to Google\'s Firebase Crashlytics so we can fix it. It has the phone model, the Android version and where in the app it crashed, never a name or an email. There is no advertising and no Google Analytics in the app.'**
+  String get privacyCrash;
 }
 
 class _AppLocalizationsDelegate

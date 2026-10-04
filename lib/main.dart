@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app/app.dart';
+import 'app/crash_reports.dart';
 import 'app/memory_limits.dart';
 import 'app/preferences.dart';
 import 'classes/class_store.dart';
@@ -27,6 +28,7 @@ Future<void> main() async {
   );
   applyMemoryLimits();
   final prefs = await SharedPreferences.getInstance();
+  await setUpCrashReports(prefs);
 
   runApp(
     ProviderScope(

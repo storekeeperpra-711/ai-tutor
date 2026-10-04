@@ -23,6 +23,8 @@ plugins {
     id("org.jetbrains.kotlin.android") version "2.4.0" apply false
     // Reads google-services.json (Firebase config) for each flavor.
     id("com.google.gms.google-services") version "4.4.4" apply false
+    // Crash reports (Firebase Crashlytics).
+    id("com.google.firebase.crashlytics") version "3.0.6" apply false
 }
 
 include(":app")
