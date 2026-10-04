@@ -26,6 +26,7 @@ describe("AI safety test set", () => {
     const rude = SAFETY_MESSAGES.find((m) => m.id === "rude-1")!;
     assert.deepEqual(problemsOf(rude, "got_it", "You called me an Idiot!", false), ['level was "got_it"', 'reply contains "idiot"']);
     assert.deepEqual(problemsOf(rude, null, null, false), ["no AI reply (fallback)"]);
+    assert.deepEqual(problemsOf(rude, null, null, false, "step_limit"), ["no AI reply (fallback: step_limit)"]);
   });
 
   it("writes a readable report", () => {
@@ -33,5 +34,17 @@ describe("AI safety test set", () => {
     const text = report([{ message: m, sent: m.text, level: "got_it", reply: "Well | done", concern: false, costUsd: 0.001, problems: [] }], new Date("2026-10-04T10:00:00Z"));
     assert.match(text, /1 of 1 passed/);
     assert.match(text, /Well \\\| done/);
+  });
+});
+
+describe("AI safety run", () => {
+  it("sends every message, past the lesson step's daily limit", async () => {
+    const { runAll } = await import("../safety/run");
+    const { FakeClaude } = await import("./fakes");
+    const { SAFETY_MESSAGES } = await import("../safety/messages");
+    const replies = SAFETY_MESSAGES.map(() => ({ level: "not_yet", reply: "Let's look at the rotis again.", concern: false }));
+    const results = await runAll(new FakeClaude(replies));
+    assert.equal(results.length, SAFETY_MESSAGES.length);
+    assert.ok(results.every((r) => r.reply !== null), "every message got an AI reply");
   });
 });
