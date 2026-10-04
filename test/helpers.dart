@@ -5,6 +5,7 @@ import 'package:ai_tutor/app/preferences.dart';
 import 'package:ai_tutor/character/narrator.dart';
 import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/classes/class_store.dart';
+import 'package:ai_tutor/reports/report_voice.dart';
 import 'package:ai_tutor/review/review_store.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/connectivity.dart';
@@ -44,6 +45,7 @@ Future<Widget> buildTestApp({
       onlineProvider.overrideWith((ref) => fake.onlineStream),
       aiServiceProvider.overrideWithValue(fake.ai),
       narratorProvider.overrideWithValue(fake.narrator),
+      reportVoiceProvider.overrideWithValue(fake.reportVoice),
       soundPlayerProvider.overrideWithValue(fake.sounds),
       photoPickerProvider.overrideWithValue((source) async => fake.photo),
       // Widget tests have no WebView and can't play video.

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../ai/weekly_report.dart';
 import '../classes/student_classes_dialog.dart';
 import '../../app/preferences.dart';
 import '../../l10n/app_localizations.dart';
@@ -236,8 +235,8 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
                     IconButton(
                       key: Key('report-${s.id}'),
                       icon: const Icon(Icons.summarize_outlined),
-                      tooltip: l10n.weeklyReport,
-                      onPressed: () => showWeeklyReport(context, ref, s),
+                      tooltip: l10n.reportButton,
+                      onPressed: () => context.push('/report/${s.id}'),
                     ),
                     IconButton(
                       key: Key('remove-${s.id}'),

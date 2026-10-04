@@ -13,6 +13,7 @@ import '../features/plan/flashcards_screen.dart';
 import '../features/plan/practice_screen.dart';
 import '../features/previewer/lesson_list_screen.dart';
 import '../features/profiles/add_student_screen.dart';
+import '../features/report/parent_report_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/review/review_screens.dart';
 import '../lessons/lesson_player_screen.dart';
@@ -51,6 +52,11 @@ final routerProvider = Provider<GoRouter>(
       GoRoute(
         path: '/account',
         builder: (context, state) => const AccountScreen(),
+      ),
+      GoRoute(
+        path: '/report/:studentId',
+        builder: (context, state) =>
+            ParentReportScreen(studentId: state.pathParameters['studentId']!),
       ),
       GoRoute(
         path: '/classes',

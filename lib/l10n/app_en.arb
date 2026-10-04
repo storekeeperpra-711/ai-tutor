@@ -859,29 +859,6 @@
   "@mithuNotesEmpty": {
     "description": "No queued answers."
   },
-  "weeklyReport": "Weekly report",
-  "@weeklyReport": {
-    "description": "Button and title for the weekly parent report."
-  },
-  "weeklyReportNone": "No report yet. Reports are written on Sunday evenings for children who practised that week.",
-  "@weeklyReportNone": {
-    "description": "No weekly report exists."
-  },
-  "weeklyReportStats": "{days} days of practice · {lessons} lessons finished · {questions} questions answered",
-  "@weeklyReportStats": {
-    "description": "Numbers of a weekly report.",
-    "placeholders": {
-      "days": {
-        "type": "int"
-      },
-      "lessons": {
-        "type": "int"
-      },
-      "questions": {
-        "type": "int"
-      }
-    }
-  },
   "needsInternet": "Connect to the internet and try again.",
   "@needsInternet": {
     "description": "Something needs a connection."
@@ -1754,5 +1731,131 @@
         "type": "String"
       }
     }
+  },
+  "reportButton": "Report",
+  "@reportButton": {
+    "description": "Tooltip of the button that opens a learner's weekly report for parents."
+  },
+  "reportTitle": "{name}'s week",
+  "@reportTitle": {
+    "description": "Title of the parent report.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "reportListen": "Listen",
+  "@reportListen": {
+    "description": "Big button that reads the report aloud."
+  },
+  "reportStop": "Stop",
+  "@reportStop": {
+    "description": "Button that stops reading the report aloud."
+  },
+  "reportLearnedHeading": "Learned",
+  "@reportLearnedHeading": {
+    "description": "Report section: skills learned this week."
+  },
+  "reportPracticeHeading": "Practice",
+  "@reportPracticeHeading": {
+    "description": "Report section: what needs practice and when it comes back."
+  },
+  "reportHomeHeading": "At home",
+  "@reportHomeHeading": {
+    "description": "Report section: one activity to do at home."
+  },
+  "reportEffortHeading": "Effort",
+  "@reportEffortHeading": {
+    "description": "Report section: days practised and questions answered."
+  },
+  "reportLearned": "This week {name} learned: {skills}.",
+  "@reportLearned": {
+    "description": "Report sentence: skills mastered this week.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "skills": {
+        "type": "String"
+      }
+    }
+  },
+  "reportLearnedNone": "{name} is still working towards the next skill. That is normal; understanding takes time.",
+  "@reportLearnedNone": {
+    "description": "Report sentence when no skill was mastered this week.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "reportWorkingOn": "Working on: {skills}.",
+  "@reportWorkingOn": {
+    "description": "Report sentence: skills practised but not mastered yet.",
+    "placeholders": {
+      "skills": {
+        "type": "String"
+      }
+    }
+  },
+  "reportNeedsHelp": "{name} finds {skill} hard. Please sit with {name} for a few minutes while they practise.",
+  "@reportNeedsHelp": {
+    "description": "Report sentence for a skill the child is stuck on.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "skill": {
+        "type": "String"
+      }
+    }
+  },
+  "reportReview": "{skill} comes back for practice on {day}.",
+  "@reportReview": {
+    "description": "Report sentence: when a mastered skill is practised again.",
+    "placeholders": {
+      "skill": {
+        "type": "String"
+      },
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "reportPracticeNone": "Nothing needs extra practice right now.",
+  "@reportPracticeNone": {
+    "description": "Report sentence when nothing needs practice."
+  },
+  "reportHomeNone": "No home activity this week.",
+  "@reportHomeNone": {
+    "description": "Report sentence when there is no home activity."
+  },
+  "reportEffort": "{name} practised on {days} of the last 7 days and answered {questions} questions.",
+  "@reportEffort": {
+    "description": "Report sentence about effort (no streaks).",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      },
+      "questions": {
+        "type": "int"
+      }
+    }
+  },
+  "reportNoUrduVoice": "This phone has no Urdu voice yet, so the report is read in English. To add Urdu: open the phone's Settings, search for \"Text-to-speech\", choose Google, then \"Install voice data\" and Urdu.",
+  "@reportNoUrduVoice": {
+    "description": "Shown when the phone cannot speak Urdu."
+  },
+  "reportNoVoice": "This phone can't read aloud. The pictures show the report.",
+  "@reportNoVoice": {
+    "description": "Shown when the phone has no text-to-speech at all."
+  },
+  "reportMithuNote": "Mithu's note",
+  "@reportMithuNote": {
+    "description": "Heading of the AI weekly note at the end of the report."
   }
 }

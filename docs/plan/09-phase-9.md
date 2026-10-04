@@ -1,6 +1,6 @@
 # Phase 9 plan: parents and teachers
 
-Status: approved 2026-10-03. Steps 1 (classes) and 2 (teacher dashboard) built; step 3 next.
+Status: approved 2026-10-03. All three steps built.
 Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 9.
 
 **Goal:** adults can see and support learning.
@@ -85,4 +85,11 @@ Each step is one pull request. Testing with a real teacher and parent comes afte
 - **Content review** stays in the dev app for now: its screens play lessons, which needs the phone's database.
 - **Deploying:** Actions → **Deploy teacher dashboard** → Run workflow → dev or prod. The first run registers a "Teacher dashboard" web app in that Firebase project. The address is shown in the run's summary: `https://<project>.web.app`.
 
-**For Shahid:** run the workflow for dev. If it stops with "permission denied", the Firebase key needs one more role; see the steps in the thread.
+Deployed to dev on 2026-10-03: https://ai-tutor-dev-ebb83.web.app (no extra permission was needed).
+
+## Step 3 as built
+
+- **Report** button next to each child on the Account screen opens the child's week (last 7 days), made on the phone from the child's own data: no internet, no AI.
+- **Four parts, each with a big picture:** Learned (a star per skill mastered this week, and what is being worked on), Practice (skills the child finds hard, and the weekday each mastered skill comes back), At home (one activity from the lesson the child is on, a different one each week), Effort (seven dots for the days practised, and questions answered; no streaks).
+- **Listen:** a big ▶ button reads it sentence by sentence with the phone's own voice, highlighting each sentence. In Urdu it uses the phone's Urdu voice; if the phone has none, it reads in English and says how to add Urdu (Settings → Text-to-speech → Google → Install voice data → Urdu). With no voice at all, the pictures carry the report.
+- **Mithu's note** (the AI weekly note from Phase 6) appears at the end when the phone is online and a note exists. It replaces the old weekly-report dialog.

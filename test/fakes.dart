@@ -10,6 +10,7 @@ import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/character/voice_lines.dart';
 import 'package:ai_tutor/lessons/lesson_updates.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
+import 'package:ai_tutor/reports/report_voice.dart';
 import 'package:ai_tutor/review/review_store.dart';
 import 'package:ai_tutor/services/auth_service.dart';
 import 'package:ai_tutor/services/local_db.dart';
@@ -36,6 +37,7 @@ class FakeBackend {
   late final FakeClassStore classes;
   late final FakeAiService ai;
   final narrator = FakeNarrator();
+  final reportVoice = FakeReportVoice();
   final sounds = FakeSounds();
 
   /// What the fake camera returns; null = the child cancelled.
@@ -771,5 +773,39 @@ class FakeClassStore implements ClassStore {
     if (_signedIn() != uid) throw _denied();
     membersOf[classId]?.remove(memberDocId(uid, studentId));
     if (lastChild) families[classId]?.remove(uid);
+  }
+}
+
+/// The phone's voice for the parent report: records what it said. Each
+/// sentence waits for [finishSentence] when [holdEach] is set.
+class FakeReportVoice implements ReportVoice {
+  /// Languages the "phone" can speak.
+  final languages = {'en', 'ur'};
+  final said = <(String, String)>[];
+  var holdEach = false;
+  Completer<void>? _current;
+  var stopped = 0;
+
+  @override
+  Future<bool> canSpeak(String languageCode) async =>
+      languages.contains(languageCode);
+
+  @override
+  Future<void> speak(String text, String languageCode) async {
+    said.add((text, languageCode));
+    if (!holdEach) return;
+    final done = _current = Completer<void>();
+    await done.future;
+  }
+
+  void finishSentence() {
+    _current?.complete();
+    _current = null;
+  }
+
+  @override
+  Future<void> stop() async {
+    stopped++;
+    finishSentence();
   }
 }

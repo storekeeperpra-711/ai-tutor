@@ -1130,24 +1130,6 @@ abstract class AppLocalizations {
   /// **'No notes yet.'**
   String get mithuNotesEmpty;
 
-  /// Button and title for the weekly parent report.
-  ///
-  /// In en, this message translates to:
-  /// **'Weekly report'**
-  String get weeklyReport;
-
-  /// No weekly report exists.
-  ///
-  /// In en, this message translates to:
-  /// **'No report yet. Reports are written on Sunday evenings for children who practised that week.'**
-  String get weeklyReportNone;
-
-  /// Numbers of a weekly report.
-  ///
-  /// In en, this message translates to:
-  /// **'{days} days of practice · {lessons} lessons finished · {questions} questions answered'**
-  String weeklyReportStats(int days, int lessons, int questions);
-
   /// Something needs a connection.
   ///
   /// In en, this message translates to:
@@ -2125,6 +2107,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Not yet: {names}'**
   String notFinishedBy(String names);
+
+  /// Tooltip of the button that opens a learner's weekly report for parents.
+  ///
+  /// In en, this message translates to:
+  /// **'Report'**
+  String get reportButton;
+
+  /// Title of the parent report.
+  ///
+  /// In en, this message translates to:
+  /// **'{name}\'s week'**
+  String reportTitle(String name);
+
+  /// Big button that reads the report aloud.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen'**
+  String get reportListen;
+
+  /// Button that stops reading the report aloud.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get reportStop;
+
+  /// Report section: skills learned this week.
+  ///
+  /// In en, this message translates to:
+  /// **'Learned'**
+  String get reportLearnedHeading;
+
+  /// Report section: what needs practice and when it comes back.
+  ///
+  /// In en, this message translates to:
+  /// **'Practice'**
+  String get reportPracticeHeading;
+
+  /// Report section: one activity to do at home.
+  ///
+  /// In en, this message translates to:
+  /// **'At home'**
+  String get reportHomeHeading;
+
+  /// Report section: days practised and questions answered.
+  ///
+  /// In en, this message translates to:
+  /// **'Effort'**
+  String get reportEffortHeading;
+
+  /// Report sentence: skills mastered this week.
+  ///
+  /// In en, this message translates to:
+  /// **'This week {name} learned: {skills}.'**
+  String reportLearned(String name, String skills);
+
+  /// Report sentence when no skill was mastered this week.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} is still working towards the next skill. That is normal; understanding takes time.'**
+  String reportLearnedNone(String name);
+
+  /// Report sentence: skills practised but not mastered yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Working on: {skills}.'**
+  String reportWorkingOn(String skills);
+
+  /// Report sentence for a skill the child is stuck on.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} finds {skill} hard. Please sit with {name} for a few minutes while they practise.'**
+  String reportNeedsHelp(String name, String skill);
+
+  /// Report sentence: when a mastered skill is practised again.
+  ///
+  /// In en, this message translates to:
+  /// **'{skill} comes back for practice on {day}.'**
+  String reportReview(String skill, String day);
+
+  /// Report sentence when nothing needs practice.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing needs extra practice right now.'**
+  String get reportPracticeNone;
+
+  /// Report sentence when there is no home activity.
+  ///
+  /// In en, this message translates to:
+  /// **'No home activity this week.'**
+  String get reportHomeNone;
+
+  /// Report sentence about effort (no streaks).
+  ///
+  /// In en, this message translates to:
+  /// **'{name} practised on {days} of the last 7 days and answered {questions} questions.'**
+  String reportEffort(String name, int days, int questions);
+
+  /// Shown when the phone cannot speak Urdu.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone has no Urdu voice yet, so the report is read in English. To add Urdu: open the phone\'s Settings, search for \"Text-to-speech\", choose Google, then \"Install voice data\" and Urdu.'**
+  String get reportNoUrduVoice;
+
+  /// Shown when the phone has no text-to-speech at all.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone can\'t read aloud. The pictures show the report.'**
+  String get reportNoVoice;
+
+  /// Heading of the AI weekly note at the end of the report.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu\'s note'**
+  String get reportMithuNote;
 }
 
 class _AppLocalizationsDelegate
