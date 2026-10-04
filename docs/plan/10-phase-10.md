@@ -107,3 +107,12 @@ Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 10.
   - a tablet register to print.
 - No screenshots: menus differ between brands and Android versions, so the guide names each button (with Samsung's names too). Photos of the real donated tablets can be added after the first setup.
 - No app change was needed: app pinning is built into Android and works with any app.
+
+## Step 6 as built
+
+- **One-week test checklist** ([docs/setup/one-week-test.md](../setup/one-week-test.md)) for the Infinix Hot 10:
+  - day 0: install the `arm64-v8a` file, stop XOS from closing the app, and write the starting numbers;
+  - every day: 20 to 30 minutes of use (lessons, videos, Mithu, a photo step, offline, switching apps, a restart), then a row from the Phone check screen;
+  - day 7: Android's battery, data and storage pages, compared with a "good" table;
+  - send a photo of the tables in the thread.
+- The "good" limits (most memory under 250 MB, mobile data under 50 MB a week, no crashes, battery share under 10%) are first guesses; they will be adjusted after the first test.
