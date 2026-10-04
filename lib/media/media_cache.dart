@@ -96,24 +96,53 @@ class MediaCache {
     LinkMedia(:final url) => (await file(url)).readAsString(),
   };
 
+  /// Whether [url] is saved on the phone (so playing it uses no data).
+  Future<bool> isSaved(String url) async {
+    await _repo.open();
+    return await _repo.get(url) != null;
+  }
+
+  /// Bytes saved of [urls].
+  Future<int> savedBytesOf(Set<String> urls) async {
+    await _repo.open();
+    return (await _repo.getAllObjects())
+        .where((o) => urls.contains(o.key))
+        .fold<int>(0, (sum, o) => sum + (o.length ?? 0));
+  }
+
+  /// Downloads [urls] now (the Downloads screen, or a parent choosing to
+  /// use mobile data). Throws when offline.
+  Future<void> download(Set<String> urls) async {
+    await Future.wait([for (final url in urls) _manager.downloadFile(url)]);
+    await trim(keep: urls);
+  }
+
+  /// Removes [urls] from the phone.
+  Future<void> remove(Set<String> urls) async {
+    for (final url in urls) {
+      await _manager.removeFile(url);
+    }
+  }
+
+  /// The linked videos and captions of [lesson] in [language] (bundled
+  /// ones need no download).
+  static Set<String> linksOf(Lesson lesson, String language) => {
+    for (final step in lesson.steps.whereType<VideoStep>())
+      for (final path in [
+        step.src.inLanguage(language),
+        ?step.captions?.inLanguage(language),
+      ])
+        if (path.startsWith('https://')) path,
+  };
+
   /// Starts downloading the linked videos (and captions) of [lesson] in
   /// [language], so they are ready by the time the child reaches them.
   /// Errors are ignored: the video step tries again and has a fallback.
+  /// The caller checks Data saver first.
   void prefetch(Lesson lesson, String language) {
-    final links = {
-      for (final step in lesson.steps.whereType<VideoStep>())
-        for (final path in [
-          step.src.inLanguage(language),
-          ?step.captions?.inLanguage(language),
-        ])
-          if (path.startsWith('https://')) path,
-    };
+    final links = linksOf(lesson, language);
     if (links.isEmpty) return;
-    unawaited(
-      Future.wait([for (final url in links) _manager.downloadFile(url)])
-          .then((_) => trim(keep: links))
-          .catchError((Object _) {}),
-    );
+    unawaited(download(links).catchError((Object _) {}));
   }
 }
 

@@ -72,3 +72,9 @@ Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 10.
 - The lesson format has one video file per language, so "play the smallest size" needs a second, smaller file per video. That is a change to the lesson schema, so I'll ask before doing it. For now, videos should be made small (360p) when they are created.
 - CI's APK job (on main, or run by hand) also builds small release APKs, one for older phones (armeabi-v7a) and one for newer phones (arm64-v8a), and lists their sizes.
 - Phone check screen: long-press the word "Settings" at the top of the Settings screen. It shows memory now and at most, pictures in memory, saved videos (with a button to remove them) and downloaded lessons. Data used (step 2) and crashes (step 4) will be added there.
+
+## Step 2 as built
+
+- **Data saver** (Settings, on by default, `lib/data/data_saver.dart`). While it is on and the phone is on mobile data, lesson videos don't download by themselves. A video step whose video isn't saved shows the video's summary and a "Watch now (uses mobile data)" button, so the child can always carry on. Lesson text (under 31 KB per lesson), progress and AI help still use mobile data: they are small, and lesson fixes should arrive quickly.
+- **Downloads** screen (Settings > Downloads) lists every lesson whose videos are links, with the size saved, and Download and Remove buttons. Downloads asked for there run on any connection. Today every video is inside the app, so the screen says there is nothing to download. It matters once videos are uploaded instead of bundled.
+- **Data used**: Android's own count of the app's data (`MainActivity.kt`, `TrafficStats`) is read when the app opens, closes and switches between Wi-Fi and mobile data. What was used since the last reading goes to the connection the phone was on. The last 7 days are kept on the phone only. Settings shows mobile data used, and the Phone check screen shows both Wi-Fi and mobile.

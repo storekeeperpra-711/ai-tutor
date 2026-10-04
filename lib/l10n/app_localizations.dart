@@ -2269,6 +2269,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Remove saved videos'**
   String get phoneCheckClearMedia;
+
+  /// Settings switch: videos download only on Wi-Fi
+  ///
+  /// In en, this message translates to:
+  /// **'Data saver'**
+  String get dataSaver;
+
+  /// Settings: what Data saver does
+  ///
+  /// In en, this message translates to:
+  /// **'Videos download only on Wi-Fi, or when you tap Download.'**
+  String get dataSaverHelp;
+
+  /// Settings: mobile data the app used this week
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile data used in the last 7 days: {amount}'**
+  String dataUsedThisWeek(String amount);
+
+  /// Title of the downloads screen and its Settings entry
+  ///
+  /// In en, this message translates to:
+  /// **'Downloads'**
+  String get downloadsTitle;
+
+  /// Downloads screen: explanation at the top
+  ///
+  /// In en, this message translates to:
+  /// **'Save a lesson\'s videos before going somewhere without signal. Saving uses data now, even with Data saver on.'**
+  String get downloadsHelp;
+
+  /// Downloads screen when no lesson has videos to download
+  ///
+  /// In en, this message translates to:
+  /// **'All videos are inside the app. There is nothing to download.'**
+  String get downloadsNone;
+
+  /// Downloads: the lesson's videos are saved
+  ///
+  /// In en, this message translates to:
+  /// **'Saved on this phone ({size})'**
+  String downloadSaved(String size);
+
+  /// Downloads: the lesson's videos are not saved
+  ///
+  /// In en, this message translates to:
+  /// **'Not saved'**
+  String get downloadNotSaved;
+
+  /// Downloads: button to save a lesson's videos
+  ///
+  /// In en, this message translates to:
+  /// **'Download'**
+  String get downloadSave;
+
+  /// Downloads: button to delete a lesson's saved videos
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from this phone'**
+  String get downloadRemove;
+
+  /// Downloads: a download failed
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t download. Check the internet and try again.'**
+  String get downloadFailed;
+
+  /// Video step while Data saver waits for Wi-Fi; the summary follows
+  ///
+  /// In en, this message translates to:
+  /// **'This video will download on Wi-Fi. Here is what it shows:'**
+  String get videoNeedsData;
+
+  /// Video step: download the video now on mobile data
+  ///
+  /// In en, this message translates to:
+  /// **'Watch now (uses mobile data)'**
+  String get videoUseData;
+
+  /// Phone check row: data used on Wi-Fi this week
+  ///
+  /// In en, this message translates to:
+  /// **'Wi-Fi data, last 7 days'**
+  String get phoneCheckDataWifi;
+
+  /// Phone check row: data used on mobile data this week
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile data, last 7 days'**
+  String get phoneCheckDataMobile;
 }
 
 class _AppLocalizationsDelegate

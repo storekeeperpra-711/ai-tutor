@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../character/mithu_bubble.dart';
+import '../../data/data_saver.dart';
 import '../../l10n/app_localizations.dart';
 import '../../media/media_cache.dart';
 import '../../models/lesson_step.dart';
@@ -52,6 +53,10 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
   var _captions = true;
   String? _language;
 
+  /// The video isn't saved and Data saver is on, on mobile data: the
+  /// child (or parent) can choose to use data, or read the summary.
+  var _waitingForWifi = false;
+
   /// Where the video was when the app went into the background.
   Duration? _resumeAt;
   var _hidden = false;
@@ -96,16 +101,31 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
     }
   }
 
-  Future<void> _load(String language, {Duration? at}) async {
+  Future<void> _load(
+    String language, {
+    Duration? at,
+    bool useData = false,
+  }) async {
     final old = _controller;
     setState(() {
       _controller = null;
       _failed = false;
+      _waitingForWifi = false;
     });
     await old?.dispose();
 
     final step = widget.step;
     final cache = ref.read(mediaCacheProvider);
+    final video = MediaSource.of(step.src.inLanguage(language), 'videos');
+    if (video is LinkMedia &&
+        !useData &&
+        !ref.read(autoDownloadProvider) &&
+        !await cache.isSaved(video.url)) {
+      if (mounted && language == _language) {
+        setState(() => _waitingForWifi = true);
+      }
+      return;
+    }
     final captionPath = step.captions?.inLanguage(language);
     final captions = captionPath == null
         ? null
@@ -114,7 +134,7 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
               .then<ClosedCaptionFile>(WebVTTCaptionFile.new);
     try {
       final controller = await ref.read(videoControllerFactoryProvider)(
-        MediaSource.of(step.src.inLanguage(language), 'videos'),
+        video,
         captions,
       );
       await controller.initialize();
@@ -173,7 +193,42 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
           LessonText(step.title!, style: textTheme.titleLarge),
           const SizedBox(height: 12),
         ],
-        if (_failed)
+        if (_waitingForWifi)
+          Container(
+            key: const Key('video-wait-wifi'),
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.surfaceContainerHighest,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    const Icon(Icons.wifi_off, size: 32),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        l10n.videoNeedsData,
+                        style: textTheme.labelLarge,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                LessonText(step.summary, style: textTheme.bodyLarge),
+                const SizedBox(height: 12),
+                OutlinedButton.icon(
+                  key: const Key('video-use-data'),
+                  icon: const Icon(Icons.download),
+                  label: Text(l10n.videoUseData),
+                  onPressed: () => _load(_language ?? 'en', useData: true),
+                ),
+              ],
+            ),
+          )
+        else if (_failed)
           FeedbackBox(
             key: const Key('video-fallback'),
             good: false,

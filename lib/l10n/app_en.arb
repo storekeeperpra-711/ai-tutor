@@ -1889,5 +1889,77 @@
   "phoneCheckClearMedia": "Remove saved videos",
   "@phoneCheckClearMedia": {
     "description": "Button: delete all saved lesson videos to free space"
+  },
+  "dataSaver": "Data saver",
+  "@dataSaver": {
+    "description": "Settings switch: videos download only on Wi-Fi"
+  },
+  "dataSaverHelp": "Videos download only on Wi-Fi, or when you tap Download.",
+  "@dataSaverHelp": {
+    "description": "Settings: what Data saver does"
+  },
+  "dataUsedThisWeek": "Mobile data used in the last 7 days: {amount}",
+  "@dataUsedThisWeek": {
+    "description": "Settings: mobile data the app used this week",
+    "placeholders": {
+      "amount": {
+        "type": "String",
+        "example": "12.5 MB"
+      }
+    }
+  },
+  "downloadsTitle": "Downloads",
+  "@downloadsTitle": {
+    "description": "Title of the downloads screen and its Settings entry"
+  },
+  "downloadsHelp": "Save a lesson's videos before going somewhere without signal. Saving uses data now, even with Data saver on.",
+  "@downloadsHelp": {
+    "description": "Downloads screen: explanation at the top"
+  },
+  "downloadsNone": "All videos are inside the app. There is nothing to download.",
+  "@downloadsNone": {
+    "description": "Downloads screen when no lesson has videos to download"
+  },
+  "downloadSaved": "Saved on this phone ({size})",
+  "@downloadSaved": {
+    "description": "Downloads: the lesson's videos are saved",
+    "placeholders": {
+      "size": {
+        "type": "String",
+        "example": "24.0 MB"
+      }
+    }
+  },
+  "downloadNotSaved": "Not saved",
+  "@downloadNotSaved": {
+    "description": "Downloads: the lesson's videos are not saved"
+  },
+  "downloadSave": "Download",
+  "@downloadSave": {
+    "description": "Downloads: button to save a lesson's videos"
+  },
+  "downloadRemove": "Remove from this phone",
+  "@downloadRemove": {
+    "description": "Downloads: button to delete a lesson's saved videos"
+  },
+  "downloadFailed": "Couldn't download. Check the internet and try again.",
+  "@downloadFailed": {
+    "description": "Downloads: a download failed"
+  },
+  "videoNeedsData": "This video will download on Wi-Fi. Here is what it shows:",
+  "@videoNeedsData": {
+    "description": "Video step while Data saver waits for Wi-Fi; the summary follows"
+  },
+  "videoUseData": "Watch now (uses mobile data)",
+  "@videoUseData": {
+    "description": "Video step: download the video now on mobile data"
+  },
+  "phoneCheckDataWifi": "Wi-Fi data, last 7 days",
+  "@phoneCheckDataWifi": {
+    "description": "Phone check row: data used on Wi-Fi this week"
+  },
+  "phoneCheckDataMobile": "Mobile data, last 7 days",
+  "@phoneCheckDataMobile": {
+    "description": "Phone check row: data used on mobile data this week"
   }
 }

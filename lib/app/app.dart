@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../data/data_usage.dart';
 import '../l10n/app_localizations.dart';
 import '../lessons/lesson_updates.dart';
 import '../services/sync_service.dart';
@@ -26,6 +27,8 @@ class AiTutorApp extends ConsumerWidget {
     // Keeps the sync service and lesson downloads running for the whole app.
     ref.watch(syncServiceProvider);
     ref.watch(lessonUpdaterProvider);
+    // Counts the data the app uses (Phase 10).
+    ref.watch(dataUsageSamplerProvider);
 
     return MaterialApp.router(
       onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,

@@ -5,6 +5,7 @@ import 'package:ai_tutor/app/preferences.dart';
 import 'package:ai_tutor/character/narrator.dart';
 import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/classes/class_store.dart';
+import 'package:ai_tutor/data/data_usage.dart';
 import 'package:ai_tutor/media/media_cache.dart';
 import 'package:ai_tutor/reports/report_voice.dart';
 import 'package:ai_tutor/review/review_store.dart';
@@ -44,6 +45,8 @@ Future<Widget> buildTestApp({
       classStoreProvider.overrideWithValue(fake.classes),
       reviewOfferedProvider.overrideWithValue(reviewOffered),
       onlineProvider.overrideWith((ref) => fake.onlineStream),
+      onWifiProvider.overrideWith((ref) => fake.wifiStream),
+      appByteCounterProvider.overrideWithValue(() async => fake.appBytes),
       aiServiceProvider.overrideWithValue(fake.ai),
       narratorProvider.overrideWithValue(fake.narrator),
       reportVoiceProvider.overrideWithValue(fake.reportVoice),

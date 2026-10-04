@@ -1298,4 +1298,58 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get phoneCheckClearMedia => 'Remove saved videos';
+
+  @override
+  String get dataSaver => 'Data saver';
+
+  @override
+  String get dataSaverHelp =>
+      'Videos download only on Wi-Fi, or when you tap Download.';
+
+  @override
+  String dataUsedThisWeek(String amount) {
+    return 'Mobile data used in the last 7 days: $amount';
+  }
+
+  @override
+  String get downloadsTitle => 'Downloads';
+
+  @override
+  String get downloadsHelp =>
+      'Save a lesson\'s videos before going somewhere without signal. Saving uses data now, even with Data saver on.';
+
+  @override
+  String get downloadsNone =>
+      'All videos are inside the app. There is nothing to download.';
+
+  @override
+  String downloadSaved(String size) {
+    return 'Saved on this phone ($size)';
+  }
+
+  @override
+  String get downloadNotSaved => 'Not saved';
+
+  @override
+  String get downloadSave => 'Download';
+
+  @override
+  String get downloadRemove => 'Remove from this phone';
+
+  @override
+  String get downloadFailed =>
+      'Couldn\'t download. Check the internet and try again.';
+
+  @override
+  String get videoNeedsData =>
+      'This video will download on Wi-Fi. Here is what it shows:';
+
+  @override
+  String get videoUseData => 'Watch now (uses mobile data)';
+
+  @override
+  String get phoneCheckDataWifi => 'Wi-Fi data, last 7 days';
+
+  @override
+  String get phoneCheckDataMobile => 'Mobile data, last 7 days';
 }
