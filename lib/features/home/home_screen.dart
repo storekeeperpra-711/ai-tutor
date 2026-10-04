@@ -62,6 +62,15 @@ class HomeScreen extends ConsumerWidget {
                   onPressed: () => context.push('/learners/new'),
                 ),
               ),
+              const SizedBox(height: 8),
+              Center(
+                child: TextButton.icon(
+                  key: const Key('home-privacy'),
+                  icon: const Icon(Icons.privacy_tip_outlined),
+                  label: Text(l10n.privacyTitle),
+                  onPressed: () => context.push('/privacy'),
+                ),
+              ),
             ],
             AsyncData(value: final list) when current == null => [
               _WhoIsLearning(students: list),

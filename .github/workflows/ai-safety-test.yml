@@ -1,0 +1,44 @@
+name: AI safety test
+
+# Run by hand: Actions -> AI safety test -> Run workflow.
+# Sends the fixed test messages (worker/src/safety/messages.ts) through the
+# AI server's own code to Claude, and shows Mithu's replies on the run's
+# page (Summary) and as a file to download. About 40 short AI calls: a few
+# cents. Needs the GitHub secret ANTHROPIC_API_KEY.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  safety:
+    name: Run the AI safety test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: worker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - name: Send the test messages
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node lib/safety/run.js safety-report.md
+      - name: Show the results
+        if: always()
+        run: |
+          if [ -f safety-report.md ]; then cat safety-report.md >> "$GITHUB_STEP_SUMMARY"; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ai-safety-report
+          path: worker/safety-report.md
+          if-no-files-found: ignore

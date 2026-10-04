@@ -44,6 +44,8 @@ describe("batch job for queued answers", () => {
     assert.deepEqual(await runBatchJob(deps), { collected: 0, submitted: 1, skipped: 2 });
     assert.equal(batches.created[0].requests[0].custom_id, "a_q1");
     assert.equal(store.queue.get("q1")!.status, "in_batch");
+    // The typed answer isn't kept once it has been sent.
+    assert.equal(store.queue.get("q1")!.answer, "");
     assert.equal(store.queue.get("q2")!.status, "skipped");
     assert.equal(store.queue.get("q3")!.status, "skipped");
 
@@ -58,6 +60,15 @@ describe("batch job for queued answers", () => {
     assert.equal(store.batches.get("batch_1")!.status, "ended");
     assert.equal(store.totals.get(dayOf(NOW)), costOf("claude-haiku-4-5", USAGE, true));
     assert.equal(store.logs.at(-1)!.batch, true);
+  });
+
+  it("removes phone numbers from queued answers before Claude", async () => {
+    const { store, batches, deps } = setup();
+    queue(store, "q1", { answer: "دو آدھے، میرا نمبر 0300-1234567 ہے" });
+    await runBatchJob(deps);
+    const content = JSON.stringify(batches.created[0].requests[0]);
+    assert.match(content, /\[phone number removed\]/);
+    assert.doesNotMatch(content, /1234567/);
   });
 
   it("marks errored answers as failed", async () => {

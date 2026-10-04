@@ -20,6 +20,7 @@ import {
   type Lang,
   type PhotoReading,
 } from "./prompts";
+import { redactPersonal } from "./privacy";
 import type { Kind, Reservation, Store } from "./store";
 
 export interface Deps {
@@ -76,8 +77,10 @@ export function parseFeedbackRequest(data: unknown): FeedbackRequest {
   const d = (data ?? {}) as Record<string, unknown>;
   const lang = d.lang === "ur" ? "ur" : "en";
   const kind = d.kind === "verdict" ? "verdict" : "explain";
-  const answer = typeof d.answer === "string" ? d.answer.trim().slice(0, LIMITS.maxAnswerChars) : "";
-  if (!answer) throw new BadRequest("answer is empty");
+  const typed = typeof d.answer === "string" ? d.answer.trim().slice(0, LIMITS.maxAnswerChars) : "";
+  if (!typed) throw new BadRequest("answer is empty");
+  // Phone numbers, emails and addresses never reach Claude or the logs.
+  const answer = redactPersonal(typed).text;
   return {
     student_id: str(d.student_id, "student_id", 100),
     lesson_id: str(d.lesson_id, "lesson_id"),

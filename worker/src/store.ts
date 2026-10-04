@@ -289,7 +289,10 @@ export class FirestoreStore implements Store {
   async markQueued(ids: string[], status: "in_batch" | "skipped", batchId?: string): Promise<void> {
     await this.write(
       ...ids.map(
-        (id): Write => ({ kind: "set", path: `ai_queue/${id}`, data: { status, batch_id: batchId ?? null }, merge: true, exists: true }),
+        // The typed answer isn't kept once it has been sent or skipped.
+        (id): Write => ({
+          kind: "set", path: `ai_queue/${id}`, data: { status, batch_id: batchId ?? null, answer: "" }, merge: true, exists: true,
+        }),
       ),
     );
   }

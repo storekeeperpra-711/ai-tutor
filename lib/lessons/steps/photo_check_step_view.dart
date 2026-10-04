@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../ai/ai_help.dart';
 import '../../ai/ai_service.dart';
 import '../../ai/photo_picker.dart';
 import '../../character/mithu_bubble.dart';
@@ -50,7 +51,12 @@ enum _Phase {
 
 class _PhotoCheckStepViewState extends ConsumerState<PhotoCheckStepView> {
   final _controller = TextEditingController();
-  var _phase = _Phase.start;
+
+  /// With AI help off, there is no photo reading: the student types.
+  late var _phase = _startPhase;
+
+  _Phase get _startPhase =>
+      ref.read(aiHelpProvider) ? _Phase.start : _Phase.confirm;
   var _attempts = 0;
   final _misconceptions = <String>[];
 
@@ -173,6 +179,7 @@ class _PhotoCheckStepViewState extends ConsumerState<PhotoCheckStepView> {
     // Only a wrong answer uses AI, to explain the checker's verdict.
     final studentId = _studentId;
     if (studentId == null || lessonId == null) return;
+    if (!ref.read(aiHelpProvider)) return;
     setState(() => _explaining = true);
     String? explanation;
     try {
@@ -200,7 +207,7 @@ class _PhotoCheckStepViewState extends ConsumerState<PhotoCheckStepView> {
   void _tryAgain() {
     _controller.clear();
     setState(() {
-      _phase = _Phase.start;
+      _phase = _startPhase;
       _check = null;
       _explanation = null;
       _notice = null;
@@ -223,6 +230,11 @@ class _PhotoCheckStepViewState extends ConsumerState<PhotoCheckStepView> {
     final textTheme = Theme.of(context).textTheme;
     final check = _check;
 
+    final notice =
+        _notice ??
+        (!ref.watch(aiHelpProvider) && _phase == _Phase.confirm
+            ? l10n.photoAiOff
+            : null);
     final (
       String buttonLabel,
       Key buttonKey,
@@ -261,11 +273,11 @@ class _PhotoCheckStepViewState extends ConsumerState<PhotoCheckStepView> {
         ],
         LessonText(widget.step.problem, style: textTheme.titleLarge),
         const SizedBox(height: 16),
-        if (_notice != null)
+        if (notice != null)
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
             child: Text(
-              _notice!,
+              notice,
               key: const Key('photo-notice'),
               style: textTheme.bodyLarge,
             ),
