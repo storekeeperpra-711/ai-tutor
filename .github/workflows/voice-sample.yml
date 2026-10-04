@@ -1,0 +1,36 @@
+name: Mithu voice samples
+
+# Run by hand: Actions -> Mithu voice samples -> Run workflow.
+# Makes a few Mithu lines in Urdu and English with several Gemini voices,
+# so a person can choose the voice by listening. The recordings are on the
+# run's page, under Artifacts: mithu-voice-samples.
+# Needs the GitHub secret GEMINI_API_KEY (docs/setup/gemini-voice.md).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sample:
+    name: Make voice samples
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: ffmpeg
+        run: command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: Make samples
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python tools/voice/make_voice.py sample --out voice-samples
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mithu-voice-samples
+          path: voice-samples
+          if-no-files-found: ignore
+          retention-days: 30
