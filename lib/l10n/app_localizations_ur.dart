@@ -1278,4 +1278,28 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get reportMithuNote => 'مٹھو کا پیغام';
+
+  @override
+  String get phoneCheckTitle => 'فون کی جانچ';
+
+  @override
+  String get phoneCheckRefresh => 'دوبارہ جانچیں';
+
+  @override
+  String get phoneCheckMemory => 'اس وقت استعمال ہونے والی میموری';
+
+  @override
+  String get phoneCheckMemoryMost => 'سب سے زیادہ استعمال ہونے والی میموری';
+
+  @override
+  String get phoneCheckPictures => 'میموری میں تصویریں';
+
+  @override
+  String get phoneCheckSavedMedia => 'محفوظ ویڈیوز';
+
+  @override
+  String get phoneCheckDownloadedLessons => 'ڈاؤن لوڈ کیے گئے اسباق';
+
+  @override
+  String get phoneCheckClearMedia => 'محفوظ ویڈیوز ہٹائیں';
 }

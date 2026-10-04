@@ -25,7 +25,14 @@ class SettingsScreen extends ConsumerWidget {
     final heading = Theme.of(context).textTheme.titleMedium;
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.settingsTitle)),
+      appBar: AppBar(
+        // A long press opens the hidden Phone check screen (for testers).
+        title: GestureDetector(
+          key: const Key('settings-title'),
+          onLongPress: () => context.push('/phone-check'),
+          child: Text(l10n.settingsTitle),
+        ),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [

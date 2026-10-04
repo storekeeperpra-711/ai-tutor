@@ -1274,4 +1274,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reportMithuNote => 'Mithu\'s note';
+
+  @override
+  String get phoneCheckTitle => 'Phone check';
+
+  @override
+  String get phoneCheckRefresh => 'Check again';
+
+  @override
+  String get phoneCheckMemory => 'Memory used now';
+
+  @override
+  String get phoneCheckMemoryMost => 'Most memory used';
+
+  @override
+  String get phoneCheckPictures => 'Pictures in memory';
+
+  @override
+  String get phoneCheckSavedMedia => 'Saved videos';
+
+  @override
+  String get phoneCheckDownloadedLessons => 'Downloaded lessons';
+
+  @override
+  String get phoneCheckClearMedia => 'Remove saved videos';
 }

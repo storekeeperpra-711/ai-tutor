@@ -10,6 +10,7 @@ import 'package:ai_tutor/character/sounds.dart';
 import 'package:ai_tutor/character/voice_lines.dart';
 import 'package:ai_tutor/lessons/lesson_updates.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
+import 'package:ai_tutor/media/media_cache.dart';
 import 'package:ai_tutor/reports/report_voice.dart';
 import 'package:ai_tutor/review/review_store.dart';
 import 'package:ai_tutor/services/auth_service.dart';
@@ -18,6 +19,7 @@ import 'package:ai_tutor/services/remote_store.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 /// A pretend Firebase for tests: an in-memory "server" that holds writes
 /// back while [online] is false, like Firestore does, and sends them when
@@ -39,6 +41,11 @@ class FakeBackend {
   final narrator = FakeNarrator();
   final reportVoice = FakeReportVoice();
   final sounds = FakeSounds();
+
+  /// Saved lesson videos, with nothing saved.
+  final mediaIndex = FakeMediaIndex();
+  late final mediaManager = FakeMediaManager(mediaIndex);
+  late final media = MediaCache(manager: mediaManager, repo: mediaIndex);
 
   /// What the fake camera returns; null = the child cancelled.
   Uint8List? photo = Uint8List.fromList([0xff, 0xd8, 0xff]);
@@ -808,4 +815,46 @@ class FakeReportVoice implements ReportVoice {
     stopped++;
     finishSentence();
   }
+}
+
+/// Saved files as the cache's index lists them.
+class FakeMediaIndex implements CacheInfoRepository {
+  final objects = <String, CacheObject>{};
+
+  void add(String url, int length, DateTime touched) =>
+      objects[url] = CacheObject(
+        url,
+        relativePath: url,
+        validTill: touched,
+        length: length,
+        touched: touched,
+      );
+
+  @override
+  Future<bool> open() async => true;
+
+  @override
+  Future<List<CacheObject>> getAllObjects() async => objects.values.toList();
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
+}
+
+class FakeMediaManager implements BaseCacheManager {
+  FakeMediaManager(this.repo);
+
+  final FakeMediaIndex repo;
+  final removed = <String>[];
+
+  @override
+  Future<void> removeFile(String key) async {
+    removed.add(key);
+    repo.objects.remove(key);
+  }
+
+  @override
+  Future<void> emptyCache() async => repo.objects.clear();
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }

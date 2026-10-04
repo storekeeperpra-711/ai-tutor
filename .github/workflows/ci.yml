@@ -119,3 +119,20 @@ jobs:
             build/app/outputs/flutter-apk/app-dev-debug.apk
             build/app/outputs/flutter-apk/app-prod-debug.apk
           retention-days: 14
+      # Small release APKs, one per phone type (Phase 10): a phone downloads
+      # only its own. armeabi-v7a works on almost every Android phone;
+      # arm64-v8a is smaller and faster on newer ones.
+      - run: >-
+          flutter build apk --release --flavor dev --split-per-abi
+          --target-platform android-arm,android-arm64
+      - name: APK sizes
+        run: |
+          echo "## APK sizes" >> "$GITHUB_STEP_SUMMARY"
+          ls -l build/app/outputs/flutter-apk/*.apk \
+            | awk '{printf "- %s: %.1f MB\n", $9, $5/1048576}' \
+            | sed 's|build/app/outputs/flutter-apk/||' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ai-tutor-dev-release-apks
+          path: build/app/outputs/flutter-apk/app-*-dev-release.apk
+          retention-days: 14

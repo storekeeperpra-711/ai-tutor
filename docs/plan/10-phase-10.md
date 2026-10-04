@@ -1,6 +1,6 @@
 # Phase 10 plan: hardening
 
-Status: waiting for Shahid's ok (2026-10-04).
+Status: approved 2026-10-04 (Crashlytics yes, Data saver on by default). Step 1 built.
 Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 10.
 
 **Goal:** reliable, light and safe on real devices.
@@ -62,3 +62,13 @@ Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 10.
 - Crashlytics and the daily totals stay within the free plans.
 - The AI safety test is a one-off run of about 40 short messages, costing a few cents.
 - Risk: Google Play's rules for apps used by children. Crashlytics with no advertising ID and no Analytics is allowed, but I'll note it in the privacy note.
+
+## Step 1 as built
+
+- `lib/media/media_cache.dart`: saved media lives in its own cache (`lessonMedia`) with a 300 MB limit. After each download, the files used longest ago are removed until it fits; the lesson open now is never removed.
+- `lib/app/memory_limits.dart`: pictures in memory are capped at 40 MB (Flutter's default is 100 MB) and cleared when Android reports low memory. Firestore's offline copy is capped at 40 MB.
+- `video_step_view.dart`: when the app goes into the background, the video player is closed to free memory. When the app comes back, the video loads again at the same place, paused.
+- Simulations need no change: they animate only while a ball is falling, and Android stops WebView animation while the app is hidden.
+- The lesson format has one video file per language, so "play the smallest size" needs a second, smaller file per video. That is a change to the lesson schema, so I'll ask before doing it. For now, videos should be made small (360p) when they are created.
+- CI's APK job (on main, or run by hand) also builds small release APKs, one for older phones (armeabi-v7a) and one for newer phones (arm64-v8a), and lists their sizes.
+- Phone check screen: long-press the word "Settings" at the top of the Settings screen. It shows memory now and at most, pictures in memory, saved videos (with a button to remove them) and downloaded lessons. Data used (step 2) and crashes (step 4) will be added there.
