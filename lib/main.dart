@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app/app.dart';
+import 'app/memory_limits.dart';
 import 'app/preferences.dart';
 import 'classes/class_store.dart';
 import 'review/review_store.dart';
@@ -22,7 +23,9 @@ Future<void> main() async {
   // Firestore keeps a copy on the phone and queues writes while offline.
   FirebaseFirestore.instance.settings = const Settings(
     persistenceEnabled: true,
+    cacheSizeBytes: firestoreCacheBytes,
   );
+  applyMemoryLimits();
   final prefs = await SharedPreferences.getInstance();
 
   runApp(

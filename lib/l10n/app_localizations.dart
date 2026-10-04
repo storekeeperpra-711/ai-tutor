@@ -2221,6 +2221,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Mithu\'s note'**
   String get reportMithuNote;
+
+  /// Title of the hidden screen showing the app's memory and storage use
+  ///
+  /// In en, this message translates to:
+  /// **'Phone check'**
+  String get phoneCheckTitle;
+
+  /// Tooltip: refresh the phone check numbers
+  ///
+  /// In en, this message translates to:
+  /// **'Check again'**
+  String get phoneCheckRefresh;
+
+  /// Phone check row: app memory now
+  ///
+  /// In en, this message translates to:
+  /// **'Memory used now'**
+  String get phoneCheckMemory;
+
+  /// Phone check row: the most memory the app used since it started
+  ///
+  /// In en, this message translates to:
+  /// **'Most memory used'**
+  String get phoneCheckMemoryMost;
+
+  /// Phone check row: image cache size and limit
+  ///
+  /// In en, this message translates to:
+  /// **'Pictures in memory'**
+  String get phoneCheckPictures;
+
+  /// Phone check row: saved lesson videos size and limit
+  ///
+  /// In en, this message translates to:
+  /// **'Saved videos'**
+  String get phoneCheckSavedMedia;
+
+  /// Phone check row: number of lessons downloaded from the internet
+  ///
+  /// In en, this message translates to:
+  /// **'Downloaded lessons'**
+  String get phoneCheckDownloadedLessons;
+
+  /// Button: delete all saved lesson videos to free space
+  ///
+  /// In en, this message translates to:
+  /// **'Remove saved videos'**
+  String get phoneCheckClearMedia;
 }
 
 class _AppLocalizationsDelegate

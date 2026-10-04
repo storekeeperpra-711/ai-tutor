@@ -119,3 +119,49 @@ jobs:
             build/app/outputs/flutter-apk/app-dev-debug.apk
             build/app/outputs/flutter-apk/app-prod-debug.apk
           retention-days: 14
+
+  # Small release APKs, one per phone type (Phase 10): a phone downloads
+  # only its own. armeabi-v7a works on almost every Android phone;
+  # arm64-v8a is smaller and faster on newer ones. A job of its own: the
+  # release build needs the runner's memory to itself.
+  release-apks:
+    name: Build small release APKs
+    if: github.event_name != 'pull_request'
+    needs: [check, lessons, rules]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+          cache: true
+      # The runner has about 7 GB of memory; the project's 8 GB Gradle
+      # setting (fine on a laptop) gets the release build killed here.
+      - name: Fit Gradle in the runner's memory
+        run: |
+          mkdir -p ~/.gradle
+          cat >> ~/.gradle/gradle.properties <<'PROPS'
+          org.gradle.jvmargs=-Xmx3g -XX:MaxMetaspaceSize=1g
+          kotlin.daemon.jvmargs=-Xmx1g
+          org.gradle.workers.max=2
+          PROPS
+      - run: >-
+          flutter build apk --release --flavor dev --split-per-abi
+          --target-platform android-arm,android-arm64
+      - name: APK sizes
+        run: |
+          echo "## APK sizes" >> "$GITHUB_STEP_SUMMARY"
+          ls -l build/app/outputs/flutter-apk/*.apk \
+            | awk '{printf "- %s: %.1f MB\n", $9, $5/1048576}' \
+            | sed 's|build/app/outputs/flutter-apk/||' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ai-tutor-dev-release-apks
+          path: build/app/outputs/flutter-apk/app-*-dev-release.apk
+          retention-days: 14

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
@@ -30,14 +31,64 @@ class LinkMedia extends MediaSource {
 
 /// Downloads linked media once and keeps it on the phone, so a video
 /// watched again (or opened offline later) costs no more data.
+///
+/// Saved media is kept under [maxBytes] (Phase 10): when a download takes
+/// it over, the files used longest ago are removed first.
 class MediaCache {
-  MediaCache([BaseCacheManager? manager])
-    : _manager = manager ?? DefaultCacheManager();
+  MediaCache({
+    BaseCacheManager? manager,
+    CacheInfoRepository? repo,
+    this.maxBytes = defaultMaxBytes,
+  }) : _givenManager = manager,
+       _givenRepo = repo;
 
-  final BaseCacheManager _manager;
+  static const defaultMaxBytes = 300 * 1024 * 1024;
+
+  // Made on first use, so a screen that never needs media touches no
+  // files.
+  static final _config = Config('lessonMedia');
+  final BaseCacheManager? _givenManager;
+  final CacheInfoRepository? _givenRepo;
+  late final BaseCacheManager _manager = _givenManager ?? CacheManager(_config);
+  late final CacheInfoRepository _repo = _givenRepo ?? _config.repo;
+  final int maxBytes;
 
   /// The file for [url]: from the cache, or downloaded now.
-  Future<File> file(String url) => _manager.getSingleFile(url);
+  Future<File> file(String url) async {
+    final file = await _manager.getSingleFile(url);
+    unawaited(trim(keep: {url}).catchError((Object _) {}));
+    return file;
+  }
+
+  /// Bytes of media saved on the phone.
+  Future<int> usedBytes() async {
+    await _repo.open();
+    return (await _repo.getAllObjects()).fold<int>(
+      0,
+      (sum, o) => sum + (o.length ?? 0),
+    );
+  }
+
+  /// Removes the files used longest ago until the total is at most
+  /// [maxBytes]. Files in [keep] (the lesson open now) stay.
+  Future<void> trim({Set<String> keep = const {}}) async {
+    await _repo.open();
+    final saved = await _repo.getAllObjects();
+    var total = saved.fold<int>(0, (sum, o) => sum + (o.length ?? 0));
+    if (total <= maxBytes) return;
+    saved.sort(
+      (a, b) => (a.touched ?? a.validTill).compareTo(b.touched ?? b.validTill),
+    );
+    for (final o in saved) {
+      if (total <= maxBytes) break;
+      if (keep.contains(o.key)) continue;
+      await _manager.removeFile(o.key);
+      total -= o.length ?? 0;
+    }
+  }
+
+  /// Removes all saved media (the Phone check screen's button).
+  Future<void> clear() => _manager.emptyCache();
 
   /// Text of a bundled or linked file (captions).
   Future<String> text(MediaSource source) async => switch (source) {
@@ -49,16 +100,20 @@ class MediaCache {
   /// [language], so they are ready by the time the child reaches them.
   /// Errors are ignored: the video step tries again and has a fallback.
   void prefetch(Lesson lesson, String language) {
-    for (final step in lesson.steps.whereType<VideoStep>()) {
-      for (final path in [
-        step.src.inLanguage(language),
-        ?step.captions?.inLanguage(language),
-      ]) {
-        if (path.startsWith('https://')) {
-          _manager.downloadFile(path).ignore();
-        }
-      }
-    }
+    final links = {
+      for (final step in lesson.steps.whereType<VideoStep>())
+        for (final path in [
+          step.src.inLanguage(language),
+          ?step.captions?.inLanguage(language),
+        ])
+          if (path.startsWith('https://')) path,
+    };
+    if (links.isEmpty) return;
+    unawaited(
+      Future.wait([for (final url in links) _manager.downloadFile(url)])
+          .then((_) => trim(keep: links))
+          .catchError((Object _) {}),
+    );
   }
 }
 

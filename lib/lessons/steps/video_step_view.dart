@@ -52,6 +52,40 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
   var _captions = true;
   String? _language;
 
+  /// Where the video was when the app went into the background.
+  Duration? _resumeAt;
+  var _hidden = false;
+  late final AppLifecycleListener _lifecycle;
+
+  @override
+  void initState() {
+    super.initState();
+    _lifecycle = AppLifecycleListener(onHide: _release, onShow: _restore);
+  }
+
+  /// Frees the video's memory while the app is out of sight (a cheap
+  /// phone may need it for another app), remembering the place.
+  Future<void> _release() async {
+    _hidden = true;
+    final controller = _controller;
+    if (controller == null) return;
+    _resumeAt = controller.value.position;
+    controller.removeListener(_onTick);
+    setState(() => _controller = null);
+    await controller.dispose();
+  }
+
+  /// Loads the video again at the same place, paused, when the app is
+  /// back.
+  void _restore() {
+    _hidden = false;
+    final at = _resumeAt;
+    final language = _language;
+    if (at == null || language == null) return;
+    _resumeAt = null;
+    unawaited(_load(language, at: at));
+  }
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -62,7 +96,7 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
     }
   }
 
-  Future<void> _load(String language) async {
+  Future<void> _load(String language, {Duration? at}) async {
     final old = _controller;
     setState(() {
       _controller = null;
@@ -90,7 +124,12 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
       }
       controller.addListener(_onTick);
       setState(() => _controller = controller);
-      await controller.play();
+      if (at == null) {
+        // A video that finished loading in the background waits.
+        if (!_hidden) await controller.play();
+      } else {
+        await controller.seekTo(at);
+      }
     } on Object {
       if (mounted && language == _language) setState(() => _failed = true);
     }
@@ -102,6 +141,7 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
 
   @override
   void dispose() {
+    _lifecycle.dispose();
     _controller
       ?..removeListener(_onTick)
       ..dispose();
