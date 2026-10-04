@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../l10n/app_localizations.dart';
 import '../../services/account_actions.dart';
@@ -139,6 +140,15 @@ class _AddStudentScreenState extends ConsumerState<AddStudentScreen> {
             ),
           ),
           const SizedBox(height: 16),
+          // Parents read (or listen to) the privacy note before agreeing.
+          ListTile(
+            key: const Key('open-privacy'),
+            leading: const Icon(Icons.privacy_tip_outlined),
+            title: Text(l10n.privacyTitle),
+            trailing: const Icon(Icons.chevron_right),
+            contentPadding: EdgeInsets.zero,
+            onTap: () => context.push('/privacy'),
+          ),
           CheckboxListTile(
             key: const Key('consent'),
             value: _consent,

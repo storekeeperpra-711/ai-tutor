@@ -43,7 +43,7 @@ describe("aiFeedback", () => {
     assert.equal(store.usage.get(`${day}_s1`)!.calls, 1);
     assert.equal(store.totals.get(day), costOf(MODELS.text, USAGE));
     assert.equal(store.logs.length, 1);
-    assert.equal(store.logs[0].prompt_id, "explain_v1");
+    assert.equal(store.logs[0].prompt_id, "explain_v2");
     assert.equal(store.logs[0].checked_by, "ai");
   });
 
@@ -51,6 +51,15 @@ describe("aiFeedback", () => {
     const { claude, deps } = setup([good]);
     await feedback(deps, "u1", explain("ہر روٹی کے دو آدھے", "ur"));
     assert.match(claude.requests[0].text, /<reply_language>Urdu \(Urdu script\)<\/reply_language>/);
+  });
+
+  it("removes phone numbers, emails and addresses before Claude and the logs", async () => {
+    const { store, claude, deps } = setup([good]);
+    await feedback(deps, "u1", explain("6 halves. Call me 0300 1234567 or ali@gmail.com, house no 12"));
+    const text = claude.requests[0].text;
+    assert.match(text, /<student_answer>6 halves\. Call me \[phone number removed\] or \[email removed\], \[address removed\]/);
+    assert.doesNotMatch(text, /1234567|ali@|house no/);
+    assert.doesNotMatch(String(store.logs[0].input), /1234567|ali@|house no/);
   });
 
   it("refuses students of another account", async () => {

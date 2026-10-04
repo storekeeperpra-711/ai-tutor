@@ -395,7 +395,7 @@ abstract class AppLocalizations {
   /// Parental consent tick box when adding a child.
   ///
   /// In en, this message translates to:
-  /// **'I am this child\'s parent or guardian, and I agree to save their first name, class and progress.'**
+  /// **'I am this child\'s parent or guardian. I have read the privacy note, and I agree to save their first name, class and progress, and to Mithu\'s AI help.'**
   String get consentLabel;
 
   /// Save button.
@@ -2359,6 +2359,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Mobile data, last 7 days'**
   String get phoneCheckDataMobile;
+
+  /// Title of the privacy note screen, and of the buttons that open it.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy note'**
+  String get privacyTitle;
+
+  /// First paragraph of the privacy note.
+  ///
+  /// In en, this message translates to:
+  /// **'This note says what AI Tutor keeps about your child, where it is kept, who can see it and for how long.'**
+  String get privacyIntro;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'What we keep'**
+  String get privacyKeptTitle;
+
+  /// Privacy note paragraph: what is stored.
+  ///
+  /// In en, this message translates to:
+  /// **'Your child\'s first name, class, picture and PIN (scrambled, so no one can read it), and their learning: lessons, answers, skills and badges. We never ask for a surname, an address, a phone number or a photo of your child.'**
+  String get privacyKept;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Where it is kept'**
+  String get privacyWhereTitle;
+
+  /// Privacy note paragraph: where data is stored.
+  ///
+  /// In en, this message translates to:
+  /// **'On this phone, and in your account on Google\'s Firebase servers, so that progress is safe if the phone is lost or changed.'**
+  String get privacyWhere;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu\'s AI help'**
+  String get privacyAiTitle;
+
+  /// Privacy note paragraph: what goes to the AI. Claude and Anthropic are names.
+  ///
+  /// In en, this message translates to:
+  /// **'When your child types an explanation, or takes a photo of their working, it is sent to Claude, an AI made by the company Anthropic, which writes Mithu\'s feedback. Your child\'s name is never sent. Phone numbers, emails and addresses are removed before sending. Photos are not kept after they are read. Anthropic\'s rules say it does not use this to train its AI. You can turn AI help off in Settings; the app then checks answers by itself.'**
+  String get privacyAi;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Who can see it'**
+  String get privacyWhoTitle;
+
+  /// Privacy note paragraph: who can see the data.
+  ///
+  /// In en, this message translates to:
+  /// **'You. A teacher, only if you join your child to their class: they see your child\'s first name and progress in that class. The app\'s small team can read AI messages, without names, to keep children safe and fix mistakes. No one else, and nothing is sold or used for adverts.'**
+  String get privacyWho;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'How long it is kept'**
+  String get privacyHowLongTitle;
+
+  /// Privacy note paragraph: how long data is kept.
+  ///
+  /// In en, this message translates to:
+  /// **'Your child\'s profile and progress are kept until you delete them. AI messages are kept for 90 days for safety checks, then deleted. Daily counts of AI use (numbers only) are kept to watch costs.'**
+  String get privacyHowLong;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Keeping children safe'**
+  String get privacySafetyTitle;
+
+  /// Privacy note paragraph: what happens with worrying messages.
+  ///
+  /// In en, this message translates to:
+  /// **'If your child writes something that suggests they are upset or unsafe, Mithu kindly asks them to talk to a parent or teacher they trust, and the message is marked for the team to read.'**
+  String get privacySafety;
+
+  /// Privacy note heading.
+  ///
+  /// In en, this message translates to:
+  /// **'Your choices'**
+  String get privacyChoicesTitle;
+
+  /// Privacy note paragraph: deleting data and turning things off.
+  ///
+  /// In en, this message translates to:
+  /// **'To remove a child and all their progress, tap the family button at the top of the home screen, then the bin next to the child. You can take a child out of a class at any time. You can turn AI help off in Settings.'**
+  String get privacyChoices;
+
+  /// Button that reads the privacy note aloud.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen'**
+  String get privacyListen;
+
+  /// Button that stops reading the privacy note aloud.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get privacyStop;
+
+  /// Settings switch that turns AI feedback on or off.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu\'s AI help'**
+  String get aiHelpSetting;
+
+  /// Help text under the AI help switch.
+  ///
+  /// In en, this message translates to:
+  /// **'Sends typed explanations and photos of working to an AI for feedback, without names. When off, the app checks answers by itself.'**
+  String get aiHelpSettingHint;
+
+  /// On a photo step when a parent has turned AI help off.
+  ///
+  /// In en, this message translates to:
+  /// **'Mithu\'s AI help is off, so please type your answer instead.'**
+  String get photoAiOff;
 }
 
 class _AppLocalizationsDelegate

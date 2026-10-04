@@ -16,6 +16,7 @@ import '../features/profiles/add_student_screen.dart';
 import '../features/report/parent_report_screen.dart';
 import '../features/downloads/downloads_screen.dart';
 import '../features/phone_check/phone_check_screen.dart';
+import '../features/privacy/privacy_note_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/review/review_screens.dart';
 import '../lessons/lesson_player_screen.dart';
@@ -91,6 +92,10 @@ final routerProvider = Provider<GoRouter>(
       GoRoute(
         path: '/downloads',
         builder: (context, state) => const DownloadsScreen(),
+      ),
+      GoRoute(
+        path: '/privacy',
+        builder: (context, state) => const PrivacyNoteScreen(),
       ),
       GoRoute(
         path: '/phone-check',

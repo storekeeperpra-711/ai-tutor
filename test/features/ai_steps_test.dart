@@ -50,15 +50,16 @@ class StepHarness {
     required String lessonId,
     String language = 'en',
     bool withStudent = true,
+    Map<String, Object> prefs = const {},
   }) async {
-    SharedPreferences.setMockInitialValues({});
-    final prefs = await SharedPreferences.getInstance();
+    SharedPreferences.setMockInitialValues(prefs);
+    final saved = await SharedPreferences.getInstance();
     final s1 = student('s1');
     if (withStudent) await backend.db.addStudent(s1);
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          sharedPreferencesProvider.overrideWithValue(prefs),
+          sharedPreferencesProvider.overrideWithValue(saved),
           localDbProvider.overrideWithValue(backend.db),
           authServiceProvider.overrideWithValue(backend.auth),
           remoteStoreProvider.overrideWithValue(backend.remote),
@@ -234,6 +235,15 @@ void main() {
       expect(backend.ai.explained, isEmpty);
       expect(text(tester, 'checked-by'), 'Checked by keywords');
     });
+
+    testWidgets('with AI help off, nothing is sent or queued', (tester) async {
+      await harness.pump(tester, step, lessonId: g6, prefs: {'aiHelp': false});
+      await answer(tester, 'We count how many halves fit: 3 rotis give six');
+      expect(backend.ai.explained, isEmpty);
+      expect(find.byKey(const Key('ai-level-got_it')), findsOneWidget);
+      expect(text(tester, 'checked-by'), 'Checked by keywords');
+      expect(await backend.db.answersToUpload(), isEmpty);
+    });
   });
 
   group('photo_check', () {
@@ -349,6 +359,31 @@ void main() {
       expect(find.textContaining('Line 2'), findsOneWidget);
       expect(find.textContaining('First take 2x away'), findsOneWidget);
       expect(find.byKey(const Key('ai-reply')), findsNothing);
+    });
+
+    testWidgets('with AI help off, the student types and nothing is sent', (
+      tester,
+    ) async {
+      await harness.pump(tester, step, lessonId: g9, prefs: {'aiHelp': false});
+      expect(find.byKey(const Key('photo-camera')), findsNothing);
+      expect(
+        find.text(
+          'Mithu\'s AI help is off, so please type your answer instead.',
+        ),
+        findsOneWidget,
+      );
+      await tester.enterText(
+        find.byKey(const Key('answer-input')),
+        '4x - 7 = 2x + 5\n6x = 12',
+      );
+      await tapKey(tester, 'step-check');
+      expect(find.textContaining('Line 2'), findsOneWidget);
+      expect(backend.ai.verdicts, isEmpty);
+      expect(backend.ai.photosRead, 0);
+      // Trying again goes back to typing, not to the camera.
+      await tapKey(tester, 'photo-try-again');
+      expect(find.byKey(const Key('answer-input')), findsOneWidget);
+      expect(find.byKey(const Key('photo-camera')), findsNothing);
     });
 
     testWidgets('an unreadable photo asks for another photo', (tester) async {

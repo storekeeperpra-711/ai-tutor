@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../ai/ai_help.dart';
 import '../../ai/ai_service.dart';
 import '../../ai/keyword_fallback.dart';
 import '../../character/mithu_bubble.dart';
@@ -75,7 +76,8 @@ class _AiExplainStepViewState extends ConsumerState<AiExplainStepView> {
 
     AiFeedback? feedback;
     var queue = false;
-    if (student != null && lessonId != null) {
+    // With AI help off, nothing is sent: the keywords check the answer.
+    if (student != null && lessonId != null && ref.read(aiHelpProvider)) {
       try {
         feedback = await ref
             .read(aiServiceProvider)

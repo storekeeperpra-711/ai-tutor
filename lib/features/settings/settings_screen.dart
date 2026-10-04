@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../ai/ai_help.dart';
 import '../../app/locale_controller.dart';
 import '../../app/motion.dart';
 import '../../app/theme/age_tier.dart';
@@ -139,6 +140,22 @@ class SettingsScreen extends ConsumerWidget {
             title: Text(l10n.downloadsTitle),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => context.push('/downloads'),
+          ),
+          const Divider(height: 32),
+          SwitchListTile(
+            key: const Key('ai-help'),
+            secondary: const Icon(Icons.auto_awesome_outlined),
+            title: Text(l10n.aiHelpSetting),
+            subtitle: Text(l10n.aiHelpSettingHint),
+            value: ref.watch(aiHelpProvider),
+            onChanged: (v) => ref.read(aiHelpProvider.notifier).set(v),
+          ),
+          ListTile(
+            key: const Key('open-privacy'),
+            leading: const Icon(Icons.privacy_tip_outlined),
+            title: Text(l10n.privacyTitle),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.push('/privacy'),
           ),
         ],
       ),

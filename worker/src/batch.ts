@@ -23,6 +23,7 @@ import {
   type ReportNote,
   type WeekStats,
 } from "./prompts";
+import { redactPersonal } from "./privacy";
 import type { BatchInfo, Store } from "./store";
 
 /** The parts of the Batch API the jobs use (a fake in tests). */
@@ -145,7 +146,9 @@ export async function submitQueuedAnswers(deps: BatchDeps): Promise<{ submitted:
     const found = deps.lessons.find<AiExplainStep>(answer.lesson_id, answer.step_id, "ai_explain");
     const age = (now.getTime() - answer.created_at.getTime()) / 86_400_000;
     const count = perStudent.get(answer.student_id) ?? 0;
-    const text = typeof answer.answer === "string" ? answer.answer.trim().slice(0, limits.maxAnswerChars) : "";
+    const typed = typeof answer.answer === "string" ? answer.answer.trim().slice(0, limits.maxAnswerChars) : "";
+    // Phone numbers, emails and addresses never reach Claude.
+    const text = redactPersonal(typed).text;
     if (!found || age > MAX_AGE_DAYS || count >= limits.queuedPerDay || !text) {
       skipped.push(answer.id);
       continue;

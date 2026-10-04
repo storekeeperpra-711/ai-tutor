@@ -93,7 +93,7 @@ export class MemoryStore implements Store {
   }
 
   async markQueued(ids: string[], status: "in_batch" | "skipped", batchId?: string) {
-    for (const id of ids) Object.assign(this.queue.get(id)!, { status, batch_id: batchId });
+    for (const id of ids) Object.assign(this.queue.get(id)!, { status, batch_id: batchId, answer: "" });
   }
 
   async answerQueued(id: string, result: QueueResult | null) {
