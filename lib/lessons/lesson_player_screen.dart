@@ -10,6 +10,7 @@ import '../features/common/sync_status.dart';
 import '../features/effort/celebration_view.dart';
 import '../features/effort/effort.dart';
 import '../features/plan/mastery_level.dart';
+import '../data/data_saver.dart';
 import '../media/media_cache.dart';
 import '../l10n/app_localizations.dart';
 import '../mastery/skill_state.dart';
@@ -126,8 +127,9 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     // Start downloading the lesson's linked videos now, so they are
-    // ready by the time the child reaches them.
-    if (!_prefetched) {
+    // ready by the time the child reaches them (on Wi-Fi only while Data
+    // saver is on).
+    if (!_prefetched && ref.read(autoDownloadProvider)) {
       _prefetched = true;
       ref
           .read(mediaCacheProvider)

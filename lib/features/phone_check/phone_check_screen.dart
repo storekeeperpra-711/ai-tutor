@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/memory_limits.dart';
+import '../../data/data_usage.dart';
 import '../../l10n/app_localizations.dart';
 import '../../media/media_cache.dart';
 import '../../services/local_db.dart';
@@ -41,7 +42,7 @@ String megabytes(int bytes) =>
     '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
 
 /// A hidden screen for Shahid and testers (Phase 10): how much memory and
-/// storage the app uses on this phone. Opened by a long press on the
+/// storage the app uses on this phone, and the data it used this week. Opened by a long press on the
 /// Settings title.
 class PhoneCheckScreen extends ConsumerWidget {
   const PhoneCheckScreen({super.key});
@@ -99,6 +100,18 @@ class PhoneCheckScreen extends ConsumerWidget {
               l10n.phoneCheckSavedMedia,
               '${megabytes(value.savedMedia)} / '
                   '${megabytes(ref.watch(mediaCacheProvider).maxBytes)}',
+            ),
+            row(
+              'data-wifi',
+              Icons.wifi,
+              l10n.phoneCheckDataWifi,
+              megabytes(ref.watch(dataUsageProvider).wifi),
+            ),
+            row(
+              'data-mobile',
+              Icons.signal_cellular_alt,
+              l10n.phoneCheckDataMobile,
+              megabytes(ref.watch(dataUsageProvider).mobile),
             ),
             row(
               'lessons',

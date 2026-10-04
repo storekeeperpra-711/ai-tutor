@@ -6,6 +6,9 @@ import '../../app/locale_controller.dart';
 import '../../app/motion.dart';
 import '../../app/theme/age_tier.dart';
 import '../../character/feel_settings.dart';
+import '../../data/data_saver.dart';
+import '../../data/data_usage.dart';
+import '../phone_check/phone_check_screen.dart' show megabytes;
 import '../home/home_parts.dart';
 import '../../l10n/app_localizations.dart';
 import '../../review/review_store.dart';
@@ -111,6 +114,31 @@ class SettingsScreen extends ConsumerWidget {
                   ),
               ],
             ),
+          ),
+          const Divider(height: 32),
+          SwitchListTile(
+            key: const Key('data-saver'),
+            secondary: const Icon(Icons.data_saver_on),
+            title: Text(l10n.dataSaver),
+            subtitle: Text(l10n.dataSaverHelp),
+            value: ref.watch(dataSaverProvider),
+            onChanged: (v) => ref.read(dataSaverProvider.notifier).set(v),
+          ),
+          Padding(
+            padding: const EdgeInsetsDirectional.only(start: 72, end: 16),
+            child: Text(
+              l10n.dataUsedThisWeek(
+                megabytes(ref.watch(dataUsageProvider).mobile),
+              ),
+              key: const Key('data-used-mobile'),
+            ),
+          ),
+          ListTile(
+            key: const Key('open-downloads'),
+            leading: const Icon(Icons.download_for_offline_outlined),
+            title: Text(l10n.downloadsTitle),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.push('/downloads'),
           ),
         ],
       ),

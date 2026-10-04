@@ -10,3 +10,14 @@ final onlineProvider = StreamProvider<bool>((ref) async* {
   yield hasNetwork(await connectivity.checkConnectivity());
   yield* connectivity.onConnectivityChanged.map(hasNetwork);
 });
+
+/// True while the phone is on Wi-Fi (or a cable), where data is usually
+/// free; false on mobile data or offline (Phase 10, Data saver).
+final onWifiProvider = StreamProvider<bool>((ref) async* {
+  final connectivity = Connectivity();
+  bool onWifi(List<ConnectivityResult> results) => results.any(
+    (r) => r == ConnectivityResult.wifi || r == ConnectivityResult.ethernet,
+  );
+  yield onWifi(await connectivity.checkConnectivity());
+  yield* connectivity.onConnectivityChanged.map(onWifi);
+});

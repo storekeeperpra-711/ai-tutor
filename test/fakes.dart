@@ -19,6 +19,7 @@ import 'package:ai_tutor/services/remote_store.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:file/memory.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 /// A pretend Firebase for tests: an in-memory "server" that holds writes
@@ -67,6 +68,23 @@ class FakeBackend {
     yield _online;
     yield* _onlineChanges.stream;
   }
+
+  var _wifi = true;
+  final _wifiChanges = StreamController<bool>.broadcast();
+
+  /// For `onWifiProvider`.
+  Stream<bool> get wifiStream async* {
+    yield _wifi;
+    yield* _wifiChanges.stream;
+  }
+
+  void setWifi(bool value) {
+    _wifi = value;
+    _wifiChanges.add(value);
+  }
+
+  /// What Android says the app has used, for `appByteCounterProvider`.
+  int? appBytes;
 
   void setOnline(bool value) {
     _online = value;
@@ -834,6 +852,9 @@ class FakeMediaIndex implements CacheInfoRepository {
   Future<bool> open() async => true;
 
   @override
+  Future<CacheObject?> get(String key) async => objects[key];
+
+  @override
   Future<List<CacheObject>> getAllObjects() async => objects.values.toList();
 
   @override
@@ -854,6 +875,28 @@ class FakeMediaManager implements BaseCacheManager {
 
   @override
   Future<void> emptyCache() async => repo.objects.clear();
+
+  /// Links downloaded, in order; [failDownloads] makes them fail.
+  final downloaded = <String>[];
+  var failDownloads = false;
+
+  @override
+  Future<FileInfo> downloadFile(
+    String url, {
+    String? key,
+    Map<String, String>? authHeaders,
+    bool force = false,
+  }) async {
+    if (failDownloads) throw Exception('offline');
+    downloaded.add(url);
+    repo.add(url, 5 * 1024 * 1024, DateTime(2026, 10, 4));
+    return FileInfo(
+      MemoryFileSystem().file('/$url'),
+      FileSource.Online,
+      DateTime(2026, 11, 4),
+      url,
+    );
+  }
 
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);

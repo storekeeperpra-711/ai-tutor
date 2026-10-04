@@ -1302,4 +1302,58 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get phoneCheckClearMedia => 'محفوظ ویڈیوز ہٹائیں';
+
+  @override
+  String get dataSaver => 'ڈیٹا کی بچت';
+
+  @override
+  String get dataSaverHelp =>
+      'ویڈیوز صرف وائی فائی پر، یا ڈاؤن لوڈ دبانے پر ڈاؤن لوڈ ہوں گی۔';
+
+  @override
+  String dataUsedThisWeek(String amount) {
+    return 'پچھلے 7 دن میں استعمال ہونے والا موبائل ڈیٹا: $amount';
+  }
+
+  @override
+  String get downloadsTitle => 'ڈاؤن لوڈز';
+
+  @override
+  String get downloadsHelp =>
+      'سگنل کے بغیر جگہ جانے سے پہلے سبق کی ویڈیوز محفوظ کر لیں۔ محفوظ کرنے میں ابھی ڈیٹا استعمال ہوگا، چاہے ڈیٹا کی بچت آن ہو۔';
+
+  @override
+  String get downloadsNone =>
+      'تمام ویڈیوز ایپ کے اندر موجود ہیں۔ کچھ ڈاؤن لوڈ کرنے کی ضرورت نہیں۔';
+
+  @override
+  String downloadSaved(String size) {
+    return 'اس فون پر محفوظ ہے ($size)';
+  }
+
+  @override
+  String get downloadNotSaved => 'محفوظ نہیں';
+
+  @override
+  String get downloadSave => 'ڈاؤن لوڈ کریں';
+
+  @override
+  String get downloadRemove => 'اس فون سے ہٹائیں';
+
+  @override
+  String get downloadFailed =>
+      'ڈاؤن لوڈ نہیں ہو سکا۔ انٹرنیٹ چیک کر کے دوبارہ کوشش کریں۔';
+
+  @override
+  String get videoNeedsData =>
+      'یہ ویڈیو وائی فائی پر ڈاؤن لوڈ ہوگی۔ اس میں یہ دکھایا گیا ہے:';
+
+  @override
+  String get videoUseData => 'ابھی دیکھیں (موبائل ڈیٹا استعمال ہوگا)';
+
+  @override
+  String get phoneCheckDataWifi => 'وائی فائی ڈیٹا، پچھلے 7 دن';
+
+  @override
+  String get phoneCheckDataMobile => 'موبائل ڈیٹا، پچھلے 7 دن';
 }

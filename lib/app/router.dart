@@ -14,6 +14,7 @@ import '../features/plan/practice_screen.dart';
 import '../features/previewer/lesson_list_screen.dart';
 import '../features/profiles/add_student_screen.dart';
 import '../features/report/parent_report_screen.dart';
+import '../features/downloads/downloads_screen.dart';
 import '../features/phone_check/phone_check_screen.dart';
 import '../features/settings/settings_screen.dart';
 import '../features/review/review_screens.dart';
@@ -86,6 +87,10 @@ final routerProvider = Provider<GoRouter>(
         path: '/review/:id/play',
         builder: (context, state) =>
             ReviewPlayerScreen(lessonId: state.pathParameters['id']!),
+      ),
+      GoRoute(
+        path: '/downloads',
+        builder: (context, state) => const DownloadsScreen(),
       ),
       GoRoute(
         path: '/phone-check',
