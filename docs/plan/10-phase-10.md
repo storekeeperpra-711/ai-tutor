@@ -94,3 +94,16 @@ Spec: [master-prompt.md](../master-prompt.md), Part F, Phase 10.
 - **Daily learning totals** (`worker/src/learning.ts`): the AI server's batch job (every 30 minutes) counts yesterday once, after midnight in Pakistan, from the progress the app already saves: children active, lessons worked on and finished, questions answered and right first time, and AI checks. Only totals are stored (`daily_totals/{day}`), never anything about one child. Admins see the last 7 days on the AI costs screen (Settings > AI costs).
 - Hints used are not counted: the app doesn't save hint use to the server. Adding it would change what the app stores, so it is left out for now.
 - To see crashes: Firebase console > the project > Crashlytics (it appears after the first crash report from a release build).
+
+## Step 5 as built
+
+- **Tablet guide** ([docs/setup/tablet-lock.md](../setup/tablet-lock.md)): click-by-click steps for a donated tablet:
+  - set up Android with a screen lock PIN and Find My Device;
+  - add the one named child, with the parent present for consent;
+  - turn on app pinning with "Ask for PIN before unpinning", then pin AI Tutor;
+  - how an adult unpins it;
+  - what to do when a tablet is lost (find, lock or wipe; reset the parent's password from the Firebase console);
+  - handing the tablet to a different child;
+  - a tablet register to print.
+- No screenshots: menus differ between brands and Android versions, so the guide names each button (with Samsung's names too). Photos of the real donated tablets can be added after the first setup.
+- No app change was needed: app pinning is built into Android and works with any app.
