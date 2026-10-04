@@ -87,7 +87,7 @@ void main() {
     await tapKey(tester, 'open-privacy');
     expect(find.text('رازداری کا نوٹ'), findsWidgets);
     await tapKey(tester, 'privacy-listen');
-    expect(backend.reportVoice.said, hasLength(8));
+    expect(backend.reportVoice.said, hasLength(9));
     expect(backend.reportVoice.said.every((s) => s.$2 == 'en'), isTrue);
   });
 

@@ -93,17 +93,43 @@ class CostRow {
   final double costUsd;
 }
 
+/// The whole project's learning on one day (counted by the AI server once
+/// a day, totals only; shown to admins).
+class LearningDay {
+  const LearningDay({
+    required this.day,
+    required this.students,
+    required this.lessons,
+    required this.lessonsFinished,
+    required this.questions,
+    required this.firstTry,
+    required this.aiCalls,
+  });
+
+  final String day;
+  final int students;
+  final int lessons;
+  final int lessonsFinished;
+  final int questions;
+  final int firstTry;
+  final int aiCalls;
+}
+
 class CostReport {
   const CostReport({
     required this.all,
     required this.rows,
     required this.totalUsd,
+    this.learning = const [],
   });
 
   /// True for an admin, who sees every student in the project.
   final bool all;
   final List<CostRow> rows;
   final double totalUsd;
+
+  /// Learning totals, newest first (admins only).
+  final List<LearningDay> learning;
 }
 
 /// The app's only way to the AI: the AI server (worker/) checks the student,
@@ -274,6 +300,19 @@ class HttpAiService implements AiService {
             text: (r['text'] as num? ?? 0).toInt(),
             photo: (r['photo'] as num? ?? 0).toInt(),
             costUsd: (r['cost_usd'] as num? ?? 0).toDouble(),
+          ),
+      ],
+      learning: [
+        for (final t
+            in (data['learning'] as List? ?? []).cast<Map<String, dynamic>>())
+          LearningDay(
+            day: t['day'] as String,
+            students: (t['students_active'] as num? ?? 0).toInt(),
+            lessons: (t['lessons_active'] as num? ?? 0).toInt(),
+            lessonsFinished: (t['lessons_finished'] as num? ?? 0).toInt(),
+            questions: (t['questions_answered'] as num? ?? 0).toInt(),
+            firstTry: (t['first_try_correct'] as num? ?? 0).toInt(),
+            aiCalls: (t['ai_calls'] as num? ?? 0).toInt(),
           ),
       ],
     );

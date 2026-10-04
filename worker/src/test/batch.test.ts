@@ -177,6 +177,18 @@ describe("cost dashboard", () => {
     assert.deepEqual(admin.rows.map((r) => r.student_id), ["s2", "s1"]);
     const unverified = await costReport(store, { uid: "u9", email: "boss@example.com", emailVerified: false }, ["boss@example.com"], NOW);
     assert.equal(unverified.all, false);
+    assert.equal(unverified.learning, undefined);
+  });
+
+  it("shows admins the daily learning totals, newest first", async () => {
+    const store = await withUsage();
+    const totals = (day: string, n: number) => ({
+      day, students_active: n, lessons_active: n, lessons_finished: 0, questions_answered: n, first_try_correct: 0, ai_calls: 0, ai_cost_usd: 0,
+    });
+    store.daily.set("2026-10-02", totals("2026-10-02", 2));
+    store.daily.set("2026-10-03", totals("2026-10-03", 5));
+    const admin = await costReport(store, { uid: "u9", email: "boss@example.com", emailVerified: true }, ["boss@example.com"], NOW);
+    assert.deepEqual(admin.learning!.map((t) => [t.day, t.students_active]), [["2026-10-03", 5], ["2026-10-02", 2]]);
   });
 
   it("reads the admin email setting", () => {

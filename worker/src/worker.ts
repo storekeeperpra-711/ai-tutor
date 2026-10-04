@@ -22,6 +22,7 @@ import { anthropicBatches, runBatchJob, submitWeeklyReports, type BatchDeps } fr
 import { AnthropicCaller } from "./claude";
 import { costReport, parseAdminEmails } from "./costs";
 import { Firestore, parseServiceAccount } from "./firestore";
+import { countYesterday } from "./learning";
 import { LessonLibrary } from "./lessons";
 import { FirestoreStore, type Store } from "./store";
 
@@ -33,7 +34,7 @@ export interface Env {
 
 /** Cron schedules (UTC), as in wrangler.toml. */
 export const CRON = {
-  /** Collect finished batches, send queued answers, delete old logs. */
+  /** Collect finished batches, send queued answers, delete old logs, count yesterday's learning. */
   batchJob: "*/30 * * * *",
   /** Weekly notes for parents: Sunday 18:00 in Pakistan. */
   weeklyReports: "0 13 * * SUN",
@@ -126,8 +127,9 @@ export async function runScheduled(cron: string, deps: BatchDeps): Promise<unkno
   }
   const summary = await runBatchJob(deps);
   const logsDeleted = await deps.store.deleteOldLogs(deps.now());
+  const counted = await countYesterday(deps.store, deps.now());
   await deps.store.flush();
-  return { ...summary, logsDeleted };
+  return { ...summary, logsDeleted, counted };
 }
 
 export default {

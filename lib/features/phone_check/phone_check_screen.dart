@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../app/crash_reports.dart';
 import '../../app/memory_limits.dart';
 import '../../data/data_usage.dart';
 import '../../l10n/app_localizations.dart';
@@ -42,8 +43,8 @@ String megabytes(int bytes) =>
     '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
 
 /// A hidden screen for Shahid and testers (Phase 10): how much memory and
-/// storage the app uses on this phone, and the data it used this week. Opened by a long press on the
-/// Settings title.
+/// storage the app uses on this phone, the data it used and how often it
+/// crashed this week. Opened by a long press on the Settings title.
 class PhoneCheckScreen extends ConsumerWidget {
   const PhoneCheckScreen({super.key});
 
@@ -112,6 +113,12 @@ class PhoneCheckScreen extends ConsumerWidget {
               Icons.signal_cellular_alt,
               l10n.phoneCheckDataMobile,
               megabytes(ref.watch(dataUsageProvider).mobile),
+            ),
+            row(
+              'crashes',
+              Icons.bug_report_outlined,
+              l10n.phoneCheckCrashes,
+              '${ref.watch(crashCounterProvider).lastWeek(DateTime.now())}',
             ),
             row(
               'lessons',

@@ -9,11 +9,13 @@
  * ai_usage/{day}_{sid}     uid, student_id, day, calls, text, photo, steps, tokens, cost_usd
  * ai_usage_total/{day}     calls, cost_usd: the project's daily cap
  * ai_logs/{auto}           every call, for review; deleted after 90 days by the batch job
+ * daily_totals/{day}       learning totals for the whole project (no child's data)
  * ai_queue/{id}            answers that waited offline (the app creates and reads them)
  * ai_batches/{batchId}     batches sent to the Batch API
  * ```
  */
 import { LOG_DAYS } from "./config";
+import type { DailyTotals, ProgressDoc } from "./learning";
 import { Firestore, fieldPath, type Doc, type Write } from "./firestore";
 import type { TokenUsage } from "./pricing";
 
@@ -127,6 +129,15 @@ export interface Store {
   /** Sends any writes the store held back (scheduled jobs write in one go). */
   flush(): Promise<void>;
   usageFor(days: string[], students: { uid: string; studentId: string }[] | "all"): Promise<UsageRow[]>;
+
+  /** Whether [day]'s learning totals were already counted. */
+  hasDailyTotals(day: string): Promise<boolean>;
+  /** Every child's lesson progress (for the daily totals). */
+  allProgress(): Promise<ProgressDoc[]>;
+  /** The whole project's AI calls and cost on [day]. */
+  projectUsage(day: string): Promise<{ calls: number; cost_usd: number }>;
+  saveDailyTotals(totals: DailyTotals): Promise<void>;
+  dailyTotals(days: string[]): Promise<DailyTotals[]>;
 }
 
 const usageId = (day: string, studentId: string) => `${day}_${studentId}`;
@@ -394,5 +405,31 @@ export class FirestoreStore implements Store {
       photo: num(d.data.photo),
       cost_usd: num(d.data.cost_usd),
     }));
+  }
+
+  async hasDailyTotals(day: string): Promise<boolean> {
+    return (await this.db.get(`daily_totals/${day}`)) !== null;
+  }
+
+  async allProgress(): Promise<ProgressDoc[]> {
+    const docs = await this.db.query({ collection: "progress", allDescendants: true });
+    // accounts/{uid}/students/{sid}/progress/{lessonId}
+    return docs
+      .filter((d) => d.path.startsWith("accounts/") && d.path.split("/").length === 6)
+      .map((d) => ({ owner: d.path.split("/").slice(0, 4).join("/"), data: d.data }));
+  }
+
+  async projectUsage(day: string): Promise<{ calls: number; cost_usd: number }> {
+    const doc = await this.db.get(`ai_usage_total/${day}`);
+    return { calls: num(doc?.data.calls), cost_usd: num(doc?.data.cost_usd) };
+  }
+
+  async saveDailyTotals(totals: DailyTotals): Promise<void> {
+    await this.write({ kind: "set", path: `daily_totals/${totals.day}`, data: { ...totals }, serverTimes: ["counted_at"] });
+  }
+
+  async dailyTotals(days: string[]): Promise<DailyTotals[]> {
+    const docs = await this.db.getAll(days.map((day) => `daily_totals/${day}`));
+    return docs.filter((d): d is Doc => d !== null).map((d) => d.data as unknown as DailyTotals);
   }
 }

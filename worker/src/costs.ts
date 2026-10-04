@@ -1,5 +1,6 @@
 /** The cost dashboard: AI calls and estimated cost per student per day. */
 import { dayOf } from "./config";
+import type { DailyTotals } from "./learning";
 import type { Store, UsageRow } from "./store";
 
 export interface CostReport {
@@ -8,6 +9,8 @@ export interface CostReport {
   days: string[];
   rows: UsageRow[];
   total_usd: number;
+  /** Learning totals for the whole project, newest first (admins only). */
+  learning?: DailyTotals[];
 }
 
 /** The last [count] days in Pakistan time, newest first. */
@@ -33,7 +36,11 @@ export async function costReport(
       );
   rows.sort((a, b) => b.day.localeCompare(a.day) || b.cost_usd - a.cost_usd);
   const total = rows.reduce((sum, r) => sum + r.cost_usd, 0);
-  return { all, days, rows, total_usd: Math.round(total * 1e6) / 1e6 };
+  const report: CostReport = { all, days, rows, total_usd: Math.round(total * 1e6) / 1e6 };
+  if (all) {
+    report.learning = (await store.dailyTotals(days)).sort((a, b) => b.day.localeCompare(a.day));
+  }
+  return report;
 }
 
 /** Parses the ADMIN_EMAILS setting: comma-separated, any case. */

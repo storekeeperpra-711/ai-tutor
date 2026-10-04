@@ -42,6 +42,25 @@ class AiCostsScreen extends ConsumerWidget {
                 key: const Key('costs-total'),
                 style: textTheme.headlineSmall,
               ),
+              if (value.learning.isNotEmpty) ...[
+                const Divider(height: 32),
+                Text(l10n.learningTotalsTitle, style: textTheme.titleMedium),
+                for (final t in value.learning)
+                  ListTile(
+                    key: Key('learning-${t.day}'),
+                    title: Text(t.day),
+                    subtitle: Text(
+                      l10n.learningTotalsRow(
+                        t.students,
+                        t.lessons,
+                        t.lessonsFinished,
+                        t.questions,
+                        t.firstTry,
+                        t.aiCalls,
+                      ),
+                    ),
+                  ),
+              ],
               const Divider(height: 32),
               if (value.rows.isEmpty) Text(l10n.aiCostsEmpty),
               for (final row in value.rows)

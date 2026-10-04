@@ -1,4 +1,5 @@
 /** In-memory fakes for the store, Claude and the Batch API. */
+import type { DailyTotals, ProgressDoc } from "../learning";
 import type { BatchApi } from "../batch";
 import type { ClaudeCaller, JsonReply, JsonRequest } from "../claude";
 import { LessonLibrary } from "../lessons";
@@ -86,6 +87,31 @@ export class MemoryStore implements Store {
 
   async projectCost(day: string) {
     return this.totals.get(day) ?? 0;
+  }
+
+  /** Daily learning totals by day, and every child's progress documents. */
+  daily = new Map<string, DailyTotals>();
+  progressDocs: ProgressDoc[] = [];
+  aiCalls = new Map<string, number>(); // day -> calls
+
+  async hasDailyTotals(day: string) {
+    return this.daily.has(day);
+  }
+
+  async allProgress() {
+    return this.progressDocs;
+  }
+
+  async projectUsage(day: string) {
+    return { calls: this.aiCalls.get(day) ?? 0, cost_usd: this.totals.get(day) ?? 0 };
+  }
+
+  async saveDailyTotals(totals: DailyTotals) {
+    this.daily.set(totals.day, totals);
+  }
+
+  async dailyTotals(days: string[]) {
+    return days.flatMap((d) => (this.daily.has(d) ? [this.daily.get(d)!] : []));
   }
 
   async waitingAnswers(limit: number) {

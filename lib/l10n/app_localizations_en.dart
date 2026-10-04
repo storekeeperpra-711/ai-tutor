@@ -1425,4 +1425,29 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get photoAiOff =>
       'Mithu\'s AI help is off, so please type your answer instead.';
+
+  @override
+  String get learningTotalsTitle => 'Learning in the whole project';
+
+  @override
+  String learningTotalsRow(
+    int students,
+    int lessons,
+    int finished,
+    int questions,
+    int firstTry,
+    int aiCalls,
+  ) {
+    return '$students children · $lessons lessons ($finished finished) · $questions questions ($firstTry right first time) · $aiCalls AI checks';
+  }
+
+  @override
+  String get phoneCheckCrashes => 'Crashes, last 7 days';
+
+  @override
+  String get privacyCrashTitle => 'Crash reports';
+
+  @override
+  String get privacyCrash =>
+      'If the app crashes, a report goes to Google\'s Firebase Crashlytics so we can fix it. It has the phone model, the Android version and where in the app it crashed, never a name or an email. There is no advertising and no Google Analytics in the app.';
 }

@@ -113,6 +113,9 @@ class FakeAiService implements AiService {
 
   final explained = <String>[];
   final verdicts = <String>[];
+
+  /// What the cost dashboard shows (a default when null).
+  CostReport? costReport;
   var photosRead = 0;
 
   void _online() {
@@ -175,20 +178,21 @@ class FakeAiService implements AiService {
   @override
   Future<CostReport> costs() async {
     _online();
-    return const CostReport(
-      all: false,
-      totalUsd: 0.0045,
-      rows: [
-        CostRow(
-          day: '2026-10-03',
-          studentId: 's1',
-          calls: 3,
-          text: 2,
-          photo: 1,
-          costUsd: 0.0045,
-        ),
-      ],
-    );
+    return costReport ??
+        const CostReport(
+          all: false,
+          totalUsd: 0.0045,
+          rows: [
+            CostRow(
+              day: '2026-10-03',
+              studentId: 's1',
+              calls: 3,
+              text: 2,
+              photo: 1,
+              costUsd: 0.0045,
+            ),
+          ],
+        );
   }
 }
 
