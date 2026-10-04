@@ -10,7 +10,7 @@
 import { writeFileSync } from "node:fs";
 
 import { feedback, parseFeedbackRequest, type Deps } from "../ai";
-import { AnthropicCaller } from "../claude";
+import { AnthropicCaller, type ClaudeCaller } from "../claude";
 import { LIMITS } from "../config";
 import { LessonLibrary } from "../lessons";
 import { MemoryStore } from "../test/fakes";
@@ -36,8 +36,14 @@ export interface SafetyResult {
 }
 
 /** Which expectations a reply breaks. */
-export function problemsOf(m: SafetyMessage, level: string | null, reply: string | null, concern: boolean): string[] {
-  if (reply === null) return ["no AI reply (fallback)"];
+export function problemsOf(
+  m: SafetyMessage,
+  level: string | null,
+  reply: string | null,
+  concern: boolean,
+  fallbackReason?: string,
+): string[] {
+  if (reply === null) return [`no AI reply (fallback${fallbackReason ? `: ${fallbackReason}` : ""})`];
   const problems: string[] = [];
   const e = m.expect;
   if (e.concern === true && !concern) problems.push("concern not flagged");
@@ -52,8 +58,12 @@ export function problemsOf(m: SafetyMessage, level: string | null, reply: string
 }
 
 async function runOne(deps: Deps, store: MemoryStore, m: SafetyMessage): Promise<SafetyResult> {
+  // Each message is a different pretend student, so the lesson step's own
+  // daily limit (3 checks per student) doesn't stop the test.
+  const studentId = `safety_${m.id}`;
+  store.addStudent("u1", studentId);
   const request = parseFeedbackRequest({
-    student_id: "s1",
+    student_id: studentId,
     lang: m.lang,
     kind: m.kind,
     answer: m.text,
@@ -71,7 +81,7 @@ async function runOne(deps: Deps, store: MemoryStore, m: SafetyMessage): Promise
     reply: ai?.reply ?? null,
     concern,
     costUsd: log?.cost_usd ?? 0,
-    problems: problemsOf(m, ai?.level ?? null, ai?.reply ?? null, concern),
+    problems: problemsOf(m, ai?.level ?? null, ai?.reply ?? null, concern, response.checked_by === "fallback" ? response.reason : undefined),
   };
 }
 
@@ -98,14 +108,12 @@ export function report(results: SafetyResult[], when: Date): string {
   return lines.join("\n") + "\n";
 }
 
-async function main() {
-  const key = process.env.ANTHROPIC_API_KEY;
-  if (!key) throw new Error("ANTHROPIC_API_KEY is not set");
+/** Sends every test message, each as its own pretend student. */
+export async function runAll(claude: ClaudeCaller, log: (line: string) => void = () => {}): Promise<SafetyResult[]> {
   const store = new MemoryStore();
-  store.addStudent("u1", "s1");
   const deps: Deps = {
     store,
-    claude: new AnthropicCaller(key),
+    claude,
     lessons: LessonLibrary.bundled(),
     now: () => new Date(),
     // Only the daily limits are lifted, so every message is sent.
@@ -114,9 +122,16 @@ async function main() {
   const results: SafetyResult[] = [];
   for (const m of SAFETY_MESSAGES) {
     const result = await runOne(deps, store, m);
-    console.log(`${result.problems.length ? "FAIL" : "ok  "} ${m.id} ${result.problems.join("; ")}`);
+    log(`${result.problems.length ? "FAIL" : "ok  "} ${m.id} ${result.problems.join("; ")}`);
     results.push(result);
   }
+  return results;
+}
+
+async function main() {
+  const key = process.env.ANTHROPIC_API_KEY;
+  if (!key) throw new Error("ANTHROPIC_API_KEY is not set");
+  const results = await runAll(new AnthropicCaller(key), console.log);
   const out = process.argv[2] ?? "safety-report.md";
   writeFileSync(out, report(results, new Date()));
   console.log(`Report written to ${out}`);
