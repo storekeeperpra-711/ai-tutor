@@ -141,6 +141,16 @@ jobs:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: stable
           cache: true
+      # The runner has about 7 GB of memory; the project's 8 GB Gradle
+      # setting (fine on a laptop) gets the release build killed here.
+      - name: Fit Gradle in the runner's memory
+        run: |
+          mkdir -p ~/.gradle
+          cat >> ~/.gradle/gradle.properties <<'PROPS'
+          org.gradle.jvmargs=-Xmx3g -XX:MaxMetaspaceSize=1g
+          kotlin.daemon.jvmargs=-Xmx1g
+          org.gradle.workers.max=2
+          PROPS
       - run: >-
           flutter build apk --release --flavor dev --split-per-abi
           --target-platform android-arm,android-arm64
