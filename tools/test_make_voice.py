@@ -7,6 +7,7 @@ import math
 import struct
 import sys
 import unittest
+import unittest.mock
 import wave
 from pathlib import Path
 
@@ -85,6 +86,37 @@ class MakeVoiceTest(unittest.TestCase):
         self.assertEqual(len(loud), 10)  # 20 a second
         self.assertTrue(set(quiet) <= {"0"})
         self.assertTrue(all(int(d) >= 7 for d in loud))
+
+
+class DailyLimitTest(unittest.TestCase):
+    def test_knows_the_daily_limit_from_a_busy_minute(self):
+        self.assertTrue(make_voice.is_daily_limit(
+            "Rate limit exceeded for model gemini-3.8-flash-tts "
+            "(limit: 10 requests per day on Free Tier)."))
+        self.assertFalse(make_voice.is_daily_limit(
+            "Rate limit exceeded: 3 requests per minute."))
+
+    def test_a_day_cut_short_keeps_what_was_made(self):
+        calls = []
+
+        def fake(text, voice, style, key):
+            calls.append(voice)
+            if len(calls) > 2:
+                raise make_voice.DailyLimit("used up")
+            return tone(0.3, 8000)
+
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp, \
+                unittest.mock.patch.object(make_voice, "synthesize", fake), \
+                unittest.mock.patch.object(make_voice, "PAUSE", 0):
+            out = Path(tmp)
+            ok = make_voice.make_sample(out, "key", ["Sulafat", "Achird", "Leda"])
+            self.assertTrue(ok)
+            # Urdu line 1 first, in each voice in turn.
+            self.assertEqual(calls, ["Sulafat", "Achird", "Leda"])
+            self.assertTrue((out / "Sulafat_1_ur.m4a").exists())
+            self.assertTrue((out / "Achird_1_ur.m4a").exists())
+            self.assertIn("daily limit", (out / "README.txt").read_text())
 
 
 if __name__ == "__main__":

@@ -143,6 +143,15 @@ def as_wav(audio: bytes) -> bytes:
     return out.getvalue()
 
 
+class DailyLimit(RuntimeError):
+    """The free tier's requests for today are used up (10 a day for this
+    model in October 2026); waiting minutes won't help."""
+
+
+def is_daily_limit(detail: str) -> bool:
+    return "per day" in detail or "requests per day" in detail.lower()
+
+
 def synthesize(text: str, voice: str, style: str, key: str) -> bytes:
     """Speaks [text]; waits and tries again when the free limit is hit."""
     body = json.dumps(request_body(text, voice, style)).encode()
@@ -160,6 +169,8 @@ def synthesize(text: str, voice: str, style: str, key: str) -> bytes:
             return as_wav(audio)
         except urllib.error.HTTPError as e:
             detail = e.read().decode(errors="replace")[:500]
+            if e.code == 429 and is_daily_limit(detail):
+                raise DailyLimit(f"Gemini's free daily limit is used up: {detail}") from None
             if e.code in (429, 500, 503) and attempt < 5:
                 wait = 20 * (attempt + 1)
                 print(f"  Gemini said {e.code}; trying again in {wait} s")
@@ -214,30 +225,40 @@ def sample_lines() -> list[tuple[str, str, dict]]:
     return picked
 
 
-def make_sample(out: Path, key: str) -> bool:
+def make_sample(out: Path, key: str, voices: list[str]) -> bool:
+    """Urdu first and one line at a time across the voices, so a day cut
+    short by the free limit still has the same line in several voices to
+    compare. Returns False only on a real error."""
     out.mkdir(parents=True, exist_ok=True)
-    lines = sample_lines()
     index = ["Mithu voice samples", ""]
-    for voice, feel in SAMPLE_VOICES.items():
-        for n, (lesson_id, step_id, say) in enumerate(lines, 1):
-            for language in ("ur", "en"):
-                text = say.get(language)
-                if not text:
-                    continue
+
+    def write_index():
+        (out / "README.txt").write_text("\n".join(index) + "\n", encoding="utf-8")
+
+    for n, (_, _, say) in enumerate(sample_lines(), 1):
+        for language in ("ur", "en"):
+            text = say.get(language)
+            if not text:
+                continue
+            for voice in voices:
                 name = f"{voice}_{n}_{language}.m4a"
-                print(f"{voice} ({feel}) line {n} {language}")
+                print(f"{voice} line {n} {language}")
                 try:
                     wav = synthesize(text, voice, STYLE[language], key)
+                except DailyLimit as e:
+                    print(f"::warning::{e} Run it again tomorrow for the rest.")
+                    index.append("(Stopped here: the free daily limit. Run again tomorrow.)")
+                    write_index()
+                    return True
                 except RuntimeError as e:
-                    # Keep what was made (likely the free daily limit).
                     print(f"Stopped: {e}")
-                    index.append(f"(stopped here: {e})")
-                    (out / "README.txt").write_text("\n".join(index) + "\n", encoding="utf-8")
+                    index.append(f"(Stopped here: {e})")
+                    write_index()
                     return False
                 save(wav, out / name)
-                index.append(f"{name} ({voice}, {feel}): {text}")
+                index.append(f"{name} ({voice}, {SAMPLE_VOICES.get(voice, '')}): {text}")
+                write_index()
                 time.sleep(PAUSE)
-    (out / "README.txt").write_text("\n".join(index) + "\n", encoding="utf-8")
     return True
 
 
@@ -245,13 +266,16 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("mode", choices=["sample"])
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--voices", default=",".join(SAMPLE_VOICES),
+                        help="comma-separated Gemini voice names")
     args = parser.parse_args(argv)
+    voices = [v.strip() for v in args.voices.split(",") if v.strip()]
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         print("GEMINI_API_KEY is missing. Add it as a GitHub secret "
               "(docs/setup/gemini-voice.md).")
         return 1
-    return 0 if make_sample(args.out, key) else 1
+    return 0 if make_sample(args.out, key, voices) else 1
 
 
 if __name__ == "__main__":

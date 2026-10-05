@@ -1,6 +1,8 @@
 # Mithu's voice with Google Gemini
 
-Status: Shahid chose Google's Gemini voice (2026-10-04). Step 1 (voice samples) in progress.
+Status: Shahid chose Google's Gemini voice (2026-10-04). Step 1 (voice samples) in progress: the first run (2026-10-04) made Urdu and English in the Sulafat voice, then hit the free limit.
+
+**Free limit:** Gemini's free tier allows 10 recordings a day for `gemini-3.8-flash-tts`. Grade 9 has 25 Mithu lines (50 recordings in two languages), so making them all takes about 5 days. Step 2 runs once a day by itself and carries on where it stopped.
 
 ## Why
 

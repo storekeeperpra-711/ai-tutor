@@ -5,8 +5,14 @@ name: Mithu voice samples
 # so a person can choose the voice by listening. The recordings are on the
 # run's page, under Artifacts: mithu-voice-samples.
 # Needs the GitHub secret GEMINI_API_KEY (docs/setup/gemini-voice.md).
+# Gemini's free tier allows about 10 recordings a day, so a run may stop
+# early; run it again the next day with the voices still missing.
 on:
   workflow_dispatch:
+    inputs:
+      voices:
+        description: Voices to try (comma-separated)
+        default: Sulafat,Vindemiatrix,Achird,Sadaltager
 
 permissions:
   contents: read
@@ -26,7 +32,8 @@ jobs:
       - name: Make samples
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python tools/voice/make_voice.py sample --out voice-samples
+          VOICES: ${{ inputs.voices }}
+        run: python tools/voice/make_voice.py sample --out voice-samples --voices "$VOICES"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

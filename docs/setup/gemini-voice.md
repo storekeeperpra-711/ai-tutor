@@ -33,5 +33,5 @@ You do this once. It takes about 5 minutes.
 ## If something goes wrong
 
 - **"GEMINI_API_KEY is missing"**: step 2 wasn't saved. Check the name is exactly `GEMINI_API_KEY`.
-- **"Gemini said 429"** or a run that stops early: the free daily limit was reached. Run it again tomorrow; the files made so far are still in the zip.
+- **A run that stops early** with "free daily limit": Gemini's free tier makes about **10 recordings a day**. The files made so far are in the zip. The next day, run it again and type only the voices still missing in the **voices** box.
 - **"Gemini said 400" or "403"**: the key was copied wrongly. Make a new key (step 1) and replace the secret (step 2: tap the secret, then **Update**).
