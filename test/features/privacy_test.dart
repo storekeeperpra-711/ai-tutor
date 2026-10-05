@@ -107,10 +107,11 @@ void main() {
     await tester.pumpWidget(await buildTestApp());
     await tester.pumpAndSettle();
     await tapKey(tester, 'add-learner');
+    // The page's own list (the text fields scroll sideways too).
     await tester.scrollUntilVisible(
       find.byKey(const Key('consent')),
       300,
-      scrollable: find.byType(Scrollable).last,
+      scrollable: find.byType(Scrollable).first,
     );
     expect(find.textContaining('I have read the privacy note'), findsOneWidget);
     expect(find.textContaining("Mithu's AI help"), findsOneWidget);

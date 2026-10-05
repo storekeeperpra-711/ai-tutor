@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import '../../ai/ai_help.dart';
 import '../../app/locale_controller.dart';
 import '../../app/motion.dart';
+import '../../app/motion_widgets.dart';
+import '../../app/theme/app_theme.dart';
 import '../../app/theme/age_tier.dart';
 import '../../character/feel_settings.dart';
 import '../../data/data_saver.dart';
@@ -26,141 +28,284 @@ class SettingsScreen extends ConsumerWidget {
     final l10n = AppLocalizations.of(context);
     final locale = ref.watch(localeProvider);
     final tier = ref.watch(ageTierProvider);
-    final heading = Theme.of(context).textTheme.titleMedium;
 
-    return Scaffold(
-      appBar: AppBar(
-        // A long press opens the hidden Phone check screen (for testers).
-        title: GestureDetector(
-          key: const Key('settings-title'),
-          onLongPress: () => context.push('/phone-check'),
-          child: Text(l10n.settingsTitle),
+    return TintedBackground(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          // A long press opens the hidden Phone check screen (for testers).
+          title: GestureDetector(
+            key: const Key('settings-title'),
+            onLongPress: () => context.push('/phone-check'),
+            child: Text(l10n.settingsTitle),
+          ),
         ),
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          Text(l10n.languageLabel, style: heading),
-          RadioGroup<String>(
-            groupValue: locale.languageCode,
-            onChanged: (code) {
-              if (code != null) {
-                ref.read(localeProvider.notifier).setLocale(Locale(code));
-              }
-            },
-            child: Column(
-              children: [
-                for (final l in supportedLocales)
-                  RadioListTile<String>(
-                    key: Key('language-${l.languageCode}'),
-                    value: l.languageCode,
-                    title: Text(_languageNames[l.languageCode]!),
+        // A short page, so every setting is built at once (and can be
+        // scrolled to).
+        body: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              _Section(
+                index: 0,
+                title: l10n.languageLabel,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
+                    child: Row(
+                      children: [
+                        for (final (i, l) in supportedLocales.indexed) ...[
+                          if (i > 0) const SizedBox(width: 10),
+                          Expanded(
+                            child: _LanguageButton(
+                              key: Key('language-${l.languageCode}'),
+                              label: _languageNames[l.languageCode]!,
+                              selected: locale.languageCode == l.languageCode,
+                              onTap: () => ref
+                                  .read(localeProvider.notifier)
+                                  .setLocale(Locale(l.languageCode)),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
                   ),
-              ],
-            ),
-          ),
-          const Divider(height: 32),
-          SwitchListTile(
-            key: const Key('less-motion'),
-            title: Text(l10n.lessMotion),
-            subtitle: Text(l10n.lessMotionHint),
-            value: ref.watch(lessMotionProvider),
-            onChanged: (v) => ref.read(lessMotionProvider.notifier).set(v),
-          ),
-          SwitchListTile(
-            key: const Key('sounds-on'),
-            title: Text(l10n.soundsSetting),
-            subtitle: Text(l10n.soundsSettingHint),
-            value: ref.watch(soundsOnProvider),
-            onChanged: (v) => ref.read(soundsOnProvider.notifier).set(v),
-          ),
-          SwitchListTile(
-            key: const Key('mithu-on'),
-            title: Text(l10n.mithuSetting),
-            subtitle: Text(l10n.mithuSettingHint),
-            value: ref.watch(mithuOnProvider),
-            onChanged: (v) => ref.read(mithuOnProvider.notifier).set(v),
-          ),
-          if (tier == AgeTier.middle || tier == AgeTier.older)
-            const _ExamDateTile(),
-          ListTile(
-            key: const Key('open-ai-costs'),
-            leading: const Icon(Icons.payments_outlined),
-            title: Text(l10n.aiCostsTitle),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => context.push('/ai-costs'),
-          ),
-          if (ref.watch(reviewOfferedProvider))
-            ListTile(
-              key: const Key('open-review'),
-              leading: const Icon(Icons.fact_check_outlined),
-              title: Text(l10n.reviewTitle),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () => context.push('/review'),
-            ),
-          const Divider(height: 32),
-          Text(l10n.ageTierLabel, style: heading),
-          RadioGroup<AgeTier>(
-            groupValue: tier,
-            onChanged: (t) {
-              if (t != null) ref.read(ageTierProvider.notifier).setTier(t);
-            },
-            child: Column(
-              children: [
-                for (final t in AgeTier.values)
-                  RadioListTile<AgeTier>(
-                    key: Key('tier-${t.name}'),
-                    value: t,
-                    title: Text(_tierName(l10n, t)),
-                  ),
-              ],
-            ),
-          ),
-          const Divider(height: 32),
-          SwitchListTile(
-            key: const Key('data-saver'),
-            secondary: const Icon(Icons.data_saver_on),
-            title: Text(l10n.dataSaver),
-            subtitle: Text(l10n.dataSaverHelp),
-            value: ref.watch(dataSaverProvider),
-            onChanged: (v) => ref.read(dataSaverProvider.notifier).set(v),
-          ),
-          Padding(
-            padding: const EdgeInsetsDirectional.only(start: 72, end: 16),
-            child: Text(
-              l10n.dataUsedThisWeek(
-                megabytes(ref.watch(dataUsageProvider).mobile),
+                ],
               ),
-              key: const Key('data-used-mobile'),
-            ),
+              _Section(
+                index: 1,
+                children: [
+                  SwitchListTile(
+                    key: const Key('ai-help'),
+                    secondary: const _IconTile(Icons.auto_awesome_outlined, 1),
+                    title: Text(l10n.aiHelpSetting),
+                    subtitle: Text(l10n.aiHelpSettingHint),
+                    value: ref.watch(aiHelpProvider),
+                    onChanged: (v) => ref.read(aiHelpProvider.notifier).set(v),
+                  ),
+                  SwitchListTile(
+                    key: const Key('data-saver'),
+                    secondary: const _IconTile(Icons.data_saver_on, 0),
+                    title: Text(l10n.dataSaver),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(l10n.dataSaverHelp),
+                        Text(
+                          l10n.dataUsedThisWeek(
+                            megabytes(ref.watch(dataUsageProvider).mobile),
+                          ),
+                          key: const Key('data-used-mobile'),
+                        ),
+                      ],
+                    ),
+                    isThreeLine: true,
+                    value: ref.watch(dataSaverProvider),
+                    onChanged: (v) =>
+                        ref.read(dataSaverProvider.notifier).set(v),
+                  ),
+                  SwitchListTile(
+                    key: const Key('sounds-on'),
+                    secondary: const _IconTile(Icons.volume_up_rounded, 2),
+                    title: Text(l10n.soundsSetting),
+                    subtitle: Text(l10n.soundsSettingHint),
+                    value: ref.watch(soundsOnProvider),
+                    onChanged: (v) =>
+                        ref.read(soundsOnProvider.notifier).set(v),
+                  ),
+                  SwitchListTile(
+                    key: const Key('mithu-on'),
+                    secondary: const _IconTile(Icons.flutter_dash, 0),
+                    title: Text(l10n.mithuSetting),
+                    subtitle: Text(l10n.mithuSettingHint),
+                    value: ref.watch(mithuOnProvider),
+                    onChanged: (v) => ref.read(mithuOnProvider.notifier).set(v),
+                  ),
+                  SwitchListTile(
+                    key: const Key('less-motion'),
+                    secondary: const _IconTile(
+                      Icons.motion_photos_paused_outlined,
+                      3,
+                    ),
+                    title: Text(l10n.lessMotion),
+                    subtitle: Text(l10n.lessMotionHint),
+                    value: ref.watch(lessMotionProvider),
+                    onChanged: (v) =>
+                        ref.read(lessMotionProvider.notifier).set(v),
+                  ),
+                ],
+              ),
+              _Section(
+                index: 2,
+                children: [
+                  ListTile(
+                    key: const Key('open-downloads'),
+                    leading: const _IconTile(
+                      Icons.download_for_offline_outlined,
+                      3,
+                    ),
+                    title: Text(l10n.downloadsTitle),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => context.push('/downloads'),
+                  ),
+                  ListTile(
+                    key: const Key('open-privacy'),
+                    leading: const _IconTile(Icons.privacy_tip_outlined, 1),
+                    title: Text(l10n.privacyTitle),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => context.push('/privacy'),
+                  ),
+                  if (tier == AgeTier.middle || tier == AgeTier.older)
+                    const _ExamDateTile(),
+                  ListTile(
+                    key: const Key('open-ai-costs'),
+                    leading: const _IconTile(Icons.payments_outlined, 0),
+                    title: Text(l10n.aiCostsTitle),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => context.push('/ai-costs'),
+                  ),
+                  if (ref.watch(reviewOfferedProvider))
+                    ListTile(
+                      key: const Key('open-review'),
+                      leading: const _IconTile(Icons.fact_check_outlined, 4),
+                      title: Text(l10n.reviewTitle),
+                      trailing: const Icon(Icons.chevron_right),
+                      onTap: () => context.push('/review'),
+                    ),
+                ],
+              ),
+              _Section(
+                index: 3,
+                title: l10n.ageTierLabel,
+                children: [
+                  RadioGroup<AgeTier>(
+                    groupValue: tier,
+                    onChanged: (t) {
+                      if (t != null) {
+                        ref.read(ageTierProvider.notifier).setTier(t);
+                      }
+                    },
+                    child: Column(
+                      children: [
+                        for (final t in AgeTier.values)
+                          RadioListTile<AgeTier>(
+                            key: Key('tier-${t.name}'),
+                            value: t,
+                            title: Text(_tierName(l10n, t)),
+                          ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-          ListTile(
-            key: const Key('open-downloads'),
-            leading: const Icon(Icons.download_for_offline_outlined),
-            title: Text(l10n.downloadsTitle),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => context.push('/downloads'),
-          ),
-          const Divider(height: 32),
-          SwitchListTile(
-            key: const Key('ai-help'),
-            secondary: const Icon(Icons.auto_awesome_outlined),
-            title: Text(l10n.aiHelpSetting),
-            subtitle: Text(l10n.aiHelpSettingHint),
-            value: ref.watch(aiHelpProvider),
-            onChanged: (v) => ref.read(aiHelpProvider.notifier).set(v),
-          ),
-          ListTile(
-            key: const Key('open-privacy'),
-            leading: const Icon(Icons.privacy_tip_outlined),
-            title: Text(l10n.privacyTitle),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => context.push('/privacy'),
-          ),
-        ],
+        ),
       ),
     );
   }
+}
+
+/// A white rounded card holding one group of settings.
+class _Section extends StatelessWidget {
+  const _Section({required this.index, required this.children, this.title});
+
+  final int index;
+  final String? title;
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) => EnterAnimation(
+    index: index,
+    child: Card(
+      margin: const EdgeInsets.only(bottom: 14),
+      clipBehavior: Clip.antiAlias,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            if (title != null)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 10, 16, 4),
+                child: Text(
+                  title!,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+              ),
+            ...children,
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+/// A setting's icon on a pastel square.
+class _IconTile extends StatelessWidget {
+  const _IconTile(this.icon, this.colorIndex);
+
+  final IconData icon;
+  final int colorIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = AppColors.tiles[colorIndex % AppColors.tiles.length];
+    return Container(
+      width: 40,
+      height: 40,
+      decoration: BoxDecoration(
+        color: colors.soft,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Icon(icon, color: colors.strong, size: 22),
+    );
+  }
+}
+
+/// One language, as a big button: filled when chosen.
+class _LanguageButton extends StatelessWidget {
+  const _LanguageButton({
+    super.key,
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+    selected: selected,
+    button: true,
+    child: Pressable(
+      child: Material(
+        color: selected ? AppColors.lilac : AppColors.lilacSoft,
+        borderRadius: BorderRadius.circular(AppRadius.button),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(AppRadius.button),
+          onTap: onTap,
+          child: SizedBox(
+            height: 52,
+            child: Center(
+              child: Text(
+                label,
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w900,
+                  color: selected ? Colors.white : AppColors.ink,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 String _tierName(AppLocalizations l10n, AgeTier tier) => switch (tier) {
@@ -181,7 +326,7 @@ class _ExamDateTile extends ConsumerWidget {
     final now = DateTime.now();
     return ListTile(
       key: const Key('exam-date'),
-      leading: const Icon(Icons.event_rounded),
+      leading: const _IconTile(Icons.event_rounded, 2),
       title: Text(l10n.examDateSetting),
       subtitle: Text(
         date == null

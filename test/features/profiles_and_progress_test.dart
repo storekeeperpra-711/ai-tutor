@@ -33,7 +33,7 @@ Future<void> addLearner(
 }) async {
   await tapKey(tester, 'add-learner');
   await tester.enterText(find.byKey(const Key('first-name')), name);
-  await tapKey(tester, 'grade');
+  await tester.ensureVisible(find.text(grade).last);
   await tester.tap(find.text(grade).last);
   await tester.pumpAndSettle();
   await tapKey(tester, 'avatar-cricket');

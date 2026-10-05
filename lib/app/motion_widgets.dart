@@ -340,3 +340,68 @@ class TintedBackground extends ConsumerWidget {
     );
   }
 }
+
+/// Three dots rising in turn: Mithu is thinking. Still dots when movement
+/// is reduced.
+class ThinkingDots extends StatefulWidget {
+  const ThinkingDots({super.key, this.color = AppColors.lilac});
+
+  final Color color;
+
+  @override
+  State<ThinkingDots> createState() => _ThinkingDotsState();
+}
+
+class _ThinkingDotsState extends State<ThinkingDots>
+    with SingleTickerProviderStateMixin {
+  late final _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1200),
+  );
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (reduceMotion(context)) {
+      _controller.stop();
+    } else if (!_controller.isAnimating) {
+      _controller.repeat();
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => AnimatedBuilder(
+    animation: _controller,
+    builder: (context, _) => Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        for (var i = 0; i < 3; i++)
+          Transform.translate(
+            offset: Offset(
+              0,
+              -5 *
+                  math.max(
+                    0,
+                    math.sin((_controller.value - i / 6) * 2 * math.pi),
+                  ),
+            ),
+            child: Container(
+              width: 9,
+              height: 9,
+              margin: const EdgeInsets.symmetric(horizontal: 3),
+              decoration: BoxDecoration(
+                color: widget.color,
+                shape: BoxShape.circle,
+              ),
+            ),
+          ),
+      ],
+    ),
+  );
+}

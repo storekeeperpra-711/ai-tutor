@@ -76,26 +76,18 @@ class _ChoiceStepViewState extends ConsumerState<ChoiceStepView> {
         ],
         LessonText(step.prompt, style: textTheme.titleLarge),
         const SizedBox(height: 16),
-        for (final option in step.options)
+        for (final (i, option) in step.options.indexed)
           Padding(
-            padding: const EdgeInsets.only(bottom: 8),
-            child: OutlinedButton(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: ChoiceTile(
               key: Key('option-${option.id}'),
+              number: i + 1,
+              right: _solved && option.correct,
+              tried: _tried.contains(option.id),
               onPressed: _solved || _tried.contains(option.id)
                   ? null
                   : () => _pick(option),
-              style: _solved && option.correct
-                  ? OutlinedButton.styleFrom(
-                      side: const BorderSide(
-                        color: Color(0xFF43A047),
-                        width: 2,
-                      ),
-                    )
-                  : null,
-              child: Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: LessonText(option.text, style: textTheme.titleMedium),
-              ),
+              child: LessonText(option.text, style: textTheme.titleMedium),
             ),
           ),
         if (_last != null)
