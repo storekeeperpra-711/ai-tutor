@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../app/motion_widgets.dart';
 import '../models/lesson_step.dart';
 import 'step_registry.dart';
 import 'step_result.dart';
@@ -40,11 +41,17 @@ class _StepsScreenState extends State<StepsScreen> {
   @override
   Widget build(BuildContext context) {
     final step = widget.steps[_index];
-    return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
-      body: KeyedSubtree(
-        key: ValueKey(step.id),
-        child: buildStep(step, _done, lessonId: widget.lessonId),
+    return TintedBackground(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: Text(widget.title),
+        ),
+        body: KeyedSubtree(
+          key: ValueKey(step.id),
+          child: buildStep(step, _done, lessonId: widget.lessonId),
+        ),
       ),
     );
   }

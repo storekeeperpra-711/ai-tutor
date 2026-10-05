@@ -10,6 +10,8 @@ import '../features/common/sync_status.dart';
 import '../features/effort/celebration_view.dart';
 import '../features/effort/effort.dart';
 import '../features/plan/mastery_level.dart';
+import '../app/motion_widgets.dart';
+import '../app/theme/app_theme.dart';
 import '../character/voice_downloads.dart';
 import '../data/data_saver.dart';
 import '../media/media_cache.dart';
@@ -312,67 +314,90 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     final step = steps[_index];
     final l10n = AppLocalizations.of(context);
     if (_finished case (:final stars, :final next)) {
-      return Scaffold(
-        appBar: AppBar(title: LessonText(widget.lesson.title)),
-        body: CelebrationView(
-          lesson: widget.lesson,
-          stars: stars,
-          next: next,
-          onNext: () => context.pushReplacement('/lesson/${next!.id}'),
-          onHome: () => Navigator.of(context).maybePop(_results),
+      return TintedBackground(
+        dots: true,
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            title: LessonText(widget.lesson.title),
+          ),
+          body: CelebrationView(
+            lesson: widget.lesson,
+            stars: stars,
+            next: next,
+            onNext: () => context.pushReplacement('/lesson/${next!.id}'),
+            onHome: () => Navigator.of(context).maybePop(_results),
+          ),
         ),
       );
     }
 
-    return Scaffold(
-      appBar: AppBar(
-        title: LessonText(widget.lesson.title),
-        actions: [
-          if (widget.onNote case final onNote?)
-            IconButton(
-              key: const Key('review-note'),
-              tooltip: l10n.reviewAddNote,
-              icon: const Icon(Icons.edit_note),
-              onPressed: () => onNote(context, step),
-            ),
-          const LanguageToggle(),
-        ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(28),
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-            child: Row(
-              children: [
-                Expanded(
-                  child: LinearProgressIndicator(
-                    value: (_index + 1) / steps.length,
+    return TintedBackground(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          surfaceTintColor: Colors.transparent,
+          title: LessonText(widget.lesson.title),
+          actions: [
+            if (widget.onNote case final onNote?)
+              IconButton(
+                key: const Key('review-note'),
+                tooltip: l10n.reviewAddNote,
+                icon: const Icon(Icons.edit_note),
+                onPressed: () => onNote(context, step),
+              ),
+            const LanguageToggle(),
+          ],
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(28),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+              child: Row(
+                children: [
+                  Expanded(
+                    // Fills smoothly from one step to the next.
+                    child: TweenAnimationBuilder<double>(
+                      tween: Tween(end: (_index + 1) / steps.length),
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeOutCubic,
+                      builder: (context, value, _) =>
+                          LinearProgressIndicator(value: value),
+                    ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                Text(l10n.stepProgress(_index + 1, steps.length)),
-              ],
-            ),
-          ),
-        ),
-      ),
-      body: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: SyncStatus(),
-          ),
-          Expanded(
-            // The key gives each step a fresh state.
-            child: KeyedSubtree(
-              key: ValueKey(step.id),
-              child: buildStep(
-                step,
-                (r) => unawaited(_onStepDone(r)),
-                lessonId: widget.lesson.id,
+                  const SizedBox(width: 12),
+                  Text(
+                    l10n.stepProgress(_index + 1, steps.length),
+                    style: const TextStyle(
+                      color: AppColors.muted,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-        ],
+        ),
+        body: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: SyncStatus(),
+            ),
+            Expanded(
+              // The key gives each step a fresh state.
+              child: KeyedSubtree(
+                key: ValueKey(step.id),
+                child: buildStep(
+                  step,
+                  (r) => unawaited(_onStepDone(r)),
+                  lessonId: widget.lesson.id,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

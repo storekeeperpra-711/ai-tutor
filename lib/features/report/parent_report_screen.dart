@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../app/motion_widgets.dart';
+import '../../app/theme/app_theme.dart';
 import '../../l10n/app_localizations.dart';
 import '../../reports/parent_report.dart';
 import '../../reports/report_voice.dart';
@@ -137,137 +139,156 @@ class _ParentReportScreenState extends ConsumerState<ParentReportScreen> {
     final urdu = Localizations.localeOf(context).languageCode == 'ur';
 
     Widget part(ReportPart p, IconData icon, String heading, Widget picture) {
-      final colors = Theme.of(context).colorScheme;
-      return Card(
-        key: Key('report-part-${p.name}'),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                children: [
-                  Icon(icon, size: 56, color: colors.primary),
-                  const SizedBox(height: 8),
-                  picture,
-                ],
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+      final tile = AppColors.tiles[p.index % AppColors.tiles.length];
+      return EnterAnimation(
+        index: p.index + 1,
+        child: Card(
+          key: Key('report-part-${p.name}'),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
                   children: [
-                    Text(
-                      heading,
-                      style: Theme.of(context).textTheme.titleLarge,
+                    Container(
+                      width: 64,
+                      height: 64,
+                      decoration: BoxDecoration(
+                        color: tile.soft,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Icon(icon, size: 40, color: tile.strong),
                     ),
-                    for (final (i, s) in shown.indexed)
-                      if (s.part == p)
-                        AnimatedContainer(
-                          key: Key('report-sentence-$i'),
-                          duration: const Duration(milliseconds: 200),
-                          margin: const EdgeInsets.only(top: 6),
-                          padding: const EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            color: _reading == i
-                                ? colors.primaryContainer
-                                : Colors.transparent,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Text(
-                            s.text,
-                            style: Theme.of(context).textTheme.bodyLarge,
-                          ),
-                        ),
+                    const SizedBox(height: 8),
+                    picture,
                   ],
                 ),
-              ),
-            ],
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        heading,
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                      for (final (i, s) in shown.indexed)
+                        if (s.part == p)
+                          AnimatedContainer(
+                            key: Key('report-sentence-$i'),
+                            duration: const Duration(milliseconds: 200),
+                            margin: const EdgeInsets.only(top: 6),
+                            padding: const EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              color: _reading == i
+                                  ? AppColors.lilacSoft
+                                  : Colors.transparent,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              s.text,
+                              style: Theme.of(context).textTheme.bodyLarge,
+                            ),
+                          ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       );
     }
 
-    return Scaffold(
-      appBar: AppBar(title: Text(l10n.reportTitle(name))),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          if (_reading == null)
-            FilledButton.icon(
-              key: const Key('report-listen'),
-              style: FilledButton.styleFrom(
-                minimumSize: const Size.fromHeight(72),
-                textStyle: Theme.of(context).textTheme.headlineSmall,
+    return TintedBackground(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: Text(l10n.reportTitle(name)),
+        ),
+        body: ListView(
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+          children: [
+            if (_reading == null)
+              FilledButton.icon(
+                key: const Key('report-listen'),
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size.fromHeight(72),
+                  textStyle: Theme.of(context).textTheme.headlineSmall,
+                ),
+                icon: const Icon(Icons.play_arrow, size: 40),
+                label: Text(l10n.reportListen),
+                onPressed: _voice == _Voice.own || _voice == _Voice.english
+                    ? () => _listen(spoken)
+                    : null,
+              )
+            else
+              FilledButton.tonalIcon(
+                key: const Key('report-stop'),
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size.fromHeight(72),
+                  textStyle: Theme.of(context).textTheme.headlineSmall,
+                ),
+                icon: const Icon(Icons.stop, size: 40),
+                label: Text(l10n.reportStop),
+                onPressed: _stop,
               ),
-              icon: const Icon(Icons.play_arrow, size: 40),
-              label: Text(l10n.reportListen),
-              onPressed: _voice == _Voice.own || _voice == _Voice.english
-                  ? () => _listen(spoken)
-                  : null,
-            )
-          else
-            FilledButton.tonalIcon(
-              key: const Key('report-stop'),
-              style: FilledButton.styleFrom(
-                minimumSize: const Size.fromHeight(72),
-                textStyle: Theme.of(context).textTheme.headlineSmall,
+            if (_voice == _Voice.english || _voice == _Voice.none)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(
+                  _voice == _Voice.english
+                      ? l10n.reportNoUrduVoice
+                      : l10n.reportNoVoice,
+                  key: const Key('report-voice-help'),
+                ),
               ),
-              icon: const Icon(Icons.stop, size: 40),
-              label: Text(l10n.reportStop),
-              onPressed: _stop,
+            const SizedBox(height: 16),
+            part(
+              ReportPart.learned,
+              Icons.star,
+              l10n.reportLearnedHeading,
+              _Stars(count: report.learned.length),
             ),
-          if (_voice == _Voice.english || _voice == _Voice.none)
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: Text(
-                _voice == _Voice.english
-                    ? l10n.reportNoUrduVoice
-                    : l10n.reportNoVoice,
-                key: const Key('report-voice-help'),
-              ),
+            part(
+              ReportPart.practice,
+              Icons.event,
+              l10n.reportPracticeHeading,
+              report.needsHelp.isEmpty
+                  ? const SizedBox.shrink()
+                  : Icon(
+                      Icons.front_hand,
+                      size: 32,
+                      color: Theme.of(context).colorScheme.error,
+                    ),
             ),
-          const SizedBox(height: 16),
-          part(
-            ReportPart.learned,
-            Icons.star,
-            l10n.reportLearnedHeading,
-            _Stars(count: report.learned.length),
-          ),
-          part(
-            ReportPart.practice,
-            Icons.event,
-            l10n.reportPracticeHeading,
-            report.needsHelp.isEmpty
-                ? const SizedBox.shrink()
-                : Icon(
-                    Icons.front_hand,
-                    size: 32,
-                    color: Theme.of(context).colorScheme.error,
-                  ),
-          ),
-          part(
-            ReportPart.home,
-            Icons.home,
-            l10n.reportHomeHeading,
-            const SizedBox.shrink(),
-          ),
-          part(
-            ReportPart.effort,
-            Icons.directions_walk,
-            l10n.reportEffortHeading,
-            _Days(practised: report.daysPractised),
-          ),
-          if (note != null)
-            Card(
-              key: const Key('report-mithu-note'),
-              child: ListTile(
-                leading: const Icon(Icons.chat_bubble_outline, size: 40),
-                title: Text(l10n.reportMithuNote),
-                subtitle: Text(urdu ? note.noteUr : note.noteEn),
-              ),
+            part(
+              ReportPart.home,
+              Icons.home,
+              l10n.reportHomeHeading,
+              const SizedBox.shrink(),
             ),
-        ],
+            part(
+              ReportPart.effort,
+              Icons.directions_walk,
+              l10n.reportEffortHeading,
+              _Days(practised: report.daysPractised),
+            ),
+            if (note != null)
+              Card(
+                key: const Key('report-mithu-note'),
+                color: AppColors.greenSoft,
+                elevation: 0,
+                child: ListTile(
+                  leading: const Icon(Icons.chat_bubble_outline, size: 40),
+                  title: Text(l10n.reportMithuNote),
+                  subtitle: Text(urdu ? note.noteUr : note.noteEn),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }

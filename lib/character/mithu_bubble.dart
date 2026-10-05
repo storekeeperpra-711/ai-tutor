@@ -128,8 +128,21 @@ class _MithuBubbleState extends ConsumerState<MithuBubble> {
             margin: EdgeInsets.only(top: showMithu ? 8 : 0),
             padding: const EdgeInsetsDirectional.fromSTEB(16, 8, 4, 8),
             decoration: BoxDecoration(
-              color: theme.colorScheme.secondaryContainer,
-              borderRadius: BorderRadius.circular(16),
+              color: Colors.white,
+              // The small corner points at Mithu.
+              borderRadius: BorderRadiusDirectional.only(
+                topStart: Radius.circular(showMithu ? 4 : 20),
+                topEnd: const Radius.circular(20),
+                bottomStart: const Radius.circular(20),
+                bottomEnd: const Radius.circular(20),
+              ).resolve(Directionality.of(context)),
+              boxShadow: const [
+                BoxShadow(
+                  color: Color(0x0F3C288C),
+                  blurRadius: 10,
+                  offset: Offset(0, 2),
+                ),
+              ],
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

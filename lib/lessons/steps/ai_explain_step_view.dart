@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../ai/ai_help.dart';
 import '../../ai/ai_service.dart';
 import '../../ai/keyword_fallback.dart';
+import '../../app/motion_widgets.dart';
 import '../../character/mithu_bubble.dart';
 import '../../l10n/app_localizations.dart';
 import '../../models/lesson_step.dart';
@@ -213,7 +214,6 @@ class _AiExplainStepViewState extends ConsumerState<AiExplainStepView> {
           decoration: InputDecoration(
             labelText: l10n.answerLabel,
             helperText: l10n.explainInputHelp,
-            border: const OutlineInputBorder(),
           ),
         ),
         if (_phase == _Phase.checking)
@@ -221,10 +221,7 @@ class _AiExplainStepViewState extends ConsumerState<AiExplainStepView> {
             padding: const EdgeInsets.only(top: 16),
             child: Row(
               children: [
-                const SizedBox.square(
-                  dimension: 20,
-                  child: CircularProgressIndicator(strokeWidth: 2),
-                ),
+                const ThinkingDots(),
                 const SizedBox(width: 12),
                 Expanded(child: Text(l10n.aiThinking)),
               ],
