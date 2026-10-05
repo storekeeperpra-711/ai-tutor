@@ -99,6 +99,25 @@ void main() {
     expect(find.byKey(const Key('badge-shelf')), findsNothing);
   });
 
+  testWidgets('the lesson tiles show one subject when its chip is tapped', (
+    tester,
+  ) async {
+    await openHomeFor(tester, grade: 10);
+    expect(find.text('Grade 10'), findsOneWidget);
+    const chemistry = 'home-lesson-g10-chemistry-15-balancing-equations';
+    const maths = 'home-lesson-g9-maths-05-solving-linear-equations';
+    await tester.ensureVisible(find.byKey(const Key('lesson-filter-maths')));
+    expect(find.byKey(const Key(chemistry)), findsOneWidget);
+    expect(find.byKey(const Key(maths)), findsOneWidget);
+
+    await tapKey(tester, 'lesson-filter-maths');
+    expect(find.byKey(const Key(chemistry)), findsNothing);
+    expect(find.byKey(const Key(maths)), findsOneWidget);
+
+    await tapKey(tester, 'lesson-filter-all');
+    expect(find.byKey(const Key(chemistry)), findsOneWidget);
+  });
+
   testWidgets('Grades 9-12 without a date are asked to set one', (
     tester,
   ) async {

@@ -1,19 +1,15 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../app/preferences.dart';
 import '../../app/theme/age_tier.dart';
 import '../../l10n/app_localizations.dart';
 import '../../lessons/lesson_repository.dart';
-import '../../lessons/lesson_text.dart';
 import '../../mastery/skill_state.dart';
 import '../../models/lesson.dart';
 import '../../services/local_db.dart';
 import '../../services/mastery_service.dart';
 import '../../services/profiles.dart';
-import '../plan/mastery_level.dart';
 
 String subjectName(AppLocalizations l10n, String subject) => switch (subject) {
   'maths' => l10n.subjectMaths,
@@ -110,62 +106,6 @@ Lesson? nextLessonFor(
 ) =>
     lessons.where((l) => progress[l.id]?.completed != true).firstOrNull ??
     lessons.firstOrNull;
-
-/// Every lesson as a card: start, continue or done, with mastery dots.
-class LessonList extends ConsumerWidget {
-  const LessonList({super.key, required this.student, required this.lessons});
-
-  final Student student;
-  final List<Lesson> lessons;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context);
-    final progress = ref.watch(progressProvider(student.id)).value ?? const {};
-    final states = ref.watch(skillStatesProvider(student.id)).value ?? {};
-    final curriculum = ref.watch(curriculumProvider).value;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Text(l10n.lessonsTitle, style: Theme.of(context).textTheme.titleLarge),
-        if (lessons.isEmpty)
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: Text(l10n.noLessonsYet),
-          ),
-        for (final lesson in lessons)
-          Card(
-            child: ListTile(
-              key: Key('home-lesson-${lesson.id}'),
-              title: LessonText(lesson.title),
-              subtitle: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(switch (progress[lesson.id]) {
-                    null => l10n.lessonStart,
-                    LessonProgress(completed: true) => l10n.lessonDone,
-                    final p => l10n.lessonContinue(
-                      p.nextStep + 1,
-                      lesson.steps.length,
-                    ),
-                  }, key: Key('home-lesson-status-${lesson.id}')),
-                  if (states[lesson.mainSkill] case final s?)
-                    MasteryDots(
-                      key: Key('mastery-${lesson.id}'),
-                      level: s.level(curriculum?.criteriaFor(lesson.mainSkill)),
-                    ),
-                ],
-              ),
-              trailing: progress[lesson.id]?.completed == true
-                  ? const Icon(Icons.check_circle, color: Colors.green)
-                  : const Icon(Icons.play_circle_outline),
-              onTap: () => context.push('/lesson/${lesson.id}'),
-            ),
-          ),
-      ],
-    );
-  }
-}
 
 /// The board exam date of the child using the app (Phase 7 decision 6),
 /// kept on this phone per child.

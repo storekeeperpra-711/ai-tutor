@@ -208,6 +208,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get switchLearner => 'Switch learner';
 
   @override
+  String get allSubjects => 'All';
+
+  @override
   String get lessonsTitle => 'Your lessons';
 
   @override

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../app/motion_widgets.dart';
 import '../../app/theme/age_tier.dart';
+import '../../app/theme/app_theme.dart';
 import '../../character/feel_settings.dart';
 import '../../character/mithu_bubble.dart';
 import '../../l10n/app_localizations.dart';
@@ -16,6 +18,13 @@ import '../ai/mithu_notes.dart';
 import '../effort/badge_shelf.dart';
 import '../plan/today_plan_card.dart';
 import 'home_parts.dart';
+import 'home_style.dart';
+
+/// The home's sections, sliding in one after another.
+List<Widget> _entering(List<Widget> children) => [
+  for (final (i, child) in children.indexed)
+    EnterAnimation(index: i, child: child),
+];
 
 /// Home for Grades 3 to 5: a quest, subject tiles, badges and one tip.
 class PrimaryHome extends ConsumerWidget {
@@ -32,9 +41,8 @@ class PrimaryHome extends ConsumerWidget {
     return Column(
       key: const Key('primary-home'),
       crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
+      children: _entering([
         _MithuTip(day: DateTime.now().day),
-        const SizedBox(height: 8),
         if (lessons.isNotEmpty)
           QuestCard(
             subject: lessons.first.subject,
@@ -55,7 +63,7 @@ class PrimaryHome extends ConsumerWidget {
         BadgeShelf(studentId: student.id),
         const SizedBox(height: 16),
         LessonList(student: student, lessons: all),
-      ],
+      ]),
     );
   }
 }
@@ -74,7 +82,7 @@ class MiddleHome extends ConsumerWidget {
     return Column(
       key: const Key('middle-home'),
       crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
+      children: _entering([
         if (ref.watch(mithuOnProvider)) _MithuTip(day: DateTime.now().day),
         TodayPlanCard(student: student),
         MithuNotesCard(student: student),
@@ -88,7 +96,7 @@ class MiddleHome extends ConsumerWidget {
         BadgeShelf(studentId: student.id, compact: true),
         const SizedBox(height: 16),
         LessonList(student: student, lessons: lessons),
-      ],
+      ]),
     );
   }
 }
@@ -108,7 +116,7 @@ class OlderHome extends ConsumerWidget {
     return Column(
       key: const Key('older-home'),
       crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
+      children: _entering([
         if (ref.watch(mithuOnProvider)) _MithuTip(day: DateTime.now().day),
         const ExamCountdownCard(),
         TodayPlanCard(student: student),
@@ -118,38 +126,86 @@ class OlderHome extends ConsumerWidget {
           l10n.masteryBySubject,
           style: Theme.of(context).textTheme.titleLarge,
         ),
-        for (final s in summaries)
+        const SizedBox(height: 8),
+        for (final (i, s) in summaries.indexed)
           Padding(
             key: Key('subject-mastery-${s.subject}'),
-            padding: const EdgeInsets.symmetric(vertical: 6),
+            padding: const EdgeInsets.only(bottom: 8),
+            child: _MasteryRow(summary: s, colorIndex: i),
+          ),
+        const SizedBox(height: 16),
+        LessonList(student: student, lessons: lessons),
+      ]),
+    );
+  }
+}
+
+/// One subject's mastered skills, on its pastel colour.
+class _MasteryRow extends StatelessWidget {
+  const _MasteryRow({required this.summary, required this.colorIndex});
+
+  final SubjectSummary summary;
+  final int colorIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final colors = AppColors.tiles[colorIndex % AppColors.tiles.length];
+    final s = summary;
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: colors.soft,
+        borderRadius: BorderRadius.circular(AppRadius.tile),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(subjectIcon(s.subject), color: colors.strong),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    Expanded(child: Text(subjectName(l10n, s.subject))),
+                    Expanded(
+                      child: Text(
+                        subjectName(l10n, s.subject),
+                        style: const TextStyle(fontWeight: FontWeight.w900),
+                      ),
+                    ),
                     const SizedBox(width: 8),
                     Flexible(
                       flex: 2,
                       child: Text(
                         l10n.masteredSkills(s.mastered, s.skills),
                         textAlign: TextAlign.end,
+                        style: TextStyle(
+                          color: colors.strong,
+                          fontWeight: FontWeight.w800,
+                        ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 4),
-                LinearProgressIndicator(
+                const SizedBox(height: 6),
+                TileProgress(
                   value: s.skills == 0 ? 0 : s.mastered / s.skills,
-                  minHeight: 6,
-                  borderRadius: BorderRadius.circular(3),
+                  color: colors.strong,
                 ),
               ],
             ),
           ),
-        const SizedBox(height: 16),
-        LessonList(student: student, lessons: lessons),
-      ],
+        ],
+      ),
     );
   }
 }
@@ -166,8 +222,10 @@ class ExamCountdownCard extends ConsumerWidget {
     if (days != null && days < 0) return const SizedBox.shrink();
     return Card(
       key: const Key('exam-countdown'),
+      color: AppColors.skySoft,
+      elevation: 0,
       child: ListTile(
-        leading: const Icon(Icons.event_rounded),
+        leading: const Icon(Icons.event_rounded, color: AppColors.sky),
         title: Text(switch (days) {
           null => l10n.examSetPrompt,
           0 => l10n.examToday,
@@ -202,7 +260,8 @@ class QuestCard extends StatelessWidget {
     final finished = done == lessons.length;
     return Card(
       key: const Key('quest-card'),
-      color: theme.colorScheme.tertiaryContainer,
+      color: AppColors.orangeSoft,
+      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -210,7 +269,11 @@ class QuestCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Icon(Icons.explore_rounded, size: 32),
+                const Icon(
+                  Icons.explore_rounded,
+                  size: 32,
+                  color: AppColors.orange,
+                ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
@@ -266,33 +329,27 @@ class _SubjectTiles extends StatelessWidget {
         Text(l10n.subjectsTitle, style: theme.textTheme.titleLarge),
         const SizedBox(height: 8),
         Wrap(
-          spacing: 8,
-          runSpacing: 8,
+          spacing: 12,
+          runSpacing: 12,
           children: [
-            for (final s in summaries)
+            for (final (i, s) in summaries.indexed)
               SizedBox(
                 width: 160,
-                child: Card(
+                child: SoftTile(
                   key: Key('subject-${s.subject}'),
-                  margin: EdgeInsets.zero,
-                  child: Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                  colorIndex: i,
+                  icon: subjectIcon(s.subject),
+                  title: Text(subjectName(l10n, s.subject)),
+                  footer: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(label(l10n, s)),
+                      if (detail != null)
                         Text(
-                          subjectName(l10n, s.subject),
-                          style: theme.textTheme.titleMedium,
+                          detail!(l10n, s),
+                          style: theme.textTheme.bodySmall,
                         ),
-                        const SizedBox(height: 4),
-                        Text(label(l10n, s), style: theme.textTheme.bodyLarge),
-                        if (detail != null)
-                          Text(
-                            detail!(l10n, s),
-                            style: theme.textTheme.bodySmall,
-                          ),
-                      ],
-                    ),
+                    ],
                   ),
                 ),
               ),
@@ -316,13 +373,15 @@ class _MithuTip extends ConsumerWidget {
       1 => l.mithuTip2,
       _ => l.mithuTip3,
     };
-    return MithuBubble(
+    return MithuCard(
       key: const Key('mithu-tip'),
-      line: CharacterLine(
-        emotion: 'encouraging',
-        say: LocalizedText(
-          en: tip(lookupAppLocalizations(const Locale('en'))),
-          ur: tip(lookupAppLocalizations(const Locale('ur'))),
+      child: MithuBubble(
+        line: CharacterLine(
+          emotion: 'encouraging',
+          say: LocalizedText(
+            en: tip(lookupAppLocalizations(const Locale('en'))),
+            ur: tip(lookupAppLocalizations(const Locale('ur'))),
+          ),
         ),
       ),
     );
