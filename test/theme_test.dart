@@ -1,3 +1,4 @@
+import 'package:ai_tutor/app/motion_widgets.dart';
 import 'package:ai_tutor/app/theme/age_tier.dart';
 import 'package:ai_tutor/app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,24 @@ void main() {
     expect(urdu.textTheme.bodyLarge!.fontFamily, urduFontFamily);
     expect(urdu.textTheme.bodyLarge!.height, urduLineHeight);
     expect(english.textTheme.bodyLarge!.fontFamily, isNot(urduFontFamily));
+  });
+
+  test('English uses the round Nunito font, bold for titles', () {
+    final t = buildTheme(AgeTier.primary, const Locale('en'));
+    expect(t.textTheme.bodyLarge!.fontFamily, latinFontFamily);
+    expect(t.textTheme.titleLarge!.fontWeight, FontWeight.w900);
+  });
+
+  test('the new look: white rounded cards on a soft background', () {
+    final t = buildTheme(AgeTier.older, const Locale('en'));
+    expect(t.scaffoldBackgroundColor, AppColors.background);
+    expect(t.cardTheme.color, Colors.white);
+    final shape = t.cardTheme.shape! as RoundedRectangleBorder;
+    expect(shape.borderRadius, BorderRadius.circular(AppRadius.card));
+    expect(
+      t.pageTransitionsTheme.builders[TargetPlatform.android],
+      isA<WavePageTransitionsBuilder>(),
+    );
   });
 
   test('each tier has its own main colour', () {
