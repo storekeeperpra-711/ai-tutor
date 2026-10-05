@@ -45,6 +45,13 @@ jobs:
       - run: npm ci
       # Never deploy code whose tests fail. This also bundles the lessons.
       - run: npm test
+      - name: Storage for Mithu's voice
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          id=$(python3 ../tools/voice/kv.py namespace-id)
+          sed -i "s/VOICE_NAMESPACE_ID/$id/" wrangler.toml
       - name: Deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
