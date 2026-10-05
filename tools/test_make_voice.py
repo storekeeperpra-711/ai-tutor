@@ -108,7 +108,9 @@ class DailyLimitTest(unittest.TestCase):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp, \
                 unittest.mock.patch.object(make_voice, "synthesize", fake), \
-                unittest.mock.patch.object(make_voice, "PAUSE", 0):
+                unittest.mock.patch.object(make_voice, "PAUSE", 0), \
+                unittest.mock.patch.object(  # no ffmpeg needed
+                    make_voice, "save", lambda wav, path: path.write_bytes(wav)):
             out = Path(tmp)
             ok = make_voice.make_sample(out, "key", ["Sulafat", "Achird", "Leda"])
             self.assertTrue(ok)
