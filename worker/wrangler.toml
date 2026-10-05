@@ -17,9 +17,20 @@ crons = ["*/30 * * * *", "0 13 * * SUN"]
 [observability]
 enabled = true
 
+# Mithu's recorded voice (src/voice.ts), one storage for both servers.
+# The deploy workflow puts in the real id (tools/voice/kv.py makes the
+# storage the first time), so nobody has to copy it from Cloudflare.
+[[kv_namespaces]]
+binding = "VOICE"
+id = "VOICE_NAMESPACE_ID"
+
 # Development: talks to the ai-tutor-dev Firebase project.
 [env.dev]
 name = "ai-tutor-ai-dev"
+
+[[env.dev.kv_namespaces]]
+binding = "VOICE"
+id = "VOICE_NAMESPACE_ID"
 
 [env.dev.triggers]
 crons = ["*/30 * * * *", "0 13 * * SUN"]

@@ -13,6 +13,8 @@
  *   /v1/feedback   feedback on an explanation, or on a checker's verdict
  *   /v1/photo      reads a notebook photo (the app's checker then decides)
  *   /v1/costs      the cost dashboard
+ * and GET /v1/voice/... for Mithu's recorded voice (voice.ts), from the KV
+ * storage bound as VOICE.
  */
 import Anthropic from "@anthropic-ai/sdk";
 
@@ -25,11 +27,13 @@ import { Firestore, parseServiceAccount } from "./firestore";
 import { countYesterday } from "./learning";
 import { LessonLibrary } from "./lessons";
 import { FirestoreStore, type Store } from "./store";
+import { handleVoice, isVoiceRequest, type VoiceStore } from "./voice";
 
 export interface Env {
   ANTHROPIC_API_KEY: string;
   FIREBASE_SERVICE_ACCOUNT: string;
   ADMIN_EMAILS?: string;
+  VOICE?: VoiceStore;
 }
 
 /** Cron schedules (UTC), as in wrangler.toml. */
@@ -134,6 +138,8 @@ export async function runScheduled(cron: string, deps: BatchDeps): Promise<unkno
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
+    // Recordings need no secrets, so they work even before the AI is set up.
+    if (isVoiceRequest(request)) return handleVoice(request, env.VOICE);
     let svc: Services;
     try {
       svc = services(env);

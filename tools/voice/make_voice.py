@@ -8,8 +8,13 @@ recording per language, named the way the app looks for it
     # A few lines in several voices, to choose a voice by ear:
     python tools/voice/make_voice.py sample --out voice-samples
 
+    # Every line in Mithu's voice, into the AI server's storage (KV).
+    # Lines already made and unchanged are skipped; it stops at Gemini's
+    # free daily limit and carries on the next day.
+    python tools/voice/make_voice.py make
+
 Needs GEMINI_API_KEY (a GitHub secret; never paste it anywhere else) and
-ffmpeg. The audio is made once, in GitHub Actions, never on a child's phone.
+ffmpeg; `make` also needs the Cloudflare secrets (tools/voice/kv.py). The audio is made once, in GitHub Actions, never on a child's phone.
 """
 
 from __future__ import annotations
@@ -17,12 +22,14 @@ from __future__ import annotations
 import argparse
 import array
 import base64
+import hashlib
 import io
 import json
 import math
 import os
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -40,6 +47,10 @@ STYLE = {
     "en": "a warm, kind teacher from Pakistan talking to one child; slow, clear and encouraging",
     "ur": "a warm, kind Pakistani teacher speaking Urdu to one child; slow, clear and encouraging",
 }
+
+# Mithu's voice, chosen from the samples (2026-10-05). Changing it makes
+# every line again.
+VOICE = "Sulafat"
 
 # Voices to try in the sample (Gemini's own descriptions in brackets).
 SAMPLE_VOICES = {
@@ -90,6 +101,35 @@ def mithu_lines(lesson: dict) -> list[dict]:
 
 def load_lesson(lesson_id: str) -> dict:
     return json.loads((LESSONS / f"{lesson_id}.json").read_text(encoding="utf-8"))
+
+
+def line_hash(text: str, language: str) -> str:
+    """Changes when anything that changes the sound changes."""
+    key = json.dumps([MODEL, VOICE, STYLE[language], text], ensure_ascii=False)
+    return hashlib.sha256(key.encode()).hexdigest()[:12]
+
+
+def lesson_order(lesson_id: str) -> tuple:
+    """Grade 9 first (the lessons being tested now), then the rest."""
+    return (not lesson_id.startswith("g9-"), lesson_id)
+
+
+def all_lines() -> list[dict]:
+    """Every recording to make: {name, text, language, hash}, in order."""
+    lines, seen = [], set()
+    ids = sorted((p.stem for p in LESSONS.glob("*.json")), key=lesson_order)
+    for lesson_id in ids:
+        for line in mithu_lines(load_lesson(lesson_id)):
+            for language in ("ur", "en"):
+                text = line["say"].get(language)
+                name = voice_file_name(lesson_id, line["step"], language)
+                # Two lines in one step share a file name; the app plays the first.
+                if not text or name in seen:
+                    continue
+                seen.add(name)
+                lines.append({"name": name, "text": text, "language": language,
+                              "hash": line_hash(text, language)})
+    return lines
 
 
 def request_body(text: str, voice: str, style: str) -> dict:
@@ -215,6 +255,55 @@ def save(wav_bytes: bytes, out: Path) -> None:
     out.with_suffix(".mouth").write_text(mouth_track(wav_bytes))
 
 
+def encode(wav_bytes: bytes) -> tuple[bytes, bytes]:
+    """(m4a, mouth track) for one recording."""
+    with tempfile.TemporaryDirectory() as tmp:
+        out = Path(tmp) / "line.m4a"
+        save(wav_bytes, out)
+        return out.read_bytes(), out.with_suffix(".mouth").read_bytes()
+
+
+def make_all(kv, key: str, limit: int | None = None) -> tuple[bool, int, int]:
+    """Makes the recordings still missing (or out of date) and stores each
+    one at once, with the index the app reads (key "index": which files
+    exist, and a hash that changes when a line is made again).
+    Returns (no real error, made now, still to make)."""
+    wanted = all_lines()
+    names = {l["name"] for l in wanted}
+    stored = json.loads(kv.get("index") or b"{}").get("files", {})
+    # Lines removed from the lessons drop out of the index.
+    files = {n: h for n, h in stored.items() if n in names}
+    todo = [l for l in wanted if files.get(l["name"]) != l["hash"]]
+
+    def index() -> bytes:
+        return json.dumps({"voice": VOICE, "files": files}, sort_keys=True).encode()
+
+    if files != stored:
+        kv.put_many({"index": index()})
+    made, ok = 0, True
+    for line in todo[:limit]:
+        print(f"{line['name']}: {line['text'][:60]}")
+        try:
+            wav = synthesize(line["text"], VOICE, STYLE[line["language"]], key)
+        except DailyLimit as e:
+            print(f"::warning::{e} It carries on tomorrow.")
+            break
+        except RuntimeError as e:
+            print(f"::error::{e}")
+            ok = False
+            break
+        m4a, mouth = encode(wav)
+        files[line["name"]] = line["hash"]
+        kv.put_many({
+            line["name"]: m4a,
+            line["name"][:-len(".m4a")] + ".mouth": mouth,
+            "index": index(),
+        })
+        made += 1
+        time.sleep(PAUSE)
+    return ok, made, len(todo) - made
+
+
 def sample_lines() -> list[tuple[str, str, dict]]:
     """(lesson id, step id, text) for the sample."""
     picked = []
@@ -264,8 +353,9 @@ def make_sample(out: Path, key: str, voices: list[str]) -> bool:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("mode", choices=["sample"])
-    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("mode", choices=["sample", "make"])
+    parser.add_argument("--out", type=Path, help="sample: where to save")
+    parser.add_argument("--limit", type=int, help="make: at most this many recordings")
     parser.add_argument("--voices", default=",".join(SAMPLE_VOICES),
                         help="comma-separated Gemini voice names")
     args = parser.parse_args(argv)
@@ -275,7 +365,22 @@ def main(argv: list[str] | None = None) -> int:
         print("GEMINI_API_KEY is missing. Add it as a GitHub secret "
               "(docs/setup/gemini-voice.md).")
         return 1
-    return 0 if make_sample(args.out, key, voices) else 1
+    if args.mode == "sample":
+        if not args.out:
+            parser.error("sample needs --out")
+        return 0 if make_sample(args.out, key, voices) else 1
+
+    from kv import KV
+    kv = KV.from_env()
+    kv.ensure_namespace()
+    ok, made, left = make_all(kv, key, args.limit)
+    summary = (f"Mithu's voice ({VOICE}): made {made} recordings today, "
+               f"{left} still to make.")
+    print(summary)
+    if path := os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(summary + "\n")
+    return 0 if ok else 1
 
 
 if __name__ == "__main__":

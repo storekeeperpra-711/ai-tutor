@@ -121,5 +121,116 @@ class DailyLimitTest(unittest.TestCase):
             self.assertIn("daily limit", (out / "README.txt").read_text())
 
 
+class FakeKV:
+    def __init__(self, values=None):
+        self.values = dict(values or {})
+        self.writes = []
+
+    def get(self, key):
+        return self.values.get(key)
+
+    def put_many(self, values):
+        self.writes.append(sorted(values))
+        self.values.update(values)
+
+
+def fake_encode(wav):
+    return b"m4a", b"0123"
+
+
+class MakeAllTest(unittest.TestCase):
+    def setUp(self):
+        self.calls = []
+        for target, value in [("PAUSE", 0), ("encode", fake_encode),
+                              ("synthesize", self.fake_synthesize)]:
+            patcher = unittest.mock.patch.object(make_voice, target, value)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        self.limit_after = None
+
+    def fake_synthesize(self, text, voice, style, key):
+        if self.limit_after is not None and len(self.calls) >= self.limit_after:
+            raise make_voice.DailyLimit("used up")
+        self.calls.append((text, voice))
+        return b"wav"
+
+    def test_every_line_has_its_own_file_grade_9_first(self):
+        lines = make_voice.all_lines()
+        names = [l["name"] for l in lines]
+        self.assertEqual(len(names), len(set(names)))
+        self.assertTrue(names[0].startswith("g9-"))
+        self.assertEqual(names[0][-6:], "ur.m4a")
+        self.assertEqual(names[1][-6:], "en.m4a")
+        self.assertGreater(len(lines), 80)
+
+    def test_hash_changes_with_the_text_or_voice(self):
+        a = make_voice.line_hash("Hello", "en")
+        self.assertEqual(a, make_voice.line_hash("Hello", "en"))
+        self.assertNotEqual(a, make_voice.line_hash("Hello!", "en"))
+        with unittest.mock.patch.object(make_voice, "VOICE", "Achird"):
+            self.assertNotEqual(a, make_voice.line_hash("Hello", "en"))
+
+    def test_stores_each_recording_with_the_index(self):
+        kv = FakeKV()
+        ok, made, left = make_voice.make_all(kv, "key", limit=2)
+        self.assertEqual((ok, made), (True, 2))
+        self.assertEqual(left, len(make_voice.all_lines()) - 2)
+        first = make_voice.all_lines()[0]["name"]
+        self.assertEqual(kv.values[first], b"m4a")
+        self.assertEqual(kv.values[first[:-4] + ".mouth"], b"0123")
+        index = json.loads(kv.values["index"])
+        self.assertEqual(index["voice"], "Sulafat")
+        self.assertEqual(len(index["files"]), 2)
+        self.assertTrue(all(self.calls[0][1] == "Sulafat" for _ in self.calls))
+
+    def test_carries_on_the_next_day_and_skips_what_is_made(self):
+        kv = FakeKV()
+        self.limit_after = 3
+        ok, made, _ = make_voice.make_all(kv, "key")
+        self.assertEqual((ok, made), (True, 3))
+        self.calls.clear()
+        self.limit_after = None
+        ok, made, left = make_voice.make_all(kv, "key", limit=1)
+        self.assertEqual((made, len(json.loads(kv.values["index"])["files"])), (1, 4))
+        self.assertEqual(self.calls[0][0], make_voice.all_lines()[3]["text"])
+
+    def test_makes_a_changed_line_again_and_forgets_removed_ones(self):
+        lines = make_voice.all_lines()
+        files = {l["name"]: l["hash"] for l in lines}
+        files[lines[5]["name"]] = "old"
+        files["gone__s1_en.m4a"] = "abc"
+        kv = FakeKV({"index": json.dumps({"files": files}).encode()})
+        ok, made, left = make_voice.make_all(kv, "key")
+        self.assertEqual((ok, made, left), (True, 1, 0))
+        self.assertEqual(self.calls, [(lines[5]["text"], "Sulafat")])
+        index = json.loads(kv.values["index"])["files"]
+        self.assertNotIn("gone__s1_en.m4a", index)
+        self.assertEqual(index[lines[5]["name"]], lines[5]["hash"])
+
+    def test_nothing_to_do_calls_nobody(self):
+        lines = make_voice.all_lines()
+        index = {"voice": "Sulafat", "files": {l["name"]: l["hash"] for l in lines}}
+        kv = FakeKV({"index": json.dumps(index).encode()})
+        self.assertEqual(make_voice.make_all(kv, "key"), (True, 0, 0))
+        self.assertEqual((self.calls, kv.writes), ([], []))
+
+
+class KVTest(unittest.TestCase):
+    def test_bulk_write_is_base64(self):
+        import kv as kv_module
+        sent = {}
+
+        class Fake(kv_module.KV):
+            def _call(self, method, url, body=None, raw=False):
+                sent.update(method=method, url=url, body=body)
+                return {"success": True}
+
+        store = Fake("t", "acct", "ns1")
+        store.put_many({"a.m4a": b"\x00\x01"})
+        self.assertEqual(sent["method"], "PUT")
+        self.assertTrue(sent["url"].endswith("/accounts/acct/storage/kv/namespaces/ns1/bulk"))
+        self.assertEqual(sent["body"], [{"key": "a.m4a", "value": "AAE=", "base64": True}])
+
+
 if __name__ == "__main__":
     unittest.main()
