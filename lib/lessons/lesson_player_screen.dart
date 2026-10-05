@@ -10,6 +10,7 @@ import '../features/common/sync_status.dart';
 import '../features/effort/celebration_view.dart';
 import '../features/effort/effort.dart';
 import '../features/plan/mastery_level.dart';
+import '../character/voice_downloads.dart';
 import '../data/data_saver.dart';
 import '../media/media_cache.dart';
 import '../l10n/app_localizations.dart';
@@ -122,6 +123,7 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
   }
 
   var _prefetched = false;
+  var _voiceFetched = false;
 
   @override
   void didChangeDependencies() {
@@ -129,14 +131,18 @@ class _LessonPlayerState extends ConsumerState<_LessonPlayer> {
     // Start downloading the lesson's linked videos now, so they are
     // ready by the time the child reaches them (on Wi-Fi only while Data
     // saver is on).
+    final language = Localizations.localeOf(context).languageCode;
+    if (!_voiceFetched) {
+      // Mithu's recorded voice is small (about 100 KB a lesson, like the
+      // lesson text), so it downloads on mobile data too.
+      _voiceFetched = true;
+      unawaited(
+        ref.read(voiceDownloadsProvider).prepare(widget.lesson.id, language),
+      );
+    }
     if (!_prefetched && ref.read(autoDownloadProvider)) {
       _prefetched = true;
-      ref
-          .read(mediaCacheProvider)
-          .prefetch(
-            widget.lesson,
-            Localizations.localeOf(context).languageCode,
-          );
+      ref.read(mediaCacheProvider).prefetch(widget.lesson, language);
     }
   }
 

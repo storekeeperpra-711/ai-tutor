@@ -85,15 +85,20 @@ class VoiceLine {
 }
 
 /// Finds recordings: first one just made with the dev recorder on this
-/// phone, then one bundled with the app.
+/// phone, then one downloaded from the AI server (voice_downloads.dart),
+/// then one bundled with the app.
 class VoiceLibrary {
-  VoiceLibrary({AssetBundle? bundle, this.recordingsDir})
+  VoiceLibrary({AssetBundle? bundle, this.recordingsDir, this.downloadsDir})
     : _bundle = bundle ?? rootBundle;
 
   final AssetBundle _bundle;
 
   /// Where the dev recorder saves; null to use the app's documents folder.
   final Directory? recordingsDir;
+
+  /// Where downloads are kept; null to use the app's documents folder
+  /// (the same folder as VoiceDownloads.folder).
+  final Directory? downloadsDir;
   Set<String>? _assets;
 
   Future<Directory> recordings() async {
@@ -103,6 +108,12 @@ class VoiceLibrary {
     dir.createSync(recursive: true);
     return dir;
   }
+
+  Future<Directory> _downloads() async =>
+      downloadsDir ??
+      Directory(
+        '${(await getApplicationDocumentsDirectory()).path}/voice-downloads',
+      );
 
   Future<Set<String>> _bundled() async => _assets ??= {
     for (final key in (await AssetManifest.loadFromAssetBundle(
@@ -114,21 +125,23 @@ class VoiceLibrary {
   Future<Recording?> find(VoiceLine voice) async {
     final name = voice.fileName;
     if (name == null) return null;
-    try {
-      final dir = await recordings();
-      final file = File('${dir.path}/$name');
-      final mouth = File('${dir.path}/${mouthFileName(name)}');
-      if (file.existsSync()) {
-        return Recording(
-          path: file.path,
-          isAsset: false,
-          mouth: MouthTrack.parse(
-            mouth.existsSync() ? mouth.readAsStringSync() : '',
-          ),
-        );
+    for (final folder in [recordings, _downloads]) {
+      try {
+        final dir = await folder();
+        final file = File('${dir.path}/$name');
+        final mouth = File('${dir.path}/${mouthFileName(name)}');
+        if (file.existsSync()) {
+          return Recording(
+            path: file.path,
+            isAsset: false,
+            mouth: MouthTrack.parse(
+              mouth.existsSync() ? mouth.readAsStringSync() : '',
+            ),
+          );
+        }
+      } on Exception {
+        // No documents folder (tests): only bundled recordings.
       }
-    } on Exception {
-      // No documents folder (tests): only bundled recordings.
     }
     final assets = await _bundled();
     final path = '$audioAssetDir/$name';
