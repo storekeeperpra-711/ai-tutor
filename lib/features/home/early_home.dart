@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../app/motion_widgets.dart';
 import '../../app/theme/age_tier.dart';
 import '../../character/mithu_bubble.dart';
 import '../../character/sounds.dart';
@@ -46,27 +47,53 @@ class EarlyHome extends ConsumerWidget {
       key: const Key('early-home'),
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        MithuBubble(
-          line: CharacterLine(emotion: 'happy', say: greeting),
-        ),
-        const SizedBox(height: 16),
-        if (next != null)
-          SizedBox(
-            height: 96,
-            child: FilledButton.icon(
-              key: const Key('play-next'),
-              style: FilledButton.styleFrom(
-                shape: const StadiumBorder(),
-                textStyle: Theme.of(context).textTheme.headlineMedium,
+        EnterAnimation(
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(32),
+            ),
+            shadowColor: const Color(0x33B46E28),
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  MithuBubble(
+                    line: CharacterLine(emotion: 'happy', say: greeting),
+                  ),
+                  if (next != null) ...[
+                    const SizedBox(height: 12),
+                    Pressable(
+                      child: SizedBox(
+                        height: 96,
+                        child: FilledButton.icon(
+                          key: const Key('play-next'),
+                          style: FilledButton.styleFrom(
+                            backgroundColor: _playOrange,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(28),
+                            ),
+                            elevation: 0,
+                            textStyle: Theme.of(context)
+                                .textTheme
+                                .headlineMedium
+                                ?.copyWith(fontWeight: FontWeight.w900),
+                          ),
+                          icon: const Icon(Icons.play_arrow_rounded, size: 64),
+                          label: Text(l10n.playButton),
+                          onPressed: () {
+                            ref.playSound(Sound.tap);
+                            context.push('/lesson/${next.id}');
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
               ),
-              icon: const Icon(Icons.play_arrow_rounded, size: 64),
-              label: Text(l10n.playButton),
-              onPressed: () {
-                ref.playSound(Sound.tap);
-                context.push('/lesson/${next.id}');
-              },
             ),
           ),
+        ),
         const SizedBox(height: 16),
         VillagePath(
           lessons: lessons,
@@ -82,6 +109,10 @@ class EarlyHome extends ConsumerWidget {
     );
   }
 }
+
+const _playOrange = Color(0xFFF2820C);
+const _doneGreen = Color(0xFF2E9D5B);
+const _later = Color(0xFFEFE9E1);
 
 /// Places on the path, in order. Each lesson stop gets the next one.
 const _places = [
@@ -235,26 +266,32 @@ class _Stop extends StatelessWidget {
               width: 88,
               height: 88,
               decoration: BoxDecoration(
-                color: color,
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: current ? Colors.white : color.withValues(alpha: 0.6),
-                  width: current ? 6 : 3,
-                ),
+                color: done
+                    ? _doneGreen
+                    : current
+                    ? Colors.white
+                    : _later,
+                borderRadius: BorderRadius.circular(30),
+                border: current
+                    ? Border.all(color: _playOrange, width: 4)
+                    : null,
                 boxShadow: [
                   BoxShadow(
-                    color: current
-                        ? Colors.amber.withValues(alpha: 0.9)
-                        : Colors.black26,
-                    blurRadius: current ? 18 : 4,
-                    spreadRadius: current ? 4 : 0,
+                    color: done
+                        ? const Color(0xFF1F7A45)
+                        : current
+                        ? _playOrange.withValues(alpha: 0.5)
+                        : const Color(0xFFE2D6C6),
+                    offset: current ? Offset.zero : const Offset(0, 4),
+                    blurRadius: current ? 18 : 0,
+                    spreadRadius: current ? 2 : 0,
                   ),
                 ],
               ),
               child: Icon(
                 done ? Icons.check_rounded : _places[index % _places.length],
                 size: 48,
-                color: Colors.white,
+                color: done ? Colors.white : color,
               ),
             ),
           ),
@@ -266,7 +303,9 @@ class _Stop extends StatelessWidget {
                 Icon(
                   i < stars ? Icons.star_rounded : Icons.star_outline_rounded,
                   size: 24,
-                  color: i < stars ? Colors.amber.shade600 : Colors.black26,
+                  color: i < stars
+                      ? const Color(0xFFF2A20C)
+                      : const Color(0xFFD9D4C8),
                 ),
             ],
           ),

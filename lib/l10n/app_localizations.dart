@@ -434,6 +434,12 @@ abstract class AppLocalizations {
   /// **'Switch learner'**
   String get switchLearner;
 
+  /// Chip that shows lessons of every subject on the home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get allSubjects;
+
   /// Heading above the lesson list.
   ///
   /// In en, this message translates to:

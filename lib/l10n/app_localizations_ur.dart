@@ -208,6 +208,9 @@ class AppLocalizationsUr extends AppLocalizations {
   String get switchLearner => 'طالب علم بدلیں';
 
   @override
+  String get allSubjects => 'سب';
+
+  @override
   String get lessonsTitle => 'آپ کے سبق';
 
   @override

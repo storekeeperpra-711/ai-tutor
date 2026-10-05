@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../app/theme/app_theme.dart';
 import '../../classes/class_service.dart';
 import '../../l10n/app_localizations.dart';
 import '../../lessons/lesson_text.dart';
@@ -64,10 +65,13 @@ class TodayPlanCard extends ConsumerWidget {
     );
     final allDone = teacherLessons.isEmpty && plan.items.every(done);
 
+    final doneCount = plan.items.where(done).length;
+    final total = plan.items.length + teacherLessons.length;
+
     return Card(
       key: const Key('today-plan'),
       child: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -79,8 +83,34 @@ class TodayPlanCard extends ConsumerWidget {
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
-                Text(l10n.planMinutes(plan.minutes)),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 5,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppColors.lilacSoft,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    l10n.planMinutes(plan.minutes),
+                    style: const TextStyle(
+                      color: Color(0xFF4B3CC4),
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
               ],
+            ),
+            const SizedBox(height: 12),
+            TweenAnimationBuilder<double>(
+              tween: Tween(end: total == 0 ? 0 : doneCount / total),
+              duration: const Duration(milliseconds: 600),
+              curve: Curves.easeOutCubic,
+              builder: (context, value, _) => LinearProgressIndicator(
+                key: const Key('plan-progress'),
+                value: value,
+              ),
             ),
             const SizedBox(height: 8),
             for (final (:lesson, :due) in teacherLessons)
@@ -105,10 +135,7 @@ class TodayPlanCard extends ConsumerWidget {
                 key: Key('plan-${item.key}'),
                 dense: true,
                 contentPadding: EdgeInsets.zero,
-                leading: Icon(
-                  done(item) ? Icons.check_circle : _icon(item),
-                  color: done(item) ? Colors.green : null,
-                ),
+                leading: _Tick(done: done(item), icon: _icon(item)),
                 title: switch (item) {
                   LessonItem(:final lesson) => _Localized(
                     lesson.title,
@@ -213,4 +240,32 @@ class _Localized extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Text(sentence(title.of(context)));
+}
+
+/// A rounded box: green with a tick when done, else an outline with the
+/// item's icon.
+class _Tick extends StatelessWidget {
+  const _Tick({required this.done, required this.icon});
+
+  final bool done;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) => AnimatedContainer(
+    duration: const Duration(milliseconds: 250),
+    width: 28,
+    height: 28,
+    decoration: BoxDecoration(
+      color: done ? AppColors.green : Colors.white,
+      borderRadius: BorderRadius.circular(9),
+      border: done
+          ? null
+          : Border.all(color: const Color(0xFFC9C2F5), width: 2),
+    ),
+    child: Icon(
+      done ? Icons.check_circle : icon,
+      size: 16,
+      color: done ? Colors.white : const Color(0xFF4B3CC4),
+    ),
+  );
 }

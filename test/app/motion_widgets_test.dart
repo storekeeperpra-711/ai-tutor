@@ -121,12 +121,13 @@ void main() {
     },
   );
 
-  testWidgets('drifting dots move, and stay still with less movement', (
-    tester,
-  ) async {
+  testWidgets('drifting dots move once round, then rest; still with less '
+      'movement', (tester) async {
     await tester.pumpWidget(_app(const SizedBox.expand(child: FloatingDots())));
     await tester.pump(const Duration(seconds: 1));
     expect(tester.hasRunningAnimations, isTrue);
+    await tester.pump(const Duration(seconds: 14));
+    expect(tester.hasRunningAnimations, isFalse);
 
     await tester.pumpWidget(
       _app(const SizedBox.expand(child: FloatingDots()), still: true),

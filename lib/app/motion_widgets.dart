@@ -211,8 +211,9 @@ class CountUp extends StatelessWidget {
 }
 
 /// A few soft coloured dots drifting slowly, painted behind a header.
-/// One painter, one slow timer and no shadows, so it costs very little;
-/// still when movement is reduced, and paused on hidden screens.
+/// One painter, one slow timer and no shadows, so it costs very little.
+/// The dots drift once round (14 s) when the screen opens and then rest,
+/// so a cheap phone isn't kept drawing; still when movement is reduced.
 class FloatingDots extends StatefulWidget {
   const FloatingDots({super.key, this.colors = _colors});
 
@@ -241,8 +242,8 @@ class _FloatingDotsState extends State<FloatingDots>
     super.didChangeDependencies();
     if (reduceMotion(context)) {
       _controller.stop();
-    } else if (!_controller.isAnimating) {
-      _controller.repeat();
+    } else if (!_controller.isAnimating && !_controller.isCompleted) {
+      _controller.forward();
     }
   }
 

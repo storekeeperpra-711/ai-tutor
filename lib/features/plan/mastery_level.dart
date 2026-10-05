@@ -39,7 +39,13 @@ class MasteryDots extends StatelessWidget {
               ),
             ),
           const SizedBox(width: 4),
-          Text(name, style: Theme.of(context).textTheme.bodySmall),
+          Flexible(
+            child: Text(
+              name,
+              style: Theme.of(context).textTheme.bodySmall,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
         ],
       ),
     );

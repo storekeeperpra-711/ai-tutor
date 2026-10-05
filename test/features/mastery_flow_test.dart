@@ -153,8 +153,13 @@ void main() {
       await tapKey(tester, 'flashcard-next');
     }
     expect(find.byKey(const Key('today-plan')), findsOneWidget);
-    final tile = tester.widget<ListTile>(find.byKey(Key('plan-${cards.key}')));
-    expect((tile.leading! as Icon).icon, Icons.check_circle);
+    expect(
+      find.descendant(
+        of: find.byKey(Key('plan-${cards.key}')),
+        matching: find.byIcon(Icons.check_circle),
+      ),
+      findsOneWidget,
+    );
   });
 
   testWidgets('the account screen shows who needs help', (tester) async {
