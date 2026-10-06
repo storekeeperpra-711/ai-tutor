@@ -1,0 +1,756 @@
+{
+  "id": "g6-maths-08-perimeter",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the perimeter of rectangles, squares and other polygons, and a missing side from the perimeter.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Perimeter and Area"
+    }
+  ],
+  "skills": [
+    "maths.measurement.perimeter"
+  ],
+  "title": {
+    "en": "Perimeter",
+    "ur": "احاطہ"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "two_sides_only",
+      "description": "Adds only the two sides given (length + width) instead of all four."
+    },
+    {
+      "id": "area_for_perimeter",
+      "description": "Multiplies length by width (the area) when the perimeter is asked."
+    },
+    {
+      "id": "missing_side_subtract",
+      "description": "Finds a missing side by taking one side from the whole perimeter, forgetting there are two of each."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.measurement.perimeter": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.measurement.perimeter": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the perimeter of a shape?",
+            "ur": "کسی شکل کا احاطہ کیا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "around",
+              "text": {
+                "en": "The distance all the way around its edge.",
+                "ur": "اس کے کنارے کے گرد پورا فاصلہ۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Add up the lengths of all the sides.",
+                "ur": "جی ہاں! تمام اضلاع کی لمبائیاں جمع کریں۔"
+              }
+            },
+            {
+              "id": "inside",
+              "text": {
+                "en": "The space inside it.",
+                "ur": "اس کے اندر کی جگہ۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the area. Perimeter is the distance around.",
+                "ur": "یہ رقبہ ہے۔ احاطہ گرد کا فاصلہ ہے۔"
+              },
+              "misconception_id": "area_for_perimeter"
+            },
+            {
+              "id": "long",
+              "text": {
+                "en": "Its longest side.",
+                "ur": "اس کا سب سے لمبا ضلع۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Perimeter uses every side, all the way around.",
+                "ur": "احاطے میں ہر ضلع آتا ہے، پورے گرد۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Find the perimeter of a rectangle 12 cm long and 3 cm wide.",
+            "ur": "12 سینٹی میٹر لمبی اور 3 سینٹی میٹر چوڑی مستطیل کا احاطہ معلوم کریں۔"
+          },
+          "answer": 30,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add all four sides: 12 + 3 + 12 + 3.",
+            "ur": "چاروں اضلاع جمع کریں: 12 + 3 + 12 + 3"
+          },
+          "feedback_correct": {
+            "en": "Right! 30 cm.",
+            "ur": "درست! 30 سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "2 × (12 + 3) = 2 × 15 = 30 cm.",
+            "ur": "2 × (12 + 3) = 2 × 15 = 30 سینٹی میٹر"
+          },
+          "common_wrong": [
+            {
+              "answer": 15,
+              "feedback": {
+                "en": "That is two sides. A rectangle has four: 30 cm.",
+                "ur": "یہ دو اضلاع ہیں۔ مستطیل کے چار ہیں: 30 سینٹی میٹر"
+              },
+              "misconception_id": "two_sides_only"
+            },
+            {
+              "answer": 36,
+              "feedback": {
+                "en": "12 × 3 is the area. Perimeter adds the sides: 30 cm.",
+                "ur": "12 × 3 رقبہ ہے۔ احاطے میں اضلاع جمع ہوتے ہیں: 30 سینٹی میٹر"
+              },
+              "misconception_id": "area_for_perimeter"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Maryam says a square with 5 cm sides has a perimeter of 25 cm. What went wrong?",
+            "ur": "مریم کہتی ہے 5 سینٹی میٹر ضلع والے مربع کا احاطہ 25 سینٹی میٹر ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "area",
+              "text": {
+                "en": "She found the area. Perimeter = 4 × 5 = 20 cm.",
+                "ur": "اس نے رقبہ نکالا۔ احاطہ = 4 × 5 = 20 سینٹی میٹر"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 5 × 5 is the area. Around the edge is 5 + 5 + 5 + 5 = 20.",
+                "ur": "جی ہاں! 5 × 5 رقبہ ہے۔ کنارے کے گرد 5 + 5 + 5 + 5 = 20"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Add the four sides: 5 + 5 + 5 + 5 = 20 cm. 25 is the area.",
+                "ur": "چاروں اضلاع جمع کریں: 5 + 5 + 5 + 5 = 20 سینٹی میٹر۔ 25 رقبہ ہے۔"
+              },
+              "misconception_id": "area_for_perimeter"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rect",
+      "front": {
+        "en": "Perimeter of a rectangle?",
+        "ur": "مستطیل کا احاطہ؟"
+      },
+      "back": {
+        "en": "Add all four sides, or 2 × (length + width). 8 m by 5 m: 26 m.",
+        "ur": "چاروں اضلاع جمع کریں، یا 2 × (لمبائی + چوڑائی)۔ 8 میٹر ضرب 5 میٹر: 26 میٹر"
+      }
+    },
+    {
+      "id": "f_square",
+      "front": {
+        "en": "Perimeter of a square?",
+        "ur": "مربع کا احاطہ؟"
+      },
+      "back": {
+        "en": "4 × side. Side 7 cm: 28 cm.",
+        "ur": "4 × ضلع۔ ضلع 7 سینٹی میٹر: 28 سینٹی میٹر"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_measure",
+      "text": {
+        "en": "With a ruler or a piece of string, measure the sides of a book, a table top and a door. Work out the perimeter of each. Which is the biggest?",
+        "ur": "فٹے یا دھاگے سے کسی کتاب، میز کی سطح اور دروازے کے اضلاع ناپیں۔ ہر ایک کا احاطہ نکالیں۔ سب سے بڑا کون سا ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Perimeter",
+      "ur": "احاطہ"
+    },
+    {
+      "en": "Rectangle",
+      "ur": "مستطیل"
+    },
+    {
+      "en": "Square",
+      "ur": "مربع"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Dada's vegetable garden is 8 m long and 5 m wide. How much fence does he need to go all the way round?",
+          "ur": "دادا کا سبزیوں کا باغیچہ 8 میٹر لمبا اور 5 میٹر چوڑا ہے۔ چاروں طرف باڑ کے لیے کتنی تار چاہیے؟"
+        }
+      },
+      "text": {
+        "en": "The distance around a shape is called its perimeter. First, a quick times-table check.",
+        "ur": "کسی شکل کے گرد کے فاصلے کو اس کا احاطہ کہتے ہیں۔ پہلے پہاڑے کا ایک سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.multiplication.facts",
+      "prompt": {
+        "en": "What is 7 × 4?",
+        "ur": "7 × 4 کتنا ہے؟"
+      },
+      "answer": 28,
+      "checker": "numeric",
+      "hint": {
+        "en": "Four sevens: 7, 14, 21 ...",
+        "ur": "چار دفعہ سات: 7، 14، 21 ..."
+      },
+      "feedback_correct": {
+        "en": "Right! 28.",
+        "ur": "درست! 28"
+      },
+      "feedback_wrong": {
+        "en": "7 × 4 = 28.",
+        "ur": "7 × 4 = 28"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "That is 7 + 4. Multiply: 28.",
+            "ur": "یہ 7 + 4 ہے۔ ضرب دیں: 28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_around",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Walk all the way round and add every side!",
+          "ur": "پورا چکر لگائیں اور ہر ضلع جمع کریں!"
+        }
+      },
+      "text": {
+        "en": "Perimeter = the lengths of all the sides added together. A rectangle has two lengths and two widths, so perimeter = length + width + length + width = 2 × (length + width). A square has four equal sides, so perimeter = 4 × side.",
+        "ur": "احاطہ = تمام اضلاع کی لمبائیوں کا مجموعہ۔ مستطیل کی دو لمبائیاں اور دو چوڑائیاں ہوتی ہیں، اس لیے احاطہ = لمبائی + چوڑائی + لمبائی + چوڑائی = 2 × (لمبائی + چوڑائی)۔ مربع کے چار برابر اضلاع ہیں، اس لیے احاطہ = 4 × ضلع۔"
+      }
+    },
+    {
+      "id": "s4_garden",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Dada's garden is 8 m long and 5 m wide. How many metres of fence go all the way round?",
+        "ur": "دادا کا باغیچہ 8 میٹر لمبا اور 5 میٹر چوڑا ہے۔ چاروں طرف کتنے میٹر باڑ لگے گی؟"
+      },
+      "answer": 26,
+      "checker": "numeric",
+      "hint": {
+        "en": "8 + 5 + 8 + 5.",
+        "ur": "8 + 5 + 8 + 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 26 m of fence.",
+        "ur": "درست! 26 میٹر باڑ"
+      },
+      "feedback_wrong": {
+        "en": "2 × (8 + 5) = 2 × 13 = 26 m.",
+        "ur": "2 × (8 + 5) = 2 × 13 = 26 میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "That covers only two sides. Go all the way round: 26 m.",
+            "ur": "یہ صرف دو اضلاع ہیں۔ پورا چکر: 26 میٹر"
+          },
+          "misconception_id": "two_sides_only"
+        },
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "8 × 5 is the area. Fence goes around: 26 m.",
+            "ur": "8 × 5 رقبہ ہے۔ باڑ گرد لگتی ہے: 26 میٹر"
+          },
+          "misconception_id": "area_for_perimeter"
+        }
+      ]
+    },
+    {
+      "id": "s5_square",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A square tile has sides of 7 cm. What is its perimeter?",
+        "ur": "ایک مربع ٹائل کا ہر ضلع 7 سینٹی میٹر ہے۔ اس کا احاطہ کیا ہے؟"
+      },
+      "answer": 28,
+      "checker": "numeric",
+      "hint": {
+        "en": "Four equal sides: 4 × 7.",
+        "ur": "چار برابر اضلاع: 4 × 7"
+      },
+      "feedback_correct": {
+        "en": "Right! 28 cm.",
+        "ur": "درست! 28 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "4 × 7 = 28 cm.",
+        "ur": "4 × 7 = 28 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 49,
+          "feedback": {
+            "en": "7 × 7 is the area. Perimeter: 4 × 7 = 28 cm.",
+            "ur": "7 × 7 رقبہ ہے۔ احاطہ: 4 × 7 = 28 سینٹی میٹر"
+          },
+          "misconception_id": "area_for_perimeter"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "A square has four sides, not two: 28 cm.",
+            "ur": "مربع کے دو نہیں، چار اضلاع ہیں: 28 سینٹی میٹر"
+          },
+          "misconception_id": "two_sides_only"
+        }
+      ]
+    },
+    {
+      "id": "s6_triangle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has sides of 5 cm, 6 cm and 9 cm. What is its perimeter?",
+        "ur": "ایک مثلث کے اضلاع 5، 6 اور 9 سینٹی میٹر ہیں۔ اس کا احاطہ کیا ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the three sides.",
+        "ur": "تینوں اضلاع جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 cm.",
+        "ur": "درست! 20 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "5 + 6 + 9 = 20 cm.",
+        "ur": "5 + 6 + 9 = 20 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 270,
+          "feedback": {
+            "en": "Perimeter adds, it doesn't multiply: 5 + 6 + 9 = 20.",
+            "ur": "احاطے میں ضرب نہیں، جمع: 5 + 6 + 9 = 20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_hexagon",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A regular hexagon has 6 equal sides of 4 cm. What is its perimeter?",
+        "ur": "ایک باقاعدہ مسدس کے 6 برابر اضلاع 4 سینٹی میٹر کے ہیں۔ اس کا احاطہ کیا ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 sides of 4 cm: 6 × 4.",
+        "ur": "4 سینٹی میٹر کے 6 اضلاع: 6 × 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 cm.",
+        "ur": "درست! 24 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "6 × 4 = 24 cm.",
+        "ur": "6 × 4 = 24 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "A hexagon has 6 sides, not 4: 6 × 4 = 24.",
+            "ur": "مسدس کے 4 نہیں، 6 اضلاع ہیں: 6 × 4 = 24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A rectangle has a perimeter of 30 cm. Its length is 9 cm. How wide is it?",
+        "ur": "ایک مستطیل کا احاطہ 30 سینٹی میٹر ہے۔ اس کی لمبائی 9 سینٹی میٹر ہے۔ چوڑائی کتنی ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Half the perimeter is one length + one width: 15 cm.",
+        "ur": "آدھا احاطہ = ایک لمبائی + ایک چوڑائی: 15 سینٹی میٹر"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 cm. Check: 9 + 6 + 9 + 6 = 30.",
+        "ur": "درست! 6 سینٹی میٹر۔ جانچ: 9 + 6 + 9 + 6 = 30"
+      },
+      "feedback_wrong": {
+        "en": "30 ÷ 2 = 15, and 15 − 9 = 6 cm.",
+        "ur": "30 ÷ 2 = 15، اور 15 − 9 = 6 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 21,
+          "feedback": {
+            "en": "There are two lengths: 30 ÷ 2 = 15, then 15 − 9 = 6.",
+            "ur": "دو لمبائیاں ہیں: 30 ÷ 2 = 15، پھر 15 − 9 = 6"
+          },
+          "misconception_id": "missing_side_subtract"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "Take away both lengths: 30 − 9 − 9 = 12 is two widths. One width: 6.",
+            "ur": "دونوں لمبائیاں گھٹائیں: 30 − 9 − 9 = 12 دو چوڑائیاں ہیں۔ ایک چوڑائی: 6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ayan says a rectangle 6 cm by 4 cm has a perimeter of 10 cm. What went wrong?",
+        "ur": "ایان کہتا ہے 6 ضرب 4 سینٹی میٹر کی مستطیل کا احاطہ 10 سینٹی میٹر ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "two",
+          "text": {
+            "en": "He added only two sides. All four: 20 cm.",
+            "ur": "اس نے صرف دو اضلاع جمع کیے۔ چاروں: 20 سینٹی میٹر"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 6 + 4 + 6 + 4 = 20.",
+            "ur": "جی ہاں! 6 + 4 + 6 + 4 = 20"
+          }
+        },
+        {
+          "id": "area",
+          "text": {
+            "en": "It should be 24 cm, 6 × 4.",
+            "ur": "یہ 24 سینٹی میٹر ہونا چاہیے، 6 × 4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 × 4 is the area. Perimeter: 6 + 4 + 6 + 4 = 20.",
+            "ur": "6 × 4 رقبہ ہے۔ احاطہ: 6 + 4 + 6 + 4 = 20"
+          },
+          "misconception_id": "area_for_perimeter"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A rectangle has four sides: 6 + 4 + 6 + 4 = 20 cm.",
+            "ur": "مستطیل کے چار اضلاع ہیں: 6 + 4 + 6 + 4 = 20 سینٹی میٹر"
+          },
+          "misconception_id": "two_sides_only"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is a rectangle's perimeter 2 × (length + width)? Can you teach me?",
+          "ur": "مستطیل کا احاطہ 2 × (لمبائی + چوڑائی) کیوں ہوتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why can we find a rectangle's perimeter with 2 × (length + width)?",
+        "ur": "اپنے الفاظ میں بتائیں: مستطیل کا احاطہ 2 × (لمبائی + چوڑائی) سے کیوں نکل آتا ہے؟"
+      },
+      "key_idea": "A rectangle has two equal lengths and two equal widths. Going round once means one length + one width, twice. So perimeter = 2 × (length + width).",
+      "levels": {
+        "got_it": "Explains that opposite sides are equal, so there are two lengths and two widths, which is 2 × (length + width).",
+        "partly": "Says you add the sides, without explaining where the 2 comes from.",
+        "not_yet": "Confuses it with area, or gives no reason."
+      },
+      "keywords": [
+        [
+          "two",
+          "twice",
+          "دو",
+          "do"
+        ],
+        [
+          "opposite",
+          "equal",
+          "same",
+          "برابر",
+          "آمنے سامنے"
+        ],
+        [
+          "length",
+          "width",
+          "لمبائی",
+          "چوڑائی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Two lengths and two widths make 2 × (length + width).",
+          "ur": "بہت خوب! دو لمبائیاں اور دو چوڑائیاں مل کر 2 × (لمبائی + چوڑائی)۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why we multiply by 2: how many lengths does a rectangle have?",
+          "ur": "اچھی شروعات! اب بتائیں 2 سے ضرب کیوں: مستطیل کی کتنی لمبائیاں ہیں؟"
+        },
+        "not_yet": {
+          "en": "Walk round Dada's garden: 8, 5, 8, 5. Which numbers repeat?",
+          "ur": "دادا کے باغیچے کا چکر لگائیں: 8، 5، 8، 5۔ کون سے اعداد دہرائے گئے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_square_side",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A square has a perimeter of 36 cm. How long is each side?",
+        "ur": "ایک مربع کا احاطہ 36 سینٹی میٹر ہے۔ ہر ضلع کتنا لمبا ہے؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 equal sides make 36: 36 ÷ 4.",
+        "ur": "4 برابر اضلاع مل کر 36: 36 ÷ 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 9 cm. Check: 4 × 9 = 36.",
+        "ur": "درست! 9 سینٹی میٹر۔ جانچ: 4 × 9 = 36"
+      },
+      "feedback_wrong": {
+        "en": "36 ÷ 4 = 9 cm.",
+        "ur": "36 ÷ 4 = 9 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 × 6 = 36 is the area of a 6 cm square. Perimeter ÷ 4: 9 cm.",
+            "ur": "6 × 6 = 36 تو 6 سینٹی میٹر مربع کا رقبہ ہے۔ احاطہ ÷ 4: 9 سینٹی میٹر"
+          },
+          "misconception_id": "area_for_perimeter"
+        },
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "Divide by 4, don't subtract: 36 ÷ 4 = 9.",
+            "ur": "4 سے تقسیم کریں، گھٹائیں نہیں: 36 ÷ 4 = 9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can measure all the way round now!",
+          "ur": "اب آپ پورا گرد ناپ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Perimeter is the distance around a shape: add all its sides. Rectangle: 2 × (length + width). Square: 4 × side. To find a missing side of a rectangle, halve the perimeter, then take away the side you know.",
+        "ur": "احاطہ کسی شکل کے گرد کا فاصلہ ہے: تمام اضلاع جمع کریں۔ مستطیل: 2 × (لمبائی + چوڑائی)۔ مربع: 4 × ضلع۔ مستطیل کا نامعلوم ضلع نکالنے کے لیے احاطہ آدھا کریں، پھر معلوم ضلع گھٹائیں۔"
+      },
+      "points": [
+        {
+          "en": "Count every side, not just two.",
+          "ur": "ہر ضلع گنیں، صرف دو نہیں۔"
+        },
+        {
+          "en": "Perimeter is in cm or m, not cm².",
+          "ur": "احاطہ سینٹی میٹر یا میٹر میں ہوتا ہے، مربع سینٹی میٹر میں نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_rect",
+      "type": "apply",
+      "skill": "maths.measurement.perimeter",
+      "step": {
+        "id": "r_rect",
+        "type": "number",
+        "prompt": {
+          "en": "Find the perimeter of a rectangle 10 m long and 4 m wide.",
+          "ur": "10 میٹر لمبی اور 4 میٹر چوڑی مستطیل کا احاطہ معلوم کریں۔"
+        },
+        "answer": 28,
+        "checker": "numeric",
+        "hint": {
+          "en": "2 × (10 + 4).",
+          "ur": "2 × (10 + 4)"
+        },
+        "feedback_correct": {
+          "en": "Right! 28 m.",
+          "ur": "درست! 28 میٹر"
+        },
+        "feedback_wrong": {
+          "en": "2 × 14 = 28 m.",
+          "ur": "2 × 14 = 28 میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 14,
+            "feedback": {
+              "en": "That is two sides. All four: 28 m.",
+              "ur": "یہ دو اضلاع ہیں۔ چاروں: 28 میٹر"
+            },
+            "misconception_id": "two_sides_only"
+          },
+          {
+            "answer": 40,
+            "feedback": {
+              "en": "10 × 4 is the area. Perimeter: 28 m.",
+              "ur": "10 × 4 رقبہ ہے۔ احاطہ: 28 میٹر"
+            },
+            "misconception_id": "area_for_perimeter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_square",
+      "type": "recall",
+      "skill": "maths.measurement.perimeter",
+      "step": {
+        "id": "r_square",
+        "type": "number",
+        "prompt": {
+          "en": "Find the perimeter of a square with 6 cm sides.",
+          "ur": "6 سینٹی میٹر ضلع والے مربع کا احاطہ معلوم کریں۔"
+        },
+        "answer": 24,
+        "checker": "numeric",
+        "hint": {
+          "en": "4 × 6.",
+          "ur": "4 × 6"
+        },
+        "feedback_correct": {
+          "en": "Right! 24 cm.",
+          "ur": "درست! 24 سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "4 × 6 = 24 cm.",
+          "ur": "4 × 6 = 24 سینٹی میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 36,
+            "feedback": {
+              "en": "6 × 6 is the area. Perimeter: 4 × 6 = 24.",
+              "ur": "6 × 6 رقبہ ہے۔ احاطہ: 4 × 6 = 24"
+            },
+            "misconception_id": "area_for_perimeter"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Perimeter and Area unit. No textbook text or exercises were used.",
+    "There are no pictures yet: every shape is described in words. A drawing of each shape on the board helps.",
+    "Urdu terms to check: احاطہ (perimeter), مستطیل (rectangle), مربع (square), مسدس (hexagon).",
+    "The numbers were worked out in content/sources/g6-maths-08/perimeter.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
