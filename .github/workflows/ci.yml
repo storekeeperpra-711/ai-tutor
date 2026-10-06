@@ -112,13 +112,17 @@ jobs:
           cache: true
       - run: flutter build apk --debug --flavor dev
       - run: flutter build apk --debug --flavor prod
+      # The free plan holds only 500 MB of artifacts and each debug APK is
+      # large: keep them 3 days, and a full store must not turn CI red when
+      # the app itself built fine.
       - uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: ai-tutor-debug-apks
           path: |
             build/app/outputs/flutter-apk/app-dev-debug.apk
             build/app/outputs/flutter-apk/app-prod-debug.apk
-          retention-days: 14
+          retention-days: 3
 
   # Small release APKs, one per phone type (Phase 10): a phone downloads
   # only its own. armeabi-v7a works on almost every Android phone;
@@ -127,6 +131,8 @@ jobs:
   release-apks:
     name: Build small release APKs
     if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
     needs: [check, lessons, rules]
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -160,8 +166,21 @@ jobs:
           ls -l build/app/outputs/flutter-apk/*.apk \
             | awk '{printf "- %s: %.1f MB\n", $9, $5/1048576}' \
             | sed 's|build/app/outputs/flutter-apk/||' >> "$GITHUB_STEP_SUMMARY"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ai-tutor-dev-release-apks
-          path: build/app/outputs/flutter-apk/app-*-dev-release.apk
-          retention-days: 14
+      # The APKs go on the "Test app" release page instead of artifacts:
+      # releases do not count towards the 500 MB artifact limit, and a
+      # phone downloads the .apk directly, with nothing to unzip.
+      - name: Put the APKs on the Test app release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd build/app/outputs/flutter-apk
+          cp app-arm64-v8a-dev-release.apk ai-tutor-test-arm64.apk
+          cp app-armeabi-v7a-dev-release.apk ai-tutor-test-older-phones.apk
+          notes="Newest test app, built from main (${GITHUB_SHA::7}). Download ai-tutor-test-arm64.apk on most phones; if it will not install, use ai-tutor-test-older-phones.apk."
+          if ! gh release view test-app > /dev/null 2>&1; then
+            gh release create test-app --target "$GITHUB_SHA" --prerelease \
+              --title "Test app (dev)" --notes "$notes"
+          fi
+          gh release edit test-app --notes "$notes"
+          gh release upload test-app --clobber \
+            ai-tutor-test-arm64.apk ai-tutor-test-older-phones.apk
