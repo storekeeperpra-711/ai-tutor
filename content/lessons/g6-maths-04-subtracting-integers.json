@@ -1,0 +1,762 @@
+{
+  "id": "g6-maths-04-subtracting-integers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Subtract integers by adding the opposite, and find the difference between two integers.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Integers"
+    }
+  ],
+  "skills": [
+    "maths.integers.subtract"
+  ],
+  "title": {
+    "en": "Subtracting integers",
+    "ur": "صحیح اعداد کی تفریق"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.add"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "minus_negative_is_minus",
+      "description": "Thinks subtracting a negative makes the answer smaller: 5 − (−3) = 2."
+    },
+    {
+      "id": "add_digits_keep_minus",
+      "description": "Adds the digits and keeps a minus sign: −4 − (−9) = −13."
+    },
+    {
+      "id": "order_swapped",
+      "description": "Swaps the order: works out 7 − 4 instead of 4 − 7 and gets 3."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.subtract": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.subtract": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "Which is the same as −1 − (−7)?",
+            "ur": "ان میں سے کون سا −1 − (−7) کے برابر ہے؟"
+          },
+          "options": [
+            {
+              "id": "add",
+              "text": {
+                "en": "−1 + 7",
+                "ur": "−1 + 7"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Subtracting −7 is the same as adding 7. So the answer is 6.",
+                "ur": "جی ہاں! −7 تفریق کرنا 7 جمع کرنے کے برابر ہے۔ اس لیے جواب 6 ہے۔"
+              }
+            },
+            {
+              "id": "sub",
+              "text": {
+                "en": "−1 − 7",
+                "ur": "−1 − 7"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Subtracting a negative is adding the opposite: −1 + 7.",
+                "ur": "منفی عدد تفریق کرنا اس کا مخالف جمع کرنا ہے: −1 + 7"
+              },
+              "misconception_id": "minus_negative_is_minus"
+            },
+            {
+              "id": "addneg",
+              "text": {
+                "en": "−1 + (−7)",
+                "ur": "−1 + (−7)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is −1 − 7. The opposite of −7 is 7, so −1 + 7.",
+                "ur": "یہ −1 − 7 ہے۔ −7 کا مخالف 7 ہے، اس لیے −1 + 7"
+              },
+              "misconception_id": "minus_negative_is_minus"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Work out −2 − 6",
+            "ur": "حل کریں: −2 − 6"
+          },
+          "answer": -8,
+          "checker": "numeric",
+          "hint": {
+            "en": "Subtracting 6 moves 6 to the left from −2.",
+            "ur": "6 تفریق کرنے سے −2 سے 6 بائیں جاتے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! −2 − 6 = −8.",
+            "ur": "درست! −2 − 6 = −8"
+          },
+          "feedback_wrong": {
+            "en": "−2 − 6 = −2 + (−6). Same signs: 2 + 6 = 8, keep the minus: −8.",
+            "ur": "−2 − 6 = −2 + (−6)۔ ایک جیسی علامتیں: 2 + 6 = 8، منفی رکھیں: −8"
+          },
+          "common_wrong": [
+            {
+              "answer": -4,
+              "feedback": {
+                "en": "Both −2 and −6 go left of 0, so add 2 and 6: −2 − 6 = −8.",
+                "ur": "−2 اور −6 دونوں 0 سے بائیں جاتے ہیں، اس لیے 2 اور 6 جمع کریں: −2 − 6 = −8"
+              }
+            },
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "That is −2 + 6. Subtracting 6 moves left, not right.",
+                "ur": "یہ −2 + 6 ہے۔ 6 تفریق کرنے سے دائیں نہیں، بائیں جاتے ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hira wrote 3 − 9 = 6. What went wrong?",
+            "ur": "حرا نے لکھا 3 − 9 = 6۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "order",
+              "text": {
+                "en": "She worked out 9 − 3. From 3, moving 9 to the left gives −6.",
+                "ur": "اس نے 9 − 3 حل کیا۔ 3 سے 9 بائیں جانے پر −6 آتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! You can't swap the numbers in a subtraction: 3 − 9 = −6.",
+                "ur": "جی ہاں! تفریق میں اعداد کی جگہ نہیں بدل سکتے: 3 − 9 = −6"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 9 − 3 = 6.",
+                "ur": "کوئی غلطی نہیں۔ 9 − 3 = 6"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The question is 3 − 9, not 9 − 3. Taking 9 from 3 goes below 0.",
+                "ur": "سوال 3 − 9 ہے، 9 − 3 نہیں۔ 3 میں سے 9 لینے سے 0 سے نیچے جاتے ہیں۔"
+              },
+              "misconception_id": "order_swapped"
+            },
+            {
+              "id": "twelve",
+              "text": {
+                "en": "The answer should be 12.",
+                "ur": "جواب 12 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "12 is 3 + 9. Subtracting 9 moves left from 3: −6.",
+                "ur": "12، 3 + 9 ہے۔ 9 تفریق کرنے سے 3 سے بائیں جاتے ہیں: −6"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rule",
+      "front": {
+        "en": "How do you subtract an integer?",
+        "ur": "صحیح عدد کیسے تفریق کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Add its opposite. 5 − (−3) = 5 + 3 = 8, and −3 − 5 = −3 + (−5) = −8.",
+        "ur": "اس کا مخالف جمع کریں۔ 5 − (−3) = 5 + 3 = 8، اور −3 − 5 = −3 + (−5) = −8"
+      }
+    },
+    {
+      "id": "f_difference",
+      "front": {
+        "en": "Lahore is 12 °C and Murree is −3 °C. How much warmer is Lahore?",
+        "ur": "لاہور 12 ڈگری اور مری −3 ڈگری ہے۔ لاہور کتنا زیادہ گرم ہے؟"
+      },
+      "back": {
+        "en": "12 − (−3) = 12 + 3 = 15 degrees.",
+        "ur": "12 − (−3) = 12 + 3 = 15 ڈگری"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_pattern",
+      "text": {
+        "en": "Copy and continue this pattern: 4 − 2 = 2, 4 − 1 = 3, 4 − 0 = 4, 4 − (−1) = ?, 4 − (−2) = ? What do you notice? Show it to someone at home.",
+        "ur": "یہ نمونہ نقل کریں اور آگے بڑھائیں: 4 − 2 = 2، 4 − 1 = 3، 4 − 0 = 4، 4 − (−1) = ؟، 4 − (−2) = ؟ آپ نے کیا دیکھا؟ گھر میں کسی کو دکھائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Difference",
+      "ur": "فرق"
+    },
+    {
+      "en": "Subtract",
+      "ur": "تفریق کرنا"
+    },
+    {
+      "en": "Opposite",
+      "ur": "مخالف عدد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "In Murree it is 4 °C in the evening. At night it gets 7 degrees colder. How cold is the night?",
+          "ur": "مری میں شام کو 4 ڈگری ہے۔ رات کو 7 ڈگری مزید ٹھنڈ ہو جاتی ہے۔ رات کتنی ٹھنڈی ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we subtract integers. First, a quick check of adding.",
+        "ur": "آج ہم صحیح اعداد تفریق کریں گے۔ پہلے جمع کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.integers.add",
+      "prompt": {
+        "en": "Work out −6 + 2",
+        "ur": "حل کریں: −6 + 2"
+      },
+      "answer": -4,
+      "checker": "numeric",
+      "hint": {
+        "en": "From −6, move 2 to the right.",
+        "ur": "−6 سے 2 دائیں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −6 + 2 = −4.",
+        "ur": "درست! −6 + 2 = −4"
+      },
+      "feedback_wrong": {
+        "en": "Different signs: 6 − 2 = 4, and −6 is further from 0, so −4.",
+        "ur": "مختلف علامتیں: 6 − 2 = 4، اور −6 صفر سے زیادہ دور ہے، اس لیے −4"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "−6 is further from 0, so the answer is negative: −4.",
+            "ur": "−6 صفر سے زیادہ دور ہے، اس لیے جواب منفی ہے: −4"
+          }
+        },
+        {
+          "answer": -8,
+          "feedback": {
+            "en": "Adding 2 moves right, towards 0: −4.",
+            "ur": "2 جمع کرنے سے دائیں، 0 کی طرف جاتے ہیں: −4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Subtracting a positive number moves you left.",
+          "ur": "مثبت عدد تفریق کرنے سے آپ بائیں جاتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Getting 7 degrees colder is 4 − 7. Start at 4 and move 7 to the LEFT. You pass 0 and keep going.",
+        "ur": "7 ڈگری مزید ٹھنڈ ہونا 4 − 7 ہے۔ 4 سے شروع کریں اور 7 بائیں جائیں۔ آپ 0 سے گزر کر آگے جاتے ہیں۔"
+      }
+    },
+    {
+      "id": "s4_colder",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "The marker is on 4. Move it to show 4 − 7. Press Check.",
+        "ur": "نشان 4 پر ہے۔ اسے ہلا کر 4 − 7 دکھائیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": 4
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "-3"
+      },
+      "hint": {
+        "en": "Subtracting 7 means 7 steps to the left.",
+        "ur": "7 تفریق کرنے کا مطلب 7 قدم بائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 4 − 7 = −3. The night is −3 °C.",
+        "ur": "جی ہاں! 4 − 7 = −3۔ رات −3 ڈگری ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "From 4, count 7 to the left: 3, 2, 1, 0, −1, −2, −3.",
+        "ur": "4 سے 7 بائیں گنیں: 3، 2، 1، 0، −1، −2، −3"
+      },
+      "common_wrong": [
+        {
+          "answer": "3",
+          "feedback": {
+            "en": "That is 7 − 4. The question is 4 − 7: you go past 0, to −3.",
+            "ur": "یہ 7 − 4 ہے۔ سوال 4 − 7 ہے: آپ 0 سے آگے −3 تک جاتے ہیں۔"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s5_pattern",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Look at the pattern. What happens when we take away a negative?",
+          "ur": "نمونہ دیکھیں۔ منفی عدد تفریق کرنے سے کیا ہوتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "5 − 2 = 3, 5 − 1 = 4, 5 − 0 = 5, 5 − (−1) = 6, 5 − (−2) = 7. Each time we take away one less, the answer goes up by 1. So subtracting a negative number is the same as adding its opposite: 5 − (−3) = 5 + 3 = 8. The rule always works: to subtract, add the opposite.",
+        "ur": "5 − 2 = 3، 5 − 1 = 4، 5 − 0 = 5، 5 − (−1) = 6، 5 − (−2) = 7۔ ہر بار ایک کم تفریق کرنے پر جواب 1 بڑھ جاتا ہے۔ اس لیے منفی عدد تفریق کرنا اس کا مخالف جمع کرنے کے برابر ہے: 5 − (−3) = 5 + 3 = 8۔ یہ اصول ہمیشہ کام کرتا ہے: تفریق کے لیے مخالف جمع کریں۔"
+      }
+    },
+    {
+      "id": "s6_rewrite",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which is the same as 2 − (−6)?",
+        "ur": "ان میں سے کون سا 2 − (−6) کے برابر ہے؟"
+      },
+      "options": [
+        {
+          "id": "add",
+          "text": {
+            "en": "2 + 6",
+            "ur": "2 + 6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Subtracting −6 is adding 6.",
+            "ur": "جی ہاں! −6 تفریق کرنا 6 جمع کرنا ہے۔"
+          }
+        },
+        {
+          "id": "sub",
+          "text": {
+            "en": "2 − 6",
+            "ur": "2 − 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That takes away 6. We are taking away −6, so add the opposite: 2 + 6.",
+            "ur": "اس میں 6 تفریق ہو رہا ہے۔ ہم −6 تفریق کر رہے ہیں، اس لیے مخالف جمع کریں: 2 + 6"
+          },
+          "misconception_id": "minus_negative_is_minus"
+        }
+      ]
+    },
+    {
+      "id": "s7_minus_negative",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 2 − (−6)",
+        "ur": "حل کریں: 2 − (−6)"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Change it to 2 + 6.",
+        "ur": "اسے 2 + 6 میں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 − (−6) = 2 + 6 = 8.",
+        "ur": "درست! 2 − (−6) = 2 + 6 = 8"
+      },
+      "feedback_wrong": {
+        "en": "Subtracting −6 is adding 6: 2 + 6 = 8.",
+        "ur": "−6 تفریق کرنا 6 جمع کرنا ہے: 2 + 6 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": -4,
+          "feedback": {
+            "en": "That is 2 − 6. Subtracting a negative is adding: 2 + 6 = 8.",
+            "ur": "یہ 2 − 6 ہے۔ منفی تفریق کرنا جمع کرنا ہے: 2 + 6 = 8"
+          },
+          "misconception_id": "minus_negative_is_minus"
+        },
+        {
+          "answer": -8,
+          "feedback": {
+            "en": "Subtracting a negative makes the answer bigger: 2 + 6 = 8.",
+            "ur": "منفی تفریق کرنے سے جواب بڑا ہوتا ہے: 2 + 6 = 8"
+          },
+          "misconception_id": "minus_negative_is_minus"
+        }
+      ]
+    },
+    {
+      "id": "s8_negative_minus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out −3 − 5",
+        "ur": "حل کریں: −3 − 5"
+      },
+      "answer": -8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the opposite: −3 + (−5).",
+        "ur": "مخالف جمع کریں: −3 + (−5)"
+      },
+      "feedback_correct": {
+        "en": "Right! −3 − 5 = −8.",
+        "ur": "درست! −3 − 5 = −8"
+      },
+      "feedback_wrong": {
+        "en": "−3 − 5 = −3 + (−5). Same signs: 3 + 5 = 8, keep the minus: −8.",
+        "ur": "−3 − 5 = −3 + (−5)۔ ایک جیسی علامتیں: 3 + 5 = 8، منفی رکھیں: −8"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That is −3 + 5. Subtracting 5 moves left from −3: −8.",
+            "ur": "یہ −3 + 5 ہے۔ 5 تفریق کرنے سے −3 سے بائیں جاتے ہیں: −8"
+          }
+        },
+        {
+          "answer": -2,
+          "feedback": {
+            "en": "Subtracting 5 moves further left from −3, past −5: −8.",
+            "ur": "5 تفریق کرنے سے −3 سے مزید بائیں جاتے ہیں: −8"
+          }
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "Moving left from −3 stays negative: −8.",
+            "ur": "−3 سے بائیں جانے پر جواب منفی رہتا ہے: −8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Usman wrote −4 − (−9) = −13. What went wrong?",
+        "ur": "عثمان نے لکھا −4 − (−9) = −13۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "opposite",
+          "text": {
+            "en": "Subtracting −9 means adding 9: −4 + 9 = 5.",
+            "ur": "−9 تفریق کرنے کا مطلب 9 جمع کرنا ہے: −4 + 9 = 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! −4 + 9: different signs, 9 − 4 = 5, and 9 is further from 0.",
+            "ur": "جی ہاں! −4 + 9: مختلف علامتیں، 9 − 4 = 5، اور 9 صفر سے زیادہ دور ہے۔"
+          }
+        },
+        {
+          "id": "minus5",
+          "text": {
+            "en": "The answer should be −5.",
+            "ur": "جواب −5 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The size is right, but −4 + 9 is positive, because 9 is further from 0: 5.",
+            "ur": "مقدار درست ہے، مگر −4 + 9 مثبت ہے، کیونکہ 9 صفر سے زیادہ دور ہے: 5"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 4 + 9 = 13 and both are negative.",
+            "ur": "کوئی غلطی نہیں۔ 4 + 9 = 13 اور دونوں منفی ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There is a subtraction here. Taking away −9 means adding 9, so the answer goes up.",
+            "ur": "یہاں تفریق ہے۔ −9 تفریق کرنے کا مطلب 9 جمع کرنا ہے، اس لیے جواب بڑھتا ہے۔"
+          },
+          "misconception_id": "add_digits_keep_minus"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Lahore is 12 °C and Murree is −3 °C. My friend says Lahore is only 9 degrees warmer. Is that right?",
+          "ur": "لاہور 12 ڈگری اور مری −3 ڈگری ہے۔ میرا دوست کہتا ہے لاہور صرف 9 ڈگری زیادہ گرم ہے۔ کیا یہ درست ہے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how much warmer is Lahore (12 °C) than Murree (−3 °C), and why? Think of a thermometer.",
+        "ur": "اپنے الفاظ میں بتائیں: لاہور (12 ڈگری)، مری (−3 ڈگری) سے کتنا زیادہ گرم ہے، اور کیوں؟ تھرمامیٹر کا سوچیں۔"
+      },
+      "key_idea": "The difference is 12 − (−3) = 12 + 3 = 15 degrees: 3 degrees from −3 up to 0, then 12 more up to 12. The friend got 9 by doing 12 − 3.",
+      "levels": {
+        "got_it": "Says 15 degrees, explaining 3 up to zero plus 12 more, or 12 − (−3) = 12 + 3.",
+        "partly": "Says 15 with no reason, or says the friend is wrong without the right difference.",
+        "not_yet": "Agrees with 9, gives another answer, or no reason."
+      },
+      "keywords": [
+        [
+          "15",
+          "fifteen",
+          "پندرہ",
+          "pandrah",
+          "۱۵"
+        ],
+        [
+          "zero",
+          "0",
+          "صفر",
+          "sifar"
+        ],
+        [
+          "add",
+          "plus",
+          "+",
+          "جمع",
+          "jama"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! From −3 up to 0 is 3 degrees, then 12 more: 15 degrees. That is 12 − (−3) = 12 + 3.",
+          "ur": "بہت خوب سمجھایا! −3 سے 0 تک 3 ڈگری، پھر 12 مزید: 15 ڈگری۔ یعنی 12 − (−3) = 12 + 3"
+        },
+        "partly": {
+          "en": "Good start! Now count: how many degrees from −3 up to 0, and then from 0 up to 12?",
+          "ur": "اچھی شروعات! اب گنیں: −3 سے 0 تک کتنی ڈگری، اور پھر 0 سے 12 تک؟"
+        },
+        "not_yet": {
+          "en": "Picture a thermometer. Count up from −3 to 0, then from 0 to 12. How many degrees in all?",
+          "ur": "ایک تھرمامیٹر کا سوچیں۔ −3 سے 0 تک اوپر گنیں، پھر 0 سے 12 تک۔ کل کتنی ڈگری؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_difference",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "So how many degrees warmer is Lahore? Work out 12 − (−3)",
+        "ur": "تو لاہور کتنی ڈگری زیادہ گرم ہے؟ حل کریں: 12 − (−3)"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Subtracting −3 is adding 3.",
+        "ur": "−3 تفریق کرنا 3 جمع کرنا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 − (−3) = 15. Lahore is 15 degrees warmer.",
+        "ur": "درست! 12 − (−3) = 15۔ لاہور 15 ڈگری زیادہ گرم ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "12 − (−3) = 12 + 3 = 15.",
+        "ur": "12 − (−3) = 12 + 3 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That is 12 − 3. Murree is BELOW zero, so add the 3 degrees: 15.",
+            "ur": "یہ 12 − 3 ہے۔ مری صفر سے نیچے ہے، اس لیے 3 ڈگری جمع کریں: 15"
+          },
+          "misconception_id": "minus_negative_is_minus"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Subtracting is just adding the opposite!",
+          "ur": "تفریق بس مخالف جمع کرنا ہے!"
+        }
+      },
+      "text": {
+        "en": "To subtract an integer, add its opposite. 4 − 7 = 4 + (−7) = −3. 5 − (−3) = 5 + 3 = 8. The difference between 12 °C and −3 °C is 12 − (−3) = 15 degrees.",
+        "ur": "صحیح عدد تفریق کرنے کے لیے اس کا مخالف جمع کریں۔ 4 − 7 = 4 + (−7) = −3۔ 5 − (−3) = 5 + 3 = 8۔ 12 ڈگری اور −3 ڈگری کا فرق 12 − (−3) = 15 ڈگری ہے۔"
+      },
+      "points": [
+        {
+          "en": "Subtracting a negative makes the answer bigger.",
+          "ur": "منفی تفریق کرنے سے جواب بڑا ہوتا ہے۔"
+        },
+        {
+          "en": "You can't swap the numbers: 3 − 9 = −6, but 9 − 3 = 6.",
+          "ur": "اعداد کی جگہ نہیں بدل سکتے: 3 − 9 = −6، مگر 9 − 3 = 6"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_minus_negative",
+      "type": "apply",
+      "skill": "maths.integers.subtract",
+      "step": {
+        "id": "r_minus_negative",
+        "type": "number",
+        "prompt": {
+          "en": "Work out −10 − (−4)",
+          "ur": "حل کریں: −10 − (−4)"
+        },
+        "answer": -6,
+        "checker": "numeric",
+        "hint": {
+          "en": "Change it to −10 + 4.",
+          "ur": "اسے −10 + 4 میں بدلیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −10 − (−4) = −10 + 4 = −6.",
+          "ur": "درست! −10 − (−4) = −10 + 4 = −6"
+        },
+        "feedback_wrong": {
+          "en": "Subtracting −4 is adding 4: −10 + 4 = −6.",
+          "ur": "−4 تفریق کرنا 4 جمع کرنا ہے: −10 + 4 = −6"
+        },
+        "common_wrong": [
+          {
+            "answer": -14,
+            "feedback": {
+              "en": "Subtracting −4 is adding 4, so move right: −6.",
+              "ur": "−4 تفریق کرنا 4 جمع کرنا ہے، اس لیے دائیں جائیں: −6"
+            },
+            "misconception_id": "minus_negative_is_minus"
+          },
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "−10 is further from 0, so the answer is negative: −6.",
+              "ur": "−10 صفر سے زیادہ دور ہے، اس لیے جواب منفی ہے: −6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_swap",
+      "type": "recall",
+      "skill": "maths.integers.subtract",
+      "step": {
+        "id": "r_swap",
+        "type": "number",
+        "prompt": {
+          "en": "Work out 3 − 9",
+          "ur": "حل کریں: 3 − 9"
+        },
+        "answer": -6,
+        "checker": "numeric",
+        "hint": {
+          "en": "From 3, move 9 to the left.",
+          "ur": "3 سے 9 بائیں جائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 3 − 9 = −6.",
+          "ur": "درست! 3 − 9 = −6"
+        },
+        "feedback_wrong": {
+          "en": "3 − 9 = 3 + (−9). 9 − 3 = 6, and −9 is further from 0: −6.",
+          "ur": "3 − 9 = 3 + (−9)۔ 9 − 3 = 6، اور −9 صفر سے زیادہ دور ہے: −6"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "That is 9 − 3. Taking 9 from 3 goes below 0: −6.",
+              "ur": "یہ 9 − 3 ہے۔ 3 میں سے 9 لینے سے 0 سے نیچے جاتے ہیں: −6"
+            },
+            "misconception_id": "order_swapped"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Integers unit. No textbook text or exercises were used.",
+    "The rule 'subtract = add the opposite' is shown with a pattern (5 − 2, 5 − 1, 5 − 0, 5 − (−1) …) rather than just stated.",
+    "Urdu terms to check: فرق (difference), تفریق (subtraction), مخالف عدد (opposite / additive inverse).",
+    "The numbers were worked out in content/sources/g6-maths-04/subtracting_integers.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
