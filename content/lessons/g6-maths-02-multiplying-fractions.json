@@ -1,0 +1,911 @@
+{
+  "id": "g6-maths-02-multiplying-fractions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find a fraction of a whole number, multiply fractions and mixed numbers (simplifying before or after), and know that multiplying by a fraction less than 1 gives a smaller answer.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Fractions"
+    }
+  ],
+  "skills": [
+    "maths.fractions.multiply"
+  ],
+  "title": {
+    "en": "Multiplying fractions",
+    "ur": "کسور کی ضرب"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.fractions.equivalent"
+    },
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "multiply_makes_bigger",
+      "description": "Believes multiplying always gives a bigger answer, so 1/2 × 6 must be more than 6."
+    },
+    {
+      "id": "kept_denominator",
+      "description": "Multiplies the numerators but keeps a denominator, as when adding (2/3 × 4/5 = 8/5)."
+    },
+    {
+      "id": "add_tops_and_bottoms",
+      "description": "Adds the numerators and the denominators instead of multiplying (2/3 × 4/5 = 6/8)."
+    },
+    {
+      "id": "whole_into_both",
+      "description": "Multiplies both the numerator and the denominator by the whole number (3 × 2/5 = 6/15, which is still 2/5)."
+    },
+    {
+      "id": "whole_part_only",
+      "description": "Multiplies only the whole-number part of a mixed number (3 × 2 1/4 = 6 1/4)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.fractions.multiply": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.fractions.multiply": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "How do you work out 2/3 × 4/5?",
+            "ur": "2/3 × 4/5 کیسے حل کرتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "tops_bottoms",
+              "text": {
+                "en": "Multiply the tops and multiply the bottoms: 8/15",
+                "ur": "اوپر والوں کو ضرب دیں اور نیچے والوں کو ضرب دیں: 8/15"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 2 × 4 = 8 and 3 × 5 = 15, so 2/3 × 4/5 = 8/15.",
+                "ur": "جی ہاں! 2 × 4 = 8 اور 3 × 5 = 15، اس لیے 2/3 × 4/5 = 8/15"
+              }
+            },
+            {
+              "id": "common",
+              "text": {
+                "en": "Find a common denominator first",
+                "ur": "پہلے مشترک نسب نما نکالیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is for adding and subtracting. To multiply, just multiply the tops and the bottoms.",
+                "ur": "یہ جمع اور تفریق کے لیے ہے۔ ضرب میں صرف اوپر والوں اور نیچے والوں کو ضرب دیں۔"
+              }
+            },
+            {
+              "id": "keep",
+              "text": {
+                "en": "Multiply the tops and keep the bottom: 8/5",
+                "ur": "اوپر والوں کو ضرب دیں اور نیچے والا وہی رکھیں: 8/5"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "8/5 is more than 1, but 2/3 of 4/5 must be less than 4/5. Multiply the bottoms too.",
+                "ur": "8/5 تو 1 سے زیادہ ہے، لیکن 4/5 کا 2/3 تو 4/5 سے کم ہونا چاہیے۔ نیچے والوں کو بھی ضرب دیں۔"
+              },
+              "misconception_id": "kept_denominator"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_five_sixths",
+        "type": "apply",
+        "step": {
+          "id": "qb_five_sixths",
+          "type": "text_check",
+          "prompt": {
+            "en": "Work out 5/6 × 3/10. Give your answer in its simplest form.",
+            "ur": "5/6 × 3/10 حل کریں۔ جواب سادہ ترین شکل میں لکھیں۔"
+          },
+          "checker": "fraction",
+          "expected": "1/4",
+          "hint": {
+            "en": "Multiply the tops and the bottoms, then simplify. Or simplify first: 5 and 10, 3 and 6.",
+            "ur": "اوپر والوں اور نیچے والوں کو ضرب دیں، پھر سادہ کریں۔ یا پہلے سادہ کریں: 5 اور 10، 3 اور 6"
+          },
+          "feedback_correct": {
+            "en": "Right! 15/60 = 1/4. Simplifying first gives 1/2 × 1/2 = 1/4 too.",
+            "ur": "درست! 15/60 = 1/4۔ پہلے سادہ کرنے سے بھی 1/2 × 1/2 = 1/4 آتا ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "5 × 3 = 15 and 6 × 10 = 60, so 15/60. 15 divides both: 15/60 = 1/4.",
+            "ur": "5 × 3 = 15 اور 6 × 10 = 60، یعنی 15/60۔ 15 دونوں کو تقسیم کرتا ہے: 15/60 = 1/4"
+          },
+          "require_simplest": true,
+          "common_wrong": [
+            {
+              "answer": "15/10",
+              "feedback": {
+                "en": "Multiply the bottoms too: 6 × 10 = 60.",
+                "ur": "نیچے والوں کو بھی ضرب دیں: 6 × 10 = 60"
+              },
+              "misconception_id": "kept_denominator"
+            },
+            {
+              "answer": "8/16",
+              "feedback": {
+                "en": "You added the tops and the bottoms. To multiply, multiply them.",
+                "ur": "آپ نے اوپر اور نیچے والے جمع کر دیے۔ ضرب میں انہیں ضرب دیں۔"
+              },
+              "misconception_id": "add_tops_and_bottoms"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_mixed",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_mixed",
+          "type": "choice",
+          "prompt": {
+            "en": "Hamza says 2 × 2 1/2 = 4 1/2. What went wrong?",
+            "ur": "حمزہ کہتا ہے 2 × 2 1/2 = 4 1/2۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "half",
+              "text": {
+                "en": "He multiplied the 2 wholes but not the 1/2. 2 × 2 1/2 = 4 + 1 = 5.",
+                "ur": "اس نے 2 پوروں کو ضرب دی لیکن 1/2 کو نہیں۔ 2 × 2 1/2 = 4 + 1 = 5"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Two halves make 1 more, so the answer is 5. Or 2 × 5/2 = 10/2 = 5.",
+                "ur": "درست! دو آدھے مل کر 1 اور بنتے ہیں، اس لیے جواب 5 ہے۔ یا 2 × 5/2 = 10/2 = 5"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, 2 × 2 = 4 and the 1/2 stays.",
+                "ur": "کوئی غلطی نہیں، 2 × 2 = 4 اور 1/2 ویسے ہی رہتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "2 × 2 1/2 means two lots of 2 1/2. Two halves are there, not one.",
+                "ur": "2 × 2 1/2 کا مطلب ہے 2 1/2 دو بار۔ اس میں دو آدھے ہیں، ایک نہیں۔"
+              },
+              "misconception_id": "whole_part_only"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_multiply_rule",
+      "front": {
+        "en": "How do you multiply 2/3 × 4/5?",
+        "ur": "2/3 × 4/5 کیسے ضرب دیتے ہیں؟"
+      },
+      "back": {
+        "en": "Multiply top × top and bottom × bottom: (2 × 4)/(3 × 5) = 8/15. No common denominator needed.",
+        "ur": "اوپر × اوپر اور نیچے × نیچے: (2 × 4)/(3 × 5) = 8/15۔ مشترک نسب نما کی ضرورت نہیں۔"
+      }
+    },
+    {
+      "id": "f_of_means_times",
+      "front": {
+        "en": "What is 1/3 of 12?",
+        "ur": "12 کا 1/3 کتنا ہے؟"
+      },
+      "back": {
+        "en": "'Of' means ×: 1/3 × 12 = 12 ÷ 3 = 4.",
+        "ur": "'کا' کا مطلب ہے ×: 1/3 × 12 = 12 ÷ 3 = 4"
+      }
+    },
+    {
+      "id": "f_smaller",
+      "front": {
+        "en": "Does multiplying always make a number bigger?",
+        "ur": "کیا ضرب سے عدد ہمیشہ بڑا ہو جاتا ہے؟"
+      },
+      "back": {
+        "en": "No! Multiplying by a fraction less than 1 makes it smaller: 1/2 × 6 = 3.",
+        "ur": "نہیں! 1 سے کم کسر سے ضرب دینے پر عدد چھوٹا ہو جاتا ہے: 1/2 × 6 = 3"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_fold_half_third",
+      "text": {
+        "en": "Take a square of paper. Fold it into 3 equal strips and colour one strip: that is 1/3. Now fold the paper in half the other way. How much of the whole paper is half of your coloured strip? Open it and count the small pieces.",
+        "ur": "کاغذ کا ایک چوکور ٹکڑا لیں۔ اسے 3 برابر پٹیوں میں تہہ کریں اور ایک پٹی رنگ دیں: یہ 1/3 ہے۔ اب کاغذ کو دوسری طرف سے آدھا تہہ کریں۔ رنگی ہوئی پٹی کا آدھا پورے کاغذ کا کتنا حصہ ہے؟ کھول کر چھوٹے ٹکڑے گنیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Fraction",
+      "ur": "کسر"
+    },
+    {
+      "en": "Numerator",
+      "ur": "شمار کنندہ"
+    },
+    {
+      "en": "Denominator",
+      "ur": "نسب نما"
+    },
+    {
+      "en": "Multiplication",
+      "ur": "ضرب"
+    },
+    {
+      "en": "Product",
+      "ur": "حاصل ضرب"
+    },
+    {
+      "en": "Simplest form",
+      "ur": "سادہ ترین شکل"
+    },
+    {
+      "en": "Mixed number",
+      "ur": "مخلوط عدد"
+    },
+    {
+      "en": "Improper fraction",
+      "ur": "غیر واجب کسر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ammi bought 12 mangoes and gave a third of them to our neighbours. How many mangoes did she give?",
+          "ur": "امی نے 12 آم خریدے اور ان کا تہائی حصہ پڑوسیوں کو دے دیا۔ انہوں نے کتنے آم دیے؟"
+        }
+      },
+      "text": {
+        "en": "Today we multiply with fractions: a fraction of a number, and a fraction of a fraction. First, a quick check.",
+        "ur": "آج ہم کسور کے ساتھ ضرب سیکھیں گے: کسی عدد کا کسری حصہ، اور کسی کسر کا کسری حصہ۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.fractions.equivalent",
+      "prompt": {
+        "en": "What is 4/6 in its simplest form?",
+        "ur": "4/6 کی سادہ ترین شکل کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "two_thirds",
+          "text": {
+            "en": "2/3",
+            "ur": "2/3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2 divides 4 and 6: 4/6 = 2/3.",
+            "ur": "جی ہاں! 2، 4 اور 6 دونوں کو تقسیم کرتا ہے: 4/6 = 2/3"
+          }
+        },
+        {
+          "id": "one_half",
+          "text": {
+            "en": "1/2",
+            "ur": "1/2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1/2 = 3/6, not 4/6. Divide the top and the bottom by the same number.",
+            "ur": "1/2 = 3/6 ہے، 4/6 نہیں۔ اوپر اور نیچے کو ایک ہی عدد سے تقسیم کریں۔"
+          }
+        },
+        {
+          "id": "two_sixths",
+          "text": {
+            "en": "2/6",
+            "ur": "2/6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only the top was divided. Divide the bottom by 2 as well.",
+            "ur": "صرف اوپر والا تقسیم ہوا۔ نیچے والے کو بھی 2 سے تقسیم کریں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_third_of_twelve",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ammi shares 12 mangoes into 3 equal groups and gives one group away. How many mangoes is 1/3 of 12?",
+        "ur": "امی 12 آموں کو 3 برابر حصوں میں بانٹتی ہیں اور ایک حصہ دے دیتی ہیں۔ 12 کا 1/3 کتنے آم ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Share 12 into 3 equal groups: 12 ÷ 3.",
+        "ur": "12 کو 3 برابر حصوں میں بانٹیں: 12 ÷ 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 ÷ 3 = 4. So 1/3 of 12 = 1/3 × 12 = 4 mangoes.",
+        "ur": "درست! 12 ÷ 3 = 4۔ اس لیے 12 کا 1/3 = 1/3 × 12 = 4 آم۔"
+      },
+      "feedback_wrong": {
+        "en": "3 equal groups of 12 mangoes have 4 mangoes each. 1/3 of 12 = 4.",
+        "ur": "12 آموں کے 3 برابر حصوں میں ہر ایک میں 4 آم ہیں۔ 12 کا 1/3 = 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "That is 3 times 12! A third of the mangoes must be fewer than all 12.",
+            "ur": "یہ تو 12 کا 3 گنا ہے! آموں کا تہائی حصہ تو سارے 12 آموں سے کم ہونا چاہیے۔"
+          },
+          "misconception_id": "multiply_makes_bigger"
+        }
+      ]
+    },
+    {
+      "id": "s4_predict",
+      "type": "choice",
+      "prompt": {
+        "en": "Guess first: Bilal says multiplying always makes a number bigger, so 1/2 × 6 is more than 6. Is he right?",
+        "ur": "پہلے اندازہ لگائیں: بلال کہتا ہے کہ ضرب سے عدد ہمیشہ بڑا ہوتا ہے، اس لیے 1/2 × 6 چھ سے زیادہ ہے۔ کیا وہ درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes, multiplying always makes bigger",
+            "ur": "ہاں، ضرب سے ہمیشہ بڑا ہوتا ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is true for whole numbers like 2 × 6. But 1/2 × 6 means half of 6. Is half of 6 more than 6?",
+            "ur": "یہ 2 × 6 جیسے پورے اعداد کے لیے درست ہے۔ لیکن 1/2 × 6 کا مطلب ہے 6 کا آدھا۔ کیا 6 کا آدھا 6 سے زیادہ ہے؟"
+          },
+          "misconception_id": "multiply_makes_bigger"
+        },
+        {
+          "id": "no",
+          "text": {
+            "en": "No, 1/2 × 6 is less than 6",
+            "ur": "نہیں، 1/2 × 6 چھ سے کم ہے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Good thinking! 1/2 × 6 means half of 6, which is 3. That is less than 6.",
+            "ur": "بہت خوب سوچا! 1/2 × 6 کا مطلب ہے 6 کا آدھا، یعنی 3۔ یہ 6 سے کم ہے۔"
+          }
+        },
+        {
+          "id": "same",
+          "text": {
+            "en": "It stays 6",
+            "ur": "یہ 6 ہی رہتا ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only 1 × 6 stays 6. Half of 6 is less.",
+            "ur": "صرف 1 × 6 چھ رہتا ہے۔ 6 کا آدھا اس سے کم ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "'Of' means multiply! Half of 6 is 1/2 × 6.",
+          "ur": "'کا' کا مطلب ہے ضرب! 6 کا آدھا یعنی 1/2 × 6"
+        }
+      },
+      "text": {
+        "en": "1/3 of 12 is the same as 1/3 × 12 = 12 ÷ 3 = 4. In the same way, 1/2 of 6 = 1/2 × 6 = 3. When you multiply by a fraction less than 1, you take only a part, so the answer is smaller than the number you started with. Multiplying makes bigger only when you multiply by more than 1.",
+        "ur": "12 کا 1/3 وہی ہے جو 1/3 × 12 = 12 ÷ 3 = 4۔ اسی طرح 6 کا 1/2 = 1/2 × 6 = 3۔ جب آپ 1 سے کم کسر سے ضرب دیتے ہیں تو صرف ایک حصہ لیتے ہیں، اس لیے جواب شروع والے عدد سے چھوٹا آتا ہے۔ ضرب سے عدد صرف تب بڑا ہوتا ہے جب 1 سے زیادہ سے ضرب دیں۔"
+      }
+    },
+    {
+      "id": "s6_part_of_part",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "fraction_bars",
+      "prompt": {
+        "en": "Ali has 1/3 of a paratha. He gives half of his piece to Zara. Use + to cut the paratha into 6 pieces. Ali's third is 2 pieces. Tap only Zara's pieces, then press Check.",
+        "ur": "علی کے پاس پراٹھے کا 1/3 ہے۔ وہ اپنے ٹکڑے کا آدھا زارا کو دیتا ہے۔ + دبا کر پراٹھے کے 6 ٹکڑے کریں۔ علی کا تہائی 2 ٹکڑے ہے۔ صرف زارا کے ٹکڑے چھوئیں، پھر \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "wholes": 1,
+        "max_cut": 12
+      },
+      "expected": {
+        "result": "pieces",
+        "checker": "numeric",
+        "answer": "1"
+      },
+      "hint": {
+        "en": "Ali's third is 2 pieces. Half of 2 pieces is how many?",
+        "ur": "علی کا تہائی 2 ٹکڑے ہے۔ 2 ٹکڑوں کا آدھا کتنے ٹکڑے ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Yes! Zara gets 1 piece out of 6: half of a third is 1/6 of the paratha.",
+        "ur": "جی ہاں! زارا کو 6 میں سے 1 ٹکڑا ملا: تہائی کا آدھا پراٹھے کا 1/6 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Cut the paratha into 6. Ali's third is 2 pieces; half of that is 1 piece. Zara gets 1/6 of the paratha.",
+        "ur": "پراٹھے کے 6 ٹکڑے کریں۔ علی کا تہائی 2 ٹکڑے ہے؛ اس کا آدھا 1 ٹکڑا ہے۔ زارا کو پراٹھے کا 1/6 ملا۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "2",
+          "feedback": {
+            "en": "That is all of Ali's third. Zara gets only half of it.",
+            "ur": "یہ تو علی کا پورا تہائی ہے۔ زارا کو اس کا صرف آدھا ملتا ہے۔"
+          }
+        },
+        {
+          "answer": "3",
+          "feedback": {
+            "en": "That is half of the whole paratha. Zara gets half of Ali's third, not half of the paratha.",
+            "ur": "یہ تو پورے پراٹھے کا آدھا ہے۔ زارا کو علی کے تہائی کا آدھا ملتا ہے، پورے پراٹھے کا نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Multiply top by top, and bottom by bottom!",
+          "ur": "اوپر کو اوپر سے، اور نیچے کو نیچے سے ضرب دیں!"
+        }
+      },
+      "text": {
+        "en": "Half of a third is 1/2 × 1/3. Zara got 1 piece out of 6, so 1/2 × 1/3 = 1/6. We get it by multiplying the numerators and multiplying the denominators: (1 × 1)/(2 × 3) = 1/6. No common denominator is needed to multiply. Notice: 1/6 is smaller than both 1/2 and 1/3.",
+        "ur": "تہائی کا آدھا یعنی 1/2 × 1/3۔ زارا کو 6 میں سے 1 ٹکڑا ملا، اس لیے 1/2 × 1/3 = 1/6۔ یہ شمار کنندوں کو آپس میں ضرب دینے اور نسب نماؤں کو آپس میں ضرب دینے سے آتا ہے: (1 × 1)/(2 × 3) = 1/6۔ ضرب کے لیے مشترک نسب نما کی ضرورت نہیں۔ دیکھیں: 1/6، 1/2 اور 1/3 دونوں سے چھوٹا ہے۔"
+      }
+    },
+    {
+      "id": "s8_two_fractions",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 2/3 × 4/5.",
+        "ur": "2/3 × 4/5 حل کریں۔"
+      },
+      "checker": "fraction",
+      "expected": "8/15",
+      "hint": {
+        "en": "Multiply the tops: 2 × 4. Multiply the bottoms: 3 × 5.",
+        "ur": "اوپر والوں کو ضرب دیں: 2 × 4۔ نیچے والوں کو ضرب دیں: 3 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! (2 × 4)/(3 × 5) = 8/15.",
+        "ur": "درست! (2 × 4)/(3 × 5) = 8/15"
+      },
+      "feedback_wrong": {
+        "en": "2 × 4 = 8 on top and 3 × 5 = 15 at the bottom: 2/3 × 4/5 = 8/15.",
+        "ur": "اوپر 2 × 4 = 8 اور نیچے 3 × 5 = 15: یعنی 2/3 × 4/5 = 8/15"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "8/5",
+          "feedback": {
+            "en": "You kept the 5 at the bottom. 8/5 is more than 1! Multiply the bottoms too: 3 × 5.",
+            "ur": "آپ نے نیچے 5 ہی رہنے دیا۔ 8/5 تو 1 سے زیادہ ہے! نیچے والوں کو بھی ضرب دیں: 3 × 5"
+          },
+          "misconception_id": "kept_denominator"
+        },
+        {
+          "answer": "6/8",
+          "feedback": {
+            "en": "You added the tops and the bottoms. This time we multiply: 2 × 4 and 3 × 5.",
+            "ur": "آپ نے اوپر اور نیچے والے جمع کر دیے۔ یہاں ضرب دینی ہے: 2 × 4 اور 3 × 5"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        }
+      ]
+    },
+    {
+      "id": "s9_simplify",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 3/4 × 2/9. Give your answer in its simplest form. Tip: you can simplify before you multiply.",
+        "ur": "3/4 × 2/9 حل کریں۔ جواب سادہ ترین شکل میں لکھیں۔ مشورہ: آپ ضرب سے پہلے بھی سادہ کر سکتے ہیں۔"
+      },
+      "checker": "fraction",
+      "expected": "1/6",
+      "hint": {
+        "en": "3 goes into 3 and 9; 2 goes into 2 and 4. Or multiply first to get 6/36, then simplify.",
+        "ur": "3، 3 اور 9 میں پورا آتا ہے؛ 2، 2 اور 4 میں۔ یا پہلے ضرب دے کر 6/36 بنائیں، پھر سادہ کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! Simplify first: 1/2 × 1/3 = 1/6. Or after: 6/36 = 1/6. The same answer!",
+        "ur": "شاباش! پہلے سادہ کریں: 1/2 × 1/3 = 1/6۔ یا بعد میں: 6/36 = 1/6۔ جواب ایک ہی ہے!"
+      },
+      "feedback_wrong": {
+        "en": "3 × 2 = 6 and 4 × 9 = 36, so 6/36. 6 divides both: 6/36 = 1/6.",
+        "ur": "3 × 2 = 6 اور 4 × 9 = 36، یعنی 6/36۔ 6 دونوں کو تقسیم کرتا ہے: 6/36 = 1/6"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "6/9",
+          "feedback": {
+            "en": "You kept the 9 at the bottom. Multiply the bottoms too: 4 × 9 = 36.",
+            "ur": "آپ نے نیچے 9 ہی رہنے دیا۔ نیچے والوں کو بھی ضرب دیں: 4 × 9 = 36"
+          },
+          "misconception_id": "kept_denominator"
+        },
+        {
+          "answer": "5/13",
+          "feedback": {
+            "en": "You added the tops and the bottoms. Multiply them instead.",
+            "ur": "آپ نے اوپر اور نیچے والے جمع کر دیے۔ انہیں ضرب دیں۔"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        }
+      ]
+    },
+    {
+      "id": "s10_smaller",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which answer is less than 8?",
+        "ur": "کس کا جواب 8 سے کم ہے؟"
+      },
+      "options": [
+        {
+          "id": "three_quarters",
+          "text": {
+            "en": "8 × 3/4",
+            "ur": "8 × 3/4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3/4 is less than 1, so 8 × 3/4 = 6 is less than 8.",
+            "ur": "جی ہاں! 3/4، 1 سے کم ہے، اس لیے 8 × 3/4 = 6، 8 سے کم ہے۔"
+          }
+        },
+        {
+          "id": "five_quarters",
+          "text": {
+            "en": "8 × 5/4",
+            "ur": "8 × 5/4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5/4 is more than 1, so 8 × 5/4 = 10 is more than 8.",
+            "ur": "5/4، 1 سے زیادہ ہے، اس لیے 8 × 5/4 = 10، 8 سے زیادہ ہے۔"
+          },
+          "misconception_id": "multiply_makes_bigger"
+        },
+        {
+          "id": "one_and_half",
+          "text": {
+            "en": "8 × 1 1/2",
+            "ur": "8 × 1 1/2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 1/2 is more than 1, so 8 × 1 1/2 = 12 is more than 8.",
+            "ur": "1 1/2، 1 سے زیادہ ہے، اس لیے 8 × 1 1/2 = 12، 8 سے زیادہ ہے۔"
+          },
+          "misconception_id": "multiply_makes_bigger"
+        }
+      ]
+    },
+    {
+      "id": "s11_tailor",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A tailor needs 2 1/4 metres of cloth for one shalwar kameez. How much cloth does he need for 3 suits? Write a mixed number.",
+        "ur": "ایک درزی کو ایک شلوار قمیض کے لیے 2 1/4 میٹر کپڑا چاہیے۔ 3 سوٹوں کے لیے کتنا کپڑا چاہیے؟ مخلوط عدد لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "6 3/4",
+      "hint": {
+        "en": "Change 2 1/4 to quarters first: 2 1/4 = 9/4. Then multiply by 3.",
+        "ur": "پہلے 2 1/4 کو چوتھائیوں میں بدلیں: 2 1/4 = 9/4۔ پھر 3 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 9/4 = 27/4 = 6 3/4 metres.",
+        "ur": "درست! 3 × 9/4 = 27/4 = 6 3/4 میٹر"
+      },
+      "feedback_wrong": {
+        "en": "2 1/4 = 9/4. 3 × 9/4 = 27/4, and 27 ÷ 4 = 6 remainder 3, so 6 3/4 metres.",
+        "ur": "2 1/4 = 9/4۔ 3 × 9/4 = 27/4، اور 27 ÷ 4 = 6 باقی 3، اس لیے 6 3/4 میٹر۔"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "6 1/4",
+          "feedback": {
+            "en": "You multiplied the 2 metres but not the 1/4. 3 lots of 1/4 is 3/4, so add 3/4, not 1/4.",
+            "ur": "آپ نے 2 میٹر کو ضرب دی لیکن 1/4 کو نہیں۔ 1/4 تین بار 3/4 بنتا ہے، اس لیے 3/4 جمع کریں، 1/4 نہیں۔"
+          },
+          "misconception_id": "whole_part_only"
+        },
+        {
+          "answer": "27/4",
+          "feedback": {
+            "en": "The right amount, but please write it as a mixed number: 27 ÷ 4 = ? remainder ?",
+            "ur": "مقدار درست ہے، لیکن اسے مخلوط عدد کی شکل میں لکھیں: 27 ÷ 4 = ? باقی ?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana says 3 × 2/5 = 6/15. What went wrong?",
+        "ur": "ثنا کہتی ہے 3 × 2/5 = 6/15۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "both",
+          "text": {
+            "en": "She multiplied the top and the bottom by 3. Only the top: 3 × 2/5 = 6/5 = 1 1/5.",
+            "ur": "اس نے اوپر اور نیچے دونوں کو 3 سے ضرب دی۔ صرف اوپر والے کو: 3 × 2/5 = 6/5 = 1 1/5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 6/15 is the same as 2/5, so nothing was multiplied. 3 lots of 2 fifths are 6 fifths.",
+            "ur": "جی ہاں! 6/15 تو 2/5 ہی کے برابر ہے، یعنی کچھ ضرب ہوا ہی نہیں۔ 2 پانچویں حصے تین بار 6 پانچویں حصے بنتے ہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, 3 × 2 = 6 and 3 × 5 = 15.",
+            "ur": "کوئی غلطی نہیں، 3 × 2 = 6 اور 3 × 5 = 15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6/15 = 2/5, the number we started with. 3 × 2/5 must be 3 times as much.",
+            "ur": "6/15 = 2/5، یعنی وہی عدد جس سے شروع کیا۔ 3 × 2/5 تو اس کا تین گنا ہونا چاہیے۔"
+          },
+          "misconception_id": "whole_into_both"
+        },
+        {
+          "id": "bottom",
+          "text": {
+            "en": "She should multiply only the bottom: 2/15.",
+            "ur": "اسے صرف نیچے والے کو ضرب دینی چاہیے تھی: 2/15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2/15 is smaller than 2/5! 3 = 3/1, so multiply the tops: 3 × 2 = 6, and the bottoms: 1 × 5 = 5.",
+            "ur": "2/15 تو 2/5 سے بھی چھوٹا ہے! 3 = 3/1، اس لیے اوپر والے ضرب دیں: 3 × 2 = 6، اور نیچے والے: 1 × 5 = 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s13_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? I thought multiplying always makes a number bigger!",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ میں تو سمجھتا تھا کہ ضرب سے عدد ہمیشہ بڑا ہو جاتا ہے!"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is 1/2 × 6 only 3, smaller than 6? Explain it to Bilal. You can use rotis or mangoes.",
+        "ur": "اپنے الفاظ میں بتائیں: 1/2 × 6 کا جواب صرف 3 کیوں ہے، جو 6 سے چھوٹا ہے؟ بلال کو سمجھائیں۔ آپ روٹیوں یا آموں کی مثال دے سکتے ہیں۔"
+      },
+      "key_idea": "1/2 × 6 means half of 6, so we take only a part of the 6: 3. Multiplying by a fraction less than 1 gives an answer smaller than the number; it only makes bigger when the multiplier is more than 1.",
+      "levels": {
+        "got_it": "Says 1/2 × 6 means half of 6 (taking a part), gets 3, and/or says multiplying by a number less than 1 makes it smaller.",
+        "partly": "Gives the answer 3 or says 'half of 6', but does not say why the answer is smaller than 6.",
+        "not_yet": "Agrees that multiplying always makes bigger, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "half",
+          "part",
+          "آدھ",
+          "حصہ",
+          "aadh",
+          "adh",
+          "hissa",
+          "hisa"
+        ],
+        [
+          "less than 1",
+          "less than one",
+          "less",
+          "smaller",
+          "کم",
+          "چھوٹ",
+          "kam",
+          "chhot",
+          "chot"
+        ],
+        [
+          "3",
+          "three",
+          "تین",
+          "teen"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 1/2 × 6 means half of 6, so we take only a part: 3. A fraction less than 1 makes the answer smaller.",
+          "ur": "بہت خوب سمجھایا! 1/2 × 6 کا مطلب ہے 6 کا آدھا، یعنی ہم صرف ایک حصہ لیتے ہیں: 3۔ 1 سے کم کسر سے ضرب دینے پر جواب چھوٹا آتا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why the answer is smaller: is 1/2 more or less than 1?",
+          "ur": "اچھی شروعات! اب بتائیں کہ جواب چھوٹا کیوں ہے: کیا 1/2، 1 سے زیادہ ہے یا کم؟"
+        },
+        "not_yet": {
+          "en": "Think of 6 rotis. If you eat half of them, how many do you eat? Is that more or less than 6?",
+          "ur": "سوچیں: 6 روٹیاں ہیں۔ اگر آپ ان کا آدھا کھائیں تو کتنی کھائیں گے؟ یہ 6 سے زیادہ ہے یا کم؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s14_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can multiply fractions!",
+          "ur": "اب آپ کسور کو ضرب دے سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "'Of' means multiply: 1/3 of 12 = 1/3 × 12 = 4. To multiply fractions, multiply the numerators and multiply the denominators, then simplify (or simplify first). Change a mixed number to an improper fraction before multiplying. Multiplying by a fraction less than 1 makes a number smaller.",
+        "ur": "'کا' کا مطلب ہے ضرب: 12 کا 1/3 = 1/3 × 12 = 4۔ کسور کو ضرب دینے کے لیے شمار کنندوں کو آپس میں اور نسب نماؤں کو آپس میں ضرب دیں، پھر سادہ کریں (یا پہلے سادہ کریں)۔ ضرب سے پہلے مخلوط عدد کو غیر واجب کسر میں بدلیں۔ 1 سے کم کسر سے ضرب دینے پر عدد چھوٹا ہو جاتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "1/2 × 1/3 = (1 × 1)/(2 × 3) = 1/6",
+          "ur": "1/2 × 1/3 = (1 × 1)/(2 × 3) = 1/6"
+        },
+        {
+          "en": "3 × 2 1/4 = 3 × 9/4 = 27/4 = 6 3/4",
+          "ur": "3 × 2 1/4 = 3 × 9/4 = 27/4 = 6 3/4"
+        },
+        {
+          "en": "1/2 × 6 = 3: smaller than 6!",
+          "ur": "1/2 × 6 = 3: یہ 6 سے چھوٹا ہے!"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_two_thirds",
+      "type": "apply",
+      "skill": "maths.fractions.multiply",
+      "step": {
+        "id": "r_two_thirds",
+        "type": "number",
+        "prompt": {
+          "en": "What is 2/3 of 12 rotis?",
+          "ur": "12 روٹیوں کا 2/3 کتنی روٹیاں ہیں؟"
+        },
+        "answer": 8,
+        "checker": "numeric",
+        "hint": {
+          "en": "First find 1/3 of 12, then take 2 of those groups.",
+          "ur": "پہلے 12 کا 1/3 نکالیں، پھر ایسے 2 حصے لیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 1/3 of 12 is 4, so 2/3 of 12 is 8.",
+          "ur": "درست! 12 کا 1/3 چار ہے، اس لیے 12 کا 2/3 آٹھ ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "12 ÷ 3 = 4 rotis in each third. Two thirds: 2 × 4 = 8 rotis.",
+          "ur": "ہر تہائی میں 12 ÷ 3 = 4 روٹیاں۔ دو تہائیاں: 2 × 4 = 8 روٹیاں۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "4 is only 1/3 of 12. Two thirds is two of those groups.",
+              "ur": "4 تو 12 کا صرف 1/3 ہے۔ دو تہائیاں ایسے دو حصے ہیں۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_half_of_four_sevenths",
+      "type": "apply",
+      "skill": "maths.fractions.multiply",
+      "step": {
+        "id": "r_half_of_four_sevenths",
+        "type": "text_check",
+        "prompt": {
+          "en": "Work out 1/2 × 4/7. Give your answer in its simplest form.",
+          "ur": "1/2 × 4/7 حل کریں۔ جواب سادہ ترین شکل میں لکھیں۔"
+        },
+        "checker": "fraction",
+        "expected": "2/7",
+        "hint": {
+          "en": "Multiply the tops and the bottoms, then simplify.",
+          "ur": "اوپر والوں اور نیچے والوں کو ضرب دیں، پھر سادہ کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 4/14 = 2/7. Half of 4 sevenths is 2 sevenths.",
+          "ur": "درست! 4/14 = 2/7۔ 4 ساتویں حصوں کا آدھا 2 ساتویں حصے ہیں۔"
+        },
+        "feedback_wrong": {
+          "en": "1 × 4 = 4 and 2 × 7 = 14, so 4/14 = 2/7.",
+          "ur": "1 × 4 = 4 اور 2 × 7 = 14، یعنی 4/14 = 2/7"
+        },
+        "require_simplest": true,
+        "common_wrong": [
+          {
+            "answer": "4/7",
+            "feedback": {
+              "en": "4/7 is what we started with. Half of it must be smaller: multiply the bottoms too.",
+              "ur": "4/7 تو وہی ہے جس سے شروع کیا۔ اس کا آدھا چھوٹا ہونا چاہیے: نیچے والوں کو بھی ضرب دیں۔"
+            },
+            "misconception_id": "kept_denominator"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Fractions unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the file is named g6-maths-02 to sit with the other fractions lessons. Fix the name and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: ضرب (multiplication), حاصل ضرب (product), سادہ ترین شکل (simplest form), تہائی (third), and 'کا' used for 'of' (12 کا 1/3). Some books write 'of' as 'کا حصہ'.",
+    "s11 multiplies a mixed number, which the mixed-numbers lesson teaches; the hint shows the change to an improper fraction, so maths.fractions.mixed_numbers is not listed as a prerequisite. Add it if students reach this lesson first.",
+    "The fraction checker accepts any equal value: in s11, 27/4 is listed in common_wrong with feedback asking for a mixed number (it costs an attempt). Unsimplified answers like 6/36 in s9 get 'simplify it' and do not cost an attempt.",
+    "Steps follow the lesson pattern: foundation check (s2), fraction of a number (s3), prediction (s4), symbolic (s5), concrete part of a part with the fraction bars (s6) then the rule (s7), practice (s8, s9), multiplying makes smaller (s10), mixed number (s11), find the error (s12), explain (s13).",
+    "The answers and the common wrong answers were worked out with Python's fractions module in content/sources/g6-maths-02/multiplying_fractions.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

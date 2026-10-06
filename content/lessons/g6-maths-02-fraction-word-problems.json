@@ -1,0 +1,1044 @@
+{
+  "id": "g6-maths-02-fraction-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life word problems involving addition, subtraction, multiplication and division of fractions and mixed numbers, choosing the operation from the story.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Fractions"
+    }
+  ],
+  "skills": [
+    "maths.fractions.word_problems"
+  ],
+  "title": {
+    "en": "Fraction word problems",
+    "ur": "کسور کے عبارتی سوالات"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.fractions.equivalent"
+    },
+    {
+      "skill": "maths.fractions.add_unlike"
+    },
+    {
+      "skill": "maths.fractions.mixed_numbers"
+    },
+    {
+      "skill": "maths.fractions.multiply"
+    },
+    {
+      "skill": "maths.fractions.divide_by_fraction"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "add_tops_and_bottoms",
+      "description": "Adds the numerators and adds the denominators (1/2 + 3/4 = 4/6)."
+    },
+    {
+      "id": "wrong_add_subtract",
+      "description": "Adds when the story asks how much is left, or subtracts when it asks for the total."
+    },
+    {
+      "id": "divide_instead_of_multiply",
+      "description": "Divides when the story asks for a fraction of an amount (5/8 of 24 worked out as 24 ÷ 5/8)."
+    },
+    {
+      "id": "multiply_instead_of_divide",
+      "description": "Multiplies when the story asks how many equal parts fit (6 ÷ 1 1/2 worked out as 6 × 1 1/2)."
+    },
+    {
+      "id": "one_step_only",
+      "description": "Stops after the first step of a two-step problem (finds the overs bowled, not the overs left)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.fractions.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.fractions.word_problems": [
+      {
+        "id": "qb_of_means",
+        "type": "recall",
+        "step": {
+          "id": "qb_of_means",
+          "type": "choice",
+          "prompt": {
+            "en": "Zara ate 2/3 of 15 laddoos. Which operation finds how many she ate?",
+            "ur": "زارا نے 15 لڈوؤں کا 2/3 کھایا۔ اس نے کتنے کھائے، یہ کس عمل سے معلوم ہو گا؟"
+          },
+          "options": [
+            {
+              "id": "multiply",
+              "text": {
+                "en": "Multiply: 2/3 × 15",
+                "ur": "ضرب: 2/3 × 15"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 'A fraction of' means multiply: 2/3 × 15 = 10 laddoos.",
+                "ur": "جی ہاں! 'کا کسری حصہ' مطلب ضرب: 2/3 × 15 = 10 لڈو۔"
+              }
+            },
+            {
+              "id": "divide",
+              "text": {
+                "en": "Divide: 15 ÷ 2/3",
+                "ur": "تقسیم: 15 ÷ 2/3"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "15 ÷ 2/3 = 22 1/2, more than all 15 laddoos! She ate a part of them, so multiply.",
+                "ur": "15 ÷ 2/3 = 22 1/2، یہ تو سارے 15 لڈوؤں سے بھی زیادہ ہے! اس نے ان کا ایک حصہ کھایا، اس لیے ضرب دیں۔"
+              },
+              "misconception_id": "divide_instead_of_multiply"
+            },
+            {
+              "id": "subtract",
+              "text": {
+                "en": "Subtract: 15 − 2/3",
+                "ur": "تفریق: 15 − 2/3"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That takes away 2/3 of one laddoo. The story asks for 2/3 of all 15, so multiply.",
+                "ur": "اس سے ایک لڈو کا 2/3 کم ہوتا ہے۔ سوال تو سارے 15 کے 2/3 کا ہے، اس لیے ضرب دیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_rice_bags",
+        "type": "apply",
+        "step": {
+          "id": "qb_rice_bags",
+          "type": "number",
+          "prompt": {
+            "en": "A shopkeeper packs 9 kg of rice into bags of 3/4 kg each. How many bags does he fill?",
+            "ur": "ایک دکاندار 9 کلوگرام چاول 3/4 کلوگرام کے تھیلوں میں بھرتا ہے۔ وہ کتنے تھیلے بھرے گا؟"
+          },
+          "answer": 12,
+          "checker": "numeric",
+          "hint": {
+            "en": "How many 3/4 kg bags fit into 9 kg? Divide: 9 ÷ 3/4 = 9 × 4/3.",
+            "ur": "9 کلوگرام میں 3/4 کلوگرام کے کتنے تھیلے آئیں گے؟ تقسیم کریں: 9 ÷ 3/4 = 9 × 4/3"
+          },
+          "feedback_correct": {
+            "en": "Right! 9 ÷ 3/4 = 9 × 4/3 = 12 bags.",
+            "ur": "درست! 9 ÷ 3/4 = 9 × 4/3 = 12 تھیلے۔"
+          },
+          "feedback_wrong": {
+            "en": "We ask how many 3/4 kg bags fit, so divide: 9 ÷ 3/4 = 9 × 4/3 = 36/3 = 12 bags.",
+            "ur": "سوال یہ ہے کہ 3/4 کلوگرام کے کتنے تھیلے آئیں گے، اس لیے تقسیم کریں: 9 ÷ 3/4 = 9 × 4/3 = 36/3 = 12 تھیلے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 6.75,
+              "feedback": {
+                "en": "You multiplied. Each bag holds less than 1 kg, so there must be more than 9 bags. Divide.",
+                "ur": "آپ نے ضرب دی۔ ہر تھیلے میں 1 کلوگرام سے کم آتا ہے، اس لیے تھیلے 9 سے زیادہ ہوں گے۔ تقسیم کریں۔"
+              },
+              "misconception_id": "multiply_instead_of_divide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_ribbon",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_ribbon",
+          "type": "choice",
+          "prompt": {
+            "en": "Ayesha had 3/4 m of ribbon and used 1/2 m. Hamza says she has 3/4 + 1/2 = 1 1/4 m left. What went wrong?",
+            "ur": "عائشہ کے پاس 3/4 میٹر فیتہ تھا اور اس نے 1/2 میٹر استعمال کیا۔ حمزہ کہتا ہے کہ اس کے پاس 3/4 + 1/2 = 1 1/4 میٹر بچا۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "subtract",
+              "text": {
+                "en": "'Left' means take away: 3/4 − 1/2 = 1/4 m.",
+                "ur": "'بچا' کا مطلب ہے کم کریں: 3/4 − 1/2 = 1/4 میٹر"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! She used some ribbon, so she has less than 3/4 m, not more.",
+                "ur": "درست! اس نے کچھ فیتہ استعمال کیا، اس لیے اس کے پاس 3/4 میٹر سے کم بچا، زیادہ نہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, 1 1/4 m is right.",
+                "ur": "کوئی غلطی نہیں، 1 1/4 میٹر درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Can she have more ribbon after using some? 1 1/4 m is more than she started with.",
+                "ur": "کیا کچھ استعمال کرنے کے بعد فیتہ زیادہ ہو سکتا ہے؟ 1 1/4 میٹر تو شروع سے بھی زیادہ ہے۔"
+              },
+              "misconception_id": "wrong_add_subtract"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_choose_operation",
+      "front": {
+        "en": "How do you choose the operation in a fraction story?",
+        "ur": "کسور کے عبارتی سوال میں عمل کیسے چنتے ہیں؟"
+      },
+      "back": {
+        "en": "Put together: add. How much is left or how much more: subtract. A fraction of an amount, or the same amount many times: multiply. How many parts fit: divide.",
+        "ur": "اکٹھا کرنا ہو: جمع۔ کتنا بچا یا کتنا زیادہ: تفریق۔ کسی مقدار کا کسری حصہ، یا ایک ہی مقدار کئی بار: ضرب۔ کتنے حصے پورے آتے ہیں: تقسیم۔"
+      }
+    },
+    {
+      "id": "f_does_it_make_sense",
+      "front": {
+        "en": "How can you check a word problem answer?",
+        "ur": "عبارتی سوال کا جواب کیسے جانچتے ہیں؟"
+      },
+      "back": {
+        "en": "Ask: should the answer be more or less than the starting amount? 5/8 of 24 barfi must be less than 24.",
+        "ur": "پوچھیں: کیا جواب شروع والی مقدار سے زیادہ ہونا چاہیے یا کم؟ 24 برفیوں کا 5/8 تو 24 سے کم ہی ہو گا۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_kitchen_stories",
+      "text": {
+        "en": "Ask someone at home about things measured in fractions: atta in kg, milk in litres or cloth in metres. Make up one story for each operation (add, subtract, multiply, divide). Solve them and check that each answer makes sense.",
+        "ur": "گھر میں کسی سے ایسی چیزوں کے بارے میں پوچھیں جو کسور میں ناپی جاتی ہیں: آٹا کلوگرام میں، دودھ لیٹر میں یا کپڑا میٹر میں۔ ہر عمل (جمع، تفریق، ضرب، تقسیم) کے لیے ایک کہانی بنائیں۔ انہیں حل کریں اور دیکھیں کہ ہر جواب سمجھ میں آتا ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Word problem",
+      "ur": "عبارتی سوال"
+    },
+    {
+      "en": "Operation",
+      "ur": "عمل"
+    },
+    {
+      "en": "Addition",
+      "ur": "جمع"
+    },
+    {
+      "en": "Subtraction",
+      "ur": "تفریق"
+    },
+    {
+      "en": "Multiplication",
+      "ur": "ضرب"
+    },
+    {
+      "en": "Division",
+      "ur": "تقسیم"
+    },
+    {
+      "en": "Reciprocal",
+      "ur": "معکوس"
+    },
+    {
+      "en": "Mixed number",
+      "ur": "مخلوط عدد"
+    },
+    {
+      "en": "Kilogram",
+      "ur": "کلوگرام"
+    },
+    {
+      "en": "Metre",
+      "ur": "میٹر"
+    },
+    {
+      "en": "Litre",
+      "ur": "لیٹر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Atta, cloth, petrol, rotis: fractions are everywhere at home! But how do I know whether to add, subtract, multiply or divide?",
+          "ur": "آٹا، کپڑا، پیٹرول، روٹیاں: گھر میں ہر طرف کسور ہیں! لیکن مجھے کیسے پتا چلے کہ جمع کروں، تفریق، ضرب یا تقسیم؟"
+        }
+      },
+      "text": {
+        "en": "In this lesson you read a story, choose the operation, and solve it. At the end there is a short test on the whole Fractions unit. First, a quick check.",
+        "ur": "اس سبق میں آپ کہانی پڑھیں گے، عمل چنیں گے اور سوال حل کریں گے۔ آخر میں کسور کے پورے باب کا ایک چھوٹا سا ٹیسٹ ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.fractions.multiply",
+      "prompt": {
+        "en": "What is 3/4 of 8?",
+        "ur": "8 کا 3/4 کتنا ہے؟"
+      },
+      "options": [
+        {
+          "id": "six",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3/4 × 8 = 24/4 = 6. Or: 8 ÷ 4 = 2, and 3 × 2 = 6.",
+            "ur": "جی ہاں! 3/4 × 8 = 24/4 = 6۔ یا: 8 ÷ 4 = 2، اور 3 × 2 = 6"
+          }
+        },
+        {
+          "id": "ten_two_thirds",
+          "text": {
+            "en": "10 2/3",
+            "ur": "10 2/3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 8 ÷ 3/4, more than 8! 3/4 of 8 is a part of 8, so it is less than 8.",
+            "ur": "یہ تو 8 ÷ 3/4 ہے، جو 8 سے زیادہ ہے! 8 کا 3/4 اس کا ایک حصہ ہے، اس لیے 8 سے کم ہو گا۔"
+          },
+          "misconception_id": "divide_instead_of_multiply"
+        },
+        {
+          "id": "same",
+          "text": {
+            "en": "24/32",
+            "ur": "24/32"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "24/32 is still 3/4: the top and the bottom were both multiplied by 8. Multiply only the top: 24/4 = 6.",
+            "ur": "24/32 تو اب بھی 3/4 ہی ہے: اوپر اور نیچے دونوں کو 8 سے ضرب دی گئی۔ صرف اوپر والے کو ضرب دیں: 24/4 = 6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_four_questions",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "Picture the story first, then choose!",
+          "ur": "پہلے کہانی کو ذہن میں دیکھیں، پھر عمل چنیں!"
+        }
+      },
+      "text": {
+        "en": "Ask what the story wants. Putting amounts together? Add. How much is left, or how much more? Subtract. A fraction of an amount, or the same amount many times? Multiply ('of' means ×). How many equal parts fit into an amount? Divide. Then check: should the answer be more or less than what you started with?",
+        "ur": "دیکھیں کہانی کیا پوچھ رہی ہے۔ مقداریں اکٹھی کرنی ہیں؟ جمع کریں۔ کتنا بچا، یا کتنا زیادہ؟ تفریق کریں۔ کسی مقدار کا کسری حصہ، یا ایک ہی مقدار کئی بار؟ ضرب دیں ('کا' مطلب ×)۔ ایک مقدار میں کتنے برابر حصے آتے ہیں؟ تقسیم کریں۔ پھر جانچیں: جواب شروع والی مقدار سے زیادہ ہونا چاہیے یا کم؟"
+      }
+    },
+    {
+      "id": "s4_tailor_choose",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A tailor has 6 metres of cloth. Each kameez needs 1 1/2 metres. Which sum tells how many kameez he can make?",
+        "ur": "ایک درزی کے پاس 6 میٹر کپڑا ہے۔ ہر قمیض کے لیے 1 1/2 میٹر چاہیے۔ کون سا سوال بتائے گا کہ وہ کتنی قمیضیں بنا سکتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "divide",
+          "text": {
+            "en": "6 ÷ 1 1/2",
+            "ur": "6 ÷ 1 1/2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! We ask how many pieces of 1 1/2 m fit into 6 m, so we divide.",
+            "ur": "جی ہاں! سوال یہ ہے کہ 6 میٹر میں 1 1/2 میٹر کے کتنے ٹکڑے آتے ہیں، اس لیے تقسیم کریں گے۔"
+          }
+        },
+        {
+          "id": "multiply",
+          "text": {
+            "en": "6 × 1 1/2",
+            "ur": "6 × 1 1/2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 × 1 1/2 = 9 metres: more cloth than he has! We want how many pieces fit.",
+            "ur": "6 × 1 1/2 = 9 میٹر: یہ تو اس کے کپڑے سے بھی زیادہ ہے! ہمیں یہ جاننا ہے کہ کتنے ٹکڑے آتے ہیں۔"
+          },
+          "misconception_id": "multiply_instead_of_divide"
+        },
+        {
+          "id": "subtract",
+          "text": {
+            "en": "6 − 1 1/2",
+            "ur": "6 − 1 1/2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the cloth left after one kameez. We want to know how many kameez in all.",
+            "ur": "یہ ایک قمیض کے بعد بچا کپڑا ہے۔ ہمیں یہ جاننا ہے کہ کل کتنی قمیضیں بنیں گی۔"
+          },
+          "misconception_id": "wrong_add_subtract"
+        }
+      ]
+    },
+    {
+      "id": "s5_tailor_solve",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Now work it out: 6 ÷ 1 1/2. How many kameez can the tailor make?",
+        "ur": "اب حل کریں: 6 ÷ 1 1/2۔ درزی کتنی قمیضیں بنا سکتا ہے؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "1 1/2 = 3/2. Dividing by 3/2 is the same as multiplying by its reciprocal, 2/3.",
+        "ur": "1 1/2 = 3/2۔ 3/2 سے تقسیم کرنا اس کے معکوس 2/3 سے ضرب دینے جیسا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 ÷ 3/2 = 6 × 2/3 = 4 kameez.",
+        "ur": "درست! 6 ÷ 3/2 = 6 × 2/3 = 4 قمیضیں۔"
+      },
+      "feedback_wrong": {
+        "en": "1 1/2 = 3/2, so 6 ÷ 3/2 = 6 × 2/3 = 12/3 = 4. Check: 4 × 1 1/2 = 6 metres.",
+        "ur": "1 1/2 = 3/2، اس لیے 6 ÷ 3/2 = 6 × 2/3 = 12/3 = 4۔ جانچ: 4 × 1 1/2 = 6 میٹر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "You multiplied. Each kameez needs more than 1 metre, so he can make fewer than 6. Divide.",
+            "ur": "آپ نے ضرب دی۔ ہر قمیض کو 1 میٹر سے زیادہ کپڑا چاہیے، اس لیے 6 سے کم قمیضیں بنیں گی۔ تقسیم کریں۔"
+          },
+          "misconception_id": "multiply_instead_of_divide"
+        }
+      ]
+    },
+    {
+      "id": "s6_atta",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ammi bought 1 1/2 kg of atta on Monday and 3/4 kg on Friday. How much atta did she buy in all? Write a mixed number.",
+        "ur": "امی نے پیر کو 1 1/2 کلوگرام آٹا خریدا اور جمعہ کو 3/4 کلوگرام۔ انہوں نے کل کتنا آٹا خریدا؟ مخلوط عدد لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "2 1/4",
+      "hint": {
+        "en": "'In all' means put together: add. 1 1/2 = 1 2/4, so add the quarters.",
+        "ur": "'کل' کا مطلب ہے اکٹھا کریں: جمع۔ 1 1/2 = 1 2/4، اب چوتھائیاں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1 2/4 + 3/4 = 1 5/4 = 2 1/4 kg.",
+        "ur": "درست! 1 2/4 + 3/4 = 1 5/4 = 2 1/4 کلوگرام۔"
+      },
+      "feedback_wrong": {
+        "en": "Add: 1 1/2 = 1 2/4. 1 2/4 + 3/4 = 1 5/4, and 5/4 = 1 1/4, so 2 1/4 kg.",
+        "ur": "جمع کریں: 1 1/2 = 1 2/4۔ 1 2/4 + 3/4 = 1 5/4، اور 5/4 = 1 1/4، اس لیے 2 1/4 کلوگرام۔"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "1 4/6",
+          "feedback": {
+            "en": "You added the tops and the bottoms of 1/2 and 3/4. Make them quarters first: 1/2 = 2/4.",
+            "ur": "آپ نے 1/2 اور 3/4 کے اوپر اور نیچے والے جمع کر دیے۔ پہلے چوتھائیاں بنائیں: 1/2 = 2/4"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        },
+        {
+          "answer": "3/4",
+          "feedback": {
+            "en": "You subtracted. She bought atta on both days, so the total is more than 1 1/2 kg. Add.",
+            "ur": "آپ نے تفریق کی۔ انہوں نے دونوں دن آٹا خریدا، اس لیے کل 1 1/2 کلوگرام سے زیادہ ہو گا۔ جمع کریں۔"
+          },
+          "misconception_id": "wrong_add_subtract"
+        },
+        {
+          "answer": "9/4",
+          "feedback": {
+            "en": "The right amount, but please write it as a mixed number: 9 ÷ 4 = ? remainder ?",
+            "ur": "مقدار درست ہے، لیکن اسے مخلوط عدد کی شکل میں لکھیں: 9 ÷ 4 = ? باقی ?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_petrol",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Abbu's motorbike had 4 1/4 litres of petrol. He used 1 1/2 litres going to the bazaar. How much petrol is left? Write a mixed number.",
+        "ur": "ابو کی موٹر سائیکل میں 4 1/4 لیٹر پیٹرول تھا۔ بازار جانے میں 1 1/2 لیٹر خرچ ہوا۔ کتنا پیٹرول بچا؟ مخلوط عدد لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "2 3/4",
+      "hint": {
+        "en": "'Left' means take away. Change both to quarters: 4 1/4 = 17/4 and 1 1/2 = 3/2.",
+        "ur": "'بچا' کا مطلب ہے کم کریں۔ دونوں کو چوتھائیوں میں بدلیں: 4 1/4 = 17/4 اور 1 1/2 = 3/2"
+      },
+      "feedback_correct": {
+        "en": "Right! 17/4 − 6/4 = 11/4 = 2 3/4 litres.",
+        "ur": "درست! 17/4 − 6/4 = 11/4 = 2 3/4 لیٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "4 1/4 = 17/4 and 1 1/2 = 6/4. 17/4 − 6/4 = 11/4, and 11 ÷ 4 = 2 remainder 3: 2 3/4 litres.",
+        "ur": "4 1/4 = 17/4 اور 1 1/2 = 6/4۔ 17/4 − 6/4 = 11/4، اور 11 ÷ 4 = 2 باقی 3: یعنی 2 3/4 لیٹر۔"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "5 3/4",
+          "feedback": {
+            "en": "You added. He used some petrol, so less is left, not more. Subtract.",
+            "ur": "آپ نے جمع کیا۔ پیٹرول خرچ ہوا، اس لیے کم بچا، زیادہ نہیں۔ تفریق کریں۔"
+          },
+          "misconception_id": "wrong_add_subtract"
+        },
+        {
+          "answer": "3 1/4",
+          "feedback": {
+            "en": "You took 1/4 from 1/2 the wrong way round. 1/4 − 1/2 can't be done, so change everything to quarters: 17/4 − 6/4.",
+            "ur": "آپ نے 1/2 میں سے 1/4 الٹا گھٹا دیا۔ 1/4 − 1/2 نہیں ہو سکتا، اس لیے سب کو چوتھائیوں میں بدلیں: 17/4 − 6/4"
+          }
+        },
+        {
+          "answer": "11/4",
+          "feedback": {
+            "en": "The right amount, but please write it as a mixed number: 11 ÷ 4 = ? remainder ?",
+            "ur": "مقدار درست ہے، لیکن اسے مخلوط عدد کی شکل میں لکھیں: 11 ÷ 4 = ? باقی ?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_cricket",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A T20 innings has 20 overs. Rain stopped the match after 3/5 of the overs were bowled. How many overs were left?",
+        "ur": "ٹی ٹوئنٹی کی ایک اننگز میں 20 اوور ہوتے ہیں۔ 3/5 اوور ہونے کے بعد بارش نے میچ روک دیا۔ کتنے اوور باقی تھے؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two steps: first 3/5 of 20 (multiply), then take that away from 20.",
+        "ur": "دو مرحلے: پہلے 20 کا 3/5 نکالیں (ضرب)، پھر اسے 20 میں سے کم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3/5 × 20 = 12 overs bowled, and 20 − 12 = 8 overs left.",
+        "ur": "درست! 3/5 × 20 = 12 اوور ہوئے، اور 20 − 12 = 8 اوور باقی تھے۔"
+      },
+      "feedback_wrong": {
+        "en": "20 ÷ 5 = 4, so 3/5 of 20 = 3 × 4 = 12 overs bowled. Left: 20 − 12 = 8 overs.",
+        "ur": "20 ÷ 5 = 4، اس لیے 20 کا 3/5 = 3 × 4 = 12 اوور ہوئے۔ باقی: 20 − 12 = 8 اوور۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 overs were bowled. The question asks how many were left: 20 − 12.",
+            "ur": "12 اوور تو ہو چکے تھے۔ سوال یہ ہے کہ کتنے باقی تھے: 20 − 12"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ammi has a 5 kg bag of atta and uses 1/2 kg every day. How many days will it last? Bilal wrote 5 × 1/2 = 2 1/2 days. What went wrong?",
+        "ur": "امی کے پاس آٹے کا 5 کلوگرام کا تھیلا ہے اور وہ ہر روز 1/2 کلوگرام استعمال کرتی ہیں۔ تھیلا کتنے دن چلے گا؟ بلال نے لکھا 5 × 1/2 = 2 1/2 دن۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "divide",
+          "text": {
+            "en": "He should divide: how many 1/2 kg fit into 5 kg? 5 ÷ 1/2 = 10 days.",
+            "ur": "اسے تقسیم کرنی چاہیے تھی: 5 کلوگرام میں 1/2 کلوگرام کتنی بار آتا ہے؟ 5 ÷ 1/2 = 10 دن۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each day uses only half a kg, so 5 kg must last more than 5 days: 5 × 2 = 10.",
+            "ur": "جی ہاں! ہر روز صرف آدھا کلوگرام لگتا ہے، اس لیے 5 کلوگرام 5 دن سے زیادہ چلے گا: 5 × 2 = 10"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, the answer is right.",
+            "ur": "کوئی غلطی نہیں، جواب درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Does it make sense? If she used a whole kg a day, the bag would last 5 days. She uses less, so it lasts longer.",
+            "ur": "کیا یہ سمجھ میں آتا ہے؟ اگر وہ روز پورا کلوگرام استعمال کرتیں تو تھیلا 5 دن چلتا۔ وہ اس سے کم استعمال کرتی ہیں، اس لیے زیادہ دن چلے گا۔"
+          },
+          "misconception_id": "multiply_instead_of_divide"
+        },
+        {
+          "id": "subtract",
+          "text": {
+            "en": "He should subtract: 5 − 1/2 = 4 1/2 days.",
+            "ur": "اسے تفریق کرنی چاہیے تھی: 5 − 1/2 = 4 1/2 دن۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the atta left after one day, not the number of days.",
+            "ur": "یہ تو ایک دن کے بعد بچا آٹا ہے، دنوں کی تعداد نہیں۔"
+          },
+          "misconception_id": "wrong_add_subtract"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_choice",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? How did you know to divide in the atta story, and not multiply?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ آٹے والی کہانی میں آپ کو کیسے پتا چلا کہ تقسیم کرنی ہے، ضرب نہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how did you choose the operation for the atta story (5 kg, 1/2 kg a day)? How can you check that your answer makes sense?",
+        "ur": "اپنے الفاظ میں بتائیں: آٹے والی کہانی (5 کلوگرام، روز 1/2 کلوگرام) میں آپ نے عمل کیسے چنا؟ آپ کیسے جانچ سکتے ہیں کہ جواب سمجھ میں آتا ہے؟"
+      },
+      "key_idea": "The story asks how many 1/2 kg portions fit into 5 kg, so we divide: 5 ÷ 1/2 = 10 days. Check: each day uses less than 1 kg, so the bag lasts more than 5 days (10 × 1/2 = 5).",
+      "levels": {
+        "got_it": "Says the question is how many half-kgs fit into 5 kg (or how many days), so divide, gets 10, and/or checks that the answer should be more than 5 because less than 1 kg is used each day.",
+        "partly": "Says divide or gives 10, but does not say why (how many fit) or how to check the answer.",
+        "not_yet": "Chooses multiply or subtract, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "how many",
+          "fit",
+          "کتنے",
+          "کتنی",
+          "kitne",
+          "kitni"
+        ],
+        [
+          "divide",
+          "÷",
+          "تقسیم",
+          "taqseem",
+          "taqsim"
+        ],
+        [
+          "10",
+          "ten",
+          "دس",
+          "more than",
+          "زیادہ",
+          "zyada",
+          "ziada"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! We ask how many 1/2 kg fit into 5 kg, so we divide: 10 days. Less than 1 kg a day means more than 5 days.",
+          "ur": "بہت خوب سمجھایا! سوال یہ ہے کہ 5 کلوگرام میں 1/2 کلوگرام کتنی بار آتا ہے، اس لیے تقسیم: 10 دن۔ روز 1 کلوگرام سے کم، اس لیے 5 دن سے زیادہ۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why you divide, and check: should the bag last more or fewer than 5 days?",
+          "ur": "اچھی شروعات! اب بتائیں کہ تقسیم کیوں کی، اور جانچیں: تھیلا 5 دن سے زیادہ چلے گا یا کم؟"
+        },
+        "not_yet": {
+          "en": "Think: each day Ammi takes half a kg from the bag. How many halves are there in 5 kg?",
+          "ur": "سوچیں: امی ہر روز تھیلے سے آدھا کلوگرام نکالتی ہیں۔ 5 کلوگرام میں کتنے آدھے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Fractions unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! کسور کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has one question on each part of the unit: equivalent fractions, adding, mixed numbers, multiplying and dividing. Read each one carefully and check that your answer makes sense.",
+        "ur": "اس چھوٹے ٹیسٹ میں باب کے ہر حصے سے ایک سوال ہے: مساوی کسور، جمع، مخلوط اعداد، ضرب اور تقسیم۔ ہر سوال غور سے پڑھیں اور دیکھیں کہ جواب سمجھ میں آتا ہے۔"
+      }
+    },
+    {
+      "id": "u1_simplest",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.fractions.equivalent",
+      "prompt": {
+        "en": "Test 1: What is 12/18 in its simplest form?",
+        "ur": "ٹیسٹ 1: 12/18 کی سادہ ترین شکل کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "two_thirds",
+          "text": {
+            "en": "2/3",
+            "ur": "2/3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 6 divides 12 and 18: 12/18 = 2/3.",
+            "ur": "جی ہاں! 6، 12 اور 18 دونوں کو تقسیم کرتا ہے: 12/18 = 2/3"
+          }
+        },
+        {
+          "id": "six_ninths",
+          "text": {
+            "en": "6/9",
+            "ur": "6/9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6/9 is equal to 12/18, but 3 still divides 6 and 9. Keep going: 2/3.",
+            "ur": "6/9، 12/18 کے برابر ہے، لیکن 3 اب بھی 6 اور 9 کو تقسیم کرتا ہے۔ آگے بڑھیں: 2/3"
+          }
+        },
+        {
+          "id": "three_halves",
+          "text": {
+            "en": "3/2",
+            "ur": "3/2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is upside down: 3/2 is more than 1, but 12/18 is less than 1.",
+            "ur": "یہ الٹا ہے: 3/2 تو 1 سے زیادہ ہے، جبکہ 12/18، 1 سے کم ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_walk",
+      "type": "text_check",
+      "question_type": "apply",
+      "skill": "maths.fractions.add_unlike",
+      "prompt": {
+        "en": "Test 2: Sana walked 2/3 km to school and then 1/4 km to the shop. How far did she walk in all?",
+        "ur": "ٹیسٹ 2: ثنا 2/3 کلومیٹر چل کر سکول گئی اور پھر 1/4 کلومیٹر چل کر دکان۔ وہ کل کتنا چلی؟"
+      },
+      "checker": "fraction",
+      "expected": "11/12",
+      "hint": {
+        "en": "Add. 3 and 4 both go into 12: change both to twelfths.",
+        "ur": "جمع کریں۔ 3 اور 4 دونوں 12 میں پورے آتے ہیں: دونوں کو بارہویں حصوں میں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8/12 + 3/12 = 11/12 km.",
+        "ur": "درست! 8/12 + 3/12 = 11/12 کلومیٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "2/3 = 8/12 and 1/4 = 3/12. 8/12 + 3/12 = 11/12 km.",
+        "ur": "2/3 = 8/12 اور 1/4 = 3/12۔ 8/12 + 3/12 = 11/12 کلومیٹر۔"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "3/7",
+          "feedback": {
+            "en": "You added the tops and the bottoms. 3/7 is less than 2/3! Change to twelfths first.",
+            "ur": "آپ نے اوپر اور نیچے والے جمع کر دیے۔ 3/7 تو 2/3 سے بھی کم ہے! پہلے بارہویں حصوں میں بدلیں۔"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        }
+      ]
+    },
+    {
+      "id": "u3_sugar",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.fractions.mixed_numbers",
+      "prompt": {
+        "en": "Test 3: Dadi bought 13 packets of sugar of 1/4 kg each: 13/4 kg. Write 13/4 as a mixed number.",
+        "ur": "ٹیسٹ 3: دادی نے 1/4 کلوگرام والے چینی کے 13 پیکٹ خریدے: 13/4 کلوگرام۔ 13/4 کو مخلوط عدد کی شکل میں لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "3 1/4",
+      "hint": {
+        "en": "4 quarters make 1 kg. 13 ÷ 4 = ? remainder ?",
+        "ur": "4 چوتھائیاں 1 کلوگرام بناتی ہیں۔ 13 ÷ 4 = ? باقی ?"
+      },
+      "feedback_correct": {
+        "en": "Right! 13 ÷ 4 = 3 remainder 1, so 3 1/4 kg.",
+        "ur": "درست! 13 ÷ 4 = 3 باقی 1، اس لیے 3 1/4 کلوگرام۔"
+      },
+      "feedback_wrong": {
+        "en": "13 ÷ 4 = 3 remainder 1: 3 whole kg and 1 quarter, 3 1/4 kg.",
+        "ur": "13 ÷ 4 = 3 باقی 1: 3 پورے کلوگرام اور 1 چوتھائی، یعنی 3 1/4 کلوگرام۔"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "1 3/4",
+          "feedback": {
+            "en": "You swapped them. 13 ÷ 4 = 3 remainder 1: 3 is the whole kg and 1 goes on top.",
+            "ur": "آپ نے جگہ بدل دی۔ 13 ÷ 4 = 3 باقی 1: 3 پورے کلوگرام ہیں اور 1 اوپر جاتا ہے۔"
+          }
+        },
+        {
+          "answer": "13/4",
+          "feedback": {
+            "en": "That is the fraction we started with. Write it as whole kg and a fraction.",
+            "ur": "یہ تو وہی کسر ہے جس سے شروع کیا۔ اسے پورے کلوگرام اور کسر کی شکل میں لکھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_mithai",
+      "type": "choice",
+      "question_type": "find_error",
+      "skill": "maths.fractions.multiply",
+      "prompt": {
+        "en": "Test 4: A box of mithai has 24 pieces, and 5/8 of them are barfi. Sana wrote 24 ÷ 5/8 = 38 2/5 barfi. What went wrong?",
+        "ur": "ٹیسٹ 4: مٹھائی کے ڈبے میں 24 ٹکڑے ہیں، اور ان کا 5/8 برفی ہے۔ ثنا نے لکھا 24 ÷ 5/8 = 38 2/5 برفیاں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "multiply",
+          "text": {
+            "en": "'5/8 of 24' means multiply: 5/8 × 24 = 15 barfi.",
+            "ur": "'24 کا 5/8' مطلب ضرب: 5/8 × 24 = 15 برفیاں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 24 ÷ 8 = 3, and 5 × 3 = 15. Her answer was more than the whole box!",
+            "ur": "جی ہاں! 24 ÷ 8 = 3، اور 5 × 3 = 15۔ اس کا جواب تو پورے ڈبے سے بھی زیادہ تھا!"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, the answer is right.",
+            "ur": "کوئی غلطی نہیں، جواب درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Can there be more barfi than the 24 pieces in the box? The barfi is only a part of the box.",
+            "ur": "کیا ڈبے کے 24 ٹکڑوں سے زیادہ برفیاں ہو سکتی ہیں؟ برفی تو ڈبے کا صرف ایک حصہ ہے۔"
+          },
+          "misconception_id": "divide_instead_of_multiply"
+        },
+        {
+          "id": "eighths",
+          "text": {
+            "en": "She should work out 24 ÷ 8 = 3 barfi.",
+            "ur": "اسے 24 ÷ 8 = 3 برفیاں نکالنی چاہییں تھیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 is only 1/8 of the box. 5/8 is 5 of those eighths: 5 × 3 = 15.",
+            "ur": "3 تو ڈبے کا صرف 1/8 ہے۔ 5/8 ایسے 5 آٹھویں حصے ہیں: 5 × 3 = 15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_rotis",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.fractions.divide_by_fraction",
+      "prompt": {
+        "en": "Test 5: Ammi has 6 rotis. Each child eats 3/4 of a roti. How many children can eat?",
+        "ur": "ٹیسٹ 5: امی کے پاس 6 روٹیاں ہیں۔ ہر بچہ 3/4 روٹی کھاتا ہے۔ کتنے بچے کھا سکتے ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "How many 3/4s fit into 6? Divide: multiply by the reciprocal, 4/3.",
+        "ur": "6 میں 3/4 کتنی بار آتا ہے؟ تقسیم کریں: معکوس 4/3 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 ÷ 3/4 = 6 × 4/3 = 8 children.",
+        "ur": "درست! 6 ÷ 3/4 = 6 × 4/3 = 8 بچے۔"
+      },
+      "feedback_wrong": {
+        "en": "6 ÷ 3/4 = 6 × 4/3 = 24/3 = 8. Each child eats less than a whole roti, so more than 6 children can eat.",
+        "ur": "6 ÷ 3/4 = 6 × 4/3 = 24/3 = 8۔ ہر بچہ پوری روٹی سے کم کھاتا ہے، اس لیے 6 سے زیادہ بچے کھا سکتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4.5,
+          "feedback": {
+            "en": "You multiplied. Each child eats less than one roti, so more than 6 children can eat. Divide.",
+            "ur": "آپ نے ضرب دی۔ ہر بچہ ایک روٹی سے کم کھاتا ہے، اس لیے 6 سے زیادہ بچے کھا سکتے ہیں۔ تقسیم کریں۔"
+          },
+          "misconception_id": "multiply_instead_of_divide"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the whole Fractions unit! Well done!",
+          "ur": "آپ نے کسور کا پورا باب مکمل کر لیا! شاباش!"
+        }
+      },
+      "text": {
+        "en": "Read the story and picture it. Put together: add. Left or how much more: subtract. A fraction of an amount, or the same amount many times: multiply. How many parts fit: divide. Some stories need two steps. Always check that the answer makes sense.",
+        "ur": "کہانی پڑھیں اور ذہن میں دیکھیں۔ اکٹھا کرنا: جمع۔ بچا یا کتنا زیادہ: تفریق۔ کسی مقدار کا کسری حصہ، یا ایک ہی مقدار کئی بار: ضرب۔ کتنے حصے آتے ہیں: تقسیم۔ کچھ سوالوں کے دو مرحلے ہوتے ہیں۔ ہمیشہ جانچیں کہ جواب سمجھ میں آتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "5/8 of 24 = 5/8 × 24 = 15",
+          "ur": "24 کا 5/8 = 5/8 × 24 = 15"
+        },
+        {
+          "en": "How many 1/2 kg in 5 kg? 5 ÷ 1/2 = 10",
+          "ur": "5 کلوگرام میں 1/2 کلوگرام کتنی بار؟ 5 ÷ 1/2 = 10"
+        },
+        {
+          "en": "Check: a part of an amount is smaller than the amount.",
+          "ur": "جانچ: کسی مقدار کا حصہ اس مقدار سے چھوٹا ہوتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_milk",
+      "type": "apply",
+      "skill": "maths.fractions.word_problems",
+      "step": {
+        "id": "r_milk",
+        "type": "number",
+        "prompt": {
+          "en": "Zara's family drinks 1 1/2 litres of milk every day. How much milk do they drink in 4 days? (litres)",
+          "ur": "زارا کے گھر والے روز 1 1/2 لیٹر دودھ پیتے ہیں۔ 4 دن میں وہ کتنا دودھ پیتے ہیں؟ (لیٹر)"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "The same amount 4 times: multiply. 4 × 1 1/2 = 4 × 3/2.",
+          "ur": "ایک ہی مقدار 4 بار: ضرب۔ 4 × 1 1/2 = 4 × 3/2"
+        },
+        "feedback_correct": {
+          "en": "Right! 4 × 3/2 = 12/2 = 6 litres.",
+          "ur": "درست! 4 × 3/2 = 12/2 = 6 لیٹر۔"
+        },
+        "feedback_wrong": {
+          "en": "4 × 1 = 4 and 4 × 1/2 = 2, so 4 + 2 = 6 litres.",
+          "ur": "4 × 1 = 4 اور 4 × 1/2 = 2، اس لیے 4 + 2 = 6 لیٹر۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 4.5,
+            "feedback": {
+              "en": "You multiplied the 1 but not the 1/2. 4 halves are 2 more litres.",
+              "ur": "آپ نے 1 کو ضرب دی لیکن 1/2 کو نہیں۔ 4 آدھے 2 لیٹر اور بنتے ہیں۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_lawn",
+      "type": "apply",
+      "skill": "maths.fractions.word_problems",
+      "step": {
+        "id": "r_lawn",
+        "type": "text_check",
+        "prompt": {
+          "en": "A tailor had 5 metres of lawn. He cut 2 3/4 metres for a dupatta. How much lawn is left? Write a mixed number.",
+          "ur": "ایک درزی کے پاس 5 میٹر لان تھی۔ اس نے دوپٹے کے لیے 2 3/4 میٹر کاٹی۔ کتنی لان بچی؟ مخلوط عدد لکھیں۔"
+        },
+        "checker": "fraction",
+        "expected": "2 1/4",
+        "hint": {
+          "en": "'Left' means subtract. 5 = 4 4/4.",
+          "ur": "'بچی' کا مطلب ہے تفریق۔ 5 = 4 4/4"
+        },
+        "feedback_correct": {
+          "en": "Right! 4 4/4 − 2 3/4 = 2 1/4 metres.",
+          "ur": "درست! 4 4/4 − 2 3/4 = 2 1/4 میٹر۔"
+        },
+        "feedback_wrong": {
+          "en": "Write 5 as 4 4/4. Then 4 4/4 − 2 3/4 = 2 1/4 metres.",
+          "ur": "5 کو 4 4/4 لکھیں۔ پھر 4 4/4 − 2 3/4 = 2 1/4 میٹر۔"
+        },
+        "require_simplest": true,
+        "common_wrong": [
+          {
+            "answer": "7 3/4",
+            "feedback": {
+              "en": "You added. He cut some cloth off, so less is left. Subtract.",
+              "ur": "آپ نے جمع کیا۔ اس نے کپڑا کاٹا، اس لیے کم بچا۔ تفریق کریں۔"
+            },
+            "misconception_id": "wrong_add_subtract"
+          },
+          {
+            "answer": "3 3/4",
+            "feedback": {
+              "en": "5 − 2 = 3, but the 3/4 must be taken away too, not kept. Write 5 as 4 4/4.",
+              "ur": "5 − 2 = 3، لیکن 3/4 بھی کم کرنا ہے، رکھنا نہیں۔ 5 کو 4 4/4 لکھیں۔"
+            }
+          },
+          {
+            "answer": "9/4",
+            "feedback": {
+              "en": "The right amount, but please write it as a mixed number.",
+              "ur": "مقدار درست ہے، لیکن اسے مخلوط عدد کی شکل میں لکھیں۔"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Fractions unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the file is named g6-maths-02 to sit with the other fractions lessons. Fix the name and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: عبارتی سوال (word problem), عمل (operation), معکوس (reciprocal), کلوگرام / میٹر / لیٹر, اوور and ٹی ٹوئنٹی (cricket), and 'کا' used for 'of'.",
+    "This is the last lesson of the unit. Steps s1 to s10 teach choosing the operation: foundation check (s2), the four questions (s3), choose then solve (s4, s5), add (s6), subtract (s7), a two-step problem (s8), find the error (s9), explain (s10).",
+    "s11 to u5 are a short unit test, one question per earlier lesson. Each u-step is tagged with that lesson's skill (equivalent, add_unlike, mixed_numbers, multiply, divide_by_fraction), so it counts as practice for that skill rather than for word problems.",
+    "Division stories only divide a whole number by a fraction or mixed number (as the dividing-fractions lesson teaches); no fraction ÷ fraction.",
+    "In s8, '3/5 of the overs' is 12 overs of a 20-over innings; real scorecards write part-overs as 12.3 and so on, which this lesson avoids.",
+    "The fraction checker accepts any equal value: where a step asks for a mixed number (s6, s7, u3, r_lawn), the improper fraction is listed in common_wrong with feedback asking for a mixed number (it costs an attempt).",
+    "The answers and the common wrong answers were worked out with Python's fractions module in content/sources/g6-maths-02/fraction_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

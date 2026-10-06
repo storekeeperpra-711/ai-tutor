@@ -7,13 +7,16 @@ ROOT = Path(__file__).resolve().parents[3]
 REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Fractions"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
-# Skills of the Fractions unit (dividing by a fraction is in its own,
+# Skills of the Fractions unit (dividing by a fraction is taught in its own,
 # hand-written lesson: g6-maths-02-dividing-fractions).
 UNIT_FRACTIONS = "maths.fractions.unit_fraction_meaning"
 TIMES_TABLES = "maths.multiplication.facts"
 EQUIVALENT = "maths.fractions.equivalent"
 ADD_UNLIKE = "maths.fractions.add_unlike"
 MIXED = "maths.fractions.mixed_numbers"
+MULTIPLY = "maths.fractions.multiply"
+DIVIDE = "maths.fractions.divide_by_fraction"
+WORD_PROBLEMS = "maths.fractions.word_problems"
 
 
 def T(en, ur):
