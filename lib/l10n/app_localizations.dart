@@ -2528,6 +2528,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'If the app crashes, a report goes to Google\'s Firebase Crashlytics so we can fix it. It has the phone model, the Android version and where in the app it crashed, never a name or an email. There is no advertising and no Google Analytics in the app.'**
   String get privacyCrash;
+
+  /// Bottom menu: the child's home page.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get navHome;
+
+  /// Bottom menu: all lessons.
+  ///
+  /// In en, this message translates to:
+  /// **'Lessons'**
+  String get navLessons;
+
+  /// Bottom menu: the child's effort badges.
+  ///
+  /// In en, this message translates to:
+  /// **'Badges'**
+  String get navBadges;
+
+  /// Badges page: what badges are for.
+  ///
+  /// In en, this message translates to:
+  /// **'You earn badges for effort: finishing a lesson, trying again, explaining your thinking and coming back each day.'**
+  String get badgesIntro;
 }
 
 class _AppLocalizationsDelegate

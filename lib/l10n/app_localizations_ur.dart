@@ -1457,4 +1457,17 @@ class AppLocalizationsUr extends AppLocalizations {
   @override
   String get privacyCrash =>
       'اگر ایپ بند ہو جائے (کریش)، تو اسے ٹھیک کرنے کے لیے ایک رپورٹ گوگل کے فائر بیس کریش لِٹکس کو جاتی ہے۔ اس میں فون کا ماڈل، اینڈرائیڈ کا ورژن اور یہ کہ ایپ کہاں بند ہوئی شامل ہوتا ہے، کبھی کوئی نام یا ای میل نہیں۔ ایپ میں کوئی اشتہار اور کوئی گوگل اینالیٹکس نہیں ہے۔';
+
+  @override
+  String get navHome => 'گھر';
+
+  @override
+  String get navLessons => 'اسباق';
+
+  @override
+  String get navBadges => 'بیجز';
+
+  @override
+  String get badgesIntro =>
+      'بیجز محنت پر ملتے ہیں: سبق مکمل کرنا، دوبارہ کوشش کرنا، اپنی سوچ بتانا اور روز واپس آنا۔';
 }

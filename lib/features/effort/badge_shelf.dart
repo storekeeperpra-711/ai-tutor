@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../app/theme/app_theme.dart';
 import '../../l10n/app_localizations.dart';
 import 'effort.dart';
 
@@ -81,16 +82,16 @@ class _Badge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
     final name = badgeName(AppLocalizations.of(context), badge);
+    // Earned: a pastel colour of its own. Not yet: soft grey, still easy
+    // to read, so the child can see what to aim for.
+    final tile = AppColors.tiles[badge.index % AppColors.tiles.length];
     final icon = CircleAvatar(
       radius: 22,
-      backgroundColor: earned
-          ? colors.tertiaryContainer
-          : colors.surfaceContainerHighest,
+      backgroundColor: earned ? tile.soft : AppColors.line,
       child: Icon(
         badgeIcon(badge),
-        color: earned ? colors.onTertiaryContainer : colors.outline,
+        color: earned ? tile.strong : AppColors.muted,
       ),
     );
     return Semantics(
@@ -108,8 +109,9 @@ class _Badge extends StatelessWidget {
                   Text(
                     name,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.labelSmall
-                        ?.copyWith(color: earned ? null : colors.outline),
+                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                      color: earned ? AppColors.ink : AppColors.muted,
+                    ),
                   ),
                 ],
               ),

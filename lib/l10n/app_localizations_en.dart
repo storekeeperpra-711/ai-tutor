@@ -1453,4 +1453,17 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get privacyCrash =>
       'If the app crashes, a report goes to Google\'s Firebase Crashlytics so we can fix it. It has the phone model, the Android version and where in the app it crashed, never a name or an email. There is no advertising and no Google Analytics in the app.';
+
+  @override
+  String get navHome => 'Home';
+
+  @override
+  String get navLessons => 'Lessons';
+
+  @override
+  String get navBadges => 'Badges';
+
+  @override
+  String get badgesIntro =>
+      'You earn badges for effort: finishing a lesson, trying again, explaining your thinking and coming back each day.';
 }
