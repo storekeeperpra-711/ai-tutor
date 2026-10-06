@@ -13,18 +13,34 @@ import '../profiles/avatar.dart';
 import '../profiles/pin_pad.dart';
 import 'early_home.dart';
 import 'home_style.dart';
+import 'main_tabs.dart';
 import 'tier_homes.dart';
 
 /// Home: "Who is learning?" until a child picks their picture, then the
 /// home for that child's age group (spec C4).
-class HomeScreen extends ConsumerWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends ConsumerState<HomeScreen> {
+  var _tab = HomeTab.home;
+
+  @override
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final students = ref.watch(studentsProvider);
     final current = ref.watch(currentStudentProvider);
+    // A new child starts on Home.
+    ref.listen(currentStudentProvider, (_, _) => _tab = HomeTab.home);
+    // The little ones keep their one big Play button and no menu.
+    final showBar =
+        current != null &&
+        students.hasValue &&
+        ref.watch(ageTierProvider) != AgeTier.early;
+    final tab = showBar ? _tab : HomeTab.home;
 
     return TintedBackground(
       dots: true,
@@ -42,15 +58,25 @@ class HomeScreen extends ConsumerWidget {
               tooltip: l10n.accountTitle,
               onPressed: () => context.push('/account'),
             ),
-            const SizedBox(width: 8),
-            HeaderButton(
-              icon: Icons.settings,
-              tooltip: l10n.settingsTitle,
-              onPressed: () => context.push('/settings'),
-            ),
+            // Settings is in the bottom menu once it shows.
+            if (!showBar) ...[
+              const SizedBox(width: 8),
+              HeaderButton(
+                icon: Icons.settings,
+                tooltip: l10n.settingsTitle,
+                onPressed: () => context.push('/settings'),
+              ),
+            ],
             const SizedBox(width: 16),
           ],
         ),
+        bottomNavigationBar: showBar
+            ? HomeBottomBar(
+                tab: tab,
+                onTab: (t) => setState(() => _tab = t),
+                onSettings: () => context.push('/settings'),
+              )
+            : null,
         body: ListView(
           padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
           children: [
@@ -85,11 +111,17 @@ class HomeScreen extends ConsumerWidget {
               AsyncData(value: final list) when current == null => [
                 _WhoIsLearning(students: list),
               ],
-              AsyncData() => [_StudentHome(student: current!)],
+              AsyncData() => [
+                switch (tab) {
+                  HomeTab.home => _StudentHome(student: current!),
+                  HomeTab.lessons => LessonsTab(student: current!),
+                  HomeTab.badges => BadgesTab(student: current!),
+                },
+              ],
               AsyncError(:final error) => [Text('$error')],
               _ => [const Center(child: CircularProgressIndicator())],
             },
-            if (kDebugMode) ...[
+            if (kDebugMode && tab == HomeTab.home) ...[
               const Divider(height: 48),
               Center(
                 child: FilledButton(
