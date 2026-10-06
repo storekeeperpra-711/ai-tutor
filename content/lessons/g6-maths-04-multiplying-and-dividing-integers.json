@@ -1,0 +1,769 @@
+{
+  "id": "g6-maths-04-multiplying-and-dividing-integers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Multiply and divide integers using the sign rules.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Integers"
+    }
+  ],
+  "skills": [
+    "maths.integers.multiply_divide"
+  ],
+  "title": {
+    "en": "Multiplying and dividing integers",
+    "ur": "صحیح اعداد کی ضرب اور تقسیم"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.add"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "two_negatives_negative",
+      "description": "Thinks a negative times a negative is negative: (−3) × (−5) = −15."
+    },
+    {
+      "id": "sign_dropped",
+      "description": "Gets the size right but leaves off the minus sign when the signs are different."
+    },
+    {
+      "id": "adds_instead",
+      "description": "Adds the numbers instead of multiplying: (−3) × (−5) = −8."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.multiply_divide": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.multiply_divide": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "A negative number times a negative number gives …",
+            "ur": "منفی عدد ضرب منفی عدد کا جواب …"
+          },
+          "options": [
+            {
+              "id": "pos",
+              "text": {
+                "en": "a positive number",
+                "ur": "مثبت عدد"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Same signs give a positive answer.",
+                "ur": "جی ہاں! ایک جیسی علامتوں کا جواب مثبت ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "neg",
+              "text": {
+                "en": "a negative number",
+                "ur": "منفی عدد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Same signs give a positive answer: (−2) × (−3) = 6.",
+                "ur": "ایک جیسی علامتوں کا جواب مثبت ہوتا ہے: (−2) × (−3) = 6"
+              },
+              "misconception_id": "two_negatives_negative"
+            },
+            {
+              "id": "zero",
+              "text": {
+                "en": "zero",
+                "ur": "صفر"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only multiplying by 0 gives 0. (−2) × (−3) = 6.",
+                "ur": "صرف 0 سے ضرب دینے پر 0 آتا ہے۔ (−2) × (−3) = 6"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Work out (−30) ÷ 6",
+            "ur": "حل کریں: (−30) ÷ 6"
+          },
+          "answer": -5,
+          "checker": "numeric",
+          "hint": {
+            "en": "30 ÷ 6 = 5. The signs are different.",
+            "ur": "30 ÷ 6 = 5۔ علامتیں مختلف ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! (−30) ÷ 6 = −5.",
+            "ur": "درست! (−30) ÷ 6 = −5"
+          },
+          "feedback_wrong": {
+            "en": "30 ÷ 6 = 5, and different signs give a negative answer: −5.",
+            "ur": "30 ÷ 6 = 5، اور مختلف علامتوں کا جواب منفی ہوتا ہے: −5"
+          },
+          "common_wrong": [
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "Different signs give a negative answer: −5.",
+                "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −5"
+              },
+              "misconception_id": "sign_dropped"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Nida wrote (−8) × (−2) = −16. What went wrong?",
+            "ur": "ندا نے لکھا (−8) × (−2) = −16۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "sign",
+              "text": {
+                "en": "Both numbers are negative, so the answer is positive: 16.",
+                "ur": "دونوں اعداد منفی ہیں، اس لیے جواب مثبت ہے: 16"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Same signs, positive answer.",
+                "ur": "جی ہاں! ایک جیسی علامتیں، مثبت جواب۔"
+              }
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "She should add: −8 + (−2) = −10.",
+                "ur": "اسے جمع کرنا چاہیے تھا: −8 + (−2) = −10"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The question says ×, so multiply. The sign is the mistake: the answer is 16.",
+                "ur": "سوال میں × ہے، اس لیے ضرب دیں۔ غلطی علامت میں ہے: جواب 16 ہے۔"
+              },
+              "misconception_id": "adds_instead"
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 8 × 2 = 16 and the numbers are negative.",
+                "ur": "کوئی غلطی نہیں۔ 8 × 2 = 16 اور اعداد منفی ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Two negatives multiplied give a positive: 16.",
+                "ur": "دو منفی اعداد کی ضرب مثبت ہوتی ہے: 16"
+              },
+              "misconception_id": "two_negatives_negative"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rules",
+      "front": {
+        "en": "Sign rules for × and ÷",
+        "ur": "ضرب اور تقسیم کی علامتوں کے اصول"
+      },
+      "back": {
+        "en": "Same signs: positive. Different signs: negative. (−3) × (−5) = 15, (−6) × 4 = −24.",
+        "ur": "ایک جیسی علامتیں: مثبت۔ مختلف علامتیں: منفی۔ (−3) × (−5) = 15، (−6) × 4 = −24"
+      }
+    },
+    {
+      "id": "f_divide",
+      "front": {
+        "en": "(−20) ÷ (−4) = ?",
+        "ur": "(−20) ÷ (−4) = ؟"
+      },
+      "back": {
+        "en": "5, because (−4) × 5 = −20.",
+        "ur": "5، کیونکہ (−4) × 5 = −20"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_table",
+      "text": {
+        "en": "Make a times table for −3: 3 × (−3), 2 × (−3), 1 × (−3), 0 × (−3), (−1) × (−3), (−2) × (−3). What pattern do you see? Explain it to someone at home.",
+        "ur": "−3 کا پہاڑا بنائیں: 3 × (−3)، 2 × (−3)، 1 × (−3)، 0 × (−3)، (−1) × (−3)، (−2) × (−3)۔ آپ کو کیا نمونہ نظر آتا ہے؟ گھر میں کسی کو سمجھائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Product",
+      "ur": "حاصل ضرب"
+    },
+    {
+      "en": "Quotient",
+      "ur": "حاصل تقسیم"
+    },
+    {
+      "en": "Sign rule",
+      "ur": "علامت کا اصول"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "At night in Skardu it gets 2 degrees colder every hour. What is the change after 4 hours?",
+          "ur": "سکردو میں رات کو ہر گھنٹے 2 ڈگری ٹھنڈ بڑھتی ہے۔ 4 گھنٹے بعد کتنی تبدیلی آئے گی؟"
+        }
+      },
+      "text": {
+        "en": "Today we multiply and divide integers. First, a quick check of adding.",
+        "ur": "آج ہم صحیح اعداد کی ضرب اور تقسیم کریں گے۔ پہلے جمع کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.integers.add",
+      "prompt": {
+        "en": "Work out −2 + (−2) + (−2)",
+        "ur": "حل کریں: −2 + (−2) + (−2)"
+      },
+      "answer": -6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Move 2 to the left, three times.",
+        "ur": "تین بار 2 بائیں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −2 + (−2) + (−2) = −6.",
+        "ur": "درست! −2 + (−2) + (−2) = −6"
+      },
+      "feedback_wrong": {
+        "en": "All negative: 2 + 2 + 2 = 6, keep the minus: −6.",
+        "ur": "سب منفی: 2 + 2 + 2 = 6، منفی رکھیں: −6"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "All the numbers are negative, so the answer is negative: −6.",
+            "ur": "سب اعداد منفی ہیں، اس لیے جواب منفی ہے: −6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Multiplying is adding again and again!",
+          "ur": "ضرب بار بار جمع کرنا ہے!"
+        }
+      },
+      "text": {
+        "en": "−2 + (−2) + (−2) is three lots of −2, so 3 × (−2) = −6. In the same way, 4 hours of −2 degrees is 4 × (−2). A positive number times a negative number is negative.",
+        "ur": "−2 + (−2) + (−2) تین بار −2 ہے، اس لیے 3 × (−2) = −6۔ اسی طرح، 4 گھنٹے تک −2 ڈگری، 4 × (−2) ہے۔ مثبت عدد ضرب منفی عدد کا جواب منفی ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "s4_colder",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "Show 4 × (−2) on the number line: 4 jumps of −2 from 0. Press Check.",
+        "ur": "عددی خط پر 4 × (−2) دکھائیں: 0 سے −2 کی 4 چھلانگیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": 0
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "-8"
+      },
+      "hint": {
+        "en": "Each jump is 2 to the left. Make 4 jumps.",
+        "ur": "ہر چھلانگ 2 بائیں ہے۔ 4 چھلانگیں لگائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 4 × (−2) = −8. It is 8 degrees colder.",
+        "ur": "جی ہاں! 4 × (−2) = −8۔ 8 ڈگری زیادہ ٹھنڈ ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "−2, −4, −6, −8: four jumps of −2 land on −8.",
+        "ur": "−2، −4، −6، −8: −2 کی چار چھلانگیں −8 پر پہنچتی ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "8",
+          "feedback": {
+            "en": "That is 8 to the right. Each jump of −2 goes left.",
+            "ur": "یہ 8 دائیں ہے۔ −2 کی ہر چھلانگ بائیں جاتی ہے۔"
+          },
+          "misconception_id": "sign_dropped"
+        },
+        {
+          "answer": "2",
+          "feedback": {
+            "en": "That is 4 + (−2). Make 4 jumps of −2.",
+            "ur": "یہ 4 + (−2) ہے۔ −2 کی 4 چھلانگیں لگائیں۔"
+          },
+          "misconception_id": "adds_instead"
+        }
+      ]
+    },
+    {
+      "id": "s5_pattern",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "What about a negative times a negative? Follow the pattern.",
+          "ur": "منفی ضرب منفی کا کیا؟ نمونہ دیکھیں۔"
+        }
+      },
+      "text": {
+        "en": "3 × (−2) = −6, 2 × (−2) = −4, 1 × (−2) = −2, 0 × (−2) = 0. Each answer goes UP by 2. So (−1) × (−2) = 2 and (−2) × (−2) = 4. The rules: same signs give a positive answer; different signs give a negative answer.",
+        "ur": "3 × (−2) = −6، 2 × (−2) = −4، 1 × (−2) = −2، 0 × (−2) = 0۔ ہر جواب 2 بڑھ جاتا ہے۔ اس لیے (−1) × (−2) = 2 اور (−2) × (−2) = 4۔ اصول: ایک جیسی علامتوں کا جواب مثبت؛ مختلف علامتوں کا جواب منفی۔"
+      }
+    },
+    {
+      "id": "s6_neg_neg",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out (−3) × (−5)",
+        "ur": "حل کریں: (−3) × (−5)"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 × 5 = 15. Same signs.",
+        "ur": "3 × 5 = 15۔ ایک جیسی علامتیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−3) × (−5) = 15.",
+        "ur": "درست! (−3) × (−5) = 15"
+      },
+      "feedback_wrong": {
+        "en": "3 × 5 = 15, and same signs give a positive answer: 15.",
+        "ur": "3 × 5 = 15، اور ایک جیسی علامتوں کا جواب مثبت ہوتا ہے: 15"
+      },
+      "common_wrong": [
+        {
+          "answer": -15,
+          "feedback": {
+            "en": "Both are negative: same signs give a POSITIVE answer, 15.",
+            "ur": "دونوں منفی ہیں: ایک جیسی علامتوں کا جواب مثبت ہوتا ہے، 15"
+          },
+          "misconception_id": "two_negatives_negative"
+        },
+        {
+          "answer": -8,
+          "feedback": {
+            "en": "That adds them. Multiply: 3 × 5 = 15.",
+            "ur": "یہ جمع ہے۔ ضرب دیں: 3 × 5 = 15"
+          },
+          "misconception_id": "adds_instead"
+        }
+      ]
+    },
+    {
+      "id": "s7_neg_pos",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out (−6) × 4",
+        "ur": "حل کریں: (−6) × 4"
+      },
+      "answer": -24,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 × 4 = 24. Different signs.",
+        "ur": "6 × 4 = 24۔ مختلف علامتیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−6) × 4 = −24.",
+        "ur": "درست! (−6) × 4 = −24"
+      },
+      "feedback_wrong": {
+        "en": "6 × 4 = 24, and different signs give a negative answer: −24.",
+        "ur": "6 × 4 = 24، اور مختلف علامتوں کا جواب منفی ہوتا ہے: −24"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "Different signs give a negative answer: −24.",
+            "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −24"
+          },
+          "misconception_id": "sign_dropped"
+        },
+        {
+          "answer": -2,
+          "feedback": {
+            "en": "That adds them. Multiply: 6 × 4 = 24.",
+            "ur": "یہ جمع ہے۔ ضرب دیں: 6 × 4 = 24"
+          },
+          "misconception_id": "adds_instead"
+        }
+      ]
+    },
+    {
+      "id": "s8_divide",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Division follows the same sign rules!",
+          "ur": "تقسیم کے بھی یہی علامت کے اصول ہیں!"
+        }
+      },
+      "text": {
+        "en": "Division undoes multiplication. (−12) ÷ 3 = −4, because 3 × (−4) = −12. Same signs give a positive answer; different signs give a negative answer. Divide the numbers, then choose the sign.",
+        "ur": "تقسیم، ضرب کا الٹ ہے۔ (−12) ÷ 3 = −4، کیونکہ 3 × (−4) = −12۔ ایک جیسی علامتوں کا جواب مثبت؛ مختلف علامتوں کا جواب منفی۔ پہلے اعداد تقسیم کریں، پھر علامت چنیں۔"
+      }
+    },
+    {
+      "id": "s9_divide",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out (−20) ÷ (−4)",
+        "ur": "حل کریں: (−20) ÷ (−4)"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "20 ÷ 4 = 5. Same signs.",
+        "ur": "20 ÷ 4 = 5۔ ایک جیسی علامتیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−20) ÷ (−4) = 5, because (−4) × 5 = −20.",
+        "ur": "درست! (−20) ÷ (−4) = 5، کیونکہ (−4) × 5 = −20"
+      },
+      "feedback_wrong": {
+        "en": "20 ÷ 4 = 5, and same signs give a positive answer: 5.",
+        "ur": "20 ÷ 4 = 5، اور ایک جیسی علامتوں کا جواب مثبت ہوتا ہے: 5"
+      },
+      "common_wrong": [
+        {
+          "answer": -5,
+          "feedback": {
+            "en": "Both are negative, so the answer is positive: 5.",
+            "ur": "دونوں منفی ہیں، اس لیے جواب مثبت ہے: 5"
+          },
+          "misconception_id": "two_negatives_negative"
+        }
+      ]
+    },
+    {
+      "id": "s10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ali wrote (−7) × (−3) = −21. What went wrong?",
+        "ur": "علی نے لکھا (−7) × (−3) = −21۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "sign",
+          "text": {
+            "en": "Same signs give a positive answer: 21.",
+            "ur": "ایک جیسی علامتوں کا جواب مثبت ہوتا ہے: 21"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! (−7) × (−3) = 21.",
+            "ur": "جی ہاں! (−7) × (−3) = 21"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "He should get −10.",
+            "ur": "جواب −10 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−10 is what you get by adding. This is ×: 7 × 3 = 21, and the answer is positive.",
+            "ur": "−10 جمع کرنے سے آتا ہے۔ یہ ضرب ہے: 7 × 3 = 21، اور جواب مثبت ہے۔"
+          },
+          "misconception_id": "adds_instead"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. Negative numbers give negative answers.",
+            "ur": "کوئی غلطی نہیں۔ منفی اعداد کا جواب منفی ہوتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not when there are two of them: a negative times a negative is positive.",
+            "ur": "دو منفی اعداد ہوں تو نہیں: منفی ضرب منفی مثبت ہوتا ہے۔"
+          },
+          "misconception_id": "two_negatives_negative"
+        }
+      ]
+    },
+    {
+      "id": "s11_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My cousin says (−1) × (−2) must be negative because both numbers are negative. Can you teach us?",
+          "ur": "میرا کزن کہتا ہے (−1) × (−2) منفی ہوگا کیونکہ دونوں اعداد منفی ہیں۔ کیا آپ ہمیں سمجھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is (−1) × (−2) equal to 2, not −2? You can use the pattern 2 × (−2), 1 × (−2), 0 × (−2) …",
+        "ur": "اپنے الفاظ میں بتائیں: (−1) × (−2) کا جواب 2 کیوں ہے، −2 کیوں نہیں؟ آپ نمونہ 2 × (−2)، 1 × (−2)، 0 × (−2) … استعمال کر سکتے ہیں۔"
+      },
+      "key_idea": "In the pattern 2 × (−2) = −4, 1 × (−2) = −2, 0 × (−2) = 0, each answer goes up by 2, so the next one, (−1) × (−2), is 2. Same signs give a positive answer.",
+      "levels": {
+        "got_it": "Uses the pattern (answers going up by 2: −4, −2, 0, so next is 2), or explains that taking away negatives makes the answer go up.",
+        "partly": "States the rule 'same signs give positive' without a reason, or starts the pattern without finishing it.",
+        "not_yet": "Agrees it is negative, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "pattern",
+          "goes up",
+          "up by 2",
+          "نمونہ",
+          "بڑھ",
+          "barh",
+          "namoona"
+        ],
+        [
+          "same sign",
+          "positive",
+          "مثبت",
+          "ایک جیسی",
+          "musbat"
+        ],
+        [
+          "0",
+          "zero",
+          "صفر",
+          "sifar"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The answers −4, −2, 0 go up by 2 each time, so (−1) × (−2) = 2.",
+          "ur": "بہت خوب سمجھایا! جواب −4، −2، 0 ہر بار 2 بڑھتے ہیں، اس لیے (−1) × (−2) = 2"
+        },
+        "partly": {
+          "en": "Good start! Now show the pattern: 1 × (−2) = −2, 0 × (−2) = 0. What comes next?",
+          "ur": "اچھی شروعات! اب نمونہ دکھائیں: 1 × (−2) = −2، 0 × (−2) = 0۔ اس کے بعد کیا آئے گا؟"
+        },
+        "not_yet": {
+          "en": "Look: 2 × (−2) = −4, 1 × (−2) = −2, 0 × (−2) = 0. By how much does each answer go up? What comes next?",
+          "ur": "دیکھیں: 2 × (−2) = −4، 1 × (−2) = −2، 0 × (−2) = 0۔ ہر جواب کتنا بڑھتا ہے؟ اگلا کیا ہوگا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s12_share",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 18 ÷ (−3)",
+        "ur": "حل کریں: 18 ÷ (−3)"
+      },
+      "answer": -6,
+      "checker": "numeric",
+      "hint": {
+        "en": "18 ÷ 3 = 6. Different signs.",
+        "ur": "18 ÷ 3 = 6۔ مختلف علامتیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 18 ÷ (−3) = −6, because (−3) × (−6) = 18.",
+        "ur": "درست! 18 ÷ (−3) = −6، کیونکہ (−3) × (−6) = 18"
+      },
+      "feedback_wrong": {
+        "en": "18 ÷ 3 = 6, and different signs give a negative answer: −6.",
+        "ur": "18 ÷ 3 = 6، اور مختلف علامتوں کا جواب منفی ہوتا ہے: −6"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Different signs give a negative answer: −6.",
+            "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −6"
+          },
+          "misconception_id": "sign_dropped"
+        }
+      ]
+    },
+    {
+      "id": "s13_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Two rules for × and ÷, and you know them both!",
+          "ur": "ضرب اور تقسیم کے دو اصول، اور آپ دونوں جانتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Multiply or divide the numbers, then choose the sign. Same signs: positive. Different signs: negative. 4 × (−2) = −8, (−3) × (−5) = 15, (−20) ÷ (−4) = 5, 18 ÷ (−3) = −6.",
+        "ur": "پہلے اعداد کی ضرب یا تقسیم کریں، پھر علامت چنیں۔ ایک جیسی علامتیں: مثبت۔ مختلف علامتیں: منفی۔ 4 × (−2) = −8، (−3) × (−5) = 15، (−20) ÷ (−4) = 5، 18 ÷ (−3) = −6"
+      },
+      "points": [
+        {
+          "en": "(−) × (−) = (+)",
+          "ur": "(−) × (−) = (+)"
+        },
+        {
+          "en": "(−) × (+) = (−)",
+          "ur": "(−) × (+) = (−)"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_divide",
+      "type": "apply",
+      "skill": "maths.integers.multiply_divide",
+      "step": {
+        "id": "r_divide",
+        "type": "number",
+        "prompt": {
+          "en": "Work out (−36) ÷ (−9)",
+          "ur": "حل کریں: (−36) ÷ (−9)"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "36 ÷ 9 = 4. Same signs.",
+          "ur": "36 ÷ 9 = 4۔ ایک جیسی علامتیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! (−36) ÷ (−9) = 4.",
+          "ur": "درست! (−36) ÷ (−9) = 4"
+        },
+        "feedback_wrong": {
+          "en": "36 ÷ 9 = 4, and same signs give a positive answer.",
+          "ur": "36 ÷ 9 = 4، اور ایک جیسی علامتوں کا جواب مثبت ہوتا ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": -4,
+            "feedback": {
+              "en": "Both are negative, so the answer is positive: 4.",
+              "ur": "دونوں منفی ہیں، اس لیے جواب مثبت ہے: 4"
+            },
+            "misconception_id": "two_negatives_negative"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_multiply",
+      "type": "apply",
+      "skill": "maths.integers.multiply_divide",
+      "step": {
+        "id": "r_multiply",
+        "type": "number",
+        "prompt": {
+          "en": "Work out 9 × (−3)",
+          "ur": "حل کریں: 9 × (−3)"
+        },
+        "answer": -27,
+        "checker": "numeric",
+        "hint": {
+          "en": "9 × 3 = 27. Different signs.",
+          "ur": "9 × 3 = 27۔ مختلف علامتیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 9 × (−3) = −27.",
+          "ur": "درست! 9 × (−3) = −27"
+        },
+        "feedback_wrong": {
+          "en": "9 × 3 = 27, and different signs give a negative answer: −27.",
+          "ur": "9 × 3 = 27، اور مختلف علامتوں کا جواب منفی ہوتا ہے: −27"
+        },
+        "common_wrong": [
+          {
+            "answer": 27,
+            "feedback": {
+              "en": "Different signs give a negative answer: −27.",
+              "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −27"
+            },
+            "misconception_id": "sign_dropped"
+          },
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "That adds them. Multiply: 9 × 3 = 27.",
+              "ur": "یہ جمع ہے۔ ضرب دیں: 9 × 3 = 27"
+            },
+            "misconception_id": "adds_instead"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Integers unit. No textbook text or exercises were used.",
+    "Negative numbers in × and ÷ are written in brackets: (−3) × (−5). Check this matches the Punjab textbook's style.",
+    "The rule 'negative × negative = positive' is shown with a pattern (s5) and then explained by the child to the AI (s11).",
+    "Urdu terms to check: حاصل ضرب (product), حاصل تقسیم (quotient).",
+    "The numbers were worked out in content/sources/g6-maths-04/multiplying_dividing.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

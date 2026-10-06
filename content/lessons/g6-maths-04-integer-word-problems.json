@@ -1,0 +1,940 @@
+{
+  "id": "g6-maths-04-integer-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems with integers (temperature, floors, depth, money and scores), choosing the right operation.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Integers"
+    }
+  ],
+  "skills": [
+    "maths.integers.word_problems"
+  ],
+  "title": {
+    "en": "Integer word problems",
+    "ur": "صحیح اعداد کے عملی سوالات"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.meaning"
+    },
+    {
+      "skill": "maths.integers.add"
+    },
+    {
+      "skill": "maths.integers.subtract"
+    },
+    {
+      "skill": "maths.integers.multiply_divide"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "difference_as_digits",
+      "description": "Finds the gap between a negative and a positive number by subtracting the digits: from −9 to 4 is 5."
+    },
+    {
+      "id": "penalty_added",
+      "description": "Adds a penalty or loss as if it were a gain."
+    },
+    {
+      "id": "wrong_operation",
+      "description": "Picks the wrong operation for the story, like adding when the story asks for a difference."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.word_problems": [
+      {
+        "id": "qb_operation",
+        "type": "recall",
+        "step": {
+          "id": "qb_operation",
+          "type": "choice",
+          "prompt": {
+            "en": "It is −6 °C in the morning and 1 °C at noon. Which sum tells you how much warmer noon is?",
+            "ur": "صبح −6 ڈگری اور دوپہر کو 1 ڈگری ہے۔ کون سا سوال بتاتا ہے کہ دوپہر کتنی زیادہ گرم ہے؟"
+          },
+          "options": [
+            {
+              "id": "sub",
+              "text": {
+                "en": "1 − (−6)",
+                "ur": "1 − (−6)"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A difference is a subtraction: 1 − (−6) = 7 degrees.",
+                "ur": "جی ہاں! فرق تفریق ہے: 1 − (−6) = 7 ڈگری۔"
+              }
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "1 + (−6)",
+                "ur": "1 + (−6)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That gives −5. 'How much warmer' is a difference: 1 − (−6).",
+                "ur": "اس سے −5 آتا ہے۔ \"کتنا زیادہ گرم\" فرق ہے: 1 − (−6)"
+              },
+              "misconception_id": "wrong_operation"
+            },
+            {
+              "id": "mul",
+              "text": {
+                "en": "1 × (−6)",
+                "ur": "1 × (−6)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Nothing is repeated here. 'How much warmer' is a difference: 1 − (−6).",
+                "ur": "یہاں کچھ دہرایا نہیں جا رہا۔ \"کتنا زیادہ گرم\" فرق ہے: 1 − (−6)"
+              },
+              "misconception_id": "wrong_operation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_account",
+        "type": "apply",
+        "step": {
+          "id": "qb_account",
+          "type": "number",
+          "prompt": {
+            "en": "Kamran has Rs 500 in his school savings card. He buys a uniform for Rs 800, and the school lets him owe the rest. Work out 500 − 800 to show his balance.",
+            "ur": "کامران کے اسکول بچت کارڈ میں 500 روپے ہیں۔ وہ 800 روپے کی وردی خریدتا ہے، اور اسکول باقی رقم ادھار کر دیتا ہے۔ اس کا بقایا دکھانے کے لیے 500 − 800 حل کریں۔"
+          },
+          "answer": -300,
+          "checker": "numeric",
+          "hint": {
+            "en": "He spends more than he has, so the balance goes below 0.",
+            "ur": "وہ اپنی رقم سے زیادہ خرچ کرتا ہے، اس لیے بقایا 0 سے نیچے چلا جاتا ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 500 − 800 = −300: he owes Rs 300.",
+            "ur": "درست! 500 − 800 = −300: اس پر 300 روپے ادھار ہیں۔"
+          },
+          "feedback_wrong": {
+            "en": "800 − 500 = 300, and he spent more than he had, so −300.",
+            "ur": "800 − 500 = 300، اور اس نے اپنی رقم سے زیادہ خرچ کیا، اس لیے −300"
+          },
+          "common_wrong": [
+            {
+              "answer": 300,
+              "feedback": {
+                "en": "He owes the money, so the balance is negative: −300.",
+                "ur": "اس پر ادھار ہے، اس لیے بقایا منفی ہے: −300"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A submarine is at −40 m. It rises 15 m. Saad says it is now at −55 m. What went wrong?",
+            "ur": "ایک آبدوز −40 میٹر پر ہے۔ یہ 15 میٹر اوپر آتی ہے۔ سعد کہتا ہے اب یہ −55 میٹر پر ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "up",
+              "text": {
+                "en": "Rising means going UP, towards 0: −40 + 15 = −25.",
+                "ur": "اوپر آنے کا مطلب 0 کی طرف جانا ہے: −40 + 15 = −25"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! It is still under water, but nearer the top: −25 m.",
+                "ur": "جی ہاں! یہ ابھی بھی پانی کے نیچے ہے، مگر اوپر کے قریب: −25 میٹر۔"
+              }
+            },
+            {
+              "id": "pos",
+              "text": {
+                "en": "It should be 25 m.",
+                "ur": "یہ 25 میٹر ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "It rose only 15 m from 40 m deep, so it is still below sea level: −25.",
+                "ur": "یہ 40 میٹر گہرائی سے صرف 15 میٹر اوپر آئی، اس لیے ابھی بھی سطح سمندر سے نیچے ہے: −25"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 40 + 15 = 55.",
+                "ur": "کوئی غلطی نہیں۔ 40 + 15 = 55"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Going deeper would be −55. Rising goes towards 0: −25.",
+                "ur": "مزید گہرائی میں جانا −55 ہوتا۔ اوپر آنا 0 کی طرف جانا ہے: −25"
+              },
+              "misconception_id": "wrong_operation"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_choose",
+      "front": {
+        "en": "How do you choose the operation in an integer story?",
+        "ur": "صحیح اعداد کی کہانی میں عمل کیسے چنتے ہیں؟"
+      },
+      "back": {
+        "en": "A change: add (up is +, down is −). How far apart or how much warmer: subtract. The same change again and again: multiply. Shared equally: divide.",
+        "ur": "تبدیلی: جمع کریں (اوپر +، نیچے −)۔ کتنا دور یا کتنا زیادہ گرم: تفریق کریں۔ ایک ہی تبدیلی بار بار: ضرب دیں۔ برابر بانٹنا: تقسیم کریں۔"
+      }
+    },
+    {
+      "id": "f_gap",
+      "front": {
+        "en": "How far is it from −9 to 4?",
+        "ur": "−9 سے 4 تک کتنا فاصلہ ہے؟"
+      },
+      "back": {
+        "en": "4 − (−9) = 13: 9 up to zero, then 4 more.",
+        "ur": "4 − (−9) = 13: صفر تک 9، پھر 4 مزید۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_story",
+      "text": {
+        "en": "Make up your own integer story about the weather, a lift or money. Write the sum and the answer, then ask someone at home to solve it.",
+        "ur": "موسم، لفٹ یا پیسوں کے بارے میں صحیح اعداد کی اپنی ایک کہانی بنائیں۔ سوال اور جواب لکھیں، پھر گھر میں کسی سے حل کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Balance",
+      "ur": "بقایا"
+    },
+    {
+      "en": "Sea level",
+      "ur": "سطح سمندر"
+    },
+    {
+      "en": "Basement",
+      "ur": "تہہ خانہ"
+    },
+    {
+      "en": "Penalty",
+      "ur": "جرمانہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "In a class quiz you get 5 points for a right answer and lose 2 points for a wrong one. Can your score go below zero?",
+          "ur": "جماعت کے کوئز میں درست جواب پر 5 نمبر ملتے ہیں اور غلط جواب پر 2 نمبر کٹتے ہیں۔ کیا آپ کا اسکور صفر سے نیچے جا سکتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Integers are everywhere: scores, lifts, the weather, money and the sea. Today we solve stories with them. First, a quick check.",
+        "ur": "صحیح اعداد ہر جگہ ہیں: اسکور، لفٹ، موسم، پیسے اور سمندر۔ آج ہم ان سے کہانیاں حل کریں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.integers.subtract",
+      "prompt": {
+        "en": "Work out 2 − (−5)",
+        "ur": "حل کریں: 2 − (−5)"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Subtracting −5 is adding 5.",
+        "ur": "−5 تفریق کرنا 5 جمع کرنا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 − (−5) = 7.",
+        "ur": "درست! 2 − (−5) = 7"
+      },
+      "feedback_wrong": {
+        "en": "2 − (−5) = 2 + 5 = 7.",
+        "ur": "2 − (−5) = 2 + 5 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": -3,
+          "feedback": {
+            "en": "That is 2 − 5. Subtracting −5 is adding 5: 7.",
+            "ur": "یہ 2 − 5 ہے۔ −5 تفریق کرنا 5 جمع کرنا ہے: 7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_which_operation",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "First decide what the story is asking. Then choose the operation.",
+          "ur": "پہلے سمجھیں کہ کہانی کیا پوچھ رہی ہے۔ پھر عمل چنیں۔"
+        }
+      },
+      "text": {
+        "en": "A change (going up, going down, getting warmer or colder): add, with up as + and down as −. How far apart, or how much warmer: subtract. The same change again and again: multiply. A change shared equally: divide.",
+        "ur": "تبدیلی (اوپر جانا، نیچے جانا، گرم یا ٹھنڈا ہونا): جمع کریں، اوپر + اور نیچے −۔ کتنا دور، یا کتنا زیادہ گرم: تفریق کریں۔ ایک ہی تبدیلی بار بار: ضرب دیں۔ تبدیلی برابر بانٹی گئی: تقسیم کریں۔"
+      }
+    },
+    {
+      "id": "s4_lift",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a shopping mall, the ground floor is 0 and the car park is floor −2. Amna gets in the lift at the car park and goes up 5 floors. Which floor is she on?",
+        "ur": "ایک شاپنگ مال میں زمینی منزل 0 ہے اور گاڑیوں کی پارکنگ منزل −2 ہے۔ آمنہ پارکنگ سے لفٹ میں بیٹھتی ہے اور 5 منزلیں اوپر جاتی ہے۔ وہ کس منزل پر ہے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Up is +: work out −2 + 5.",
+        "ur": "اوپر + ہے: −2 + 5 حل کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −2 + 5 = 3. She is on floor 3.",
+        "ur": "درست! −2 + 5 = 3۔ وہ منزل 3 پر ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "From −2, go up 5: −1, 0, 1, 2, 3. Floor 3.",
+        "ur": "−2 سے 5 اوپر جائیں: −1، 0، 1، 2، 3۔ منزل 3۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -7,
+          "feedback": {
+            "en": "She went UP, so add 5: −2 + 5 = 3.",
+            "ur": "وہ اوپر گئی، اس لیے 5 جمع کریں: −2 + 5 = 3"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "She started at −2, not at 0. −2 + 5 = 3.",
+            "ur": "اس نے 0 سے نہیں، −2 سے شروع کیا۔ −2 + 5 = 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_quiz",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Back to the quiz: +5 for each right answer, −2 for each wrong one. Ayesha gets 6 right and 4 wrong. What is her score?",
+        "ur": "واپس کوئز پر: ہر درست جواب پر +5، ہر غلط پر −2۔ عائشہ کے 6 جواب درست اور 4 غلط ہیں۔ اس کا اسکور کیا ہے؟"
+      },
+      "answer": 22,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 × 5 for the right answers, 4 × (−2) for the wrong ones. Then add.",
+        "ur": "درست جوابوں کے لیے 6 × 5، غلط کے لیے 4 × (−2)۔ پھر جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 + (−8) = 22.",
+        "ur": "درست! 30 + (−8) = 22"
+      },
+      "feedback_wrong": {
+        "en": "6 × 5 = 30 and 4 × (−2) = −8. 30 + (−8) = 22.",
+        "ur": "6 × 5 = 30 اور 4 × (−2) = −8۔ 30 + (−8) = 22"
+      },
+      "common_wrong": [
+        {
+          "answer": 38,
+          "feedback": {
+            "en": "The wrong answers take points AWAY: 4 × (−2) = −8, so 30 − 8.",
+            "ur": "غلط جواب نمبر کاٹتے ہیں: 4 × (−2) = −8، اس لیے 30 − 8"
+          },
+          "misconception_id": "penalty_added"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "Don't forget the 4 wrong answers: they take away 8 points.",
+            "ur": "4 غلط جواب نہ بھولیں: یہ 8 نمبر کاٹتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_skardu",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In Skardu it is −9 °C at night and 4 °C at noon. How many degrees warmer is noon?",
+        "ur": "سکردو میں رات کو −9 ڈگری اور دوپہر کو 4 ڈگری ہے۔ دوپہر کتنی ڈگری زیادہ گرم ہے؟"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "How much warmer is a difference: 4 − (−9).",
+        "ur": "کتنا زیادہ گرم فرق ہے: 4 − (−9)"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 − (−9) = 13 degrees.",
+        "ur": "درست! 4 − (−9) = 13 ڈگری۔"
+      },
+      "feedback_wrong": {
+        "en": "From −9 up to 0 is 9 degrees, then 4 more: 4 − (−9) = 13.",
+        "ur": "−9 سے 0 تک 9 ڈگری، پھر 4 مزید: 4 − (−9) = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is 9 − 4. Count 9 up to zero, then 4 more: 13.",
+            "ur": "یہ 9 − 4 ہے۔ صفر تک 9 گنیں، پھر 4 مزید: 13"
+          },
+          "misconception_id": "difference_as_digits"
+        }
+      ]
+    },
+    {
+      "id": "s7_per_hour",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In the evening the temperature falls 12 degrees in 4 hours, the same each hour. Write the change each hour as an integer.",
+        "ur": "شام کو 4 گھنٹوں میں درجہ حرارت 12 ڈگری گرتا ہے، ہر گھنٹے برابر۔ ہر گھنٹے کی تبدیلی کو صحیح عدد کی شکل میں لکھیں۔"
+      },
+      "answer": -3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Falling 12 is −12. Share it over 4 hours.",
+        "ur": "12 گرنا −12 ہے۔ اسے 4 گھنٹوں میں بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−12) ÷ 4 = −3: it falls 3 degrees each hour.",
+        "ur": "درست! (−12) ÷ 4 = −3: ہر گھنٹے 3 ڈگری گرتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Falling is negative: (−12) ÷ 4 = −3.",
+        "ur": "گرنا منفی ہے: (−12) ÷ 4 = −3"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "The temperature is falling, so the change is negative: −3.",
+            "ur": "درجہ حرارت گر رہا ہے، اس لیے تبدیلی منفی ہے: −3"
+          }
+        },
+        {
+          "answer": -48,
+          "feedback": {
+            "en": "Shared equally means divide: (−12) ÷ 4.",
+            "ur": "برابر بانٹنے کا مطلب تقسیم ہے: (−12) ÷ 4"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s8_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A building has floors from −5 (the lowest basement) to 3. Bilal says the lift travels 2 floors from the bottom to the top, because −5 + 3 = −2. What went wrong?",
+        "ur": "ایک عمارت میں منزلیں −5 (سب سے نیچے کا تہہ خانہ) سے 3 تک ہیں۔ بلال کہتا ہے لفٹ نیچے سے اوپر تک 2 منزلیں جاتی ہے، کیونکہ −5 + 3 = −2۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "sub",
+          "text": {
+            "en": "How far apart is a difference: 3 − (−5) = 8 floors.",
+            "ur": "کتنا فاصلہ فرق ہے: 3 − (−5) = 8 منزلیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 5 floors up to the ground, then 3 more: 8.",
+            "ur": "جی ہاں! زمینی منزل تک 5 منزلیں، پھر 3 مزید: 8"
+          }
+        },
+        {
+          "id": "two",
+          "text": {
+            "en": "Nothing. The answer is 2 floors.",
+            "ur": "کوئی غلطی نہیں۔ جواب 2 منزلیں ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Count them: −4, −3, −2, −1, 0, 1, 2, 3 is 8 floors up.",
+            "ur": "گنیں: −4، −3، −2، −1، 0، 1، 2، 3 یعنی 8 منزلیں اوپر۔"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "id": "minus8",
+          "text": {
+            "en": "It should be −8.",
+            "ur": "یہ −8 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A distance is never negative. The lift goes 8 floors.",
+            "ur": "فاصلہ کبھی منفی نہیں ہوتا۔ لفٹ 8 منزلیں جاتی ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A diver is at −15 m and a kite is 20 m above the sea. My friend says they are 5 m apart. Help!",
+          "ur": "ایک غوطہ خور −15 میٹر پر ہے اور ایک پتنگ سمندر سے 20 میٹر اوپر ہے۔ میرا دوست کہتا ہے یہ 5 میٹر دور ہیں۔ مدد کریں!"
+        }
+      },
+      "task": {
+        "en": "In your own words: how far apart are the diver (−15 m) and the kite (20 m), and why?",
+        "ur": "اپنے الفاظ میں بتائیں: غوطہ خور (−15 میٹر) اور پتنگ (20 میٹر) کتنے دور ہیں، اور کیوں؟"
+      },
+      "key_idea": "They are on opposite sides of sea level, so add the two distances: 15 m down to the water plus 20 m up = 35 m. That is 20 − (−15) = 35. The friend did 20 − 15.",
+      "levels": {
+        "got_it": "Says 35 m, explaining 15 below plus 20 above sea level, or 20 − (−15) = 20 + 15.",
+        "partly": "Says 35 with no reason, or explains that they are on different sides of sea level without the total.",
+        "not_yet": "Agrees with 5, gives another answer, or no reason."
+      },
+      "keywords": [
+        [
+          "35",
+          "thirty-five",
+          "پینتیس",
+          "paintees",
+          "۳۵"
+        ],
+        [
+          "sea level",
+          "zero",
+          "0",
+          "سطح",
+          "صفر",
+          "sifar"
+        ],
+        [
+          "add",
+          "plus",
+          "+",
+          "جمع",
+          "jama"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 15 m up to the sea, then 20 m more: 35 m. That is 20 − (−15).",
+          "ur": "بہت خوب سمجھایا! سمندر تک 15 میٹر، پھر 20 میٹر مزید: 35 میٹر۔ یعنی 20 − (−15)"
+        },
+        "partly": {
+          "en": "Good start! Now count: how far from the diver up to sea level, and from sea level up to the kite?",
+          "ur": "اچھی شروعات! اب گنیں: غوطہ خور سے سطح سمندر تک کتنا، اور سطح سمندر سے پتنگ تک کتنا؟"
+        },
+        "not_yet": {
+          "en": "Picture it: the diver is under the water and the kite is in the sky. How far is each one from the sea's surface?",
+          "ur": "تصور کریں: غوطہ خور پانی کے نیچے ہے اور پتنگ آسمان میں۔ ہر ایک سمندر کی سطح سے کتنا دور ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s10_gap",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "So how many metres apart are the diver and the kite?",
+        "ur": "تو غوطہ خور اور پتنگ کتنے میٹر دور ہیں؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "Work out 20 − (−15).",
+        "ur": "20 − (−15) حل کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 − (−15) = 35 m.",
+        "ur": "درست! 20 − (−15) = 35 میٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "15 m up to the sea, then 20 m more: 35 m.",
+        "ur": "سمندر تک 15 میٹر، پھر 20 میٹر مزید: 35 میٹر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is 20 − 15. They are on opposite sides of sea level: 15 + 20.",
+            "ur": "یہ 20 − 15 ہے۔ یہ سطح سمندر کے مخالف طرف ہیں: 15 + 20"
+          },
+          "misconception_id": "difference_as_digits"
+        }
+      ]
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Integers unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! صحیح اعداد کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has one question on each part of the unit: comparing, adding, subtracting, multiplying and dividing. Think about the sign of each answer.",
+        "ur": "اس چھوٹے ٹیسٹ میں باب کے ہر حصے سے ایک سوال ہے: موازنہ، جمع، تفریق، ضرب اور تقسیم۔ ہر جواب کی علامت کا سوچیں۔"
+      }
+    },
+    {
+      "id": "u1_compare",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.integers.meaning",
+      "prompt": {
+        "en": "Test 1: Which is colder, −9 °C or −4 °C?",
+        "ur": "ٹیسٹ 1: کون زیادہ ٹھنڈا ہے، −9 ڈگری یا −4 ڈگری؟"
+      },
+      "options": [
+        {
+          "id": "m9",
+          "text": {
+            "en": "−9 °C",
+            "ur": "−9 ڈگری"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! −9 is further left, so it is smaller and colder.",
+            "ur": "جی ہاں! −9 زیادہ بائیں ہے، اس لیے چھوٹا اور زیادہ ٹھنڈا ہے۔"
+          }
+        },
+        {
+          "id": "m4",
+          "text": {
+            "en": "−4 °C",
+            "ur": "−4 ڈگری"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−4 is to the right of −9, so −4 is warmer.",
+            "ur": "−4، −9 کے دائیں طرف ہے، اس لیے −4 زیادہ گرم ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_add",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.integers.add",
+      "prompt": {
+        "en": "Test 2: Work out −7 + 4",
+        "ur": "ٹیسٹ 2: حل کریں: −7 + 4"
+      },
+      "answer": -3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Different signs: 7 − 4, and −7 is further from 0.",
+        "ur": "مختلف علامتیں: 7 − 4، اور −7 صفر سے زیادہ دور ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −7 + 4 = -3.",
+        "ur": "درست! −7 + 4 = -3"
+      },
+      "feedback_wrong": {
+        "en": "7 − 4 = 3, and −7 is further from 0: -3.",
+        "ur": "7 − 4 = 3، اور −7 صفر سے زیادہ دور ہے: -3"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "−7 is further from 0, so the answer is negative: −3.",
+            "ur": "−7 صفر سے زیادہ دور ہے، اس لیے جواب منفی ہے: −3"
+          }
+        },
+        {
+          "answer": -11,
+          "feedback": {
+            "en": "Different signs: subtract, don't add. 7 − 4 = 3.",
+            "ur": "مختلف علامتیں: جمع نہیں، تفریق کریں۔ 7 − 4 = 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_subtract",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.integers.subtract",
+      "prompt": {
+        "en": "Test 3: Work out −2 − 9",
+        "ur": "ٹیسٹ 3: حل کریں: −2 − 9"
+      },
+      "answer": -11,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the opposite: −2 + (−9).",
+        "ur": "مخالف جمع کریں: −2 + (−9)"
+      },
+      "feedback_correct": {
+        "en": "Right! −2 − 9 = -11.",
+        "ur": "درست! −2 − 9 = -11"
+      },
+      "feedback_wrong": {
+        "en": "−2 + (−9): same signs, 2 + 9 = 11, keep the minus: -11.",
+        "ur": "−2 + (−9): ایک جیسی علامتیں، 2 + 9 = 11، منفی رکھیں: -11"
+      },
+      "common_wrong": [
+        {
+          "answer": -7,
+          "feedback": {
+            "en": "Subtracting 9 moves 9 to the left from −2, past −7: −11.",
+            "ur": "9 تفریق کرنے سے −2 سے بائیں جاتے ہیں: −11"
+          }
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That is −2 + 9. Subtracting 9 moves left: −11.",
+            "ur": "یہ −2 + 9 ہے۔ 9 تفریق کرنے سے بائیں جاتے ہیں: −11"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_multiply",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.integers.multiply_divide",
+      "prompt": {
+        "en": "Test 4: Work out (−4) × (−6)",
+        "ur": "ٹیسٹ 4: حل کریں: (−4) × (−6)"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × 6 = 24. Same signs.",
+        "ur": "4 × 6 = 24۔ ایک جیسی علامتیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−4) × (−6) = 24.",
+        "ur": "درست! (−4) × (−6) = 24"
+      },
+      "feedback_wrong": {
+        "en": "4 × 6 = 24, and same signs give a positive answer: 24.",
+        "ur": "4 × 6 = 24، اور ایک جیسی علامتوں کا جواب مثبت ہوتا ہے: 24"
+      },
+      "common_wrong": [
+        {
+          "answer": -24,
+          "feedback": {
+            "en": "Same signs give a positive answer: 24.",
+            "ur": "ایک جیسی علامتوں کا جواب مثبت ہوتا ہے: 24"
+          }
+        },
+        {
+          "answer": -10,
+          "feedback": {
+            "en": "That adds them. Multiply: 4 × 6 = 24.",
+            "ur": "یہ جمع ہے۔ ضرب دیں: 4 × 6 = 24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_divide",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.integers.multiply_divide",
+      "prompt": {
+        "en": "Test 5: Work out (−35) ÷ 7",
+        "ur": "ٹیسٹ 5: حل کریں: (−35) ÷ 7"
+      },
+      "answer": -5,
+      "checker": "numeric",
+      "hint": {
+        "en": "35 ÷ 7 = 5. Different signs.",
+        "ur": "35 ÷ 7 = 5۔ مختلف علامتیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−35) ÷ 7 = -5.",
+        "ur": "درست! (−35) ÷ 7 = -5"
+      },
+      "feedback_wrong": {
+        "en": "35 ÷ 7 = 5, and different signs give a negative answer: -5.",
+        "ur": "35 ÷ 7 = 5، اور مختلف علامتوں کا جواب منفی ہوتا ہے: -5"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "Different signs give a negative answer: −5.",
+            "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the whole Integers unit. Shabash!",
+          "ur": "آپ نے صحیح اعداد کا پورا باب مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In an integer story, decide what is asked. A change: add (up +, down −). How far apart or how much warmer: subtract. The same change again and again: multiply. Shared equally: divide. Then check that the sign makes sense.",
+        "ur": "صحیح اعداد کی کہانی میں سمجھیں کہ کیا پوچھا گیا ہے۔ تبدیلی: جمع (اوپر +، نیچے −)۔ کتنا دور یا کتنا زیادہ گرم: تفریق۔ ایک ہی تبدیلی بار بار: ضرب۔ برابر بانٹنا: تقسیم۔ پھر دیکھیں کہ علامت سمجھ میں آتی ہے۔"
+      },
+      "points": [
+        {
+          "en": "From −9 to 4 is 13, not 5.",
+          "ur": "−9 سے 4 تک 13 ہے، 5 نہیں۔"
+        },
+        {
+          "en": "A distance is never negative.",
+          "ur": "فاصلہ کبھی منفی نہیں ہوتا۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_submarine",
+      "type": "apply",
+      "skill": "maths.integers.word_problems",
+      "step": {
+        "id": "r_submarine",
+        "type": "number",
+        "prompt": {
+          "en": "A submarine is at −40 m. It rises 15 m. Where is it now, in metres?",
+          "ur": "ایک آبدوز −40 میٹر پر ہے۔ یہ 15 میٹر اوپر آتی ہے۔ اب یہ کتنے میٹر پر ہے؟"
+        },
+        "answer": -25,
+        "checker": "numeric",
+        "hint": {
+          "en": "Rising is +: −40 + 15.",
+          "ur": "اوپر آنا + ہے: −40 + 15"
+        },
+        "feedback_correct": {
+          "en": "Right! −40 + 15 = -25.",
+          "ur": "درست! −40 + 15 = -25"
+        },
+        "feedback_wrong": {
+          "en": "40 − 15 = 25, and −40 is further from 0: -25.",
+          "ur": "40 − 15 = 25، اور −40 صفر سے زیادہ دور ہے: -25"
+        },
+        "common_wrong": [
+          {
+            "answer": -55,
+            "feedback": {
+              "en": "Rising goes up, towards 0: −40 + 15 = −25.",
+              "ur": "اوپر آنا 0 کی طرف جانا ہے: −40 + 15 = −25"
+            },
+            "misconception_id": "wrong_operation"
+          },
+          {
+            "answer": 25,
+            "feedback": {
+              "en": "It is still under water, so the answer is negative: −25.",
+              "ur": "یہ ابھی بھی پانی کے نیچے ہے، اس لیے جواب منفی ہے: −25"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_match",
+      "type": "apply",
+      "skill": "maths.integers.word_problems",
+      "step": {
+        "id": "r_match",
+        "type": "number",
+        "prompt": {
+          "en": "In a game you get +4 for a win and −3 for a loss. Hassan wins 3 games and loses 2. What is his score?",
+          "ur": "ایک کھیل میں جیت پر +4 اور ہار پر −3 ملتے ہیں۔ حسن 3 کھیل جیتتا ہے اور 2 ہارتا ہے۔ اس کا اسکور کیا ہے؟"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "3 × 4 for the wins, 2 × (−3) for the losses. Then add.",
+          "ur": "جیت کے لیے 3 × 4، ہار کے لیے 2 × (−3)۔ پھر جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 12 + (−6) = 6.",
+          "ur": "درست! 12 + (−6) = 6"
+        },
+        "feedback_wrong": {
+          "en": "3 × 4 = 12 and 2 × (−3) = −6. 12 + (−6) = 6.",
+          "ur": "3 × 4 = 12 اور 2 × (−3) = −6۔ 12 + (−6) = 6"
+        },
+        "common_wrong": [
+          {
+            "answer": 18,
+            "feedback": {
+              "en": "Losses take points away: 12 − 6.",
+              "ur": "ہار سے نمبر کٹتے ہیں: 12 − 6"
+            },
+            "misconception_id": "penalty_added"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Integers unit. No textbook text or exercises were used. Temperatures and amounts are made up for the sums.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-04. Fix the names and curriculum_refs if the unit differs.",
+    "Urdu terms to check: بقایا (balance), تہہ خانہ (basement), سطح سمندر (sea level).",
+    "The lesson teaches choosing the operation (s3) before solving.",
+    "s11 to u5 are a short unit test, one question per earlier lesson. Each u-step is tagged with that lesson's skill (meaning, add, subtract, multiply_divide), so it counts as practice for that skill rather than for word problems.",
+    "The numbers were worked out in content/sources/g6-maths-04/integer_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
