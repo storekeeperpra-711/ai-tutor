@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:video_player/video_player.dart';
 
+import '../../app/theme/app_theme.dart';
 import '../../character/mithu_bubble.dart';
 import '../../data/data_saver.dart';
 import '../../l10n/app_localizations.dart';
@@ -250,20 +251,11 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
           AspectRatio(
             key: const Key('video'),
             aspectRatio: value.aspectRatio,
-            child: Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                VideoPlayer(controller),
-                if (_captions)
-                  ClosedCaption(
-                    text: value.caption.text,
-                    textStyle: textTheme.titleMedium?.copyWith(
-                      color: Colors.white,
-                    ),
-                  ),
-              ],
-            ),
+            child: VideoPlayer(controller),
           ),
+          // Under the picture, not on it, so nothing in the video is hidden.
+          if (_captions && step.captions != null)
+            VideoCaptionBox(text: value.caption.text),
           VideoProgressIndicator(
             controller,
             allowScrubbing: true,
@@ -309,6 +301,37 @@ class _VideoStepViewState extends ConsumerState<VideoStepView> {
           ),
         ],
       ],
+    );
+  }
+}
+
+/// The video's captions in a box of their own under the picture. It keeps
+/// room for two lines even between captions, so the buttons below don't
+/// jump up and down.
+class VideoCaptionBox extends StatelessWidget {
+  const VideoCaptionBox({super.key, required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final style = Theme.of(context).textTheme.titleMedium;
+    final lineHeight = (style?.fontSize ?? 16) * (style?.height ?? 1.4);
+    return Container(
+      key: const Key('video-caption'),
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      constraints: BoxConstraints(minHeight: lineHeight * 2 + 16),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: AppColors.lilacSoft,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+        style: style?.copyWith(color: AppColors.ink),
+      ),
     );
   }
 }
