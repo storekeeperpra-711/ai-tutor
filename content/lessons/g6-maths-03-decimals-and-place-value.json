@@ -1,0 +1,820 @@
+{
+  "id": "g6-maths-03-decimals-and-place-value",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Understand tenths and hundredths, read and write decimals, and change simple fractions to decimals.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Decimals"
+    }
+  ],
+  "skills": [
+    "maths.decimals.place_value"
+  ],
+  "title": {
+    "en": "Decimals and place value",
+    "ur": "اعشاریہ اور مقامی قیمت"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.fractions.equivalent"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "tenths_hundredths",
+      "description": "Mixes up tenths and hundredths: writes 6/100 as 0.6."
+    },
+    {
+      "id": "decimal_as_whole",
+      "description": "Reads the digits after the point as a whole number: thinks 0.35 means 35."
+    },
+    {
+      "id": "fraction_digits",
+      "description": "Writes a fraction as a decimal by putting its digits after the point: 3/4 = 0.34."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.decimals.place_value": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.decimals.place_value": [
+      {
+        "id": "qb_digit",
+        "type": "recall",
+        "step": {
+          "id": "qb_digit",
+          "type": "choice",
+          "prompt": {
+            "en": "In 5.83, what is the value of the 3?",
+            "ur": "5.83 میں 3 کی قیمت کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "hundredths",
+              "text": {
+                "en": "3 hundredths (0.03)",
+                "ur": "3 سوواں (0.03)"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The second place after the point is hundredths.",
+                "ur": "جی ہاں! اعشاریہ کے بعد دوسرا مقام سوواں ہے۔"
+              }
+            },
+            {
+              "id": "tenths",
+              "text": {
+                "en": "3 tenths (0.3)",
+                "ur": "3 دسواں (0.3)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The first place after the point is tenths; that is the 8. The 3 is in the hundredths place.",
+                "ur": "اعشاریہ کے بعد پہلا مقام دسواں ہے؛ وہاں 8 ہے۔ 3 سوویں کے مقام پر ہے۔"
+              },
+              "misconception_id": "tenths_hundredths"
+            },
+            {
+              "id": "ones",
+              "text": {
+                "en": "3 ones",
+                "ur": "3 اکائیاں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The ones digit is 5, before the point. The 3 is after the point.",
+                "ur": "اکائی کا ہندسہ 5 ہے، اعشاریہ سے پہلے۔ 3 اعشاریہ کے بعد ہے۔"
+              },
+              "misconception_id": "decimal_as_whole"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_write",
+        "type": "apply",
+        "step": {
+          "id": "qb_write",
+          "type": "number",
+          "prompt": {
+            "en": "Write 9/10 as a decimal.",
+            "ur": "9/10 کو اعشاریہ میں لکھیں۔"
+          },
+          "answer": 0.9,
+          "checker": "numeric",
+          "hint": {
+            "en": "9 tenths: one place after the point.",
+            "ur": "9 دسواں: اعشاریہ کے بعد ایک مقام۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 9/10 = 0.9.",
+            "ur": "درست! 9/10 = 0.9"
+          },
+          "feedback_wrong": {
+            "en": "Tenths go in the first place after the point: 9/10 = 0.9.",
+            "ur": "دسواں اعشاریہ کے بعد پہلے مقام پر آتا ہے: 9/10 = 0.9"
+          },
+          "common_wrong": [
+            {
+              "answer": 0.09,
+              "feedback": {
+                "en": "0.09 is 9 hundredths. 9 tenths is 0.9.",
+                "ur": "0.09 نو سوواں ہے۔ 9 دسواں 0.9 ہے۔"
+              },
+              "misconception_id": "tenths_hundredths"
+            },
+            {
+              "answer": 9.1,
+              "feedback": {
+                "en": "The 9 is tenths, so it goes after the point: 0.9.",
+                "ur": "9 دسواں ہے، اس لیے اعشاریہ کے بعد آئے گا: 0.9"
+              },
+              "misconception_id": "fraction_digits"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Ahmad wrote 7/100 as 0.7. What went wrong?",
+            "ur": "احمد نے 7/100 کو 0.7 لکھا۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "place",
+              "text": {
+                "en": "7 hundredths goes in the second place: 0.07.",
+                "ur": "7 سوواں دوسرے مقام پر آتا ہے: 0.07"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 0.7 is 7 tenths, which is 70 hundredths.",
+                "ur": "جی ہاں! 0.7 سات دسواں ہے، یعنی 70 سوواں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 7/100 = 0.7.",
+                "ur": "کوئی غلطی نہیں۔ 7/100 = 0.7"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0.7 is 7/10. Hundredths need two places after the point: 0.07.",
+                "ur": "0.7 سات دسواں ہے۔ سوویں کے لیے اعشاریہ کے بعد دو مقام چاہییں: 0.07"
+              },
+              "misconception_id": "tenths_hundredths"
+            },
+            {
+              "id": "big",
+              "text": {
+                "en": "It should be 7.100.",
+                "ur": "یہ 7.100 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "7/100 is less than 1, so it starts with 0: 0.07.",
+                "ur": "7/100 ایک سے کم ہے، اس لیے یہ 0 سے شروع ہوگا: 0.07"
+              },
+              "misconception_id": "fraction_digits"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_places",
+      "front": {
+        "en": "What are the places after the decimal point?",
+        "ur": "اعشاریہ کے بعد کون سے مقام ہیں؟"
+      },
+      "back": {
+        "en": "First tenths, then hundredths. In 2.45: 4 tenths and 5 hundredths.",
+        "ur": "پہلے دسواں، پھر سوواں۔ 2.45 میں: 4 دسواں اور 5 سوواں۔"
+      }
+    },
+    {
+      "id": "f_fraction",
+      "front": {
+        "en": "3/4 as a decimal?",
+        "ur": "3/4 اعشاریہ میں؟"
+      },
+      "back": {
+        "en": "0.75, because 3/4 = 75/100.",
+        "ur": "0.75، کیونکہ 3/4 = 75/100"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_ruler",
+      "text": {
+        "en": "Use a ruler to measure 3 things at home in centimetres, like a pencil or a spoon. Write each length in metres as a decimal (for example 15 cm = 0.15 m).",
+        "ur": "گھر میں 3 چیزیں، جیسے پنسل یا چمچ، فٹے سے سینٹی میٹر میں ناپیں۔ ہر لمبائی کو میٹر میں اعشاریہ کی شکل میں لکھیں (مثلاً 15 سینٹی میٹر = 0.15 میٹر)۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Decimal",
+      "ur": "اعشاریہ"
+    },
+    {
+      "en": "Decimal point",
+      "ur": "اعشاری نقطہ"
+    },
+    {
+      "en": "Tenths",
+      "ur": "دسواں حصہ"
+    },
+    {
+      "en": "Hundredths",
+      "ur": "سوواں حصہ"
+    },
+    {
+      "en": "Place value",
+      "ur": "مقامی قیمت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My pencil is longer than 7 cm but shorter than 8 cm. How can we write its length exactly?",
+          "ur": "میری پنسل 7 سینٹی میٹر سے لمبی مگر 8 سینٹی میٹر سے چھوٹی ہے۔ ہم اس کی ٹھیک لمبائی کیسے لکھیں؟"
+        }
+      },
+      "text": {
+        "en": "We need numbers between the whole numbers. They are called decimals. First, a quick check on fractions.",
+        "ur": "ہمیں مکمل اعداد کے درمیان کے اعداد چاہییں۔ انہیں اعشاریہ کہتے ہیں۔ پہلے کسروں کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.fractions.equivalent",
+      "prompt": {
+        "en": "Which fraction is equal to 3/10?",
+        "ur": "کون سی کسر 3/10 کے برابر ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "30/100",
+            "ur": "30/100"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Multiply the top and bottom by 10.",
+            "ur": "جی ہاں! شمار کنندہ اور نسب نما دونوں کو 10 سے ضرب دیں۔"
+          }
+        },
+        {
+          "id": "small",
+          "text": {
+            "en": "3/100",
+            "ur": "3/100"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3/100 is ten times smaller. Multiply the top by 10 too: 30/100.",
+            "ur": "3/100 دس گنا چھوٹا ہے۔ اوپر والے کو بھی 10 سے ضرب دیں: 30/100"
+          }
+        },
+        {
+          "id": "flip",
+          "text": {
+            "en": "10/3",
+            "ur": "10/3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is turned upside down. 3/10 = 30/100.",
+            "ur": "یہ الٹا ہے۔ 3/10 = 30/100"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "The decimal point separates whole numbers from parts of one.",
+          "ur": "اعشاری نقطہ مکمل اعداد کو ایک کے حصوں سے الگ کرتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "Cut 1 into 10 equal parts: each part is one tenth, 1/10 = 0.1. So 7/10 = 0.7. Cut 1 into 100 parts: each is one hundredth, 1/100 = 0.01. In 2.45, the 2 is ones, the 4 is tenths and the 5 is hundredths. My pencil is 7.3 cm: 7 whole cm and 3 tenths.",
+        "ur": "1 کو 10 برابر حصوں میں کاٹیں: ہر حصہ ایک دسواں ہے، 1/10 = 0.1۔ اس لیے 7/10 = 0.7۔ 1 کو 100 حصوں میں کاٹیں: ہر حصہ ایک سوواں ہے، 1/100 = 0.01۔ 2.45 میں 2 اکائیاں، 4 دسواں اور 5 سوواں ہیں۔ میری پنسل 7.3 سینٹی میٹر ہے: 7 پورے سینٹی میٹر اور 3 دسواں۔"
+      }
+    },
+    {
+      "id": "s4_place",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "This line goes from 0 to 1 in tenths. Put the marker on 0.7. Press Check.",
+        "ur": "یہ خط 0 سے 1 تک دسویں حصوں میں ہے۔ نشان کو 0.7 پر رکھیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": 0,
+        "max": 1,
+        "step": 0.1,
+        "start": 0,
+        "labels": "decimal"
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "0.7"
+      },
+      "hint": {
+        "en": "Count 7 tenths from 0.",
+        "ur": "0 سے 7 دسواں گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 0.7 is 7 tenths of the way from 0 to 1.",
+        "ur": "جی ہاں! 0.7، 0 سے 1 تک کا 7 دسواں راستہ ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "0.1, 0.2, 0.3 … count 7 steps: 0.7.",
+        "ur": "0.1، 0.2، 0.3 … 7 قدم گنیں: 0.7"
+      },
+      "common_wrong": [
+        {
+          "answer": "0.3",
+          "feedback": {
+            "en": "That is 3 tenths. Count 7 steps from 0.",
+            "ur": "یہ 3 دسواں ہے۔ 0 سے 7 قدم گنیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_digit",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "In 2.45, what is the value of the 4?",
+        "ur": "2.45 میں 4 کی قیمت کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "tenths",
+          "text": {
+            "en": "4 tenths (0.4)",
+            "ur": "4 دسواں (0.4)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The first place after the point is tenths.",
+            "ur": "جی ہاں! اعشاریہ کے بعد پہلا مقام دسواں ہے۔"
+          }
+        },
+        {
+          "id": "hundredths",
+          "text": {
+            "en": "4 hundredths (0.04)",
+            "ur": "4 سوواں (0.04)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Hundredths is the second place, where the 5 is. The 4 is tenths.",
+            "ur": "سوواں دوسرا مقام ہے، جہاں 5 ہے۔ 4 دسواں ہے۔"
+          },
+          "misconception_id": "tenths_hundredths"
+        },
+        {
+          "id": "forty",
+          "text": {
+            "en": "40",
+            "ur": "40"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 4 is after the point, so it is less than 1: 4 tenths.",
+            "ur": "4 اعشاریہ کے بعد ہے، اس لیے ایک سے کم ہے: 4 دسواں۔"
+          },
+          "misconception_id": "decimal_as_whole"
+        }
+      ]
+    },
+    {
+      "id": "s6_hundredths",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 6/100 as a decimal.",
+        "ur": "6/100 کو اعشاریہ میں لکھیں۔"
+      },
+      "answer": 0.06,
+      "checker": "numeric",
+      "hint": {
+        "en": "Hundredths need two places after the point.",
+        "ur": "سوویں کے لیے اعشاریہ کے بعد دو مقام چاہییں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6/100 = 0.06.",
+        "ur": "درست! 6/100 = 0.06"
+      },
+      "feedback_wrong": {
+        "en": "No tenths, 6 hundredths: 0.06.",
+        "ur": "کوئی دسواں نہیں، 6 سوواں: 0.06"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.6,
+          "feedback": {
+            "en": "0.6 is 6 tenths. 6 hundredths needs a 0 in the tenths place: 0.06.",
+            "ur": "0.6 چھ دسواں ہے۔ 6 سوویں کے لیے دسویں کے مقام پر 0 لگائیں: 0.06"
+          },
+          "misconception_id": "tenths_hundredths"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6/100 is much less than 1: 0.06.",
+            "ur": "6/100 ایک سے بہت کم ہے: 0.06"
+          },
+          "misconception_id": "decimal_as_whole"
+        }
+      ]
+    },
+    {
+      "id": "s7_expanded",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 3 + 2/10 + 5/100 as one decimal.",
+        "ur": "3 + 2/10 + 5/100 کو ایک اعشاریہ عدد میں لکھیں۔"
+      },
+      "answer": 3.25,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 ones, 2 tenths, 5 hundredths.",
+        "ur": "3 اکائیاں، 2 دسواں، 5 سوواں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3.25.",
+        "ur": "درست! 3.25"
+      },
+      "feedback_wrong": {
+        "en": "Ones before the point, then tenths, then hundredths: 3.25.",
+        "ur": "اکائیاں اعشاریہ سے پہلے، پھر دسواں، پھر سوواں: 3.25"
+      },
+      "common_wrong": [
+        {
+          "answer": 325,
+          "feedback": {
+            "en": "The 2 and the 5 are parts of 1, so they go after the point: 3.25.",
+            "ur": "2 اور 5 ایک کے حصے ہیں، اس لیے اعشاریہ کے بعد آئیں گے: 3.25"
+          },
+          "misconception_id": "decimal_as_whole"
+        }
+      ]
+    },
+    {
+      "id": "s8_three_quarters",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 3/4 as a decimal. Hint: make the bottom 100.",
+        "ur": "3/4 کو اعشاریہ میں لکھیں۔ اشارہ: نسب نما کو 100 بنائیں۔"
+      },
+      "answer": 0.75,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × 25 = 100, so 3/4 = 75/100.",
+        "ur": "4 × 25 = 100، اس لیے 3/4 = 75/100"
+      },
+      "feedback_correct": {
+        "en": "Right! 3/4 = 75/100 = 0.75.",
+        "ur": "درست! 3/4 = 75/100 = 0.75"
+      },
+      "feedback_wrong": {
+        "en": "Multiply top and bottom by 25: 3/4 = 75/100 = 0.75.",
+        "ur": "اوپر اور نیچے کو 25 سے ضرب دیں: 3/4 = 75/100 = 0.75"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.34,
+          "feedback": {
+            "en": "The digits of a fraction don't go straight after the point. Make the bottom 100: 75/100 = 0.75.",
+            "ur": "کسر کے ہندسے سیدھے اعشاریہ کے بعد نہیں لکھے جاتے۔ نسب نما 100 بنائیں: 75/100 = 0.75"
+          },
+          "misconception_id": "fraction_digits"
+        },
+        {
+          "answer": 3.4,
+          "feedback": {
+            "en": "3/4 is less than 1. Make the bottom 100: 0.75.",
+            "ur": "3/4 ایک سے کم ہے۔ نسب نما 100 بنائیں: 0.75"
+          },
+          "misconception_id": "fraction_digits"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zara says 0.5 means 5/100. What went wrong?",
+        "ur": "زارا کہتی ہے 0.5 کا مطلب 5/100 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "tenths",
+          "text": {
+            "en": "The 5 is in the tenths place, so 0.5 = 5/10, which is half.",
+            "ur": "5 دسویں کے مقام پر ہے، اس لیے 0.5 = 5/10، یعنی آدھا۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 5/100 would be 0.05.",
+            "ur": "جی ہاں! 5/100 تو 0.05 ہوتا۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 0.5 = 5/100.",
+            "ur": "کوئی غلطی نہیں۔ 0.5 = 5/100"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "One place after the point is tenths: 0.5 = 5/10.",
+            "ur": "اعشاریہ کے بعد ایک مقام دسواں ہے: 0.5 = 5/10"
+          },
+          "misconception_id": "tenths_hundredths"
+        },
+        {
+          "id": "five",
+          "text": {
+            "en": "0.5 means 5.",
+            "ur": "0.5 کا مطلب 5 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0.5 is less than 1: it is half of 1.",
+            "ur": "0.5 ایک سے کم ہے: یہ 1 کا آدھا ہے۔"
+          },
+          "misconception_id": "decimal_as_whole"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My friend says 0.50 is bigger than 0.5 because it has more digits. Is that right?",
+          "ur": "میرا دوست کہتا ہے 0.50، 0.5 سے بڑا ہے کیونکہ اس میں زیادہ ہندسے ہیں۔ کیا یہ درست ہے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: are 0.5 and 0.50 equal? Explain why, using tenths and hundredths.",
+        "ur": "اپنے الفاظ میں بتائیں: کیا 0.5 اور 0.50 برابر ہیں؟ دسویں اور سوویں حصوں سے سمجھائیں۔"
+      },
+      "key_idea": "They are equal: 0.5 is 5 tenths, and 5 tenths is the same as 50 hundredths, which is 0.50. A zero at the end after the point does not change the value.",
+      "levels": {
+        "got_it": "Says they are equal, because 5 tenths = 50 hundredths (or 5/10 = 50/100), or because the end zero adds no tenths or hundredths.",
+        "partly": "Says they are equal but gives no reason, or mentions tenths without linking them to hundredths.",
+        "not_yet": "Says 0.50 is bigger, gives no answer, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "equal",
+          "same",
+          "برابر",
+          "ایک جیسے",
+          "barabar"
+        ],
+        [
+          "tenths",
+          "hundredths",
+          "دسواں",
+          "سوواں",
+          "daswan",
+          "sauwan"
+        ],
+        [
+          "50/100",
+          "5/10",
+          "zero",
+          "صفر",
+          "sifar"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 5 tenths is the same as 50 hundredths, so 0.5 = 0.50.",
+          "ur": "بہت خوب سمجھایا! 5 دسواں، 50 سوویں کے برابر ہے، اس لیے 0.5 = 0.50"
+        },
+        "partly": {
+          "en": "Good start! Now say how many hundredths are in 5 tenths.",
+          "ur": "اچھی شروعات! اب بتائیں کہ 5 دسویں میں کتنے سوواں ہیں۔"
+        },
+        "not_yet": {
+          "en": "Think: 0.5 is 5/10 and 0.50 is 50/100. Are 5/10 and 50/100 equal?",
+          "ur": "سوچیں: 0.5 یعنی 5/10 اور 0.50 یعنی 50/100۔ کیا 5/10 اور 50/100 برابر ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_metres",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "1 metre is 100 centimetres. A pencil is 35 cm long. Write its length in metres as a decimal.",
+        "ur": "1 میٹر میں 100 سینٹی میٹر ہوتے ہیں۔ ایک پنسل 35 سینٹی میٹر لمبی ہے۔ اس کی لمبائی میٹر میں اعشاریہ کی شکل میں لکھیں۔"
+      },
+      "answer": 0.35,
+      "checker": "numeric",
+      "hint": {
+        "en": "35 cm is 35/100 of a metre.",
+        "ur": "35 سینٹی میٹر، ایک میٹر کا 35/100 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 35 cm = 0.35 m.",
+        "ur": "درست! 35 سینٹی میٹر = 0.35 میٹر"
+      },
+      "feedback_wrong": {
+        "en": "35/100 m = 0.35 m.",
+        "ur": "35/100 میٹر = 0.35 میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 3.5,
+          "feedback": {
+            "en": "3.5 m is longer than 3 metres! 35 cm is less than 1 m: 0.35.",
+            "ur": "3.5 میٹر تو 3 میٹر سے بھی لمبا ہے! 35 سینٹی میٹر ایک میٹر سے کم ہے: 0.35"
+          },
+          "misconception_id": "tenths_hundredths"
+        },
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "That is in centimetres. In metres it is 35/100 = 0.35.",
+            "ur": "یہ سینٹی میٹر میں ہے۔ میٹر میں یہ 35/100 = 0.35 ہے۔"
+          },
+          "misconception_id": "decimal_as_whole"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can read and write decimals!",
+          "ur": "اب آپ اعشاریہ پڑھ اور لکھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "The first place after the decimal point is tenths, the second is hundredths. 0.7 = 7/10, 0.06 = 6/100, 2.45 = 2 + 4/10 + 5/100. To change a fraction to a decimal, make the bottom 10 or 100: 3/4 = 75/100 = 0.75.",
+        "ur": "اعشاریہ کے بعد پہلا مقام دسواں ہے، دوسرا سوواں۔ 0.7 = 7/10، 0.06 = 6/100، 2.45 = 2 + 4/10 + 5/100۔ کسر کو اعشاریہ میں بدلنے کے لیے نسب نما 10 یا 100 بنائیں: 3/4 = 75/100 = 0.75"
+      },
+      "points": [
+        {
+          "en": "0.5 = 0.50: a zero at the end changes nothing.",
+          "ur": "0.5 = 0.50: آخر میں صفر سے کچھ نہیں بدلتا۔"
+        },
+        {
+          "en": "0.6 is 6 tenths; 0.06 is 6 hundredths.",
+          "ur": "0.6 چھ دسواں ہے؛ 0.06 چھ سوواں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_hundredths",
+      "type": "apply",
+      "skill": "maths.decimals.place_value",
+      "step": {
+        "id": "r_hundredths",
+        "type": "number",
+        "prompt": {
+          "en": "Write 48/100 as a decimal.",
+          "ur": "48/100 کو اعشاریہ میں لکھیں۔"
+        },
+        "answer": 0.48,
+        "checker": "numeric",
+        "hint": {
+          "en": "Two places after the point for hundredths.",
+          "ur": "سوویں کے لیے اعشاریہ کے بعد دو مقام۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 48/100 = 0.48.",
+          "ur": "درست! 48/100 = 0.48"
+        },
+        "feedback_wrong": {
+          "en": "48 hundredths = 0.48.",
+          "ur": "48 سوواں = 0.48"
+        },
+        "common_wrong": [
+          {
+            "answer": 4.8,
+            "feedback": {
+              "en": "4.8 is more than 4! 48/100 is less than 1: 0.48.",
+              "ur": "4.8 تو 4 سے زیادہ ہے! 48/100 ایک سے کم ہے: 0.48"
+            },
+            "misconception_id": "tenths_hundredths"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_fifths",
+      "type": "apply",
+      "skill": "maths.decimals.place_value",
+      "step": {
+        "id": "r_fifths",
+        "type": "number",
+        "prompt": {
+          "en": "Write 2/5 as a decimal. Hint: make the bottom 10.",
+          "ur": "2/5 کو اعشاریہ میں لکھیں۔ اشارہ: نسب نما 10 بنائیں۔"
+        },
+        "answer": 0.4,
+        "checker": "numeric",
+        "hint": {
+          "en": "5 × 2 = 10, so 2/5 = 4/10.",
+          "ur": "5 × 2 = 10، اس لیے 2/5 = 4/10"
+        },
+        "feedback_correct": {
+          "en": "Right! 2/5 = 4/10 = 0.4.",
+          "ur": "درست! 2/5 = 4/10 = 0.4"
+        },
+        "feedback_wrong": {
+          "en": "Multiply top and bottom by 2: 4/10 = 0.4.",
+          "ur": "اوپر اور نیچے کو 2 سے ضرب دیں: 4/10 = 0.4"
+        },
+        "common_wrong": [
+          {
+            "answer": 0.25,
+            "feedback": {
+              "en": "The digits of a fraction don't go after the point. 2/5 = 4/10 = 0.4.",
+              "ur": "کسر کے ہندسے اعشاریہ کے بعد نہیں لکھے جاتے۔ 2/5 = 4/10 = 0.4"
+            },
+            "misconception_id": "fraction_digits"
+          },
+          {
+            "answer": 2.5,
+            "feedback": {
+              "en": "2/5 is less than 1. 2/5 = 4/10 = 0.4.",
+              "ur": "2/5 ایک سے کم ہے۔ 2/5 = 4/10 = 0.4"
+            },
+            "misconception_id": "fraction_digits"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Decimals unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-03. Fix the names and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: اعشاریہ (decimal), اعشاری نقطہ (decimal point), دسواں حصہ (tenths), سوواں حصہ (hundredths), مقامی قیمت (place value).",
+    "The number-line step uses the native number_line sim with decimal labels from 0 to 1 in tenths.",
+    "The numbers were worked out in content/sources/g6-maths-03/decimals_place_value.py with exact Decimal arithmetic; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
