@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart' show appFlavor;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/preferences.dart';
@@ -22,13 +23,21 @@ String subjectName(AppLocalizations l10n, String subject) => switch (subject) {
   _ => subject[0].toUpperCase() + subject.substring(1).replaceAll('_', ' '),
 };
 
-/// The lessons a child sees: reviewed ones (debug builds show drafts too).
+/// Whether lessons a teacher has not approved yet are shown. Only the dev
+/// test app (and debug builds) shows them, so lessons can be tried before
+/// review; the prod app shows approved lessons only.
+final showDraftLessonsProvider = Provider<bool>(
+  (ref) => kDebugMode || appFlavor == 'dev',
+);
+
+/// The lessons a child sees: reviewed ones, plus drafts in the dev app.
 final visibleLessonsProvider = Provider<List<Lesson>>((ref) {
   final ids = ref.watch(lessonIdsProvider).value ?? const <String>[];
+  final drafts = ref.watch(showDraftLessonsProvider);
   return [
     for (final id in ids)
       if (ref.watch(lessonProvider(id)).value case final lesson?)
-        if (lesson.review.status == 'approved' || kDebugMode) lesson,
+        if (lesson.review.isApproved || drafts) lesson,
   ];
 });
 
