@@ -1,0 +1,813 @@
+{
+  "id": "g6-maths-07-like-terms",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise like terms and simplify expressions by collecting them.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Introduction to Algebra"
+    }
+  ],
+  "skills": [
+    "maths.algebra.expressions_basic"
+  ],
+  "title": {
+    "en": "Collecting like terms",
+    "ur": "یکساں رقوم جمع کرنا"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.substitution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "joins_unlike",
+      "description": "Combines unlike terms: 3a + 2b = 5ab, or 3x + 4 = 7x."
+    },
+    {
+      "id": "drops_letter",
+      "description": "Adds the numbers and drops the letter: 3a + 2a = 5."
+    },
+    {
+      "id": "multiplies_terms",
+      "description": "Multiplies instead of adding: 4x + 3x = 12x."
+    },
+    {
+      "id": "forgets_one",
+      "description": "Forgets that a letter on its own means 1 of it: b counted as 0b."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.expressions_basic": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.expressions_basic": [
+      {
+        "id": "qb_like",
+        "type": "recall",
+        "step": {
+          "id": "qb_like",
+          "type": "choice",
+          "prompt": {
+            "en": "Which two are like terms?",
+            "ur": "کون سی دو یکساں رقوم ہیں؟"
+          },
+          "options": [
+            {
+              "id": "same",
+              "text": {
+                "en": "3y and 7y",
+                "ur": "3y اور 7y"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Same letter, so they can be added: 10y.",
+                "ur": "جی ہاں! ایک ہی حرف، اس لیے جمع ہو سکتی ہیں: 10y"
+              }
+            },
+            {
+              "id": "diff",
+              "text": {
+                "en": "3y and 7x",
+                "ur": "3y اور 7x"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Different letters are unlike terms. 3y and 7y are alike.",
+                "ur": "مختلف حروف یکساں رقوم نہیں۔ 3y اور 7y یکساں ہیں۔"
+              },
+              "misconception_id": "joins_unlike"
+            },
+            {
+              "id": "num",
+              "text": {
+                "en": "3y and 7",
+                "ur": "3y اور 7"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "7 has no letter, so it is not like 3y. 3y and 7y are alike.",
+                "ur": "7 میں حرف نہیں، اس لیے یہ 3y جیسی نہیں۔ 3y اور 7y یکساں ہیں۔"
+              },
+              "misconception_id": "joins_unlike"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "text_check",
+          "prompt": {
+            "en": "Simplify 5p + 2 + p.",
+            "ur": "5p + 2 + p کو مختصر کریں۔"
+          },
+          "checker": "text",
+          "expected": "6p + 2",
+          "accept": [
+            "2 + 6p"
+          ],
+          "hint": {
+            "en": "p on its own is 1p. Collect the p terms; the 2 stays.",
+            "ur": "اکیلا p یعنی 1p۔ p والی رقوم جمع کریں؛ 2 ویسے ہی رہے گا۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 6p + 2.",
+            "ur": "درست! 6p + 2"
+          },
+          "feedback_wrong": {
+            "en": "5p + p = 6p, and the 2 stays: 6p + 2.",
+            "ur": "5p + p = 6p، اور 2 ویسے ہی: 6p + 2"
+          },
+          "common_wrong": [
+            {
+              "answer": "8p",
+              "feedback": {
+                "en": "2 has no letter, so it can't join the p terms: 6p + 2.",
+                "ur": "2 میں حرف نہیں، اس لیے p والی رقوم سے نہیں ملتا: 6p + 2"
+              },
+              "misconception_id": "joins_unlike"
+            },
+            {
+              "answer": "5p + 2",
+              "feedback": {
+                "en": "Don't forget the last p (that's 1p): 6p + 2.",
+                "ur": "آخری p نہ بھولیں (یہ 1p ہے): 6p + 2"
+              },
+              "misconception_id": "forgets_one"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Noor says 6n − n = 6. What went wrong?",
+            "ur": "نور کہتی ہے 6n − n = 6۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "right",
+              "text": {
+                "en": "n is 1n, so 6n − 1n = 5n.",
+                "ur": "n یعنی 1n، تو 6n − 1n = 5n"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 6 lots of n take away 1 lot of n leaves 5n.",
+                "ur": "جی ہاں! n کے 6 میں سے 1 گھٹائیں تو 5n بچتے ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. The n's cancel.",
+                "ur": "کوئی غلطی نہیں۔ n کٹ جاتے ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Try n = 2: 6 × 2 − 2 = 10, not 6. The answer is 5n.",
+                "ur": "n = 2 رکھیں: 6 × 2 − 2 = 10، نہ کہ 6۔ جواب 5n ہے۔"
+              },
+              "misconception_id": "drops_letter"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_like",
+      "front": {
+        "en": "What are like terms?",
+        "ur": "یکساں رقوم کیا ہیں؟"
+      },
+      "back": {
+        "en": "Terms with the same letter, like 3a and 2a. Add their numbers: 3a + 2a = 5a.",
+        "ur": "ایک ہی حرف والی رقوم، جیسے 3a اور 2a۔ ان کے اعداد جمع کریں: 3a + 2a = 5a"
+      }
+    },
+    {
+      "id": "f_unlike",
+      "front": {
+        "en": "Can 3a + 2b be simplified?",
+        "ur": "کیا 3a + 2b مختصر ہو سکتا ہے؟"
+      },
+      "back": {
+        "en": "No. Different letters are unlike terms, so it stays 3a + 2b (never 5ab).",
+        "ur": "نہیں۔ مختلف حروف یکساں رقوم نہیں، اس لیے یہ 3a + 2b ہی رہے گا (5ab کبھی نہیں)۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_fruit",
+      "text": {
+        "en": "Put some mangoes (m) and bananas (b) in two groups, for example 3m + 2b and 4m + 1b. Join the groups. How many of each do you have? Write it as an expression.",
+        "ur": "کچھ آم (m) اور کیلے (b) دو گروہوں میں رکھیں، مثلاً 3m + 2b اور 4m + 1b۔ دونوں گروہ ملائیں۔ ہر ایک کتنے ہیں؟ اسے عبارت کی شکل میں لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Term",
+      "ur": "رقم"
+    },
+    {
+      "en": "Like terms",
+      "ur": "یکساں رقوم"
+    },
+    {
+      "en": "Simplify",
+      "ur": "مختصر کرنا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "3 apples and 2 apples make 5 apples. But what do 3 apples and 2 bananas make?",
+          "ur": "3 سیب اور 2 سیب مل کر 5 سیب۔ مگر 3 سیب اور 2 کیلے مل کر کیا بنتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we tidy up expressions by joining the parts that are alike. First, a quick check.",
+        "ur": "آج ہم عبارتوں کے یکساں حصے ملا کر انہیں مختصر کریں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.algebra.substitution",
+      "prompt": {
+        "en": "Find the value of 2x + 3 when x = 5.",
+        "ur": "جب x = 5 ہو تو 2x + 3 کی قیمت معلوم کریں۔"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 × 5 first, then add 3.",
+        "ur": "پہلے 2 × 5، پھر 3 جمع۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 10 + 3 = 13.",
+        "ur": "درست! 10 + 3 = 13"
+      },
+      "feedback_wrong": {
+        "en": "2 × 5 = 10, then 10 + 3 = 13.",
+        "ur": "2 × 5 = 10، پھر 10 + 3 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "2x is 2 × x, not 25. 10 + 3 = 13.",
+            "ur": "2x یعنی 2 × x، نہ کہ 25۔ 10 + 3 = 13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_like",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Same letter? Join them! Different letters? Leave them!",
+          "ur": "ایک ہی حرف؟ ملا دیں! مختلف حروف؟ رہنے دیں!"
+        }
+      },
+      "text": {
+        "en": "Each part of an expression is a term. Terms with the same letter are like terms: 3a + 2a = 5a, just like 3 apples + 2 apples. Terms with different letters are unlike: 3a + 2b stays as it is. A letter on its own, like b, means 1b.",
+        "ur": "عبارت کا ہر حصہ ایک رقم ہے۔ ایک ہی حرف والی رقوم یکساں رقوم ہیں: 3a + 2a = 5a، جیسے 3 سیب + 2 سیب۔ مختلف حروف والی رقوم یکساں نہیں: 3a + 2b ویسے ہی رہتا ہے۔ اکیلا حرف، جیسے b، یعنی 1b۔"
+      }
+    },
+    {
+      "id": "s4_add",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 4x + 3x.",
+        "ur": "4x + 3x کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "7x",
+      "accept": [
+        "7*x",
+        "x7"
+      ],
+      "hint": {
+        "en": "4 x's and 3 more x's.",
+        "ur": "4 x اور 3 مزید x"
+      },
+      "feedback_correct": {
+        "en": "Right! 7x.",
+        "ur": "درست! 7x"
+      },
+      "feedback_wrong": {
+        "en": "4x + 3x = 7x.",
+        "ur": "4x + 3x = 7x"
+      },
+      "common_wrong": [
+        {
+          "answer": "7",
+          "feedback": {
+            "en": "Keep the letter: 7 x's, so 7x.",
+            "ur": "حرف رکھیں: 7 x، یعنی 7x"
+          },
+          "misconception_id": "drops_letter"
+        },
+        {
+          "answer": "12x",
+          "feedback": {
+            "en": "Add, don't multiply: 4 + 3 = 7, so 7x.",
+            "ur": "ضرب نہیں، جمع کریں: 4 + 3 = 7، یعنی 7x"
+          },
+          "misconception_id": "multiplies_terms"
+        }
+      ]
+    },
+    {
+      "id": "s5_subtract",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 9m − 4m.",
+        "ur": "9m − 4m کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "5m",
+      "accept": [
+        "5*m",
+        "m5"
+      ],
+      "hint": {
+        "en": "9 m's take away 4 m's.",
+        "ur": "9 m میں سے 4 m گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5m.",
+        "ur": "درست! 5m"
+      },
+      "feedback_wrong": {
+        "en": "9 − 4 = 5, so 5m.",
+        "ur": "9 − 4 = 5، یعنی 5m"
+      },
+      "common_wrong": [
+        {
+          "answer": "5",
+          "feedback": {
+            "en": "Keep the letter: 5m.",
+            "ur": "حرف رکھیں: 5m"
+          },
+          "misconception_id": "drops_letter"
+        },
+        {
+          "answer": "13m",
+          "feedback": {
+            "en": "It's minus: 9 − 4 = 5, so 5m.",
+            "ur": "یہ تفریق ہے: 9 − 4 = 5، یعنی 5m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_which",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which expression can be made shorter?",
+        "ur": "کون سی عبارت مختصر ہو سکتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "like",
+          "text": {
+            "en": "2a + 5a",
+            "ur": "2a + 5a"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Same letter: 2a + 5a = 7a.",
+            "ur": "جی ہاں! ایک ہی حرف: 2a + 5a = 7a"
+          }
+        },
+        {
+          "id": "unlike",
+          "text": {
+            "en": "2a + 5b",
+            "ur": "2a + 5b"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Different letters can't be joined. 2a + 5a can: 7a.",
+            "ur": "مختلف حروف نہیں ملتے۔ 2a + 5a مل سکتے ہیں: 7a"
+          },
+          "misconception_id": "joins_unlike"
+        },
+        {
+          "id": "number",
+          "text": {
+            "en": "2a + 5",
+            "ur": "2a + 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 has no letter, so it can't join 2a. 2a + 5a can: 7a.",
+            "ur": "5 میں حرف نہیں، اس لیے 2a سے نہیں ملتا۔ 2a + 5a مل سکتے ہیں: 7a"
+          },
+          "misconception_id": "joins_unlike"
+        }
+      ]
+    },
+    {
+      "id": "s7_with_number",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 3x + 4 + 4x.",
+        "ur": "3x + 4 + 4x کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "7x + 4",
+      "accept": [
+        "4 + 7x"
+      ],
+      "hint": {
+        "en": "Join the x terms. The 4 has no letter, so it stays.",
+        "ur": "x والی رقوم ملائیں۔ 4 میں حرف نہیں، وہ ویسے ہی رہے گا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7x + 4.",
+        "ur": "درست! 7x + 4"
+      },
+      "feedback_wrong": {
+        "en": "3x + 4x = 7x, and the 4 stays: 7x + 4.",
+        "ur": "3x + 4x = 7x، اور 4 ویسے ہی: 7x + 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "11x",
+          "feedback": {
+            "en": "4 has no letter, so it can't join the x terms: 7x + 4.",
+            "ur": "4 میں حرف نہیں، اس لیے x والی رقوم سے نہیں ملتا: 7x + 4"
+          },
+          "misconception_id": "joins_unlike"
+        },
+        {
+          "answer": "11",
+          "feedback": {
+            "en": "Only the x terms join, and keep the letter: 7x + 4.",
+            "ur": "صرف x والی رقوم ملتی ہیں، اور حرف رکھیں: 7x + 4"
+          },
+          "misconception_id": "drops_letter"
+        }
+      ]
+    },
+    {
+      "id": "s8_two_letters",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 2a + 3b + 4a + b.",
+        "ur": "2a + 3b + 4a + b کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "6a + 4b",
+      "accept": [
+        "4b + 6a"
+      ],
+      "hint": {
+        "en": "a's together, b's together. b on its own is 1b.",
+        "ur": "a ایک ساتھ، b ایک ساتھ۔ اکیلا b یعنی 1b"
+      },
+      "feedback_correct": {
+        "en": "Right! 6a + 4b.",
+        "ur": "درست! 6a + 4b"
+      },
+      "feedback_wrong": {
+        "en": "2a + 4a = 6a and 3b + 1b = 4b: 6a + 4b.",
+        "ur": "2a + 4a = 6a اور 3b + 1b = 4b: 6a + 4b"
+      },
+      "common_wrong": [
+        {
+          "answer": "6a + 3b",
+          "feedback": {
+            "en": "The last b counts as 1b: 3b + 1b = 4b.",
+            "ur": "آخری b کو 1b گنیں: 3b + 1b = 4b"
+          },
+          "misconception_id": "forgets_one"
+        },
+        {
+          "answer": "10ab",
+          "feedback": {
+            "en": "a's and b's are unlike, so they stay apart: 6a + 4b.",
+            "ur": "a اور b یکساں نہیں، اس لیے الگ رہتے ہیں: 6a + 4b"
+          },
+          "misconception_id": "joins_unlike"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Kamran simplifies 3a + 2b to 5ab. What went wrong?",
+        "ur": "کامران 3a + 2b کو 5ab بنا دیتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "unlike",
+          "text": {
+            "en": "a and b are unlike terms, so it stays 3a + 2b.",
+            "ur": "a اور b یکساں رقوم نہیں، اس لیے یہ 3a + 2b ہی رہے گا۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Like 3 apples and 2 bananas: you can't call them 5 'apple-bananas'.",
+            "ur": "جی ہاں! جیسے 3 سیب اور 2 کیلے: انہیں 5 'سیب کیلے' نہیں کہہ سکتے۔"
+          }
+        },
+        {
+          "id": "five",
+          "text": {
+            "en": "It should be 5a.",
+            "ur": "یہ 5a ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The b's aren't a's. It stays 3a + 2b.",
+            "ur": "b کو a نہیں بنا سکتے۔ یہ 3a + 2b ہی رہے گا۔"
+          },
+          "misconception_id": "joins_unlike"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Try a = 1, b = 1: 3 + 2 = 5, but 5ab = 5. Try a = 2, b = 1: 8, but 5ab = 10. Not the same!",
+            "ur": "a = 1، b = 1 پر 3 + 2 = 5 اور 5ab = 5۔ a = 2، b = 1 پر 8، مگر 5ab = 10۔ برابر نہیں!"
+          },
+          "misconception_id": "joins_unlike"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why can we join 3a + 2a but not 3a + 2b? Can you teach me?",
+          "ur": "ہم 3a + 2a کو کیوں ملا سکتے ہیں مگر 3a + 2b کو کیوں نہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why does 3a + 2a make 5a, but 3a + 2b can't be made shorter?",
+        "ur": "اپنے الفاظ میں بتائیں: 3a + 2a کیوں 5a بنتا ہے، مگر 3a + 2b کیوں مختصر نہیں ہو سکتا؟"
+      },
+      "key_idea": "a and b can stand for different numbers. 3a + 2a is 5 lots of the same thing, but a and b are different things (like apples and bananas), so they can't be counted together.",
+      "levels": {
+        "got_it": "Explains that like terms are the same kind of thing (same letter, same number) so they can be counted together, while a and b are different.",
+        "partly": "Says the letters must be the same, without saying why.",
+        "not_yet": "Says 3a + 2b is 5ab, or gives no reason."
+      },
+      "keywords": [
+        [
+          "same",
+          "like",
+          "ایک",
+          "یکساں",
+          "same letter"
+        ],
+        [
+          "different",
+          "unlike",
+          "مختلف",
+          "alag"
+        ],
+        [
+          "apple",
+          "banana",
+          "سیب",
+          "کیلے",
+          "thing",
+          "چیز"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Same letter, same kind of thing; different letters, different things.",
+          "ur": "بہت خوب! ایک حرف، ایک جیسی چیز؛ مختلف حروف، مختلف چیزیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why: what could a and b stand for?",
+          "ur": "اچھی شروعات! اب وجہ بتائیں: a اور b کس کی جگہ ہو سکتے ہیں؟"
+        },
+        "not_yet": {
+          "en": "Think of 3 apples and 2 bananas. Is that 5 apples? Is it 5 bananas?",
+          "ur": "3 سیب اور 2 کیلے سوچیں۔ کیا یہ 5 سیب ہیں؟ کیا 5 کیلے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_check",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "We said 3x + 4 + 4x = 7x + 4. Check it: what is 7x + 4 when x = 2? (3x + 4 + 4x gives the same.)",
+        "ur": "ہم نے کہا 3x + 4 + 4x = 7x + 4۔ جانچیں: x = 2 پر 7x + 4 کتنا ہے؟ (3x + 4 + 4x کا جواب بھی یہی ہوگا۔)"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "7 × 2 first, then add 4.",
+        "ur": "پہلے 7 × 2، پھر 4 جمع۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 18. And 6 + 4 + 8 = 18 too. Same!",
+        "ur": "درست! 18۔ اور 6 + 4 + 8 بھی 18۔ برابر!"
+      },
+      "feedback_wrong": {
+        "en": "7 × 2 + 4 = 14 + 4 = 18.",
+        "ur": "7 × 2 + 4 = 14 + 4 = 18"
+      },
+      "common_wrong": [
+        {
+          "answer": 22,
+          "feedback": {
+            "en": "Multiply first: 7 × 2 = 14, then + 4 = 18.",
+            "ur": "پہلے ضرب: 7 × 2 = 14، پھر + 4 = 18"
+          }
+        },
+        {
+          "answer": 76,
+          "feedback": {
+            "en": "7x is 7 × x, not 72. 14 + 4 = 18.",
+            "ur": "7x یعنی 7 × x، نہ کہ 72۔ 14 + 4 = 18"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Your expressions are neat and tidy now!",
+          "ur": "اب آپ کی عبارتیں صاف ستھری ہیں!"
+        }
+      },
+      "text": {
+        "en": "Like terms have the same letter. Add or take away their numbers and keep the letter: 4x + 3x = 7x. Unlike terms, and plain numbers, stay apart: 3x + 4 + 4x = 7x + 4. A letter on its own means 1 of it.",
+        "ur": "یکساں رقوم میں ایک ہی حرف ہوتا ہے۔ ان کے اعداد جمع یا تفریق کریں اور حرف رکھیں: 4x + 3x = 7x۔ غیر یکساں رقوم اور خالی اعداد الگ رہتے ہیں: 3x + 4 + 4x = 7x + 4۔ اکیلا حرف یعنی اس کا 1۔"
+      },
+      "points": [
+        {
+          "en": "3a + 2b is never 5ab.",
+          "ur": "3a + 2b کبھی 5ab نہیں ہوتا۔"
+        },
+        {
+          "en": "Check by putting in a number: both forms give the same value.",
+          "ur": "کوئی عدد رکھ کر جانچیں: دونوں شکلوں کی قیمت برابر آتی ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_subtract",
+      "type": "apply",
+      "skill": "maths.algebra.expressions_basic",
+      "step": {
+        "id": "r_subtract",
+        "type": "text_check",
+        "prompt": {
+          "en": "Simplify 8k − 3k.",
+          "ur": "8k − 3k کو مختصر کریں۔"
+        },
+        "checker": "text",
+        "expected": "5k",
+        "accept": [
+          "5*k",
+          "k5"
+        ],
+        "hint": {
+          "en": "8 − 3, and keep the k.",
+          "ur": "8 − 3، اور k رکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5k.",
+          "ur": "درست! 5k"
+        },
+        "feedback_wrong": {
+          "en": "8 − 3 = 5, so 5k.",
+          "ur": "8 − 3 = 5، یعنی 5k"
+        },
+        "common_wrong": [
+          {
+            "answer": "5",
+            "feedback": {
+              "en": "Keep the letter: 5k.",
+              "ur": "حرف رکھیں: 5k"
+            },
+            "misconception_id": "drops_letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_repeat",
+      "type": "recall",
+      "skill": "maths.algebra.expressions_basic",
+      "step": {
+        "id": "r_repeat",
+        "type": "text_check",
+        "prompt": {
+          "en": "Simplify a + a + a.",
+          "ur": "a + a + a کو مختصر کریں۔"
+        },
+        "checker": "text",
+        "expected": "3a",
+        "accept": [
+          "3*a",
+          "a3"
+        ],
+        "hint": {
+          "en": "How many a's are there?",
+          "ur": "کتنے a ہیں؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 3a.",
+          "ur": "درست! 3a"
+        },
+        "feedback_wrong": {
+          "en": "Three a's: 3a.",
+          "ur": "تین a: 3a"
+        },
+        "common_wrong": [
+          {
+            "answer": "aaa",
+            "feedback": {
+              "en": "Three a's added is 3a.",
+              "ur": "تین a جمع کریں تو 3a"
+            }
+          },
+          {
+            "answer": "3",
+            "feedback": {
+              "en": "Keep the letter: 3a.",
+              "ur": "حرف رکھیں: 3a"
+            },
+            "misconception_id": "drops_letter"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Introduction to Algebra unit. No textbook text or exercises were used.",
+    "Answers are typed and checked as text, accepting other orders (4 + 7x). The script checks every simplification by putting in many numbers.",
+    "This lesson's skill (maths.algebra.expressions_basic) is the warm-up skill of the Grade 9 linear equations lesson.",
+    "Urdu terms to check: رقم (term), یکساں رقوم (like terms), مختصر کرنا (simplify).",
+    "The numbers were worked out in content/sources/g6-maths-07/like_terms.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
