@@ -17,6 +17,9 @@ EQUIVALENT_FRACTIONS = "maths.fractions.equivalent"
 RATIO_MEANING = "maths.ratio.meaning"
 RATIO_EQUIVALENT = "maths.ratio.equivalent"
 RATIO_SHARE = "maths.ratio.share"
+RATIO_PROPORTION = "maths.ratio.proportion"
+UNITARY = "maths.ratio.unitary_method"
+RATIO_WORD_PROBLEMS = "maths.ratio.word_problems"
 
 
 def T(en, ur):
@@ -82,6 +85,30 @@ def ratio_question(id, prompt, a: int, b: int, hint, good, bad, *, common_wrong=
     if common_wrong:
         step["common_wrong"] = list(common_wrong)
     return step
+
+
+def number_question(id, prompt, answer: int, hint, good, bad, *, common_wrong=(), qtype="apply", skill=None, character=None):
+    """A step whose answer is a whole number."""
+    step = {"id": id, "type": "number"}
+    if qtype:
+        step["question_type"] = qtype
+    if skill:
+        step["skill"] = skill
+    if character:
+        step["character"] = character
+    step.update({"prompt": prompt, "answer": answer, "checker": "numeric",
+                 "hint": hint, "feedback_correct": good, "feedback_wrong": bad})
+    if common_wrong:
+        step["common_wrong"] = list(common_wrong)
+    return step
+
+
+def missing_term(a: int, b: int, c: int) -> int:
+    """d in a : b :: c : d, from extremes × extremes = means × means."""
+    d = F(b * c, a)
+    assert d.denominator == 1, (a, b, c)
+    assert a * d == b * c
+    return int(d)
 
 
 def check_lesson(lesson):

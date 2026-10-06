@@ -1,0 +1,999 @@
+{
+  "id": "g6-maths-06-ratio-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems with ratios: comparing, sharing, proportion and the unitary method, choosing the right method for each problem.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Ratio and Proportion"
+    }
+  ],
+  "skills": [
+    "maths.ratio.word_problems"
+  ],
+  "title": {
+    "en": "Ratio word problems",
+    "ur": "نسبت کے عملی سوالات"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.meaning"
+    },
+    {
+      "skill": "maths.ratio.equivalent"
+    },
+    {
+      "skill": "maths.ratio.share"
+    },
+    {
+      "skill": "maths.ratio.proportion"
+    },
+    {
+      "skill": "maths.ratio.unitary_method"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "share_vs_total",
+      "description": "Treats one person's share as the total (divides it by all the parts), or the total as one share."
+    },
+    {
+      "id": "additive_thinking",
+      "description": "Adds the difference instead of scaling (4 people eat 12 rotis, so 10 people eat 18)."
+    },
+    {
+      "id": "order_swapped",
+      "description": "Writes or uses the ratio the wrong way round."
+    },
+    {
+      "id": "part_for_whole",
+      "description": "Compares a part with the whole when the question asks for part to part."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.word_problems": [
+      {
+        "id": "qb_which_method",
+        "type": "recall",
+        "step": {
+          "id": "qb_which_method",
+          "type": "choice",
+          "prompt": {
+            "en": "\"Share Rs 800 between two sisters in the ratio 3 : 5.\" Which method do you use?",
+            "ur": "\"800 روپے دو بہنوں میں 3 : 5 کی نسبت سے تقسیم کریں۔\" آپ کون سا طریقہ استعمال کریں گے؟"
+          },
+          "options": [
+            {
+              "id": "share",
+              "text": {
+                "en": "Add the parts (8), find one part, multiply.",
+                "ur": "حصے جمع کریں (8)، ایک حصہ معلوم کریں، ضرب دیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! You know the total, so add the parts: 800 ÷ 8 = 100, shares Rs 300 and Rs 500.",
+                "ur": "جی ہاں! کل معلوم ہے، اس لیے حصے جمع کریں: 800 ÷ 8 = 100، حصے 300 روپے اور 500 روپے۔"
+              }
+            },
+            {
+              "id": "half",
+              "text": {
+                "en": "Halve it.",
+                "ur": "آدھا کریں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Halving is only for 1 : 1. Here it is 3 : 5.",
+                "ur": "آدھا صرف 1 : 1 کے لیے ہے۔ یہاں 3 : 5 ہے۔"
+              }
+            },
+            {
+              "id": "unitary",
+              "text": {
+                "en": "Find the price of one sister.",
+                "ur": "ایک بہن کی قیمت معلوم کریں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "There's no price here. You know the total, so share it in the ratio.",
+                "ur": "یہاں کوئی قیمت نہیں۔ کل معلوم ہے، اس لیے اسے نسبت میں بانٹیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_kites",
+        "type": "apply",
+        "step": {
+          "id": "qb_kites",
+          "type": "number",
+          "prompt": {
+            "en": "3 kites need 12 m of string. How many metres of string do 8 kites need?",
+            "ur": "3 پتنگوں کے لیے 12 میٹر ڈور چاہیے۔ 8 پتنگوں کے لیے کتنے میٹر ڈور چاہیے؟"
+          },
+          "answer": 32,
+          "checker": "numeric",
+          "hint": {
+            "en": "How much string does 1 kite need?",
+            "ur": "1 پتنگ کو کتنی ڈور چاہیے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! 1 kite needs 4 m, so 8 kites need 32 m.",
+            "ur": "درست! 1 پتنگ کو 4 میٹر، اس لیے 8 پتنگوں کو 32 میٹر۔"
+          },
+          "feedback_wrong": {
+            "en": "12 ÷ 3 = 4 m for one kite. 8 × 4 = 32 m.",
+            "ur": "ایک پتنگ: 12 ÷ 3 = 4 میٹر۔ 8 × 4 = 32 میٹر۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 17,
+              "feedback": {
+                "en": "5 more kites need much more than 5 m. Find 1 kite first.",
+                "ur": "5 پتنگیں زیادہ کے لیے 5 میٹر سے کہیں زیادہ چاہیے۔ پہلے 1 پتنگ معلوم کریں۔"
+              },
+              "misconception_id": "additive_thinking"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana and Rabia share sweets in the ratio 2 : 5. Sana gets 10. Rabia says: \"10 ÷ 7 parts...\" and gets stuck. What should she do?",
+            "ur": "ثنا اور رابعہ مٹھائی 2 : 5 کی نسبت سے بانٹتی ہیں۔ ثنا کو 10 ملتی ہیں۔ رابعہ کہتی ہے: \"10 ÷ 7 حصے...\" اور الجھ جاتی ہے۔ اسے کیا کرنا چاہیے؟"
+          },
+          "options": [
+            {
+              "id": "parts",
+              "text": {
+                "en": "10 is Sana's 2 parts, not the total. One part is 5, so Rabia gets 25.",
+                "ur": "10 ثنا کے 2 حصے ہیں، کل نہیں۔ ایک حصہ 5، اس لیے رابعہ کو 25۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Divide a share by its own parts: 10 ÷ 2 = 5, then 5 × 5 = 25.",
+                "ur": "درست! حصے کو اس کے اپنے حصوں سے تقسیم کریں: 10 ÷ 2 = 5، پھر 5 × 5 = 25"
+              }
+            },
+            {
+              "id": "total",
+              "text": {
+                "en": "Divide by 7 anyway and round.",
+                "ur": "پھر بھی 7 سے تقسیم کر کے قریب ترین عدد لیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "10 is not the total, so 7 is the wrong number of parts. Sana's 10 is 2 parts.",
+                "ur": "10 کل نہیں، اس لیے 7 غلط تعداد ہے۔ ثنا کی 10، 2 حصے ہیں۔"
+              },
+              "misconception_id": "share_vs_total"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_choose",
+      "front": {
+        "en": "Ratio problem: which method?",
+        "ur": "نسبت کا سوال: کون سا طریقہ؟"
+      },
+      "back": {
+        "en": "Total known → add the parts and share. One pair known (4 pens Rs 120) → unitary method or proportion. Two amounts to compare → write a ratio and simplify.",
+        "ur": "کل معلوم ← حصے جمع کر کے بانٹیں۔ ایک جوڑا معلوم (4 قلم 120 روپے) ← اکائی کا طریقہ یا تناسب۔ دو مقداروں کا موازنہ ← نسبت لکھ کر سادہ کریں۔"
+      }
+    },
+    {
+      "id": "f_share_known",
+      "front": {
+        "en": "You know ONE share, not the total. What next?",
+        "ur": "آپ کو ایک حصہ معلوم ہے، کل نہیں۔ اب کیا؟"
+      },
+      "back": {
+        "en": "Divide that share by its own number of parts to find one part. 2 : 5, first share 10 → one part 5 → second share 25.",
+        "ur": "اس حصے کو اس کے اپنے حصوں سے تقسیم کر کے ایک حصہ معلوم کریں۔ 2 : 5، پہلا حصہ 10 ← ایک حصہ 5 ← دوسرا حصہ 25"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_recipe",
+      "text": {
+        "en": "Ask someone at home for a recipe (like chai or rice) and how many people it is for. Work out how much of each thing is needed for your whole family.",
+        "ur": "گھر میں کسی سے کوئی ترکیب پوچھیں (جیسے چائے یا چاول) اور یہ کتنے لوگوں کے لیے ہے۔ حساب لگائیں کہ پورے گھر والوں کے لیے ہر چیز کتنی چاہیے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Ratio",
+      "ur": "نسبت"
+    },
+    {
+      "en": "Proportion",
+      "ur": "تناسب"
+    },
+    {
+      "en": "Share",
+      "ur": "حصہ"
+    },
+    {
+      "en": "Unitary method",
+      "ur": "اکائی کا طریقہ"
+    },
+    {
+      "en": "Profit",
+      "ur": "منافع"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ratios are everywhere: in the kitchen, the shop and the bazaar! Ready to solve real problems?",
+          "ur": "نسبتیں ہر جگہ ہیں: باورچی خانے میں، دکان میں اور بازار میں! کیا آپ اصل سوال حل کرنے کے لیے تیار ہیں؟"
+        }
+      },
+      "text": {
+        "en": "In this lesson you read a story, choose the method, and solve it. At the end there is a short test on the whole Ratio and Proportion unit. First, a quick check.",
+        "ur": "اس سبق میں آپ کہانی پڑھیں گے، طریقہ چنیں گے، اور حل کریں گے۔ آخر میں نسبت اور تناسب کے پورے باب پر ایک چھوٹا ٹیسٹ ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.ratio.share",
+      "prompt": {
+        "en": "To share an amount in the ratio 3 : 5, how many equal parts do you cut it into?",
+        "ur": "کسی مقدار کو 3 : 5 کی نسبت میں بانٹنے کے لیے اسے کتنے برابر حصوں میں کاٹتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "eight",
+          "text": {
+            "en": "8",
+            "ur": "8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3 + 5 = 8 parts.",
+            "ur": "جی ہاں! 3 + 5 = 8 حصے۔"
+          }
+        },
+        {
+          "id": "fifteen",
+          "text": {
+            "en": "15",
+            "ur": "15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Add the parts, don't multiply: 3 + 5 = 8.",
+            "ur": "حصے جمع کریں، ضرب نہ دیں: 3 + 5 = 8"
+          }
+        },
+        {
+          "id": "two",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are 2 people, but 3 + 5 = 8 parts.",
+            "ur": "لوگ 2 ہیں، لیکن 3 + 5 = 8 حصے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_which_method",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Ask yourself: what do I know, and what do I want?",
+          "ur": "خود سے پوچھیں: مجھے کیا معلوم ہے، اور کیا چاہیے؟"
+        }
+      },
+      "text": {
+        "en": "Know the TOTAL and a ratio? Add the parts and share. Know ONE PAIR (4 pens cost Rs 120) and want another? Use the unitary method or a proportion. Want to COMPARE two amounts? Write a ratio in the right order and simplify. Always check: does the answer make sense?",
+        "ur": "کل اور نسبت معلوم ہے؟ حصے جمع کر کے بانٹیں۔ ایک جوڑا معلوم ہے (4 قلم 120 روپے) اور دوسرا چاہیے؟ اکائی کا طریقہ یا تناسب استعمال کریں۔ دو مقداروں کا موازنہ کرنا ہے؟ صحیح ترتیب میں نسبت لکھ کر سادہ کریں۔ ہمیشہ جانچیں: کیا جواب سمجھ میں آتا ہے؟"
+      }
+    },
+    {
+      "id": "s4_choose",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "\"At a dawat, 4 guests eat 12 rotis. How many rotis do 10 guests eat?\" Which method fits?",
+        "ur": "\"ایک دعوت میں 4 مہمان 12 روٹیاں کھاتے ہیں۔ 10 مہمان کتنی روٹیاں کھائیں گے؟\" کون سا طریقہ ٹھیک ہے؟"
+      },
+      "options": [
+        {
+          "id": "unitary",
+          "text": {
+            "en": "Unitary method: rotis for 1 guest, then 10 guests.",
+            "ur": "اکائی کا طریقہ: 1 مہمان کی روٹیاں، پھر 10 مہمان۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! We know one pair (4 guests, 12 rotis) and want another.",
+            "ur": "جی ہاں! ہمیں ایک جوڑا معلوم ہے (4 مہمان، 12 روٹیاں) اور دوسرا چاہیے۔"
+          }
+        },
+        {
+          "id": "share",
+          "text": {
+            "en": "Sharing: add 4 + 12.",
+            "ur": "تقسیم: 4 + 12 جمع کریں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 and 12 are guests and rotis, not parts of a total.",
+            "ur": "4 اور 12 مہمان اور روٹیاں ہیں، کسی کل کے حصے نہیں۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "Add 6 rotis for 6 more guests.",
+            "ur": "6 مہمان زیادہ کے لیے 6 روٹیاں جمع کریں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each guest eats more than 1 roti! Find rotis for 1 guest.",
+            "ur": "ہر مہمان 1 سے زیادہ روٹی کھاتا ہے! 1 مہمان کی روٹیاں معلوم کریں۔"
+          },
+          "misconception_id": "additive_thinking"
+        }
+      ]
+    },
+    {
+      "id": "s5_rotis",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Now solve it: 4 guests eat 12 rotis. How many rotis do 10 guests eat?",
+        "ur": "اب حل کریں: 4 مہمان 12 روٹیاں کھاتے ہیں۔ 10 مہمان کتنی روٹیاں کھائیں گے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "1 guest eats 12 ÷ 4 rotis.",
+        "ur": "1 مہمان 12 ÷ 4 روٹیاں کھاتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 rotis each, so 10 × 3 = 30.",
+        "ur": "درست! ہر ایک 3 روٹیاں، اس لیے 10 × 3 = 30"
+      },
+      "feedback_wrong": {
+        "en": "12 ÷ 4 = 3 rotis for one guest. 10 × 3 = 30.",
+        "ur": "ایک مہمان: 12 ÷ 4 = 3 روٹیاں۔ 10 × 3 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "6 more guests eat more than 6 rotis: each eats 3.",
+            "ur": "6 مہمان زیادہ 6 سے زیادہ روٹیاں کھائیں گے: ہر ایک 3 کھاتا ہے۔"
+          },
+          "misconception_id": "additive_thinking"
+        },
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "12 rotis are for 4 guests, not 1. Divide by 4 first.",
+            "ur": "12 روٹیاں 4 مہمانوں کی ہیں، 1 کی نہیں۔ پہلے 4 سے تقسیم کریں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_profit",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Zahid put Rs 3000 and Asif Rs 2000 into a small shop. They share the profit of Rs 1500 in the same ratio, 3 : 2. How much does Zahid get, in rupees?",
+        "ur": "زاہد نے ایک چھوٹی دکان میں 3000 روپے اور آصف نے 2000 روپے لگائے۔ وہ 1500 روپے منافع اسی نسبت 3 : 2 میں بانٹتے ہیں۔ زاہد کو کتنے روپے ملیں گے؟"
+      },
+      "answer": 900,
+      "checker": "numeric",
+      "hint": {
+        "en": "You know the total profit: 3 + 2 = 5 parts.",
+        "ur": "کل منافع معلوم ہے: 3 + 2 = 5 حصے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 1500 ÷ 5 = 300, so Zahid gets 3 × 300 = Rs 900 and Asif Rs 600.",
+        "ur": "درست! ایک حصہ 1500 ÷ 5 = 300، اس لیے زاہد کو 3 × 300 = 900 روپے اور آصف کو 600 روپے۔"
+      },
+      "feedback_wrong": {
+        "en": "5 parts: 1500 ÷ 5 = 300. Zahid has 3 parts: 3 × 300 = Rs 900.",
+        "ur": "5 حصے: 1500 ÷ 5 = 300۔ زاہد کے 3 حصے: 3 × 300 = 900 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 750,
+          "feedback": {
+            "en": "That is half. Zahid put in more, so he gets 3 of the 5 parts.",
+            "ur": "یہ آدھا ہے۔ زاہد نے زیادہ لگایا، اس لیے اسے 5 میں سے 3 حصے ملتے ہیں۔"
+          }
+        },
+        {
+          "answer": 600,
+          "feedback": {
+            "en": "Rs 600 is Asif's share (2 parts). Zahid has 3 parts.",
+            "ur": "600 روپے آصف کا حصہ ہے (2 حصے)۔ زاہد کے 3 حصے ہیں۔"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s7_school",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A school has 240 students; 96 are girls. Write the ratio of girls to boys in its simplest form.",
+        "ur": "ایک سکول میں 240 طلبہ ہیں؛ 96 لڑکیاں ہیں۔ لڑکیوں اور لڑکوں کی نسبت سادہ ترین شکل میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "2:3",
+      "accept": [
+        "2 to 3",
+        "2∶3"
+      ],
+      "hint": {
+        "en": "First find the boys: 240 − 96. Then simplify 96 : 144.",
+        "ur": "پہلے لڑکے معلوم کریں: 240 − 96۔ پھر 96 : 144 کو سادہ کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 144 boys, and 96 : 144 = 2 : 3 (both ÷ 48).",
+        "ur": "درست! 144 لڑکے، اور 96 : 144 = 2 : 3 (دونوں ÷ 48)۔"
+      },
+      "feedback_wrong": {
+        "en": "Boys: 240 − 96 = 144. 96 : 144: divide both by 48 to get 2 : 3.",
+        "ur": "لڑکے: 240 − 96 = 144۔ 96 : 144: دونوں کو 48 سے تقسیم کریں تو 2 : 3"
+      },
+      "common_wrong": [
+        {
+          "answer": "2:5",
+          "feedback": {
+            "en": "2 : 5 is girls to ALL students. The question asks girls to boys.",
+            "ur": "2 : 5 لڑکیوں اور تمام طلبہ کی نسبت ہے۔ سوال لڑکیوں اور لڑکوں کی نسبت پوچھتا ہے۔"
+          },
+          "misconception_id": "part_for_whole"
+        },
+        {
+          "answer": "3:2",
+          "feedback": {
+            "en": "That is boys to girls. Girls come first.",
+            "ur": "یہ لڑکوں اور لڑکیوں کی نسبت ہے۔ لڑکیاں پہلے ہیں۔"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s8_tree",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "At the same time of day, a 5 m pole has a 3 m shadow and a tree has a 12 m shadow. How tall is the tree, in m?",
+        "ur": "دن کے ایک ہی وقت میں 5 میٹر کے کھمبے کا سایہ 3 میٹر اور ایک درخت کا سایہ 12 میٹر ہے۔ درخت کتنے میٹر اونچا ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Shadow to height is the same: 3 : 5 :: 12 : ?",
+        "ur": "سایہ اور اونچائی کی نسبت ایک جیسی ہے: 3 : 5 :: 12 : ?"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 4 = 12, so the height is 5 × 4 = 20 m.",
+        "ur": "درست! 3 × 4 = 12، اس لیے اونچائی 5 × 4 = 20 میٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "3 : 5 :: 12 : ?. The shadow is 4 times longer, so the tree is 5 × 4 = 20 m.",
+        "ur": "3 : 5 :: 12 : ?۔ سایہ 4 گنا لمبا ہے، اس لیے درخت 5 × 4 = 20 میٹر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "The shadow is 4 times longer, not 9 m longer for the height. Multiply.",
+            "ur": "سایہ 4 گنا لمبا ہے؛ اونچائی میں 9 میٹر جمع نہ کریں۔ ضرب دیں۔"
+          },
+          "misconception_id": "additive_thinking"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "In a class, boys to girls is 3 : 4, and there are 21 boys. Kashif says: \"7 parts, 21 ÷ 7 = 3, so 4 × 3 = 12 girls.\" What went wrong?",
+        "ur": "ایک جماعت میں لڑکوں اور لڑکیوں کی نسبت 3 : 4 ہے، اور 21 لڑکے ہیں۔ کاشف کہتا ہے: \"7 حصے، 21 ÷ 7 = 3، اس لیے 4 × 3 = 12 لڑکیاں۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "share",
+          "text": {
+            "en": "21 is the boys (3 parts), not the whole class. One part is 21 ÷ 3 = 7, so 28 girls.",
+            "ur": "21 لڑکے ہیں (3 حصے)، پوری جماعت نہیں۔ ایک حصہ 21 ÷ 3 = 7، اس لیے 28 لڑکیاں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Check: 12 girls would be fewer than 21 boys, but 3 : 4 means more girls.",
+            "ur": "جی ہاں! جانچیں: 12 لڑکیاں 21 لڑکوں سے کم ہوں گی، لیکن 3 : 4 کا مطلب زیادہ لڑکیاں ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. He added the parts and shared.",
+            "ur": "کوئی غلطی نہیں۔ اس نے حصے جمع کر کے بانٹا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding the parts is for a total. 21 is only the boys' share.",
+            "ur": "حصے جمع کرنا کل کے لیے ہے۔ 21 صرف لڑکوں کا حصہ ہے۔"
+          },
+          "misconception_id": "share_vs_total"
+        },
+        {
+          "id": "order",
+          "text": {
+            "en": "He should use 4 : 3.",
+            "ur": "اسے 4 : 3 استعمال کرنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The order 3 : 4 is right (boys first). The mistake is treating 21 as the total.",
+            "ur": "ترتیب 3 : 4 ٹھیک ہے (لڑکے پہلے)۔ غلطی 21 کو کل سمجھنا ہے۔"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_choice",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? When do I add the parts of a ratio, and when don't I?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ نسبت کے حصے کب جمع کرتے ہیں، اور کب نہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: boys to girls is 3 : 4. Why do we divide by 7 when we know the whole class, but by 3 when we know only the boys?",
+        "ur": "اپنے الفاظ میں بتائیں: لڑکوں اور لڑکیوں کی نسبت 3 : 4 ہے۔ پوری جماعت معلوم ہو تو 7 سے تقسیم کیوں کرتے ہیں، اور صرف لڑکے معلوم ہوں تو 3 سے کیوں؟"
+      },
+      "key_idea": "The whole class is all 3 + 4 = 7 parts, so dividing it by 7 gives one part. The boys are only their own 3 parts, so dividing the boys by 3 gives one part. Always divide an amount by the number of parts it is made of.",
+      "levels": {
+        "got_it": "Says the whole class is 7 parts (3 + 4) while the boys are only 3 parts, so you divide each amount by the number of parts it contains.",
+        "partly": "Mentions 7 parts or 3 parts but does not link each amount with its own number of parts.",
+        "not_yet": "Says to always divide by 7, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "part",
+          "حص",
+          "hiss"
+        ],
+        [
+          "whole",
+          "total",
+          "class",
+          "all",
+          "کل",
+          "پوری",
+          "جماعت",
+          "kul",
+          "poori",
+          "jamat"
+        ],
+        [
+          "boys",
+          "only",
+          "3",
+          "لڑک",
+          "صرف",
+          "lark",
+          "sirf"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Divide each amount by the number of parts it is made of: the class is 7 parts, the boys are 3.",
+          "ur": "بہت خوب سمجھایا! ہر مقدار کو اس کے اپنے حصوں سے تقسیم کریں: جماعت 7 حصے ہے، لڑکے 3۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how many parts the whole class is, and how many parts the boys are.",
+          "ur": "اچھی شروعات! اب بتائیں کہ پوری جماعت کتنے حصے ہے، اور لڑکے کتنے حصے۔"
+        },
+        "not_yet": {
+          "en": "Think: in 3 : 4, how many parts are boys? How many parts are boys and girls together?",
+          "ur": "سوچیں: 3 : 4 میں لڑکے کتنے حصے ہیں؟ لڑکے اور لڑکیاں مل کر کتنے حصے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Ratio unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! نسبت کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has one question on each part of the unit: writing a ratio, simplest form, sharing, proportion and the unitary method. Read each one carefully and check that your answer makes sense.",
+        "ur": "اس چھوٹے ٹیسٹ میں باب کے ہر حصے سے ایک سوال ہے: نسبت لکھنا، سادہ ترین شکل، تقسیم، تناسب اور اکائی کا طریقہ۔ ہر سوال غور سے پڑھیں اور دیکھیں کہ جواب سمجھ میں آتا ہے۔"
+      }
+    },
+    {
+      "id": "u1_write",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.ratio.meaning",
+      "prompt": {
+        "en": "Test 1: A team has 7 boys and 9 girls. What is the ratio of girls to boys?",
+        "ur": "ٹیسٹ 1: ایک ٹیم میں 7 لڑکے اور 9 لڑکیاں ہیں۔ لڑکیوں اور لڑکوں کی نسبت کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "9 : 7",
+            "ur": "9 : 7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Girls first: 9 : 7.",
+            "ur": "جی ہاں! لڑکیاں پہلے: 9 : 7"
+          }
+        },
+        {
+          "id": "swapped",
+          "text": {
+            "en": "7 : 9",
+            "ur": "7 : 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is boys to girls. Girls come first.",
+            "ur": "یہ لڑکوں اور لڑکیوں کی نسبت ہے۔ لڑکیاں پہلے ہیں۔"
+          },
+          "misconception_id": "order_swapped"
+        },
+        {
+          "id": "whole",
+          "text": {
+            "en": "9 : 16",
+            "ur": "9 : 16"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "16 is the whole team. Compare girls with boys.",
+            "ur": "16 پوری ٹیم ہے۔ لڑکیوں کا موازنہ لڑکوں سے کریں۔"
+          },
+          "misconception_id": "part_for_whole"
+        }
+      ]
+    },
+    {
+      "id": "u2_simplest",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.ratio.equivalent",
+      "prompt": {
+        "en": "Test 2: Write 18 : 24 in its simplest form.",
+        "ur": "ٹیسٹ 2: 18 : 24 کو سادہ ترین شکل میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "3:4",
+      "accept": [
+        "3 to 4",
+        "3∶4"
+      ],
+      "hint": {
+        "en": "6 divides both 18 and 24.",
+        "ur": "6، 18 اور 24 دونوں کو تقسیم کرتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 18 : 24 = 3 : 4.",
+        "ur": "درست! 18 : 24 = 3 : 4"
+      },
+      "feedback_wrong": {
+        "en": "Divide both by 6: 18 ÷ 6 = 3 and 24 ÷ 6 = 4. So 3 : 4.",
+        "ur": "دونوں کو 6 سے تقسیم کریں: 18 ÷ 6 = 3 اور 24 ÷ 6 = 4۔ اس لیے 3 : 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "9:12",
+          "feedback": {
+            "en": "9 : 12 is equal, but 3 still divides both. Keep going.",
+            "ur": "9 : 12 برابر ہے، لیکن 3 اب بھی دونوں کو تقسیم کرتا ہے۔ آگے بڑھیں۔"
+          }
+        },
+        {
+          "answer": "6:8",
+          "feedback": {
+            "en": "6 : 8 is equal, but 2 still divides both. Keep going.",
+            "ur": "6 : 8 برابر ہے، لیکن 2 اب بھی دونوں کو تقسیم کرتا ہے۔ آگے بڑھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_sweets",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.ratio.share",
+      "prompt": {
+        "en": "Test 3: Share 56 sweets between Ayan and Mahnoor in the ratio 3 : 5. How many does Mahnoor get?",
+        "ur": "ٹیسٹ 3: 56 مٹھائیاں ایان اور ماہ نور میں 3 : 5 کی نسبت سے بانٹیں۔ ماہ نور کو کتنی ملیں گی؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 + 5 = 8 parts.",
+        "ur": "3 + 5 = 8 حصے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 56 ÷ 8 = 7, so Mahnoor gets 5 × 7 = 35.",
+        "ur": "درست! ایک حصہ 56 ÷ 8 = 7، اس لیے ماہ نور کو 5 × 7 = 35۔"
+      },
+      "feedback_wrong": {
+        "en": "8 parts: 56 ÷ 8 = 7. Mahnoor has 5 parts: 5 × 7 = 35.",
+        "ur": "8 حصے: 56 ÷ 8 = 7۔ ماہ نور کے 5 حصے: 5 × 7 = 35"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "That is half each. The ratio is 3 : 5.",
+            "ur": "یہ ہر ایک کو آدھا ہے۔ نسبت 3 : 5 ہے۔"
+          }
+        },
+        {
+          "answer": 21,
+          "feedback": {
+            "en": "21 is Ayan's share (3 parts). Mahnoor has 5.",
+            "ur": "21 ایان کا حصہ ہے (3 حصے)۔ ماہ نور کے 5 ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_proportion",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.ratio.proportion",
+      "prompt": {
+        "en": "Test 4: Find the missing term: 6 : 9 :: ? : 15",
+        "ur": "ٹیسٹ 4: غائب رکن معلوم کریں: 6 : 9 :: ? : 15"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Extremes = means: 6 × 15 = 9 × ?",
+        "ur": "طرفین = وسطین: 6 × 15 = 9 × ?"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 15 = 90, and 90 ÷ 9 = 10. Both ratios are 2 : 3.",
+        "ur": "درست! 6 × 15 = 90، اور 90 ÷ 9 = 10۔ دونوں نسبتیں 2 : 3 ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "6 × 15 = 90 = 9 × ?, so ? = 90 ÷ 9 = 10.",
+        "ur": "6 × 15 = 90 = 9 × ?، اس لیے ? = 90 ÷ 9 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "You added 6 because 9 + 6 = 15. Use extremes = means instead.",
+            "ur": "آپ نے 6 جمع کیا کیونکہ 9 + 6 = 15۔ اس کے بجائے طرفین = وسطین استعمال کریں۔"
+          },
+          "misconception_id": "additive_thinking"
+        }
+      ]
+    },
+    {
+      "id": "u5_apples",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.ratio.unitary_method",
+      "prompt": {
+        "en": "Test 5: 3 kg of apples cost Rs 540. How much do 5 kg cost, in rupees?",
+        "ur": "ٹیسٹ 5: 3 کلوگرام سیب 540 روپے کے ہیں۔ 5 کلوگرام کتنے روپے کے ہوں گے؟"
+      },
+      "answer": 900,
+      "checker": "numeric",
+      "hint": {
+        "en": "1 kg: 540 ÷ 3.",
+        "ur": "1 کلوگرام: 540 ÷ 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 1 kg is Rs 180, so 5 kg cost Rs 900.",
+        "ur": "درست! 1 کلوگرام 180 روپے، اس لیے 5 کلوگرام 900 روپے۔"
+      },
+      "feedback_wrong": {
+        "en": "540 ÷ 3 = 180 for 1 kg. 5 × 180 = Rs 900.",
+        "ur": "1 کلوگرام: 540 ÷ 3 = 180۔ 5 × 180 = 900 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 542,
+          "feedback": {
+            "en": "2 more kg don't cost Rs 2 more. Find 1 kg first.",
+            "ur": "2 کلوگرام زیادہ کی قیمت 2 روپے زیادہ نہیں۔ پہلے 1 کلوگرام معلوم کریں۔"
+          },
+          "misconception_id": "additive_thinking"
+        },
+        {
+          "answer": 2700,
+          "feedback": {
+            "en": "Rs 540 is for 3 kg. Divide by 3 first.",
+            "ur": "540 روپے 3 کلوگرام کے ہیں۔ پہلے 3 سے تقسیم کریں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the whole Ratio and Proportion unit. Shabash!",
+          "ur": "آپ نے نسبت اور تناسب کا پورا باب مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "For a ratio story, ask: what do I know, and what do I want? Total known: add the parts and share. One pair known: unitary method or proportion. Comparing: write the ratio in order and simplify. Check that the answer makes sense.",
+        "ur": "نسبت کی کہانی میں پوچھیں: مجھے کیا معلوم ہے، اور کیا چاہیے؟ کل معلوم: حصے جمع کر کے بانٹیں۔ ایک جوڑا معلوم: اکائی کا طریقہ یا تناسب۔ موازنہ: ترتیب سے نسبت لکھ کر سادہ کریں۔ جانچیں کہ جواب سمجھ میں آتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Divide an amount by the number of parts it is made of.",
+          "ur": "مقدار کو اس کے اپنے حصوں کی تعداد سے تقسیم کریں۔"
+        },
+        {
+          "en": "Ratios grow by ×, never by +.",
+          "ur": "نسبتیں × سے بڑھتی ہیں، کبھی + سے نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_paint",
+      "type": "apply",
+      "skill": "maths.ratio.word_problems",
+      "step": {
+        "id": "r_paint",
+        "type": "number",
+        "prompt": {
+          "en": "Paint is mixed blue to white in the ratio 2 : 5. Faiza uses 15 tins of white. How many tins of blue does she need?",
+          "ur": "رنگ نیلا اور سفید 2 : 5 کی نسبت میں ملایا جاتا ہے۔ فائزہ سفید رنگ کے 15 ڈبے استعمال کرتی ہے۔ اسے نیلے رنگ کے کتنے ڈبے چاہییں؟"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "The 15 white tins are 5 parts. How many tins is one part?",
+          "ur": "سفید کے 15 ڈبے 5 حصے ہیں۔ ایک حصہ کتنے ڈبے ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! One part is 15 ÷ 5 = 3, so blue is 2 × 3 = 6 tins.",
+          "ur": "درست! ایک حصہ 15 ÷ 5 = 3، اس لیے نیلا 2 × 3 = 6 ڈبے۔"
+        },
+        "feedback_wrong": {
+          "en": "White is 5 parts: 15 ÷ 5 = 3 tins each. Blue is 2 parts: 2 × 3 = 6.",
+          "ur": "سفید 5 حصے: 15 ÷ 5 = 3 ڈبے فی حصہ۔ نیلا 2 حصے: 2 × 3 = 6"
+        },
+        "common_wrong": [
+          {
+            "answer": 12,
+            "feedback": {
+              "en": "Taking 3 away keeps the gap, not the ratio. Find one part: 15 ÷ 5.",
+              "ur": "3 کم کرنے سے فرق رہتا ہے، نسبت نہیں۔ ایک حصہ معلوم کریں: 15 ÷ 5"
+            },
+            "misconception_id": "additive_thinking"
+          },
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "15 is only the white paint (5 parts), so blue is less than white.",
+              "ur": "15 صرف سفید رنگ ہے (5 حصے)، اس لیے نیلا سفید سے کم ہوگا۔"
+            },
+            "misconception_id": "share_vs_total"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_proportion",
+      "type": "apply",
+      "skill": "maths.ratio.word_problems",
+      "step": {
+        "id": "r_proportion",
+        "type": "number",
+        "prompt": {
+          "en": "A map shows 2 cm for every 5 km. Two villages are 14 cm apart on the map. How many km apart are they?",
+          "ur": "ایک نقشے پر ہر 5 کلومیٹر کے لیے 2 سینٹی میٹر ہیں۔ نقشے پر دو گاؤں 14 سینٹی میٹر دور ہیں۔ وہ کتنے کلومیٹر دور ہیں؟"
+        },
+        "answer": 35,
+        "checker": "numeric",
+        "hint": {
+          "en": "2 : 5 :: 14 : ?. What do you multiply 2 by to get 14?",
+          "ur": "2 : 5 :: 14 : ?۔ 2 کو کس عدد سے ضرب دیں تو 14 بنتا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 2 × 7 = 14, so 5 × 7 = 35 km.",
+          "ur": "درست! 2 × 7 = 14، اس لیے 5 × 7 = 35 کلومیٹر۔"
+        },
+        "feedback_wrong": {
+          "en": "2 : 5 :: 14 : ?. 2 × 7 = 14, so 5 × 7 = 35 km.",
+          "ur": "2 : 5 :: 14 : ?۔ 2 × 7 = 14، اس لیے 5 × 7 = 35 کلومیٹر۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 17,
+            "feedback": {
+              "en": "You added 12 because 2 + 12 = 14. Multiply instead: 2 × 7 = 14.",
+              "ur": "آپ نے 12 جمع کیا کیونکہ 2 + 12 = 14۔ اس کے بجائے ضرب دیں: 2 × 7 = 14"
+            },
+            "misconception_id": "additive_thinking"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Ratio and Proportion unit. No textbook text or exercises were used. Prices and amounts are round numbers for the sums.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-06. Fix the names and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: نسبت کے عملی سوالات (ratio word problems), منافع (profit).",
+    "The lesson teaches choosing the method (s3, s4) before solving: total known means share; one pair known means unitary method or proportion; comparing means write and simplify.",
+    "s11 to u5 are a short unit test, one question per earlier lesson. Each u-step is tagged with that lesson's skill (meaning, equivalent, share, proportion, unitary_method), so it counts as practice for that skill rather than for word problems.",
+    "The numbers were worked out in content/sources/g6-maths-06/ratio_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
