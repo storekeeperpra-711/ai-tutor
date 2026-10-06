@@ -342,16 +342,17 @@ LessonItem? _nextLesson(
   // Then the first new lesson, made for the student's age group, whose
   // prerequisites aren't gaps: not still being learned, and not taught by
   // another lesson the student hasn't done yet. A prerequisite no lesson
-  // teaches is never a gap: nothing in the app could close it, so one
-  // missed warm-up question must not block the lesson for ever. (Without
-  // lessons for their group yet, any lesson except the youngest children's.)
+  // for their age group teaches is never a gap: nothing the student will
+  // be given could close it, so one missed warm-up question must not block
+  // the lesson for ever. (Without lessons for their group yet, any lesson
+  // except the youngest children's.)
   var fitting = curriculum.lessons.where(
     (l) => tier == null || l.tier == tier.name,
   );
   if (fitting.isEmpty) {
     fitting = curriculum.lessons.where((l) => l.tier != AgeTier.early.name);
   }
-  final taught = {for (final l in curriculum.lessons) ...l.skills};
+  final taught = {for (final l in fitting) ...l.skills};
   for (final lesson in fitting) {
     if (positions[lesson.id] != null) continue;
     if (levelOf(lesson.mainSkill) != MasteryLevel.notStarted) continue;
