@@ -7,8 +7,10 @@ Scripts that write the Grade 6 Maths lessons of the Introduction to Algebra unit
 | `letters_for_numbers.py` | `g6-maths-07-letters-for-numbers` | `maths.algebra.variables` |
 | `substitution.py` | `g6-maths-07-substitution` | `maths.algebra.substitution` |
 | `like_terms.py` | `g6-maths-07-like-terms` | `maths.algebra.expressions_basic` |
+| `simple_equations.py` | `g6-maths-07-simple-equations` | `maths.algebra.simple_equations` |
+| `algebra_word_problems.py` | `g6-maths-07-algebra-word-problems` | `maths.algebra.word_problems` |
 
-Every answer, and every common wrong answer (like reading 3n as thirty-something), is worked out in Python and checked with `assert`, so no number is typed by hand. `common.py` has `value()`, which works out an expression such as `3n + 2` for given numbers; simplifications are checked by putting in many numbers. Typed expressions use the `text` checker, with `accept` listing other right ways to write them (4 + n, b6).
+Every answer, and every common wrong answer (like reading 3n as thirty-something), is worked out in Python and checked with `assert`, so no number is typed by hand. `common.py` has `value()`, which works out an expression such as `3n + 2` for given numbers; simplifications are checked by putting in many numbers. Typed expressions use the `text` checker, with `accept` listing other right ways to write them (4 + n, b6). Equations are solved by `solve()` in the scripts, which also checks there is only one answer. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 
 `maths.algebra.expressions_basic` is also the warm-up skill of the Grade 9 linear equations lesson, so this unit now teaches it.
 

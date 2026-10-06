@@ -1,0 +1,930 @@
+{
+  "id": "g6-maths-07-algebra-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Write and solve simple equations for real-life problems, and check the answer in the story.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Introduction to Algebra"
+    }
+  ],
+  "skills": [
+    "maths.algebra.word_problems"
+  ],
+  "title": {
+    "en": "Algebra word problems",
+    "ur": "الجبرا کے سوالات"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.simple_equations"
+    },
+    {
+      "skill": "maths.algebra.variables"
+    },
+    {
+      "skill": "maths.algebra.substitution"
+    },
+    {
+      "skill": "maths.algebra.expressions_basic"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "wrong_equation",
+      "description": "Writes the wrong operation from the words: 'buys 6 more' as 6s, or 'take away 7' as 7 − n."
+    },
+    {
+      "id": "same_operation",
+      "description": "Solves by doing the operation in the equation instead of its opposite."
+    },
+    {
+      "id": "answers_wrong_quantity",
+      "description": "Finds a number but not the one the question asks for (Ali's marbles instead of Omar's)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.word_problems": [
+      {
+        "id": "qb_equation",
+        "type": "recall",
+        "step": {
+          "id": "qb_equation",
+          "type": "choice",
+          "prompt": {
+            "en": "'A number times 4 is 28.' Which equation fits?",
+            "ur": "'ایک عدد کا 4 گنا 28 ہے۔' کون سی مساوات درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "times",
+              "text": {
+                "en": "4n = 28",
+                "ur": "4n = 28"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Times 4 is 4n. So n = 7.",
+                "ur": "جی ہاں! 4 گنا یعنی 4n۔ تو n = 7"
+              }
+            },
+            {
+              "id": "plus",
+              "text": {
+                "en": "n + 4 = 28",
+                "ur": "n + 4 = 28"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is 4 more, not 4 times. 4n = 28.",
+                "ur": "یہ 4 زیادہ ہے، 4 گنا نہیں۔ 4n = 28"
+              },
+              "misconception_id": "wrong_equation"
+            },
+            {
+              "id": "minus",
+              "text": {
+                "en": "n − 4 = 28",
+                "ur": "n − 4 = 28"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is 4 less. Times 4 is 4n = 28.",
+                "ur": "یہ 4 کم ہے۔ 4 گنا یعنی 4n = 28"
+              },
+              "misconception_id": "wrong_equation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Amna has 5 full packets of biscuits and 3 loose ones: 43 biscuits in all. How many are in each packet?",
+            "ur": "آمنہ کے پاس بسکٹ کے 5 بھرے پیکٹ اور 3 کھلے بسکٹ ہیں: کل 43 بسکٹ۔ ہر پیکٹ میں کتنے ہیں؟"
+          },
+          "answer": 8,
+          "checker": "numeric",
+          "hint": {
+            "en": "5p + 3 = 43. Take 3 away first.",
+            "ur": "5p + 3 = 43۔ پہلے 3 گھٹائیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 8 in each packet. Check: 5 × 8 + 3 = 43.",
+            "ur": "درست! ہر پیکٹ میں 8۔ جانچ: 5 × 8 + 3 = 43"
+          },
+          "feedback_wrong": {
+            "en": "5p + 3 = 43, so 5p = 40 and p = 8.",
+            "ur": "5p + 3 = 43، تو 5p = 40 اور p = 8"
+          },
+          "common_wrong": [
+            {
+              "answer": 40,
+              "feedback": {
+                "en": "40 is all the biscuits in packets. Each packet: 40 ÷ 5 = 8.",
+                "ur": "40 پیکٹوں کے سارے بسکٹ ہیں۔ ہر پیکٹ: 40 ÷ 5 = 8"
+              },
+              "misconception_id": "answers_wrong_quantity"
+            },
+            {
+              "answer": 9.2,
+              "feedback": {
+                "en": "Take the 3 loose ones away first: 5p = 40, p = 8.",
+                "ur": "پہلے 3 کھلے بسکٹ گھٹائیں: 5p = 40، p = 8"
+              },
+              "misconception_id": "same_operation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zain solves 2n + 5 = 25 and gets n = 15. What went wrong?",
+            "ur": "زین 2n + 5 = 25 حل کر کے n = 15 نکالتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "check",
+              "text": {
+                "en": "Check: 2 × 15 + 5 = 35, not 25. It should be n = 10.",
+                "ur": "جانچ: 2 × 15 + 5 = 35، نہ کہ 25۔ n = 10 ہونا چاہیے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 25 − 5 = 20, then 20 ÷ 2 = 10.",
+                "ur": "جی ہاں! 25 − 5 = 20، پھر 20 ÷ 2 = 10"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Put it back in: 2 × 15 + 5 = 35. The answer is n = 10.",
+                "ur": "واپس رکھیں: 2 × 15 + 5 = 35۔ جواب n = 10 ہے۔"
+              },
+              "misconception_id": "same_operation"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_steps",
+      "front": {
+        "en": "How do you solve a word problem with algebra?",
+        "ur": "الجبرا سے سوال کیسے حل کریں؟"
+      },
+      "back": {
+        "en": "1. Use a letter for the unknown. 2. Write an equation. 3. Solve it. 4. Check it in the story and answer in words.",
+        "ur": "1۔ نامعلوم کے لیے حرف لیں۔ 2۔ مساوات لکھیں۔ 3۔ حل کریں۔ 4۔ کہانی میں جانچیں اور الفاظ میں جواب دیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_shop",
+      "text": {
+        "en": "Next time someone buys several of the same thing, note the total cost and how many. Write an equation like 4n = 260 and solve it to find the price of one. Check with the shopkeeper's price!",
+        "ur": "اگلی بار جب کوئی ایک جیسی کئی چیزیں خریدے تو کل قیمت اور تعداد لکھ لیں۔ 4n = 260 جیسی مساوات لکھ کر ایک چیز کی قیمت نکالیں۔ دکاندار کی قیمت سے جانچیں!"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Unknown",
+      "ur": "نامعلوم"
+    },
+    {
+      "en": "Equation",
+      "ur": "مساوات"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Three notebooks cost 135 rupees. How much is one? Algebra can answer questions like this!",
+          "ur": "تین کاپیاں 135 روپے کی ہیں۔ ایک کتنے کی ہے؟ الجبرا ایسے سوالوں کا جواب دے سکتا ہے!"
+        }
+      },
+      "text": {
+        "en": "Today we turn stories into equations and solve them. First, a quick check.",
+        "ur": "آج ہم کہانیوں کو مساوات میں بدل کر حل کریں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.algebra.simple_equations",
+      "prompt": {
+        "en": "Solve x + 8 = 20. What is x?",
+        "ur": "x + 8 = 20 حل کریں۔ x کتنا ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 8 from both sides.",
+        "ur": "دونوں طرف سے 8 گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 12.",
+        "ur": "درست! x = 12"
+      },
+      "feedback_wrong": {
+        "en": "20 − 8 = 12, so x = 12.",
+        "ur": "20 − 8 = 12، اس لیے x = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "Check: 28 + 8 = 36. Take 8 away: 12.",
+            "ur": "جانچیں: 28 + 8 = 36۔ 8 گھٹائیں: 12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_steps",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Four steps: letter, equation, solve, check!",
+          "ur": "چار قدم: حرف، مساوات، حل، جانچ!"
+        }
+      },
+      "text": {
+        "en": "1. Choose a letter for the number you don't know. 2. Turn the words into an equation. 3. Solve it. 4. Check the answer makes sense in the story, and answer in words.",
+        "ur": "1۔ نامعلوم عدد کے لیے حرف چنیں۔ 2۔ الفاظ کو مساوات میں بدلیں۔ 3۔ اسے حل کریں۔ 4۔ جانچیں کہ جواب کہانی میں ٹھیک ہے، اور الفاظ میں جواب دیں۔"
+      }
+    },
+    {
+      "id": "s4_write",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ayesha has s stickers. She buys 6 more and now has 21. Which equation fits?",
+        "ur": "عائشہ کے پاس s اسٹیکر ہیں۔ وہ 6 اور خریدتی ہے اور اب اس کے پاس 21 ہیں۔ کون سی مساوات درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "plus",
+          "text": {
+            "en": "s + 6 = 21",
+            "ur": "s + 6 = 21"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 6 more means + 6.",
+            "ur": "جی ہاں! 6 اور یعنی + 6"
+          }
+        },
+        {
+          "id": "times",
+          "text": {
+            "en": "6s = 21",
+            "ur": "6s = 21"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6s means 6 times as many. She bought 6 more: s + 6 = 21.",
+            "ur": "6s یعنی 6 گنا۔ اس نے 6 اور خریدے: s + 6 = 21"
+          },
+          "misconception_id": "wrong_equation"
+        },
+        {
+          "id": "minus",
+          "text": {
+            "en": "s − 6 = 21",
+            "ur": "s − 6 = 21"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Buying adds stickers: s + 6 = 21.",
+            "ur": "خریدنے سے اسٹیکر بڑھتے ہیں: s + 6 = 21"
+          },
+          "misconception_id": "wrong_equation"
+        }
+      ]
+    },
+    {
+      "id": "s5_stickers",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve s + 6 = 21. How many stickers did Ayesha have at first?",
+        "ur": "s + 6 = 21 حل کریں۔ شروع میں عائشہ کے پاس کتنے اسٹیکر تھے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 6 from both sides.",
+        "ur": "دونوں طرف سے 6 گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 stickers. Check: 15 + 6 = 21.",
+        "ur": "درست! 15 اسٹیکر۔ جانچ: 15 + 6 = 21"
+      },
+      "feedback_wrong": {
+        "en": "21 − 6 = 15 stickers.",
+        "ur": "21 − 6 = 15 اسٹیکر"
+      },
+      "common_wrong": [
+        {
+          "answer": 27,
+          "feedback": {
+            "en": "Check: 27 + 6 = 33, not 21. Take 6 away: 15.",
+            "ur": "جانچیں: 27 + 6 = 33، نہ کہ 21۔ 6 گھٹائیں: 15"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s6_notebooks",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "3 notebooks cost 135 rupees. Write 3n = 135 and find n, the price of one notebook.",
+        "ur": "3 کاپیاں 135 روپے کی ہیں۔ 3n = 135 لکھیں اور n یعنی ایک کاپی کی قیمت معلوم کریں۔"
+      },
+      "answer": 45,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide both sides by 3.",
+        "ur": "دونوں طرف 3 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 45 rupees. Check: 3 × 45 = 135.",
+        "ur": "درست! 45 روپے۔ جانچ: 3 × 45 = 135"
+      },
+      "feedback_wrong": {
+        "en": "135 ÷ 3 = 45 rupees.",
+        "ur": "135 ÷ 3 = 45 روپے"
+      },
+      "common_wrong": [
+        {
+          "answer": 132,
+          "feedback": {
+            "en": "3n is 3 × n, so divide: 135 ÷ 3 = 45.",
+            "ur": "3n یعنی 3 × n، اس لیے تقسیم: 135 ÷ 3 = 45"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s7_age",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal doubles his age and adds 4. He gets 30. Write 2a + 4 = 30 and find his age a.",
+        "ur": "بلال اپنی عمر دگنی کر کے 4 جمع کرتا ہے تو 30 آتا ہے۔ 2a + 4 = 30 لکھیں اور اس کی عمر a معلوم کریں۔"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 4 from both sides first, then divide by 2.",
+        "ur": "پہلے دونوں طرف سے 4 گھٹائیں، پھر 2 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Bilal is 13. Check: 2 × 13 + 4 = 30.",
+        "ur": "درست! بلال 13 سال کا ہے۔ جانچ: 2 × 13 + 4 = 30"
+      },
+      "feedback_wrong": {
+        "en": "2a = 30 − 4 = 26, so a = 13.",
+        "ur": "2a = 30 − 4 = 26، اس لیے a = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 17,
+          "feedback": {
+            "en": "Take the 4 away, don't add it: 2a = 26, a = 13.",
+            "ur": "4 جمع نہیں، گھٹائیں: 2a = 26، a = 13"
+          },
+          "misconception_id": "same_operation"
+        },
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "That is 2a, double his age. Halve it: 13.",
+            "ur": "یہ 2a ہے، دگنی عمر۔ آدھا کریں: 13"
+          },
+          "misconception_id": "answers_wrong_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s8_together",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ali has 5 more marbles than Omar. Together they have 31. Call Omar's marbles o, so o + o + 5 = 31. How many does OMAR have?",
+        "ur": "علی کے پاس عمر سے 5 کنچے زیادہ ہیں۔ دونوں کے پاس مل کر 31 ہیں۔ عمر کے کنچوں کو o کہیں، تو o + o + 5 = 31۔ عمر کے پاس کتنے ہیں؟"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "o + o is 2o. Then 2o + 5 = 31.",
+        "ur": "o + o یعنی 2o۔ پھر 2o + 5 = 31"
+      },
+      "feedback_correct": {
+        "en": "Right! Omar has 13 and Ali has 18. Check: 13 + 18 = 31.",
+        "ur": "درست! عمر کے 13 اور علی کے 18۔ جانچ: 13 + 18 = 31"
+      },
+      "feedback_wrong": {
+        "en": "2o + 5 = 31, so 2o = 26 and o = 13.",
+        "ur": "2o + 5 = 31، تو 2o = 26 اور o = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "18 is Ali's marbles. The question asks for Omar's: 13.",
+            "ur": "18 علی کے کنچے ہیں۔ سوال عمر کے بارے میں ہے: 13"
+          },
+          "misconception_id": "answers_wrong_quantity"
+        },
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "That is 2o. Halve it: Omar has 13.",
+            "ur": "یہ 2o ہے۔ آدھا کریں: عمر کے 13"
+          },
+          "misconception_id": "answers_wrong_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "'I think of a number and take away 7. I get 12.' Sana writes 7 − n = 12. What went wrong?",
+        "ur": "'میں ایک عدد سوچ کر اس میں سے 7 گھٹاتی ہوں۔ 12 آتا ہے۔' ثنا 7 − n = 12 لکھتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "order",
+          "text": {
+            "en": "Start with the number: n − 7 = 12, so n = 19.",
+            "ur": "عدد سے شروع کریں: n − 7 = 12، تو n = 19"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Check: 19 − 7 = 12.",
+            "ur": "جی ہاں! جانچ: 19 − 7 = 12"
+          }
+        },
+        {
+          "id": "plus",
+          "text": {
+            "en": "It should be n + 7 = 12.",
+            "ur": "یہ n + 7 = 12 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Take away means −. Start with the number: n − 7 = 12.",
+            "ur": "گھٹانا یعنی −۔ عدد سے شروع کریں: n − 7 = 12"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 − n takes the number from 7. It should be n − 7 = 12, so n = 19.",
+            "ur": "7 − n میں عدد کو 7 سے گھٹاتے ہیں۔ یہ n − 7 = 12 ہونا چاہیے، تو n = 19"
+          },
+          "misconception_id": "wrong_equation"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why should we check our answer in the story, not just in the equation? Can you teach me?",
+          "ur": "ہمیں اپنا جواب صرف مساوات میں نہیں، کہانی میں بھی کیوں جانچنا چاہیے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is it good to check your answer in the story at the end?",
+        "ur": "اپنے الفاظ میں بتائیں: آخر میں جواب کو کہانی میں جانچنا کیوں اچھا ہے؟"
+      },
+      "key_idea": "The equation might have been written wrongly, or we might have found a different quantity from the one asked. Putting the answer back into the story catches both mistakes and shows the answer makes sense.",
+      "levels": {
+        "got_it": "Explains that checking in the story catches a wrong equation or answering the wrong quantity, and shows the answer makes sense.",
+        "partly": "Says checking finds mistakes, without saying which kind or why the story matters.",
+        "not_yet": "Gives no reason, or says checking isn't needed."
+      },
+      "keywords": [
+        [
+          "check",
+          "جانچ",
+          "jaanch"
+        ],
+        [
+          "story",
+          "question",
+          "کہانی",
+          "سوال",
+          "sense",
+          "ٹھیک"
+        ],
+        [
+          "wrong",
+          "mistake",
+          "غلط",
+          "غلطی",
+          "ghalti"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The story check catches a wrong equation or a wrong answer.",
+          "ur": "بہت خوب! کہانی میں جانچ غلط مساوات یا غلط جواب پکڑ لیتی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Think of Ali and Omar: what mistake would the story check catch?",
+          "ur": "اچھی شروعات! علی اور عمر کا سوچیں: کہانی میں جانچ کون سی غلطی پکڑتی؟"
+        },
+        "not_yet": {
+          "en": "Remember Ali and Omar: 18 solved the sum but answered about the wrong boy. How could we have spotted that?",
+          "ur": "علی اور عمر یاد کریں: 18 بھی ایک جواب تھا مگر غلط لڑکے کا۔ ہم یہ کیسے پکڑ سکتے تھے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole algebra unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! الجبرا کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on writing expressions, substitution, like terms, equations and a word problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں عبارت لکھنے، قیمت رکھنے، یکساں رقوم، مساوات اور ایک کہانی والے سوال ہیں۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_write",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.algebra.variables",
+      "prompt": {
+        "en": "Test 1: Write an expression for '4 times t'.",
+        "ur": "ٹیسٹ 1: 't کا 4 گنا' کی عبارت لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "4t",
+      "accept": [
+        "4*t",
+        "t*4",
+        "t4"
+      ],
+      "hint": {
+        "en": "Number first, no × sign.",
+        "ur": "عدد پہلے، × کے بغیر۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4t.",
+        "ur": "درست! 4t"
+      },
+      "feedback_wrong": {
+        "en": "4 × t = 4t.",
+        "ur": "4 × t = 4t"
+      },
+      "common_wrong": [
+        {
+          "answer": "t + 4",
+          "feedback": {
+            "en": "That is 4 more. 4 times t is 4t.",
+            "ur": "یہ 4 زیادہ ہے۔ t کا 4 گنا 4t ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_substitute",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.algebra.substitution",
+      "prompt": {
+        "en": "Test 2: Find the value of 5x − 2 when x = 3.",
+        "ur": "ٹیسٹ 2: جب x = 3 ہو تو 5x − 2 کی قیمت معلوم کریں۔"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 × 3 first, then take away 2.",
+        "ur": "پہلے 5 × 3، پھر 2 گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 − 2 = 13.",
+        "ur": "درست! 15 − 2 = 13"
+      },
+      "feedback_wrong": {
+        "en": "5 × 3 = 15, then 15 − 2 = 13.",
+        "ur": "5 × 3 = 15، پھر 15 − 2 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 51,
+          "feedback": {
+            "en": "5x is 5 × x, not 53. 15 − 2 = 13.",
+            "ur": "5x یعنی 5 × x، نہ کہ 53۔ 15 − 2 = 13"
+          }
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "Multiply first: 5 × 3 = 15, then − 2 = 13.",
+            "ur": "پہلے ضرب: 5 × 3 = 15، پھر − 2 = 13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_simplify",
+      "type": "text_check",
+      "question_type": "apply",
+      "skill": "maths.algebra.expressions_basic",
+      "prompt": {
+        "en": "Test 3: Simplify 6a + 2 + a.",
+        "ur": "ٹیسٹ 3: 6a + 2 + a کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "7a + 2",
+      "accept": [
+        "2 + 7a"
+      ],
+      "hint": {
+        "en": "a on its own is 1a. The 2 stays.",
+        "ur": "اکیلا a یعنی 1a۔ 2 ویسے ہی رہے گا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7a + 2.",
+        "ur": "درست! 7a + 2"
+      },
+      "feedback_wrong": {
+        "en": "6a + a = 7a, and the 2 stays: 7a + 2.",
+        "ur": "6a + a = 7a، اور 2 ویسے ہی: 7a + 2"
+      },
+      "common_wrong": [
+        {
+          "answer": "9a",
+          "feedback": {
+            "en": "2 has no letter, so it stays apart: 7a + 2.",
+            "ur": "2 میں حرف نہیں، اس لیے الگ رہتا ہے: 7a + 2"
+          }
+        },
+        {
+          "answer": "6a + 2",
+          "feedback": {
+            "en": "Don't forget the last a (1a): 7a + 2.",
+            "ur": "آخری a نہ بھولیں (1a): 7a + 2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_equation",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.algebra.simple_equations",
+      "prompt": {
+        "en": "Test 4: Solve 2x + 3 = 15. What is x?",
+        "ur": "ٹیسٹ 4: 2x + 3 = 15 حل کریں۔ x کتنا ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 3 from both sides, then divide by 2.",
+        "ur": "دونوں طرف سے 3 گھٹائیں، پھر 2 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 6. Check: 2 × 6 + 3 = 15.",
+        "ur": "درست! x = 6۔ جانچ: 2 × 6 + 3 = 15"
+      },
+      "feedback_wrong": {
+        "en": "2x = 15 − 3 = 12, so x = 6.",
+        "ur": "2x = 15 − 3 = 12، اس لیے x = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Take the 3 away, don't add it: 2x = 12, x = 6.",
+            "ur": "3 جمع نہیں، گھٹائیں: 2x = 12، x = 6"
+          }
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That is 2x. Divide by 2: x = 6.",
+            "ur": "یہ 2x ہے۔ 2 سے تقسیم کریں: x = 6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_taxi",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: A taxi charges 50 rupees plus 20 rupees for each km. A ride costs 210 rupees. Write 50 + 20k = 210. How many km was the ride?",
+        "ur": "ٹیسٹ 5: ٹیکسی 50 روپے اور ہر کلومیٹر کے 20 روپے لیتی ہے۔ ایک سفر 210 روپے کا ہوا۔ 50 + 20k = 210 لکھیں۔ سفر کتنے کلومیٹر کا تھا؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 50 from both sides, then divide by 20.",
+        "ur": "دونوں طرف سے 50 گھٹائیں، پھر 20 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 km. Check: 50 + 20 × 8 = 210.",
+        "ur": "درست! 8 کلومیٹر۔ جانچ: 50 + 20 × 8 = 210"
+      },
+      "feedback_wrong": {
+        "en": "20k = 210 − 50 = 160, so k = 8 km.",
+        "ur": "20k = 210 − 50 = 160، اس لیے k = 8 کلومیٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 160,
+          "feedback": {
+            "en": "That is 20k, the cost of the km. Divide by 20: 8 km.",
+            "ur": "یہ 20k ہے، کلومیٹر کی قیمت۔ 20 سے تقسیم کریں: 8 کلومیٹر"
+          },
+          "misconception_id": "answers_wrong_quantity"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Take away the 50 first: 160 ÷ 20 = 8.",
+            "ur": "پہلے 50 گھٹائیں: 160 ÷ 20 = 8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the algebra unit! Well done!",
+          "ur": "آپ نے الجبرا کا باب مکمل کر لیا! شاباش!"
+        }
+      },
+      "text": {
+        "en": "Use a letter for the unknown, turn the words into an equation, solve it by doing the same to both sides, then check in the story and answer the question that was asked.",
+        "ur": "نامعلوم کے لیے حرف لیں، الفاظ کو مساوات میں بدلیں، دونوں طرف ایک جیسا کر کے حل کریں، پھر کہانی میں جانچیں اور وہی جواب دیں جو پوچھا گیا ہے۔"
+      },
+      "points": [
+        {
+          "en": "'More' is +, 'less' or 'take away' is −, 'times' or 'each' is ×.",
+          "ur": "'زیادہ' یعنی +، 'کم' یا 'گھٹانا' یعنی −، 'گنا' یا 'ہر ایک' یعنی ×"
+        },
+        {
+          "en": "Answer the question asked: Omar's marbles, not Ali's.",
+          "ur": "وہی جواب دیں جو پوچھا گیا: عمر کے کنچے، علی کے نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_plus",
+      "type": "apply",
+      "skill": "maths.algebra.word_problems",
+      "step": {
+        "id": "r_plus",
+        "type": "number",
+        "prompt": {
+          "en": "A number plus 15 is 40. What is the number?",
+          "ur": "ایک عدد جمع 15 برابر 40 ہے۔ وہ عدد کیا ہے؟"
+        },
+        "answer": 25,
+        "checker": "numeric",
+        "hint": {
+          "en": "n + 15 = 40. Take 15 from both sides.",
+          "ur": "n + 15 = 40۔ دونوں طرف سے 15 گھٹائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 25.",
+          "ur": "درست! 25"
+        },
+        "feedback_wrong": {
+          "en": "40 − 15 = 25.",
+          "ur": "40 − 15 = 25"
+        },
+        "common_wrong": [
+          {
+            "answer": 55,
+            "feedback": {
+              "en": "Check: 55 + 15 = 70. Take 15 away: 25.",
+              "ur": "جانچیں: 55 + 15 = 70۔ 15 گھٹائیں: 25"
+            },
+            "misconception_id": "same_operation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_bags",
+      "type": "recall",
+      "skill": "maths.algebra.word_problems",
+      "step": {
+        "id": "r_bags",
+        "type": "number",
+        "prompt": {
+          "en": "7 equal bags hold 84 mangoes. How many mangoes are in each bag?",
+          "ur": "7 برابر تھیلوں میں 84 آم ہیں۔ ہر تھیلے میں کتنے آم ہیں؟"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "7b = 84. Divide both sides by 7.",
+          "ur": "7b = 84۔ دونوں طرف 7 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 12 mangoes.",
+          "ur": "درست! 12 آم"
+        },
+        "feedback_wrong": {
+          "en": "84 ÷ 7 = 12.",
+          "ur": "84 ÷ 7 = 12"
+        },
+        "common_wrong": [
+          {
+            "answer": 77,
+            "feedback": {
+              "en": "7b is 7 × b, so divide: 84 ÷ 7 = 12.",
+              "ur": "7b یعنی 7 × b، اس لیے تقسیم: 84 ÷ 7 = 12"
+            },
+            "misconception_id": "same_operation"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Introduction to Algebra unit. No textbook text or exercises were used.",
+    "Each problem follows four steps: letter, equation, solve, check in the story. Step s8 checks that the child answers the quantity asked for.",
+    "Steps u1 to u5 are a short unit test; each is tagged with the skill of the lesson it comes from.",
+    "The numbers were worked out in content/sources/g6-maths-07/algebra_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

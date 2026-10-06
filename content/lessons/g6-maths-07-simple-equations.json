@@ -1,0 +1,755 @@
+{
+  "id": "g6-maths-07-simple-equations",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve simple one-step and two-step equations by doing the same to both sides, and check the answer.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Introduction to Algebra"
+    }
+  ],
+  "skills": [
+    "maths.algebra.simple_equations"
+  ],
+  "title": {
+    "en": "Simple equations",
+    "ur": "سادہ مساوات"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.substitution"
+    },
+    {
+      "skill": "maths.algebra.expressions_basic"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "same_operation",
+      "description": "Does the operation in the equation instead of its opposite: x + 5 = 12 gives x = 17."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Undoes multiplying by subtracting: 3x = 18 gives x = 15."
+    },
+    {
+      "id": "two_step_order",
+      "description": "In a two-step equation, divides before taking away the number: 2x + 1 = 9 gives x = 4.5 or 5."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.simple_equations": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.simple_equations": [
+      {
+        "id": "qb_recall",
+        "type": "recall",
+        "step": {
+          "id": "qb_recall",
+          "type": "choice",
+          "prompt": {
+            "en": "Which value of x makes x + 3 = 10 true?",
+            "ur": "x کی کون سی قیمت x + 3 = 10 کو درست بناتی ہے؟"
+          },
+          "options": [
+            {
+              "id": "seven",
+              "text": {
+                "en": "x = 7",
+                "ur": "x = 7"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 7 + 3 = 10.",
+                "ur": "جی ہاں! 7 + 3 = 10"
+              }
+            },
+            {
+              "id": "thirteen",
+              "text": {
+                "en": "x = 13",
+                "ur": "x = 13"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "13 + 3 = 16, not 10. Take 3 away: x = 7.",
+                "ur": "13 + 3 = 16، نہ کہ 10۔ 3 گھٹائیں: x = 7"
+              },
+              "misconception_id": "same_operation"
+            },
+            {
+              "id": "thirty",
+              "text": {
+                "en": "x = 30",
+                "ur": "x = 30"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "30 + 3 = 33. Take 3 from 10: x = 7.",
+                "ur": "30 + 3 = 33۔ 10 میں سے 3 گھٹائیں: x = 7"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Solve 5k = 35. What is k?",
+            "ur": "5k = 35 حل کریں۔ k کتنا ہے؟"
+          },
+          "answer": 7,
+          "checker": "numeric",
+          "hint": {
+            "en": "5 times what makes 35? Divide both sides by 5.",
+            "ur": "5 ضرب کیا 35 بنتا ہے؟ دونوں طرف 5 سے تقسیم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! k = 7. Check: 5 × 7 = 35.",
+            "ur": "درست! k = 7۔ جانچ: 5 × 7 = 35"
+          },
+          "feedback_wrong": {
+            "en": "35 ÷ 5 = 7, so k = 7.",
+            "ur": "35 ÷ 5 = 7، اس لیے k = 7"
+          },
+          "common_wrong": [
+            {
+              "answer": 30,
+              "feedback": {
+                "en": "5k means 5 × k, so divide, don't subtract: 35 ÷ 5 = 7.",
+                "ur": "5k یعنی 5 × k، اس لیے تفریق نہیں تقسیم: 35 ÷ 5 = 7"
+              },
+              "misconception_id": "wrong_inverse"
+            },
+            {
+              "answer": 175,
+              "feedback": {
+                "en": "Undo × 5 by dividing: 35 ÷ 5 = 7.",
+                "ur": "× 5 کو تقسیم سے الٹیں: 35 ÷ 5 = 7"
+              },
+              "misconception_id": "same_operation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hina solves n − 3 = 8 and gets n = 5. What went wrong?",
+            "ur": "حنا n − 3 = 8 حل کر کے n = 5 نکالتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "add",
+              "text": {
+                "en": "She should add 3 to both sides: n = 11.",
+                "ur": "اسے دونوں طرف 3 جمع کرنا چاہیے: n = 11"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Check: 11 − 3 = 8. And 5 − 3 = 2, not 8.",
+                "ur": "جی ہاں! جانچ: 11 − 3 = 8۔ اور 5 − 3 = 2، نہ کہ 8"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check: 5 − 3 = 2, not 8. Add 3 to both sides: n = 11.",
+                "ur": "جانچیں: 5 − 3 = 2، نہ کہ 8۔ دونوں طرف 3 جمع کریں: n = 11"
+              },
+              "misconception_id": "same_operation"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_balance",
+      "front": {
+        "en": "How do you solve an equation?",
+        "ur": "مساوات کیسے حل کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Keep it balanced: do the opposite operation to both sides. x + 5 = 12: take 5 from both sides, x = 7.",
+        "ur": "توازن رکھیں: دونوں طرف الٹا عمل کریں۔ x + 5 = 12: دونوں طرف سے 5 گھٹائیں، x = 7"
+      }
+    },
+    {
+      "id": "f_check",
+      "front": {
+        "en": "How do you check an answer?",
+        "ur": "جواب کیسے جانچیں؟"
+      },
+      "back": {
+        "en": "Put it back in. x = 7 in x + 5 = 12: 7 + 5 = 12. True!",
+        "ur": "اسے واپس رکھیں۔ x + 5 = 12 میں x = 7: 7 + 5 = 12۔ درست!"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_mystery",
+      "text": {
+        "en": "Play 'think of a number' with someone at home: they think of a number, double it and add 3, and tell you the result. Write an equation like 2n + 3 = 17 and solve it to find their number.",
+        "ur": "گھر میں کسی کے ساتھ 'کوئی عدد سوچو' کھیلیں: وہ عدد سوچیں، اسے دگنا کر کے 3 جمع کریں، اور نتیجہ بتائیں۔ 2n + 3 = 17 جیسی مساوات لکھ کر حل کریں اور ان کا عدد معلوم کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Equation",
+      "ur": "مساوات"
+    },
+    {
+      "en": "Solve",
+      "ur": "حل کرنا"
+    },
+    {
+      "en": "Both sides",
+      "ur": "دونوں طرف"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I'm thinking of a number. I add 5 and get 12. Can you find my number?",
+          "ur": "میں نے ایک عدد سوچا ہے۔ اس میں 5 جمع کیا تو 12 آیا۔ کیا آپ میرا عدد ڈھونڈ سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "We can write this as an equation: x + 5 = 12. Today we solve equations like this. First, a quick check.",
+        "ur": "اسے ہم مساوات کی شکل میں لکھ سکتے ہیں: x + 5 = 12۔ آج ہم ایسی مساواتیں حل کریں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.algebra.expressions_basic",
+      "prompt": {
+        "en": "Simplify 5y + 2y.",
+        "ur": "5y + 2y کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "7y",
+      "accept": [
+        "7*y",
+        "y7"
+      ],
+      "hint": {
+        "en": "Same letter: add the numbers.",
+        "ur": "ایک ہی حرف: اعداد جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7y.",
+        "ur": "درست! 7y"
+      },
+      "feedback_wrong": {
+        "en": "5y + 2y = 7y.",
+        "ur": "5y + 2y = 7y"
+      },
+      "common_wrong": [
+        {
+          "answer": "7",
+          "feedback": {
+            "en": "Keep the letter: 7y.",
+            "ur": "حرف رکھیں: 7y"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_balance",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "An equation is like a balance. Keep both sides equal!",
+          "ur": "مساوات ترازو کی طرح ہے۔ دونوں پلڑے برابر رکھیں!"
+        }
+      },
+      "text": {
+        "en": "x + 5 = 12 says both sides weigh the same. To get x alone, undo the + 5 by taking 5 from BOTH sides: x = 12 − 5 = 7. Undo + with −, − with +, × with ÷, and ÷ with ×. Then check: 7 + 5 = 12.",
+        "ur": "x + 5 = 12 کہتی ہے دونوں طرف برابر ہیں۔ x کو اکیلا کرنے کے لیے + 5 کو الٹیں، دونوں طرف سے 5 گھٹا کر: x = 12 − 5 = 7۔ + کو − سے، − کو + سے، × کو ÷ سے، اور ÷ کو × سے الٹیں۔ پھر جانچیں: 7 + 5 = 12"
+      }
+    },
+    {
+      "id": "s4_add",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve x + 5 = 12. What is x?",
+        "ur": "x + 5 = 12 حل کریں۔ x کتنا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 5 from both sides.",
+        "ur": "دونوں طرف سے 5 گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 7. Check: 7 + 5 = 12.",
+        "ur": "درست! x = 7۔ جانچ: 7 + 5 = 12"
+      },
+      "feedback_wrong": {
+        "en": "12 − 5 = 7, so x = 7.",
+        "ur": "12 − 5 = 7، اس لیے x = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 17,
+          "feedback": {
+            "en": "Check: 17 + 5 = 22, not 12. Undo + 5 by taking 5 away: 7.",
+            "ur": "جانچیں: 17 + 5 = 22، نہ کہ 12۔ + 5 کو 5 گھٹا کر الٹیں: 7"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s5_subtract",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve y − 4 = 9. What is y?",
+        "ur": "y − 4 = 9 حل کریں۔ y کتنا ہے؟"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Undo − 4 by adding 4 to both sides.",
+        "ur": "− 4 کو دونوں طرف 4 جمع کر کے الٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! y = 13. Check: 13 − 4 = 9.",
+        "ur": "درست! y = 13۔ جانچ: 13 − 4 = 9"
+      },
+      "feedback_wrong": {
+        "en": "9 + 4 = 13, so y = 13.",
+        "ur": "9 + 4 = 13، اس لیے y = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "Check: 5 − 4 = 1, not 9. Add 4 to both sides: 13.",
+            "ur": "جانچیں: 5 − 4 = 1، نہ کہ 9۔ دونوں طرف 4 جمع کریں: 13"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s6_times",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 3x = 18. What is x?",
+        "ur": "3x = 18 حل کریں۔ x کتنا ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "3x means 3 × x. Undo it by dividing both sides by 3.",
+        "ur": "3x یعنی 3 × x۔ دونوں طرف 3 سے تقسیم کر کے الٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 6. Check: 3 × 6 = 18.",
+        "ur": "درست! x = 6۔ جانچ: 3 × 6 = 18"
+      },
+      "feedback_wrong": {
+        "en": "18 ÷ 3 = 6, so x = 6.",
+        "ur": "18 ÷ 3 = 6، اس لیے x = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "3x is 3 × x, so divide, don't subtract: 18 ÷ 3 = 6.",
+            "ur": "3x یعنی 3 × x، اس لیے تفریق نہیں تقسیم: 18 ÷ 3 = 6"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 54,
+          "feedback": {
+            "en": "Undo × 3 by dividing: 18 ÷ 3 = 6.",
+            "ur": "× 3 کو تقسیم سے الٹیں: 18 ÷ 3 = 6"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s7_divide",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve m ÷ 4 = 5. What is m?",
+        "ur": "m ÷ 4 = 5 حل کریں۔ m کتنا ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Undo ÷ 4 by multiplying both sides by 4.",
+        "ur": "÷ 4 کو دونوں طرف 4 سے ضرب دے کر الٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! m = 20. Check: 20 ÷ 4 = 5.",
+        "ur": "درست! m = 20۔ جانچ: 20 ÷ 4 = 5"
+      },
+      "feedback_wrong": {
+        "en": "5 × 4 = 20, so m = 20.",
+        "ur": "5 × 4 = 20، اس لیے m = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Undo ÷ 4 by multiplying, not adding: 5 × 4 = 20.",
+            "ur": "÷ 4 کو جمع سے نہیں، ضرب سے الٹیں: 5 × 4 = 20"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "Check: 1 ÷ 4 is not 5. Multiply: 5 × 4 = 20.",
+            "ur": "جانچیں: 1 ÷ 4 پانچ نہیں۔ ضرب دیں: 5 × 4 = 20"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s8_two_step",
+      "type": "text_check",
+      "question_type": "apply",
+      "checker": "linear_equation",
+      "expected": "2x + 1 = 9",
+      "multiline": true,
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Two steps now! Undo the + 1 first, then the × 2.",
+          "ur": "اب دو قدم! پہلے + 1 کو الٹیں، پھر × 2 کو۔"
+        }
+      },
+      "prompt": {
+        "en": "Solve 2x + 1 = 9. Write each step on a new line, ending with x = your answer.",
+        "ur": "2x + 1 = 9 حل کریں۔ ہر قدم نئی سطر میں لکھیں، اور آخر میں x = آپ کا جواب۔"
+      },
+      "hint": {
+        "en": "Take 1 from both sides: 2x = 8. Then divide both sides by 2.",
+        "ur": "دونوں طرف سے 1 گھٹائیں: 2x = 8۔ پھر دونوں طرف 2 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! x = 4. Check: 2 × 4 + 1 = 9.",
+        "ur": "شاباش! x = 4۔ جانچ: 2 × 4 + 1 = 9"
+      },
+      "feedback_wrong": {
+        "en": "2x + 1 = 9. Take 1 from both sides: 2x = 8. Divide both sides by 2: x = 4.",
+        "ur": "2x + 1 = 9۔ دونوں طرف سے 1 گھٹائیں: 2x = 8۔ دونوں طرف 2 سے تقسیم کریں: x = 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "x = 5",
+          "feedback": {
+            "en": "Take the 1 away, don't add it: 2x = 8, so x = 4. Check: 2 × 5 + 1 = 11, not 9.",
+            "ur": "1 جمع نہیں، گھٹائیں: 2x = 8، اس لیے x = 4۔ جانچ: 2 × 5 + 1 = 11، نہ کہ 9"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ahmed solves x + 6 = 10 and gets x = 16. What went wrong?",
+        "ur": "احمد x + 6 = 10 حل کر کے x = 16 نکالتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "undo",
+          "text": {
+            "en": "He added 6 instead of taking it away. x = 4.",
+            "ur": "اس نے 6 گھٹانے کی بجائے جمع کیا۔ x = 4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Check: 4 + 6 = 10. And 16 + 6 = 22.",
+            "ur": "جی ہاں! جانچ: 4 + 6 = 10۔ اور 16 + 6 = 22"
+          }
+        },
+        {
+          "id": "sixty",
+          "text": {
+            "en": "He should multiply: x = 60.",
+            "ur": "اسے ضرب دینی چاہیے: x = 60"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: 60 + 6 = 66, not 10. Take 6 away: x = 4.",
+            "ur": "جانچیں: 60 + 6 = 66، نہ کہ 10۔ 6 گھٹائیں: x = 4"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: 16 + 6 = 22, not 10. x = 4.",
+            "ur": "جانچیں: 16 + 6 = 22، نہ کہ 10۔ x = 4"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why must we do the same thing to BOTH sides of an equation? Can you teach me?",
+          "ur": "مساوات کے دونوں طرف ایک ہی کام کیوں کرنا ضروری ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we take 5 from both sides of x + 5 = 12, and not just one side?",
+        "ur": "اپنے الفاظ میں بتائیں: x + 5 = 12 میں ہم دونوں طرف سے 5 کیوں گھٹاتے ہیں، صرف ایک طرف سے کیوں نہیں؟"
+      },
+      "key_idea": "The equals sign means both sides are the same amount, like a balance. Changing only one side breaks the balance, so whatever we do to one side we must do to the other.",
+      "levels": {
+        "got_it": "Explains that the two sides are equal (balanced) and changing only one side would make them unequal.",
+        "partly": "Says we must keep it fair or balanced, without linking to the equals sign.",
+        "not_yet": "Gives no reason, or says one side is enough."
+      },
+      "keywords": [
+        [
+          "equal",
+          "same",
+          "برابر",
+          "barabar"
+        ],
+        [
+          "balance",
+          "ترازو",
+          "توازن",
+          "tarazu"
+        ],
+        [
+          "both",
+          "دونوں",
+          "dono"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The two sides stay equal only if we change both the same way.",
+          "ur": "بہت خوب! دونوں طرف تبھی برابر رہتے ہیں جب دونوں کو ایک جیسا بدلیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what the = sign tells us about the two sides.",
+          "ur": "اچھی شروعات! اب بتائیں = کا نشان دونوں طرف کے بارے میں کیا بتاتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Think of a balance with x + 5 on one pan and 12 on the other. What happens if you take 5 off one pan only?",
+          "ur": "ایک ترازو سوچیں جس کے ایک پلڑے میں x + 5 اور دوسرے میں 12 ہو۔ اگر صرف ایک پلڑے سے 5 اٹھائیں تو کیا ہوگا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_two_step",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 4n − 3 = 25. What is n?",
+        "ur": "4n − 3 = 25 حل کریں۔ n کتنا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add 3 to both sides first: 4n = 28. Then divide by 4.",
+        "ur": "پہلے دونوں طرف 3 جمع کریں: 4n = 28۔ پھر 4 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! n = 7. Check: 4 × 7 − 3 = 25.",
+        "ur": "درست! n = 7۔ جانچ: 4 × 7 − 3 = 25"
+      },
+      "feedback_wrong": {
+        "en": "4n − 3 = 25, so 4n = 28 and n = 28 ÷ 4 = 7.",
+        "ur": "4n − 3 = 25، تو 4n = 28 اور n = 28 ÷ 4 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "That is 4n. Now divide by 4: n = 7.",
+            "ur": "یہ 4n ہے۔ اب 4 سے تقسیم کریں: n = 7"
+          }
+        },
+        {
+          "answer": 5.5,
+          "feedback": {
+            "en": "Add 3, don't take it away: 4n = 28, so n = 7.",
+            "ur": "3 گھٹائیں نہیں، جمع کریں: 4n = 28، اس لیے n = 7"
+          },
+          "misconception_id": "same_operation"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can solve equations now!",
+          "ur": "اب آپ مساوات حل کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "An equation is a balance. To find the letter, undo each operation by doing the opposite to both sides: x + 5 = 12 gives x = 7; 3x = 18 gives x = 6. For two steps, undo the + or − first, then the × or ÷. Always check by putting the answer back in.",
+        "ur": "مساوات ایک ترازو ہے۔ حرف معلوم کرنے کے لیے ہر عمل کو الٹیں، دونوں طرف الٹا عمل کر کے: x + 5 = 12 سے x = 7؛ 3x = 18 سے x = 6۔ دو قدم ہوں تو پہلے + یا − کو الٹیں، پھر × یا ÷ کو۔ ہمیشہ جواب واپس رکھ کر جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "Do the same to both sides.",
+          "ur": "دونوں طرف ایک جیسا کریں۔"
+        },
+        {
+          "en": "Check: put your answer back into the equation.",
+          "ur": "جانچیں: اپنا جواب مساوات میں واپس رکھیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_add",
+      "type": "apply",
+      "skill": "maths.algebra.simple_equations",
+      "step": {
+        "id": "r_add",
+        "type": "number",
+        "prompt": {
+          "en": "Solve a + 9 = 15. What is a?",
+          "ur": "a + 9 = 15 حل کریں۔ a کتنا ہے؟"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "Take 9 from both sides.",
+          "ur": "دونوں طرف سے 9 گھٹائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! a = 6.",
+          "ur": "درست! a = 6"
+        },
+        "feedback_wrong": {
+          "en": "15 − 9 = 6, so a = 6.",
+          "ur": "15 − 9 = 6، اس لیے a = 6"
+        },
+        "common_wrong": [
+          {
+            "answer": 24,
+            "feedback": {
+              "en": "Check: 24 + 9 = 33, not 15. Take 9 away: 6.",
+              "ur": "جانچیں: 24 + 9 = 33، نہ کہ 15۔ 9 گھٹائیں: 6"
+            },
+            "misconception_id": "same_operation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_times",
+      "type": "recall",
+      "skill": "maths.algebra.simple_equations",
+      "step": {
+        "id": "r_times",
+        "type": "number",
+        "prompt": {
+          "en": "Solve 6y = 42. What is y?",
+          "ur": "6y = 42 حل کریں۔ y کتنا ہے؟"
+        },
+        "answer": 7,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide both sides by 6.",
+          "ur": "دونوں طرف 6 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! y = 7.",
+          "ur": "درست! y = 7"
+        },
+        "feedback_wrong": {
+          "en": "42 ÷ 6 = 7, so y = 7.",
+          "ur": "42 ÷ 6 = 7، اس لیے y = 7"
+        },
+        "common_wrong": [
+          {
+            "answer": 36,
+            "feedback": {
+              "en": "6y is 6 × y, so divide: 42 ÷ 6 = 7.",
+              "ur": "6y یعنی 6 × y، اس لیے تقسیم: 42 ÷ 6 = 7"
+            },
+            "misconception_id": "wrong_inverse"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Introduction to Algebra unit. No textbook text or exercises were used.",
+    "Equations are taught as a balance: do the opposite operation to both sides, then check. Step s8 uses the same step-by-step working checker as the Grade 9 equations lesson.",
+    "Urdu terms to check: مساوات (equation), حل کرنا (solve).",
+    "The numbers were worked out in content/sources/g6-maths-07/simple_equations.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
