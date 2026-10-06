@@ -1,0 +1,771 @@
+{
+  "id": "g6-maths-02-adding-fractions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Add and subtract fractions with different denominators by first changing them to equivalent fractions with a common denominator.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Fractions"
+    }
+  ],
+  "skills": [
+    "maths.fractions.add_unlike"
+  ],
+  "title": {
+    "en": "Adding and subtracting fractions",
+    "ur": "کسور کی جمع اور تفریق"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.fractions.equivalent"
+    },
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "add_tops_and_bottoms",
+      "description": "Adds the numerators and adds the denominators (1/2 + 1/3 = 2/5)."
+    },
+    {
+      "id": "subtract_tops_and_bottoms",
+      "description": "Subtracts the numerators and subtracts the denominators (3/4 − 1/3 = 2/1)."
+    },
+    {
+      "id": "only_denominator_changed",
+      "description": "Changes both fractions to the common denominator but does not change the numerators (1/4 + 2/3 = 3/12)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.fractions.add_unlike": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.fractions.add_unlike": [
+      {
+        "id": "qb_common_denominator",
+        "type": "recall",
+        "step": {
+          "id": "qb_common_denominator",
+          "type": "choice",
+          "prompt": {
+            "en": "To add 2/5 + 1/2, which common denominator can you use?",
+            "ur": "2/5 + 1/2 جمع کرنے کے لیے کون سا مشترک نسب نما لے سکتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "ten",
+              "text": {
+                "en": "10",
+                "ur": "10"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Both 5 and 2 go into 10: 2/5 = 4/10 and 1/2 = 5/10.",
+                "ur": "جی ہاں! 5 اور 2 دونوں 10 میں پورے آتے ہیں: 2/5 = 4/10 اور 1/2 = 5/10"
+              }
+            },
+            {
+              "id": "seven",
+              "text": {
+                "en": "7",
+                "ur": "7"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "7 is 5 + 2, but 5 and 2 don't go into 7. Find a number in the 5 times table and the 2 times table.",
+                "ur": "7 تو 5 + 2 ہے، لیکن 5 اور 2 اس میں پورے نہیں آتے۔ ایسا عدد ڈھونڈیں جو 5 اور 2 دونوں کے پہاڑے میں ہو۔"
+              },
+              "misconception_id": "add_tops_and_bottoms"
+            },
+            {
+              "id": "five",
+              "text": {
+                "en": "5",
+                "ur": "5"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Halves can't be written as fifths. Find a number that both 5 and 2 go into.",
+                "ur": "آدھے کو پانچویں حصوں میں نہیں لکھا جا سکتا۔ ایسا عدد ڈھونڈیں جس میں 5 اور 2 دونوں پورے آئیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_add_fifths_halves",
+        "type": "apply",
+        "step": {
+          "id": "qb_add_fifths_halves",
+          "type": "text_check",
+          "prompt": {
+            "en": "Work out 2/5 + 1/2.",
+            "ur": "2/5 + 1/2 حل کریں۔"
+          },
+          "checker": "fraction",
+          "expected": "9/10",
+          "hint": {
+            "en": "Change both to tenths first.",
+            "ur": "پہلے دونوں کو دسویں حصوں میں بدلیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 4/10 + 5/10 = 9/10.",
+            "ur": "درست! 4/10 + 5/10 = 9/10"
+          },
+          "feedback_wrong": {
+            "en": "2/5 = 4/10 and 1/2 = 5/10. So 4/10 + 5/10 = 9/10.",
+            "ur": "2/5 = 4/10 اور 1/2 = 5/10۔ اس لیے 4/10 + 5/10 = 9/10"
+          },
+          "require_simplest": true,
+          "common_wrong": [
+            {
+              "answer": "3/7",
+              "feedback": {
+                "en": "You added the tops and the bottoms. Make the pieces the same size first: tenths.",
+                "ur": "آپ نے اوپر اور نیچے والے عدد جمع کر دیے۔ پہلے ٹکڑے ایک جتنے کریں: دسویں حصے۔"
+              },
+              "misconception_id": "add_tops_and_bottoms"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_subtract",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_subtract",
+          "type": "choice",
+          "prompt": {
+            "en": "Ali works out 5/6 − 1/2 like this: 5/6 − 1/6 = 4/6. What went wrong?",
+            "ur": "علی 5/6 − 1/2 یوں حل کرتا ہے: 5/6 − 1/6 = 4/6۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "numerator",
+              "text": {
+                "en": "He changed 1/2 to sixths but kept the 1 on top. 1/2 = 3/6, so the answer is 2/6 = 1/3.",
+                "ur": "اس نے 1/2 کو چھٹے حصوں میں بدلا لیکن اوپر 1 ہی رہنے دیا۔ 1/2 = 3/6، اس لیے جواب 2/6 = 1/3 ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! When the bottom is multiplied by 3, the top must be multiplied by 3 too.",
+                "ur": "درست! جب نیچے والے کو 3 سے ضرب دیں تو اوپر والے کو بھی 3 سے ضرب دینی ہوتی ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, 4/6 is right.",
+                "ur": "کوئی غلطی نہیں، 4/6 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Is 1/2 the same as 1/6? Half a paratha is 3 sixths, not 1.",
+                "ur": "کیا 1/2 اور 1/6 برابر ہیں؟ آدھا پراٹھا 3 چھٹے حصے ہے، 1 نہیں۔"
+              },
+              "misconception_id": "only_denominator_changed"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_add_unlike",
+      "front": {
+        "en": "How do you add 1/2 + 1/3?",
+        "ur": "1/2 + 1/3 کیسے جمع کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Make the pieces the same size: 1/2 = 3/6 and 1/3 = 2/6. Then add the tops: 3/6 + 2/6 = 5/6.",
+        "ur": "ٹکڑے ایک جتنے کریں: 1/2 = 3/6 اور 1/3 = 2/6۔ پھر اوپر والے جمع کریں: 3/6 + 2/6 = 5/6"
+      }
+    },
+    {
+      "id": "f_not_two_fifths",
+      "front": {
+        "en": "Is 1/2 + 1/3 = 2/5?",
+        "ur": "کیا 1/2 + 1/3 = 2/5 ہے؟"
+      },
+      "back": {
+        "en": "No! 2/5 is less than 1/2. Never add the bottoms. 1/2 + 1/3 = 5/6.",
+        "ur": "نہیں! 2/5 تو 1/2 سے بھی کم ہے۔ نیچے والے عدد کبھی جمع نہ کریں۔ 1/2 + 1/3 = 5/6"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_paper_strips",
+      "text": {
+        "en": "Take two paper strips of the same length. Fold one into 2 equal parts and the other into 3. Colour 1/2 of the first and 1/3 of the second. Now fold both into 6 parts. How many sixths are coloured altogether?",
+        "ur": "ایک جتنی لمبی کاغذ کی دو پٹیاں لیں۔ ایک کو 2 برابر حصوں میں اور دوسری کو 3 میں تہہ کریں۔ پہلی کا 1/2 اور دوسری کا 1/3 رنگ دیں۔ اب دونوں کو 6 حصوں میں تہہ کریں۔ کل کتنے چھٹے حصے رنگے ہوئے ہیں؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Fraction",
+      "ur": "کسر"
+    },
+    {
+      "en": "Numerator",
+      "ur": "شمار کنندہ"
+    },
+    {
+      "en": "Denominator",
+      "ur": "نسب نما"
+    },
+    {
+      "en": "Common denominator",
+      "ur": "مشترک نسب نما"
+    },
+    {
+      "en": "Equivalent fractions",
+      "ur": "مساوی کسور"
+    },
+    {
+      "en": "Addition",
+      "ur": "جمع"
+    },
+    {
+      "en": "Subtraction",
+      "ur": "تفریق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Zara ate half a paratha and Ali ate a third of it. How much did they eat together?",
+          "ur": "زارا نے آدھا پراٹھا کھایا اور علی نے اس کا تیسرا حصہ۔ دونوں نے مل کر کتنا کھایا؟"
+        }
+      },
+      "text": {
+        "en": "Halves and thirds are pieces of different sizes. Let's find out how to add them. First, a quick check.",
+        "ur": "آدھا اور تہائی مختلف سائز کے ٹکڑے ہیں۔ آئیں دیکھیں انہیں کیسے جمع کرتے ہیں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.fractions.equivalent",
+      "prompt": {
+        "en": "Which fraction is equal to 1/2?",
+        "ur": "کون سی کسر 1/2 کے برابر ہے؟"
+      },
+      "options": [
+        {
+          "id": "three_sixths",
+          "text": {
+            "en": "3/6",
+            "ur": "3/6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 1/2 = (1 × 3)/(2 × 3) = 3/6.",
+            "ur": "جی ہاں! 1/2 = (1 × 3)/(2 × 3) = 3/6"
+          }
+        },
+        {
+          "id": "one_sixth",
+          "text": {
+            "en": "1/6",
+            "ur": "1/6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only the bottom changed. 1/6 is much less than half.",
+            "ur": "صرف نیچے والا عدد بدلا۔ 1/6 آدھے سے بہت کم ہے۔"
+          }
+        },
+        {
+          "id": "two_thirds",
+          "text": {
+            "en": "2/3",
+            "ur": "2/3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2/3 is 1/2 with 1 added to top and bottom. That changes the amount.",
+            "ur": "2/3 میں 1/2 کے اوپر اور نیچے 1 جمع کیا گیا ہے۔ اس سے مقدار بدل جاتی ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_same_size",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Same-size pieces first. Bilal ate 1/4 of a chapati, then 2/4 more. How much did he eat? Write a fraction.",
+        "ur": "پہلے ایک جتنے ٹکڑے۔ بلال نے چپاتی کا 1/4 کھایا، پھر 2/4 اور۔ اس نے کتنا کھایا؟ کسر لکھیں۔"
+      },
+      "answer": 0.75,
+      "checker": "fraction",
+      "require_simplest": true,
+      "hint": {
+        "en": "1 quarter and 2 more quarters: how many quarters?",
+        "ur": "1 چوتھائی اور 2 چوتھائیاں اور: کل کتنی چوتھائیاں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 1/4 + 2/4 = 3/4. The pieces are the same size, so just add the numerators.",
+        "ur": "درست! 1/4 + 2/4 = 3/4۔ ٹکڑے ایک جتنے ہیں، اس لیے صرف شمار کنندہ جمع کریں۔"
+      },
+      "feedback_wrong": {
+        "en": "1 quarter + 2 quarters = 3 quarters. 1/4 + 2/4 = 3/4. The denominator stays 4.",
+        "ur": "1 چوتھائی + 2 چوتھائیاں = 3 چوتھائیاں۔ 1/4 + 2/4 = 3/4۔ نسب نما 4 ہی رہتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.375,
+          "feedback": {
+            "en": "3/8 is less than 1/2, but Bilal ate more than half! The pieces are still quarters, so keep 4 at the bottom.",
+            "ur": "3/8 تو آدھے سے کم ہے، لیکن بلال نے آدھی سے زیادہ کھائی! ٹکڑے اب بھی چوتھائیاں ہیں، اس لیے نیچے 4 ہی رکھیں۔"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        }
+      ]
+    },
+    {
+      "id": "s4_predict",
+      "type": "choice",
+      "prompt": {
+        "en": "Guess first: Hamza says half a paratha plus a third of a paratha is 2/5 of a paratha (1 + 1 = 2 and 2 + 3 = 5). Is he right?",
+        "ur": "پہلے اندازہ لگائیں: حمزہ کہتا ہے آدھا پراٹھا اور تہائی پراٹھا مل کر 2/5 پراٹھا ہے (1 + 1 = 2 اور 2 + 3 = 5)۔ کیا وہ درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes, add the tops and add the bottoms",
+            "ur": "ہاں، اوپر والے جمع کریں اور نیچے والے جمع کریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It looks neat, but let's test it: 2/5 is less than 1/2. Can half plus more be less than half?",
+            "ur": "یہ آسان لگتا ہے، لیکن آئیں جانچیں: 2/5 تو 1/2 سے کم ہے۔ کیا آدھا اور کچھ مزید مل کر آدھے سے کم ہو سکتا ہے؟"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        },
+        {
+          "id": "no",
+          "text": {
+            "en": "No, the answer must be more than 1/2",
+            "ur": "نہیں، جواب 1/2 سے زیادہ ہونا چاہیے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Good thinking! Zara alone ate 1/2, so together they ate more than 1/2. 2/5 is less.",
+            "ur": "بہت خوب سوچا! اکیلے زارا نے 1/2 کھایا، اس لیے دونوں نے مل کر 1/2 سے زیادہ کھایا۔ 2/5 کم ہے۔"
+          }
+        },
+        {
+          "id": "unsure",
+          "text": {
+            "en": "We can't add halves and thirds",
+            "ur": "آدھے اور تہائی جمع نہیں ہو سکتے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "We can! We just need pieces of the same size first. Let's see how.",
+            "ur": "ہو سکتے ہیں! بس پہلے ٹکڑے ایک جتنے کرنے ہوں گے۔ آئیں دیکھیں کیسے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_test_it",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "fraction_bars",
+      "prompt": {
+        "en": "Halves and thirds both fit into sixths. Use + to cut the paratha into 6 pieces. Tap 3 pieces for Zara's half and 2 for Ali's third. Press Check.",
+        "ur": "آدھے اور تہائی دونوں چھٹے حصوں میں پورے آتے ہیں۔ + دبا کر پراٹھے کے 6 ٹکڑے کریں۔ زارا کے آدھے کے لیے 3 ٹکڑے اور علی کے تہائی کے لیے 2 ٹکڑے چھوئیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "wholes": 1,
+        "max_cut": 12
+      },
+      "expected": {
+        "result": "pieces",
+        "checker": "numeric",
+        "answer": "5"
+      },
+      "hint": {
+        "en": "Cut into 6. Half of 6 pieces is 3; a third of 6 pieces is 2.",
+        "ur": "6 ٹکڑے کریں۔ 6 ٹکڑوں کا آدھا 3 ہے؛ 6 ٹکڑوں کا تہائی 2 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 3 sixths + 2 sixths = 5 sixths. Together they ate 5/6 of the paratha.",
+        "ur": "جی ہاں! 3 چھٹے حصے + 2 چھٹے حصے = 5 چھٹے حصے۔ دونوں نے مل کر پراٹھے کا 5/6 کھایا۔"
+      },
+      "feedback_wrong": {
+        "en": "Cut the paratha into 6. Zara's half is 3 pieces and Ali's third is 2 pieces: 5 pieces, or 5/6.",
+        "ur": "پراٹھے کے 6 ٹکڑے کریں۔ زارا کا آدھا 3 ٹکڑے ہے اور علی کا تہائی 2 ٹکڑے: کل 5 ٹکڑے، یعنی 5/6"
+      },
+      "common_wrong": [
+        {
+          "answer": "2",
+          "feedback": {
+            "en": "That is 1 piece for each child. But the pieces must be the same size: half the paratha is 3 sixths.",
+            "ur": "یہ ہر بچے کا 1 ٹکڑا ہے۔ لیکن ٹکڑے ایک جتنے ہونے چاہییں: آدھا پراٹھا 3 چھٹے حصے ہے۔"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        }
+      ]
+    },
+    {
+      "id": "s6_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "Make the pieces the same size first, then add!",
+          "ur": "پہلے ٹکڑے ایک جتنے کریں، پھر جمع کریں!"
+        }
+      },
+      "text": {
+        "en": "We can only add pieces of the same size. 2 and 3 both go into 6, so 6 is a common denominator. Change each fraction to an equivalent fraction: 1/2 = 3/6 and 1/3 = 2/6. Then add the numerators and keep the denominator: 3/6 + 2/6 = 5/6. Subtracting works the same way.",
+        "ur": "ہم صرف ایک جتنے ٹکڑے جمع کر سکتے ہیں۔ 2 اور 3 دونوں 6 میں پورے آتے ہیں، اس لیے 6 مشترک نسب نما ہے۔ ہر کسر کو مساوی کسر میں بدلیں: 1/2 = 3/6 اور 1/3 = 2/6۔ پھر شمار کنندہ جمع کریں اور نسب نما وہی رکھیں: 3/6 + 2/6 = 5/6۔ تفریق بھی اسی طرح ہوتی ہے۔"
+      }
+    },
+    {
+      "id": "s7_lassi",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal drank 1/4 of a jug of lassi in the morning and 2/3 of the jug in the evening. What fraction of the jug did he drink?",
+        "ur": "بلال نے صبح لسی کے جگ کا 1/4 پیا اور شام کو جگ کا 2/3۔ اس نے جگ کا کتنا حصہ پیا؟"
+      },
+      "checker": "fraction",
+      "expected": "11/12",
+      "hint": {
+        "en": "4 and 3 both go into 12. Change both fractions to twelfths.",
+        "ur": "4 اور 3 دونوں 12 میں پورے آتے ہیں۔ دونوں کسور کو بارہویں حصوں میں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Well done! 1/4 = 3/12 and 2/3 = 8/12, so 3/12 + 8/12 = 11/12.",
+        "ur": "شاباش! 1/4 = 3/12 اور 2/3 = 8/12، اس لیے 3/12 + 8/12 = 11/12"
+      },
+      "feedback_wrong": {
+        "en": "Use 12: 1/4 = 3/12 (× 3) and 2/3 = 8/12 (× 4). Then 3/12 + 8/12 = 11/12.",
+        "ur": "12 لیں: 1/4 = 3/12 (× 3) اور 2/3 = 8/12 (× 4)۔ پھر 3/12 + 8/12 = 11/12"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "3/7",
+          "feedback": {
+            "en": "You added the tops and the bottoms. 3/7 is less than 2/3, so it can't be right. Change to twelfths first.",
+            "ur": "آپ نے اوپر اور نیچے والے عدد جمع کر دیے۔ 3/7 تو 2/3 سے بھی کم ہے، اس لیے درست نہیں ہو سکتا۔ پہلے بارہویں حصوں میں بدلیں۔"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        },
+        {
+          "answer": "3/12",
+          "feedback": {
+            "en": "Good, 12 is the right denominator. But change the numerators too: 1/4 = 3/12 and 2/3 = 8/12.",
+            "ur": "شاباش، 12 درست نسب نما ہے۔ لیکن شمار کنندہ بھی بدلیں: 1/4 = 3/12 اور 2/3 = 8/12"
+          },
+          "misconception_id": "only_denominator_changed"
+        }
+      ]
+    },
+    {
+      "id": "s8_ribbon",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ayesha had 3/4 of a metre of ribbon. She used 1/3 of a metre to decorate a card. How much ribbon is left?",
+        "ur": "عائشہ کے پاس 3/4 میٹر فیتہ تھا۔ اس نے کارڈ سجانے کے لیے 1/3 میٹر استعمال کیا۔ کتنا فیتہ بچا؟"
+      },
+      "checker": "fraction",
+      "expected": "5/12",
+      "hint": {
+        "en": "Use twelfths again: 3/4 = ?/12 and 1/3 = ?/12. Then subtract the numerators.",
+        "ur": "پھر بارہویں حصے لیں: 3/4 = ?/12 اور 1/3 = ?/12۔ پھر شمار کنندہ تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9/12 − 4/12 = 5/12 of a metre is left.",
+        "ur": "درست! 9/12 − 4/12 = 5/12 میٹر بچا۔"
+      },
+      "feedback_wrong": {
+        "en": "3/4 = 9/12 and 1/3 = 4/12. So 9/12 − 4/12 = 5/12 of a metre is left.",
+        "ur": "3/4 = 9/12 اور 1/3 = 4/12۔ اس لیے 9/12 − 4/12 = 5/12 میٹر بچا۔"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "2/1",
+          "feedback": {
+            "en": "You subtracted the tops and the bottoms: 2/1 is 2 whole metres, more than she started with! Change to twelfths first.",
+            "ur": "آپ نے اوپر اور نیچے والے عدد تفریق کر دیے: 2/1 تو 2 پورے میٹر ہیں، شروع سے بھی زیادہ! پہلے بارہویں حصوں میں بدلیں۔"
+          },
+          "misconception_id": "subtract_tops_and_bottoms"
+        },
+        {
+          "answer": "2/12",
+          "feedback": {
+            "en": "12 is right, but change the numerators too: 3/4 = 9/12 and 1/3 = 4/12.",
+            "ur": "12 درست ہے، لیکن شمار کنندہ بھی بدلیں: 3/4 = 9/12 اور 1/3 = 4/12"
+          },
+          "misconception_id": "only_denominator_changed"
+        }
+      ]
+    },
+    {
+      "id": "s9_simplify",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 1/2 + 1/6. Give your answer in its simplest form.",
+        "ur": "1/2 + 1/6 حل کریں۔ جواب سادہ ترین شکل میں لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "2/3",
+      "hint": {
+        "en": "6 is a common denominator: 1/2 = 3/6. Add, then simplify.",
+        "ur": "6 مشترک نسب نما ہے: 1/2 = 3/6۔ جمع کریں، پھر سادہ کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 3/6 + 1/6 = 4/6 = 2/3.",
+        "ur": "جی ہاں! 3/6 + 1/6 = 4/6 = 2/3"
+      },
+      "feedback_wrong": {
+        "en": "1/2 = 3/6, so 3/6 + 1/6 = 4/6. 2 divides 4 and 6: 4/6 = 2/3.",
+        "ur": "1/2 = 3/6، اس لیے 3/6 + 1/6 = 4/6۔ 2، 4 اور 6 دونوں کو تقسیم کرتا ہے: 4/6 = 2/3"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "2/8",
+          "feedback": {
+            "en": "You added the tops and the bottoms. Change 1/2 to sixths first.",
+            "ur": "آپ نے اوپر اور نیچے والے عدد جمع کر دیے۔ پہلے 1/2 کو چھٹے حصوں میں بدلیں۔"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        }
+      ]
+    },
+    {
+      "id": "s10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Look at Hamza's answer again: 1/2 + 1/3 = 2/5. What went wrong?",
+        "ur": "حمزہ کا جواب پھر دیکھیں: 1/2 + 1/3 = 2/5۔ اس سے کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "bottoms",
+          "text": {
+            "en": "He added the denominators. He should change both to sixths: 3/6 + 2/6 = 5/6.",
+            "ur": "اس نے نسب نما جمع کر دیے۔ اسے دونوں کو چھٹے حصوں میں بدلنا چاہیے تھا: 3/6 + 2/6 = 5/6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The denominator tells the size of the pieces. We don't add sizes; we make them the same, then count.",
+            "ur": "جی ہاں! نسب نما ٹکڑوں کا سائز بتاتا ہے۔ ہم سائز جمع نہیں کرتے؛ پہلے ایک جتنے کرتے ہیں، پھر گنتے ہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, 2/5 is right.",
+            "ur": "کوئی غلطی نہیں، 2/5 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2/5 is less than 1/2, but Zara alone ate 1/2. Together it must be more.",
+            "ur": "2/5 تو 1/2 سے کم ہے، جبکہ اکیلے زارا نے 1/2 کھایا۔ مل کر زیادہ ہونا چاہیے۔"
+          },
+          "misconception_id": "add_tops_and_bottoms"
+        },
+        {
+          "id": "multiply",
+          "text": {
+            "en": "He should multiply the denominators and keep the tops: 2/6.",
+            "ur": "اسے نسب نما ضرب دینے چاہیے تھے اور اوپر والے وہی رکھنے تھے: 2/6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 is the right denominator, but the tops change too: 1/2 = 3/6 and 1/3 = 2/6.",
+            "ur": "6 درست نسب نما ہے، لیکن اوپر والے بھی بدلتے ہیں: 1/2 = 3/6 اور 1/3 = 2/6"
+          },
+          "misconception_id": "only_denominator_changed"
+        }
+      ]
+    },
+    {
+      "id": "s11_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? Why can't I just add the tops and the bottoms?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ میں اوپر اور نیچے والے عدد سیدھے جمع کیوں نہیں کر سکتا؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is 1/2 + 1/3 not 2/5? Explain how to add them. You can use a paratha.",
+        "ur": "اپنے الفاظ میں بتائیں: 1/2 + 1/3 کا جواب 2/5 کیوں نہیں؟ سمجھائیں کہ انہیں کیسے جمع کرتے ہیں۔ آپ پراٹھے کی مثال دے سکتے ہیں۔"
+      },
+      "key_idea": "Halves and thirds are pieces of different sizes, so they can't be counted together. Change both to the same size (sixths, a common denominator): 1/2 = 3/6 and 1/3 = 2/6, so the total is 5/6. 2/5 can't be right because it is less than 1/2.",
+      "levels": {
+        "got_it": "Says the pieces must be the same size (a common denominator), changes to sixths (3/6 and 2/6, or the answer 5/6), and/or says 2/5 is less than 1/2 so it can't be the total.",
+        "partly": "Mentions same-size pieces, sixths or the answer 5/6, but does not explain why adding the bottoms is wrong or how the sixths are found.",
+        "not_yet": "Says adding tops and bottoms is fine, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "same size",
+          "same",
+          "common",
+          "equal",
+          "برابر",
+          "ایک جتن",
+          "ایک جیس",
+          "مشترک",
+          "barabar",
+          "ek jitn",
+          "ek jais",
+          "mushtarak"
+        ],
+        [
+          "sixth",
+          "6",
+          "چھٹ",
+          "chhat",
+          "chat"
+        ],
+        [
+          "less than half",
+          "less",
+          "smaller",
+          "more than half",
+          "کم",
+          "چھوٹ",
+          "زیادہ",
+          "kam",
+          "chhot",
+          "zyada",
+          "ziada"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Halves and thirds are different sizes, so first change both to sixths: 3/6 + 2/6 = 5/6.",
+          "ur": "بہت خوب سمجھایا! آدھا اور تہائی مختلف سائز کے ہیں، اس لیے پہلے دونوں کو چھٹے حصوں میں بدلیں: 3/6 + 2/6 = 5/6"
+        },
+        "partly": {
+          "en": "Good start! Now say why 2/5 can't be right: is it more or less than Zara's half?",
+          "ur": "اچھی شروعات! اب بتائیں کہ 2/5 درست کیوں نہیں ہو سکتا: کیا یہ زارا کے آدھے سے زیادہ ہے یا کم؟"
+        },
+        "not_yet": {
+          "en": "Think of a paratha cut into 6 pieces. How many pieces are half? How many are a third? How many altogether?",
+          "ur": "سوچیں: ایک پراٹھے کے 6 ٹکڑے ہیں۔ آدھا کتنے ٹکڑے ہے؟ تہائی کتنے ٹکڑے؟ کل کتنے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can add and subtract any fractions now!",
+          "ur": "اب آپ کوئی بھی کسور جمع اور تفریق کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "To add or subtract fractions with different denominators, first change them to equivalent fractions with a common denominator. Then add or subtract the numerators, keep the denominator, and simplify.",
+        "ur": "مختلف نسب نما والی کسور جمع یا تفریق کرنے کے لیے پہلے انہیں مشترک نسب نما والی مساوی کسور میں بدلیں۔ پھر شمار کنندہ جمع یا تفریق کریں، نسب نما وہی رکھیں، اور جواب سادہ کریں۔"
+      },
+      "points": [
+        {
+          "en": "1/2 + 1/3 = 3/6 + 2/6 = 5/6",
+          "ur": "1/2 + 1/3 = 3/6 + 2/6 = 5/6"
+        },
+        {
+          "en": "Never add the denominators: 1/2 + 1/3 is not 2/5.",
+          "ur": "نسب نما کبھی جمع نہ کریں: 1/2 + 1/3 کا جواب 2/5 نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_subtract",
+      "type": "apply",
+      "skill": "maths.fractions.add_unlike",
+      "step": {
+        "id": "r_subtract",
+        "type": "text_check",
+        "prompt": {
+          "en": "Work out 1/2 − 1/5.",
+          "ur": "1/2 − 1/5 حل کریں۔"
+        },
+        "checker": "fraction",
+        "expected": "3/10",
+        "hint": {
+          "en": "2 and 5 both go into 10.",
+          "ur": "2 اور 5 دونوں 10 میں پورے آتے ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5/10 − 2/10 = 3/10.",
+          "ur": "درست! 5/10 − 2/10 = 3/10"
+        },
+        "feedback_wrong": {
+          "en": "1/2 = 5/10 and 1/5 = 2/10. So 5/10 − 2/10 = 3/10.",
+          "ur": "1/2 = 5/10 اور 1/5 = 2/10۔ اس لیے 5/10 − 2/10 = 3/10"
+        },
+        "require_simplest": true,
+        "common_wrong": [
+          {
+            "answer": "0/-3",
+            "feedback": {
+              "en": "You subtracted the tops and the bottoms. Change both to tenths first.",
+              "ur": "آپ نے اوپر اور نیچے والے عدد تفریق کر دیے۔ پہلے دونوں کو دسویں حصوں میں بدلیں۔"
+            },
+            "misconception_id": "subtract_tops_and_bottoms"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Fractions unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the file is named g6-maths-02 to sit with the dividing-fractions lesson. Fix the name and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: مشترک نسب نما (common denominator), مساوی کسور (equivalent fractions), تہائی (third), چھٹا حصہ (sixth), بارہواں حصہ (twelfth), تفریق (subtraction).",
+    "The lesson uses any common denominator the times tables give (here the smallest one). The LCM (ذو اضعاف اقل) is not named; add it if the textbook teaches it with this topic.",
+    "Steps follow the lesson pattern: foundation check (s2), same denominators (s3), prediction (s4), concrete with the fraction bars (s5) then symbolic (s6), practice (s7 to s9), find the error (s10), explain (s11).",
+    "The answers and the common wrong answers (adding tops and bottoms; changing only the denominator) were worked out with Python's fractions module in content/sources/g6-maths-02/adding_fractions.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

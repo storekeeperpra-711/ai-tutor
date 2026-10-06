@@ -1,0 +1,869 @@
+{
+  "id": "g6-maths-02-mixed-numbers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Change mixed numbers to improper fractions and improper fractions to mixed numbers, and place them on a number line.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Fractions"
+    }
+  ],
+  "skills": [
+    "maths.fractions.mixed_numbers"
+  ],
+  "title": {
+    "en": "Mixed numbers and improper fractions",
+    "ur": "مخلوط اعداد اور غیر واجب کسور"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.fractions.unit_fraction_meaning"
+    },
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "improper_less_than_one",
+      "description": "Thinks every fraction is less than 1, so 5/2 must be a small amount."
+    },
+    {
+      "id": "whole_added_to_top",
+      "description": "Adds the whole number to the numerator (2 1/2 = 3/2) instead of changing the wholes into pieces."
+    },
+    {
+      "id": "forgot_the_extra",
+      "description": "Changes the wholes into pieces but forgets to add the extra pieces (3 1/4 = 12/4)."
+    },
+    {
+      "id": "swapped_quotient_remainder",
+      "description": "When changing to a mixed number, swaps the whole number and the remainder (11/4 = 3 2/4)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.fractions.mixed_numbers": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.fractions.mixed_numbers": [
+      {
+        "id": "qb_which_improper",
+        "type": "recall",
+        "step": {
+          "id": "qb_which_improper",
+          "type": "choice",
+          "prompt": {
+            "en": "Which of these is an improper fraction?",
+            "ur": "ان میں سے غیر واجب کسر کون سی ہے؟"
+          },
+          "options": [
+            {
+              "id": "seven_thirds",
+              "text": {
+                "en": "7/3",
+                "ur": "7/3"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The numerator (7) is bigger than the denominator (3), so it is more than 1 whole.",
+                "ur": "جی ہاں! شمار کنندہ (7) نسب نما (3) سے بڑا ہے، اس لیے یہ 1 پورے سے زیادہ ہے۔"
+              }
+            },
+            {
+              "id": "three_sevenths",
+              "text": {
+                "en": "3/7",
+                "ur": "3/7"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3/7 is less than 1 whole: its numerator is smaller than its denominator.",
+                "ur": "3/7 ایک پورے سے کم ہے: اس کا شمار کنندہ نسب نما سے چھوٹا ہے۔"
+              }
+            },
+            {
+              "id": "mixed",
+              "text": {
+                "en": "2 1/3",
+                "ur": "2 1/3"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "2 1/3 is a mixed number: a whole number and a fraction together.",
+                "ur": "2 1/3 مخلوط عدد ہے: پورا عدد اور کسر ایک ساتھ۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_seventeen_fifths",
+        "type": "apply",
+        "step": {
+          "id": "qb_seventeen_fifths",
+          "type": "text_check",
+          "prompt": {
+            "en": "Write 17/5 as a mixed number.",
+            "ur": "17/5 کو مخلوط عدد کی شکل میں لکھیں۔"
+          },
+          "checker": "fraction",
+          "expected": "3 2/5",
+          "hint": {
+            "en": "17 ÷ 5 = ? remainder ?",
+            "ur": "17 ÷ 5 = ? باقی ?"
+          },
+          "feedback_correct": {
+            "en": "Right! 17 ÷ 5 = 3 remainder 2, so 17/5 = 3 2/5.",
+            "ur": "درست! 17 ÷ 5 = 3 باقی 2، اس لیے 17/5 = 3 2/5"
+          },
+          "feedback_wrong": {
+            "en": "5 fifths make 1 whole. 17 ÷ 5 = 3 remainder 2: 3 wholes and 2 fifths left, so 3 2/5.",
+            "ur": "5 پانچویں حصے 1 پورا بناتے ہیں۔ 17 ÷ 5 = 3 باقی 2: 3 پورے اور 2 پانچویں حصے بچے، یعنی 3 2/5"
+          },
+          "require_simplest": true,
+          "common_wrong": [
+            {
+              "answer": "2 3/5",
+              "feedback": {
+                "en": "You swapped them. The answer of the division (3) is the whole number; the remainder (2) goes on top.",
+                "ur": "آپ نے جگہ بدل دی۔ تقسیم کا جواب (3) پورا عدد ہے؛ باقی (2) اوپر جاتا ہے۔"
+              },
+              "misconception_id": "swapped_quotient_remainder"
+            },
+            {
+              "answer": "17/5",
+              "feedback": {
+                "en": "That is the fraction we started with. Write it as wholes and a fraction.",
+                "ur": "یہ تو وہی کسر ہے جس سے شروع کیا۔ اسے پورے اور کسر کی شکل میں لکھیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_forgot",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_forgot",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana says 4 2/3 = 12/3. What went wrong?",
+            "ur": "ثنا کہتی ہے 4 2/3 = 12/3۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "extra",
+              "text": {
+                "en": "She changed 4 wholes to 12 thirds but forgot the 2 extra thirds: 4 2/3 = 14/3.",
+                "ur": "اس نے 4 پوروں کو 12 تہائیاں بنایا لیکن 2 اضافی تہائیاں بھول گئی: 4 2/3 = 14/3"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! 12 thirds + 2 thirds = 14 thirds.",
+                "ur": "درست! 12 تہائیاں + 2 تہائیاں = 14 تہائیاں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 4 × 3 = 12.",
+                "ur": "کوئی غلطی نہیں۔ 4 × 3 = 12"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "12/3 is exactly 4. Where did the 2/3 go?",
+                "ur": "12/3 تو بالکل 4 ہے۔ 2/3 کہاں گیا؟"
+              },
+              "misconception_id": "forgot_the_extra"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_to_improper",
+      "front": {
+        "en": "How do you change 2 1/2 into an improper fraction?",
+        "ur": "2 1/2 کو غیر واجب کسر میں کیسے بدلتے ہیں؟"
+      },
+      "back": {
+        "en": "Wholes × denominator, then add the numerator: 2 × 2 + 1 = 5, so 2 1/2 = 5/2.",
+        "ur": "پورے × نسب نما، پھر شمار کنندہ جمع کریں: 2 × 2 + 1 = 5، اس لیے 2 1/2 = 5/2"
+      }
+    },
+    {
+      "id": "f_to_mixed",
+      "front": {
+        "en": "How do you change 7/2 into a mixed number?",
+        "ur": "7/2 کو مخلوط عدد میں کیسے بدلتے ہیں؟"
+      },
+      "back": {
+        "en": "Divide: 7 ÷ 2 = 3 remainder 1. So 7/2 = 3 1/2.",
+        "ur": "تقسیم کریں: 7 ÷ 2 = 3 باقی 1۔ اس لیے 7/2 = 3 1/2"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_count_halves",
+      "text": {
+        "en": "At dinner, count the rotis or parathas on the plate. Imagine each one cut in half. How many halves would there be? Write it as a mixed number and as an improper fraction (for example 2 1/2 = 5/2).",
+        "ur": "رات کے کھانے پر پلیٹ میں روٹیاں یا پراٹھے گنیں۔ سوچیں کہ ہر ایک کو آدھا کاٹ دیا گیا ہے۔ کتنے آدھے ٹکڑے ہوں گے؟ اسے مخلوط عدد اور غیر واجب کسر دونوں شکلوں میں لکھیں (مثلاً 2 1/2 = 5/2)۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Fraction",
+      "ur": "کسر"
+    },
+    {
+      "en": "Numerator",
+      "ur": "شمار کنندہ"
+    },
+    {
+      "en": "Denominator",
+      "ur": "نسب نما"
+    },
+    {
+      "en": "Mixed number",
+      "ur": "مخلوط عدد"
+    },
+    {
+      "en": "Improper fraction",
+      "ur": "غیر واجب کسر"
+    },
+    {
+      "en": "Proper fraction",
+      "ur": "واجب کسر"
+    },
+    {
+      "en": "Remainder",
+      "ur": "باقی"
+    },
+    {
+      "en": "Number line",
+      "ur": "عددی خط"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali ate 2 rotis and a half. How many half pieces is that?",
+          "ur": "علی نے ڈھائی روٹیاں کھائیں۔ یہ کتنے آدھے ٹکڑے بنتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "2 and a half is written 2 1/2. Let's find out how many halves it is. First, a quick check.",
+        "ur": "ڈھائی کو 2 1/2 لکھتے ہیں۔ آئیں معلوم کریں کہ اس میں کتنے آدھے ہیں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.fractions.unit_fraction_meaning",
+      "prompt": {
+        "en": "How many halves make one whole roti?",
+        "ur": "کتنے آدھے مل کر ایک پوری روٹی بناتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "two",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2 halves make 1 whole: 2/2 = 1.",
+            "ur": "جی ہاں! 2 آدھے 1 پوری بناتے ہیں: 2/2 = 1"
+          }
+        },
+        {
+          "id": "one",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "One half is only part of the roti. How many halves cover it all?",
+            "ur": "ایک آدھا تو روٹی کا صرف ایک حصہ ہے۔ کتنے آدھے پوری روٹی ڈھانپتے ہیں؟"
+          }
+        },
+        {
+          "id": "four",
+          "text": {
+            "en": "4",
+            "ur": "4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 pieces would be quarters. Halves are 2 equal pieces.",
+            "ur": "4 ٹکڑے چوتھائیاں ہوں گی۔ آدھے 2 برابر ٹکڑے ہوتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_predict",
+      "type": "choice",
+      "prompt": {
+        "en": "Guess first: 5/2 of a roti means 5 halves. Is that more or less than 1 whole roti?",
+        "ur": "پہلے اندازہ لگائیں: 5/2 روٹی کا مطلب ہے 5 آدھے۔ کیا یہ 1 پوری روٹی سے زیادہ ہے یا کم؟"
+      },
+      "options": [
+        {
+          "id": "less",
+          "text": {
+            "en": "Less: a fraction is always part of one thing",
+            "ur": "کم: کسر ہمیشہ کسی چیز کا حصہ ہوتی ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Many people think so. But 2 halves already make 1 roti, and here there are 5 halves. Let's test it.",
+            "ur": "بہت سے لوگ ایسا سمجھتے ہیں۔ لیکن 2 آدھے تو 1 روٹی بنا دیتے ہیں، اور یہاں 5 آدھے ہیں۔ آئیں جانچیں۔"
+          },
+          "misconception_id": "improper_less_than_one"
+        },
+        {
+          "id": "more",
+          "text": {
+            "en": "More than 1 roti",
+            "ur": "1 روٹی سے زیادہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Good thinking! 2 halves make 1 roti, so 5 halves are more than 1 roti.",
+            "ur": "بہت خوب سوچا! 2 آدھے 1 روٹی بناتے ہیں، اس لیے 5 آدھے 1 روٹی سے زیادہ ہیں۔"
+          }
+        },
+        {
+          "id": "same",
+          "text": {
+            "en": "Exactly 1 roti",
+            "ur": "پوری 1 روٹی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 roti is 2 halves, written 2/2. 5/2 has 3 more halves.",
+            "ur": "1 روٹی 2 آدھے ہے، یعنی 2/2۔ 5/2 میں 3 آدھے اور ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4_test_it",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "fraction_bars",
+      "prompt": {
+        "en": "Show Ali's 2 1/2 rotis. Use + to cut every roti into halves. Tap the halves Ali ate: 2 whole rotis and half of the third. Press Check.",
+        "ur": "علی کی 2 1/2 روٹیاں دکھائیں۔ + دبا کر ہر روٹی کے آدھے کریں۔ وہ آدھے چھوئیں جو علی نے کھائے: 2 پوری روٹیاں اور تیسری کا آدھا۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "wholes": 3,
+        "max_cut": 6
+      },
+      "expected": {
+        "result": "pieces",
+        "checker": "numeric",
+        "answer": "5"
+      },
+      "hint": {
+        "en": "Each whole roti is 2 halves. Then add the last half.",
+        "ur": "ہر پوری روٹی 2 آدھے ہے۔ پھر آخری آدھا جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 2 rotis are 4 halves, plus 1 half makes 5 halves. So 2 1/2 = 5/2.",
+        "ur": "جی ہاں! 2 روٹیاں 4 آدھے ہیں، اور 1 آدھا ملا کر 5 آدھے۔ یعنی 2 1/2 = 5/2"
+      },
+      "feedback_wrong": {
+        "en": "2 whole rotis make 2 × 2 = 4 halves. Add the last half: 4 + 1 = 5 halves. 2 1/2 = 5/2.",
+        "ur": "2 پوری روٹیاں 2 × 2 = 4 آدھے بناتی ہیں۔ آخری آدھا جمع کریں: 4 + 1 = 5 آدھے۔ 2 1/2 = 5/2"
+      },
+      "common_wrong": [
+        {
+          "answer": "3",
+          "feedback": {
+            "en": "That is 3 halves, only 1 1/2 rotis. Each whole roti has 2 halves.",
+            "ur": "یہ 3 آدھے ہیں، یعنی صرف 1 1/2 روٹی۔ ہر پوری روٹی میں 2 آدھے ہوتے ہیں۔"
+          },
+          "misconception_id": "whole_added_to_top"
+        },
+        {
+          "answer": "4",
+          "feedback": {
+            "en": "4 halves are the 2 whole rotis. Don't forget the last half!",
+            "ur": "4 آدھے تو 2 پوری روٹیاں ہیں۔ آخری آدھا نہ بھولیں!"
+          },
+          "misconception_id": "forgot_the_extra"
+        }
+      ]
+    },
+    {
+      "id": "s5_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Two names for the same amount of roti!",
+          "ur": "روٹی کی ایک ہی مقدار کے دو نام!"
+        }
+      },
+      "text": {
+        "en": "2 1/2 is a mixed number: a whole number and a fraction. 5/2 is an improper fraction: its numerator is bigger than its denominator, so it is more than 1. They are the same amount. To change 2 1/2: 2 wholes × 2 halves = 4 halves, plus 1 half = 5 halves. So 2 1/2 = (2 × 2 + 1)/2 = 5/2.",
+        "ur": "2 1/2 مخلوط عدد ہے: پورا عدد اور کسر ایک ساتھ۔ 5/2 غیر واجب کسر ہے: اس کا شمار کنندہ نسب نما سے بڑا ہے، اس لیے یہ 1 سے زیادہ ہے۔ دونوں ایک جتنی مقدار ہیں۔ 2 1/2 کو بدلنے کے لیے: 2 پورے × 2 آدھے = 4 آدھے، اور 1 آدھا ملا کر 5 آدھے۔ یعنی 2 1/2 = (2 × 2 + 1)/2 = 5/2"
+      }
+    },
+    {
+      "id": "s6_to_improper",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A tailor has 3 1/4 metres of cloth. Write 3 1/4 as an improper fraction.",
+        "ur": "ایک درزی کے پاس 3 1/4 میٹر کپڑا ہے۔ 3 1/4 کو غیر واجب کسر کی شکل میں لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "13/4",
+      "hint": {
+        "en": "How many quarters are in 3 wholes? Then add the extra quarter.",
+        "ur": "3 پوروں میں کتنی چوتھائیاں ہیں؟ پھر اضافی چوتھائی جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 4 + 1 = 13, so 3 1/4 = 13/4.",
+        "ur": "درست! 3 × 4 + 1 = 13، اس لیے 3 1/4 = 13/4"
+      },
+      "feedback_wrong": {
+        "en": "3 wholes are 3 × 4 = 12 quarters. Add 1 more quarter: 13 quarters. 3 1/4 = 13/4.",
+        "ur": "3 پورے 3 × 4 = 12 چوتھائیاں ہیں۔ 1 چوتھائی اور جمع کریں: 13 چوتھائیاں۔ 3 1/4 = 13/4"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "4/4",
+          "feedback": {
+            "en": "You added 3 to the top. But 3 wholes are 12 quarters, not 3.",
+            "ur": "آپ نے اوپر 3 جمع کیا۔ لیکن 3 پورے 12 چوتھائیاں ہیں، 3 نہیں۔"
+          },
+          "misconception_id": "whole_added_to_top"
+        },
+        {
+          "answer": "12/4",
+          "feedback": {
+            "en": "12/4 is the 3 wholes. Add the extra 1/4 too.",
+            "ur": "12/4 تو 3 پورے ہیں۔ اضافی 1/4 بھی جمع کریں۔"
+          },
+          "misconception_id": "forgot_the_extra"
+        },
+        {
+          "answer": "3 1/4",
+          "feedback": {
+            "en": "That is the mixed number we started with. Write it as one fraction with 4 at the bottom.",
+            "ur": "یہ تو وہی مخلوط عدد ہے جس سے شروع کیا۔ اسے ایک کسر کی شکل میں لکھیں جس کے نیچے 4 ہو۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_other_way",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Now the other way: we divide!",
+          "ur": "اب الٹی طرف: ہم تقسیم کریں گے!"
+        }
+      },
+      "text": {
+        "en": "To change 7/2 into a mixed number, ask: how many whole rotis do 7 halves make? Every 2 halves make 1 roti, so divide: 7 ÷ 2 = 3 remainder 1. That is 3 whole rotis and 1 half left over: 7/2 = 3 1/2. The answer of the division is the whole number; the remainder goes on top.",
+        "ur": "7/2 کو مخلوط عدد میں بدلنے کے لیے پوچھیں: 7 آدھے کتنی پوری روٹیاں بناتے ہیں؟ ہر 2 آدھے 1 روٹی بناتے ہیں، اس لیے تقسیم کریں: 7 ÷ 2 = 3 باقی 1۔ یعنی 3 پوری روٹیاں اور 1 آدھا بچا: 7/2 = 3 1/2۔ تقسیم کا جواب پورا عدد ہے؛ باقی اوپر جاتا ہے۔"
+      }
+    },
+    {
+      "id": "s8_to_mixed",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ayesha's mother cut parathas into quarters. There are 11 quarters on the plate: 11/4. Write 11/4 as a mixed number.",
+        "ur": "عائشہ کی امی نے پراٹھوں کو چوتھائیوں میں کاٹا۔ پلیٹ میں 11 چوتھائیاں ہیں: 11/4۔ 11/4 کو مخلوط عدد کی شکل میں لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "2 3/4",
+      "hint": {
+        "en": "4 quarters make 1 paratha. 11 ÷ 4 = ? remainder ?",
+        "ur": "4 چوتھائیاں 1 پراٹھا بناتی ہیں۔ 11 ÷ 4 = ? باقی ?"
+      },
+      "feedback_correct": {
+        "en": "Well done! 11 ÷ 4 = 2 remainder 3: 2 whole parathas and 3 quarters, 2 3/4.",
+        "ur": "شاباش! 11 ÷ 4 = 2 باقی 3: 2 پورے پراٹھے اور 3 چوتھائیاں، یعنی 2 3/4"
+      },
+      "feedback_wrong": {
+        "en": "11 ÷ 4 = 2 remainder 3. So there are 2 whole parathas and 3 quarters left: 11/4 = 2 3/4.",
+        "ur": "11 ÷ 4 = 2 باقی 3۔ یعنی 2 پورے پراٹھے اور 3 چوتھائیاں بچیں: 11/4 = 2 3/4"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "3 2/4",
+          "feedback": {
+            "en": "You swapped them. 11 ÷ 4 = 2 remainder 3: the 2 is the wholes and the 3 goes on top.",
+            "ur": "آپ نے جگہ بدل دی۔ 11 ÷ 4 = 2 باقی 3: 2 پورے ہیں اور 3 اوپر جاتا ہے۔"
+          },
+          "misconception_id": "swapped_quotient_remainder"
+        },
+        {
+          "answer": "11/4",
+          "feedback": {
+            "en": "That is the fraction we started with. Write it as whole parathas and a fraction.",
+            "ur": "یہ تو وہی کسر ہے جس سے شروع کیا۔ اسے پورے پراٹھوں اور کسر کی شکل میں لکھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_number_line",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "Put the marker on 2 1/2 on the number line. Press Check.",
+        "ur": "عددی خط پر نشان کو 2 1/2 پر رکھیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": 0,
+        "max": 4,
+        "step": 0.5
+      },
+      "expected": {
+        "result": "value",
+        "checker": "fraction",
+        "answer": "5/2"
+      },
+      "hint": {
+        "en": "2 1/2 is between 2 and 3, half-way. Count the halves: it is 5/2.",
+        "ur": "2 1/2، 2 اور 3 کے بالکل درمیان ہے۔ آدھے گنیں: یہ 5/2 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 2 1/2 = 5/2 is half-way between 2 and 3.",
+        "ur": "جی ہاں! 2 1/2 = 5/2، 2 اور 3 کے بالکل درمیان ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Go past 2 by one more half: 2 1/2 = 5/2, half-way between 2 and 3.",
+        "ur": "2 سے ایک آدھا آگے جائیں: 2 1/2 = 5/2، 2 اور 3 کے بالکل درمیان۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/2",
+          "feedback": {
+            "en": "That is 3/2 = 1 1/2. 2 wholes are 4 halves, so 2 1/2 is 5 halves.",
+            "ur": "یہ 3/2 = 1 1/2 ہے۔ 2 پورے 4 آدھے ہیں، اس لیے 2 1/2 پانچ آدھے ہے۔"
+          },
+          "misconception_id": "whole_added_to_top"
+        }
+      ]
+    },
+    {
+      "id": "s10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza says 2 1/3 = 3/3. What went wrong?",
+        "ur": "حمزہ کہتا ہے 2 1/3 = 3/3۔ اس سے کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "added",
+          "text": {
+            "en": "He added the 2 wholes to the top. 2 wholes are 6 thirds, so 2 1/3 = 7/3.",
+            "ur": "اس نے 2 پوروں کو اوپر جمع کر دیا۔ 2 پورے 6 تہائیاں ہیں، اس لیے 2 1/3 = 7/3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3/3 is just 1 whole. 2 × 3 + 1 = 7, so 2 1/3 = 7/3.",
+            "ur": "جی ہاں! 3/3 تو صرف 1 پورا ہے۔ 2 × 3 + 1 = 7، اس لیے 2 1/3 = 7/3"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, 2 + 1 = 3.",
+            "ur": "کوئی غلطی نہیں، 2 + 1 = 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3/3 is only 1 whole, but 2 1/3 is more than 2. Something is missing.",
+            "ur": "3/3 صرف 1 پورا ہے، جبکہ 2 1/3، 2 سے زیادہ ہے۔ کچھ کم ہے۔"
+          },
+          "misconception_id": "whole_added_to_top"
+        },
+        {
+          "id": "bottom",
+          "text": {
+            "en": "He should change the bottom: 2 1/3 = 1/6.",
+            "ur": "اسے نیچے والا عدد بدلنا چاہیے: 2 1/3 = 1/6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1/6 is less than 1! The pieces are still thirds, so the bottom stays 3.",
+            "ur": "1/6 تو 1 سے بھی کم ہے! ٹکڑے اب بھی تہائیاں ہیں، اس لیے نیچے 3 ہی رہے گا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s11_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? How does 2 3/4 turn into 11/4?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ 2 3/4 کیسے 11/4 بن جاتا ہے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how do you change 2 3/4 into an improper fraction, and why does it work? You can use parathas cut into quarters.",
+        "ur": "اپنے الفاظ میں بتائیں: 2 3/4 کو غیر واجب کسر میں کیسے بدلتے ہیں، اور یہ طریقہ کیوں درست ہے؟ آپ چوتھائیوں میں کٹے پراٹھوں کی مثال دے سکتے ہیں۔"
+      },
+      "key_idea": "Each whole is 4 quarters, so 2 wholes are 2 × 4 = 8 quarters. Add the 3 extra quarters: 8 + 3 = 11 quarters, so 2 3/4 = 11/4. It works because we count everything in quarters.",
+      "levels": {
+        "got_it": "Says each whole is 4 quarters so 2 wholes are 8 quarters (multiply), then adds the 3 quarters to get 11 quarters, 11/4.",
+        "partly": "Gives the rule (multiply then add) or the answer 11/4, but does not say why (wholes become quarters).",
+        "not_yet": "Adds the whole number to the numerator, gives no method, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "quarter",
+          "4 pieces",
+          "four pieces",
+          "چوتھائ",
+          "chothai",
+          "chauthai",
+          "chothaai"
+        ],
+        [
+          "multiply",
+          "times",
+          "8",
+          "eight",
+          "× 4",
+          "x 4",
+          "ضرب",
+          "آٹھ",
+          "zarb",
+          "aath"
+        ],
+        [
+          "add",
+          "plus",
+          "11",
+          "eleven",
+          "جمع",
+          "گیارہ",
+          "jama",
+          "gyarah",
+          "gyara"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 2 parathas are 8 quarters, and 3 more quarters make 11 quarters: 11/4.",
+          "ur": "بہت خوب سمجھایا! 2 پراٹھے 8 چوتھائیاں ہیں، اور 3 چوتھائیاں ملا کر 11 چوتھائیاں: 11/4"
+        },
+        "partly": {
+          "en": "Good start! Now say why we multiply: how many quarters are in one whole paratha?",
+          "ur": "اچھی شروعات! اب بتائیں کہ ضرب کیوں دیتے ہیں: ایک پورے پراٹھے میں کتنی چوتھائیاں ہوتی ہیں؟"
+        },
+        "not_yet": {
+          "en": "Think of 2 parathas, each cut into 4 quarters, and 3 more quarters. How many quarters can you count?",
+          "ur": "سوچیں: 2 پراٹھے ہیں، ہر ایک 4 چوتھائیوں میں کٹا ہوا، اور 3 چوتھائیاں اور۔ آپ کتنی چوتھائیاں گن سکتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s12_milk",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Zara's family buys milk in half-litre packets. This week they used 9 packets: 9/2 litres. How many litres is that? Write it as a mixed number.",
+        "ur": "زارا کے گھر والے آدھے لیٹر کے پیکٹ میں دودھ لیتے ہیں۔ اس ہفتے انہوں نے 9 پیکٹ استعمال کیے: 9/2 لیٹر۔ یہ کتنے لیٹر ہیں؟ مخلوط عدد کی شکل میں لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "4 1/2",
+      "hint": {
+        "en": "2 packets make 1 litre. 9 ÷ 2 = ? remainder ?",
+        "ur": "2 پیکٹ 1 لیٹر بناتے ہیں۔ 9 ÷ 2 = ? باقی ?"
+      },
+      "feedback_correct": {
+        "en": "Right! 9 ÷ 2 = 4 remainder 1, so they used 4 1/2 litres.",
+        "ur": "درست! 9 ÷ 2 = 4 باقی 1، اس لیے انہوں نے 4 1/2 لیٹر دودھ استعمال کیا۔"
+      },
+      "feedback_wrong": {
+        "en": "Every 2 packets make 1 litre. 9 ÷ 2 = 4 remainder 1: 4 whole litres and half a litre, 4 1/2 litres.",
+        "ur": "ہر 2 پیکٹ 1 لیٹر بناتے ہیں۔ 9 ÷ 2 = 4 باقی 1: 4 پورے لیٹر اور آدھا لیٹر، یعنی 4 1/2 لیٹر۔"
+      },
+      "require_simplest": true,
+      "common_wrong": [
+        {
+          "answer": "1 4/2",
+          "feedback": {
+            "en": "You swapped them. 9 ÷ 2 = 4 remainder 1: 4 is the whole litres and 1 goes on top.",
+            "ur": "آپ نے جگہ بدل دی۔ 9 ÷ 2 = 4 باقی 1: 4 پورے لیٹر ہیں اور 1 اوپر جاتا ہے۔"
+          },
+          "misconception_id": "swapped_quotient_remainder"
+        },
+        {
+          "answer": "9/2",
+          "feedback": {
+            "en": "The right amount, but please write it as a mixed number: whole litres and a fraction.",
+            "ur": "مقدار درست ہے، لیکن اسے مخلوط عدد کی شکل میں لکھیں: پورے لیٹر اور کسر۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s13_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can write the same amount in two ways!",
+          "ur": "اب آپ ایک ہی مقدار کو دو طرح لکھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A mixed number (2 1/2) and an improper fraction (5/2) can show the same amount. Mixed to improper: multiply the whole number by the denominator and add the numerator. Improper to mixed: divide; the answer is the whole number and the remainder goes on top.",
+        "ur": "مخلوط عدد (2 1/2) اور غیر واجب کسر (5/2) ایک ہی مقدار دکھا سکتے ہیں۔ مخلوط سے غیر واجب: پورے عدد کو نسب نما سے ضرب دیں اور شمار کنندہ جمع کریں۔ غیر واجب سے مخلوط: تقسیم کریں؛ جواب پورا عدد ہے اور باقی اوپر جاتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "2 1/2 = (2 × 2 + 1)/2 = 5/2",
+          "ur": "2 1/2 = (2 × 2 + 1)/2 = 5/2"
+        },
+        {
+          "en": "11/4: 11 ÷ 4 = 2 remainder 3, so 11/4 = 2 3/4",
+          "ur": "11/4: 11 ÷ 4 = 2 باقی 3، اس لیے 11/4 = 2 3/4"
+        },
+        {
+          "en": "An improper fraction is more than 1 (or equal to 1).",
+          "ur": "غیر واجب کسر 1 سے زیادہ (یا 1 کے برابر) ہوتی ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_to_improper",
+      "type": "apply",
+      "skill": "maths.fractions.mixed_numbers",
+      "step": {
+        "id": "r_to_improper",
+        "type": "text_check",
+        "prompt": {
+          "en": "Write 1 2/5 as an improper fraction.",
+          "ur": "1 2/5 کو غیر واجب کسر کی شکل میں لکھیں۔"
+        },
+        "checker": "fraction",
+        "expected": "7/5",
+        "hint": {
+          "en": "1 whole is 5 fifths. Add the 2 fifths.",
+          "ur": "1 پورا 5 پانچویں حصے ہے۔ 2 پانچویں حصے جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 1 × 5 + 2 = 7, so 1 2/5 = 7/5.",
+          "ur": "درست! 1 × 5 + 2 = 7، اس لیے 1 2/5 = 7/5"
+        },
+        "feedback_wrong": {
+          "en": "1 whole = 5/5. Add 2/5: 7/5.",
+          "ur": "1 پورا = 5/5۔ 2/5 جمع کریں: 7/5"
+        },
+        "require_simplest": true,
+        "common_wrong": [
+          {
+            "answer": "3/5",
+            "feedback": {
+              "en": "You added 1 to the top. 1 whole is 5 fifths, not 1.",
+              "ur": "آپ نے اوپر 1 جمع کیا۔ 1 پورا 5 پانچویں حصے ہے، 1 نہیں۔"
+            },
+            "misconception_id": "whole_added_to_top"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_to_mixed",
+      "type": "apply",
+      "skill": "maths.fractions.mixed_numbers",
+      "step": {
+        "id": "r_to_mixed",
+        "type": "text_check",
+        "prompt": {
+          "en": "Write 10/3 as a mixed number.",
+          "ur": "10/3 کو مخلوط عدد کی شکل میں لکھیں۔"
+        },
+        "checker": "fraction",
+        "expected": "3 1/3",
+        "hint": {
+          "en": "10 ÷ 3 = ? remainder ?",
+          "ur": "10 ÷ 3 = ? باقی ?"
+        },
+        "feedback_correct": {
+          "en": "Right! 10 ÷ 3 = 3 remainder 1, so 10/3 = 3 1/3.",
+          "ur": "درست! 10 ÷ 3 = 3 باقی 1، اس لیے 10/3 = 3 1/3"
+        },
+        "feedback_wrong": {
+          "en": "10 ÷ 3 = 3 remainder 1: 3 wholes and 1 third, 3 1/3.",
+          "ur": "10 ÷ 3 = 3 باقی 1: 3 پورے اور 1 تہائی، یعنی 3 1/3"
+        },
+        "require_simplest": true,
+        "common_wrong": [
+          {
+            "answer": "1 3/3",
+            "feedback": {
+              "en": "You swapped them: the 3 is the wholes and the remainder 1 goes on top.",
+              "ur": "آپ نے جگہ بدل دی: 3 پورے ہیں اور باقی 1 اوپر جاتا ہے۔"
+            },
+            "misconception_id": "swapped_quotient_remainder"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Fractions unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the file is named g6-maths-02 to sit with the dividing-fractions lesson. Fix the name and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: مخلوط عدد (mixed number), غیر واجب کسر (improper fraction), واجب کسر (proper fraction), باقی (remainder), عددی خط (number line), and ڈھائی (two and a half) in the hook.",
+    "The fraction checker accepts any equal value, so it can't insist on a form: where a step asks for a mixed number (s8, s12) or an improper fraction (s6), typing the starting form back is listed in common_wrong with feedback asking for the other form. That costs an attempt.",
+    "Steps follow the lesson pattern: foundation check (s2), prediction (s3), concrete with the fraction bars (s4) then symbolic (s5, s6), the other way (s7, s8), number line (s9), find the error (s10), explain (s11), word problem (s12).",
+    "The answers and the common wrong answers were worked out with Python's fractions module in content/sources/g6-maths-02/mixed_numbers.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

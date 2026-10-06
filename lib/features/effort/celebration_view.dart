@@ -67,60 +67,64 @@ class _CelebrationViewState extends ConsumerState<CelebrationView> {
       (stars.keptTrying, l10n.starKeptTrying),
       (stars.explained, l10n.starExplained),
     ];
-    return ListView(
+    // Not a lazy list: Back home must exist even when it starts off screen.
+    return SingleChildScrollView(
       key: const Key('lesson-celebration'),
       padding: const EdgeInsets.all(24),
-      children: [
-        MithuBubble(
-          line: CharacterLine(emotion: 'celebrating', say: _praise()),
-        ),
-        const SizedBox(height: 24),
-        Semantics(
-          label: '${stars.count} / 3',
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              for (final (i, (earned, _)) in reasons.indexed)
-                Icon(
-                  earned ? Icons.star_rounded : Icons.star_outline_rounded,
-                  key: Key('star-$i-${earned ? 'on' : 'off'}'),
-                  size: 64,
-                  color: earned ? Colors.amber.shade600 : theme.disabledColor,
-                ),
-            ],
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          MithuBubble(
+            line: CharacterLine(emotion: 'celebrating', say: _praise()),
           ),
-        ),
-        const SizedBox(height: 8),
-        for (final (earned, reason) in reasons)
-          if (earned)
+          const SizedBox(height: 24),
+          Semantics(
+            label: '${stars.count} / 3',
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                for (final (i, (earned, _)) in reasons.indexed)
+                  Icon(
+                    earned ? Icons.star_rounded : Icons.star_outline_rounded,
+                    key: Key('star-$i-${earned ? 'on' : 'off'}'),
+                    size: 64,
+                    color: earned ? Colors.amber.shade600 : theme.disabledColor,
+                  ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          for (final (earned, reason) in reasons)
+            if (earned)
+              Text(
+                reason,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.titleMedium,
+              ),
+          const SizedBox(height: 32),
+          if (next != null)
+            FilledButton.icon(
+              key: const Key('celebration-next'),
+              icon: const Icon(Icons.arrow_forward_rounded),
+              label: Text(l10n.nextLesson(next.title.of(context))),
+              onPressed: widget.onNext,
+            )
+          else
             Text(
-              reason,
+              l10n.comeBackTomorrow,
+              key: const Key('come-back-tomorrow'),
               textAlign: TextAlign.center,
               style: theme.textTheme.titleMedium,
             ),
-        const SizedBox(height: 32),
-        if (next != null)
-          FilledButton.icon(
-            key: const Key('celebration-next'),
-            icon: const Icon(Icons.arrow_forward_rounded),
-            label: Text(l10n.nextLesson(next.title.of(context))),
-            onPressed: widget.onNext,
-          )
-        else
-          Text(
-            l10n.comeBackTomorrow,
-            key: const Key('come-back-tomorrow'),
-            textAlign: TextAlign.center,
-            style: theme.textTheme.titleMedium,
+          const SizedBox(height: 12),
+          OutlinedButton.icon(
+            key: const Key('celebration-done'),
+            icon: const Icon(Icons.home_rounded),
+            label: Text(l10n.backHome),
+            onPressed: widget.onHome,
           ),
-        const SizedBox(height: 12),
-        OutlinedButton.icon(
-          key: const Key('celebration-done'),
-          icon: const Icon(Icons.home_rounded),
-          label: Text(l10n.backHome),
-          onPressed: widget.onHome,
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
