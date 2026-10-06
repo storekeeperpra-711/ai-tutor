@@ -1,0 +1,751 @@
+{
+  "id": "g6-maths-05-prime-numbers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise prime and composite numbers and write a number as a product of prime factors.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Factors and Multiples"
+    }
+  ],
+  "skills": [
+    "maths.factors.primes"
+  ],
+  "title": {
+    "en": "Prime numbers and prime factors",
+    "ur": "مفرد اعداد اور مفرد اجزائے ضربی"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.factors_multiples"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "odd_is_prime",
+      "description": "Thinks every odd number is prime: 9, 15, 21 are prime."
+    },
+    {
+      "id": "one_is_prime",
+      "description": "Thinks 1 is a prime number."
+    },
+    {
+      "id": "stops_early",
+      "description": "Stops a factor tree before every branch ends in a prime: 24 = 4 × 6."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.primes": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.primes": [
+      {
+        "id": "qb_two",
+        "type": "recall",
+        "step": {
+          "id": "qb_two",
+          "type": "choice",
+          "prompt": {
+            "en": "Which sentence about 2 is true?",
+            "ur": "2 کے بارے میں کون سا جملہ درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "right",
+              "text": {
+                "en": "2 is prime: its only factors are 1 and 2.",
+                "ur": "2 مفرد ہے: اس کے اجزائے ضربی صرف 1 اور 2 ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 2 is the only even prime.",
+                "ur": "جی ہاں! 2 واحد جفت مفرد عدد ہے۔"
+              }
+            },
+            {
+              "id": "even",
+              "text": {
+                "en": "2 is not prime because it is even.",
+                "ur": "2 جفت ہے اس لیے مفرد نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check its factors: only 1 and 2. So 2 is prime, the only even one.",
+                "ur": "اس کے اجزائے ضربی دیکھیں: صرف 1 اور 2۔ اس لیے 2 مفرد ہے، واحد جفت۔"
+              },
+              "misconception_id": "odd_is_prime"
+            },
+            {
+              "id": "comp",
+              "text": {
+                "en": "2 is composite.",
+                "ur": "2 مرکب ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A composite number has more than 2 factors. 2 has only 1 and 2.",
+                "ur": "مرکب عدد کے 2 سے زیادہ اجزائے ضربی ہوتے ہیں۔ 2 کے صرف 1 اور 2 ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_missing",
+        "type": "apply",
+        "step": {
+          "id": "qb_missing",
+          "type": "number",
+          "prompt": {
+            "en": "Find the missing prime: 90 = 2 × 3 × 3 × ?",
+            "ur": "غائب مفرد عدد معلوم کریں: 90 = 2 × 3 × 3 × ?"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "2 × 3 × 3 = 18. What times 18 makes 90?",
+            "ur": "2 × 3 × 3 = 18۔ 18 کو کس سے ضرب دیں تو 90 بنے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! 90 = 2 × 3 × 3 × 5.",
+            "ur": "درست! 90 = 2 × 3 × 3 × 5"
+          },
+          "feedback_wrong": {
+            "en": "2 × 3 × 3 = 18 and 90 ÷ 18 = 5.",
+            "ur": "2 × 3 × 3 = 18 اور 90 ÷ 18 = 5"
+          },
+          "common_wrong": [
+            {
+              "answer": 10,
+              "feedback": {
+                "en": "10 is not prime (2 × 5). 90 ÷ 18 = 5.",
+                "ur": "10 مفرد نہیں (2 × 5)۔ 90 ÷ 18 = 5"
+              },
+              "misconception_id": "stops_early"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zainab wrote the prime factors of 24 as 4 × 6. What went wrong?",
+            "ur": "زینب نے 24 کے مفرد اجزائے ضربی 4 × 6 لکھے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "stop",
+              "text": {
+                "en": "4 and 6 are not prime. Keep going: 24 = 2 × 2 × 2 × 3.",
+                "ur": "4 اور 6 مفرد نہیں۔ آگے بڑھیں: 24 = 2 × 2 × 2 × 3"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Every branch must end in a prime.",
+                "ur": "جی ہاں! ہر شاخ مفرد عدد پر ختم ہونی چاہیے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 4 × 6 = 24.",
+                "ur": "کوئی غلطی نہیں۔ 4 × 6 = 24"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "4 × 6 = 24 is true, but 4 and 6 are not prime. 24 = 2 × 2 × 2 × 3.",
+                "ur": "4 × 6 = 24 درست ہے، مگر 4 اور 6 مفرد نہیں۔ 24 = 2 × 2 × 2 × 3"
+              },
+              "misconception_id": "stops_early"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_prime",
+      "front": {
+        "en": "What is a prime number?",
+        "ur": "مفرد عدد کیا ہے؟"
+      },
+      "back": {
+        "en": "A number with exactly two factors: 1 and itself. 2, 3, 5, 7, 11, 13 … 1 is not prime.",
+        "ur": "وہ عدد جس کے ٹھیک دو اجزائے ضربی ہوں: 1 اور خود وہ عدد۔ 2، 3، 5، 7، 11، 13 … 1 مفرد نہیں۔"
+      }
+    },
+    {
+      "id": "f_tree",
+      "front": {
+        "en": "60 as a product of primes?",
+        "ur": "60 مفرد اجزائے ضربی کی شکل میں؟"
+      },
+      "back": {
+        "en": "60 = 2 × 2 × 3 × 5",
+        "ur": "60 = 2 × 2 × 3 × 5"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sieve",
+      "text": {
+        "en": "Write the numbers 1 to 50. Cross out 1. Circle 2 and cross out every other multiple of 2. Do the same for 3, 5 and 7. The circled and uncrossed numbers are the primes. How many are there?",
+        "ur": "1 سے 50 تک اعداد لکھیں۔ 1 کاٹ دیں۔ 2 پر دائرہ لگائیں اور 2 کے باقی سب اضعاف کاٹ دیں۔ 3، 5 اور 7 کے ساتھ بھی ایسا کریں۔ دائرے والے اور نہ کٹے اعداد مفرد ہیں۔ یہ کتنے ہیں؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Prime number",
+      "ur": "مفرد عدد"
+    },
+    {
+      "en": "Composite number",
+      "ur": "مرکب عدد"
+    },
+    {
+      "en": "Prime factor",
+      "ur": "مفرد جزو ضربی"
+    },
+    {
+      "en": "Factor tree",
+      "ur": "اجزائے ضربی کا درخت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Yesterday 12 laddoos fitted in many neat rows. Today Ayesha has 7. She can only make 1 row of 7, or 7 rows of 1! Why?",
+          "ur": "کل 12 لڈو کئی صاف قطاروں میں آ گئے۔ آج عائشہ کے پاس 7 ہیں۔ وہ صرف 7 کی 1 قطار، یا 1 کی 7 قطاریں بنا سکتی ہے! کیوں؟"
+        }
+      },
+      "text": {
+        "en": "Some numbers can't be split into equal rows. Today we meet them. First, a quick check on factors.",
+        "ur": "کچھ اعداد برابر قطاروں میں نہیں بٹ سکتے۔ آج ہم ان سے ملیں گے۔ پہلے اجزائے ضربی کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.factors.factors_multiples",
+      "prompt": {
+        "en": "How many factors does 7 have?",
+        "ur": "7 کے کتنے اجزائے ضربی ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which numbers divide 7 exactly?",
+        "ur": "کون سے اعداد 7 کو پورا تقسیم کرتے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! Only 1 and 7.",
+        "ur": "درست! صرف 1 اور 7"
+      },
+      "feedback_wrong": {
+        "en": "Only 1 × 7 = 7, so 7 has 2 factors: 1 and 7.",
+        "ur": "صرف 1 × 7 = 7، اس لیے 7 کے 2 اجزائے ضربی ہیں: 1 اور 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "Count 7 itself too: 1 and 7.",
+            "ur": "خود 7 بھی گنیں: 1 اور 7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Numbers like 7 are called prime numbers!",
+          "ur": "7 جیسے اعداد مفرد اعداد کہلاتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A prime number has exactly two factors: 1 and itself. 2, 3, 5, 7, 11 and 13 are prime. A composite number has more than two factors, like 12. The number 1 has only one factor, so it is neither prime nor composite. 2 is the only even prime: every other even number divides by 2.",
+        "ur": "مفرد عدد کے ٹھیک دو اجزائے ضربی ہوتے ہیں: 1 اور خود وہ عدد۔ 2، 3، 5، 7، 11 اور 13 مفرد ہیں۔ مرکب عدد کے دو سے زیادہ اجزائے ضربی ہوتے ہیں، جیسے 12۔ 1 کا صرف ایک جزو ضربی ہے، اس لیے یہ نہ مفرد ہے نہ مرکب۔ 2 واحد جفت مفرد عدد ہے: باقی ہر جفت عدد 2 سے تقسیم ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "s4_which_prime",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a prime number?",
+        "ur": "ان میں سے کون سا مفرد عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "p29",
+          "text": {
+            "en": "29",
+            "ur": "29"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only 1 × 29 makes 29.",
+            "ur": "جی ہاں! صرف 1 × 29 سے 29 بنتا ہے۔"
+          }
+        },
+        {
+          "id": "p21",
+          "text": {
+            "en": "21",
+            "ur": "21"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "21 = 3 × 7, so it is composite.",
+            "ur": "21 = 3 × 7، اس لیے یہ مرکب ہے۔"
+          },
+          "misconception_id": "odd_is_prime"
+        },
+        {
+          "id": "p27",
+          "text": {
+            "en": "27",
+            "ur": "27"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "27 = 3 × 9, so it is composite.",
+            "ur": "27 = 3 × 9، اس لیے یہ مرکب ہے۔"
+          },
+          "misconception_id": "odd_is_prime"
+        },
+        {
+          "id": "p1",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 has only one factor, so it is not prime.",
+            "ur": "1 کا صرف ایک جزو ضربی ہے، اس لیے یہ مفرد نہیں۔"
+          },
+          "misconception_id": "one_is_prime"
+        }
+      ]
+    },
+    {
+      "id": "s5_count_primes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many prime numbers are there from 1 to 20?",
+        "ur": "1 سے 20 تک کتنے مفرد اعداد ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "List them: 2, 3, 5, 7, … Don't count 1.",
+        "ur": "انہیں لکھیں: 2، 3، 5، 7، … 1 کو نہ گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2, 3, 5, 7, 11, 13, 17, 19.",
+        "ur": "درست! 2، 3، 5، 7، 11، 13، 17، 19"
+      },
+      "feedback_wrong": {
+        "en": "2, 3, 5, 7, 11, 13, 17, 19: eight primes.",
+        "ur": "2، 3، 5، 7، 11، 13، 17، 19: آٹھ مفرد اعداد۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Did you count 1? 1 is not prime.",
+            "ur": "کیا آپ نے 1 گنا؟ 1 مفرد نہیں۔"
+          },
+          "misconception_id": "one_is_prime"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Did you leave out 2? 2 is prime.",
+            "ur": "کیا آپ نے 2 چھوڑ دیا؟ 2 مفرد ہے۔"
+          }
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Odd numbers like 9 and 15 are not prime: 9 = 3 × 3, 15 = 3 × 5.",
+            "ur": "9 اور 15 جیسے طاق اعداد مفرد نہیں: 9 = 3 × 3، 15 = 3 × 5"
+          },
+          "misconception_id": "odd_is_prime"
+        }
+      ]
+    },
+    {
+      "id": "s6_tree",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Every composite number is built from primes. A factor tree finds them!",
+          "ur": "ہر مرکب عدد مفرد اعداد سے بنتا ہے۔ اجزائے ضربی کا درخت انہیں ڈھونڈتا ہے!"
+        }
+      },
+      "text": {
+        "en": "Split 60 into two factors: 60 = 2 × 30. 2 is prime, so that branch stops. Split 30 = 2 × 15, and 15 = 3 × 5. Stop when every branch ends in a prime. So 60 = 2 × 2 × 3 × 5. This is called writing 60 as a product of prime factors. Any split works; you always get the same primes.",
+        "ur": "60 کو دو اجزائے ضربی میں توڑیں: 60 = 2 × 30۔ 2 مفرد ہے، اس لیے وہ شاخ رک جاتی ہے۔ 30 = 2 × 15، اور 15 = 3 × 5۔ جب ہر شاخ مفرد عدد پر ختم ہو تو رک جائیں۔ اس لیے 60 = 2 × 2 × 3 × 5۔ اسے 60 کو مفرد اجزائے ضربی کے حاصل ضرب کی شکل میں لکھنا کہتے ہیں۔ کسی بھی طرح توڑیں؛ مفرد اعداد ہمیشہ وہی آتے ہیں۔"
+      }
+    },
+    {
+      "id": "s7_thirty_six",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which shows 36 as a product of prime factors?",
+        "ur": "کون سا 36 کو مفرد اجزائے ضربی کے حاصل ضرب کی شکل میں دکھاتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "2 × 2 × 3 × 3",
+            "ur": "2 × 2 × 3 × 3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Every factor is prime and they multiply to 36.",
+            "ur": "جی ہاں! ہر جزو مفرد ہے اور ان کا حاصل ضرب 36 ہے۔"
+          }
+        },
+        {
+          "id": "four_nine",
+          "text": {
+            "en": "4 × 9",
+            "ur": "4 × 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 and 9 are not prime. Split them: 2 × 2 × 3 × 3.",
+            "ur": "4 اور 9 مفرد نہیں۔ انہیں توڑیں: 2 × 2 × 3 × 3"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "id": "six_six",
+          "text": {
+            "en": "6 × 6",
+            "ur": "6 × 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 is not prime: 6 = 2 × 3. So 2 × 3 × 2 × 3.",
+            "ur": "6 مفرد نہیں: 6 = 2 × 3۔ اس لیے 2 × 3 × 2 × 3"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "s8_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the missing prime: 84 = 2 × 2 × 3 × ?",
+        "ur": "غائب مفرد عدد معلوم کریں: 84 = 2 × 2 × 3 × ?"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 × 2 × 3 = 12. What times 12 makes 84?",
+        "ur": "2 × 2 × 3 = 12۔ 12 کو کس سے ضرب دیں تو 84 بنے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 84 = 2 × 2 × 3 × 7.",
+        "ur": "درست! 84 = 2 × 2 × 3 × 7"
+      },
+      "feedback_wrong": {
+        "en": "2 × 2 × 3 = 12 and 84 ÷ 12 = 7.",
+        "ur": "2 × 2 × 3 = 12 اور 84 ÷ 12 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "14 is not prime (2 × 7). 84 ÷ 12 = 7.",
+            "ur": "14 مفرد نہیں (2 × 7)۔ 84 ÷ 12 = 7"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Saad says 9 is a prime number because it is odd. What went wrong?",
+        "ur": "سعد کہتا ہے 9 مفرد عدد ہے کیونکہ یہ طاق ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "three",
+          "text": {
+            "en": "9 = 3 × 3, so it has 3 factors (1, 3, 9). It is composite.",
+            "ur": "9 = 3 × 3، اس لیے اس کے 3 اجزائے ضربی ہیں (1، 3، 9)۔ یہ مرکب ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Odd doesn't mean prime: check the factors.",
+            "ur": "جی ہاں! طاق کا مطلب مفرد نہیں: اجزائے ضربی دیکھیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. All odd numbers are prime.",
+            "ur": "کوئی غلطی نہیں۔ سب طاق اعداد مفرد ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9, 15 and 21 are odd but not prime. 9 = 3 × 3.",
+            "ur": "9، 15 اور 21 طاق ہیں مگر مفرد نہیں۔ 9 = 3 × 3"
+          },
+          "misconception_id": "odd_is_prime"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My friend says 1 must be prime, because nothing divides it except 1. Is he right?",
+          "ur": "میرا دوست کہتا ہے 1 مفرد ہونا چاہیے، کیونکہ 1 کے سوا کوئی اسے تقسیم نہیں کرتا۔ کیا وہ درست ہے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: is 1 a prime number? Explain why or why not.",
+        "ur": "اپنے الفاظ میں بتائیں: کیا 1 مفرد عدد ہے؟ وجہ بتائیں۔"
+      },
+      "key_idea": "1 is not prime. A prime has exactly two different factors, 1 and itself, but 1 has only one factor (1). So 1 is neither prime nor composite.",
+      "levels": {
+        "got_it": "Says 1 is not prime because a prime needs exactly two factors and 1 has only one.",
+        "partly": "Says 1 is not prime but gives no reason, or mentions factors without counting them.",
+        "not_yet": "Says 1 is prime, or gives no reason."
+      },
+      "keywords": [
+        [
+          "two factors",
+          "2 factors",
+          "دو اجزائے",
+          "do ajza",
+          "exactly two"
+        ],
+        [
+          "one factor",
+          "only one",
+          "ایک جزو",
+          "صرف ایک",
+          "sirf ek"
+        ],
+        [
+          "not prime",
+          "مفرد نہیں",
+          "neither",
+          "نہ مفرد"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! A prime needs exactly two factors, but 1 has only one, so 1 is not prime.",
+          "ur": "بہت خوب سمجھایا! مفرد عدد کے ٹھیک دو اجزائے ضربی ہونے چاہییں، مگر 1 کا صرف ایک ہے، اس لیے 1 مفرد نہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now count: how many factors does 1 have, and how many does a prime need?",
+          "ur": "اچھی شروعات! اب گنیں: 1 کے کتنے اجزائے ضربی ہیں، اور مفرد عدد کو کتنے چاہییں؟"
+        },
+        "not_yet": {
+          "en": "Remember: a prime has exactly two factors, like 7 (1 and 7). How many factors does 1 have?",
+          "ur": "یاد کریں: مفرد عدد کے ٹھیک دو اجزائے ضربی ہوتے ہیں، جیسے 7 (1 اور 7)۔ 1 کے کتنے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_smallest",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "91 is not prime. What is its smallest prime factor?",
+        "ur": "91 مفرد نہیں ہے۔ اس کا سب سے چھوٹا مفرد جزو ضربی کیا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try dividing by 2, 3, 5, 7 in turn.",
+        "ur": "باری باری 2، 3، 5، 7 سے تقسیم کر کے دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 91 = 7 × 13.",
+        "ur": "درست! 91 = 7 × 13"
+      },
+      "feedback_wrong": {
+        "en": "91 is odd (not 2), 9 + 1 = 10 (not 3), doesn't end in 0 or 5 (not 5), and 91 ÷ 7 = 13. So 7.",
+        "ur": "91 طاق ہے (2 نہیں)، 9 + 1 = 10 (3 نہیں)، آخر میں 0 یا 5 نہیں (5 نہیں)، اور 91 ÷ 7 = 13۔ اس لیے 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "1 is not prime. Try 2, 3, 5, 7 …",
+            "ur": "1 مفرد نہیں۔ 2، 3، 5، 7 … آزمائیں۔"
+          },
+          "misconception_id": "one_is_prime"
+        },
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "13 is a prime factor, but 7 is smaller: 91 = 7 × 13.",
+            "ur": "13 مفرد جزو ضربی ہے، مگر 7 چھوٹا ہے: 91 = 7 × 13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Primes are the building blocks of all numbers!",
+          "ur": "مفرد اعداد تمام اعداد کی بنیادی اینٹیں ہیں!"
+        }
+      },
+      "text": {
+        "en": "A prime has exactly two factors, 1 and itself: 2, 3, 5, 7, 11, 13, 17, 19 … A composite number has more. 1 is neither, and 2 is the only even prime. Use a factor tree to write a number as a product of primes: 60 = 2 × 2 × 3 × 5.",
+        "ur": "مفرد عدد کے ٹھیک دو اجزائے ضربی ہوتے ہیں، 1 اور خود وہ عدد: 2، 3، 5، 7، 11، 13، 17، 19 … مرکب عدد کے زیادہ ہوتے ہیں۔ 1 دونوں میں سے کوئی نہیں، اور 2 واحد جفت مفرد عدد ہے۔ عدد کو مفرد اعداد کے حاصل ضرب کی شکل میں لکھنے کے لیے اجزائے ضربی کا درخت بنائیں: 60 = 2 × 2 × 3 × 5"
+      },
+      "points": [
+        {
+          "en": "Odd doesn't mean prime: 9 = 3 × 3.",
+          "ur": "طاق کا مطلب مفرد نہیں: 9 = 3 × 3"
+        },
+        {
+          "en": "Every branch of a factor tree ends in a prime.",
+          "ur": "اجزائے ضربی کے درخت کی ہر شاخ مفرد عدد پر ختم ہوتی ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_count",
+      "type": "apply",
+      "skill": "maths.factors.primes",
+      "step": {
+        "id": "r_count",
+        "type": "number",
+        "prompt": {
+          "en": "How many prime numbers are there from 20 to 30?",
+          "ur": "20 سے 30 تک کتنے مفرد اعداد ہیں؟"
+        },
+        "answer": 2,
+        "checker": "numeric",
+        "hint": {
+          "en": "Check the odd numbers: 21, 23, 25, 27, 29.",
+          "ur": "طاق اعداد دیکھیں: 21، 23، 25، 27، 29"
+        },
+        "feedback_correct": {
+          "en": "Right! 23 and 29.",
+          "ur": "درست! 23 اور 29"
+        },
+        "feedback_wrong": {
+          "en": "21 = 3 × 7, 25 = 5 × 5, 27 = 3 × 9. Only 23 and 29 are prime.",
+          "ur": "21 = 3 × 7، 25 = 5 × 5، 27 = 3 × 9۔ صرف 23 اور 29 مفرد ہیں۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 5,
+            "feedback": {
+              "en": "Not every odd number is prime: 21, 25 and 27 are composite.",
+              "ur": "ہر طاق عدد مفرد نہیں: 21، 25 اور 27 مرکب ہیں۔"
+            },
+            "misconception_id": "odd_is_prime"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_product",
+      "type": "recall",
+      "skill": "maths.factors.primes",
+      "step": {
+        "id": "r_product",
+        "type": "number",
+        "prompt": {
+          "en": "Which number is 2 × 3 × 3 × 5?",
+          "ur": "2 × 3 × 3 × 5 کون سا عدد ہے؟"
+        },
+        "answer": 90,
+        "checker": "numeric",
+        "hint": {
+          "en": "Multiply step by step: 2 × 3 = 6, 6 × 3 = 18 …",
+          "ur": "قدم بہ قدم ضرب دیں: 2 × 3 = 6، 6 × 3 = 18 …"
+        },
+        "feedback_correct": {
+          "en": "Right! 90.",
+          "ur": "درست! 90"
+        },
+        "feedback_wrong": {
+          "en": "2 × 3 = 6, 6 × 3 = 18, 18 × 5 = 90.",
+          "ur": "2 × 3 = 6، 6 × 3 = 18، 18 × 5 = 90"
+        },
+        "common_wrong": [
+          {
+            "answer": 13,
+            "feedback": {
+              "en": "That adds them. Multiply: 2 × 3 × 3 × 5 = 90.",
+              "ur": "یہ جمع ہے۔ ضرب دیں: 2 × 3 × 3 × 5 = 90"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Factors and Multiples unit. No textbook text or exercises were used.",
+    "Urdu terms to check: مفرد عدد (prime number), مرکب عدد (composite number), اجزائے ضربی کا درخت (factor tree).",
+    "The numbers were worked out in content/sources/g6-maths-05/prime_numbers.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
