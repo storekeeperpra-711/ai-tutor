@@ -1,0 +1,747 @@
+{
+  "id": "g6-maths-08-area-of-rectangles",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the area of rectangles and squares in square units, and a missing side from the area.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Perimeter and Area"
+    }
+  ],
+  "skills": [
+    "maths.measurement.area_rectangle"
+  ],
+  "title": {
+    "en": "Area of rectangles and squares",
+    "ur": "مستطیل اور مربع کا رقبہ"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.measurement.perimeter"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "perimeter_for_area",
+      "description": "Adds the sides (the perimeter) when the area is asked."
+    },
+    {
+      "id": "area_wrong_units",
+      "description": "Writes area in cm or m instead of square units (cm², m²)."
+    },
+    {
+      "id": "same_perimeter_same_area",
+      "description": "Thinks shapes with the same perimeter must have the same area."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.measurement.area_rectangle": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.measurement.area_rectangle": [
+      {
+        "id": "qb_units",
+        "type": "recall",
+        "step": {
+          "id": "qb_units",
+          "type": "choice",
+          "prompt": {
+            "en": "Which unit is right for the area of a page?",
+            "ur": "کسی صفحے کے رقبے کے لیے کون سی اکائی درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "cm2",
+              "text": {
+                "en": "cm² (square centimetres)",
+                "ur": "مربع سینٹی میٹر (cm²)"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Area counts squares, so it uses square units.",
+                "ur": "جی ہاں! رقبہ مربع گنتا ہے، اس لیے مربع اکائیاں۔"
+              }
+            },
+            {
+              "id": "cm",
+              "text": {
+                "en": "cm",
+                "ur": "سینٹی میٹر"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "cm measures a length. Area counts squares: cm².",
+                "ur": "سینٹی میٹر لمبائی ناپتا ہے۔ رقبہ مربع گنتا ہے: cm²"
+              },
+              "misconception_id": "area_wrong_units"
+            },
+            {
+              "id": "kg",
+              "text": {
+                "en": "kg",
+                "ur": "کلوگرام"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "kg measures weight. Area uses square units: cm².",
+                "ur": "کلوگرام وزن ناپتا ہے۔ رقبے کی اکائی مربع ہے: cm²"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Find the area of a rectangle 12 cm long and 5 cm wide, in cm².",
+            "ur": "12 سینٹی میٹر لمبی اور 5 سینٹی میٹر چوڑی مستطیل کا رقبہ مربع سینٹی میٹر میں معلوم کریں۔"
+          },
+          "answer": 60,
+          "checker": "numeric",
+          "hint": {
+            "en": "Area = length × width.",
+            "ur": "رقبہ = لمبائی × چوڑائی"
+          },
+          "feedback_correct": {
+            "en": "Right! 60 cm².",
+            "ur": "درست! 60 مربع سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "12 × 5 = 60 cm².",
+            "ur": "12 × 5 = 60 مربع سینٹی میٹر"
+          },
+          "common_wrong": [
+            {
+              "answer": 34,
+              "feedback": {
+                "en": "34 cm is the perimeter. Area = 12 × 5 = 60 cm².",
+                "ur": "34 سینٹی میٹر احاطہ ہے۔ رقبہ = 12 × 5 = 60 مربع سینٹی میٹر"
+              },
+              "misconception_id": "perimeter_for_area"
+            },
+            {
+              "answer": 17,
+              "feedback": {
+                "en": "Multiply, don't add: 12 × 5 = 60.",
+                "ur": "جمع نہیں، ضرب: 12 × 5 = 60"
+              },
+              "misconception_id": "perimeter_for_area"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Talha writes: 'The area of a square with 4 cm sides is 16 cm.' What went wrong?",
+            "ur": "طلحہ لکھتا ہے: '4 سینٹی میٹر ضلع والے مربع کا رقبہ 16 سینٹی میٹر ہے۔' کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "units",
+              "text": {
+                "en": "The unit: area is 16 cm², square centimetres.",
+                "ur": "اکائی: رقبہ 16 مربع سینٹی میٹر ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The number is right; area counts squares, so cm².",
+                "ur": "جی ہاں! عدد درست ہے؛ رقبہ مربع گنتا ہے، اس لیے cm²"
+              }
+            },
+            {
+              "id": "number",
+              "text": {
+                "en": "The number: it should be 8.",
+                "ur": "عدد: یہ 8 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "4 × 4 = 16 is right. Only the unit is wrong: cm².",
+                "ur": "4 × 4 = 16 درست ہے۔ صرف اکائی غلط ہے: cm²"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "16 cm is a length. Area is 16 cm².",
+                "ur": "16 سینٹی میٹر لمبائی ہے۔ رقبہ 16 مربع سینٹی میٹر ہے۔"
+              },
+              "misconception_id": "area_wrong_units"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_area",
+      "front": {
+        "en": "Area of a rectangle?",
+        "ur": "مستطیل کا رقبہ؟"
+      },
+      "back": {
+        "en": "Length × width, in square units. 6 m by 4 m: 24 m².",
+        "ur": "لمبائی × چوڑائی، مربع اکائیوں میں۔ 6 میٹر ضرب 4 میٹر: 24 مربع میٹر"
+      }
+    },
+    {
+      "id": "f_square",
+      "front": {
+        "en": "Area of a square?",
+        "ur": "مربع کا رقبہ؟"
+      },
+      "back": {
+        "en": "Side × side. Side 9 cm: 81 cm².",
+        "ur": "ضلع × ضلع۔ ضلع 9 سینٹی میٹر: 81 مربع سینٹی میٹر"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_tiles",
+      "text": {
+        "en": "Find a floor or wall with square tiles. Count the tiles along one side and along the other. Multiply to find how many tiles there are, then count a few rows to check.",
+        "ur": "کوئی فرش یا دیوار ڈھونڈیں جس پر مربع ٹائلیں ہوں۔ ایک طرف کی ٹائلیں اور دوسری طرف کی ٹائلیں گنیں۔ ضرب دے کر کل ٹائلیں نکالیں، پھر کچھ قطاریں گن کر جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Area",
+      "ur": "رقبہ"
+    },
+    {
+      "en": "Square centimetre (cm²)",
+      "ur": "مربع سینٹی میٹر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ammi wants a new rug for the room. Is it the distance around that matters, or the floor it covers?",
+          "ur": "امی کمرے کے لیے نیا قالین چاہتی ہیں۔ کیا گرد کا فاصلہ اہم ہے، یا وہ فرش جو قالین ڈھانپے گا؟"
+        }
+      },
+      "text": {
+        "en": "The space a flat shape covers is its area. First, a quick check on perimeter.",
+        "ur": "کوئی چپٹی شکل جتنی جگہ گھیرتی ہے وہ اس کا رقبہ ہے۔ پہلے احاطے کا ایک سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.perimeter",
+      "prompt": {
+        "en": "What is the perimeter of a rectangle 6 cm by 3 cm?",
+        "ur": "6 ضرب 3 سینٹی میٹر مستطیل کا احاطہ کیا ہے؟"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 + 3 + 6 + 3.",
+        "ur": "6 + 3 + 6 + 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 18 cm.",
+        "ur": "درست! 18 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "2 × (6 + 3) = 18 cm.",
+        "ur": "2 × (6 + 3) = 18 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That is two sides. All four: 18 cm.",
+            "ur": "یہ دو اضلاع ہیں۔ چاروں: 18 سینٹی میٹر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_squares",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Area counts the little squares inside!",
+          "ur": "رقبہ اندر کے چھوٹے مربع گنتا ہے!"
+        }
+      },
+      "text": {
+        "en": "Cover a rectangle 4 cm long and 3 cm wide with 1 cm squares: 3 rows of 4 squares. That is 4 × 3 = 12 squares, so the area is 12 square centimetres, written 12 cm². Area of a rectangle = length × width. Area of a square = side × side.",
+        "ur": "4 سینٹی میٹر لمبی اور 3 سینٹی میٹر چوڑی مستطیل کو 1 سینٹی میٹر کے مربعوں سے ڈھانپیں: 4 مربعوں کی 3 قطاریں۔ یعنی 4 × 3 = 12 مربع، اس لیے رقبہ 12 مربع سینٹی میٹر ہے، جسے 12 cm² لکھتے ہیں۔ مستطیل کا رقبہ = لمبائی × چوڑائی۔ مربع کا رقبہ = ضلع × ضلع۔"
+      }
+    },
+    {
+      "id": "s4_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "So how many 1 cm squares cover the 4 cm by 3 cm rectangle?",
+        "ur": "تو 4 ضرب 3 سینٹی میٹر مستطیل کو 1 سینٹی میٹر کے کتنے مربع ڈھانپتے ہیں؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 rows of 4.",
+        "ur": "4 کی 3 قطاریں"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 squares: 12 cm².",
+        "ur": "درست! 12 مربع: 12 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "4 × 3 = 12 squares.",
+        "ur": "4 × 3 = 12 مربع"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "14 cm is the perimeter, around the edge. Inside: 4 × 3 = 12.",
+            "ur": "14 سینٹی میٹر احاطہ ہے، کنارے کے گرد۔ اندر: 4 × 3 = 12"
+          },
+          "misconception_id": "perimeter_for_area"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Multiply the rows and columns: 4 × 3 = 12.",
+            "ur": "قطاریں اور کالم ضرب دیں: 4 × 3 = 12"
+          },
+          "misconception_id": "perimeter_for_area"
+        }
+      ]
+    },
+    {
+      "id": "s5_rug",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ammi's rug is 6 m long and 4 m wide. What is its area in m²?",
+        "ur": "امی کا قالین 6 میٹر لمبا اور 4 میٹر چوڑا ہے۔ اس کا رقبہ مربع میٹر میں کیا ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "Length × width.",
+        "ur": "لمبائی × چوڑائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 m².",
+        "ur": "درست! 24 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "6 × 4 = 24 m².",
+        "ur": "6 × 4 = 24 مربع میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 m is the perimeter. Area = 6 × 4 = 24 m².",
+            "ur": "20 میٹر احاطہ ہے۔ رقبہ = 6 × 4 = 24 مربع میٹر"
+          },
+          "misconception_id": "perimeter_for_area"
+        }
+      ]
+    },
+    {
+      "id": "s6_square",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A square has sides of 9 cm. What is its area in cm²?",
+        "ur": "ایک مربع کا ضلع 9 سینٹی میٹر ہے۔ اس کا رقبہ مربع سینٹی میٹر میں کیا ہے؟"
+      },
+      "answer": 81,
+      "checker": "numeric",
+      "hint": {
+        "en": "Side × side: 9 × 9.",
+        "ur": "ضلع × ضلع: 9 × 9"
+      },
+      "feedback_correct": {
+        "en": "Right! 81 cm².",
+        "ur": "درست! 81 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "9 × 9 = 81 cm².",
+        "ur": "9 × 9 = 81 مربع سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "36 cm is the perimeter. Area = 9 × 9 = 81 cm².",
+            "ur": "36 سینٹی میٹر احاطہ ہے۔ رقبہ = 9 × 9 = 81"
+          },
+          "misconception_id": "perimeter_for_area"
+        },
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "That is 9 × 2. Area of a square is 9 × 9 = 81.",
+            "ur": "یہ 9 × 2 ہے۔ مربع کا رقبہ 9 × 9 = 81"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A rectangle has an area of 40 cm². Its length is 8 cm. How wide is it?",
+        "ur": "ایک مستطیل کا رقبہ 40 مربع سینٹی میٹر ہے۔ اس کی لمبائی 8 سینٹی میٹر ہے۔ چوڑائی کتنی ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "8 × width = 40.",
+        "ur": "8 × چوڑائی = 40"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 cm. Check: 8 × 5 = 40.",
+        "ur": "درست! 5 سینٹی میٹر۔ جانچ: 8 × 5 = 40"
+      },
+      "feedback_wrong": {
+        "en": "40 ÷ 8 = 5 cm.",
+        "ur": "40 ÷ 8 = 5 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "Divide, don't subtract: 40 ÷ 8 = 5.",
+            "ur": "گھٹائیں نہیں، تقسیم کریں: 40 ÷ 8 = 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_same_perimeter",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A 7 m by 3 m garden and a 5 m by 5 m garden both have a perimeter of 20 m. How many m² bigger is the square garden?",
+        "ur": "7 ضرب 3 میٹر اور 5 ضرب 5 میٹر کے دونوں باغیچوں کا احاطہ 20 میٹر ہے۔ مربع باغیچہ کتنے مربع میٹر بڑا ہے؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find both areas: 5 × 5 and 7 × 3.",
+        "ur": "دونوں رقبے نکالیں: 5 × 5 اور 7 × 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 25 − 21 = 4 m². Same perimeter, different area!",
+        "ur": "درست! 25 − 21 = 4 مربع میٹر۔ احاطہ ایک، رقبہ مختلف!"
+      },
+      "feedback_wrong": {
+        "en": "5 × 5 = 25 and 7 × 3 = 21, so 25 − 21 = 4 m².",
+        "ur": "5 × 5 = 25 اور 7 × 3 = 21، تو 25 − 21 = 4 مربع میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "Same perimeter doesn't mean same area: 25 m² and 21 m². Difference: 4.",
+            "ur": "ایک احاطے کا مطلب ایک رقبہ نہیں: 25 اور 21 مربع میٹر۔ فرق: 4"
+          },
+          "misconception_id": "same_perimeter_same_area"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Rabia says the area of a 5 cm by 3 cm rectangle is 16 cm². What went wrong?",
+        "ur": "رابعہ کہتی ہے 5 ضرب 3 سینٹی میٹر مستطیل کا رقبہ 16 مربع سینٹی میٹر ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "perimeter",
+          "text": {
+            "en": "She found the perimeter. Area = 5 × 3 = 15 cm².",
+            "ur": "اس نے احاطہ نکالا۔ رقبہ = 5 × 3 = 15 مربع سینٹی میٹر"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 5 + 3 + 5 + 3 = 16 is the distance round. Inside: 15 squares.",
+            "ur": "جی ہاں! 5 + 3 + 5 + 3 = 16 گرد کا فاصلہ ہے۔ اندر: 15 مربع۔"
+          }
+        },
+        {
+          "id": "eight",
+          "text": {
+            "en": "It should be 8 cm².",
+            "ur": "یہ 8 مربع سینٹی میٹر ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8 is 5 + 3. Area multiplies: 5 × 3 = 15.",
+            "ur": "8 یعنی 5 + 3۔ رقبے میں ضرب: 5 × 3 = 15"
+          },
+          "misconception_id": "perimeter_for_area"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "16 cm is the perimeter. The area is 5 × 3 = 15 cm².",
+            "ur": "16 سینٹی میٹر احاطہ ہے۔ رقبہ 5 × 3 = 15 مربع سینٹی میٹر ہے۔"
+          },
+          "misconception_id": "perimeter_for_area"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does length × width give the area of a rectangle? Can you teach me?",
+          "ur": "لمبائی × چوڑائی سے مستطیل کا رقبہ کیوں نکلتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we multiply length by width to find the area of a rectangle?",
+        "ur": "اپنے الفاظ میں بتائیں: مستطیل کا رقبہ نکالنے کے لیے لمبائی کو چوڑائی سے ضرب کیوں دیتے ہیں؟"
+      },
+      "key_idea": "Area counts the unit squares inside. The length tells how many squares fit in one row and the width tells how many rows there are, so the total is length × width.",
+      "levels": {
+        "got_it": "Explains that the rectangle is rows of unit squares: the length gives squares per row, the width gives the number of rows.",
+        "partly": "Says area counts squares, without linking rows and columns to the multiplication.",
+        "not_yet": "Confuses it with perimeter, or gives no reason."
+      },
+      "keywords": [
+        [
+          "square",
+          "مربع",
+          "murabba"
+        ],
+        [
+          "row",
+          "rows",
+          "قطار",
+          "qataar"
+        ],
+        [
+          "inside",
+          "cover",
+          "اندر",
+          "ڈھانپ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Rows of squares: squares in a row × number of rows.",
+          "ur": "بہت خوب! مربعوں کی قطاریں: ایک قطار کے مربع × قطاروں کی تعداد۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how rows and columns of squares give a multiplication.",
+          "ur": "اچھی شروعات! اب بتائیں مربعوں کی قطاروں اور کالموں سے ضرب کیسے بنتی ہے۔"
+        },
+        "not_yet": {
+          "en": "Picture the 4 by 3 rectangle: 3 rows of 4 squares. How many squares is that?",
+          "ur": "4 ضرب 3 کی مستطیل سوچیں: 4 مربعوں کی 3 قطاریں۔ کل کتنے مربع ہوئے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_tiles",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A floor is 8 m long and 6 m wide. Each tile covers 1 m². How many tiles are needed?",
+        "ur": "ایک فرش 8 میٹر لمبا اور 6 میٹر چوڑا ہے۔ ہر ٹائل 1 مربع میٹر ڈھانپتی ہے۔ کتنی ٹائلیں چاہییں؟"
+      },
+      "answer": 48,
+      "checker": "numeric",
+      "hint": {
+        "en": "The number of tiles is the area: 8 × 6.",
+        "ur": "ٹائلوں کی تعداد رقبہ ہے: 8 × 6"
+      },
+      "feedback_correct": {
+        "en": "Right! 48 tiles.",
+        "ur": "درست! 48 ٹائلیں"
+      },
+      "feedback_wrong": {
+        "en": "8 × 6 = 48 m², so 48 tiles.",
+        "ur": "8 × 6 = 48 مربع میٹر، یعنی 48 ٹائلیں"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "28 m is the perimeter. Tiles cover the inside: 8 × 6 = 48.",
+            "ur": "28 میٹر احاطہ ہے۔ ٹائلیں اندر ڈھانپتی ہیں: 8 × 6 = 48"
+          },
+          "misconception_id": "perimeter_for_area"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "Multiply, don't add: 8 × 6 = 48.",
+            "ur": "جمع نہیں، ضرب: 8 × 6 = 48"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can measure the inside of a shape!",
+          "ur": "اب آپ شکل کا اندر ناپ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Area is the space a shape covers, counted in squares. Rectangle: length × width. Square: side × side. Write area in square units: cm², m². Shapes with the same perimeter can have different areas.",
+        "ur": "رقبہ وہ جگہ ہے جو شکل ڈھانپتی ہے، مربعوں میں گنی جاتی ہے۔ مستطیل: لمبائی × چوڑائی۔ مربع: ضلع × ضلع۔ رقبہ مربع اکائیوں میں لکھیں: مربع سینٹی میٹر، مربع میٹر۔ ایک جیسے احاطے والی شکلوں کا رقبہ مختلف ہو سکتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Perimeter goes around (cm); area covers inside (cm²).",
+          "ur": "احاطہ گرد (سینٹی میٹر)؛ رقبہ اندر (مربع سینٹی میٹر)۔"
+        },
+        {
+          "en": "Missing side: area ÷ the side you know.",
+          "ur": "نامعلوم ضلع: رقبہ ÷ معلوم ضلع۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_rect",
+      "type": "apply",
+      "skill": "maths.measurement.area_rectangle",
+      "step": {
+        "id": "r_rect",
+        "type": "number",
+        "prompt": {
+          "en": "Find the area of a rectangle 9 cm by 7 cm, in cm².",
+          "ur": "9 ضرب 7 سینٹی میٹر مستطیل کا رقبہ مربع سینٹی میٹر میں معلوم کریں۔"
+        },
+        "answer": 63,
+        "checker": "numeric",
+        "hint": {
+          "en": "9 × 7.",
+          "ur": "9 × 7"
+        },
+        "feedback_correct": {
+          "en": "Right! 63 cm².",
+          "ur": "درست! 63 مربع سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "9 × 7 = 63 cm².",
+          "ur": "9 × 7 = 63 مربع سینٹی میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 32,
+            "feedback": {
+              "en": "32 cm is the perimeter. Area: 9 × 7 = 63.",
+              "ur": "32 سینٹی میٹر احاطہ ہے۔ رقبہ: 9 × 7 = 63"
+            },
+            "misconception_id": "perimeter_for_area"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_square",
+      "type": "recall",
+      "skill": "maths.measurement.area_rectangle",
+      "step": {
+        "id": "r_square",
+        "type": "number",
+        "prompt": {
+          "en": "Find the area of a square with 10 m sides, in m².",
+          "ur": "10 میٹر ضلع والے مربع کا رقبہ مربع میٹر میں معلوم کریں۔"
+        },
+        "answer": 100,
+        "checker": "numeric",
+        "hint": {
+          "en": "10 × 10.",
+          "ur": "10 × 10"
+        },
+        "feedback_correct": {
+          "en": "Right! 100 m².",
+          "ur": "درست! 100 مربع میٹر"
+        },
+        "feedback_wrong": {
+          "en": "10 × 10 = 100 m².",
+          "ur": "10 × 10 = 100 مربع میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 40,
+            "feedback": {
+              "en": "40 m is the perimeter. Area: 10 × 10 = 100.",
+              "ur": "40 میٹر احاطہ ہے۔ رقبہ: 10 × 10 = 100"
+            },
+            "misconception_id": "perimeter_for_area"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Perimeter and Area unit. No textbook text or exercises were used.",
+    "Area is introduced by counting unit squares in rows before the formula. Squared paper helps.",
+    "Urdu terms to check: رقبہ (area), مربع سینٹی میٹر (square centimetre).",
+    "The numbers were worked out in content/sources/g6-maths-08/area_rectangles.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
