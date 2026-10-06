@@ -1,0 +1,757 @@
+{
+  "id": "g6-maths-05-lowest-common-multiple",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the lowest common multiple (LCM) of two or three numbers by listing multiples and by prime factorisation.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Factors and Multiples"
+    }
+  ],
+  "skills": [
+    "maths.factors.lcm"
+  ],
+  "title": {
+    "en": "Lowest common multiple (LCM)",
+    "ur": "ذو اضعاف اقل"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.factors_multiples"
+    },
+    {
+      "skill": "maths.factors.hcf"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "lcm_hcf_swap",
+      "description": "Gives a common factor (often the HCF) instead of the LCM: LCM of 4 and 6 is 2."
+    },
+    {
+      "id": "always_multiply",
+      "description": "Always multiplies the two numbers: LCM of 4 and 6 is 24, which is a common multiple but not the lowest."
+    },
+    {
+      "id": "shared_primes_only",
+      "description": "Multiplies only the shared prime factors, which gives the HCF."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.lcm": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.lcm": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the LCM of two numbers?",
+            "ur": "دو اعداد کا ذو اضعاف اقل کیا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "right",
+              "text": {
+                "en": "The smallest number that both numbers divide into.",
+                "ur": "سب سے چھوٹا عدد جسے دونوں اعداد پورا تقسیم کریں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! For 4 and 6 it is 12.",
+                "ur": "جی ہاں! 4 اور 6 کا 12 ہے۔"
+              }
+            },
+            {
+              "id": "hcf",
+              "text": {
+                "en": "The biggest number that divides both.",
+                "ur": "سب سے بڑا عدد جو دونوں کو تقسیم کرے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the HCF. The LCM is a multiple of both.",
+                "ur": "یہ عاد اعظم ہے۔ ذو اضعاف اقل دونوں کا ضعف ہوتا ہے۔"
+              },
+              "misconception_id": "lcm_hcf_swap"
+            },
+            {
+              "id": "product",
+              "text": {
+                "en": "Always the two numbers multiplied.",
+                "ur": "ہمیشہ دونوں اعداد کا حاصل ضرب۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is a common multiple, but often not the lowest: 4 × 6 = 24, but the LCM is 12.",
+                "ur": "یہ مشترک ضعف ہے، مگر اکثر سب سے چھوٹا نہیں: 4 × 6 = 24، مگر ذو اضعاف اقل 12 ہے۔"
+              },
+              "misconception_id": "always_multiply"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Find the LCM of 10 and 15.",
+            "ur": "10 اور 15 کا ذو اضعاف اقل معلوم کریں۔"
+          },
+          "answer": 30,
+          "checker": "numeric",
+          "hint": {
+            "en": "Multiples of 15: 15, 30, 45 ... Which is the first one 10 also divides?",
+            "ur": "15 کے اضعاف: 15، 30، 45 ... پہلا کون سا ہے جسے 10 بھی تقسیم کرے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! LCM = 30.",
+            "ur": "درست! ذو اضعاف اقل = 30"
+          },
+          "feedback_wrong": {
+            "en": "15, 30: 30 ÷ 10 = 3. So the LCM is 30.",
+            "ur": "15، 30: 30 ÷ 10 = 3۔ اس لیے ذو اضعاف اقل 30 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "5 is the HCF. The LCM is a multiple of both: 30.",
+                "ur": "5 عاد اعظم ہے۔ ذو اضعاف اقل دونوں کا ضعف ہے: 30"
+              },
+              "misconception_id": "lcm_hcf_swap"
+            },
+            {
+              "answer": 150,
+              "feedback": {
+                "en": "150 is a common multiple, but 30 is lower.",
+                "ur": "150 مشترک ضعف ہے، مگر 30 چھوٹا ہے۔"
+              },
+              "misconception_id": "always_multiply"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal says the LCM of 6 and 9 is 54, because 6 × 9 = 54. What went wrong?",
+            "ur": "بلال کہتا ہے 6 اور 9 کا ذو اضعاف اقل 54 ہے، کیونکہ 6 × 9 = 54۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "lowest",
+              "text": {
+                "en": "54 is a common multiple, but 18 is lower.",
+                "ur": "54 مشترک ضعف ہے، مگر 18 چھوٹا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 6 and 9 share a 3, so the LCM is 54 ÷ 3 = 18.",
+                "ur": "جی ہاں! 6 اور 9 میں 3 مشترک ہے، اس لیے ذو اضعاف اقل 54 ÷ 3 = 18 ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. Multiply to get the LCM.",
+                "ur": "کوئی غلطی نہیں۔ ضرب دینے سے ذو اضعاف اقل ملتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only when the numbers share no factor. 18 is a common multiple lower than 54.",
+                "ur": "صرف تب جب اعداد میں کوئی جزو ضربی مشترک نہ ہو۔ 18 مشترک ضعف ہے جو 54 سے چھوٹا ہے۔"
+              },
+              "misconception_id": "always_multiply"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_lcm",
+      "front": {
+        "en": "What is the LCM?",
+        "ur": "ذو اضعاف اقل کیا ہے؟"
+      },
+      "back": {
+        "en": "The lowest common multiple: the smallest number both numbers divide into. LCM of 4 and 6 = 12.",
+        "ur": "سب سے چھوٹا مشترک ضعف: سب سے چھوٹا عدد جسے دونوں اعداد تقسیم کریں۔ 4 اور 6 کا ذو اضعاف اقل = 12"
+      }
+    },
+    {
+      "id": "f_rule",
+      "front": {
+        "en": "HCF × LCM = ?",
+        "ur": "عاد اعظم × ذو اضعاف اقل = ؟"
+      },
+      "back": {
+        "en": "The two numbers multiplied. For 8 and 12: 4 × 24 = 96 = 8 × 12.",
+        "ur": "دونوں اعداد کا حاصل ضرب۔ 8 اور 12 کے لیے: 4 × 24 = 96 = 8 × 12"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_bells",
+      "text": {
+        "en": "One light blinks every 3 seconds and another every 4 seconds. They blink together now. Count with a clock: after how many seconds do they blink together again?",
+        "ur": "ایک بتی ہر 3 سیکنڈ بعد اور دوسری ہر 4 سیکنڈ بعد جلتی ہے۔ ابھی دونوں ایک ساتھ جلی ہیں۔ گھڑی سے گنیں: کتنے سیکنڈ بعد دوبارہ ایک ساتھ جلیں گی؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Common multiple",
+      "ur": "مشترک ضعف"
+    },
+    {
+      "en": "Lowest common multiple (LCM)",
+      "ur": "ذو اضعاف اقل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "One bus leaves every 4 minutes, another every 6 minutes. They just left together. When do they leave together again?",
+          "ur": "ایک بس ہر 4 منٹ بعد چلتی ہے، دوسری ہر 6 منٹ بعد۔ ابھی دونوں ساتھ چلیں۔ دوبارہ کب ساتھ چلیں گی؟"
+        }
+      },
+      "text": {
+        "en": "The answer must be a multiple of 4 AND of 6. Today we find the smallest such number. First, a quick check.",
+        "ur": "جواب 4 اور 6 دونوں کا ضعف ہونا چاہیے۔ آج ہم ایسا سب سے چھوٹا عدد ڈھونڈیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.factors.hcf",
+      "prompt": {
+        "en": "Find the HCF of 18 and 24.",
+        "ur": "18 اور 24 کا عاد اعظم معلوم کریں۔"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "The biggest number that divides both.",
+        "ur": "سب سے بڑا عدد جو دونوں کو تقسیم کرے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! HCF = 6.",
+        "ur": "درست! عاد اعظم = 6"
+      },
+      "feedback_wrong": {
+        "en": "18 = 2 × 3 × 3, 24 = 2 × 2 × 2 × 3. Shared: 2 × 3 = 6.",
+        "ur": "18 = 2 × 3 × 3، 24 = 2 × 2 × 2 × 3۔ مشترک: 2 × 3 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 divides both, but 6 is higher.",
+            "ur": "3 دونوں کو تقسیم کرتا ہے، مگر 6 بڑا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "List the multiples and find the first one they share!",
+          "ur": "اضعاف لکھیں اور پہلا مشترک ڈھونڈیں!"
+        }
+      },
+      "text": {
+        "en": "Multiples of 4: 4, 8, 12, 16, 20, 24 ... Multiples of 6: 6, 12, 18, 24 ... The common multiples are 12, 24, ... The lowest is 12, so the lowest common multiple (LCM) of 4 and 6 is 12. The buses leave together again after 12 minutes.",
+        "ur": "4 کے اضعاف: 4، 8، 12، 16، 20، 24 ... 6 کے اضعاف: 6، 12، 18، 24 ... مشترک اضعاف 12، 24، ... ہیں۔ سب سے چھوٹا 12 ہے، اس لیے 4 اور 6 کا ذو اضعاف اقل 12 ہے۔ بسیں 12 منٹ بعد دوبارہ ساتھ چلیں گی۔"
+      }
+    },
+    {
+      "id": "s4_lcm",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "So what is the LCM of 4 and 6?",
+        "ur": "تو 4 اور 6 کا ذو اضعاف اقل کیا ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "The first number in both lists of multiples.",
+        "ur": "دونوں فہرستوں میں پہلا مشترک عدد۔"
+      },
+      "feedback_correct": {
+        "en": "Right! LCM = 12.",
+        "ur": "درست! ذو اضعاف اقل = 12"
+      },
+      "feedback_wrong": {
+        "en": "Common multiples 12, 24, ...: the lowest is 12.",
+        "ur": "مشترک اضعاف 12، 24، ...: سب سے چھوٹا 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24 is a common multiple, but 12 comes first.",
+            "ur": "24 مشترک ضعف ہے، مگر 12 پہلے آتا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the HCF. The LCM is a multiple of both: 12.",
+            "ur": "2 عاد اعظم ہے۔ ذو اضعاف اقل دونوں کا ضعف ہے: 12"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ]
+    },
+    {
+      "id": "s5_primes",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "For bigger numbers, prime factors help again!",
+          "ur": "بڑے اعداد کے لیے پھر مفرد اجزائے ضربی مدد کرتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "12 = 2 × 2 × 3 and 18 = 2 × 3 × 3. Take each prime the most times it appears in either number: two 2s (from 12) and two 3s (from 18). LCM = 2 × 2 × 3 × 3 = 36.",
+        "ur": "12 = 2 × 2 × 3 اور 18 = 2 × 3 × 3۔ ہر مفرد عدد اتنی بار لیں جتنی بار وہ کسی ایک عدد میں سب سے زیادہ آئے: دو 2 (12 سے) اور دو 3 (18 سے)۔ ذو اضعاف اقل = 2 × 2 × 3 × 3 = 36"
+      }
+    },
+    {
+      "id": "s6_by_primes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the LCM of 12 and 18.",
+        "ur": "12 اور 18 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 36,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two 2s and two 3s.",
+        "ur": "دو 2 اور دو 3"
+      },
+      "feedback_correct": {
+        "en": "Right! LCM = 2 × 2 × 3 × 3 = 36.",
+        "ur": "درست! ذو اضعاف اقل = 2 × 2 × 3 × 3 = 36"
+      },
+      "feedback_wrong": {
+        "en": "12 = 2 × 2 × 3, 18 = 2 × 3 × 3. Take two 2s and two 3s: 36.",
+        "ur": "12 = 2 × 2 × 3، 18 = 2 × 3 × 3۔ دو 2 اور دو 3 لیں: 36"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the HCF (only the shared primes). The LCM takes them all: 36.",
+            "ur": "6 عاد اعظم ہے (صرف مشترک مفرد اعداد)۔ ذو اضعاف اقل سب لیتا ہے: 36"
+          },
+          "misconception_id": "shared_primes_only"
+        },
+        {
+          "answer": 216,
+          "feedback": {
+            "en": "216 = 12 × 18 is a common multiple, but 36 is lower.",
+            "ur": "216 = 12 × 18 مشترک ضعف ہے، مگر 36 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        }
+      ]
+    },
+    {
+      "id": "s7_divides",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the LCM of 5 and 15.",
+        "ur": "5 اور 15 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Is 15 already a multiple of 5?",
+        "ur": "کیا 15 پہلے ہی 5 کا ضعف ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 is a multiple of 5, so the LCM is 15 itself.",
+        "ur": "درست! 15، 5 کا ضعف ہے، اس لیے ذو اضعاف اقل خود 15 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "15 ÷ 5 = 3, so 15 is a multiple of both. LCM = 15.",
+        "ur": "15 ÷ 5 = 3، اس لیے 15 دونوں کا ضعف ہے۔ ذو اضعاف اقل = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 75,
+          "feedback": {
+            "en": "75 is a common multiple, but 15 is lower.",
+            "ur": "75 مشترک ضعف ہے، مگر 15 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is the HCF. 5 is not a multiple of 15.",
+            "ur": "5 عاد اعظم ہے۔ 5، 15 کا ضعف نہیں۔"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ]
+    },
+    {
+      "id": "s8_rule",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shortcut: HCF × LCM = the two numbers multiplied. The HCF of 8 and 12 is 4. Use 8 × 12 = 96 to find their LCM.",
+        "ur": "ایک آسان طریقہ: عاد اعظم × ذو اضعاف اقل = دونوں اعداد کا حاصل ضرب۔ 8 اور 12 کا عاد اعظم 4 ہے۔ 8 × 12 = 96 سے ان کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × LCM = 96. Divide 96 by 4.",
+        "ur": "4 × ذو اضعاف اقل = 96۔ 96 کو 4 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! LCM = 96 ÷ 4 = 24.",
+        "ur": "درست! ذو اضعاف اقل = 96 ÷ 4 = 24"
+      },
+      "feedback_wrong": {
+        "en": "96 ÷ 4 = 24. Check: 24 ÷ 8 = 3 and 24 ÷ 12 = 2.",
+        "ur": "96 ÷ 4 = 24۔ جانچ: 24 ÷ 8 = 3 اور 24 ÷ 12 = 2"
+      },
+      "common_wrong": [
+        {
+          "answer": 96,
+          "feedback": {
+            "en": "96 is the product. Divide it by the HCF: 96 ÷ 4 = 24.",
+            "ur": "96 حاصل ضرب ہے۔ اسے عاد اعظم سے تقسیم کریں: 96 ÷ 4 = 24"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 384,
+          "feedback": {
+            "en": "Divide by the HCF, don't multiply: 96 ÷ 4 = 24.",
+            "ur": "عاد اعظم سے تقسیم کریں، ضرب نہیں: 96 ÷ 4 = 24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana says the LCM of 6 and 9 is 3. What went wrong?",
+        "ur": "ثنا کہتی ہے 6 اور 9 کا ذو اضعاف اقل 3 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "swap",
+          "text": {
+            "en": "3 is the HCF. The LCM is a multiple of both: 18.",
+            "ur": "3 عاد اعظم ہے۔ ذو اضعاف اقل دونوں کا ضعف ہے: 18"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 18 ÷ 6 = 3 and 18 ÷ 9 = 2. The LCM can't be smaller than the bigger number.",
+            "ur": "جی ہاں! 18 ÷ 6 = 3 اور 18 ÷ 9 = 2۔ ذو اضعاف اقل بڑے عدد سے چھوٹا نہیں ہو سکتا۔"
+          }
+        },
+        {
+          "id": "product",
+          "text": {
+            "en": "It should be 54, 6 × 9.",
+            "ur": "یہ 54 ہونا چاہیے، 6 × 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "54 is a common multiple, but 18 is lower.",
+            "ur": "54 مشترک ضعف ہے، مگر 18 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 is not a multiple of 6 or 9. It is the HCF. LCM = 18.",
+            "ur": "3، 6 یا 9 کا ضعف نہیں۔ یہ عاد اعظم ہے۔ ذو اضعاف اقل = 18"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can the LCM of 4 and 6 ever be smaller than 6? Can you teach me why or why not?",
+          "ur": "کیا 4 اور 6 کا ذو اضعاف اقل کبھی 6 سے چھوٹا ہو سکتا ہے؟ کیا آپ مجھے وجہ سمجھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why can the LCM never be smaller than the bigger of the two numbers?",
+        "ur": "اپنے الفاظ میں بتائیں: ذو اضعاف اقل دونوں اعداد میں سے بڑے عدد سے کبھی چھوٹا کیوں نہیں ہو سکتا؟"
+      },
+      "key_idea": "The LCM must be a multiple of both numbers, and every multiple of 6 is 6 or more. So the LCM is at least the bigger number.",
+      "levels": {
+        "got_it": "Explains that the LCM is a multiple of the bigger number, and multiples are never smaller than the number itself.",
+        "partly": "Says the LCM is a multiple of both, or that it is big, without linking it to the bigger number.",
+        "not_yet": "Says it can be smaller, gives no reason, or confuses it with the HCF."
+      },
+      "keywords": [
+        [
+          "multiple",
+          "times",
+          "ضعف",
+          "zarb",
+          "ضرب"
+        ],
+        [
+          "bigger",
+          "6",
+          "بڑا",
+          "bara"
+        ],
+        [
+          "smaller",
+          "can't",
+          "never",
+          "چھوٹا",
+          "نہیں"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The LCM is a multiple of 6, and every multiple of 6 is 6 or more.",
+          "ur": "بہت خوب سمجھایا! ذو اضعاف اقل 6 کا ضعف ہے، اور 6 کا ہر ضعف 6 یا اس سے زیادہ ہوتا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say: can a multiple of 6 be smaller than 6?",
+          "ur": "اچھی شروعات! اب بتائیں: کیا 6 کا کوئی ضعف 6 سے چھوٹا ہو سکتا ہے؟"
+        },
+        "not_yet": {
+          "en": "Remember, the LCM is a multiple of BOTH numbers. List the multiples of 6: 6, 12, 18 ... Are any smaller than 6?",
+          "ur": "یاد کریں، ذو اضعاف اقل دونوں اعداد کا ضعف ہے۔ 6 کے اضعاف لکھیں: 6، 12، 18 ... کیا کوئی 6 سے چھوٹا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_three",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the LCM of 2, 3 and 4.",
+        "ur": "2، 3 اور 4 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiples of 4: 4, 8, 12 ... Which is the first one 2 and 3 both divide?",
+        "ur": "4 کے اضعاف: 4، 8، 12 ... پہلا کون سا ہے جسے 2 اور 3 دونوں تقسیم کریں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! LCM = 12.",
+        "ur": "درست! ذو اضعاف اقل = 12"
+      },
+      "feedback_wrong": {
+        "en": "4, 8, 12: 12 ÷ 2 = 6 and 12 ÷ 3 = 4. LCM = 12.",
+        "ur": "4، 8، 12: 12 ÷ 2 = 6 اور 12 ÷ 3 = 4۔ ذو اضعاف اقل = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24 = 2 × 3 × 4 is a common multiple, but 12 is lower.",
+            "ur": "24 = 2 × 3 × 4 مشترک ضعف ہے، مگر 12 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "1 is the HCF. The LCM is a multiple of all three: 12.",
+            "ur": "1 عاد اعظم ہے۔ ذو اضعاف اقل تینوں کا ضعف ہے: 12"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can find the LCM two ways!",
+          "ur": "اب آپ ذو اضعاف اقل دو طریقوں سے معلوم کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "The LCM is the smallest number that both numbers divide into. List multiples and pick the first common one, or take every prime the most times it appears. LCM of 4 and 6 = 12; of 12 and 18 = 36. HCF × LCM = the two numbers multiplied.",
+        "ur": "ذو اضعاف اقل وہ سب سے چھوٹا عدد ہے جسے دونوں اعداد تقسیم کریں۔ اضعاف لکھ کر پہلا مشترک چنیں، یا ہر مفرد عدد اتنی بار لیں جتنی بار وہ سب سے زیادہ آئے۔ 4 اور 6 کا ذو اضعاف اقل = 12؛ 12 اور 18 کا = 36۔ عاد اعظم × ذو اضعاف اقل = دونوں اعداد کا حاصل ضرب۔"
+      },
+      "points": [
+        {
+          "en": "The LCM is never smaller than the bigger number.",
+          "ur": "ذو اضعاف اقل بڑے عدد سے کبھی چھوٹا نہیں ہوتا۔"
+        },
+        {
+          "en": "Use the LCM to find when repeating things happen together again.",
+          "ur": "بار بار ہونے والی چیزیں دوبارہ کب ساتھ ہوں گی، یہ جاننے کے لیے ذو اضعاف اقل استعمال کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_lcm",
+      "type": "apply",
+      "skill": "maths.factors.lcm",
+      "step": {
+        "id": "r_lcm",
+        "type": "number",
+        "prompt": {
+          "en": "Find the LCM of 9 and 12.",
+          "ur": "9 اور 12 کا ذو اضعاف اقل معلوم کریں۔"
+        },
+        "answer": 36,
+        "checker": "numeric",
+        "hint": {
+          "en": "Multiples of 12: 12, 24, 36 ... Which does 9 divide?",
+          "ur": "12 کے اضعاف: 12، 24، 36 ... ان میں سے کسے 9 تقسیم کرتا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! LCM = 36.",
+          "ur": "درست! ذو اضعاف اقل = 36"
+        },
+        "feedback_wrong": {
+          "en": "9 = 3 × 3, 12 = 2 × 2 × 3. Take two 2s and two 3s: 36.",
+          "ur": "9 = 3 × 3، 12 = 2 × 2 × 3۔ دو 2 اور دو 3 لیں: 36"
+        },
+        "common_wrong": [
+          {
+            "answer": 108,
+            "feedback": {
+              "en": "108 = 9 × 12 is a common multiple, but 36 is lower.",
+              "ur": "108 = 9 × 12 مشترک ضعف ہے، مگر 36 چھوٹا ہے۔"
+            },
+            "misconception_id": "always_multiply"
+          },
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "3 is the HCF. The LCM is a multiple of both: 36.",
+              "ur": "3 عاد اعظم ہے۔ ذو اضعاف اقل دونوں کا ضعف ہے: 36"
+            },
+            "misconception_id": "lcm_hcf_swap"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_coprime",
+      "type": "recall",
+      "skill": "maths.factors.lcm",
+      "step": {
+        "id": "r_coprime",
+        "type": "number",
+        "prompt": {
+          "en": "7 and 8 share no factor except 1. Find their LCM.",
+          "ur": "7 اور 8 میں 1 کے سوا کوئی جزو ضربی مشترک نہیں۔ ان کا ذو اضعاف اقل معلوم کریں۔"
+        },
+        "answer": 56,
+        "checker": "numeric",
+        "hint": {
+          "en": "When the HCF is 1, the LCM is the two numbers multiplied.",
+          "ur": "جب عاد اعظم 1 ہو تو ذو اضعاف اقل دونوں اعداد کا حاصل ضرب ہوتا ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! LCM = 7 × 8 = 56.",
+          "ur": "درست! ذو اضعاف اقل = 7 × 8 = 56"
+        },
+        "feedback_wrong": {
+          "en": "HCF = 1, so LCM = 7 × 8 = 56.",
+          "ur": "عاد اعظم = 1، اس لیے ذو اضعاف اقل = 7 × 8 = 56"
+        },
+        "common_wrong": [
+          {
+            "answer": 1,
+            "feedback": {
+              "en": "1 is the HCF. The LCM is 7 × 8 = 56.",
+              "ur": "1 عاد اعظم ہے۔ ذو اضعاف اقل 7 × 8 = 56 ہے۔"
+            },
+            "misconception_id": "lcm_hcf_swap"
+          },
+          {
+            "answer": 15,
+            "feedback": {
+              "en": "That is 7 + 8. Multiply: 56.",
+              "ur": "یہ 7 + 8 ہے۔ ضرب دیں: 56"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Factors and Multiples unit. No textbook text or exercises were used.",
+    "Two methods are taught: listing multiples (small numbers) and prime factors (bigger numbers), plus HCF × LCM = product. Division method can be added if the Punjab textbook uses it.",
+    "Urdu terms to check: ذو اضعاف اقل (LCM), مشترک ضعف (common multiple).",
+    "The numbers were worked out in content/sources/g6-maths-05/lcm.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
