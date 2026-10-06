@@ -1,0 +1,817 @@
+{
+  "id": "g6-maths-06-sharing-in-a-ratio",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Divide a quantity into two parts in a given ratio.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Ratio and Proportion"
+    }
+  ],
+  "skills": [
+    "maths.ratio.share"
+  ],
+  "title": {
+    "en": "Sharing in a ratio",
+    "ur": "نسبت میں تقسیم"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.meaning"
+    },
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "share_equally",
+      "description": "Shares the amount equally (half each) whatever the ratio."
+    },
+    {
+      "id": "ratio_as_amounts",
+      "description": "Gives the ratio numbers themselves as the shares (Rs 2 and Rs 3 out of Rs 500)."
+    },
+    {
+      "id": "divide_by_people",
+      "description": "Divides by the number of people, or by one term, instead of by the total number of parts."
+    },
+    {
+      "id": "multiply_parts",
+      "description": "Multiplies the terms of the ratio (3 × 4 = 12) instead of adding them to find the number of parts."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.share": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.share": [
+      {
+        "id": "qb_first_step",
+        "type": "recall",
+        "step": {
+          "id": "qb_first_step",
+          "type": "choice",
+          "prompt": {
+            "en": "You want to share Rs 60 in the ratio 1 : 3. What do you do first?",
+            "ur": "آپ 60 روپے کو 1 : 3 کی نسبت میں تقسیم کرنا چاہتے ہیں۔ پہلے کیا کریں گے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Add the parts: 1 + 3 = 4 parts.",
+                "ur": "حصے جمع کریں: 1 + 3 = 4 حصے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Then one part is 60 ÷ 4 = 15, so the shares are Rs 15 and Rs 45.",
+                "ur": "جی ہاں! پھر ایک حصہ 60 ÷ 4 = 15، اس لیے حصے 15 روپے اور 45 روپے ہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Halve it: Rs 30 each.",
+                "ur": "آدھا کریں: ہر ایک کو 30 روپے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Halving is for 1 : 1. Here one person gets 3 parts for every 1 part.",
+                "ur": "آدھا کرنا 1 : 1 کے لیے ہے۔ یہاں ایک کو ہر 1 حصے کے مقابلے میں 3 حصے ملتے ہیں۔"
+              },
+              "misconception_id": "share_equally"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Multiply the parts: 1 × 3 = 3.",
+                "ur": "حصوں کو ضرب دیں: 1 × 3 = 3۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Add the parts, don't multiply them: 1 + 3 = 4 parts.",
+                "ur": "حصے جمع کریں، ضرب نہ دیں: 1 + 3 = 4 حصے۔"
+              },
+              "misconception_id": "multiply_parts"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_share",
+        "type": "apply",
+        "step": {
+          "id": "qb_share",
+          "type": "number",
+          "prompt": {
+            "en": "Share 45 apples between Asad and Hina in the ratio 4 : 5. How many apples does Hina get?",
+            "ur": "45 سیب اسد اور حنا میں 4 : 5 کی نسبت سے تقسیم کریں۔ حنا کو کتنے سیب ملیں گے؟"
+          },
+          "answer": 25,
+          "checker": "numeric",
+          "hint": {
+            "en": "4 + 5 = 9 parts. How many apples is one part?",
+            "ur": "4 + 5 = 9 حصے۔ ایک حصہ کتنے سیب ہے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! One part is 45 ÷ 9 = 5, so Hina gets 5 × 5 = 25.",
+            "ur": "درست! ایک حصہ 45 ÷ 9 = 5، اس لیے حنا کو 5 × 5 = 25 ملیں گے۔"
+          },
+          "feedback_wrong": {
+            "en": "9 parts: one part is 45 ÷ 9 = 5. Hina has 5 parts: 5 × 5 = 25.",
+            "ur": "9 حصے: ایک حصہ 45 ÷ 9 = 5۔ حنا کے 5 حصے ہیں: 5 × 5 = 25"
+          },
+          "common_wrong": [
+            {
+              "answer": 20,
+              "feedback": {
+                "en": "20 is Asad's share (4 parts). Hina has 5 parts.",
+                "ur": "20 اسد کا حصہ ہے (4 حصے)۔ حنا کے 5 حصے ہیں۔"
+              }
+            },
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "5 is one part. Hina gets 5 parts.",
+                "ur": "5 ایک حصہ ہے۔ حنا کو 5 حصے ملتے ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_equal",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_equal",
+          "type": "choice",
+          "prompt": {
+            "en": "Nida shares Rs 900 between two sisters in the ratio 2 : 7 and gives Rs 450 to each. Is she right?",
+            "ur": "ندا 900 روپے دو بہنوں میں 2 : 7 کی نسبت سے تقسیم کرتی ہے اور ہر ایک کو 450 روپے دیتی ہے۔ کیا وہ درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "no",
+              "text": {
+                "en": "No. 9 parts of Rs 100: the sisters get Rs 200 and Rs 700.",
+                "ur": "نہیں۔ 100 روپے کے 9 حصے: بہنوں کو 200 روپے اور 700 روپے ملیں گے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! 2 + 7 = 9 parts, 900 ÷ 9 = 100, so Rs 200 and Rs 700.",
+                "ur": "درست! 2 + 7 = 9 حصے، 900 ÷ 9 = 100، اس لیے 200 روپے اور 700 روپے۔"
+              }
+            },
+            {
+              "id": "yes",
+              "text": {
+                "en": "Yes. Sharing means everyone gets the same.",
+                "ur": "ہاں۔ تقسیم کا مطلب ہے سب کو برابر ملے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Equal shares would be 1 : 1. In 2 : 7 the second sister gets much more.",
+                "ur": "برابر حصے 1 : 1 ہوتے۔ 2 : 7 میں دوسری بہن کو بہت زیادہ ملتا ہے۔"
+              },
+              "misconception_id": "share_equally"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_three_steps",
+      "front": {
+        "en": "How do you share an amount in a ratio?",
+        "ur": "کسی مقدار کو نسبت میں کیسے تقسیم کرتے ہیں؟"
+      },
+      "back": {
+        "en": "1. Add the parts. 2. Divide the amount by the parts to find one part. 3. Multiply one part by each number. Rs 500 in 2 : 3: 5 parts, one part Rs 100, shares Rs 200 and Rs 300.",
+        "ur": "1۔ حصے جمع کریں۔ 2۔ مقدار کو حصوں سے تقسیم کر کے ایک حصہ معلوم کریں۔ 3۔ ایک حصے کو ہر عدد سے ضرب دیں۔ 500 روپے 2 : 3 میں: 5 حصے، ایک حصہ 100 روپے، حصے 200 روپے اور 300 روپے۔"
+      }
+    },
+    {
+      "id": "f_check",
+      "front": {
+        "en": "How can you check your shares?",
+        "ur": "اپنے حصوں کو کیسے جانچیں؟"
+      },
+      "back": {
+        "en": "Add them: they must make the whole amount. 200 + 300 = 500.",
+        "ur": "انہیں جمع کریں: یہ پوری مقدار کے برابر ہونے چاہییں۔ 200 + 300 = 500"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_share_beans",
+      "text": {
+        "en": "Take 20 beans or buttons. Share them between two cups in the ratio 1 : 3: put 1 in the first cup and 3 in the second, again and again until none are left. How many are in each cup?",
+        "ur": "20 دانے یا بٹن لیں۔ انہیں دو پیالوں میں 1 : 3 کی نسبت سے تقسیم کریں: پہلے پیالے میں 1 اور دوسرے میں 3 ڈالیں، بار بار، جب تک کچھ نہ بچے۔ ہر پیالے میں کتنے ہیں؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Ratio",
+      "ur": "نسبت"
+    },
+    {
+      "en": "Share",
+      "ur": "حصہ"
+    },
+    {
+      "en": "Part",
+      "ur": "حصہ"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Nani gave Hamid and Saad Rs 500 for helping. Hamid helped 2 hours, Saad 3 hours. How should they share it fairly?",
+          "ur": "نانی نے مدد پر حامد اور سعد کو 500 روپے دیے۔ حامد نے 2 گھنٹے، سعد نے 3 گھنٹے مدد کی۔ وہ انصاف سے کیسے بانٹیں؟"
+        }
+      },
+      "text": {
+        "en": "Saad worked more, so he should get more. They share it in the ratio 2 : 3. First, a quick check.",
+        "ur": "سعد نے زیادہ کام کیا، اس لیے اسے زیادہ ملنا چاہیے۔ وہ اسے 2 : 3 کی نسبت میں بانٹتے ہیں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.multiplication.facts",
+      "prompt": {
+        "en": "What is 500 ÷ 5?",
+        "ur": "500 ÷ 5 کتنا ہے؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "How many 5s make 50? Then think of 500.",
+        "ur": "کتنے 5 مل کر 50 بنتے ہیں؟ پھر 500 کے بارے میں سوچیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 500 ÷ 5 = 100. We'll need this soon.",
+        "ur": "جی ہاں! 500 ÷ 5 = 100۔ یہ ہمیں جلد کام آئے گا۔"
+      },
+      "feedback_wrong": {
+        "en": "5 × 100 = 500, so 500 ÷ 5 = 100.",
+        "ur": "5 × 100 = 500، اس لیے 500 ÷ 5 = 100"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "5 × 10 = 50, not 500. Try 5 × 100.",
+            "ur": "5 × 10 = 50 ہے، 500 نہیں۔ 5 × 100 آزمائیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_predict",
+      "type": "choice",
+      "prompt": {
+        "en": "Guess first: how should Hamid and Saad share Rs 500 in the ratio 2 : 3?",
+        "ur": "پہلے اندازہ لگائیں: حامد اور سعد 500 روپے 2 : 3 کی نسبت میں کیسے بانٹیں؟"
+      },
+      "options": [
+        {
+          "id": "half",
+          "text": {
+            "en": "Rs 250 each",
+            "ur": "ہر ایک کو 250 روپے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is fair only if they worked the same time. Saad worked more.",
+            "ur": "یہ تب انصاف ہوتا جب دونوں برابر کام کرتے۔ سعد نے زیادہ کام کیا۔"
+          },
+          "misconception_id": "share_equally"
+        },
+        {
+          "id": "ratio_numbers",
+          "text": {
+            "en": "Rs 2 and Rs 3",
+            "ur": "2 روپے اور 3 روپے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That only gives away Rs 5! All Rs 500 must be shared.",
+            "ur": "اس طرح تو صرف 5 روپے بٹے! پورے 500 روپے بانٹنے ہیں۔"
+          },
+          "misconception_id": "ratio_as_amounts"
+        },
+        {
+          "id": "right",
+          "text": {
+            "en": "Rs 200 and Rs 300",
+            "ur": "200 روپے اور 300 روپے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Good thinking! Let's see how to work it out.",
+            "ur": "بہت خوب سوچا! آئیں دیکھیں اسے کیسے نکالتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4_method",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Think of the money cut into equal parts!",
+          "ur": "سوچیں کہ پیسے برابر حصوں میں کٹے ہوئے ہیں!"
+        }
+      },
+      "text": {
+        "en": "2 : 3 means Hamid gets 2 parts and Saad gets 3 parts, all the same size. 1. Add the parts: 2 + 3 = 5 parts. 2. Find one part: Rs 500 ÷ 5 = Rs 100. 3. Multiply: Hamid 2 × 100 = Rs 200, Saad 3 × 100 = Rs 300. Check: 200 + 300 = 500.",
+        "ur": "2 : 3 کا مطلب ہے حامد کو 2 حصے اور سعد کو 3 حصے، سب ایک جتنے۔ 1۔ حصے جمع کریں: 2 + 3 = 5 حصے۔ 2۔ ایک حصہ معلوم کریں: 500 روپے ÷ 5 = 100 روپے۔ 3۔ ضرب دیں: حامد 2 × 100 = 200 روپے، سعد 3 × 100 = 300 روپے۔ جانچیں: 200 + 300 = 500"
+      }
+    },
+    {
+      "id": "s5_parts",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "An amount is shared in the ratio 3 : 4. How many equal parts is it cut into?",
+        "ur": "ایک مقدار 3 : 4 کی نسبت میں تقسیم کی جاتی ہے۔ اسے کتنے برابر حصوں میں کاٹا جاتا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "One person gets 3 parts and the other gets 4.",
+        "ur": "ایک کو 3 حصے ملتے ہیں اور دوسرے کو 4۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 + 4 = 7 parts.",
+        "ur": "درست! 3 + 4 = 7 حصے۔"
+      },
+      "feedback_wrong": {
+        "en": "Add the parts: 3 + 4 = 7.",
+        "ur": "حصے جمع کریں: 3 + 4 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "Add the parts, don't multiply: 3 + 4 = 7.",
+            "ur": "حصے جمع کریں، ضرب نہ دیں: 3 + 4 = 7"
+          },
+          "misconception_id": "multiply_parts"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "There are 2 people, but 3 + 4 = 7 parts.",
+            "ur": "لوگ 2 ہیں، لیکن حصے 3 + 4 = 7 ہیں۔"
+          },
+          "misconception_id": "divide_by_people"
+        }
+      ]
+    },
+    {
+      "id": "s6_share",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Abbu shares Rs 700 between Fatima and Zainab in the ratio 3 : 4. How much does Zainab get?",
+        "ur": "ابو 700 روپے فاطمہ اور زینب میں 3 : 4 کی نسبت سے تقسیم کرتے ہیں۔ زینب کو کتنے ملیں گے؟"
+      },
+      "answer": 400,
+      "checker": "numeric",
+      "hint": {
+        "en": "7 parts. One part is 700 ÷ 7. Zainab has 4 parts.",
+        "ur": "7 حصے۔ ایک حصہ 700 ÷ 7۔ زینب کے 4 حصے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is Rs 100, so Zainab gets 4 × 100 = Rs 400 and Fatima Rs 300.",
+        "ur": "درست! ایک حصہ 100 روپے، اس لیے زینب کو 4 × 100 = 400 روپے اور فاطمہ کو 300 روپے۔"
+      },
+      "feedback_wrong": {
+        "en": "3 + 4 = 7 parts, 700 ÷ 7 = 100. Zainab has 4 parts: 4 × 100 = Rs 400.",
+        "ur": "3 + 4 = 7 حصے، 700 ÷ 7 = 100۔ زینب کے 4 حصے ہیں: 4 × 100 = 400 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 350,
+          "feedback": {
+            "en": "That is half. Zainab has 4 of the 7 parts, more than half.",
+            "ur": "یہ آدھا ہے۔ زینب کے 7 میں سے 4 حصے ہیں، آدھے سے زیادہ۔"
+          },
+          "misconception_id": "share_equally"
+        },
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "Rs 300 is Fatima's share (3 parts). Zainab has 4 parts.",
+            "ur": "300 روپے فاطمہ کا حصہ ہے (3 حصے)۔ زینب کے 4 حصے ہیں۔"
+          }
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is how many parts Zainab gets. How much money is that?",
+            "ur": "4 تو زینب کے حصوں کی تعداد ہے۔ یہ کتنے پیسے بنتے ہیں؟"
+          },
+          "misconception_id": "ratio_as_amounts"
+        }
+      ]
+    },
+    {
+      "id": "s7_marbles",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Amna and Bilal share 36 marbles in the ratio 1 : 2. How many marbles does Bilal get?",
+        "ur": "آمنہ اور بلال 36 کنچے 1 : 2 کی نسبت سے بانٹتے ہیں۔ بلال کو کتنے کنچے ملیں گے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "1 + 2 = 3 parts. One part is 36 ÷ 3.",
+        "ur": "1 + 2 = 3 حصے۔ ایک حصہ 36 ÷ 3۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 12, so Bilal gets 2 × 12 = 24.",
+        "ur": "درست! ایک حصہ 12، اس لیے بلال کو 2 × 12 = 24 ملیں گے۔"
+      },
+      "feedback_wrong": {
+        "en": "3 parts: 36 ÷ 3 = 12. Bilal has 2 parts: 2 × 12 = 24.",
+        "ur": "3 حصے: 36 ÷ 3 = 12۔ بلال کے 2 حصے ہیں: 2 × 12 = 24"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "That is half each. Bilal gets 2 parts for Amna's 1.",
+            "ur": "یہ ہر ایک کو آدھا ہے۔ بلال کو آمنہ کے 1 حصے کے مقابلے میں 2 حصے ملتے ہیں۔"
+          },
+          "misconception_id": "share_equally"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is Amna's share (1 part). Bilal has 2 parts.",
+            "ur": "12 آمنہ کا حصہ ہے (1 حصہ)۔ بلال کے 2 حصے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Umar shares 30 toffees in the ratio 2 : 3. He says: \"30 ÷ 2 = 15 for one part, so 2 × 15 = 30 and 3 × 15 = 45.\" What went wrong?",
+        "ur": "عمر 30 ٹافیاں 2 : 3 کی نسبت سے بانٹتا ہے۔ وہ کہتا ہے: \"ایک حصہ 30 ÷ 2 = 15، اس لیے 2 × 15 = 30 اور 3 × 15 = 45۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "parts",
+          "text": {
+            "en": "He divided by 2 instead of by all 5 parts. One part is 30 ÷ 5 = 6, so 12 and 18.",
+            "ur": "اس نے تمام 5 حصوں کے بجائے 2 سے تقسیم کیا۔ ایک حصہ 30 ÷ 5 = 6، اس لیے 12 اور 18۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! His shares make 75 toffees, but there are only 30. 12 + 18 = 30.",
+            "ur": "جی ہاں! اس کے حصے 75 ٹافیاں بنتے ہیں، لیکن ٹافیاں صرف 30 ہیں۔ 12 + 18 = 30"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. The second share is bigger, as it should be.",
+            "ur": "کوئی غلطی نہیں۔ دوسرے کو زیادہ ملا، جیسا ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: 30 + 45 = 75, but there are only 30 toffees. Divide by all the parts.",
+            "ur": "جانچیں: 30 + 45 = 75، لیکن ٹافیاں صرف 30 ہیں۔ تمام حصوں سے تقسیم کریں۔"
+          },
+          "misconception_id": "divide_by_people"
+        },
+        {
+          "id": "half",
+          "text": {
+            "en": "He should give 15 to each.",
+            "ur": "اسے ہر ایک کو 15 دینی چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "15 each is 1 : 1. The ratio is 2 : 3, so the second share is bigger.",
+            "ur": "ہر ایک کو 15 دینا 1 : 1 ہے۔ نسبت 2 : 3 ہے، اس لیے دوسرا حصہ بڑا ہے۔"
+          },
+          "misconception_id": "share_equally"
+        }
+      ]
+    },
+    {
+      "id": "s9_class",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A class of 36 children has girls and boys in the ratio 4 : 5. How many girls are there?",
+        "ur": "36 بچوں کی ایک جماعت میں لڑکیوں اور لڑکوں کی نسبت 4 : 5 ہے۔ لڑکیاں کتنی ہیں؟"
+      },
+      "answer": 16,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 + 5 = 9 parts. How many children is one part?",
+        "ur": "4 + 5 = 9 حصے۔ ایک حصہ کتنے بچے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 36 ÷ 9 = 4, so 16 girls and 20 boys.",
+        "ur": "درست! ایک حصہ 36 ÷ 9 = 4، اس لیے 16 لڑکیاں اور 20 لڑکے۔"
+      },
+      "feedback_wrong": {
+        "en": "9 parts: 36 ÷ 9 = 4 children each. Girls have 4 parts: 4 × 4 = 16.",
+        "ur": "9 حصے: 36 ÷ 9 = 4 بچے فی حصہ۔ لڑکیوں کے 4 حصے ہیں: 4 × 4 = 16"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 is the boys (5 parts). Girls are named first: 4 parts.",
+            "ur": "20 لڑکے ہیں (5 حصے)۔ لڑکیاں پہلے آئی ہیں: 4 حصے۔"
+          }
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is the number of parts for girls. How many children is that?",
+            "ur": "4 تو لڑکیوں کے حصوں کی تعداد ہے۔ یہ کتنے بچے بنتے ہیں؟"
+          },
+          "misconception_id": "ratio_as_amounts"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? Why do we add 2 + 3 before we divide the money?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ پیسے تقسیم کرنے سے پہلے ہم 2 + 3 کیوں جمع کرتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: when sharing Rs 500 in the ratio 2 : 3, why do we divide by 5?",
+        "ur": "اپنے الفاظ میں بتائیں: 500 روپے کو 2 : 3 کی نسبت میں بانٹتے وقت ہم 5 سے کیوں تقسیم کرتے ہیں؟"
+      },
+      "key_idea": "Hamid gets 2 equal parts and Saad gets 3, so the money is cut into 2 + 3 = 5 equal parts. Dividing by 5 gives the size of one part (Rs 100); then Hamid gets 2 of them and Saad 3.",
+      "levels": {
+        "got_it": "Says the money is cut into 5 equal parts because 2 + 3 = 5 (2 for one, 3 for the other), and dividing by 5 gives one part.",
+        "partly": "Says 2 + 3 = 5 or mentions parts, but does not explain that 5 is the total number of equal parts.",
+        "not_yet": "Says because there are 2 people, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "part",
+          "piece",
+          "حص",
+          "ٹکڑ",
+          "hiss",
+          "tukr",
+          "tukd"
+        ],
+        [
+          "5",
+          "five",
+          "پانچ",
+          "۵",
+          "paanch",
+          "panch"
+        ],
+        [
+          "equal",
+          "same",
+          "add",
+          "total",
+          "برابر",
+          "جمع",
+          "کل",
+          "barabar",
+          "jama",
+          "kul"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 2 parts plus 3 parts make 5 equal parts, so one part is Rs 500 ÷ 5 = Rs 100.",
+          "ur": "بہت خوب سمجھایا! 2 حصے اور 3 حصے مل کر 5 برابر حصے بنتے ہیں، اس لیے ایک حصہ 500 ÷ 5 = 100 روپے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what the 5 parts are, and who gets how many.",
+          "ur": "اچھی شروعات! اب بتائیں کہ 5 حصے کیا ہیں، اور کس کو کتنے ملتے ہیں۔"
+        },
+        "not_yet": {
+          "en": "Think: Hamid gets 2 equal parts and Saad gets 3. How many equal parts is the Rs 500 cut into?",
+          "ur": "سوچیں: حامد کو 2 برابر حصے ملتے ہیں اور سعد کو 3۔ 500 روپے کتنے برابر حصوں میں کٹتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_one_share_known",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hamid and Saad share some money in the ratio 2 : 3. Hamid gets Rs 80. How much does Saad get?",
+        "ur": "حامد اور سعد کچھ پیسے 2 : 3 کی نسبت سے بانٹتے ہیں۔ حامد کو 80 روپے ملتے ہیں۔ سعد کو کتنے ملیں گے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "Hamid's Rs 80 is 2 parts. How much is one part?",
+        "ur": "حامد کے 80 روپے 2 حصے ہیں۔ ایک حصہ کتنا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 80 ÷ 2 = 40, so Saad gets 3 × 40 = Rs 120.",
+        "ur": "درست! ایک حصہ 80 ÷ 2 = 40، اس لیے سعد کو 3 × 40 = 120 روپے ملیں گے۔"
+      },
+      "feedback_wrong": {
+        "en": "2 parts are Rs 80, so one part is Rs 40. Saad has 3 parts: 3 × 40 = Rs 120.",
+        "ur": "2 حصے 80 روپے ہیں، اس لیے ایک حصہ 40 روپے۔ سعد کے 3 حصے ہیں: 3 × 40 = 120 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "Rs 40 is one part. Saad gets 3 parts.",
+            "ur": "40 روپے ایک حصہ ہے۔ سعد کو 3 حصے ملتے ہیں۔"
+          }
+        },
+        {
+          "answer": 200,
+          "feedback": {
+            "en": "Rs 200 is all the money (5 parts). Saad gets 3 parts.",
+            "ur": "200 روپے کل پیسے ہیں (5 حصے)۔ سعد کو 3 حصے ملتے ہیں۔"
+          }
+        },
+        {
+          "answer": 81,
+          "feedback": {
+            "en": "Adding 1 doesn't keep the ratio. Find one part first: 80 ÷ 2.",
+            "ur": "1 جمع کرنے سے نسبت برقرار نہیں رہتی۔ پہلے ایک حصہ معلوم کریں: 80 ÷ 2۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can share anything fairly in a ratio!",
+          "ur": "اب آپ کوئی بھی چیز نسبت میں انصاف سے بانٹ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "To share an amount in a ratio: add the parts, divide the amount by the number of parts to find one part, then multiply one part by each number of the ratio. Check that the shares add up to the whole amount.",
+        "ur": "کسی مقدار کو نسبت میں بانٹنے کے لیے: حصے جمع کریں، مقدار کو حصوں کی تعداد سے تقسیم کر کے ایک حصہ معلوم کریں، پھر ایک حصے کو نسبت کے ہر عدد سے ضرب دیں۔ جانچیں کہ حصے مل کر پوری مقدار بنتے ہیں۔"
+      },
+      "points": [
+        {
+          "en": "Rs 500 in 2 : 3 → 5 parts → Rs 100 each → Rs 200 and Rs 300",
+          "ur": "500 روپے 2 : 3 میں ← 5 حصے ← ہر حصہ 100 روپے ← 200 روپے اور 300 روپے"
+        },
+        {
+          "en": "Add the parts; don't divide by the number of people.",
+          "ur": "حصے جمع کریں؛ لوگوں کی تعداد سے تقسیم نہ کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_share",
+      "type": "apply",
+      "skill": "maths.ratio.share",
+      "step": {
+        "id": "r_share",
+        "type": "number",
+        "prompt": {
+          "en": "Share Rs 60 between Ahmed and Kiran in the ratio 1 : 3. How much does Kiran get?",
+          "ur": "60 روپے احمد اور کرن میں 1 : 3 کی نسبت سے تقسیم کریں۔ کرن کو کتنے ملیں گے؟"
+        },
+        "answer": 45,
+        "checker": "numeric",
+        "hint": {
+          "en": "1 + 3 = 4 parts.",
+          "ur": "1 + 3 = 4 حصے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! One part is 60 ÷ 4 = 15, so Kiran gets 3 × 15 = 45.",
+          "ur": "درست! ایک حصہ 60 ÷ 4 = 15، اس لیے کرن کو 3 × 15 = 45 ملیں گے۔"
+        },
+        "feedback_wrong": {
+          "en": "4 parts: 60 ÷ 4 = 15. Kiran has 3 parts: 3 × 15 = Rs 45.",
+          "ur": "4 حصے: 60 ÷ 4 = 15۔ کرن کے 3 حصے ہیں: 3 × 15 = 45 روپے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "That is half each. Kiran gets 3 parts for Ahmed's 1.",
+              "ur": "یہ ہر ایک کو آدھا ہے۔ کرن کو احمد کے 1 حصے کے مقابلے میں 3 حصے ملتے ہیں۔"
+            },
+            "misconception_id": "share_equally"
+          },
+          {
+            "answer": 15,
+            "feedback": {
+              "en": "Rs 15 is Ahmed's share (1 part). Kiran has 3 parts.",
+              "ur": "15 روپے احمد کا حصہ ہے (1 حصہ)۔ کرن کے 3 حصے ہیں۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_find_error",
+      "type": "find_error",
+      "skill": "maths.ratio.share",
+      "step": {
+        "id": "r_find_error",
+        "type": "choice",
+        "prompt": {
+          "en": "To share Rs 900 in the ratio 2 : 7, Saba gives Rs 2 and Rs 7. What went wrong?",
+          "ur": "900 روپے 2 : 7 کی نسبت میں بانٹنے کے لیے صبا 2 روپے اور 7 روپے دیتی ہے۔ کیا غلطی ہوئی؟"
+        },
+        "options": [
+          {
+            "id": "amounts",
+            "text": {
+              "en": "2 and 7 are parts, not rupees. One part is 900 ÷ 9 = Rs 100, so Rs 200 and Rs 700.",
+              "ur": "2 اور 7 حصے ہیں، روپے نہیں۔ ایک حصہ 900 ÷ 9 = 100 روپے، اس لیے 200 روپے اور 700 روپے۔"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! The shares must add up to Rs 900.",
+              "ur": "جی ہاں! حصے مل کر 900 روپے بننے چاہییں۔"
+            }
+          },
+          {
+            "id": "nothing",
+            "text": {
+              "en": "Nothing. That is the ratio 2 : 7.",
+              "ur": "کوئی غلطی نہیں۔ یہی 2 : 7 کی نسبت ہے۔"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "The ratio is right, but only Rs 9 was shared. All Rs 900 must be shared.",
+              "ur": "نسبت ٹھیک ہے، لیکن صرف 9 روپے بٹے۔ پورے 900 روپے بانٹنے ہیں۔"
+            },
+            "misconception_id": "ratio_as_amounts"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Ratio and Proportion unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-06. Fix the names and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: نسبت میں تقسیم (sharing in a ratio), حصہ (part / share), کل (total).",
+    "The method is taught as three steps (add the parts, find one part, multiply), with a check that the shares add up to the total. Every amount divides exactly, so no step needs decimals.",
+    "Steps: foundation division (s2), prediction (s3), the method (s4), counting parts (s5), sharing (s6, s7), find the error (s8), new context (s9), explain (s10), working back from one share (s11).",
+    "The numbers were worked out in content/sources/g6-maths-06/sharing_in_a_ratio.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
