@@ -110,6 +110,10 @@ jobs:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: stable
           cache: true
+      # Two debug builds fill the runner's disk; remove tools this job
+      # doesn't use first.
+      - name: Free disk space
+        run: sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost /usr/local/.ghcup "$AGENT_TOOLSDIRECTORY/CodeQL"
       - run: flutter build apk --debug --flavor dev
       - run: flutter build apk --debug --flavor prod
       # The free plan holds only 500 MB of artifacts and each debug APK is
