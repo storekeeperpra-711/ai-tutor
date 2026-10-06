@@ -1,0 +1,918 @@
+{
+  "id": "g6-maths-03-decimal-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems with decimals (lengths, weights and volumes), choosing the operation and checking with an estimate.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Decimals"
+    }
+  ],
+  "skills": [
+    "maths.decimals.word_problems"
+  ],
+  "title": {
+    "en": "Decimal word problems",
+    "ur": "اعشاریہ کے عملی سوالات"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.decimals.place_value"
+    },
+    {
+      "skill": "maths.decimals.compare"
+    },
+    {
+      "skill": "maths.decimals.add_subtract"
+    },
+    {
+      "skill": "maths.decimals.multiply_divide"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "wrong_operation",
+      "description": "Picks the wrong operation for the story, like multiplying when the story shares equally."
+    },
+    {
+      "id": "one_step_only",
+      "description": "Stops after the first step of a two-step problem."
+    },
+    {
+      "id": "no_estimate",
+      "description": "Accepts an answer that is far from a quick estimate, like 4.9 × 3 = 1.47."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.decimals.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.decimals.word_problems": [
+      {
+        "id": "qb_operation",
+        "type": "recall",
+        "step": {
+          "id": "qb_operation",
+          "type": "choice",
+          "prompt": {
+            "en": "4.8 litres of milk is poured equally into 4 glasses. Which sum finds how much is in each glass?",
+            "ur": "4.8 لیٹر دودھ 4 گلاسوں میں برابر ڈالا جاتا ہے۔ کون سا سوال بتاتا ہے کہ ہر گلاس میں کتنا ہے؟"
+          },
+          "options": [
+            {
+              "id": "div",
+              "text": {
+                "en": "4.8 ÷ 4",
+                "ur": "4.8 ÷ 4"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Sharing equally is dividing: 1.2 litres each.",
+                "ur": "جی ہاں! برابر بانٹنا تقسیم ہے: ہر ایک میں 1.2 لیٹر۔"
+              }
+            },
+            {
+              "id": "mul",
+              "text": {
+                "en": "4.8 × 4",
+                "ur": "4.8 × 4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That would be 4 times as much milk. Sharing is dividing.",
+                "ur": "اس سے دودھ 4 گنا ہو جاتا۔ بانٹنا تقسیم ہے۔"
+              },
+              "misconception_id": "wrong_operation"
+            },
+            {
+              "id": "sub",
+              "text": {
+                "en": "4.8 − 4",
+                "ur": "4.8 − 4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Nothing is taken away. Share equally: divide.",
+                "ur": "کچھ کم نہیں کیا جا رہا۔ برابر بانٹیں: تقسیم کریں۔"
+              },
+              "misconception_id": "wrong_operation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A recipe needs 1.75 kg of potatoes and 2.5 kg of onions. How many kg is that in all?",
+            "ur": "ایک ترکیب میں 1.75 کلوگرام آلو اور 2.5 کلوگرام پیاز چاہییں۔ کل کتنے کلوگرام ہیں؟"
+          },
+          "answer": 4.25,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add: 1.75 + 2.50.",
+            "ur": "جمع کریں: 1.75 + 2.50"
+          },
+          "feedback_correct": {
+            "en": "Right! 4.25 kg.",
+            "ur": "درست! 4.25 کلوگرام۔"
+          },
+          "feedback_wrong": {
+            "en": "1.75 + 2.50 = 4.25.",
+            "ur": "1.75 + 2.50 = 4.25"
+          },
+          "common_wrong": [
+            {
+              "answer": 2,
+              "feedback": {
+                "en": "Line up the points: 1.75 + 2.50.",
+                "ur": "نقطے سیدھ میں رکھیں: 1.75 + 2.50"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Kamran worked out 4.9 × 3 = 1.47. How can you tell quickly that it is wrong?",
+            "ur": "کامران نے 4.9 × 3 = 1.47 حل کیا۔ آپ جلدی کیسے بتا سکتے ہیں کہ یہ غلط ہے؟"
+          },
+          "options": [
+            {
+              "id": "estimate",
+              "text": {
+                "en": "4.9 is about 5, and 5 × 3 = 15. 1.47 is far too small.",
+                "ur": "4.9 تقریباً 5 ہے، اور 5 × 3 = 15۔ 1.47 بہت چھوٹا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The answer is 14.7: the point was put in the wrong place.",
+                "ur": "جی ہاں! جواب 14.7 ہے: نقطہ غلط جگہ لگا تھا۔"
+              }
+            },
+            {
+              "id": "cant",
+              "text": {
+                "en": "You can't tell without working it out again.",
+                "ur": "دوبارہ حل کیے بغیر نہیں بتا سکتے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A quick estimate tells you: about 5 × 3 = 15.",
+                "ur": "ایک فوری اندازہ بتا دیتا ہے: تقریباً 5 × 3 = 15"
+              },
+              "misconception_id": "no_estimate"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_choose",
+      "front": {
+        "en": "How do you choose the operation in a decimal story?",
+        "ur": "اعشاریہ کی کہانی میں عمل کیسے چنتے ہیں؟"
+      },
+      "back": {
+        "en": "Putting together: add. How much more or left: subtract. Equal groups: multiply. Sharing equally: divide. Then estimate to check.",
+        "ur": "اکٹھا کرنا: جمع۔ کتنا زیادہ یا باقی: تفریق۔ برابر گروہ: ضرب۔ برابر بانٹنا: تقسیم۔ پھر اندازے سے جانچیں۔"
+      }
+    },
+    {
+      "id": "f_estimate",
+      "front": {
+        "en": "Why estimate?",
+        "ur": "اندازہ کیوں لگائیں؟"
+      },
+      "back": {
+        "en": "To catch a decimal point in the wrong place: 4.9 × 3 is about 15, so 14.7 makes sense and 1.47 does not.",
+        "ur": "غلط جگہ لگا نقطہ پکڑنے کے لیے: 4.9 × 3 تقریباً 15 ہے، اس لیے 14.7 درست لگتا ہے اور 1.47 نہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_story",
+      "text": {
+        "en": "Make up a decimal story about cooking, shopping or travel. Write the sum and the answer, then ask someone at home to solve it.",
+        "ur": "کھانا پکانے، خریداری یا سفر کے بارے میں اعشاریہ کی ایک کہانی بنائیں۔ سوال اور جواب لکھیں، پھر گھر میں کسی سے حل کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Estimate",
+      "ur": "اندازہ"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    },
+    {
+      "en": "Each",
+      "ur": "ہر ایک"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "On sports day, Sara jumps 3.5 m and Hina jumps 3.45 m. Who wins, and by how much?",
+          "ur": "کھیلوں کے دن سارہ 3.5 میٹر اور حنا 3.45 میٹر چھلانگ لگاتی ہیں۔ کون جیتتا ہے، اور کتنے فرق سے؟"
+        }
+      },
+      "text": {
+        "en": "Decimals are everywhere: lengths, weights, litres and times. Today we solve stories with them. First, a quick check.",
+        "ur": "اعشاریہ ہر جگہ ہیں: لمبائی، وزن، لیٹر اور وقت۔ آج ہم ان سے کہانیاں حل کریں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.decimals.multiply_divide",
+      "prompt": {
+        "en": "Work out 2.5 × 4",
+        "ur": "حل کریں: 2.5 × 4"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "25 × 4 = 100, with 1 decimal place.",
+        "ur": "25 × 4 = 100، ایک اعشاری مقام کے ساتھ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2.5 × 4 = 10.",
+        "ur": "درست! 2.5 × 4 = 10"
+      },
+      "feedback_wrong": {
+        "en": "25 × 4 = 100. One decimal place: 10.0 = 10.",
+        "ur": "25 × 4 = 100۔ ایک اعشاری مقام: 10.0 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 8.5,
+          "feedback": {
+            "en": "Multiply the 0.5 too: 0.5 × 4 = 2. So 8 + 2 = 10.",
+            "ur": "0.5 کو بھی ضرب دیں: 0.5 × 4 = 2۔ اس لیے 8 + 2 = 10"
+          }
+        },
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "Put the point back: one decimal place, so 10.",
+            "ur": "نقطہ واپس لگائیں: ایک اعشاری مقام، اس لیے 10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_which_operation",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Read the story, choose the operation, then estimate to check!",
+          "ur": "کہانی پڑھیں، عمل چنیں، پھر اندازے سے جانچیں!"
+        }
+      },
+      "text": {
+        "en": "Putting amounts together: add. How much more, or how much is left: subtract. Equal groups: multiply. Sharing equally: divide. Then estimate with whole numbers: 4.9 × 3 is about 5 × 3 = 15. If your answer is far from the estimate, check the decimal point.",
+        "ur": "مقداریں اکٹھی کرنا: جمع۔ کتنا زیادہ، یا کتنا باقی: تفریق۔ برابر گروہ: ضرب۔ برابر بانٹنا: تقسیم۔ پھر مکمل اعداد سے اندازہ لگائیں: 4.9 × 3 تقریباً 5 × 3 = 15۔ اگر جواب اندازے سے بہت دور ہو تو اعشاری نقطہ دیکھیں۔"
+      }
+    },
+    {
+      "id": "s4_walk",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ahmed walks 1.25 km to school and then 0.8 km to the tuition centre. How many km does he walk in all?",
+        "ur": "احمد اسکول تک 1.25 کلومیٹر اور پھر ٹیوشن سینٹر تک 0.8 کلومیٹر پیدل چلتا ہے۔ وہ کل کتنے کلومیٹر چلتا ہے؟"
+      },
+      "answer": 2.05,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add, lining up the points: 1.25 + 0.80.",
+        "ur": "نقطے سیدھ میں رکھ کر جمع کریں: 1.25 + 0.80"
+      },
+      "feedback_correct": {
+        "en": "Right! 2.05 km.",
+        "ur": "درست! 2.05 کلومیٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "1.25 + 0.80 = 2.05. Estimate: about 1 + 1 = 2.",
+        "ur": "1.25 + 0.80 = 2.05۔ اندازہ: تقریباً 1 + 1 = 2"
+      },
+      "common_wrong": [
+        {
+          "answer": 1.33,
+          "feedback": {
+            "en": "The 8 is 8 tenths, not 8 hundredths. Write 0.80 and line up the points.",
+            "ur": "8 آٹھ دسواں ہے، آٹھ سوواں نہیں۔ 0.80 لکھیں اور نقطے سیدھ میں رکھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_long_jump",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Back to sports day: Sara jumped 3.5 m and Hina 3.45 m. By how many metres did Sara win?",
+        "ur": "واپس کھیلوں کے دن پر: سارہ نے 3.5 میٹر اور حنا نے 3.45 میٹر چھلانگ لگائی۔ سارہ کتنے میٹر سے جیتی؟"
+      },
+      "answer": 0.05,
+      "checker": "numeric",
+      "hint": {
+        "en": "How much more: subtract 3.50 − 3.45.",
+        "ur": "کتنا زیادہ: تفریق کریں 3.50 − 3.45"
+      },
+      "feedback_correct": {
+        "en": "Right! Sara won by 0.05 m, just 5 cm.",
+        "ur": "درست! سارہ 0.05 میٹر سے جیتی، صرف 5 سینٹی میٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "3.50 − 3.45 = 0.05.",
+        "ur": "3.50 − 3.45 = 0.05"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.4,
+          "feedback": {
+            "en": "Write 3.5 as 3.50 first, then subtract: 3.50 − 3.45 = 0.05.",
+            "ur": "پہلے 3.5 کو 3.50 لکھیں، پھر تفریق کریں: 3.50 − 3.45 = 0.05"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_tailor",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A tailor needs 2.4 m of cloth for one suit. How many metres does he need for 5 suits?",
+        "ur": "ایک درزی کو ایک سوٹ کے لیے 2.4 میٹر کپڑا چاہیے۔ 5 سوٹوں کے لیے کتنے میٹر چاہییں؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 equal groups of 2.4: multiply.",
+        "ur": "2.4 کے 5 برابر گروہ: ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 2.4 = 12 m.",
+        "ur": "درست! 5 × 2.4 = 12 میٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "5 × 24 = 120, with 1 decimal place: 12.0 = 12.",
+        "ur": "5 × 24 = 120، ایک اعشاری مقام کے ساتھ: 12.0 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 10.4,
+          "feedback": {
+            "en": "Multiply the 0.4 too: 5 × 0.4 = 2. So 10 + 2 = 12.",
+            "ur": "0.4 کو بھی ضرب دیں: 5 × 0.4 = 2۔ اس لیے 10 + 2 = 12"
+          }
+        },
+        {
+          "answer": 7.4,
+          "feedback": {
+            "en": "Equal groups means multiply, not add.",
+            "ur": "برابر گروہ کا مطلب ضرب ہے، جمع نہیں۔"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s7_juice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "12.6 litres of juice is poured equally into 6 jugs. How many litres are in each jug?",
+        "ur": "12.6 لیٹر جوس 6 جگوں میں برابر ڈالا جاتا ہے۔ ہر جگ میں کتنے لیٹر ہیں؟"
+      },
+      "answer": 2.1,
+      "checker": "numeric",
+      "hint": {
+        "en": "Sharing equally: divide 12.6 by 6.",
+        "ur": "برابر بانٹنا: 12.6 کو 6 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2.1 litres each.",
+        "ur": "درست! ہر ایک میں 2.1 لیٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "126 ÷ 6 = 21, so 12.6 ÷ 6 = 2.1. Check: 6 × 2.1 = 12.6.",
+        "ur": "126 ÷ 6 = 21، اس لیے 12.6 ÷ 6 = 2.1۔ جانچ: 6 × 2.1 = 12.6"
+      },
+      "common_wrong": [
+        {
+          "answer": 21,
+          "feedback": {
+            "en": "One jug can't hold more than all the juice! 12.6 ÷ 6 = 2.1.",
+            "ur": "ایک جگ میں سارے جوس سے زیادہ نہیں آ سکتا! 12.6 ÷ 6 = 2.1"
+          }
+        },
+        {
+          "answer": 75.6,
+          "feedback": {
+            "en": "Sharing makes each part smaller: divide, don't multiply.",
+            "ur": "بانٹنے سے ہر حصہ چھوٹا ہوتا ہے: تقسیم کریں، ضرب نہیں۔"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s8_two_steps",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ammi has 5 kg of flour. She uses 0.75 kg each day for 3 days. How many kg are left?",
+        "ur": "امی کے پاس 5 کلوگرام آٹا ہے۔ وہ 3 دن تک ہر روز 0.75 کلوگرام استعمال کرتی ہیں۔ کتنے کلوگرام باقی ہیں؟"
+      },
+      "answer": 2.75,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two steps: first 3 × 0.75, then take that from 5.",
+        "ur": "دو قدم: پہلے 3 × 0.75، پھر اسے 5 میں سے تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! She used 2.25 kg, so 2.75 kg are left.",
+        "ur": "درست! انہوں نے 2.25 کلوگرام استعمال کیا، اس لیے 2.75 کلوگرام باقی ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "3 × 0.75 = 2.25. 5.00 − 2.25 = 2.75.",
+        "ur": "3 × 0.75 = 2.25۔ 5.00 − 2.25 = 2.75"
+      },
+      "common_wrong": [
+        {
+          "answer": 4.25,
+          "feedback": {
+            "en": "That is only one day. She uses 0.75 kg on each of 3 days.",
+            "ur": "یہ صرف ایک دن ہے۔ وہ 3 دن ہر روز 0.75 کلوگرام استعمال کرتی ہیں۔"
+          },
+          "misconception_id": "one_step_only"
+        },
+        {
+          "answer": 2.25,
+          "feedback": {
+            "en": "2.25 kg is what she used. The question asks what is left.",
+            "ur": "2.25 کلوگرام استعمال ہوا۔ سوال یہ ہے کہ کتنا باقی ہے۔"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A 2 m ribbon is cut into 4 equal pieces. Hira says each piece is 8 m long. What went wrong?",
+        "ur": "2 میٹر کا فیتہ 4 برابر ٹکڑوں میں کاٹا جاتا ہے۔ حرا کہتی ہے ہر ٹکڑا 8 میٹر لمبا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "divide",
+          "text": {
+            "en": "She multiplied. Cutting into equal pieces is dividing: 2 ÷ 4 = 0.5 m.",
+            "ur": "اس نے ضرب دی۔ برابر ٹکڑوں میں کاٹنا تقسیم ہے: 2 ÷ 4 = 0.5 میٹر"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A piece can't be longer than the whole ribbon.",
+            "ur": "جی ہاں! ایک ٹکڑا پورے فیتے سے لمبا نہیں ہو سکتا۔"
+          }
+        },
+        {
+          "id": "two",
+          "text": {
+            "en": "Each piece should be 2 m.",
+            "ur": "ہر ٹکڑا 2 میٹر ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 m is the whole ribbon. Share it into 4: 0.5 m.",
+            "ur": "2 میٹر پورا فیتہ ہے۔ اسے 4 میں بانٹیں: 0.5 میٹر"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 2 × 4 = 8.",
+            "ur": "کوئی غلطی نہیں۔ 2 × 4 = 8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8 m is longer than the whole ribbon! Cutting into pieces is dividing.",
+            "ur": "8 میٹر تو پورے فیتے سے لمبا ہے! ٹکڑوں میں کاٹنا تقسیم ہے۔"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My friend got 4.9 × 3 = 1.47. How can we check quickly, without doing it again?",
+          "ur": "میرے دوست کا جواب 4.9 × 3 = 1.47 آیا۔ ہم دوبارہ حل کیے بغیر جلدی کیسے جانچیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how can an estimate show that 4.9 × 3 = 1.47 is wrong? What is the right answer?",
+        "ur": "اپنے الفاظ میں بتائیں: اندازہ کیسے دکھاتا ہے کہ 4.9 × 3 = 1.47 غلط ہے؟ درست جواب کیا ہے؟"
+      },
+      "key_idea": "4.9 is close to 5, and 5 × 3 = 15, so the answer must be close to 15. 1.47 is far too small: the decimal point is in the wrong place. The answer is 14.7.",
+      "levels": {
+        "got_it": "Rounds 4.9 to 5 and estimates 15, says 1.47 is too small (point in the wrong place), and gives 14.7.",
+        "partly": "Gives the estimate or the right answer 14.7, but not both, or doesn't explain why 1.47 is wrong.",
+        "not_yet": "Agrees with 1.47, gives no estimate, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "5",
+          "about",
+          "round",
+          "تقریباً",
+          "taqreeban",
+          "andaza",
+          "اندازہ"
+        ],
+        [
+          "15",
+          "پندرہ",
+          "pandrah"
+        ],
+        [
+          "14.7",
+          "point",
+          "نقطہ",
+          "nuqta"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 4.9 × 3 is about 5 × 3 = 15, so 1.47 is far too small. The answer is 14.7.",
+          "ur": "بہت خوب سمجھایا! 4.9 × 3 تقریباً 5 × 3 = 15 ہے، اس لیے 1.47 بہت چھوٹا ہے۔ جواب 14.7 ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Round 4.9 to a whole number. What is the estimate, and is 1.47 close to it?",
+          "ur": "اچھی شروعات! 4.9 کو مکمل عدد بنائیں۔ اندازہ کیا ہے، اور کیا 1.47 اس کے قریب ہے؟"
+        },
+        "not_yet": {
+          "en": "Think: 4.9 is close to which whole number? What is that number times 3?",
+          "ur": "سوچیں: 4.9 کس مکمل عدد کے قریب ہے؟ اس عدد کو 3 سے ضرب دیں تو کیا آتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Decimals unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! اعشاریہ کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on each part of the unit: place value, comparing, adding and subtracting, multiplying and dividing. Line up the points and check your decimal places.",
+        "ur": "اس چھوٹے ٹیسٹ میں باب کے ہر حصے سے سوال ہیں: مقامی قیمت، موازنہ، جمع اور تفریق، ضرب اور تقسیم۔ نقطے سیدھ میں رکھیں اور اعشاری مقام جانچیں۔"
+      }
+    },
+    {
+      "id": "u1_place",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.decimals.place_value",
+      "prompt": {
+        "en": "Test 1: In 3.07, what is the value of the 7?",
+        "ur": "ٹیسٹ 1: 3.07 میں 7 کی قیمت کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "hundredths",
+          "text": {
+            "en": "7 hundredths (0.07)",
+            "ur": "7 سوواں (0.07)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The 7 is in the second place after the point.",
+            "ur": "جی ہاں! 7 اعشاریہ کے بعد دوسرے مقام پر ہے۔"
+          }
+        },
+        {
+          "id": "tenths",
+          "text": {
+            "en": "7 tenths (0.7)",
+            "ur": "7 دسواں (0.7)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The tenths digit is 0. The 7 is hundredths.",
+            "ur": "دسویں کا ہندسہ 0 ہے۔ 7 سوواں ہے۔"
+          }
+        },
+        {
+          "id": "seven",
+          "text": {
+            "en": "7",
+            "ur": "7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 7 is after the point, so it is less than 1.",
+            "ur": "7 اعشاریہ کے بعد ہے، اس لیے ایک سے کم ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_compare",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.decimals.compare",
+      "prompt": {
+        "en": "Test 2: Which is the greatest: 0.6, 0.56 or 0.065? Type it.",
+        "ur": "ٹیسٹ 2: سب سے بڑا کون سا ہے: 0.6، 0.56 یا 0.065؟ لکھیں۔"
+      },
+      "answer": 0.6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write them with three places: 0.600, 0.560, 0.065.",
+        "ur": "تین مقام کے ساتھ لکھیں: 0.600، 0.560، 0.065"
+      },
+      "feedback_correct": {
+        "en": "Right! 0.6 has the most tenths.",
+        "ur": "درست! 0.6 میں سب سے زیادہ دسواں ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "Compare tenths: 6, 5, 0. So 0.6 is the greatest.",
+        "ur": "دسویں کا موازنہ کریں: 6، 5، 0۔ اس لیے 0.6 سب سے بڑا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.065,
+          "feedback": {
+            "en": "More digits doesn't mean bigger. 0.065 has 0 tenths.",
+            "ur": "زیادہ ہندسوں کا مطلب بڑا نہیں۔ 0.065 میں 0 دسواں ہیں۔"
+          }
+        },
+        {
+          "answer": 0.56,
+          "feedback": {
+            "en": "0.6 = 0.60, which is more than 0.56.",
+            "ur": "0.6 = 0.60، جو 0.56 سے زیادہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_subtract",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.decimals.add_subtract",
+      "prompt": {
+        "en": "Test 3: Work out 8 − 2.75",
+        "ur": "ٹیسٹ 3: حل کریں: 8 − 2.75"
+      },
+      "answer": 5.25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write 8.00 − 2.75.",
+        "ur": "8.00 − 2.75 لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 − 2.75 = 5.25.",
+        "ur": "درست! 8 − 2.75 = 5.25"
+      },
+      "feedback_wrong": {
+        "en": "8.00 − 2.75 = 5.25. Check: 5.25 + 2.75 = 8.",
+        "ur": "8.00 − 2.75 = 5.25۔ جانچ: 5.25 + 2.75 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 6.75,
+          "feedback": {
+            "en": "Take away the 0.75 too: 8.00 − 2.75 = 5.25.",
+            "ur": "0.75 بھی تفریق کریں: 8.00 − 2.75 = 5.25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_multiply",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.decimals.multiply_divide",
+      "prompt": {
+        "en": "Test 4: Work out 0.6 × 0.4",
+        "ur": "ٹیسٹ 4: حل کریں: 0.6 × 0.4"
+      },
+      "answer": 0.24,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 × 4 = 24. How many decimal places?",
+        "ur": "6 × 4 = 24۔ کتنے اعشاری مقام؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 0.6 × 0.4 = 0.24.",
+        "ur": "درست! 0.6 × 0.4 = 0.24"
+      },
+      "feedback_wrong": {
+        "en": "6 × 4 = 24, and 1 + 1 = 2 decimal places: 0.24.",
+        "ur": "6 × 4 = 24، اور 1 + 1 = 2 اعشاری مقام: 0.24"
+      },
+      "common_wrong": [
+        {
+          "answer": 2.4,
+          "feedback": {
+            "en": "Count the places in both numbers: 2. So 0.24.",
+            "ur": "دونوں اعداد کے مقام گنیں: 2۔ اس لیے 0.24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_divide",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.decimals.multiply_divide",
+      "prompt": {
+        "en": "Test 5: Work out 14.4 ÷ 6",
+        "ur": "ٹیسٹ 5: حل کریں: 14.4 ÷ 6"
+      },
+      "answer": 2.4,
+      "checker": "numeric",
+      "hint": {
+        "en": "144 ÷ 6 = 24. Keep 1 decimal place.",
+        "ur": "144 ÷ 6 = 24۔ ایک اعشاری مقام رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 14.4 ÷ 6 = 2.4.",
+        "ur": "درست! 14.4 ÷ 6 = 2.4"
+      },
+      "feedback_wrong": {
+        "en": "144 ÷ 6 = 24, so 14.4 ÷ 6 = 2.4. Check: 6 × 2.4 = 14.4.",
+        "ur": "144 ÷ 6 = 24، اس لیے 14.4 ÷ 6 = 2.4۔ جانچ: 6 × 2.4 = 14.4"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "Put the point back: the answer is less than 14.4. So 2.4.",
+            "ur": "نقطہ واپس لگائیں: جواب 14.4 سے کم ہے۔ اس لیے 2.4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the whole Decimals unit. Shabash!",
+          "ur": "آپ نے اعشاریہ کا پورا باب مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In a decimal story, decide what is asked. Putting together: add. How much more or left: subtract. Equal groups: multiply. Sharing equally: divide. Some stories need two steps. Always estimate with whole numbers to check the decimal point.",
+        "ur": "اعشاریہ کی کہانی میں سمجھیں کہ کیا پوچھا گیا ہے۔ اکٹھا کرنا: جمع۔ کتنا زیادہ یا باقی: تفریق۔ برابر گروہ: ضرب۔ برابر بانٹنا: تقسیم۔ کچھ کہانیوں میں دو قدم ہوتے ہیں۔ اعشاری نقطہ جانچنے کے لیے ہمیشہ مکمل اعداد سے اندازہ لگائیں۔"
+      },
+      "points": [
+        {
+          "en": "4.9 × 3 ≈ 15, so the answer is 14.7.",
+          "ur": "4.9 × 3 ≈ 15، اس لیے جواب 14.7 ہے۔"
+        },
+        {
+          "en": "A piece is never longer than the whole.",
+          "ur": "ایک ٹکڑا کبھی پورے سے لمبا نہیں ہوتا۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_bottles",
+      "type": "apply",
+      "skill": "maths.decimals.word_problems",
+      "step": {
+        "id": "r_bottles",
+        "type": "number",
+        "prompt": {
+          "en": "A small bottle holds 0.35 litres. How many litres do 4 bottles hold?",
+          "ur": "ایک چھوٹی بوتل میں 0.35 لیٹر آتا ہے۔ 4 بوتلوں میں کتنے لیٹر آئیں گے؟"
+        },
+        "answer": 1.4,
+        "checker": "numeric",
+        "hint": {
+          "en": "4 equal groups: 4 × 0.35.",
+          "ur": "4 برابر گروہ: 4 × 0.35"
+        },
+        "feedback_correct": {
+          "en": "Right! 4 × 0.35 = 1.4 litres.",
+          "ur": "درست! 4 × 0.35 = 1.4 لیٹر۔"
+        },
+        "feedback_wrong": {
+          "en": "4 × 35 = 140, with 2 decimal places: 1.40 = 1.4.",
+          "ur": "4 × 35 = 140، دو اعشاری مقام کے ساتھ: 1.40 = 1.4"
+        },
+        "common_wrong": [
+          {
+            "answer": 14,
+            "feedback": {
+              "en": "Two decimal places: 1.40 = 1.4. Estimate: 4 × about 0.3 is about 1.2.",
+              "ur": "دو اعشاری مقام: 1.40 = 1.4۔ اندازہ: 4 × تقریباً 0.3 تقریباً 1.2 ہے۔"
+            },
+            "misconception_id": "no_estimate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_change",
+      "type": "apply",
+      "skill": "maths.decimals.word_problems",
+      "step": {
+        "id": "r_change",
+        "type": "number",
+        "prompt": {
+          "en": "A water tank holds 20 litres. 12.85 litres are used. How many litres are left?",
+          "ur": "پانی کی ٹینکی میں 20 لیٹر آتا ہے۔ 12.85 لیٹر استعمال ہو گیا۔ کتنے لیٹر باقی ہیں؟"
+        },
+        "answer": 7.15,
+        "checker": "numeric",
+        "hint": {
+          "en": "How much is left: 20.00 − 12.85.",
+          "ur": "کتنا باقی: 20.00 − 12.85"
+        },
+        "feedback_correct": {
+          "en": "Right! 7.15 litres are left.",
+          "ur": "درست! 7.15 لیٹر باقی ہیں۔"
+        },
+        "feedback_wrong": {
+          "en": "20.00 − 12.85 = 7.15. Check: 7.15 + 12.85 = 20.",
+          "ur": "20.00 − 12.85 = 7.15۔ جانچ: 7.15 + 12.85 = 20"
+        },
+        "common_wrong": [
+          {
+            "answer": 8.85,
+            "feedback": {
+              "en": "Take away the 0.85 too: 20.00 − 12.85 = 7.15.",
+              "ur": "0.85 بھی تفریق کریں: 20.00 − 12.85 = 7.15"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Decimals unit. No textbook text or exercises were used. Lengths, weights and volumes are made up for the sums; money is left out because rupee prices are now mostly whole numbers.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-03. Fix the names and curriculum_refs if the unit differs.",
+    "The lesson teaches choosing the operation (s3) and checking with a whole-number estimate (s10).",
+    "s11 to u5 are a short unit test. Each u-step is tagged with an earlier lesson's skill (place_value, compare, add_subtract, multiply_divide), so it counts as practice for that skill rather than for word problems.",
+    "The numbers were worked out in content/sources/g6-maths-03/decimal_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
