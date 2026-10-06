@@ -78,7 +78,11 @@ class FakeVideoPlatform extends VideoPlayerPlatform {
       const SizedBox.expand();
 }
 
-Widget videoStep(FakeVideoPlatform platform, {required bool autoDownload}) {
+Widget videoStep(
+  FakeVideoPlatform platform, {
+  required bool autoDownload,
+  LocalizedText? captions,
+}) {
   VideoPlayerPlatform.instance = platform;
   const text = LocalizedText(en: 'Falling', ur: 'گرنا');
   final backend = FakeBackend();
@@ -96,11 +100,12 @@ Widget videoStep(FakeVideoPlatform platform, {required bool autoDownload}) {
       supportedLocales: AppLocalizations.supportedLocales,
       home: Scaffold(
         body: VideoStepView(
-          step: const VideoStep(
+          step: VideoStep(
             id: 'v1',
             type: 'video',
-            src: LocalizedText(en: 'https://v.mp4', ur: 'https://v.mp4'),
+            src: const LocalizedText(en: 'https://v.mp4', ur: 'https://v.mp4'),
             summary: text,
+            captions: captions,
           ),
           onDone: (_) {},
         ),
@@ -165,5 +170,34 @@ void main() {
       () => Future<void>.delayed(const Duration(milliseconds: 50)),
     );
     expect(platform.disposed, [0, 1]);
+  });
+
+  testWidgets('captions sit under the picture, not on it, and CC hides them', (
+    tester,
+  ) async {
+    final platform = FakeVideoPlatform();
+    await tester.pumpWidget(
+      videoStep(
+        platform,
+        autoDownload: true,
+        captions: const LocalizedText(
+          en: 'fractions_roti_en.vtt',
+          ur: 'fractions_roti_ur.vtt',
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    final video = tester.getRect(find.byKey(const Key('video')));
+    final caption = tester.getRect(find.byKey(const Key('video-caption')));
+    expect(caption.top, greaterThanOrEqualTo(video.bottom));
+
+    await tester.ensureVisible(find.byKey(const Key('video-captions')));
+    await tester.tap(find.byKey(const Key('video-captions')));
+    await tester.pump();
+    expect(find.byKey(const Key('video-caption')), findsNothing);
+    await tester.pumpWidget(const SizedBox());
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 50)),
+    );
   });
 }
