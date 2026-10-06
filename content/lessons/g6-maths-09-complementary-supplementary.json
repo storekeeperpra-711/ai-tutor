@@ -1,0 +1,759 @@
+{
+  "id": "g6-maths-09-complementary-supplementary",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise complementary angles (sum 90°) and supplementary angles (sum 180°), and find a missing complement or supplement.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Angles"
+    }
+  ],
+  "skills": [
+    "maths.geometry.complementary_supplementary"
+  ],
+  "title": {
+    "en": "Complementary and supplementary angles",
+    "ur": "متمم اور مکمل زاویے"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.geometry.angles_on_line"
+    },
+    {
+      "skill": "maths.geometry.angle_types"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "mixes_up_pairs",
+      "description": "Mixes up complementary (90°) and supplementary (180°)."
+    },
+    {
+      "id": "complement_from_180",
+      "description": "Finds a complement by taking the angle from 180° instead of 90°."
+    },
+    {
+      "id": "supplement_from_90",
+      "description": "Finds a supplement by taking the angle from 90° instead of 180°."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.geometry.complementary_supplementary": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.geometry.complementary_supplementary": [
+      {
+        "id": "qb_comp",
+        "type": "recall",
+        "step": {
+          "id": "qb_comp",
+          "type": "choice",
+          "prompt": {
+            "en": "Complementary angles add up to how many degrees?",
+            "ur": "متمم زاویوں کا مجموعہ کتنے درجے ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "ninety",
+              "text": {
+                "en": "90°",
+                "ur": "90°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Complementary angles make a corner, 90°.",
+                "ur": "جی ہاں! متمم زاویے کونا، 90°، بناتے ہیں۔"
+              }
+            },
+            {
+              "id": "oneeighty",
+              "text": {
+                "en": "180°",
+                "ur": "180°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "180° is for supplementary angles. Complementary make 90°.",
+                "ur": "180° مکمل زاویوں کے لیے ہے۔ متمم 90° بناتے ہیں۔"
+              },
+              "misconception_id": "mixes_up_pairs"
+            },
+            {
+              "id": "threesixty",
+              "text": {
+                "en": "360°",
+                "ur": "360°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "360° is a full turn. Complementary angles make 90°.",
+                "ur": "360° پورا چکر ہے۔ متمم زاویے 90° بناتے ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "What is the supplement of 128°?",
+            "ur": "128° کا مکمل زاویہ کیا ہے؟"
+          },
+          "answer": 52,
+          "checker": "numeric",
+          "hint": {
+            "en": "Supplementary angles make 180°: 180 − 128.",
+            "ur": "مکمل زاویے 180° بناتے ہیں: 180 − 128"
+          },
+          "feedback_correct": {
+            "en": "Right! 52°.",
+            "ur": "درست! 52°"
+          },
+          "feedback_wrong": {
+            "en": "180 − 128 = 52°.",
+            "ur": "180 − 128 = 52°"
+          },
+          "common_wrong": [
+            {
+              "answer": 232,
+              "feedback": {
+                "en": "Supplementary is 180°, not 360°: 180 − 128 = 52°.",
+                "ur": "مکمل 180° ہے، 360° نہیں: 180 − 128 = 52°"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Kamran says the complement of 120° is 60°. What went wrong?",
+            "ur": "کامران کہتا ہے 120° کا متمم 60° ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "none",
+              "text": {
+                "en": "120° is more than 90°, so it has no complement. 60° is its supplement.",
+                "ur": "120° تو 90° سے زیادہ ہے، اس لیے اس کا کوئی متمم نہیں۔ 60° اس کا مکمل زاویہ ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Only acute angles have a complement.",
+                "ur": "جی ہاں! صرف حادہ زاویوں کا متمم ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "thirty",
+              "text": {
+                "en": "The complement is 30°.",
+                "ur": "متمم 30° ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "120 + 30 is 150, not 90. 120° has no complement.",
+                "ur": "120 + 30 = 150، نہ کہ 90۔ 120° کا کوئی متمم نہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "120 + 60 = 180, so 60° is the supplement, not the complement.",
+                "ur": "120 + 60 = 180، اس لیے 60° مکمل ہے، متمم نہیں۔"
+              },
+              "misconception_id": "mixes_up_pairs"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_comp",
+      "front": {
+        "en": "Complementary angles?",
+        "ur": "متمم زاویے؟"
+      },
+      "back": {
+        "en": "Two angles that add up to 90°, like 30° and 60°. Think C for Corner.",
+        "ur": "دو زاویے جن کا مجموعہ 90° ہو، جیسے 30° اور 60°۔ C یعنی Corner (کونا) یاد رکھیں۔"
+      }
+    },
+    {
+      "id": "f_supp",
+      "front": {
+        "en": "Supplementary angles?",
+        "ur": "مکمل زاویے؟"
+      },
+      "back": {
+        "en": "Two angles that add up to 180°, like 65° and 115°. Think S for Straight.",
+        "ur": "دو زاویے جن کا مجموعہ 180° ہو، جیسے 65° اور 115°۔ S یعنی Straight (سیدھی) یاد رکھیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_corner",
+      "text": {
+        "en": "Put a ruler across the corner of a book so it makes two angles in the corner. Those two angles are complementary: together they make 90°. Then lay the ruler across a straight edge: the two angles are supplementary.",
+        "ur": "کتاب کے کونے پر رولر ترچھا رکھیں تاکہ کونے میں دو زاویے بنیں۔ یہ دونوں متمم ہیں: مل کر 90° بناتے ہیں۔ پھر رولر کو سیدھے کنارے پر رکھیں: دونوں زاویے مکمل ہیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Complementary angles",
+      "ur": "متمم زاویے"
+    },
+    {
+      "en": "Supplementary angles",
+      "ur": "مکمل زاویے"
+    },
+    {
+      "en": "Complement",
+      "ur": "متمم"
+    },
+    {
+      "en": "Supplement",
+      "ur": "مکمل زاویہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Some angles come in pairs that fit together perfectly, like two puzzle pieces. Let's find out how!",
+          "ur": "کچھ زاویے جوڑوں میں آتے ہیں جو پہیلی کے دو ٹکڑوں کی طرح بالکل جڑ جاتے ہیں۔ آئیں دیکھیں کیسے!"
+        }
+      },
+      "text": {
+        "en": "Today we meet two special pairs of angles. First, a quick check.",
+        "ur": "آج ہم زاویوں کے دو خاص جوڑوں سے ملیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.geometry.angles_on_line",
+      "prompt": {
+        "en": "Two angles sit on a straight line. One is 150°. What is the other?",
+        "ur": "سیدھی لکیر پر دو زاویے ہیں۔ ایک 150° ہے۔ دوسرا کتنا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "A straight line is 180°.",
+        "ur": "سیدھی لکیر 180° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30°.",
+        "ur": "درست! 30°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 150 = 30°.",
+        "ur": "180 − 150 = 30°"
+      },
+      "common_wrong": [
+        {
+          "answer": 210,
+          "feedback": {
+            "en": "Use 180° for a line: 30°.",
+            "ur": "لکیر کے لیے 180° لیں: 30°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_pairs",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "C for Corner, 90°. S for Straight, 180°!",
+          "ur": "C یعنی کونا، 90°۔ S یعنی سیدھی لکیر، 180°!"
+        }
+      },
+      "text": {
+        "en": "Two angles are complementary if they add up to 90°: together they fill a corner. Two angles are supplementary if they add up to 180°: together they make a straight line. The complement of 30° is 90 − 30 = 60°. The supplement of 30° is 180 − 30 = 150°.",
+        "ur": "دو زاویے متمم ہیں اگر ان کا مجموعہ 90° ہو: مل کر کونا بھرتے ہیں۔ دو زاویے مکمل ہیں اگر ان کا مجموعہ 180° ہو: مل کر سیدھی لکیر بناتے ہیں۔ 30° کا متمم 90 − 30 = 60° ہے۔ 30° کا مکمل زاویہ 180 − 30 = 150° ہے۔"
+      }
+    },
+    {
+      "id": "s4_complement",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the complement of 30°?",
+        "ur": "30° کا متمم کیا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Complementary angles make 90°.",
+        "ur": "متمم زاویے 90° بناتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60°. 30 + 60 = 90.",
+        "ur": "درست! 60°۔ 30 + 60 = 90"
+      },
+      "feedback_wrong": {
+        "en": "90 − 30 = 60°.",
+        "ur": "90 − 30 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "150° is the supplement (180°). The complement uses 90°: 60°.",
+            "ur": "150° مکمل زاویہ ہے (180°)۔ متمم میں 90° لیں: 60°"
+          },
+          "misconception_id": "complement_from_180"
+        }
+      ]
+    },
+    {
+      "id": "s5_supplement",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the supplement of 65°?",
+        "ur": "65° کا مکمل زاویہ کیا ہے؟"
+      },
+      "answer": 115,
+      "checker": "numeric",
+      "hint": {
+        "en": "Supplementary angles make 180°.",
+        "ur": "مکمل زاویے 180° بناتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 115°. 65 + 115 = 180.",
+        "ur": "درست! 115°۔ 65 + 115 = 180"
+      },
+      "feedback_wrong": {
+        "en": "180 − 65 = 115°.",
+        "ur": "180 − 65 = 115°"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "25° is the complement (90°). The supplement uses 180°: 115°.",
+            "ur": "25° متمم ہے (90°)۔ مکمل میں 180° لیں: 115°"
+          },
+          "misconception_id": "supplement_from_90"
+        }
+      ]
+    },
+    {
+      "id": "s6_which",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Are 35° and 55° complementary, supplementary or neither?",
+        "ur": "کیا 35° اور 55° متمم ہیں، مکمل ہیں یا کوئی نہیں؟"
+      },
+      "options": [
+        {
+          "id": "comp",
+          "text": {
+            "en": "Complementary",
+            "ur": "متمم"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "35 + 55 = 90. Yes! They make 90°.",
+            "ur": "35 + 55 = 90۔ جی ہاں! یہ 90° بناتے ہیں۔"
+          }
+        },
+        {
+          "id": "supp",
+          "text": {
+            "en": "Supplementary",
+            "ur": "مکمل"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "35 + 55 = 90. Supplementary angles make 180°.",
+            "ur": "35 + 55 = 90۔ مکمل زاویے 180° بناتے ہیں۔"
+          },
+          "misconception_id": "mixes_up_pairs"
+        },
+        {
+          "id": "neither",
+          "text": {
+            "en": "Neither",
+            "ur": "کوئی نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "35 + 55 = 90. Look at the total again.",
+            "ur": "35 + 55 = 90۔ مجموعہ دوبارہ دیکھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_which",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Are 110° and 70° complementary, supplementary or neither?",
+        "ur": "کیا 110° اور 70° متمم ہیں، مکمل ہیں یا کوئی نہیں؟"
+      },
+      "options": [
+        {
+          "id": "comp",
+          "text": {
+            "en": "Complementary",
+            "ur": "متمم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "110 + 70 = 180. Complementary angles make 90°.",
+            "ur": "110 + 70 = 180۔ متمم زاویے 90° بناتے ہیں۔"
+          },
+          "misconception_id": "mixes_up_pairs"
+        },
+        {
+          "id": "supp",
+          "text": {
+            "en": "Supplementary",
+            "ur": "مکمل"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "110 + 70 = 180. Yes! They make 180°.",
+            "ur": "110 + 70 = 180۔ جی ہاں! یہ 180° بناتے ہیں۔"
+          }
+        },
+        {
+          "id": "neither",
+          "text": {
+            "en": "Neither",
+            "ur": "کوئی نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "110 + 70 = 180. Look at the total again.",
+            "ur": "110 + 70 = 180۔ مجموعہ دوبارہ دیکھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_self",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "An angle is equal to its own complement. How big is it?",
+        "ur": "ایک زاویہ اپنے متمم کے برابر ہے۔ یہ کتنا بڑا ہے؟"
+      },
+      "answer": 45,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two equal angles make 90°.",
+        "ur": "دو برابر زاویے 90° بناتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 45° + 45° = 90°.",
+        "ur": "درست! 45° + 45° = 90°"
+      },
+      "feedback_wrong": {
+        "en": "90 ÷ 2 = 45°.",
+        "ur": "90 ÷ 2 = 45°"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° with its complement would make more than 90°. Half of 90: 45°.",
+            "ur": "90° اور اس کا متمم 90° سے زیادہ ہو جائے گا۔ 90 کا آدھا: 45°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ayesha says the complement of 40° is 140°. What went wrong?",
+        "ur": "عائشہ کہتی ہے 40° کا متمم 140° ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "ninety",
+          "text": {
+            "en": "Complementary means 90°. 90 − 40 = 50°.",
+            "ur": "متمم کا مطلب 90°۔ 90 − 40 = 50°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 140° is the supplement, using 180°.",
+            "ur": "جی ہاں! 140° مکمل زاویہ ہے، 180° سے۔"
+          }
+        },
+        {
+          "id": "bigger",
+          "text": {
+            "en": "It should be bigger, 320°.",
+            "ur": "یہ بڑا ہونا چاہیے، 320°۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "320° uses 360°. The complement uses 90°: 50°.",
+            "ur": "320° میں 360° لیا۔ متمم میں 90° لیں: 50°"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "40 + 140 = 180, so 140° is the supplement. The complement is 50°.",
+            "ur": "40 + 140 = 180، اس لیے 140° مکمل ہے۔ متمم 50° ہے۔"
+          },
+          "misconception_id": "complement_from_180"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can a 100° angle have a complement? Why or why not? Can you teach me?",
+          "ur": "کیا 100° کے زاویے کا متمم ہو سکتا ہے؟ کیوں یا کیوں نہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why does an obtuse angle, like 100°, have no complement?",
+        "ur": "اپنے الفاظ میں بتائیں: منفرجہ زاویے، جیسے 100°، کا کوئی متمم کیوں نہیں ہوتا؟"
+      },
+      "key_idea": "Complementary angles add up to 90°. An obtuse angle is already more than 90°, so there is nothing left to add: no angle can make the total 90°.",
+      "levels": {
+        "got_it": "Says complements add to 90° and the obtuse angle is already more than 90°, so nothing is left.",
+        "partly": "Says 100° is more than 90° without linking it to the 90° total, or the reverse.",
+        "not_yet": "Gives a number like 80° or −10°, or no reason."
+      },
+      "keywords": [
+        [
+          "90",
+          "corner",
+          "کونا",
+          "kona"
+        ],
+        [
+          "more",
+          "bigger",
+          "already",
+          "زیادہ",
+          "بڑا",
+          "zyada"
+        ],
+        [
+          "nothing",
+          "no angle",
+          "left",
+          "کچھ نہیں",
+          "باقی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 100° is already past 90°, so no angle can be added to make 90°.",
+          "ur": "بہت خوب! 100° پہلے ہی 90° سے آگے ہے، اس لیے کوئی زاویہ جمع کر کے 90° نہیں بن سکتا۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what complementary angles must add up to.",
+          "ur": "اچھی شروعات! اب بتائیں متمم زاویوں کا مجموعہ کتنا ہونا چاہیے۔"
+        },
+        "not_yet": {
+          "en": "Complementary angles add up to 90°. Is 100° more or less than 90°?",
+          "ur": "متمم زاویوں کا مجموعہ 90° ہوتا ہے۔ کیا 100°، 90° سے زیادہ ہے یا کم؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_two_step",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The supplement of an angle is 100°. What is the complement of the same angle?",
+        "ur": "ایک زاویے کا مکمل زاویہ 100° ہے۔ اسی زاویے کا متمم کیا ہے؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "First find the angle: 180 − 100. Then take it from 90.",
+        "ur": "پہلے زاویہ نکالیں: 180 − 100۔ پھر اسے 90 سے نفی کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The angle is 80°, so its complement is 10°.",
+        "ur": "درست! زاویہ 80° ہے، اس لیے اس کا متمم 10° ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "180 − 100 = 80°, and 90 − 80 = 10°.",
+        "ur": "180 − 100 = 80°، اور 90 − 80 = 10°"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "80° is the angle itself. Its complement is 90 − 80 = 10°.",
+            "ur": "80° تو خود زاویہ ہے۔ اس کا متمم 90 − 80 = 10° ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You know your angle pairs now!",
+          "ur": "اب آپ زاویوں کے جوڑے جانتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Complementary angles add up to 90° (C for Corner). Supplementary angles add up to 180° (S for Straight). To find a complement, take the angle from 90°; to find a supplement, take it from 180°. Only acute angles have a complement.",
+        "ur": "متمم زاویوں کا مجموعہ 90° ہے (C یعنی کونا)۔ مکمل زاویوں کا مجموعہ 180° ہے (S یعنی سیدھی لکیر)۔ متمم کے لیے زاویہ 90° سے نفی کریں؛ مکمل کے لیے 180° سے۔ صرف حادہ زاویوں کا متمم ہوتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Complementary: 90°.",
+          "ur": "متمم: 90°۔"
+        },
+        {
+          "en": "Supplementary: 180°.",
+          "ur": "مکمل: 180°۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_comp",
+      "type": "apply",
+      "skill": "maths.geometry.complementary_supplementary",
+      "step": {
+        "id": "r_comp",
+        "type": "number",
+        "prompt": {
+          "en": "What is the complement of 72°?",
+          "ur": "72° کا متمم کیا ہے؟"
+        },
+        "answer": 18,
+        "checker": "numeric",
+        "hint": {
+          "en": "90 − 72.",
+          "ur": "90 − 72"
+        },
+        "feedback_correct": {
+          "en": "Right! 18°.",
+          "ur": "درست! 18°"
+        },
+        "feedback_wrong": {
+          "en": "90 − 72 = 18°.",
+          "ur": "90 − 72 = 18°"
+        },
+        "common_wrong": [
+          {
+            "answer": 108,
+            "feedback": {
+              "en": "108° is the supplement. The complement: 90 − 72 = 18°.",
+              "ur": "108° مکمل ہے۔ متمم: 90 − 72 = 18°"
+            },
+            "misconception_id": "complement_from_180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_supp",
+      "type": "apply",
+      "skill": "maths.geometry.complementary_supplementary",
+      "step": {
+        "id": "r_supp",
+        "type": "number",
+        "prompt": {
+          "en": "What is the supplement of 45°?",
+          "ur": "45° کا مکمل زاویہ کیا ہے؟"
+        },
+        "answer": 135,
+        "checker": "numeric",
+        "hint": {
+          "en": "180 − 45.",
+          "ur": "180 − 45"
+        },
+        "feedback_correct": {
+          "en": "Right! 135°.",
+          "ur": "درست! 135°"
+        },
+        "feedback_wrong": {
+          "en": "180 − 45 = 135°.",
+          "ur": "180 − 45 = 135°"
+        },
+        "common_wrong": [
+          {
+            "answer": 45,
+            "feedback": {
+              "en": "45° is the complement. The supplement: 180 − 45 = 135°.",
+              "ur": "45° متمم ہے۔ مکمل: 180 − 45 = 135°"
+            },
+            "misconception_id": "supplement_from_90"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Angles unit. No textbook text or exercises were used.",
+    "\"C for Corner, S for Straight\" helps children keep 90° and 180° apart; most wrong answers in this lesson catch that mix-up.",
+    "Urdu terms to check: متمم (complementary) and مکمل زاویے (supplementary). Some books use other words; please confirm the PCTB ones.",
+    "The numbers were worked out in content/sources/g6-maths-09/angle_pairs.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

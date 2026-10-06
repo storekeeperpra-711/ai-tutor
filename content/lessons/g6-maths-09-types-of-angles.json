@@ -1,0 +1,1003 @@
+{
+  "id": "g6-maths-09-types-of-angles",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Name acute, right, obtuse, straight and reflex angles from their size in degrees.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Angles"
+    }
+  ],
+  "skills": [
+    "maths.geometry.angle_types"
+  ],
+  "title": {
+    "en": "Types of angles",
+    "ur": "زاویوں کی اقسام"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.measurement.area_triangle"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "straight_is_obtuse",
+      "description": "Calls a 180° angle obtuse instead of straight."
+    },
+    {
+      "id": "big_is_acute",
+      "description": "Mixes up acute and obtuse, calling a wide angle acute."
+    },
+    {
+      "id": "near_90_is_right",
+      "description": "Calls any angle close to 90° a right angle."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.geometry.angle_types": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.geometry.angle_types": [
+      {
+        "id": "qb_right",
+        "type": "recall",
+        "step": {
+          "id": "qb_right",
+          "type": "choice",
+          "prompt": {
+            "en": "How many degrees is a right angle?",
+            "ur": "قائمہ زاویہ کتنے درجے کا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "ninety",
+              "text": {
+                "en": "90°",
+                "ur": "90°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A right angle is a square corner, 90°.",
+                "ur": "جی ہاں! قائمہ زاویہ چوکور کونا ہے، 90°۔"
+              }
+            },
+            {
+              "id": "hundred",
+              "text": {
+                "en": "100°",
+                "ur": "100°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A right angle is exactly 90°.",
+                "ur": "قائمہ زاویہ بالکل 90° ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "oneeighty",
+              "text": {
+                "en": "180°",
+                "ur": "180°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "180° is a straight angle. A right angle is half of it: 90°.",
+                "ur": "180° مستقیم زاویہ ہے۔ قائمہ اس کا آدھا ہے: 90°۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "choice",
+          "prompt": {
+            "en": "What kind of angle is 160°?",
+            "ur": "160° کس قسم کا زاویہ ہے؟"
+          },
+          "options": [
+            {
+              "id": "acute",
+              "text": {
+                "en": "Acute",
+                "ur": "حادہ زاویہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Not quite. Obtuse angles are between 90° and 180°. So 160° is obtuse.",
+                "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 160° منفرجہ زاویہ ہے۔"
+              },
+              "misconception_id": "big_is_acute"
+            },
+            {
+              "id": "right",
+              "text": {
+                "en": "Right",
+                "ur": "قائمہ زاویہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Not quite. Obtuse angles are between 90° and 180°. So 160° is obtuse.",
+                "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 160° منفرجہ زاویہ ہے۔"
+              },
+              "misconception_id": "near_90_is_right"
+            },
+            {
+              "id": "obtuse",
+              "text": {
+                "en": "Obtuse",
+                "ur": "منفرجہ زاویہ"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 160° is obtuse. Obtuse angles are between 90° and 180°.",
+                "ur": "جی ہاں! 160° منفرجہ زاویہ ہے۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "straight",
+              "text": {
+                "en": "Straight",
+                "ur": "مستقیم زاویہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Not quite. Obtuse angles are between 90° and 180°. So 160° is obtuse.",
+                "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 160° منفرجہ زاویہ ہے۔"
+              }
+            },
+            {
+              "id": "reflex",
+              "text": {
+                "en": "Reflex",
+                "ur": "منعکس زاویہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Not quite. Obtuse angles are between 90° and 180°. So 160° is obtuse.",
+                "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 160° منفرجہ زاویہ ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hina says 95° is a right angle because it is close to 90°. What went wrong?",
+            "ur": "حنا کہتی ہے 95° قائمہ زاویہ ہے کیونکہ یہ 90° کے قریب ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "exact",
+              "text": {
+                "en": "A right angle is exactly 90°. 95° is obtuse.",
+                "ur": "قائمہ زاویہ بالکل 90° ہوتا ہے۔ 95° منفرجہ ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Even 1° more than 90° makes it obtuse.",
+                "ur": "جی ہاں! 90° سے 1° زیادہ بھی منفرجہ ہے۔"
+              }
+            },
+            {
+              "id": "acute",
+              "text": {
+                "en": "95° is acute.",
+                "ur": "95° حادہ ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Acute is less than 90°. 95° is more, so it is obtuse.",
+                "ur": "حادہ 90° سے کم ہوتا ہے۔ 95° زیادہ ہے، اس لیے منفرجہ ہے۔"
+              },
+              "misconception_id": "big_is_acute"
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Right angles are exactly 90°. 95° is obtuse.",
+                "ur": "قائمہ زاویہ بالکل 90° ہوتا ہے۔ 95° منفرجہ ہے۔"
+              },
+              "misconception_id": "near_90_is_right"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_kinds",
+      "front": {
+        "en": "The five kinds of angle?",
+        "ur": "زاویوں کی پانچ اقسام؟"
+      },
+      "back": {
+        "en": "Acute (less than 90°), right (90°), obtuse (90° to 180°), straight (180°), reflex (180° to 360°).",
+        "ur": "حادہ (90° سے کم)، قائمہ (90°)، منفرجہ (90° سے 180°)، مستقیم (180°)، منعکس (180° سے 360°)۔"
+      }
+    },
+    {
+      "id": "f_turn",
+      "front": {
+        "en": "How many degrees in a full turn?",
+        "ur": "پورے چکر میں کتنے درجے؟"
+      },
+      "back": {
+        "en": "360°. Half a turn is 180°, a quarter turn is 90°.",
+        "ur": "360°۔ آدھا چکر 180°، چوتھائی چکر 90°۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_hunt",
+      "text": {
+        "en": "Go on an angle hunt at home. Find one right angle (a book corner), one acute angle and one obtuse angle (an open door or scissors). Tell someone at home what kind each one is.",
+        "ur": "گھر میں زاویے تلاش کریں۔ ایک قائمہ زاویہ (کتاب کا کونا)، ایک حادہ اور ایک منفرجہ زاویہ (کھلا دروازہ یا قینچی) ڈھونڈیں۔ گھر والوں کو بتائیں ہر ایک کس قسم کا ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Angle",
+      "ur": "زاویہ"
+    },
+    {
+      "en": "Degree",
+      "ur": "درجہ"
+    },
+    {
+      "en": "Acute angle",
+      "ur": "حادہ زاویہ"
+    },
+    {
+      "en": "Right angle",
+      "ur": "قائمہ زاویہ"
+    },
+    {
+      "en": "Obtuse angle",
+      "ur": "منفرجہ زاویہ"
+    },
+    {
+      "en": "Straight angle",
+      "ur": "مستقیم زاویہ"
+    },
+    {
+      "en": "Reflex angle",
+      "ur": "منعکس زاویہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Open a door a little, then wider, then all the way. The turn gets bigger! That turn is an angle.",
+          "ur": "دروازہ تھوڑا کھولیں، پھر زیادہ، پھر پورا۔ گھماؤ بڑا ہوتا جاتا ہے! یہ گھماؤ زاویہ ہے۔"
+        }
+      },
+      "text": {
+        "en": "An angle measures how far something turns. We measure it in degrees (°). A full turn is 360°. First, a quick check.",
+        "ur": "زاویہ بتاتا ہے کوئی چیز کتنا گھومی۔ ہم اسے درجوں (°) میں ناپتے ہیں۔ پورا چکر 360° ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.measurement.area_triangle",
+      "prompt": {
+        "en": "In the triangle lesson, the height met the base at a square corner. What is that corner called?",
+        "ur": "مثلث کے سبق میں اونچائی قاعدے سے چوکور کونے پر ملی۔ اس کونے کو کیا کہتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "A right angle",
+            "ur": "قائمہ زاویہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A square corner is a right angle.",
+            "ur": "جی ہاں! چوکور کونا قائمہ زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "slant",
+          "text": {
+            "en": "A slanted side",
+            "ur": "ترچھا ضلع"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The height is not slanted. It meets the base at a right angle.",
+            "ur": "اونچائی ترچھی نہیں۔ یہ قاعدے سے قائمہ زاویے پر ملتی ہے۔"
+          }
+        },
+        {
+          "id": "base",
+          "text": {
+            "en": "The base",
+            "ur": "قاعدہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The base is a side. The square corner is a right angle.",
+            "ur": "قاعدہ ایک ضلع ہے۔ چوکور کونا قائمہ زاویہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_kinds",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Five kinds of angle, and the right angle, 90°, is the one to compare with!",
+          "ur": "زاویوں کی پانچ اقسام، اور قائمہ زاویہ، 90°، سے موازنہ کریں!"
+        }
+      },
+      "text": {
+        "en": "Acute: less than 90° (a narrow opening). Right: exactly 90° (a square corner). Obtuse: between 90° and 180° (wider than a corner). Straight: exactly 180° (a straight line). Reflex: between 180° and 360° (more than half a turn).",
+        "ur": "حادہ: 90° سے کم (تنگ کھلاؤ)۔ قائمہ: بالکل 90° (چوکور کونا)۔ منفرجہ: 90° اور 180° کے درمیان (کونے سے زیادہ کھلا)۔ مستقیم: بالکل 180° (سیدھی لکیر)۔ منعکس: 180° اور 360° کے درمیان (آدھے چکر سے زیادہ)۔"
+      }
+    },
+    {
+      "id": "s4_acute",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What kind of angle is 35°?",
+        "ur": "35° کس قسم کا زاویہ ہے؟"
+      },
+      "options": [
+        {
+          "id": "acute",
+          "text": {
+            "en": "Acute",
+            "ur": "حادہ زاویہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 35° is acute. Acute angles are less than 90°.",
+            "ur": "جی ہاں! 35° حادہ زاویہ ہے۔ حادہ زاویہ 90° سے کم ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "right",
+          "text": {
+            "en": "Right",
+            "ur": "قائمہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Acute angles are less than 90°. So 35° is acute.",
+            "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 35° حادہ زاویہ ہے۔"
+          },
+          "misconception_id": "near_90_is_right"
+        },
+        {
+          "id": "obtuse",
+          "text": {
+            "en": "Obtuse",
+            "ur": "منفرجہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Acute angles are less than 90°. So 35° is acute.",
+            "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 35° حادہ زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "straight",
+          "text": {
+            "en": "Straight",
+            "ur": "مستقیم زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Acute angles are less than 90°. So 35° is acute.",
+            "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 35° حادہ زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "reflex",
+          "text": {
+            "en": "Reflex",
+            "ur": "منعکس زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Acute angles are less than 90°. So 35° is acute.",
+            "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 35° حادہ زاویہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_obtuse",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A door is opened 120°. What kind of angle is that?",
+        "ur": "دروازہ 120° کھولا گیا۔ یہ کس قسم کا زاویہ ہے؟"
+      },
+      "options": [
+        {
+          "id": "acute",
+          "text": {
+            "en": "Acute",
+            "ur": "حادہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 120° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 120° منفرجہ زاویہ ہے۔"
+          },
+          "misconception_id": "big_is_acute"
+        },
+        {
+          "id": "right",
+          "text": {
+            "en": "Right",
+            "ur": "قائمہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 120° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 120° منفرجہ زاویہ ہے۔"
+          },
+          "misconception_id": "near_90_is_right"
+        },
+        {
+          "id": "obtuse",
+          "text": {
+            "en": "Obtuse",
+            "ur": "منفرجہ زاویہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 120° is obtuse. Obtuse angles are between 90° and 180°.",
+            "ur": "جی ہاں! 120° منفرجہ زاویہ ہے۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "straight",
+          "text": {
+            "en": "Straight",
+            "ur": "مستقیم زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 120° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 120° منفرجہ زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "reflex",
+          "text": {
+            "en": "Reflex",
+            "ur": "منعکس زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 120° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 120° منفرجہ زاویہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_two_rights",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many right angles make one straight angle?",
+        "ur": "کتنے قائمہ زاویے مل کر ایک مستقیم زاویہ بناتے ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "A straight angle is 180°. A right angle is 90°.",
+        "ur": "مستقیم زاویہ 180° ہے۔ قائمہ زاویہ 90° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 90° + 90° = 180°.",
+        "ur": "درست! 90° + 90° = 180°"
+      },
+      "feedback_wrong": {
+        "en": "180 ÷ 90 = 2 right angles.",
+        "ur": "180 ÷ 90 = 2 قائمہ زاویے"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Four right angles make a full turn, 360°. A straight angle is 180°: two.",
+            "ur": "چار قائمہ زاویے پورا چکر، 360°، بناتے ہیں۔ مستقیم 180° ہے: دو۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_reflex",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What kind of angle is 250°?",
+        "ur": "250° کس قسم کا زاویہ ہے؟"
+      },
+      "options": [
+        {
+          "id": "acute",
+          "text": {
+            "en": "Acute",
+            "ur": "حادہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Reflex angles are between 180° and 360°. So 250° is reflex.",
+            "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 250° منعکس زاویہ ہے۔"
+          },
+          "misconception_id": "big_is_acute"
+        },
+        {
+          "id": "right",
+          "text": {
+            "en": "Right",
+            "ur": "قائمہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Reflex angles are between 180° and 360°. So 250° is reflex.",
+            "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 250° منعکس زاویہ ہے۔"
+          },
+          "misconception_id": "near_90_is_right"
+        },
+        {
+          "id": "obtuse",
+          "text": {
+            "en": "Obtuse",
+            "ur": "منفرجہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Reflex angles are between 180° and 360°. So 250° is reflex.",
+            "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 250° منعکس زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "straight",
+          "text": {
+            "en": "Straight",
+            "ur": "مستقیم زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Reflex angles are between 180° and 360°. So 250° is reflex.",
+            "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 250° منعکس زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "reflex",
+          "text": {
+            "en": "Reflex",
+            "ur": "منعکس زاویہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 250° is reflex. Reflex angles are between 180° and 360°.",
+            "ur": "جی ہاں! 250° منعکس زاویہ ہے۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_clock",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A clock shows 3 o'clock. How many degrees apart are the two hands? (Each hour mark is 30° apart.)",
+        "ur": "گھڑی 3 بجا رہی ہے۔ دونوں سوئیوں کے درمیان کتنے درجے ہیں؟ (ہر گھنٹے کا نشان 30° کے فاصلے پر ہے۔)"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 hour marks, 30° each.",
+        "ur": "3 گھنٹے کے نشان، ہر ایک 30°"
+      },
+      "feedback_correct": {
+        "en": "Right! 90°, a right angle.",
+        "ur": "درست! 90°، قائمہ زاویہ"
+      },
+      "feedback_wrong": {
+        "en": "3 × 30° = 90°.",
+        "ur": "3 × 30° = 90°"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the hour. Each hour is 30°: 3 × 30 = 90°.",
+            "ur": "3 گھنٹہ ہے۔ ہر گھنٹہ 30°: 3 × 30 = 90°"
+          }
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That is minutes. Use degrees: 3 × 30 = 90°.",
+            "ur": "یہ منٹ ہیں۔ درجے لیں: 3 × 30 = 90°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal says 180° is an obtuse angle because it is more than 90°. What went wrong?",
+        "ur": "بلال کہتا ہے 180° منفرجہ زاویہ ہے کیونکہ یہ 90° سے زیادہ ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "straight",
+          "text": {
+            "en": "180° is exactly a straight line, so it is a straight angle.",
+            "ur": "180° بالکل سیدھی لکیر ہے، اس لیے مستقیم زاویہ ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Obtuse angles are less than 180°. Exactly 180° is straight.",
+            "ur": "جی ہاں! منفرجہ زاویہ 180° سے کم ہوتا ہے۔ بالکل 180° مستقیم ہے۔"
+          }
+        },
+        {
+          "id": "reflex",
+          "text": {
+            "en": "180° is reflex.",
+            "ur": "180° منعکس ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Reflex is more than 180°. Exactly 180° is straight.",
+            "ur": "منعکس 180° سے زیادہ ہوتا ہے۔ بالکل 180° مستقیم ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Obtuse stops before 180°. 180° is a straight angle.",
+            "ur": "منفرجہ 180° سے پہلے رک جاتا ہے۔ 180° مستقیم زاویہ ہے۔"
+          },
+          "misconception_id": "straight_is_obtuse"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Is 100° acute or obtuse? How can you tell? Can you teach me?",
+          "ur": "100° حادہ ہے یا منفرجہ؟ آپ کیسے بتاتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: is 100° acute or obtuse, and how do you know?",
+        "ur": "اپنے الفاظ میں بتائیں: 100° حادہ ہے یا منفرجہ، اور آپ کو کیسے پتا؟"
+      },
+      "key_idea": "100° is obtuse because it is more than a right angle (90°) but less than a straight angle (180°). Acute angles are less than 90°.",
+      "levels": {
+        "got_it": "Says 100° is obtuse and compares it with 90° (and ideally 180°).",
+        "partly": "Says obtuse without comparing with 90°, or compares correctly but names the wrong type.",
+        "not_yet": "Says acute, or gives no reason."
+      },
+      "keywords": [
+        [
+          "obtuse",
+          "منفرجہ",
+          "munfarja"
+        ],
+        [
+          "90",
+          "right",
+          "قائمہ",
+          "qaima"
+        ],
+        [
+          "more",
+          "bigger",
+          "greater",
+          "زیادہ",
+          "بڑا",
+          "zyada"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! More than 90° but less than 180° means obtuse.",
+          "ur": "بہت خوب! 90° سے زیادہ لیکن 180° سے کم کا مطلب منفرجہ۔"
+        },
+        "partly": {
+          "en": "Good start! Now compare 100° with a right angle, 90°.",
+          "ur": "اچھی شروعات! اب 100° کا موازنہ قائمہ زاویے، 90°، سے کریں۔"
+        },
+        "not_yet": {
+          "en": "Is 100° bigger or smaller than a square corner, 90°? Acute angles are smaller than 90°.",
+          "ur": "کیا 100° چوکور کونے، 90°، سے بڑا ہے یا چھوٹا؟ حادہ زاویے 90° سے چھوٹے ہوتے ہیں۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_six",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A clock shows 6 o'clock. How many degrees apart are the two hands?",
+        "ur": "گھڑی 6 بجا رہی ہے۔ دونوں سوئیوں کے درمیان کتنے درجے ہیں؟"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 hour marks, 30° each.",
+        "ur": "6 گھنٹے کے نشان، ہر ایک 30°"
+      },
+      "feedback_correct": {
+        "en": "Right! 180°, a straight angle: the hands make a straight line.",
+        "ur": "درست! 180°، مستقیم زاویہ: سوئیاں سیدھی لکیر بناتی ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "6 × 30° = 180°.",
+        "ur": "6 × 30° = 180°"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the hour. Each hour is 30°: 6 × 30 = 180°.",
+            "ur": "6 گھنٹہ ہے۔ ہر گھنٹہ 30°: 6 × 30 = 180°"
+          }
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "That is one hour. Six hours: 6 × 30 = 180°.",
+            "ur": "یہ ایک گھنٹہ ہے۔ چھ گھنٹے: 6 × 30 = 180°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can name every angle now!",
+          "ur": "اب آپ ہر زاویے کا نام بتا سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Compare every angle with 90° and 180°. Less than 90°: acute. Exactly 90°: right. Between 90° and 180°: obtuse. Exactly 180°: straight. More than 180°: reflex. A full turn is 360°.",
+        "ur": "ہر زاویے کا موازنہ 90° اور 180° سے کریں۔ 90° سے کم: حادہ۔ بالکل 90°: قائمہ۔ 90° اور 180° کے درمیان: منفرجہ۔ بالکل 180°: مستقیم۔ 180° سے زیادہ: منعکس۔ پورا چکر 360° ہے۔"
+      },
+      "points": [
+        {
+          "en": "Right angle = 90°, straight angle = 180°.",
+          "ur": "قائمہ = 90°، مستقیم = 180°۔"
+        },
+        {
+          "en": "Full turn = 360°.",
+          "ur": "پورا چکر = 360°۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_acute",
+      "type": "apply",
+      "skill": "maths.geometry.angle_types",
+      "step": {
+        "id": "r_acute",
+        "type": "choice",
+        "prompt": {
+          "en": "What kind of angle is 89°?",
+          "ur": "89° کس قسم کا زاویہ ہے؟"
+        },
+        "options": [
+          {
+            "id": "acute",
+            "text": {
+              "en": "Acute",
+              "ur": "حادہ زاویہ"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! 89° is acute. Acute angles are less than 90°.",
+              "ur": "جی ہاں! 89° حادہ زاویہ ہے۔ حادہ زاویہ 90° سے کم ہوتا ہے۔"
+            }
+          },
+          {
+            "id": "right",
+            "text": {
+              "en": "Right",
+              "ur": "قائمہ زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Acute angles are less than 90°. So 89° is acute.",
+              "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 89° حادہ زاویہ ہے۔"
+            },
+            "misconception_id": "near_90_is_right"
+          },
+          {
+            "id": "obtuse",
+            "text": {
+              "en": "Obtuse",
+              "ur": "منفرجہ زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Acute angles are less than 90°. So 89° is acute.",
+              "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 89° حادہ زاویہ ہے۔"
+            }
+          },
+          {
+            "id": "straight",
+            "text": {
+              "en": "Straight",
+              "ur": "مستقیم زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Acute angles are less than 90°. So 89° is acute.",
+              "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 89° حادہ زاویہ ہے۔"
+            }
+          },
+          {
+            "id": "reflex",
+            "text": {
+              "en": "Reflex",
+              "ur": "منعکس زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Acute angles are less than 90°. So 89° is acute.",
+              "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 89° حادہ زاویہ ہے۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_reflex",
+      "type": "recall",
+      "skill": "maths.geometry.angle_types",
+      "step": {
+        "id": "r_reflex",
+        "type": "choice",
+        "prompt": {
+          "en": "What kind of angle is 300°?",
+          "ur": "300° کس قسم کا زاویہ ہے؟"
+        },
+        "options": [
+          {
+            "id": "acute",
+            "text": {
+              "en": "Acute",
+              "ur": "حادہ زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Reflex angles are between 180° and 360°. So 300° is reflex.",
+              "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 300° منعکس زاویہ ہے۔"
+            },
+            "misconception_id": "big_is_acute"
+          },
+          {
+            "id": "right",
+            "text": {
+              "en": "Right",
+              "ur": "قائمہ زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Reflex angles are between 180° and 360°. So 300° is reflex.",
+              "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 300° منعکس زاویہ ہے۔"
+            },
+            "misconception_id": "near_90_is_right"
+          },
+          {
+            "id": "obtuse",
+            "text": {
+              "en": "Obtuse",
+              "ur": "منفرجہ زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Reflex angles are between 180° and 360°. So 300° is reflex.",
+              "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 300° منعکس زاویہ ہے۔"
+            }
+          },
+          {
+            "id": "straight",
+            "text": {
+              "en": "Straight",
+              "ur": "مستقیم زاویہ"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Not quite. Reflex angles are between 180° and 360°. So 300° is reflex.",
+              "ur": "ابھی نہیں۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔ اس لیے 300° منعکس زاویہ ہے۔"
+            }
+          },
+          {
+            "id": "reflex",
+            "text": {
+              "en": "Reflex",
+              "ur": "منعکس زاویہ"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! 300° is reflex. Reflex angles are between 180° and 360°.",
+              "ur": "جی ہاں! 300° منعکس زاویہ ہے۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Angles unit. No textbook text or exercises were used.",
+    "There are no pictures yet, so every angle is given in degrees or as a clock or door. Doors, book corners and clock hands make the sizes concrete; the home task is an angle hunt.",
+    "Urdu terms to check: زاویہ (angle), درجہ (degree), حادہ (acute), قائمہ (right), منفرجہ (obtuse), مستقیم (straight), منعکس (reflex).",
+    "The numbers were worked out in content/sources/g6-maths-09/angle_types.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
