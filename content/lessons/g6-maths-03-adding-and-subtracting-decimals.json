@@ -1,0 +1,714 @@
+{
+  "id": "g6-maths-03-adding-and-subtracting-decimals",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Add and subtract decimals by lining up the decimal points.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Decimals"
+    }
+  ],
+  "skills": [
+    "maths.decimals.add_subtract"
+  ],
+  "title": {
+    "en": "Adding and subtracting decimals",
+    "ur": "اعشاریہ اعداد کی جمع اور تفریق"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.decimals.place_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "right_aligned",
+      "description": "Lines up the last digits instead of the decimal points: 4.2 + 1.35 = 1.77."
+    },
+    {
+      "id": "missing_zero",
+      "description": "Does not fill an empty place with 0 when subtracting, and brings a digit straight down: 3.6 − 1.25 = 2.45."
+    },
+    {
+      "id": "whole_only",
+      "description": "Subtracts the whole numbers and keeps the decimal part: 5 − 2.35 = 3.35."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.decimals.add_subtract": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.decimals.add_subtract": [
+      {
+        "id": "qb_first_step",
+        "type": "recall",
+        "step": {
+          "id": "qb_first_step",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the first thing to do when adding 6.4 + 2.85?",
+            "ur": "6.4 + 2.85 جمع کرتے وقت سب سے پہلے کیا کریں؟"
+          },
+          "options": [
+            {
+              "id": "points",
+              "text": {
+                "en": "Line up the decimal points, writing 6.4 as 6.40.",
+                "ur": "اعشاری نقطے ایک سیدھ میں رکھیں، 6.4 کو 6.40 لکھیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Then add like whole numbers: 9.25.",
+                "ur": "جی ہاں! پھر مکمل اعداد کی طرح جمع کریں: 9.25"
+              }
+            },
+            {
+              "id": "right",
+              "text": {
+                "en": "Line up the last digits on the right.",
+                "ur": "دائیں طرف آخری ہندسے ایک سیدھ میں رکھیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That puts tenths under hundredths. Line up the points instead.",
+                "ur": "اس سے دسواں، سوویں کے نیچے آ جاتا ہے۔ اس کے بجائے نقطے ایک سیدھ میں رکھیں۔"
+              },
+              "misconception_id": "right_aligned"
+            },
+            {
+              "id": "drop",
+              "text": {
+                "en": "Take away the points and add 64 + 285.",
+                "ur": "نقطے ہٹا کر 64 + 285 جمع کریں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "64 + 285 mixes up the places. Line up the points.",
+                "ur": "64 + 285 سے مقام گڈمڈ ہو جاتے ہیں۔ نقطے ایک سیدھ میں رکھیں۔"
+              },
+              "misconception_id": "right_aligned"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_add",
+        "type": "apply",
+        "step": {
+          "id": "qb_add",
+          "type": "number",
+          "prompt": {
+            "en": "Work out 6.4 + 2.85",
+            "ur": "حل کریں: 6.4 + 2.85"
+          },
+          "answer": 9.25,
+          "checker": "numeric",
+          "hint": {
+            "en": "Write 6.40 + 2.85, lining up the points.",
+            "ur": "نقطے ایک سیدھ میں رکھ کر 6.40 + 2.85 لکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 6.40 + 2.85 = 9.25.",
+            "ur": "درست! 6.40 + 2.85 = 9.25"
+          },
+          "feedback_wrong": {
+            "en": "6.40 + 2.85: hundredths 0 + 5 = 5, tenths 4 + 8 = 12 (carry 1), ones 6 + 2 + 1 = 9. So 9.25.",
+            "ur": "6.40 + 2.85: سوواں 0 + 5 = 5، دسواں 4 + 8 = 12 (1 حاصل)، اکائیاں 6 + 2 + 1 = 9۔ اس لیے 9.25"
+          },
+          "common_wrong": [
+            {
+              "answer": 3.49,
+              "feedback": {
+                "en": "You lined up the last digits. Line up the points: 6.40 + 2.85.",
+                "ur": "آپ نے آخری ہندسے ایک سیدھ میں رکھے۔ نقطے ایک سیدھ میں رکھیں: 6.40 + 2.85"
+              },
+              "misconception_id": "right_aligned"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana worked out 5 − 2.35 = 3.35. What went wrong?",
+            "ur": "ثنا نے 5 − 2.35 = 3.35 حل کیا۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "zeros",
+              "text": {
+                "en": "She only took away the 2. Write 5.00 − 2.35 = 2.65.",
+                "ur": "اس نے صرف 2 تفریق کیا۔ 5.00 − 2.35 = 2.65 لکھیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The 0.35 must be taken away too.",
+                "ur": "جی ہاں! 0.35 بھی تفریق کرنا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 5 − 2 = 3.",
+                "ur": "کوئی غلطی نہیں۔ 5 − 2 = 3"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "2.35 is more than 2, so the answer must be less than 3: 2.65.",
+                "ur": "2.35، 2 سے زیادہ ہے، اس لیے جواب 3 سے کم ہوگا: 2.65"
+              },
+              "misconception_id": "whole_only"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_line_up",
+      "front": {
+        "en": "How do you add or subtract decimals?",
+        "ur": "اعشاریہ کیسے جمع یا تفریق کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Line up the decimal points. Fill empty places with 0. Add or subtract like whole numbers, and put the point in the answer straight below.",
+        "ur": "اعشاری نقطے ایک سیدھ میں رکھیں۔ خالی مقام پر 0 لکھیں۔ مکمل اعداد کی طرح جمع یا تفریق کریں، اور جواب میں نقطہ سیدھا نیچے لگائیں۔"
+      }
+    },
+    {
+      "id": "f_subtract",
+      "front": {
+        "en": "5 − 2.35 = ?",
+        "ur": "5 − 2.35 = ؟"
+      },
+      "back": {
+        "en": "Write 5.00 − 2.35 = 2.65.",
+        "ur": "5.00 − 2.35 = 2.65 لکھیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_shopping",
+      "text": {
+        "en": "Ask an adult for the weights of 2 things bought at the market this week (like 1.5 kg potatoes and 0.75 kg onions). Add them. How much more is the heavier one?",
+        "ur": "کسی بڑے سے اس ہفتے بازار سے خریدی گئی 2 چیزوں کا وزن پوچھیں (جیسے 1.5 کلوگرام آلو اور 0.75 کلوگرام پیاز)۔ انہیں جمع کریں۔ بھاری چیز کتنی زیادہ ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Sum",
+      "ur": "مجموعہ"
+    },
+    {
+      "en": "Difference",
+      "ur": "فرق"
+    },
+    {
+      "en": "Line up",
+      "ur": "ایک سیدھ میں رکھنا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ammi buys 1.5 kg of potatoes and 0.75 kg of onions. How heavy is the bag?",
+          "ur": "امی 1.5 کلوگرام آلو اور 0.75 کلوگرام پیاز خریدتی ہیں۔ تھیلا کتنا بھاری ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we add and subtract decimals. First, a quick check on place value.",
+        "ur": "آج ہم اعشاریہ اعداد جمع اور تفریق کریں گے۔ پہلے مقامی قیمت کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.decimals.place_value",
+      "prompt": {
+        "en": "Write 75/100 as a decimal.",
+        "ur": "75/100 کو اعشاریہ میں لکھیں۔"
+      },
+      "answer": 0.75,
+      "checker": "numeric",
+      "hint": {
+        "en": "Hundredths: two places after the point.",
+        "ur": "سوواں: اعشاریہ کے بعد دو مقام۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 75/100 = 0.75.",
+        "ur": "درست! 75/100 = 0.75"
+      },
+      "feedback_wrong": {
+        "en": "75 hundredths = 0.75.",
+        "ur": "75 سوواں = 0.75"
+      },
+      "common_wrong": [
+        {
+          "answer": 7.5,
+          "feedback": {
+            "en": "7.5 is more than 7! 75/100 is less than 1: 0.75.",
+            "ur": "7.5 تو 7 سے زیادہ ہے! 75/100 ایک سے کم ہے: 0.75"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "The golden rule: line up the decimal points!",
+          "ur": "سنہری اصول: اعشاری نقطے ایک سیدھ میں رکھیں!"
+        }
+      },
+      "text": {
+        "en": "Write the numbers one under the other with the points in a straight line. Fill empty places with 0: 1.5 becomes 1.50. Then add like whole numbers and put the point straight below: 1.50 + 0.75 = 2.25. Ones go under ones, tenths under tenths, hundredths under hundredths.",
+        "ur": "اعداد کو ایک دوسرے کے نیچے اس طرح لکھیں کہ نقطے ایک سیدھی لکیر میں ہوں۔ خالی مقام پر 0 لکھیں: 1.5 کو 1.50 لکھیں۔ پھر مکمل اعداد کی طرح جمع کریں اور نقطہ سیدھا نیچے لگائیں: 1.50 + 0.75 = 2.25۔ اکائیاں اکائیوں کے نیچے، دسواں دسویں کے نیچے، سوواں سوویں کے نیچے۔"
+      }
+    },
+    {
+      "id": "s4_bag",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 1.5 + 0.75 to find the weight of Ammi's bag in kg.",
+        "ur": "امی کے تھیلے کا وزن کلوگرام میں معلوم کرنے کے لیے 1.5 + 0.75 حل کریں۔"
+      },
+      "answer": 2.25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write 1.50 + 0.75.",
+        "ur": "1.50 + 0.75 لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2.25 kg.",
+        "ur": "درست! 2.25 کلوگرام۔"
+      },
+      "feedback_wrong": {
+        "en": "1.50 + 0.75: 0 + 5 = 5, 5 + 7 = 12 (carry 1), 1 + 0 + 1 = 2. So 2.25.",
+        "ur": "1.50 + 0.75: 0 + 5 = 5، 5 + 7 = 12 (1 حاصل)، 1 + 0 + 1 = 2۔ اس لیے 2.25"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.9,
+          "feedback": {
+            "en": "You lined up the last digits. Line up the points: 1.50 + 0.75.",
+            "ur": "آپ نے آخری ہندسے ایک سیدھ میں رکھے۔ نقطے ایک سیدھ میں رکھیں: 1.50 + 0.75"
+          },
+          "misconception_id": "right_aligned"
+        }
+      ]
+    },
+    {
+      "id": "s5_jump",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "The marker is on 0.8. Move it to show 0.8 + 0.6. Press Check.",
+        "ur": "نشان 0.8 پر ہے۔ اسے ہلا کر 0.8 + 0.6 دکھائیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": 0,
+        "max": 2,
+        "step": 0.1,
+        "start": 0.8,
+        "labels": "decimal"
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "1.4"
+      },
+      "hint": {
+        "en": "0.6 is 6 jumps of 0.1 to the right.",
+        "ur": "0.6 یعنی دائیں طرف 0.1 کی 6 چھلانگیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 0.8 + 0.6 = 1.4. You crossed 1!",
+        "ur": "جی ہاں! 0.8 + 0.6 = 1.4۔ آپ 1 سے آگے نکل گئے!"
+      },
+      "feedback_wrong": {
+        "en": "From 0.8: 0.9, 1, 1.1, 1.2, 1.3, 1.4.",
+        "ur": "0.8 سے: 0.9، 1، 1.1، 1.2، 1.3، 1.4"
+      },
+      "common_wrong": [
+        {
+          "answer": "1.2",
+          "feedback": {
+            "en": "Count 6 jumps of 0.1 from 0.8: you land on 1.4.",
+            "ur": "0.8 سے 0.1 کی 6 چھلانگیں گنیں: آپ 1.4 پر پہنچتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_subtract",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Subtracting works the same way. Don't forget the zeros!",
+          "ur": "تفریق بھی اسی طرح ہوتی ہے۔ صفر نہ بھولیں!"
+        }
+      },
+      "text": {
+        "en": "For 5 − 2.35, write 5 as 5.00 so both numbers have hundredths. Then subtract like whole numbers, borrowing when you need to: 5.00 − 2.35 = 2.65. Check: 2.65 + 2.35 = 5.",
+        "ur": "5 − 2.35 کے لیے 5 کو 5.00 لکھیں تاکہ دونوں میں سوواں ہو۔ پھر مکمل اعداد کی طرح تفریق کریں، ضرورت ہو تو ادھار لیں: 5.00 − 2.35 = 2.65۔ جانچ: 2.65 + 2.35 = 5"
+      }
+    },
+    {
+      "id": "s7_whole_minus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 5 − 2.35",
+        "ur": "حل کریں: 5 − 2.35"
+      },
+      "answer": 2.65,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write 5.00 − 2.35.",
+        "ur": "5.00 − 2.35 لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 − 2.35 = 2.65.",
+        "ur": "درست! 5 − 2.35 = 2.65"
+      },
+      "feedback_wrong": {
+        "en": "5.00 − 2.35 = 2.65. Check: 2.65 + 2.35 = 5.",
+        "ur": "5.00 − 2.35 = 2.65۔ جانچ: 2.65 + 2.35 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 3.35,
+          "feedback": {
+            "en": "You took away 2 but not the 0.35. Write 5.00 − 2.35.",
+            "ur": "آپ نے 2 تفریق کیا مگر 0.35 نہیں۔ 5.00 − 2.35 لکھیں۔"
+          },
+          "misconception_id": "whole_only"
+        }
+      ]
+    },
+    {
+      "id": "s8_fill_zero",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 3.6 − 1.25",
+        "ur": "حل کریں: 3.6 − 1.25"
+      },
+      "answer": 2.35,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write 3.6 as 3.60 first.",
+        "ur": "پہلے 3.6 کو 3.60 لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3.60 − 1.25 = 2.35.",
+        "ur": "درست! 3.60 − 1.25 = 2.35"
+      },
+      "feedback_wrong": {
+        "en": "3.60 − 1.25: borrow for the hundredths, 10 − 5 = 5; tenths 5 − 2 = 3; ones 3 − 1 = 2. So 2.35.",
+        "ur": "3.60 − 1.25: سوویں کے لیے ادھار لیں، 10 − 5 = 5؛ دسواں 5 − 2 = 3؛ اکائیاں 3 − 1 = 2۔ اس لیے 2.35"
+      },
+      "common_wrong": [
+        {
+          "answer": 2.45,
+          "feedback": {
+            "en": "You brought the 5 straight down. 3.6 = 3.60, so it is 0 − 5 in the hundredths: borrow.",
+            "ur": "آپ نے 5 سیدھا نیچے لکھ دیا۔ 3.6 = 3.60، اس لیے سوویں میں 0 − 5 ہے: ادھار لیں۔"
+          },
+          "misconception_id": "missing_zero"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Usman wrote 4.2 + 1.35 = 1.77. What went wrong?",
+        "ur": "عثمان نے لکھا 4.2 + 1.35 = 1.77۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "align",
+          "text": {
+            "en": "He lined up the last digits. With the points lined up: 4.20 + 1.35 = 5.55.",
+            "ur": "اس نے آخری ہندسے ایک سیدھ میں رکھے۔ نقطے سیدھ میں رکھیں: 4.20 + 1.35 = 5.55"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Also, the answer must be more than 4.2, so 1.77 can't be right.",
+            "ur": "جی ہاں! یہ بھی دیکھیں، جواب 4.2 سے زیادہ ہونا چاہیے، اس لیے 1.77 درست نہیں ہو سکتا۔"
+          }
+        },
+        {
+          "id": "carry",
+          "text": {
+            "en": "He forgot to carry.",
+            "ur": "وہ حاصل بھول گیا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There is nothing to carry here. The problem is the lining up: 4.20 + 1.35 = 5.55.",
+            "ur": "یہاں کوئی حاصل نہیں۔ مسئلہ سیدھ کا ہے: 4.20 + 1.35 = 5.55"
+          },
+          "misconception_id": "right_aligned"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 42 + 135 = 177.",
+            "ur": "کوئی غلطی نہیں۔ 42 + 135 = 177"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4.2 is 4 and 2 tenths, not 42. Line up the points: 5.55.",
+            "ur": "4.2 یعنی 4 اور 2 دسواں، 42 نہیں۔ نقطے سیدھ میں رکھیں: 5.55"
+          },
+          "misconception_id": "right_aligned"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we have to line up the decimal points? Can't we just line up the numbers on the right?",
+          "ur": "ہمیں اعشاری نقطے ایک سیدھ میں کیوں رکھنے پڑتے ہیں؟ کیا ہم صرف دائیں طرف سے اعداد سیدھ میں نہیں رکھ سکتے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why must we line up the decimal points when adding 4.2 + 1.35?",
+        "ur": "اپنے الفاظ میں بتائیں: 4.2 + 1.35 جمع کرتے وقت اعشاری نقطے ایک سیدھ میں رکھنا کیوں ضروری ہے؟"
+      },
+      "key_idea": "So that we add the same kinds of parts: ones with ones, tenths with tenths, hundredths with hundredths. Lining up on the right would add the 2 tenths to the 5 hundredths, which is wrong.",
+      "levels": {
+        "got_it": "Explains that lining up the points puts ones under ones, tenths under tenths and hundredths under hundredths, so like places are added.",
+        "partly": "Says the points must be lined up or the answer is wrong, but does not mention places.",
+        "not_yet": "Says it doesn't matter, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "tenths",
+          "hundredths",
+          "دسواں",
+          "سوواں",
+          "daswan",
+          "sauwan"
+        ],
+        [
+          "place",
+          "same",
+          "مقام",
+          "ایک جیسے",
+          "muqam"
+        ],
+        [
+          "ones",
+          "اکائی",
+          "ikai"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Lining up the points puts tenths under tenths and hundredths under hundredths, so we add the same kinds of parts.",
+          "ur": "بہت خوب سمجھایا! نقطے سیدھ میں رکھنے سے دسواں دسویں کے نیچے اور سوواں سوویں کے نیچے آتا ہے، اس لیے ایک جیسے حصے جمع ہوتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say which places go under each other when the points are lined up.",
+          "ur": "اچھی شروعات! اب بتائیں کہ نقطے سیدھ میں ہوں تو کون سے مقام ایک دوسرے کے نیچے آتے ہیں۔"
+        },
+        "not_yet": {
+          "en": "Think: in 4.2 the 2 is tenths, in 1.35 the 5 is hundredths. Should tenths be added to hundredths?",
+          "ur": "سوچیں: 4.2 میں 2 دسواں ہے، 1.35 میں 5 سوواں ہے۔ کیا دسواں، سوویں میں جمع ہونا چاہیے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_ribbon",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ayesha has a ribbon 2 m long. She cuts off 0.65 m for a gift. How many metres are left?",
+        "ur": "عائشہ کے پاس 2 میٹر لمبا فیتہ ہے۔ وہ تحفے کے لیے 0.65 میٹر کاٹ لیتی ہے۔ کتنے میٹر باقی ہیں؟"
+      },
+      "answer": 1.35,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write 2.00 − 0.65.",
+        "ur": "2.00 − 0.65 لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2.00 − 0.65 = 1.35 m.",
+        "ur": "درست! 2.00 − 0.65 = 1.35 میٹر۔"
+      },
+      "feedback_wrong": {
+        "en": "2.00 − 0.65 = 1.35. Check: 1.35 + 0.65 = 2.",
+        "ur": "2.00 − 0.65 = 1.35۔ جانچ: 1.35 + 0.65 = 2"
+      },
+      "common_wrong": [
+        {
+          "answer": 2.65,
+          "feedback": {
+            "en": "Cutting off makes it shorter: subtract, 2.00 − 0.65.",
+            "ur": "کاٹنے سے فیتہ چھوٹا ہوتا ہے: تفریق کریں، 2.00 − 0.65"
+          }
+        },
+        {
+          "answer": 1.45,
+          "feedback": {
+            "en": "Check the borrowing: 2.00 − 0.65 = 1.35. Check by adding back.",
+            "ur": "ادھار دوبارہ دیکھیں: 2.00 − 0.65 = 1.35۔ واپس جمع کر کے جانچیں۔"
+          },
+          "misconception_id": "missing_zero"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Line up the points, and decimals are easy!",
+          "ur": "نقطے سیدھ میں رکھیں، اور اعشاریہ آسان ہے!"
+        }
+      },
+      "text": {
+        "en": "To add or subtract decimals: line up the decimal points, fill empty places with zeros, then add or subtract like whole numbers and put the point straight below. 1.50 + 0.75 = 2.25 and 5.00 − 2.35 = 2.65. Check that the answer makes sense.",
+        "ur": "اعشاریہ جمع یا تفریق کرنے کے لیے: اعشاری نقطے سیدھ میں رکھیں، خالی مقام پر صفر لکھیں، پھر مکمل اعداد کی طرح جمع یا تفریق کریں اور نقطہ سیدھا نیچے لگائیں۔ 1.50 + 0.75 = 2.25 اور 5.00 − 2.35 = 2.65۔ دیکھیں کہ جواب سمجھ میں آتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "4.2 + 1.35 = 5.55, not 1.77.",
+          "ur": "4.2 + 1.35 = 5.55، نہ کہ 1.77"
+        },
+        {
+          "en": "Check a subtraction by adding back.",
+          "ur": "تفریق کو واپس جمع کر کے جانچیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_subtract",
+      "type": "apply",
+      "skill": "maths.decimals.add_subtract",
+      "step": {
+        "id": "r_subtract",
+        "type": "number",
+        "prompt": {
+          "en": "Work out 7 − 3.4",
+          "ur": "حل کریں: 7 − 3.4"
+        },
+        "answer": 3.6,
+        "checker": "numeric",
+        "hint": {
+          "en": "Write 7.0 − 3.4.",
+          "ur": "7.0 − 3.4 لکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 7.0 − 3.4 = 3.6.",
+          "ur": "درست! 7.0 − 3.4 = 3.6"
+        },
+        "feedback_wrong": {
+          "en": "7.0 − 3.4: borrow, 10 − 4 = 6 tenths; 6 − 3 = 3 ones. So 3.6.",
+          "ur": "7.0 − 3.4: ادھار لیں، 10 − 4 = 6 دسواں؛ 6 − 3 = 3 اکائیاں۔ اس لیے 3.6"
+        },
+        "common_wrong": [
+          {
+            "answer": 4.4,
+            "feedback": {
+              "en": "You took away 3 but not the 0.4. Write 7.0 − 3.4.",
+              "ur": "آپ نے 3 تفریق کیا مگر 0.4 نہیں۔ 7.0 − 3.4 لکھیں۔"
+            },
+            "misconception_id": "whole_only"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_add",
+      "type": "apply",
+      "skill": "maths.decimals.add_subtract",
+      "step": {
+        "id": "r_add",
+        "type": "number",
+        "prompt": {
+          "en": "Work out 0.45 + 0.8",
+          "ur": "حل کریں: 0.45 + 0.8"
+        },
+        "answer": 1.25,
+        "checker": "numeric",
+        "hint": {
+          "en": "Write 0.45 + 0.80.",
+          "ur": "0.45 + 0.80 لکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 0.45 + 0.80 = 1.25.",
+          "ur": "درست! 0.45 + 0.80 = 1.25"
+        },
+        "feedback_wrong": {
+          "en": "0.45 + 0.80: 5 + 0 = 5, 4 + 8 = 12 (carry 1), so 1.25.",
+          "ur": "0.45 + 0.80: 5 + 0 = 5، 4 + 8 = 12 (1 حاصل)، اس لیے 1.25"
+        },
+        "common_wrong": [
+          {
+            "answer": 0.53,
+            "feedback": {
+              "en": "The 8 is 8 tenths, not 8 hundredths. Write 0.80.",
+              "ur": "8 آٹھ دسواں ہے، آٹھ سوواں نہیں۔ 0.80 لکھیں۔"
+            },
+            "misconception_id": "right_aligned"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Decimals unit. No textbook text or exercises were used. Weights and lengths are made up for the sums.",
+    "The common errors are worked out in the script: lining up on the right (4.2 + 1.35 = 1.77) and bringing a digit down without a zero (3.6 − 1.25 = 2.45).",
+    "Urdu terms to check: حاصل (carry), ادھار (borrow) in column subtraction.",
+    "The numbers were worked out in content/sources/g6-maths-03/adding_subtracting_decimals.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

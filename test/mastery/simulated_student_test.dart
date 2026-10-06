@@ -131,8 +131,8 @@ void main() {
       s.states[skill]?.level(curriculum.criteriaFor(skill)) ??
       MasteryLevel.notStarted;
 
-  test('fifteen weeks of daily plans: every lesson done, skills secure', () {
-    final s = SimulatedStudent(curriculum)..studyFor(105, start);
+  test('sixteen weeks of daily plans: every lesson done, skills secure', () {
+    final s = SimulatedStudent(curriculum)..studyFor(112, start);
 
     for (final lesson in curriculum.lessons) {
       expect(s.lessons[lesson.id]?.completed, isTrue, reason: lesson.id);
@@ -148,7 +148,7 @@ void main() {
   });
 
   test('levels only rise in order for a strong student', () {
-    final s = SimulatedStudent(curriculum, skill: 1)..studyFor(105, start);
+    final s = SimulatedStudent(curriculum, skill: 1)..studyFor(112, start);
     for (final skill in [fractions, equations, balancing]) {
       final levels = [
         for (final (_, sk, level) in s.levelChanges)
@@ -294,6 +294,31 @@ void main() {
     expect(
       (plan.items.single as LessonItem).lesson.id,
       'g6-maths-02-dividing-fractions',
+    );
+  });
+
+  test('a missed warm-up on a skill no lesson teaches never blocks', () {
+    // The first Ratio lesson warms up with times tables, which no lesson
+    // teaches. One wrong answer leaves that skill at Learning for ever.
+    final ratio = Curriculum([
+      for (final l in loadLessons())
+        if (l.id == 'g6-maths-06-what-is-a-ratio') l,
+    ]);
+    const facts = 'maths.multiplication.facts';
+    expect(ratio.lessons.single.prerequisites.map((p) => p.skill), [
+      'maths.fractions.unit_fraction_meaning',
+      facts,
+    ]);
+    final plan = buildDailyPlan(
+      curriculum: ratio,
+      states: const {facts: SkillState(skill: facts, answered: 1)},
+      lessons: const {},
+      now: start,
+      studentId: 'sim',
+    );
+    expect(
+      plan.items.whereType<LessonItem>().single.lesson.id,
+      'g6-maths-06-what-is-a-ratio',
     );
   });
 

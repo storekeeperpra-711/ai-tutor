@@ -1,0 +1,749 @@
+{
+  "id": "g6-maths-03-comparing-decimals",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Compare and order decimals using place value and the number line.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Decimals"
+    }
+  ],
+  "skills": [
+    "maths.decimals.compare"
+  ],
+  "title": {
+    "en": "Comparing and ordering decimals",
+    "ur": "اعشاریہ اعداد کا موازنہ اور ترتیب"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.decimals.place_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "longer_is_bigger",
+      "description": "Thinks a decimal with more digits is bigger: 1.25 > 1.5."
+    },
+    {
+      "id": "shorter_is_bigger",
+      "description": "Thinks a decimal with fewer digits is always bigger, or that hundredths beat tenths."
+    },
+    {
+      "id": "compare_after_point",
+      "description": "Compares the digits after the point as whole numbers: 0.09 > 0.1 because 9 > 1."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.decimals.compare": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.decimals.compare": [
+      {
+        "id": "qb_first",
+        "type": "recall",
+        "step": {
+          "id": "qb_first",
+          "type": "choice",
+          "prompt": {
+            "en": "To compare 4.62 and 4.7, which digits decide it?",
+            "ur": "4.62 اور 4.7 کا موازنہ کرنے کے لیے کون سے ہندسے فیصلہ کرتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "tenths",
+              "text": {
+                "en": "The tenths: 6 and 7, so 4.7 is bigger.",
+                "ur": "دسویں: 6 اور 7، اس لیے 4.7 بڑا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The ones are the same, so look at the tenths.",
+                "ur": "جی ہاں! اکائیاں ایک جیسی ہیں، اس لیے دسویں دیکھیں۔"
+              }
+            },
+            {
+              "id": "last",
+              "text": {
+                "en": "The last digits: 2 and 7.",
+                "ur": "آخری ہندسے: 2 اور 7"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Compare place by place from the left. After the ones, look at the tenths: 6 and 7.",
+                "ur": "بائیں سے مقام بہ مقام موازنہ کریں۔ اکائیوں کے بعد دسویں دیکھیں: 6 اور 7"
+              }
+            },
+            {
+              "id": "count",
+              "text": {
+                "en": "The number of digits: 4.62 has more.",
+                "ur": "ہندسوں کی تعداد: 4.62 میں زیادہ ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "More digits doesn't mean bigger. Compare the tenths: 7 > 6.",
+                "ur": "زیادہ ہندسوں کا مطلب بڑا نہیں۔ دسویں کا موازنہ کریں: 7 > 6"
+              },
+              "misconception_id": "longer_is_bigger"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_smaller",
+        "type": "apply",
+        "step": {
+          "id": "qb_smaller",
+          "type": "number",
+          "prompt": {
+            "en": "Which is smaller, 0.8 or 0.75? Type it.",
+            "ur": "کون سا چھوٹا ہے، 0.8 یا 0.75؟ لکھیں۔"
+          },
+          "answer": 0.75,
+          "checker": "numeric",
+          "hint": {
+            "en": "Write 0.8 as 0.80, then compare.",
+            "ur": "0.8 کو 0.80 لکھیں، پھر موازنہ کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 0.75 < 0.80.",
+            "ur": "درست! 0.75 < 0.80"
+          },
+          "feedback_wrong": {
+            "en": "0.8 = 0.80, and 75 hundredths is less than 80 hundredths. So 0.75 is smaller.",
+            "ur": "0.8 = 0.80، اور 75 سوواں، 80 سوویں سے کم ہے۔ اس لیے 0.75 چھوٹا ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 0.8,
+              "feedback": {
+                "en": "0.8 = 0.80, which is more than 0.75.",
+                "ur": "0.8 = 0.80، جو 0.75 سے زیادہ ہے۔"
+              },
+              "misconception_id": "longer_is_bigger"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hamid says 2.35 is bigger than 2.4, because 35 is bigger than 4. What went wrong?",
+            "ur": "حامد کہتا ہے 2.35، 2.4 سے بڑا ہے، کیونکہ 35، 4 سے بڑا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "tenths",
+              "text": {
+                "en": "Compare the tenths: 4 > 3, so 2.4 is bigger.",
+                "ur": "دسویں کا موازنہ کریں: 4 > 3، اس لیے 2.4 بڑا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 2.4 = 2.40, and 40 hundredths beats 35 hundredths.",
+                "ur": "جی ہاں! 2.4 = 2.40، اور 40 سوواں، 35 سوویں سے زیادہ ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 35 > 4.",
+                "ur": "کوئی غلطی نہیں۔ 35 > 4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The digits after the point are not whole numbers. 2.4 = 2.40 > 2.35.",
+                "ur": "اعشاریہ کے بعد کے ہندسے مکمل اعداد نہیں ہیں۔ 2.4 = 2.40 > 2.35"
+              },
+              "misconception_id": "compare_after_point"
+            },
+            {
+              "id": "equal",
+              "text": {
+                "en": "They are equal.",
+                "ur": "یہ برابر ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "2.40 and 2.35 are different: 2.4 is bigger.",
+                "ur": "2.40 اور 2.35 مختلف ہیں: 2.4 بڑا ہے۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_compare",
+      "front": {
+        "en": "How do you compare two decimals?",
+        "ur": "دو اعشاریہ اعداد کا موازنہ کیسے کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Line up the points. Compare place by place from the left: ones, tenths, hundredths. Add zeros to make them the same length: 1.5 = 1.50 > 1.25.",
+        "ur": "نقطے ایک سیدھ میں رکھیں۔ بائیں سے مقام بہ مقام موازنہ کریں: اکائیاں، دسواں، سوواں۔ برابر لمبائی کے لیے صفر لگائیں: 1.5 = 1.50 > 1.25"
+      }
+    },
+    {
+      "id": "f_trap",
+      "front": {
+        "en": "Which is bigger, 0.1 or 0.09?",
+        "ur": "کون سا بڑا ہے، 0.1 یا 0.09؟"
+      },
+      "back": {
+        "en": "0.1, because 0.1 = 0.10 and 10 hundredths > 9 hundredths.",
+        "ur": "0.1، کیونکہ 0.1 = 0.10 اور 10 سوواں > 9 سوواں"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_labels",
+      "text": {
+        "en": "Find 3 packets or bottles at home with decimal weights or volumes on them (like 1.5 L or 0.25 kg). Write them in order from smallest to biggest.",
+        "ur": "گھر میں 3 پیکٹ یا بوتلیں ڈھونڈیں جن پر اعشاریہ میں وزن یا مقدار لکھی ہو (جیسے 1.5 لیٹر یا 0.25 کلوگرام)۔ انہیں چھوٹے سے بڑے کی ترتیب میں لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Greater than (>)",
+      "ur": "بڑا (>)"
+    },
+    {
+      "en": "Less than (<)",
+      "ur": "چھوٹا (<)"
+    },
+    {
+      "en": "Order",
+      "ur": "ترتیب"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "One bag of sugar weighs 1.5 kg and another weighs 1.25 kg. Hira says 1.25 is heavier because 25 is more than 5. Is she right?",
+          "ur": "چینی کا ایک تھیلا 1.5 کلوگرام اور دوسرا 1.25 کلوگرام ہے۔ حرا کہتی ہے 1.25 زیادہ بھاری ہے کیونکہ 25، 5 سے زیادہ ہے۔ کیا وہ درست ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn to compare and order decimals. First, a quick check on place value.",
+        "ur": "آج ہم اعشاریہ اعداد کا موازنہ اور ترتیب سیکھیں گے۔ پہلے مقامی قیمت کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.decimals.place_value",
+      "prompt": {
+        "en": "In 1.25, what is the value of the 2?",
+        "ur": "1.25 میں 2 کی قیمت کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "tenths",
+          "text": {
+            "en": "2 tenths (0.2)",
+            "ur": "2 دسواں (0.2)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The first place after the point is tenths.",
+            "ur": "جی ہاں! اعشاریہ کے بعد پہلا مقام دسواں ہے۔"
+          }
+        },
+        {
+          "id": "hundredths",
+          "text": {
+            "en": "2 hundredths (0.02)",
+            "ur": "2 سوواں (0.02)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Hundredths is the second place, where the 5 is.",
+            "ur": "سوواں دوسرا مقام ہے، جہاں 5 ہے۔"
+          }
+        },
+        {
+          "id": "twenty",
+          "text": {
+            "en": "20",
+            "ur": "20"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 2 is after the point, so it is less than 1.",
+            "ur": "2 اعشاریہ کے بعد ہے، اس لیے ایک سے کم ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Line up the points, then compare from the left!",
+          "ur": "نقطے ایک سیدھ میں رکھیں، پھر بائیں سے موازنہ کریں!"
+        }
+      },
+      "text": {
+        "en": "Compare place by place from the left: ones first, then tenths, then hundredths. 1.5 and 1.25 have the same ones (1). Tenths: 5 against 2, so 1.5 is bigger. It helps to add a zero so both have the same number of places: 1.50 and 1.25. A zero at the end does not change a decimal.",
+        "ur": "بائیں سے مقام بہ مقام موازنہ کریں: پہلے اکائیاں، پھر دسواں، پھر سوواں۔ 1.5 اور 1.25 کی اکائیاں ایک جیسی ہیں (1)۔ دسواں: 5 اور 2، اس لیے 1.5 بڑا ہے۔ دونوں کے برابر مقام کرنے کے لیے صفر لگانا مددگار ہے: 1.50 اور 1.25۔ آخر میں صفر لگانے سے اعشاریہ نہیں بدلتا۔"
+      }
+    },
+    {
+      "id": "s4_sugar",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "So which bag of sugar is heavier?",
+        "ur": "تو چینی کا کون سا تھیلا زیادہ بھاری ہے؟"
+      },
+      "options": [
+        {
+          "id": "big",
+          "text": {
+            "en": "1.5 kg",
+            "ur": "1.5 کلوگرام"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 1.50 > 1.25. Hira was wrong.",
+            "ur": "جی ہاں! 1.50 > 1.25۔ حرا غلط تھی۔"
+          }
+        },
+        {
+          "id": "long",
+          "text": {
+            "en": "1.25 kg",
+            "ur": "1.25 کلوگرام"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "More digits doesn't mean heavier. Compare tenths: 5 > 2.",
+            "ur": "زیادہ ہندسوں کا مطلب زیادہ بھاری نہیں۔ دسویں کا موازنہ کریں: 5 > 2"
+          },
+          "misconception_id": "longer_is_bigger"
+        }
+      ]
+    },
+    {
+      "id": "s5_number_line",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "On a number line, the bigger number is further right.",
+          "ur": "عددی خط پر بڑا عدد زیادہ دائیں ہوتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "Between 1 and 2 there are tenths: 1.1, 1.2, 1.3 … 1.9. 1.25 is halfway between 1.2 and 1.3. 1.5 is further right, so it is bigger.",
+        "ur": "1 اور 2 کے درمیان دسواں ہیں: 1.1، 1.2، 1.3 … 1.9۔ 1.25، 1.2 اور 1.3 کے بالکل درمیان ہے۔ 1.5 زیادہ دائیں ہے، اس لیے بڑا ہے۔"
+      }
+    },
+    {
+      "id": "s6_compare",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is greater, 0.4 or 0.38?",
+        "ur": "کون سا بڑا ہے، 0.4 یا 0.38؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "0.4",
+            "ur": "0.4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 0.4 = 0.40, and 40 hundredths > 38 hundredths.",
+            "ur": "جی ہاں! 0.4 = 0.40، اور 40 سوواں > 38 سوواں۔"
+          }
+        },
+        {
+          "id": "wrong",
+          "text": {
+            "en": "0.38",
+            "ur": "0.38"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Compare tenths: 4 > 3. So 0.4 is greater.",
+            "ur": "دسویں کا موازنہ کریں: 4 > 3۔ اس لیے 0.4 بڑا ہے۔"
+          },
+          "misconception_id": "longer_is_bigger"
+        }
+      ]
+    },
+    {
+      "id": "s7_order",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Put in order from smallest to greatest: 0.7, 0.07, 0.17, 0.71",
+        "ur": "چھوٹے سے بڑے کی ترتیب میں رکھیں: 0.7، 0.07، 0.17، 0.71"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "0.07, 0.17, 0.7, 0.71",
+            "ur": "0.07، 0.17، 0.7، 0.71"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! As hundredths: 7, 17, 70, 71.",
+            "ur": "جی ہاں! سوویں میں: 7، 17، 70، 71"
+          }
+        },
+        {
+          "id": "length",
+          "text": {
+            "en": "0.7, 0.07, 0.17, 0.71",
+            "ur": "0.7، 0.07، 0.17، 0.71"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Write them all with two places: 0.70, 0.07, 0.17, 0.71. Now order them.",
+            "ur": "سب کو دو مقام کے ساتھ لکھیں: 0.70، 0.07، 0.17، 0.71۔ اب ترتیب دیں۔"
+          },
+          "misconception_id": "shorter_is_bigger"
+        },
+        {
+          "id": "digits",
+          "text": {
+            "en": "0.07, 0.7, 0.17, 0.71",
+            "ur": "0.07، 0.7، 0.17، 0.71"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0.7 = 0.70, which is bigger than 0.17.",
+            "ur": "0.7 = 0.70، جو 0.17 سے بڑا ہے۔"
+          },
+          "misconception_id": "compare_after_point"
+        }
+      ]
+    },
+    {
+      "id": "s8_between",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "This line goes from 0 to 1 in steps of 0.05. Put the marker on the number halfway between 0.3 and 0.4. Press Check.",
+        "ur": "یہ خط 0 سے 1 تک 0.05 کے قدموں میں ہے۔ نشان کو 0.3 اور 0.4 کے بالکل درمیان والے عدد پر رکھیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "start": 0,
+        "labels": "decimal"
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "0.35"
+      },
+      "hint": {
+        "en": "Think in hundredths: 0.30 and 0.40. What is halfway?",
+        "ur": "سوویں میں سوچیں: 0.30 اور 0.40۔ درمیان میں کیا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Yes! 0.35 is between 0.3 and 0.4.",
+        "ur": "جی ہاں! 0.35، 0.3 اور 0.4 کے درمیان ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "0.30 and 0.40: halfway is 0.35.",
+        "ur": "0.30 اور 0.40: درمیان 0.35 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "0.4",
+          "feedback": {
+            "en": "That is the end, 0.4. Go back one step to halfway: 0.35.",
+            "ur": "یہ آخر ہے، 0.4۔ ایک قدم پیچھے درمیان میں جائیں: 0.35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal says 0.09 is greater than 0.1, because 9 is greater than 1. What went wrong?",
+        "ur": "بلال کہتا ہے 0.09، 0.1 سے بڑا ہے، کیونکہ 9، 1 سے بڑا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "tenths",
+          "text": {
+            "en": "Compare tenths: 0.1 has 1 tenth, 0.09 has 0 tenths. So 0.1 is greater.",
+            "ur": "دسویں کا موازنہ کریں: 0.1 میں 1 دسواں، 0.09 میں 0 دسواں۔ اس لیے 0.1 بڑا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 0.1 = 0.10, and 10 hundredths > 9 hundredths.",
+            "ur": "جی ہاں! 0.1 = 0.10، اور 10 سوواں > 9 سوواں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 9 > 1.",
+            "ur": "کوئی غلطی نہیں۔ 9 > 1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 9 is hundredths but the 1 is a tenth. 0.1 = 0.10 > 0.09.",
+            "ur": "9 سوواں ہے مگر 1 دسواں ہے۔ 0.1 = 0.10 > 0.09"
+          },
+          "misconception_id": "compare_after_point"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Hira still thinks 1.25 kg is heavier than 1.5 kg. Can you help her?",
+          "ur": "حرا اب بھی سمجھتی ہے 1.25 کلوگرام، 1.5 کلوگرام سے زیادہ بھاری ہے۔ کیا آپ اس کی مدد کر سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is 1.5 greater than 1.25?",
+        "ur": "اپنے الفاظ میں بتائیں: 1.5، 1.25 سے بڑا کیوں ہے؟"
+      },
+      "key_idea": "The ones are the same. In the tenths place, 1.5 has 5 tenths and 1.25 has only 2 tenths, so 1.5 is greater. Writing 1.5 as 1.50 shows 50 hundredths against 25 hundredths.",
+      "levels": {
+        "got_it": "Compares the tenths (5 against 2), or writes 1.5 as 1.50 and compares 50 with 25 hundredths.",
+        "partly": "Says 1.5 is greater without a place-value reason, or mentions adding a zero without comparing.",
+        "not_yet": "Agrees 1.25 is greater, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "tenths",
+          "دسواں",
+          "daswan",
+          "5 > 2",
+          "5 and 2"
+        ],
+        [
+          "1.50",
+          "zero",
+          "صفر",
+          "sifar",
+          "50"
+        ],
+        [
+          "hundredths",
+          "سوواں",
+          "sauwan"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 1.5 has 5 tenths but 1.25 has only 2, so 1.5 is greater: 1.50 > 1.25.",
+          "ur": "بہت خوب سمجھایا! 1.5 میں 5 دسواں ہیں مگر 1.25 میں صرف 2، اس لیے 1.5 بڑا ہے: 1.50 > 1.25"
+        },
+        "partly": {
+          "en": "Good start! Now compare the tenths digit of each number.",
+          "ur": "اچھی شروعات! اب ہر عدد کا دسویں والا ہندسہ دیکھیں۔"
+        },
+        "not_yet": {
+          "en": "Write 1.5 as 1.50. Now compare 1.50 and 1.25 place by place.",
+          "ur": "1.5 کو 1.50 لکھیں۔ اب 1.50 اور 1.25 کا مقام بہ مقام موازنہ کریں۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_greatest",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is the greatest: 2.6, 2.06 or 2.66? Type it.",
+        "ur": "سب سے بڑا کون سا ہے: 2.6، 2.06 یا 2.66؟ لکھیں۔"
+      },
+      "answer": 2.66,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write them all with two places: 2.60, 2.06, 2.66.",
+        "ur": "سب کو دو مقام کے ساتھ لکھیں: 2.60، 2.06، 2.66"
+      },
+      "feedback_correct": {
+        "en": "Right! 2.66 is the greatest.",
+        "ur": "درست! 2.66 سب سے بڑا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "2.60, 2.06, 2.66: the tenths tie at 6 for two of them, then 6 hundredths beats 0. So 2.66.",
+        "ur": "2.60، 2.06، 2.66: دو میں دسواں 6 ہے، پھر 6 سوواں، 0 سے زیادہ ہے۔ اس لیے 2.66"
+      },
+      "common_wrong": [
+        {
+          "answer": 2.6,
+          "feedback": {
+            "en": "2.6 = 2.60, which is less than 2.66.",
+            "ur": "2.6 = 2.60، جو 2.66 سے کم ہے۔"
+          },
+          "misconception_id": "shorter_is_bigger"
+        },
+        {
+          "answer": 2.06,
+          "feedback": {
+            "en": "2.06 has 0 tenths, so it is the smallest.",
+            "ur": "2.06 میں 0 دسواں ہیں، اس لیے یہ سب سے چھوٹا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can compare any decimals now!",
+          "ur": "اب آپ کسی بھی اعشاریہ کا موازنہ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Line up the decimal points and compare place by place from the left: ones, tenths, hundredths. Add zeros at the end to make the same number of places. More digits does not mean bigger: 1.5 > 1.25 and 0.1 > 0.09.",
+        "ur": "اعشاری نقطے ایک سیدھ میں رکھیں اور بائیں سے مقام بہ مقام موازنہ کریں: اکائیاں، دسواں، سوواں۔ برابر مقام کے لیے آخر میں صفر لگائیں۔ زیادہ ہندسوں کا مطلب بڑا نہیں: 1.5 > 1.25 اور 0.1 > 0.09"
+      },
+      "points": [
+        {
+          "en": "1.5 = 1.50",
+          "ur": "1.5 = 1.50"
+        },
+        {
+          "en": "On a number line, bigger is further right.",
+          "ur": "عددی خط پر بڑا عدد زیادہ دائیں ہوتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_greater",
+      "type": "apply",
+      "skill": "maths.decimals.compare",
+      "step": {
+        "id": "r_greater",
+        "type": "number",
+        "prompt": {
+          "en": "Which is greater, 3.09 or 3.1? Type it.",
+          "ur": "کون سا بڑا ہے، 3.09 یا 3.1؟ لکھیں۔"
+        },
+        "answer": 3.1,
+        "checker": "numeric",
+        "hint": {
+          "en": "Compare the tenths: 0 and 1.",
+          "ur": "دسویں کا موازنہ کریں: 0 اور 1"
+        },
+        "feedback_correct": {
+          "en": "Right! 3.1 = 3.10 > 3.09.",
+          "ur": "درست! 3.1 = 3.10 > 3.09"
+        },
+        "feedback_wrong": {
+          "en": "3.1 has 1 tenth and 3.09 has 0 tenths, so 3.1 is greater.",
+          "ur": "3.1 میں 1 دسواں اور 3.09 میں 0 دسواں، اس لیے 3.1 بڑا ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 3.09,
+            "feedback": {
+              "en": "9 hundredths is less than 1 tenth (10 hundredths). 3.1 is greater.",
+              "ur": "9 سوواں، 1 دسویں (10 سوویں) سے کم ہے۔ 3.1 بڑا ہے۔"
+            },
+            "misconception_id": "compare_after_point"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_smallest",
+      "type": "apply",
+      "skill": "maths.decimals.compare",
+      "step": {
+        "id": "r_smallest",
+        "type": "number",
+        "prompt": {
+          "en": "Which is the smallest: 5.5, 5.05 or 5.45? Type it.",
+          "ur": "سب سے چھوٹا کون سا ہے: 5.5، 5.05 یا 5.45؟ لکھیں۔"
+        },
+        "answer": 5.05,
+        "checker": "numeric",
+        "hint": {
+          "en": "Write them with two places: 5.50, 5.05, 5.45.",
+          "ur": "دو مقام کے ساتھ لکھیں: 5.50، 5.05، 5.45"
+        },
+        "feedback_correct": {
+          "en": "Right! 5.05 has 0 tenths, so it is the smallest.",
+          "ur": "درست! 5.05 میں 0 دسواں ہیں، اس لیے یہ سب سے چھوٹا ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "5.50, 5.05, 5.45: tenths 5, 0, 4. The smallest is 5.05.",
+          "ur": "5.50، 5.05، 5.45: دسواں 5، 0، 4۔ سب سے چھوٹا 5.05"
+        },
+        "common_wrong": [
+          {
+            "answer": 5.5,
+            "feedback": {
+              "en": "5.5 = 5.50, the greatest of the three.",
+              "ur": "5.5 = 5.50، تینوں میں سب سے بڑا۔"
+            },
+            "misconception_id": "shorter_is_bigger"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Decimals unit. No textbook text or exercises were used.",
+    "The key method is lining up the points and adding zeros so both numbers have the same number of places.",
+    "Urdu terms to check: ترتیب (order), موازنہ (compare).",
+    "The number-line step uses the native number_line sim from 0 to 1 in steps of 0.05 with decimal labels.",
+    "The numbers were worked out in content/sources/g6-maths-03/comparing_decimals.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
