@@ -7,8 +7,10 @@ Scripts that write the Grade 6 Maths lessons of the Perimeter and Area unit (`co
 | `perimeter.py` | `g6-maths-08-perimeter` | `maths.measurement.perimeter` |
 | `area_rectangles.py` | `g6-maths-08-area-of-rectangles` | `maths.measurement.area_rectangle` |
 | `compound_shapes.py` | `g6-maths-08-compound-shapes` | `maths.measurement.compound_area` |
+| `triangles.py` | `g6-maths-08-area-of-triangles` | `maths.measurement.area_triangle` |
+| `area_word_problems.py` | `g6-maths-08-area-word-problems` | `maths.measurement.word_problems` |
 
-Every answer, and every common wrong answer (like giving the perimeter when the area is asked), is worked out in Python and checked with `assert`, so no number is typed by hand. There are no pictures yet: each shape is described in words.
+Every answer, and every common wrong answer (like giving the perimeter when the area is asked), is worked out in Python and checked with `assert`, so no number is typed by hand. There are no pictures yet: each shape is described in words. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 
 To change a lesson, edit its script and run it, then run the validator:
 

@@ -1,0 +1,748 @@
+{
+  "id": "g6-maths-08-area-of-triangles",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the area of a triangle as half of base × height, using the perpendicular height.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Perimeter and Area"
+    }
+  ],
+  "skills": [
+    "maths.measurement.area_triangle"
+  ],
+  "title": {
+    "en": "Area of triangles",
+    "ur": "مثلث کا رقبہ"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.measurement.area_rectangle"
+    },
+    {
+      "skill": "maths.measurement.compound_area"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgets_half",
+      "description": "Multiplies base by height and forgets to halve."
+    },
+    {
+      "id": "slant_height",
+      "description": "Uses the slanted side instead of the perpendicular height."
+    },
+    {
+      "id": "missing_height_no_double",
+      "description": "Finds a missing height by area ÷ base, forgetting to double the area first."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.measurement.area_triangle": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.measurement.area_triangle": [
+      {
+        "id": "qb_formula",
+        "type": "recall",
+        "step": {
+          "id": "qb_formula",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the area of a triangle?",
+            "ur": "مثلث کا رقبہ کیا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "half",
+              "text": {
+                "en": "Half of base × height",
+                "ur": "قاعدہ × اونچائی کا آدھا"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A triangle is half of a rectangle.",
+                "ur": "جی ہاں! مثلث مستطیل کا آدھا ہے۔"
+              }
+            },
+            {
+              "id": "full",
+              "text": {
+                "en": "Base × height",
+                "ur": "قاعدہ × اونچائی"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the whole rectangle. A triangle is half of it.",
+                "ur": "یہ پوری مستطیل ہے۔ مثلث اس کا آدھا ہے۔"
+              },
+              "misconception_id": "forgets_half"
+            },
+            {
+              "id": "sides",
+              "text": {
+                "en": "All three sides added",
+                "ur": "تینوں اضلاع کا مجموعہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the perimeter. Area: half of base × height.",
+                "ur": "یہ احاطہ ہے۔ رقبہ: قاعدہ × اونچائی کا آدھا۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A triangle has a base of 9 cm and a height of 4 cm. What is its area in cm²?",
+            "ur": "ایک مثلث کا قاعدہ 9 سینٹی میٹر اور اونچائی 4 سینٹی میٹر ہے۔ اس کا رقبہ کیا ہے؟"
+          },
+          "answer": 18,
+          "checker": "numeric",
+          "hint": {
+            "en": "9 × 4, then halve.",
+            "ur": "9 × 4، پھر آدھا۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 18 cm².",
+            "ur": "درست! 18 مربع سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "9 × 4 = 36, half is 18 cm².",
+            "ur": "9 × 4 = 36، آدھا 18"
+          },
+          "common_wrong": [
+            {
+              "answer": 36,
+              "feedback": {
+                "en": "Don't forget to halve: 36 ÷ 2 = 18.",
+                "ur": "آدھا کرنا نہ بھولیں: 36 ÷ 2 = 18"
+              },
+              "misconception_id": "forgets_half"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A triangle has base 12 cm, height 5 cm and a slanted side of 13 cm. Saad says its area is ½ × 12 × 13 = 78 cm². What went wrong?",
+            "ur": "ایک مثلث کا قاعدہ 12، اونچائی 5 اور ترچھا ضلع 13 سینٹی میٹر ہے۔ سعد کہتا ہے رقبہ ½ × 12 × 13 = 78 ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "height",
+              "text": {
+                "en": "He used the slanted side. Use the height: ½ × 12 × 5 = 30 cm².",
+                "ur": "اس نے ترچھا ضلع لیا۔ اونچائی لیں: ½ × 12 × 5 = 30"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The height goes straight up from the base, at a right angle.",
+                "ur": "جی ہاں! اونچائی قاعدے سے سیدھی اوپر، زاویہ قائمہ پر جاتی ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The slanted side isn't the height. ½ × 12 × 5 = 30 cm².",
+                "ur": "ترچھا ضلع اونچائی نہیں۔ ½ × 12 × 5 = 30"
+              },
+              "misconception_id": "slant_height"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_tri",
+      "front": {
+        "en": "Area of a triangle?",
+        "ur": "مثلث کا رقبہ؟"
+      },
+      "back": {
+        "en": "½ × base × height. Base 8, height 6: 24 cm².",
+        "ur": "½ × قاعدہ × اونچائی۔ قاعدہ 8، اونچائی 6: 24 مربع سینٹی میٹر"
+      }
+    },
+    {
+      "id": "f_height",
+      "front": {
+        "en": "What is the height of a triangle?",
+        "ur": "مثلث کی اونچائی کیا ہے؟"
+      },
+      "back": {
+        "en": "The straight-up distance from the base to the top corner, at a right angle to the base. Not the slanted side.",
+        "ur": "قاعدے سے اوپر کے کونے تک سیدھا فاصلہ، قاعدے پر زاویہ قائمہ بناتا ہوا۔ ترچھا ضلع نہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_fold",
+      "text": {
+        "en": "Take a rectangular piece of paper and measure it. Fold or cut it along a diagonal. Are the two triangles the same? Work out the area of one triangle.",
+        "ur": "مستطیل کاغذ لیں اور ناپیں۔ اسے ترچھی لکیر (وتر) پر موڑیں یا کاٹیں۔ کیا دونوں مثلث ایک جیسے ہیں؟ ایک مثلث کا رقبہ نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Triangle",
+      "ur": "مثلث"
+    },
+    {
+      "en": "Base",
+      "ur": "قاعدہ"
+    },
+    {
+      "en": "Height",
+      "ur": "اونچائی"
+    },
+    {
+      "en": "Right angle",
+      "ur": "زاویہ قائمہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Cut a rectangle corner to corner. What do you get? Two triangles! So what is the area of one?",
+          "ur": "مستطیل کو ایک کونے سے دوسرے کونے تک کاٹیں۔ کیا ملا؟ دو مثلث! تو ایک کا رقبہ کیا ہوگا؟"
+        }
+      },
+      "text": {
+        "en": "Today we find the area of triangles using what we know about rectangles. First, a quick check.",
+        "ur": "آج ہم مستطیل کی مدد سے مثلث کا رقبہ نکالیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.area_rectangle",
+      "prompt": {
+        "en": "What is the area of a rectangle 8 cm by 6 cm, in cm²?",
+        "ur": "8 ضرب 6 سینٹی میٹر مستطیل کا رقبہ کیا ہے؟"
+      },
+      "answer": 48,
+      "checker": "numeric",
+      "hint": {
+        "en": "Length × width.",
+        "ur": "لمبائی × چوڑائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 48 cm².",
+        "ur": "درست! 48 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "8 × 6 = 48 cm².",
+        "ur": "8 × 6 = 48"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "28 cm is the perimeter. Area: 8 × 6 = 48.",
+            "ur": "28 سینٹی میٹر احاطہ ہے۔ رقبہ: 8 × 6 = 48"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_half",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "A triangle is half a rectangle!",
+          "ur": "مثلث آدھی مستطیل ہے!"
+        }
+      },
+      "text": {
+        "en": "Cutting an 8 cm by 6 cm rectangle corner to corner makes two equal triangles. Each is half of 48 cm². So the area of a triangle = ½ × base × height. The height must go straight up from the base, at a right angle, to the top corner. It is not the slanted side.",
+        "ur": "8 ضرب 6 سینٹی میٹر کی مستطیل کو کونے سے کونے تک کاٹنے سے دو برابر مثلث بنتے ہیں۔ ہر ایک 48 کا آدھا ہے۔ اس لیے مثلث کا رقبہ = ½ × قاعدہ × اونچائی۔ اونچائی قاعدے سے سیدھی اوپر، زاویہ قائمہ پر، اوپر کے کونے تک جاتی ہے۔ یہ ترچھا ضلع نہیں۔"
+      }
+    },
+    {
+      "id": "s4_half_rect",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "So what is the area of one of those triangles, with base 8 cm and height 6 cm?",
+        "ur": "تو ان میں سے ایک مثلث کا رقبہ کیا ہے، جس کا قاعدہ 8 اور اونچائی 6 سینٹی میٹر ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "Half of 8 × 6.",
+        "ur": "8 × 6 کا آدھا"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 cm².",
+        "ur": "درست! 24 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "8 × 6 = 48, half is 24 cm².",
+        "ur": "8 × 6 = 48، آدھا 24"
+      },
+      "common_wrong": [
+        {
+          "answer": 48,
+          "feedback": {
+            "en": "That is the whole rectangle. One triangle is half: 24.",
+            "ur": "یہ پوری مستطیل ہے۔ ایک مثلث آدھا ہے: 24"
+          },
+          "misconception_id": "forgets_half"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "Multiply, then halve: 8 × 6 ÷ 2 = 24.",
+            "ur": "ضرب دیں، پھر آدھا: 8 × 6 ÷ 2 = 24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_any",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has a base of 10 cm and a height of 7 cm. What is its area in cm²?",
+        "ur": "ایک مثلث کا قاعدہ 10 اور اونچائی 7 سینٹی میٹر ہے۔ رقبہ کیا ہے؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "½ × 10 × 7.",
+        "ur": "½ × 10 × 7"
+      },
+      "feedback_correct": {
+        "en": "Right! 35 cm².",
+        "ur": "درست! 35 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "10 × 7 = 70, half is 35 cm².",
+        "ur": "10 × 7 = 70، آدھا 35"
+      },
+      "common_wrong": [
+        {
+          "answer": 70,
+          "feedback": {
+            "en": "Don't forget to halve: 70 ÷ 2 = 35.",
+            "ur": "آدھا کرنا نہ بھولیں: 70 ÷ 2 = 35"
+          },
+          "misconception_id": "forgets_half"
+        }
+      ]
+    },
+    {
+      "id": "s6_slant",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has a base of 12 cm, a height of 5 cm, and a slanted side of 13 cm. What is its area in cm²?",
+        "ur": "ایک مثلث کا قاعدہ 12، اونچائی 5 اور ترچھا ضلع 13 سینٹی میٹر ہے۔ رقبہ کیا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Use the height (5), not the slanted side.",
+        "ur": "اونچائی (5) لیں، ترچھا ضلع نہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! ½ × 12 × 5 = 30 cm².",
+        "ur": "درست! ½ × 12 × 5 = 30"
+      },
+      "feedback_wrong": {
+        "en": "12 × 5 = 60, half is 30 cm². The 13 cm side isn't needed.",
+        "ur": "12 × 5 = 60، آدھا 30۔ 13 والا ضلع نہیں چاہیے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 78,
+          "feedback": {
+            "en": "13 cm is the slanted side. Use the height: ½ × 12 × 5 = 30.",
+            "ur": "13 ترچھا ضلع ہے۔ اونچائی لیں: ½ × 12 × 5 = 30"
+          },
+          "misconception_id": "slant_height"
+        },
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "Halve it: 60 ÷ 2 = 30.",
+            "ur": "آدھا کریں: 60 ÷ 2 = 30"
+          },
+          "misconception_id": "forgets_half"
+        }
+      ]
+    },
+    {
+      "id": "s7_missing_height",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has an area of 24 cm² and a base of 8 cm. What is its height?",
+        "ur": "ایک مثلث کا رقبہ 24 مربع سینٹی میٹر اور قاعدہ 8 سینٹی میٹر ہے۔ اونچائی کتنی ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Base × height is double the area: 48. Then 48 ÷ 8.",
+        "ur": "قاعدہ × اونچائی رقبے کا دگنا ہے: 48۔ پھر 48 ÷ 8"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 cm. Check: ½ × 8 × 6 = 24.",
+        "ur": "درست! 6 سینٹی میٹر۔ جانچ: ½ × 8 × 6 = 24"
+      },
+      "feedback_wrong": {
+        "en": "24 × 2 = 48, and 48 ÷ 8 = 6 cm.",
+        "ur": "24 × 2 = 48، اور 48 ÷ 8 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Check: ½ × 8 × 3 = 12, not 24. Double the area first: 48 ÷ 8 = 6.",
+            "ur": "جانچیں: ½ × 8 × 3 = 12، نہ کہ 24۔ پہلے رقبہ دگنا کریں: 48 ÷ 8 = 6"
+          },
+          "misconception_id": "missing_height_no_double"
+        }
+      ]
+    },
+    {
+      "id": "s8_kite",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A kite is made of two equal triangles, each with a base of 10 cm and a height of 4 cm. What is the area of the kite in cm²?",
+        "ur": "ایک پتنگ دو برابر مثلثوں سے بنی ہے، ہر ایک کا قاعدہ 10 اور اونچائی 4 سینٹی میٹر۔ پتنگ کا رقبہ کیا ہے؟"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "One triangle is ½ × 10 × 4. There are two.",
+        "ur": "ایک مثلث ½ × 10 × 4۔ دو ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 + 20 = 40 cm².",
+        "ur": "درست! 20 + 20 = 40 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Each triangle is 20 cm², so the kite is 40 cm².",
+        "ur": "ہر مثلث 20، تو پتنگ 40 مربع سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "That is one triangle. The kite has two: 40.",
+            "ur": "یہ ایک مثلث ہے۔ پتنگ میں دو ہیں: 40"
+          }
+        },
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "Each triangle is half of 10 × 4 = 20. Two make 40.",
+            "ur": "ہر مثلث 10 × 4 کا آدھا = 20۔ دو مل کر 40"
+          },
+          "misconception_id": "forgets_half"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Asad says a triangle with base 6 cm and height 4 cm has an area of 24 cm². What went wrong?",
+        "ur": "اسد کہتا ہے 6 قاعدے اور 4 اونچائی والے مثلث کا رقبہ 24 مربع سینٹی میٹر ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "half",
+          "text": {
+            "en": "He forgot to halve. ½ × 6 × 4 = 12 cm².",
+            "ur": "وہ آدھا کرنا بھول گیا۔ ½ × 6 × 4 = 12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 24 is the whole rectangle; the triangle is half.",
+            "ur": "جی ہاں! 24 پوری مستطیل ہے؛ مثلث آدھا ہے۔"
+          }
+        },
+        {
+          "id": "ten",
+          "text": {
+            "en": "It should be 10 cm².",
+            "ur": "یہ 10 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "10 is 6 + 4. Area: ½ × 6 × 4 = 12.",
+            "ur": "10 یعنی 6 + 4۔ رقبہ: ½ × 6 × 4 = 12"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 × 4 is the rectangle. A triangle is half of it: 12 cm².",
+            "ur": "6 × 4 مستطیل ہے۔ مثلث اس کا آدھا: 12"
+          },
+          "misconception_id": "forgets_half"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is there a ½ in the triangle area formula? Can you teach me?",
+          "ur": "مثلث کے رقبے کے قاعدے میں ½ کیوں ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the area of a triangle half of base × height?",
+        "ur": "اپنے الفاظ میں بتائیں: مثلث کا رقبہ قاعدہ × اونچائی کا آدھا کیوں ہوتا ہے؟"
+      },
+      "key_idea": "Base × height is the area of a rectangle around the triangle. A diagonal cuts that rectangle into two equal triangles, so one triangle is half of it.",
+      "levels": {
+        "got_it": "Explains that base × height is a rectangle, and the triangle is half of it because two equal triangles make the rectangle.",
+        "partly": "Says the triangle is half a rectangle, without saying why or which rectangle.",
+        "not_yet": "Gives no reason, or says the ½ is just part of the rule."
+      },
+      "keywords": [
+        [
+          "rectangle",
+          "مستطیل",
+          "mustateel"
+        ],
+        [
+          "half",
+          "two",
+          "آدھا",
+          "دو",
+          "aadha"
+        ],
+        [
+          "diagonal",
+          "cut",
+          "corner",
+          "کاٹ",
+          "کونے",
+          "وتر"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Two equal triangles make the rectangle, so one is half.",
+          "ur": "بہت خوب! دو برابر مثلث مل کر مستطیل بناتے ہیں، اس لیے ایک آدھا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say which rectangle, and why exactly half.",
+          "ur": "اچھی شروعات! اب بتائیں کون سی مستطیل، اور بالکل آدھا کیوں۔"
+        },
+        "not_yet": {
+          "en": "Remember cutting the rectangle corner to corner. How many triangles did you get? Were they the same?",
+          "ur": "مستطیل کو کونے سے کونے تک کاٹنا یاد کریں۔ کتنے مثلث بنے؟ کیا وہ ایک جیسے تھے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_house",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A drawing of a house is a 6 cm by 4 cm rectangle with a triangle roof on top: base 6 cm, height 3 cm. What is the total area in cm²?",
+        "ur": "گھر کی تصویر 6 ضرب 4 سینٹی میٹر کی مستطیل اور اوپر مثلث چھت سے بنی ہے: قاعدہ 6، اونچائی 3 سینٹی میٹر۔ کل رقبہ کیا ہے؟"
+      },
+      "answer": 33,
+      "checker": "numeric",
+      "hint": {
+        "en": "Rectangle 6 × 4, plus triangle ½ × 6 × 3.",
+        "ur": "مستطیل 6 × 4، جمع مثلث ½ × 6 × 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 + 9 = 33 cm².",
+        "ur": "درست! 24 + 9 = 33 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "6 × 4 = 24 and ½ × 6 × 3 = 9, so 33 cm².",
+        "ur": "6 × 4 = 24 اور ½ × 6 × 3 = 9، تو 33"
+      },
+      "common_wrong": [
+        {
+          "answer": 42,
+          "feedback": {
+            "en": "Halve the roof: ½ × 6 × 3 = 9, so 24 + 9 = 33.",
+            "ur": "چھت آدھی کریں: ½ × 6 × 3 = 9، تو 24 + 9 = 33"
+          },
+          "misconception_id": "forgets_half"
+        },
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "Add the roof too: 24 + 9 = 33.",
+            "ur": "چھت بھی جمع کریں: 24 + 9 = 33"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Triangles done!",
+          "ur": "مثلث مکمل!"
+        }
+      },
+      "text": {
+        "en": "Area of a triangle = ½ × base × height. The height goes straight up from the base at a right angle; never use the slanted side. To find a missing height, double the area and divide by the base.",
+        "ur": "مثلث کا رقبہ = ½ × قاعدہ × اونچائی۔ اونچائی قاعدے سے زاویہ قائمہ پر سیدھی اوپر جاتی ہے؛ ترچھا ضلع کبھی نہ لیں۔ نامعلوم اونچائی کے لیے رقبہ دگنا کر کے قاعدے سے تقسیم کریں۔"
+      },
+      "points": [
+        {
+          "en": "A triangle is half a rectangle.",
+          "ur": "مثلث آدھی مستطیل ہے۔"
+        },
+        {
+          "en": "Don't forget the ½.",
+          "ur": "½ نہ بھولیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_tri",
+      "type": "apply",
+      "skill": "maths.measurement.area_triangle",
+      "step": {
+        "id": "r_tri",
+        "type": "number",
+        "prompt": {
+          "en": "Find the area of a triangle with base 14 cm and height 3 cm, in cm².",
+          "ur": "14 قاعدے اور 3 اونچائی والے مثلث کا رقبہ معلوم کریں۔"
+        },
+        "answer": 21,
+        "checker": "numeric",
+        "hint": {
+          "en": "½ × 14 × 3.",
+          "ur": "½ × 14 × 3"
+        },
+        "feedback_correct": {
+          "en": "Right! 21 cm².",
+          "ur": "درست! 21 مربع سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "14 × 3 = 42, half is 21.",
+          "ur": "14 × 3 = 42، آدھا 21"
+        },
+        "common_wrong": [
+          {
+            "answer": 42,
+            "feedback": {
+              "en": "Halve it: 21.",
+              "ur": "آدھا کریں: 21"
+            },
+            "misconception_id": "forgets_half"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_tri2",
+      "type": "recall",
+      "skill": "maths.measurement.area_triangle",
+      "step": {
+        "id": "r_tri2",
+        "type": "number",
+        "prompt": {
+          "en": "Find the area of a triangle with base 5 m and height 6 m, in m².",
+          "ur": "5 میٹر قاعدے اور 6 میٹر اونچائی والے مثلث کا رقبہ معلوم کریں۔"
+        },
+        "answer": 15,
+        "checker": "numeric",
+        "hint": {
+          "en": "½ × 5 × 6.",
+          "ur": "½ × 5 × 6"
+        },
+        "feedback_correct": {
+          "en": "Right! 15 m².",
+          "ur": "درست! 15 مربع میٹر"
+        },
+        "feedback_wrong": {
+          "en": "5 × 6 = 30, half is 15.",
+          "ur": "5 × 6 = 30، آدھا 15"
+        },
+        "common_wrong": [
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "Halve it: 15.",
+              "ur": "آدھا کریں: 15"
+            },
+            "misconception_id": "forgets_half"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Perimeter and Area unit. No textbook text or exercises were used.",
+    "The formula is shown as half of a rectangle; cutting a paper rectangle along a diagonal makes it concrete. The 5-12-13 triangle in s6 checks that children use the height, not the slanted side.",
+    "Urdu terms to check: مثلث (triangle), قاعدہ (base), اونچائی (height), زاویہ قائمہ (right angle).",
+    "The numbers were worked out in content/sources/g6-maths-08/triangles.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

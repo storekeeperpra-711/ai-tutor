@@ -1,0 +1,886 @@
+{
+  "id": "g6-maths-08-area-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems by deciding whether perimeter or area is needed, including costs.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Perimeter and Area"
+    }
+  ],
+  "skills": [
+    "maths.measurement.word_problems"
+  ],
+  "title": {
+    "en": "Perimeter and area word problems",
+    "ur": "احاطے اور رقبے کے سوالات"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.measurement.area_triangle"
+    },
+    {
+      "skill": "maths.measurement.perimeter"
+    },
+    {
+      "skill": "maths.measurement.area_rectangle"
+    },
+    {
+      "skill": "maths.measurement.compound_area"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "wrong_measure",
+      "description": "Uses area for an edge job (fencing, border) or perimeter for a covering job (carpet, paint)."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds the perimeter or area but not the cost or amount the question asks for."
+    },
+    {
+      "id": "two_sides_only",
+      "description": "Adds only two sides of a rectangle for the perimeter."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.measurement.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.measurement.word_problems": [
+      {
+        "id": "qb_which",
+        "type": "recall",
+        "step": {
+          "id": "qb_which",
+          "type": "choice",
+          "prompt": {
+            "en": "To find how much paint covers a wall, which do you need?",
+            "ur": "دیوار پر کتنا رنگ لگے گا، یہ جاننے کے لیے کیا چاہیے؟"
+          },
+          "options": [
+            {
+              "id": "area",
+              "text": {
+                "en": "The area of the wall",
+                "ur": "دیوار کا رقبہ"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Paint covers the whole surface.",
+                "ur": "جی ہاں! رنگ پوری سطح ڈھانپتا ہے۔"
+              }
+            },
+            {
+              "id": "perimeter",
+              "text": {
+                "en": "The perimeter of the wall",
+                "ur": "دیوار کا احاطہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Perimeter is only the edge. Paint covers the inside: area.",
+                "ur": "احاطہ صرف کنارہ ہے۔ رنگ اندر ڈھانپتا ہے: رقبہ۔"
+              },
+              "misconception_id": "wrong_measure"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A square plot has 25 m sides. How many metres of wire fence go all the way round?",
+            "ur": "ایک مربع پلاٹ کا ہر ضلع 25 میٹر ہے۔ چاروں طرف کتنے میٹر تار کی باڑ لگے گی؟"
+          },
+          "answer": 100,
+          "checker": "numeric",
+          "hint": {
+            "en": "Fence goes around: perimeter = 4 × 25.",
+            "ur": "باڑ گرد لگتی ہے: احاطہ = 4 × 25"
+          },
+          "feedback_correct": {
+            "en": "Right! 100 m.",
+            "ur": "درست! 100 میٹر"
+          },
+          "feedback_wrong": {
+            "en": "4 × 25 = 100 m.",
+            "ur": "4 × 25 = 100 میٹر"
+          },
+          "common_wrong": [
+            {
+              "answer": 625,
+              "feedback": {
+                "en": "625 m² is the area. A fence goes around: 100 m.",
+                "ur": "625 مربع میٹر رقبہ ہے۔ باڑ گرد لگتی ہے: 100 میٹر"
+              },
+              "misconception_id": "wrong_measure"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "To fence a 20 m by 15 m field, Javed works out 20 × 15 = 300 m of fence. What went wrong?",
+            "ur": "20 ضرب 15 میٹر کے میدان کی باڑ کے لیے جاوید 20 × 15 = 300 میٹر نکالتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "perimeter",
+              "text": {
+                "en": "A fence needs the perimeter: 2 × (20 + 15) = 70 m.",
+                "ur": "باڑ کے لیے احاطہ چاہیے: 2 × (20 + 15) = 70 میٹر"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 300 m² is the area of the field, not the fence.",
+                "ur": "جی ہاں! 300 مربع میٹر میدان کا رقبہ ہے، باڑ نہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The fence goes around the edge: 70 m. 300 is the area.",
+                "ur": "باڑ کنارے کے گرد لگتی ہے: 70 میٹر۔ 300 رقبہ ہے۔"
+              },
+              "misconception_id": "wrong_measure"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_which",
+      "front": {
+        "en": "Perimeter or area?",
+        "ur": "احاطہ یا رقبہ؟"
+      },
+      "back": {
+        "en": "Around the edge (fence, border, lace): perimeter. Covering (carpet, paint, tiles, grass): area.",
+        "ur": "کنارے کے گرد (باڑ، بارڈر، لیس): احاطہ۔ ڈھانپنا (قالین، رنگ، ٹائل، گھاس): رقبہ۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_cost",
+      "text": {
+        "en": "Measure a room or courtyard at home. Work out how many metres of border it would need and how many square metres of carpet. Ask at a shop what one metre of border and one square metre of carpet cost, and find the totals.",
+        "ur": "گھر کا کوئی کمرہ یا صحن ناپیں۔ معلوم کریں کتنے میٹر بارڈر اور کتنے مربع میٹر قالین لگے گا۔ دکان سے ایک میٹر بارڈر اور ایک مربع میٹر قالین کی قیمت پوچھیں، اور کل خرچ نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Perimeter",
+      "ur": "احاطہ"
+    },
+    {
+      "en": "Area",
+      "ur": "رقبہ"
+    },
+    {
+      "en": "Cost per metre",
+      "ur": "فی میٹر قیمت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Fence, carpet, paint, tiles: some jobs go around the edge, some cover the inside. Which is which?",
+          "ur": "باڑ، قالین، رنگ، ٹائلیں: کچھ کام کنارے کے گرد ہوتے ہیں، کچھ اندر ڈھانپتے ہیں۔ کون سا کیا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we solve real problems with perimeter and area, including costs. First, a quick check.",
+        "ur": "آج ہم احاطے اور رقبے کے اصل سوال حل کریں گے، خرچ سمیت۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.area_triangle",
+      "prompt": {
+        "en": "What is the area of a triangle with base 10 cm and height 6 cm, in cm²?",
+        "ur": "10 قاعدے اور 6 اونچائی والے مثلث کا رقبہ کیا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "½ × 10 × 6.",
+        "ur": "½ × 10 × 6"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 cm².",
+        "ur": "درست! 30 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "10 × 6 = 60, half is 30.",
+        "ur": "10 × 6 = 60، آدھا 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "Halve it: 30.",
+            "ur": "آدھا کریں: 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_which",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Ask: does it go around, or cover?",
+          "ur": "پوچھیں: یہ گرد جاتا ہے، یا ڈھانپتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Around the edge (fence, border, lace, skirting): use the perimeter, in m or cm. Covering the inside (carpet, paint, tiles, grass): use the area, in m² or cm². For a cost, multiply the amount by the price of one metre or one square metre.",
+        "ur": "کنارے کے گرد (باڑ، بارڈر، لیس): احاطہ لیں، میٹر یا سینٹی میٹر میں۔ اندر ڈھانپنا (قالین، رنگ، ٹائلیں، گھاس): رقبہ لیں، مربع میٹر یا مربع سینٹی میٹر میں۔ خرچ کے لیے مقدار کو ایک میٹر یا ایک مربع میٹر کی قیمت سے ضرب دیں۔"
+      }
+    },
+    {
+      "id": "s4_choose",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Nani wants lace sewn all round the edge of a tablecloth. Which does she need?",
+        "ur": "نانی میز پوش کے چاروں کناروں پر لیس لگوانا چاہتی ہیں۔ انہیں کیا چاہیے؟"
+      },
+      "options": [
+        {
+          "id": "perimeter",
+          "text": {
+            "en": "The perimeter",
+            "ur": "احاطہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Lace goes around the edge.",
+            "ur": "جی ہاں! لیس کنارے کے گرد لگتی ہے۔"
+          }
+        },
+        {
+          "id": "area",
+          "text": {
+            "en": "The area",
+            "ur": "رقبہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Lace only goes on the edge, not over the cloth: perimeter.",
+            "ur": "لیس صرف کنارے پر لگتی ہے، پورے کپڑے پر نہیں: احاطہ۔"
+          },
+          "misconception_id": "wrong_measure"
+        }
+      ]
+    },
+    {
+      "id": "s5_fence_cost",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A field is 20 m long and 15 m wide. Fencing costs Rs 50 a metre. How much does it cost to fence all the way round?",
+        "ur": "ایک میدان 20 میٹر لمبا اور 15 میٹر چوڑا ہے۔ باڑ 50 روپے فی میٹر ہے۔ چاروں طرف باڑ پر کتنا خرچ آئے گا؟"
+      },
+      "answer": 3500,
+      "checker": "numeric",
+      "hint": {
+        "en": "Perimeter first: 2 × (20 + 15). Then × 50.",
+        "ur": "پہلے احاطہ: 2 × (20 + 15)۔ پھر × 50"
+      },
+      "feedback_correct": {
+        "en": "Right! 70 m × Rs 50 = Rs 3500.",
+        "ur": "درست! 70 میٹر × 50 روپے = 3500 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Perimeter = 70 m, so 70 × 50 = Rs 3500.",
+        "ur": "احاطہ = 70 میٹر، تو 70 × 50 = 3500 روپے"
+      },
+      "common_wrong": [
+        {
+          "answer": 15000,
+          "feedback": {
+            "en": "That used the area. A fence goes around: 70 m × 50 = 3500.",
+            "ur": "یہ رقبے سے نکلا۔ باڑ گرد لگتی ہے: 70 × 50 = 3500"
+          },
+          "misconception_id": "wrong_measure"
+        },
+        {
+          "answer": 1750,
+          "feedback": {
+            "en": "That is only two sides. All four: 70 m × 50 = 3500.",
+            "ur": "یہ صرف دو اضلاع ہیں۔ چاروں: 70 × 50 = 3500"
+          },
+          "misconception_id": "two_sides_only"
+        },
+        {
+          "answer": 70,
+          "feedback": {
+            "en": "70 m is the fence. Now the cost: 70 × 50 = 3500.",
+            "ur": "70 میٹر باڑ ہے۔ اب خرچ: 70 × 50 = 3500"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "s6_carpet_cost",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A room is 5 m by 4 m. Carpet costs Rs 300 a square metre. How much does carpet for the whole floor cost?",
+        "ur": "ایک کمرہ 5 ضرب 4 میٹر ہے۔ قالین 300 روپے فی مربع میٹر ہے۔ پورے فرش کے قالین پر کتنا خرچ آئے گا؟"
+      },
+      "answer": 6000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Area first: 5 × 4. Then × 300.",
+        "ur": "پہلے رقبہ: 5 × 4۔ پھر × 300"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 m² × Rs 300 = Rs 6000.",
+        "ur": "درست! 20 مربع میٹر × 300 = 6000 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Area = 20 m², so 20 × 300 = Rs 6000.",
+        "ur": "رقبہ = 20 مربع میٹر، تو 20 × 300 = 6000 روپے"
+      },
+      "common_wrong": [
+        {
+          "answer": 5400,
+          "feedback": {
+            "en": "That used the perimeter. Carpet covers the floor: 20 m² × 300 = 6000.",
+            "ur": "یہ احاطے سے نکلا۔ قالین فرش ڈھانپتا ہے: 20 × 300 = 6000"
+          },
+          "misconception_id": "wrong_measure"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 m² is the area. Now the cost: 20 × 300 = 6000.",
+            "ur": "20 مربع میٹر رقبہ ہے۔ اب خرچ: 20 × 300 = 6000"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "s7_paint",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A wall is 4 m wide and 3 m high. One tin of paint covers 6 m². How many tins are needed?",
+        "ur": "ایک دیوار 4 میٹر چوڑی اور 3 میٹر اونچی ہے۔ رنگ کا ایک ڈبہ 6 مربع میٹر ڈھانپتا ہے۔ کتنے ڈبے چاہییں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Area: 4 × 3 = 12 m². Each tin covers 6 m².",
+        "ur": "رقبہ: 4 × 3 = 12 مربع میٹر۔ ہر ڈبہ 6 مربع میٹر۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 ÷ 6 = 2 tins.",
+        "ur": "درست! 12 ÷ 6 = 2 ڈبے"
+      },
+      "feedback_wrong": {
+        "en": "4 × 3 = 12 m², and 12 ÷ 6 = 2 tins.",
+        "ur": "4 × 3 = 12، اور 12 ÷ 6 = 2 ڈبے"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 m² is the wall. Each tin covers 6: 12 ÷ 6 = 2.",
+            "ur": "12 مربع میٹر دیوار ہے۔ ہر ڈبہ 6: 12 ÷ 6 = 2"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "s8_square_field",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A square field has a perimeter of 64 m. What is its area in m²?",
+        "ur": "ایک مربع میدان کا احاطہ 64 میٹر ہے۔ اس کا رقبہ کیا ہے؟"
+      },
+      "answer": 256,
+      "checker": "numeric",
+      "hint": {
+        "en": "Side = 64 ÷ 4. Then side × side.",
+        "ur": "ضلع = 64 ÷ 4۔ پھر ضلع × ضلع"
+      },
+      "feedback_correct": {
+        "en": "Right! Side 16 m, area 16 × 16 = 256 m².",
+        "ur": "درست! ضلع 16 میٹر، رقبہ 16 × 16 = 256"
+      },
+      "feedback_wrong": {
+        "en": "64 ÷ 4 = 16 m, and 16 × 16 = 256 m².",
+        "ur": "64 ÷ 4 = 16 میٹر، اور 16 × 16 = 256"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "16 m is one side. Area: 16 × 16 = 256 m².",
+            "ur": "16 میٹر ایک ضلع ہے۔ رقبہ: 16 × 16 = 256"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 64,
+          "feedback": {
+            "en": "64 m is the perimeter. Area: 16 × 16 = 256 m².",
+            "ur": "64 میٹر احاطہ ہے۔ رقبہ: 16 × 16 = 256"
+          },
+          "misconception_id": "wrong_measure"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "To find how many m² of grass seed a 9 m by 6 m lawn needs, Laiba works out 2 × (9 + 6) = 30. What went wrong?",
+        "ur": "9 ضرب 6 میٹر کے لان کے لیے کتنے مربع میٹر گھاس کا بیج چاہیے، اس کے لیے لائبہ 2 × (9 + 6) = 30 نکالتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "area",
+          "text": {
+            "en": "Grass covers the lawn: area = 9 × 6 = 54 m².",
+            "ur": "گھاس لان ڈھانپتی ہے: رقبہ = 9 × 6 = 54 مربع میٹر"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 30 m is the perimeter, the distance around.",
+            "ur": "جی ہاں! 30 میٹر احاطہ ہے، گرد کا فاصلہ۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the edge. Seed covers the whole lawn: 9 × 6 = 54 m².",
+            "ur": "یہ کنارہ ہے۔ بیج پورا لان ڈھانپتا ہے: 9 × 6 = 54"
+          },
+          "misconception_id": "wrong_measure"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do you decide if a problem needs perimeter or area? Can you teach me?",
+          "ur": "آپ کیسے فیصلہ کرتے ہیں کہ سوال میں احاطہ چاہیے یا رقبہ؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how do you know whether a problem needs the perimeter or the area? Give an example of each.",
+        "ur": "اپنے الفاظ میں بتائیں: آپ کیسے جانتے ہیں کہ سوال میں احاطہ چاہیے یا رقبہ؟ ہر ایک کی مثال دیں۔"
+      },
+      "key_idea": "If the thing goes along the edge (fence, border, lace), use perimeter. If it covers the surface (carpet, paint, grass, tiles), use area.",
+      "levels": {
+        "got_it": "Links perimeter to things along the edge and area to things covering the surface, with an example of each.",
+        "partly": "Describes one correctly, or both without examples.",
+        "not_yet": "Mixes them up or gives no rule."
+      },
+      "keywords": [
+        [
+          "edge",
+          "around",
+          "fence",
+          "کنارہ",
+          "گرد",
+          "باڑ"
+        ],
+        [
+          "cover",
+          "inside",
+          "carpet",
+          "paint",
+          "ڈھانپ",
+          "قالین",
+          "رنگ"
+        ],
+        [
+          "perimeter",
+          "area",
+          "احاطہ",
+          "رقبہ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Great rule! Around the edge: perimeter. Covering: area.",
+          "ur": "بہت اچھا اصول! کنارے کے گرد: احاطہ۔ ڈھانپنا: رقبہ۔"
+        },
+        "partly": {
+          "en": "Good start! Now give the other one, with an example.",
+          "ur": "اچھی شروعات! اب دوسرا بتائیں، مثال کے ساتھ۔"
+        },
+        "not_yet": {
+          "en": "Think of a fence and a carpet. Which goes around the room, and which covers the floor?",
+          "ur": "باڑ اور قالین سوچیں۔ کون گرد جاتا ہے، اور کون فرش ڈھانپتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Perimeter and area unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! احاطے اور رقبے کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on perimeter, area of rectangles, compound shapes, triangles and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں احاطہ، مستطیل کا رقبہ، مرکب شکلیں، مثلث اور ایک اصل زندگی کا سوال ہے۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_perimeter",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.perimeter",
+      "prompt": {
+        "en": "Test 1: Find the perimeter of a rectangle 11 cm by 4 cm.",
+        "ur": "ٹیسٹ 1: 11 ضرب 4 سینٹی میٹر مستطیل کا احاطہ معلوم کریں۔"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 × (11 + 4).",
+        "ur": "2 × (11 + 4)"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 cm.",
+        "ur": "درست! 30 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "2 × 15 = 30 cm.",
+        "ur": "2 × 15 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 44,
+          "feedback": {
+            "en": "11 × 4 is the area. Perimeter: 30 cm.",
+            "ur": "11 × 4 رقبہ ہے۔ احاطہ: 30"
+          }
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That is two sides. All four: 30 cm.",
+            "ur": "یہ دو اضلاع ہیں۔ چاروں: 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_area",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.measurement.area_rectangle",
+      "prompt": {
+        "en": "Test 2: Find the area of a square with 12 cm sides, in cm².",
+        "ur": "ٹیسٹ 2: 12 سینٹی میٹر ضلع والے مربع کا رقبہ معلوم کریں۔"
+      },
+      "answer": 144,
+      "checker": "numeric",
+      "hint": {
+        "en": "12 × 12.",
+        "ur": "12 × 12"
+      },
+      "feedback_correct": {
+        "en": "Right! 144 cm².",
+        "ur": "درست! 144 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "12 × 12 = 144 cm².",
+        "ur": "12 × 12 = 144"
+      },
+      "common_wrong": [
+        {
+          "answer": 48,
+          "feedback": {
+            "en": "48 cm is the perimeter. Area: 12 × 12 = 144.",
+            "ur": "48 سینٹی میٹر احاطہ ہے۔ رقبہ: 144"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_compound",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.measurement.compound_area",
+      "prompt": {
+        "en": "Test 3: A 9 m by 6 m yard has a 2 m by 3 m shed in it. What area is left, in m²?",
+        "ur": "ٹیسٹ 3: 9 ضرب 6 میٹر کے احاطے میں 2 ضرب 3 میٹر کا کمرہ ہے۔ کتنا رقبہ بچا؟"
+      },
+      "answer": 48,
+      "checker": "numeric",
+      "hint": {
+        "en": "54 take away 6.",
+        "ur": "54 منفی 6"
+      },
+      "feedback_correct": {
+        "en": "Right! 48 m².",
+        "ur": "درست! 48 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "9 × 6 = 54, shed 2 × 3 = 6, so 48 m².",
+        "ur": "9 × 6 = 54، کمرہ 2 × 3 = 6، تو 48"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "Take the shed away, don't add it: 54 − 6 = 48.",
+            "ur": "کمرہ گھٹائیں، جمع نہیں: 54 − 6 = 48"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_triangle",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.measurement.area_triangle",
+      "prompt": {
+        "en": "Test 4: Find the area of a triangle with base 16 cm and height 5 cm, in cm².",
+        "ur": "ٹیسٹ 4: 16 قاعدے اور 5 اونچائی والے مثلث کا رقبہ معلوم کریں۔"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "½ × 16 × 5.",
+        "ur": "½ × 16 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 40 cm².",
+        "ur": "درست! 40 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "16 × 5 = 80, half is 40.",
+        "ur": "16 × 5 = 80، آدھا 40"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "Halve it: 40.",
+            "ur": "آدھا کریں: 40"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_ribbon",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: Zoya puts ribbon all round the edge of a card 15 cm by 10 cm. How many cm of ribbon does she need?",
+        "ur": "ٹیسٹ 5: زویا 15 ضرب 10 سینٹی میٹر کارڈ کے چاروں کناروں پر ربن لگاتی ہے۔ کتنے سینٹی میٹر ربن چاہیے؟"
+      },
+      "answer": 50,
+      "checker": "numeric",
+      "hint": {
+        "en": "Ribbon goes around: perimeter.",
+        "ur": "ربن گرد لگتا ہے: احاطہ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 50 cm.",
+        "ur": "درست! 50 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "2 × (15 + 10) = 50 cm.",
+        "ur": "2 × (15 + 10) = 50"
+      },
+      "common_wrong": [
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "150 cm² is the area. Ribbon goes around: 50 cm.",
+            "ur": "150 رقبہ ہے۔ ربن گرد لگتا ہے: 50"
+          },
+          "misconception_id": "wrong_measure"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the Perimeter and area unit! Well done!",
+          "ur": "آپ نے احاطے اور رقبے کا باب مکمل کر لیا! شاباش!"
+        }
+      },
+      "text": {
+        "en": "Around the edge (fence, border, ribbon): perimeter. Covering (carpet, paint, grass, tiles): area. For costs or tins, finish the job: multiply by the price, or divide by what one tin covers.",
+        "ur": "کنارے کے گرد (باڑ، بارڈر، ربن): احاطہ۔ ڈھانپنا (قالین، رنگ، گھاس، ٹائلیں): رقبہ۔ خرچ یا ڈبوں کے لیے کام پورا کریں: قیمت سے ضرب دیں، یا ایک ڈبے کی مقدار سے تقسیم کریں۔"
+      },
+      "points": [
+        {
+          "en": "Perimeter in m; area in m².",
+          "ur": "احاطہ میٹر میں؛ رقبہ مربع میٹر میں۔"
+        },
+        {
+          "en": "Answer the question asked: the cost, not just the area.",
+          "ur": "وہی جواب دیں جو پوچھا گیا: خرچ، صرف رقبہ نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_carpet",
+      "type": "apply",
+      "skill": "maths.measurement.word_problems",
+      "step": {
+        "id": "r_carpet",
+        "type": "number",
+        "prompt": {
+          "en": "Carpet costs Rs 200 a square metre. How much does it cost to carpet a 6 m by 3 m room?",
+          "ur": "قالین 200 روپے فی مربع میٹر ہے۔ 6 ضرب 3 میٹر کمرے کے قالین پر کتنا خرچ آئے گا؟"
+        },
+        "answer": 3600,
+        "checker": "numeric",
+        "hint": {
+          "en": "Area 6 × 3, then × 200.",
+          "ur": "رقبہ 6 × 3، پھر × 200"
+        },
+        "feedback_correct": {
+          "en": "Right! 18 m² × 200 = Rs 3600.",
+          "ur": "درست! 18 × 200 = 3600 روپے"
+        },
+        "feedback_wrong": {
+          "en": "6 × 3 = 18 m², and 18 × 200 = Rs 3600.",
+          "ur": "6 × 3 = 18، اور 18 × 200 = 3600"
+        },
+        "common_wrong": [
+          {
+            "answer": 18,
+            "feedback": {
+              "en": "18 m² is the area. Now the cost: 18 × 200 = 3600.",
+              "ur": "18 مربع میٹر رقبہ ہے۔ اب خرچ: 3600"
+            },
+            "misconception_id": "stops_early"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_lace",
+      "type": "recall",
+      "skill": "maths.measurement.word_problems",
+      "step": {
+        "id": "r_lace",
+        "type": "number",
+        "prompt": {
+          "en": "A tablecloth is 2 m by 1 m. How many metres of lace go all round its edge?",
+          "ur": "ایک میز پوش 2 ضرب 1 میٹر ہے۔ اس کے چاروں کناروں پر کتنے میٹر لیس لگے گی؟"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "Perimeter: 2 × (2 + 1).",
+          "ur": "احاطہ: 2 × (2 + 1)"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 m.",
+          "ur": "درست! 6 میٹر"
+        },
+        "feedback_wrong": {
+          "en": "2 × 3 = 6 m.",
+          "ur": "2 × 3 = 6 میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "2 m² is the area. Lace goes around: 6 m.",
+              "ur": "2 مربع میٹر رقبہ ہے۔ لیس گرد لگتی ہے: 6 میٹر"
+            },
+            "misconception_id": "wrong_measure"
+          },
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "That is two sides. All four: 6 m.",
+              "ur": "یہ دو اضلاع ہیں۔ چاروں: 6 میٹر"
+            },
+            "misconception_id": "two_sides_only"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Perimeter and Area unit. No textbook text or exercises were used.",
+    "The main idea is choosing perimeter (along the edge) or area (covering), then finishing the problem (cost, number of tins).",
+    "Steps u1 to u5 are a short unit test; each is tagged with the skill of the lesson it comes from.",
+    "The numbers were worked out in content/sources/g6-maths-08/area_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
