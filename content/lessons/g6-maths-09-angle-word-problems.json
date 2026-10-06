@@ -1,0 +1,917 @@
+{
+  "id": "g6-maths-09-angle-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems with angles on a line, around a point, in a triangle and on a clock, choosing the right total.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Angles"
+    }
+  ],
+  "skills": [
+    "maths.geometry.word_problems"
+  ],
+  "title": {
+    "en": "Angle word problems",
+    "ur": "زاویوں کے عبارتی سوال"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.geometry.triangle_angles"
+    },
+    {
+      "skill": "maths.geometry.angles_on_line"
+    },
+    {
+      "skill": "maths.geometry.complementary_supplementary"
+    },
+    {
+      "skill": "maths.geometry.angle_types"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "wrong_total",
+      "description": "Picks the wrong total (90°, 180° or 360°) for the situation."
+    },
+    {
+      "id": "forgets_right_angle",
+      "description": "Leaves out a right angle that the story gives in words (a wall meeting the ground)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.geometry.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.geometry.word_problems": [
+      {
+        "id": "qb_total",
+        "type": "recall",
+        "step": {
+          "id": "qb_total",
+          "type": "choice",
+          "prompt": {
+            "en": "Slices of a roti meet at the middle. Which total do their angles make?",
+            "ur": "روٹی کے ٹکڑے درمیان میں ملتے ہیں۔ ان کے زاویوں کا مجموعہ کیا ہوگا؟"
+          },
+          "options": [
+            {
+              "id": "point",
+              "text": {
+                "en": "360°, all the way around a point",
+                "ur": "360°، نقطے کے پورے گرد"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The slices go all the way round.",
+                "ur": "جی ہاں! ٹکڑے پورے گرد جاتے ہیں۔"
+              }
+            },
+            {
+              "id": "line",
+              "text": {
+                "en": "180°, a straight line",
+                "ur": "180°، سیدھی لکیر"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The slices go all the way round the middle: 360°.",
+                "ur": "ٹکڑے درمیان کے پورے گرد جاتے ہیں: 360°۔"
+              },
+              "misconception_id": "wrong_total"
+            },
+            {
+              "id": "corner",
+              "text": {
+                "en": "90°, a corner",
+                "ur": "90°، ایک کونا"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The slices go all the way round the middle: 360°.",
+                "ur": "ٹکڑے درمیان کے پورے گرد جاتے ہیں: 360°۔"
+              },
+              "misconception_id": "wrong_total"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A pole stands straight up from flat ground. A rope from its top to the ground makes 55° with the ground. What angle does the rope make with the pole?",
+            "ur": "ایک کھمبا ہموار زمین پر سیدھا کھڑا ہے۔ اس کی چوٹی سے زمین تک ایک رسی زمین کے ساتھ 55° بناتی ہے۔ رسی کھمبے کے ساتھ کتنا زاویہ بناتی ہے؟"
+          },
+          "answer": 35,
+          "checker": "numeric",
+          "hint": {
+            "en": "Pole, ground and rope make a triangle with a right angle at the bottom.",
+            "ur": "کھمبا، زمین اور رسی ایک مثلث بناتے ہیں جس کے نیچے قائمہ زاویہ ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 35°.",
+            "ur": "درست! 35°"
+          },
+          "feedback_wrong": {
+            "en": "180 − 90 − 55 = 35°.",
+            "ur": "180 − 90 − 55 = 35°"
+          },
+          "common_wrong": [
+            {
+              "answer": 125,
+              "feedback": {
+                "en": "The pole meets the ground at 90°: 180 − 90 − 55 = 35°.",
+                "ur": "کھمبا زمین سے 90° پر ملتا ہے: 180 − 90 − 55 = 35°"
+              },
+              "misconception_id": "forgets_right_angle"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A roti is cut from the middle into 4 equal pieces. Hamza says each piece has a 45° angle at the middle. What went wrong?",
+            "ur": "ایک روٹی درمیان سے 4 برابر ٹکڑوں میں کاٹی گئی۔ حمزہ کہتا ہے ہر ٹکڑے کا درمیان میں زاویہ 45° ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "point",
+              "text": {
+                "en": "Around a point is 360°, so each is 360 ÷ 4 = 90°.",
+                "ur": "نقطے کے گرد 360° ہے، اس لیے ہر ایک 360 ÷ 4 = 90°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! He shared 180° instead of 360°.",
+                "ur": "جی ہاں! اس نے 360° کی بجائے 180° بانٹا۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "4 × 45 is only 180°, half the roti. Each piece is 90°.",
+                "ur": "4 × 45 صرف 180° ہے، آدھی روٹی۔ ہر ٹکڑا 90° ہے۔"
+              },
+              "misconception_id": "wrong_total"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_which",
+      "front": {
+        "en": "Which total?",
+        "ur": "کون سا مجموعہ؟"
+      },
+      "back": {
+        "en": "Corner: 90°. Straight line or triangle: 180°. All the way round a point: 360°.",
+        "ur": "کونا: 90°۔ سیدھی لکیر یا مثلث: 180°۔ نقطے کے پورے گرد: 360°۔"
+      }
+    },
+    {
+      "id": "f_clock",
+      "front": {
+        "en": "Angle between clock hour marks?",
+        "ur": "گھڑی کے گھنٹوں کے نشانوں کے درمیان زاویہ؟"
+      },
+      "back": {
+        "en": "30°, because 360 ÷ 12 = 30.",
+        "ur": "30°، کیونکہ 360 ÷ 12 = 30"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_clock",
+      "text": {
+        "en": "Look at a clock at home at 1, 2, 3 and 4 o'clock (or move the hands yourself). Work out the angle between the hands each time: 30° for every hour mark.",
+        "ur": "گھر کی گھڑی کو 1، 2، 3 اور 4 بجے دیکھیں (یا خود سوئیاں گھمائیں)۔ ہر بار سوئیوں کا زاویہ نکالیں: ہر گھنٹے کے نشان کے لیے 30°۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Ladder",
+      "ur": "سیڑھی"
+    },
+    {
+      "en": "Clock hands",
+      "ur": "گھڑی کی سوئیاں"
+    },
+    {
+      "en": "Roof",
+      "ur": "چھت"
+    },
+    {
+      "en": "Total",
+      "ur": "مجموعہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Angles are everywhere: ladders, clocks, roofs and even rotis! Let's solve some real puzzles.",
+          "ur": "زاویے ہر جگہ ہیں: سیڑھیاں، گھڑیاں، چھتیں اور روٹی بھی! آئیں کچھ اصل پہیلیاں حل کریں۔"
+        }
+      },
+      "text": {
+        "en": "Today we use everything from the Angles unit on real-life problems, then a short unit test. First, a quick check.",
+        "ur": "آج ہم زاویوں کے پورے باب کو اصل زندگی کے سوالوں پر لگائیں گے، پھر ایک چھوٹا ٹیسٹ۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.geometry.triangle_angles",
+      "prompt": {
+        "en": "A triangle has angles of 90° and 40°. What is the third angle?",
+        "ur": "ایک مثلث کے دو زاویے 90° اور 40° ہیں۔ تیسرا زاویہ کتنا ہے؟"
+      },
+      "answer": 50,
+      "checker": "numeric",
+      "hint": {
+        "en": "A triangle is 180°.",
+        "ur": "مثلث 180° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 50°.",
+        "ur": "درست! 50°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 90 − 40 = 50°.",
+        "ur": "180 − 90 − 40 = 50°"
+      },
+      "common_wrong": [
+        {
+          "answer": 140,
+          "feedback": {
+            "en": "Don't forget the 90°: 180 − 90 − 40 = 50°.",
+            "ur": "90° نہ بھولیں: 180 − 90 − 40 = 50°"
+          },
+          "misconception_id": "forgets_right_angle"
+        }
+      ]
+    },
+    {
+      "id": "s3_plan",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "First ask: is it a corner, a line, a triangle, or all the way round?",
+          "ur": "پہلے پوچھیں: یہ کونا ہے، لکیر ہے، مثلث ہے، یا پورا گرد؟"
+        }
+      },
+      "text": {
+        "en": "For an angle problem: 1) Picture it, or draw it. 2) Choose the total: a corner is 90°, a straight line or a triangle is 180°, all the way round a point is 360°. 3) Take the known angles away. Watch for right angles hidden in words, like a wall meeting the ground.",
+        "ur": "زاویے کے سوال کے لیے: 1) تصور کریں یا بنائیں۔ 2) مجموعہ چنیں: کونا 90°، سیدھی لکیر یا مثلث 180°، نقطے کے پورے گرد 360°۔ 3) معلوم زاویے نفی کریں۔ الفاظ میں چھپے قائمہ زاویے دیکھیں، جیسے دیوار کا زمین سے ملنا۔"
+      }
+    },
+    {
+      "id": "s4_ladder",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A ladder leans against a wall. It makes 70° with the ground. The wall stands straight up from the ground. What angle does the ladder make with the wall?",
+        "ur": "ایک سیڑھی دیوار سے ٹیک لگائے ہے۔ یہ زمین کے ساتھ 70° بناتی ہے۔ دیوار زمین سے سیدھی کھڑی ہے۔ سیڑھی دیوار کے ساتھ کتنا زاویہ بناتی ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Ladder, wall and ground make a triangle. The wall meets the ground at 90°.",
+        "ur": "سیڑھی، دیوار اور زمین مثلث بناتے ہیں۔ دیوار زمین سے 90° پر ملتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20°.",
+        "ur": "درست! 20°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 90 − 70 = 20°.",
+        "ur": "180 − 90 − 70 = 20°"
+      },
+      "common_wrong": [
+        {
+          "answer": 110,
+          "feedback": {
+            "en": "Don't forget the right angle at the wall: 180 − 90 − 70 = 20°.",
+            "ur": "دیوار والا قائمہ زاویہ نہ بھولیں: 180 − 90 − 70 = 20°"
+          },
+          "misconception_id": "forgets_right_angle"
+        }
+      ]
+    },
+    {
+      "id": "s5_roti",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ammi cuts a roti from the middle into 6 equal pieces. What angle does each piece make at the middle?",
+        "ur": "امی ایک روٹی درمیان سے 6 برابر ٹکڑوں میں کاٹتی ہیں۔ ہر ٹکڑا درمیان میں کتنا زاویہ بناتا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "All the way round the middle is 360°.",
+        "ur": "درمیان کے پورے گرد 360° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60° each.",
+        "ur": "درست! ہر ایک 60°"
+      },
+      "feedback_wrong": {
+        "en": "360 ÷ 6 = 60°.",
+        "ur": "360 ÷ 6 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "That shared 180°. All the way round is 360°: 60°.",
+            "ur": "اس میں 180° بانٹا۔ پورا گرد 360° ہے: 60°"
+          },
+          "misconception_id": "wrong_total"
+        }
+      ]
+    },
+    {
+      "id": "s6_gate",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A gate in a straight fence opens 75° from the fence on one side. What angle does it make with the fence on the other side?",
+        "ur": "سیدھی باڑ میں ایک دروازہ ایک طرف باڑ سے 75° کھلتا ہے۔ دوسری طرف یہ باڑ کے ساتھ کتنا زاویہ بناتا ہے؟"
+      },
+      "answer": 105,
+      "checker": "numeric",
+      "hint": {
+        "en": "The fence is a straight line: 180°.",
+        "ur": "باڑ سیدھی لکیر ہے: 180°۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 105°.",
+        "ur": "درست! 105°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 75 = 105°.",
+        "ur": "180 − 75 = 105°"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That used 90°. The fence is a straight line, 180°: 105°.",
+            "ur": "اس میں 90° لیا۔ باڑ سیدھی لکیر، 180°، ہے: 105°"
+          },
+          "misconception_id": "wrong_total"
+        }
+      ]
+    },
+    {
+      "id": "s7_clock",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the smaller angle between the hands of a clock at 4 o'clock?",
+        "ur": "4 بجے گھڑی کی سوئیوں کے درمیان چھوٹا زاویہ کتنا ہے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each hour mark is 30°.",
+        "ur": "ہر گھنٹے کا نشان 30° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 30° = 120°.",
+        "ur": "درست! 4 × 30° = 120°"
+      },
+      "feedback_wrong": {
+        "en": "4 × 30° = 120°.",
+        "ur": "4 × 30° = 120°"
+      },
+      "common_wrong": [
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "240° is the bigger angle, the other way round. The smaller one is 120°.",
+            "ur": "240° بڑا زاویہ ہے، دوسری طرف سے۔ چھوٹا 120° ہے۔"
+          }
+        },
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "Each hour is 30°, not 10°: 4 × 30 = 120°.",
+            "ur": "ہر گھنٹہ 30° ہے، 10° نہیں: 4 × 30 = 120°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_roof",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A roof frame is an isosceles triangle. The angle at the top is 120°. What is each of the two equal angles at the bottom?",
+        "ur": "چھت کا ڈھانچہ متساوی الساقین مثلث ہے۔ اوپر کا زاویہ 120° ہے۔ نیچے کے دونوں برابر زاویوں میں سے ہر ایک کتنا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "180 − 120, then share between two.",
+        "ur": "180 − 120، پھر دو میں بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30° each.",
+        "ur": "درست! ہر ایک 30°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 120 = 60, and 60 ÷ 2 = 30°.",
+        "ur": "180 − 120 = 60، اور 60 ÷ 2 = 30°"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "That is both bottom angles together. Each is 60 ÷ 2 = 30°.",
+            "ur": "یہ نیچے کے دونوں زاویے مل کر ہیں۔ ہر ایک 60 ÷ 2 = 30°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A ramp goes up from a straight road at 15°. Sara says the angle between the ramp and the road on the other side is 90 − 15 = 75°. What went wrong?",
+        "ur": "ایک ڈھلوان سیدھی سڑک سے 15° پر اوپر جاتی ہے۔ سارہ کہتی ہے دوسری طرف ڈھلوان اور سڑک کا زاویہ 90 − 15 = 75° ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "line",
+          "text": {
+            "en": "The road is a straight line, so use 180°: 180 − 15 = 165°.",
+            "ur": "سڑک سیدھی لکیر ہے، اس لیے 180° لیں: 180 − 15 = 165°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! There is no corner here, just a straight road.",
+            "ur": "جی ہاں! یہاں کوئی کونا نہیں، صرف سیدھی سڑک ہے۔"
+          }
+        },
+        {
+          "id": "point",
+          "text": {
+            "en": "She should use 360°: 345°.",
+            "ur": "اسے 360° لینا چاہیے: 345°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The road is a straight line, not a full turn: 165°.",
+            "ur": "سڑک سیدھی لکیر ہے، پورا چکر نہیں: 165°"
+          },
+          "misconception_id": "wrong_total"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "90° is a corner. A straight road is 180°: 165°.",
+            "ur": "90° کونا ہے۔ سیدھی سڑک 180° ہے: 165°"
+          },
+          "misconception_id": "wrong_total"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do you know whether to use 90°, 180° or 360°? Can you teach me?",
+          "ur": "آپ کو کیسے پتا چلتا ہے کہ 90°، 180° یا 360° لینا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how do you choose between 90°, 180° and 360° in an angle problem?",
+        "ur": "اپنے الفاظ میں بتائیں: زاویے کے سوال میں آپ 90°، 180° اور 360° میں سے کیسے چنتے ہیں؟"
+      },
+      "key_idea": "Look at what the angles make together: a corner (right angle) is 90°, a straight line or the inside of a triangle is 180°, and angles all the way round a point are 360°.",
+      "levels": {
+        "got_it": "Links each total to its situation: corner 90°, straight line or triangle 180°, round a point 360°.",
+        "partly": "Gets one or two of the situations right.",
+        "not_yet": "Gives no way to choose, or mixes them up."
+      },
+      "keywords": [
+        [
+          "corner",
+          "right angle",
+          "کونا",
+          "قائمہ"
+        ],
+        [
+          "line",
+          "straight",
+          "triangle",
+          "لکیر",
+          "سیدھی",
+          "مثلث"
+        ],
+        [
+          "round",
+          "point",
+          "full",
+          "گرد",
+          "نقطہ",
+          "پورا"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Corner 90°, line or triangle 180°, all the way round 360°.",
+          "ur": "بہت خوب! کونا 90°، لکیر یا مثلث 180°، پورا گرد 360°۔"
+        },
+        "partly": {
+          "en": "Good start! Can you add the other situations? Think of a corner, a line and a full turn.",
+          "ur": "اچھی شروعات! کیا آپ باقی صورتیں بھی بتا سکتے ہیں؟ کونا، لکیر اور پورا چکر سوچیں۔"
+        },
+        "not_yet": {
+          "en": "Think of a book corner, a straight road and a whole roti. Which total goes with each?",
+          "ur": "کتاب کا کونا، سیدھی سڑک اور پوری روٹی سوچیں۔ ہر ایک کے ساتھ کون سا مجموعہ ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Angles unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! زاویوں کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on types of angles, angles on a line, angle pairs, triangles and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں زاویوں کی اقسام، لکیر پر زاویے، زاویوں کے جوڑے، مثلث اور ایک اصل زندگی کا سوال ہے۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_kind",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.geometry.angle_types",
+      "prompt": {
+        "en": "Test 1: What kind of angle is 135°?",
+        "ur": "ٹیسٹ 1: 135° کس قسم کا زاویہ ہے؟"
+      },
+      "options": [
+        {
+          "id": "acute",
+          "text": {
+            "en": "Acute",
+            "ur": "حادہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 135° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 135° منفرجہ زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "right",
+          "text": {
+            "en": "Right",
+            "ur": "قائمہ زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 135° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 135° منفرجہ زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "obtuse",
+          "text": {
+            "en": "Obtuse",
+            "ur": "منفرجہ زاویہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 135° is obtuse. Obtuse angles are between 90° and 180°.",
+            "ur": "جی ہاں! 135° منفرجہ زاویہ ہے۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "straight",
+          "text": {
+            "en": "Straight",
+            "ur": "مستقیم زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 135° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 135° منفرجہ زاویہ ہے۔"
+          }
+        },
+        {
+          "id": "reflex",
+          "text": {
+            "en": "Reflex",
+            "ur": "منعکس زاویہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not quite. Obtuse angles are between 90° and 180°. So 135° is obtuse.",
+            "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 135° منفرجہ زاویہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_line",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.geometry.angles_on_line",
+      "prompt": {
+        "en": "Test 2: Two angles sit on a straight line. One is 48°. What is the other?",
+        "ur": "ٹیسٹ 2: سیدھی لکیر پر دو زاویے ہیں۔ ایک 48° ہے۔ دوسرا کتنا ہے؟"
+      },
+      "answer": 132,
+      "checker": "numeric",
+      "hint": {
+        "en": "180 − 48.",
+        "ur": "180 − 48"
+      },
+      "feedback_correct": {
+        "en": "Right! 132°.",
+        "ur": "درست! 132°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 48 = 132°.",
+        "ur": "180 − 48 = 132°"
+      },
+      "common_wrong": [
+        {
+          "answer": 312,
+          "feedback": {
+            "en": "A line is 180°, not 360°: 132°.",
+            "ur": "لکیر 180° ہے، 360° نہیں: 132°"
+          },
+          "misconception_id": "wrong_total"
+        }
+      ]
+    },
+    {
+      "id": "u3_complement",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.geometry.complementary_supplementary",
+      "prompt": {
+        "en": "Test 3: What is the complement of 58°?",
+        "ur": "ٹیسٹ 3: 58° کا متمم کیا ہے؟"
+      },
+      "answer": 32,
+      "checker": "numeric",
+      "hint": {
+        "en": "Complementary angles make 90°.",
+        "ur": "متمم زاویے 90° بناتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 32°.",
+        "ur": "درست! 32°"
+      },
+      "feedback_wrong": {
+        "en": "90 − 58 = 32°.",
+        "ur": "90 − 58 = 32°"
+      },
+      "common_wrong": [
+        {
+          "answer": 122,
+          "feedback": {
+            "en": "122° is the supplement. The complement: 90 − 58 = 32°.",
+            "ur": "122° مکمل زاویہ ہے۔ متمم: 90 − 58 = 32°"
+          },
+          "misconception_id": "wrong_total"
+        }
+      ]
+    },
+    {
+      "id": "u4_triangle",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.geometry.triangle_angles",
+      "prompt": {
+        "en": "Test 4: A triangle has angles of 45° and 75°. What is the third angle?",
+        "ur": "ٹیسٹ 4: ایک مثلث کے دو زاویے 45° اور 75° ہیں۔ تیسرا زاویہ کتنا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "180 − 45 − 75.",
+        "ur": "180 − 45 − 75"
+      },
+      "feedback_correct": {
+        "en": "Right! 60°.",
+        "ur": "درست! 60°"
+      },
+      "feedback_wrong": {
+        "en": "45 + 75 = 120, and 180 − 120 = 60°.",
+        "ur": "45 + 75 = 120، اور 180 − 120 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "120 is the two angles added. Take it from 180: 60°.",
+            "ur": "120 دونوں زاویوں کا مجموعہ ہے۔ 180 سے نفی کریں: 60°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_roundabout",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: Three roads meet at a roundabout. The angles between them are 100°, 145° and a missing one. What is the missing angle?",
+        "ur": "ٹیسٹ 5: ایک گول چکر پر تین سڑکیں ملتی ہیں۔ ان کے درمیان زاویے 100°، 145° اور ایک نامعلوم ہیں۔ نامعلوم زاویہ کتنا ہے؟"
+      },
+      "answer": 115,
+      "checker": "numeric",
+      "hint": {
+        "en": "The roads go all the way round: 360°.",
+        "ur": "سڑکیں پورے گرد جاتی ہیں: 360°۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 115°.",
+        "ur": "درست! 115°"
+      },
+      "feedback_wrong": {
+        "en": "100 + 145 = 245, and 360 − 245 = 115°.",
+        "ur": "100 + 145 = 245، اور 360 − 245 = 115°"
+      },
+      "common_wrong": [
+        {
+          "answer": 245,
+          "feedback": {
+            "en": "245 is the two angles added. Take it from 360: 115°.",
+            "ur": "245 دونوں زاویوں کا مجموعہ ہے۔ 360 سے نفی کریں: 115°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Angles unit complete! You solved real angle puzzles.",
+          "ur": "زاویوں کا باب مکمل! آپ نے اصل زاویوں کی پہیلیاں حل کیں۔"
+        }
+      },
+      "text": {
+        "en": "Picture the problem, choose the total (corner 90°, line or triangle 180°, round a point 360°), then take away the angles you know. Look for right angles hidden in words, and on a clock use 30° for each hour mark.",
+        "ur": "سوال کا تصور کریں، مجموعہ چنیں (کونا 90°، لکیر یا مثلث 180°، نقطے کے گرد 360°)، پھر معلوم زاویے نفی کریں۔ الفاظ میں چھپے قائمہ زاویے دیکھیں، اور گھڑی پر ہر گھنٹے کے نشان کے لیے 30° لیں۔"
+      },
+      "points": [
+        {
+          "en": "Choose the right total first.",
+          "ur": "پہلے صحیح مجموعہ چنیں۔"
+        },
+        {
+          "en": "Walls and poles stand at 90°.",
+          "ur": "دیواریں اور کھمبے 90° پر کھڑے ہوتے ہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_star",
+      "type": "apply",
+      "skill": "maths.geometry.word_problems",
+      "step": {
+        "id": "r_star",
+        "type": "number",
+        "prompt": {
+          "en": "A wheel has 5 equal spokes from the middle. What is the angle between two spokes next to each other?",
+          "ur": "ایک پہیے کے درمیان سے 5 برابر تیلیاں نکلتی ہیں۔ ساتھ والی دو تیلیوں کے درمیان زاویہ کتنا ہے؟"
+        },
+        "answer": 72,
+        "checker": "numeric",
+        "hint": {
+          "en": "All the way round: 360 ÷ 5.",
+          "ur": "پورا گرد: 360 ÷ 5"
+        },
+        "feedback_correct": {
+          "en": "Right! 72°.",
+          "ur": "درست! 72°"
+        },
+        "feedback_wrong": {
+          "en": "360 ÷ 5 = 72°.",
+          "ur": "360 ÷ 5 = 72°"
+        },
+        "common_wrong": [
+          {
+            "answer": 36,
+            "feedback": {
+              "en": "That shared 180°. All the way round is 360°: 72°.",
+              "ur": "اس میں 180° بانٹا۔ پورا گرد 360° ہے: 72°"
+            },
+            "misconception_id": "wrong_total"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_clock",
+      "type": "apply",
+      "skill": "maths.geometry.word_problems",
+      "step": {
+        "id": "r_clock",
+        "type": "number",
+        "prompt": {
+          "en": "What is the angle between the hands of a clock at 2 o'clock?",
+          "ur": "2 بجے گھڑی کی سوئیوں کے درمیان زاویہ کتنا ہے؟"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "Each hour mark is 30°.",
+          "ur": "ہر گھنٹے کا نشان 30° ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 60°.",
+          "ur": "درست! 60°"
+        },
+        "feedback_wrong": {
+          "en": "2 × 30° = 60°.",
+          "ur": "2 × 30° = 60°"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "2 is the hour. Each hour is 30°: 60°.",
+              "ur": "2 گھنٹہ ہے۔ ہر گھنٹہ 30°: 60°"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Angles unit. No textbook text or exercises were used.",
+    "Most mistakes in angle word problems come from choosing the wrong total, or missing a right angle given only in words (a wall, a pole). The steps practise both.",
+    "The unit test (u1 to u5) has one question per earlier lesson plus a real-life problem. Each is tagged with that lesson's skill, so results feed back into the mastery of earlier lessons.",
+    "The numbers were worked out in content/sources/g6-maths-09/angle_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
