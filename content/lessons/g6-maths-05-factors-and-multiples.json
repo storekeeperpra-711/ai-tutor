@@ -1,0 +1,773 @@
+{
+  "id": "g6-maths-05-factors-and-multiples",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find factors and multiples of a number, and use divisibility tests for 2, 3, 5 and 10.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Factors and Multiples"
+    }
+  ],
+  "skills": [
+    "maths.factors.factors_multiples"
+  ],
+  "title": {
+    "en": "Factors and multiples",
+    "ur": "اجزائے ضربی اور اضعاف"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "factor_multiple_swap",
+      "description": "Mixes up factors and multiples: says 4 is a multiple of 12."
+    },
+    {
+      "id": "missing_pairs",
+      "description": "Forgets factors when listing them, especially 1 and the number itself."
+    },
+    {
+      "id": "adds_for_multiple",
+      "description": "Adds instead of multiplying to find a multiple: the 5th multiple of 7 is 12."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.factors_multiples": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.factors_multiples": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "Which sentence is true?",
+            "ur": "کون سا جملہ درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "right",
+              "text": {
+                "en": "5 is a factor of 20, and 20 is a multiple of 5.",
+                "ur": "5، 20 کا جزو ضربی ہے، اور 20، 5 کا ضعف ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 5 divides 20 exactly: 20 = 4 × 5.",
+                "ur": "جی ہاں! 5، 20 کو پورا تقسیم کرتا ہے: 20 = 4 × 5"
+              }
+            },
+            {
+              "id": "swap",
+              "text": {
+                "en": "20 is a factor of 5.",
+                "ur": "20، 5 کا جزو ضربی ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A factor is never bigger than the number. 5 is a factor of 20.",
+                "ur": "جزو ضربی کبھی عدد سے بڑا نہیں ہوتا۔ 5، 20 کا جزو ضربی ہے۔"
+              },
+              "misconception_id": "factor_multiple_swap"
+            },
+            {
+              "id": "mult",
+              "text": {
+                "en": "5 is a multiple of 20.",
+                "ur": "5، 20 کا ضعف ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Multiples of 20 are 20, 40, 60 … 5 is a factor of 20.",
+                "ur": "20 کے اضعاف 20، 40، 60 … ہیں۔ 5، 20 کا جزو ضربی ہے۔"
+              },
+              "misconception_id": "factor_multiple_swap"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_count",
+        "type": "apply",
+        "step": {
+          "id": "qb_count",
+          "type": "number",
+          "prompt": {
+            "en": "How many factors does 20 have?",
+            "ur": "20 کے کتنے اجزائے ضربی ہیں؟"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "Find the pairs: 1 × 20, 2 × 10, 4 × 5.",
+            "ur": "جوڑے ڈھونڈیں: 1 × 20، 2 × 10، 4 × 5"
+          },
+          "feedback_correct": {
+            "en": "Right! 1, 2, 4, 5, 10 and 20: six factors.",
+            "ur": "درست! 1، 2، 4، 5، 10 اور 20: چھ اجزائے ضربی۔"
+          },
+          "feedback_wrong": {
+            "en": "1 × 20, 2 × 10, 4 × 5 give 1, 2, 4, 5, 10, 20: six factors.",
+            "ur": "1 × 20، 2 × 10، 4 × 5 سے 1، 2، 4، 5، 10، 20: چھ اجزائے ضربی۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 3,
+              "feedback": {
+                "en": "Each pair gives TWO factors: 3 pairs, 6 factors.",
+                "ur": "ہر جوڑے میں دو اجزائے ضربی ہیں: 3 جوڑے، 6 اجزائے ضربی۔"
+              },
+              "misconception_id": "missing_pairs"
+            },
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "Don't forget 1 and 20 itself: 1, 2, 4, 5, 10, 20.",
+                "ur": "1 اور خود 20 نہ بھولیں: 1، 2، 4، 5، 10، 20"
+              },
+              "misconception_id": "missing_pairs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Maryam listed the factors of 16 as 2, 4, 8. What is missing?",
+            "ur": "مریم نے 16 کے اجزائے ضربی 2، 4، 8 لکھے۔ کیا رہ گیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "ends",
+              "text": {
+                "en": "1 and 16: every number has 1 and itself as factors.",
+                "ur": "1 اور 16: ہر عدد کے اجزائے ضربی میں 1 اور خود وہ عدد ہوتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The factors of 16 are 1, 2, 4, 8, 16.",
+                "ur": "جی ہاں! 16 کے اجزائے ضربی 1، 2، 4، 8، 16 ہیں۔"
+              }
+            },
+            {
+              "id": "six",
+              "text": {
+                "en": "6",
+                "ur": "6"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "16 ÷ 6 is not exact, so 6 is not a factor. 1 and 16 are missing.",
+                "ur": "16 ÷ 6 پورا نہیں، اس لیے 6 جزو ضربی نہیں۔ 1 اور 16 رہ گئے ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کچھ نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "1 × 16 = 16, so 1 and 16 are factors too.",
+                "ur": "1 × 16 = 16، اس لیے 1 اور 16 بھی اجزائے ضربی ہیں۔"
+              },
+              "misconception_id": "missing_pairs"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_words",
+      "front": {
+        "en": "Factor or multiple?",
+        "ur": "جزو ضربی یا ضعف؟"
+      },
+      "back": {
+        "en": "A factor divides a number exactly: 4 is a factor of 12. A multiple is in its times table: 12 is a multiple of 4.",
+        "ur": "جزو ضربی عدد کو پورا تقسیم کرتا ہے: 4، 12 کا جزو ضربی ہے۔ ضعف پہاڑے میں آتا ہے: 12، 4 کا ضعف ہے۔"
+      }
+    },
+    {
+      "id": "f_tests",
+      "front": {
+        "en": "Divisibility tests for 2, 3, 5, 10",
+        "ur": "2، 3، 5، 10 سے تقسیم کی جانچ"
+      },
+      "back": {
+        "en": "2: last digit even. 5: last digit 0 or 5. 10: last digit 0. 3: the sum of the digits divides by 3.",
+        "ur": "2: آخری ہندسہ جفت۔ 5: آخری ہندسہ 0 یا 5۔ 10: آخری ہندسہ 0۔ 3: ہندسوں کا مجموعہ 3 سے تقسیم ہو۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_rows",
+      "text": {
+        "en": "Take 24 small things (beans, buttons or stones). Find every way to put them in equal rows. Write each way as a multiplication. What are the factors of 24?",
+        "ur": "24 چھوٹی چیزیں لیں (دانے، بٹن یا کنکر)۔ انہیں برابر قطاروں میں رکھنے کے سب طریقے ڈھونڈیں۔ ہر طریقے کو ضرب کی شکل میں لکھیں۔ 24 کے اجزائے ضربی کیا ہیں؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Factor",
+      "ur": "جزو ضربی"
+    },
+    {
+      "en": "Multiple",
+      "ur": "ضعف"
+    },
+    {
+      "en": "Divisible",
+      "ur": "قابل تقسیم"
+    },
+    {
+      "en": "Divisibility test",
+      "ur": "قابلِ تقسیم ہونے کی جانچ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ayesha has 12 laddoos. She wants to put them in equal rows on a tray. How many different ways can she do it?",
+          "ur": "عائشہ کے پاس 12 لڈو ہیں۔ وہ انہیں تھال میں برابر قطاروں میں رکھنا چاہتی ہے۔ وہ کتنے مختلف طریقوں سے رکھ سکتی ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn about factors and multiples. First, a quick times-tables check.",
+        "ur": "آج ہم اجزائے ضربی اور اضعاف کے بارے میں سیکھیں گے۔ پہلے پہاڑوں کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.multiplication.facts",
+      "prompt": {
+        "en": "Work out 6 × 7",
+        "ur": "حل کریں: 6 × 7"
+      },
+      "answer": 42,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count 7 sixes: 6, 12, 18 …",
+        "ur": "چھ کو 7 بار گنیں: 6، 12، 18 …"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 7 = 42.",
+        "ur": "درست! 6 × 7 = 42"
+      },
+      "feedback_wrong": {
+        "en": "6 × 7 = 42.",
+        "ur": "6 × 7 = 42"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "That is 6 + 7. Multiply: 6 × 7 = 42.",
+            "ur": "یہ 6 + 7 ہے۔ ضرب دیں: 6 × 7 = 42"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Each row arrangement is a pair of factors!",
+          "ur": "قطاروں کی ہر ترتیب اجزائے ضربی کا ایک جوڑا ہے!"
+        }
+      },
+      "text": {
+        "en": "12 laddoos can go in 1 row of 12, 2 rows of 6, 3 rows of 4, 4 rows of 3, 6 rows of 2 or 12 rows of 1. The numbers that divide 12 exactly are its factors: 1, 2, 3, 4, 6, 12. The multiples of a number are its times table: the multiples of 4 are 4, 8, 12, 16, 20 … So 4 is a factor of 12, and 12 is a multiple of 4.",
+        "ur": "12 لڈو 12 کی 1 قطار، 6 کی 2 قطاروں، 4 کی 3 قطاروں، 3 کی 4 قطاروں، 2 کی 6 قطاروں یا 1 کی 12 قطاروں میں رکھے جا سکتے ہیں۔ جو اعداد 12 کو پورا تقسیم کرتے ہیں وہ اس کے اجزائے ضربی ہیں: 1، 2، 3، 4، 6، 12۔ کسی عدد کے اضعاف اس کا پہاڑا ہیں: 4 کے اضعاف 4، 8، 12، 16، 20 … ہیں۔ اس لیے 4، 12 کا جزو ضربی ہے، اور 12، 4 کا ضعف ہے۔"
+      }
+    },
+    {
+      "id": "s4_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many factors does 12 have?",
+        "ur": "12 کے کتنے اجزائے ضربی ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Pairs: 1 × 12, 2 × 6, 3 × 4. Count every number.",
+        "ur": "جوڑے: 1 × 12، 2 × 6، 3 × 4۔ ہر عدد گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1, 2, 3, 4, 6, 12: six factors.",
+        "ur": "درست! 1، 2، 3، 4، 6، 12: چھ اجزائے ضربی۔"
+      },
+      "feedback_wrong": {
+        "en": "Three pairs give six factors: 1, 2, 3, 4, 6, 12.",
+        "ur": "تین جوڑوں سے چھ اجزائے ضربی: 1، 2، 3، 4، 6، 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Each pair has two factors. 3 pairs make 6 factors.",
+            "ur": "ہر جوڑے میں دو اجزائے ضربی ہیں۔ 3 جوڑے، 6 اجزائے ضربی۔"
+          },
+          "misconception_id": "missing_pairs"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't forget 1 and 12 itself.",
+            "ur": "1 اور خود 12 نہ بھولیں۔"
+          },
+          "misconception_id": "missing_pairs"
+        }
+      ]
+    },
+    {
+      "id": "s5_not_factor",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these is NOT a factor of 18?",
+        "ur": "ان میں سے کون سا 18 کا جزو ضربی نہیں ہے؟"
+      },
+      "options": [
+        {
+          "id": "four",
+          "text": {
+            "en": "4",
+            "ur": "4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 18 ÷ 4 is 4 remainder 2, not exact.",
+            "ur": "جی ہاں! 18 ÷ 4 کا باقی 2 بچتا ہے، پورا نہیں۔"
+          }
+        },
+        {
+          "id": "three",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 × 6 = 18, so 3 is a factor.",
+            "ur": "3 × 6 = 18، اس لیے 3 جزو ضربی ہے۔"
+          }
+        },
+        {
+          "id": "nine",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 × 9 = 18, so 9 is a factor.",
+            "ur": "2 × 9 = 18، اس لیے 9 جزو ضربی ہے۔"
+          }
+        },
+        {
+          "id": "one",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 is a factor of every number.",
+            "ur": "1 ہر عدد کا جزو ضربی ہے۔"
+          },
+          "misconception_id": "missing_pairs"
+        }
+      ]
+    },
+    {
+      "id": "s6_multiple",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the 5th multiple of 7?",
+        "ur": "7 کا پانچواں ضعف کیا ہے؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count in 7s five times: 7, 14, …",
+        "ur": "7 کے حساب سے پانچ بار گنیں: 7، 14، …"
+      },
+      "feedback_correct": {
+        "en": "Right! 7, 14, 21, 28, 35.",
+        "ur": "درست! 7، 14، 21، 28، 35"
+      },
+      "feedback_wrong": {
+        "en": "The 5th multiple of 7 is 5 × 7 = 35.",
+        "ur": "7 کا پانچواں ضعف 5 × 7 = 35 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That is 7 + 5. Multiply: 5 × 7 = 35.",
+            "ur": "یہ 7 + 5 ہے۔ ضرب دیں: 5 × 7 = 35"
+          },
+          "misconception_id": "adds_for_multiple"
+        },
+        {
+          "answer": 42,
+          "feedback": {
+            "en": "That is the 6th multiple. Count again: 7, 14, 21, 28, 35.",
+            "ur": "یہ چھٹا ضعف ہے۔ دوبارہ گنیں: 7، 14، 21، 28، 35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_tests",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Some quick tricks tell you if a number divides exactly!",
+          "ur": "کچھ آسان طریقے بتا دیتے ہیں کہ عدد پورا تقسیم ہوتا ہے یا نہیں!"
+        }
+      },
+      "text": {
+        "en": "Divisible by 2: the last digit is even (0, 2, 4, 6, 8). By 5: the last digit is 0 or 5. By 10: the last digit is 0. By 3: add the digits; if the sum divides by 3, so does the number. 471: 4 + 7 + 1 = 12, and 12 divides by 3, so 471 does too.",
+        "ur": "2 سے قابل تقسیم: آخری ہندسہ جفت ہو (0، 2، 4، 6، 8)۔ 5 سے: آخری ہندسہ 0 یا 5 ہو۔ 10 سے: آخری ہندسہ 0 ہو۔ 3 سے: ہندسے جمع کریں؛ اگر مجموعہ 3 سے تقسیم ہو تو عدد بھی ہوگا۔ 471: 4 + 7 + 1 = 12، اور 12، 3 سے تقسیم ہوتا ہے، اس لیے 471 بھی۔"
+      }
+    },
+    {
+      "id": "s8_test_three",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these numbers is divisible by 3?",
+        "ur": "ان میں سے کون سا عدد 3 سے قابل تقسیم ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "471",
+            "ur": "471"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 4 + 7 + 1 = 12, which divides by 3.",
+            "ur": "جی ہاں! 4 + 7 + 1 = 12، جو 3 سے تقسیم ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "a",
+          "text": {
+            "en": "472",
+            "ur": "472"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 + 7 + 2 = 13, which doesn't divide by 3.",
+            "ur": "4 + 7 + 2 = 13، جو 3 سے تقسیم نہیں ہوتا۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "203",
+            "ur": "203"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 + 0 + 3 = 5. Ending in 3 doesn't make it divisible by 3.",
+            "ur": "2 + 0 + 3 = 5۔ آخر میں 3 ہونے سے 3 سے تقسیم نہیں ہوتا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal says, \"4 is a multiple of 12.\" What went wrong?",
+        "ur": "بلال کہتا ہے، \"4، 12 کا ضعف ہے۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "swap",
+          "text": {
+            "en": "He swapped the words: 4 is a FACTOR of 12, and 12 is a multiple of 4.",
+            "ur": "اس نے الفاظ بدل دیے: 4، 12 کا جزو ضربی ہے، اور 12، 4 کا ضعف ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Multiples of 12 are 12, 24, 36 …; 4 is not one of them.",
+            "ur": "جی ہاں! 12 کے اضعاف 12، 24، 36 … ہیں؛ 4 ان میں نہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 4 and 12 go together.",
+            "ur": "کوئی غلطی نہیں۔ 4 اور 12 ساتھ آتے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "They do, but the other way round: 4 divides 12, so 4 is a factor of 12.",
+            "ur": "آتے ہیں، مگر الٹ: 4، 12 کو تقسیم کرتا ہے، اس لیے 4، 12 کا جزو ضربی ہے۔"
+          },
+          "misconception_id": "factor_multiple_swap"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I always mix up factors and multiples! Can you teach me the difference, using 3 and 12?",
+          "ur": "میں ہمیشہ اجزائے ضربی اور اضعاف میں الجھ جاتا ہوں! کیا آپ 3 اور 12 سے فرق سمجھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: what is the difference between a factor and a multiple? Use 3 and 12.",
+        "ur": "اپنے الفاظ میں بتائیں: جزو ضربی اور ضعف میں کیا فرق ہے؟ 3 اور 12 استعمال کریں۔"
+      },
+      "key_idea": "3 is a factor of 12 because 3 divides 12 exactly (12 ÷ 3 = 4). 12 is a multiple of 3 because it is in the 3 times table (3 × 4 = 12). Factors are small and divide in; multiples are big and come from multiplying.",
+      "levels": {
+        "got_it": "Says 3 is a factor of 12 because it divides 12 exactly, and 12 is a multiple of 3 because it is in the 3 times table (3 × 4).",
+        "partly": "Gets one of the two right, or states both without a reason.",
+        "not_yet": "Mixes them up, gives no answer, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "divide",
+          "divides",
+          "تقسیم",
+          "taqseem",
+          "÷"
+        ],
+        [
+          "times table",
+          "multiply",
+          "پہاڑا",
+          "ضرب",
+          "pahara",
+          "zarb",
+          "×"
+        ],
+        [
+          "factor",
+          "multiple",
+          "جزو",
+          "ضعف",
+          "juz",
+          "zaaf"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 3 divides 12 exactly, so 3 is a factor; 12 is in the 3 times table, so 12 is a multiple of 3.",
+          "ur": "بہت خوب سمجھایا! 3، 12 کو پورا تقسیم کرتا ہے، اس لیے 3 جزو ضربی ہے؛ 12، 3 کے پہاڑے میں ہے، اس لیے 12، 3 کا ضعف ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now explain the other word too: which one divides, and which one is in the times table?",
+          "ur": "اچھی شروعات! اب دوسرا لفظ بھی سمجھائیں: کون تقسیم کرتا ہے، اور کون پہاڑے میں آتا ہے؟"
+        },
+        "not_yet": {
+          "en": "Think: 12 ÷ 3 = 4 and 3 × 4 = 12. Which number divides the other? Which is in the other's times table?",
+          "ur": "سوچیں: 12 ÷ 3 = 4 اور 3 × 4 = 12۔ کون سا عدد دوسرے کو تقسیم کرتا ہے؟ کون دوسرے کے پہاڑے میں ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_largest",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the largest factor of 36 that is smaller than 36?",
+        "ur": "36 کا سب سے بڑا جزو ضربی کون سا ہے جو 36 سے چھوٹا ہو؟"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find the smallest factor bigger than 1, and pair it.",
+        "ur": "1 سے بڑا سب سے چھوٹا جزو ضربی ڈھونڈیں، اور اس کا جوڑا بنائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 18 = 36, so 18.",
+        "ur": "درست! 2 × 18 = 36، اس لیے 18"
+      },
+      "feedback_wrong": {
+        "en": "The smallest factor after 1 is 2, and 36 ÷ 2 = 18.",
+        "ur": "1 کے بعد سب سے چھوٹا جزو ضربی 2 ہے، اور 36 ÷ 2 = 18"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is a factor, but 18 is bigger: 2 × 18 = 36.",
+            "ur": "12 جزو ضربی ہے، مگر 18 بڑا ہے: 2 × 18 = 36"
+          }
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 × 6 = 36, but 18 is a bigger factor.",
+            "ur": "6 × 6 = 36، مگر 18 بڑا جزو ضربی ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Factors divide in, multiples come out of the times table!",
+          "ur": "اجزائے ضربی تقسیم کرتے ہیں، اضعاف پہاڑے سے نکلتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A factor divides a number exactly: the factors of 12 are 1, 2, 3, 4, 6, 12. A multiple is in a number's times table: 4, 8, 12, 16 … are multiples of 4. Find factors in pairs. Quick tests: 2 (even), 5 (ends 0 or 5), 10 (ends 0), 3 (digit sum divides by 3).",
+        "ur": "جزو ضربی عدد کو پورا تقسیم کرتا ہے: 12 کے اجزائے ضربی 1، 2، 3، 4، 6، 12 ہیں۔ ضعف عدد کے پہاڑے میں ہوتا ہے: 4، 8، 12، 16 … 4 کے اضعاف ہیں۔ اجزائے ضربی جوڑوں میں ڈھونڈیں۔ آسان جانچ: 2 (جفت)، 5 (آخر میں 0 یا 5)، 10 (آخر میں 0)، 3 (ہندسوں کا مجموعہ 3 سے تقسیم)۔"
+      },
+      "points": [
+        {
+          "en": "1 and the number itself are always factors.",
+          "ur": "1 اور خود وہ عدد ہمیشہ اجزائے ضربی ہیں۔"
+        },
+        {
+          "en": "4 is a factor of 12; 12 is a multiple of 4.",
+          "ur": "4، 12 کا جزو ضربی ہے؛ 12، 4 کا ضعف ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_multiple",
+      "type": "apply",
+      "skill": "maths.factors.factors_multiples",
+      "step": {
+        "id": "r_multiple",
+        "type": "number",
+        "prompt": {
+          "en": "What is the 4th multiple of 9?",
+          "ur": "9 کا چوتھا ضعف کیا ہے؟"
+        },
+        "answer": 36,
+        "checker": "numeric",
+        "hint": {
+          "en": "4 × 9.",
+          "ur": "4 × 9"
+        },
+        "feedback_correct": {
+          "en": "Right! 9, 18, 27, 36.",
+          "ur": "درست! 9، 18، 27، 36"
+        },
+        "feedback_wrong": {
+          "en": "4 × 9 = 36.",
+          "ur": "4 × 9 = 36"
+        },
+        "common_wrong": [
+          {
+            "answer": 13,
+            "feedback": {
+              "en": "That is 9 + 4. Multiply: 4 × 9 = 36.",
+              "ur": "یہ 9 + 4 ہے۔ ضرب دیں: 4 × 9 = 36"
+            },
+            "misconception_id": "adds_for_multiple"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_count",
+      "type": "apply",
+      "skill": "maths.factors.factors_multiples",
+      "step": {
+        "id": "r_count",
+        "type": "number",
+        "prompt": {
+          "en": "How many factors does 15 have?",
+          "ur": "15 کے کتنے اجزائے ضربی ہیں؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Pairs: 1 × 15, 3 × 5.",
+          "ur": "جوڑے: 1 × 15، 3 × 5"
+        },
+        "feedback_correct": {
+          "en": "Right! 1, 3, 5, 15.",
+          "ur": "درست! 1، 3، 5، 15"
+        },
+        "feedback_wrong": {
+          "en": "Two pairs: 1, 3, 5, 15. That is 4 factors.",
+          "ur": "دو جوڑے: 1، 3، 5، 15۔ یعنی 4 اجزائے ضربی۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "Each pair gives two factors: 4 in all.",
+              "ur": "ہر جوڑے میں دو اجزائے ضربی ہیں: کل 4"
+            },
+            "misconception_id": "missing_pairs"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Factors and Multiples unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-05. Fix the names and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: جزو ضربی / اجزائے ضربی (factor / factors), ضعف / اضعاف (multiple / multiples), قابل تقسیم (divisible).",
+    "The numbers were worked out in content/sources/g6-maths-05/factors_and_multiples.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
