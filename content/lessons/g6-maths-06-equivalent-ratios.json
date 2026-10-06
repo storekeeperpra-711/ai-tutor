@@ -1,0 +1,820 @@
+{
+  "id": "g6-maths-06-equivalent-ratios",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Make equivalent ratios by multiplying or dividing both terms by the same number, and write a ratio in its simplest form.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Ratio and Proportion"
+    }
+  ],
+  "skills": [
+    "maths.ratio.equivalent"
+  ],
+  "title": {
+    "en": "Equivalent ratios",
+    "ur": "مساوی نسبتیں"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.meaning"
+    },
+    {
+      "skill": "maths.fractions.equivalent"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "add_same_number",
+      "description": "Adds the same number to both terms (2 : 3 = 4 : 5) instead of multiplying or dividing."
+    },
+    {
+      "id": "bigger_numbers_more",
+      "description": "Thinks 4 : 10 is a stronger or bigger mix than 2 : 5 because its numbers are bigger."
+    },
+    {
+      "id": "not_fully_simplified",
+      "description": "Stops simplifying too early (8 : 12 = 4 : 6)."
+    },
+    {
+      "id": "order_swapped",
+      "description": "Swaps the two terms while simplifying (25 : 15 = 3 : 5)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.equivalent": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.equivalent": [
+      {
+        "id": "qb_how_equivalent",
+        "type": "recall",
+        "step": {
+          "id": "qb_how_equivalent",
+          "type": "choice",
+          "prompt": {
+            "en": "How do you make a ratio equivalent to 3 : 7?",
+            "ur": "3 : 7 کے مساوی نسبت کیسے بناتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Multiply both numbers by the same number, like 6 : 14.",
+                "ur": "دونوں عدد کو ایک ہی عدد سے ضرب دیں، جیسے 6 : 14۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 3 × 2 = 6 and 7 × 2 = 14, so 3 : 7 = 6 : 14.",
+                "ur": "جی ہاں! 3 × 2 = 6 اور 7 × 2 = 14، اس لیے 3 : 7 = 6 : 14"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Add the same number to both, like 5 : 9.",
+                "ur": "دونوں میں ایک ہی عدد جمع کریں، جیسے 5 : 9۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Adding changes the comparison. Multiply or divide both by the same number.",
+                "ur": "جمع کرنے سے موازنہ بدل جاتا ہے۔ دونوں کو ایک ہی عدد سے ضرب یا تقسیم کریں۔"
+              },
+              "misconception_id": "add_same_number"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Swap them round, like 7 : 3.",
+                "ur": "انہیں الٹ دیں، جیسے 7 : 3۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "7 : 3 is a different ratio: the order matters.",
+                "ur": "7 : 3 ایک مختلف نسبت ہے: ترتیب اہم ہے۔"
+              },
+              "misconception_id": "order_swapped"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_simplify",
+        "type": "apply",
+        "step": {
+          "id": "qb_simplify",
+          "type": "text_check",
+          "prompt": {
+            "en": "Write 10 : 4 in its simplest form.",
+            "ur": "10 : 4 کو سادہ ترین شکل میں لکھیں۔"
+          },
+          "checker": "text",
+          "expected": "5:2",
+          "accept": [
+            "5 to 2",
+            "5∶2"
+          ],
+          "hint": {
+            "en": "Which number divides both 10 and 4?",
+            "ur": "کون سا عدد 10 اور 4 دونوں کو تقسیم کرتا ہے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! Divide both by 2: 10 : 4 = 5 : 2.",
+            "ur": "درست! دونوں کو 2 سے تقسیم کریں: 10 : 4 = 5 : 2"
+          },
+          "feedback_wrong": {
+            "en": "2 divides both: 10 ÷ 2 = 5 and 4 ÷ 2 = 2, so 10 : 4 = 5 : 2.",
+            "ur": "2 دونوں کو تقسیم کرتا ہے: 10 ÷ 2 = 5 اور 4 ÷ 2 = 2، اس لیے 10 : 4 = 5 : 2"
+          },
+          "common_wrong": [
+            {
+              "answer": "2:5",
+              "feedback": {
+                "en": "Keep the order: 10 was first, so its part (5) stays first.",
+                "ur": "ترتیب برقرار رکھیں: 10 پہلے تھا، اس لیے اس کا حصہ (5) پہلے رہے گا۔"
+              },
+              "misconception_id": "order_swapped"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error_add",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error_add",
+          "type": "choice",
+          "prompt": {
+            "en": "Rida says 1 : 3 = 4 : 6, because she added 3 to both numbers. Is she right?",
+            "ur": "ردا کہتی ہے 1 : 3 = 4 : 6، کیونکہ اس نے دونوں عدد میں 3 جمع کیا۔ کیا وہ درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "no",
+              "text": {
+                "en": "No. She must multiply both by the same number: 1 : 3 = 2 : 6.",
+                "ur": "نہیں۔ اسے دونوں کو ایک ہی عدد سے ضرب دینی چاہیے: 1 : 3 = 2 : 6"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! 1 : 3 = 2 : 6 (both × 2). 4 : 6 is a different ratio.",
+                "ur": "درست! 1 : 3 = 2 : 6 (دونوں × 2)۔ 4 : 6 ایک مختلف نسبت ہے۔"
+              }
+            },
+            {
+              "id": "yes",
+              "text": {
+                "en": "Yes. She did the same to both numbers.",
+                "ur": "ہاں۔ اس نے دونوں عدد کے ساتھ ایک جیسا کام کیا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Doing the same only works with × and ÷. Adding changes the ratio.",
+                "ur": "ایک جیسا کام صرف × اور ÷ سے ٹھیک رہتا ہے۔ جمع کرنے سے نسبت بدل جاتی ہے۔"
+              },
+              "misconception_id": "add_same_number"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_equivalent",
+      "front": {
+        "en": "How do you make an equivalent ratio?",
+        "ur": "مساوی نسبت کیسے بناتے ہیں؟"
+      },
+      "back": {
+        "en": "Multiply or divide both numbers by the same number. 2 : 5 = 4 : 10 = 6 : 15",
+        "ur": "دونوں عدد کو ایک ہی عدد سے ضرب یا تقسیم دیں۔ 2 : 5 = 4 : 10 = 6 : 15"
+      }
+    },
+    {
+      "id": "f_simplest",
+      "front": {
+        "en": "When is a ratio in its simplest form?",
+        "ur": "نسبت سادہ ترین شکل میں کب ہوتی ہے؟"
+      },
+      "back": {
+        "en": "When no number except 1 divides both numbers. 2 : 3 is simplest; 8 : 12 is not (4 divides both).",
+        "ur": "جب 1 کے سوا کوئی عدد دونوں کو تقسیم نہ کرے۔ 2 : 3 سادہ ترین ہے؛ 8 : 12 نہیں (4 دونوں کو تقسیم کرتا ہے)۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sharbat",
+      "text": {
+        "en": "Make sharbat with an adult: 1 spoon of syrup to 4 spoons of water. Now make twice as much. How many spoons of each do you need? Does it taste the same?",
+        "ur": "کسی بڑے کے ساتھ شربت بنائیں: 1 چمچ شربت اور 4 چمچ پانی۔ اب دگنا بنائیں۔ ہر ایک کے کتنے چمچ چاہییں؟ کیا ذائقہ ایک جیسا ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Ratio",
+      "ur": "نسبت"
+    },
+    {
+      "en": "Equivalent ratios",
+      "ur": "مساوی نسبتیں"
+    },
+    {
+      "en": "Simplest form",
+      "ur": "سادہ ترین شکل"
+    },
+    {
+      "en": "Term (of a ratio)",
+      "ur": "نسبت کا رکن"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali makes lemonade with 2 glasses of lemon juice and 5 of water. Sara uses 4 and 10. Whose lemonade is stronger?",
+          "ur": "علی 2 گلاس لیموں کے رس اور 5 گلاس پانی سے لیمونیڈ بناتا ہے۔ سارہ 4 اور 10 استعمال کرتی ہے۔ کس کا لیمونیڈ زیادہ تیز ہے؟"
+        }
+      },
+      "text": {
+        "en": "Let's find out. First, a quick check.",
+        "ur": "آئیں معلوم کریں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.ratio.meaning",
+      "prompt": {
+        "en": "A cake uses 2 cups of sugar and 5 cups of flour. What is the ratio of sugar to flour?",
+        "ur": "ایک کیک میں 2 کپ چینی اور 5 کپ آٹا ڈلتا ہے۔ چینی اور آٹے کی نسبت کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "2 : 5",
+            "ur": "2 : 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Sugar first: 2 : 5.",
+            "ur": "جی ہاں! چینی پہلے: 2 : 5"
+          }
+        },
+        {
+          "id": "swapped",
+          "text": {
+            "en": "5 : 2",
+            "ur": "5 : 2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is flour to sugar. Sugar is named first.",
+            "ur": "یہ آٹے اور چینی کی نسبت ہے۔ چینی پہلے آئی ہے۔"
+          },
+          "misconception_id": "order_swapped"
+        },
+        {
+          "id": "whole",
+          "text": {
+            "en": "2 : 7",
+            "ur": "2 : 7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is all the cups. Compare sugar with flour only.",
+            "ur": "7 تمام کپ ہیں۔ چینی کا موازنہ صرف آٹے سے کریں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_predict",
+      "type": "choice",
+      "prompt": {
+        "en": "Guess first: Ali uses 2 : 5 and Sara uses 4 : 10. Whose lemonade is stronger?",
+        "ur": "پہلے اندازہ لگائیں: علی 2 : 5 اور سارہ 4 : 10 استعمال کرتی ہے۔ کس کا لیمونیڈ زیادہ تیز ہے؟"
+      },
+      "options": [
+        {
+          "id": "sara",
+          "text": {
+            "en": "Sara's: she uses more lemon juice",
+            "ur": "سارہ کا: وہ زیادہ لیموں کا رس ڈالتی ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "She uses more lemon, but also more water. Let's look closely.",
+            "ur": "وہ لیموں زیادہ ڈالتی ہے، مگر پانی بھی زیادہ۔ آئیں غور سے دیکھیں۔"
+          },
+          "misconception_id": "bigger_numbers_more"
+        },
+        {
+          "id": "ali",
+          "text": {
+            "en": "Ali's: he uses less water",
+            "ur": "علی کا: وہ کم پانی ڈالتا ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "He uses less water, but also less lemon. Let's look closely.",
+            "ur": "وہ پانی کم ڈالتا ہے، مگر لیموں بھی کم۔ آئیں غور سے دیکھیں۔"
+          }
+        },
+        {
+          "id": "same",
+          "text": {
+            "en": "They taste the same",
+            "ur": "دونوں کا ذائقہ ایک جیسا ہے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Good thinking! Let's see why.",
+            "ur": "بہت خوب سوچا! آئیں دیکھیں کیوں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Sara just made two jugs of Ali's lemonade!",
+          "ur": "سارہ نے بس علی والے لیمونیڈ کے دو جگ بنائے!"
+        }
+      },
+      "text": {
+        "en": "Sara's 4 : 10 is Ali's 2 : 5 made twice: 2 × 2 = 4 and 5 × 2 = 10. For every 2 glasses of lemon there are still 5 of water, so they taste the same. 2 : 5, 4 : 10 and 6 : 15 are equivalent ratios. To make one, multiply (or divide) both numbers by the same number, just like equivalent fractions.",
+        "ur": "سارہ کا 4 : 10، علی کا 2 : 5 دو بار بنایا ہوا ہے: 2 × 2 = 4 اور 5 × 2 = 10۔ ہر 2 گلاس لیموں کے مقابلے میں اب بھی 5 گلاس پانی ہے، اس لیے ذائقہ ایک جیسا ہے۔ 2 : 5، 4 : 10 اور 6 : 15 مساوی نسبتیں ہیں۔ مساوی نسبت بنانے کے لیے دونوں عدد کو ایک ہی عدد سے ضرب (یا تقسیم) دیں، بالکل مساوی کسور کی طرح۔"
+      }
+    },
+    {
+      "id": "s5_fill_gap",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Fill the gap: 3 : 4 = ? : 20. What is the missing number?",
+        "ur": "خالی جگہ پُر کریں: 3 : 4 = ? : 20۔ غائب عدد کیا ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × 5 = 20. Do the same to the 3.",
+        "ur": "4 × 5 = 20۔ 3 کے ساتھ بھی یہی کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 5 = 15, so 3 : 4 = 15 : 20.",
+        "ur": "درست! 3 × 5 = 15، اس لیے 3 : 4 = 15 : 20"
+      },
+      "feedback_wrong": {
+        "en": "4 was multiplied by 5 to make 20, so multiply 3 by 5 too: 3 × 5 = 15.",
+        "ur": "20 بنانے کے لیے 4 کو 5 سے ضرب دی گئی، اس لیے 3 کو بھی 5 سے ضرب دیں: 3 × 5 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 19,
+          "feedback": {
+            "en": "You added 16 because 4 + 16 = 20. Multiply instead: 4 × 5 = 20.",
+            "ur": "آپ نے 16 جمع کیا کیونکہ 4 + 16 = 20۔ اس کے بجائے ضرب دیں: 4 × 5 = 20"
+          },
+          "misconception_id": "add_same_number"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "If the 3 stays the same, the mix changes. Multiply it by 5 too.",
+            "ur": "اگر 3 ویسا ہی رہے تو آمیزہ بدل جاتا ہے۔ اسے بھی 5 سے ضرب دیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_simplest",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Big numbers are hard to compare. Can we make them smaller?",
+          "ur": "بڑے اعداد کا موازنہ مشکل ہے۔ کیا ہم انہیں چھوٹا کر سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Yes: divide both numbers by the same number. 12 : 18: 6 divides both, so 12 : 18 = (12 ÷ 6) : (18 ÷ 6) = 2 : 3. Now no number except 1 divides both 2 and 3, so 2 : 3 is the simplest form. Keep the order: 12 was first, so 2 stays first.",
+        "ur": "جی ہاں: دونوں عدد کو ایک ہی عدد سے تقسیم کریں۔ 12 : 18 میں 6 دونوں کو تقسیم کرتا ہے، اس لیے 12 : 18 = (12 ÷ 6) : (18 ÷ 6) = 2 : 3۔ اب 1 کے سوا کوئی عدد 2 اور 3 دونوں کو تقسیم نہیں کرتا، اس لیے 2 : 3 سادہ ترین شکل ہے۔ ترتیب برقرار رکھیں: 12 پہلے تھا، اس لیے 2 پہلے رہے گا۔"
+      }
+    },
+    {
+      "id": "s7_simplify",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A class has 8 girls and 12 boys. Write the ratio of girls to boys in its simplest form.",
+        "ur": "ایک جماعت میں 8 لڑکیاں اور 12 لڑکے ہیں۔ لڑکیوں اور لڑکوں کی نسبت سادہ ترین شکل میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "2:3",
+      "accept": [
+        "2 to 3",
+        "2∶3"
+      ],
+      "hint": {
+        "en": "Divide both by 2, then look again: can you divide by 2 once more?",
+        "ur": "دونوں کو 2 سے تقسیم کریں، پھر دوبارہ دیکھیں: کیا ایک بار پھر 2 سے تقسیم ہو سکتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Well done! 8 : 12 = 4 : 6 = 2 : 3. You can also divide by 4 in one go.",
+        "ur": "شاباش! 8 : 12 = 4 : 6 = 2 : 3۔ آپ ایک ہی بار میں 4 سے بھی تقسیم کر سکتے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "4 divides both: 8 ÷ 4 = 2 and 12 ÷ 4 = 3. So 8 : 12 = 2 : 3.",
+        "ur": "4 دونوں کو تقسیم کرتا ہے: 8 ÷ 4 = 2 اور 12 ÷ 4 = 3۔ اس لیے 8 : 12 = 2 : 3"
+      },
+      "common_wrong": [
+        {
+          "answer": "4:6",
+          "feedback": {
+            "en": "4 : 6 is equal, but 2 still divides both. Keep going.",
+            "ur": "4 : 6 برابر ہے، لیکن 2 اب بھی دونوں کو تقسیم کرتا ہے۔ آگے بڑھیں۔"
+          },
+          "misconception_id": "not_fully_simplified"
+        },
+        {
+          "answer": "3:2",
+          "feedback": {
+            "en": "Keep the order: girls (8) came first, so their part stays first.",
+            "ur": "ترتیب برقرار رکھیں: لڑکیاں (8) پہلے تھیں، اس لیے ان کا حصہ پہلے رہے گا۔"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s8_simplify_bigger_first",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A farmer has 25 goats and 15 cows. Write the ratio of goats to cows in its simplest form.",
+        "ur": "ایک کسان کے پاس 25 بکریاں اور 15 گائیں ہیں۔ بکریوں اور گایوں کی نسبت سادہ ترین شکل میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "5:3",
+      "accept": [
+        "5 to 3",
+        "5∶3"
+      ],
+      "hint": {
+        "en": "Which number divides both 25 and 15?",
+        "ur": "کون سا عدد 25 اور 15 دونوں کو تقسیم کرتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! Divide both by 5: 25 : 15 = 5 : 3.",
+        "ur": "درست! دونوں کو 5 سے تقسیم کریں: 25 : 15 = 5 : 3"
+      },
+      "feedback_wrong": {
+        "en": "5 divides both: 25 ÷ 5 = 5 and 15 ÷ 5 = 3. Goats first, so 5 : 3.",
+        "ur": "5 دونوں کو تقسیم کرتا ہے: 25 ÷ 5 = 5 اور 15 ÷ 5 = 3۔ بکریاں پہلے، اس لیے 5 : 3"
+      },
+      "common_wrong": [
+        {
+          "answer": "3:5",
+          "feedback": {
+            "en": "The goats came first (25), so their part (5) stays first: 5 : 3.",
+            "ur": "بکریاں (25) پہلے تھیں، اس لیے ان کا حصہ (5) پہلے رہے گا: 5 : 3"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zain says 2 : 3 = 4 : 5, because he added 2 to both numbers. What went wrong?",
+        "ur": "زین کہتا ہے 2 : 3 = 4 : 5، کیونکہ اس نے دونوں عدد میں 2 جمع کیا۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "added",
+          "text": {
+            "en": "Adding changes the ratio. He should multiply both: 2 : 3 = 4 : 6.",
+            "ur": "جمع کرنے سے نسبت بدل جاتی ہے۔ اسے دونوں کو ضرب دینی چاہیے: 2 : 3 = 4 : 6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2 : 3 = 4 : 6 (both × 2). 4 : 5 is a different ratio.",
+            "ur": "جی ہاں! 2 : 3 = 4 : 6 (دونوں × 2)۔ 4 : 5 ایک مختلف نسبت ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. He did the same to both numbers.",
+            "ur": "کوئی غلطی نہیں۔ اس نے دونوں عدد کے ساتھ ایک جیسا کام کیا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Doing the same only works with × and ÷. 2 : 3 = 4 : 6, not 4 : 5.",
+            "ur": "ایک جیسا کام صرف × اور ÷ سے ٹھیک رہتا ہے۔ 2 : 3 = 4 : 6، نہ کہ 4 : 5۔"
+          },
+          "misconception_id": "add_same_number"
+        },
+        {
+          "id": "order",
+          "text": {
+            "en": "He should have swapped them: 3 : 2.",
+            "ur": "اسے انہیں الٹ دینا چاہیے تھا: 3 : 2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Swapping makes a different ratio. Multiply both numbers by the same number.",
+            "ur": "الٹنے سے مختلف نسبت بنتی ہے۔ دونوں عدد کو ایک ہی عدد سے ضرب دیں۔"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? 4 : 10 has bigger numbers, so isn't Sara's lemonade stronger?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ 4 : 10 میں عدد بڑے ہیں، تو کیا سارہ کا لیمونیڈ زیادہ تیز نہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do Ali's 2 : 5 and Sara's 4 : 10 lemonade taste the same?",
+        "ur": "اپنے الفاظ میں بتائیں: علی کا 2 : 5 اور سارہ کا 4 : 10 لیمونیڈ ایک جیسا کیوں لگتا ہے؟"
+      },
+      "key_idea": "Sara doubled both the lemon juice and the water (2 × 2 = 4, 5 × 2 = 10). For every 2 glasses of lemon there are still 5 of water, so the mix, and the taste, is the same.",
+      "levels": {
+        "got_it": "Says both amounts were multiplied by 2 (doubled), so there is still the same amount of water for each glass of lemon; or that 4 : 10 simplifies to 2 : 5.",
+        "partly": "Says they are the same, or mentions doubling, but does not say that both the lemon and the water were doubled.",
+        "not_yet": "Says Sara's is stronger because the numbers are bigger, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "same",
+          "equal",
+          "برابر",
+          "ایک جیس",
+          "barabar",
+          "ek jais"
+        ],
+        [
+          "double",
+          "twice",
+          "× 2",
+          "x 2",
+          "times 2",
+          "multiply",
+          "دگن",
+          "دو گنا",
+          "ضرب",
+          "dugn",
+          "do guna",
+          "zarb"
+        ],
+        [
+          "both",
+          "water",
+          "lemon",
+          "دونوں",
+          "پانی",
+          "لیموں",
+          "dono",
+          "paani",
+          "pani",
+          "limo"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Sara doubled both the lemon and the water, so the mix stays 2 : 5.",
+          "ur": "بہت خوب سمجھایا! سارہ نے لیموں اور پانی دونوں دگنے کیے، اس لیے آمیزہ 2 : 5 ہی رہا۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what happened to the lemon juice and to the water.",
+          "ur": "اچھی شروعات! اب بتائیں کہ لیموں کے رس اور پانی کے ساتھ کیا ہوا۔"
+        },
+        "not_yet": {
+          "en": "Think: if you pour Sara's jug into two equal jugs, how much lemon and water is in each one?",
+          "ur": "سوچیں: اگر سارہ کے جگ کو دو برابر جگوں میں ڈالیں تو ہر ایک میں کتنا لیموں اور پانی ہوگا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_which_equal",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which ratio is equal to 4 : 6?",
+        "ur": "کون سی نسبت 4 : 6 کے برابر ہے؟"
+      },
+      "options": [
+        {
+          "id": "two_three",
+          "text": {
+            "en": "2 : 3",
+            "ur": "2 : 3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Both divided by 2: 4 : 6 = 2 : 3.",
+            "ur": "جی ہاں! دونوں کو 2 سے تقسیم: 4 : 6 = 2 : 3"
+          }
+        },
+        {
+          "id": "six_eight",
+          "text": {
+            "en": "6 : 8",
+            "ur": "6 : 8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 : 8 is 4 : 6 with 2 added to both. Adding changes the ratio.",
+            "ur": "6 : 8 میں 4 : 6 کے دونوں عدد میں 2 جمع کیا گیا ہے۔ جمع کرنے سے نسبت بدل جاتی ہے۔"
+          },
+          "misconception_id": "add_same_number"
+        },
+        {
+          "id": "six_four",
+          "text": {
+            "en": "6 : 4",
+            "ur": "6 : 4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 : 4 is the other way round. The order matters.",
+            "ur": "6 : 4 الٹی ترتیب ہے۔ ترتیب اہم ہے۔"
+          },
+          "misconception_id": "order_swapped"
+        },
+        {
+          "id": "four_twelve",
+          "text": {
+            "en": "4 : 12",
+            "ur": "4 : 12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only the second number was multiplied by 2. Change both.",
+            "ur": "صرف دوسرے عدد کو 2 سے ضرب دی گئی۔ دونوں کو بدلیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can make ratios bigger or smaller and keep them the same!",
+          "ur": "اب آپ نسبتوں کو بڑا یا چھوٹا کر کے بھی ویسا ہی رکھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Equivalent ratios compare in the same way: 2 : 5 = 4 : 10 = 6 : 15. Multiply or divide both numbers by the same number, and keep the order. A ratio is in its simplest form when no number except 1 divides both numbers.",
+        "ur": "مساوی نسبتیں ایک ہی طرح موازنہ کرتی ہیں: 2 : 5 = 4 : 10 = 6 : 15۔ دونوں عدد کو ایک ہی عدد سے ضرب یا تقسیم دیں، اور ترتیب برقرار رکھیں۔ نسبت سادہ ترین شکل میں تب ہوتی ہے جب 1 کے سوا کوئی عدد دونوں کو تقسیم نہ کرے۔"
+      },
+      "points": [
+        {
+          "en": "12 : 18 = 2 : 3 (both ÷ 6)",
+          "ur": "12 : 18 = 2 : 3 (دونوں ÷ 6)"
+        },
+        {
+          "en": "Never add the same number to both: that changes the ratio.",
+          "ur": "دونوں میں ایک ہی عدد کبھی جمع نہ کریں: اس سے نسبت بدل جاتی ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_simplify",
+      "type": "apply",
+      "skill": "maths.ratio.equivalent",
+      "step": {
+        "id": "r_simplify",
+        "type": "text_check",
+        "prompt": {
+          "en": "Write 16 : 24 in its simplest form.",
+          "ur": "16 : 24 کو سادہ ترین شکل میں لکھیں۔"
+        },
+        "checker": "text",
+        "expected": "2:3",
+        "accept": [
+          "2 to 3",
+          "2∶3"
+        ],
+        "hint": {
+          "en": "8 divides both 16 and 24.",
+          "ur": "8، 16 اور 24 دونوں کو تقسیم کرتا ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 16 : 24 = 2 : 3.",
+          "ur": "درست! 16 : 24 = 2 : 3"
+        },
+        "feedback_wrong": {
+          "en": "Divide both by 8: 16 ÷ 8 = 2 and 24 ÷ 8 = 3. So 16 : 24 = 2 : 3.",
+          "ur": "دونوں کو 8 سے تقسیم کریں: 16 ÷ 8 = 2 اور 24 ÷ 8 = 3۔ اس لیے 16 : 24 = 2 : 3"
+        },
+        "common_wrong": [
+          {
+            "answer": "8:12",
+            "feedback": {
+              "en": "8 : 12 is equal, but 4 still divides both. Keep going.",
+              "ur": "8 : 12 برابر ہے، لیکن 4 اب بھی دونوں کو تقسیم کرتا ہے۔ آگے بڑھیں۔"
+            },
+            "misconception_id": "not_fully_simplified"
+          },
+          {
+            "answer": "4:6",
+            "feedback": {
+              "en": "4 : 6 is equal, but 2 still divides both. Keep going.",
+              "ur": "4 : 6 برابر ہے، لیکن 2 اب بھی دونوں کو تقسیم کرتا ہے۔ آگے بڑھیں۔"
+            },
+            "misconception_id": "not_fully_simplified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_fill_gap",
+      "type": "apply",
+      "skill": "maths.ratio.equivalent",
+      "step": {
+        "id": "r_fill_gap",
+        "type": "number",
+        "prompt": {
+          "en": "Fill the gap: 5 : 2 = ? : 12.",
+          "ur": "خالی جگہ پُر کریں: 5 : 2 = ? : 12"
+        },
+        "answer": 30,
+        "checker": "numeric",
+        "hint": {
+          "en": "What do you multiply 2 by to get 12?",
+          "ur": "2 کو کس عدد سے ضرب دیں تو 12 بنتا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Yes! Both × 6: 5 : 2 = 30 : 12.",
+          "ur": "جی ہاں! دونوں × 6: 5 : 2 = 30 : 12"
+        },
+        "feedback_wrong": {
+          "en": "2 × 6 = 12, so multiply 5 by 6 too: 5 × 6 = 30.",
+          "ur": "2 × 6 = 12، اس لیے 5 کو بھی 6 سے ضرب دیں: 5 × 6 = 30"
+        },
+        "common_wrong": [
+          {
+            "answer": 15,
+            "feedback": {
+              "en": "You added 10 because 2 + 10 = 12. Multiply instead: 2 × 6 = 12.",
+              "ur": "آپ نے 10 جمع کیا کیونکہ 2 + 10 = 12۔ اس کے بجائے ضرب دیں: 2 × 6 = 12"
+            },
+            "misconception_id": "add_same_number"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Ratio and Proportion unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-06. Fix the names and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: مساوی نسبتیں (equivalent ratios), سادہ ترین شکل (simplest form), نسبت کا رکن (term of a ratio).",
+    "Typed ratios use the text checker, which compares exactly: an equal but unsimplified ratio (like 4 : 6 for 8 : 12) has its own 'keep going' feedback but still counts as a wrong attempt.",
+    "Steps: foundation (s2), prediction (s3), the idea (s4) and a missing number (s5), simplifying (s6 to s8), find the error (s9), explain (s10), new numbers (s11).",
+    "The numbers were worked out in content/sources/g6-maths-06/equivalent_ratios.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
