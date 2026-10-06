@@ -1,0 +1,748 @@
+{
+  "id": "g6-maths-09-angles-on-a-line",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find missing angles using: angles on a straight line add up to 180°, and angles around a point add up to 360°.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Angles"
+    }
+  ],
+  "skills": [
+    "maths.geometry.angles_on_line"
+  ],
+  "title": {
+    "en": "Angles on a line and around a point",
+    "ur": "سیدھی لکیر پر اور نقطے کے گرد زاویے"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.geometry.angle_types"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "line_is_360",
+      "description": "Uses 360° for angles on a straight line."
+    },
+    {
+      "id": "point_is_180",
+      "description": "Uses 180° for angles around a point."
+    },
+    {
+      "id": "adds_known",
+      "description": "Adds the known angles instead of taking them away from the total."
+    },
+    {
+      "id": "forgets_an_angle",
+      "description": "Leaves one known angle (often the right angle) out of the sum."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.geometry.angles_on_line": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.geometry.angles_on_line": [
+      {
+        "id": "qb_point",
+        "type": "recall",
+        "step": {
+          "id": "qb_point",
+          "type": "choice",
+          "prompt": {
+            "en": "The angles around a point add up to how many degrees?",
+            "ur": "نقطے کے گرد زاویوں کا مجموعہ کتنے درجے ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "full",
+              "text": {
+                "en": "360°",
+                "ur": "360°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Around a point is a full turn, 360°.",
+                "ur": "جی ہاں! نقطے کے گرد پورا چکر ہے، 360°۔"
+              }
+            },
+            {
+              "id": "half",
+              "text": {
+                "en": "180°",
+                "ur": "180°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "180° is a straight line, half a turn. Around a point is 360°.",
+                "ur": "180° سیدھی لکیر، آدھا چکر ہے۔ نقطے کے گرد 360°۔"
+              },
+              "misconception_id": "point_is_180"
+            },
+            {
+              "id": "quarter",
+              "text": {
+                "en": "90°",
+                "ur": "90°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "90° is a quarter turn. All the way around is 360°.",
+                "ur": "90° چوتھائی چکر ہے۔ پورا گرد 360°۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Two angles sit on a straight line. One is 75°. What is the other, in degrees?",
+            "ur": "سیدھی لکیر پر دو زاویے ہیں۔ ایک 75° ہے۔ دوسرا کتنے درجے ہے؟"
+          },
+          "answer": 105,
+          "checker": "numeric",
+          "hint": {
+            "en": "180 − 75.",
+            "ur": "180 − 75"
+          },
+          "feedback_correct": {
+            "en": "Right! 105°.",
+            "ur": "درست! 105°"
+          },
+          "feedback_wrong": {
+            "en": "180 − 75 = 105°.",
+            "ur": "180 − 75 = 105°"
+          },
+          "common_wrong": [
+            {
+              "answer": 285,
+              "feedback": {
+                "en": "That used 360°. A straight line is 180°: 180 − 75 = 105.",
+                "ur": "اس میں 360° لیا۔ سیدھی لکیر 180° ہے: 180 − 75 = 105"
+              },
+              "misconception_id": "line_is_360"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Three angles meet at a point: 120°, 140° and a missing one. Zara says the missing angle is 180 − 120 − 140. What went wrong?",
+            "ur": "ایک نقطے پر تین زاویے ملتے ہیں: 120°، 140° اور ایک نامعلوم۔ زارا کہتی ہے نامعلوم زاویہ 180 − 120 − 140 ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "full",
+              "text": {
+                "en": "Around a point is 360°, not 180°. 360 − 120 − 140 = 100°.",
+                "ur": "نقطے کے گرد 360° ہے، 180° نہیں۔ 360 − 120 − 140 = 100°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 180° is only for a straight line.",
+                "ur": "جی ہاں! 180° صرف سیدھی لکیر کے لیے ہے۔"
+              }
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "She should add: 120 + 140 = 260°.",
+                "ur": "اسے جمع کرنا چاہیے: 120 + 140 = 260°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Take the known angles away from 360°: 100°.",
+                "ur": "معلوم زاویے 360° سے نفی کریں: 100°"
+              },
+              "misconception_id": "adds_known"
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "180 − 120 − 140 is less than zero! Around a point use 360°: 100°.",
+                "ur": "180 − 120 − 140 صفر سے کم ہے! نقطے کے گرد 360° لیں: 100°"
+              },
+              "misconception_id": "point_is_180"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_line",
+      "front": {
+        "en": "Angles on a straight line add up to?",
+        "ur": "سیدھی لکیر پر زاویوں کا مجموعہ؟"
+      },
+      "back": {
+        "en": "180°. If one is 130°, the other is 50°.",
+        "ur": "180°۔ اگر ایک 130° ہے تو دوسرا 50°۔"
+      }
+    },
+    {
+      "id": "f_point",
+      "front": {
+        "en": "Angles around a point add up to?",
+        "ur": "نقطے کے گرد زاویوں کا مجموعہ؟"
+      },
+      "back": {
+        "en": "360°, a full turn.",
+        "ur": "360°، پورا چکر۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_roti",
+      "text": {
+        "en": "Cut a roti or a paper circle into 4 pieces from the middle (not all the same size). The angles at the middle add up to 360°. Lay two pieces with straight edges together on a line: those angles make 180°.",
+        "ur": "روٹی یا کاغذ کے دائرے کو درمیان سے 4 ٹکڑوں میں کاٹیں (سب برابر نہ ہوں)۔ درمیان کے زاویوں کا مجموعہ 360° ہے۔ سیدھے کناروں والے دو ٹکڑے ایک لکیر پر رکھیں: وہ زاویے 180° بناتے ہیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Straight line",
+      "ur": "سیدھی لکیر"
+    },
+    {
+      "en": "Point",
+      "ur": "نقطہ"
+    },
+    {
+      "en": "Full turn",
+      "ur": "پورا چکر"
+    },
+    {
+      "en": "Missing angle",
+      "ur": "نامعلوم زاویہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Cut a roti into slices from the middle. All the slice corners together make a full turn! How many degrees is that?",
+          "ur": "روٹی کو درمیان سے ٹکڑوں میں کاٹیں۔ سب ٹکڑوں کے کونے مل کر پورا چکر بناتے ہیں! یہ کتنے درجے ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we find missing angles on a straight line and around a point. First, a quick check.",
+        "ur": "آج ہم سیدھی لکیر پر اور نقطے کے گرد نامعلوم زاویے نکالیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.geometry.angle_types",
+      "prompt": {
+        "en": "How many degrees is a straight angle?",
+        "ur": "مستقیم زاویہ کتنے درجے کا ہوتا ہے؟"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "Half of a full turn.",
+        "ur": "پورے چکر کا آدھا"
+      },
+      "feedback_correct": {
+        "en": "Right! 180°.",
+        "ur": "درست! 180°"
+      },
+      "feedback_wrong": {
+        "en": "A straight angle is 180°.",
+        "ur": "مستقیم زاویہ 180° ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° is a right angle. A straight angle is two of them: 180°.",
+            "ur": "90° قائمہ زاویہ ہے۔ مستقیم ان میں سے دو ہے: 180°"
+          }
+        },
+        {
+          "answer": 360,
+          "feedback": {
+            "en": "360° is a full turn. A straight angle is half: 180°.",
+            "ur": "360° پورا چکر ہے۔ مستقیم آدھا ہے: 180°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Two numbers to remember: 180 for a line, 360 for a point!",
+          "ur": "دو عدد یاد رکھیں: لکیر کے لیے 180، نقطے کے لیے 360!"
+        }
+      },
+      "text": {
+        "en": "Angles that sit together on a straight line add up to 180°. Angles that go all the way around a point add up to 360°. To find a missing angle, take the known angles away from 180° or 360°.",
+        "ur": "سیدھی لکیر پر ساتھ ساتھ زاویوں کا مجموعہ 180° ہوتا ہے۔ نقطے کے پورے گرد زاویوں کا مجموعہ 360° ہوتا ہے۔ نامعلوم زاویہ نکالنے کے لیے معلوم زاویے 180° یا 360° سے نفی کریں۔"
+      }
+    },
+    {
+      "id": "s4_line",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A straight line is split into two angles. One is 130°. What is the other, in degrees?",
+        "ur": "ایک سیدھی لکیر دو زاویوں میں تقسیم ہے۔ ایک 130° ہے۔ دوسرا کتنے درجے ہے؟"
+      },
+      "answer": 50,
+      "checker": "numeric",
+      "hint": {
+        "en": "180 − 130.",
+        "ur": "180 − 130"
+      },
+      "feedback_correct": {
+        "en": "Right! 50°. Check: 130 + 50 = 180.",
+        "ur": "درست! 50°۔ جانچ: 130 + 50 = 180"
+      },
+      "feedback_wrong": {
+        "en": "180 − 130 = 50°.",
+        "ur": "180 − 130 = 50°"
+      },
+      "common_wrong": [
+        {
+          "answer": 230,
+          "feedback": {
+            "en": "That used 360°. A straight line is 180°: 50°.",
+            "ur": "اس میں 360° لیا۔ سیدھی لکیر 180° ہے: 50°"
+          },
+          "misconception_id": "line_is_360"
+        }
+      ]
+    },
+    {
+      "id": "s5_three",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Three angles sit on a straight line: 40°, 75° and a missing one. What is the missing angle?",
+        "ur": "سیدھی لکیر پر تین زاویے ہیں: 40°، 75° اور ایک نامعلوم۔ نامعلوم زاویہ کتنا ہے؟"
+      },
+      "answer": 65,
+      "checker": "numeric",
+      "hint": {
+        "en": "40 + 75 = 115. Then 180 − 115.",
+        "ur": "40 + 75 = 115۔ پھر 180 − 115"
+      },
+      "feedback_correct": {
+        "en": "Right! 65°.",
+        "ur": "درست! 65°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 115 = 65°.",
+        "ur": "180 − 115 = 65°"
+      },
+      "common_wrong": [
+        {
+          "answer": 115,
+          "feedback": {
+            "en": "115 is the two known angles. Take it from 180: 65°.",
+            "ur": "115 دو معلوم زاویے ہیں۔ 180 سے نفی کریں: 65°"
+          },
+          "misconception_id": "adds_known"
+        },
+        {
+          "answer": 245,
+          "feedback": {
+            "en": "That used 360°. On a line use 180°: 65°.",
+            "ur": "اس میں 360° لیا۔ لکیر پر 180° لیں: 65°"
+          },
+          "misconception_id": "line_is_360"
+        }
+      ]
+    },
+    {
+      "id": "s6_point",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Three angles meet around a point: 100°, 150° and a missing one. What is the missing angle?",
+        "ur": "ایک نقطے کے گرد تین زاویے ملتے ہیں: 100°، 150° اور ایک نامعلوم۔ نامعلوم زاویہ کتنا ہے؟"
+      },
+      "answer": 110,
+      "checker": "numeric",
+      "hint": {
+        "en": "Around a point: 360 − 100 − 150.",
+        "ur": "نقطے کے گرد: 360 − 100 − 150"
+      },
+      "feedback_correct": {
+        "en": "Right! 110°.",
+        "ur": "درست! 110°"
+      },
+      "feedback_wrong": {
+        "en": "100 + 150 = 250, and 360 − 250 = 110°.",
+        "ur": "100 + 150 = 250، اور 360 − 250 = 110°"
+      },
+      "common_wrong": [
+        {
+          "answer": 250,
+          "feedback": {
+            "en": "250 is the two known angles. Take it from 360: 110°.",
+            "ur": "250 دو معلوم زاویے ہیں۔ 360 سے نفی کریں: 110°"
+          },
+          "misconception_id": "adds_known"
+        }
+      ]
+    },
+    {
+      "id": "s7_equal",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Four equal angles meet around a point. How big is each one?",
+        "ur": "ایک نقطے کے گرد چار برابر زاویے ملتے ہیں۔ ہر ایک کتنا بڑا ہے؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "360 ÷ 4.",
+        "ur": "360 ÷ 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 90°: four right angles, like a plus sign.",
+        "ur": "درست! 90°: چار قائمہ زاویے، جمع کے نشان کی طرح۔"
+      },
+      "feedback_wrong": {
+        "en": "360 ÷ 4 = 90°.",
+        "ur": "360 ÷ 4 = 90°"
+      },
+      "common_wrong": [
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "That used 180°. Around a point is 360°: 360 ÷ 4 = 90°.",
+            "ur": "اس میں 180° لیا۔ نقطے کے گرد 360° ہے: 360 ÷ 4 = 90°"
+          },
+          "misconception_id": "point_is_180"
+        }
+      ]
+    },
+    {
+      "id": "s8_two_equal",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "On a straight line there is a 40° angle and two equal angles. How big is each equal angle?",
+        "ur": "سیدھی لکیر پر ایک 40° کا زاویہ اور دو برابر زاویے ہیں۔ ہر برابر زاویہ کتنا ہے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "180 − 40 = 140. Share it between two.",
+        "ur": "180 − 40 = 140۔ اسے دو میں بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 70°. Check: 70 + 70 + 40 = 180.",
+        "ur": "درست! 70°۔ جانچ: 70 + 70 + 40 = 180"
+      },
+      "feedback_wrong": {
+        "en": "180 − 40 = 140, and 140 ÷ 2 = 70°.",
+        "ur": "180 − 40 = 140، اور 140 ÷ 2 = 70°"
+      },
+      "common_wrong": [
+        {
+          "answer": 140,
+          "feedback": {
+            "en": "That is both equal angles together. Each is 140 ÷ 2 = 70°.",
+            "ur": "یہ دونوں برابر زاویے مل کر ہیں۔ ہر ایک 140 ÷ 2 = 70°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Two angles sit on a straight line. One is 70°. Usman says the other is 360 − 70 = 290°. What went wrong?",
+        "ur": "سیدھی لکیر پر دو زاویے ہیں۔ ایک 70° ہے۔ عثمان کہتا ہے دوسرا 360 − 70 = 290° ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "line",
+          "text": {
+            "en": "A straight line is 180°. 180 − 70 = 110°.",
+            "ur": "سیدھی لکیر 180° ہے۔ 180 − 70 = 110°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 360° is for a full turn around a point.",
+            "ur": "جی ہاں! 360° نقطے کے گرد پورے چکر کے لیے ہے۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "He should add: 70 + 70 = 140°.",
+            "ur": "اسے جمع کرنا چاہیے: 70 + 70 = 140°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The two angles needn't be equal. 180 − 70 = 110°.",
+            "ur": "دونوں زاویوں کا برابر ہونا ضروری نہیں۔ 180 − 70 = 110°"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "290° is more than a straight line! 180 − 70 = 110°.",
+            "ur": "290° تو سیدھی لکیر سے بھی زیادہ ہے! 180 − 70 = 110°"
+          },
+          "misconception_id": "line_is_360"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do the angles on a straight line always add up to 180°? Can you teach me?",
+          "ur": "سیدھی لکیر پر زاویوں کا مجموعہ ہمیشہ 180° کیوں ہوتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do angles on a straight line add up to 180°?",
+        "ur": "اپنے الفاظ میں بتائیں: سیدھی لکیر پر زاویوں کا مجموعہ 180° کیوں ہوتا ہے؟"
+      },
+      "key_idea": "A straight line is half a turn, a straight angle of 180°. The angles on it just split that half turn into parts, so together they still make 180°.",
+      "levels": {
+        "got_it": "Says a straight line is a straight angle or half a turn (180°), and the angles on it are parts of it.",
+        "partly": "Says a straight line is 180° without saying the angles are its parts, or the reverse.",
+        "not_yet": "Gives no reason, or says it is just the rule."
+      },
+      "keywords": [
+        [
+          "half",
+          "straight angle",
+          "آدھا",
+          "مستقیم",
+          "aadha"
+        ],
+        [
+          "turn",
+          "360",
+          "چکر",
+          "chakkar"
+        ],
+        [
+          "parts",
+          "split",
+          "together",
+          "حصے",
+          "مل کر",
+          "hissay"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The angles are just parts of one straight angle, 180°.",
+          "ur": "بہت خوب! یہ زاویے ایک مستقیم زاویے، 180°، کے حصے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how the angles on the line are parts of the straight angle.",
+          "ur": "اچھی شروعات! اب بتائیں لکیر کے زاویے مستقیم زاویے کے حصے کیسے ہیں۔"
+        },
+        "not_yet": {
+          "en": "A straight line is half a turn. How many degrees is half of 360°? The angles share that.",
+          "ur": "سیدھی لکیر آدھا چکر ہے۔ 360° کا آدھا کتنا ہے؟ زاویے اسی کو بانٹتے ہیں۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_four",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Four angles meet around a point: a right angle (90°), 120°, 85° and a missing one. What is the missing angle?",
+        "ur": "ایک نقطے کے گرد چار زاویے ملتے ہیں: ایک قائمہ زاویہ (90°)، 120°، 85° اور ایک نامعلوم۔ نامعلوم زاویہ کتنا ہے؟"
+      },
+      "answer": 65,
+      "checker": "numeric",
+      "hint": {
+        "en": "90 + 120 + 85 = 295. Then 360 − 295.",
+        "ur": "90 + 120 + 85 = 295۔ پھر 360 − 295"
+      },
+      "feedback_correct": {
+        "en": "Right! 65°.",
+        "ur": "درست! 65°"
+      },
+      "feedback_wrong": {
+        "en": "360 − 295 = 65°.",
+        "ur": "360 − 295 = 65°"
+      },
+      "common_wrong": [
+        {
+          "answer": 155,
+          "feedback": {
+            "en": "Don't forget the right angle: 360 − 90 − 120 − 85 = 65°.",
+            "ur": "قائمہ زاویہ نہ بھولیں: 360 − 90 − 120 − 85 = 65°"
+          },
+          "misconception_id": "forgets_an_angle"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "180 for a line, 360 for a point. Well done!",
+          "ur": "لکیر کے لیے 180، نقطے کے لیے 360۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "Angles on a straight line add up to 180°. Angles around a point add up to 360°. To find a missing angle, add the known ones and take the sum away from 180° or 360°. Check by adding them all back up.",
+        "ur": "سیدھی لکیر پر زاویوں کا مجموعہ 180° ہے۔ نقطے کے گرد زاویوں کا مجموعہ 360° ہے۔ نامعلوم زاویے کے لیے معلوم زاویے جمع کریں اور 180° یا 360° سے نفی کریں۔ سب کو دوبارہ جمع کر کے جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "Straight line: 180°.",
+          "ur": "سیدھی لکیر: 180°۔"
+        },
+        {
+          "en": "Around a point: 360°.",
+          "ur": "نقطے کے گرد: 360°۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_line",
+      "type": "apply",
+      "skill": "maths.geometry.angles_on_line",
+      "step": {
+        "id": "r_line",
+        "type": "number",
+        "prompt": {
+          "en": "Two angles sit on a straight line. One is 145°. What is the other?",
+          "ur": "سیدھی لکیر پر دو زاویے ہیں۔ ایک 145° ہے۔ دوسرا کتنا ہے؟"
+        },
+        "answer": 35,
+        "checker": "numeric",
+        "hint": {
+          "en": "180 − 145.",
+          "ur": "180 − 145"
+        },
+        "feedback_correct": {
+          "en": "Right! 35°.",
+          "ur": "درست! 35°"
+        },
+        "feedback_wrong": {
+          "en": "180 − 145 = 35°.",
+          "ur": "180 − 145 = 35°"
+        },
+        "common_wrong": [
+          {
+            "answer": 215,
+            "feedback": {
+              "en": "Use 180° for a line: 35°.",
+              "ur": "لکیر کے لیے 180° لیں: 35°"
+            },
+            "misconception_id": "line_is_360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_point",
+      "type": "apply",
+      "skill": "maths.geometry.angles_on_line",
+      "step": {
+        "id": "r_point",
+        "type": "number",
+        "prompt": {
+          "en": "Three angles meet around a point: 200°, 95° and a missing one. What is the missing angle?",
+          "ur": "ایک نقطے کے گرد تین زاویے ہیں: 200°، 95° اور ایک نامعلوم۔ نامعلوم زاویہ کتنا ہے؟"
+        },
+        "answer": 65,
+        "checker": "numeric",
+        "hint": {
+          "en": "360 − 200 − 95.",
+          "ur": "360 − 200 − 95"
+        },
+        "feedback_correct": {
+          "en": "Right! 65°.",
+          "ur": "درست! 65°"
+        },
+        "feedback_wrong": {
+          "en": "200 + 95 = 295, and 360 − 295 = 65°.",
+          "ur": "200 + 95 = 295، اور 360 − 295 = 65°"
+        },
+        "common_wrong": [
+          {
+            "answer": 295,
+            "feedback": {
+              "en": "Take the known angles from 360: 65°.",
+              "ur": "معلوم زاویے 360 سے نفی کریں: 65°"
+            },
+            "misconception_id": "adds_known"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Angles unit. No textbook text or exercises were used.",
+    "The two totals are tied to turns: a straight line is half a turn (180°), all the way round is a full turn (360°). The most common slip is using the wrong total, so several wrong answers catch it.",
+    "Urdu terms to check: سیدھی لکیر (straight line), نقطہ (point), پورا چکر (full turn), نامعلوم زاویہ (missing angle).",
+    "The numbers were worked out in content/sources/g6-maths-09/angles_on_a_line.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
