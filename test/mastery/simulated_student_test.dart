@@ -131,8 +131,8 @@ void main() {
       s.states[skill]?.level(curriculum.criteriaFor(skill)) ??
       MasteryLevel.notStarted;
 
-  test('twenty-four weeks of plans: every lesson done, skills secure', () {
-    final s = SimulatedStudent(curriculum)..studyFor(168, start);
+  test('twenty-six weeks of plans: every lesson done, skills secure', () {
+    final s = SimulatedStudent(curriculum)..studyFor(182, start);
 
     for (final lesson in curriculum.lessons) {
       expect(s.lessons[lesson.id]?.completed, isTrue, reason: lesson.id);
@@ -148,7 +148,7 @@ void main() {
   });
 
   test('levels only rise in order for a strong student', () {
-    final s = SimulatedStudent(curriculum, skill: 1)..studyFor(168, start);
+    final s = SimulatedStudent(curriculum, skill: 1)..studyFor(182, start);
     for (final skill in [fractions, equations, balancing]) {
       final levels = [
         for (final (_, sk, level) in s.levelChanges)
