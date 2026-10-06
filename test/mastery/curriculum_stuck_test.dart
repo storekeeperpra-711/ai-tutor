@@ -27,6 +27,9 @@ void main() {
     expect(curriculum.lessons.map((l) => l.grade), [
       0,
       6,
+      6,
+      6,
+      6,
       9,
       9,
       9,
