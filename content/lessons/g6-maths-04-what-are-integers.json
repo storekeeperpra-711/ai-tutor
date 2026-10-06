@@ -1,0 +1,764 @@
+{
+  "id": "g6-maths-04-what-are-integers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Know integers as whole numbers and their negatives, show them on a number line, and compare and order them.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Integers"
+    }
+  ],
+  "skills": [
+    "maths.integers.meaning"
+  ],
+  "title": {
+    "en": "What are integers?",
+    "ur": "صحیح اعداد کیا ہیں؟"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [],
+  "misconceptions": [
+    {
+      "id": "bigger_digit_bigger",
+      "description": "Thinks −7 is greater than −2 because 7 is greater than 2."
+    },
+    {
+      "id": "sign_ignored",
+      "description": "Ignores the minus sign, putting −4 where 4 goes on the number line."
+    },
+    {
+      "id": "zero_not_integer",
+      "description": "Thinks zero is not an integer, or that it is negative."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.meaning": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.meaning": [
+      {
+        "id": "qb_less_than_zero",
+        "type": "recall",
+        "step": {
+          "id": "qb_less_than_zero",
+          "type": "choice",
+          "prompt": {
+            "en": "Which of these numbers is less than zero?",
+            "ur": "ان میں سے کون سا عدد صفر سے کم ہے؟"
+          },
+          "options": [
+            {
+              "id": "neg",
+              "text": {
+                "en": "−4",
+                "ur": "−4"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! −4 is a negative integer: it is 4 to the left of 0.",
+                "ur": "جی ہاں! −4 منفی صحیح عدد ہے: یہ 0 سے 4 بائیں طرف ہے۔"
+              }
+            },
+            {
+              "id": "zero",
+              "text": {
+                "en": "0",
+                "ur": "0"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0 is neither positive nor negative. It is the middle of the number line.",
+                "ur": "0 نہ مثبت ہے نہ منفی۔ یہ عددی خط کا درمیان ہے۔"
+              },
+              "misconception_id": "zero_not_integer"
+            },
+            {
+              "id": "pos",
+              "text": {
+                "en": "4",
+                "ur": "4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "4 is positive: it is to the right of 0.",
+                "ur": "4 مثبت ہے: یہ 0 کے دائیں طرف ہے۔"
+              },
+              "misconception_id": "sign_ignored"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_place",
+        "type": "apply",
+        "step": {
+          "id": "qb_place",
+          "type": "sim",
+          "renderer": "native",
+          "sim_id": "number_line",
+          "prompt": {
+            "en": "Put the marker on −7. Press Check.",
+            "ur": "نشان کو −7 پر رکھیں۔ \"جانچیں\" دبائیں۔"
+          },
+          "params": {
+            "min": -10,
+            "max": 10,
+            "step": 1,
+            "start": 0
+          },
+          "expected": {
+            "result": "value",
+            "checker": "numeric",
+            "answer": "-7"
+          },
+          "hint": {
+            "en": "Negative numbers are to the LEFT of 0.",
+            "ur": "منفی اعداد 0 کے بائیں طرف ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Yes! −7 is 7 steps to the left of 0.",
+            "ur": "جی ہاں! −7، 0 سے 7 قدم بائیں طرف ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "Start at 0 and count 7 steps to the left: that is −7.",
+            "ur": "0 سے شروع کریں اور 7 قدم بائیں گنیں: یہ −7 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": "7",
+              "feedback": {
+                "en": "That is 7, to the right. −7 is the same distance to the LEFT of 0.",
+                "ur": "یہ 7 ہے، دائیں طرف۔ −7 اتنا ہی فاصلہ 0 کے بائیں طرف ہے۔"
+              },
+              "misconception_id": "sign_ignored"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Ahmad says −9 is greater than −1, because 9 is greater than 1. Is he right?",
+            "ur": "احمد کہتا ہے −9، −1 سے بڑا ہے، کیونکہ 9، 1 سے بڑا ہے۔ کیا وہ درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "no",
+              "text": {
+                "en": "No. −1 is to the right of −9, so −1 is greater.",
+                "ur": "نہیں۔ −1، −9 کے دائیں طرف ہے، اس لیے −1 بڑا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! Owing Rs 1 is better than owing Rs 9: −1 > −9.",
+                "ur": "درست! 1 روپیہ ادھار، 9 روپے ادھار سے بہتر ہے: −1 > −9"
+              }
+            },
+            {
+              "id": "yes",
+              "text": {
+                "en": "Yes. 9 is a bigger number.",
+                "ur": "ہاں۔ 9 بڑا عدد ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "For negatives it flips: the further left, the smaller. −9 < −1.",
+                "ur": "منفی اعداد میں الٹ ہو جاتا ہے: جتنا بائیں، اتنا چھوٹا۔ −9 < −1"
+              },
+              "misconception_id": "bigger_digit_bigger"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_integers",
+      "front": {
+        "en": "What are integers?",
+        "ur": "صحیح اعداد کیا ہیں؟"
+      },
+      "back": {
+        "en": "The whole numbers, their negatives and zero: … −3, −2, −1, 0, 1, 2, 3 …",
+        "ur": "مکمل اعداد، ان کے منفی، اور صفر: … −3، −2، −1، 0، 1، 2، 3 …"
+      }
+    },
+    {
+      "id": "f_compare",
+      "front": {
+        "en": "Which is greater, −2 or −7?",
+        "ur": "کون سا بڑا ہے، −2 یا −7؟"
+      },
+      "back": {
+        "en": "−2. On the number line, the number further right is greater. −2 °C is warmer than −7 °C.",
+        "ur": "−2۔ عددی خط پر جو عدد زیادہ دائیں ہو وہ بڑا ہے۔ −2 ڈگری، −7 ڈگری سے زیادہ گرم ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_weather",
+      "text": {
+        "en": "Watch or listen to the weather news, or ask an adult: what is the coldest city in Pakistan today? Is its temperature above or below zero? Write it as an integer.",
+        "ur": "موسم کی خبریں دیکھیں یا سنیں، یا کسی بڑے سے پوچھیں: آج پاکستان کا سب سے ٹھنڈا شہر کون سا ہے؟ اس کا درجہ حرارت صفر سے اوپر ہے یا نیچے؟ اسے صحیح عدد کی شکل میں لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Integer",
+      "ur": "صحیح عدد"
+    },
+    {
+      "en": "Negative",
+      "ur": "منفی"
+    },
+    {
+      "en": "Positive",
+      "ur": "مثبت"
+    },
+    {
+      "en": "Number line",
+      "ur": "عددی خط"
+    },
+    {
+      "en": "Opposite",
+      "ur": "مخالف عدد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "On a winter night it is 12 °C in Lahore, but in Murree it is 3 degrees BELOW zero. How do we write that?",
+          "ur": "سردیوں کی ایک رات لاہور میں 12 ڈگری ہے، مگر مری میں صفر سے 3 ڈگری نیچے۔ ہم اسے کیسے لکھیں؟"
+        }
+      },
+      "text": {
+        "en": "Some numbers are less than zero! Today we meet them. First, a quick check.",
+        "ur": "کچھ اعداد صفر سے بھی کم ہوتے ہیں! آج ہم ان سے ملیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "On a number line, where is 8 compared with 3?",
+        "ur": "عددی خط پر 8، 3 کے مقابلے میں کہاں ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "To the right, because 8 is greater",
+            "ur": "دائیں طرف، کیونکہ 8 بڑا ہے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Numbers get bigger as you go right.",
+            "ur": "جی ہاں! دائیں جاتے ہوئے اعداد بڑے ہوتے جاتے ہیں۔"
+          }
+        },
+        {
+          "id": "left",
+          "text": {
+            "en": "To the left",
+            "ur": "بائیں طرف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Bigger numbers are further right: 3, 4, 5, 6, 7, 8.",
+            "ur": "بڑے اعداد زیادہ دائیں ہوتے ہیں: 3، 4، 5، 6، 7، 8۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "The number line keeps going, to the left of zero too!",
+          "ur": "عددی خط صفر کے بائیں طرف بھی چلتا رہتا ہے!"
+        }
+      },
+      "text": {
+        "en": "Murree's temperature is −3 °C (\"minus three\" or \"negative three\"): 3 steps to the LEFT of 0. Numbers less than 0 are negative; numbers greater than 0 are positive; 0 is neither. The whole numbers, their negatives and 0 are called integers: … −3, −2, −1, 0, 1, 2, 3 … We use them for cold weather, depths below sea level and money owed.",
+        "ur": "مری کا درجہ حرارت −3 ڈگری ہے (\"منفی تین\"): 0 سے 3 قدم بائیں طرف۔ 0 سے کم اعداد منفی ہیں؛ 0 سے بڑے اعداد مثبت ہیں؛ 0 نہ مثبت ہے نہ منفی۔ مکمل اعداد، ان کے منفی اور 0 مل کر صحیح اعداد کہلاتے ہیں: … −3، −2، −1، 0، 1، 2، 3 … یہ ٹھنڈے موسم، سطح سمندر سے نیچے گہرائی اور ادھار کے لیے استعمال ہوتے ہیں۔"
+      }
+    },
+    {
+      "id": "s4_place",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "Put the marker on −4. Press Check.",
+        "ur": "نشان کو −4 پر رکھیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": 0
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "-4"
+      },
+      "hint": {
+        "en": "Start at 0 and go 4 steps to the left.",
+        "ur": "0 سے شروع کریں اور 4 قدم بائیں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! −4 is 4 steps to the left of 0.",
+        "ur": "جی ہاں! −4، 0 سے 4 قدم بائیں طرف ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "−4 is 4 steps to the LEFT of 0.",
+        "ur": "−4، 0 سے 4 قدم بائیں طرف ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "4",
+          "feedback": {
+            "en": "That is 4, to the right of 0. The minus sign means go LEFT.",
+            "ur": "یہ 4 ہے، 0 کے دائیں طرف۔ منفی کی علامت کا مطلب ہے بائیں جائیں۔"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ]
+    },
+    {
+      "id": "s5_compare",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Skardu is −7 °C and Murree is −2 °C. Which number is greater?",
+        "ur": "سکردو میں −7 ڈگری اور مری میں −2 ڈگری ہے۔ کون سا عدد بڑا ہے؟"
+      },
+      "options": [
+        {
+          "id": "m2",
+          "text": {
+            "en": "−2",
+            "ur": "−2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! −2 is to the right of −7, and Murree is warmer.",
+            "ur": "جی ہاں! −2، −7 کے دائیں طرف ہے، اور مری زیادہ گرم ہے۔"
+          }
+        },
+        {
+          "id": "m7",
+          "text": {
+            "en": "−7",
+            "ur": "−7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−7 is colder, so it is smaller. It is further left on the number line.",
+            "ur": "−7 زیادہ ٹھنڈا ہے، اس لیے چھوٹا ہے۔ یہ عددی خط پر زیادہ بائیں ہے۔"
+          },
+          "misconception_id": "bigger_digit_bigger"
+        }
+      ]
+    },
+    {
+      "id": "s6_compare_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Further right means greater, even for negative numbers!",
+          "ur": "زیادہ دائیں کا مطلب بڑا، منفی اعداد کے لیے بھی!"
+        }
+      },
+      "text": {
+        "en": "On the number line, the number further to the right is always greater. −2 is to the right of −7, so −2 > −7. Think of temperature: −2 °C is warmer than −7 °C. Every positive number is greater than 0, and 0 is greater than every negative number.",
+        "ur": "عددی خط پر جو عدد زیادہ دائیں ہو وہ ہمیشہ بڑا ہوتا ہے۔ −2، −7 کے دائیں طرف ہے، اس لیے −2 > −7۔ درجہ حرارت کا سوچیں: −2 ڈگری، −7 ڈگری سے زیادہ گرم ہے۔ ہر مثبت عدد 0 سے بڑا ہے، اور 0 ہر منفی عدد سے بڑا ہے۔"
+      }
+    },
+    {
+      "id": "s7_order",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Put these in order from smallest to greatest: −5, 3, 0, −1",
+        "ur": "انہیں چھوٹے سے بڑے کی ترتیب میں رکھیں: −5، 3، 0، −1"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "−5, −1, 0, 3",
+            "ur": "−5، −1، 0، 3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! From left to right on the number line.",
+            "ur": "جی ہاں! عددی خط پر بائیں سے دائیں۔"
+          }
+        },
+        {
+          "id": "digits",
+          "text": {
+            "en": "−1, −5, 0, 3",
+            "ur": "−1، −5، 0، 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−5 is further left than −1, so −5 comes first.",
+            "ur": "−5، −1 سے زیادہ بائیں ہے، اس لیے −5 پہلے آئے گا۔"
+          },
+          "misconception_id": "bigger_digit_bigger"
+        },
+        {
+          "id": "zero",
+          "text": {
+            "en": "0, −1, 3, −5",
+            "ur": "0، −1، 3، −5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Negative numbers are smaller than 0, so they come before it.",
+            "ur": "منفی اعداد 0 سے چھوٹے ہیں، اس لیے یہ اس سے پہلے آئیں گے۔"
+          },
+          "misconception_id": "zero_not_integer"
+        }
+      ]
+    },
+    {
+      "id": "s8_opposite",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Every integer has an opposite, the same distance from 0 on the other side. What is the opposite of 6? Type it with a minus sign.",
+        "ur": "ہر صحیح عدد کا ایک مخالف ہوتا ہے، جو دوسری طرف 0 سے اتنے ہی فاصلے پر ہو۔ 6 کا مخالف کیا ہے؟ منفی کی علامت کے ساتھ لکھیں۔"
+      },
+      "answer": -6,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 is 6 steps right of 0. Go 6 steps left instead.",
+        "ur": "6، 0 سے 6 قدم دائیں ہے۔ اس کے بجائے 6 قدم بائیں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The opposite of 6 is −6.",
+        "ur": "درست! 6 کا مخالف −6 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "6 steps right of 0 is 6; 6 steps left is −6. So the opposite of 6 is −6.",
+        "ur": "0 سے 6 قدم دائیں 6 ہے؛ 6 قدم بائیں −6۔ اس لیے 6 کا مخالف −6 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Add a minus sign: the opposite of 6 is on the other side of 0.",
+            "ur": "منفی کی علامت لگائیں: 6 کا مخالف 0 کی دوسری طرف ہے۔"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal says −8 is greater than −3, because 8 is more than 3. What went wrong?",
+        "ur": "بلال کہتا ہے −8، −3 سے بڑا ہے، کیونکہ 8، 3 سے زیادہ ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "flip",
+          "text": {
+            "en": "With negatives, the bigger digit is further left, so −8 is smaller: −8 < −3.",
+            "ur": "منفی اعداد میں بڑا ہندسہ زیادہ بائیں ہوتا ہے، اس لیے −8 چھوٹا ہے: −8 < −3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! −8 °C is colder than −3 °C.",
+            "ur": "جی ہاں! −8 ڈگری، −3 ڈگری سے زیادہ ٹھنڈا ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 8 is more than 3.",
+            "ur": "کوئی غلطی نہیں۔ 8، 3 سے زیادہ ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is true for 8 and 3, but −8 is further left than −3, so it is smaller.",
+            "ur": "یہ 8 اور 3 کے لیے درست ہے، لیکن −8، −3 سے زیادہ بائیں ہے، اس لیے چھوٹا ہے۔"
+          },
+          "misconception_id": "bigger_digit_bigger"
+        },
+        {
+          "id": "equal",
+          "text": {
+            "en": "They are equal, because both are negative.",
+            "ur": "یہ برابر ہیں، کیونکہ دونوں منفی ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "They are at different places on the number line, so they are not equal.",
+            "ur": "یہ عددی خط پر مختلف جگہوں پر ہیں، اس لیے برابر نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? 7 is bigger than 2, so why is −7 smaller than −2?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ 7، 2 سے بڑا ہے، تو −7، −2 سے چھوٹا کیوں ہے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is −7 smaller than −2? You can use a number line or the weather.",
+        "ur": "اپنے الفاظ میں بتائیں: −7، −2 سے چھوٹا کیوں ہے؟ آپ عددی خط یا موسم کی مثال دے سکتے ہیں۔"
+      },
+      "key_idea": "−7 is further to the left of 0 than −2 on the number line, and numbers get smaller as you go left. −7 °C is colder than −2 °C.",
+      "levels": {
+        "got_it": "Says −7 is further left (further below zero) than −2 on the number line, so it is smaller; or uses temperature: −7 °C is colder.",
+        "partly": "Says −7 is smaller or mentions left or cold, but does not explain why the bigger digit makes it smaller.",
+        "not_yet": "Says −7 is bigger, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "left",
+          "below",
+          "further",
+          "بائیں",
+          "نیچے",
+          "dur",
+          "baen",
+          "baayen",
+          "neeche"
+        ],
+        [
+          "cold",
+          "colder",
+          "ٹھنڈ",
+          "سرد",
+          "thand",
+          "sard"
+        ],
+        [
+          "number line",
+          "zero",
+          "عددی خط",
+          "صفر",
+          "sifar"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! −7 is further left of zero, so it is smaller, like −7 °C is colder than −2 °C.",
+          "ur": "بہت خوب سمجھایا! −7 صفر سے زیادہ بائیں ہے، اس لیے چھوٹا ہے، جیسے −7 ڈگری، −2 ڈگری سے زیادہ ٹھنڈا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say where −7 and −2 are on the number line.",
+          "ur": "اچھی شروعات! اب بتائیں کہ −7 اور −2 عددی خط پر کہاں ہیں۔"
+        },
+        "not_yet": {
+          "en": "Think: which is colder, −7 °C or −2 °C? Is colder a bigger or a smaller temperature?",
+          "ur": "سوچیں: کون زیادہ ٹھنڈا ہے، −7 ڈگری یا −2 ڈگری؟ زیادہ ٹھنڈا بڑا درجہ حرارت ہے یا چھوٹا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_diver",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "A diver is 6 m below sea level. Sea level is 0. Show where she is on the number line.",
+        "ur": "ایک غوطہ خور سطح سمندر سے 6 میٹر نیچے ہے۔ سطح سمندر 0 ہے۔ عددی خط پر دکھائیں کہ وہ کہاں ہے۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": 0
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "-6"
+      },
+      "hint": {
+        "en": "Below sea level means a negative number.",
+        "ur": "سطح سمندر سے نیچے کا مطلب منفی عدد ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 6 m below sea level is −6.",
+        "ur": "جی ہاں! سطح سمندر سے 6 میٹر نیچے −6 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Below 0 is negative: 6 m below is −6, 6 steps left of 0.",
+        "ur": "0 سے نیچے منفی ہے: 6 میٹر نیچے −6 ہے، 0 سے 6 قدم بائیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "6",
+          "feedback": {
+            "en": "6 would be 6 m ABOVE the sea. She is below: −6.",
+            "ur": "6 کا مطلب سمندر سے 6 میٹر اوپر ہوتا۔ وہ نیچے ہے: −6"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you know numbers below zero!",
+          "ur": "اب آپ صفر سے نیچے کے اعداد جانتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Integers are … −3, −2, −1, 0, 1, 2, 3 … Negative numbers are to the left of 0, positive numbers to the right. The number further right is greater, so −2 > −7. Every integer has an opposite: 6 and −6.",
+        "ur": "صحیح اعداد … −3، −2، −1، 0، 1، 2، 3 … ہیں۔ منفی اعداد 0 کے بائیں، مثبت دائیں طرف ہیں۔ جو عدد زیادہ دائیں ہو وہ بڑا ہے، اس لیے −2 > −7۔ ہر صحیح عدد کا ایک مخالف ہوتا ہے: 6 اور −6۔"
+      },
+      "points": [
+        {
+          "en": "−2 °C is warmer than −7 °C: −2 > −7",
+          "ur": "−2 ڈگری، −7 ڈگری سے زیادہ گرم ہے: −2 > −7"
+        },
+        {
+          "en": "0 is neither positive nor negative.",
+          "ur": "0 نہ مثبت ہے نہ منفی۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_temperature",
+      "type": "apply",
+      "skill": "maths.integers.meaning",
+      "step": {
+        "id": "r_temperature",
+        "type": "number",
+        "prompt": {
+          "en": "It is 5 degrees below zero in Kalam. Write the temperature as an integer.",
+          "ur": "کالام میں صفر سے 5 ڈگری نیچے ہے۔ درجہ حرارت کو صحیح عدد کی شکل میں لکھیں۔"
+        },
+        "answer": -5,
+        "checker": "numeric",
+        "hint": {
+          "en": "Below zero means negative.",
+          "ur": "صفر سے نیچے کا مطلب منفی ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −5 °C.",
+          "ur": "درست! −5 ڈگری۔"
+        },
+        "feedback_wrong": {
+          "en": "Below zero is negative: −5.",
+          "ur": "صفر سے نیچے منفی ہے: −5"
+        },
+        "common_wrong": [
+          {
+            "answer": 5,
+            "feedback": {
+              "en": "5 would be above zero. Add a minus sign.",
+              "ur": "5 کا مطلب صفر سے اوپر ہوتا۔ منفی کی علامت لگائیں۔"
+            },
+            "misconception_id": "sign_ignored"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_compare",
+      "type": "recall",
+      "skill": "maths.integers.meaning",
+      "step": {
+        "id": "r_compare",
+        "type": "choice",
+        "prompt": {
+          "en": "Which is greater: −10 or −4?",
+          "ur": "کون سا بڑا ہے: −10 یا −4؟"
+        },
+        "options": [
+          {
+            "id": "m4",
+            "text": {
+              "en": "−4",
+              "ur": "−4"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! −4 is to the right of −10.",
+              "ur": "جی ہاں! −4، −10 کے دائیں طرف ہے۔"
+            }
+          },
+          {
+            "id": "m10",
+            "text": {
+              "en": "−10",
+              "ur": "−10"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "−10 is further left, so it is smaller.",
+              "ur": "−10 زیادہ بائیں ہے، اس لیے چھوٹا ہے۔"
+            },
+            "misconception_id": "bigger_digit_bigger"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Integers unit. No textbook text or exercises were used.",
+    "Unit number to be confirmed against the PCTB Grade 6 book: the files are named g6-maths-04. Fix the names and curriculum_refs if the unit differs.",
+    "Urdu terms to check against the Punjab textbook: صحیح اعداد (integers), منفی (negative), مثبت (positive), عددی خط (number line), مخالف عدد (opposite / additive inverse).",
+    "Number-line steps use the native number_line sim from −10 to 10 with whole-number ticks. Typed negative answers accept the keyboard minus and the − sign.",
+    "Temperatures are realistic winter night values for the places named, not real readings.",
+    "The numbers were worked out in content/sources/g6-maths-04/what_are_integers.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

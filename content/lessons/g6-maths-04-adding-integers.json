@@ -1,0 +1,804 @@
+{
+  "id": "g6-maths-04-adding-integers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Add integers using a number line and the sign rules.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Integers"
+    }
+  ],
+  "skills": [
+    "maths.integers.add"
+  ],
+  "title": {
+    "en": "Adding integers",
+    "ur": "صحیح اعداد کی جمع"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.meaning"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "add_digits_keep_minus",
+      "description": "Adds the digits and keeps a minus sign when the signs are different: −7 + 3 = −10."
+    },
+    {
+      "id": "negative_moves_right",
+      "description": "Moves right on the number line when adding a negative number."
+    },
+    {
+      "id": "wrong_sign",
+      "description": "Gets the size right but the sign wrong: 4 + (−6) = 2."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.add": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.add": [
+      {
+        "id": "qb_direction",
+        "type": "recall",
+        "step": {
+          "id": "qb_direction",
+          "type": "choice",
+          "prompt": {
+            "en": "To add a negative number on the number line, which way do you move?",
+            "ur": "عددی خط پر منفی عدد جمع کرنے کے لیے کس طرف جاتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "left",
+              "text": {
+                "en": "Left",
+                "ur": "بائیں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Adding a negative number makes the answer smaller.",
+                "ur": "جی ہاں! منفی عدد جمع کرنے سے جواب چھوٹا ہو جاتا ہے۔"
+              }
+            },
+            {
+              "id": "right",
+              "text": {
+                "en": "Right",
+                "ur": "دائیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Right is for adding a positive number. A negative number takes you left.",
+                "ur": "دائیں طرف مثبت عدد جمع کرنے کے لیے ہے۔ منفی عدد آپ کو بائیں لے جاتا ہے۔"
+              },
+              "misconception_id": "negative_moves_right"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_same_sign",
+        "type": "apply",
+        "step": {
+          "id": "qb_same_sign",
+          "type": "number",
+          "prompt": {
+            "en": "Work out −6 + (−2)",
+            "ur": "حل کریں: −6 + (−2)"
+          },
+          "answer": -8,
+          "checker": "numeric",
+          "hint": {
+            "en": "Both are negative: add 6 and 2, and keep the minus sign.",
+            "ur": "دونوں منفی ہیں: 6 اور 2 جمع کریں، اور منفی کی علامت رکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! −6 + (−2) = −8.",
+            "ur": "درست! −6 + (−2) = −8"
+          },
+          "feedback_wrong": {
+            "en": "Start at −6 and move 2 more to the left: −8.",
+            "ur": "−6 سے شروع کریں اور 2 مزید بائیں جائیں: −8"
+          },
+          "common_wrong": [
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "Both numbers are negative, so the answer is negative too: −8.",
+                "ur": "دونوں اعداد منفی ہیں، اس لیے جواب بھی منفی ہے: −8"
+              },
+              "misconception_id": "wrong_sign"
+            },
+            {
+              "answer": -4,
+              "feedback": {
+                "en": "That is −6 + 2. Here you add −2, so move left: −8.",
+                "ur": "یہ −6 + 2 ہے۔ یہاں −2 جمع کرنا ہے، اس لیے بائیں جائیں: −8"
+              },
+              "misconception_id": "negative_moves_right"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zainab wrote 3 + (−10) = 13. What went wrong?",
+            "ur": "زینب نے لکھا 3 + (−10) = 13۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "left",
+              "text": {
+                "en": "Adding −10 moves 10 LEFT from 3, so the answer is −7.",
+                "ur": "−10 جمع کرنے کا مطلب 3 سے 10 بائیں جانا ہے، اس لیے جواب −7 ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The signs are different: 10 − 3 = 7, and −10 is further from 0, so −7.",
+                "ur": "جی ہاں! علامتیں مختلف ہیں: 10 − 3 = 7، اور −10 صفر سے زیادہ دور ہے، اس لیے −7"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 3 + 10 = 13.",
+                "ur": "کوئی غلطی نہیں۔ 3 + 10 = 13"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "She added 10, but the number is −10. It moves you left.",
+                "ur": "اس نے 10 جمع کیا، مگر عدد −10 ہے۔ یہ بائیں لے جاتا ہے۔"
+              },
+              "misconception_id": "negative_moves_right"
+            },
+            {
+              "id": "minus13",
+              "text": {
+                "en": "The answer should be −13.",
+                "ur": "جواب −13 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That adds the digits and keeps the minus. The signs are different, so subtract: 10 − 3 = 7, giving −7.",
+                "ur": "اس میں ہندسے جمع کر کے منفی رکھ دیا گیا۔ علامتیں مختلف ہیں، اس لیے تفریق کریں: 10 − 3 = 7، یعنی −7"
+              },
+              "misconception_id": "add_digits_keep_minus"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_same",
+      "front": {
+        "en": "−5 + (−3) = ?",
+        "ur": "−5 + (−3) = ؟"
+      },
+      "back": {
+        "en": "−8. Same signs: add the numbers and keep the sign.",
+        "ur": "−8۔ ایک جیسی علامتیں: اعداد جمع کریں اور علامت رکھیں۔"
+      }
+    },
+    {
+      "id": "f_different",
+      "front": {
+        "en": "−9 + 4 = ?",
+        "ur": "−9 + 4 = ؟"
+      },
+      "back": {
+        "en": "−5. Different signs: 9 − 4 = 5, and take the sign of the number further from 0 (−9).",
+        "ur": "−5۔ مختلف علامتیں: 9 − 4 = 5، اور اس عدد کی علامت لیں جو 0 سے زیادہ دور ہو (−9)۔"
+      }
+    },
+    {
+      "id": "f_zero",
+      "front": {
+        "en": "−4 + 4 = ?",
+        "ur": "−4 + 4 = ؟"
+      },
+      "back": {
+        "en": "0. A number plus its opposite is always 0.",
+        "ur": "0۔ کسی عدد اور اس کے مخالف کا مجموعہ ہمیشہ 0 ہوتا ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_steps",
+      "text": {
+        "en": "Draw a number line from −10 to 10 on the floor with chalk, or on paper. Stand on 2. Take 6 steps back (that is adding −6). Where are you? Make up 3 more for someone at home.",
+        "ur": "چاک سے فرش پر، یا کاغذ پر، −10 سے 10 تک عددی خط بنائیں۔ 2 پر کھڑے ہوں۔ 6 قدم پیچھے جائیں (یہ −6 جمع کرنا ہے)۔ آپ کہاں ہیں؟ گھر میں کسی کے لیے ایسے 3 مزید سوال بنائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Sum",
+      "ur": "مجموعہ"
+    },
+    {
+      "en": "Integer",
+      "ur": "صحیح عدد"
+    },
+    {
+      "en": "Opposite",
+      "ur": "مخالف عدد"
+    },
+    {
+      "en": "Zero pair",
+      "ur": "صفر جوڑا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "In Murree it is −3 °C at sunrise. By noon it is 5 degrees warmer. What is the temperature now?",
+          "ur": "مری میں صبح −3 ڈگری ہے۔ دوپہر تک 5 ڈگری زیادہ گرم ہو جاتا ہے۔ اب درجہ حرارت کیا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we add integers, positive and negative. First, a quick check.",
+        "ur": "آج ہم صحیح اعداد جمع کریں گے، مثبت اور منفی۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.integers.meaning",
+      "prompt": {
+        "en": "Which is greater, −1 or −6?",
+        "ur": "کون سا بڑا ہے، −1 یا −6؟"
+      },
+      "options": [
+        {
+          "id": "m1",
+          "text": {
+            "en": "−1",
+            "ur": "−1"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! −1 is to the right of −6.",
+            "ur": "جی ہاں! −1، −6 کے دائیں طرف ہے۔"
+          }
+        },
+        {
+          "id": "m6",
+          "text": {
+            "en": "−6",
+            "ur": "−6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−6 is further left, so it is smaller.",
+            "ur": "−6 زیادہ بائیں ہے، اس لیے چھوٹا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Adding is moving along the number line!",
+          "ur": "جمع کرنا عددی خط پر چلنا ہے!"
+        }
+      },
+      "text": {
+        "en": "Start at the first number. Adding a positive number moves you RIGHT. Adding a negative number moves you LEFT. For Murree: start at −3 and move 5 to the right.",
+        "ur": "پہلے عدد سے شروع کریں۔ مثبت عدد جمع کرنے سے آپ دائیں جاتے ہیں۔ منفی عدد جمع کرنے سے آپ بائیں جاتے ہیں۔ مری کے لیے: −3 سے شروع کریں اور 5 دائیں جائیں۔"
+      }
+    },
+    {
+      "id": "s4_warmer",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "The marker is on −3. Move it to show −3 + 5. Press Check.",
+        "ur": "نشان −3 پر ہے۔ اسے ہلا کر −3 + 5 دکھائیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": -3
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "2"
+      },
+      "hint": {
+        "en": "Adding 5 means 5 steps to the right.",
+        "ur": "5 جمع کرنے کا مطلب 5 قدم دائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! −3 + 5 = 2. It is 2 °C at noon.",
+        "ur": "جی ہاں! −3 + 5 = 2۔ دوپہر کو 2 ڈگری ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "From −3, count 5 to the right: −2, −1, 0, 1, 2.",
+        "ur": "−3 سے 5 دائیں گنیں: −2، −1، 0، 1، 2"
+      },
+      "common_wrong": [
+        {
+          "answer": "-8",
+          "feedback": {
+            "en": "That is 5 to the left. Adding a positive number moves right.",
+            "ur": "یہ 5 بائیں ہے۔ مثبت عدد جمع کرنے سے دائیں جاتے ہیں۔"
+          },
+          "misconception_id": "negative_moves_right"
+        }
+      ]
+    },
+    {
+      "id": "s5_add_negative",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "The marker is on 4. Move it to show 4 + (−6). Press Check.",
+        "ur": "نشان 4 پر ہے۔ اسے ہلا کر 4 + (−6) دکھائیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": 4
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "-2"
+      },
+      "hint": {
+        "en": "Adding −6 means 6 steps to the LEFT.",
+        "ur": "−6 جمع کرنے کا مطلب 6 قدم بائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! 4 + (−6) = −2.",
+        "ur": "جی ہاں! 4 + (−6) = −2"
+      },
+      "feedback_wrong": {
+        "en": "From 4, count 6 to the left: 3, 2, 1, 0, −1, −2.",
+        "ur": "4 سے 6 بائیں گنیں: 3، 2، 1، 0، −1، −2"
+      },
+      "common_wrong": [
+        {
+          "answer": "10",
+          "feedback": {
+            "en": "That is 6 to the right. Adding a negative number moves left.",
+            "ur": "یہ 6 دائیں ہے۔ منفی عدد جمع کرنے سے بائیں جاتے ہیں۔"
+          },
+          "misconception_id": "negative_moves_right"
+        },
+        {
+          "answer": "2",
+          "feedback": {
+            "en": "Close, but the sign is wrong. You went past 0, so the answer is −2.",
+            "ur": "قریب، مگر علامت غلط ہے۔ آپ 0 سے آگے گئے، اس لیے جواب −2 ہے۔"
+          },
+          "misconception_id": "wrong_sign"
+        }
+      ]
+    },
+    {
+      "id": "s6_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Two rules, so you don't need the number line every time.",
+          "ur": "دو اصول، تاکہ ہر بار عددی خط کی ضرورت نہ پڑے۔"
+        }
+      },
+      "text": {
+        "en": "Same signs: add the numbers and keep the sign. −5 + (−3) = −8. Different signs: subtract the smaller from the bigger (ignoring signs), and take the sign of the number further from 0. −9 + 4: 9 − 4 = 5, and −9 is further from 0, so the answer is −5.",
+        "ur": "ایک جیسی علامتیں: اعداد جمع کریں اور علامت رکھیں۔ −5 + (−3) = −8۔ مختلف علامتیں: علامتوں کو چھوڑ کر بڑے میں سے چھوٹا تفریق کریں، اور اس عدد کی علامت لیں جو 0 سے زیادہ دور ہو۔ −9 + 4: 9 − 4 = 5، اور −9 صفر سے زیادہ دور ہے، اس لیے جواب −5 ہے۔"
+      }
+    },
+    {
+      "id": "s7_same_signs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out −5 + (−3)",
+        "ur": "حل کریں: −5 + (−3)"
+      },
+      "answer": -8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Same signs: add 5 and 3, keep the minus.",
+        "ur": "ایک جیسی علامتیں: 5 اور 3 جمع کریں، منفی رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −5 + (−3) = −8.",
+        "ur": "درست! −5 + (−3) = −8"
+      },
+      "feedback_wrong": {
+        "en": "Both negative: 5 + 3 = 8, keep the minus: −8.",
+        "ur": "دونوں منفی: 5 + 3 = 8، منفی رکھیں: −8"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "Both numbers are negative, so the answer is negative: −8.",
+            "ur": "دونوں اعداد منفی ہیں، اس لیے جواب منفی ہے: −8"
+          },
+          "misconception_id": "wrong_sign"
+        },
+        {
+          "answer": -2,
+          "feedback": {
+            "en": "That is −5 + 3. You are adding −3, so go further left: −8.",
+            "ur": "یہ −5 + 3 ہے۔ آپ −3 جمع کر رہے ہیں، اس لیے مزید بائیں جائیں: −8"
+          },
+          "misconception_id": "negative_moves_right"
+        }
+      ]
+    },
+    {
+      "id": "s8_different_signs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out −9 + 4",
+        "ur": "حل کریں: −9 + 4"
+      },
+      "answer": -5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Different signs: 9 − 4, and −9 is further from 0.",
+        "ur": "مختلف علامتیں: 9 − 4، اور −9 صفر سے زیادہ دور ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −9 + 4 = −5.",
+        "ur": "درست! −9 + 4 = −5"
+      },
+      "feedback_wrong": {
+        "en": "9 − 4 = 5. −9 is further from 0, so the answer is negative: −5.",
+        "ur": "9 − 4 = 5۔ −9 صفر سے زیادہ دور ہے، اس لیے جواب منفی ہے: −5"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "The size is right, but −9 is further from 0, so the answer is negative: −5.",
+            "ur": "مقدار درست ہے، مگر −9 صفر سے زیادہ دور ہے، اس لیے جواب منفی ہے: −5"
+          },
+          "misconception_id": "wrong_sign"
+        },
+        {
+          "answer": -13,
+          "feedback": {
+            "en": "The signs are different, so subtract, don't add: 9 − 4 = 5.",
+            "ur": "علامتیں مختلف ہیں، اس لیے جمع نہیں تفریق کریں: 9 − 4 = 5"
+          },
+          "misconception_id": "add_digits_keep_minus"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sara wrote −7 + 3 = −10. What went wrong?",
+        "ur": "سارہ نے لکھا −7 + 3 = −10۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "subtract",
+          "text": {
+            "en": "The signs are different, so she should subtract: 7 − 3 = 4, giving −4.",
+            "ur": "علامتیں مختلف ہیں، اس لیے تفریق کرنی تھی: 7 − 3 = 4، یعنی −4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! From −7, moving 3 to the right gives −4.",
+            "ur": "جی ہاں! −7 سے 3 دائیں جانے پر −4 آتا ہے۔"
+          }
+        },
+        {
+          "id": "sign",
+          "text": {
+            "en": "The answer should be 10.",
+            "ur": "جواب 10 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding 3 moves right only 3 steps from −7. You don't reach 10.",
+            "ur": "3 جمع کرنے سے −7 سے صرف 3 قدم دائیں جاتے ہیں۔ آپ 10 تک نہیں پہنچتے۔"
+          },
+          "misconception_id": "wrong_sign"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 7 + 3 = 10.",
+            "ur": "کوئی غلطی نہیں۔ 7 + 3 = 10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding +3 to −7 moves right, towards 0, so the answer is closer to 0: −4.",
+            "ur": "−7 میں 3 جمع کرنے سے دائیں، 0 کی طرف جاتے ہیں، اس لیے جواب 0 کے زیادہ قریب ہے: −4"
+          },
+          "misconception_id": "add_digits_keep_minus"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I worked out −4 + 4 and got 0. Can you tell me why?",
+          "ur": "میں نے −4 + 4 حل کیا اور 0 آیا۔ کیا آپ بتا سکتے ہیں کیوں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is −4 + 4 equal to 0? You can use the number line or money.",
+        "ur": "اپنے الفاظ میں بتائیں: −4 + 4 کا جواب 0 کیوں ہے؟ آپ عددی خط یا پیسوں کی مثال دے سکتے ہیں۔"
+      },
+      "key_idea": "Start at −4 and move 4 to the right and you land on 0; −4 and 4 are opposites, so they cancel. Owing Rs 4 and then getting Rs 4 leaves nothing.",
+      "levels": {
+        "got_it": "Explains that moving 4 right from −4 reaches 0, or that −4 and 4 are opposites and cancel, or uses owing and paying back the same amount.",
+        "partly": "Says they cancel or are opposites but gives no reason, or describes the number line without reaching 0.",
+        "not_yet": "Gives a different answer, no reason, or wrong reasoning."
+      },
+      "keywords": [
+        [
+          "opposite",
+          "cancel",
+          "مخالف",
+          "ختم",
+          "khatam",
+          "mukhalif",
+          "barabar",
+          "برابر"
+        ],
+        [
+          "right",
+          "steps",
+          "number line",
+          "دائیں",
+          "قدم",
+          "عددی خط",
+          "daen",
+          "qadam"
+        ],
+        [
+          "owe",
+          "pay",
+          "ادھار",
+          "واپس",
+          "udhar",
+          "wapas"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! −4 and 4 are opposites: from −4, 4 steps right lands on 0.",
+          "ur": "بہت خوب سمجھایا! −4 اور 4 مخالف ہیں: −4 سے 4 قدم دائیں 0 پر پہنچتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say where you land if you start at −4 and move 4 to the right.",
+          "ur": "اچھی شروعات! اب بتائیں کہ −4 سے شروع کر کے 4 دائیں جائیں تو کہاں پہنچتے ہیں۔"
+        },
+        "not_yet": {
+          "en": "Think: you owe your friend Rs 4, then you pay Rs 4 back. How much do you owe now?",
+          "ur": "سوچیں: آپ پر دوست کے 4 روپے ادھار ہیں، پھر آپ 4 روپے واپس کر دیتے ہیں۔ اب کتنا ادھار ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_money",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hamza has Rs 6 (that is +6). He buys a pen for Rs 8 on credit from the shop (that is −8). Work out 6 + (−8) to find where he stands.",
+        "ur": "حمزہ کے پاس 6 روپے ہیں (یعنی +6)۔ وہ دکان سے 8 روپے کا قلم ادھار لیتا ہے (یعنی −8)۔ اس کا حساب جاننے کے لیے 6 + (−8) حل کریں۔"
+      },
+      "answer": -2,
+      "checker": "numeric",
+      "hint": {
+        "en": "He pays Rs 6 and still owes the rest. Owing is negative.",
+        "ur": "وہ 6 روپے دیتا ہے اور باقی ادھار رہتا ہے۔ ادھار منفی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 + (−8) = −2: he still owes Rs 2.",
+        "ur": "درست! 6 + (−8) = −2: اس پر ابھی 2 روپے ادھار ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "8 − 6 = 2, and −8 is further from 0, so −2. He owes Rs 2.",
+        "ur": "8 − 6 = 2، اور −8 صفر سے زیادہ دور ہے، اس لیے −2۔ اس پر 2 روپے ادھار ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "He can't pay all of it, so he still owes: the answer is negative, −2.",
+            "ur": "وہ پورا نہیں دے سکتا، اس لیے ادھار باقی ہے: جواب منفی ہے، −2"
+          },
+          "misconception_id": "wrong_sign"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "The pen is −8, so it moves left: 6 − 8.",
+            "ur": "قلم −8 ہے، اس لیے بائیں جاتا ہے: 6 − 8"
+          },
+          "misconception_id": "negative_moves_right"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can add any integers now!",
+          "ur": "اب آپ کوئی بھی صحیح اعداد جمع کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Adding a positive number: move right. Adding a negative number: move left. Same signs: add and keep the sign. Different signs: subtract, and take the sign of the number further from 0. A number plus its opposite is 0.",
+        "ur": "مثبت عدد جمع کرنا: دائیں جائیں۔ منفی عدد جمع کرنا: بائیں جائیں۔ ایک جیسی علامتیں: جمع کریں اور علامت رکھیں۔ مختلف علامتیں: تفریق کریں، اور اس عدد کی علامت لیں جو 0 سے زیادہ دور ہو۔ کسی عدد اور اس کے مخالف کا مجموعہ 0 ہے۔"
+      },
+      "points": [
+        {
+          "en": "−5 + (−3) = −8",
+          "ur": "−5 + (−3) = −8"
+        },
+        {
+          "en": "−9 + 4 = −5",
+          "ur": "−9 + 4 = −5"
+        },
+        {
+          "en": "−4 + 4 = 0",
+          "ur": "−4 + 4 = 0"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_mixed",
+      "type": "apply",
+      "skill": "maths.integers.add",
+      "step": {
+        "id": "r_mixed",
+        "type": "number",
+        "prompt": {
+          "en": "Work out −2 + 7",
+          "ur": "حل کریں: −2 + 7"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "Different signs: 7 − 2, and 7 is further from 0.",
+          "ur": "مختلف علامتیں: 7 − 2، اور 7 صفر سے زیادہ دور ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −2 + 7 = 5.",
+          "ur": "درست! −2 + 7 = 5"
+        },
+        "feedback_wrong": {
+          "en": "From −2, move 7 to the right: 5.",
+          "ur": "−2 سے 7 دائیں جائیں: 5"
+        },
+        "common_wrong": [
+          {
+            "answer": -5,
+            "feedback": {
+              "en": "7 is further from 0 and positive, so the answer is positive: 5.",
+              "ur": "7 صفر سے زیادہ دور اور مثبت ہے، اس لیے جواب مثبت ہے: 5"
+            },
+            "misconception_id": "wrong_sign"
+          },
+          {
+            "answer": -9,
+            "feedback": {
+              "en": "The signs are different, so subtract: 7 − 2 = 5.",
+              "ur": "علامتیں مختلف ہیں، اس لیے تفریق کریں: 7 − 2 = 5"
+            },
+            "misconception_id": "add_digits_keep_minus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_zero",
+      "type": "recall",
+      "skill": "maths.integers.add",
+      "step": {
+        "id": "r_zero",
+        "type": "number",
+        "prompt": {
+          "en": "Work out −8 + 8",
+          "ur": "حل کریں: −8 + 8"
+        },
+        "answer": 0,
+        "checker": "numeric",
+        "hint": {
+          "en": "−8 and 8 are opposites.",
+          "ur": "−8 اور 8 مخالف ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! A number plus its opposite is 0.",
+          "ur": "درست! کسی عدد اور اس کے مخالف کا مجموعہ 0 ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "From −8, move 8 to the right: you land on 0.",
+          "ur": "−8 سے 8 دائیں جائیں: آپ 0 پر پہنچتے ہیں۔"
+        },
+        "common_wrong": [
+          {
+            "answer": -16,
+            "feedback": {
+              "en": "The signs are different, so they cancel: 0.",
+              "ur": "علامتیں مختلف ہیں، اس لیے ختم ہو جاتے ہیں: 0"
+            },
+            "misconception_id": "add_digits_keep_minus"
+          },
+          {
+            "answer": 16,
+            "feedback": {
+              "en": "−8 and 8 are opposites, so they cancel: 0.",
+              "ur": "−8 اور 8 مخالف ہیں، اس لیے ختم ہو جاتے ہیں: 0"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Integers unit. No textbook text or exercises were used.",
+    "A negative number after + is written in brackets: −5 + (−3). Check this matches the Punjab textbook's style.",
+    "Urdu terms to check: مجموعہ (sum), صفر جوڑا (zero pair).",
+    "The number-line steps start the marker on the first number, so the child only shows the move.",
+    "The numbers were worked out in content/sources/g6-maths-04/adding_integers.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
