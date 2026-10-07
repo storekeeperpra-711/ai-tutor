@@ -1,0 +1,946 @@
+{
+  "id": "g6-maths-17-likelihood",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Differentiate outcomes that are equally likely and not equally likely to occur; place events on the probability scale from 0 to 1.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 12: Probability, 12.3 Probability of Single Event"
+    }
+  ],
+  "skills": [
+    "maths.probability.likelihood"
+  ],
+  "title": {
+    "en": "Likely, unlikely and equally likely",
+    "ur": "زیادہ امکان، کم امکان اور یکساں امکان"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.probability.single_event"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "two_kinds_equal",
+      "description": "Thinks two kinds of outcome (red or blue) always means a 50-50 chance."
+    },
+    {
+      "id": "more_than_one",
+      "description": "Gives a probability bigger than 1."
+    },
+    {
+      "id": "possible_is_likely",
+      "description": "Thinks anything that can happen is likely."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.probability.likelihood": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.probability.likelihood": [
+      {
+        "id": "qb_zero",
+        "type": "recall",
+        "step": {
+          "id": "qb_zero",
+          "type": "choice",
+          "prompt": {
+            "en": "An event has probability 0. It is …",
+            "ur": "ایک واقعے کا احتمال 0 ہے۔ یہ ہے …"
+          },
+          "options": [
+            {
+              "id": "impossible",
+              "text": {
+                "en": "Impossible",
+                "ur": "ناممکن"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 0 means it can never happen.",
+                "ur": "جی ہاں! 0 کا مطلب ہے یہ کبھی نہیں ہو سکتا۔"
+              }
+            },
+            {
+              "id": "unlikely",
+              "text": {
+                "en": "Unlikely",
+                "ur": "کم امکان"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0 is the very bottom of the scale: impossible.",
+                "ur": "0 پیمانے کا سب سے نیچے ہے: ناممکن۔"
+              }
+            },
+            {
+              "id": "even_chance",
+              "text": {
+                "en": "Even chance",
+                "ur": "برابر امکان"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0 is the very bottom of the scale: impossible.",
+                "ur": "0 پیمانے کا سب سے نیچے ہے: ناممکن۔"
+              }
+            },
+            {
+              "id": "likely",
+              "text": {
+                "en": "Likely",
+                "ur": "زیادہ امکان"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0 is the very bottom of the scale: impossible.",
+                "ur": "0 پیمانے کا سب سے نیچے ہے: ناممکن۔"
+              }
+            },
+            {
+              "id": "certain",
+              "text": {
+                "en": "Certain",
+                "ur": "یقینی"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0 is the very bottom of the scale: impossible.",
+                "ur": "0 پیمانے کا سب سے نیچے ہے: ناممکن۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "text_check",
+          "prompt": {
+            "en": "A spinner has 4 equal parts: 3 red and 1 yellow. What is P(yellow)?",
+            "ur": "ایک اسپنر کے 4 برابر حصے ہیں: 3 سرخ اور 1 پیلا۔ P(پیلا) کیا ہے؟"
+          },
+          "checker": "fraction",
+          "expected": "1/4",
+          "hint": {
+            "en": "1 yellow part out of 4 parts.",
+            "ur": "4 حصوں میں سے 1 پیلا۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 1/4, so yellow is unlikely.",
+            "ur": "درست! 1/4، تو پیلا کم امکان ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "1 part out of 4: P(yellow) = 1/4.",
+            "ur": "4 میں سے 1 حصہ: P(پیلا) = 1/4"
+          },
+          "common_wrong": [
+            {
+              "answer": "1/3",
+              "feedback": {
+                "en": "3 is the red parts. Divide by all 4 parts: 1/4.",
+                "ur": "3 سرخ حصے ہیں۔ تمام 4 حصوں سے تقسیم کریں: 1/4"
+              }
+            },
+            {
+              "answer": "1/2",
+              "feedback": {
+                "en": "Two colours, but not equal parts: 1 of 4 is yellow.",
+                "ur": "دو رنگ ہیں، مگر حصے برابر نہیں: 4 میں سے 1 پیلا۔"
+              },
+              "misconception_id": "two_kinds_equal"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana says the probability that it rains tomorrow is 2, so it is very likely. What is wrong?",
+            "ur": "ثنا کہتی ہے کہ کل بارش کا احتمال 2 ہے، تو بہت زیادہ امکان ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "max_one",
+              "text": {
+                "en": "A probability can't be more than 1.",
+                "ur": "احتمال 1 سے زیادہ نہیں ہو سکتا۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 1 already means certain.",
+                "ur": "جی ہاں! 1 کا مطلب ہی یقینی ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The scale stops at 1 (certain). 2 is not a probability.",
+                "ur": "پیمانہ 1 (یقینی) پر ختم ہوتا ہے۔ 2 احتمال نہیں۔"
+              },
+              "misconception_id": "more_than_one"
+            },
+            {
+              "id": "unlikely",
+              "text": {
+                "en": "2 means unlikely.",
+                "ur": "2 کا مطلب کم امکان ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "No probability is 2. They go from 0 to 1.",
+                "ur": "کوئی احتمال 2 نہیں ہوتا۔ یہ 0 سے 1 تک ہوتے ہیں۔"
+              },
+              "misconception_id": "more_than_one"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_scale",
+      "front": {
+        "en": "The probability scale?",
+        "ur": "احتمال کا پیمانہ؟"
+      },
+      "back": {
+        "en": "0 impossible, under 1/2 unlikely, 1/2 even chance, over 1/2 likely, 1 certain.",
+        "ur": "0 ناممکن، 1/2 سے کم کم امکان، 1/2 برابر امکان، 1/2 سے زیادہ زیادہ امکان، 1 یقینی۔"
+      }
+    },
+    {
+      "id": "f_equally",
+      "front": {
+        "en": "Equally likely?",
+        "ur": "یکساں امکان؟"
+      },
+      "back": {
+        "en": "Outcomes with the same probability, like H and T on a fair coin.",
+        "ur": "ایک جتنے احتمال والے نتائج، جیسے منصفانہ سکے پر H اور T۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_scale",
+      "text": {
+        "en": "Draw a line and mark 0, 1/2 and 1. Put three things from your day on it: 'the sun sets today', 'I find a lion at home', 'it rains tomorrow'.",
+        "ur": "ایک لکیر کھینچیں اور 0، 1/2 اور 1 لکھیں۔ اپنے دن کی تین باتیں اس پر رکھیں: 'آج سورج غروب ہوگا'، 'گھر میں شیر ملے گا'، 'کل بارش ہوگی'۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Impossible",
+      "ur": "ناممکن"
+    },
+    {
+      "en": "Unlikely",
+      "ur": "کم امکان"
+    },
+    {
+      "en": "Even chance",
+      "ur": "برابر امکان"
+    },
+    {
+      "en": "Likely",
+      "ur": "زیادہ امکان"
+    },
+    {
+      "en": "Certain",
+      "ur": "یقینی"
+    },
+    {
+      "en": "Equally likely",
+      "ur": "یکساں امکان"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Will the sun rise tomorrow? Will it snow in Multan in June? Some things are surer than others!",
+          "ur": "کیا کل سورج نکلے گا؟ کیا جون میں ملتان میں برف پڑے گی؟ کچھ باتیں دوسری باتوں سے زیادہ یقینی ہیں!"
+        }
+      },
+      "text": {
+        "en": "Today we put chances in order, from impossible to certain, and learn when outcomes are equally likely. First, one probability to warm up.",
+        "ur": "آج ہم امکانات کو ترتیب دیں گے، ناممکن سے یقینی تک، اور سیکھیں گے کہ نتائج کب یکساں ممکن ہوتے ہیں۔ پہلے ایک احتمال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.probability.single_event",
+      "prompt": {
+        "en": "A fair coin is tossed. What is P(head)?",
+        "ur": "ایک منصفانہ سکہ اچھالا جاتا ہے۔ P(ہیڈ) کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "1/2",
+      "hint": {
+        "en": "H is one outcome out of H and T.",
+        "ur": "H اور T میں سے H ایک نتیجہ ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1/2.",
+        "ur": "درست! 1/2"
+      },
+      "feedback_wrong": {
+        "en": "One outcome (H) out of two (H, T): 1/2.",
+        "ur": "دو (H، T) میں سے ایک نتیجہ (H): 1/2"
+      },
+      "common_wrong": [
+        {
+          "answer": "2",
+          "feedback": {
+            "en": "Wanted outcomes on top: 1 out of 2 is 1/2.",
+            "ur": "مطلوبہ نتائج اوپر: 2 میں سے 1 یعنی 1/2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_scale",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Zero means never, one means always. Everything else sits in between!",
+          "ur": "صفر یعنی کبھی نہیں، ایک یعنی ہمیشہ۔ باقی سب درمیان میں!"
+        }
+      },
+      "text": {
+        "en": "Every probability is on a scale from 0 to 1. 0 is impossible. Less than 1/2 is unlikely. Exactly 1/2 is an even chance. More than 1/2 is likely. 1 is certain. Outcomes are equally likely when they have the same probability, like H and T on a fair coin, or the six faces of a fair dice.",
+        "ur": "ہر احتمال 0 سے 1 کے پیمانے پر ہوتا ہے۔ 0 ناممکن ہے۔ 1/2 سے کم، کم امکان ہے۔ ٹھیک 1/2 برابر امکان ہے۔ 1/2 سے زیادہ، زیادہ امکان ہے۔ 1 یقینی ہے۔ نتائج یکساں ممکن تب ہوتے ہیں جب ان کا احتمال ایک جتنا ہو، جیسے منصفانہ سکے پر H اور T، یا منصفانہ ڈائس کے چھ رُخ۔"
+      }
+    },
+    {
+      "id": "s4_certain",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "You roll a dice. How likely is a number less than 7?",
+        "ur": "آپ ڈائس پھینکتے ہیں۔ 7 سے چھوٹا عدد آنے کا کتنا امکان ہے؟"
+      },
+      "options": [
+        {
+          "id": "impossible",
+          "text": {
+            "en": "Impossible",
+            "ur": "ناممکن"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every face (1 to 6) is less than 7, so P = 6/6 = 1: certain.",
+            "ur": "ہر رُخ (1 سے 6) 7 سے چھوٹا ہے، تو P = 6/6 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "unlikely",
+          "text": {
+            "en": "Unlikely",
+            "ur": "کم امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every face (1 to 6) is less than 7, so P = 6/6 = 1: certain.",
+            "ur": "ہر رُخ (1 سے 6) 7 سے چھوٹا ہے، تو P = 6/6 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "even_chance",
+          "text": {
+            "en": "Even chance",
+            "ur": "برابر امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every face (1 to 6) is less than 7, so P = 6/6 = 1: certain.",
+            "ur": "ہر رُخ (1 سے 6) 7 سے چھوٹا ہے، تو P = 6/6 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "likely",
+          "text": {
+            "en": "Likely",
+            "ur": "زیادہ امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every face (1 to 6) is less than 7, so P = 6/6 = 1: certain.",
+            "ur": "ہر رُخ (1 سے 6) 7 سے چھوٹا ہے، تو P = 6/6 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "certain",
+          "text": {
+            "en": "Certain",
+            "ur": "یقینی"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Every face is less than 7: P = 6/6 = 1.",
+            "ur": "جی ہاں! ہر رُخ 7 سے چھوٹا ہے: P = 6/6 = 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_unlikely",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bag has 9 blue balls and 1 red ball. How likely is it to pick red?",
+        "ur": "ایک تھیلے میں 9 نیلی اور 1 سرخ گیند ہے۔ سرخ نکلنے کا کتنا امکان ہے؟"
+      },
+      "options": [
+        {
+          "id": "impossible",
+          "text": {
+            "en": "Impossible",
+            "ur": "ناممکن"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Red can happen, but P(red) = 1/10, less than 1/2: unlikely.",
+            "ur": "سرخ نکل سکتی ہے، مگر P(سرخ) = 1/10، جو 1/2 سے کم ہے: کم امکان۔"
+          },
+          "misconception_id": "possible_is_likely"
+        },
+        {
+          "id": "unlikely",
+          "text": {
+            "en": "Unlikely",
+            "ur": "کم امکان"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! P(red) = 1/10, less than 1/2.",
+            "ur": "جی ہاں! P(سرخ) = 1/10، جو 1/2 سے کم ہے۔"
+          }
+        },
+        {
+          "id": "even_chance",
+          "text": {
+            "en": "Even chance",
+            "ur": "برابر امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Red can happen, but P(red) = 1/10, less than 1/2: unlikely.",
+            "ur": "سرخ نکل سکتی ہے، مگر P(سرخ) = 1/10، جو 1/2 سے کم ہے: کم امکان۔"
+          },
+          "misconception_id": "possible_is_likely"
+        },
+        {
+          "id": "likely",
+          "text": {
+            "en": "Likely",
+            "ur": "زیادہ امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Red can happen, but P(red) = 1/10, less than 1/2: unlikely.",
+            "ur": "سرخ نکل سکتی ہے، مگر P(سرخ) = 1/10، جو 1/2 سے کم ہے: کم امکان۔"
+          },
+          "misconception_id": "possible_is_likely"
+        },
+        {
+          "id": "certain",
+          "text": {
+            "en": "Certain",
+            "ur": "یقینی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Red can happen, but P(red) = 1/10, less than 1/2: unlikely.",
+            "ur": "سرخ نکل سکتی ہے، مگر P(سرخ) = 1/10، جو 1/2 سے کم ہے: کم امکان۔"
+          },
+          "misconception_id": "possible_is_likely"
+        }
+      ]
+    },
+    {
+      "id": "s6_even",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "You toss a fair coin. How likely is heads?",
+        "ur": "آپ منصفانہ سکہ اچھالتے ہیں۔ ہیڈ آنے کا کتنا امکان ہے؟"
+      },
+      "options": [
+        {
+          "id": "impossible",
+          "text": {
+            "en": "Impossible",
+            "ur": "ناممکن"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P(head) = 1/2, exactly the middle: an even chance.",
+            "ur": "P(ہیڈ) = 1/2، بالکل درمیان: برابر امکان۔"
+          }
+        },
+        {
+          "id": "unlikely",
+          "text": {
+            "en": "Unlikely",
+            "ur": "کم امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P(head) = 1/2, exactly the middle: an even chance.",
+            "ur": "P(ہیڈ) = 1/2، بالکل درمیان: برابر امکان۔"
+          }
+        },
+        {
+          "id": "even_chance",
+          "text": {
+            "en": "Even chance",
+            "ur": "برابر امکان"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! P(head) = 1/2: an even chance.",
+            "ur": "جی ہاں! P(ہیڈ) = 1/2: برابر امکان۔"
+          }
+        },
+        {
+          "id": "likely",
+          "text": {
+            "en": "Likely",
+            "ur": "زیادہ امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P(head) = 1/2, exactly the middle: an even chance.",
+            "ur": "P(ہیڈ) = 1/2، بالکل درمیان: برابر امکان۔"
+          }
+        },
+        {
+          "id": "certain",
+          "text": {
+            "en": "Certain",
+            "ur": "یقینی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P(head) = 1/2, exactly the middle: an even chance.",
+            "ur": "P(ہیڈ) = 1/2، بالکل درمیان: برابر امکان۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_spinner",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A spinner has 4 equal parts: 3 red and 1 yellow. What is P(red)?",
+        "ur": "ایک اسپنر کے 4 برابر حصے ہیں: 3 سرخ اور 1 پیلا۔ P(سرخ) کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "3/4",
+      "hint": {
+        "en": "3 red parts out of 4 parts.",
+        "ur": "4 حصوں میں سے 3 سرخ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3/4: more than 1/2, so red is likely.",
+        "ur": "درست! 3/4: 1/2 سے زیادہ، تو سرخ زیادہ امکان ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "3 parts out of 4: P(red) = 3/4.",
+        "ur": "4 میں سے 3 حصے: P(سرخ) = 3/4"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/1",
+          "feedback": {
+            "en": "1 is the yellow part. Divide by all 4 parts: 3/4.",
+            "ur": "1 پیلا حصہ ہے۔ تمام 4 حصوں سے تقسیم کریں: 3/4"
+          },
+          "misconception_id": "more_than_one"
+        },
+        {
+          "answer": "1/2",
+          "feedback": {
+            "en": "Two colours, but not equal parts: 3 of 4 are red.",
+            "ur": "دو رنگ ہیں، مگر حصے برابر نہیں: 4 میں سے 3 سرخ۔"
+          },
+          "misconception_id": "two_kinds_equal"
+        }
+      ]
+    },
+    {
+      "id": "s8_equally",
+      "type": "choice",
+      "prompt": {
+        "en": "Which of these has equally likely outcomes?",
+        "ur": "ان میں سے کس کے نتائج یکساں ممکن ہیں؟"
+      },
+      "options": [
+        {
+          "id": "coin",
+          "text": {
+            "en": "Tossing a fair coin: H or T",
+            "ur": "منصفانہ سکہ اچھالنا: H یا T"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! P(H) = P(T) = 1/2.",
+            "ur": "جی ہاں! P(H) = P(T) = 1/2"
+          }
+        },
+        {
+          "id": "spinner",
+          "text": {
+            "en": "The spinner: red or yellow",
+            "ur": "اسپنر: سرخ یا پیلا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Red has 3 parts and yellow 1: 3/4 and 1/4 are not equal.",
+            "ur": "سرخ کے 3 حصے اور پیلے کا 1: 3/4 اور 1/4 برابر نہیں۔"
+          },
+          "misconception_id": "two_kinds_equal"
+        },
+        {
+          "id": "bag",
+          "text": {
+            "en": "9 blue and 1 red ball: blue or red",
+            "ur": "9 نیلی اور 1 سرخ گیند: نیلی یا سرخ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Blue is 9/10 and red is 1/10: not equal.",
+            "ur": "نیلی 9/10 اور سرخ 1/10: برابر نہیں۔"
+          },
+          "misconception_id": "two_kinds_equal"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza says: 'A bag has 9 blue balls and 1 red ball. There are two colours, so red and blue are equally likely.' What is wrong?",
+        "ur": "حمزہ کہتا ہے: 'تھیلے میں 9 نیلی اور 1 سرخ گیند ہے۔ رنگ دو ہیں، تو سرخ اور نیلی یکساں ممکن ہیں۔' کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "count_balls",
+          "text": {
+            "en": "Count the balls, not the colours: P(blue) = 9/10, P(red) = 1/10.",
+            "ur": "رنگ نہیں، گیندیں گنیں: P(نیلی) = 9/10، P(سرخ) = 1/10"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Blue is much more likely.",
+            "ur": "جی ہاں! نیلی کا امکان کہیں زیادہ ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Two colours doesn't mean 50-50. 9 of the 10 balls are blue.",
+            "ur": "دو رنگ کا مطلب آدھا آدھا نہیں۔ 10 میں سے 9 گیندیں نیلی ہیں۔"
+          },
+          "misconception_id": "two_kinds_equal"
+        },
+        {
+          "id": "red_likely",
+          "text": {
+            "en": "Red is more likely because it is special.",
+            "ur": "سرخ کا امکان زیادہ ہے کیونکہ وہ خاص ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only 1 ball is red: P(red) = 1/10, unlikely.",
+            "ur": "صرف 1 گیند سرخ ہے: P(سرخ) = 1/10، کم امکان۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A 6 can come up, so isn't it likely? Help me understand!",
+          "ur": "6 آ تو سکتا ہے، تو کیا یہ زیادہ امکان نہیں؟ مجھے سمجھائیں!"
+        }
+      },
+      "task": {
+        "en": "Explain why rolling a 6 on a fair dice is unlikely, but rolling a number less than 7 is certain.",
+        "ur": "بتائیں کہ منصفانہ ڈائس پر 6 آنا کم امکان کیوں ہے، مگر 7 سے چھوٹا عدد آنا یقینی کیوں ہے۔"
+      },
+      "key_idea": "Only one face of six shows 6, so P(6) = 1/6, which is less than 1/2: unlikely. Every face is less than 7, so P = 6/6 = 1: certain.",
+      "levels": {
+        "got_it": "Says P(6) = 1/6 (one face of six), less than 1/2 so unlikely, and that all six faces are less than 7 so P = 1, certain.",
+        "partly": "Explains one of the two, or names the words without the probabilities.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "1/6",
+          "one out of six",
+          "چھ میں سے ایک"
+        ],
+        [
+          "1/2",
+          "half",
+          "آدھا"
+        ],
+        [
+          "every",
+          "all",
+          "سب",
+          "ہر"
+        ],
+        [
+          "1",
+          "6/6",
+          "one"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 1/6 is low; 6/6 is certain.",
+          "ur": "بہت خوب! 1/6 کم ہے؛ 6/6 یقینی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now give the probability of each one.",
+          "ur": "اچھی شروعات! اب ہر ایک کا احتمال بتائیں۔"
+        },
+        "not_yet": {
+          "en": "How many faces show 6? How many faces are less than 7?",
+          "ur": "کتنے رُخ پر 6 ہے؟ کتنے رُخ 7 سے چھوٹے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_blue",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bag has 2 red and 8 blue balls. What is P(blue)?",
+        "ur": "ایک تھیلے میں 2 سرخ اور 8 نیلی گیندیں ہیں۔ P(نیلی) کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "4/5",
+      "hint": {
+        "en": "8 blue out of all the balls.",
+        "ur": "تمام گیندوں میں سے 8 نیلی۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8/10 = 4/5: likely.",
+        "ur": "درست! 8/10 = 4/5: زیادہ امکان۔"
+      },
+      "feedback_wrong": {
+        "en": "8 blue out of 10 balls: 8/10 = 4/5.",
+        "ur": "10 گیندوں میں سے 8 نیلی: 8/10 = 4/5"
+      },
+      "common_wrong": [
+        {
+          "answer": "8/2",
+          "feedback": {
+            "en": "A probability is never more than 1. Divide by all 10 balls: 8/10.",
+            "ur": "احتمال کبھی 1 سے زیادہ نہیں ہوتا۔ تمام 10 گیندوں سے تقسیم کریں: 8/10"
+          },
+          "misconception_id": "more_than_one"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "From impossible to certain, you can place any event on the scale now!",
+          "ur": "ناممکن سے یقینی تک، اب آپ کسی بھی واقعے کو پیمانے پر رکھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Probabilities go from 0 (impossible) to 1 (certain). Under 1/2 is unlikely, 1/2 is an even chance, over 1/2 is likely. Outcomes are equally likely only when their probabilities are the same; two colours in a bag don't make a 50-50 chance.",
+        "ur": "احتمال 0 (ناممکن) سے 1 (یقینی) تک ہوتے ہیں۔ 1/2 سے کم، کم امکان؛ 1/2 برابر امکان؛ 1/2 سے زیادہ، زیادہ امکان۔ نتائج تب ہی یکساں ممکن ہیں جب ان کے احتمال ایک جتنے ہوں؛ تھیلے میں دو رنگ ہونے سے آدھا آدھا امکان نہیں بنتا۔"
+      },
+      "points": [
+        {
+          "en": "0 impossible, 1/2 even chance, 1 certain.",
+          "ur": "0 ناممکن، 1/2 برابر امکان، 1 یقینی۔"
+        },
+        {
+          "en": "Equally likely = same probability.",
+          "ur": "یکساں امکان = ایک جتنا احتمال"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_word",
+      "type": "apply",
+      "skill": "maths.probability.likelihood",
+      "step": {
+        "id": "r_word",
+        "type": "choice",
+        "prompt": {
+          "en": "An event has probability 9/10. It is …",
+          "ur": "ایک واقعے کا احتمال 9/10 ہے۔ یہ ہے …"
+        },
+        "options": [
+          {
+            "id": "impossible",
+            "text": {
+              "en": "Impossible",
+              "ur": "ناممکن"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "9/10 is more than 1/2 and less than 1: likely.",
+              "ur": "9/10، 1/2 سے زیادہ اور 1 سے کم ہے: زیادہ امکان۔"
+            }
+          },
+          {
+            "id": "unlikely",
+            "text": {
+              "en": "Unlikely",
+              "ur": "کم امکان"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "9/10 is more than 1/2 and less than 1: likely.",
+              "ur": "9/10، 1/2 سے زیادہ اور 1 سے کم ہے: زیادہ امکان۔"
+            }
+          },
+          {
+            "id": "even_chance",
+            "text": {
+              "en": "Even chance",
+              "ur": "برابر امکان"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "9/10 is more than 1/2 and less than 1: likely.",
+              "ur": "9/10، 1/2 سے زیادہ اور 1 سے کم ہے: زیادہ امکان۔"
+            }
+          },
+          {
+            "id": "likely",
+            "text": {
+              "en": "Likely",
+              "ur": "زیادہ امکان"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! 9/10 is more than 1/2 but less than 1.",
+              "ur": "جی ہاں! 9/10، 1/2 سے زیادہ مگر 1 سے کم ہے۔"
+            }
+          },
+          {
+            "id": "certain",
+            "text": {
+              "en": "Certain",
+              "ur": "یقینی"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "9/10 is more than 1/2 and less than 1: likely.",
+              "ur": "9/10، 1/2 سے زیادہ اور 1 سے کم ہے: زیادہ امکان۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_odd",
+      "type": "apply",
+      "skill": "maths.probability.likelihood",
+      "step": {
+        "id": "r_odd",
+        "type": "text_check",
+        "prompt": {
+          "en": "You roll a dice. What is the probability of an odd number?",
+          "ur": "آپ ڈائس پھینکتے ہیں۔ طاق عدد آنے کا احتمال کیا ہے؟"
+        },
+        "checker": "fraction",
+        "expected": "1/2",
+        "hint": {
+          "en": "The odd faces are 1, 3 and 5.",
+          "ur": "طاق رُخ 1، 3 اور 5 ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 3/6 = 1/2: an even chance.",
+          "ur": "درست! 3/6 = 1/2: برابر امکان۔"
+        },
+        "feedback_wrong": {
+          "en": "E = {1, 3, 5}, so P = 3/6 = 1/2.",
+          "ur": "E = {1, 3, 5}، تو P = 3/6 = 1/2"
+        },
+        "common_wrong": [
+          {
+            "answer": "3",
+            "feedback": {
+              "en": "3 is how many odd numbers. Divide by 6: 3/6.",
+              "ur": "3 طاق اعداد کی تعداد ہے۔ 6 سے تقسیم کریں: 3/6"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Probability unit (PCTB Mathematics 6, Sub-domain 12). No textbook text or exercises were used.",
+    "The five scale words (impossible, unlikely, even chance, likely, certain) follow the book's probability scale.",
+    "Urdu terms to check: ناممکن، کم امکان، برابر امکان، زیادہ امکان، یقینی، یکساں امکان (equally likely)، طاق عدد (odd number).",
+    "The numbers were worked out in content/sources/g6-maths-17/likelihood.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
