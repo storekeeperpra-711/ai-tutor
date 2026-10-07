@@ -1,0 +1,885 @@
+{
+  "id": "g6-maths-10-data-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems with tables, bar graphs, mean, mode and range, choosing the right measure.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Data Handling"
+    }
+  ],
+  "skills": [
+    "maths.data.word_problems"
+  ],
+  "title": {
+    "en": "Data word problems",
+    "ur": "مواد کے عبارتی سوال"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.data.mean"
+    },
+    {
+      "skill": "maths.data.mode_range"
+    },
+    {
+      "skill": "maths.data.bar_graphs"
+    },
+    {
+      "skill": "maths.data.tables"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgets_divide",
+      "description": "Gives the total instead of the mean."
+    },
+    {
+      "id": "skips_zero",
+      "description": "Leaves out a zero value when counting how many numbers there are."
+    },
+    {
+      "id": "ignores_scale",
+      "description": "Reads the number of squares on a bar graph as the value."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.word_problems": [
+      {
+        "id": "qb_which",
+        "type": "recall",
+        "step": {
+          "id": "qb_which",
+          "type": "choice",
+          "prompt": {
+            "en": "You want to know how spread out the heights in your class are. Which should you find?",
+            "ur": "آپ جاننا چاہتے ہیں کہ جماعت کی لمبائیاں کتنی پھیلی ہوئی ہیں۔ کیا معلوم کریں؟"
+          },
+          "options": [
+            {
+              "id": "range",
+              "text": {
+                "en": "The range",
+                "ur": "رینج"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The range shows the spread: tallest − shortest.",
+                "ur": "جی ہاں! رینج پھیلاؤ دکھاتی ہے: سب سے لمبا − سب سے چھوٹا۔"
+              }
+            },
+            {
+              "id": "mode",
+              "text": {
+                "en": "The mode",
+                "ur": "موڈ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The mode is the most common height, not the spread.",
+                "ur": "موڈ سب سے عام لمبائی ہے، پھیلاؤ نہیں۔"
+              }
+            },
+            {
+              "id": "total",
+              "text": {
+                "en": "The total",
+                "ur": "کل"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Adding the heights doesn't show the spread. Use the range.",
+                "ur": "لمبائیاں جمع کرنے سے پھیلاؤ نہیں دکھتا۔ رینج لیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A family's electricity bills for three months were Rs 250, Rs 300 and Rs 350. What was the mean bill, in rupees?",
+            "ur": "ایک خاندان کے تین مہینوں کے بجلی کے بل 250، 300 اور 350 روپے تھے۔ اوسط بل کتنے روپے تھا؟"
+          },
+          "answer": 300,
+          "checker": "numeric",
+          "hint": {
+            "en": "Total ÷ 3.",
+            "ur": "کل ÷ 3"
+          },
+          "feedback_correct": {
+            "en": "Right! Rs 300.",
+            "ur": "درست! 300 روپے"
+          },
+          "feedback_wrong": {
+            "en": "900 ÷ 3 = 300.",
+            "ur": "900 ÷ 3 = 300"
+          },
+          "common_wrong": [
+            {
+              "answer": 900,
+              "feedback": {
+                "en": "900 is the total. Divide by 3: 300.",
+                "ur": "900 کل ہے۔ 3 سے تقسیم کریں: 300"
+              },
+              "misconception_id": "forgets_divide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Each square on a bar graph stands for 20 people. A bar is 6 squares tall. Kashif says 26 people. What went wrong?",
+            "ur": "بار گراف کا ہر خانہ 20 لوگوں کو ظاہر کرتا ہے۔ ایک ستون 6 خانے اونچا ہے۔ کاشف کہتا ہے 26 لوگ۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "multiply",
+              "text": {
+                "en": "He added. Multiply: 6 × 20 = 120 people.",
+                "ur": "اس نے جمع کیا۔ ضرب دیں: 6 × 20 = 120 لوگ"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Each of the 6 squares is 20 people.",
+                "ur": "جی ہاں! 6 خانوں میں سے ہر ایک 20 لوگ ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6 squares of 20 each is 6 × 20 = 120.",
+                "ur": "20 والے 6 خانے یعنی 6 × 20 = 120"
+              },
+              "misconception_id": "ignores_scale"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_choose",
+      "front": {
+        "en": "Which measure?",
+        "ur": "کون سا پیمانہ؟"
+      },
+      "back": {
+        "en": "Fair share: mean. Most common: mode. How spread out: range. Altogether: total.",
+        "ur": "برابر حصہ: اوسط۔ سب سے عام: موڈ۔ کتنا پھیلا: رینج۔ سب مل کر: کل۔"
+      }
+    },
+    {
+      "id": "f_zero",
+      "front": {
+        "en": "Does a zero count in the mean?",
+        "ur": "کیا صفر اوسط میں گنا جاتا ہے؟"
+      },
+      "back": {
+        "en": "Yes! Mean of 10, 0, 20 is 30 ÷ 3 = 10.",
+        "ur": "جی ہاں! 10، 0، 20 کی اوسط 30 ÷ 3 = 10"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_week",
+      "text": {
+        "en": "For one week, write down how many glasses of water you drink each day. At the end, find the total, the mean, the mode and the range.",
+        "ur": "ایک ہفتہ روزانہ لکھیں آپ کتنے گلاس پانی پیتے ہیں۔ آخر میں کل، اوسط، موڈ اور رینج نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Mean",
+      "ur": "اوسط"
+    },
+    {
+      "en": "Mode",
+      "ur": "موڈ"
+    },
+    {
+      "en": "Range",
+      "ur": "رینج"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Shopkeepers, cricketers and farmers all use data! Let's solve their real problems.",
+          "ur": "دکاندار، کرکٹر اور کسان سب مواد استعمال کرتے ہیں! آئیں ان کے اصل سوال حل کریں۔"
+        }
+      },
+      "text": {
+        "en": "Today we use everything from the Data handling unit on real-life problems, then a short unit test. First, a quick check.",
+        "ur": "آج ہم مواد کے پورے باب کو اصل زندگی کے سوالوں پر لگائیں گے، پھر ایک چھوٹا ٹیسٹ۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.data.mean",
+      "prompt": {
+        "en": "Find the mean of 8, 12 and 10.",
+        "ur": "8، 12 اور 10 کی اوسط معلوم کریں۔"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total ÷ 3.",
+        "ur": "کل ÷ 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 10.",
+        "ur": "درست! 10"
+      },
+      "feedback_wrong": {
+        "en": "30 ÷ 3 = 10.",
+        "ur": "30 ÷ 3 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is the total. Divide by 3: 10.",
+            "ur": "30 کل ہے۔ 3 سے تقسیم کریں: 10"
+          },
+          "misconception_id": "forgets_divide"
+        }
+      ]
+    },
+    {
+      "id": "s3_plan",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "First ask: does the question want a total, a difference, a fair share, the most common, or the spread?",
+          "ur": "پہلے پوچھیں: سوال کل چاہتا ہے، فرق، برابر حصہ، سب سے عام، یا پھیلاؤ؟"
+        }
+      },
+      "text": {
+        "en": "Altogether: add (total). How many more: take away. Fair share or average: mean = total ÷ how many. Most common: mode. How spread out: range = largest − smallest. On a bar graph, check the scale first.",
+        "ur": "سب مل کر: جمع (کل)۔ کتنے زیادہ: نفی۔ برابر حصہ یا اوسط: اوسط = کل ÷ تعداد۔ سب سے عام: موڈ۔ کتنا پھیلا: رینج = سب سے بڑا − سب سے چھوٹا۔ بار گراف میں پہلے پیمانہ دیکھیں۔"
+      }
+    },
+    {
+      "id": "s4_samosas",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shop sold these samosas: Monday: 40; Tuesday: 35; Wednesday: 50; Thursday: 45; Friday: 30. What is the mean number sold per day?",
+        "ur": "ایک دکان نے یہ سموسے بیچے: پیر: 40؛ منگل: 35؛ بدھ: 50؛ جمعرات: 45؛ جمعہ: 30۔ روزانہ اوسطاً کتنے بکے؟"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total of 5 days ÷ 5.",
+        "ur": "5 دنوں کا کل ÷ 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 40 a day.",
+        "ur": "درست! روزانہ 40"
+      },
+      "feedback_wrong": {
+        "en": "40 + 35 + 50 + 45 + 30 = 200, and 200 ÷ 5 = 40.",
+        "ur": "40 + 35 + 50 + 45 + 30 = 200، اور 200 ÷ 5 = 40"
+      },
+      "common_wrong": [
+        {
+          "answer": 200,
+          "feedback": {
+            "en": "200 is the total. Divide by 5 days: 40.",
+            "ur": "200 کل ہے۔ 5 دنوں سے تقسیم کریں: 40"
+          },
+          "misconception_id": "forgets_divide"
+        }
+      ]
+    },
+    {
+      "id": "s5_range",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Same shop: Monday: 40; Tuesday: 35; Wednesday: 50; Thursday: 45; Friday: 30. What is the range of samosas sold?",
+        "ur": "وہی دکان: پیر: 40؛ منگل: 35؛ بدھ: 50؛ جمعرات: 45؛ جمعہ: 30۔ بکنے والے سموسوں کی رینج کتنی ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Best day − worst day.",
+        "ur": "سب سے اچھا دن − سب سے کمزور دن"
+      },
+      "feedback_correct": {
+        "en": "Right! 50 − 30 = 20.",
+        "ur": "درست! 50 − 30 = 20"
+      },
+      "feedback_wrong": {
+        "en": "50 − 30 = 20.",
+        "ur": "50 − 30 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "50 is the best day. Range = 50 − 30 = 20.",
+            "ur": "50 سب سے اچھا دن ہے۔ رینج = 50 − 30 = 20"
+          }
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "The smallest is 30, not 40: 50 − 30 = 20.",
+            "ur": "سب سے چھوٹا 30 ہے، 40 نہیں: 50 − 30 = 20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_wheat",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A farmer's bar graph shows wheat harvested. Each square stands for 10 kg. This year's bar is 7 squares tall. How many kg of wheat?",
+        "ur": "ایک کسان کا بار گراف کٹی ہوئی گندم دکھاتا ہے۔ ہر خانہ 10 کلو ہے۔ اس سال کا ستون 7 خانے اونچا ہے۔ کتنے کلو گندم؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "7 squares, 10 kg each.",
+        "ur": "7 خانے، ہر ایک 10 کلو"
+      },
+      "feedback_correct": {
+        "en": "Right! 70 kg.",
+        "ur": "درست! 70 کلو"
+      },
+      "feedback_wrong": {
+        "en": "7 × 10 = 70 kg.",
+        "ur": "7 × 10 = 70"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Each square is 10 kg: 7 × 10 = 70.",
+            "ur": "ہر خانہ 10 کلو ہے: 7 × 10 = 70"
+          },
+          "misconception_id": "ignores_scale"
+        }
+      ]
+    },
+    {
+      "id": "s7_runs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A batsman's mean score over 5 matches is 30 runs. How many runs did he score altogether?",
+        "ur": "ایک بلے باز کی 5 میچوں میں اوسط 30 رنز ہے۔ اس نے کل کتنے رنز بنائے؟"
+      },
+      "answer": 150,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total = mean × how many.",
+        "ur": "کل = اوسط × تعداد"
+      },
+      "feedback_correct": {
+        "en": "Right! 150 runs.",
+        "ur": "درست! 150 رنز"
+      },
+      "feedback_wrong": {
+        "en": "30 × 5 = 150.",
+        "ur": "30 × 5 = 150"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That divides. Total = 30 × 5 = 150.",
+            "ur": "یہ تقسیم ہے۔ کل = 30 × 5 = 150"
+          }
+        },
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "Multiply, don't add: 30 × 5 = 150.",
+            "ur": "جمع نہیں، ضرب: 30 × 5 = 150"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_savings",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Sana saved a mean of Rs 50 a week for 4 weeks. In the first three weeks she saved Rs 40, Rs 60 and Rs 45. How much did she save in week 4?",
+        "ur": "ثنا نے 4 ہفتوں میں اوسطاً 50 روپے ہفتہ بچائے۔ پہلے تین ہفتوں میں 40، 60 اور 45 روپے بچائے۔ چوتھے ہفتے کتنے بچائے؟"
+      },
+      "answer": 55,
+      "checker": "numeric",
+      "hint": {
+        "en": "The total must be 50 × 4 = 200.",
+        "ur": "کل 50 × 4 = 200 ہونا چاہیے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 55.",
+        "ur": "درست! 55 روپے"
+      },
+      "feedback_wrong": {
+        "en": "200 − (40 + 60 + 45) = 200 − 145 = 55.",
+        "ur": "200 − (40 + 60 + 45) = 200 − 145 = 55"
+      },
+      "common_wrong": [
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "50 is the mean, but week 4 must make the total 200: Rs 55.",
+            "ur": "50 اوسط ہے، لیکن چوتھا ہفتہ کل کو 200 بنائے: 55 روپے"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Over three days a shop sold 10, 0 and 20 cakes. Rehan says the mean is 30 ÷ 2 = 15, because the 0 doesn't count. What went wrong?",
+        "ur": "تین دنوں میں ایک دکان نے 10، 0 اور 20 کیک بیچے۔ ریحان کہتا ہے اوسط 30 ÷ 2 = 15 ہے، کیونکہ 0 نہیں گنا جاتا۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "zero",
+          "text": {
+            "en": "The 0 is a real day and counts. 30 ÷ 3 = 10.",
+            "ur": "0 بھی ایک اصل دن ہے اور گنا جاتا ہے۔ 30 ÷ 3 = 10"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! There were 3 days, so divide by 3.",
+            "ur": "جی ہاں! 3 دن تھے، تو 3 سے تقسیم کریں۔"
+          }
+        },
+        {
+          "id": "total",
+          "text": {
+            "en": "The total should be 31.",
+            "ur": "کل 31 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "10 + 0 + 20 = 30 is right. Divide by 3 days: 10.",
+            "ur": "10 + 0 + 20 = 30 درست ہے۔ 3 دنوں سے تقسیم کریں: 10"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A day with 0 sales is still a day. 30 ÷ 3 = 10.",
+            "ur": "صفر بکری والا دن بھی دن ہے۔ 30 ÷ 3 = 10"
+          },
+          "misconception_id": "skips_zero"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shoe shop wants to know which size to stock most. Should it use the mean or the mode? Why? Can you teach me?",
+          "ur": "جوتوں کی دکان جاننا چاہتی ہے کون سا سائز سب سے زیادہ رکھے۔ اوسط لے یا موڈ؟ کیوں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the mode better than the mean for choosing which shoe size to stock most?",
+        "ur": "اپنے الفاظ میں بتائیں: سب سے زیادہ کون سا سائز رکھنا ہے، اس کے لیے موڈ اوسط سے بہتر کیوں ہے؟"
+      },
+      "key_idea": "The mode is the size most people actually wear, so it sells the most. The mean might not be a real size (like 4.6), and fewer people may wear it.",
+      "levels": {
+        "got_it": "Says the mode is the size most people wear (most common), while the mean may not be a real or popular size.",
+        "partly": "Says the mode is the most common without comparing with the mean, or the reverse.",
+        "not_yet": "Chooses the mean, or gives no reason."
+      },
+      "keywords": [
+        [
+          "mode",
+          "most",
+          "common",
+          "موڈ",
+          "سب سے زیادہ",
+          "عام"
+        ],
+        [
+          "mean",
+          "average",
+          "اوسط"
+        ],
+        [
+          "real",
+          "size",
+          "wear",
+          "buy",
+          "سائز",
+          "پہن",
+          "خرید"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The mode is the size most people wear; the mean might not even be a real size.",
+          "ur": "بہت خوب! موڈ وہ سائز ہے جو سب سے زیادہ لوگ پہنتے ہیں؛ اوسط شاید اصل سائز بھی نہ ہو۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why the mean might not help the shop.",
+          "ur": "اچھی شروعات! اب بتائیں اوسط دکان کے کام کیوں نہ آئے۔"
+        },
+        "not_yet": {
+          "en": "If the mean shoe size is 4.6, can the shop sell size 4.6? Which size do the most customers wear?",
+          "ur": "اگر اوسط سائز 4.6 ہو تو کیا دکان 4.6 سائز بیچ سکتی ہے؟ سب سے زیادہ گاہک کون سا سائز پہنتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Data handling unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! مواد کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on tally marks, bar graphs, mean, mode and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں ٹیلی، بار گراف، اوسط، موڈ اور ایک اصل زندگی کا سوال ہے۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_tally",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.data.tables",
+      "prompt": {
+        "en": "Test 1: How many do these tally marks show? IIII/ IIII/ IIII/ IIII",
+        "ur": "ٹیسٹ 1: یہ ٹیلی کے نشان کتنے دکھاتے ہیں؟ IIII/ IIII/ IIII/ IIII"
+      },
+      "answer": 19,
+      "checker": "numeric",
+      "hint": {
+        "en": "Three gates of 5, then 4.",
+        "ur": "5 کے تین دروازے، پھر 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 19.",
+        "ur": "درست! 19"
+      },
+      "feedback_wrong": {
+        "en": "5 + 5 + 5 + 4 = 19.",
+        "ur": "5 + 5 + 5 + 4 = 19"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "Each gate is 5, not 4: 19.",
+            "ur": "ہر دروازہ 5 ہے، 4 نہیں: 19"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_bar",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.data.bar_graphs",
+      "prompt": {
+        "en": "Test 2: On a bar graph each square stands for 5 books. A bar is 8 squares tall. How many books?",
+        "ur": "ٹیسٹ 2: بار گراف کا ہر خانہ 5 کتابیں ہے۔ ایک ستون 8 خانے اونچا ہے۔ کتنی کتابیں؟"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "8 × 5.",
+        "ur": "8 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 40 books.",
+        "ur": "درست! 40 کتابیں"
+      },
+      "feedback_wrong": {
+        "en": "8 × 5 = 40.",
+        "ur": "8 × 5 = 40"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "Each square is 5 books: 40.",
+            "ur": "ہر خانہ 5 کتابیں ہے: 40"
+          },
+          "misconception_id": "ignores_scale"
+        }
+      ]
+    },
+    {
+      "id": "u3_mean",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.data.mean",
+      "prompt": {
+        "en": "Test 3: Find the mean of 9, 11, 13, 7.",
+        "ur": "ٹیسٹ 3: 9, 11, 13, 7 کی اوسط معلوم کریں۔"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total ÷ 4.",
+        "ur": "کل ÷ 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 10.",
+        "ur": "درست! 10"
+      },
+      "feedback_wrong": {
+        "en": "40 ÷ 4 = 10.",
+        "ur": "40 ÷ 4 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "40 is the total. Divide by 4: 10.",
+            "ur": "40 کل ہے۔ 4 سے تقسیم کریں: 10"
+          },
+          "misconception_id": "forgets_divide"
+        }
+      ]
+    },
+    {
+      "id": "u4_mode",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.data.mode_range",
+      "prompt": {
+        "en": "Test 4: Find the mode of 2, 3, 3, 8, 3, 1.",
+        "ur": "ٹیسٹ 4: 2, 3, 3, 8, 3, 1 کا موڈ معلوم کریں۔"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which number appears most often?",
+        "ur": "کون سا عدد سب سے زیادہ بار آتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 3.",
+        "ur": "درست! 3"
+      },
+      "feedback_wrong": {
+        "en": "3 appears three times: the mode is 3.",
+        "ur": "3 تین بار آتا ہے: موڈ 3 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the largest, but appears once. The mode is 3.",
+            "ur": "8 سب سے بڑا ہے، لیکن ایک بار آتا ہے۔ موڈ 3 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_heights",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: The heights of four children are 120, 135, 128, 142 cm. What is the range of their heights, in cm?",
+        "ur": "ٹیسٹ 5: چار بچوں کی لمبائیاں 120, 135, 128, 142 سینٹی میٹر ہیں۔ ان کی لمبائیوں کی رینج کتنے سینٹی میٹر ہے؟"
+      },
+      "answer": 22,
+      "checker": "numeric",
+      "hint": {
+        "en": "Tallest − shortest.",
+        "ur": "سب سے لمبا − سب سے چھوٹا"
+      },
+      "feedback_correct": {
+        "en": "Right! 142 − 120 = 22 cm.",
+        "ur": "درست! 142 − 120 = 22 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "142 − 120 = 22.",
+        "ur": "142 − 120 = 22"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "The shortest is 120, not 128: 142 − 120 = 22.",
+            "ur": "سب سے چھوٹا 120 ہے، 128 نہیں: 142 − 120 = 22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Data handling unit complete! You can read and use data now.",
+          "ur": "مواد کا باب مکمل! اب آپ مواد پڑھ اور استعمال کر سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Choose the right tool: total for 'altogether', take away for 'how many more', mean for a fair share, mode for the most common, range for the spread. Check bar graph scales, and remember a zero still counts as a value.",
+        "ur": "صحیح طریقہ چنیں: 'سب مل کر' کے لیے کل، 'کتنے زیادہ' کے لیے نفی، برابر حصے کے لیے اوسط، سب سے عام کے لیے موڈ، پھیلاؤ کے لیے رینج۔ بار گراف کا پیمانہ دیکھیں، اور یاد رکھیں صفر بھی ایک قیمت ہے۔"
+      },
+      "points": [
+        {
+          "en": "Pick the right measure first.",
+          "ur": "پہلے صحیح پیمانہ چنیں۔"
+        },
+        {
+          "en": "A zero still counts.",
+          "ur": "صفر بھی گنا جاتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_scale",
+      "type": "apply",
+      "skill": "maths.data.word_problems",
+      "step": {
+        "id": "r_scale",
+        "type": "number",
+        "prompt": {
+          "en": "Each square on a bar graph stands for 20 people. A bar is 6 squares tall. How many people?",
+          "ur": "بار گراف کا ہر خانہ 20 لوگ ہے۔ ایک ستون 6 خانے اونچا ہے۔ کتنے لوگ؟"
+        },
+        "answer": 120,
+        "checker": "numeric",
+        "hint": {
+          "en": "6 × 20.",
+          "ur": "6 × 20"
+        },
+        "feedback_correct": {
+          "en": "Right! 120 people.",
+          "ur": "درست! 120 لوگ"
+        },
+        "feedback_wrong": {
+          "en": "6 × 20 = 120.",
+          "ur": "6 × 20 = 120"
+        },
+        "common_wrong": [
+          {
+            "answer": 26,
+            "feedback": {
+              "en": "Multiply, don't add: 6 × 20 = 120.",
+              "ur": "جمع نہیں، ضرب: 6 × 20 = 120"
+            },
+            "misconception_id": "ignores_scale"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_range",
+      "type": "apply",
+      "skill": "maths.data.word_problems",
+      "step": {
+        "id": "r_range",
+        "type": "number",
+        "prompt": {
+          "en": "Goals scored by a team in five matches: 14, 9, 21, 9, 17. What is the range?",
+          "ur": "ایک ٹیم کے پانچ میچوں میں گول: 14, 9, 21, 9, 17۔ رینج کتنی ہے؟"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "Largest − smallest.",
+          "ur": "سب سے بڑا − سب سے چھوٹا"
+        },
+        "feedback_correct": {
+          "en": "Right! 21 − 9 = 12.",
+          "ur": "درست! 21 − 9 = 12"
+        },
+        "feedback_wrong": {
+          "en": "21 − 9 = 12.",
+          "ur": "21 − 9 = 12"
+        },
+        "common_wrong": [
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "9 is the mode. The range is 21 − 9 = 12.",
+              "ur": "9 موڈ ہے۔ رینج 21 − 9 = 12 ہے۔"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
+    "The main skill here is choosing the right measure (total, difference, mean, mode, range). s9 checks that a zero value still counts in the mean.",
+    "The unit test (u1 to u5) has one question per earlier lesson plus a real-life problem. Each is tagged with that lesson's skill, so results feed back into the mastery of earlier lessons.",
+    "The numbers were worked out in content/sources/g6-maths-10/data_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
