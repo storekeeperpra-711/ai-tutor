@@ -1,0 +1,776 @@
+{
+  "id": "g6-maths-17-sample-space",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Explain experiments, outcomes, sample space and events.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 12: Probability, 12.1 Experiment and 12.2 Sample Space and an Event"
+    }
+  ],
+  "skills": [
+    "maths.probability.sample_space"
+  ],
+  "title": {
+    "en": "Outcomes and sample space",
+    "ur": "نتائج اور نمونی فضا"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.meaning"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "order_ignored",
+      "description": "Counts HT and TH (or similar outcomes in a different order) as one outcome."
+    },
+    {
+      "id": "colours_not_objects",
+      "description": "Counts kinds (colours, letters) instead of the things themselves (balls, cards)."
+    },
+    {
+      "id": "missing_outcomes",
+      "description": "Lists only some outcomes, such as the smallest and the biggest."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.probability.sample_space": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.probability.sample_space": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "The set of all possible outcomes of an experiment is called the …",
+            "ur": "کسی تجربے کے تمام ممکنہ نتائج کا سیٹ کہلاتا ہے …"
+          },
+          "options": [
+            {
+              "id": "sample_space",
+              "text": {
+                "en": "sample space",
+                "ur": "نمونی فضا"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! We write it as S, like S = {H, T}.",
+                "ur": "جی ہاں! ہم اسے S لکھتے ہیں، جیسے S = {H, T}۔"
+              }
+            },
+            {
+              "id": "event",
+              "text": {
+                "en": "event",
+                "ur": "واقعہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "An event is only some of the outcomes. All of them together is the sample space.",
+                "ur": "واقعہ صرف کچھ نتائج ہوتا ہے۔ سب نتائج مل کر نمونی فضا ہیں۔"
+              }
+            },
+            {
+              "id": "outcome",
+              "text": {
+                "en": "outcome",
+                "ur": "نتیجہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "An outcome is just one result. All the outcomes together make the sample space.",
+                "ur": "نتیجہ صرف ایک نتیجہ ہے۔ سب نتائج مل کر نمونی فضا بناتے ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A spinner has the numbers 1 to 8. How many outcomes are in the event 'a number greater than 5'?",
+            "ur": "ایک اسپنر پر 1 سے 8 تک اعداد ہیں۔ واقعہ '5 سے بڑا عدد' میں کتنے نتائج ہیں؟"
+          },
+          "answer": 3,
+          "checker": "numeric",
+          "hint": {
+            "en": "Greater than 5 does not include 5.",
+            "ur": "5 سے بڑا میں 5 شامل نہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! E = {6, 7, 8}.",
+            "ur": "درست! E = {6, 7, 8}"
+          },
+          "feedback_wrong": {
+            "en": "The numbers greater than 5 are 6, 7 and 8: three outcomes.",
+            "ur": "5 سے بڑے اعداد 6، 7 اور 8 ہیں: تین نتائج۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "5 is not greater than 5. E = {6, 7, 8}: 3 outcomes.",
+                "ur": "5، 5 سے بڑا نہیں۔ E = {6, 7, 8}: 3 نتائج"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal says the sample space of rolling a dice is S = {1, 6}, the smallest and biggest numbers. What is wrong?",
+            "ur": "بلال کہتا ہے کہ ڈائس پھینکنے کی نمونی فضا S = {1, 6} ہے، سب سے چھوٹا اور سب سے بڑا عدد۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "all",
+              "text": {
+                "en": "S must list every outcome: {1, 2, 3, 4, 5, 6}.",
+                "ur": "S میں ہر نتیجہ لکھنا ہے: {1, 2, 3, 4, 5, 6}"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Any of the six faces can come up.",
+                "ur": "جی ہاں! چھ میں سے کوئی بھی رُخ آ سکتا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A dice can also show 2, 3, 4 or 5. S = {1, 2, 3, 4, 5, 6}.",
+                "ur": "ڈائس پر 2، 3، 4 یا 5 بھی آ سکتا ہے۔ S = {1, 2, 3, 4, 5, 6}"
+              },
+              "misconception_id": "missing_outcomes"
+            },
+            {
+              "id": "six_only",
+              "text": {
+                "en": "S should be {6}.",
+                "ur": "S کو {6} ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6 is just one outcome. S has all six: {1, 2, 3, 4, 5, 6}.",
+                "ur": "6 صرف ایک نتیجہ ہے۔ S میں چھ ہیں: {1, 2, 3, 4, 5, 6}"
+              },
+              "misconception_id": "missing_outcomes"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_outcome",
+      "front": {
+        "en": "Outcome?",
+        "ur": "نتیجہ؟"
+      },
+      "back": {
+        "en": "One possible result of an experiment, like H when you toss a coin.",
+        "ur": "کسی تجربے کا ایک ممکنہ نتیجہ، جیسے سکہ اچھالنے پر H۔"
+      }
+    },
+    {
+      "id": "f_sample_space",
+      "front": {
+        "en": "Sample space S?",
+        "ur": "نمونی فضا S؟"
+      },
+      "back": {
+        "en": "The set of all outcomes. A dice: S = {1, 2, 3, 4, 5, 6}.",
+        "ur": "تمام نتائج کا سیٹ۔ ڈائس: S = {1, 2, 3, 4, 5, 6}"
+      }
+    },
+    {
+      "id": "f_event",
+      "front": {
+        "en": "Event?",
+        "ur": "واقعہ؟"
+      },
+      "back": {
+        "en": "Some of the outcomes, like 'an even number' = {2, 4, 6}.",
+        "ur": "کچھ نتائج، جیسے 'جفت عدد' = {2, 4, 6}"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_coins",
+      "text": {
+        "en": "Take two coins at home. Toss them together 12 times and write down what you get each time (HH, HT, TH or TT). Did you see all four outcomes?",
+        "ur": "گھر میں دو سکے لیں۔ انہیں 12 بار اکٹھے اچھالیں اور ہر بار لکھیں کہ کیا آیا (HH، HT، TH یا TT)۔ کیا چاروں نتائج آئے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Experiment",
+      "ur": "تجربہ"
+    },
+    {
+      "en": "Outcome",
+      "ur": "نتیجہ"
+    },
+    {
+      "en": "Sample space",
+      "ur": "نمونی فضا"
+    },
+    {
+      "en": "Event",
+      "ur": "واقعہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Before a cricket match, the captains toss a coin. What can happen? Let's list every possibility!",
+          "ur": "کرکٹ میچ سے پہلے کپتان سکہ اچھالتے ہیں۔ کیا ہو سکتا ہے؟ آئیں ہر امکان لکھیں!"
+        }
+      },
+      "text": {
+        "en": "Today we learn the words of probability: experiment, outcome, sample space and event. First, a quick question about sets.",
+        "ur": "آج ہم احتمال کے الفاظ سیکھیں گے: تجربہ، نتیجہ، نمونی فضا اور واقعہ۔ پہلے سیٹ کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.sets.meaning",
+      "prompt": {
+        "en": "How many members does the set {2, 4, 6, 8} have?",
+        "ur": "سیٹ {2, 4, 6, 8} کے کتنے ارکان ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the numbers inside the brackets.",
+        "ur": "بریکٹ کے اندر اعداد گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! It has 4 members.",
+        "ur": "درست! اس کے 4 ارکان ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "Count them: 2, 4, 6, 8. That is 4 members.",
+        "ur": "گنیں: 2، 4، 6، 8۔ یہ 4 ارکان ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the biggest member. Count the members: 2, 4, 6, 8 is 4.",
+            "ur": "8 سب سے بڑا رکن ہے۔ ارکان گنیں: 2، 4، 6، 8 یعنی 4۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_words",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Toss a coin: H or T. Those two outcomes make the sample space, S = {H, T}.",
+          "ur": "سکہ اچھالیں: H یا T۔ یہ دو نتائج نمونی فضا بناتے ہیں، S = {H, T}۔"
+        }
+      },
+      "text": {
+        "en": "An experiment is something we do whose result we can't be sure of, like tossing a coin. Each possible result is an outcome: heads (H) or tails (T). The set of all outcomes is the sample space S. For a coin, S = {H, T}, so n(S) = 2. For a dice, S = {1, 2, 3, 4, 5, 6}. An event is some of the outcomes, like 'an even number' = {2, 4, 6}.",
+        "ur": "تجربہ ایسا کام ہے جس کے نتیجے کا ہمیں یقین نہ ہو، جیسے سکہ اچھالنا۔ ہر ممکنہ نتیجہ ایک نتیجہ (outcome) ہے: ہیڈ (H) یا ٹیل (T)۔ تمام نتائج کا سیٹ نمونی فضا S ہے۔ سکے کے لیے S = {H, T}، تو n(S) = 2۔ ڈائس کے لیے S = {1, 2, 3, 4, 5, 6}۔ واقعہ کچھ نتائج ہوتا ہے، جیسے 'جفت عدد' = {2, 4, 6}۔"
+      }
+    },
+    {
+      "id": "s4_dice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "You roll a dice once. How many outcomes are in the sample space?",
+        "ur": "آپ ڈائس ایک بار پھینکتے ہیں۔ نمونی فضا میں کتنے نتائج ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "A dice has a number on each face.",
+        "ur": "ڈائس کے ہر رُخ پر ایک عدد ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! S = {1, 2, 3, 4, 5, 6}, so n(S) = 6.",
+        "ur": "درست! S = {1, 2, 3, 4, 5, 6}، تو n(S) = 6"
+      },
+      "feedback_wrong": {
+        "en": "Any face can come up: 1, 2, 3, 4, 5 or 6. That is 6 outcomes.",
+        "ur": "کوئی بھی رُخ آ سکتا ہے: 1، 2، 3، 4، 5 یا 6۔ یہ 6 نتائج ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "One roll gives one number, but it could be any of 6. n(S) = 6.",
+            "ur": "ایک بار پھینکنے سے ایک عدد آتا ہے، مگر وہ 6 میں سے کوئی بھی ہو سکتا ہے۔ n(S) = 6"
+          },
+          "misconception_id": "missing_outcomes"
+        }
+      ]
+    },
+    {
+      "id": "s5_coin_space",
+      "type": "choice",
+      "prompt": {
+        "en": "Which is the sample space of tossing one coin?",
+        "ur": "ایک سکہ اچھالنے کی نمونی فضا کون سی ہے؟"
+      },
+      "options": [
+        {
+          "id": "h_t",
+          "text": {
+            "en": "{H, T}",
+            "ur": "{H, T}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Heads or tails: two outcomes.",
+            "ur": "جی ہاں! ہیڈ یا ٹیل: دو نتائج۔"
+          }
+        },
+        {
+          "id": "h",
+          "text": {
+            "en": "{H}",
+            "ur": "{H}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Tails can come up too. S = {H, T}.",
+            "ur": "ٹیل بھی آ سکتا ہے۔ S = {H, T}"
+          },
+          "misconception_id": "missing_outcomes"
+        },
+        {
+          "id": "h_t_h_t",
+          "text": {
+            "en": "{H, T, H, T}",
+            "ur": "{H, T, H, T}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each outcome is listed once. S = {H, T}.",
+            "ur": "ہر نتیجہ ایک بار لکھا جاتا ہے۔ S = {H, T}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_two_coins",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Now toss two coins together: a 5-rupee coin and a 10-rupee coin. How many outcomes are there?",
+        "ur": "اب دو سکے اکٹھے اچھالیں: 5 روپے کا اور 10 روپے کا۔ کتنے نتائج ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "List them: HH, HT, TH, …",
+        "ur": "لکھیں: HH، HT، TH، …"
+      },
+      "feedback_correct": {
+        "en": "Right! S = {HH, HT, TH, TT}.",
+        "ur": "درست! S = {HH, HT, TH, TT}"
+      },
+      "feedback_wrong": {
+        "en": "S = {HH, HT, TH, TT}. HT (5 heads, 10 tails) is different from TH.",
+        "ur": "S = {HH, HT, TH, TT}۔ HT (5 کا ہیڈ، 10 کا ٹیل) اور TH الگ ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "HT and TH are different: the 5-rupee coin shows H in one and T in the other. There are 4.",
+            "ur": "HT اور TH الگ ہیں: ایک میں 5 روپے والا H ہے اور دوسرے میں T۔ کل 4 ہیں۔"
+          },
+          "misconception_id": "order_ignored"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That is one coin. Two coins give HH, HT, TH and TT: 4 outcomes.",
+            "ur": "یہ ایک سکہ ہے۔ دو سکوں سے HH، HT، TH اور TT: 4 نتائج۔"
+          },
+          "misconception_id": "missing_outcomes"
+        }
+      ]
+    },
+    {
+      "id": "s7_balls",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bag has 3 red, 2 blue and 5 green balls. Hamza picks one ball without looking. How many different balls could he pick?",
+        "ur": "ایک تھیلے میں 3 سرخ، 2 نیلی اور 5 سبز گیندیں ہیں۔ حمزہ بغیر دیکھے ایک گیند نکالتا ہے۔ وہ کتنی مختلف گیندوں میں سے کوئی نکال سکتا ہے؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each ball is one outcome. Count all the balls.",
+        "ur": "ہر گیند ایک نتیجہ ہے۔ سب گیندیں گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 + 2 + 5 = 10 outcomes.",
+        "ur": "درست! 3 + 2 + 5 = 10 نتائج"
+      },
+      "feedback_wrong": {
+        "en": "Any of the balls can come out: 3 + 2 + 5 = 10.",
+        "ur": "کوئی بھی گیند نکل سکتی ہے: 3 + 2 + 5 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "There are 3 colours, but 10 balls. Each ball is an outcome: 10.",
+            "ur": "رنگ 3 ہیں، مگر گیندیں 10۔ ہر گیند ایک نتیجہ ہے: 10"
+          },
+          "misconception_id": "colours_not_objects"
+        }
+      ]
+    },
+    {
+      "id": "s8_event",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Roll a dice. How many outcomes are in the event E = 'an even number'?",
+        "ur": "ڈائس پھینکیں۔ واقعہ E = 'جفت عدد' میں کتنے نتائج ہیں؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Even numbers can be shared into twos: which faces?",
+        "ur": "جفت اعداد دو دو میں بٹ جاتے ہیں: کون سے رُخ؟"
+      },
+      "feedback_correct": {
+        "en": "Right! E = {2, 4, 6}.",
+        "ur": "درست! E = {2, 4, 6}"
+      },
+      "feedback_wrong": {
+        "en": "The even faces are 2, 4 and 6, so E has 3 outcomes.",
+        "ur": "جفت رُخ 2، 4 اور 6 ہیں، تو E میں 3 نتائج ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is all the outcomes. Only 2, 4 and 6 are even: 3.",
+            "ur": "6 تو سب نتائج ہیں۔ صرف 2، 4 اور 6 جفت ہیں: 3"
+          }
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "Don't forget 2! E = {2, 4, 6}: 3 outcomes.",
+            "ur": "2 نہ بھولیں! E = {2, 4, 6}: 3 نتائج"
+          },
+          "misconception_id": "missing_outcomes"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana writes the sample space of tossing two coins as S = {HH, HT, TT}. What is wrong?",
+        "ur": "ثنا دو سکے اچھالنے کی نمونی فضا S = {HH, HT, TT} لکھتی ہے۔ کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "missing_th",
+          "text": {
+            "en": "TH is missing: first coin tails, second heads is another outcome.",
+            "ur": "TH رہ گیا: پہلا سکہ ٹیل، دوسرا ہیڈ ایک اور نتیجہ ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! S = {HH, HT, TH, TT}, so n(S) = 4.",
+            "ur": "جی ہاں! S = {HH, HT, TH, TT}، تو n(S) = 4"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "HT and TH are different outcomes. S = {HH, HT, TH, TT}.",
+            "ur": "HT اور TH الگ نتائج ہیں۔ S = {HH, HT, TH, TT}"
+          },
+          "misconception_id": "order_ignored"
+        },
+        {
+          "id": "no_hh",
+          "text": {
+            "en": "HH should not be there.",
+            "ur": "HH نہیں ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Both coins can land heads, so HH stays. TH is the one missing.",
+            "ur": "دونوں سکے ہیڈ آ سکتے ہیں، تو HH رہے گا۔ TH رہ گیا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I always mix up the sample space and an event. Can you teach me the difference?",
+          "ur": "میں ہمیشہ نمونی فضا اور واقعہ میں الجھ جاتا ہوں۔ کیا آپ مجھے فرق سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "You roll a dice. Write the sample space, and the event 'a number greater than 4'. How are they different?",
+        "ur": "آپ ڈائس پھینکتے ہیں۔ نمونی فضا لکھیں، اور واقعہ '4 سے بڑا عدد'۔ ان میں کیا فرق ہے؟"
+      },
+      "key_idea": "The sample space is every outcome: S = {1, 2, 3, 4, 5, 6}. The event 'greater than 4' is only some of them: E = {5, 6}. An event is part of the sample space.",
+      "levels": {
+        "got_it": "Writes S = {1, 2, 3, 4, 5, 6} and E = {5, 6}, and says the event is part of (some of) the sample space.",
+        "partly": "Writes one set correctly, or both without saying how they differ.",
+        "not_yet": "Gives no sets or no reason."
+      },
+      "keywords": [
+        [
+          "5",
+          "five",
+          "پانچ"
+        ],
+        [
+          "6",
+          "six",
+          "چھ"
+        ],
+        [
+          "all",
+          "every",
+          "تمام",
+          "سب"
+        ],
+        [
+          "part",
+          "some",
+          "کچھ",
+          "حصہ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! E = {5, 6} is part of S.",
+          "ur": "بہت خوب! E = {5, 6}، S کا حصہ ہے۔"
+        },
+        "partly": {
+          "en": "Good start! S has every face; which faces are greater than 4?",
+          "ur": "اچھی شروعات! S میں ہر رُخ ہے؛ 4 سے بڑے رُخ کون سے ہیں؟"
+        },
+        "not_yet": {
+          "en": "List all six faces first. Then pick the ones greater than 4.",
+          "ur": "پہلے چھ رُخ لکھیں۔ پھر 4 سے بڑے چن لیں۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_letters",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The letters of LAHORE are written on 6 cards. Ayesha picks one card. How many outcomes are in the event 'a vowel'?",
+        "ur": "لفظ LAHORE کے حروف 6 کارڈز پر لکھے ہیں۔ عائشہ ایک کارڈ نکالتی ہے۔ واقعہ 'حرفِ علت (vowel)' میں کتنے نتائج ہیں؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "The vowels are A, E, I, O and U. Which are in LAHORE?",
+        "ur": "حروفِ علت A، E، I، O اور U ہیں۔ LAHORE میں کون سے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! E = {A, O, E}.",
+        "ur": "درست! E = {A, O, E}"
+      },
+      "feedback_wrong": {
+        "en": "L-A-H-O-R-E: the vowels are A, O and E, so 3 outcomes.",
+        "ur": "L-A-H-O-R-E: حروفِ علت A، O اور E ہیں، تو 3 نتائج۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "Check the last letter: E is a vowel too. A, O, E: 3.",
+            "ur": "آخری حرف دیکھیں: E بھی حرفِ علت ہے۔ A، O، E: 3"
+          },
+          "misconception_id": "missing_outcomes"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is all the cards. Only A, O and E are vowels: 3.",
+            "ur": "6 تو سب کارڈ ہیں۔ صرف A، O اور E حروفِ علت ہیں: 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Experiment, outcome, sample space, event. You know all four words now!",
+          "ur": "تجربہ، نتیجہ، نمونی فضا، واقعہ۔ اب آپ چاروں الفاظ جانتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "An experiment has outcomes. The set of all outcomes is the sample space S, and n(S) is how many there are. An event is some of the outcomes. With two coins, HT and TH are different outcomes. In a bag, each ball is an outcome, not each colour.",
+        "ur": "تجربے کے نتائج ہوتے ہیں۔ تمام نتائج کا سیٹ نمونی فضا S ہے، اور n(S) ان کی تعداد ہے۔ واقعہ کچھ نتائج ہوتا ہے۔ دو سکوں میں HT اور TH الگ نتائج ہیں۔ تھیلے میں ہر گیند ایک نتیجہ ہے، ہر رنگ نہیں۔"
+      },
+      "points": [
+        {
+          "en": "Coin: S = {H, T}. Dice: S = {1, …, 6}.",
+          "ur": "سکہ: S = {H, T}۔ ڈائس: S = {1، …، 6}"
+        },
+        {
+          "en": "An event is part of S.",
+          "ur": "واقعہ S کا حصہ ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_one_head",
+      "type": "apply",
+      "skill": "maths.probability.sample_space",
+      "step": {
+        "id": "r_one_head",
+        "type": "number",
+        "prompt": {
+          "en": "Two coins are tossed. How many outcomes have exactly one head?",
+          "ur": "دو سکے اچھالے جاتے ہیں۔ کتنے نتائج میں ٹھیک ایک ہیڈ ہے؟"
+        },
+        "answer": 2,
+        "checker": "numeric",
+        "hint": {
+          "en": "S = {HH, HT, TH, TT}. Count the ones with one H.",
+          "ur": "S = {HH, HT, TH, TT}۔ ایک H والے گنیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! HT and TH.",
+          "ur": "درست! HT اور TH"
+        },
+        "feedback_wrong": {
+          "en": "HT and TH each have one head: 2 outcomes.",
+          "ur": "HT اور TH میں ایک ایک ہیڈ ہے: 2 نتائج۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 1,
+            "feedback": {
+              "en": "HT and TH are different outcomes, and both have one head: 2.",
+              "ur": "HT اور TH الگ نتائج ہیں، اور دونوں میں ایک ہیڈ ہے: 2"
+            },
+            "misconception_id": "order_ignored"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_vowels",
+      "type": "apply",
+      "skill": "maths.probability.sample_space",
+      "step": {
+        "id": "r_vowels",
+        "type": "number",
+        "prompt": {
+          "en": "The letters of PAKISTAN are written on 8 cards. How many cards show a vowel?",
+          "ur": "لفظ PAKISTAN کے حروف 8 کارڈز پر لکھے ہیں۔ کتنے کارڈز پر حرفِ علت ہے؟"
+        },
+        "answer": 3,
+        "checker": "numeric",
+        "hint": {
+          "en": "Go letter by letter: P-A-K-I-S-T-A-N.",
+          "ur": "حرف بہ حرف دیکھیں: P-A-K-I-S-T-A-N"
+        },
+        "feedback_correct": {
+          "en": "Right! A, I and A: 3 cards.",
+          "ur": "درست! A، I اور A: 3 کارڈ"
+        },
+        "feedback_wrong": {
+          "en": "There are two A cards and one I card: 3.",
+          "ur": "A کے دو کارڈ اور I کا ایک کارڈ: 3"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "A is on two cards. Count each card: A, I, A = 3.",
+              "ur": "A دو کارڈز پر ہے۔ ہر کارڈ گنیں: A، I، A = 3"
+            },
+            "misconception_id": "colours_not_objects"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Probability unit (PCTB Mathematics 6, Sub-domain 12). No textbook text or exercises were used; the book was used only for its outline and words.",
+    "The book writes S = {H, T}, n(S) and 'dice' for one or many; the lesson does the same.",
+    "Urdu terms to check: تجربہ (experiment), نتیجہ (outcome), نمونی فضا (sample space), واقعہ (event), احتمال (probability), حرفِ علت (vowel). Heads and tails are written ہیڈ / ٹیل.",
+    "The numbers were worked out in content/sources/g6-maths-17/sample_space.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

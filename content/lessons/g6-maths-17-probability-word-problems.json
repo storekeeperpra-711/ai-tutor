@@ -1,0 +1,978 @@
+{
+  "id": "g6-maths-17-probability-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-world word problems on the probability of a single event and on equally likely outcomes.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 12: Probability, 12.3 Probability of Single Event"
+    }
+  ],
+  "skills": [
+    "maths.probability.word_problems"
+  ],
+  "title": {
+    "en": "Probability word problems",
+    "ur": "احتمال کے عملی سوالات"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.probability.likelihood"
+    },
+    {
+      "skill": "maths.probability.single_event"
+    },
+    {
+      "skill": "maths.probability.sample_space"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "part_to_part",
+      "description": "Divides by the other outcomes instead of by all outcomes."
+    },
+    {
+      "id": "kinds_not_things",
+      "description": "Uses the number of kinds (flavours, colours) as n(S) instead of the number of things."
+    },
+    {
+      "id": "two_kinds_equal",
+      "description": "Thinks 'win or lose' (two results) means a 1/2 chance."
+    },
+    {
+      "id": "wrong_event",
+      "description": "Counts the opposite event (girls instead of boys)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.probability.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.probability.word_problems": [
+      {
+        "id": "qb_total",
+        "type": "recall",
+        "step": {
+          "id": "qb_total",
+          "type": "choice",
+          "prompt": {
+            "en": "In a lucky draw, what is n(S)?",
+            "ur": "لکی ڈرا میں n(S) کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "all",
+              "text": {
+                "en": "The number of all the tickets",
+                "ur": "تمام ٹکٹوں کی تعداد"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Any ticket could be drawn.",
+                "ur": "جی ہاں! کوئی بھی ٹکٹ نکل سکتا ہے۔"
+              }
+            },
+            {
+              "id": "mine",
+              "text": {
+                "en": "The number of tickets I bought",
+                "ur": "میرے خریدے ٹکٹوں کی تعداد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is n(E). n(S) is every ticket in the draw.",
+                "ur": "یہ n(E) ہے۔ n(S) ڈرا کا ہر ٹکٹ ہے۔"
+              }
+            },
+            {
+              "id": "two",
+              "text": {
+                "en": "2: win or lose",
+                "ur": "2: جیت یا ہار"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Win and lose are not equally likely. Count every ticket.",
+                "ur": "جیت اور ہار یکساں ممکن نہیں۔ ہر ٹکٹ گنیں۔"
+              },
+              "misconception_id": "two_kinds_equal"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "text_check",
+          "prompt": {
+            "en": "The 26 letters A to Z are on 26 cards. Sana picks one. What is P(vowel)?",
+            "ur": "A سے Z تک 26 حروف 26 کارڈز پر ہیں۔ ثنا ایک نکالتی ہے۔ P(حرفِ علت) کیا ہے؟"
+          },
+          "checker": "fraction",
+          "expected": "5/26",
+          "hint": {
+            "en": "The vowels are A, E, I, O, U.",
+            "ur": "حروفِ علت A، E، I، O، U ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 5/26.",
+            "ur": "درست! 5/26"
+          },
+          "feedback_wrong": {
+            "en": "5 vowel cards out of 26 cards: 5/26.",
+            "ur": "26 کارڈز میں سے 5 حرفِ علت: 5/26"
+          },
+          "common_wrong": [
+            {
+              "answer": "5/21",
+              "feedback": {
+                "en": "21 is the other letters. Divide by all 26: 5/26.",
+                "ur": "21 باقی حروف ہیں۔ تمام 26 سے تقسیم کریں: 5/26"
+              },
+              "misconception_id": "part_to_part"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A box has 5 mango, 5 orange and 10 lemon sweets. Bilal says P(mango) = 5/10. What is wrong?",
+            "ur": "ایک ڈبے میں 5 آم، 5 مالٹے اور 10 لیموں والی میٹھی گولیاں ہیں۔ بلال کہتا ہے P(آم) = 5/10۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "all_sweets",
+              "text": {
+                "en": "There are 20 sweets in all: P(mango) = 5/20.",
+                "ur": "کل 20 گولیاں ہیں: P(آم) = 5/20"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 5 + 5 + 10 = 20, so 5/20 = 1/4.",
+                "ur": "جی ہاں! 5 + 5 + 10 = 20، تو 5/20 = 1/4"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "10 is only the lemon sweets. All of them: 20. P = 5/20.",
+                "ur": "10 صرف لیموں والی ہیں۔ سب: 20۔ P = 5/20"
+              },
+              "misconception_id": "part_to_part"
+            },
+            {
+              "id": "one_third",
+              "text": {
+                "en": "It should be 1/3, for three flavours.",
+                "ur": "تین ذائقوں کی وجہ سے 1/3 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Count sweets, not flavours: 5/20.",
+                "ur": "ذائقے نہیں، گولیاں گنیں: 5/20"
+              },
+              "misconception_id": "kinds_not_things"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_steps",
+      "front": {
+        "en": "Steps for a probability word problem?",
+        "ur": "احتمال کے عملی سوال کے قدم؟"
+      },
+      "back": {
+        "en": "Count all outcomes, count the ones you want, divide, then say how likely.",
+        "ur": "تمام نتائج گنیں، مطلوبہ گنیں، تقسیم کریں، پھر بتائیں کتنا امکان ہے۔"
+      }
+    },
+    {
+      "id": "f_win_lose",
+      "front": {
+        "en": "Is 'win or lose' 1/2?",
+        "ur": "کیا 'جیت یا ہار' 1/2 ہے؟"
+      },
+      "back": {
+        "en": "Not always. 1 ticket of 100 wins with P = 1/100.",
+        "ur": "ہمیشہ نہیں۔ 100 میں سے 1 ٹکٹ کے جیتنے کا P = 1/100"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_draw",
+      "text": {
+        "en": "Write the names of the days of the week on 7 slips of paper. Ask someone at home: what is P(a day starting with T)? Check by listing the days.",
+        "ur": "ہفتے کے دنوں کے نام 7 پرچیوں پر لکھیں۔ گھر میں کسی سے پوچھیں: T سے شروع ہونے والے دن کا P کیا ہے؟ دن لکھ کر جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Lucky draw",
+      "ur": "لکی ڈرا (قرعہ اندازی)"
+    },
+    {
+      "en": "At random",
+      "ur": "بغیر دیکھے / اتفاقاً"
+    },
+    {
+      "en": "Probability",
+      "ur": "احتمال"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "The school mela has a lucky draw! If I buy more tickets, how much better is my chance?",
+          "ur": "اسکول کے میلے میں لکی ڈرا ہے! اگر میں زیادہ ٹکٹ خریدوں تو میرا امکان کتنا بہتر ہوگا؟"
+        }
+      },
+      "text": {
+        "en": "Today we use probability in real life: lucky draws, toffee jars, Ludo and our class. Then a short test on the whole unit. First, one warm-up.",
+        "ur": "آج ہم احتمال اصل زندگی میں استعمال کریں گے: لکی ڈرا، ٹافیوں کا مرتبان، لُڈو اور ہماری کلاس۔ پھر پورے باب کا چھوٹا ٹیسٹ۔ پہلے ایک سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.probability.single_event",
+      "prompt": {
+        "en": "You roll a dice. What is P(3)?",
+        "ur": "آپ ڈائس پھینکتے ہیں۔ P(3) کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "1/6",
+      "hint": {
+        "en": "One face out of six.",
+        "ur": "چھ میں سے ایک رُخ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1/6.",
+        "ur": "درست! 1/6"
+      },
+      "feedback_wrong": {
+        "en": "One face shows 3, out of 6 faces: 1/6.",
+        "ur": "6 رُخ میں سے ایک پر 3 ہے: 1/6"
+      },
+      "common_wrong": [
+        {
+          "answer": "1/3",
+          "feedback": {
+            "en": "3 is the number we want, not the bottom. One face of six: 1/6.",
+            "ur": "3 مطلوبہ عدد ہے، نیچے والا نہیں۔ چھ میں سے ایک رُخ: 1/6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Count all, count what you want, divide. Then say how likely it is!",
+          "ur": "سب گنیں، مطلوبہ گنیں، تقسیم کریں۔ پھر بتائیں کتنا امکان ہے!"
+        }
+      },
+      "text": {
+        "en": "For a word problem: 1. Find n(S): every outcome that could happen (every ticket, every toffee, every student). 2. Find n(E): the outcomes you want. 3. P(E) = n(E) ÷ n(S). 4. Say how likely it is: under 1/2 is unlikely, over 1/2 is likely.",
+        "ur": "عملی سوال کے لیے: 1۔ n(S) معلوم کریں: ہر وہ نتیجہ جو ہو سکتا ہے (ہر ٹکٹ، ہر ٹافی، ہر طالب علم)۔ 2۔ n(E) معلوم کریں: مطلوبہ نتائج۔ 3۔ P(E) = n(E) ÷ n(S)۔ 4۔ بتائیں کتنا امکان ہے: 1/2 سے کم، کم امکان؛ 1/2 سے زیادہ، زیادہ امکان۔"
+      }
+    },
+    {
+      "id": "s4_draw",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "40 tickets are sold for the lucky draw. Ali buys 3 of them. One ticket wins. What is the probability that Ali wins?",
+        "ur": "لکی ڈرا کے 40 ٹکٹ بکے۔ علی نے ان میں سے 3 خریدے۔ ایک ٹکٹ جیتے گا۔ علی کے جیتنے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "3/40",
+      "hint": {
+        "en": "Ali's tickets out of all the tickets.",
+        "ur": "تمام ٹکٹوں میں سے علی کے ٹکٹ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3/40: unlikely, but better than 1/40.",
+        "ur": "درست! 3/40: کم امکان، مگر 1/40 سے بہتر۔"
+      },
+      "feedback_wrong": {
+        "en": "n(E) = 3 and n(S) = 40, so P = 3/40.",
+        "ur": "n(E) = 3 اور n(S) = 40، تو P = 3/40"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/37",
+          "feedback": {
+            "en": "37 is the other tickets. Divide by all 40: 3/40.",
+            "ur": "37 باقی ٹکٹ ہیں۔ تمام 40 سے تقسیم کریں: 3/40"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "answer": "1/40",
+          "feedback": {
+            "en": "Ali has 3 tickets, so 3 outcomes win for him: 3/40.",
+            "ur": "علی کے 3 ٹکٹ ہیں، تو 3 نتائج اس کی جیت ہیں: 3/40"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_toffees",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A jar has 6 mango, 4 strawberry and 10 orange toffees. Ayesha takes one without looking. What is P(mango)?",
+        "ur": "ایک مرتبان میں 6 آم، 4 اسٹرابیری اور 10 مالٹے والی ٹافیاں ہیں۔ عائشہ بغیر دیکھے ایک لیتی ہے۔ P(آم) کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "3/10",
+      "hint": {
+        "en": "How many toffees in all?",
+        "ur": "کل کتنی ٹافیاں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 6/20 = 3/10.",
+        "ur": "درست! 6/20 = 3/10"
+      },
+      "feedback_wrong": {
+        "en": "6 + 4 + 10 = 20 toffees, 6 are mango: 6/20 = 3/10.",
+        "ur": "6 + 4 + 10 = 20 ٹافیاں، 6 آم والی: 6/20 = 3/10"
+      },
+      "common_wrong": [
+        {
+          "answer": "1/3",
+          "feedback": {
+            "en": "Count toffees, not flavours: 6 out of 20.",
+            "ur": "ذائقے نہیں، ٹافیاں گنیں: 20 میں سے 6"
+          },
+          "misconception_id": "kinds_not_things"
+        },
+        {
+          "answer": "6/14",
+          "feedback": {
+            "en": "14 is the other toffees. Divide by all 20: 6/20.",
+            "ur": "14 باقی ٹافیاں ہیں۔ تمام 20 سے تقسیم کریں: 6/20"
+          },
+          "misconception_id": "part_to_part"
+        }
+      ]
+    },
+    {
+      "id": "s6_day",
+      "type": "choice",
+      "prompt": {
+        "en": "A day of the week is picked at random. What is P(Friday)?",
+        "ur": "ہفتے کا ایک دن اتفاقاً چنا جاتا ہے۔ P(جمعہ) کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "one_seventh",
+          "text": {
+            "en": "1/7",
+            "ur": "1/7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! One day out of seven.",
+            "ur": "جی ہاں! سات میں سے ایک دن۔"
+          }
+        },
+        {
+          "id": "one_half",
+          "text": {
+            "en": "1/2: it is Friday or it isn't",
+            "ur": "1/2: جمعہ ہے یا نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "'Friday or not' are not equally likely. 1 day out of 7: 1/7.",
+            "ur": "'جمعہ یا نہیں' یکساں ممکن نہیں۔ 7 میں سے 1 دن: 1/7"
+          },
+          "misconception_id": "two_kinds_equal"
+        },
+        {
+          "id": "seven",
+          "text": {
+            "en": "7",
+            "ur": "7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A probability is never more than 1. 1 out of 7: 1/7.",
+            "ur": "احتمال کبھی 1 سے زیادہ نہیں ہوتا۔ 7 میں سے 1: 1/7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_class",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A class has 30 students: 18 girls and 12 boys. The teacher picks one student at random to ring the bell. What is P(a boy)?",
+        "ur": "ایک کلاس میں 30 طلبہ ہیں: 18 لڑکیاں اور 12 لڑکے۔ استاد گھنٹی بجانے کے لیے اتفاقاً ایک طالب علم چنتے ہیں۔ P(لڑکا) کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "2/5",
+      "hint": {
+        "en": "12 boys out of 30 students.",
+        "ur": "30 طلبہ میں سے 12 لڑکے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12/30 = 2/5.",
+        "ur": "درست! 12/30 = 2/5"
+      },
+      "feedback_wrong": {
+        "en": "n(E) = 12 boys, n(S) = 30 students: 12/30 = 2/5.",
+        "ur": "n(E) = 12 لڑکے، n(S) = 30 طلبہ: 12/30 = 2/5"
+      },
+      "common_wrong": [
+        {
+          "answer": "12/18",
+          "feedback": {
+            "en": "18 is the girls. Divide by all 30 students: 12/30.",
+            "ur": "18 لڑکیاں ہیں۔ تمام 30 طلبہ سے تقسیم کریں: 12/30"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "answer": "18/30",
+          "feedback": {
+            "en": "That is P(a girl). We want boys: 12/30.",
+            "ur": "یہ P(لڑکی) ہے۔ ہمیں لڑکے چاہئیں: 12/30"
+          },
+          "misconception_id": "wrong_event"
+        }
+      ]
+    },
+    {
+      "id": "s8_ludo",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In Ludo, Hamza wins if he rolls a 5 or a 6. What is the probability he wins on this roll?",
+        "ur": "لُڈو میں حمزہ جیت جائے گا اگر 5 یا 6 آئے۔ اس باری جیتنے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "1/3",
+      "hint": {
+        "en": "E = {5, 6}.",
+        "ur": "E = {5, 6}"
+      },
+      "feedback_correct": {
+        "en": "Right! 2/6 = 1/3.",
+        "ur": "درست! 2/6 = 1/3"
+      },
+      "feedback_wrong": {
+        "en": "Two faces win (5 and 6), out of 6: 2/6 = 1/3.",
+        "ur": "6 میں سے دو رُخ (5 اور 6) جتاتے ہیں: 2/6 = 1/3"
+      },
+      "common_wrong": [
+        {
+          "answer": "1/6",
+          "feedback": {
+            "en": "Both 5 and 6 win, so n(E) = 2: 2/6.",
+            "ur": "5 اور 6 دونوں جتاتے ہیں، تو n(E) = 2: 2/6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Fatima buys 1 ticket in a lucky draw of 100 tickets. She says: 'I will either win or lose, so my chance is 1/2.' What is wrong?",
+        "ur": "فاطمہ 100 ٹکٹوں والے لکی ڈرا میں 1 ٹکٹ خریدتی ہے۔ وہ کہتی ہے: 'میں یا جیتوں گی یا ہاروں گی، تو میرا امکان 1/2 ہے۔' کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "hundred",
+          "text": {
+            "en": "Win and lose are not equally likely: P(win) = 1/100.",
+            "ur": "جیت اور ہار یکساں ممکن نہیں: P(جیت) = 1/100"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each ticket is an outcome: 1 of 100 is hers.",
+            "ur": "جی ہاں! ہر ٹکٹ ایک نتیجہ ہے: 100 میں سے 1 اس کا۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "99 tickets make her lose and only 1 makes her win: 1/100.",
+            "ur": "99 ٹکٹ ہرواتے ہیں اور صرف 1 جتاتا ہے: 1/100"
+          },
+          "misconception_id": "two_kinds_equal"
+        },
+        {
+          "id": "certain",
+          "text": {
+            "en": "She will surely win.",
+            "ur": "وہ ضرور جیتے گی۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only 1 of 100 tickets is hers: P = 1/100, very unlikely.",
+            "ur": "100 میں سے صرف 1 ٹکٹ اس کا ہے: P = 1/100، بہت کم امکان۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Bag B has more red balls. So it's better, right? Can you check for me?",
+          "ur": "تھیلے B میں سرخ گیندیں زیادہ ہیں۔ تو وہ بہتر ہے نا؟ کیا آپ میرے لیے جانچ سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "Bag A has 1 red and 3 blue balls. Bag B has 2 red and 8 blue balls. Which bag gives a better chance of picking red? Explain.",
+        "ur": "تھیلے A میں 1 سرخ اور 3 نیلی گیندیں ہیں۔ تھیلے B میں 2 سرخ اور 8 نیلی۔ کس تھیلے سے سرخ نکلنے کا امکان بہتر ہے؟ وضاحت کریں۔"
+      },
+      "key_idea": "Bag A: P(red) = 1/4. Bag B: P(red) = 2/10 = 1/5. 1/4 is bigger than 1/5, so bag A is better, even though bag B has more red balls: compare probabilities, not just counts.",
+      "levels": {
+        "got_it": "Finds 1/4 for bag A and 2/10 (1/5) for bag B and says bag A is better because 1/4 is bigger.",
+        "partly": "Picks bag A without both probabilities, or finds the probabilities but compares them wrongly.",
+        "not_yet": "Picks bag B because it has more red balls, or gives no reason."
+      },
+      "keywords": [
+        [
+          "1/4",
+          "one quarter",
+          "چوتھائی"
+        ],
+        [
+          "2/10",
+          "1/5"
+        ],
+        [
+          "A"
+        ],
+        [
+          "bigger",
+          "more",
+          "greater",
+          "زیادہ",
+          "بڑا"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 1/4 beats 1/5, so bag A.",
+          "ur": "بہت خوب! 1/4، 1/5 سے بڑا ہے، تو تھیلا A۔"
+        },
+        "partly": {
+          "en": "Good start! Work out P(red) for each bag and compare.",
+          "ur": "اچھی شروعات! ہر تھیلے کا P(سرخ) نکالیں اور موازنہ کریں۔"
+        },
+        "not_yet": {
+          "en": "More red balls isn't enough. What is P(red) in each bag?",
+          "ur": "زیادہ سرخ گیندیں کافی نہیں۔ ہر تھیلے میں P(سرخ) کیا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Probability unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! احتمال کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on sample spaces, the probability of an event, the probability scale and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں نمونی فضا، کسی واقعے کے احتمال، احتمال کے پیمانے اور ایک اصل زندگی کے سوال ہیں۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_coins",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.probability.sample_space",
+      "prompt": {
+        "en": "Test 1: Three coins are tossed together. How many outcomes are in the sample space?",
+        "ur": "ٹیسٹ 1: تین سکے اکٹھے اچھالے جاتے ہیں۔ نمونی فضا میں کتنے نتائج ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two coins give 4. Each of those can end in H or T.",
+        "ur": "دو سکوں سے 4۔ ہر ایک کے آخر میں H یا T آ سکتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 2 × 2 = 8.",
+        "ur": "درست! 2 × 2 × 2 = 8"
+      },
+      "feedback_wrong": {
+        "en": "HHH, HHT, HTH, HTT, THH, THT, TTH, TTT: 8.",
+        "ur": "HHH، HHT، HTH، HTT، THH، THT، TTH، TTT: 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Each coin doubles the outcomes: 2 × 2 × 2 = 8, not 2 + 2 + 2.",
+            "ur": "ہر سکہ نتائج دگنے کرتا ہے: 2 × 2 × 2 = 8، 2 + 2 + 2 نہیں۔"
+          }
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That is two coins. Three coins give 8.",
+            "ur": "یہ دو سکے ہیں۔ تین سکوں سے 8۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_dice",
+      "type": "text_check",
+      "question_type": "apply",
+      "skill": "maths.probability.single_event",
+      "prompt": {
+        "en": "Test 2: You roll a dice. What is the probability of a number greater than 2?",
+        "ur": "ٹیسٹ 2: آپ ڈائس پھینکتے ہیں۔ 2 سے بڑا عدد آنے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "2/3",
+      "hint": {
+        "en": "E = {3, 4, 5, 6}.",
+        "ur": "E = {3, 4, 5, 6}"
+      },
+      "feedback_correct": {
+        "en": "Right! 4/6 = 2/3.",
+        "ur": "درست! 4/6 = 2/3"
+      },
+      "feedback_wrong": {
+        "en": "Four faces are greater than 2: 4/6 = 2/3.",
+        "ur": "چار رُخ 2 سے بڑے ہیں: 4/6 = 2/3"
+      },
+      "common_wrong": [
+        {
+          "answer": "2/6",
+          "feedback": {
+            "en": "That is 2 or less. Greater than 2 is 3, 4, 5, 6: 4/6.",
+            "ur": "یہ 2 یا کم ہے۔ 2 سے بڑے 3، 4، 5، 6: 4/6"
+          }
+        },
+        {
+          "answer": "4",
+          "feedback": {
+            "en": "4 is how many faces. Divide by 6: 4/6.",
+            "ur": "4 رُخوں کی تعداد ہے۔ 6 سے تقسیم کریں: 4/6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_scale",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 3: A bag has 7 green balls and nothing else. How likely is picking a green ball?",
+        "ur": "ٹیسٹ 3: ایک تھیلے میں صرف 7 سبز گیندیں ہیں۔ سبز گیند نکلنے کا کتنا امکان ہے؟"
+      },
+      "options": [
+        {
+          "id": "impossible",
+          "text": {
+            "en": "Impossible",
+            "ur": "ناممکن"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every ball is green, so P = 7/7 = 1: certain.",
+            "ur": "ہر گیند سبز ہے، تو P = 7/7 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "unlikely",
+          "text": {
+            "en": "Unlikely",
+            "ur": "کم امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every ball is green, so P = 7/7 = 1: certain.",
+            "ur": "ہر گیند سبز ہے، تو P = 7/7 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "even_chance",
+          "text": {
+            "en": "Even chance",
+            "ur": "برابر امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every ball is green, so P = 7/7 = 1: certain.",
+            "ur": "ہر گیند سبز ہے، تو P = 7/7 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "likely",
+          "text": {
+            "en": "Likely",
+            "ur": "زیادہ امکان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every ball is green, so P = 7/7 = 1: certain.",
+            "ur": "ہر گیند سبز ہے، تو P = 7/7 = 1: یقینی۔"
+          }
+        },
+        {
+          "id": "certain",
+          "text": {
+            "en": "Certain",
+            "ur": "یقینی"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Every ball is green: P = 7/7 = 1.",
+            "ur": "جی ہاں! ہر گیند سبز ہے: P = 7/7 = 1"
+          }
+        }
+      ],
+      "skill": "maths.probability.likelihood"
+    },
+    {
+      "id": "u4_months",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.probability.sample_space",
+      "prompt": {
+        "en": "Test 4: A month of the year is picked at random. How many outcomes are in the event 'the month starts with J'?",
+        "ur": "ٹیسٹ 4: سال کا ایک مہینہ اتفاقاً چنا جاتا ہے۔ واقعہ 'مہینہ J سے شروع ہو' میں کتنے نتائج ہیں؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Say the months in English: January, February, …",
+        "ur": "مہینے انگریزی میں کہیں: January، February، …"
+      },
+      "feedback_correct": {
+        "en": "Right! January, June and July.",
+        "ur": "درست! January، June اور July"
+      },
+      "feedback_wrong": {
+        "en": "January, June and July start with J: 3 outcomes.",
+        "ur": "January، June اور July، J سے شروع ہوتے ہیں: 3 نتائج"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "Don't forget January! January, June, July: 3.",
+            "ur": "January نہ بھولیں! January، June، July: 3"
+          }
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is every month. Only 3 start with J.",
+            "ur": "12 تو سب مہینے ہیں۔ صرف 3، J سے شروع ہوتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_spinner",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: A spinner at the mela has 10 equal parts. 3 parts win a prize. What is the probability of winning a prize?",
+        "ur": "ٹیسٹ 5: میلے کے ایک اسپنر کے 10 برابر حصے ہیں۔ 3 حصوں پر انعام ہے۔ انعام جیتنے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "3/10",
+      "hint": {
+        "en": "Winning parts out of all the parts.",
+        "ur": "تمام حصوں میں سے جیتنے والے حصے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3/10: unlikely.",
+        "ur": "درست! 3/10: کم امکان۔"
+      },
+      "feedback_wrong": {
+        "en": "3 winning parts out of 10: 3/10.",
+        "ur": "10 میں سے 3 جیتنے والے حصے: 3/10"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/7",
+          "feedback": {
+            "en": "7 is the parts with no prize. Divide by all 10: 3/10.",
+            "ur": "7 بغیر انعام والے حصے ہیں۔ تمام 10 سے تقسیم کریں: 3/10"
+          },
+          "misconception_id": "part_to_part"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Probability unit complete! Now you can work out your chances anywhere.",
+          "ur": "احتمال کا باب مکمل! اب آپ کہیں بھی اپنے امکانات نکال سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Count every outcome for n(S), count the ones you want for n(E), and divide. Then say how likely it is. 'Win or lose' is not always 1/2: count the tickets. To compare two chances, compare the probabilities, not just the counts.",
+        "ur": "n(S) کے لیے ہر نتیجہ گنیں، n(E) کے لیے مطلوبہ نتائج گنیں، اور تقسیم کریں۔ پھر بتائیں کتنا امکان ہے۔ 'جیت یا ہار' ہمیشہ 1/2 نہیں: ٹکٹ گنیں۔ دو امکانات کا موازنہ کرنے کے لیے احتمالات کا موازنہ کریں، صرف تعداد کا نہیں۔"
+      },
+      "points": [
+        {
+          "en": "All outcomes on the bottom.",
+          "ur": "تمام نتائج نیچے۔"
+        },
+        {
+          "en": "Compare probabilities, not counts.",
+          "ur": "تعداد نہیں، احتمال کا موازنہ کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_tickets",
+      "type": "apply",
+      "skill": "maths.probability.word_problems",
+      "step": {
+        "id": "r_tickets",
+        "type": "text_check",
+        "prompt": {
+          "en": "50 tickets are sold in a lucky draw. Usman buys 5. What is the probability that Usman wins?",
+          "ur": "لکی ڈرا میں 50 ٹکٹ بکے۔ عثمان نے 5 خریدے۔ عثمان کے جیتنے کا احتمال کیا ہے؟"
+        },
+        "checker": "fraction",
+        "expected": "1/10",
+        "hint": {
+          "en": "Usman's tickets out of all the tickets.",
+          "ur": "تمام ٹکٹوں میں سے عثمان کے ٹکٹ۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5/50 = 1/10.",
+          "ur": "درست! 5/50 = 1/10"
+        },
+        "feedback_wrong": {
+          "en": "5 out of 50: 5/50 = 1/10.",
+          "ur": "50 میں سے 5: 5/50 = 1/10"
+        },
+        "common_wrong": [
+          {
+            "answer": "5/45",
+            "feedback": {
+              "en": "45 is the other tickets. Divide by all 50: 5/50.",
+              "ur": "45 باقی ٹکٹ ہیں۔ تمام 50 سے تقسیم کریں: 5/50"
+            },
+            "misconception_id": "part_to_part"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_glasses",
+      "type": "apply",
+      "skill": "maths.probability.word_problems",
+      "step": {
+        "id": "r_glasses",
+        "type": "text_check",
+        "prompt": {
+          "en": "A class has 24 students. 9 of them wear glasses. One student is picked at random. What is P(no glasses)?",
+          "ur": "ایک کلاس میں 24 طلبہ ہیں۔ ان میں سے 9 عینک لگاتے ہیں۔ ایک طالب علم اتفاقاً چنا جاتا ہے۔ P(عینک نہیں) کیا ہے؟"
+        },
+        "checker": "fraction",
+        "expected": "5/8",
+        "hint": {
+          "en": "How many do NOT wear glasses?",
+          "ur": "کتنے عینک نہیں لگاتے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 15/24 = 5/8.",
+          "ur": "درست! 15/24 = 5/8"
+        },
+        "feedback_wrong": {
+          "en": "24 − 9 = 15 without glasses: 15/24 = 5/8.",
+          "ur": "24 − 9 = 15 بغیر عینک: 15/24 = 5/8"
+        },
+        "common_wrong": [
+          {
+            "answer": "9/24",
+            "feedback": {
+              "en": "That is P(glasses). Without glasses: 15/24.",
+              "ur": "یہ P(عینک) ہے۔ بغیر عینک: 15/24"
+            },
+            "misconception_id": "wrong_event"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Probability unit (PCTB Mathematics 6, Sub-domain 12). No textbook text or exercises were used.",
+    "The unit test (u1 to u5) covers sample space, probability of an event, the probability scale and a real-life problem.",
+    "Months are named in English (January …) because the question is about their first letter.",
+    "Urdu terms to check: لکی ڈرا / قرعہ اندازی (lucky draw), اتفاقاً (at random).",
+    "The numbers were worked out in content/sources/g6-maths-17/probability_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
