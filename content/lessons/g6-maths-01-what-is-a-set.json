@@ -1,0 +1,750 @@
+{
+  "id": "g6-maths-01-what-is-a-set",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise a set as a well-defined collection, write it in braces, and use the signs ∈ and ∉.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Sets"
+    }
+  ],
+  "skills": [
+    "maths.sets.meaning"
+  ],
+  "title": {
+    "en": "What is a set?",
+    "ur": "سیٹ کیا ہے؟"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.factors_multiples"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "repeats",
+      "description": "Lists or counts a repeated element more than once."
+    },
+    {
+      "id": "not_well_defined",
+      "description": "Thinks any collection is a set, even one based on opinion (\"beautiful flowers\")."
+    },
+    {
+      "id": "element_sign",
+      "description": "Mixes up ∈ (is an element of) and ∉ (is not an element of)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.meaning": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.meaning": [
+      {
+        "id": "qb_element",
+        "type": "recall",
+        "step": {
+          "id": "qb_element",
+          "type": "choice",
+          "prompt": {
+            "en": "What does 3 ∈ A mean?",
+            "ur": "3 ∈ A کا کیا مطلب ہے؟"
+          },
+          "options": [
+            {
+              "id": "in",
+              "text": {
+                "en": "3 is an element of set A",
+                "ur": "3، سیٹ A کا رکن ہے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! ∈ means \"is an element of\".",
+                "ur": "جی ہاں! ∈ کا مطلب ہے \"کا رکن ہے\"۔"
+              }
+            },
+            {
+              "id": "not_in",
+              "text": {
+                "en": "3 is not in set A",
+                "ur": "3، سیٹ A میں نہیں ہے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That would be 3 ∉ A, with a line through the sign.",
+                "ur": "وہ 3 ∉ A ہوتا، نشان پر لکیر کے ساتھ۔"
+              },
+              "misconception_id": "element_sign"
+            },
+            {
+              "id": "three",
+              "text": {
+                "en": "A has 3 elements",
+                "ur": "A کے 3 رکن ہیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "∈ says one thing belongs to a set: 3 is an element of A.",
+                "ur": "∈ بتاتا ہے کہ ایک چیز سیٹ میں شامل ہے: 3، A کا رکن ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "How many elements are in the set of letters of the word LAHORE?",
+            "ur": "لفظ LAHORE کے حروف کے سیٹ میں کتنے رکن ہیں؟"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "Write each different letter once.",
+            "ur": "ہر مختلف حرف ایک بار لکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! {L, A, H, O, R, E} has 6 elements.",
+            "ur": "درست! {L, A, H, O, R, E} کے 6 رکن ہیں۔"
+          },
+          "feedback_wrong": {
+            "en": "L, A, H, O, R, E: 6 letters, none repeated.",
+            "ur": "L، A، H، O، R، E: چھ حروف، کوئی دہرایا نہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "Count again: L, A, H, O, R, E is 6.",
+                "ur": "دوبارہ گنیں: L، A، H، O، R، E یعنی 6"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Asad says \"the clever children in my class\" is a set. What is wrong?",
+            "ur": "اسد کہتا ہے \"میری کلاس کے ذہین بچے\" ایک سیٹ ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "opinion",
+              "text": {
+                "en": "\"Clever\" is an opinion, so it isn't clear who belongs.",
+                "ur": "\"ذہین\" ایک رائے ہے، اس لیے واضح نہیں کون شامل ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A set must be well defined: everyone must agree what is in it.",
+                "ur": "جی ہاں! سیٹ واضح ہونا چاہیے: سب متفق ہوں کہ اس میں کیا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, it is a set.",
+                "ur": "کوئی غلطی نہیں، یہ سیٹ ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "People could disagree about who is clever, so it is not well defined.",
+                "ur": "لوگ اختلاف کر سکتے ہیں کہ کون ذہین ہے، اس لیے یہ واضح نہیں۔"
+              },
+              "misconception_id": "not_well_defined"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_set",
+      "front": {
+        "en": "A set?",
+        "ur": "سیٹ؟"
+      },
+      "back": {
+        "en": "A well-defined collection, written in braces: {2, 4, 6}. No element is written twice.",
+        "ur": "واضح طور پر بیان کیا گیا مجموعہ، بریکٹ میں لکھا جاتا ہے: {2, 4, 6}۔ کوئی رکن دو بار نہیں لکھا جاتا۔"
+      }
+    },
+    {
+      "id": "f_signs",
+      "front": {
+        "en": "∈ and ∉?",
+        "ur": "∈ اور ∉؟"
+      },
+      "back": {
+        "en": "5 ∈ A: 5 is in A. 4 ∉ A: 4 is not in A.",
+        "ur": "5 ∈ A: 5، A میں ہے۔ 4 ∉ A: 4، A میں نہیں ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sets",
+      "text": {
+        "en": "Write three sets from your home, in braces: for example the set of people in your family, the set of colours on your school bag, or the set of letters in your name. Count the elements of each.",
+        "ur": "اپنے گھر سے تین سیٹ بریکٹ میں لکھیں: مثلاً گھر کے افراد کا سیٹ، اسکول بیگ کے رنگوں کا سیٹ، یا آپ کے نام کے حروف کا سیٹ۔ ہر ایک کے رکن گنیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Set",
+      "ur": "سیٹ"
+    },
+    {
+      "en": "Element",
+      "ur": "رکن"
+    },
+    {
+      "en": "Well defined",
+      "ur": "واضح طور پر بیان کردہ"
+    },
+    {
+      "en": "Braces { }",
+      "ur": "بریکٹ { }"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Days of the week, the vowels, players in a cricket team. What do these groups have in common?",
+          "ur": "ہفتے کے دن، حروفِ علت، کرکٹ ٹیم کے کھلاڑی۔ ان گروہوں میں کیا بات مشترک ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn about sets. First, a quick check on factors.",
+        "ur": "آج ہم سیٹ کے بارے میں سیکھیں گے۔ پہلے اجزائے ضربی کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.factors.factors_multiples",
+      "prompt": {
+        "en": "How many factors does 12 have?",
+        "ur": "12 کے کتنے اجزائے ضربی ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "1, 2, 3, … which numbers divide 12 exactly?",
+        "ur": "1، 2، 3، … کون سے اعداد 12 کو پورا تقسیم کرتے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 1, 2, 3, 4, 6 and 12.",
+        "ur": "درست! 1، 2، 3، 4، 6 اور 12"
+      },
+      "feedback_wrong": {
+        "en": "1, 2, 3, 4, 6, 12: that is 6 factors.",
+        "ur": "1، 2، 3، 4، 6، 12: یعنی 6 اجزائے ضربی"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't forget 1 and 12 itself: 6 factors.",
+            "ur": "1 اور خود 12 کو نہ بھولیں: 6 اجزائے ضربی"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_set",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "A set is a group where everyone agrees exactly what belongs!",
+          "ur": "سیٹ ایسا گروہ ہے جس میں سب متفق ہوں کہ کیا شامل ہے!"
+        }
+      },
+      "text": {
+        "en": "A set is a well-defined collection: it must be clear what is in it. The things in a set are its elements. We write a set in braces, with commas: the vowels are {a, e, i, o, u}. Each element is written once, and the order does not matter. 5 ∈ A means 5 is an element of A; 4 ∉ A means 4 is not.",
+        "ur": "سیٹ واضح طور پر بیان کیا گیا مجموعہ ہے: صاف پتا ہو کہ اس میں کیا ہے۔ سیٹ میں شامل چیزیں اس کے رکن کہلاتی ہیں۔ سیٹ کو بریکٹ میں، کاموں کے ساتھ لکھتے ہیں: حروفِ علت {a, e, i, o, u} ہیں۔ ہر رکن ایک بار لکھا جاتا ہے، اور ترتیب اہم نہیں۔ 5 ∈ A کا مطلب ہے 5، A کا رکن ہے؛ 4 ∉ A کا مطلب ہے 4 نہیں ہے۔"
+      }
+    },
+    {
+      "id": "s4_vowels",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many elements are in {a, e, i, o, u}?",
+        "ur": "{a, e, i, o, u} میں کتنے رکن ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the letters between the braces.",
+        "ur": "بریکٹ کے اندر حروف گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 elements.",
+        "ur": "درست! 5 رکن"
+      },
+      "feedback_wrong": {
+        "en": "a, e, i, o, u: 5 elements.",
+        "ur": "a، e، i، o، u: پانچ رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "The set is one thing, but it has 5 elements inside it.",
+            "ur": "سیٹ ایک چیز ہے، لیکن اس کے اندر 5 رکن ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_well_defined",
+      "type": "choice",
+      "prompt": {
+        "en": "Which of these is a set?",
+        "ur": "ان میں سے کون سا سیٹ ہے؟"
+      },
+      "options": [
+        {
+          "id": "days",
+          "text": {
+            "en": "The days of the week",
+            "ur": "ہفتے کے دن"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Everyone agrees on the 7 days.",
+            "ur": "جی ہاں! سب 7 دنوں پر متفق ہیں۔"
+          }
+        },
+        {
+          "id": "flowers",
+          "text": {
+            "en": "Beautiful flowers",
+            "ur": "خوبصورت پھول"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "\"Beautiful\" is an opinion, so it isn't well defined.",
+            "ur": "\"خوبصورت\" ایک رائے ہے، اس لیے یہ واضح نہیں۔"
+          },
+          "misconception_id": "not_well_defined"
+        },
+        {
+          "id": "tall",
+          "text": {
+            "en": "Tall boys in the school",
+            "ur": "اسکول کے لمبے لڑکے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "How tall is \"tall\"? People would disagree, so it isn't well defined.",
+            "ur": "\"لمبا\" کتنا لمبا؟ لوگ اختلاف کریں گے، اس لیے یہ واضح نہیں۔"
+          },
+          "misconception_id": "not_well_defined"
+        }
+      ]
+    },
+    {
+      "id": "s6_evens",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many elements are in the set of even numbers between 1 and 11?",
+        "ur": "1 اور 11 کے درمیان جفت اعداد کے سیٹ میں کتنے رکن ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write them out: {2, 4, …}.",
+        "ur": "انہیں لکھیں: {2, 4, …}"
+      },
+      "feedback_correct": {
+        "en": "Right! {2, 4, 6, 8, 10} has 5 elements.",
+        "ur": "درست! {2, 4, 6, 8, 10} کے 5 رکن ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "{2, 4, 6, 8, 10}: 5 elements.",
+        "ur": "{2, 4, 6, 8, 10}: پانچ رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't forget 10: 2, 4, 6, 8, 10 is 5.",
+            "ur": "10 کو نہ بھولیں: 2، 4، 6، 8، 10 یعنی 5"
+          }
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "12 is not between 1 and 11: 2, 4, 6, 8, 10 is 5.",
+            "ur": "12، 1 اور 11 کے درمیان نہیں: 2، 4، 6، 8، 10 یعنی 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_pakistan",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many elements are in the set of letters of the word PAKISTAN?",
+        "ur": "لفظ PAKISTAN کے حروف کے سیٹ میں کتنے رکن ہیں؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "A appears twice in the word, but only once in the set.",
+        "ur": "لفظ میں A دو بار ہے، لیکن سیٹ میں ایک بار۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {P, A, K, I, S, T, N} has 7 elements.",
+        "ur": "درست! {P, A, K, I, S, T, N} کے 7 رکن ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "P, A, K, I, S, T, N: 7, since A is written once.",
+        "ur": "P، A، K، I، S، T، N: سات، کیونکہ A ایک بار لکھا جاتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "The word has 8 letters, but A repeats. In a set it is written once: 7.",
+            "ur": "لفظ میں 8 حروف ہیں، لیکن A دہرایا گیا ہے۔ سیٹ میں یہ ایک بار لکھا جاتا ہے: 7"
+          },
+          "misconception_id": "repeats"
+        }
+      ]
+    },
+    {
+      "id": "s8_signs",
+      "type": "choice",
+      "prompt": {
+        "en": "A = {1, 3, 5, 7}. Which is true?",
+        "ur": "A = {1, 3, 5, 7}۔ کون سا درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "five",
+          "text": {
+            "en": "5 ∈ A",
+            "ur": "5 ∈ A"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 5 is in A.",
+            "ur": "جی ہاں! 5، A میں ہے۔"
+          }
+        },
+        {
+          "id": "four",
+          "text": {
+            "en": "4 ∈ A",
+            "ur": "4 ∈ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 is not in A, so 4 ∉ A.",
+            "ur": "4، A میں نہیں ہے، تو 4 ∉ A۔"
+          },
+          "misconception_id": "element_sign"
+        },
+        {
+          "id": "seven",
+          "text": {
+            "en": "7 ∉ A",
+            "ur": "7 ∉ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is in A, so 7 ∈ A.",
+            "ur": "7، A میں ہے، تو 7 ∈ A۔"
+          },
+          "misconception_id": "element_sign"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zain writes the set of letters of APPLE as {A, P, P, L, E}. What went wrong?",
+        "ur": "زین لفظ APPLE کے حروف کا سیٹ {A, P, P, L, E} لکھتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "repeat",
+          "text": {
+            "en": "P is written twice. It should be {A, P, L, E}.",
+            "ur": "P دو بار لکھا ہے۔ یہ {A, P, L, E} ہونا چاہیے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each element is written only once.",
+            "ur": "جی ہاں! ہر رکن صرف ایک بار لکھا جاتا ہے۔"
+          }
+        },
+        {
+          "id": "order",
+          "text": {
+            "en": "The letters are in the wrong order.",
+            "ur": "حروف غلط ترتیب میں ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Order doesn't matter in a set. The problem is P written twice.",
+            "ur": "سیٹ میں ترتیب اہم نہیں۔ مسئلہ P کا دو بار لکھا جانا ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P appears twice. In a set each element is written once: {A, P, L, E}.",
+            "ur": "P دو بار ہے۔ سیٹ میں ہر رکن ایک بار لکھا جاتا ہے: {A, P, L, E}"
+          },
+          "misconception_id": "repeats"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is \"the good cricketers of Pakistan\" not a set, but \"the players in today's team\" is? Can you teach me?",
+          "ur": "\"پاکستان کے اچھے کرکٹرز\" سیٹ کیوں نہیں، لیکن \"آج کی ٹیم کے کھلاڑی\" سیٹ کیوں ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is one of these a set and the other not?",
+        "ur": "اپنے الفاظ میں بتائیں: ان میں سے ایک سیٹ کیوں ہے اور دوسرا کیوں نہیں؟"
+      },
+      "key_idea": "A set must be well defined: it must be clear to everyone what belongs. \"Good\" is an opinion, so people would disagree; the players in today's team are a definite list.",
+      "levels": {
+        "got_it": "Says a set must be clear or well defined, and \"good\" is an opinion that people could disagree about.",
+        "partly": "Says \"good\" is an opinion, or that the team is a fixed list, but not both.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "opinion",
+          "think",
+          "disagree",
+          "رائے",
+          "سوچ",
+          "اختلاف"
+        ],
+        [
+          "clear",
+          "well defined",
+          "exact",
+          "واضح",
+          "صاف"
+        ],
+        [
+          "list",
+          "fixed",
+          "team",
+          "فہرست",
+          "ٹیم"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! A set must be clear, and \"good\" is only an opinion.",
+          "ur": "بہت خوب! سیٹ واضح ہونا چاہیے، اور \"اچھا\" صرف ایک رائے ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what makes the team a clear list.",
+          "ur": "اچھی شروعات! اب بتائیں ٹیم واضح فہرست کیوں ہے۔"
+        },
+        "not_yet": {
+          "en": "Would everyone agree who the \"good\" cricketers are? Would everyone agree who is in today's team?",
+          "ur": "کیا سب متفق ہوں گے کہ \"اچھے\" کرکٹر کون ہیں؟ کیا سب متفق ہوں گے کہ آج کی ٹیم میں کون ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_factors",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many elements are in the set of factors of 18?",
+        "ur": "18 کے اجزائے ضربی کے سیٹ میں کتنے رکن ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find every number that divides 18 exactly.",
+        "ur": "ہر وہ عدد ڈھونڈیں جو 18 کو پورا تقسیم کرے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {1, 2, 3, 6, 9, 18} has 6 elements.",
+        "ur": "درست! {1, 2, 3, 6, 9, 18} کے 6 رکن ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "{1, 2, 3, 6, 9, 18}: 6 elements.",
+        "ur": "{1, 2, 3, 6, 9, 18}: چھ رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Include 1 and 18: {1, 2, 3, 6, 9, 18} has 6.",
+            "ur": "1 اور 18 شامل کریں: {1, 2, 3, 6, 9, 18} کے 6 رکن ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can write and read sets now!",
+          "ur": "اب آپ سیٹ لکھ اور پڑھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A set is a well-defined collection, written in braces with commas, like {2, 4, 6}. Its members are elements. Each element is written once and order does not matter. ∈ means \"is an element of\", and ∉ means \"is not an element of\".",
+        "ur": "سیٹ واضح طور پر بیان کیا گیا مجموعہ ہے، جو بریکٹ میں کاموں کے ساتھ لکھا جاتا ہے، جیسے {2, 4, 6}۔ اس کے ارکان رکن کہلاتے ہیں۔ ہر رکن ایک بار لکھا جاتا ہے اور ترتیب اہم نہیں۔ ∈ کا مطلب \"کا رکن ہے\" اور ∉ کا مطلب \"کا رکن نہیں\" ہے۔"
+      },
+      "points": [
+        {
+          "en": "Well defined: everyone agrees what is in it.",
+          "ur": "واضح: سب متفق ہوں کہ اس میں کیا ہے۔"
+        },
+        {
+          "en": "Each element once; order doesn't matter.",
+          "ur": "ہر رکن ایک بار؛ ترتیب اہم نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_odds",
+      "type": "apply",
+      "skill": "maths.sets.meaning",
+      "step": {
+        "id": "r_odds",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in the set of odd numbers less than 10?",
+          "ur": "10 سے چھوٹے طاق اعداد کے سیٹ میں کتنے رکن ہیں؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "{1, 3, …}",
+          "ur": "{1, 3, …}"
+        },
+        "feedback_correct": {
+          "en": "Right! {1, 3, 5, 7, 9} has 5.",
+          "ur": "درست! {1, 3, 5, 7, 9} کے 5 رکن ہیں۔"
+        },
+        "feedback_wrong": {
+          "en": "1, 3, 5, 7, 9: 5 elements.",
+          "ur": "1، 3، 5، 7، 9: پانچ رکن"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "Don't forget 1: {1, 3, 5, 7, 9} has 5.",
+              "ur": "1 کو نہ بھولیں: {1, 3, 5, 7, 9} کے 5 رکن ہیں۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_ball",
+      "type": "apply",
+      "skill": "maths.sets.meaning",
+      "step": {
+        "id": "r_ball",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in the set of letters of the word BALL?",
+          "ur": "لفظ BALL کے حروف کے سیٹ میں کتنے رکن ہیں؟"
+        },
+        "answer": 3,
+        "checker": "numeric",
+        "hint": {
+          "en": "L repeats. Write it once.",
+          "ur": "L دہرایا گیا ہے۔ اسے ایک بار لکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! {B, A, L} has 3.",
+          "ur": "درست! {B, A, L} کے 3 رکن ہیں۔"
+        },
+        "feedback_wrong": {
+          "en": "B, A, L: 3 elements.",
+          "ur": "B، A، L: تین رکن"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "L repeats, so it is written once: {B, A, L}, 3 elements.",
+              "ur": "L دہرایا گیا ہے، تو ایک بار لکھا جاتا ہے: {B, A, L}، تین رکن"
+            },
+            "misconception_id": "repeats"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Sets unit. No textbook text or exercises were used.",
+    "Sets of letters use English words (PAKISTAN, LAHORE) so the braces notation reads the same in both languages.",
+    "Urdu terms to check: سیٹ (set), رکن (element), واضح طور پر بیان کردہ (well defined), حروفِ علت (vowels).",
+    "The numbers were worked out in content/sources/g6-maths-01/what_is_a_set.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
