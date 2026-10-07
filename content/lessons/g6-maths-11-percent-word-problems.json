@@ -1,0 +1,924 @@
+{
+  "id": "g6-maths-11-percent-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems with percentages: discounts, increases, savings and parts of a group.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Percentages"
+    }
+  ],
+  "skills": [
+    "maths.percent.word_problems"
+  ],
+  "title": {
+    "en": "Percentage word problems",
+    "ur": "فیصد کے عملی سوال"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.percent.of_amount"
+    },
+    {
+      "skill": "maths.percent.find_percent"
+    },
+    {
+      "skill": "maths.percent.convert"
+    },
+    {
+      "skill": "maths.percent.meaning"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "discount_as_price",
+      "description": "Gives the discount (the money saved) when the question asks for the new price."
+    },
+    {
+      "id": "percent_not_amount",
+      "description": "Adds or takes away the percent number itself (Rs 200 + 10 instead of Rs 200 + 10% of 200)."
+    },
+    {
+      "id": "wrong_group",
+      "description": "Answers for the group named in the percent instead of the other group asked about."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.percent.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.percent.word_problems": [
+      {
+        "id": "qb_sale",
+        "type": "recall",
+        "step": {
+          "id": "qb_sale",
+          "type": "choice",
+          "prompt": {
+            "en": "A shop gives 25% off. What fraction of the old price do you pay?",
+            "ur": "دکان 25% رعایت دیتی ہے۔ آپ پرانی قیمت کا کتنا حصہ دیتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "75",
+              "text": {
+                "en": "75%, three quarters",
+                "ur": "75%، تین چوتھائی"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 100% − 25% = 75%.",
+                "ur": "جی ہاں! 100% − 25% = 75%"
+              }
+            },
+            {
+              "id": "25",
+              "text": {
+                "en": "25%, one quarter",
+                "ur": "25%، ایک چوتھائی"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "25% is what you save. You pay the rest: 75%.",
+                "ur": "25% آپ بچاتے ہیں۔ باقی آپ دیتے ہیں: 75%"
+              },
+              "misconception_id": "discount_as_price"
+            },
+            {
+              "id": "all",
+              "text": {
+                "en": "All of it",
+                "ur": "ساری"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "You get 25% off, so you pay 75%.",
+                "ur": "آپ کو 25% رعایت ملتی ہے، تو آپ 75% دیتے ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A cricket ball costs Rs 300. It is sold at 10% off. What is the sale price, in rupees?",
+            "ur": "کرکٹ بال 300 روپے کی ہے۔ یہ 10% رعایت پر بکتی ہے۔ سیل کی قیمت کتنے روپے ہے؟"
+          },
+          "answer": 270,
+          "checker": "numeric",
+          "hint": {
+            "en": "10% of 300 is 30. Take it off.",
+            "ur": "300 کا 10% یعنی 30۔ اسے کم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! Rs 270.",
+            "ur": "درست! 270 روپے"
+          },
+          "feedback_wrong": {
+            "en": "300 − 30 = 270.",
+            "ur": "300 − 30 = 270"
+          },
+          "common_wrong": [
+            {
+              "answer": 30,
+              "feedback": {
+                "en": "Rs 30 is the discount. The sale price is 300 − 30 = 270.",
+                "ur": "30 روپے رعایت ہے۔ سیل کی قیمت 300 − 30 = 270 ہے۔"
+              },
+              "misconception_id": "discount_as_price"
+            },
+            {
+              "answer": 290,
+              "feedback": {
+                "en": "Take off 10% of 300 (Rs 30), not Rs 10: 270.",
+                "ur": "300 کا 10% (30 روپے) کم کریں، 10 روپے نہیں: 270"
+              },
+              "misconception_id": "percent_not_amount"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A bag of rice weighed 50 kg. Its weight grows by 20%. Faisal says it now weighs 70 kg. What went wrong?",
+            "ur": "چاول کی بوری 50 کلو تھی۔ اس کا وزن 20% بڑھتا ہے۔ فیصل کہتا ہے اب یہ 70 کلو ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "amount",
+              "text": {
+                "en": "He added 20 kg. 20% of 50 is 10 kg, so it is 60 kg.",
+                "ur": "اس نے 20 کلو جمع کیا۔ 50 کا 20% یعنی 10 کلو، تو یہ 60 کلو ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Work out the percent of the amount first.",
+                "ur": "جی ہاں! پہلے مقدار کا فیصد نکالیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "20% of 50 kg is 10 kg, not 20 kg. 50 + 10 = 60 kg.",
+                "ur": "50 کلو کا 20% یعنی 10 کلو، 20 کلو نہیں۔ 50 + 10 = 60 کلو"
+              },
+              "misconception_id": "percent_not_amount"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_discount",
+      "front": {
+        "en": "Sale price?",
+        "ur": "سیل کی قیمت؟"
+      },
+      "back": {
+        "en": "Old price − discount. 25% off Rs 800: 800 − 200 = Rs 600.",
+        "ur": "پرانی قیمت − رعایت۔ 800 پر 25% رعایت: 800 − 200 = 600 روپے"
+      }
+    },
+    {
+      "id": "f_increase",
+      "front": {
+        "en": "After an increase?",
+        "ur": "اضافے کے بعد؟"
+      },
+      "back": {
+        "en": "Old amount + increase. Rs 200 up 10%: 200 + 20 = Rs 220.",
+        "ur": "پرانی مقدار + اضافہ۔ 200 روپے میں 10% اضافہ: 200 + 20 = 220 روپے"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_shop",
+      "text": {
+        "en": "Imagine a sale at a shop near you: everything is 20% off. Choose three things your family buys and work out the sale price of each. How much would the family save altogether?",
+        "ur": "سوچیں کہ قریب کی دکان پر سیل ہے: ہر چیز پر 20% رعایت۔ تین چیزیں چنیں جو آپ کا گھرانہ خریدتا ہے اور ہر ایک کی سیل کی قیمت نکالیں۔ گھرانہ کل کتنے پیسے بچائے گا؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Discount",
+      "ur": "رعایت"
+    },
+    {
+      "en": "Sale price",
+      "ur": "سیل کی قیمت"
+    },
+    {
+      "en": "Increase",
+      "ur": "اضافہ"
+    },
+    {
+      "en": "Save",
+      "ur": "بچانا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Eid sale! A shirt costs Rs 800 with 25% off. How much do we actually pay?",
+          "ur": "عید سیل! ایک قمیض 800 روپے کی ہے، 25% رعایت کے ساتھ۔ ہم اصل میں کتنے دیں گے؟"
+        }
+      },
+      "text": {
+        "en": "Today we use percents to solve real problems. First, a quick check.",
+        "ur": "آج ہم فیصد سے اصل زندگی کے سوال حل کریں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.percent.of_amount",
+      "prompt": {
+        "en": "What is 10% of 250?",
+        "ur": "250 کا 10% کیا ہے؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 10.",
+        "ur": "10 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 25.",
+        "ur": "درست! 25"
+      },
+      "feedback_wrong": {
+        "en": "250 ÷ 10 = 25.",
+        "ur": "250 ÷ 10 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "10% is a tenth, not 10 less: 25.",
+            "ur": "10% دسواں حصہ ہے، 10 کم نہیں: 25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_steps",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Read the question twice. Does it want the money saved, or the new price?",
+          "ur": "سوال دو بار پڑھیں۔ کیا بچت پوچھی ہے، یا نئی قیمت؟"
+        }
+      },
+      "text": {
+        "en": "Most percent problems need two steps. 1) Find the percent of the amount (25% of 800 = 200). 2) Decide what to do with it: take it away for a discount (800 − 200 = 600), add it for an increase. To find what percent something changed by, use change ÷ old amount × 100. Always check what the question asks for.",
+        "ur": "زیادہ تر فیصد کے سوالوں میں دو قدم ہوتے ہیں۔ 1) مقدار کا فیصد نکالیں (800 کا 25% = 200)۔ 2) فیصلہ کریں کہ اس کا کیا کرنا ہے: رعایت ہو تو نفی کریں (800 − 200 = 600)، اضافہ ہو تو جمع کریں۔ یہ معلوم کرنے کے لیے کہ کتنے فیصد تبدیلی ہوئی: تبدیلی ÷ پرانی مقدار × 100۔ ہمیشہ دیکھیں سوال کیا پوچھ رہا ہے۔"
+      }
+    },
+    {
+      "id": "s4_shirt",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shirt costs Rs 800. In the Eid sale it is 25% off. What is the sale price, in rupees?",
+        "ur": "ایک قمیض 800 روپے کی ہے۔ عید سیل میں اس پر 25% رعایت ہے۔ سیل کی قیمت کتنے روپے ہے؟"
+      },
+      "answer": 600,
+      "checker": "numeric",
+      "hint": {
+        "en": "25% of 800 is a quarter: 200. Take it off.",
+        "ur": "800 کا 25% یعنی چوتھائی: 200۔ اسے کم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 600.",
+        "ur": "درست! 600 روپے"
+      },
+      "feedback_wrong": {
+        "en": "800 − 200 = 600.",
+        "ur": "800 − 200 = 600"
+      },
+      "common_wrong": [
+        {
+          "answer": 200,
+          "feedback": {
+            "en": "Rs 200 is the discount. The sale price is 800 − 200 = 600.",
+            "ur": "200 روپے رعایت ہے۔ سیل کی قیمت 800 − 200 = 600 ہے۔"
+          },
+          "misconception_id": "discount_as_price"
+        },
+        {
+          "answer": 775,
+          "feedback": {
+            "en": "Take off 25% of 800 (Rs 200), not Rs 25: 600.",
+            "ur": "800 کا 25% (200 روپے) کم کریں، 25 روپے نہیں: 600"
+          },
+          "misconception_id": "percent_not_amount"
+        }
+      ]
+    },
+    {
+      "id": "s5_pocket",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hira's weekly pocket money is Rs 200. It goes up by 10%. What is her new pocket money, in rupees?",
+        "ur": "حرا کا ہفتہ وار جیب خرچ 200 روپے ہے۔ اس میں 10% اضافہ ہوتا ہے۔ نیا جیب خرچ کتنے روپے ہے؟"
+      },
+      "answer": 220,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% of 200 is 20. Add it on.",
+        "ur": "200 کا 10% یعنی 20۔ اسے جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 220.",
+        "ur": "درست! 220 روپے"
+      },
+      "feedback_wrong": {
+        "en": "200 + 20 = 220.",
+        "ur": "200 + 20 = 220"
+      },
+      "common_wrong": [
+        {
+          "answer": 210,
+          "feedback": {
+            "en": "Add 10% of 200 (Rs 20), not Rs 10: 220.",
+            "ur": "200 کا 10% (20 روپے) جمع کریں، 10 روپے نہیں: 220"
+          },
+          "misconception_id": "percent_not_amount"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "Rs 20 is the increase. New amount: 200 + 20 = 220.",
+            "ur": "20 روپے اضافہ ہے۔ نئی رقم: 200 + 20 = 220"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_boys",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A school has 600 children. 45% are girls. How many boys are there?",
+        "ur": "ایک اسکول میں 600 بچے ہیں۔ 45% لڑکیاں ہیں۔ لڑکے کتنے ہیں؟"
+      },
+      "answer": 330,
+      "checker": "numeric",
+      "hint": {
+        "en": "Boys are 100% − 45% = 55%. Or find the girls first and take them away.",
+        "ur": "لڑکے 100% − 45% = 55% ہیں۔ یا پہلے لڑکیاں نکالیں اور نفی کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 330 boys.",
+        "ur": "درست! 330 لڑکے"
+      },
+      "feedback_wrong": {
+        "en": "Girls: 45% of 600 = 270. Boys: 600 − 270 = 330.",
+        "ur": "لڑکیاں: 600 کا 45% = 270۔ لڑکے: 600 − 270 = 330"
+      },
+      "common_wrong": [
+        {
+          "answer": 270,
+          "feedback": {
+            "en": "270 are girls. Boys: 600 − 270 = 330.",
+            "ur": "270 لڑکیاں ہیں۔ لڑکے: 600 − 270 = 330"
+          },
+          "misconception_id": "wrong_group"
+        },
+        {
+          "answer": 55,
+          "feedback": {
+            "en": "55% are boys. 55% of 600 is 330.",
+            "ur": "55% لڑکے ہیں۔ 600 کا 55% یعنی 330"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_percent_off",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A fan's price drops from Rs 400 to Rs 340. What percent discount is that? Type just the number.",
+        "ur": "پنکھے کی قیمت 400 روپے سے کم ہو کر 340 روپے ہو جاتی ہے۔ یہ کتنے فیصد رعایت ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "The drop is Rs 60. What percent is 60 of 400?",
+        "ur": "کمی 60 روپے ہے۔ 60، 400 کا کتنے فیصد ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 15% off.",
+        "ur": "درست! 15% رعایت"
+      },
+      "feedback_wrong": {
+        "en": "60 ÷ 400 × 100 = 15.",
+        "ur": "60 ÷ 400 × 100 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "Rs 60 is the drop in rupees. As a percent: 60 ÷ 400 × 100 = 15%.",
+            "ur": "60 روپے کمی ہے۔ فیصد میں: 60 ÷ 400 × 100 = 15%"
+          }
+        },
+        {
+          "answer": 85,
+          "feedback": {
+            "en": "85% is what you still pay. The discount is 15%.",
+            "ur": "85% آپ اب بھی دیتے ہیں۔ رعایت 15% ہے۔"
+          },
+          "misconception_id": "discount_as_price"
+        }
+      ]
+    },
+    {
+      "id": "s8_spend",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ali earns Rs 1500 from a holiday job. He saves 20% and spends the rest. How many rupees does he spend?",
+        "ur": "علی چھٹیوں کے کام سے 1500 روپے کماتا ہے۔ وہ 20% بچاتا ہے اور باقی خرچ کرتا ہے۔ وہ کتنے روپے خرچ کرتا ہے؟"
+      },
+      "answer": 1200,
+      "checker": "numeric",
+      "hint": {
+        "en": "20% of 1500 is 300. The rest is spent.",
+        "ur": "1500 کا 20% یعنی 300۔ باقی خرچ ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 1200.",
+        "ur": "درست! 1200 روپے"
+      },
+      "feedback_wrong": {
+        "en": "1500 − 300 = 1200.",
+        "ur": "1500 − 300 = 1200"
+      },
+      "common_wrong": [
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "Rs 300 is what he saves. He spends 1500 − 300 = 1200.",
+            "ur": "300 روپے وہ بچاتا ہے۔ وہ 1500 − 300 = 1200 خرچ کرتا ہے۔"
+          },
+          "misconception_id": "wrong_group"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Shoes cost Rs 1000 with 10% off. Imran says he will pay Rs 100. What went wrong?",
+        "ur": "جوتے 1000 روپے کے ہیں، 10% رعایت کے ساتھ۔ عمران کہتا ہے وہ 100 روپے دے گا۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "discount",
+          "text": {
+            "en": "Rs 100 is the discount. He pays 1000 − 100 = Rs 900.",
+            "ur": "100 روپے رعایت ہے۔ وہ 1000 − 100 = 900 روپے دے گا۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! With 10% off you still pay 90%.",
+            "ur": "جی ہاں! 10% رعایت پر آپ پھر بھی 90% دیتے ہیں۔"
+          }
+        },
+        {
+          "id": "ten",
+          "text": {
+            "en": "He should pay Rs 990.",
+            "ur": "اسے 990 روپے دینے چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "10% of 1000 is Rs 100, not Rs 10. He pays Rs 900.",
+            "ur": "1000 کا 10% یعنی 100 روپے، 10 نہیں۔ وہ 900 روپے دے گا۔"
+          },
+          "misconception_id": "percent_not_amount"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Rs 100 is only the money saved. He pays Rs 900.",
+            "ur": "100 روپے صرف بچت ہے۔ وہ 900 روپے دے گا۔"
+          },
+          "misconception_id": "discount_as_price"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "With 25% off, why can we find the sale price by working out 75% of the old price? Can you teach me?",
+          "ur": "25% رعایت پر، پرانی قیمت کا 75% نکال کر سیل کی قیمت کیوں مل جاتی ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the price after 25% off the same as 75% of the old price?",
+        "ur": "اپنے الفاظ میں بتائیں: 25% رعایت کے بعد قیمت پرانی قیمت کے 75% کے برابر کیوں ہے؟"
+      },
+      "key_idea": "The old price is 100%. Taking 25% off leaves 100% − 25% = 75% of the price, so the sale price is 75% of the old price.",
+      "levels": {
+        "got_it": "Says the whole price is 100%, and taking away 25% leaves 75%.",
+        "partly": "Says 100 − 25 = 75, without linking it to the price.",
+        "not_yet": "Gives no reason, or just repeats the rule."
+      },
+      "keywords": [
+        [
+          "100",
+          "whole",
+          "full",
+          "پورا",
+          "پوری"
+        ],
+        [
+          "left",
+          "rest",
+          "remain",
+          "باقی"
+        ],
+        [
+          "75",
+          "take away",
+          "minus",
+          "نفی",
+          "کم"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The full price is 100%, and 25% off leaves 75%.",
+          "ur": "بہت خوب! پوری قیمت 100% ہے، اور 25% رعایت کے بعد 75% بچتا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what the 100% stands for.",
+          "ur": "اچھی شروعات! اب بتائیں 100% کس چیز کو ظاہر کرتا ہے۔"
+        },
+        "not_yet": {
+          "en": "The full price is 100%. If 25% is taken off, what percent of the price is left to pay?",
+          "ur": "پوری قیمت 100% ہے۔ اگر 25% کم ہو جائے تو قیمت کا کتنے فیصد دینا باقی ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Percentages unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! فیصد کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on what a percent means, changing decimals to percents, percent of an amount, finding the percentage and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں فیصد کا مطلب، اعشاریہ کو فیصد بنانا، مقدار کا فیصد، فیصد معلوم کرنا اور ایک اصل زندگی کا سوال ہے۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_rest",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.percent.meaning",
+      "prompt": {
+        "en": "Test 1: 35% of a field is planted with wheat. What percent is not planted with wheat?",
+        "ur": "ٹیسٹ 1: ایک کھیت کے 35% میں گندم لگی ہے۔ کتنے فیصد میں گندم نہیں لگی؟"
+      },
+      "answer": 65,
+      "checker": "numeric",
+      "hint": {
+        "en": "The whole field is 100%.",
+        "ur": "پورا کھیت 100% ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 65%.",
+        "ur": "درست! 65%"
+      },
+      "feedback_wrong": {
+        "en": "100 − 35 = 65.",
+        "ur": "100 − 35 = 65"
+      },
+      "common_wrong": [
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "35% has wheat. The rest: 100 − 35 = 65%.",
+            "ur": "35% میں گندم ہے۔ باقی: 100 − 35 = 65%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_decimal",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.percent.convert",
+      "prompt": {
+        "en": "Test 2: Write 0.08 as a percent. Type just the number.",
+        "ur": "ٹیسٹ 2: 0.08 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply by 100.",
+        "ur": "100 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 0.08 = 8%.",
+        "ur": "درست! 0.08 = 8%"
+      },
+      "feedback_wrong": {
+        "en": "0.08 × 100 = 8.",
+        "ur": "0.08 × 100 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "0.08 is 8 hundredths: 8%. 80% would be 0.8.",
+            "ur": "0.08 یعنی 8 سوویں: 8%۔ 80% تو 0.8 ہوتا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_amount",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.percent.of_amount",
+      "prompt": {
+        "en": "Test 3: Find 30% of 90.",
+        "ur": "ٹیسٹ 3: 90 کا 30% معلوم کریں۔"
+      },
+      "answer": 27,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% of 90 is 9. 30% is three times that.",
+        "ur": "90 کا 10% یعنی 9۔ 30% اس کا تین گنا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 27.",
+        "ur": "درست! 27"
+      },
+      "feedback_wrong": {
+        "en": "10% = 9, so 30% = 27.",
+        "ur": "10% = 9، تو 30% = 27"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is the percent. 30% of 90 is 27.",
+            "ur": "30 فیصد ہے۔ 90 کا 30% یعنی 27"
+          }
+        },
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "That takes away 30. 30% of 90 is 3 × 9 = 27.",
+            "ur": "یہ 30 کی نفی ہے۔ 90 کا 30% یعنی 3 × 9 = 27"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_find",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.percent.find_percent",
+      "prompt": {
+        "en": "Test 4: Sana gets 21 out of 30 in a test. What percent is that? Type just the number.",
+        "ur": "ٹیسٹ 4: ثنا ٹیسٹ میں 30 میں سے 21 لیتی ہے۔ یہ کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "21/30 = 7/10 = ?/100",
+        "ur": "21/30 = 7/10 = ?/100"
+      },
+      "feedback_correct": {
+        "en": "Right! 70%.",
+        "ur": "درست! 70%"
+      },
+      "feedback_wrong": {
+        "en": "21/30 = 7/10 = 70/100 = 70%.",
+        "ur": "21/30 = 7/10 = 70/100 = 70%"
+      },
+      "common_wrong": [
+        {
+          "answer": 21,
+          "feedback": {
+            "en": "21 out of 30 is not 21%. 21/30 = 70%.",
+            "ur": "30 میں سے 21، 21% نہیں ہے۔ 21/30 = 70%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_sale",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: A school bag costs Rs 250. It is sold at 20% off. What is the sale price, in rupees?",
+        "ur": "ٹیسٹ 5: اسکول بیگ 250 روپے کا ہے۔ یہ 20% رعایت پر بکتا ہے۔ سیل کی قیمت کتنے روپے ہے؟"
+      },
+      "answer": 200,
+      "checker": "numeric",
+      "hint": {
+        "en": "20% of 250 is 50. Take it off.",
+        "ur": "250 کا 20% یعنی 50۔ اسے کم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 200.",
+        "ur": "درست! 200 روپے"
+      },
+      "feedback_wrong": {
+        "en": "250 − 50 = 200.",
+        "ur": "250 − 50 = 200"
+      },
+      "common_wrong": [
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "Rs 50 is the discount. Sale price: 250 − 50 = 200.",
+            "ur": "50 روپے رعایت ہے۔ سیل کی قیمت: 250 − 50 = 200"
+          },
+          "misconception_id": "discount_as_price"
+        },
+        {
+          "answer": 230,
+          "feedback": {
+            "en": "Take off 20% of 250 (Rs 50), not Rs 20: 200.",
+            "ur": "250 کا 20% (50 روپے) کم کریں، 20 روپے نہیں: 200"
+          },
+          "misconception_id": "percent_not_amount"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Percentages unit complete! You're ready for any sale in the bazaar.",
+          "ur": "فیصد کا باب مکمل! اب آپ بازار کی ہر سیل کے لیے تیار ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Percent problems usually take two steps: find the percent of the amount, then take it away (discount, savings spent) or add it on (increase). To find a percent change: change ÷ old amount × 100. Read carefully to see whether the question wants the part, the rest or the new total.",
+        "ur": "فیصد کے سوال عموماً دو قدم لیتے ہیں: مقدار کا فیصد نکالیں، پھر اسے نفی کریں (رعایت، بچت کے بعد خرچ) یا جمع کریں (اضافہ)۔ فیصد تبدیلی نکالنے کے لیے: تبدیلی ÷ پرانی مقدار × 100۔ غور سے پڑھیں کہ سوال حصہ، باقی یا نیا کل پوچھ رہا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Discount: take it away. Increase: add it on.",
+          "ur": "رعایت: نفی کریں۔ اضافہ: جمع کریں۔"
+        },
+        {
+          "en": "Check what the question asks for.",
+          "ur": "دیکھیں سوال کیا پوچھ رہا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_increase",
+      "type": "apply",
+      "skill": "maths.percent.word_problems",
+      "step": {
+        "id": "r_increase",
+        "type": "number",
+        "prompt": {
+          "en": "A goat weighed 50 kg. Its weight goes up by 20%. What does it weigh now, in kg?",
+          "ur": "ایک بکری کا وزن 50 کلو تھا۔ اس کا وزن 20% بڑھ جاتا ہے۔ اب اس کا وزن کتنے کلو ہے؟"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "20% of 50 is 10. Add it on.",
+          "ur": "50 کا 20% یعنی 10۔ اسے جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 60 kg.",
+          "ur": "درست! 60 کلو"
+        },
+        "feedback_wrong": {
+          "en": "50 + 10 = 60.",
+          "ur": "50 + 10 = 60"
+        },
+        "common_wrong": [
+          {
+            "answer": 70,
+            "feedback": {
+              "en": "Add 20% of 50 (10 kg), not 20 kg: 60.",
+              "ur": "50 کا 20% (10 کلو) جمع کریں، 20 کلو نہیں: 60"
+            },
+            "misconception_id": "percent_not_amount"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_percent_off",
+      "type": "apply",
+      "skill": "maths.percent.word_problems",
+      "step": {
+        "id": "r_percent_off",
+        "type": "number",
+        "prompt": {
+          "en": "A watch's price drops from Rs 500 to Rs 450. What percent discount is that? Type just the number.",
+          "ur": "ایک گھڑی کی قیمت 500 روپے سے کم ہو کر 450 روپے ہو جاتی ہے۔ یہ کتنے فیصد رعایت ہے؟ صرف عدد لکھیں۔"
+        },
+        "answer": 10,
+        "checker": "numeric",
+        "hint": {
+          "en": "The drop is Rs 50. What percent is 50 of 500?",
+          "ur": "کمی 50 روپے ہے۔ 50، 500 کا کتنے فیصد ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 10% off.",
+          "ur": "درست! 10% رعایت"
+        },
+        "feedback_wrong": {
+          "en": "50 ÷ 500 × 100 = 10.",
+          "ur": "50 ÷ 500 × 100 = 10"
+        },
+        "common_wrong": [
+          {
+            "answer": 50,
+            "feedback": {
+              "en": "Rs 50 is the drop in rupees. As a percent: 10%.",
+              "ur": "50 روپے کمی ہے۔ فیصد میں: 10%"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Percentages unit. No textbook text or exercises were used.",
+    "Contexts are everyday Pakistani ones (Eid sale, pocket money, holiday job). The five-question unit test at the end covers every lesson of the unit.",
+    "Urdu terms to check: رعایت (discount), اضافہ (increase), سیل کی قیمت (sale price).",
+    "The numbers were worked out in content/sources/g6-maths-11/percent_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
