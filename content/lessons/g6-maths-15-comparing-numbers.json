@@ -1,0 +1,744 @@
+{
+  "id": "g6-maths-15-comparing-numbers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Compare and order large numbers by counting digits and comparing place by place from the left.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Whole Numbers"
+    }
+  ],
+  "skills": [
+    "maths.whole.compare"
+  ],
+  "title": {
+    "en": "Comparing large numbers",
+    "ur": "بڑے اعداد کا موازنہ"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.whole.number_systems"
+    },
+    {
+      "skill": "maths.whole.place_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "first_digit",
+      "description": "Compares the first digits without first counting how many digits each number has."
+    },
+    {
+      "id": "wrong_place",
+      "description": "Compares digits in different places, or stops at the first digit when they are equal."
+    },
+    {
+      "id": "digit_count",
+      "description": "Mixes up the largest and smallest numbers with a given number of digits."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.whole.compare": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.whole.compare": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "Two whole numbers have different numbers of digits. Which is bigger?",
+            "ur": "دو مکمل اعداد میں ہندسوں کی تعداد مختلف ہے۔ کون سا بڑا ہے؟"
+          },
+          "options": [
+            {
+              "id": "more",
+              "text": {
+                "en": "The one with more digits",
+                "ur": "جس میں زیادہ ہندسے ہوں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Count the digits first.",
+                "ur": "جی ہاں! پہلے ہندسے گنیں۔"
+              }
+            },
+            {
+              "id": "first",
+              "text": {
+                "en": "The one with the bigger first digit",
+                "ur": "جس کا پہلا ہندسہ بڑا ہو"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only if they have the same number of digits. More digits wins first.",
+                "ur": "صرف تب جب ہندسوں کی تعداد برابر ہو۔ پہلے زیادہ ہندسے جیتتے ہیں۔"
+              },
+              "misconception_id": "first_digit"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "What is the largest 7-digit number?",
+            "ur": "سب سے بڑا 7 ہندسی عدد کون سا ہے؟"
+          },
+          "answer": 9999999,
+          "checker": "numeric",
+          "hint": {
+            "en": "Use the biggest digit in every place.",
+            "ur": "ہر مقام پر سب سے بڑا ہندسہ لگائیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 99,99,999.",
+            "ur": "درست! 99,99,999"
+          },
+          "feedback_wrong": {
+            "en": "Seven 9s: 99,99,999.",
+            "ur": "سات 9: 99,99,999"
+          },
+          "common_wrong": [
+            {
+              "answer": 999999,
+              "feedback": {
+                "en": "That has only 6 digits. Seven 9s: 99,99,999.",
+                "ur": "اس میں صرف 6 ہندسے ہیں۔ سات 9: 99,99,999"
+              },
+              "misconception_id": "digit_count"
+            },
+            {
+              "answer": 1000000,
+              "feedback": {
+                "en": "That is the smallest 7-digit number. The largest is 99,99,999.",
+                "ur": "یہ سب سے چھوٹا 7 ہندسی عدد ہے۔ سب سے بڑا 99,99,999 ہے۔"
+              },
+              "misconception_id": "digit_count"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zainab says 4,38,000 is bigger than 4,83,000 because 3 comes before 8. What is wrong?",
+            "ur": "زینب کہتی ہے 4,38,000 بڑا ہے 4,83,000 سے کیونکہ 3 پہلے آتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "compare",
+              "text": {
+                "en": "The lakhs are equal (4), so compare the next place: 8 > 3, so 4,83,000 is bigger.",
+                "ur": "لاکھ برابر ہیں (4)، تو اگلا مقام دیکھیں: 8 > 3، تو 4,83,000 بڑا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Go left to right until the digits differ.",
+                "ur": "جی ہاں! بائیں سے دائیں چلیں جب تک ہندسے مختلف نہ ہوں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Compare the ten thousands: 8 is more than 3, so 4,83,000 is bigger.",
+                "ur": "دس ہزار کا موازنہ کریں: 8 بڑا ہے 3 سے، تو 4,83,000 بڑا ہے۔"
+              },
+              "misconception_id": "wrong_place"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_digits",
+      "front": {
+        "en": "Comparing: step 1?",
+        "ur": "موازنہ: پہلا قدم؟"
+      },
+      "back": {
+        "en": "Count the digits. More digits = bigger.",
+        "ur": "ہندسے گنیں۔ زیادہ ہندسے = بڑا"
+      }
+    },
+    {
+      "id": "f_left",
+      "front": {
+        "en": "Same number of digits?",
+        "ur": "ہندسے برابر ہوں؟"
+      },
+      "back": {
+        "en": "Compare from the left until two digits differ.",
+        "ur": "بائیں سے موازنہ کریں جب تک دو ہندسے مختلف نہ ہوں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_prices",
+      "text": {
+        "en": "Find the prices of two things in an advert (a motorbike and a car, or two phones). Which costs more? Explain how you knew.",
+        "ur": "کسی اشتہار میں دو چیزوں کی قیمتیں دیکھیں (موٹر سائیکل اور گاڑی، یا دو فون)۔ کون سی مہنگی ہے؟ بتائیں آپ کو کیسے پتا چلا۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Greater than (>)",
+      "ur": "بڑا (>)"
+    },
+    {
+      "en": "Less than (<)",
+      "ur": "چھوٹا (<)"
+    },
+    {
+      "en": "Order",
+      "ur": "ترتیب"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two villages, two big numbers. Which village has more people? Let's find out!",
+          "ur": "دو گاؤں، دو بڑے اعداد۔ کس گاؤں میں زیادہ لوگ ہیں؟ آئیں معلوم کریں!"
+        }
+      },
+      "text": {
+        "en": "Today we compare and order large numbers. First, a quick place value check.",
+        "ur": "آج ہم بڑے اعداد کا موازنہ کریں گے اور انہیں ترتیب دیں گے۔ پہلے مقامی قیمت کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.whole.place_value",
+      "prompt": {
+        "en": "What is the value of the digit 3 in 3,20,000?",
+        "ur": "3,20,000 میں 3 کی مقامی قیمت کیا ہے؟"
+      },
+      "answer": 300000,
+      "checker": "numeric",
+      "hint": {
+        "en": "The 3 is in the lakhs place.",
+        "ur": "3 لاکھ کے مقام پر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 lakh = 3,00,000.",
+        "ur": "درست! 3 لاکھ = 3,00,000"
+      },
+      "feedback_wrong": {
+        "en": "3 is in the lakhs place: 3,00,000.",
+        "ur": "3 لاکھ کے مقام پر ہے: 3,00,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "That is the digit. Its value is 3 lakh.",
+            "ur": "یہ ہندسہ ہے۔ اس کی قیمت 3 لاکھ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Count the digits first. Then go left to right!",
+          "ur": "پہلے ہندسے گنیں۔ پھر بائیں سے دائیں چلیں!"
+        }
+      },
+      "text": {
+        "en": "Step 1: count the digits. The number with more digits is bigger: 1,02,345 (6 digits) > 98,765 (5 digits). Step 2: if they have the same number of digits, compare from the left. When two digits differ, the bigger digit wins: 7,54,120 > 7,45,210 because 5 > 4 in the ten thousands place.",
+        "ur": "قدم 1: ہندسے گنیں۔ جس عدد میں زیادہ ہندسے ہوں وہ بڑا ہے: 1,02,345 (6 ہندسے) > 98,765 (5 ہندسے)۔ قدم 2: اگر ہندسے برابر ہوں تو بائیں سے موازنہ کریں۔ جہاں دو ہندسے مختلف ہوں، بڑا ہندسہ جیتتا ہے: 7,54,120 > 7,45,210 کیونکہ دس ہزار کے مقام پر 5 > 4"
+      }
+    },
+    {
+      "id": "s4_digits",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is bigger: 98,765 or 1,02,345? Type the bigger number.",
+        "ur": "کون سا بڑا ہے: 98,765 یا 1,02,345؟ بڑا عدد لکھیں۔"
+      },
+      "answer": 102345,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the digits.",
+        "ur": "ہندسے گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1,02,345 has 6 digits.",
+        "ur": "درست! 1,02,345 میں 6 ہندسے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "1,02,345 has 6 digits and 98,765 has 5, so 1,02,345 is bigger.",
+        "ur": "1,02,345 میں 6 ہندسے ہیں اور 98,765 میں 5، تو 1,02,345 بڑا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 98765,
+          "feedback": {
+            "en": "9 > 1, but 98,765 has only 5 digits. 1,02,345 has 6: it is bigger.",
+            "ur": "9 > 1، مگر 98,765 میں صرف 5 ہندسے ہیں۔ 1,02,345 میں 6 ہیں: یہ بڑا ہے۔"
+          },
+          "misconception_id": "first_digit"
+        }
+      ]
+    },
+    {
+      "id": "s5_left",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is bigger: 7,45,210 or 7,54,120? Type the bigger number.",
+        "ur": "کون سا بڑا ہے: 7,45,210 یا 7,54,120؟ بڑا عدد لکھیں۔"
+      },
+      "answer": 754120,
+      "checker": "numeric",
+      "hint": {
+        "en": "Both have 7 lakh. Look at the next digit.",
+        "ur": "دونوں میں 7 لاکھ ہیں۔ اگلا ہندسہ دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7,54,120.",
+        "ur": "درست! 7,54,120"
+      },
+      "feedback_wrong": {
+        "en": "The lakhs are both 7. Ten thousands: 5 > 4, so 7,54,120 is bigger.",
+        "ur": "لاکھ دونوں میں 7 ہیں۔ دس ہزار: 5 > 4، تو 7,54,120 بڑا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 745210,
+          "feedback": {
+            "en": "Compare the ten thousands: 5 > 4, so 7,54,120 is bigger.",
+            "ur": "دس ہزار کا موازنہ کریں: 5 > 4، تو 7,54,120 بڑا ہے۔"
+          },
+          "misconception_id": "wrong_place"
+        }
+      ]
+    },
+    {
+      "id": "s6_smallest",
+      "type": "choice",
+      "prompt": {
+        "en": "Which is the smallest?",
+        "ur": "سب سے چھوٹا کون سا ہے؟"
+      },
+      "options": [
+        {
+          "id": "n39000",
+          "text": {
+            "en": "39,000",
+            "ur": "39,000"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! It has only 5 digits.",
+            "ur": "جی ہاں! اس میں صرف 5 ہندسے ہیں۔"
+          }
+        },
+        {
+          "id": "n309000",
+          "text": {
+            "en": "3,09,000",
+            "ur": "3,09,000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It has 6 digits. 39,000 has only 5, so 39,000 is smaller.",
+            "ur": "اس میں 6 ہندسے ہیں۔ 39,000 میں صرف 5، تو 39,000 چھوٹا ہے۔"
+          },
+          "misconception_id": "first_digit"
+        },
+        {
+          "id": "n390000",
+          "text": {
+            "en": "3,90,000",
+            "ur": "3,90,000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the biggest. 39,000 has the fewest digits.",
+            "ur": "یہ سب سے بڑا ہے۔ 39,000 میں سب سے کم ہندسے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_smallest_six",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the smallest 6-digit number?",
+        "ur": "سب سے چھوٹا 6 ہندسی عدد کون سا ہے؟"
+      },
+      "answer": 100000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Start with 1, then all zeros.",
+        "ur": "1 سے شروع کریں، پھر سب صفر۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1,00,000 (1 lakh).",
+        "ur": "درست! 1,00,000 (1 لاکھ)"
+      },
+      "feedback_wrong": {
+        "en": "A 6-digit number can't start with 0, so the smallest is 1,00,000.",
+        "ur": "6 ہندسی عدد 0 سے شروع نہیں ہو سکتا، تو سب سے چھوٹا 1,00,000 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 99999,
+          "feedback": {
+            "en": "That is the largest 5-digit number. Add 1: 1,00,000.",
+            "ur": "یہ سب سے بڑا 5 ہندسی عدد ہے۔ 1 جمع کریں: 1,00,000"
+          },
+          "misconception_id": "digit_count"
+        },
+        {
+          "answer": 111111,
+          "feedback": {
+            "en": "1,00,000 is smaller and still has 6 digits.",
+            "ur": "1,00,000 اس سے چھوٹا ہے اور اس میں بھی 6 ہندسے ہیں۔"
+          },
+          "misconception_id": "digit_count"
+        }
+      ]
+    },
+    {
+      "id": "s8_biggest",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is the biggest: 52,000; 5,20,000; 5,02,000? Type it.",
+        "ur": "سب سے بڑا کون سا ہے: 52,000؛ 5,20,000؛ 5,02,000؟ اسے لکھیں۔"
+      },
+      "answer": 520000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two have 6 digits. Compare those from the left.",
+        "ur": "دو میں 6 ہندسے ہیں۔ انہیں بائیں سے دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5,20,000.",
+        "ur": "درست! 5,20,000"
+      },
+      "feedback_wrong": {
+        "en": "52,000 has 5 digits. Of the other two, 2 > 0 in the ten thousands, so 5,20,000.",
+        "ur": "52,000 میں 5 ہندسے ہیں۔ باقی دو میں دس ہزار پر 2 > 0، تو 5,20,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 502000,
+          "feedback": {
+            "en": "Compare the ten thousands: 2 > 0, so 5,20,000 is bigger.",
+            "ur": "دس ہزار دیکھیں: 2 > 0، تو 5,20,000 بڑا ہے۔"
+          },
+          "misconception_id": "wrong_place"
+        },
+        {
+          "answer": 52000,
+          "feedback": {
+            "en": "52,000 has only 5 digits, so it is the smallest.",
+            "ur": "52,000 میں صرف 5 ہندسے ہیں، تو یہ سب سے چھوٹا ہے۔"
+          },
+          "misconception_id": "first_digit"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal says 89,999 is bigger than 1,00,000 because 8 is bigger than 1. What went wrong?",
+        "ur": "بلال کہتا ہے 89,999 بڑا ہے 1,00,000 سے کیونکہ 8 بڑا ہے 1 سے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "digits",
+          "text": {
+            "en": "He didn't count the digits. 1,00,000 has 6 digits, so it is bigger.",
+            "ur": "اس نے ہندسے نہیں گنے۔ 1,00,000 میں 6 ہندسے ہیں، تو یہ بڑا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Count the digits before looking at the first digit.",
+            "ur": "جی ہاں! پہلا ہندسہ دیکھنے سے پہلے ہندسے گنیں۔"
+          }
+        },
+        {
+          "id": "last",
+          "text": {
+            "en": "He should compare the last digits.",
+            "ur": "اسے آخری ہندسوں کا موازنہ کرنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Always start from the left, after counting the digits.",
+            "ur": "ہمیشہ بائیں سے شروع کریں، ہندسے گننے کے بعد۔"
+          },
+          "misconception_id": "wrong_place"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "89,999 is less than 90 thousand. 1,00,000 is 100 thousand.",
+            "ur": "89,999 نوے ہزار سے کم ہے۔ 1,00,000 سو ہزار ہے۔"
+          },
+          "misconception_id": "first_digit"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is a number with more digits always bigger? Can you teach me?",
+          "ur": "زیادہ ہندسوں والا عدد ہمیشہ بڑا کیوں ہوتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is any 6-digit number bigger than any 5-digit number?",
+        "ur": "اپنے الفاظ میں بتائیں: کوئی بھی 6 ہندسی عدد کسی بھی 5 ہندسی عدد سے بڑا کیوں ہوتا ہے؟"
+      },
+      "key_idea": "The biggest 5-digit number is 99,999. The smallest 6-digit number is 1,00,000, which is one more. So every 6-digit number is at least 1 lakh, and every 5-digit number is less than 1 lakh.",
+      "levels": {
+        "got_it": "Says the largest 5-digit number (99,999) is less than the smallest 6-digit number (1,00,000), or that 6 digits means at least a lakh.",
+        "partly": "Says a 6-digit number reaches the lakhs place, without comparing the two.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "99999",
+          "99,999"
+        ],
+        [
+          "100000",
+          "1,00,000",
+          "lakh",
+          "لاکھ"
+        ],
+        [
+          "place",
+          "مقام"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Even the smallest 6-digit number beats the largest 5-digit one.",
+          "ur": "بہت خوب! سب سے چھوٹا 6 ہندسی عدد بھی سب سے بڑے 5 ہندسی عدد سے بڑا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now compare 99,999 with 1,00,000.",
+          "ur": "اچھی شروعات! اب 99,999 کا 1,00,000 سے موازنہ کریں۔"
+        },
+        "not_yet": {
+          "en": "What is the largest 5-digit number? What is the smallest 6-digit number?",
+          "ur": "سب سے بڑا 5 ہندسی عدد کون سا ہے؟ سب سے چھوٹا 6 ہندسی عدد کون سا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_towns",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Town A has 3,45,600 people. Town B has 3,54,060 people. Type the bigger population.",
+        "ur": "قصبہ الف میں 3,45,600 لوگ ہیں۔ قصبہ ب میں 3,54,060 لوگ ہیں۔ زیادہ آبادی لکھیں۔"
+      },
+      "answer": 354060,
+      "checker": "numeric",
+      "hint": {
+        "en": "Same lakhs (3). Compare the ten thousands.",
+        "ur": "لاکھ برابر (3)۔ دس ہزار کا موازنہ کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Town B, 3,54,060.",
+        "ur": "درست! قصبہ ب، 3,54,060"
+      },
+      "feedback_wrong": {
+        "en": "Lakhs: 3 and 3. Ten thousands: 5 > 4, so 3,54,060.",
+        "ur": "لاکھ: 3 اور 3۔ دس ہزار: 5 > 4، تو 3,54,060"
+      },
+      "common_wrong": [
+        {
+          "answer": 345600,
+          "feedback": {
+            "en": "Look at the ten thousands: 5 > 4, so Town B, 3,54,060.",
+            "ur": "دس ہزار دیکھیں: 5 > 4، تو قصبہ ب، 3,54,060"
+          },
+          "misconception_id": "wrong_place"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Count the digits, then go left to right. You are a number judge now!",
+          "ur": "ہندسے گنیں، پھر بائیں سے دائیں۔ اب آپ اعداد کے جج ہیں!"
+        }
+      },
+      "text": {
+        "en": "To compare whole numbers: first count the digits (more digits = bigger). If they have the same number of digits, compare from the left until two digits differ.",
+        "ur": "مکمل اعداد کا موازنہ: پہلے ہندسے گنیں (زیادہ ہندسے = بڑا)۔ اگر ہندسے برابر ہوں تو بائیں سے موازنہ کریں جب تک دو ہندسے مختلف نہ ہوں۔"
+      },
+      "points": [
+        {
+          "en": "More digits = bigger.",
+          "ur": "زیادہ ہندسے = بڑا"
+        },
+        {
+          "en": "Same digits: compare from the left.",
+          "ur": "ہندسے برابر: بائیں سے موازنہ۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_smallest",
+      "type": "apply",
+      "skill": "maths.whole.compare",
+      "step": {
+        "id": "r_smallest",
+        "type": "number",
+        "prompt": {
+          "en": "What is the smallest 7-digit number?",
+          "ur": "سب سے چھوٹا 7 ہندسی عدد کون سا ہے؟"
+        },
+        "answer": 1000000,
+        "checker": "numeric",
+        "hint": {
+          "en": "1 followed by six zeros.",
+          "ur": "1 کے بعد چھ صفر۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 10,00,000 (10 lakh).",
+          "ur": "درست! 10,00,000 (10 لاکھ)"
+        },
+        "feedback_wrong": {
+          "en": "Start with 1, then zeros: 10,00,000.",
+          "ur": "1 سے شروع کریں، پھر صفر: 10,00,000"
+        },
+        "common_wrong": [
+          {
+            "answer": 999999,
+            "feedback": {
+              "en": "That is the largest 6-digit number. Add 1: 10,00,000.",
+              "ur": "یہ سب سے بڑا 6 ہندسی عدد ہے۔ 1 جمع کریں: 10,00,000"
+            },
+            "misconception_id": "digit_count"
+          },
+          {
+            "answer": 1111111,
+            "feedback": {
+              "en": "10,00,000 is smaller and still has 7 digits.",
+              "ur": "10,00,000 اس سے چھوٹا ہے اور اس میں بھی 7 ہندسے ہیں۔"
+            },
+            "misconception_id": "digit_count"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_bigger",
+      "type": "apply",
+      "skill": "maths.whole.compare",
+      "step": {
+        "id": "r_bigger",
+        "type": "number",
+        "prompt": {
+          "en": "Which is bigger: 6,07,000 or 6,70,000? Type the bigger number.",
+          "ur": "کون سا بڑا ہے: 6,07,000 یا 6,70,000؟ بڑا عدد لکھیں۔"
+        },
+        "answer": 670000,
+        "checker": "numeric",
+        "hint": {
+          "en": "Same lakhs. Compare the ten thousands.",
+          "ur": "لاکھ برابر۔ دس ہزار دیکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 6,70,000.",
+          "ur": "درست! 6,70,000"
+        },
+        "feedback_wrong": {
+          "en": "Ten thousands: 7 > 0, so 6,70,000.",
+          "ur": "دس ہزار: 7 > 0، تو 6,70,000"
+        },
+        "common_wrong": [
+          {
+            "answer": 607000,
+            "feedback": {
+              "en": "Ten thousands: 7 > 0, so 6,70,000 is bigger.",
+              "ur": "دس ہزار: 7 > 0، تو 6,70,000 بڑا ہے۔"
+            },
+            "misconception_id": "wrong_place"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Whole Numbers unit. No textbook text or exercises were used.",
+    "Steps that ask for the bigger number take a typed answer, so the lesson works without drag-and-drop ordering.",
+    "Urdu terms to check: موازنہ (compare), ترتیب (order), ہندسی (digit) as in 6 ہندسی عدد.",
+    "The numbers were worked out in content/sources/g6-maths-15/comparing_numbers.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

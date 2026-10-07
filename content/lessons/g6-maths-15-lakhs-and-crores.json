@@ -1,0 +1,773 @@
+{
+  "id": "g6-maths-15-lakhs-and-crores",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Read, write and find the place value of digits in numbers up to crores, using Pakistani commas.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Whole Numbers"
+    }
+  ],
+  "skills": [
+    "maths.whole.place_value"
+  ],
+  "title": {
+    "en": "Lakhs and crores",
+    "ur": "لاکھ اور کروڑ"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "digit_not_value",
+      "description": "Gives the digit itself, or the wrong place, instead of its value."
+    },
+    {
+      "id": "lakh_ten_thousand",
+      "description": "Thinks 1 lakh is 10,000 or 10 thousands."
+    },
+    {
+      "id": "crore_ten_lakh",
+      "description": "Thinks 1 crore is 10 lakh."
+    },
+    {
+      "id": "lost_zero",
+      "description": "Drops a zero when writing a number from words."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.whole.place_value": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.whole.place_value": [
+      {
+        "id": "qb_zeros",
+        "type": "recall",
+        "step": {
+          "id": "qb_zeros",
+          "type": "choice",
+          "prompt": {
+            "en": "How many zeros are in 1 lakh?",
+            "ur": "1 لاکھ میں کتنے صفر ہیں؟"
+          },
+          "options": [
+            {
+              "id": "five",
+              "text": {
+                "en": "5 (1,00,000)",
+                "ur": "5 (1,00,000)"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 1 lakh = 1,00,000.",
+                "ur": "جی ہاں! 1 لاکھ = 1,00,000"
+              }
+            },
+            {
+              "id": "four",
+              "text": {
+                "en": "4 (10,000)",
+                "ur": "4 (10,000)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "10,000 is ten thousand. 1 lakh is 1,00,000: 5 zeros.",
+                "ur": "10,000 دس ہزار ہے۔ 1 لاکھ 1,00,000 ہے: 5 صفر۔"
+              },
+              "misconception_id": "lakh_ten_thousand"
+            },
+            {
+              "id": "seven",
+              "text": {
+                "en": "7 (1,00,00,000)",
+                "ur": "7 (1,00,00,000)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is 1 crore. 1 lakh has 5 zeros.",
+                "ur": "یہ 1 کروڑ ہے۔ 1 لاکھ میں 5 صفر ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "What is the value of the digit 8 in 8,20,00,000?",
+            "ur": "8,20,00,000 میں 8 کی مقامی قیمت کیا ہے؟"
+          },
+          "answer": 80000000,
+          "checker": "numeric",
+          "hint": {
+            "en": "The 8 is in the crores place.",
+            "ur": "8 کروڑ کے مقام پر ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 8 crore = 8,00,00,000.",
+            "ur": "درست! 8 کروڑ = 8,00,00,000"
+          },
+          "feedback_wrong": {
+            "en": "8 is in the crores place, so its value is 8 crore = 8,00,00,000.",
+            "ur": "8 کروڑ کے مقام پر ہے، تو اس کی قیمت 8 کروڑ = 8,00,00,000 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "That is the digit. Its value is 8 crore.",
+                "ur": "یہ ہندسہ ہے۔ اس کی قیمت 8 کروڑ ہے۔"
+              },
+              "misconception_id": "digit_not_value"
+            },
+            {
+              "answer": 8000000,
+              "feedback": {
+                "en": "That is 80 lakh. The 8 is in the crores place: 8 crore.",
+                "ur": "یہ 80 لاکھ ہے۔ 8 کروڑ کے مقام پر ہے: 8 کروڑ"
+              },
+              "misconception_id": "digit_not_value"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hamza reads 2,50,000 as 'twenty-five thousand'. What is wrong?",
+            "ur": "حمزہ 2,50,000 کو 'پچیس ہزار' پڑھتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "lakh",
+              "text": {
+                "en": "It is two lakh fifty thousand.",
+                "ur": "یہ دو لاکھ پچاس ہزار ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The 2 is in the lakhs place.",
+                "ur": "جی ہاں! 2 لاکھ کے مقام پر ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Twenty-five thousand is 25,000. This number has 6 digits: two lakh fifty thousand.",
+                "ur": "پچیس ہزار 25,000 ہے۔ اس عدد میں 6 ہندسے ہیں: دو لاکھ پچاس ہزار۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_lakh",
+      "front": {
+        "en": "1 lakh?",
+        "ur": "1 لاکھ؟"
+      },
+      "back": {
+        "en": "1,00,000 = 100 thousand.",
+        "ur": "1,00,000 = 100 ہزار"
+      }
+    },
+    {
+      "id": "f_crore",
+      "front": {
+        "en": "1 crore?",
+        "ur": "1 کروڑ؟"
+      },
+      "back": {
+        "en": "1,00,00,000 = 100 lakh.",
+        "ur": "1,00,00,000 = 100 لاکھ"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_news",
+      "text": {
+        "en": "Find a big number in a newspaper or on the TV news (a price, a budget or a population). Write it with commas and read it aloud in lakhs or crores.",
+        "ur": "اخبار یا ٹی وی خبروں میں کوئی بڑا عدد ڈھونڈیں (قیمت، بجٹ یا آبادی)۔ اسے کاما لگا کر لکھیں اور لاکھ یا کروڑ میں بلند آواز سے پڑھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Lakh",
+      "ur": "لاکھ"
+    },
+    {
+      "en": "Crore",
+      "ur": "کروڑ"
+    },
+    {
+      "en": "Place value",
+      "ur": "مقامی قیمت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A new car costs Rs 45,00,000. How do we even read that number?",
+          "ur": "ایک نئی گاڑی 45,00,000 روپے کی ہے۔ ہم یہ عدد پڑھیں کیسے؟"
+        }
+      },
+      "text": {
+        "en": "Today we read and write big numbers in lakhs and crores. First, a quick multiplication check.",
+        "ur": "آج ہم بڑے اعداد لاکھ اور کروڑ میں پڑھیں اور لکھیں گے۔ پہلے ضرب کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.multiplication.facts",
+      "prompt": {
+        "en": "What is 10 × 10 × 10?",
+        "ur": "10 × 10 × 10 کتنا ہے؟"
+      },
+      "answer": 1000,
+      "checker": "numeric",
+      "hint": {
+        "en": "10 × 10 = 100, then × 10.",
+        "ur": "10 × 10 = 100، پھر × 10"
+      },
+      "feedback_correct": {
+        "en": "Right! 1000.",
+        "ur": "درست! 1000"
+      },
+      "feedback_wrong": {
+        "en": "10 × 10 = 100, and 100 × 10 = 1000.",
+        "ur": "10 × 10 = 100، اور 100 × 10 = 1000"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "Multiply, don't add: 10 × 10 × 10 = 1000.",
+            "ur": "جمع نہیں، ضرب: 10 × 10 × 10 = 1000"
+          }
+        },
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "That is 10 × 10. Multiply by 10 again: 1000.",
+            "ur": "یہ 10 × 10 ہے۔ پھر 10 سے ضرب دیں: 1000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Each place is 10 times the place on its right!",
+          "ur": "ہر مقام اپنے دائیں والے مقام سے 10 گنا ہے!"
+        }
+      },
+      "text": {
+        "en": "Places from the right: ones, tens, hundreds, thousands, ten thousands, lakhs, ten lakhs, crores, ten crores. 100 thousand = 1 lakh (1,00,000). 100 lakh = 1 crore (1,00,00,000). In the Pakistani system, put a comma after the first 3 digits from the right, then after every 2 digits: 2,45,67,890 is two crore forty-five lakh sixty-seven thousand eight hundred ninety.",
+        "ur": "دائیں سے مقامات: اکائی، دہائی، سینکڑہ، ہزار، دس ہزار، لاکھ، دس لاکھ، کروڑ، دس کروڑ۔ 100 ہزار = 1 لاکھ (1,00,000)۔ 100 لاکھ = 1 کروڑ (1,00,00,000)۔ پاکستانی نظام میں دائیں سے پہلے 3 ہندسوں کے بعد کاما لگائیں، پھر ہر 2 ہندسوں کے بعد: 2,45,67,890 یعنی دو کروڑ پینتالیس لاکھ سڑسٹھ ہزار آٹھ سو نوے۔"
+      }
+    },
+    {
+      "id": "s4_value",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the value of the digit 6 in 6,40,000?",
+        "ur": "6,40,000 میں 6 کی مقامی قیمت کیا ہے؟"
+      },
+      "answer": 600000,
+      "checker": "numeric",
+      "hint": {
+        "en": "The 6 is in the lakhs place.",
+        "ur": "6 لاکھ کے مقام پر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 lakh = 6,00,000.",
+        "ur": "درست! 6 لاکھ = 6,00,000"
+      },
+      "feedback_wrong": {
+        "en": "6 is in the lakhs place, so its value is 6 lakh = 6,00,000.",
+        "ur": "6 لاکھ کے مقام پر ہے، تو اس کی قیمت 6 لاکھ = 6,00,000 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That is the digit. Its value is 6 lakh.",
+            "ur": "یہ ہندسہ ہے۔ اس کی قیمت 6 لاکھ ہے۔"
+          },
+          "misconception_id": "digit_not_value"
+        },
+        {
+          "answer": 60000,
+          "feedback": {
+            "en": "That is the ten thousands place. The 6 is in the lakhs place: 6,00,000.",
+            "ur": "یہ دس ہزار کا مقام ہے۔ 6 لاکھ کے مقام پر ہے: 6,00,000"
+          },
+          "misconception_id": "digit_not_value"
+        }
+      ]
+    },
+    {
+      "id": "s5_thousands",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many thousands make 1 lakh?",
+        "ur": "کتنے ہزار مل کر 1 لاکھ بنتے ہیں؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "1,00,000 ÷ 1000.",
+        "ur": "1,00,000 ÷ 1000"
+      },
+      "feedback_correct": {
+        "en": "Right! 100 thousands make 1 lakh.",
+        "ur": "درست! 100 ہزار سے 1 لاکھ بنتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "1,00,000 ÷ 1000 = 100.",
+        "ur": "1,00,000 ÷ 1000 = 100"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 thousand is 10,000. 1 lakh is 100 thousand.",
+            "ur": "10 ہزار 10,000 ہے۔ 1 لاکھ 100 ہزار ہے۔"
+          },
+          "misconception_id": "lakh_ten_thousand"
+        },
+        {
+          "answer": 1000,
+          "feedback": {
+            "en": "1000 thousands would be 10 lakh. 1 lakh = 100 thousand.",
+            "ur": "1000 ہزار 10 لاکھ ہوں گے۔ 1 لاکھ = 100 ہزار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_crore",
+      "type": "choice",
+      "prompt": {
+        "en": "Which is 1 crore?",
+        "ur": "1 کروڑ کون سا ہے؟"
+      },
+      "options": [
+        {
+          "id": "crore",
+          "text": {
+            "en": "1,00,00,000",
+            "ur": "1,00,00,000"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 1 followed by 7 zeros.",
+            "ur": "جی ہاں! 1 کے بعد 7 صفر۔"
+          }
+        },
+        {
+          "id": "ten_lakh",
+          "text": {
+            "en": "10,00,000",
+            "ur": "10,00,000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 10 lakh. 1 crore = 100 lakh.",
+            "ur": "یہ 10 لاکھ ہے۔ 1 کروڑ = 100 لاکھ"
+          },
+          "misconception_id": "crore_ten_lakh"
+        },
+        {
+          "id": "lakh",
+          "text": {
+            "en": "1,00,000",
+            "ur": "1,00,000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 1 lakh. 1 crore is 1,00,00,000.",
+            "ur": "یہ 1 لاکھ ہے۔ 1 کروڑ 1,00,00,000 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_write",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 'three lakh twenty-five thousand' as a number.",
+        "ur": "'تین لاکھ پچیس ہزار' کو عدد میں لکھیں۔"
+      },
+      "answer": 325000,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 lakh is 3,00,000. Add 25,000.",
+        "ur": "3 لاکھ 3,00,000 ہے۔ 25,000 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3,25,000.",
+        "ur": "درست! 3,25,000"
+      },
+      "feedback_wrong": {
+        "en": "3,00,000 + 25,000 = 3,25,000.",
+        "ur": "3,00,000 + 25,000 = 3,25,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 32500,
+          "feedback": {
+            "en": "That is only 5 digits, which is thousands. 3 lakh needs 6 digits: 3,25,000.",
+            "ur": "یہ صرف 5 ہندسے ہیں، یعنی ہزار۔ 3 لاکھ کے لیے 6 ہندسے: 3,25,000"
+          },
+          "misconception_id": "lost_zero"
+        },
+        {
+          "answer": 30025000,
+          "feedback": {
+            "en": "Don't write 3 lakh and 25 thousand side by side. Add them: 3,25,000.",
+            "ur": "3 لاکھ اور 25 ہزار ساتھ ساتھ نہ لکھیں۔ جمع کریں: 3,25,000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_lakhs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many lakhs make 1 crore?",
+        "ur": "کتنے لاکھ مل کر 1 کروڑ بنتے ہیں؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "1,00,00,000 ÷ 1,00,000.",
+        "ur": "1,00,00,000 ÷ 1,00,000"
+      },
+      "feedback_correct": {
+        "en": "Right! 100 lakh = 1 crore.",
+        "ur": "درست! 100 لاکھ = 1 کروڑ"
+      },
+      "feedback_wrong": {
+        "en": "1 crore has 2 more zeros than 1 lakh, so it is 100 lakh.",
+        "ur": "1 کروڑ میں 1 لاکھ سے 2 صفر زیادہ ہیں، تو یہ 100 لاکھ ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 lakh is 10,00,000. 1 crore is 100 lakh.",
+            "ur": "10 لاکھ 10,00,000 ہے۔ 1 کروڑ 100 لاکھ ہے۔"
+          },
+          "misconception_id": "crore_ten_lakh"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ahmed reads 45,00,000 as 'forty-five thousand'. What went wrong?",
+        "ur": "احمد 45,00,000 کو 'پینتالیس ہزار' پڑھتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "lakh",
+          "text": {
+            "en": "It is forty-five lakh. The 45 is in the lakhs places.",
+            "ur": "یہ پینتالیس لاکھ ہے۔ 45 لاکھ کے مقامات پر ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Forty-five thousand is 45,000.",
+            "ur": "جی ہاں! پینتالیس ہزار 45,000 ہے۔"
+          }
+        },
+        {
+          "id": "crore",
+          "text": {
+            "en": "It is forty-five crore.",
+            "ur": "یہ پینتالیس کروڑ ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "45 crore would be 45,00,00,000. This is 45 lakh.",
+            "ur": "45 کروڑ 45,00,00,000 ہوگا۔ یہ 45 لاکھ ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "45,000 is forty-five thousand. 45,00,000 has two more zeros: 45 lakh.",
+            "ur": "45,000 پینتالیس ہزار ہے۔ 45,00,000 میں دو صفر زیادہ ہیں: 45 لاکھ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why are 100 thousands the same as 1 lakh? Can you teach me?",
+          "ur": "100 ہزار اور 1 لاکھ برابر کیوں ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do 100 thousands make 1 lakh?",
+        "ur": "اپنے الفاظ میں بتائیں: 100 ہزار سے 1 لاکھ کیوں بنتا ہے؟"
+      },
+      "key_idea": "Each place is 10 times the one on its right. 10 thousands make ten thousand (10,000), and 10 ten-thousands make 1 lakh, so 10 × 10 = 100 thousands make 1 lakh (1000 × 100 = 1,00,000).",
+      "levels": {
+        "got_it": "Says 1000 × 100 = 1,00,000, or that each place is 10 times the last, so two places up is 100 times.",
+        "partly": "Says 100 × 1000 without explaining the places.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "10",
+          "ten",
+          "دس"
+        ],
+        [
+          "100",
+          "hundred",
+          "سو"
+        ],
+        [
+          "place",
+          "مقام"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Two places up means 10 × 10 = 100 times.",
+          "ur": "بہت خوب! دو مقام اوپر یعنی 10 × 10 = 100 گنا۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how the places grow by 10 each time.",
+          "ur": "اچھی شروعات! اب بتائیں کہ مقامات ہر بار 10 گنا کیسے بڑھتے ہیں۔"
+        },
+        "not_yet": {
+          "en": "How many thousands make ten thousand? How many ten thousands make a lakh?",
+          "ur": "کتنے ہزار سے دس ہزار بنتا ہے؟ کتنے دس ہزار سے ایک لاکھ؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_notes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A school fund has Rs 5,00,000. How many Rs 1000 notes is that?",
+        "ur": "سکول کے فنڈ میں 5,00,000 روپے ہیں۔ یہ 1000 روپے کے کتنے نوٹ ہیں؟"
+      },
+      "answer": 500,
+      "checker": "numeric",
+      "hint": {
+        "en": "1 lakh = 100 thousand. How many thousands in 5 lakh?",
+        "ur": "1 لاکھ = 100 ہزار۔ 5 لاکھ میں کتنے ہزار؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 500 notes.",
+        "ur": "درست! 500 نوٹ"
+      },
+      "feedback_wrong": {
+        "en": "5 lakh = 5 × 100 thousand = 500 thousand, so 500 notes.",
+        "ur": "5 لاکھ = 5 × 100 ہزار = 500 ہزار، تو 500 نوٹ"
+      },
+      "common_wrong": [
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "1 lakh is 100 thousand, not 10: 500 notes.",
+            "ur": "1 لاکھ 100 ہزار ہے، 10 نہیں: 500 نوٹ"
+          },
+          "misconception_id": "lakh_ten_thousand"
+        },
+        {
+          "answer": 5000,
+          "feedback": {
+            "en": "5000 notes of Rs 1000 would be 50 lakh. 5 lakh is 500 notes.",
+            "ur": "1000 روپے کے 5000 نوٹ 50 لاکھ ہوں گے۔ 5 لاکھ 500 نوٹ ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Lakhs and crores are easy now. Big numbers, no fear!",
+          "ur": "لاکھ اور کروڑ اب آسان ہیں۔ بڑے اعداد، کوئی ڈر نہیں!"
+        }
+      },
+      "text": {
+        "en": "100 thousand = 1 lakh (1,00,000). 100 lakh = 1 crore (1,00,00,000). Pakistani commas: 3 digits from the right, then every 2. The value of a digit depends on its place.",
+        "ur": "100 ہزار = 1 لاکھ (1,00,000)۔ 100 لاکھ = 1 کروڑ (1,00,00,000)۔ پاکستانی کامے: دائیں سے 3 ہندسے، پھر ہر 2۔ ہندسے کی قیمت اس کے مقام پر منحصر ہے۔"
+      },
+      "points": [
+        {
+          "en": "1 lakh = 1,00,000.",
+          "ur": "1 لاکھ = 1,00,000"
+        },
+        {
+          "en": "1 crore = 100 lakh.",
+          "ur": "1 کروڑ = 100 لاکھ"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_value",
+      "type": "apply",
+      "skill": "maths.whole.place_value",
+      "step": {
+        "id": "r_value",
+        "type": "number",
+        "prompt": {
+          "en": "What is the value of the digit 4 in 4,50,000?",
+          "ur": "4,50,000 میں 4 کی مقامی قیمت کیا ہے؟"
+        },
+        "answer": 400000,
+        "checker": "numeric",
+        "hint": {
+          "en": "The 4 is in the lakhs place.",
+          "ur": "4 لاکھ کے مقام پر ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 4 lakh = 4,00,000.",
+          "ur": "درست! 4 لاکھ = 4,00,000"
+        },
+        "feedback_wrong": {
+          "en": "4 is in the lakhs place: 4,00,000.",
+          "ur": "4 لاکھ کے مقام پر ہے: 4,00,000"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That is the digit. Its value is 4 lakh.",
+              "ur": "یہ ہندسہ ہے۔ اس کی قیمت 4 لاکھ ہے۔"
+            },
+            "misconception_id": "digit_not_value"
+          },
+          {
+            "answer": 40000,
+            "feedback": {
+              "en": "That is the ten thousands place. The 4 is in the lakhs place.",
+              "ur": "یہ دس ہزار کا مقام ہے۔ 4 لاکھ کے مقام پر ہے۔"
+            },
+            "misconception_id": "digit_not_value"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_ten_thousands",
+      "type": "apply",
+      "skill": "maths.whole.place_value",
+      "step": {
+        "id": "r_ten_thousands",
+        "type": "number",
+        "prompt": {
+          "en": "How many ten thousands (10,000) make 1 lakh?",
+          "ur": "کتنے دس ہزار (10,000) مل کر 1 لاکھ بنتے ہیں؟"
+        },
+        "answer": 10,
+        "checker": "numeric",
+        "hint": {
+          "en": "1,00,000 ÷ 10,000.",
+          "ur": "1,00,000 ÷ 10,000"
+        },
+        "feedback_correct": {
+          "en": "Right! 10.",
+          "ur": "درست! 10"
+        },
+        "feedback_wrong": {
+          "en": "1,00,000 ÷ 10,000 = 10.",
+          "ur": "1,00,000 ÷ 10,000 = 10"
+        },
+        "common_wrong": [
+          {
+            "answer": 100,
+            "feedback": {
+              "en": "100 thousands make a lakh, but only 10 ten thousands.",
+              "ur": "100 ہزار سے لاکھ بنتا ہے، مگر دس ہزار صرف 10۔"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Whole Numbers unit. No textbook text or exercises were used.",
+    "Children may type answers with or without commas (6,00,000 or 600000); both are accepted.",
+    "Urdu terms to check: مقامی قیمت (place value), لاکھ, کروڑ, کاما.",
+    "The numbers were worked out in content/sources/g6-maths-15/lakhs_and_crores.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

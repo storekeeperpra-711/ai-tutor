@@ -8,13 +8,21 @@ import 'rational.dart';
 /// not a number.
 double? parseNumber(String input) => parseRational(input)?.toDouble();
 
-/// Like [parseNumber] but exact: whole numbers, decimals, fractions
-/// (`3/4`), mixed numbers (`1 1/2`, `-2 3/4`) and number words.
+/// Commas between digit groups, the Pakistani way (`6,00,000`) or the
+/// international way (`600,000`). Other commas (`3,4`) are not numbers.
+final _groupedNumber = RegExp(
+  r'^[+-]?(\d{1,2}(,\d{2})*,\d{3}|\d{1,3}(,\d{3})+)(\.\d+)?$',
+);
+
+/// Like [parseNumber] but exact: whole numbers (with or without commas),
+/// decimals, fractions (`3/4`), mixed numbers (`1 1/2`, `-2 3/4`) and
+/// number words.
 Rational? parseRational(String input) {
   final word = numberFromWord(input);
   if (word != null) return Rational(word);
 
-  final text = normalizeInput(input).replaceAll(RegExp(r'\s+'), ' ').trim();
+  var text = normalizeInput(input).replaceAll(RegExp(r'\s+'), ' ').trim();
+  if (_groupedNumber.hasMatch(text)) text = text.replaceAll(',', '');
   if (text.isEmpty) return null;
 
   // Mixed number: whole, space, fraction.
