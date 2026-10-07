@@ -1,0 +1,765 @@
+{
+  "id": "g6-maths-01-subsets",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise subsets and proper subsets, and list or count all the subsets of a small set.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Sets"
+    }
+  ],
+  "skills": [
+    "maths.sets.subsets"
+  ],
+  "title": {
+    "en": "Subsets",
+    "ur": "ذیلی سیٹ"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.kinds"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgets_empty_self",
+      "description": "Leaves out the empty set or the set itself when listing subsets."
+    },
+    {
+      "id": "extra_element",
+      "description": "Thinks a set is a subset even when one of its elements is not in the bigger set."
+    },
+    {
+      "id": "proper_includes_self",
+      "description": "Counts the set itself as a proper subset."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.subsets": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.subsets": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "What does A ⊆ B mean?",
+            "ur": "A ⊆ B کا کیا مطلب ہے؟"
+          },
+          "options": [
+            {
+              "id": "every",
+              "text": {
+                "en": "Every element of A is also in B",
+                "ur": "A کا ہر رکن B میں بھی ہے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A is a subset of B.",
+                "ur": "جی ہاں! A، B کا ذیلی سیٹ ہے۔"
+              }
+            },
+            {
+              "id": "some",
+              "text": {
+                "en": "Some elements of A are in B",
+                "ur": "A کے کچھ رکن B میں ہیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Every element of A must be in B, not just some.",
+                "ur": "A کا ہر رکن B میں ہونا چاہیے، صرف کچھ نہیں۔"
+              },
+              "misconception_id": "extra_element"
+            },
+            {
+              "id": "bigger",
+              "text": {
+                "en": "A has more elements than B",
+                "ur": "A کے رکن B سے زیادہ ہیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A subset can't have more elements. Every element of A is in B.",
+                "ur": "ذیلی سیٹ کے رکن زیادہ نہیں ہو سکتے۔ A کا ہر رکن B میں ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "How many subsets of {1, 2, 3} have exactly 2 elements?",
+            "ur": "{1, 2, 3} کے کتنے ذیلی سیٹ میں بالکل 2 رکن ہیں؟"
+          },
+          "answer": 3,
+          "checker": "numeric",
+          "hint": {
+            "en": "List the pairs: {1, 2}, …",
+            "ur": "جوڑے لکھیں: {1, 2}، …"
+          },
+          "feedback_correct": {
+            "en": "Right! {1, 2}, {1, 3} and {2, 3}.",
+            "ur": "درست! {1, 2}، {1, 3} اور {2, 3}"
+          },
+          "feedback_wrong": {
+            "en": "{1, 2}, {1, 3}, {2, 3}: 3 subsets.",
+            "ur": "{1, 2}، {1, 3}، {2, 3}: تین ذیلی سیٹ"
+          },
+          "common_wrong": [
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "8 is all the subsets. Only 3 have exactly 2 elements.",
+                "ur": "8 تو تمام ذیلی سیٹ ہیں۔ صرف 3 میں بالکل 2 رکن ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sara says {3} ⊆ {1, 2}. What is wrong?",
+            "ur": "سارہ کہتی ہے {3} ⊆ {1, 2}۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "not_in",
+              "text": {
+                "en": "3 is not an element of {1, 2}, so {3} is not a subset.",
+                "ur": "3، {1, 2} کا رکن نہیں، اس لیے {3} ذیلی سیٹ نہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Every element must be in the bigger set.",
+                "ur": "جی ہاں! ہر رکن بڑے سیٹ میں ہونا چاہیے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, {3} is smaller.",
+                "ur": "کوئی غلطی نہیں، {3} چھوٹا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Being smaller isn't enough. 3 is not in {1, 2}.",
+                "ur": "چھوٹا ہونا کافی نہیں۔ 3، {1, 2} میں نہیں ہے۔"
+              },
+              "misconception_id": "extra_element"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_subset",
+      "front": {
+        "en": "A ⊆ B?",
+        "ur": "A ⊆ B؟"
+      },
+      "back": {
+        "en": "Every element of A is in B. { } and B itself are always subsets of B.",
+        "ur": "A کا ہر رکن B میں ہے۔ { } اور خود B ہمیشہ B کے ذیلی سیٹ ہیں۔"
+      }
+    },
+    {
+      "id": "f_count",
+      "front": {
+        "en": "How many subsets?",
+        "ur": "کتنے ذیلی سیٹ؟"
+      },
+      "back": {
+        "en": "1 element: 2. 2 elements: 4. 3 elements: 8. Each new element doubles it.",
+        "ur": "1 رکن: 2۔ 2 رکن: 4۔ 3 رکن: 8۔ ہر نیا رکن دگنا کر دیتا ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_fruit",
+      "text": {
+        "en": "Put three different fruits (or three spoons, cups or pebbles) on a table. How many different ways can you choose some of them, including choosing none and choosing all three? Check that you get 8.",
+        "ur": "میز پر تین مختلف پھل (یا تین چمچ، کپ یا کنکر) رکھیں۔ ان میں سے کچھ چننے کے کتنے طریقے ہیں، کچھ نہ چننا اور تینوں چننا بھی شامل؟ دیکھیں کیا 8 آتے ہیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Subset",
+      "ur": "ذیلی سیٹ"
+    },
+    {
+      "en": "Proper subset",
+      "ur": "حقیقی ذیلی سیٹ"
+    },
+    {
+      "en": "Empty set",
+      "ur": "خالی سیٹ"
+    },
+    {
+      "en": "Element",
+      "ur": "رکن"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "From a box of 3 sweets, how many different handfuls could you take, if taking none counts too?",
+          "ur": "3 ٹافیوں کے ڈبے سے کتنی مختلف مٹھیاں لے سکتے ہیں، اگر کچھ نہ لینا بھی گنا جائے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn about subsets. First, a quick check.",
+        "ur": "آج ہم ذیلی سیٹ کے بارے میں سیکھیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.sets.kinds",
+      "prompt": {
+        "en": "A = {1, 2, 3}. How many elements does a set equivalent to A have?",
+        "ur": "A = {1, 2, 3}۔ A کے ہم قوت سیٹ کے کتنے رکن ہوں گے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Equivalent means the same number of elements.",
+        "ur": "ہم قوت یعنی رکنوں کی برابر تعداد۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3.",
+        "ur": "درست! 3"
+      },
+      "feedback_wrong": {
+        "en": "A has 3 elements, so any equivalent set has 3.",
+        "ur": "A کے 3 رکن ہیں، تو ہر ہم قوت سیٹ کے بھی 3 ہوں گے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Equivalent means the same number of elements as A: 3.",
+            "ur": "ہم قوت یعنی A جتنے رکن: 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_subsets",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "A subset is a set made only from things in the bigger set!",
+          "ur": "ذیلی سیٹ وہ سیٹ ہے جو صرف بڑے سیٹ کی چیزوں سے بنے!"
+        }
+      },
+      "text": {
+        "en": "A is a subset of B (A ⊆ B) if every element of A is also in B. The empty set { } is a subset of every set, and every set is a subset of itself. A proper subset (⊂) is any subset except the set itself. The subsets of {a, b} are { }, {a}, {b} and {a, b}: 4 of them. Each new element doubles the number: 2, 4, 8, 16, …",
+        "ur": "A، B کا ذیلی سیٹ ہے (A ⊆ B) اگر A کا ہر رکن B میں بھی ہو۔ خالی سیٹ { } ہر سیٹ کا ذیلی سیٹ ہے، اور ہر سیٹ خود اپنا ذیلی سیٹ ہے۔ حقیقی ذیلی سیٹ (⊂) خود سیٹ کے علاوہ ہر ذیلی سیٹ ہے۔ {a, b} کے ذیلی سیٹ { }، {a}، {b} اور {a, b} ہیں: کل 4۔ ہر نیا رکن تعداد دگنی کر دیتا ہے: 2، 4، 8، 16، …"
+      }
+    },
+    {
+      "id": "s4_which",
+      "type": "choice",
+      "prompt": {
+        "en": "B = {1, 2, 3, 4, 5}. Which is a subset of B?",
+        "ur": "B = {1, 2, 3, 4, 5}۔ کون سا B کا ذیلی سیٹ ہے؟"
+      },
+      "options": [
+        {
+          "id": "two_four",
+          "text": {
+            "en": "{2, 4}",
+            "ur": "{2, 4}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2 and 4 are both in B.",
+            "ur": "جی ہاں! 2 اور 4 دونوں B میں ہیں۔"
+          }
+        },
+        {
+          "id": "four_six",
+          "text": {
+            "en": "{4, 6}",
+            "ur": "{4, 6}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 is not in B, so {4, 6} is not a subset.",
+            "ur": "6، B میں نہیں، اس لیے {4, 6} ذیلی سیٹ نہیں۔"
+          },
+          "misconception_id": "extra_element"
+        },
+        {
+          "id": "zero_one",
+          "text": {
+            "en": "{0, 1}",
+            "ur": "{0, 1}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is not in B, so {0, 1} is not a subset.",
+            "ur": "0، B میں نہیں، اس لیے {0, 1} ذیلی سیٹ نہیں۔"
+          },
+          "misconception_id": "extra_element"
+        }
+      ]
+    },
+    {
+      "id": "s5_two",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many subsets does {a, b} have?",
+        "ur": "{a, b} کے کتنے ذیلی سیٹ ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Don't forget { } and {a, b} itself.",
+        "ur": "{ } اور خود {a, b} کو نہ بھولیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! { }, {a}, {b}, {a, b}.",
+        "ur": "درست! { }، {a}، {b}، {a, b}"
+      },
+      "feedback_wrong": {
+        "en": "{ }, {a}, {b}, {a, b}: 4 subsets.",
+        "ur": "{ }، {a}، {b}، {a, b}: چار ذیلی سیٹ"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "{a} and {b} are two, but { } and {a, b} count too: 4.",
+            "ur": "{a} اور {b} دو ہیں، لیکن { } اور {a, b} بھی گنے جاتے ہیں: 4"
+          },
+          "misconception_id": "forgets_empty_self"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Count the empty set too: { }, {a}, {b}, {a, b} is 4.",
+            "ur": "خالی سیٹ بھی گنیں: { }، {a}، {b}، {a, b} یعنی 4"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "s6_three",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many subsets does {p, q, r} have?",
+        "ur": "{p, q, r} کے کتنے ذیلی سیٹ ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "{a, b} had 4. One more element doubles it.",
+        "ur": "{a, b} کے 4 تھے۔ ایک اور رکن اسے دگنا کر دیتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 subsets.",
+        "ur": "درست! 8 ذیلی سیٹ"
+      },
+      "feedback_wrong": {
+        "en": "{ }, {p}, {q}, {r}, {p, q}, {p, r}, {q, r}, {p, q, r}: 8.",
+        "ur": "{ }، {p}، {q}، {r}، {p, q}، {p, r}، {q, r}، {p, q, r}: آٹھ"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Add { } and {p, q, r} itself: 8.",
+            "ur": "{ } اور خود {p, q, r} شامل کریں: 8"
+          },
+          "misconception_id": "forgets_empty_self"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Count the empty set too: 8.",
+            "ur": "خالی سیٹ بھی گنیں: 8"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "s7_proper",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many proper subsets does {p, q, r} have?",
+        "ur": "{p, q, r} کے کتنے حقیقی ذیلی سیٹ ہیں؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "All the subsets except {p, q, r} itself.",
+        "ur": "خود {p, q, r} کے علاوہ تمام ذیلی سیٹ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 − 1 = 7.",
+        "ur": "درست! 8 − 1 = 7"
+      },
+      "feedback_wrong": {
+        "en": "8 subsets, minus the set itself: 7.",
+        "ur": "8 ذیلی سیٹ، خود سیٹ نکال کر: 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "A proper subset can't be the set itself: 8 − 1 = 7.",
+            "ur": "حقیقی ذیلی سیٹ خود سیٹ نہیں ہو سکتا: 8 − 1 = 7"
+          },
+          "misconception_id": "proper_includes_self"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "The empty set is a proper subset too: 7.",
+            "ur": "خالی سیٹ بھی حقیقی ذیلی سیٹ ہے: 7"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "s8_empty",
+      "type": "choice",
+      "prompt": {
+        "en": "Is { } a subset of {5, 6}?",
+        "ur": "کیا { }، {5, 6} کا ذیلی سیٹ ہے؟"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes, the empty set is a subset of every set",
+            "ur": "جی ہاں، خالی سیٹ ہر سیٹ کا ذیلی سیٹ ہے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! It has no element that is missing from {5, 6}.",
+            "ur": "جی ہاں! اس کا کوئی ایسا رکن نہیں جو {5, 6} میں نہ ہو۔"
+          }
+        },
+        {
+          "id": "no",
+          "text": {
+            "en": "No, it has nothing in it",
+            "ur": "نہیں، اس میں کچھ نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It has no element outside {5, 6}, so it is a subset.",
+            "ur": "اس کا کوئی رکن {5, 6} سے باہر نہیں، اس لیے یہ ذیلی سیٹ ہے۔"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana lists the subsets of {1, 2} as {1} and {2}, and says there are 2. What went wrong?",
+        "ur": "ثنا {1, 2} کے ذیلی سیٹ {1} اور {2} لکھتی ہے، اور کہتی ہے یہ 2 ہیں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "missing",
+          "text": {
+            "en": "She left out { } and {1, 2}. There are 4.",
+            "ur": "اس نے { } اور {1, 2} چھوڑ دیے۔ یہ 4 ہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The empty set and the set itself always count.",
+            "ur": "جی ہاں! خالی سیٹ اور خود سیٹ ہمیشہ گنے جاتے ہیں۔"
+          }
+        },
+        {
+          "id": "three",
+          "text": {
+            "en": "She left out {1, 2}. There are 3.",
+            "ur": "اس نے {1, 2} چھوڑ دیا۔ یہ 3 ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{ } is a subset too: there are 4.",
+            "ur": "{ } بھی ذیلی سیٹ ہے: یہ 4 ہیں۔"
+          },
+          "misconception_id": "forgets_empty_self"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{ } and {1, 2} are subsets too: 4 altogether.",
+            "ur": "{ } اور {1, 2} بھی ذیلی سیٹ ہیں: کل 4"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "{a, b} has 4 subsets, but {a, b, c} has 8. Why does one more element double the number? Can you teach me?",
+          "ur": "{a, b} کے 4 ذیلی سیٹ ہیں، لیکن {a, b, c} کے 8۔ ایک رکن بڑھنے سے تعداد دگنی کیوں ہو جاتی ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why does adding one element double the number of subsets?",
+        "ur": "اپنے الفاظ میں بتائیں: ایک رکن بڑھانے سے ذیلی سیٹوں کی تعداد دگنی کیوں ہو جاتی ہے؟"
+      },
+      "key_idea": "Every old subset can be taken twice: once without the new element and once with it added. So each old subset gives two new ones, and the number doubles.",
+      "levels": {
+        "got_it": "Says each old subset appears once without the new element and once with it, so the count doubles.",
+        "partly": "Says the new element can be in or out, without linking it to doubling.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "with",
+          "without",
+          "in or out",
+          "ساتھ",
+          "بغیر"
+        ],
+        [
+          "each",
+          "every",
+          "old",
+          "ہر",
+          "پرانا"
+        ],
+        [
+          "double",
+          "twice",
+          "two",
+          "دگنا",
+          "دو"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Each old subset comes once without c and once with c.",
+          "ur": "بہت خوب! ہر پرانا ذیلی سیٹ ایک بار c کے بغیر اور ایک بار c کے ساتھ آتا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what that means for each of the old subsets.",
+          "ur": "اچھی شروعات! اب بتائیں ہر پرانے ذیلی سیٹ پر اس کا کیا اثر ہے۔"
+        },
+        "not_yet": {
+          "en": "Take the 4 subsets of {a, b}. Now make each one again with c added. How many do you have now?",
+          "ur": "{a, b} کے 4 ذیلی سیٹ لیں۔ اب ہر ایک میں c ڈال کر دوبارہ بنائیں۔ اب کتنے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_colours",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many subsets does {red, green, blue, yellow} have?",
+        "ur": "{سرخ، سبز، نیلا، پیلا} کے کتنے ذیلی سیٹ ہیں؟"
+      },
+      "answer": 16,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 elements give 8. One more element doubles it.",
+        "ur": "3 رکن سے 8 بنتے ہیں۔ ایک اور رکن اسے دگنا کر دیتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 16 subsets.",
+        "ur": "درست! 16 ذیلی سیٹ"
+      },
+      "feedback_wrong": {
+        "en": "2 × 2 × 2 × 2 = 16.",
+        "ur": "2 × 2 × 2 × 2 = 16"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is for 3 elements. With 4, double it: 16.",
+            "ur": "8 تو 3 رکن کے لیے ہے۔ 4 کے لیے دگنا کریں: 16"
+          }
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "Count the empty set too: 16.",
+            "ur": "خالی سیٹ بھی گنیں: 16"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can find every subset now!",
+          "ur": "اب آپ ہر ذیلی سیٹ ڈھونڈ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A ⊆ B when every element of A is in B. The empty set and B itself are always subsets of B. Proper subsets are all of them except B itself. A set with 1, 2, 3 or 4 elements has 2, 4, 8 or 16 subsets: each new element doubles the number.",
+        "ur": "A ⊆ B جب A کا ہر رکن B میں ہو۔ خالی سیٹ اور خود B ہمیشہ B کے ذیلی سیٹ ہیں۔ حقیقی ذیلی سیٹ خود B کے علاوہ سب ہیں۔ 1، 2، 3 یا 4 رکن والے سیٹ کے 2، 4، 8 یا 16 ذیلی سیٹ ہوتے ہیں: ہر نیا رکن تعداد دگنی کر دیتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "{ } and the set itself always count.",
+          "ur": "{ } اور خود سیٹ ہمیشہ گنے جاتے ہیں۔"
+        },
+        {
+          "en": "Proper subsets: leave out the set itself.",
+          "ur": "حقیقی ذیلی سیٹ: خود سیٹ کو چھوڑ دیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_mn",
+      "type": "apply",
+      "skill": "maths.sets.subsets",
+      "step": {
+        "id": "r_mn",
+        "type": "number",
+        "prompt": {
+          "en": "How many subsets does {m, n} have?",
+          "ur": "{m, n} کے کتنے ذیلی سیٹ ہیں؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "{ }, {m}, …",
+          "ur": "{ }، {m}، …"
+        },
+        "feedback_correct": {
+          "en": "Right! 4.",
+          "ur": "درست! 4"
+        },
+        "feedback_wrong": {
+          "en": "{ }, {m}, {n}, {m, n}: 4.",
+          "ur": "{ }، {m}، {n}، {m, n}: چار"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "Include { } and {m, n}: 4.",
+              "ur": "{ } اور {m, n} شامل کریں: 4"
+            },
+            "misconception_id": "forgets_empty_self"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_proper",
+      "type": "apply",
+      "skill": "maths.sets.subsets",
+      "step": {
+        "id": "r_proper",
+        "type": "number",
+        "prompt": {
+          "en": "How many proper subsets does {a, b} have?",
+          "ur": "{a, b} کے کتنے حقیقی ذیلی سیٹ ہیں؟"
+        },
+        "answer": 3,
+        "checker": "numeric",
+        "hint": {
+          "en": "All 4 subsets except {a, b} itself.",
+          "ur": "4 ذیلی سیٹ میں سے خود {a, b} کے علاوہ۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 3.",
+          "ur": "درست! 3"
+        },
+        "feedback_wrong": {
+          "en": "{ }, {a}, {b}: 3.",
+          "ur": "{ }، {a}، {b}: تین"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "A proper subset can't be {a, b} itself: 3.",
+              "ur": "حقیقی ذیلی سیٹ خود {a, b} نہیں ہو سکتا: 3"
+            },
+            "misconception_id": "proper_includes_self"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Sets unit. No textbook text or exercises were used.",
+    "The doubling rule (2, 4, 8, 16) is shown by pattern and by \"with or without the new element\"; the formula 2ⁿ is not needed yet.",
+    "Urdu terms to check: ذیلی سیٹ (subset), حقیقی ذیلی سیٹ (proper subset).",
+    "The numbers were worked out in content/sources/g6-maths-01/subsets.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

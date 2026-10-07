@@ -49,6 +49,22 @@ Future<void> tapKey(WidgetTester tester, String key) async {
   await tester.pumpAndSettle();
 }
 
+/// Opens the previewer and taps lesson [id]. The list is longer than the
+/// screen, so scroll the lesson into view first. Urdu titles make tiles
+/// taller, so allow plenty of scrolls for a long list.
+Future<void> openPreviewLesson(WidgetTester tester, String id) async {
+  await tapKey(tester, 'open-previewer');
+  final tile = find.byKey(Key('lesson-$id'));
+  for (var i = 0; i < 100 && find.byType(ListTile).evaluate().isEmpty; i++) {
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 10)),
+    );
+    await tester.pump();
+  }
+  await tester.scrollUntilVisible(tile, 200, maxScrolls: 500);
+  await tapKey(tester, 'lesson-$id');
+}
+
 /// An explanation with one word from every keyword group.
 String goodExplanation(AiExplainStep step) =>
     'I think ${step.keywords.map((g) => g.first).join(' and ')} is the idea';

@@ -46,8 +46,7 @@ void main() {
   ) async {
     await tester.pumpWidget(await buildTestApp());
     await tester.pumpAndSettle();
-    await tapKey(tester, 'open-previewer');
-    await tapKey(tester, 'lesson-g6-maths-02-dividing-fractions');
+    await openPreviewLesson(tester, 'g6-maths-02-dividing-fractions');
     // Jump to the video by answering the steps before it.
     final lesson = loadLessonJson(lessonJson('g6-maths-02-dividing-fractions'));
     for (final step in lesson.steps.takeWhile((s) => s.type != 'video')) {

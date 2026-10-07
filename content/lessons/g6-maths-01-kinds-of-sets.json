@@ -1,0 +1,739 @@
+{
+  "id": "g6-maths-01-kinds-of-sets",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise empty, finite and infinite sets, and tell equal sets from equivalent sets.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Sets"
+    }
+  ],
+  "skills": [
+    "maths.sets.kinds"
+  ],
+  "title": {
+    "en": "Kinds of sets",
+    "ur": "سیٹوں کی اقسام"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.meaning"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "zero_is_empty",
+      "description": "Thinks {0} is the empty set, though it has one element."
+    },
+    {
+      "id": "equal_equivalent",
+      "description": "Mixes up equal sets (same elements) and equivalent sets (same number of elements)."
+    },
+    {
+      "id": "big_is_infinite",
+      "description": "Thinks a large set that can be counted is infinite."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.kinds": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.kinds": [
+      {
+        "id": "qb_empty",
+        "type": "recall",
+        "step": {
+          "id": "qb_empty",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the empty set?",
+            "ur": "خالی سیٹ کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "none",
+              "text": {
+                "en": "A set with no elements, written { } or ∅",
+                "ur": "ایسا سیٹ جس کا کوئی رکن نہ ہو، { } یا ∅ لکھا جاتا ہے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! It has 0 elements.",
+                "ur": "جی ہاں! اس کے 0 رکن ہیں۔"
+              }
+            },
+            {
+              "id": "zero",
+              "text": {
+                "en": "The set {0}",
+                "ur": "سیٹ {0}"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "{0} has one element, the number 0. The empty set has none.",
+                "ur": "{0} کا ایک رکن ہے، عدد 0۔ خالی سیٹ کا کوئی رکن نہیں۔"
+              },
+              "misconception_id": "zero_is_empty"
+            },
+            {
+              "id": "small",
+              "text": {
+                "en": "A set with only one element",
+                "ur": "صرف ایک رکن والا سیٹ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "One element is not empty. The empty set has no elements.",
+                "ur": "ایک رکن خالی نہیں۔ خالی سیٹ کا کوئی رکن نہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "How many elements are in the set of multiples of 5 less than 30?",
+            "ur": "30 سے چھوٹے 5 کے اضعاف کے سیٹ میں کتنے رکن ہیں؟"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "{5, 10, …}",
+            "ur": "{5, 10, …}"
+          },
+          "feedback_correct": {
+            "en": "Right! {5, 10, 15, 20, 25} has 5.",
+            "ur": "درست! {5, 10, 15, 20, 25} کے 5 رکن ہیں۔"
+          },
+          "feedback_wrong": {
+            "en": "5, 10, 15, 20, 25: 5 elements. 30 is not less than 30.",
+            "ur": "5، 10، 15، 20، 25: پانچ رکن۔ 30، 30 سے چھوٹا نہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 6,
+              "feedback": {
+                "en": "30 is not less than 30: {5, 10, 15, 20, 25} has 5.",
+                "ur": "30، 30 سے چھوٹا نہیں: {5, 10, 15, 20, 25} کے 5 رکن ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Ali says {1, 2, 3} and {4, 5, 6} are equal sets. What is wrong?",
+            "ur": "علی کہتا ہے {1, 2, 3} اور {4, 5, 6} برابر سیٹ ہیں۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "equiv",
+              "text": {
+                "en": "They have different elements, so they are only equivalent (both have 3).",
+                "ur": "ان کے رکن مختلف ہیں، اس لیے یہ صرف ہم قوت ہیں (دونوں کے 3)۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Equal needs the same elements.",
+                "ur": "جی ہاں! برابر ہونے کے لیے رکن ایک جیسے ہوں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Same number of elements makes them equivalent. Equal sets have the same elements.",
+                "ur": "رکنوں کی برابر تعداد انہیں ہم قوت بناتی ہے۔ برابر سیٹوں کے رکن ایک جیسے ہوتے ہیں۔"
+              },
+              "misconception_id": "equal_equivalent"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_empty",
+      "front": {
+        "en": "Empty set?",
+        "ur": "خالی سیٹ؟"
+      },
+      "back": {
+        "en": "No elements: { } or ∅. Careful: {0} is not empty.",
+        "ur": "کوئی رکن نہیں: { } یا ∅۔ دھیان: {0} خالی نہیں۔"
+      }
+    },
+    {
+      "id": "f_equal",
+      "front": {
+        "en": "Equal or equivalent?",
+        "ur": "برابر یا ہم قوت؟"
+      },
+      "back": {
+        "en": "Equal: same elements. Equivalent: same number of elements.",
+        "ur": "برابر: ایک جیسے رکن۔ ہم قوت: رکنوں کی برابر تعداد۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_kinds",
+      "text": {
+        "en": "Think of one empty set (like the set of cats in your house that can fly), one finite set and one infinite set. Tell someone at home which is which and why.",
+        "ur": "ایک خالی سیٹ (جیسے آپ کے گھر کی اڑنے والی بلیوں کا سیٹ)، ایک محدود سیٹ اور ایک لامحدود سیٹ سوچیں۔ گھر میں کسی کو بتائیں کون سا کون سا ہے اور کیوں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Empty set",
+      "ur": "خالی سیٹ"
+    },
+    {
+      "en": "Finite",
+      "ur": "محدود"
+    },
+    {
+      "en": "Infinite",
+      "ur": "لامحدود"
+    },
+    {
+      "en": "Equivalent",
+      "ur": "ہم قوت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can a set have nothing in it? Can a set go on forever? Let's find out!",
+          "ur": "کیا سیٹ میں کچھ بھی نہ ہو؟ کیا سیٹ ہمیشہ چلتا رہے؟ آئیں معلوم کریں!"
+        }
+      },
+      "text": {
+        "en": "Today we learn the kinds of sets. First, a quick check.",
+        "ur": "آج ہم سیٹوں کی اقسام سیکھیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.sets.meaning",
+      "prompt": {
+        "en": "How many elements are in {2, 4, 6, 8}?",
+        "ur": "{2, 4, 6, 8} میں کتنے رکن ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count what is inside the braces.",
+        "ur": "بریکٹ کے اندر گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4.",
+        "ur": "درست! 4"
+      },
+      "feedback_wrong": {
+        "en": "2, 4, 6, 8: 4 elements.",
+        "ur": "2، 4، 6، 8: چار رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the largest element. Count them: 4.",
+            "ur": "8 سب سے بڑا رکن ہے۔ انہیں گنیں: 4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_kinds",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Empty, finite, infinite, equal, equivalent. Let's meet them one by one!",
+          "ur": "خالی، محدود، لامحدود، برابر، ہم قوت۔ آئیں ایک ایک سے ملیں!"
+        }
+      },
+      "text": {
+        "en": "The empty set has no elements; we write { } or ∅. A finite set can be counted to the end, like the days of the week. An infinite set goes on forever, like {1, 2, 3, …}. Equal sets have exactly the same elements: {1, 2, 3} = {3, 1, 2}. Equivalent sets have the same number of elements: {a, b, c} and {1, 2, 3}.",
+        "ur": "خالی سیٹ کا کوئی رکن نہیں؛ اسے { } یا ∅ لکھتے ہیں۔ محدود سیٹ آخر تک گنا جا سکتا ہے، جیسے ہفتے کے دن۔ لامحدود سیٹ ہمیشہ چلتا رہتا ہے، جیسے {1, 2, 3, …}۔ برابر سیٹوں کے رکن بالکل ایک جیسے ہوتے ہیں: {1, 2, 3} = {3, 1, 2}۔ ہم قوت سیٹوں کے رکنوں کی تعداد برابر ہوتی ہے: {a, b, c} اور {1, 2, 3}۔"
+      }
+    },
+    {
+      "id": "s4_empty",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many elements are in the set of months that have 32 days?",
+        "ur": "32 دن والے مہینوں کے سیٹ میں کتنے رکن ہیں؟"
+      },
+      "answer": 0,
+      "checker": "numeric",
+      "hint": {
+        "en": "Does any month have 32 days?",
+        "ur": "کیا کسی مہینے کے 32 دن ہوتے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! None. It is the empty set.",
+        "ur": "درست! کوئی نہیں۔ یہ خالی سیٹ ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "No month has 32 days, so the set is empty: 0 elements.",
+        "ur": "کسی مہینے کے 32 دن نہیں، تو سیٹ خالی ہے: 0 رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "There are 12 months, but none has 32 days: 0.",
+            "ur": "مہینے 12 ہیں، لیکن کسی کے 32 دن نہیں: 0"
+          }
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "Not even one month has 32 days: 0.",
+            "ur": "ایک مہینے کے بھی 32 دن نہیں: 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_infinite",
+      "type": "choice",
+      "prompt": {
+        "en": "Which set is infinite?",
+        "ur": "کون سا سیٹ لامحدود ہے؟"
+      },
+      "options": [
+        {
+          "id": "naturals",
+          "text": {
+            "en": "{1, 2, 3, 4, …}, the counting numbers",
+            "ur": "{1, 2, 3, 4, …}، گنتی کے اعداد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The counting numbers never end.",
+            "ur": "جی ہاں! گنتی کے اعداد کبھی ختم نہیں ہوتے۔"
+          }
+        },
+        {
+          "id": "people",
+          "text": {
+            "en": "The people living in Lahore",
+            "ur": "لاہور میں رہنے والے لوگ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That's a big set, but it can be counted, so it is finite.",
+            "ur": "یہ بڑا سیٹ ہے، لیکن گنا جا سکتا ہے، اس لیے محدود ہے۔"
+          },
+          "misconception_id": "big_is_infinite"
+        },
+        {
+          "id": "days",
+          "text": {
+            "en": "The days of the week",
+            "ur": "ہفتے کے دن"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are only 7 days: finite.",
+            "ur": "دن صرف 7 ہیں: محدود۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_equal",
+      "type": "choice",
+      "prompt": {
+        "en": "A = {1, 2, 3} and B = {3, 1, 2}. What are A and B?",
+        "ur": "A = {1, 2, 3} اور B = {3, 1, 2}۔ A اور B کیا ہیں؟"
+      },
+      "options": [
+        {
+          "id": "equal",
+          "text": {
+            "en": "Equal sets",
+            "ur": "برابر سیٹ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Same elements; the order doesn't matter.",
+            "ur": "جی ہاں! ایک جیسے رکن؛ ترتیب اہم نہیں۔"
+          }
+        },
+        {
+          "id": "different",
+          "text": {
+            "en": "Different sets, because the order is different",
+            "ur": "مختلف سیٹ، کیونکہ ترتیب مختلف ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Order doesn't matter in a set. They have the same elements, so they are equal.",
+            "ur": "سیٹ میں ترتیب اہم نہیں۔ ان کے رکن ایک جیسے ہیں، اس لیے برابر ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_equivalent",
+      "type": "choice",
+      "prompt": {
+        "en": "A = {a, b, c} and B = {1, 2, 3}. What are A and B?",
+        "ur": "A = {a, b, c} اور B = {1, 2, 3}۔ A اور B کیا ہیں؟"
+      },
+      "options": [
+        {
+          "id": "equiv",
+          "text": {
+            "en": "Equivalent, but not equal",
+            "ur": "ہم قوت، لیکن برابر نہیں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Both have 3 elements, but the elements are different.",
+            "ur": "جی ہاں! دونوں کے 3 رکن ہیں، لیکن رکن مختلف ہیں۔"
+          }
+        },
+        {
+          "id": "equal",
+          "text": {
+            "en": "Equal",
+            "ur": "برابر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Equal sets need the same elements. These only have the same number.",
+            "ur": "برابر سیٹوں کے رکن ایک جیسے ہوں۔ ان کی صرف تعداد برابر ہے۔"
+          },
+          "misconception_id": "equal_equivalent"
+        },
+        {
+          "id": "neither",
+          "text": {
+            "en": "Neither",
+            "ur": "کوئی بھی نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Both have 3 elements, so they are equivalent.",
+            "ur": "دونوں کے 3 رکن ہیں، اس لیے ہم قوت ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_primes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many elements are in the set of prime numbers less than 20?",
+        "ur": "20 سے چھوٹے مفرد اعداد کے سیٹ میں کتنے رکن ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "2, 3, 5, 7, … keep going up to 19.",
+        "ur": "2، 3، 5، 7، … 19 تک جاری رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {2, 3, 5, 7, 11, 13, 17, 19} has 8 elements. It is finite.",
+        "ur": "درست! {2, 3, 5, 7, 11, 13, 17, 19} کے 8 رکن ہیں۔ یہ محدود ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "{2, 3, 5, 7, 11, 13, 17, 19}: 8 elements.",
+        "ur": "{2, 3, 5, 7, 11, 13, 17, 19}: آٹھ رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "1 is not a prime number: 8 elements.",
+            "ur": "1 مفرد عدد نہیں ہے: 8 رکن"
+          }
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Count again, including 2: 2, 3, 5, 7, 11, 13, 17, 19 is 8.",
+            "ur": "2 سمیت دوبارہ گنیں: 2، 3، 5، 7، 11، 13، 17، 19 یعنی 8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hina says {0} is the empty set. What went wrong?",
+        "ur": "حنا کہتی ہے {0} خالی سیٹ ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "one",
+          "text": {
+            "en": "{0} has one element, the number 0, so it is not empty.",
+            "ur": "{0} کا ایک رکن ہے، عدد 0، اس لیے یہ خالی نہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The empty set is { }, with nothing inside.",
+            "ur": "جی ہاں! خالی سیٹ { } ہے، جس کے اندر کچھ نہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, 0 means nothing.",
+            "ur": "کوئی غلطی نہیں، 0 کا مطلب کچھ نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is a number, and here it is inside the set. So {0} has one element.",
+            "ur": "0 ایک عدد ہے، اور یہاں سیٹ کے اندر ہے۔ تو {0} کا ایک رکن ہے۔"
+          },
+          "misconception_id": "zero_is_empty"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Equal sets are always equivalent, but equivalent sets are not always equal. Why? Can you teach me?",
+          "ur": "برابر سیٹ ہمیشہ ہم قوت ہوتے ہیں، لیکن ہم قوت سیٹ ہمیشہ برابر نہیں۔ کیوں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why are equal sets always equivalent, but equivalent sets not always equal?",
+        "ur": "اپنے الفاظ میں بتائیں: برابر سیٹ ہمیشہ ہم قوت کیوں ہوتے ہیں، لیکن ہم قوت سیٹ ہمیشہ برابر کیوں نہیں؟"
+      },
+      "key_idea": "Equal sets have exactly the same elements, so they must have the same number of elements (equivalent). But two sets can have the same number of elements with different elements, like {a, b, c} and {1, 2, 3}, so equivalent sets need not be equal.",
+      "levels": {
+        "got_it": "Says equal means same elements (so same number), while equivalent only means same number, and gives or describes an example of different elements.",
+        "partly": "Explains one direction only.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "same elements",
+          "same members",
+          "ایک جیسے رکن"
+        ],
+        [
+          "same number",
+          "how many",
+          "تعداد",
+          "برابر تعداد"
+        ],
+        [
+          "different",
+          "example",
+          "مختلف",
+          "مثال"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Same elements means same number, but not the other way round.",
+          "ur": "بہت خوب! ایک جیسے رکن کا مطلب برابر تعداد ہے، لیکن الٹا نہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now explain the other direction, with an example.",
+          "ur": "اچھی شروعات! اب دوسری طرف بھی مثال سے سمجھائیں۔"
+        },
+        "not_yet": {
+          "en": "Look at {a, b, c} and {1, 2, 3}. Do they have the same number of elements? The same elements?",
+          "ur": "{a, b, c} اور {1, 2, 3} دیکھیں۔ کیا ان کے رکنوں کی تعداد برابر ہے؟ کیا رکن ایک جیسے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_even_primes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many elements are in the set of even prime numbers?",
+        "ur": "جفت مفرد اعداد کے سیٹ میں کتنے رکن ہیں؟"
+      },
+      "answer": 1,
+      "checker": "numeric",
+      "hint": {
+        "en": "Every even number above 2 can be divided by 2.",
+        "ur": "2 سے بڑا ہر جفت عدد 2 سے تقسیم ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Only {2}: 1 element.",
+        "ur": "درست! صرف {2}: ایک رکن"
+      },
+      "feedback_wrong": {
+        "en": "2 is the only even prime, so the set is {2}: 1 element.",
+        "ur": "2 واحد جفت مفرد عدد ہے، تو سیٹ {2} ہے: ایک رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "2 is even and prime! The set is {2}: 1 element.",
+            "ur": "2 جفت بھی ہے اور مفرد بھی! سیٹ {2} ہے: ایک رکن"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You know five kinds of sets now!",
+          "ur": "اب آپ سیٹوں کی پانچ قسمیں جانتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Empty set: no elements, { } or ∅ (but {0} has one element). Finite: can be counted to the end. Infinite: goes on forever. Equal sets: the same elements, in any order. Equivalent sets: the same number of elements.",
+        "ur": "خالی سیٹ: کوئی رکن نہیں، { } یا ∅ (لیکن {0} کا ایک رکن ہے)۔ محدود: آخر تک گنا جا سکتا ہے۔ لامحدود: ہمیشہ چلتا رہتا ہے۔ برابر سیٹ: ایک جیسے رکن، کسی بھی ترتیب میں۔ ہم قوت سیٹ: رکنوں کی برابر تعداد۔"
+      },
+      "points": [
+        {
+          "en": "Equal: same elements.",
+          "ur": "برابر: ایک جیسے رکن۔"
+        },
+        {
+          "en": "Equivalent: same number of elements.",
+          "ur": "ہم قوت: رکنوں کی برابر تعداد۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_zero",
+      "type": "apply",
+      "skill": "maths.sets.kinds",
+      "step": {
+        "id": "r_zero",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in the set of whole numbers less than 1?",
+          "ur": "1 سے چھوٹے مکمل اعداد کے سیٹ میں کتنے رکن ہیں؟"
+        },
+        "answer": 1,
+        "checker": "numeric",
+        "hint": {
+          "en": "Whole numbers start at 0.",
+          "ur": "مکمل اعداد 0 سے شروع ہوتے ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! {0}: 1 element.",
+          "ur": "درست! {0}: ایک رکن"
+        },
+        "feedback_wrong": {
+          "en": "The set is {0}, which has 1 element.",
+          "ur": "سیٹ {0} ہے، جس کا ایک رکن ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 0,
+            "feedback": {
+              "en": "0 is a whole number less than 1. The set is {0}: 1 element.",
+              "ur": "0، 1 سے چھوٹا مکمل عدد ہے۔ سیٹ {0} ہے: ایک رکن"
+            },
+            "misconception_id": "zero_is_empty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_evens",
+      "type": "apply",
+      "skill": "maths.sets.kinds",
+      "step": {
+        "id": "r_evens",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in the set of even numbers between 10 and 20?",
+          "ur": "10 اور 20 کے درمیان جفت اعداد کے سیٹ میں کتنے رکن ہیں؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Between: don't count 10 or 20.",
+          "ur": "درمیان: 10 یا 20 نہ گنیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! {12, 14, 16, 18}: 4.",
+          "ur": "درست! {12, 14, 16, 18}: چار"
+        },
+        "feedback_wrong": {
+          "en": "12, 14, 16, 18: 4 elements.",
+          "ur": "12، 14، 16، 18: چار رکن"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "\"Between\" leaves out 10 and 20: {12, 14, 16, 18}, 4 elements.",
+              "ur": "\"درمیان\" میں 10 اور 20 شامل نہیں: {12, 14, 16, 18}، چار رکن"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Sets unit. No textbook text or exercises were used.",
+    "\"Between\" is used to mean the end numbers are left out; the hints say so where it matters.",
+    "Urdu terms to check: خالی سیٹ (empty set), محدود (finite), لامحدود (infinite), ہم قوت (equivalent), مفرد (prime).",
+    "The numbers were worked out in content/sources/g6-maths-01/kinds_of_sets.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
