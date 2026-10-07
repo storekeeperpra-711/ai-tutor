@@ -1,0 +1,927 @@
+{
+  "id": "g6-maths-15-whole-number-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems with large whole numbers, choosing the right operation.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Whole Numbers"
+    }
+  ],
+  "skills": [
+    "maths.whole.word_problems"
+  ],
+  "title": {
+    "en": "Whole numbers word problems",
+    "ur": "مکمل اعداد کے عملی سوال"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.whole.properties"
+    },
+    {
+      "skill": "maths.whole.compare"
+    },
+    {
+      "skill": "maths.whole.number_systems"
+    },
+    {
+      "skill": "maths.whole.place_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "wrong_operation",
+      "description": "Adds when the story needs multiplying, or the other way round."
+    },
+    {
+      "id": "adds_difference",
+      "description": "Adds the two numbers when the story asks for what is left."
+    },
+    {
+      "id": "lost_zero",
+      "description": "Drops or adds a zero when working with lakhs and crores."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.whole.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.whole.word_problems": [
+      {
+        "id": "qb_left",
+        "type": "recall",
+        "step": {
+          "id": "qb_left",
+          "type": "choice",
+          "prompt": {
+            "en": "A story asks 'how many are left?'. Which operation do you use?",
+            "ur": "سوال پوچھتا ہے 'کتنے باقی ہیں؟'۔ آپ کون سا عمل کریں گے؟"
+          },
+          "options": [
+            {
+              "id": "subtract",
+              "text": {
+                "en": "Subtract (−)",
+                "ur": "تفریق (−)"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Take away what is used.",
+                "ur": "جی ہاں! جو استعمال ہوا وہ نکالیں۔"
+              }
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "Add (+)",
+                "ur": "جمع (+)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Adding makes it bigger. 'Left' means take away: −.",
+                "ur": "جمع سے بڑھتا ہے۔ 'باقی' یعنی نکالنا: −"
+              },
+              "misconception_id": "adds_difference"
+            },
+            {
+              "id": "times",
+              "text": {
+                "en": "Multiply (×)",
+                "ur": "ضرب (×)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "× is for equal groups. 'Left' means −.",
+                "ur": "× برابر گروپوں کے لیے ہے۔ 'باقی' یعنی −"
+              },
+              "misconception_id": "wrong_operation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A farmer sells 3 buffaloes at Rs 45,000 each and a cart for Rs 20,000. How much does he get? (3 × 45,000 + 20,000)",
+            "ur": "ایک کسان 45,000 روپے فی بھینس کے حساب سے 3 بھینسیں اور 20,000 روپے کی ایک گاڑی بیچتا ہے۔ اسے کتنے پیسے ملتے ہیں؟ (3 × 45,000 + 20,000)"
+          },
+          "answer": 155000,
+          "checker": "numeric",
+          "hint": {
+            "en": "3 × 45,000 first.",
+            "ur": "پہلے 3 × 45,000"
+          },
+          "feedback_correct": {
+            "en": "Right! Rs 1,55,000.",
+            "ur": "درست! 1,55,000 روپے"
+          },
+          "feedback_wrong": {
+            "en": "3 × 45,000 = 1,35,000, then + 20,000 = 1,55,000.",
+            "ur": "3 × 45,000 = 1,35,000، پھر + 20,000 = 1,55,000"
+          },
+          "common_wrong": [
+            {
+              "answer": 195000,
+              "feedback": {
+                "en": "There is only 1 cart, not 3: 1,35,000 + 20,000 = 1,55,000.",
+                "ur": "گاڑی صرف 1 ہے، 3 نہیں: 1,35,000 + 20,000 = 1,55,000"
+              },
+              "misconception_id": "wrong_operation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A tank holds 5,000 litres. 1,200 litres are used. Kamran says 6,200 litres are left. What is wrong?",
+            "ur": "ٹینکی میں 5,000 لیٹر آتا ہے۔ 1,200 لیٹر استعمال ہو گیا۔ کامران کہتا ہے 6,200 لیٹر باقی ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "subtract",
+              "text": {
+                "en": "He added. Left means subtract: 5,000 − 1,200 = 3,800.",
+                "ur": "اس نے جمع کیا۔ باقی یعنی تفریق: 5,000 − 1,200 = 3,800"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! What is left can't be more than the tank holds.",
+                "ur": "جی ہاں! باقی پانی ٹینکی کی گنجائش سے زیادہ نہیں ہو سکتا۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6,200 is more than the full tank! 5,000 − 1,200 = 3,800.",
+                "ur": "6,200 تو پوری ٹینکی سے بھی زیادہ ہے! 5,000 − 1,200 = 3,800"
+              },
+              "misconception_id": "adds_difference"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_words",
+      "front": {
+        "en": "'Altogether', 'total'?",
+        "ur": "'کل'، 'مجموعی'؟"
+      },
+      "back": {
+        "en": "Usually add, or × for equal groups.",
+        "ur": "عموماً جمع، یا برابر گروپوں کے لیے ×"
+      }
+    },
+    {
+      "id": "f_left",
+      "front": {
+        "en": "'Left', 'more than', 'difference'?",
+        "ur": "'باقی'، 'کتنا زیادہ'، 'فرق'؟"
+      },
+      "back": {
+        "en": "Subtract.",
+        "ur": "تفریق"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_story",
+      "text": {
+        "en": "Make up your own story with a number in lakhs (a car price, a crop sale or a school fund). Ask someone at home to solve it.",
+        "ur": "لاکھوں والے عدد کے ساتھ اپنی ایک کہانی بنائیں (گاڑی کی قیمت، فصل کی فروخت یا سکول کا فنڈ)۔ گھر میں کسی سے اسے حل کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Total",
+      "ur": "کل"
+    },
+    {
+      "en": "Difference",
+      "ur": "فرق"
+    },
+    {
+      "en": "Each",
+      "ur": "ہر ایک"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Bricks, buses and budgets: big numbers are everywhere. Let's solve real problems!",
+          "ur": "اینٹیں، بسیں اور بجٹ: بڑے اعداد ہر جگہ ہیں۔ آئیں اصل سوال حل کریں!"
+        }
+      },
+      "text": {
+        "en": "Today we solve word problems with large numbers. First, a quick check on breaking up numbers.",
+        "ur": "آج ہم بڑے اعداد کے عملی سوال حل کریں گے۔ پہلے اعداد توڑنے کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.whole.properties",
+      "prompt": {
+        "en": "Work out 6 × (10 + 3).",
+        "ur": "6 × (10 + 3) نکالیں۔"
+      },
+      "answer": 78,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 × 10 + 6 × 3.",
+        "ur": "6 × 10 + 6 × 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 60 + 18 = 78.",
+        "ur": "درست! 60 + 18 = 78"
+      },
+      "feedback_wrong": {
+        "en": "6 × 10 = 60, 6 × 3 = 18, 60 + 18 = 78.",
+        "ur": "6 × 10 = 60، 6 × 3 = 18، 60 + 18 = 78"
+      },
+      "common_wrong": [
+        {
+          "answer": 63,
+          "feedback": {
+            "en": "Multiply the 3 by 6 too: 60 + 18 = 78.",
+            "ur": "3 کو بھی 6 سے ضرب دیں: 60 + 18 = 78"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Read, choose, work, check. Four steps to any word problem!",
+          "ur": "پڑھیں، چنیں، حل کریں، جانچیں۔ ہر عملی سوال کے چار قدم!"
+        }
+      },
+      "text": {
+        "en": "1. Read the story and find the numbers. 2. Choose the operation: total → +; equal groups → ×; left or difference → −; sharing equally → ÷. 3. Work it out, keeping the zeros right. 4. Check: does the answer make sense?",
+        "ur": "1۔ کہانی پڑھیں اور اعداد ڈھونڈیں۔ 2۔ عمل چنیں: کل → +؛ برابر گروپ → ×؛ باقی یا فرق → −؛ برابر بانٹنا → ÷۔ 3۔ حل کریں، صفر صحیح رکھیں۔ 4۔ جانچیں: کیا جواب سمجھ میں آتا ہے؟"
+      }
+    },
+    {
+      "id": "s4_bricks",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A kiln makes 2,50,000 bricks a month. How many bricks does it make in 4 months?",
+        "ur": "ایک بھٹہ ہر مہینے 2,50,000 اینٹیں بناتا ہے۔ 4 مہینوں میں کتنی اینٹیں بنائے گا؟"
+      },
+      "answer": 1000000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Equal groups: 2,50,000 × 4.",
+        "ur": "برابر گروپ: 2,50,000 × 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 10,00,000 bricks (10 lakh).",
+        "ur": "درست! 10,00,000 اینٹیں (10 لاکھ)"
+      },
+      "feedback_wrong": {
+        "en": "2,50,000 × 4 = 10,00,000.",
+        "ur": "2,50,000 × 4 = 10,00,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 100000,
+          "feedback": {
+            "en": "2.5 lakh × 4 = 10 lakh: 10,00,000. Count the zeros.",
+            "ur": "ڈھائی لاکھ × 4 = 10 لاکھ: 10,00,000۔ صفر گنیں۔"
+          },
+          "misconception_id": "lost_zero"
+        },
+        {
+          "answer": 250004,
+          "feedback": {
+            "en": "4 months means × 4, not + 4: 10,00,000.",
+            "ur": "4 مہینے یعنی × 4، + 4 نہیں: 10,00,000"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s5_adults",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A town has 1,25,400 people. 38,600 of them are children. How many are adults?",
+        "ur": "ایک قصبے میں 1,25,400 لوگ ہیں۔ ان میں 38,600 بچے ہیں۔ بالغ کتنے ہیں؟"
+      },
+      "answer": 86800,
+      "checker": "numeric",
+      "hint": {
+        "en": "The rest: 1,25,400 − 38,600.",
+        "ur": "باقی: 1,25,400 − 38,600"
+      },
+      "feedback_correct": {
+        "en": "Right! 86,800 adults.",
+        "ur": "درست! 86,800 بالغ"
+      },
+      "feedback_wrong": {
+        "en": "1,25,400 − 38,600 = 86,800.",
+        "ur": "1,25,400 − 38,600 = 86,800"
+      },
+      "common_wrong": [
+        {
+          "answer": 164000,
+          "feedback": {
+            "en": "Adding gives more than the whole town. Subtract: 86,800.",
+            "ur": "جمع کرنے سے پورے قصبے سے زیادہ ہو جاتا ہے۔ تفریق کریں: 86,800"
+          },
+          "misconception_id": "adds_difference"
+        }
+      ]
+    },
+    {
+      "id": "s6_operation",
+      "type": "choice",
+      "prompt": {
+        "en": "A cricket stadium has 4 stands with 27,000 seats in each. Which sum finds all the seats?",
+        "ur": "کرکٹ سٹیڈیم میں 4 سٹینڈ ہیں، ہر ایک میں 27,000 نشستیں۔ تمام نشستیں کون سا حساب بتائے گا؟"
+      },
+      "options": [
+        {
+          "id": "times",
+          "text": {
+            "en": "27,000 × 4",
+            "ur": "27,000 × 4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 4 equal groups: 1,08,000 seats.",
+            "ur": "جی ہاں! 4 برابر گروپ: 1,08,000 نشستیں۔"
+          }
+        },
+        {
+          "id": "plus",
+          "text": {
+            "en": "27,000 + 4",
+            "ur": "27,000 + 4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding 4 adds 4 seats. There are 4 stands of 27,000: ×.",
+            "ur": "4 جمع کرنے سے 4 نشستیں بڑھتی ہیں۔ 27,000 کے 4 سٹینڈ ہیں: ×"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "id": "divide",
+          "text": {
+            "en": "27,000 ÷ 4",
+            "ur": "27,000 ÷ 4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "÷ shares out. Here each stand has 27,000, so ×.",
+            "ur": "÷ بانٹتا ہے۔ یہاں ہر سٹینڈ میں 27,000 ہیں، تو ×"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s7_schools",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The government gives Rs 3,00,00,000 (3 crore) to be shared equally by 100 schools. How much does each school get?",
+        "ur": "حکومت 3,00,00,000 روپے (3 کروڑ) دیتی ہے جو 100 سکولوں میں برابر بانٹے جائیں۔ ہر سکول کو کتنے ملیں گے؟"
+      },
+      "answer": 300000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Sharing equally: ÷ 100. Remove two zeros.",
+        "ur": "برابر بانٹنا: ÷ 100۔ دو صفر ہٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 3,00,000 (3 lakh) each.",
+        "ur": "درست! ہر ایک کو 3,00,000 روپے (3 لاکھ)"
+      },
+      "feedback_wrong": {
+        "en": "3,00,00,000 ÷ 100 = 3,00,000.",
+        "ur": "3,00,00,000 ÷ 100 = 3,00,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 3000000,
+          "feedback": {
+            "en": "That is ÷ 10. For ÷ 100 remove two zeros: 3,00,000.",
+            "ur": "یہ ÷ 10 ہے۔ ÷ 100 کے لیے دو صفر ہٹائیں: 3,00,000"
+          },
+          "misconception_id": "lost_zero"
+        },
+        {
+          "answer": 30000,
+          "feedback": {
+            "en": "That removes three zeros. ÷ 100 removes two: 3,00,000.",
+            "ur": "اس میں تین صفر ہٹ گئے۔ ÷ 100 سے دو ہٹتے ہیں: 3,00,000"
+          },
+          "misconception_id": "lost_zero"
+        }
+      ]
+    },
+    {
+      "id": "s8_metro",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A metro bus carries 1,80,000 passengers a day. How many does it carry in a week (7 days)?",
+        "ur": "میٹرو بس روزانہ 1,80,000 مسافر لے جاتی ہے۔ ایک ہفتے (7 دن) میں کتنے؟"
+      },
+      "answer": 1260000,
+      "checker": "numeric",
+      "hint": {
+        "en": "1,80,000 × 7.",
+        "ur": "1,80,000 × 7"
+      },
+      "feedback_correct": {
+        "en": "Right! 12,60,000 passengers.",
+        "ur": "درست! 12,60,000 مسافر"
+      },
+      "feedback_wrong": {
+        "en": "18 × 7 = 126, then add the four zeros: 12,60,000.",
+        "ur": "18 × 7 = 126، پھر چار صفر لگائیں: 12,60,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 126000,
+          "feedback": {
+            "en": "1,80,000 has four zeros after 18: 12,60,000.",
+            "ur": "1,80,000 میں 18 کے بعد چار صفر ہیں: 12,60,000"
+          },
+          "misconception_id": "lost_zero"
+        },
+        {
+          "answer": 180007,
+          "feedback": {
+            "en": "A week is 7 days of passengers: × 7, not + 7.",
+            "ur": "ہفتہ یعنی 7 دن کے مسافر: × 7، + 7 نہیں"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "5 buses each carry 60 children. Hina says 60 + 5 = 65 children. What went wrong?",
+        "ur": "5 بسوں میں سے ہر ایک میں 60 بچے ہیں۔ حنا کہتی ہے 60 + 5 = 65 بچے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "times",
+          "text": {
+            "en": "Equal groups need ×: 60 × 5 = 300.",
+            "ur": "برابر گروپوں کے لیے ×: 60 × 5 = 300"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 5 buses of 60 is 300 children.",
+            "ur": "جی ہاں! 60 کی 5 بسیں یعنی 300 بچے۔"
+          }
+        },
+        {
+          "id": "minus",
+          "text": {
+            "en": "She should subtract: 60 − 5 = 55.",
+            "ur": "اسے تفریق کرنی چاہیے: 60 − 5 = 55"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Nothing is taken away. 5 groups of 60: ×.",
+            "ur": "کچھ نکالا نہیں جا رہا۔ 60 کے 5 گروپ: ×"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "One bus alone has 60. Five buses have 60 × 5 = 300.",
+            "ur": "اکیلی ایک بس میں 60 ہیں۔ پانچ بسوں میں 60 × 5 = 300"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do you know whether to add or multiply in a story? Can you teach me?",
+          "ur": "آپ کو کیسے پتا چلتا ہے کہ کہانی میں جمع کرنا ہے یا ضرب؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: when do we multiply instead of add? Give an example.",
+        "ur": "اپنے الفاظ میں بتائیں: ہم جمع کی بجائے ضرب کب کرتے ہیں؟ ایک مثال دیں۔"
+      },
+      "key_idea": "We multiply when there are equal groups (the same amount many times), like 5 buses with 60 children each. We add when we put different amounts together.",
+      "levels": {
+        "got_it": "Says multiply for equal groups or the same amount repeated, with an example.",
+        "partly": "Gives an example without the idea of equal groups, or the idea without an example.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "equal",
+          "same",
+          "each",
+          "برابر",
+          "ہر"
+        ],
+        [
+          "group",
+          "times",
+          "گروپ",
+          "بار"
+        ],
+        [
+          "multiply",
+          "ضرب"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Equal groups mean multiply.",
+          "ur": "بہت خوب! برابر گروپ یعنی ضرب۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what makes the groups special.",
+          "ur": "اچھی شروعات! اب بتائیں ان گروپوں میں کیا خاص ہے۔"
+        },
+        "not_yet": {
+          "en": "Think of 5 buses with 60 children in each. Is it 60 + 5 or 60 × 5? Why?",
+          "ur": "60 بچوں والی 5 بسوں کا سوچیں۔ یہ 60 + 5 ہے یا 60 × 5؟ کیوں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Whole numbers unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! مکمل اعداد کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on place value, millions, comparing, properties and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں مقامی قیمت، ملین، موازنہ، خصوصیات اور ایک اصل زندگی کا سوال ہے۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_place_value",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.whole.place_value",
+      "prompt": {
+        "en": "Test 1: What is the value of the digit 7 in 7,30,000?",
+        "ur": "ٹیسٹ 1: 7,30,000 میں 7 کی مقامی قیمت کیا ہے؟"
+      },
+      "answer": 700000,
+      "checker": "numeric",
+      "hint": {
+        "en": "The 7 is in the lakhs place.",
+        "ur": "7 لاکھ کے مقام پر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 lakh = 7,00,000.",
+        "ur": "درست! 7 لاکھ = 7,00,000"
+      },
+      "feedback_wrong": {
+        "en": "7 is in the lakhs place: 7,00,000.",
+        "ur": "7 لاکھ کے مقام پر ہے: 7,00,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That is the digit. Its value is 7 lakh.",
+            "ur": "یہ ہندسہ ہے۔ اس کی قیمت 7 لاکھ ہے۔"
+          }
+        },
+        {
+          "answer": 70000,
+          "feedback": {
+            "en": "That is the ten thousands place. The 7 is in the lakhs place.",
+            "ur": "یہ دس ہزار کا مقام ہے۔ 7 لاکھ کے مقام پر ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_millions",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.whole.number_systems",
+      "prompt": {
+        "en": "Test 2: 6 million is how many lakh?",
+        "ur": "ٹیسٹ 2: 6 ملین کتنے لاکھ ہیں؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "1 million = 10 lakh.",
+        "ur": "1 ملین = 10 لاکھ"
+      },
+      "feedback_correct": {
+        "en": "Right! 60 lakh.",
+        "ur": "درست! 60 لاکھ"
+      },
+      "feedback_wrong": {
+        "en": "6 × 10 = 60.",
+        "ur": "6 × 10 = 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "1 million is 10 lakh: 60.",
+            "ur": "1 ملین 10 لاکھ ہے: 60"
+          }
+        },
+        {
+          "answer": 600,
+          "feedback": {
+            "en": "1 million is 10 lakh, not 100: 60.",
+            "ur": "1 ملین 10 لاکھ ہے، 100 نہیں: 60"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_compare",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.whole.compare",
+      "prompt": {
+        "en": "Test 3: Which is bigger: 8,09,500 or 8,90,050? Type the bigger number.",
+        "ur": "ٹیسٹ 3: کون سا بڑا ہے: 8,09,500 یا 8,90,050؟ بڑا عدد لکھیں۔"
+      },
+      "answer": 890050,
+      "checker": "numeric",
+      "hint": {
+        "en": "Same lakhs. Compare the ten thousands.",
+        "ur": "لاکھ برابر۔ دس ہزار دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8,90,050.",
+        "ur": "درست! 8,90,050"
+      },
+      "feedback_wrong": {
+        "en": "Ten thousands: 9 > 0, so 8,90,050.",
+        "ur": "دس ہزار: 9 > 0، تو 8,90,050"
+      },
+      "common_wrong": [
+        {
+          "answer": 809500,
+          "feedback": {
+            "en": "Ten thousands: 9 > 0, so 8,90,050 is bigger.",
+            "ur": "دس ہزار: 9 > 0، تو 8,90,050 بڑا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_properties",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.whole.properties",
+      "prompt": {
+        "en": "Test 4: Work out 25 × 47 × 4.",
+        "ur": "ٹیسٹ 4: 25 × 47 × 4 نکالیں۔"
+      },
+      "answer": 4700,
+      "checker": "numeric",
+      "hint": {
+        "en": "25 × 4 = 100 first.",
+        "ur": "پہلے 25 × 4 = 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 100 × 47 = 4700.",
+        "ur": "درست! 100 × 47 = 4700"
+      },
+      "feedback_wrong": {
+        "en": "25 × 4 = 100, and 100 × 47 = 4700.",
+        "ur": "25 × 4 = 100، اور 100 × 47 = 4700"
+      },
+      "common_wrong": [
+        {
+          "answer": 76,
+          "feedback": {
+            "en": "Multiply, don't add: 100 × 47 = 4700.",
+            "ur": "جمع نہیں، ضرب: 100 × 47 = 4700"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_charity",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: A charity collects Rs 4,50,000 in March and Rs 3,75,000 in April. How much is that altogether?",
+        "ur": "ٹیسٹ 5: ایک فلاحی ادارہ مارچ میں 4,50,000 روپے اور اپریل میں 3,75,000 روپے جمع کرتا ہے۔ کل کتنے ہوئے؟"
+      },
+      "answer": 825000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Altogether: add.",
+        "ur": "کل: جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 8,25,000.",
+        "ur": "درست! 8,25,000 روپے"
+      },
+      "feedback_wrong": {
+        "en": "4,50,000 + 3,75,000 = 8,25,000.",
+        "ur": "4,50,000 + 3,75,000 = 8,25,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 75000,
+          "feedback": {
+            "en": "That is the difference. Altogether means add: 8,25,000.",
+            "ur": "یہ فرق ہے۔ کل یعنی جمع: 8,25,000"
+          },
+          "misconception_id": "adds_difference"
+        },
+        {
+          "answer": 725000,
+          "feedback": {
+            "en": "Carry the 1: 50,000 + 75,000 = 1,25,000. Total 8,25,000.",
+            "ur": "1 آگے لے جائیں: 50,000 + 75,000 = 1,25,000۔ کل 8,25,000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Whole numbers unit complete! Lakhs, crores and millions are your friends now.",
+          "ur": "مکمل اعداد کا باب مکمل! لاکھ، کروڑ اور ملین اب آپ کے دوست ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Read the story, choose the operation (total +, equal groups ×, left or difference −, sharing ÷), keep the zeros right, and check that the answer makes sense.",
+        "ur": "کہانی پڑھیں، عمل چنیں (کل +، برابر گروپ ×، باقی یا فرق −، بانٹنا ÷)، صفر صحیح رکھیں، اور جانچیں کہ جواب سمجھ میں آتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Equal groups: ×. Sharing: ÷.",
+          "ur": "برابر گروپ: ×۔ بانٹنا: ÷"
+        },
+        {
+          "en": "Count the zeros, then check.",
+          "ur": "صفر گنیں، پھر جانچیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_tickets",
+      "type": "apply",
+      "skill": "maths.whole.word_problems",
+      "step": {
+        "id": "r_tickets",
+        "type": "number",
+        "prompt": {
+          "en": "A cricket match sells 18,000 tickets each day for 3 days. How many tickets is that?",
+          "ur": "ایک کرکٹ میچ کے لیے 3 دن تک روزانہ 18,000 ٹکٹ بکتے ہیں۔ کل کتنے ٹکٹ ہوئے؟"
+        },
+        "answer": 54000,
+        "checker": "numeric",
+        "hint": {
+          "en": "Equal groups: 18,000 × 3.",
+          "ur": "برابر گروپ: 18,000 × 3"
+        },
+        "feedback_correct": {
+          "en": "Right! 54,000 tickets.",
+          "ur": "درست! 54,000 ٹکٹ"
+        },
+        "feedback_wrong": {
+          "en": "18 × 3 = 54, so 54,000.",
+          "ur": "18 × 3 = 54، تو 54,000"
+        },
+        "common_wrong": [
+          {
+            "answer": 18003,
+            "feedback": {
+              "en": "3 days means × 3, not + 3: 54,000.",
+              "ur": "3 دن یعنی × 3، + 3 نہیں: 54,000"
+            },
+            "misconception_id": "wrong_operation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_left",
+      "type": "apply",
+      "skill": "maths.whole.word_problems",
+      "step": {
+        "id": "r_left",
+        "type": "number",
+        "prompt": {
+          "en": "A family saves Rs 10,00,000 and spends Rs 2,75,000 on a wedding. How much is left?",
+          "ur": "ایک خاندان 10,00,000 روپے بچاتا ہے اور 2,75,000 روپے ایک شادی پر خرچ کرتا ہے۔ کتنے باقی ہیں؟"
+        },
+        "answer": 725000,
+        "checker": "numeric",
+        "hint": {
+          "en": "Left: 10,00,000 − 2,75,000.",
+          "ur": "باقی: 10,00,000 − 2,75,000"
+        },
+        "feedback_correct": {
+          "en": "Right! Rs 7,25,000.",
+          "ur": "درست! 7,25,000 روپے"
+        },
+        "feedback_wrong": {
+          "en": "10,00,000 − 2,75,000 = 7,25,000.",
+          "ur": "10,00,000 − 2,75,000 = 7,25,000"
+        },
+        "common_wrong": [
+          {
+            "answer": 1275000,
+            "feedback": {
+              "en": "Spending makes it less. Subtract: 7,25,000.",
+              "ur": "خرچ کرنے سے کم ہوتا ہے۔ تفریق کریں: 7,25,000"
+            },
+            "misconception_id": "adds_difference"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Whole Numbers unit. No textbook text or exercises were used.",
+    "The numbers in the stories (bricks, metro passengers, a school fund) are made up but realistic for Punjab.",
+    "The five-question unit test at the end covers every lesson of the unit.",
+    "The numbers were worked out in content/sources/g6-maths-15/whole_number_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
