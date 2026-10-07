@@ -1,0 +1,723 @@
+{
+  "id": "g6-maths-10-tables-and-tallies",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Record data with tally marks, and read totals, differences and the largest group from a frequency table.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Data Handling"
+    }
+  ],
+  "skills": [
+    "maths.data.tables"
+  ],
+  "title": {
+    "en": "Tables and tally marks",
+    "ur": "جدول اور ٹیلی کے نشان"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.multiplication.facts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "skips_gate",
+      "description": "Counts only the upright strokes of a tally group, so IIII/ is read as 4."
+    },
+    {
+      "id": "adds_for_difference",
+      "description": "Adds two counts when the question asks how many more."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.tables": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.tables": [
+      {
+        "id": "qb_gate",
+        "type": "recall",
+        "step": {
+          "id": "qb_gate",
+          "type": "choice",
+          "prompt": {
+            "en": "In tally marks, what does IIII/ (four lines and one across) stand for?",
+            "ur": "ٹیلی کے نشانوں میں IIII/ (چار لکیریں اور ایک ترچھی) کا مطلب کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "five",
+              "text": {
+                "en": "5",
+                "ur": "5"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The line across is the fifth one.",
+                "ur": "جی ہاں! ترچھی لکیر پانچویں ہے۔"
+              }
+            },
+            {
+              "id": "four",
+              "text": {
+                "en": "4",
+                "ur": "4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Count the line across too: 5.",
+                "ur": "ترچھی لکیر بھی گنیں: 5۔"
+              },
+              "misconception_id": "skips_gate"
+            },
+            {
+              "id": "ten",
+              "text": {
+                "en": "10",
+                "ur": "10"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "One group is 5.",
+                "ur": "ایک گروہ 5 ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "How many do these tally marks show? IIII/ IIII/ IIII/ I",
+            "ur": "یہ ٹیلی کے نشان کتنے دکھاتے ہیں؟ IIII/ IIII/ IIII/ I"
+          },
+          "answer": 16,
+          "checker": "numeric",
+          "hint": {
+            "en": "Three groups of 5, then 1 more.",
+            "ur": "5 کے تین گروہ، پھر 1 اور۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 16.",
+            "ur": "درست! 16"
+          },
+          "feedback_wrong": {
+            "en": "5 + 5 + 5 + 1 = 16.",
+            "ur": "5 + 5 + 5 + 1 = 16"
+          },
+          "common_wrong": [
+            {
+              "answer": 13,
+              "feedback": {
+                "en": "Each group is 5, not 4: 5 + 5 + 5 + 1 = 16.",
+                "ur": "ہر گروہ 5 ہے، 4 نہیں: 5 + 5 + 5 + 1 = 16"
+              },
+              "misconception_id": "skips_gate"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Votes: Sparrows: 14; Crows: 9; Parrots: 5. Hira says 19 more children chose sparrows than parrots. What went wrong?",
+            "ur": "ووٹ: چڑیاں: 14؛ کوّے: 9؛ طوطے: 5۔ حرا کہتی ہے چڑیوں کو طوطوں سے 19 زیادہ بچوں نے چنا۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "subtract",
+              "text": {
+                "en": "'How many more' means take away: 14 − 5 = 9.",
+                "ur": "'کتنے زیادہ' کا مطلب نفی: 14 − 5 = 9"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! She added instead of finding the difference.",
+                "ur": "جی ہاں! اس نے فرق کی بجائے جمع کیا۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "14 + 5 = 19 is both together. 'How many more' is 14 − 5 = 9.",
+                "ur": "14 + 5 = 19 دونوں مل کر ہیں۔ 'کتنے زیادہ' یعنی 14 − 5 = 9"
+              },
+              "misconception_id": "adds_for_difference"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_tally",
+      "front": {
+        "en": "How do tally marks work?",
+        "ur": "ٹیلی کے نشان کیسے کام کرتے ہیں؟"
+      },
+      "back": {
+        "en": "One stroke for each item. The fifth stroke goes across the first four: IIII/ = 5. Count in fives.",
+        "ur": "ہر چیز کے لیے ایک لکیر۔ پانچویں لکیر پہلی چار کے اوپر ترچھی: IIII/ = 5۔ پانچ پانچ کر کے گنیں۔"
+      }
+    },
+    {
+      "id": "f_more",
+      "front": {
+        "en": "'How many more?'",
+        "ur": "'کتنے زیادہ؟'"
+      },
+      "back": {
+        "en": "Take away: the bigger count minus the smaller.",
+        "ur": "نفی کریں: بڑی گنتی میں سے چھوٹی۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_survey",
+      "text": {
+        "en": "Ask your family and neighbours their favourite colour. Keep a tally for each colour, then write the totals in a table. Which colour won?",
+        "ur": "اپنے گھر والوں اور پڑوسیوں سے ان کا پسندیدہ رنگ پوچھیں۔ ہر رنگ کے لیے ٹیلی رکھیں، پھر کل تعداد جدول میں لکھیں۔ کون سا رنگ جیتا؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Data",
+      "ur": "مواد (ڈیٹا)"
+    },
+    {
+      "en": "Table",
+      "ur": "جدول"
+    },
+    {
+      "en": "Tally marks",
+      "ur": "ٹیلی کے نشان"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    },
+    {
+      "en": "Frequency",
+      "ur": "تعدد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Your class votes for its favourite fruit. How can you count all the votes quickly, without losing track?",
+          "ur": "آپ کی جماعت پسندیدہ پھل کے لیے ووٹ دیتی ہے۔ آپ سب ووٹ جلدی، بغیر بھولے، کیسے گنیں گے؟"
+        }
+      },
+      "text": {
+        "en": "Today we record data with tally marks and read it from tables. First, a quick check.",
+        "ur": "آج ہم ٹیلی کے نشانوں سے مواد لکھیں گے اور جدول سے پڑھیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.multiplication.facts",
+      "prompt": {
+        "en": "What is 5 × 3?",
+        "ur": "5 × 3 کتنے ہیں؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count in fives: 5, 10, 15.",
+        "ur": "پانچ پانچ گنیں: 5، 10، 15"
+      },
+      "feedback_correct": {
+        "en": "Right! 15.",
+        "ur": "درست! 15"
+      },
+      "feedback_wrong": {
+        "en": "5 × 3 = 15.",
+        "ur": "5 × 3 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is 5 + 3. Multiply: 5 × 3 = 15.",
+            "ur": "8 یعنی 5 + 3۔ ضرب دیں: 5 × 3 = 15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_tally",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Four lines, then one across. That makes a gate of five!",
+          "ur": "چار لکیریں، پھر ایک ترچھی۔ یہ پانچ کا دروازہ بنتا ہے!"
+        }
+      },
+      "text": {
+        "en": "Tally marks: draw one line for each vote. The fifth line goes across the first four, written here as IIII/. So IIII/ IIII/ III is 5 + 5 + 3 = 13. A table (frequency table) lists each group with its total.",
+        "ur": "ٹیلی کے نشان: ہر ووٹ کے لیے ایک لکیر۔ پانچویں لکیر پہلی چار کے اوپر ترچھی جاتی ہے، یہاں IIII/ لکھی گئی ہے۔ تو IIII/ IIII/ III یعنی 5 + 5 + 3 = 13۔ جدول (تعدد کا جدول) ہر گروہ اور اس کی کل تعداد دکھاتا ہے۔"
+      }
+    },
+    {
+      "id": "s4_read_tally",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many do these tally marks show? IIII/ IIII/ III",
+        "ur": "یہ ٹیلی کے نشان کتنے دکھاتے ہیں؟ IIII/ IIII/ III"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two gates of 5, then 3.",
+        "ur": "5 کے دو دروازے، پھر 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 13.",
+        "ur": "درست! 13"
+      },
+      "feedback_wrong": {
+        "en": "5 + 5 + 3 = 13.",
+        "ur": "5 + 5 + 3 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "Each gate is 5, not 4: 5 + 5 + 3 = 13.",
+            "ur": "ہر دروازہ 5 ہے، 4 نہیں: 5 + 5 + 3 = 13"
+          },
+          "misconception_id": "skips_gate"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Count the gates too: 5 + 5 + 3 = 13.",
+            "ur": "دروازے بھی گنیں: 5 + 5 + 3 = 13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_total",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Favourite fruit votes: Mango: 8; Banana: 5; Apple: 11; Orange: 6. How many children voted altogether?",
+        "ur": "پسندیدہ پھل کے ووٹ: آم: 8؛ کیلا: 5؛ سیب: 11؛ کینو: 6۔ کل کتنے بچوں نے ووٹ دیا؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add all four numbers.",
+        "ur": "چاروں عدد جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 children.",
+        "ur": "درست! 30 بچے"
+      },
+      "feedback_wrong": {
+        "en": "8 + 5 + 11 + 6 = 30.",
+        "ur": "8 + 5 + 11 + 6 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is the number of fruits. Add the votes: 30.",
+            "ur": "4 پھلوں کی تعداد ہے۔ ووٹ جمع کریں: 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_more",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Same votes: Mango: 8; Banana: 5; Apple: 11; Orange: 6. How many more children chose apple than banana?",
+        "ur": "وہی ووٹ: آم: 8؛ کیلا: 5؛ سیب: 11؛ کینو: 6۔ سیب کو کیلے سے کتنے زیادہ بچوں نے چنا؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "'How many more' means take away.",
+        "ur": "'کتنے زیادہ' کا مطلب نفی۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 11 − 5 = 6 more.",
+        "ur": "درست! 11 − 5 = 6 زیادہ"
+      },
+      "feedback_wrong": {
+        "en": "11 − 5 = 6.",
+        "ur": "11 − 5 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "16 is both together. 'How many more' is 11 − 5 = 6.",
+            "ur": "16 دونوں مل کر ہیں۔ 'کتنے زیادہ' یعنی 11 − 5 = 6"
+          },
+          "misconception_id": "adds_for_difference"
+        }
+      ]
+    },
+    {
+      "id": "s7_most",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Same votes: Mango: 8; Banana: 5; Apple: 11; Orange: 6. Which fruit was the most popular?",
+        "ur": "وہی ووٹ: آم: 8؛ کیلا: 5؛ سیب: 11؛ کینو: 6۔ سب سے زیادہ پسند کیا جانے والا پھل کون سا تھا؟"
+      },
+      "options": [
+        {
+          "id": "apple",
+          "text": {
+            "en": "Apple",
+            "ur": "سیب"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Apple has the most votes, 11.",
+            "ur": "جی ہاں! سیب کے سب سے زیادہ ووٹ ہیں، 11۔"
+          }
+        },
+        {
+          "id": "mango",
+          "text": {
+            "en": "Mango",
+            "ur": "آم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Mango has 8. Apple has more: 11.",
+            "ur": "آم کے 8 ہیں۔ سیب کے زیادہ ہیں: 11۔"
+          }
+        },
+        {
+          "id": "banana",
+          "text": {
+            "en": "Banana",
+            "ur": "کیلا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Banana has the fewest, 5. Look for the biggest number.",
+            "ur": "کیلے کے سب سے کم، 5، ہیں۔ سب سے بڑا عدد دیکھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_gates",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many full gates of five do you draw to show 20 votes in tally marks?",
+        "ur": "20 ووٹ ٹیلی میں دکھانے کے لیے پانچ کے کتنے پورے دروازے بنائیں گے؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "20 ÷ 5.",
+        "ur": "20 ÷ 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 gates.",
+        "ur": "درست! 4 دروازے"
+      },
+      "feedback_wrong": {
+        "en": "20 ÷ 5 = 4.",
+        "ur": "20 ÷ 5 = 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "Each gate holds 5 votes: 20 ÷ 5 = 4 gates.",
+            "ur": "ہر دروازے میں 5 ووٹ: 20 ÷ 5 = 4 دروازے"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zain reads the tally IIII/ IIII/ II as 4 + 4 + 2 = 10. What went wrong?",
+        "ur": "زین ٹیلی IIII/ IIII/ II کو 4 + 4 + 2 = 10 پڑھتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "gate",
+          "text": {
+            "en": "He didn't count the lines across. Each gate is 5: 5 + 5 + 2 = 12.",
+            "ur": "اس نے ترچھی لکیریں نہیں گنیں۔ ہر دروازہ 5 ہے: 5 + 5 + 2 = 12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The line across is the fifth vote.",
+            "ur": "جی ہاں! ترچھی لکیر پانچواں ووٹ ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "IIII/ is 5, not 4. The answer is 12.",
+            "ur": "IIII/ پانچ ہے، چار نہیں۔ جواب 12 ہے۔"
+          },
+          "misconception_id": "skips_gate"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we draw the fifth tally line across the others? Can you teach me?",
+          "ur": "ہم پانچویں ٹیلی لکیر باقی کے اوپر ترچھی کیوں بناتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we cross every fifth tally mark?",
+        "ur": "اپنے الفاظ میں بتائیں: ہم ہر پانچویں ٹیلی کو ترچھا کیوں کرتے ہیں؟"
+      },
+      "key_idea": "Crossing every fifth line makes groups of five, so you can count quickly in fives instead of counting every single line, and you make fewer mistakes.",
+      "levels": {
+        "got_it": "Says it makes groups of five that you can count in fives, so counting is faster or easier.",
+        "partly": "Says it makes counting easier without mentioning groups of five, or the reverse.",
+        "not_yet": "Gives no reason, or says it is just for decoration."
+      },
+      "keywords": [
+        [
+          "five",
+          "5",
+          "پانچ",
+          "paanch"
+        ],
+        [
+          "group",
+          "bundle",
+          "گروہ",
+          "گچھا"
+        ],
+        [
+          "quick",
+          "fast",
+          "easy",
+          "count",
+          "جلدی",
+          "آسان",
+          "گن"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Groups of five let you count in fives, fast and without mistakes.",
+          "ur": "بہت خوب! پانچ کے گروہ سے پانچ پانچ کر کے، جلدی اور بغیر غلطی، گن سکتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what the crossing line makes.",
+          "ur": "اچھی شروعات! اب بتائیں ترچھی لکیر کیا بناتی ہے۔"
+        },
+        "not_yet": {
+          "en": "Try counting 23 single lines, then 4 gates and 3 lines. Which is quicker? Why?",
+          "ur": "23 اکیلی لکیریں گنیں، پھر 4 دروازے اور 3 لکیریں۔ کون سا جلدی ہے؟ کیوں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_classes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Class 6A has 32 students, 6B has 28 and 6C has 35. How many students are there in Grade 6 altogether?",
+        "ur": "جماعت 6A میں 32، 6B میں 28 اور 6C میں 35 طالب علم ہیں۔ چھٹی جماعت میں کل کتنے طالب علم ہیں؟"
+      },
+      "answer": 95,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the three classes.",
+        "ur": "تینوں جماعتیں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 95 students.",
+        "ur": "درست! 95 طالب علم"
+      },
+      "feedback_wrong": {
+        "en": "32 + 28 + 35 = 95.",
+        "ur": "32 + 28 + 35 = 95"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "That is only 6A and 6B. Add 6C too: 95.",
+            "ur": "یہ صرف 6A اور 6B ہیں۔ 6C بھی جمع کریں: 95"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can count and read data now!",
+          "ur": "اب آپ مواد گن اور پڑھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Tally marks group votes in fives: IIII/ is 5, so count in fives and add the leftovers. A table lists each group with its total. Add for 'altogether'; take away for 'how many more'.",
+        "ur": "ٹیلی کے نشان ووٹوں کو پانچ کے گروہوں میں رکھتے ہیں: IIII/ پانچ ہے، تو پانچ پانچ گنیں اور بچ جانے والے جمع کریں۔ جدول ہر گروہ کی کل تعداد دکھاتا ہے۔ 'کل' کے لیے جمع؛ 'کتنے زیادہ' کے لیے نفی۔"
+      },
+      "points": [
+        {
+          "en": "IIII/ = 5.",
+          "ur": "IIII/ = 5۔"
+        },
+        {
+          "en": "'How many more' means take away.",
+          "ur": "'کتنے زیادہ' یعنی نفی۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_tally",
+      "type": "recall",
+      "skill": "maths.data.tables",
+      "step": {
+        "id": "r_tally",
+        "type": "number",
+        "prompt": {
+          "en": "How many do these tally marks show? IIII/ IIII",
+          "ur": "یہ ٹیلی کے نشان کتنے دکھاتے ہیں؟ IIII/ IIII"
+        },
+        "answer": 9,
+        "checker": "numeric",
+        "hint": {
+          "en": "One gate of 5, then 4.",
+          "ur": "5 کا ایک دروازہ، پھر 4"
+        },
+        "feedback_correct": {
+          "en": "Right! 9.",
+          "ur": "درست! 9"
+        },
+        "feedback_wrong": {
+          "en": "5 + 4 = 9.",
+          "ur": "5 + 4 = 9"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "The gate is 5: 5 + 4 = 9.",
+              "ur": "دروازہ 5 ہے: 5 + 4 = 9"
+            },
+            "misconception_id": "skips_gate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_more",
+      "type": "apply",
+      "skill": "maths.data.tables",
+      "step": {
+        "id": "r_more",
+        "type": "number",
+        "prompt": {
+          "en": "Birds seen: Sparrows: 14; Crows: 9; Parrots: 5. How many more sparrows than parrots?",
+          "ur": "دیکھے گئے پرندے: چڑیاں: 14؛ کوّے: 9؛ طوطے: 5۔ چڑیاں طوطوں سے کتنی زیادہ ہیں؟"
+        },
+        "answer": 9,
+        "checker": "numeric",
+        "hint": {
+          "en": "14 − 5.",
+          "ur": "14 − 5"
+        },
+        "feedback_correct": {
+          "en": "Right! 9 more.",
+          "ur": "درست! 9 زیادہ"
+        },
+        "feedback_wrong": {
+          "en": "14 − 5 = 9.",
+          "ur": "14 − 5 = 9"
+        },
+        "common_wrong": [
+          {
+            "answer": 19,
+            "feedback": {
+              "en": "That adds them. 'How many more' is 14 − 5 = 9.",
+              "ur": "یہ جمع ہے۔ 'کتنے زیادہ' یعنی 14 − 5 = 9"
+            },
+            "misconception_id": "adds_for_difference"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
+    "There are no pictures yet, so a tally group of five is written IIII/ and tables are written as short lists. Real tally marks on paper (the home task) help children see the 'gate'.",
+    "Urdu terms to check: مواد / ڈیٹا (data), جدول (table), ٹیلی کے نشان (tally marks), تعدد (frequency).",
+    "The numbers were worked out in content/sources/g6-maths-10/tables_tallies.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

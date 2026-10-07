@@ -1,0 +1,737 @@
+{
+  "id": "g6-maths-10-bar-graphs",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Read values, differences and totals from a bar graph, using its scale.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Data Handling"
+    }
+  ],
+  "skills": [
+    "maths.data.bar_graphs"
+  ],
+  "title": {
+    "en": "Bar graphs",
+    "ur": "بار گراف (ستونی گراف)"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.data.tables"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "ignores_scale",
+      "description": "Reads the number of squares as the value, ignoring that each square stands for more than one."
+    },
+    {
+      "id": "adds_for_difference",
+      "description": "Adds two bars when the question asks how many more."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.bar_graphs": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.bar_graphs": [
+      {
+        "id": "qb_height",
+        "type": "recall",
+        "step": {
+          "id": "qb_height",
+          "type": "choice",
+          "prompt": {
+            "en": "On a bar graph, what does the height of a bar show?",
+            "ur": "بار گراف میں ستون کی اونچائی کیا دکھاتی ہے؟"
+          },
+          "options": [
+            {
+              "id": "count",
+              "text": {
+                "en": "How many there are of that thing",
+                "ur": "اس چیز کی تعداد"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A taller bar means more.",
+                "ur": "جی ہاں! اونچا ستون یعنی زیادہ۔"
+              }
+            },
+            {
+              "id": "order",
+              "text": {
+                "en": "The order things came in",
+                "ur": "چیزوں کی ترتیب"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The height shows how many, read against the scale.",
+                "ur": "اونچائی تعداد دکھاتی ہے، پیمانے کے مطابق۔"
+              }
+            },
+            {
+              "id": "width",
+              "text": {
+                "en": "How wide the thing is",
+                "ur": "چیز کی چوڑائی"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "All bars are the same width. The height shows how many.",
+                "ur": "سب ستون ایک جتنے چوڑے ہیں۔ اونچائی تعداد دکھاتی ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "On a bar graph, each square stands for 4 children. A bar is 5 squares tall. How many children does it show?",
+            "ur": "ایک بار گراف میں ہر خانہ 4 بچوں کو ظاہر کرتا ہے۔ ایک ستون 5 خانے اونچا ہے۔ یہ کتنے بچے دکھاتا ہے؟"
+          },
+          "answer": 20,
+          "checker": "numeric",
+          "hint": {
+            "en": "5 squares, 4 each.",
+            "ur": "5 خانے، ہر ایک 4"
+          },
+          "feedback_correct": {
+            "en": "Right! 20 children.",
+            "ur": "درست! 20 بچے"
+          },
+          "feedback_wrong": {
+            "en": "5 × 4 = 20.",
+            "ur": "5 × 4 = 20"
+          },
+          "common_wrong": [
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "Each square is 4 children: 5 × 4 = 20.",
+                "ur": "ہر خانہ 4 بچے ہے: 5 × 4 = 20"
+              },
+              "misconception_id": "ignores_scale"
+            },
+            {
+              "answer": 9,
+              "feedback": {
+                "en": "Multiply, don't add: 5 × 4 = 20.",
+                "ur": "جمع نہیں، ضرب: 5 × 4 = 20"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "On a bar graph each square stands for 10 people. A bar is 4 squares tall. Asma says it shows 4 people. What went wrong?",
+            "ur": "ایک بار گراف میں ہر خانہ 10 لوگوں کو ظاہر کرتا ہے۔ ایک ستون 4 خانے اونچا ہے۔ عاصمہ کہتی ہے یہ 4 لوگ دکھاتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "scale",
+              "text": {
+                "en": "She forgot the scale: 4 × 10 = 40 people.",
+                "ur": "وہ پیمانہ بھول گئی: 4 × 10 = 40 لوگ"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Always check what one square stands for.",
+                "ur": "جی ہاں! ہمیشہ دیکھیں ایک خانہ کتنے کو ظاہر کرتا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Each square is 10 people, so 4 squares are 40.",
+                "ur": "ہر خانہ 10 لوگ ہے، تو 4 خانے 40 ہیں۔"
+              },
+              "misconception_id": "ignores_scale"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_bar",
+      "front": {
+        "en": "How do you read a bar graph?",
+        "ur": "بار گراف کیسے پڑھتے ہیں؟"
+      },
+      "back": {
+        "en": "Look along from the top of the bar to the scale. Check what one square stands for first.",
+        "ur": "ستون کے اوپر سے پیمانے تک دیکھیں۔ پہلے دیکھیں ایک خانہ کتنے کو ظاہر کرتا ہے۔"
+      }
+    },
+    {
+      "id": "f_scale",
+      "front": {
+        "en": "Each square = 5. Bar is 7 squares. Value?",
+        "ur": "ہر خانہ = 5۔ ستون 7 خانے۔ قیمت؟"
+      },
+      "back": {
+        "en": "7 × 5 = 35.",
+        "ur": "7 × 5 = 35"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_draw",
+      "text": {
+        "en": "Use your colour survey from the last lesson. Draw a bar graph on squared paper: one bar for each colour, one square for each vote. Which bar is tallest?",
+        "ur": "پچھلے سبق کا رنگوں والا سروے لیں۔ خانوں والے کاغذ پر بار گراف بنائیں: ہر رنگ کا ایک ستون، ہر ووٹ کا ایک خانہ۔ کون سا ستون سب سے اونچا ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Bar graph",
+      "ur": "بار گراف (ستونی گراف)"
+    },
+    {
+      "en": "Bar",
+      "ur": "ستون"
+    },
+    {
+      "en": "Scale",
+      "ur": "پیمانہ"
+    },
+    {
+      "en": "Axis",
+      "ur": "محور"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A picture can show data faster than a list. Tall bars, short bars: you see the winner at once!",
+          "ur": "تصویر فہرست سے جلدی مواد دکھاتی ہے۔ اونچے ستون، چھوٹے ستون: جیتنے والا فوراً نظر آتا ہے!"
+        }
+      },
+      "text": {
+        "en": "Today we read bar graphs. There are no pictures yet, so each graph is described in words. First, a quick check.",
+        "ur": "آج ہم بار گراف پڑھیں گے۔ ابھی تصویریں نہیں، اس لیے ہر گراف الفاظ میں بتایا گیا ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.data.tables",
+      "prompt": {
+        "en": "How many do these tally marks show? IIII/ IIII/ I",
+        "ur": "یہ ٹیلی کے نشان کتنے دکھاتے ہیں؟ IIII/ IIII/ I"
+      },
+      "answer": 11,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each gate is 5.",
+        "ur": "ہر دروازہ 5 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 11.",
+        "ur": "درست! 11"
+      },
+      "feedback_wrong": {
+        "en": "5 + 5 + 1 = 11.",
+        "ur": "5 + 5 + 1 = 11"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Each gate is 5, not 4: 5 + 5 + 1 = 11.",
+            "ur": "ہر دروازہ 5 ہے، 4 نہیں: 5 + 5 + 1 = 11"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_bars",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Always check the scale first: what does one square stand for?",
+          "ur": "ہمیشہ پہلے پیمانہ دیکھیں: ایک خانہ کتنے کو ظاہر کرتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "A bar graph has one bar for each group. The taller the bar, the more there are. The scale up the side tells you the numbers. Sometimes one square stands for more than one, like 2 or 5 or 10: then multiply the number of squares by that amount.",
+        "ur": "بار گراف میں ہر گروہ کا ایک ستون ہوتا ہے۔ ستون جتنا اونچا، تعداد اتنی زیادہ۔ کنارے کا پیمانہ عدد بتاتا ہے۔ کبھی ایک خانہ ایک سے زیادہ، جیسے 2 یا 5 یا 10، کو ظاہر کرتا ہے: تب خانوں کو اس سے ضرب دیں۔"
+      }
+    },
+    {
+      "id": "s4_more",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bar graph shows books read this month: Ali: 7; Sara: 12; Omar: 9; Hina: 4. How many more books did Sara read than Hina?",
+        "ur": "ایک بار گراف اس مہینے پڑھی گئی کتابیں دکھاتا ہے: علی: 7؛ سارہ: 12؛ عمر: 9؛ حنا: 4۔ سارہ نے حنا سے کتنی زیادہ کتابیں پڑھیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take the shorter bar from the taller one.",
+        "ur": "اونچے ستون میں سے چھوٹا نفی کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 − 4 = 8 more.",
+        "ur": "درست! 12 − 4 = 8 زیادہ"
+      },
+      "feedback_wrong": {
+        "en": "12 − 4 = 8.",
+        "ur": "12 − 4 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That adds them. 'How many more' is 12 − 4 = 8.",
+            "ur": "یہ جمع ہے۔ 'کتنے زیادہ' یعنی 12 − 4 = 8"
+          },
+          "misconception_id": "adds_for_difference"
+        }
+      ]
+    },
+    {
+      "id": "s5_scale2",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "On a bar graph of favourite fruits, each square stands for 2 children. The mango bar is 6 squares tall. How many children chose mango?",
+        "ur": "پسندیدہ پھلوں کے بار گراف میں ہر خانہ 2 بچوں کو ظاہر کرتا ہے۔ آم کا ستون 6 خانے اونچا ہے۔ کتنے بچوں نے آم چنا؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 squares, 2 children each.",
+        "ur": "6 خانے، ہر ایک 2 بچے"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 children.",
+        "ur": "درست! 12 بچے"
+      },
+      "feedback_wrong": {
+        "en": "6 × 2 = 12.",
+        "ur": "6 × 2 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Each square is 2 children: 6 × 2 = 12.",
+            "ur": "ہر خانہ 2 بچے ہے: 6 × 2 = 12"
+          },
+          "misconception_id": "ignores_scale"
+        }
+      ]
+    },
+    {
+      "id": "s6_scale5",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Each square stands for 5 cars. A bar is 7 squares tall. How many cars does it show?",
+        "ur": "ہر خانہ 5 گاڑیوں کو ظاہر کرتا ہے۔ ایک ستون 7 خانے اونچا ہے۔ یہ کتنی گاڑیاں دکھاتا ہے؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "7 × 5.",
+        "ur": "7 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 35 cars.",
+        "ur": "درست! 35 گاڑیاں"
+      },
+      "feedback_wrong": {
+        "en": "7 × 5 = 35.",
+        "ur": "7 × 5 = 35"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Each square is 5 cars: 7 × 5 = 35.",
+            "ur": "ہر خانہ 5 گاڑیاں ہے: 7 × 5 = 35"
+          },
+          "misconception_id": "ignores_scale"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "Multiply, don't add: 7 × 5 = 35.",
+            "ur": "جمع نہیں، ضرب: 7 × 5 = 35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_total",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bar graph shows money Bilal saved: Monday: 15 rupees; Tuesday: 20 rupees; Wednesday: 10 rupees; Thursday: 25 rupees. How much did he save altogether, in rupees?",
+        "ur": "ایک بار گراف بلال کی بچت دکھاتا ہے: پیر: 15 روپے؛ منگل: 20 روپے؛ بدھ: 10 روپے؛ جمعرات: 25 روپے۔ اس نے کل کتنے روپے بچائے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add all four bars.",
+        "ur": "چاروں ستون جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 70.",
+        "ur": "درست! 70 روپے"
+      },
+      "feedback_wrong": {
+        "en": "15 + 20 + 10 + 25 = 70.",
+        "ur": "15 + 20 + 10 + 25 = 70"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "25 is the tallest bar. Add them all: 70.",
+            "ur": "25 سب سے اونچا ستون ہے۔ سب جمع کریں: 70"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_least",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Same graph: Monday: 15 rupees; Tuesday: 20 rupees; Wednesday: 10 rupees; Thursday: 25 rupees. On which day did he save the least?",
+        "ur": "وہی گراف: پیر: 15 روپے؛ منگل: 20 روپے؛ بدھ: 10 روپے؛ جمعرات: 25 روپے۔ کس دن اس نے سب سے کم بچایا؟"
+      },
+      "options": [
+        {
+          "id": "wed",
+          "text": {
+            "en": "Wednesday",
+            "ur": "بدھ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Wednesday has the shortest bar, Rs 10.",
+            "ur": "جی ہاں! بدھ کا ستون سب سے چھوٹا ہے، 10 روپے۔"
+          }
+        },
+        {
+          "id": "thu",
+          "text": {
+            "en": "Thursday",
+            "ur": "جمعرات"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Thursday is the tallest bar, the most. Look for the shortest.",
+            "ur": "جمعرات سب سے اونچا ستون، یعنی سب سے زیادہ۔ سب سے چھوٹا دیکھیں۔"
+          }
+        },
+        {
+          "id": "mon",
+          "text": {
+            "en": "Monday",
+            "ur": "پیر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Monday is Rs 15. Wednesday is less: Rs 10.",
+            "ur": "پیر 15 روپے ہے۔ بدھ کم ہے: 10 روپے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Each square stands for 10 people. A bar is 4 squares tall. Asma says it shows 4 people. What went wrong?",
+        "ur": "ہر خانہ 10 لوگوں کو ظاہر کرتا ہے۔ ایک ستون 4 خانے اونچا ہے۔ عاصمہ کہتی ہے یہ 4 لوگ دکھاتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "scale",
+          "text": {
+            "en": "She forgot the scale: 4 × 10 = 40 people.",
+            "ur": "وہ پیمانہ بھول گئی: 4 × 10 = 40 لوگ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Check what one square stands for.",
+            "ur": "جی ہاں! دیکھیں ایک خانہ کتنے کو ظاہر کرتا ہے۔"
+          }
+        },
+        {
+          "id": "fourteen",
+          "text": {
+            "en": "It should be 4 + 10 = 14 people.",
+            "ur": "یہ 4 + 10 = 14 لوگ ہونے چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each square is 10, so multiply: 40.",
+            "ur": "ہر خانہ 10 ہے، تو ضرب دیں: 40"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each square is 10 people, so 4 squares show 40.",
+            "ur": "ہر خانہ 10 لوگ ہے، تو 4 خانے 40 دکھاتے ہیں۔"
+          },
+          "misconception_id": "ignores_scale"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why should you look at the scale before reading a bar graph? Can you teach me?",
+          "ur": "بار گراف پڑھنے سے پہلے پیمانہ کیوں دیکھنا چاہیے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why must you check the scale of a bar graph first?",
+        "ur": "اپنے الفاظ میں بتائیں: بار گراف کا پیمانہ پہلے کیوں دیکھنا ضروری ہے؟"
+      },
+      "key_idea": "One square might stand for 1, 2, 5, 10 or more. If you just count squares without the scale, you get the wrong number; you must multiply by what each square stands for.",
+      "levels": {
+        "got_it": "Says one square may stand for more than one, so you multiply by the scale to get the real number.",
+        "partly": "Says the scale changes the numbers, without explaining how.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "square",
+          "each",
+          "خانہ",
+          "ہر"
+        ],
+        [
+          "more than one",
+          "2",
+          "5",
+          "10",
+          "زیادہ"
+        ],
+        [
+          "multiply",
+          "times",
+          "ضرب",
+          "zarb"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Each square may stand for many, so multiply by the scale.",
+          "ur": "بہت خوب! ہر خانہ کئی کو ظاہر کر سکتا ہے، تو پیمانے سے ضرب دیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what you do with the scale: add or multiply?",
+          "ur": "اچھی شروعات! اب بتائیں پیمانے کے ساتھ کیا کرتے ہیں: جمع یا ضرب؟"
+        },
+        "not_yet": {
+          "en": "If one square stands for 10 people, how many do 3 squares show? What if you didn't know about the 10?",
+          "ur": "اگر ایک خانہ 10 لوگ ہو تو 3 خانے کتنے دکھاتے ہیں؟ اگر آپ کو 10 کا پتا نہ ہو تو؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_halfway",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bar ends exactly halfway between the 20 line and the 30 line. What number does it show?",
+        "ur": "ایک ستون 20 والی لکیر اور 30 والی لکیر کے بالکل درمیان ختم ہوتا ہے۔ یہ کون سا عدد دکھاتا ہے؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Halfway between 20 and 30.",
+        "ur": "20 اور 30 کا درمیان"
+      },
+      "feedback_correct": {
+        "en": "Right! 25.",
+        "ur": "درست! 25"
+      },
+      "feedback_wrong": {
+        "en": "Halfway between 20 and 30 is 25.",
+        "ur": "20 اور 30 کا درمیان 25 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "It goes past 20, halfway to 30: 25.",
+            "ur": "یہ 20 سے آگے، 30 کے آدھے راستے تک جاتا ہے: 25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Bar graphs mastered!",
+          "ur": "بار گراف آ گئے!"
+        }
+      },
+      "text": {
+        "en": "Each bar shows how many are in one group. Check the scale first: if one square stands for 2, 5 or 10, multiply the number of squares by it. Take away for 'how many more'; add all the bars for the total.",
+        "ur": "ہر ستون ایک گروہ کی تعداد دکھاتا ہے۔ پہلے پیمانہ دیکھیں: اگر ایک خانہ 2، 5 یا 10 ہو تو خانوں کو اس سے ضرب دیں۔ 'کتنے زیادہ' کے لیے نفی؛ کل کے لیے سب ستون جمع کریں۔"
+      },
+      "points": [
+        {
+          "en": "Check the scale first.",
+          "ur": "پہلے پیمانہ دیکھیں۔"
+        },
+        {
+          "en": "Taller bar = more.",
+          "ur": "اونچا ستون = زیادہ۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_scale",
+      "type": "apply",
+      "skill": "maths.data.bar_graphs",
+      "step": {
+        "id": "r_scale",
+        "type": "number",
+        "prompt": {
+          "en": "Each square stands for 2 goats. A bar is 9 squares tall. How many goats?",
+          "ur": "ہر خانہ 2 بکریوں کو ظاہر کرتا ہے۔ ایک ستون 9 خانے اونچا ہے۔ کتنی بکریاں؟"
+        },
+        "answer": 18,
+        "checker": "numeric",
+        "hint": {
+          "en": "9 × 2.",
+          "ur": "9 × 2"
+        },
+        "feedback_correct": {
+          "en": "Right! 18 goats.",
+          "ur": "درست! 18 بکریاں"
+        },
+        "feedback_wrong": {
+          "en": "9 × 2 = 18.",
+          "ur": "9 × 2 = 18"
+        },
+        "common_wrong": [
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "Each square is 2 goats: 18.",
+              "ur": "ہر خانہ 2 بکریاں ہے: 18"
+            },
+            "misconception_id": "ignores_scale"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_more",
+      "type": "apply",
+      "skill": "maths.data.bar_graphs",
+      "step": {
+        "id": "r_more",
+        "type": "number",
+        "prompt": {
+          "en": "Money saved: Monday: 15 rupees; Tuesday: 20 rupees; Wednesday: 10 rupees; Thursday: 25 rupees. How much more was saved on Thursday than on Wednesday, in rupees?",
+          "ur": "بچت: پیر: 15 روپے؛ منگل: 20 روپے؛ بدھ: 10 روپے؛ جمعرات: 25 روپے۔ جمعرات کو بدھ سے کتنے روپے زیادہ بچائے؟"
+        },
+        "answer": 15,
+        "checker": "numeric",
+        "hint": {
+          "en": "25 − 10.",
+          "ur": "25 − 10"
+        },
+        "feedback_correct": {
+          "en": "Right! Rs 15 more.",
+          "ur": "درست! 15 روپے زیادہ"
+        },
+        "feedback_wrong": {
+          "en": "25 − 10 = 15.",
+          "ur": "25 − 10 = 15"
+        },
+        "common_wrong": [
+          {
+            "answer": 35,
+            "feedback": {
+              "en": "That adds them. 'How much more' is 25 − 10 = 15.",
+              "ur": "یہ جمع ہے۔ 'کتنا زیادہ' یعنی 25 − 10 = 15"
+            },
+            "misconception_id": "adds_for_difference"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
+    "There are no pictures yet, so every bar graph is described in words (bar heights, or squares and a scale). Drawing one on squared paper (the home task) makes it concrete.",
+    "The scale questions (one square stands for 2, 5 or 10) catch the most common mistake: counting squares as the value.",
+    "Urdu terms to check: بار گراف / ستونی گراف (bar graph), ستون (bar), پیمانہ (scale), محور (axis).",
+    "The numbers were worked out in content/sources/g6-maths-10/bar_graphs.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
