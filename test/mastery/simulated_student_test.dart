@@ -2,6 +2,7 @@ import 'package:ai_tutor/app/theme/age_tier.dart';
 
 import 'dart:math';
 
+import 'package:ai_tutor/lessons/hidden_units.dart';
 import 'package:ai_tutor/lessons/step_result.dart';
 import 'package:ai_tutor/mastery/curriculum.dart';
 import 'package:ai_tutor/mastery/daily_plan.dart';
@@ -145,6 +146,20 @@ void main() {
       );
     }
     expect(levelOf(s, fractions), MasteryLevel.secure);
+  });
+
+  test('with the hidden units left out, every shown lesson is still done', () {
+    final shown = Curriculum([
+      for (final l in curriculum.lessons)
+        if (!isHiddenLesson(l.id)) l,
+    ]);
+    expect(shown.lessons.length, lessThan(curriculum.lessons.length));
+    expect(isHiddenLesson('g6-maths-02-dividing-fractions'), isTrue);
+    expect(isHiddenLesson('g6-maths-04-adding-integers'), isFalse);
+    final s = SimulatedStudent(shown)..studyFor(434, start);
+    for (final lesson in shown.lessons) {
+      expect(s.lessons[lesson.id]?.completed, isTrue, reason: lesson.id);
+    }
   });
 
   test('levels only rise in order for a strong student', () {

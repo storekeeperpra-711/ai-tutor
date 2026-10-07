@@ -4,6 +4,7 @@ import base64
 import io
 import json
 import math
+import re
 import struct
 import sys
 import unittest
@@ -230,6 +231,19 @@ class KVTest(unittest.TestCase):
         self.assertEqual(sent["method"], "PUT")
         self.assertTrue(sent["url"].endswith("/accounts/acct/storage/kv/namespaces/ns1/bulk"))
         self.assertEqual(sent["body"], [{"key": "a.m4a", "value": "AAE=", "base64": True}])
+
+
+class HiddenUnitsTest(unittest.TestCase):
+    def test_same_list_as_the_app(self):
+        dart = (make_voice.ROOT / "lib" / "lessons" / "hidden_units.dart").read_text()
+        units = re.search(r"const hiddenUnits = \{(.*?)\};", dart, re.S)[1]
+        self.assertEqual(sorted(re.findall(r"'([^']+)'", units)),
+                         sorted(make_voice.HIDDEN_UNITS))
+
+    def test_hidden_lessons_are_recorded_last(self):
+        ids = ["g6-maths-02-x", "g6-maths-04-y", "g9-maths-05-z", "g6-maths-15-w"]
+        self.assertEqual(sorted(ids, key=make_voice.lesson_order),
+                         ["g9-maths-05-z", "g6-maths-04-y", "g6-maths-02-x", "g6-maths-15-w"])
 
 
 if __name__ == "__main__":

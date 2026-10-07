@@ -2,6 +2,7 @@ import 'package:ai_tutor/app/preferences.dart';
 import 'package:ai_tutor/classes/class_store.dart';
 import 'package:ai_tutor/dashboard/dashboard_app.dart';
 import 'package:ai_tutor/dashboard/dashboard_data.dart';
+import 'package:ai_tutor/lessons/hidden_units.dart';
 import 'package:ai_tutor/mastery/curriculum.dart';
 import 'package:ai_tutor/mastery/skill_state.dart';
 import 'package:ai_tutor/services/auth_service.dart';
@@ -53,6 +54,8 @@ Future<Widget> buildDashboard(FakeBackend backend) async {
   final prefs = await SharedPreferences.getInstance();
   return ProviderScope(
     overrides: [
+      // The test class did the Fractions lesson, which children don't see.
+      hiddenUnitsProvider.overrideWithValue(const {}),
       sharedPreferencesProvider.overrideWithValue(prefs),
       authServiceProvider.overrideWithValue(backend.auth),
       remoteStoreProvider.overrideWithValue(backend.remote),
@@ -254,7 +257,7 @@ void main() {
       final backend = FakeBackend();
       backend.remote.publishLesson(lessonJson(title: 'Only online'));
       final curriculum = (await tester.runAsync(
-        () => loadDashboardCurriculum(backend.remote),
+        () => loadDashboardCurriculum(backend.remote, hidden: const {}),
       ))!;
       expect(curriculum.lesson(newId)?.title.en, 'Only online');
       expect(curriculum.lesson(fractionsLesson), isNotNull);
@@ -262,10 +265,18 @@ void main() {
       // Offline, the bundled lessons still load.
       backend.setOnline(false);
       final offline = (await tester.runAsync(
-        () => loadDashboardCurriculum(backend.remote),
+        () => loadDashboardCurriculum(backend.remote, hidden: const {}),
       ))!;
       expect(offline.lesson(fractionsLesson), isNotNull);
       expect(offline.lesson(newId), isNull);
+
+      // Units not in the Grade 6 book are left out.
+      backend.setOnline(true);
+      final shown = (await tester.runAsync(
+        () => loadDashboardCurriculum(backend.remote),
+      ))!;
+      expect(shown.lesson(fractionsLesson), isNull);
+      expect(shown.lesson(newId), isNotNull);
     });
   });
 }

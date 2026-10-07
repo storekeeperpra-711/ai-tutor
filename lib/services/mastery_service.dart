@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../app/preferences.dart';
 import '../app/theme/age_tier.dart';
+import '../lessons/hidden_units.dart';
 import '../lessons/lesson_repository.dart';
 import '../lessons/step_result.dart';
 import '../mastery/curriculum.dart';
@@ -17,12 +18,14 @@ import 'local_db.dart';
 import 'profiles.dart';
 import 'sync_service.dart';
 
-/// All bundled lessons as a skills graph. Lessons that fail to load are
-/// left out (the previewer shows their errors).
+/// All bundled lessons as a skills graph. Lessons that fail to load, and
+/// hidden units, are left out (the previewer shows them).
 final curriculumProvider = FutureProvider<Curriculum>((ref) async {
   final ids = await ref.watch(lessonIdsProvider.future);
+  final hidden = ref.watch(hiddenUnitsProvider);
   final lessons = <Lesson>[];
   for (final id in ids) {
+    if (isHiddenLesson(id, hidden)) continue;
     try {
       lessons.add(await ref.watch(lessonProvider(id).future));
     } catch (_) {
