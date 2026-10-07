@@ -1,0 +1,739 @@
+{
+  "id": "g6-maths-12-profit-loss-percent",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the profit or loss as a percentage of the cost price.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Profit and Loss"
+    }
+  ],
+  "skills": [
+    "maths.money.profit_loss_percent"
+  ],
+  "title": {
+    "en": "Profit and loss percent",
+    "ur": "نفع اور نقصان کی فیصد"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.money.profit_loss"
+    },
+    {
+      "skill": "maths.percent.find_percent"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "percent_of_sp",
+      "description": "Divides the profit or loss by the selling price instead of the cost price."
+    },
+    {
+      "id": "rupees_as_percent",
+      "description": "Gives the profit in rupees as the percent (Rs 50 profit = 50%)."
+    },
+    {
+      "id": "bigger_is_better",
+      "description": "Thinks the bigger profit in rupees is always the better deal, without comparing percents."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.money.profit_loss_percent": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.money.profit_loss_percent": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "How do you find the profit percent?",
+            "ur": "نفع کی فیصد کیسے نکالتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "of_cp",
+              "text": {
+                "en": "Profit ÷ cost price × 100",
+                "ur": "نفع ÷ قیمتِ خرید × 100"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The percent is always of the cost price.",
+                "ur": "جی ہاں! فیصد ہمیشہ قیمتِ خرید کی ہوتی ہے۔"
+              }
+            },
+            {
+              "id": "of_sp",
+              "text": {
+                "en": "Profit ÷ selling price × 100",
+                "ur": "نفع ÷ قیمتِ فروخت × 100"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "We compare the profit with what was paid: the cost price.",
+                "ur": "ہم نفع کا موازنہ ادا کی گئی رقم یعنی قیمتِ خرید سے کرتے ہیں۔"
+              },
+              "misconception_id": "percent_of_sp"
+            },
+            {
+              "id": "rupees",
+              "text": {
+                "en": "The profit in rupees is the percent",
+                "ur": "روپوں میں نفع ہی فیصد ہے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Rupees are not a percent. Divide by the cost price and × 100.",
+                "ur": "روپے فیصد نہیں ہیں۔ قیمتِ خرید سے تقسیم کریں اور × 100 کریں۔"
+              },
+              "misconception_id": "rupees_as_percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A toy costs Rs 50 and is sold for Rs 60. What is the profit percent? Type just the number.",
+            "ur": "ایک کھلونا 50 روپے کا خریدا اور 60 روپے میں بیچا گیا۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+          },
+          "answer": 20,
+          "checker": "numeric",
+          "hint": {
+            "en": "Profit = 10. Then 10 ÷ 50 × 100.",
+            "ur": "نفع = 10۔ پھر 10 ÷ 50 × 100"
+          },
+          "feedback_correct": {
+            "en": "Right! 20%.",
+            "ur": "درست! 20%"
+          },
+          "feedback_wrong": {
+            "en": "Profit 10. 10 ÷ 50 × 100 = 20%.",
+            "ur": "نفع 10۔ 10 ÷ 50 × 100 = 20%"
+          },
+          "common_wrong": [
+            {
+              "answer": 10,
+              "feedback": {
+                "en": "Rs 10 is the profit in rupees. 10 ÷ 50 × 100 = 20%.",
+                "ur": "10 روپے نفع ہے۔ 10 ÷ 50 × 100 = 20%"
+              },
+              "misconception_id": "rupees_as_percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A lamp costs Rs 80 and is sold for Rs 100. Kamran says the profit percent is 20 ÷ 100 × 100 = 20%. What is wrong?",
+            "ur": "ایک لیمپ 80 روپے کا خریدا اور 100 روپے میں بیچا گیا۔ کامران کہتا ہے نفع 20 ÷ 100 × 100 = 20% ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "use_cp",
+              "text": {
+                "en": "He divided by the selling price. It should be 20 ÷ 80 × 100 = 25%.",
+                "ur": "اس نے قیمتِ فروخت سے تقسیم کیا۔ 20 ÷ 80 × 100 = 25% ہونا چاہیے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The percent is of the cost price.",
+                "ur": "جی ہاں! فیصد قیمتِ خرید کی ہوتی ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Look at what he divided by: Rs 100 is the selling price.",
+                "ur": "دیکھیں اس نے کس سے تقسیم کیا: 100 روپے قیمتِ فروخت ہے۔"
+              },
+              "misconception_id": "percent_of_sp"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_profit_percent",
+      "front": {
+        "en": "Profit percent?",
+        "ur": "نفع کی فیصد؟"
+      },
+      "back": {
+        "en": "Profit ÷ cost price × 100",
+        "ur": "نفع ÷ قیمتِ خرید × 100"
+      }
+    },
+    {
+      "id": "f_loss_percent",
+      "front": {
+        "en": "Loss percent?",
+        "ur": "نقصان کی فیصد؟"
+      },
+      "back": {
+        "en": "Loss ÷ cost price × 100",
+        "ur": "نقصان ÷ قیمتِ خرید × 100"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_deal",
+      "text": {
+        "en": "Think of something your family bought and later sold, or ask a shopkeeper about one item. Work out the profit or loss, then the percent of the cost price.",
+        "ur": "کسی ایسی چیز کے بارے میں سوچیں جو آپ کے گھر والوں نے خریدی اور بعد میں بیچی، یا کسی دکاندار سے ایک چیز کے بارے میں پوچھیں۔ نفع یا نقصان نکالیں، پھر قیمتِ خرید کی فیصد۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Profit percent",
+      "ur": "نفع کی فیصد"
+    },
+    {
+      "en": "Loss percent",
+      "ur": "نقصان کی فیصد"
+    },
+    {
+      "en": "Cost price",
+      "ur": "قیمتِ خرید"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali makes Rs 20 on a Rs 100 toy. Sara makes Rs 60 on a Rs 400 bag. Who did better?",
+          "ur": "علی 100 روپے کے کھلونے پر 20 روپے کماتا ہے۔ سارہ 400 روپے کے بیگ پر 60 روپے۔ کس نے بہتر کیا؟"
+        }
+      },
+      "text": {
+        "en": "Rupees alone don't tell us. A percent lets us compare. First, a quick percent check.",
+        "ur": "صرف روپے یہ نہیں بتاتے۔ فیصد سے ہم موازنہ کر سکتے ہیں۔ پہلے فیصد کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.percent.find_percent",
+      "prompt": {
+        "en": "What percent is 30 of 120? Type just the number.",
+        "ur": "30، 120 کا کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "30 ÷ 120, then × 100.",
+        "ur": "30 ÷ 120، پھر × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 25%.",
+        "ur": "درست! 25%"
+      },
+      "feedback_wrong": {
+        "en": "30/120 = 1/4 = 25%.",
+        "ur": "30/120 = 1/4 = 25%"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 out of 120 is not 30%. 30 ÷ 120 × 100 = 25.",
+            "ur": "120 میں سے 30، 30% نہیں ہے۔ 30 ÷ 120 × 100 = 25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Always compare with the cost price: the money you put in.",
+          "ur": "ہمیشہ قیمتِ خرید سے موازنہ کریں: وہ رقم جو آپ نے لگائی۔"
+        }
+      },
+      "text": {
+        "en": "Profit percent = profit ÷ cost price × 100. Loss percent = loss ÷ cost price × 100. Example: bought for Rs 200, sold for Rs 250. Profit = 50. 50 ÷ 200 × 100 = 25%.",
+        "ur": "نفع کی فیصد = نفع ÷ قیمتِ خرید × 100۔ نقصان کی فیصد = نقصان ÷ قیمتِ خرید × 100۔ مثال: 200 روپے میں خریدا، 250 میں بیچا۔ نفع = 50۔ 50 ÷ 200 × 100 = 25%"
+      }
+    },
+    {
+      "id": "s4_profit_percent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shirt is bought for Rs 200 and sold for Rs 250. What is the profit percent? Type just the number.",
+        "ur": "ایک قمیض 200 روپے میں خریدی اور 250 روپے میں بیچی گئی۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Profit = 50. Then 50 ÷ 200 × 100.",
+        "ur": "نفع = 50۔ پھر 50 ÷ 200 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 25%.",
+        "ur": "درست! 25%"
+      },
+      "feedback_wrong": {
+        "en": "50 ÷ 200 × 100 = 25.",
+        "ur": "50 ÷ 200 × 100 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "Rs 50 is the profit in rupees. 50 ÷ 200 × 100 = 25%.",
+            "ur": "50 روپے نفع ہے۔ 50 ÷ 200 × 100 = 25%"
+          },
+          "misconception_id": "rupees_as_percent"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "Divide by the cost price (200), not the selling price (250).",
+            "ur": "قیمتِ خرید (200) سے تقسیم کریں، قیمتِ فروخت (250) سے نہیں۔"
+          },
+          "misconception_id": "percent_of_sp"
+        }
+      ]
+    },
+    {
+      "id": "s5_loss_percent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A school bag is bought for Rs 400 and sold for Rs 340. What is the loss percent? Type just the number.",
+        "ur": "ایک سکول بیگ 400 روپے میں خریدا اور 340 روپے میں بیچا گیا۔ نقصان کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Loss = 400 − 340 = 60. Then 60 ÷ 400 × 100.",
+        "ur": "نقصان = 400 − 340 = 60۔ پھر 60 ÷ 400 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 15%.",
+        "ur": "درست! 15%"
+      },
+      "feedback_wrong": {
+        "en": "60 ÷ 400 × 100 = 15.",
+        "ur": "60 ÷ 400 × 100 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "Rs 60 is the loss in rupees. 60 ÷ 400 × 100 = 15%.",
+            "ur": "60 روپے نقصان ہے۔ 60 ÷ 400 × 100 = 15%"
+          },
+          "misconception_id": "rupees_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s6_which_price",
+      "type": "choice",
+      "prompt": {
+        "en": "Profit percent and loss percent are always worked out from which price?",
+        "ur": "نفع اور نقصان کی فیصد ہمیشہ کس قیمت سے نکالی جاتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "cp",
+          "text": {
+            "en": "The cost price",
+            "ur": "قیمتِ خرید"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The money that was put in.",
+            "ur": "جی ہاں! وہ رقم جو لگائی گئی۔"
+          }
+        },
+        {
+          "id": "sp",
+          "text": {
+            "en": "The selling price",
+            "ur": "قیمتِ فروخت"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No, we compare with what was paid: the cost price.",
+            "ur": "نہیں، ہم ادا کی گئی رقم یعنی قیمتِ خرید سے موازنہ کرتے ہیں۔"
+          },
+          "misconception_id": "percent_of_sp"
+        },
+        {
+          "id": "100",
+          "text": {
+            "en": "Always Rs 100",
+            "ur": "ہمیشہ 100 روپے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "We divide by the cost price, then × 100.",
+            "ur": "ہم قیمتِ خرید سے تقسیم کرتے ہیں، پھر × 100"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_watch",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A watch is bought for Rs 500 and sold for Rs 600. What is the profit percent? Type just the number.",
+        "ur": "ایک گھڑی 500 روپے میں خریدی اور 600 روپے میں بیچی گئی۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Profit = 100. Then 100 ÷ 500 × 100.",
+        "ur": "نفع = 100۔ پھر 100 ÷ 500 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 20%.",
+        "ur": "درست! 20%"
+      },
+      "feedback_wrong": {
+        "en": "100 ÷ 500 × 100 = 20.",
+        "ur": "100 ÷ 500 × 100 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "Rs 100 is the profit in rupees. 100 ÷ 500 × 100 = 20%.",
+            "ur": "100 روپے نفع ہے۔ 100 ÷ 500 × 100 = 20%"
+          },
+          "misconception_id": "rupees_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s8_bicycle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Usman bought a bicycle for Rs 2000 and sold it for Rs 1500. What is his loss percent? Type just the number.",
+        "ur": "عثمان نے سائیکل 2000 روپے میں خریدی اور 1500 روپے میں بیچی۔ اس کا نقصان کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Loss = 500. Then 500 ÷ 2000 × 100.",
+        "ur": "نقصان = 500۔ پھر 500 ÷ 2000 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 25%.",
+        "ur": "درست! 25%"
+      },
+      "feedback_wrong": {
+        "en": "500 ÷ 2000 × 100 = 25.",
+        "ur": "500 ÷ 2000 × 100 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 33,
+          "feedback": {
+            "en": "Divide by the cost price (2000), not 1500: 500 ÷ 2000 × 100 = 25.",
+            "ur": "1500 نہیں، قیمتِ خرید (2000) سے تقسیم کریں: 500 ÷ 2000 × 100 = 25"
+          },
+          "misconception_id": "percent_of_sp"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A lamp is bought for Rs 80 and sold for Rs 100. Hina says, \"Profit 20, so 20 ÷ 100 × 100 = 20%.\" What went wrong?",
+        "ur": "ایک لیمپ 80 روپے میں خریدا اور 100 روپے میں بیچا گیا۔ حنا کہتی ہے، \"نفع 20، تو 20 ÷ 100 × 100 = 20%۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "use_cp",
+          "text": {
+            "en": "She divided by the selling price. It should be 20 ÷ 80 × 100 = 25%.",
+            "ur": "اس نے قیمتِ فروخت سے تقسیم کیا۔ 20 ÷ 80 × 100 = 25% ہونا چاہیے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Always divide by the cost price.",
+            "ur": "جی ہاں! ہمیشہ قیمتِ خرید سے تقسیم کریں۔"
+          }
+        },
+        {
+          "id": "profit",
+          "text": {
+            "en": "The profit is not Rs 20.",
+            "ur": "نفع 20 روپے نہیں ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The profit is right: 100 − 80 = 20. The mistake is dividing by 100.",
+            "ur": "نفع درست ہے: 100 − 80 = 20۔ غلطی 100 سے تقسیم کرنا ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Rs 100 is the selling price. Divide by the cost price, 80.",
+            "ur": "100 روپے قیمتِ فروخت ہے۔ قیمتِ خرید 80 سے تقسیم کریں۔"
+          },
+          "misconception_id": "percent_of_sp"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali made Rs 20 and Sara made Rs 60. Why might Ali have done better? Can you teach me?",
+          "ur": "علی نے 20 روپے اور سارہ نے 60 روپے کمائے۔ علی نے بہتر کیوں کیا ہو سکتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we use a percent of the cost price to compare two deals, and not just the rupees?",
+        "ur": "اپنے الفاظ میں بتائیں: دو سودوں کا موازنہ کرنے کے لیے ہم صرف روپے کے بجائے قیمتِ خرید کی فیصد کیوں استعمال کرتے ہیں؟"
+      },
+      "key_idea": "Deals start with different amounts of money. A percent of the cost price shows how much was earned for every 100 rupees put in, so deals of different sizes can be compared fairly. Ali: 20 on 100 is 20%; Sara: 60 on 400 is 15%.",
+      "levels": {
+        "got_it": "Says the cost prices are different, and a percent shows the profit for every 100 rupees spent, so it is a fair comparison.",
+        "partly": "Says percent is fairer, without linking it to the different cost prices.",
+        "not_yet": "Gives no reason, or says the bigger rupee profit is always better."
+      },
+      "keywords": [
+        [
+          "cost",
+          "spent",
+          "paid",
+          "خرید",
+          "خرچ",
+          "لگائی"
+        ],
+        [
+          "100",
+          "every",
+          "hundred",
+          "سو"
+        ],
+        [
+          "fair",
+          "compare",
+          "different",
+          "موازنہ",
+          "مختلف"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! A percent shows the profit for every Rs 100 put in.",
+          "ur": "بہت خوب! فیصد ہر 100 روپے پر نفع دکھاتی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why the different cost prices matter.",
+          "ur": "اچھی شروعات! اب بتائیں کہ مختلف قیمتِ خرید کیوں اہم ہے۔"
+        },
+        "not_yet": {
+          "en": "Ali spent Rs 100 and Sara spent Rs 400. For every Rs 100 spent, how much did each earn?",
+          "ur": "علی نے 100 روپے اور سارہ نے 400 روپے لگائے۔ ہر 100 روپے پر ہر ایک نے کتنا کمایا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_compare",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ali makes Rs 20 profit on a toy that cost Rs 100: that is 20%. Sara makes Rs 60 profit on a bag that cost Rs 400. What is Sara's profit percent? Type just the number.",
+        "ur": "علی 100 روپے کے کھلونے پر 20 روپے نفع کماتا ہے: یہ 20% ہے۔ سارہ 400 روپے کے بیگ پر 60 روپے نفع کماتی ہے۔ سارہ کا نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "60 ÷ 400 × 100.",
+        "ur": "60 ÷ 400 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 15%, so Ali did better for the money he put in.",
+        "ur": "درست! 15%، تو لگائی گئی رقم کے حساب سے علی نے بہتر کیا۔"
+      },
+      "feedback_wrong": {
+        "en": "60 ÷ 400 × 100 = 15. Ali's 20% is better.",
+        "ur": "60 ÷ 400 × 100 = 15۔ علی کا 20% بہتر ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "Rs 60 is the profit in rupees. 60 ÷ 400 × 100 = 15%.",
+            "ur": "60 روپے نفع ہے۔ 60 ÷ 400 × 100 = 15%"
+          },
+          "misconception_id": "rupees_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can compare any two deals fairly!",
+          "ur": "اب آپ کسی بھی دو سودوں کا منصفانہ موازنہ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Profit percent = profit ÷ cost price × 100. Loss percent = loss ÷ cost price × 100. Always divide by the cost price. A percent lets us compare deals of different sizes.",
+        "ur": "نفع کی فیصد = نفع ÷ قیمتِ خرید × 100۔ نقصان کی فیصد = نقصان ÷ قیمتِ خرید × 100۔ ہمیشہ قیمتِ خرید سے تقسیم کریں۔ فیصد سے مختلف سائز کے سودوں کا موازنہ ہو سکتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Find the profit or loss in rupees first.",
+          "ur": "پہلے روپوں میں نفع یا نقصان نکالیں۔"
+        },
+        {
+          "en": "Then ÷ cost price × 100.",
+          "ur": "پھر ÷ قیمتِ خرید × 100"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_loss",
+      "type": "apply",
+      "skill": "maths.money.profit_loss_percent",
+      "step": {
+        "id": "r_loss",
+        "type": "number",
+        "prompt": {
+          "en": "A fan is bought for Rs 250 and sold for Rs 200. What is the loss percent? Type just the number.",
+          "ur": "ایک پنکھا 250 روپے میں خریدا اور 200 روپے میں بیچا گیا۔ نقصان کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+        },
+        "answer": 20,
+        "checker": "numeric",
+        "hint": {
+          "en": "Loss = 50. Then 50 ÷ 250 × 100.",
+          "ur": "نقصان = 50۔ پھر 50 ÷ 250 × 100"
+        },
+        "feedback_correct": {
+          "en": "Right! 20%.",
+          "ur": "درست! 20%"
+        },
+        "feedback_wrong": {
+          "en": "50 ÷ 250 × 100 = 20.",
+          "ur": "50 ÷ 250 × 100 = 20"
+        },
+        "common_wrong": [
+          {
+            "answer": 25,
+            "feedback": {
+              "en": "Divide by the cost price (250), not 200: 50 ÷ 250 × 100 = 20.",
+              "ur": "200 نہیں، قیمتِ خرید (250) سے تقسیم کریں: 50 ÷ 250 × 100 = 20"
+            },
+            "misconception_id": "percent_of_sp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_profit",
+      "type": "apply",
+      "skill": "maths.money.profit_loss_percent",
+      "step": {
+        "id": "r_profit",
+        "type": "number",
+        "prompt": {
+          "en": "A book is bought for Rs 160 and sold for Rs 200. What is the profit percent? Type just the number.",
+          "ur": "ایک کتاب 160 روپے میں خریدی اور 200 روپے میں بیچی گئی۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+        },
+        "answer": 25,
+        "checker": "numeric",
+        "hint": {
+          "en": "Profit = 40. Then 40 ÷ 160 × 100.",
+          "ur": "نفع = 40۔ پھر 40 ÷ 160 × 100"
+        },
+        "feedback_correct": {
+          "en": "Right! 25%.",
+          "ur": "درست! 25%"
+        },
+        "feedback_wrong": {
+          "en": "40 ÷ 160 × 100 = 25.",
+          "ur": "40 ÷ 160 × 100 = 25"
+        },
+        "common_wrong": [
+          {
+            "answer": 20,
+            "feedback": {
+              "en": "Divide by the cost price (160), not 200: 40 ÷ 160 × 100 = 25.",
+              "ur": "200 نہیں، قیمتِ خرید (160) سے تقسیم کریں: 40 ÷ 160 × 100 = 25"
+            },
+            "misconception_id": "percent_of_sp"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Profit and Loss unit. No textbook text or exercises were used.",
+    "The hook and s11 compare two deals to show why a percent of the cost price is used.",
+    "Urdu terms to check: نفع کی فیصد (profit percent), نقصان کی فیصد (loss percent).",
+    "The numbers were worked out in content/sources/g6-maths-12/profit_loss_percent.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
