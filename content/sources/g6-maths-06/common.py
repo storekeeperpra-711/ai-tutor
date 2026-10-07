@@ -20,6 +20,11 @@ RATIO_SHARE = "maths.ratio.share"
 RATIO_PROPORTION = "maths.ratio.proportion"
 UNITARY = "maths.ratio.unitary_method"
 RATIO_WORD_PROBLEMS = "maths.ratio.word_problems"
+# Added after matching the PCTB Mathematics 6 book (Sub-domain 4).
+RATIO_RATE = "maths.ratio.rate"
+RATIO_CONTINUED = "maths.ratio.continued"
+
+BOOK = "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage"
 
 
 def T(en, ur):
@@ -47,6 +52,45 @@ def wrong(answer, en, ur, mis=None):
 def ratio(a: int, b: int) -> str:
     """A ratio written as given: 4:6 stays 4:6."""
     return f"{a}:{b}"
+
+
+def continued(*parts: int) -> str:
+    """A continued ratio written as given: 2:3:4."""
+    return ":".join(str(p) for p in parts)
+
+
+def simplest_all(*parts: int) -> tuple[int, ...]:
+    g = gcd(*parts)
+    return tuple(p // g for p in parts)
+
+
+def join(ab: tuple[int, int], bc: tuple[int, int]) -> tuple[int, int, int]:
+    """a:b:c from a:b and b:c, making the two b's the same first."""
+    (a, b1), (b2, c) = ab, bc
+    m = b1 * b2 // gcd(b1, b2)
+    return simplest_all(a * m // b1, m, c * m // b2)
+
+
+def continued_question(id, prompt, parts, hint, good, bad, *, common_wrong=(), qtype="apply", skill=None, character=None):
+    """A typed continued ratio like 2:3:4, checked exactly (spaces don't matter)."""
+    step = {"id": id, "type": "text_check"}
+    if qtype:
+        step["question_type"] = qtype
+    if skill:
+        step["skill"] = skill
+    if character:
+        step["character"] = character
+    step.update({
+        "prompt": prompt, "checker": "text", "expected": continued(*parts),
+        "accept": [continued(*parts).replace(":", "∶")],
+        "hint": hint, "feedback_correct": good, "feedback_wrong": bad,
+    })
+    if common_wrong:
+        step["common_wrong"] = list(common_wrong)
+    return step
+
+
+assert join((2, 3), (3, 5)) == (2, 3, 5) and join((2, 3), (4, 5)) == (8, 12, 15)
 
 
 def simplest(a: int, b: int) -> tuple[int, int]:

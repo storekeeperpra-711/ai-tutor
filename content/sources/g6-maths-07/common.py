@@ -15,6 +15,58 @@ ALG_SUBSTITUTION = "maths.algebra.substitution"
 ALG_LIKE_TERMS = "maths.algebra.expressions_basic"
 ALG_EQUATIONS = "maths.algebra.simple_equations"
 ALG_WORD_PROBLEMS = "maths.algebra.word_problems"
+# Added after matching the PCTB Mathematics 6 book (Sub-domain 6).
+ALG_SEQUENCES = "maths.algebra.sequences"
+ALG_TERMS = "maths.algebra.terms"
+ALG_ADD_SUBTRACT = "maths.algebra.add_subtract"
+
+BOOK = "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions"
+
+
+def term(coef, var):
+    """One term without its sign: term(1, 'a') is 'a', term(7, '') is '7'."""
+    if not var:
+        return str(abs(coef))
+    return var if abs(coef) == 1 else f"{abs(coef)}{var}"
+
+
+def expr(*terms, minus="-"):
+    """An expression from (coefficient, letter) pairs, zero terms left out:
+    expr((7, 'a'), (1, 'b'), (-3, '')) is '7a + b - 3'."""
+    out = ""
+    for coef, var in terms:
+        if coef == 0:
+            continue
+        if not out:
+            out = ("-" if coef < 0 else "") + term(coef, var)
+        else:
+            out += f" {minus if coef < 0 else '+'} " + term(coef, var)
+    return out or "0"
+
+
+def expr_forms(*terms):
+    """Every order a child might write the same expression in, without spaces."""
+    from itertools import permutations
+    kept = [t for t in terms if t[0] != 0]
+    return sorted({expr(*p).replace(" ", "") for p in permutations(kept)})
+
+
+def collect(*terms):
+    """Adds like terms: collect((3, 'a'), (2, 'b'), (4, 'a')) is ((7, 'a'), (2, 'b'))."""
+    total = {}
+    for coef, var in terms:
+        total[var] = total.get(var, 0) + coef
+    letters = sorted(v for v in total if v) + ([""] if "" in total else [])
+    return tuple((total[v], v) for v in letters)
+
+
+def negate(*terms):
+    return tuple((-c, v) for c, v in terms)
+
+
+assert expr((7, "a"), (1, "b"), (-3, "")) == "7a + b - 3"
+assert collect((3, "a"), (2, "b"), (4, "a"), (1, "b")) == ((7, "a"), (3, "b"))
+assert "b+7a" in expr_forms((7, "a"), (1, "b"))
 
 
 def value(expr, **values):

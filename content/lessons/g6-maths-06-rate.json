@@ -1,0 +1,737 @@
+{
+  "id": "g6-maths-06-rate",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find a rate as an amount for one unit, and use rates to solve real-life problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, 4.1 Rate"
+    }
+  ],
+  "skills": [
+    "maths.ratio.rate"
+  ],
+  "title": {
+    "en": "Rate",
+    "ur": "شرح"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.unitary_method"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "multiply_not_divide",
+      "description": "Multiplies the two amounts instead of dividing to find the amount for one."
+    },
+    {
+      "id": "upside_down_rate",
+      "description": "Divides the wrong way round (minutes ÷ litres instead of litres ÷ minutes)."
+    },
+    {
+      "id": "divide_not_multiply",
+      "description": "Divides when using a rate to find the amount for many."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.rate": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.rate": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "'Rs 250 per kg' means …",
+            "ur": "'250 روپے فی کلو' کا مطلب ہے …"
+          },
+          "options": [
+            {
+              "id": "each_kg",
+              "text": {
+                "en": "Rs 250 for each 1 kg",
+                "ur": "ہر 1 کلو کے 250 روپے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 'Per' means 'for each one'.",
+                "ur": "جی ہاں! 'فی' یعنی 'ہر ایک کے لیے'۔"
+              }
+            },
+            {
+              "id": "all",
+              "text": {
+                "en": "Rs 250 for all the rice in the shop",
+                "ur": "دکان کے سارے چاول 250 روپے کے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "'Per kg' means for each kilogram, not for all of it.",
+                "ur": "'فی کلو' یعنی ہر کلو کے لیے، سب کے لیے نہیں۔"
+              }
+            },
+            {
+              "id": "kg_per_rupee",
+              "text": {
+                "en": "250 kg for each rupee",
+                "ur": "ہر روپے کے 250 کلو"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is upside down. It is rupees for each kilogram.",
+                "ur": "یہ اُلٹا ہے۔ یہ ہر کلو کے روپے ہیں۔"
+              },
+              "misconception_id": "upside_down_rate"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A cyclist rides 45 km in 3 hours. What is her speed in km per hour?",
+            "ur": "ایک سائیکل سوار 3 گھنٹوں میں 45 کلومیٹر چلاتی ہے۔ اس کی رفتار کتنے کلومیٹر فی گھنٹہ ہے؟"
+          },
+          "answer": 15,
+          "checker": "numeric",
+          "hint": {
+            "en": "km for one hour: divide by the hours.",
+            "ur": "ایک گھنٹے کے کلومیٹر: گھنٹوں سے تقسیم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 15 km per hour.",
+            "ur": "درست! 15 کلومیٹر فی گھنٹہ"
+          },
+          "feedback_wrong": {
+            "en": "45 ÷ 3 = 15 km per hour.",
+            "ur": "45 ÷ 3 = 15 کلومیٹر فی گھنٹہ"
+          },
+          "common_wrong": [
+            {
+              "answer": 135,
+              "feedback": {
+                "en": "Divide, don't multiply: 45 ÷ 3 = 15.",
+                "ur": "ضرب نہیں، تقسیم کریں: 45 ÷ 3 = 15"
+              },
+              "misconception_id": "multiply_not_divide"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "3 kg of apples cost Rs 450. Sara says 1 kg costs Rs 1,350. What is wrong?",
+            "ur": "3 کلو سیب 450 روپے کے ہیں۔ سارہ کہتی ہے 1 کلو 1,350 روپے کا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "divide",
+              "text": {
+                "en": "She multiplied. 1 kg is less: 450 ÷ 3 = Rs 150.",
+                "ur": "اس نے ضرب دی۔ 1 کلو سستا ہوگا: 450 ÷ 3 = 150 روپے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! One kilogram costs less than three.",
+                "ur": "جی ہاں! ایک کلو تین کلو سے سستا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "1 kg can't cost more than 3 kg. 450 ÷ 3 = 150.",
+                "ur": "1 کلو، 3 کلو سے مہنگا نہیں ہو سکتا۔ 450 ÷ 3 = 150"
+              },
+              "misconception_id": "multiply_not_divide"
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "She should add: 450 + 3 = 453.",
+                "ur": "اسے جمع کرنا چاہیے: 450 + 3 = 453"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "For one kg, share the price by 3: 450 ÷ 3 = 150.",
+                "ur": "ایک کلو کے لیے قیمت کو 3 پر بانٹیں: 450 ÷ 3 = 150"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rate",
+      "front": {
+        "en": "Rate?",
+        "ur": "شرح؟"
+      },
+      "back": {
+        "en": "How much of one thing for each one of another: Rs 250 per kg, 60 km per hour.",
+        "ur": "ایک چیز کی مقدار، دوسری کی ہر اکائی کے لیے: 250 روپے فی کلو، 60 کلومیٹر فی گھنٹہ۔"
+      }
+    },
+    {
+      "id": "f_find",
+      "front": {
+        "en": "How to find a rate?",
+        "ur": "شرح کیسے نکالیں؟"
+      },
+      "back": {
+        "en": "Divide the amount by the number of units: 180 km ÷ 3 h = 60 km/h.",
+        "ur": "مقدار کو اکائیوں کی تعداد سے تقسیم کریں: 180 کلومیٹر ÷ 3 گھنٹے = 60 کلومیٹر فی گھنٹہ"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_shop",
+      "text": {
+        "en": "Look at two packs of the same thing at home or in a shop (like 1 kg and 5 kg of sugar). Find the price per kg of each. Which is the better buy?",
+        "ur": "گھر یا دکان میں ایک ہی چیز کے دو پیکٹ دیکھیں (جیسے 1 کلو اور 5 کلو چینی)۔ ہر ایک کی فی کلو قیمت نکالیں۔ کون سا سستا سودا ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Rate",
+      "ur": "شرح"
+    },
+    {
+      "en": "Per",
+      "ur": "فی"
+    },
+    {
+      "en": "Speed",
+      "ur": "رفتار"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Rice is Rs 250 per kg. The bus goes 60 km per hour. What does 'per' really mean?",
+          "ur": "چاول 250 روپے فی کلو ہیں۔ بس 60 کلومیٹر فی گھنٹہ چلتی ہے۔ 'فی' کا اصل مطلب کیا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn about rates: how much for each one. First, the unitary method.",
+        "ur": "آج ہم شرح کے بارے میں سیکھیں گے: ہر ایک کے لیے کتنا۔ پہلے اکائی کا طریقہ۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.ratio.unitary_method",
+      "prompt": {
+        "en": "5 pens cost Rs 75. How much does 1 pen cost?",
+        "ur": "5 قلم 75 روپے کے ہیں۔ 1 قلم کتنے کا ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Share Rs 75 among 5 pens.",
+        "ur": "75 روپے کو 5 قلموں میں بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 75 ÷ 5 = Rs 15.",
+        "ur": "درست! 75 ÷ 5 = 15 روپے"
+      },
+      "feedback_wrong": {
+        "en": "75 ÷ 5 = 15, so one pen is Rs 15.",
+        "ur": "75 ÷ 5 = 15، تو ایک قلم 15 روپے کا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 375,
+          "feedback": {
+            "en": "One pen costs less than five. Divide: 75 ÷ 5 = 15.",
+            "ur": "ایک قلم پانچ سے سستا ہے۔ تقسیم کریں: 75 ÷ 5 = 15"
+          },
+          "misconception_id": "multiply_not_divide"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "'Per' means 'for each one'. To find a rate, divide by the number of units!",
+          "ur": "'فی' یعنی 'ہر ایک کے لیے'۔ شرح نکالنے کے لیے اکائیوں کی تعداد سے تقسیم کریں!"
+        }
+      },
+      "text": {
+        "en": "A rate compares two different kinds of quantity, like rupees and kilograms, or kilometres and hours. It tells how much for ONE unit, and we say 'per': Rs 250 per kg, 60 km per hour (60 km/h). To find a rate, divide: 4 kg cost Rs 1,000, so the rate is 1,000 ÷ 4 = Rs 250 per kg. A ratio like 3:5 compares quantities of the same kind.",
+        "ur": "شرح دو مختلف قسم کی مقداروں کا موازنہ ہے، جیسے روپے اور کلوگرام، یا کلومیٹر اور گھنٹے۔ یہ ایک اکائی کے لیے مقدار بتاتی ہے، اور ہم 'فی' کہتے ہیں: 250 روپے فی کلو، 60 کلومیٹر فی گھنٹہ (60 km/h)۔ شرح نکالنے کے لیے تقسیم کریں: 4 کلو 1,000 روپے کے ہیں، تو شرح 1,000 ÷ 4 = 250 روپے فی کلو۔ 3:5 جیسی نسبت ایک ہی قسم کی مقداروں کا موازنہ کرتی ہے۔"
+      }
+    },
+    {
+      "id": "s4_rice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "4 kg of rice cost Rs 1,000. What is the rate in rupees per kg?",
+        "ur": "4 کلو چاول 1,000 روپے کے ہیں۔ شرح کتنے روپے فی کلو ہے؟"
+      },
+      "answer": 250,
+      "checker": "numeric",
+      "hint": {
+        "en": "Rupees for 1 kg: divide by 4.",
+        "ur": "1 کلو کے روپے: 4 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 250 per kg.",
+        "ur": "درست! 250 روپے فی کلو"
+      },
+      "feedback_wrong": {
+        "en": "1,000 ÷ 4 = 250, so Rs 250 per kg.",
+        "ur": "1,000 ÷ 4 = 250، تو 250 روپے فی کلو"
+      },
+      "common_wrong": [
+        {
+          "answer": 4000,
+          "feedback": {
+            "en": "Divide, don't multiply: 1,000 ÷ 4 = 250.",
+            "ur": "ضرب نہیں، تقسیم کریں: 1,000 ÷ 4 = 250"
+          },
+          "misconception_id": "multiply_not_divide"
+        }
+      ]
+    },
+    {
+      "id": "s5_bus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bus travels 180 km in 3 hours. What is its speed in km per hour?",
+        "ur": "ایک بس 3 گھنٹوں میں 180 کلومیٹر چلتی ہے۔ اس کی رفتار کتنے کلومیٹر فی گھنٹہ ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "km for 1 hour: divide by 3.",
+        "ur": "1 گھنٹے کے کلومیٹر: 3 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60 km/h.",
+        "ur": "درست! 60 کلومیٹر فی گھنٹہ"
+      },
+      "feedback_wrong": {
+        "en": "180 ÷ 3 = 60 km per hour.",
+        "ur": "180 ÷ 3 = 60 کلومیٹر فی گھنٹہ"
+      },
+      "common_wrong": [
+        {
+          "answer": 540,
+          "feedback": {
+            "en": "In one hour the bus goes less than in three. 180 ÷ 3 = 60.",
+            "ur": "ایک گھنٹے میں بس تین سے کم چلتی ہے۔ 180 ÷ 3 = 60"
+          },
+          "misconception_id": "multiply_not_divide"
+        }
+      ]
+    },
+    {
+      "id": "s6_which",
+      "type": "choice",
+      "prompt": {
+        "en": "Which of these is a rate?",
+        "ur": "ان میں سے شرح کون سی ہے؟"
+      },
+      "options": [
+        {
+          "id": "per_dozen",
+          "text": {
+            "en": "Rs 120 per dozen eggs",
+            "ur": "120 روپے فی درجن انڈے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Rupees for each dozen: two different kinds of quantity.",
+            "ur": "جی ہاں! ہر درجن کے روپے: دو مختلف قسم کی مقداریں۔"
+          }
+        },
+        {
+          "id": "boys_girls",
+          "text": {
+            "en": "Boys to girls is 3:5",
+            "ur": "لڑکے اور لڑکیاں 3:5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Boys and girls are the same kind (people): that is a ratio.",
+            "ur": "لڑکے اور لڑکیاں ایک ہی قسم (لوگ) ہیں: یہ نسبت ہے۔"
+          }
+        },
+        {
+          "id": "fifteen_kg",
+          "text": {
+            "en": "15 kg",
+            "ur": "15 کلو"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is just one amount. A rate is 'something per something'.",
+            "ur": "یہ صرف ایک مقدار ہے۔ شرح 'کچھ فی کچھ' ہوتی ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_typing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ayesha types 240 words in 6 minutes. How many words per minute is that?",
+        "ur": "عائشہ 6 منٹ میں 240 الفاظ ٹائپ کرتی ہے۔ یہ کتنے الفاظ فی منٹ ہیں؟"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "Words for 1 minute: divide by 6.",
+        "ur": "1 منٹ کے الفاظ: 6 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 40 words per minute.",
+        "ur": "درست! 40 الفاظ فی منٹ"
+      },
+      "feedback_wrong": {
+        "en": "240 ÷ 6 = 40 words per minute.",
+        "ur": "240 ÷ 6 = 40 الفاظ فی منٹ"
+      },
+      "common_wrong": [
+        {
+          "answer": 1440,
+          "feedback": {
+            "en": "Divide, don't multiply: 240 ÷ 6 = 40.",
+            "ur": "ضرب نہیں، تقسیم کریں: 240 ÷ 6 = 40"
+          },
+          "misconception_id": "multiply_not_divide"
+        }
+      ]
+    },
+    {
+      "id": "s8_petrol",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Petrol costs Rs 260 per litre. How much do 5 litres cost?",
+        "ur": "پیٹرول 260 روپے فی لیٹر ہے۔ 5 لیٹر کتنے کے ہوں گے؟"
+      },
+      "answer": 1300,
+      "checker": "numeric",
+      "hint": {
+        "en": "Rs 260 for each litre, and there are 5 litres.",
+        "ur": "ہر لیٹر کے 260 روپے، اور 5 لیٹر ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 260 × 5 = Rs 1,300.",
+        "ur": "درست! 260 × 5 = 1,300 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Each litre is Rs 260, so 5 litres are 260 × 5 = 1,300.",
+        "ur": "ہر لیٹر 260 روپے کا، تو 5 لیٹر 260 × 5 = 1,300"
+      },
+      "common_wrong": [
+        {
+          "answer": 52,
+          "feedback": {
+            "en": "We know the price of 1 litre; 5 litres cost more. Multiply: 1,300.",
+            "ur": "1 لیٹر کی قیمت معلوم ہے؛ 5 لیٹر مہنگے ہوں گے۔ ضرب دیں: 1,300"
+          },
+          "misconception_id": "divide_not_multiply"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A tap fills 60 litres in 4 minutes. Usman says the rate is 4 ÷ 60 litres per minute. What is wrong?",
+        "ur": "ایک نل 4 منٹ میں 60 لیٹر بھرتا ہے۔ عثمان کہتا ہے شرح 4 ÷ 60 لیٹر فی منٹ ہے۔ کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "flip",
+          "text": {
+            "en": "Litres per minute is litres ÷ minutes: 60 ÷ 4 = 15.",
+            "ur": "لیٹر فی منٹ یعنی لیٹر ÷ منٹ: 60 ÷ 4 = 15"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The 'per' amount goes on the bottom.",
+            "ur": "جی ہاں! 'فی' والی مقدار نیچے آتی ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 ÷ 60 is minutes per litre. Litres per minute: 60 ÷ 4 = 15.",
+            "ur": "4 ÷ 60 منٹ فی لیٹر ہے۔ لیٹر فی منٹ: 60 ÷ 4 = 15"
+          },
+          "misconception_id": "upside_down_rate"
+        },
+        {
+          "id": "times",
+          "text": {
+            "en": "It should be 60 × 4 = 240.",
+            "ur": "یہ 60 × 4 = 240 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "In one minute the tap fills less than in four: 60 ÷ 4 = 15.",
+            "ur": "ایک منٹ میں نل چار منٹ سے کم بھرتا ہے: 60 ÷ 4 = 15"
+          },
+          "misconception_id": "multiply_not_divide"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "The big bag costs more money. So the small bag is cheaper, right? Can you check?",
+          "ur": "بڑا تھیلا زیادہ پیسوں کا ہے۔ تو چھوٹا تھیلا سستا ہے نا؟ کیا آپ جانچ سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "A 2 kg bag of sugar costs Rs 300. A 5 kg bag costs Rs 700. Which is the better buy? Explain using the price per kg.",
+        "ur": "چینی کا 2 کلو کا تھیلا 300 روپے کا ہے۔ 5 کلو کا تھیلا 700 روپے کا ہے۔ کون سا سستا سودا ہے؟ فی کلو قیمت سے وضاحت کریں۔"
+      },
+      "key_idea": "2 kg bag: 300 ÷ 2 = Rs 150 per kg. 5 kg bag: 700 ÷ 5 = Rs 140 per kg. The 5 kg bag is the better buy because each kilogram costs less, even though the bag costs more.",
+      "levels": {
+        "got_it": "Finds Rs 150 per kg and Rs 140 per kg and says the 5 kg bag is the better buy because each kg is cheaper.",
+        "partly": "Finds one rate, or picks the 5 kg bag without comparing per kg.",
+        "not_yet": "Picks the 2 kg bag because it costs less in total, or gives no reason."
+      },
+      "keywords": [
+        [
+          "150",
+          "ڈیڑھ سو"
+        ],
+        [
+          "140",
+          "ایک سو چالیس"
+        ],
+        [
+          "per kg",
+          "each kg",
+          "فی کلو",
+          "ہر کلو"
+        ],
+        [
+          "5 kg",
+          "big",
+          "بڑا",
+          "پانچ کلو"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Rs 140 per kg beats Rs 150.",
+          "ur": "بہت خوب! 140 روپے فی کلو، 150 سے سستا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Work out the price of 1 kg in each bag.",
+          "ur": "اچھی شروعات! ہر تھیلے میں 1 کلو کی قیمت نکالیں۔"
+        },
+        "not_yet": {
+          "en": "Divide each price by its kilograms. Which kg is cheaper?",
+          "ur": "ہر قیمت کو اس کے کلو سے تقسیم کریں۔ کون سا کلو سستا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_eggs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Pack A has 6 eggs for Rs 180. Pack B has 12 eggs for Rs 324. What is the price of one egg in pack B?",
+        "ur": "پیکٹ A میں 6 انڈے 180 روپے کے ہیں۔ پیکٹ B میں 12 انڈے 324 روپے کے۔ پیکٹ B میں ایک انڈے کی قیمت کیا ہے؟"
+      },
+      "answer": 27,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide pack B's price by its 12 eggs.",
+        "ur": "پیکٹ B کی قیمت کو اس کے 12 انڈوں سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 27 an egg, cheaper than Rs 30 in pack A.",
+        "ur": "درست! 27 روپے فی انڈا، پیکٹ A کے 30 روپے سے سستا۔"
+      },
+      "feedback_wrong": {
+        "en": "324 ÷ 12 = 27, so Rs 27 per egg.",
+        "ur": "324 ÷ 12 = 27، تو 27 روپے فی انڈا"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "That is pack A (180 ÷ 6). Pack B: 324 ÷ 12 = 27.",
+            "ur": "یہ پیکٹ A ہے (180 ÷ 6)۔ پیکٹ B: 324 ÷ 12 = 27"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Per kg, per hour, per minute: now you can find any rate and spot the better buy!",
+          "ur": "فی کلو، فی گھنٹہ، فی منٹ: اب آپ کوئی بھی شرح نکال سکتے ہیں اور سستا سودا پہچان سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A rate is an amount for each one unit of something else. To find it, divide by the number of units. To use it, multiply by the number of units. To find the better buy, compare the price per unit.",
+        "ur": "شرح کسی دوسری چیز کی ہر ایک اکائی کے لیے مقدار ہے۔ اسے نکالنے کے لیے اکائیوں کی تعداد سے تقسیم کریں۔ اسے استعمال کرنے کے لیے اکائیوں کی تعداد سے ضرب دیں۔ سستا سودا پہچاننے کے لیے فی اکائی قیمت کا موازنہ کریں۔"
+      },
+      "points": [
+        {
+          "en": "Find a rate: divide.",
+          "ur": "شرح نکالنا: تقسیم"
+        },
+        {
+          "en": "Use a rate: multiply.",
+          "ur": "شرح استعمال کرنا: ضرب"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_bottles",
+      "type": "apply",
+      "skill": "maths.ratio.rate",
+      "step": {
+        "id": "r_bottles",
+        "type": "number",
+        "prompt": {
+          "en": "A machine fills 360 bottles in 6 hours. How many bottles per hour?",
+          "ur": "ایک مشین 6 گھنٹوں میں 360 بوتلیں بھرتی ہے۔ فی گھنٹہ کتنی بوتلیں؟"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide by the hours.",
+          "ur": "گھنٹوں سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 60 bottles per hour.",
+          "ur": "درست! 60 بوتلیں فی گھنٹہ"
+        },
+        "feedback_wrong": {
+          "en": "360 ÷ 6 = 60 bottles per hour.",
+          "ur": "360 ÷ 6 = 60 بوتلیں فی گھنٹہ"
+        },
+        "common_wrong": [
+          {
+            "answer": 2160,
+            "feedback": {
+              "en": "Divide, don't multiply: 360 ÷ 6 = 60.",
+              "ur": "ضرب نہیں، تقسیم کریں: 360 ÷ 6 = 60"
+            },
+            "misconception_id": "multiply_not_divide"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_pens",
+      "type": "apply",
+      "skill": "maths.ratio.rate",
+      "step": {
+        "id": "r_pens",
+        "type": "number",
+        "prompt": {
+          "en": "Pens cost Rs 35 each. How much do 8 pens cost?",
+          "ur": "قلم 35 روپے فی قلم ہیں۔ 8 قلم کتنے کے ہوں گے؟"
+        },
+        "answer": 280,
+        "checker": "numeric",
+        "hint": {
+          "en": "Rs 35 for each of 8 pens.",
+          "ur": "8 قلموں میں سے ہر ایک کے 35 روپے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 35 × 8 = Rs 280.",
+          "ur": "درست! 35 × 8 = 280 روپے"
+        },
+        "feedback_wrong": {
+          "en": "35 × 8 = 280.",
+          "ur": "35 × 8 = 280"
+        },
+        "common_wrong": [
+          {
+            "answer": 43,
+            "feedback": {
+              "en": "Multiply, don't add: 35 × 8 = 280.",
+              "ur": "جمع نہیں، ضرب دیں: 35 × 8 = 280"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh after matching the app with PCTB Mathematics 6 (Sub-domain 4, Rate). No textbook text or exercises were used.",
+    "Rate is taught after the unitary method, which it uses: a rate is the amount for one unit.",
+    "Urdu terms to check: شرح (rate), فی (per), رفتار (speed).",
+    "The numbers were worked out in content/sources/g6-maths-06/rate.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

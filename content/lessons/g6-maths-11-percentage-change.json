@@ -1,0 +1,796 @@
+{
+  "id": "g6-maths-11-percentage-change",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Increase or decrease an amount by a percentage, and find a percentage increase or decrease.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, 4.3 Percentage (increase and decrease)"
+    }
+  ],
+  "skills": [
+    "maths.percent.change"
+  ],
+  "title": {
+    "en": "Percentage increase and decrease",
+    "ur": "فیصد اضافہ اور کمی"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.percent.of_amount"
+    },
+    {
+      "skill": "maths.percent.find_percent"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "change_only",
+      "description": "Gives only the increase or decrease, not the new amount."
+    },
+    {
+      "id": "adds_the_number",
+      "description": "Adds or subtracts the percentage number itself (800 + 10) instead of that percent of the amount."
+    },
+    {
+      "id": "new_as_base",
+      "description": "Divides the change by the new amount instead of the original amount."
+    },
+    {
+      "id": "difference_as_percent",
+      "description": "Gives the difference (Rs 10) as the percentage."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.percent.change": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.percent.change": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "Percentage increase = …",
+            "ur": "فیصد اضافہ = …"
+          },
+          "options": [
+            {
+              "id": "original",
+              "text": {
+                "en": "increase ÷ original amount × 100",
+                "ur": "اضافہ ÷ اصل مقدار × 100"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Always compare with where you started.",
+                "ur": "جی ہاں! ہمیشہ شروع کی مقدار سے موازنہ کریں۔"
+              }
+            },
+            {
+              "id": "new",
+              "text": {
+                "en": "increase ÷ new amount × 100",
+                "ur": "اضافہ ÷ نئی مقدار × 100"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Divide by the ORIGINAL amount, not the new one.",
+                "ur": "اصل مقدار سے تقسیم کریں، نئی سے نہیں۔"
+              },
+              "misconception_id": "new_as_base"
+            },
+            {
+              "id": "difference",
+              "text": {
+                "en": "new amount − original amount",
+                "ur": "نئی مقدار − اصل مقدار"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the increase in rupees. Divide by the original and × 100 for the percent.",
+                "ur": "یہ روپوں میں اضافہ ہے۔ فیصد کے لیے اصل سے تقسیم کریں اور 100 سے ضرب۔"
+              },
+              "misconception_id": "difference_as_percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A water bill of Rs 600 goes down by 5%. What is the new bill?",
+            "ur": "600 روپے کا پانی کا بل 5% کم ہو جاتا ہے۔ نیا بل کتنا ہے؟"
+          },
+          "answer": 570,
+          "checker": "numeric",
+          "hint": {
+            "en": "5% of 600 is 30. Take it away.",
+            "ur": "600 کا 5% = 30۔ اسے تفریق کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 600 − 30 = Rs 570.",
+            "ur": "درست! 600 − 30 = 570 روپے"
+          },
+          "feedback_wrong": {
+            "en": "5% of 600 = 30, and 600 − 30 = 570.",
+            "ur": "600 کا 5% = 30، اور 600 − 30 = 570"
+          },
+          "common_wrong": [
+            {
+              "answer": 30,
+              "feedback": {
+                "en": "30 is the decrease. The new bill is 600 − 30 = 570.",
+                "ur": "30 کمی ہے۔ نیا بل 600 − 30 = 570"
+              },
+              "misconception_id": "change_only"
+            },
+            {
+              "answer": 595,
+              "feedback": {
+                "en": "Take away 5% of 600 (30), not 5: 570.",
+                "ur": "5 نہیں، 600 کا 5% (30) تفریق کریں: 570"
+              },
+              "misconception_id": "adds_the_number"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A bag costs Rs 500. In a sale it has 20% off. Ayesha says the sale price is Rs 480. What is wrong?",
+            "ur": "ایک بستہ 500 روپے کا ہے۔ سیل میں 20% رعایت ہے۔ عائشہ کہتی ہے سیل کی قیمت 480 روپے ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "percent_of",
+              "text": {
+                "en": "20% of 500 is 100, not 20: the price is 500 − 100 = Rs 400.",
+                "ur": "500 کا 20% = 100، 20 نہیں: قیمت 500 − 100 = 400 روپے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Find 20% of the price first.",
+                "ur": "جی ہاں! پہلے قیمت کا 20% نکالیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "She took away 20 rupees, not 20%. 20% of 500 = 100: Rs 400.",
+                "ur": "اس نے 20 روپے تفریق کیے، 20% نہیں۔ 500 کا 20% = 100: 400 روپے"
+              },
+              "misconception_id": "adds_the_number"
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "She should add: Rs 520.",
+                "ur": "اسے جمع کرنا چاہیے: 520 روپے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A sale makes the price go down: 500 − 100 = 400.",
+                "ur": "سیل میں قیمت کم ہوتی ہے: 500 − 100 = 400"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_new",
+      "front": {
+        "en": "Increase Rs 800 by 10%?",
+        "ur": "800 روپے میں 10% اضافہ؟"
+      },
+      "back": {
+        "en": "10% of 800 = 80, so 800 + 80 = Rs 880.",
+        "ur": "800 کا 10% = 80، تو 800 + 80 = 880 روپے"
+      }
+    },
+    {
+      "id": "f_change",
+      "front": {
+        "en": "Percentage change?",
+        "ur": "فیصد تبدیلی؟"
+      },
+      "back": {
+        "en": "change ÷ ORIGINAL amount × 100.",
+        "ur": "تبدیلی ÷ اصل مقدار × 100"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_prices",
+      "text": {
+        "en": "Ask someone at home what a litre of milk cost last year and what it costs now. Work out the percentage increase.",
+        "ur": "گھر میں کسی سے پوچھیں کہ پچھلے سال ایک لیٹر دودھ کتنے کا تھا اور اب کتنے کا ہے۔ فیصد اضافہ نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Increase",
+      "ur": "اضافہ"
+    },
+    {
+      "en": "Decrease",
+      "ur": "کمی"
+    },
+    {
+      "en": "Original amount",
+      "ur": "اصل مقدار"
+    },
+    {
+      "en": "Discount",
+      "ur": "رعایت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Prices go up, sales bring them down. How do shopkeepers work out 10% more or 25% off?",
+          "ur": "قیمتیں بڑھتی ہیں، سیل انہیں کم کرتی ہے۔ دکاندار 10% زیادہ یا 25% رعایت کیسے نکالتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we increase and decrease amounts by a percentage, and find the percentage change. First, a percentage of an amount.",
+        "ur": "آج ہم مقداروں میں فیصد اضافہ اور کمی کریں گے، اور فیصد تبدیلی نکالیں گے۔ پہلے کسی مقدار کا فیصد۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.percent.of_amount",
+      "prompt": {
+        "en": "What is 20% of 450?",
+        "ur": "450 کا 20% کتنا ہے؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% of 450 is 45. Double it.",
+        "ur": "450 کا 10% = 45۔ اسے دگنا کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 90.",
+        "ur": "درست! 90"
+      },
+      "feedback_wrong": {
+        "en": "10% of 450 = 45, so 20% = 90.",
+        "ur": "450 کا 10% = 45، تو 20% = 90"
+      },
+      "common_wrong": [
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "45 is 10%. 20% is double: 90.",
+            "ur": "45 تو 10% ہے۔ 20% اس کا دگنا: 90"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Find the percent of the amount, then add it or take it away. Always start from the original!",
+          "ur": "مقدار کا فیصد نکالیں، پھر جمع یا تفریق کریں۔ ہمیشہ اصل مقدار سے شروع کریں!"
+        }
+      },
+      "text": {
+        "en": "To increase Rs 800 by 10%: 10% of 800 = 80, so the new price is 800 + 80 = Rs 880. To decrease, take it away instead. To find the percentage change: change ÷ original amount × 100. A fare goes from Rs 40 to Rs 50: the change is 10, and 10 ÷ 40 × 100 = 25%. Always divide by the ORIGINAL amount.",
+        "ur": "800 روپے میں 10% اضافہ: 800 کا 10% = 80، تو نئی قیمت 800 + 80 = 880 روپے۔ کمی کے لیے اسے تفریق کریں۔ فیصد تبدیلی نکالنے کے لیے: تبدیلی ÷ اصل مقدار × 100۔ کرایہ 40 سے 50 روپے ہو جاتا ہے: تبدیلی 10 ہے، اور 10 ÷ 40 × 100 = 25%۔ ہمیشہ اصل مقدار سے تقسیم کریں۔"
+      }
+    },
+    {
+      "id": "s4_increase",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A school bag costs Rs 800. The price goes up by 10%. What is the new price?",
+        "ur": "ایک اسکول بیگ 800 روپے کا ہے۔ قیمت 10% بڑھ جاتی ہے۔ نئی قیمت کیا ہے؟"
+      },
+      "answer": 880,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% of 800, then add it on.",
+        "ur": "800 کا 10%، پھر جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 800 + 80 = Rs 880.",
+        "ur": "درست! 800 + 80 = 880 روپے"
+      },
+      "feedback_wrong": {
+        "en": "10% of 800 = 80, so 800 + 80 = 880.",
+        "ur": "800 کا 10% = 80، تو 800 + 80 = 880"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "80 is the increase. Add it: 800 + 80 = 880.",
+            "ur": "80 اضافہ ہے۔ اسے جمع کریں: 800 + 80 = 880"
+          },
+          "misconception_id": "change_only"
+        },
+        {
+          "answer": 810,
+          "feedback": {
+            "en": "Add 10% of 800 (80), not 10: 880.",
+            "ur": "10 نہیں، 800 کا 10% (80) جمع کریں: 880"
+          },
+          "misconception_id": "adds_the_number"
+        }
+      ]
+    },
+    {
+      "id": "s5_sale",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shirt costs Rs 1,200. In a sale it has 25% off. What is the sale price?",
+        "ur": "ایک قمیض 1,200 روپے کی ہے۔ سیل میں 25% رعایت ہے۔ سیل کی قیمت کیا ہے؟"
+      },
+      "answer": 900,
+      "checker": "numeric",
+      "hint": {
+        "en": "25% is a quarter. Take a quarter of 1,200 away.",
+        "ur": "25% یعنی چوتھائی۔ 1,200 کا چوتھائی تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1,200 − 300 = Rs 900.",
+        "ur": "درست! 1,200 − 300 = 900 روپے"
+      },
+      "feedback_wrong": {
+        "en": "25% of 1,200 = 300, so 1,200 − 300 = 900.",
+        "ur": "1,200 کا 25% = 300، تو 1,200 − 300 = 900"
+      },
+      "common_wrong": [
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "300 is the discount. The price is 1,200 − 300 = 900.",
+            "ur": "300 رعایت ہے۔ قیمت 1,200 − 300 = 900"
+          },
+          "misconception_id": "change_only"
+        },
+        {
+          "answer": 1500,
+          "feedback": {
+            "en": "'Off' means the price goes down: 1,200 − 300 = 900.",
+            "ur": "'رعایت' یعنی قیمت کم ہوتی ہے: 1,200 − 300 = 900"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_students",
+      "type": "choice",
+      "prompt": {
+        "en": "A school had 500 students. Now it has 550. What is the percentage increase?",
+        "ur": "ایک اسکول میں 500 طلبہ تھے۔ اب 550 ہیں۔ فیصد اضافہ کتنا ہے؟"
+      },
+      "options": [
+        {
+          "id": "ten",
+          "text": {
+            "en": "10%",
+            "ur": "10%"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 50 ÷ 500 × 100 = 10%.",
+            "ur": "جی ہاں! 50 ÷ 500 × 100 = 10%"
+          }
+        },
+        {
+          "id": "fifty",
+          "text": {
+            "en": "50%",
+            "ur": "50%"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "50 is the number of new students. 50 ÷ 500 × 100 = 10%.",
+            "ur": "50 نئے طلبہ کی تعداد ہے۔ 50 ÷ 500 × 100 = 10%"
+          },
+          "misconception_id": "difference_as_percent"
+        },
+        {
+          "id": "nine",
+          "text": {
+            "en": "about 9%",
+            "ur": "تقریباً 9%"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Divide by the original 500, not 550: 10%.",
+            "ur": "اصل 500 سے تقسیم کریں، 550 سے نہیں: 10%"
+          },
+          "misconception_id": "new_as_base"
+        }
+      ]
+    },
+    {
+      "id": "s7_fare",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bus fare goes up from Rs 40 to Rs 50. What is the percentage increase? Type the number.",
+        "ur": "بس کا کرایہ 40 سے 50 روپے ہو جاتا ہے۔ فیصد اضافہ کتنا ہے؟ عدد لکھیں۔"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "The increase is 10. Divide by the original 40, then × 100.",
+        "ur": "اضافہ 10 ہے۔ اصل 40 سے تقسیم کریں، پھر × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 10 ÷ 40 × 100 = 25%.",
+        "ur": "درست! 10 ÷ 40 × 100 = 25%"
+      },
+      "feedback_wrong": {
+        "en": "Change 10, original 40: 10 ÷ 40 × 100 = 25.",
+        "ur": "تبدیلی 10، اصل 40: 10 ÷ 40 × 100 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "Divide by the original fare (40), not the new one: 25%.",
+            "ur": "پرانے کرائے (40) سے تقسیم کریں، نئے سے نہیں: 25%"
+          },
+          "misconception_id": "new_as_base"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Rs 10 is the increase. As a percent: 10 ÷ 40 × 100 = 25.",
+            "ur": "10 روپے اضافہ ہے۔ فیصد میں: 10 ÷ 40 × 100 = 25"
+          },
+          "misconception_id": "difference_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s8_decrease",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A sack of flour weighed 25 kg. After some was used, it weighs 20 kg. What is the percentage decrease?",
+        "ur": "آٹے کی بوری 25 کلو کی تھی۔ کچھ استعمال کے بعد 20 کلو کی ہے۔ فیصد کمی کتنی ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "The decrease is 5 kg. Divide by the original 25.",
+        "ur": "کمی 5 کلو ہے۔ اصل 25 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 ÷ 25 × 100 = 20%.",
+        "ur": "درست! 5 ÷ 25 × 100 = 20%"
+      },
+      "feedback_wrong": {
+        "en": "Change 5, original 25: 5 ÷ 25 × 100 = 20.",
+        "ur": "تبدیلی 5، اصل 25: 5 ÷ 25 × 100 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "Divide by the original 25 kg, not 20: 20%.",
+            "ur": "اصل 25 کلو سے تقسیم کریں، 20 سے نہیں: 20%"
+          },
+          "misconception_id": "new_as_base"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 kg is the decrease. As a percent: 5 ÷ 25 × 100 = 20.",
+            "ur": "5 کلو کمی ہے۔ فیصد میں: 5 ÷ 25 × 100 = 20"
+          },
+          "misconception_id": "difference_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A price goes from Rs 200 to Rs 250. Bilal writes 50 ÷ 250 × 100 = 20% increase. What is wrong?",
+        "ur": "قیمت 200 سے 250 روپے ہو جاتی ہے۔ بلال لکھتا ہے 50 ÷ 250 × 100 = 20% اضافہ۔ کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "original",
+          "text": {
+            "en": "Divide by the original Rs 200: 50 ÷ 200 × 100 = 25%.",
+            "ur": "اصل 200 روپے سے تقسیم کریں: 50 ÷ 200 × 100 = 25%"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The change is compared with where it started.",
+            "ur": "جی ہاں! تبدیلی کا موازنہ شروع کی مقدار سے ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "250 is the new price. Use the original 200: 25%.",
+            "ur": "250 نئی قیمت ہے۔ اصل 200 لیں: 25%"
+          },
+          "misconception_id": "new_as_base"
+        },
+        {
+          "id": "fifty",
+          "text": {
+            "en": "The answer is 50%.",
+            "ur": "جواب 50% ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Rs 50 is the change, not the percent: 50 ÷ 200 × 100 = 25%.",
+            "ur": "50 روپے تبدیلی ہے، فیصد نہیں: 50 ÷ 200 × 100 = 25%"
+          },
+          "misconception_id": "difference_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Up 10%, then down 10%. Surely we're back where we started? Can you check for me?",
+          "ur": "10% اوپر، پھر 10% نیچے۔ یقیناً ہم وہیں واپس آ گئے؟ کیا آپ جانچ سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "A price of Rs 1,000 goes up by 10%, then the new price goes down by 10%. Is it back to Rs 1,000? Explain.",
+        "ur": "1,000 روپے کی قیمت 10% بڑھتی ہے، پھر نئی قیمت 10% کم ہوتی ہے۔ کیا یہ واپس 1,000 روپے ہو گئی؟ وضاحت کریں۔"
+      },
+      "key_idea": "Up 10%: 1,000 + 100 = 1,100. Down 10% of 1,100 is 110, so 1,100 − 110 = 990. It is not back to 1,000, because the second 10% is of a bigger amount.",
+      "levels": {
+        "got_it": "Works out 1,100, then 1,100 − 110 = 990, and says the second 10% is of the bigger amount (1,100).",
+        "partly": "Says 'no' with 1,100 but not the second step, or gets 990 without a reason.",
+        "not_yet": "Says it is back to 1,000, or gives no reason."
+      },
+      "keywords": [
+        [
+          "1100",
+          "1,100"
+        ],
+        [
+          "110"
+        ],
+        [
+          "990"
+        ],
+        [
+          "bigger",
+          "more",
+          "new",
+          "زیادہ",
+          "نئی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 990, because the second 10% is of 1,100.",
+          "ur": "بہت خوب! 990، کیونکہ دوسرا 10%، 1,100 کا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now find 10% of 1,100 and take it away.",
+          "ur": "اچھی شروعات! اب 1,100 کا 10% نکالیں اور تفریق کریں۔"
+        },
+        "not_yet": {
+          "en": "Work it out: 10% of 1,000 first. Then 10% of the new price.",
+          "ur": "حساب کریں: پہلے 1,000 کا 10%۔ پھر نئی قیمت کا 10%۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_village",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A village has 2,000 people. Its population increases by 15%. How many people live there now?",
+        "ur": "ایک گاؤں میں 2,000 لوگ ہیں۔ آبادی 15% بڑھ جاتی ہے۔ اب وہاں کتنے لوگ رہتے ہیں؟"
+      },
+      "answer": 2300,
+      "checker": "numeric",
+      "hint": {
+        "en": "15% of 2,000 = 10% + 5% = 200 + 100.",
+        "ur": "2,000 کا 15% = 10% + 5% = 200 + 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 2,000 + 300 = 2,300.",
+        "ur": "درست! 2,000 + 300 = 2,300"
+      },
+      "feedback_wrong": {
+        "en": "15% of 2,000 = 300, so 2,000 + 300 = 2,300.",
+        "ur": "2,000 کا 15% = 300، تو 2,000 + 300 = 2,300"
+      },
+      "common_wrong": [
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "300 is the increase. Add it: 2,300.",
+            "ur": "300 اضافہ ہے۔ اسے جمع کریں: 2,300"
+          },
+          "misconception_id": "change_only"
+        },
+        {
+          "answer": 2015,
+          "feedback": {
+            "en": "Add 15% of 2,000 (300), not 15: 2,300.",
+            "ur": "15 نہیں، 2,000 کا 15% (300) جمع کریں: 2,300"
+          },
+          "misconception_id": "adds_the_number"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Percent of the amount, then add or take away. And compare with the original!",
+          "ur": "مقدار کا فیصد، پھر جمع یا تفریق۔ اور اصل سے موازنہ کریں!"
+        }
+      },
+      "text": {
+        "en": "To increase or decrease by a percentage, find that percentage of the amount, then add it or take it away. To find a percentage change, divide the change by the ORIGINAL amount and multiply by 100.",
+        "ur": "فیصد اضافہ یا کمی کے لیے مقدار کا وہ فیصد نکالیں، پھر جمع یا تفریق کریں۔ فیصد تبدیلی کے لیے تبدیلی کو اصل مقدار سے تقسیم کریں اور 100 سے ضرب دیں۔"
+      },
+      "points": [
+        {
+          "en": "New amount = original ± percent of it.",
+          "ur": "نئی مقدار = اصل ± اس کا فیصد"
+        },
+        {
+          "en": "% change = change ÷ original × 100",
+          "ur": "فیصد تبدیلی = تبدیلی ÷ اصل × 100"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_increase",
+      "type": "apply",
+      "skill": "maths.percent.change",
+      "step": {
+        "id": "r_increase",
+        "type": "number",
+        "prompt": {
+          "en": "Increase Rs 250 by 20%.",
+          "ur": "250 روپے میں 20% اضافہ کریں۔"
+        },
+        "answer": 300,
+        "checker": "numeric",
+        "hint": {
+          "en": "20% of 250 is 50.",
+          "ur": "250 کا 20% = 50"
+        },
+        "feedback_correct": {
+          "en": "Right! 250 + 50 = Rs 300.",
+          "ur": "درست! 250 + 50 = 300 روپے"
+        },
+        "feedback_wrong": {
+          "en": "20% of 250 = 50, so 250 + 50 = 300.",
+          "ur": "250 کا 20% = 50، تو 250 + 50 = 300"
+        },
+        "common_wrong": [
+          {
+            "answer": 50,
+            "feedback": {
+              "en": "50 is the increase. Add it: 300.",
+              "ur": "50 اضافہ ہے۔ اسے جمع کریں: 300"
+            },
+            "misconception_id": "change_only"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_change",
+      "type": "apply",
+      "skill": "maths.percent.change",
+      "step": {
+        "id": "r_change",
+        "type": "number",
+        "prompt": {
+          "en": "The number of mangoes on a tree goes from 80 to 60. What is the percentage decrease?",
+          "ur": "ایک درخت پر آموں کی تعداد 80 سے 60 ہو جاتی ہے۔ فیصد کمی کتنی ہے؟"
+        },
+        "answer": 25,
+        "checker": "numeric",
+        "hint": {
+          "en": "The decrease is 20. Divide by the original 80.",
+          "ur": "کمی 20 ہے۔ اصل 80 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 20 ÷ 80 × 100 = 25%.",
+          "ur": "درست! 20 ÷ 80 × 100 = 25%"
+        },
+        "feedback_wrong": {
+          "en": "Change 20, original 80: 20 ÷ 80 × 100 = 25.",
+          "ur": "تبدیلی 20، اصل 80: 20 ÷ 80 × 100 = 25"
+        },
+        "common_wrong": [
+          {
+            "answer": 20,
+            "feedback": {
+              "en": "20 is the decrease in mangoes. As a percent: 20 ÷ 80 × 100 = 25.",
+              "ur": "20 آموں میں کمی ہے۔ فیصد میں: 20 ÷ 80 × 100 = 25"
+            },
+            "misconception_id": "difference_as_percent"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh after matching the app with PCTB Mathematics 6 (Sub-domain 4, percentage increase and decrease). No textbook text or exercises were used.",
+    "Every answer is a whole number, so the percent sign is not typed.",
+    "Urdu terms to check: فیصد اضافہ (percentage increase), فیصد کمی (percentage decrease), اصل مقدار (original amount), رعایت (discount).",
+    "The numbers were worked out in content/sources/g6-maths-11/percentage_change.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

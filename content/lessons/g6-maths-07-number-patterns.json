@@ -1,0 +1,749 @@
+{
+  "id": "g6-maths-07-number-patterns",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Continue number patterns, and use a rule like 3n + 1 to find any term of a sequence.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Patterns and sequences"
+    }
+  ],
+  "skills": [
+    "maths.algebra.sequences"
+  ],
+  "title": {
+    "en": "Number patterns and sequences",
+    "ur": "اعداد کے نمونے اور سلسلے"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.substitution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "joins_digits",
+      "description": "Reads 3n with n = 5 as 35 instead of 3 × 5."
+    },
+    {
+      "id": "always_add",
+      "description": "Assumes every pattern adds the same number, even when it doubles or the gap grows."
+    },
+    {
+      "id": "term_for_position",
+      "description": "Puts the term's value in place of n instead of finding its position."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.sequences": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.sequences": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the rule of the pattern 3, 7, 11, 15, …?",
+            "ur": "نمونے 3، 7، 11، 15، … کا اصول کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "add_four",
+              "text": {
+                "en": "Add 4",
+                "ur": "4 جمع کریں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Each term is 4 more than the one before.",
+                "ur": "جی ہاں! ہر رکن پچھلے سے 4 زیادہ ہے۔"
+              }
+            },
+            {
+              "id": "add_three",
+              "text": {
+                "en": "Add 3",
+                "ur": "3 جمع کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3 + 3 = 6, not 7. The gap is 4.",
+                "ur": "3 + 3 = 6، 7 نہیں۔ فرق 4 ہے۔"
+              }
+            },
+            {
+              "id": "double",
+              "text": {
+                "en": "Double it",
+                "ur": "دگنا کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3 doubled is 6, not 7. The gap is always 4.",
+                "ur": "3 کا دگنا 6 ہے، 7 نہیں۔ فرق ہمیشہ 4 ہے۔"
+              },
+              "misconception_id": "always_add"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "What is the next term of 50, 45, 40, 35, …?",
+            "ur": "50، 45، 40، 35، … کا اگلا رکن کیا ہے؟"
+          },
+          "answer": 30,
+          "checker": "numeric",
+          "hint": {
+            "en": "The terms go down by 5.",
+            "ur": "رکن 5، 5 کم ہوتے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 35 − 5 = 30.",
+            "ur": "درست! 35 − 5 = 30"
+          },
+          "feedback_wrong": {
+            "en": "Each term is 5 less: 35 − 5 = 30.",
+            "ur": "ہر رکن 5 کم ہے: 35 − 5 = 30"
+          },
+          "common_wrong": [
+            {
+              "answer": 40,
+              "feedback": {
+                "en": "The pattern goes down, not up: 35 − 5 = 30.",
+                "ur": "نمونہ نیچے جا رہا ہے، اوپر نہیں: 35 − 5 = 30"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana says the next term of 1, 4, 9, 16, … is 23, because 16 + 7 = 23. What is wrong?",
+            "ur": "ثنا کہتی ہے کہ 1، 4، 9، 16، … کا اگلا رکن 23 ہے، کیونکہ 16 + 7 = 23۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "growing_gap",
+              "text": {
+                "en": "The gaps grow: +3, +5, +7, so next is +9: 25.",
+                "ur": "فرق بڑھ رہا ہے: +3، +5، +7، تو اگلا +9: 25"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! These are square numbers: 5 × 5 = 25.",
+                "ur": "جی ہاں! یہ مربع اعداد ہیں: 5 × 5 = 25"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The gaps are 3, 5, 7, so the next gap is 9: 25.",
+                "ur": "فرق 3، 5، 7 ہیں، تو اگلا فرق 9: 25"
+              },
+              "misconception_id": "always_add"
+            },
+            {
+              "id": "double",
+              "text": {
+                "en": "She should double: 32.",
+                "ur": "اسے دگنا کرنا چاہیے: 32"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "4 isn't double 1. The gaps grow by 2: 16 + 9 = 25.",
+                "ur": "4، 1 کا دگنا نہیں۔ فرق 2، 2 بڑھتا ہے: 16 + 9 = 25"
+              },
+              "misconception_id": "always_add"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_sequence",
+      "front": {
+        "en": "Sequence?",
+        "ur": "سلسلہ؟"
+      },
+      "back": {
+        "en": "Numbers in order that follow a rule, like 4, 7, 10, 13 (add 3).",
+        "ur": "ترتیب میں اعداد جو کسی اصول پر چلیں، جیسے 4، 7، 10، 13 (3 جمع)"
+      }
+    },
+    {
+      "id": "f_nth",
+      "front": {
+        "en": "nth term 3n + 1?",
+        "ur": "n واں رکن 3n + 1؟"
+      },
+      "back": {
+        "en": "Put the position in for n: the 5th term is 3 × 5 + 1 = 16.",
+        "ur": "n کی جگہ مقام رکھیں: 5واں رکن 3 × 5 + 1 = 16"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sticks",
+      "text": {
+        "en": "Make squares in a row with matchsticks or straws: 1 square, then 2, then 3. Count the sticks each time. Can you find the rule?",
+        "ur": "ماچس کی تیلیوں یا اسٹرا سے ایک قطار میں مربع بنائیں: 1 مربع، پھر 2، پھر 3۔ ہر بار تیلیاں گنیں۔ کیا آپ اصول ڈھونڈ سکتے ہیں؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Pattern",
+      "ur": "نمونہ"
+    },
+    {
+      "en": "Sequence",
+      "ur": "سلسلہ"
+    },
+    {
+      "en": "Term",
+      "ur": "رکن"
+    },
+    {
+      "en": "Rule",
+      "ur": "اصول"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "4, 7, 10, 13… What comes next? And what would the 100th number be?",
+          "ur": "4، 7، 10، 13… آگے کیا آئے گا؟ اور 100واں عدد کیا ہوگا؟"
+        }
+      },
+      "text": {
+        "en": "Today we find the rules behind number patterns, and use letters to find any term. First, a substitution warm-up.",
+        "ur": "آج ہم اعداد کے نمونوں کے پیچھے اصول ڈھونڈیں گے، اور حروف سے کوئی بھی رکن نکالیں گے۔ پہلے قیمت رکھنے کا ایک سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.algebra.substitution",
+      "prompt": {
+        "en": "Find the value of 3n + 1 when n = 5.",
+        "ur": "جب n = 5 ہو تو 3n + 1 کی قیمت معلوم کریں۔"
+      },
+      "answer": 16,
+      "checker": "numeric",
+      "hint": {
+        "en": "3n means 3 × n.",
+        "ur": "3n یعنی 3 × n"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 5 + 1 = 16.",
+        "ur": "درست! 3 × 5 + 1 = 16"
+      },
+      "feedback_wrong": {
+        "en": "3 × 5 = 15, then 15 + 1 = 16.",
+        "ur": "3 × 5 = 15، پھر 15 + 1 = 16"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "3n is 3 × 5, not 35: 15 + 1 = 16.",
+            "ur": "3n یعنی 3 × 5، 35 نہیں: 15 + 1 = 16"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Find the rule, and you can jump to any term without counting!",
+          "ur": "اصول ڈھونڈ لیں، تو گنے بغیر کسی بھی رکن تک پہنچ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A sequence is a list of numbers that follow a rule. Each number is a term. In 4, 7, 10, 13, … the rule is 'add 3'. We can also write a rule for the nth term: here it is 3n + 1. Put n = 1 to get 4, n = 2 to get 7, and n = 100 to get 301. Some patterns don't add the same amount: 2, 4, 8, 16 doubles each time.",
+        "ur": "سلسلہ اعداد کی فہرست ہے جو کسی اصول پر چلتی ہے۔ ہر عدد ایک رکن ہے۔ 4، 7، 10، 13، … میں اصول '3 جمع کریں' ہے۔ ہم n ویں رکن کا اصول بھی لکھ سکتے ہیں: یہاں 3n + 1 ہے۔ n = 1 رکھیں تو 4، n = 2 رکھیں تو 7، اور n = 100 رکھیں تو 301۔ کچھ نمونوں میں ہر بار ایک جتنا جمع نہیں ہوتا: 2، 4، 8، 16 ہر بار دگنا ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "s4_next",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the next term of 5, 9, 13, 17, …?",
+        "ur": "5، 9، 13، 17، … کا اگلا رکن کیا ہے؟"
+      },
+      "answer": 21,
+      "checker": "numeric",
+      "hint": {
+        "en": "How much is added each time?",
+        "ur": "ہر بار کتنا جمع ہوتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! Add 4: 17 + 4 = 21.",
+        "ur": "درست! 4 جمع: 17 + 4 = 21"
+      },
+      "feedback_wrong": {
+        "en": "The rule is add 4: 17 + 4 = 21.",
+        "ur": "اصول 4 جمع کرنا ہے: 17 + 4 = 21"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "The gap is 4, not 1: 17 + 4 = 21.",
+            "ur": "فرق 4 ہے، 1 نہیں: 17 + 4 = 21"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_double",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the next term of 2, 4, 8, 16, …?",
+        "ur": "2، 4، 8، 16، … کا اگلا رکن کیا ہے؟"
+      },
+      "answer": 32,
+      "checker": "numeric",
+      "hint": {
+        "en": "Look: 2 × 2 = 4, 4 × 2 = 8 …",
+        "ur": "دیکھیں: 2 × 2 = 4، 4 × 2 = 8 …"
+      },
+      "feedback_correct": {
+        "en": "Right! Each term doubles: 32.",
+        "ur": "درست! ہر رکن دگنا ہوتا ہے: 32"
+      },
+      "feedback_wrong": {
+        "en": "The rule is 'double': 16 × 2 = 32.",
+        "ur": "اصول 'دگنا' ہے: 16 × 2 = 32"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "The gaps are 2, 4, 8, not always 2. Each term doubles: 32.",
+            "ur": "فرق 2، 4، 8 ہیں، ہمیشہ 2 نہیں۔ ہر رکن دگنا ہوتا ہے: 32"
+          },
+          "misconception_id": "always_add"
+        },
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "Adding 8 again doesn't fit 2, 4, 8. Double: 32.",
+            "ur": "دوبارہ 8 جمع کرنا 2، 4، 8 پر پورا نہیں اترتا۔ دگنا کریں: 32"
+          },
+          "misconception_id": "always_add"
+        }
+      ]
+    },
+    {
+      "id": "s6_which_rule",
+      "type": "choice",
+      "prompt": {
+        "en": "What is the rule of 3, 8, 13, 18, …?",
+        "ur": "3، 8، 13، 18، … کا اصول کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "add_five",
+          "text": {
+            "en": "Add 5",
+            "ur": "5 جمع کریں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3 + 5 = 8, 8 + 5 = 13.",
+            "ur": "جی ہاں! 3 + 5 = 8، 8 + 5 = 13"
+          }
+        },
+        {
+          "id": "add_three",
+          "text": {
+            "en": "Add 3",
+            "ur": "3 جمع کریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 + 3 = 6, not 8. The gap is 5.",
+            "ur": "3 + 3 = 6، 8 نہیں۔ فرق 5 ہے۔"
+          }
+        },
+        {
+          "id": "double",
+          "text": {
+            "en": "Double and add 2",
+            "ur": "دگنا کر کے 2 جمع"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 8, but then 18, not 13. The rule is add 5.",
+            "ur": "اس سے 8 تو آتا ہے، مگر پھر 18، 13 نہیں۔ اصول 5 جمع کرنا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_tenth",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A sequence has nth term 2n + 3. What is its 10th term?",
+        "ur": "ایک سلسلے کا n واں رکن 2n + 3 ہے۔ اس کا 10واں رکن کیا ہے؟"
+      },
+      "answer": 23,
+      "checker": "numeric",
+      "hint": {
+        "en": "Put n = 10 into 2n + 3.",
+        "ur": "2n + 3 میں n = 10 رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 10 + 3 = 23.",
+        "ur": "درست! 2 × 10 + 3 = 23"
+      },
+      "feedback_wrong": {
+        "en": "2 × 10 = 20, then 20 + 3 = 23.",
+        "ur": "2 × 10 = 20، پھر 20 + 3 = 23"
+      },
+      "common_wrong": [
+        {
+          "answer": 213,
+          "feedback": {
+            "en": "2n is 2 × 10, not 210: 20 + 3 = 23.",
+            "ur": "2n یعنی 2 × 10، 210 نہیں: 20 + 3 = 23"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s8_which_term",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A sequence has nth term 4n − 1. Which term is 39? (Find n.)",
+        "ur": "ایک سلسلے کا n واں رکن 4n − 1 ہے۔ 39 کون سا رکن ہے؟ (n معلوم کریں۔)"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "4n − 1 = 39, so 4n = 40.",
+        "ur": "4n − 1 = 39، تو 4n = 40"
+      },
+      "feedback_correct": {
+        "en": "Right! The 10th term: 4 × 10 − 1 = 39.",
+        "ur": "درست! 10واں رکن: 4 × 10 − 1 = 39"
+      },
+      "feedback_wrong": {
+        "en": "4n = 40, so n = 10. Check: 4 × 10 − 1 = 39.",
+        "ur": "4n = 40، تو n = 10۔ جانچ: 4 × 10 − 1 = 39"
+      },
+      "common_wrong": [
+        {
+          "answer": 155,
+          "feedback": {
+            "en": "39 is the term, not n. Solve 4n − 1 = 39: n = 10.",
+            "ur": "39 رکن ہے، n نہیں۔ 4n − 1 = 39 حل کریں: n = 10"
+          },
+          "misconception_id": "term_for_position"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ali finds the 6th term of 3n + 2. He writes 36 + 2 = 38. What is wrong?",
+        "ur": "علی 3n + 2 کا چھٹا رکن نکالتا ہے۔ وہ لکھتا ہے 36 + 2 = 38۔ کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "times",
+          "text": {
+            "en": "3n means 3 × 6 = 18, so the 6th term is 20.",
+            "ur": "3n یعنی 3 × 6 = 18، تو چھٹا رکن 20 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A number next to a letter means multiply.",
+            "ur": "جی ہاں! حرف کے ساتھ عدد یعنی ضرب۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3n is 3 × 6, not 36: 18 + 2 = 20.",
+            "ur": "3n یعنی 3 × 6، 36 نہیں: 18 + 2 = 20"
+          },
+          "misconception_id": "joins_digits"
+        },
+        {
+          "id": "count",
+          "text": {
+            "en": "He should count on 6 from 3: 9.",
+            "ur": "اسے 3 سے 6 آگے گننا چاہیے: 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Put n = 6 into 3n + 2: 3 × 6 + 2 = 20.",
+            "ur": "3n + 2 میں n = 6 رکھیں: 3 × 6 + 2 = 20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "1 square takes 4 sticks, 2 squares take 7, 3 squares take 10. Why 3n + 1? Teach me!",
+          "ur": "1 مربع میں 4 تیلیاں، 2 میں 7، 3 میں 10۔ 3n + 1 کیوں؟ مجھے سکھائیں!"
+        }
+      },
+      "task": {
+        "en": "Squares in a row need 4, 7, 10, … matchsticks. Explain why n squares need 3n + 1 sticks.",
+        "ur": "قطار میں مربعوں کے لیے 4، 7، 10، … تیلیاں لگتی ہیں۔ بتائیں کہ n مربعوں کے لیے 3n + 1 تیلیاں کیوں لگتی ہیں۔"
+      },
+      "key_idea": "The first square needs 4 sticks. Each new square shares a side with the one before, so it needs only 3 more. So n squares need 1 + 3n sticks: the 1 is the first side, and each square adds 3.",
+      "levels": {
+        "got_it": "Says each new square adds 3 sticks (it shares a side), and the extra 1 is the first side, so 3n + 1.",
+        "partly": "Says 'add 3 each time' but doesn't explain the + 1, or the other way round.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "3",
+          "three",
+          "تین"
+        ],
+        [
+          "share",
+          "same side",
+          "مشترک"
+        ],
+        [
+          "1",
+          "first",
+          "پہلا",
+          "ایک"
+        ],
+        [
+          "each",
+          "every",
+          "ہر"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 3 per square, plus 1 to start.",
+          "ur": "بہت خوب! ہر مربع کی 3، اور شروع کی 1۔"
+        },
+        "partly": {
+          "en": "Good start! Where does the + 1 come from?",
+          "ur": "اچھی شروعات! + 1 کہاں سے آتا ہے؟"
+        },
+        "not_yet": {
+          "en": "How many new sticks does each new square need? Why not 4?",
+          "ur": "ہر نئے مربع کو کتنی نئی تیلیاں چاہئیں؟ 4 کیوں نہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_twentieth",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The sequence 7, 11, 15, 19, … has nth term 4n + 3. What is the 20th term?",
+        "ur": "سلسلے 7، 11، 15، 19، … کا n واں رکن 4n + 3 ہے۔ 20واں رکن کیا ہے؟"
+      },
+      "answer": 83,
+      "checker": "numeric",
+      "hint": {
+        "en": "Put n = 20.",
+        "ur": "n = 20 رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 20 + 3 = 83.",
+        "ur": "درست! 4 × 20 + 3 = 83"
+      },
+      "feedback_wrong": {
+        "en": "4 × 20 = 80, then 80 + 3 = 83.",
+        "ur": "4 × 20 = 80، پھر 80 + 3 = 83"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "Don't forget the + 3: 80 + 3 = 83.",
+            "ur": "+ 3 نہ بھولیں: 80 + 3 = 83"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Patterns have rules, and rules let you find any term. Brilliant!",
+          "ur": "نمونوں کے اصول ہوتے ہیں، اور اصول سے کوئی بھی رکن مل جاتا ہے۔ زبردست!"
+        }
+      },
+      "text": {
+        "en": "A sequence follows a rule. Find the gap between terms to continue it, but check: some patterns double or have growing gaps. A rule like 3n + 1 gives any term: put the position in for n. To find which term a number is, solve the rule equal to it.",
+        "ur": "سلسلہ کسی اصول پر چلتا ہے۔ آگے بڑھانے کے لیے ارکان کا فرق دیکھیں، مگر جانچیں: کچھ نمونے دگنے ہوتے ہیں یا ان کا فرق بڑھتا ہے۔ 3n + 1 جیسا اصول کوئی بھی رکن دیتا ہے: n کی جگہ مقام رکھیں۔ کوئی عدد کون سا رکن ہے، یہ جاننے کے لیے اصول کو اس کے برابر رکھ کر حل کریں۔"
+      },
+      "points": [
+        {
+          "en": "nth term: put n = position.",
+          "ur": "n واں رکن: n = مقام رکھیں۔"
+        },
+        {
+          "en": "Check the gaps: add, double or growing?",
+          "ur": "فرق دیکھیں: جمع، دگنا یا بڑھتا ہوا؟"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_term",
+      "type": "apply",
+      "skill": "maths.algebra.sequences",
+      "step": {
+        "id": "r_term",
+        "type": "number",
+        "prompt": {
+          "en": "A sequence has nth term 6n − 2. What is the 4th term?",
+          "ur": "ایک سلسلے کا n واں رکن 6n − 2 ہے۔ چوتھا رکن کیا ہے؟"
+        },
+        "answer": 22,
+        "checker": "numeric",
+        "hint": {
+          "en": "Put n = 4.",
+          "ur": "n = 4 رکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 × 4 − 2 = 22.",
+          "ur": "درست! 6 × 4 − 2 = 22"
+        },
+        "feedback_wrong": {
+          "en": "6 × 4 = 24, then 24 − 2 = 22.",
+          "ur": "6 × 4 = 24، پھر 24 − 2 = 22"
+        },
+        "common_wrong": [
+          {
+            "answer": 62,
+            "feedback": {
+              "en": "6n is 6 × 4, not 64: 24 − 2 = 22.",
+              "ur": "6n یعنی 6 × 4، 64 نہیں: 24 − 2 = 22"
+            },
+            "misconception_id": "joins_digits"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_next",
+      "type": "apply",
+      "skill": "maths.algebra.sequences",
+      "step": {
+        "id": "r_next",
+        "type": "number",
+        "prompt": {
+          "en": "What is the next term of 3, 6, 12, 24, …?",
+          "ur": "3، 6، 12، 24، … کا اگلا رکن کیا ہے؟"
+        },
+        "answer": 48,
+        "checker": "numeric",
+        "hint": {
+          "en": "Look at how each term is made from the one before.",
+          "ur": "دیکھیں ہر رکن پچھلے سے کیسے بنتا ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! It doubles: 48.",
+          "ur": "درست! یہ دگنا ہوتا ہے: 48"
+        },
+        "feedback_wrong": {
+          "en": "Each term doubles: 24 × 2 = 48.",
+          "ur": "ہر رکن دگنا ہوتا ہے: 24 × 2 = 48"
+        },
+        "common_wrong": [
+          {
+            "answer": 36,
+            "feedback": {
+              "en": "The gaps are 3, 6, 12, so each term doubles: 48.",
+              "ur": "فرق 3، 6، 12 ہیں، تو ہر رکن دگنا ہوتا ہے: 48"
+            },
+            "misconception_id": "always_add"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh after matching the app with PCTB Mathematics 6 (Sub-domain 6, patterns and sequences). No textbook text or exercises were used.",
+    "s8 (which term is 39?) uses the one-step equations of the earlier Simple equations lesson.",
+    "Urdu terms to check: نمونہ (pattern), سلسلہ (sequence), رکن (term), اصول (rule).",
+    "The numbers were worked out in content/sources/g6-maths-07/number_patterns.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

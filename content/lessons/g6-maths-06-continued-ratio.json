@@ -1,0 +1,757 @@
+{
+  "id": "g6-maths-06-continued-ratio",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find and simplify a continued ratio of three quantities, and share an amount in a continued ratio.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, 4.2 Ratio (continued ratio)"
+    }
+  ],
+  "skills": [
+    "maths.ratio.continued"
+  ],
+  "title": {
+    "en": "Continued ratio",
+    "ur": "مسلسل نسبت"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.equivalent"
+    },
+    {
+      "skill": "maths.ratio.share"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "joins_without_matching",
+      "description": "Joins a:b and b:c into a:b:c without making the two b's the same."
+    },
+    {
+      "id": "divides_by_count",
+      "description": "Shares an amount by the number of people (3) instead of the total parts."
+    },
+    {
+      "id": "not_all_terms",
+      "description": "Divides only some terms of the ratio when simplifying."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.continued": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.continued": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "A continued ratio like 2:3:4 compares …",
+            "ur": "2:3:4 جیسی مسلسل نسبت موازنہ کرتی ہے …"
+          },
+          "options": [
+            {
+              "id": "three",
+              "text": {
+                "en": "three or more quantities",
+                "ur": "تین یا زیادہ مقداروں کا"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 2:3:4 compares three quantities at once.",
+                "ur": "جی ہاں! 2:3:4 ایک ساتھ تین مقداروں کا موازنہ کرتی ہے۔"
+              }
+            },
+            {
+              "id": "two",
+              "text": {
+                "en": "only two quantities",
+                "ur": "صرف دو مقداروں کا"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A ratio like 2:3 compares two. A continued ratio compares three or more.",
+                "ur": "2:3 جیسی نسبت دو کا موازنہ کرتی ہے۔ مسلسل نسبت تین یا زیادہ کا۔"
+              }
+            },
+            {
+              "id": "time",
+              "text": {
+                "en": "things that happen one after another",
+                "ur": "ایک کے بعد ایک ہونے والی چیزوں کا"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "'Continued' means the ratio carries on to a third term: a:b:c.",
+                "ur": "'مسلسل' یعنی نسبت تیسرے حصے تک چلتی ہے: a:b:c"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Share Rs 120 in the ratio 1:2:3. What is the largest share?",
+            "ur": "120 روپے کو 1:2:3 کی نسبت سے بانٹیں۔ سب سے بڑا حصہ کتنا ہے؟"
+          },
+          "answer": 60,
+          "checker": "numeric",
+          "hint": {
+            "en": "1 + 2 + 3 = 6 parts. One part is 120 ÷ 6.",
+            "ur": "1 + 2 + 3 = 6 حصے۔ ایک حصہ 120 ÷ 6"
+          },
+          "feedback_correct": {
+            "en": "Right! One part is Rs 20, so 3 parts are Rs 60.",
+            "ur": "درست! ایک حصہ 20 روپے، تو 3 حصے 60 روپے۔"
+          },
+          "feedback_wrong": {
+            "en": "120 ÷ 6 = 20 for one part; 3 × 20 = 60.",
+            "ur": "ایک حصہ 120 ÷ 6 = 20؛ 3 × 20 = 60"
+          },
+          "common_wrong": [
+            {
+              "answer": 40,
+              "feedback": {
+                "en": "Don't divide by 3 people: there are 1 + 2 + 3 = 6 parts. 3 × 20 = 60.",
+                "ur": "3 لوگوں سے تقسیم نہ کریں: 1 + 2 + 3 = 6 حصے ہیں۔ 3 × 20 = 60"
+              },
+              "misconception_id": "divides_by_count"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal simplifies 8:12:20 and writes 2:3:20. What is wrong?",
+            "ur": "بلال 8:12:20 کو مختصر کر کے 2:3:20 لکھتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "all_terms",
+              "text": {
+                "en": "Every term must be divided by 4: 2:3:5.",
+                "ur": "ہر حصے کو 4 سے تقسیم کرنا ہے: 2:3:5"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Divide all three terms by the same number.",
+                "ur": "جی ہاں! تینوں حصوں کو ایک ہی عدد سے تقسیم کریں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "He forgot to divide 20 by 4. 8:12:20 = 2:3:5.",
+                "ur": "وہ 20 کو 4 سے تقسیم کرنا بھول گیا۔ 8:12:20 = 2:3:5"
+              },
+              "misconception_id": "not_all_terms"
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "He should add 4 to each term.",
+                "ur": "اسے ہر حصے میں 4 جمع کرنا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Ratios are simplified by dividing every term: 2:3:5.",
+                "ur": "نسبت کو ہر حصہ تقسیم کر کے مختصر کرتے ہیں: 2:3:5"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_continued",
+      "front": {
+        "en": "Continued ratio?",
+        "ur": "مسلسل نسبت؟"
+      },
+      "back": {
+        "en": "A ratio of three or more quantities, like a:b:c = 2:3:4.",
+        "ur": "تین یا زیادہ مقداروں کی نسبت، جیسے a:b:c = 2:3:4"
+      }
+    },
+    {
+      "id": "f_join",
+      "front": {
+        "en": "a:b and b:c to a:b:c?",
+        "ur": "a:b اور b:c سے a:b:c؟"
+      },
+      "back": {
+        "en": "Make the two b's the same first: 2:3 and 4:5 become 8:12 and 12:15, so 8:12:15.",
+        "ur": "پہلے دونوں b برابر کریں: 2:3 اور 4:5 بنتے ہیں 8:12 اور 12:15، تو 8:12:15"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_recipe",
+      "text": {
+        "en": "Find a recipe at home with three main things (like rice, water and lentils). Write their amounts as a continued ratio and simplify it.",
+        "ur": "گھر میں کوئی ترکیب ڈھونڈیں جس میں تین اہم چیزیں ہوں (جیسے چاول، پانی اور دال)۔ ان کی مقداریں مسلسل نسبت میں لکھیں اور مختصر کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Continued ratio",
+      "ur": "مسلسل نسبت"
+    },
+    {
+      "en": "Term",
+      "ur": "حصہ (رکن)"
+    },
+    {
+      "en": "Simplest form",
+      "ur": "مختصر ترین شکل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Three friends share sweets: 2 for Ali, 3 for Bilal, 4 for Hamza. How do we write that as one ratio?",
+          "ur": "تین دوست مٹھائی بانٹتے ہیں: علی کی 2، بلال کی 3، حمزہ کی 4۔ اسے ایک نسبت میں کیسے لکھیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn continued ratios: ratios of three quantities. First, simplify a ratio of two.",
+        "ur": "آج ہم مسلسل نسبت سیکھیں گے: تین مقداروں کی نسبت۔ پہلے دو کی نسبت مختصر کریں۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.ratio.equivalent",
+      "prompt": {
+        "en": "Write 12:18 in its simplest form.",
+        "ur": "12:18 کو مختصر ترین شکل میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "2:3",
+      "accept": [
+        "2 to 3",
+        "2∶3"
+      ],
+      "hint": {
+        "en": "Divide both by 6.",
+        "ur": "دونوں کو 6 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12:18 = 2:3.",
+        "ur": "درست! 12:18 = 2:3"
+      },
+      "feedback_wrong": {
+        "en": "12 ÷ 6 = 2 and 18 ÷ 6 = 3, so 2:3.",
+        "ur": "12 ÷ 6 = 2 اور 18 ÷ 6 = 3، تو 2:3"
+      },
+      "common_wrong": [
+        {
+          "answer": "6:9",
+          "feedback": {
+            "en": "6:9 is right but not simplest: divide by 3 again, 2:3.",
+            "ur": "6:9 ٹھیک ہے مگر مختصر ترین نہیں: دوبارہ 3 سے تقسیم کریں، 2:3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Same rules as before, just one more term. Divide every term by the same number!",
+          "ur": "وہی اصول، بس ایک حصہ اور۔ ہر حصے کو ایک ہی عدد سے تقسیم کریں!"
+        }
+      },
+      "text": {
+        "en": "A continued ratio compares three or more quantities: Ali : Bilal : Hamza = 2 : 3 : 4. To simplify it, divide every term by the same number: 10:15:20 = 2:3:4. To join a:b and b:c, the two b's must be the same: a:b = 2:3 and b:c = 3:5 give a:b:c = 2:3:5. To share an amount, add the parts (2 + 3 + 4 = 9), find one part, then multiply.",
+        "ur": "مسلسل نسبت تین یا زیادہ مقداروں کا موازنہ کرتی ہے: علی : بلال : حمزہ = 2 : 3 : 4۔ اسے مختصر کرنے کے لیے ہر حصے کو ایک ہی عدد سے تقسیم کریں: 10:15:20 = 2:3:4۔ a:b اور b:c کو جوڑنے کے لیے دونوں b برابر ہونے چاہئیں: a:b = 2:3 اور b:c = 3:5 سے a:b:c = 2:3:5۔ کوئی رقم بانٹنے کے لیے حصے جمع کریں (2 + 3 + 4 = 9)، ایک حصہ نکالیں، پھر ضرب دیں۔"
+      }
+    },
+    {
+      "id": "s4_simplify",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 10:15:20 in its simplest form.",
+        "ur": "10:15:20 کو مختصر ترین شکل میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "2:3:4",
+      "accept": [
+        "2∶3∶4"
+      ],
+      "hint": {
+        "en": "All three can be divided by 5.",
+        "ur": "تینوں 5 سے تقسیم ہو سکتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 10:15:20 = 2:3:4.",
+        "ur": "درست! 10:15:20 = 2:3:4"
+      },
+      "feedback_wrong": {
+        "en": "Divide each term by 5: 2, 3, 4. So 2:3:4.",
+        "ur": "ہر حصے کو 5 سے تقسیم کریں: 2، 3، 4۔ تو 2:3:4"
+      },
+      "common_wrong": [
+        {
+          "answer": "2:3:20",
+          "feedback": {
+            "en": "Divide the last term by 5 too: 20 ÷ 5 = 4. So 2:3:4.",
+            "ur": "آخری حصہ بھی 5 سے تقسیم کریں: 20 ÷ 5 = 4۔ تو 2:3:4"
+          },
+          "misconception_id": "not_all_terms"
+        }
+      ]
+    },
+    {
+      "id": "s5_share",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Rs 900 is shared among three children in the ratio 2:3:4. What is the smallest share?",
+        "ur": "900 روپے تین بچوں میں 2:3:4 کی نسبت سے بانٹے جاتے ہیں۔ سب سے چھوٹا حصہ کتنا ہے؟"
+      },
+      "answer": 200,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 + 3 + 4 = 9 parts. One part is 900 ÷ 9.",
+        "ur": "2 + 3 + 4 = 9 حصے۔ ایک حصہ 900 ÷ 9"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is Rs 100, so 2 parts are Rs 200.",
+        "ur": "درست! ایک حصہ 100 روپے، تو 2 حصے 200 روپے۔"
+      },
+      "feedback_wrong": {
+        "en": "900 ÷ 9 = 100; the smallest share is 2 × 100 = 200.",
+        "ur": "900 ÷ 9 = 100؛ سب سے چھوٹا حصہ 2 × 100 = 200"
+      },
+      "common_wrong": [
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "Don't divide by 3 children: there are 9 parts. 2 × 100 = 200.",
+            "ur": "3 بچوں سے تقسیم نہ کریں: 9 حصے ہیں۔ 2 × 100 = 200"
+          },
+          "misconception_id": "divides_by_count"
+        }
+      ]
+    },
+    {
+      "id": "s6_join",
+      "type": "choice",
+      "prompt": {
+        "en": "a:b = 2:3 and b:c = 3:5. What is a:b:c?",
+        "ur": "a:b = 2:3 اور b:c = 3:5۔ a:b:c کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "two_three_five",
+          "text": {
+            "en": "2:3:5",
+            "ur": "2:3:5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! b is 3 in both, so they join at once.",
+            "ur": "جی ہاں! دونوں میں b = 3 ہے، تو سیدھا جڑ جاتے ہیں۔"
+          }
+        },
+        {
+          "id": "two_six_five",
+          "text": {
+            "en": "2:6:5",
+            "ur": "2:6:5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Don't add the b's. b is 3 in both: 2:3:5.",
+            "ur": "b جمع نہ کریں۔ دونوں میں b = 3 ہے: 2:3:5"
+          }
+        },
+        {
+          "id": "five_three_two",
+          "text": {
+            "en": "5:3:2",
+            "ur": "5:3:2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Keep the order a, b, c: 2:3:5.",
+            "ur": "ترتیب a، b، c رکھیں: 2:3:5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_match",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "a:b = 2:3 and b:c = 4:5. Make the b's the same and write a:b:c.",
+        "ur": "a:b = 2:3 اور b:c = 4:5۔ b برابر کریں اور a:b:c لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "8:12:15",
+      "accept": [
+        "8∶12∶15"
+      ],
+      "hint": {
+        "en": "Make b = 12: 2:3 = 8:12 and 4:5 = 12:15.",
+        "ur": "b = 12 بنائیں: 2:3 = 8:12 اور 4:5 = 12:15"
+      },
+      "feedback_correct": {
+        "en": "Right! a:b:c = 8:12:15.",
+        "ur": "درست! a:b:c = 8:12:15"
+      },
+      "feedback_wrong": {
+        "en": "2:3 × 4 = 8:12 and 4:5 × 3 = 12:15, so a:b:c = 8:12:15.",
+        "ur": "2:3 کو 4 سے ضرب = 8:12 اور 4:5 کو 3 سے ضرب = 12:15، تو a:b:c = 8:12:15"
+      },
+      "common_wrong": [
+        {
+          "answer": "2:3:5",
+          "feedback": {
+            "en": "b is 3 in one ratio and 4 in the other. Make both 12 first: 8:12:15.",
+            "ur": "ایک نسبت میں b = 3 ہے اور دوسری میں 4۔ پہلے دونوں 12 بنائیں: 8:12:15"
+          },
+          "misconception_id": "joins_without_matching"
+        },
+        {
+          "answer": "2:7:5",
+          "feedback": {
+            "en": "Don't add the b's. Make them equal: 8:12:15.",
+            "ur": "b جمع نہ کریں۔ انہیں برابر کریں: 8:12:15"
+          },
+          "misconception_id": "joins_without_matching"
+        }
+      ]
+    },
+    {
+      "id": "s8_recipe",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A cake mix has flour, sugar and butter in the ratio 5:2:3. The mix weighs 500 g. How many grams of sugar are in it?",
+        "ur": "کیک کے آمیزے میں آٹا، چینی اور مکھن 5:2:3 کی نسبت میں ہیں۔ آمیزہ 500 گرام کا ہے۔ اس میں کتنے گرام چینی ہے؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 + 2 + 3 = 10 parts. One part is 500 ÷ 10.",
+        "ur": "5 + 2 + 3 = 10 حصے۔ ایک حصہ 500 ÷ 10"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 50 g, so sugar is 100 g.",
+        "ur": "درست! ایک حصہ 50 گرام، تو چینی 100 گرام۔"
+      },
+      "feedback_wrong": {
+        "en": "500 ÷ 10 = 50; sugar is 2 × 50 = 100 g.",
+        "ur": "500 ÷ 10 = 50؛ چینی 2 × 50 = 100 گرام"
+      },
+      "common_wrong": [
+        {
+          "answer": 250,
+          "feedback": {
+            "en": "500 ÷ 2 halves it. Use all 10 parts: 2 × 50 = 100.",
+            "ur": "500 ÷ 2 آدھا کرتا ہے۔ تمام 10 حصے لیں: 2 × 50 = 100"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "a:b = 1:2 and b:c = 3:4. Sana writes a:b:c = 1:2:4. What is wrong?",
+        "ur": "a:b = 1:2 اور b:c = 3:4۔ ثنا a:b:c = 1:2:4 لکھتی ہے۔ کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "match",
+          "text": {
+            "en": "The b's are 2 and 3. Make both 6: 3:6 and 6:8, so 3:6:8.",
+            "ur": "b ایک میں 2 اور دوسرے میں 3 ہے۔ دونوں 6 بنائیں: 3:6 اور 6:8، تو 3:6:8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The middle term must match before joining.",
+            "ur": "جی ہاں! جوڑنے سے پہلے درمیانی حصہ برابر ہونا چاہیے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "In 1:2:4, b:c is 2:4 = 1:2, not 3:4. The answer is 3:6:8.",
+            "ur": "1:2:4 میں b:c = 2:4 = 1:2 ہے، 3:4 نہیں۔ جواب 3:6:8 ہے۔"
+          },
+          "misconception_id": "joins_without_matching"
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "Add the ratios: 4:6.",
+            "ur": "نسبتیں جمع کریں: 4:6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Ratios are not added. Match the b's: 3:6:8.",
+            "ur": "نسبتیں جمع نہیں ہوتیں۔ b برابر کریں: 3:6:8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why can't I just write the numbers next to each other? Teach me!",
+          "ur": "میں اعداد کو ساتھ ساتھ کیوں نہیں لکھ سکتا؟ مجھے سکھائیں!"
+        }
+      },
+      "task": {
+        "en": "Ali : Bilal = 2 : 3 and Bilal : Hamza = 4 : 5. Explain why Ali : Bilal : Hamza is not 2 : 3 : 5.",
+        "ur": "علی : بلال = 2 : 3 اور بلال : حمزہ = 4 : 5۔ بتائیں کہ علی : بلال : حمزہ، 2 : 3 : 5 کیوں نہیں ہے۔"
+      },
+      "key_idea": "Bilal is 3 parts in one ratio and 4 parts in the other, so the parts are different sizes. Make Bilal the same in both (12): 8:12 and 12:15. So Ali : Bilal : Hamza = 8 : 12 : 15.",
+      "levels": {
+        "got_it": "Says Bilal's parts differ (3 and 4), makes them the same (12), and gives 8:12:15.",
+        "partly": "Says the b's must be the same but doesn't finish, or gives 8:12:15 without a reason.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "same",
+          "equal",
+          "برابر"
+        ],
+        [
+          "12",
+          "twelve",
+          "بارہ"
+        ],
+        [
+          "8:12:15",
+          "8 : 12 : 15"
+        ],
+        [
+          "Bilal",
+          "b",
+          "بلال"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Bilal must be the same: 8:12:15.",
+          "ur": "بہت خوب! بلال برابر ہونا چاہیے: 8:12:15"
+        },
+        "partly": {
+          "en": "Good start! Now make Bilal 12 in both ratios.",
+          "ur": "اچھی شروعات! اب دونوں نسبتوں میں بلال کو 12 بنائیں۔"
+        },
+        "not_yet": {
+          "en": "Bilal is 3 in one ratio and 4 in the other. Can both be 12?",
+          "ur": "بلال ایک نسبت میں 3 اور دوسری میں 4 ہے۔ کیا دونوں 12 ہو سکتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_ages",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The ages of three brothers are in the ratio 3:4:5. Their ages add up to 36 years. How old is the oldest?",
+        "ur": "تین بھائیوں کی عمریں 3:4:5 کی نسبت میں ہیں۔ ان کی عمروں کا مجموعہ 36 سال ہے۔ سب سے بڑا کتنے سال کا ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 + 4 + 5 = 12 parts. One part is 36 ÷ 12.",
+        "ur": "3 + 4 + 5 = 12 حصے۔ ایک حصہ 36 ÷ 12"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 3 years, so the oldest is 15.",
+        "ur": "درست! ایک حصہ 3 سال، تو سب سے بڑا 15 سال کا۔"
+      },
+      "feedback_wrong": {
+        "en": "36 ÷ 12 = 3; the oldest is 5 × 3 = 15 years.",
+        "ur": "36 ÷ 12 = 3؛ سب سے بڑا 5 × 3 = 15 سال"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "Don't divide by 3 brothers: there are 12 parts. 5 × 3 = 15.",
+            "ur": "3 بھائیوں سے تقسیم نہ کریں: 12 حصے ہیں۔ 5 × 3 = 15"
+          },
+          "misconception_id": "divides_by_count"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Two terms or three, the rules stay the same. Well done!",
+          "ur": "دو حصے ہوں یا تین، اصول وہی رہتے ہیں۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "A continued ratio compares three or more quantities. Simplify by dividing every term by the same number. To join a:b and b:c, first make the b's the same. To share, add all the parts, find one part, then multiply.",
+        "ur": "مسلسل نسبت تین یا زیادہ مقداروں کا موازنہ کرتی ہے۔ ہر حصے کو ایک ہی عدد سے تقسیم کر کے مختصر کریں۔ a:b اور b:c جوڑنے کے لیے پہلے b برابر کریں۔ بانٹنے کے لیے سب حصے جمع کریں، ایک حصہ نکالیں، پھر ضرب دیں۔"
+      },
+      "points": [
+        {
+          "en": "Divide every term.",
+          "ur": "ہر حصہ تقسیم کریں۔"
+        },
+        {
+          "en": "Match b before joining.",
+          "ur": "جوڑنے سے پہلے b برابر کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_simplify",
+      "type": "apply",
+      "skill": "maths.ratio.continued",
+      "step": {
+        "id": "r_simplify",
+        "type": "text_check",
+        "prompt": {
+          "en": "Write 6:9:12 in its simplest form.",
+          "ur": "6:9:12 کو مختصر ترین شکل میں لکھیں۔"
+        },
+        "checker": "text",
+        "expected": "2:3:4",
+        "accept": [
+          "2∶3∶4"
+        ],
+        "hint": {
+          "en": "All three can be divided by 3.",
+          "ur": "تینوں 3 سے تقسیم ہو سکتے ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 2:3:4.",
+          "ur": "درست! 2:3:4"
+        },
+        "feedback_wrong": {
+          "en": "6 ÷ 3, 9 ÷ 3, 12 ÷ 3: 2:3:4.",
+          "ur": "6 ÷ 3، 9 ÷ 3، 12 ÷ 3: 2:3:4"
+        },
+        "common_wrong": [
+          {
+            "answer": "2:3:12",
+            "feedback": {
+              "en": "Divide 12 by 3 too: 2:3:4.",
+              "ur": "12 کو بھی 3 سے تقسیم کریں: 2:3:4"
+            },
+            "misconception_id": "not_all_terms"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_share",
+      "type": "apply",
+      "skill": "maths.ratio.continued",
+      "step": {
+        "id": "r_share",
+        "type": "number",
+        "prompt": {
+          "en": "Rs 1,000 is shared in the ratio 1:4:5. What is the middle share (4 parts)?",
+          "ur": "1,000 روپے 1:4:5 کی نسبت سے بانٹے جاتے ہیں۔ درمیانی حصہ (4 حصے) کتنا ہے؟"
+        },
+        "answer": 400,
+        "checker": "numeric",
+        "hint": {
+          "en": "1 + 4 + 5 = 10 parts.",
+          "ur": "1 + 4 + 5 = 10 حصے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 4 × 100 = Rs 400.",
+          "ur": "درست! 4 × 100 = 400 روپے"
+        },
+        "feedback_wrong": {
+          "en": "1,000 ÷ 10 = 100; 4 × 100 = 400.",
+          "ur": "1,000 ÷ 10 = 100؛ 4 × 100 = 400"
+        },
+        "common_wrong": [
+          {
+            "answer": 250,
+            "feedback": {
+              "en": "1,000 ÷ 4 is not one part. There are 10 parts: 4 × 100 = 400.",
+              "ur": "1,000 ÷ 4 ایک حصہ نہیں۔ 10 حصے ہیں: 4 × 100 = 400"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh after matching the app with PCTB Mathematics 6 (Sub-domain 4, continued ratio). No textbook text or exercises were used.",
+    "Answers like 8:12:15 are typed and checked exactly (spaces don't matter), so a ratio that is right but not simplest is marked wrong with a hint.",
+    "Urdu terms to check: مسلسل نسبت (continued ratio), حصہ / رکن (term). The book also uses antecedent and consequent; this lesson doesn't need them.",
+    "The numbers were worked out in content/sources/g6-maths-06/continued_ratio.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
