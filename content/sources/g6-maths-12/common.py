@@ -11,6 +11,7 @@ REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 PC_FIND = "maths.percent.find_percent"
 PC_OF_AMOUNT = "maths.percent.of_amount"
 DEC_ADD_SUBTRACT = "maths.decimals.add_subtract"
+DEC_MULTIPLY_DIVIDE = "maths.decimals.multiply_divide"
 
 # Skills of the Profit and Loss unit.
 PL_MEANING = "maths.money.profit_loss"

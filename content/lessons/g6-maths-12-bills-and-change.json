@@ -1,0 +1,746 @@
+{
+  "id": "g6-maths-12-bills-and-change",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Read and make a simple shop bill, find the total, and work out the change.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Profit and Loss"
+    }
+  ],
+  "skills": [
+    "maths.money.bills"
+  ],
+  "title": {
+    "en": "Bills and change",
+    "ur": "بل اور بقایا"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.decimals.add_subtract"
+    },
+    {
+      "skill": "maths.decimals.multiply_divide"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgets_quantity",
+      "description": "Adds the rate of each item and forgets to multiply by how many were bought."
+    },
+    {
+      "id": "total_as_change",
+      "description": "Gives the bill total when the question asks for the change."
+    },
+    {
+      "id": "change_wrong_way",
+      "description": "Adds the bill to the money paid instead of taking it away."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.money.bills": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.money.bills": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "How do you find the change?",
+            "ur": "بقایا کیسے نکالتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "minus",
+              "text": {
+                "en": "Money given − bill total",
+                "ur": "دی گئی رقم − بل کا کل"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Change is what comes back.",
+                "ur": "جی ہاں! بقایا وہ ہے جو واپس آتا ہے۔"
+              }
+            },
+            {
+              "id": "plus",
+              "text": {
+                "en": "Money given + bill total",
+                "ur": "دی گئی رقم + بل کا کل"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Change is smaller than the money given. Take the bill away.",
+                "ur": "بقایا دی گئی رقم سے کم ہوتا ہے۔ بل نفی کریں۔"
+              },
+              "misconception_id": "change_wrong_way"
+            },
+            {
+              "id": "total",
+              "text": {
+                "en": "It is the bill total",
+                "ur": "یہ بل کا کل ہے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The total is what you pay. The change is what is left over.",
+                "ur": "کل وہ ہے جو آپ دیتے ہیں۔ بقایا وہ ہے جو بچ جاتا ہے۔"
+              },
+              "misconception_id": "total_as_change"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Zara buys 5 eggs at Rs 30 each and pays with a Rs 200 note. How much change does she get, in rupees?",
+            "ur": "زارا 30 روپے فی انڈا کے حساب سے 5 انڈے خریدتی ہے اور 200 روپے کا نوٹ دیتی ہے۔ اسے کتنے روپے بقایا ملے گا؟"
+          },
+          "answer": 50,
+          "checker": "numeric",
+          "hint": {
+            "en": "Bill: 5 × 30. Then 200 − bill.",
+            "ur": "بل: 5 × 30۔ پھر 200 − بل"
+          },
+          "feedback_correct": {
+            "en": "Right! Rs 50.",
+            "ur": "درست! 50 روپے"
+          },
+          "feedback_wrong": {
+            "en": "Bill = 150. Change = 200 − 150 = 50.",
+            "ur": "بل = 150۔ بقایا = 200 − 150 = 50"
+          },
+          "common_wrong": [
+            {
+              "answer": 150,
+              "feedback": {
+                "en": "Rs 150 is the bill. Change: 200 − 150 = 50.",
+                "ur": "150 روپے بل ہے۔ بقایا: 200 − 150 = 50"
+              },
+              "misconception_id": "total_as_change"
+            },
+            {
+              "answer": 170,
+              "feedback": {
+                "en": "5 eggs cost 5 × 30 = 150, not 30. Change: 50.",
+                "ur": "5 انڈے 5 × 30 = 150 کے ہیں، 30 کے نہیں۔ بقایا: 50"
+              },
+              "misconception_id": "forgets_quantity"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A bill has 3 pens at Rs 25 and 2 erasers at Rs 15. Bilal writes the total as 25 + 15 = Rs 40. What is wrong?",
+            "ur": "ایک بل میں 25 روپے کے 3 قلم اور 15 روپے کے 2 ربڑ ہیں۔ بلال کل 25 + 15 = 40 روپے لکھتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "qty",
+              "text": {
+                "en": "He forgot how many: 3 × 25 + 2 × 15 = Rs 105.",
+                "ur": "وہ تعداد بھول گیا: 3 × 25 + 2 × 15 = 105 روپے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Multiply each rate by how many, then add.",
+                "ur": "جی ہاں! ہر قیمت کو تعداد سے ضرب دیں، پھر جمع کریں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "There are 3 pens and 2 erasers, not one of each.",
+                "ur": "3 قلم اور 2 ربڑ ہیں، ہر ایک کا ایک نہیں۔"
+              },
+              "misconception_id": "forgets_quantity"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_line",
+      "front": {
+        "en": "Amount for one line of a bill?",
+        "ur": "بل کی ایک لائن کی رقم؟"
+      },
+      "back": {
+        "en": "Quantity × rate",
+        "ur": "تعداد × قیمت فی عدد"
+      }
+    },
+    {
+      "id": "f_change",
+      "front": {
+        "en": "Change?",
+        "ur": "بقایا؟"
+      },
+      "back": {
+        "en": "Money given − bill total",
+        "ur": "دی گئی رقم − بل کا کل"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_bill",
+      "text": {
+        "en": "Next time someone at home goes shopping, ask to see the bill, or write one together. Check each line (quantity × rate), check the total, and work out the change from the note they paid with.",
+        "ur": "اگلی بار جب گھر میں کوئی خریداری کرے تو بل دیکھنے کو کہیں، یا مل کر ایک بل بنائیں۔ ہر لائن جانچیں (تعداد × قیمت)، کل جانچیں، اور دیے گئے نوٹ سے بقایا نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Bill",
+      "ur": "بل"
+    },
+    {
+      "en": "Rate",
+      "ur": "قیمت فی عدد"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    },
+    {
+      "en": "Change",
+      "ur": "بقایا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "At the shop, Ammi pays with a Rs 1000 note. How do we check the bill and the change?",
+          "ur": "دکان پر امی 1000 روپے کا نوٹ دیتی ہیں۔ ہم بل اور بقایا کیسے جانچیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we read bills and work out change. First, a quick decimal check.",
+        "ur": "آج ہم بل پڑھیں گے اور بقایا نکالیں گے۔ پہلے اعشاریہ کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.decimals.multiply_divide",
+      "prompt": {
+        "en": "3 × Rs 45.50 = ? rupees",
+        "ur": "3 × 45.50 روپے = ? روپے"
+      },
+      "answer": 136.5,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 × 45 = 135, and 3 × 0.50 = 1.50.",
+        "ur": "3 × 45 = 135، اور 3 × 0.50 = 1.50"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 136.50.",
+        "ur": "درست! 136.50 روپے"
+      },
+      "feedback_wrong": {
+        "en": "135 + 1.50 = 136.50.",
+        "ur": "135 + 1.50 = 136.50"
+      },
+      "common_wrong": [
+        {
+          "answer": 135.5,
+          "feedback": {
+            "en": "Multiply the paisa too: 3 × 0.50 = 1.50, so 136.50.",
+            "ur": "پیسے بھی ضرب دیں: 3 × 0.50 = 1.50، تو 136.50"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_bill",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Each line: how many times the rate. Then add the lines. Then the change.",
+          "ur": "ہر لائن: تعداد ضرب قیمت۔ پھر لائنیں جمع کریں۔ پھر بقایا۔"
+        }
+      },
+      "text": {
+        "en": "A bill lists each item, how many (quantity), the price of one (rate) and the amount for that line: quantity × rate. Add all the lines to get the total. If you pay with a note, change = money given − total.",
+        "ur": "بل میں ہر چیز، اس کی تعداد، ایک کی قیمت اور اس لائن کی رقم ہوتی ہے: تعداد × قیمت۔ تمام لائنیں جمع کرنے سے کل بنتا ہے۔ اگر آپ نوٹ دیں تو بقایا = دی گئی رقم − کل۔"
+      }
+    },
+    {
+      "id": "s4_sugar",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Sugar costs Rs 160 a kg. What is the amount for 2 kg, in rupees?",
+        "ur": "چینی 160 روپے فی کلو ہے۔ 2 کلو کی رقم کتنے روپے ہے؟"
+      },
+      "answer": 320,
+      "checker": "numeric",
+      "hint": {
+        "en": "Quantity × rate: 2 × 160.",
+        "ur": "تعداد × قیمت: 2 × 160"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 320.",
+        "ur": "درست! 320 روپے"
+      },
+      "feedback_wrong": {
+        "en": "2 × 160 = 320.",
+        "ur": "2 × 160 = 320"
+      },
+      "common_wrong": [
+        {
+          "answer": 160,
+          "feedback": {
+            "en": "Rs 160 is for 1 kg. For 2 kg: 2 × 160 = 320.",
+            "ur": "160 روپے 1 کلو کے ہیں۔ 2 کلو: 2 × 160 = 320"
+          },
+          "misconception_id": "forgets_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s5_total",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bill has: 2 kg sugar at Rs 160 a kg, 3 packets of biscuits at Rs 35 each, and 1 litre of milk at Rs 220. What is the total, in rupees?",
+        "ur": "ایک بل میں ہے: 160 روپے فی کلو کے حساب سے 2 کلو چینی، 35 روپے فی پیکٹ کے حساب سے 3 پیکٹ بسکٹ، اور 220 روپے کا 1 لیٹر دودھ۔ کل کتنے روپے ہیں؟"
+      },
+      "answer": 645,
+      "checker": "numeric",
+      "hint": {
+        "en": "Lines: 320, 3 × 35 = 105, and 220. Add them.",
+        "ur": "لائنیں: 320، 3 × 35 = 105، اور 220۔ انہیں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 645.",
+        "ur": "درست! 645 روپے"
+      },
+      "feedback_wrong": {
+        "en": "320 + 105 + 220 = 645.",
+        "ur": "320 + 105 + 220 = 645"
+      },
+      "common_wrong": [
+        {
+          "answer": 415,
+          "feedback": {
+            "en": "Multiply each rate by its quantity first: 320 + 105 + 220 = 645.",
+            "ur": "پہلے ہر قیمت کو تعداد سے ضرب دیں: 320 + 105 + 220 = 645"
+          },
+          "misconception_id": "forgets_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s6_change",
+      "type": "choice",
+      "prompt": {
+        "en": "That bill comes to Rs 645. Ammi pays with a Rs 1000 note. What is the change?",
+        "ur": "وہ بل 645 روپے بنتا ہے۔ امی 1000 روپے کا نوٹ دیتی ہیں۔ بقایا کتنا ہے؟"
+      },
+      "options": [
+        {
+          "id": "355",
+          "text": {
+            "en": "Rs 355",
+            "ur": "355 روپے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 1000 − 645 = 355.",
+            "ur": "جی ہاں! 1000 − 645 = 355"
+          }
+        },
+        {
+          "id": "455",
+          "text": {
+            "en": "Rs 455",
+            "ur": "455 روپے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check the subtraction: 1000 − 645 = 355.",
+            "ur": "نفی دوبارہ دیکھیں: 1000 − 645 = 355"
+          }
+        },
+        {
+          "id": "1645",
+          "text": {
+            "en": "Rs 1645",
+            "ur": "1645 روپے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Change is taken away, not added: 1000 − 645 = 355.",
+            "ur": "بقایا نفی سے نکلتا ہے، جمع سے نہیں: 1000 − 645 = 355"
+          },
+          "misconception_id": "change_wrong_way"
+        }
+      ]
+    },
+    {
+      "id": "s7_notebooks",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ahmed buys 4 notebooks at Rs 85.50 each. He pays with a Rs 500 note. How much change does he get, in rupees?",
+        "ur": "احمد 85.50 روپے فی کاپی کے حساب سے 4 کاپیاں خریدتا ہے۔ وہ 500 روپے کا نوٹ دیتا ہے۔ اسے کتنے روپے بقایا ملے گا؟"
+      },
+      "answer": 158,
+      "checker": "numeric",
+      "hint": {
+        "en": "Bill: 4 × 85.50. Then 500 − bill.",
+        "ur": "بل: 4 × 85.50۔ پھر 500 − بل"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 158.",
+        "ur": "درست! 158 روپے"
+      },
+      "feedback_wrong": {
+        "en": "4 × 85.50 = 342. 500 − 342 = 158.",
+        "ur": "4 × 85.50 = 342۔ 500 − 342 = 158"
+      },
+      "common_wrong": [
+        {
+          "answer": 342,
+          "feedback": {
+            "en": "Rs 342 is the bill. Change: 500 − 342 = 158.",
+            "ur": "342 روپے بل ہے۔ بقایا: 500 − 342 = 158"
+          },
+          "misconception_id": "total_as_change"
+        },
+        {
+          "answer": 414.5,
+          "feedback": {
+            "en": "That is for one notebook. 4 cost 342, so the change is 158.",
+            "ur": "یہ ایک کاپی کا ہے۔ 4 کی قیمت 342 ہے، تو بقایا 158 ہے۔"
+          },
+          "misconception_id": "forgets_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s8_two_notes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bill comes to Rs 1235. Abbu pays with one Rs 1000 note and one Rs 500 note. How much change does he get, in rupees?",
+        "ur": "ایک بل 1235 روپے بنتا ہے۔ ابو 1000 روپے کا ایک نوٹ اور 500 روپے کا ایک نوٹ دیتے ہیں۔ انہیں کتنے روپے بقایا ملے گا؟"
+      },
+      "answer": 265,
+      "checker": "numeric",
+      "hint": {
+        "en": "Money given: 1000 + 500 = 1500.",
+        "ur": "دی گئی رقم: 1000 + 500 = 1500"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 265.",
+        "ur": "درست! 265 روپے"
+      },
+      "feedback_wrong": {
+        "en": "1500 − 1235 = 265.",
+        "ur": "1500 − 1235 = 265"
+      },
+      "common_wrong": [
+        {
+          "answer": 235,
+          "feedback": {
+            "en": "He gave 1500, not 1000 + 1000. 1500 − 1235 = 265.",
+            "ur": "انہوں نے 1500 دیے۔ 1500 − 1235 = 265"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A bill has 3 pens at Rs 25 each and 2 erasers at Rs 15 each. The shop boy writes, \"Total: 25 + 15 = Rs 40.\" What went wrong?",
+        "ur": "ایک بل میں 25 روپے فی قلم کے حساب سے 3 قلم اور 15 روپے فی ربڑ کے حساب سے 2 ربڑ ہیں۔ دکان کا لڑکا لکھتا ہے، \"کل: 25 + 15 = 40 روپے۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "qty",
+          "text": {
+            "en": "He forgot the quantities. 3 × 25 + 2 × 15 = Rs 105.",
+            "ur": "وہ تعداد بھول گیا۔ 3 × 25 + 2 × 15 = 105 روپے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each line is quantity × rate.",
+            "ur": "جی ہاں! ہر لائن تعداد × قیمت ہے۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "He should have multiplied: 25 × 15.",
+            "ur": "اسے ضرب دینی چاہیے تھی: 25 × 15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Different items are added, but each rate is first multiplied by its quantity.",
+            "ur": "مختلف چیزیں جمع ہوتی ہیں، لیکن پہلے ہر قیمت کو اس کی تعداد سے ضرب دی جاتی ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are 3 pens and 2 erasers, not one of each. The total is Rs 105.",
+            "ur": "3 قلم اور 2 ربڑ ہیں، ہر ایک کا ایک نہیں۔ کل 105 روپے ہے۔"
+          },
+          "misconception_id": "forgets_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why can't we just add the prices on a bill? Can you teach me?",
+          "ur": "ہم بل پر قیمتیں سیدھی جمع کیوں نہیں کر سکتے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we multiply each rate by the quantity before adding the lines of a bill?",
+        "ur": "اپنے الفاظ میں بتائیں: بل کی لائنیں جمع کرنے سے پہلے ہم ہر قیمت کو تعداد سے ضرب کیوں دیتے ہیں؟"
+      },
+      "key_idea": "The rate is the price of one item. If you buy 3 pens, you pay for 3 pens, so the line amount is 3 × the rate. Only then do we add the lines together for the total.",
+      "levels": {
+        "got_it": "Says the rate is the price of only one item, so for many items you multiply by how many, then add the lines.",
+        "partly": "Says you multiply, without saying the rate is for one item.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "one",
+          "each",
+          "ایک",
+          "فی"
+        ],
+        [
+          "how many",
+          "quantity",
+          "تعداد",
+          "کتنے"
+        ],
+        [
+          "multiply",
+          "times",
+          "ضرب",
+          "گنا"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The rate is for one, so we multiply by how many.",
+          "ur": "بہت خوب! قیمت ایک کی ہے، اس لیے تعداد سے ضرب دیتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what the rate is the price of.",
+          "ur": "اچھی شروعات! اب بتائیں قیمت فی عدد کس چیز کی قیمت ہے۔"
+        },
+        "not_yet": {
+          "en": "One pen costs Rs 25. You buy 3 pens. Do you pay Rs 25 or more?",
+          "ur": "ایک قلم 25 روپے کا ہے۔ آپ 3 قلم خریدتے ہیں۔ آپ 25 روپے دیں گے یا زیادہ؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_vegetables",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "At the sabzi stall, Saima buys 1.5 kg of tomatoes at Rs 120 a kg and 0.5 kg of ginger at Rs 600 a kg. She pays with a Rs 500 note. How much change does she get, in rupees?",
+        "ur": "سبزی کی ریڑھی پر صائمہ 120 روپے فی کلو کے حساب سے 1.5 کلو ٹماٹر اور 600 روپے فی کلو کے حساب سے 0.5 کلو ادرک خریدتی ہے۔ وہ 500 روپے کا نوٹ دیتی ہے۔ اسے کتنے روپے بقایا ملے گا؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "1.5 × 120 = 180 and 0.5 × 600 = 300.",
+        "ur": "1.5 × 120 = 180 اور 0.5 × 600 = 300"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 20.",
+        "ur": "درست! 20 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Bill = 180 + 300 = 480. Change = 500 − 480 = 20.",
+        "ur": "بل = 180 + 300 = 480۔ بقایا = 500 − 480 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 480,
+          "feedback": {
+            "en": "Rs 480 is the bill. Change: 500 − 480 = 20.",
+            "ur": "480 روپے بل ہے۔ بقایا: 500 − 480 = 20"
+          },
+          "misconception_id": "total_as_change"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can check any shop bill yourself!",
+          "ur": "اب آپ دکان کا کوئی بھی بل خود جانچ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Each line of a bill is quantity × rate. Add the lines to get the total. Change = money given − total. Always check the bill before you pay.",
+        "ur": "بل کی ہر لائن تعداد × قیمت ہے۔ لائنیں جمع کرنے سے کل بنتا ہے۔ بقایا = دی گئی رقم − کل۔ پیسے دینے سے پہلے ہمیشہ بل جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "Line = quantity × rate.",
+          "ur": "لائن = تعداد × قیمت۔"
+        },
+        {
+          "en": "Change = money given − total.",
+          "ur": "بقایا = دی گئی رقم − کل۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_line",
+      "type": "apply",
+      "skill": "maths.money.bills",
+      "step": {
+        "id": "r_line",
+        "type": "number",
+        "prompt": {
+          "en": "Flour costs Rs 140 a kg. What is the amount for 3 kg, in rupees?",
+          "ur": "آٹا 140 روپے فی کلو ہے۔ 3 کلو کی رقم کتنے روپے ہے؟"
+        },
+        "answer": 420,
+        "checker": "numeric",
+        "hint": {
+          "en": "3 × 140.",
+          "ur": "3 × 140"
+        },
+        "feedback_correct": {
+          "en": "Right! Rs 420.",
+          "ur": "درست! 420 روپے"
+        },
+        "feedback_wrong": {
+          "en": "3 × 140 = 420.",
+          "ur": "3 × 140 = 420"
+        },
+        "common_wrong": [
+          {
+            "answer": 140,
+            "feedback": {
+              "en": "Rs 140 is for 1 kg. 3 × 140 = 420.",
+              "ur": "140 روپے 1 کلو کے ہیں۔ 3 × 140 = 420"
+            },
+            "misconception_id": "forgets_quantity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_change",
+      "type": "apply",
+      "skill": "maths.money.bills",
+      "step": {
+        "id": "r_change",
+        "type": "number",
+        "prompt": {
+          "en": "A bill comes to Rs 785. You pay with a Rs 1000 note. How much change do you get, in rupees?",
+          "ur": "ایک بل 785 روپے بنتا ہے۔ آپ 1000 روپے کا نوٹ دیتے ہیں۔ آپ کو کتنے روپے بقایا ملے گا؟"
+        },
+        "answer": 215,
+        "checker": "numeric",
+        "hint": {
+          "en": "1000 − 785.",
+          "ur": "1000 − 785"
+        },
+        "feedback_correct": {
+          "en": "Right! Rs 215.",
+          "ur": "درست! 215 روپے"
+        },
+        "feedback_wrong": {
+          "en": "1000 − 785 = 215.",
+          "ur": "1000 − 785 = 215"
+        },
+        "common_wrong": [
+          {
+            "answer": 225,
+            "feedback": {
+              "en": "Check the subtraction: 1000 − 785 = 215.",
+              "ur": "نفی دوبارہ دیکھیں: 1000 − 785 = 215"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Profit and Loss unit. No textbook text or exercises were used.",
+    "Prices are round and close to everyday Pakistani shop prices; they are for practice, not exact current prices.",
+    "Urdu terms to check: بل (bill), قیمت فی عدد (rate), بقایا (change).",
+    "The numbers were worked out in content/sources/g6-maths-12/bills_and_change.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

@@ -1,0 +1,897 @@
+{
+  "id": "g6-maths-12-profit-loss-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems on profit and loss, including buying in bulk and extra costs such as repairs.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Profit and Loss"
+    }
+  ],
+  "skills": [
+    "maths.money.word_problems"
+  ],
+  "title": {
+    "en": "Profit and loss word problems",
+    "ur": "نفع اور نقصان کے عملی سوال"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.money.selling_price"
+    },
+    {
+      "skill": "maths.money.profit_loss_percent"
+    },
+    {
+      "skill": "maths.money.bills"
+    },
+    {
+      "skill": "maths.money.profit_loss"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgets_extra_cost",
+      "description": "Leaves out extra costs like repairs or transport from the cost price."
+    },
+    {
+      "id": "one_item_only",
+      "description": "Works with the price of one item when many were bought and sold."
+    },
+    {
+      "id": "rupees_as_percent",
+      "description": "Gives the profit in rupees when the question asks for the percent."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.money.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.money.word_problems": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "A trader buys a cart for Rs 5000 and pays Rs 500 to bring it home. What is the cost price?",
+            "ur": "ایک تاجر 5000 روپے میں ریڑھی خریدتا ہے اور اسے گھر لانے کے 500 روپے دیتا ہے۔ قیمتِ خرید کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "5500",
+              "text": {
+                "en": "Rs 5500",
+                "ur": "5500 روپے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Every rupee spent to get it ready to sell is part of the cost price.",
+                "ur": "جی ہاں! بیچنے کے لیے تیار کرنے پر خرچ ہر روپیہ قیمتِ خرید کا حصہ ہے۔"
+              }
+            },
+            {
+              "id": "5000",
+              "text": {
+                "en": "Rs 5000",
+                "ur": "5000 روپے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The Rs 500 was spent too, so the cost price is Rs 5500.",
+                "ur": "500 روپے بھی خرچ ہوئے، تو قیمتِ خرید 5500 روپے ہے۔"
+              },
+              "misconception_id": "forgets_extra_cost"
+            },
+            {
+              "id": "4500",
+              "text": {
+                "en": "Rs 4500",
+                "ur": "4500 روپے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Extra costs are added, not taken away: Rs 5500.",
+                "ur": "اضافی خرچ جمع ہوتا ہے، نفی نہیں: 5500 روپے"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A vendor buys 10 kg of potatoes at Rs 60 a kg and sells them at Rs 75 a kg. What is the profit, in rupees?",
+            "ur": "ایک ریڑھی والا 60 روپے فی کلو کے حساب سے 10 کلو آلو خریدتا ہے اور 75 روپے فی کلو بیچتا ہے۔ نفع کتنے روپے ہے؟"
+          },
+          "answer": 150,
+          "checker": "numeric",
+          "hint": {
+            "en": "CP = 10 × 60, SP = 10 × 75.",
+            "ur": "قیمتِ خرید = 10 × 60، قیمتِ فروخت = 10 × 75"
+          },
+          "feedback_correct": {
+            "en": "Right! Rs 150.",
+            "ur": "درست! 150 روپے"
+          },
+          "feedback_wrong": {
+            "en": "750 − 600 = 150.",
+            "ur": "750 − 600 = 150"
+          },
+          "common_wrong": [
+            {
+              "answer": 15,
+              "feedback": {
+                "en": "Rs 15 is the profit on 1 kg. On 10 kg: 150.",
+                "ur": "15 روپے 1 کلو پر نفع ہے۔ 10 کلو پر: 150"
+              },
+              "misconception_id": "one_item_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Kashif buys a motorbike for Rs 40000, spends Rs 5000 on repairs and sells it for Rs 50000. He says his profit is Rs 10000. What is wrong?",
+            "ur": "کاشف 40000 روپے میں موٹر سائیکل خریدتا ہے، 5000 روپے مرمت پر لگاتا ہے اور 50000 روپے میں بیچتا ہے۔ وہ کہتا ہے اس کا نفع 10000 روپے ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "repair",
+              "text": {
+                "en": "He forgot the repairs. Cost price = 45000, so profit = Rs 5000.",
+                "ur": "وہ مرمت بھول گیا۔ قیمتِ خرید = 45000، تو نفع = 5000 روپے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The repair money is part of the cost price.",
+                "ur": "جی ہاں! مرمت کے پیسے قیمتِ خرید کا حصہ ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "He spent Rs 45000 in all, so the profit is only Rs 5000.",
+                "ur": "اس نے کل 45000 روپے خرچ کیے، تو نفع صرف 5000 روپے ہے۔"
+              },
+              "misconception_id": "forgets_extra_cost"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_extra",
+      "front": {
+        "en": "Repairs or transport?",
+        "ur": "مرمت یا کرایہ؟"
+      },
+      "back": {
+        "en": "Add them to the cost price.",
+        "ur": "انہیں قیمتِ خرید میں جمع کریں۔"
+      }
+    },
+    {
+      "id": "f_bulk",
+      "front": {
+        "en": "Many items bought and sold?",
+        "ur": "بہت سی چیزیں خریدیں اور بیچیں؟"
+      },
+      "back": {
+        "en": "Find the total CP and total SP first.",
+        "ur": "پہلے کل قیمتِ خرید اور کل قیمتِ فروخت نکالیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_stall",
+      "text": {
+        "en": "Plan a small stall for a school fair. Choose one thing to sell, like lemonade glasses. Guess what you would spend on everything you need, choose a selling price, and work out your profit and profit percent if you sell 30.",
+        "ur": "سکول میلے کے لیے ایک چھوٹے سٹال کا منصوبہ بنائیں۔ بیچنے کے لیے ایک چیز چنیں، جیسے شکنجبین کے گلاس۔ اندازہ لگائیں کہ ضرورت کی ہر چیز پر کتنا خرچ ہوگا، قیمتِ فروخت چنیں، اور 30 بیچنے پر نفع اور نفع کی فیصد نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Repair",
+      "ur": "مرمت"
+    },
+    {
+      "en": "Total cost price",
+      "ur": "کل قیمتِ خرید"
+    },
+    {
+      "en": "Total selling price",
+      "ur": "کل قیمتِ فروخت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Uncle Rashid fixes old fridges and sells them. How does he know if his work pays?",
+          "ur": "رشید چچا پرانے فریج ٹھیک کر کے بیچتے ہیں۔ انہیں کیسے پتا چلے کہ ان کا کام فائدہ مند ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we solve real profit and loss problems. First, a quick check.",
+        "ur": "آج ہم نفع اور نقصان کے اصل زندگی کے سوال حل کریں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.money.profit_loss",
+      "prompt": {
+        "en": "Bought for Rs 350, sold for Rs 420. What is the profit, in rupees?",
+        "ur": "350 روپے میں خریدا، 420 روپے میں بیچا۔ نفع کتنے روپے ہے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "SP − CP.",
+        "ur": "قیمتِ فروخت − قیمتِ خرید"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 70.",
+        "ur": "درست! 70 روپے"
+      },
+      "feedback_wrong": {
+        "en": "420 − 350 = 70.",
+        "ur": "420 − 350 = 70"
+      },
+      "common_wrong": [
+        {
+          "answer": 420,
+          "feedback": {
+            "en": "Rs 420 is the selling price. Profit: 420 − 350 = 70.",
+            "ur": "420 روپے قیمتِ فروخت ہے۔ نفع: 420 − 350 = 70"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_steps",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Count every rupee spent, and every rupee earned. Then compare.",
+          "ur": "خرچ ہونے والا ہر روپیہ اور کمایا ہوا ہر روپیہ گنیں۔ پھر موازنہ کریں۔"
+        }
+      },
+      "text": {
+        "en": "1) Find the total cost price: everything paid, including repairs or transport. 2) Find the total selling price: everything received. 3) Profit or loss = the difference. 4) For a percent, divide by the total cost price and × 100.",
+        "ur": "1) کل قیمتِ خرید نکالیں: سب کچھ جو ادا کیا، مرمت یا کرایہ سمیت۔ 2) کل قیمتِ فروخت نکالیں: سب کچھ جو ملا۔ 3) نفع یا نقصان = فرق۔ 4) فیصد کے لیے کل قیمتِ خرید سے تقسیم کریں اور × 100 کریں۔"
+      }
+    },
+    {
+      "id": "s4_notebooks",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shopkeeper buys 12 notebooks at Rs 50 each and sells each one for Rs 60. What is the total profit, in rupees?",
+        "ur": "ایک دکاندار 50 روپے فی کاپی کے حساب سے 12 کاپیاں خریدتا ہے اور ہر ایک 60 روپے میں بیچتا ہے۔ کل نفع کتنے روپے ہے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "CP = 12 × 50, SP = 12 × 60.",
+        "ur": "قیمتِ خرید = 12 × 50، قیمتِ فروخت = 12 × 60"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 120.",
+        "ur": "درست! 120 روپے"
+      },
+      "feedback_wrong": {
+        "en": "720 − 600 = 120.",
+        "ur": "720 − 600 = 120"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Rs 10 is the profit on one notebook. On 12: 120.",
+            "ur": "10 روپے ایک کاپی پر نفع ہے۔ 12 پر: 120"
+          },
+          "misconception_id": "one_item_only"
+        }
+      ]
+    },
+    {
+      "id": "s5_percent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "He spent Rs 600 on the 12 notebooks and made Rs 120 profit. What is his profit percent? Type just the number.",
+        "ur": "اس نے 12 کاپیوں پر 600 روپے خرچ کیے اور 120 روپے نفع کمایا۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "120 ÷ 600 × 100.",
+        "ur": "120 ÷ 600 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 20%.",
+        "ur": "درست! 20%"
+      },
+      "feedback_wrong": {
+        "en": "120 ÷ 600 × 100 = 20.",
+        "ur": "120 ÷ 600 × 100 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "Rs 120 is the profit in rupees. 120 ÷ 600 × 100 = 20%.",
+            "ur": "120 روپے نفع ہے۔ 120 ÷ 600 × 100 = 20%"
+          },
+          "misconception_id": "rupees_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s6_bananas",
+      "type": "choice",
+      "prompt": {
+        "en": "Nadia buys 2 dozen bananas at Rs 100 a dozen and sells them at Rs 10 each. What happens?",
+        "ur": "نادیہ 100 روپے فی درجن کے حساب سے 2 درجن کیلے خریدتی ہے اور 10 روپے فی کیلا بیچتی ہے۔ کیا ہوتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "profit",
+          "text": {
+            "en": "A profit of Rs 40",
+            "ur": "40 روپے نفع"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! CP = 200, SP = 24 × 10 = 240.",
+            "ur": "جی ہاں! قیمتِ خرید = 200، قیمتِ فروخت = 24 × 10 = 240"
+          }
+        },
+        {
+          "id": "loss",
+          "text": {
+            "en": "A loss of Rs 40",
+            "ur": "40 روپے نقصان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "SP = 240 is more than CP = 200, so it is a profit.",
+            "ur": "قیمتِ فروخت 240، قیمتِ خرید 200 سے زیادہ ہے، تو یہ نفع ہے۔"
+          }
+        },
+        {
+          "id": "neither",
+          "text": {
+            "en": "No profit and no loss",
+            "ur": "نہ نفع نہ نقصان"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 dozen is 24 bananas: 24 × 10 = 240, more than 200.",
+            "ur": "2 درجن یعنی 24 کیلے: 24 × 10 = 240، جو 200 سے زیادہ ہے۔"
+          },
+          "misconception_id": "one_item_only"
+        }
+      ]
+    },
+    {
+      "id": "s7_fridge",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Rashid buys an old fridge for Rs 8000, spends Rs 1000 on repairs, and sells it for Rs 10800. What is his profit, in rupees?",
+        "ur": "رشید 8000 روپے میں پرانا فریج خریدتا ہے، 1000 روپے مرمت پر لگاتا ہے، اور اسے 10800 روپے میں بیچتا ہے۔ اس کا نفع کتنے روپے ہے؟"
+      },
+      "answer": 1800,
+      "checker": "numeric",
+      "hint": {
+        "en": "Cost price = 8000 + 1000.",
+        "ur": "قیمتِ خرید = 8000 + 1000"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 1800.",
+        "ur": "درست! 1800 روپے"
+      },
+      "feedback_wrong": {
+        "en": "CP = 9000. 10800 − 9000 = 1800.",
+        "ur": "قیمتِ خرید = 9000۔ 10800 − 9000 = 1800"
+      },
+      "common_wrong": [
+        {
+          "answer": 2800,
+          "feedback": {
+            "en": "Add the repairs to the cost: 9000. Profit: 10800 − 9000 = 1800.",
+            "ur": "مرمت قیمت میں جمع کریں: 9000۔ نفع: 10800 − 9000 = 1800"
+          },
+          "misconception_id": "forgets_extra_cost"
+        }
+      ]
+    },
+    {
+      "id": "s8_fridge_percent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Rashid's fridge cost him Rs 9000 in all and he made Rs 1800 profit. What is his profit percent? Type just the number.",
+        "ur": "رشید کو فریج کل 9000 روپے کا پڑا اور اس نے 1800 روپے نفع کمایا۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "1800 ÷ 9000 × 100.",
+        "ur": "1800 ÷ 9000 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 20%.",
+        "ur": "درست! 20%"
+      },
+      "feedback_wrong": {
+        "en": "1800 ÷ 9000 × 100 = 20.",
+        "ur": "1800 ÷ 9000 × 100 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 1800,
+          "feedback": {
+            "en": "Rs 1800 is the profit in rupees. 1800 ÷ 9000 × 100 = 20%.",
+            "ur": "1800 روپے نفع ہے۔ 1800 ÷ 9000 × 100 = 20%"
+          },
+          "misconception_id": "rupees_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Imran buys a bicycle for Rs 3000, spends Rs 500 on new tyres, and sells it for Rs 4000. He says, \"4000 − 3000 = Rs 1000 profit.\" What went wrong?",
+        "ur": "عمران 3000 روپے میں سائیکل خریدتا ہے، 500 روپے نئے ٹائروں پر لگاتا ہے، اور اسے 4000 روپے میں بیچتا ہے۔ وہ کہتا ہے، \"4000 − 3000 = 1000 روپے نفع۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "tyres",
+          "text": {
+            "en": "He forgot the tyres. CP = 3500, so the profit is Rs 500.",
+            "ur": "وہ ٹائر بھول گیا۔ قیمتِ خرید = 3500، تو نفع 500 روپے ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Money spent to get it ready is part of the cost.",
+            "ur": "جی ہاں! تیار کرنے پر خرچ ہونے والی رقم قیمت کا حصہ ہے۔"
+          }
+        },
+        {
+          "id": "loss",
+          "text": {
+            "en": "It is a loss of Rs 500.",
+            "ur": "یہ 500 روپے نقصان ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "SP 4000 is still more than CP 3500, so it is a profit of Rs 500.",
+            "ur": "قیمتِ فروخت 4000، قیمتِ خرید 3500 سے زیادہ ہے، تو یہ 500 روپے نفع ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "He spent Rs 3500 in all, not Rs 3000.",
+            "ur": "اس نے کل 3500 روپے خرچ کیے، 3000 نہیں۔"
+          },
+          "misconception_id": "forgets_extra_cost"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does the repair money count as part of the cost price? Can you teach me?",
+          "ur": "مرمت کے پیسے قیمتِ خرید میں کیوں گنے جاتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we add repair or transport costs to the cost price?",
+        "ur": "اپنے الفاظ میں بتائیں: ہم مرمت یا کرایے کا خرچ قیمتِ خرید میں کیوں جمع کرتے ہیں؟"
+      },
+      "key_idea": "Profit is the money you have at the end compared with all the money you spent. Repairs and transport are money spent to be able to sell, so leaving them out would make the profit look bigger than it really is.",
+      "levels": {
+        "got_it": "Says repairs or transport are money spent, so they are part of what it cost, and leaving them out makes the profit look too big.",
+        "partly": "Says they are money spent, without saying what happens to the profit if they are left out.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "spent",
+          "paid",
+          "money",
+          "خرچ",
+          "ادا",
+          "پیسے"
+        ],
+        [
+          "cost",
+          "قیمت",
+          "خرید"
+        ],
+        [
+          "bigger",
+          "too much",
+          "wrong",
+          "real",
+          "زیادہ",
+          "اصل"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Every rupee spent counts, or the profit looks too big.",
+          "ur": "بہت خوب! خرچ ہونے والا ہر روپیہ گنا جاتا ہے، ورنہ نفع زیادہ لگتا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what would happen to the profit if we left the repairs out.",
+          "ur": "اچھی شروعات! اب بتائیں اگر مرمت چھوڑ دیں تو نفع کا کیا ہوگا۔"
+        },
+        "not_yet": {
+          "en": "Imran spent Rs 3000 and then Rs 500 more. How much did he spend in all?",
+          "ur": "عمران نے 3000 روپے اور پھر 500 روپے مزید خرچ کیے۔ کل کتنا خرچ کیا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Profit and loss unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! نفع اور نقصان کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on profit and loss, profit percent, the selling price, bills and change, and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں نفع اور نقصان، نفع کی فیصد، قیمتِ فروخت، بل اور بقایا، اور ایک اصل زندگی کا سوال ہے۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_loss",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.money.profit_loss",
+      "prompt": {
+        "en": "Test 1: A school bag is bought for Rs 750 and sold for Rs 600. What is the loss, in rupees?",
+        "ur": "ٹیسٹ 1: ایک سکول بیگ 750 روپے میں خریدا اور 600 روپے میں بیچا گیا۔ نقصان کتنے روپے ہے؟"
+      },
+      "answer": 150,
+      "checker": "numeric",
+      "hint": {
+        "en": "CP − SP.",
+        "ur": "قیمتِ خرید − قیمتِ فروخت"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 150.",
+        "ur": "درست! 150 روپے"
+      },
+      "feedback_wrong": {
+        "en": "750 − 600 = 150.",
+        "ur": "750 − 600 = 150"
+      },
+      "common_wrong": [
+        {
+          "answer": 600,
+          "feedback": {
+            "en": "Rs 600 is the selling price. Loss: 750 − 600 = 150.",
+            "ur": "600 روپے قیمتِ فروخت ہے۔ نقصان: 750 − 600 = 150"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_percent",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.money.profit_loss_percent",
+      "prompt": {
+        "en": "Test 2: A clock is bought for Rs 300 and sold for Rs 360. What is the profit percent? Type just the number.",
+        "ur": "ٹیسٹ 2: ایک گھڑیال 300 روپے میں خریدا اور 360 روپے میں بیچا گیا۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Profit = 60. Then 60 ÷ 300 × 100.",
+        "ur": "نفع = 60۔ پھر 60 ÷ 300 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 20%.",
+        "ur": "درست! 20%"
+      },
+      "feedback_wrong": {
+        "en": "60 ÷ 300 × 100 = 20.",
+        "ur": "60 ÷ 300 × 100 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "Rs 60 is the profit in rupees. 60 ÷ 300 × 100 = 20%.",
+            "ur": "60 روپے نفع ہے۔ 60 ÷ 300 × 100 = 20%"
+          },
+          "misconception_id": "rupees_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "u3_selling_price",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.money.selling_price",
+      "prompt": {
+        "en": "Test 3: A table costs Rs 800. It is sold at a 15% loss. What is the selling price, in rupees?",
+        "ur": "ٹیسٹ 3: ایک میز 800 روپے کی ہے۔ اسے 15% نقصان پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+      },
+      "answer": 680,
+      "checker": "numeric",
+      "hint": {
+        "en": "15% of 800 = 120. Then 800 − 120.",
+        "ur": "800 کا 15% = 120۔ پھر 800 − 120"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 680.",
+        "ur": "درست! 680 روپے"
+      },
+      "feedback_wrong": {
+        "en": "800 − 120 = 680.",
+        "ur": "800 − 120 = 680"
+      },
+      "common_wrong": [
+        {
+          "answer": 920,
+          "feedback": {
+            "en": "It's a loss, so take away: 800 − 120 = 680.",
+            "ur": "یہ نقصان ہے، تو نفی کریں: 800 − 120 = 680"
+          }
+        },
+        {
+          "answer": 785,
+          "feedback": {
+            "en": "15% is not Rs 15. 15% of 800 = 120, so 680.",
+            "ur": "15%، 15 روپے نہیں ہے۔ 800 کا 15% = 120، تو 680"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_change",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.money.bills",
+      "prompt": {
+        "en": "Test 4: Rice costs Rs 220 a kg. Ali buys 3 kg and pays with a Rs 1000 note. How much change does he get, in rupees?",
+        "ur": "ٹیسٹ 4: چاول 220 روپے فی کلو ہیں۔ علی 3 کلو خریدتا ہے اور 1000 روپے کا نوٹ دیتا ہے۔ اسے کتنے روپے بقایا ملے گا؟"
+      },
+      "answer": 340,
+      "checker": "numeric",
+      "hint": {
+        "en": "Bill: 3 × 220. Then 1000 − bill.",
+        "ur": "بل: 3 × 220۔ پھر 1000 − بل"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 340.",
+        "ur": "درست! 340 روپے"
+      },
+      "feedback_wrong": {
+        "en": "3 × 220 = 660. 1000 − 660 = 340.",
+        "ur": "3 × 220 = 660۔ 1000 − 660 = 340"
+      },
+      "common_wrong": [
+        {
+          "answer": 660,
+          "feedback": {
+            "en": "Rs 660 is the bill. Change: 1000 − 660 = 340.",
+            "ur": "660 روپے بل ہے۔ بقایا: 1000 − 660 = 340"
+          }
+        },
+        {
+          "answer": 780,
+          "feedback": {
+            "en": "3 kg cost 3 × 220 = 660, not 220. Change: 340.",
+            "ur": "3 کلو 3 × 220 = 660 کے ہیں، 220 کے نہیں۔ بقایا: 340"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_pens",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: A shopkeeper buys 20 pens at Rs 12 each and sells all of them at Rs 15 each. What is the profit, in rupees?",
+        "ur": "ٹیسٹ 5: ایک دکاندار 12 روپے فی قلم کے حساب سے 20 قلم خریدتا ہے اور سب 15 روپے فی قلم بیچتا ہے۔ نفع کتنے روپے ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "CP = 20 × 12, SP = 20 × 15.",
+        "ur": "قیمتِ خرید = 20 × 12، قیمتِ فروخت = 20 × 15"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 60.",
+        "ur": "درست! 60 روپے"
+      },
+      "feedback_wrong": {
+        "en": "300 − 240 = 60.",
+        "ur": "300 − 240 = 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Rs 3 is the profit on one pen. On 20: 60.",
+            "ur": "3 روپے ایک قلم پر نفع ہے۔ 20 پر: 60"
+          },
+          "misconception_id": "one_item_only"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Profit and loss unit complete! You think like a smart shopkeeper now.",
+          "ur": "نفع اور نقصان کا باب مکمل! اب آپ ایک سمجھدار دکاندار کی طرح سوچتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Find the total cost price, including extra costs like repairs or transport. Find the total selling price for all the items. The difference is the profit or loss. For a percent, divide by the total cost price and × 100.",
+        "ur": "کل قیمتِ خرید نکالیں، مرمت یا کرایے جیسے اضافی خرچ سمیت۔ تمام چیزوں کی کل قیمتِ فروخت نکالیں۔ فرق نفع یا نقصان ہے۔ فیصد کے لیے کل قیمتِ خرید سے تقسیم کریں اور × 100 کریں۔"
+      },
+      "points": [
+        {
+          "en": "Extra costs go into the cost price.",
+          "ur": "اضافی خرچ قیمتِ خرید میں جاتا ہے۔"
+        },
+        {
+          "en": "Many items: use totals.",
+          "ur": "بہت سی چیزیں: کل استعمال کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_shirts",
+      "type": "apply",
+      "skill": "maths.money.word_problems",
+      "step": {
+        "id": "r_shirts",
+        "type": "number",
+        "prompt": {
+          "en": "A trader buys 5 shirts at Rs 400 each and sells all 5 for Rs 2400 in total. What is the profit, in rupees?",
+          "ur": "ایک تاجر 400 روپے فی قمیض کے حساب سے 5 قمیضیں خریدتا ہے اور پانچوں کل 2400 روپے میں بیچتا ہے۔ نفع کتنے روپے ہے؟"
+        },
+        "answer": 400,
+        "checker": "numeric",
+        "hint": {
+          "en": "CP = 5 × 400.",
+          "ur": "قیمتِ خرید = 5 × 400"
+        },
+        "feedback_correct": {
+          "en": "Right! Rs 400.",
+          "ur": "درست! 400 روپے"
+        },
+        "feedback_wrong": {
+          "en": "2400 − 2000 = 400.",
+          "ur": "2400 − 2000 = 400"
+        },
+        "common_wrong": [
+          {
+            "answer": 2000,
+            "feedback": {
+              "en": "Rs 2000 is the cost price. Profit: 2400 − 2000 = 400.",
+              "ur": "2000 روپے قیمتِ خرید ہے۔ نفع: 2400 − 2000 = 400"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_shirts_percent",
+      "type": "apply",
+      "skill": "maths.money.word_problems",
+      "step": {
+        "id": "r_shirts_percent",
+        "type": "number",
+        "prompt": {
+          "en": "The trader spent Rs 2000 on the shirts and made Rs 400 profit. What is the profit percent? Type just the number.",
+          "ur": "تاجر نے قمیضوں پر 2000 روپے خرچ کیے اور 400 روپے نفع کمایا۔ نفع کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+        },
+        "answer": 20,
+        "checker": "numeric",
+        "hint": {
+          "en": "400 ÷ 2000 × 100.",
+          "ur": "400 ÷ 2000 × 100"
+        },
+        "feedback_correct": {
+          "en": "Right! 20%.",
+          "ur": "درست! 20%"
+        },
+        "feedback_wrong": {
+          "en": "400 ÷ 2000 × 100 = 20.",
+          "ur": "400 ÷ 2000 × 100 = 20"
+        },
+        "common_wrong": [
+          {
+            "answer": 400,
+            "feedback": {
+              "en": "Rs 400 is the profit in rupees. 400 ÷ 2000 × 100 = 20%.",
+              "ur": "400 روپے نفع ہے۔ 400 ÷ 2000 × 100 = 20%"
+            },
+            "misconception_id": "rupees_as_percent"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Profit and Loss unit. No textbook text or exercises were used.",
+    "The five-question unit test at the end covers every lesson of the unit.",
+    "Urdu terms to check: مرمت (repair), کل قیمتِ خرید (total cost price).",
+    "The numbers were worked out in content/sources/g6-maths-12/profit_loss_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
