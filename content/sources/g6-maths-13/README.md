@@ -7,8 +7,10 @@ Scripts that write the Grade 6 Maths lessons of the Simplification unit (`conten
 | `order_of_operations.py` | `g6-maths-13-order-of-operations` | `maths.simplify.order_of_operations` |
 | `brackets.py` | `g6-maths-13-brackets` | `maths.simplify.brackets` |
 | `fractions_decimals.py` | `g6-maths-13-fractions-decimals` | `maths.simplify.fractions_decimals` |
+| `estimation.py` | `g6-maths-13-estimation` | `maths.simplify.estimation` |
+| `simplification_word_problems.py` | `g6-maths-13-simplification-word-problems` | `maths.simplify.word_problems` |
 
-Every answer, and every common wrong answer (like working strictly left to right, ignoring the brackets, or multiplying only the first number in a bracket), is worked out in Python with exact decimals and fractions and checked with `assert`, so no number is typed by hand. Python follows the same order of operations as BODMAS, so each expression is written in the script just as it appears in the lesson.
+Every answer, and every common wrong answer (like working strictly left to right, ignoring the brackets, or multiplying only the first number in a bracket), is worked out in Python with exact decimals and fractions and checked with `assert`, so no number is typed by hand. Python follows the same order of operations as BODMAS, so each expression is written in the script just as it appears in the lesson. Rounding uses `round_to` in `common.py`, where a 5 rounds up as taught in school. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 
 To change a lesson, edit its script and run it, then run the validator:
 

@@ -1,0 +1,765 @@
+{
+  "id": "g6-maths-13-estimation",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Round numbers to the nearest 10, 100 or whole number, and estimate to check an answer.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Simplification"
+    }
+  ],
+  "skills": [
+    "maths.simplify.estimation"
+  ],
+  "title": {
+    "en": "Rounding and estimating",
+    "ur": "قریب ترین عدد اور اندازہ"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.simplify.order_of_operations"
+    },
+    {
+      "skill": "maths.decimals.place_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "rounds_down_always",
+      "description": "Always rounds down (drops the digits) instead of looking at the next digit."
+    },
+    {
+      "id": "wrong_place",
+      "description": "Rounds to the wrong place, such as the nearest 100 when asked for the nearest 10."
+    },
+    {
+      "id": "exact_not_estimate",
+      "description": "Works out the exact answer when an estimate is asked for, or trusts an answer without checking it."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.simplify.estimation": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.simplify.estimation": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "Rounding 45 to the nearest 10, which do we get?",
+            "ur": "45 کو قریب ترین 10 تک لانے پر کیا ملتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "fifty",
+              "text": {
+                "en": "50",
+                "ur": "50"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A 5 rounds up.",
+                "ur": "جی ہاں! 5 ہو تو اوپر جاتے ہیں۔"
+              }
+            },
+            {
+              "id": "forty",
+              "text": {
+                "en": "40",
+                "ur": "40"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "When the next digit is 5 or more, round up: 50.",
+                "ur": "جب اگلا ہندسہ 5 یا زیادہ ہو تو اوپر جائیں: 50"
+              },
+              "misconception_id": "rounds_down_always"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Round 762 to the nearest 100.",
+            "ur": "762 کو قریب ترین 100 تک لائیں۔"
+          },
+          "answer": 800,
+          "checker": "numeric",
+          "hint": {
+            "en": "Look at the tens digit: 6.",
+            "ur": "دہائی کا ہندسہ دیکھیں: 6"
+          },
+          "feedback_correct": {
+            "en": "Right! 800.",
+            "ur": "درست! 800"
+          },
+          "feedback_wrong": {
+            "en": "6 is 5 or more, so round up: 800.",
+            "ur": "6، 5 یا زیادہ ہے، تو اوپر جائیں: 800"
+          },
+          "common_wrong": [
+            {
+              "answer": 700,
+              "feedback": {
+                "en": "The tens digit is 6, so round up to 800.",
+                "ur": "دہائی کا ہندسہ 6 ہے، تو 800 تک اوپر جائیں۔"
+              },
+              "misconception_id": "rounds_down_always"
+            },
+            {
+              "answer": 760,
+              "feedback": {
+                "en": "That is the nearest 10. To the nearest 100 it is 800.",
+                "ur": "یہ قریب ترین 10 ہے۔ قریب ترین 100 تک 800 ہے۔"
+              },
+              "misconception_id": "wrong_place"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Kamran works out 19.8 × 5 and gets 9.9. How can an estimate show this is wrong?",
+            "ur": "کامران 19.8 × 5 حل کرتا ہے اور اسے 9.9 ملتا ہے۔ اندازہ کیسے دکھاتا ہے کہ یہ غلط ہے؟"
+          },
+          "options": [
+            {
+              "id": "estimate",
+              "text": {
+                "en": "19.8 is about 20, and 20 × 5 = 100, so 9.9 is far too small.",
+                "ur": "19.8 تقریباً 20 ہے، اور 20 × 5 = 100، تو 9.9 بہت چھوٹا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The real answer is 99, close to 100.",
+                "ur": "جی ہاں! اصل جواب 99 ہے، جو 100 کے قریب ہے۔"
+              }
+            },
+            {
+              "id": "fine",
+              "text": {
+                "en": "It looks fine.",
+                "ur": "یہ ٹھیک لگتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Estimate: 20 × 5 = 100. 9.9 is much too small.",
+                "ur": "اندازہ: 20 × 5 = 100۔ 9.9 بہت چھوٹا ہے۔"
+              },
+              "misconception_id": "exact_not_estimate"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_round",
+      "front": {
+        "en": "How to round?",
+        "ur": "قریب ترین عدد کیسے؟"
+      },
+      "back": {
+        "en": "Look at the next digit: 5 or more, round up; 4 or less, round down.",
+        "ur": "اگلا ہندسہ دیکھیں: 5 یا زیادہ تو اوپر؛ 4 یا کم تو نیچے۔"
+      }
+    },
+    {
+      "id": "f_estimate",
+      "front": {
+        "en": "Why estimate?",
+        "ur": "اندازہ کیوں؟"
+      },
+      "back": {
+        "en": "To check an answer is about the right size.",
+        "ur": "یہ جانچنے کے لیے کہ جواب تقریباً درست سائز کا ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_bazaar",
+      "text": {
+        "en": "Next time your family buys a few things, round each price to the nearest 10 or 100 and estimate the total in your head. Then compare with the real bill.",
+        "ur": "اگلی بار جب آپ کے گھر والے کچھ چیزیں خریدیں تو ہر قیمت کو قریب ترین 10 یا 100 تک لائیں اور دماغ میں کل کا اندازہ لگائیں۔ پھر اصل بل سے موازنہ کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Round",
+      "ur": "قریب ترین عدد تک لانا"
+    },
+    {
+      "en": "Estimate",
+      "ur": "اندازہ"
+    },
+    {
+      "en": "Nearest",
+      "ur": "قریب ترین"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "The shopkeeper says Rs 198 + Rs 405 + Rs 99 is Rs 1700. Can we check quickly, without paper?",
+          "ur": "دکاندار کہتا ہے 198 + 405 + 99 روپے، 1700 روپے ہیں۔ کیا ہم کاغذ کے بغیر جلدی جانچ سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn to round and estimate. First, a quick place value check.",
+        "ur": "آج ہم قریب ترین عدد اور اندازہ سیکھیں گے۔ پہلے مقامی قیمت کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.decimals.place_value",
+      "prompt": {
+        "en": "In 4.75, which digit is in the tenths place?",
+        "ur": "4.75 میں دسویں کے مقام پر کون سا ہندسہ ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "The tenths place is the first digit after the point.",
+        "ur": "دسواں مقام اعشاریہ کے بعد پہلا ہندسہ ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 tenths.",
+        "ur": "درست! 7 دسویں"
+      },
+      "feedback_wrong": {
+        "en": "4.75: 4 ones, 7 tenths, 5 hundredths.",
+        "ur": "4.75: 4 اکائیاں، 7 دسویں، 5 سوویں"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is in the hundredths place. The tenths digit is 7.",
+            "ur": "5 سوویں کے مقام پر ہے۔ دسویں کا ہندسہ 7 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_round",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Look one place to the right. 5 or more? Round up!",
+          "ur": "ایک مقام دائیں دیکھیں۔ 5 یا زیادہ؟ اوپر جائیں!"
+        }
+      },
+      "text": {
+        "en": "To round to the nearest 100, look at the tens digit. If it is 5 or more, round up; if it is 4 or less, round down. 487 → 500, because the tens digit 8 is 5 or more. To estimate, round each number first, then work it out. An estimate tells you if an answer is about the right size.",
+        "ur": "قریب ترین 100 تک لانے کے لیے دہائی کا ہندسہ دیکھیں۔ 5 یا زیادہ ہو تو اوپر جائیں؛ 4 یا کم ہو تو نیچے۔ 487 ← 500، کیونکہ دہائی کا ہندسہ 8 ہے۔ اندازے کے لیے پہلے ہر عدد کو قریب ترین تک لائیں، پھر حل کریں۔ اندازہ بتاتا ہے کہ جواب تقریباً درست سائز کا ہے یا نہیں۔"
+      }
+    },
+    {
+      "id": "s4_round_100",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Round 487 to the nearest 100.",
+        "ur": "487 کو قریب ترین 100 تک لائیں۔"
+      },
+      "answer": 500,
+      "checker": "numeric",
+      "hint": {
+        "en": "Look at the tens digit: 8.",
+        "ur": "دہائی کا ہندسہ دیکھیں: 8"
+      },
+      "feedback_correct": {
+        "en": "Right! 500.",
+        "ur": "درست! 500"
+      },
+      "feedback_wrong": {
+        "en": "8 is 5 or more, so round up: 500.",
+        "ur": "8، 5 یا زیادہ ہے، تو اوپر: 500"
+      },
+      "common_wrong": [
+        {
+          "answer": 400,
+          "feedback": {
+            "en": "The tens digit is 8, so round up to 500.",
+            "ur": "دہائی کا ہندسہ 8 ہے، تو 500 تک اوپر جائیں۔"
+          },
+          "misconception_id": "rounds_down_always"
+        },
+        {
+          "answer": 490,
+          "feedback": {
+            "en": "That is the nearest 10. To the nearest 100: 500.",
+            "ur": "یہ قریب ترین 10 ہے۔ قریب ترین 100 تک: 500"
+          },
+          "misconception_id": "wrong_place"
+        }
+      ]
+    },
+    {
+      "id": "s5_estimate_sum",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Estimate 298 + 513 by rounding each number to the nearest 100.",
+        "ur": "298 + 513 کا اندازہ لگائیں، ہر عدد کو قریب ترین 100 تک لا کر۔"
+      },
+      "answer": 800,
+      "checker": "numeric",
+      "hint": {
+        "en": "298 → 300 and 513 → 500.",
+        "ur": "298 ← 300 اور 513 ← 500"
+      },
+      "feedback_correct": {
+        "en": "Right! 300 + 500 = 800.",
+        "ur": "درست! 300 + 500 = 800"
+      },
+      "feedback_wrong": {
+        "en": "300 + 500 = 800. (The exact answer is 811.)",
+        "ur": "300 + 500 = 800۔ (اصل جواب 811 ہے۔)"
+      },
+      "common_wrong": [
+        {
+          "answer": 811,
+          "feedback": {
+            "en": "That is the exact answer. The estimate is 300 + 500 = 800.",
+            "ur": "یہ اصل جواب ہے۔ اندازہ 300 + 500 = 800 ہے۔"
+          },
+          "misconception_id": "exact_not_estimate"
+        },
+        {
+          "answer": 700,
+          "feedback": {
+            "en": "298 rounds up to 300, not down to 200: 800.",
+            "ur": "298، 300 تک اوپر جاتا ہے، 200 تک نیچے نہیں: 800"
+          },
+          "misconception_id": "rounds_down_always"
+        }
+      ]
+    },
+    {
+      "id": "s6_about",
+      "type": "choice",
+      "prompt": {
+        "en": "About how much is 49 × 21?",
+        "ur": "49 × 21 تقریباً کتنا ہے؟"
+      },
+      "options": [
+        {
+          "id": "thousand",
+          "text": {
+            "en": "About 1000",
+            "ur": "تقریباً 1000"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 50 × 20 = 1000. (Exactly 1029.)",
+            "ur": "جی ہاں! 50 × 20 = 1000۔ (اصل 1029)"
+          }
+        },
+        {
+          "id": "hundred",
+          "text": {
+            "en": "About 100",
+            "ur": "تقریباً 100"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "50 × 20 is 1000, not 100.",
+            "ur": "50 × 20 = 1000، 100 نہیں۔"
+          }
+        },
+        {
+          "id": "ten_thousand",
+          "text": {
+            "en": "About 10000",
+            "ur": "تقریباً 10000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "50 × 20 is 1000, not 10000.",
+            "ur": "50 × 20 = 1000، 10000 نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_decimals",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Estimate 6.8 × 4.1 by rounding each number to the nearest whole number.",
+        "ur": "6.8 × 4.1 کا اندازہ لگائیں، ہر عدد کو قریب ترین مکمل عدد تک لا کر۔"
+      },
+      "answer": 28,
+      "checker": "numeric",
+      "hint": {
+        "en": "6.8 → 7 and 4.1 → 4.",
+        "ur": "6.8 ← 7 اور 4.1 ← 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 × 4 = 28.",
+        "ur": "درست! 7 × 4 = 28"
+      },
+      "feedback_wrong": {
+        "en": "7 × 4 = 28. (The exact answer is 27.88.)",
+        "ur": "7 × 4 = 28۔ (اصل جواب 27.88 ہے۔)"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "6.8 rounds up to 7, not down to 6: 7 × 4 = 28.",
+            "ur": "6.8، 7 تک اوپر جاتا ہے، 6 تک نیچے نہیں: 7 × 4 = 28"
+          },
+          "misconception_id": "rounds_down_always"
+        }
+      ]
+    },
+    {
+      "id": "s8_round_10",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Round 3462 to the nearest 10.",
+        "ur": "3462 کو قریب ترین 10 تک لائیں۔"
+      },
+      "answer": 3460,
+      "checker": "numeric",
+      "hint": {
+        "en": "Look at the ones digit: 2.",
+        "ur": "اکائی کا ہندسہ دیکھیں: 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 3460.",
+        "ur": "درست! 3460"
+      },
+      "feedback_wrong": {
+        "en": "2 is 4 or less, so round down: 3460.",
+        "ur": "2، 4 یا کم ہے، تو نیچے: 3460"
+      },
+      "common_wrong": [
+        {
+          "answer": 3500,
+          "feedback": {
+            "en": "That is the nearest 100. To the nearest 10: 3460.",
+            "ur": "یہ قریب ترین 100 ہے۔ قریب ترین 10 تک: 3460"
+          },
+          "misconception_id": "wrong_place"
+        },
+        {
+          "answer": 3470,
+          "feedback": {
+            "en": "The ones digit is 2, so round down: 3460.",
+            "ur": "اکائی کا ہندسہ 2 ہے، تو نیچے: 3460"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hira works out 52 × 38 and gets 476. How can an estimate show it is wrong?",
+        "ur": "حرا 52 × 38 حل کرتی ہے اور اسے 476 ملتا ہے۔ اندازہ کیسے دکھاتا ہے کہ یہ غلط ہے؟"
+      },
+      "options": [
+        {
+          "id": "estimate",
+          "text": {
+            "en": "52 × 38 is about 50 × 40 = 2000, so 476 is far too small.",
+            "ur": "52 × 38 تقریباً 50 × 40 = 2000 ہے، تو 476 بہت چھوٹا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The exact answer is 1976, close to 2000.",
+            "ur": "جی ہاں! اصل جواب 1976 ہے، جو 2000 کے قریب ہے۔"
+          }
+        },
+        {
+          "id": "fine",
+          "text": {
+            "en": "It looks fine.",
+            "ur": "یہ ٹھیک لگتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Estimate: 50 × 40 = 2000. 476 is much too small.",
+            "ur": "اندازہ: 50 × 40 = 2000۔ 476 بہت چھوٹا ہے۔"
+          },
+          "misconception_id": "exact_not_estimate"
+        },
+        {
+          "id": "too_big",
+          "text": {
+            "en": "476 is too big.",
+            "ur": "476 بہت بڑا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It's the other way: the estimate 2000 is much bigger.",
+            "ur": "الٹا ہے: اندازہ 2000 بہت بڑا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "If we can work out the exact answer, why bother estimating? Can you teach me?",
+          "ur": "اگر ہم اصل جواب نکال سکتے ہیں تو اندازہ کیوں لگائیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how does an estimate help you, even when you can work out the exact answer?",
+        "ur": "اپنے الفاظ میں بتائیں: اندازہ آپ کی مدد کیسے کرتا ہے، چاہے آپ اصل جواب نکال سکتے ہوں؟"
+      },
+      "key_idea": "An estimate is quick and easy to do in your head. It tells you roughly what size the answer should be, so you can catch big mistakes, like a wrong bill or a slip in working.",
+      "levels": {
+        "got_it": "Says an estimate is quick and shows roughly what the answer should be, so you can spot a big mistake.",
+        "partly": "Says it is quick or easy, without saying it helps check answers.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "check",
+          "mistake",
+          "wrong",
+          "جانچ",
+          "غلطی",
+          "غلط"
+        ],
+        [
+          "quick",
+          "easy",
+          "head",
+          "جلدی",
+          "آسان",
+          "دماغ"
+        ],
+        [
+          "about",
+          "roughly",
+          "size",
+          "تقریباً"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! An estimate quickly catches big mistakes.",
+          "ur": "بہت خوب! اندازہ جلدی سے بڑی غلطیاں پکڑ لیتا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how it helps you check an answer.",
+          "ur": "اچھی شروعات! اب بتائیں یہ جواب جانچنے میں کیسے مدد کرتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Think of the shopkeeper's bill of Rs 1700. How did an estimate help?",
+          "ur": "دکاندار کے 1700 روپے کے بل کے بارے میں سوچیں۔ اندازے نے کیسے مدد کی؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_bill",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Things cost Rs 198, Rs 405 and Rs 99. Round each price to the nearest 100 and estimate the total, in rupees.",
+        "ur": "چیزوں کی قیمت 198، 405 اور 99 روپے ہے۔ ہر قیمت کو قریب ترین 100 تک لائیں اور کل کا اندازہ لگائیں، روپوں میں۔"
+      },
+      "answer": 700,
+      "checker": "numeric",
+      "hint": {
+        "en": "198 → 200, 405 → 400, 99 → 100.",
+        "ur": "198 ← 200، 405 ← 400، 99 ← 100"
+      },
+      "feedback_correct": {
+        "en": "Right! About Rs 700, so a bill of Rs 1700 is wrong.",
+        "ur": "درست! تقریباً 700 روپے، تو 1700 روپے کا بل غلط ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "200 + 400 + 100 = 700. (Exactly Rs 702.)",
+        "ur": "200 + 400 + 100 = 700۔ (اصل 702 روپے)"
+      },
+      "common_wrong": [
+        {
+          "answer": 702,
+          "feedback": {
+            "en": "That is the exact total. The estimate is 200 + 400 + 100 = 700.",
+            "ur": "یہ اصل کل ہے۔ اندازہ 200 + 400 + 100 = 700 ہے۔"
+          },
+          "misconception_id": "exact_not_estimate"
+        },
+        {
+          "answer": 500,
+          "feedback": {
+            "en": "198 rounds up to 200 and 99 up to 100: 700.",
+            "ur": "198، 200 تک اور 99، 100 تک اوپر جاتا ہے: 700"
+          },
+          "misconception_id": "rounds_down_always"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can check any answer in your head!",
+          "ur": "اب آپ کسی بھی جواب کو دماغ میں جانچ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "To round, look at the next digit to the right: 5 or more, round up; 4 or less, round down. To estimate, round each number first and then work it out. Use an estimate to check that an answer is about the right size.",
+        "ur": "قریب ترین عدد کے لیے دائیں والا اگلا ہندسہ دیکھیں: 5 یا زیادہ تو اوپر؛ 4 یا کم تو نیچے۔ اندازے کے لیے پہلے ہر عدد کو قریب ترین تک لائیں، پھر حل کریں۔ اندازے سے جانچیں کہ جواب تقریباً درست سائز کا ہے۔"
+      },
+      "points": [
+        {
+          "en": "5 or more: round up.",
+          "ur": "5 یا زیادہ: اوپر۔"
+        },
+        {
+          "en": "Estimate to check answers.",
+          "ur": "جواب جانچنے کے لیے اندازہ لگائیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_estimate",
+      "type": "apply",
+      "skill": "maths.simplify.estimation",
+      "step": {
+        "id": "r_estimate",
+        "type": "number",
+        "prompt": {
+          "en": "Estimate 612 − 289 by rounding each number to the nearest 100.",
+          "ur": "612 − 289 کا اندازہ لگائیں، ہر عدد کو قریب ترین 100 تک لا کر۔"
+        },
+        "answer": 300,
+        "checker": "numeric",
+        "hint": {
+          "en": "612 → 600 and 289 → 300.",
+          "ur": "612 ← 600 اور 289 ← 300"
+        },
+        "feedback_correct": {
+          "en": "Right! 600 − 300 = 300.",
+          "ur": "درست! 600 − 300 = 300"
+        },
+        "feedback_wrong": {
+          "en": "600 − 300 = 300. (Exactly 323.)",
+          "ur": "600 − 300 = 300۔ (اصل 323)"
+        },
+        "common_wrong": [
+          {
+            "answer": 323,
+            "feedback": {
+              "en": "That is the exact answer. The estimate is 600 − 300 = 300.",
+              "ur": "یہ اصل جواب ہے۔ اندازہ 600 − 300 = 300 ہے۔"
+            },
+            "misconception_id": "exact_not_estimate"
+          },
+          {
+            "answer": 400,
+            "feedback": {
+              "en": "289 rounds up to 300: 600 − 300 = 300.",
+              "ur": "289، 300 تک اوپر جاتا ہے: 600 − 300 = 300"
+            },
+            "misconception_id": "rounds_down_always"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_round",
+      "type": "apply",
+      "skill": "maths.simplify.estimation",
+      "step": {
+        "id": "r_round",
+        "type": "number",
+        "prompt": {
+          "en": "Round 45 to the nearest 10.",
+          "ur": "45 کو قریب ترین 10 تک لائیں۔"
+        },
+        "answer": 50,
+        "checker": "numeric",
+        "hint": {
+          "en": "The ones digit is 5.",
+          "ur": "اکائی کا ہندسہ 5 ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 50.",
+          "ur": "درست! 50"
+        },
+        "feedback_wrong": {
+          "en": "5 rounds up: 50.",
+          "ur": "5 ہو تو اوپر: 50"
+        },
+        "common_wrong": [
+          {
+            "answer": 40,
+            "feedback": {
+              "en": "A 5 rounds up: 50.",
+              "ur": "5 ہو تو اوپر جائیں: 50"
+            },
+            "misconception_id": "rounds_down_always"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Simplification unit. No textbook text or exercises were used.",
+    "Rounding follows the school rule: a 5 rounds up.",
+    "Urdu terms to check: اندازہ (estimate), قریب ترین (nearest).",
+    "The numbers were worked out in content/sources/g6-maths-13/estimation.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
