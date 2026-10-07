@@ -14,6 +14,7 @@ import 'package:ai_tutor/services/connectivity.dart';
 import 'package:ai_tutor/services/local_db.dart';
 import 'package:ai_tutor/services/remote_store.dart';
 import 'package:flutter/services.dart';
+import 'package:ai_tutor/lessons/hidden_units.dart';
 import 'package:ai_tutor/lessons/steps/video_step_view.dart';
 import 'package:ai_tutor/sims/sim_host.dart';
 import 'package:flutter/widgets.dart';
@@ -38,6 +39,8 @@ Future<Widget> buildTestApp({
   return ProviderScope(
     overrides: [
       sharedPreferencesProvider.overrideWithValue(store),
+      // Most tests play the Fractions lesson, which children don't see.
+      hiddenUnitsProvider.overrideWithValue(const {}),
       localDbProvider.overrideWithValue(fake.db),
       authServiceProvider.overrideWithValue(fake.auth),
       remoteStoreProvider.overrideWithValue(fake.remote),

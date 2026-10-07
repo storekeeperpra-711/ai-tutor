@@ -21,6 +21,7 @@ void main() {
       'g6-maths-02-adding-fractions',
       'draft',
     ),
+    'g6-maths-04-adding-integers': load('g6-maths-04-adding-integers', 'draft'),
     'g9-maths-05-linear-programming': load(
       'g9-maths-05-linear-programming',
       'approved',
@@ -45,9 +46,16 @@ void main() {
 
   test('the dev test app shows lessons still waiting for review', () async {
     expect(await visible(drafts: true), [
-      'g6-maths-02-adding-fractions',
+      'g6-maths-04-adding-integers',
       'g9-maths-05-linear-programming',
     ]);
+  });
+
+  test('units not in the Grade 6 book are never shown', () async {
+    expect(
+      await visible(drafts: true),
+      isNot(contains('g6-maths-02-adding-fractions')),
+    );
   });
 
   test('the prod app shows approved lessons only', () async {

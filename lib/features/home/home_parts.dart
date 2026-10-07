@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../app/preferences.dart';
 import '../../app/theme/age_tier.dart';
 import '../../l10n/app_localizations.dart';
+import '../../lessons/hidden_units.dart';
 import '../../lessons/lesson_repository.dart';
 import '../../mastery/skill_state.dart';
 import '../../models/lesson.dart';
@@ -30,14 +31,17 @@ final showDraftLessonsProvider = Provider<bool>(
   (ref) => kDebugMode || appFlavor == 'dev',
 );
 
-/// The lessons a child sees: reviewed ones, plus drafts in the dev app.
+/// The lessons a child sees: reviewed ones, plus drafts in the dev app,
+/// but never hidden units.
 final visibleLessonsProvider = Provider<List<Lesson>>((ref) {
   final ids = ref.watch(lessonIdsProvider).value ?? const <String>[];
   final drafts = ref.watch(showDraftLessonsProvider);
+  final hidden = ref.watch(hiddenUnitsProvider);
   return [
     for (final id in ids)
-      if (ref.watch(lessonProvider(id)).value case final lesson?)
-        if (lesson.review.isApproved || drafts) lesson,
+      if (!isHiddenLesson(id, hidden))
+        if (ref.watch(lessonProvider(id)).value case final lesson?)
+          if (lesson.review.isApproved || drafts) lesson,
   ];
 });
 

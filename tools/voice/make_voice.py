@@ -109,9 +109,18 @@ def line_hash(text: str, language: str) -> str:
     return hashlib.sha256(key.encode()).hexdigest()[:12]
 
 
+# Units children don't see (lib/lessons/hidden_units.dart; keep the same).
+HIDDEN_UNITS = ("g6-maths-02", "g6-maths-03", "g6-maths-12", "g6-maths-15")
+
+
+def is_hidden(lesson_id: str) -> bool:
+    return any(lesson_id.startswith(f"{unit}-") for unit in HIDDEN_UNITS)
+
+
 def lesson_order(lesson_id: str) -> tuple:
-    """Grade 9 first (the lessons being tested now), then the rest."""
-    return (not lesson_id.startswith("g9-"), lesson_id)
+    """Grade 9 first (the lessons being tested now), then the rest, and
+    hidden units last so the daily allowance goes to lessons children see."""
+    return (is_hidden(lesson_id), not lesson_id.startswith("g9-"), lesson_id)
 
 
 def all_lines() -> list[dict]:

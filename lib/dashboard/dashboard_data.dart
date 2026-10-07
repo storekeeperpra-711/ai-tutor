@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../classes/class_store.dart';
+import '../lessons/hidden_units.dart';
 import '../lessons/lesson_repository.dart';
 import '../lessons/lesson_updates.dart';
 import '../mastery/curriculum.dart';
@@ -14,7 +15,11 @@ import '../services/remote_store.dart';
 /// Every lesson for the dashboard: the ones bundled with the app, replaced
 /// or joined by newer ones published to Firestore. The website has no
 /// phone database, so it reads them straight away each time it opens.
-Future<Curriculum> loadDashboardCurriculum(RemoteStore remote) async {
+/// Hidden units are left out, as in the app.
+Future<Curriculum> loadDashboardCurriculum(
+  RemoteStore remote, {
+  Set<String> hidden = hiddenUnits,
+}) async {
   final lessons = <String, Lesson>{};
   final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
   for (final path in manifest.listAssets()) {
@@ -47,7 +52,10 @@ Future<Curriculum> loadDashboardCurriculum(RemoteStore remote) async {
   } catch (_) {
     // Without the catalog, the bundled lessons still work.
   }
-  return Curriculum(lessons.values.toList());
+  return Curriculum([
+    for (final lesson in lessons.values)
+      if (!isHiddenLesson(lesson.id, hidden)) lesson,
+  ]);
 }
 
 /// One student's level in one skill, for the grid.
@@ -128,5 +136,8 @@ String describeMistake(Curriculum? curriculum, String lessonId, String id) {
 
 /// The dashboard's lessons; it stands in for the app's `curriculumProvider`.
 final dashboardCurriculumProvider = FutureProvider<Curriculum>(
-  (ref) => loadDashboardCurriculum(ref.watch(remoteStoreProvider)),
+  (ref) => loadDashboardCurriculum(
+    ref.watch(remoteStoreProvider),
+    hidden: ref.watch(hiddenUnitsProvider),
+  ),
 );
