@@ -1,0 +1,743 @@
+{
+  "id": "g6-maths-11-what-is-a-percent",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Understand a percent as a number out of 100, and write simple fractions out of 100 or 10 as percents.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Percentages"
+    }
+  ],
+  "skills": [
+    "maths.percent.meaning"
+  ],
+  "title": {
+    "en": "What is a percent?",
+    "ur": "فیصد کیا ہے؟"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.fractions.equivalent"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "out_of_ten",
+      "description": "Reads a percent as a number out of 10 instead of out of 100."
+    },
+    {
+      "id": "rest_not_whole",
+      "description": "Forgets that the whole is 100%, so can't find the part that is left."
+    },
+    {
+      "id": "denominator_as_percent",
+      "description": "Uses the top number of a fraction as the percent without first making the bottom 100."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.percent.meaning": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.percent.meaning": [
+      {
+        "id": "qb_mean",
+        "type": "recall",
+        "step": {
+          "id": "qb_mean",
+          "type": "choice",
+          "prompt": {
+            "en": "What does 40% mean?",
+            "ur": "40% کا کیا مطلب ہے؟"
+          },
+          "options": [
+            {
+              "id": "hundred",
+              "text": {
+                "en": "40 out of every 100",
+                "ur": "ہر 100 میں سے 40"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Per cent means out of 100.",
+                "ur": "جی ہاں! فیصد کا مطلب ہے 100 میں سے۔"
+              }
+            },
+            {
+              "id": "ten",
+              "text": {
+                "en": "40 out of every 10",
+                "ur": "ہر 10 میں سے 40"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Per cent means out of 100, not 10.",
+                "ur": "فیصد کا مطلب 100 میں سے ہے، 10 میں سے نہیں۔"
+              },
+              "misconception_id": "out_of_ten"
+            },
+            {
+              "id": "forty",
+              "text": {
+                "en": "40 things",
+                "ur": "40 چیزیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A percent is a part out of 100: 40 out of every 100.",
+                "ur": "فیصد 100 میں سے حصہ ہے: ہر 100 میں سے 40۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Write 1/5 as a percent. Type just the number.",
+            "ur": "1/5 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+          },
+          "answer": 20,
+          "checker": "numeric",
+          "hint": {
+            "en": "1/5 = ?/100. Multiply top and bottom by 20.",
+            "ur": "1/5 = ?/100۔ اوپر اور نیچے کو 20 سے ضرب دیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 1/5 = 20/100 = 20%.",
+            "ur": "درست! 1/5 = 20/100 = 20%"
+          },
+          "feedback_wrong": {
+            "en": "1/5 = 20/100, so it is 20%.",
+            "ur": "1/5 = 20/100، یعنی 20%"
+          },
+          "common_wrong": [
+            {
+              "answer": 1,
+              "feedback": {
+                "en": "Make the bottom 100 first: 1/5 = 20/100 = 20%.",
+                "ur": "پہلے نیچے والا 100 بنائیں: 1/5 = 20/100 = 20%"
+              },
+              "misconception_id": "denominator_as_percent"
+            },
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "Make the bottom 100 first: 1/5 = 20/100 = 20%.",
+                "ur": "پہلے نیچے والا 100 بنائیں: 1/5 = 20/100 = 20%"
+              },
+              "misconception_id": "denominator_as_percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A test has 10 questions. Hina gets 6 right and says she scored 6%. What went wrong?",
+            "ur": "ٹیسٹ میں 10 سوال ہیں۔ حنا کے 6 درست ہیں اور وہ کہتی ہے اس کے 6% نمبر ہیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "hundred",
+              "text": {
+                "en": "6 out of 10 is 60 out of 100, so she scored 60%.",
+                "ur": "10 میں سے 6 یعنی 100 میں سے 60، تو اس کے 60% ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A percent is always out of 100.",
+                "ur": "جی ہاں! فیصد ہمیشہ 100 میں سے ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6% would be 6 out of 100. She got 6 out of 10, which is 60%.",
+                "ur": "6% کا مطلب 100 میں سے 6 ہے۔ اس کے 10 میں سے 6 ہیں، یعنی 60%۔"
+              },
+              "misconception_id": "out_of_ten"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_percent",
+      "front": {
+        "en": "Percent (%)?",
+        "ur": "فیصد (%)؟"
+      },
+      "back": {
+        "en": "Out of 100. 25% = 25 out of 100 = 25/100.",
+        "ur": "100 میں سے۔ 25% = 100 میں سے 25 = 25/100"
+      }
+    },
+    {
+      "id": "f_whole",
+      "front": {
+        "en": "The whole thing is…",
+        "ur": "پوری چیز…"
+      },
+      "back": {
+        "en": "100%. If 30% is used, 70% is left.",
+        "ur": "100% ہے۔ اگر 30% استعمال ہو تو 70% باقی ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_spot",
+      "text": {
+        "en": "Look for the % sign at home or in the bazaar: a phone battery, a sale board, a packet of milk or biscuits. Write down three you find and say what each one means out of 100.",
+        "ur": "گھر یا بازار میں % کا نشان ڈھونڈیں: فون کی بیٹری، سیل کا بورڈ، دودھ یا بسکٹ کا پیکٹ۔ تین لکھیں اور بتائیں ہر ایک کا مطلب 100 میں سے کیا ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Percent",
+      "ur": "فیصد"
+    },
+    {
+      "en": "Out of 100",
+      "ur": "100 میں سے"
+    },
+    {
+      "en": "Whole",
+      "ur": "پورا"
+    },
+    {
+      "en": "Fraction",
+      "ur": "کسر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My phone battery says 75%. Is that a lot or a little? What does the 75 count?",
+          "ur": "میرے فون کی بیٹری 75% دکھاتی ہے۔ یہ زیادہ ہے یا کم؟ 75 کس چیز کو گنتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn what a percent is. First, a quick check on fractions.",
+        "ur": "آج ہم سیکھیں گے کہ فیصد کیا ہے۔ پہلے کسروں کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.fractions.equivalent",
+      "prompt": {
+        "en": "1/4 = ?/100. What is the missing number?",
+        "ur": "1/4 = ?/100۔ خالی جگہ پر کون سا عدد آئے گا؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × 25 = 100, so multiply the top by 25 too.",
+        "ur": "4 × 25 = 100، تو اوپر والے کو بھی 25 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1/4 = 25/100.",
+        "ur": "درست! 1/4 = 25/100"
+      },
+      "feedback_wrong": {
+        "en": "Multiply top and bottom by 25: 25/100.",
+        "ur": "اوپر اور نیچے کو 25 سے ضرب دیں: 25/100"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Make the bottom 100 by multiplying by 25. Do the same to the top: 25.",
+            "ur": "نیچے والے کو 25 سے ضرب دے کر 100 بنائیں۔ اوپر والے کے ساتھ بھی یہی کریں: 25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_percent",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Per cent means out of a hundred. Cent is an old word for hundred!",
+          "ur": "فیصد کا مطلب ہے سو میں سے۔ فی صد یعنی ہر سو پر!"
+        }
+      },
+      "text": {
+        "en": "A percent is a number out of 100, and the sign % means \"out of 100\". 25% means 25 out of 100, which is 25/100, the same as 1/4. The whole thing is 100%. So a battery at 75% has 75 parts out of 100 left: three quarters full.",
+        "ur": "فیصد 100 میں سے ایک عدد ہے، اور % کا نشان \"100 میں سے\" کا مطلب دیتا ہے۔ 25% کا مطلب ہے 100 میں سے 25، یعنی 25/100، جو 1/4 کے برابر ہے۔ پوری چیز 100% ہے۔ تو 75% والی بیٹری میں 100 میں سے 75 حصے باقی ہیں: تین چوتھائی بھری ہوئی۔"
+      }
+    },
+    {
+      "id": "s4_squares",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A grid has 100 squares. 37 are coloured green. What percent is green? Type just the number.",
+        "ur": "ایک جال میں 100 خانے ہیں۔ 37 سبز ہیں۔ کتنے فیصد سبز ہیں؟ صرف عدد لکھیں۔"
+      },
+      "answer": 37,
+      "checker": "numeric",
+      "hint": {
+        "en": "Out of 100 is the same as percent.",
+        "ur": "100 میں سے یعنی فیصد۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 37 out of 100 is 37%.",
+        "ur": "درست! 100 میں سے 37 یعنی 37%"
+      },
+      "feedback_wrong": {
+        "en": "37 out of 100 squares is 37%.",
+        "ur": "100 میں سے 37 خانے یعنی 37%"
+      },
+      "common_wrong": [
+        {
+          "answer": 63,
+          "feedback": {
+            "en": "63 squares are not green. Green is 37 out of 100: 37%.",
+            "ur": "63 خانے سبز نہیں ہیں۔ سبز 100 میں سے 37 ہیں: 37%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_rest",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "45% of a wall is painted. What percent is not painted yet?",
+        "ur": "ایک دیوار کا 45% رنگ ہو چکا ہے۔ کتنے فیصد ابھی باقی ہے؟"
+      },
+      "answer": 55,
+      "checker": "numeric",
+      "hint": {
+        "en": "The whole wall is 100%.",
+        "ur": "پوری دیوار 100% ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 100 − 45 = 55%.",
+        "ur": "درست! 100 − 45 = 55%"
+      },
+      "feedback_wrong": {
+        "en": "The whole is 100%, so 100 − 45 = 55.",
+        "ur": "پورا 100% ہے، تو 100 − 45 = 55"
+      },
+      "common_wrong": [
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "45% is the painted part. The rest is 100 − 45 = 55%.",
+            "ur": "45% رنگ والا حصہ ہے۔ باقی 100 − 45 = 55% ہے۔"
+          },
+          "misconception_id": "rest_not_whole"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "The whole is 100%, not 50%: 100 − 45 = 55.",
+            "ur": "پورا 100% ہے، 50% نہیں: 100 − 45 = 55"
+          },
+          "misconception_id": "rest_not_whole"
+        }
+      ]
+    },
+    {
+      "id": "s6_hundredths",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 9/100 as a percent. Type just the number.",
+        "ur": "9/100 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "The bottom is already 100.",
+        "ur": "نیچے والا پہلے ہی 100 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9/100 = 9%.",
+        "ur": "درست! 9/100 = 9%"
+      },
+      "feedback_wrong": {
+        "en": "9 out of 100 is 9%.",
+        "ur": "100 میں سے 9 یعنی 9%"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "That would be 90 out of 100. 9/100 is 9%.",
+            "ur": "یہ 100 میں سے 90 ہوتا۔ 9/100 یعنی 9%"
+          },
+          "misconception_id": "out_of_ten"
+        }
+      ]
+    },
+    {
+      "id": "s7_half",
+      "type": "choice",
+      "prompt": {
+        "en": "Which is the same as 50%?",
+        "ur": "کون سا 50% کے برابر ہے؟"
+      },
+      "options": [
+        {
+          "id": "half",
+          "text": {
+            "en": "Half",
+            "ur": "آدھا"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 50 out of 100 is one half.",
+            "ur": "جی ہاں! 100 میں سے 50 یعنی آدھا۔"
+          }
+        },
+        {
+          "id": "fifth",
+          "text": {
+            "en": "One fifth",
+            "ur": "پانچواں حصہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "One fifth is 20 out of 100. 50 out of 100 is a half.",
+            "ur": "پانچواں حصہ 100 میں سے 20 ہے۔ 100 میں سے 50 آدھا ہے۔"
+          }
+        },
+        {
+          "id": "all",
+          "text": {
+            "en": "All of it",
+            "ur": "سارا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "All of it is 100%. 50% is half.",
+            "ur": "سارا 100% ہے۔ 50% آدھا ہے۔"
+          },
+          "misconception_id": "rest_not_whole"
+        }
+      ]
+    },
+    {
+      "id": "s8_tenths",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "3/10 of the children walk to school. What percent is that? Type just the number.",
+        "ur": "3/10 بچے پیدل اسکول آتے ہیں۔ یہ کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "3/10 = ?/100. Multiply top and bottom by 10.",
+        "ur": "3/10 = ?/100۔ اوپر اور نیچے کو 10 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3/10 = 30/100 = 30%.",
+        "ur": "درست! 3/10 = 30/100 = 30%"
+      },
+      "feedback_wrong": {
+        "en": "3/10 = 30/100, so it is 30%.",
+        "ur": "3/10 = 30/100، یعنی 30%"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Make the bottom 100 first: 3/10 = 30/100 = 30%.",
+            "ur": "پہلے نیچے والا 100 بنائیں: 3/10 = 30/100 = 30%"
+          },
+          "misconception_id": "denominator_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ali says 7% means 7 out of 10. What went wrong?",
+        "ur": "علی کہتا ہے 7% کا مطلب ہے 10 میں سے 7۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "hundred",
+          "text": {
+            "en": "A percent is out of 100: 7% is 7 out of 100.",
+            "ur": "فیصد 100 میں سے ہوتا ہے: 7% یعنی 100 میں سے 7۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 7 out of 10 would be 70%.",
+            "ur": "جی ہاں! 10 میں سے 7 تو 70% ہوتا۔"
+          }
+        },
+        {
+          "id": "seventy",
+          "text": {
+            "en": "7% means 70 out of 100.",
+            "ur": "7% کا مطلب 100 میں سے 70 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "70 out of 100 is 70%. 7% is 7 out of 100.",
+            "ur": "100 میں سے 70 یعنی 70%۔ 7% یعنی 100 میں سے 7۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Per cent means out of 100, so 7% is 7 out of 100.",
+            "ur": "فیصد کا مطلب 100 میں سے ہے، تو 7% یعنی 100 میں سے 7۔"
+          },
+          "misconception_id": "out_of_ten"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is the whole thing 100%, and not 10% or 1000%? Can you teach me?",
+          "ur": "پوری چیز 100% کیوں ہے، 10% یا 1000% کیوں نہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the whole of something 100%?",
+        "ur": "اپنے الفاظ میں بتائیں: کسی چیز کا پورا حصہ 100% کیوں ہوتا ہے؟"
+      },
+      "key_idea": "A percent counts parts out of 100. If the whole is cut into 100 equal parts, all of them together are 100 out of 100, which is 100%.",
+      "levels": {
+        "got_it": "Says a percent counts parts out of 100, so all 100 parts make 100%.",
+        "partly": "Says percent means out of 100, without linking it to the whole.",
+        "not_yet": "Gives no reason, or just repeats that the whole is 100%."
+      },
+      "keywords": [
+        [
+          "100",
+          "hundred",
+          "سو"
+        ],
+        [
+          "parts",
+          "pieces",
+          "حصے",
+          "ٹکڑے"
+        ],
+        [
+          "whole",
+          "all",
+          "پورا",
+          "سارا",
+          "سب"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The whole is 100 parts out of 100.",
+          "ur": "بہت خوب! پوری چیز 100 میں سے 100 حصے ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what happens when you take all 100 parts.",
+          "ur": "اچھی شروعات! اب بتائیں جب سب 100 حصے لیں تو کیا ہوتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Think of the grid of 100 squares. If all of them are green, what percent is green?",
+          "ur": "100 خانوں والا جال سوچیں۔ اگر سب سبز ہوں تو کتنے فیصد سبز ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_mangoes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A box has 100 mangoes. 12 are bad. What percent of the mangoes are good?",
+        "ur": "ایک پیٹی میں 100 آم ہیں۔ 12 خراب ہیں۔ کتنے فیصد آم اچھے ہیں؟"
+      },
+      "answer": 88,
+      "checker": "numeric",
+      "hint": {
+        "en": "All the mangoes are 100%. Take away the bad ones.",
+        "ur": "سارے آم 100% ہیں۔ خراب نکال دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 88% are good.",
+        "ur": "درست! 88% اچھے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "100 − 12 = 88, so 88%.",
+        "ur": "100 − 12 = 88، یعنی 88%"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12% are bad. The good ones are 100 − 12 = 88%.",
+            "ur": "12% خراب ہیں۔ اچھے 100 − 12 = 88% ہیں۔"
+          },
+          "misconception_id": "rest_not_whole"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you know what the % sign means!",
+          "ur": "اب آپ جانتے ہیں کہ % کا نشان کیا بتاتا ہے!"
+        }
+      },
+      "text": {
+        "en": "A percent is a number out of 100: 25% means 25 out of 100, or 25/100. The whole thing is 100%, so the part left over is 100 minus the part used. To turn a fraction into a percent, first make its bottom number 100.",
+        "ur": "فیصد 100 میں سے ایک عدد ہے: 25% یعنی 100 میں سے 25، یا 25/100۔ پوری چیز 100% ہے، تو باقی حصہ 100 میں سے استعمال شدہ حصہ نکال کر ملتا ہے۔ کسر کو فیصد بنانے کے لیے پہلے اس کا نیچے والا عدد 100 بنائیں۔"
+      },
+      "points": [
+        {
+          "en": "% means out of 100.",
+          "ur": "% یعنی 100 میں سے۔"
+        },
+        {
+          "en": "The whole is 100%.",
+          "ur": "پورا 100% ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_half",
+      "type": "apply",
+      "skill": "maths.percent.meaning",
+      "step": {
+        "id": "r_half",
+        "type": "number",
+        "prompt": {
+          "en": "Write 1/2 as a percent. Type just the number.",
+          "ur": "1/2 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+        },
+        "answer": 50,
+        "checker": "numeric",
+        "hint": {
+          "en": "1/2 = ?/100",
+          "ur": "1/2 = ?/100"
+        },
+        "feedback_correct": {
+          "en": "Right! 50%.",
+          "ur": "درست! 50%"
+        },
+        "feedback_wrong": {
+          "en": "1/2 = 50/100 = 50%.",
+          "ur": "1/2 = 50/100 = 50%"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "Make the bottom 100: 1/2 = 50/100 = 50%.",
+              "ur": "نیچے والا 100 بنائیں: 1/2 = 50/100 = 50%"
+            },
+            "misconception_id": "denominator_as_percent"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_rest",
+      "type": "apply",
+      "skill": "maths.percent.meaning",
+      "step": {
+        "id": "r_rest",
+        "type": "number",
+        "prompt": {
+          "en": "64% of the seats on a bus are taken. What percent are empty?",
+          "ur": "بس کی 64% نشستیں بھری ہیں۔ کتنے فیصد خالی ہیں؟"
+        },
+        "answer": 36,
+        "checker": "numeric",
+        "hint": {
+          "en": "The whole bus is 100%.",
+          "ur": "پوری بس 100% ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 36%.",
+          "ur": "درست! 36%"
+        },
+        "feedback_wrong": {
+          "en": "100 − 64 = 36.",
+          "ur": "100 − 64 = 36"
+        },
+        "common_wrong": [
+          {
+            "answer": 64,
+            "feedback": {
+              "en": "64% are taken. Empty: 100 − 64 = 36%.",
+              "ur": "64% بھری ہیں۔ خالی: 100 − 64 = 36%"
+            },
+            "misconception_id": "rest_not_whole"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Percentages unit. No textbook text or exercises were used.",
+    "Number answers are typed without the % sign; each prompt says \"type just the number\" where that might confuse.",
+    "Urdu terms to check: فیصد (percent), کسر (fraction).",
+    "The numbers were worked out in content/sources/g6-maths-11/what_is_a_percent.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

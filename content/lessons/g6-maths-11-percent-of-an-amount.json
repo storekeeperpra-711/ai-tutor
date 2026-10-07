@@ -1,0 +1,767 @@
+{
+  "id": "g6-maths-11-percent-of-an-amount",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find a percentage of an amount, using 10%, 50% and 25% as building blocks.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Percentages"
+    }
+  ],
+  "skills": [
+    "maths.percent.of_amount"
+  ],
+  "title": {
+    "en": "Percent of an amount",
+    "ur": "کسی مقدار کا فیصد"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.percent.convert"
+    },
+    {
+      "skill": "maths.fractions.multiply"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "percent_as_answer",
+      "description": "Gives the percent itself as the answer (20% of 40 = 20)."
+    },
+    {
+      "id": "ten_percent_wrong",
+      "description": "Finds 10% by taking away 10 instead of dividing by 10."
+    },
+    {
+      "id": "rest_instead",
+      "description": "Gives the amount left over instead of the percent asked for."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.percent.of_amount": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.percent.of_amount": [
+      {
+        "id": "qb_ten",
+        "type": "recall",
+        "step": {
+          "id": "qb_ten",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the quickest way to find 10% of an amount?",
+            "ur": "کسی مقدار کا 10% نکالنے کا سب سے آسان طریقہ کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "div10",
+              "text": {
+                "en": "Divide it by 10",
+                "ur": "اسے 10 سے تقسیم کریں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 10% is one tenth.",
+                "ur": "جی ہاں! 10% یعنی دسواں حصہ۔"
+              }
+            },
+            {
+              "id": "minus10",
+              "text": {
+                "en": "Take away 10",
+                "ur": "10 نفی کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "10% is a tenth of the amount, so divide by 10.",
+                "ur": "10% مقدار کا دسواں حصہ ہے، تو 10 سے تقسیم کریں۔"
+              },
+              "misconception_id": "ten_percent_wrong"
+            },
+            {
+              "id": "times10",
+              "text": {
+                "en": "Multiply it by 10",
+                "ur": "اسے 10 سے ضرب دیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "10% is smaller than the amount. Divide by 10.",
+                "ur": "10% مقدار سے چھوٹا ہے۔ 10 سے تقسیم کریں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Find 5% of 80.",
+            "ur": "80 کا 5% معلوم کریں۔"
+          },
+          "answer": 4,
+          "checker": "numeric",
+          "hint": {
+            "en": "10% of 80 is 8. 5% is half of that.",
+            "ur": "80 کا 10% یعنی 8۔ 5% اس کا آدھا ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 4.",
+            "ur": "درست! 4"
+          },
+          "feedback_wrong": {
+            "en": "10% = 8, so 5% = 4.",
+            "ur": "10% = 8، تو 5% = 4"
+          },
+          "common_wrong": [
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "5 is the percent. 5% of 80 is 4.",
+                "ur": "5 فیصد ہے۔ 80 کا 5% یعنی 4"
+              },
+              "misconception_id": "percent_as_answer"
+            },
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "8 is 10%. 5% is half of it: 4.",
+                "ur": "8 یعنی 10%۔ 5% اس کا آدھا ہے: 4"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zara says 10% of 90 is 80, because 90 − 10 = 80. What went wrong?",
+            "ur": "زارا کہتی ہے 90 کا 10% یعنی 80، کیونکہ 90 − 10 = 80۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "divide",
+              "text": {
+                "en": "10% means divide by 10: 10% of 90 is 9.",
+                "ur": "10% یعنی 10 سے تقسیم: 90 کا 10% یعنی 9"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 10% is a tenth, a small part of 90.",
+                "ur": "جی ہاں! 10% دسواں حصہ ہے، 90 کا چھوٹا سا حصہ۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "80 is most of 90! 10% is one tenth: 9.",
+                "ur": "80 تو 90 کا زیادہ تر حصہ ہے! 10% دسواں حصہ ہے: 9"
+              },
+              "misconception_id": "ten_percent_wrong"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_blocks",
+      "front": {
+        "en": "Easy percents?",
+        "ur": "آسان فیصد؟"
+      },
+      "back": {
+        "en": "50% = half. 25% = quarter. 10% = ÷ 10.",
+        "ur": "50% = آدھا۔ 25% = چوتھائی۔ 10% = ÷ 10"
+      }
+    },
+    {
+      "id": "f_build",
+      "front": {
+        "en": "20% or 15%?",
+        "ur": "20% یا 15%؟"
+      },
+      "back": {
+        "en": "20% = 10% × 2. 15% = 10% + 5%.",
+        "ur": "20% = 10% × 2۔ 15% = 10% + 5%"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sale",
+      "text": {
+        "en": "Ask someone at home the price of something you buy often, like a bag of flour or a bottle of oil. Work out 10% and 50% of that price. What would 20% off save?",
+        "ur": "گھر میں کسی سے کوئی ایسی چیز کی قیمت پوچھیں جو اکثر خریدی جاتی ہے، جیسے آٹے کا تھیلا یا تیل کی بوتل۔ اس قیمت کا 10% اور 50% نکالیں۔ 20% رعایت سے کتنی بچت ہو گی؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Percent of",
+      "ur": "کا فیصد"
+    },
+    {
+      "en": "Discount",
+      "ur": "رعایت"
+    },
+    {
+      "en": "Amount",
+      "ur": "مقدار"
+    },
+    {
+      "en": "Tenth",
+      "ur": "دسواں حصہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "The shop says 20% off a Rs 500 school bag. How much money do we save?",
+          "ur": "دکان پر لکھا ہے 500 روپے کے اسکول بیگ پر 20% رعایت۔ ہم کتنے پیسے بچائیں گے؟"
+        }
+      },
+      "text": {
+        "en": "Today we find a percent of an amount. First, a quick check on fractions.",
+        "ur": "آج ہم کسی مقدار کا فیصد نکالیں گے۔ پہلے کسروں کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.fractions.multiply",
+      "prompt": {
+        "en": "What is 1/4 of 20?",
+        "ur": "20 کا 1/4 کیا ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide 20 into 4 equal parts.",
+        "ur": "20 کو 4 برابر حصوں میں بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5.",
+        "ur": "درست! 5"
+      },
+      "feedback_wrong": {
+        "en": "20 ÷ 4 = 5.",
+        "ur": "20 ÷ 4 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "That multiplies. A quarter of 20 is 20 ÷ 4 = 5.",
+            "ur": "یہ ضرب ہے۔ 20 کا چوتھائی 20 ÷ 4 = 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_blocks",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Start with the easy ones, then build the rest from them!",
+          "ur": "پہلے آسان والے نکالیں، پھر باقی انہی سے بنائیں!"
+        }
+      },
+      "text": {
+        "en": "Some percents are easy: 50% is half (÷ 2), 25% is a quarter (÷ 4), 10% is a tenth (÷ 10). Build others from these: 20% = 10% × 2, 5% = half of 10%, 15% = 10% + 5%. For any percent: divide the amount by 100, then multiply by the percent. For 20% of 500: 10% is 50, so 20% is 100.",
+        "ur": "کچھ فیصد آسان ہیں: 50% آدھا (÷ 2)، 25% چوتھائی (÷ 4)، 10% دسواں حصہ (÷ 10)۔ باقی انہی سے بنائیں: 20% = 10% × 2، 5% = 10% کا آدھا، 15% = 10% + 5%۔ کسی بھی فیصد کے لیے: مقدار کو 100 سے تقسیم کریں، پھر فیصد سے ضرب دیں۔ 500 کا 20%: 10% یعنی 50، تو 20% یعنی 100۔"
+      }
+    },
+    {
+      "id": "s4_ten",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 10% of 300.",
+        "ur": "300 کا 10% معلوم کریں۔"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 10.",
+        "ur": "10 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30.",
+        "ur": "درست! 30"
+      },
+      "feedback_wrong": {
+        "en": "300 ÷ 10 = 30.",
+        "ur": "300 ÷ 10 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 290,
+          "feedback": {
+            "en": "10% is not 10 less. It is a tenth: 300 ÷ 10 = 30.",
+            "ur": "10% یعنی 10 کم نہیں۔ یہ دسواں حصہ ہے: 300 ÷ 10 = 30"
+          },
+          "misconception_id": "ten_percent_wrong"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is the percent. 10% of 300 is 30.",
+            "ur": "10 فیصد ہے۔ 300 کا 10% یعنی 30"
+          },
+          "misconception_id": "percent_as_answer"
+        }
+      ]
+    },
+    {
+      "id": "s5_half",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 50% of 84.",
+        "ur": "84 کا 50% معلوم کریں۔"
+      },
+      "answer": 42,
+      "checker": "numeric",
+      "hint": {
+        "en": "50% is half.",
+        "ur": "50% یعنی آدھا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 42.",
+        "ur": "درست! 42"
+      },
+      "feedback_wrong": {
+        "en": "Half of 84 is 42.",
+        "ur": "84 کا آدھا 42 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 34,
+          "feedback": {
+            "en": "50% is not 50 less. It is half: 42.",
+            "ur": "50% یعنی 50 کم نہیں۔ یہ آدھا ہے: 42"
+          }
+        },
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "50 is the percent. Half of 84 is 42.",
+            "ur": "50 فیصد ہے۔ 84 کا آدھا 42 ہے۔"
+          },
+          "misconception_id": "percent_as_answer"
+        }
+      ]
+    },
+    {
+      "id": "s6_quarter",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 25% of 200.",
+        "ur": "200 کا 25% معلوم کریں۔"
+      },
+      "answer": 50,
+      "checker": "numeric",
+      "hint": {
+        "en": "25% is a quarter: divide by 4.",
+        "ur": "25% یعنی چوتھائی: 4 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 50.",
+        "ur": "درست! 50"
+      },
+      "feedback_wrong": {
+        "en": "200 ÷ 4 = 50.",
+        "ur": "200 ÷ 4 = 50"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "25 is the percent. A quarter of 200 is 50.",
+            "ur": "25 فیصد ہے۔ 200 کا چوتھائی 50 ہے۔"
+          },
+          "misconception_id": "percent_as_answer"
+        },
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "150 is what is left (75%). 25% is 50.",
+            "ur": "150 باقی ہے (75%)۔ 25% یعنی 50"
+          },
+          "misconception_id": "rest_instead"
+        }
+      ]
+    },
+    {
+      "id": "s7_bag",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A school bag costs Rs 500. The shop gives 20% off. How many rupees do you save?",
+        "ur": "اسکول بیگ 500 روپے کا ہے۔ دکان 20% رعایت دیتی ہے۔ آپ کتنے روپے بچاتے ہیں؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% of 500 is 50. 20% is twice that.",
+        "ur": "500 کا 10% یعنی 50۔ 20% اس کا دگنا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! You save Rs 100.",
+        "ur": "درست! آپ 100 روپے بچاتے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "10% = 50, so 20% = 100.",
+        "ur": "10% = 50، تو 20% = 100"
+      },
+      "common_wrong": [
+        {
+          "answer": 400,
+          "feedback": {
+            "en": "Rs 400 is the new price. The saving is 20%: Rs 100.",
+            "ur": "400 روپے نئی قیمت ہے۔ بچت 20% ہے: 100 روپے"
+          },
+          "misconception_id": "rest_instead"
+        },
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "Rs 50 is 10%. 20% is twice that: Rs 100.",
+            "ur": "50 روپے یعنی 10%۔ 20% اس کا دگنا ہے: 100 روپے"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_fifteen",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 15% of 60.",
+        "ur": "60 کا 15% معلوم کریں۔"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% of 60 is 6, and 5% is half of that.",
+        "ur": "60 کا 10% یعنی 6، اور 5% اس کا آدھا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 + 3 = 9.",
+        "ur": "درست! 6 + 3 = 9"
+      },
+      "feedback_wrong": {
+        "en": "10% = 6, 5% = 3, so 15% = 9.",
+        "ur": "10% = 6، 5% = 3، تو 15% = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15 is the percent. 15% of 60 is 6 + 3 = 9.",
+            "ur": "15 فیصد ہے۔ 60 کا 15% یعنی 6 + 3 = 9"
+          },
+          "misconception_id": "percent_as_answer"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is only 10%. Add 5% (3): 9.",
+            "ur": "6 صرف 10% ہے۔ 5% (3) جمع کریں: 9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza says 20% of 40 is 20. What went wrong?",
+        "ur": "حمزہ کہتا ہے 40 کا 20% یعنی 20۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "eight",
+          "text": {
+            "en": "He just used the 20. 10% of 40 is 4, so 20% is 8.",
+            "ur": "اس نے بس 20 لکھ دیا۔ 40 کا 10% یعنی 4، تو 20% یعنی 8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 20 would be half of 40, which is 50%.",
+            "ur": "جی ہاں! 20 تو 40 کا آدھا ہے، یعنی 50%۔"
+          }
+        },
+        {
+          "id": "twenty_two",
+          "text": {
+            "en": "It should be 40 − 20 = 20 anyway.",
+            "ur": "ویسے بھی 40 − 20 = 20 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Taking away 20 isn't finding 20%. 20% of 40 is 8.",
+            "ur": "20 نفی کرنا 20% نکالنا نہیں ہے۔ 40 کا 20% یعنی 8"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "20 is half of 40, which is 50%. 20% of 40 is 8.",
+            "ur": "20 تو 40 کا آدھا ہے، یعنی 50%۔ 40 کا 20% یعنی 8"
+          },
+          "misconception_id": "percent_as_answer"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does dividing by 10 give 10% of an amount? Can you teach me?",
+          "ur": "10 سے تقسیم کرنے سے مقدار کا 10% کیوں ملتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is 10% of an amount the same as the amount divided by 10?",
+        "ur": "اپنے الفاظ میں بتائیں: کسی مقدار کا 10% اسے 10 سے تقسیم کرنے کے برابر کیوں ہے؟"
+      },
+      "key_idea": "10% means 10 out of 100, which is 1/10. Finding one tenth of something means cutting it into 10 equal parts and taking one, which is dividing by 10.",
+      "levels": {
+        "got_it": "Says 10% is 10 out of 100 = one tenth, and a tenth means dividing into 10 equal parts.",
+        "partly": "Says 10% is a tenth, without linking it to dividing.",
+        "not_yet": "Gives no reason, or just repeats the rule."
+      },
+      "keywords": [
+        [
+          "tenth",
+          "1/10",
+          "دسواں"
+        ],
+        [
+          "10 out of 100",
+          "out of 100",
+          "100 میں سے"
+        ],
+        [
+          "equal parts",
+          "parts",
+          "برابر",
+          "حصے"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 10% is one tenth, so we divide by 10.",
+          "ur": "بہت خوب! 10% دسواں حصہ ہے، اس لیے 10 سے تقسیم کرتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how a tenth is linked to dividing by 10.",
+          "ur": "اچھی شروعات! اب بتائیں دسواں حصہ 10 سے تقسیم سے کیسے جڑا ہے۔"
+        },
+        "not_yet": {
+          "en": "Write 10% as a fraction: 10/100. What does that simplify to?",
+          "ur": "10% کو کسر میں لکھیں: 10/100۔ یہ سادہ ہو کر کیا بنتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_class",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A class has 40 children. 75% of them passed the test. How many children passed?",
+        "ur": "ایک کلاس میں 40 بچے ہیں۔ ان میں سے 75% ٹیسٹ میں پاس ہوئے۔ کتنے بچے پاس ہوئے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "75% is three quarters. A quarter of 40 is 10.",
+        "ur": "75% یعنی تین چوتھائی۔ 40 کا چوتھائی 10 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 children passed.",
+        "ur": "درست! 30 بچے پاس ہوئے۔"
+      },
+      "feedback_wrong": {
+        "en": "A quarter is 10, so three quarters is 30.",
+        "ur": "چوتھائی 10، تو تین چوتھائی 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is 25%, the children who did not pass. 75% is 30.",
+            "ur": "10 یعنی 25%، جو پاس نہیں ہوئے۔ 75% یعنی 30"
+          },
+          "misconception_id": "rest_instead"
+        },
+        {
+          "answer": 75,
+          "feedback": {
+            "en": "There are only 40 children! 75% of 40 is 30.",
+            "ur": "بچے تو صرف 40 ہیں! 40 کا 75% یعنی 30"
+          },
+          "misconception_id": "percent_as_answer"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can work out sale prices now!",
+          "ur": "اب آپ سیل کی قیمتیں نکال سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "To find a percent of an amount, use the easy ones: 50% = half, 25% = quarter, 10% = divide by 10. Build the rest: 20% = 2 × 10%, 5% = half of 10%, 75% = 3 × 25%. Or divide by 100 and multiply by the percent.",
+        "ur": "کسی مقدار کا فیصد نکالنے کے لیے آسان والے استعمال کریں: 50% = آدھا، 25% = چوتھائی، 10% = 10 سے تقسیم۔ باقی بنائیں: 20% = 2 × 10%، 5% = 10% کا آدھا، 75% = 3 × 25%۔ یا 100 سے تقسیم کر کے فیصد سے ضرب دیں۔"
+      },
+      "points": [
+        {
+          "en": "10% = amount ÷ 10.",
+          "ur": "10% = مقدار ÷ 10۔"
+        },
+        {
+          "en": "Build other percents from 10%, 25% and 50%.",
+          "ur": "باقی فیصد 10%، 25% اور 50% سے بنائیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_ten",
+      "type": "apply",
+      "skill": "maths.percent.of_amount",
+      "step": {
+        "id": "r_ten",
+        "type": "number",
+        "prompt": {
+          "en": "Find 10% of 70.",
+          "ur": "70 کا 10% معلوم کریں۔"
+        },
+        "answer": 7,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide by 10.",
+          "ur": "10 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 7.",
+          "ur": "درست! 7"
+        },
+        "feedback_wrong": {
+          "en": "70 ÷ 10 = 7.",
+          "ur": "70 ÷ 10 = 7"
+        },
+        "common_wrong": [
+          {
+            "answer": 60,
+            "feedback": {
+              "en": "10% is a tenth, not 10 less: 7.",
+              "ur": "10% دسواں حصہ ہے، 10 کم نہیں: 7"
+            },
+            "misconception_id": "ten_percent_wrong"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_quarter",
+      "type": "apply",
+      "skill": "maths.percent.of_amount",
+      "step": {
+        "id": "r_quarter",
+        "type": "number",
+        "prompt": {
+          "en": "Find 25% of 48.",
+          "ur": "48 کا 25% معلوم کریں۔"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "A quarter: divide by 4.",
+          "ur": "چوتھائی: 4 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 12.",
+          "ur": "درست! 12"
+        },
+        "feedback_wrong": {
+          "en": "48 ÷ 4 = 12.",
+          "ur": "48 ÷ 4 = 12"
+        },
+        "common_wrong": [
+          {
+            "answer": 25,
+            "feedback": {
+              "en": "25 is the percent. A quarter of 48 is 12.",
+              "ur": "25 فیصد ہے۔ 48 کا چوتھائی 12 ہے۔"
+            },
+            "misconception_id": "percent_as_answer"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Percentages unit. No textbook text or exercises were used.",
+    "Children build percents from 10%, 25% and 50% (mental strategy) before the general rule of dividing by 100.",
+    "Urdu terms to check: رعایت (discount), دسواں حصہ (tenth).",
+    "The numbers were worked out in content/sources/g6-maths-11/percent_of_amount.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

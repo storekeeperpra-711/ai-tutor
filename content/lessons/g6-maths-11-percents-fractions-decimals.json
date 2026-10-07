@@ -1,0 +1,749 @@
+{
+  "id": "g6-maths-11-percents-fractions-decimals",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Change between percents, fractions and decimals.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Percentages"
+    }
+  ],
+  "skills": [
+    "maths.percent.convert"
+  ],
+  "title": {
+    "en": "Percents, fractions and decimals",
+    "ur": "فیصد، کسریں اور اعشاریہ"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.percent.meaning"
+    },
+    {
+      "skill": "maths.decimals.place_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "one_place",
+      "description": "Moves the decimal point one place instead of two (0.6 = 6%, 7% = 0.7)."
+    },
+    {
+      "id": "percent_is_decimal",
+      "description": "Writes the percent number as the decimal without dividing by 100 (25% = 25)."
+    },
+    {
+      "id": "not_simplest",
+      "description": "Leaves the fraction over 100 or simplifies it wrongly."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.percent.convert": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.percent.convert": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "How do you change a decimal into a percent?",
+            "ur": "اعشاریہ کو فیصد میں کیسے بدلتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "times100",
+              "text": {
+                "en": "Multiply by 100",
+                "ur": "100 سے ضرب دیں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 0.3 × 100 = 30, so 0.3 = 30%.",
+                "ur": "جی ہاں! 0.3 × 100 = 30، تو 0.3 = 30%"
+              }
+            },
+            {
+              "id": "times10",
+              "text": {
+                "en": "Multiply by 10",
+                "ur": "10 سے ضرب دیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Percent is out of 100, so multiply by 100.",
+                "ur": "فیصد 100 میں سے ہے، تو 100 سے ضرب دیں۔"
+              },
+              "misconception_id": "one_place"
+            },
+            {
+              "id": "div100",
+              "text": {
+                "en": "Divide by 100",
+                "ur": "100 سے تقسیم کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That goes the other way, from a percent to a decimal.",
+                "ur": "یہ الٹا ہے، فیصد سے اعشاریہ۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Write 0.45 as a percent. Type just the number.",
+            "ur": "0.45 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+          },
+          "answer": 45,
+          "checker": "numeric",
+          "hint": {
+            "en": "Multiply by 100.",
+            "ur": "100 سے ضرب دیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 0.45 = 45%.",
+            "ur": "درست! 0.45 = 45%"
+          },
+          "feedback_wrong": {
+            "en": "0.45 × 100 = 45, so 45%.",
+            "ur": "0.45 × 100 = 45، یعنی 45%"
+          },
+          "common_wrong": [
+            {
+              "answer": 4.5,
+              "feedback": {
+                "en": "Multiply by 100, not 10: 45%.",
+                "ur": "10 نہیں، 100 سے ضرب دیں: 45%"
+              },
+              "misconception_id": "one_place"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal writes 3% as 0.3. What went wrong?",
+            "ur": "بلال 3% کو 0.3 لکھتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "two",
+              "text": {
+                "en": "Divide by 100: 3% = 0.03.",
+                "ur": "100 سے تقسیم کریں: 3% = 0.03"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 0.3 would be 30%.",
+                "ur": "جی ہاں! 0.3 تو 30% ہوتا۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0.3 is 3 tenths, which is 30%. 3% is 3 hundredths: 0.03.",
+                "ur": "0.3 یعنی 3 دسویں، جو 30% ہے۔ 3% یعنی 3 سوویں: 0.03"
+              },
+              "misconception_id": "one_place"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_to_dec",
+      "front": {
+        "en": "Percent → decimal?",
+        "ur": "فیصد ← اعشاریہ؟"
+      },
+      "back": {
+        "en": "Divide by 100. 25% = 0.25, 7% = 0.07.",
+        "ur": "100 سے تقسیم۔ 25% = 0.25، 7% = 0.07"
+      }
+    },
+    {
+      "id": "f_to_pc",
+      "front": {
+        "en": "Decimal or fraction → percent?",
+        "ur": "اعشاریہ یا کسر ← فیصد؟"
+      },
+      "back": {
+        "en": "Multiply by 100. 0.6 = 60%, 3/4 = 75%.",
+        "ur": "100 سے ضرب۔ 0.6 = 60%، 3/4 = 75%"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_match",
+      "text": {
+        "en": "Make six small cards: 50%, 1/2, 25%, 1/4, 10% and 0.1. Mix them up and ask someone at home to find the pairs that mean the same amount.",
+        "ur": "چھ چھوٹے کارڈ بنائیں: 50%، 1/2، 25%، 1/4، 10% اور 0.1۔ انہیں ملا دیں اور گھر کے کسی فرد سے کہیں کہ برابر مقدار والے جوڑے ڈھونڈے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Percent",
+      "ur": "فیصد"
+    },
+    {
+      "en": "Decimal",
+      "ur": "اعشاریہ"
+    },
+    {
+      "en": "Hundredths",
+      "ur": "سوویں حصے"
+    },
+    {
+      "en": "Simplest form",
+      "ur": "سادہ ترین شکل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Half a roti, 0.5 of a roti, 50% of a roti. Are these three different amounts, or the same?",
+          "ur": "آدھی روٹی، 0.5 روٹی، 50% روٹی۔ کیا یہ تین مختلف مقداریں ہیں یا ایک جیسی؟"
+        }
+      },
+      "text": {
+        "en": "Today we change between percents, fractions and decimals. First, a quick check on decimals.",
+        "ur": "آج ہم فیصد، کسروں اور اعشاریہ کو ایک دوسرے میں بدلیں گے۔ پہلے اعشاریہ کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.decimals.place_value",
+      "prompt": {
+        "en": "How many hundredths are in 0.35?",
+        "ur": "0.35 میں کتنے سوویں حصے ہیں؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "0.35 = 3 tenths and 5 hundredths. One tenth is 10 hundredths.",
+        "ur": "0.35 = 3 دسویں اور 5 سوویں۔ ایک دسواں 10 سوویں کے برابر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 0.35 = 35/100.",
+        "ur": "درست! 0.35 = 35/100"
+      },
+      "feedback_wrong": {
+        "en": "3 tenths = 30 hundredths, plus 5 more: 35.",
+        "ur": "3 دسویں = 30 سوویں، اور 5 مزید: 35"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is only the hundredths digit. 3 tenths are 30 hundredths more: 35.",
+            "ur": "5 صرف سوویں کا ہندسہ ہے۔ 3 دسویں مزید 30 سوویں ہیں: 35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_convert",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "They're all the same amount, just written three ways!",
+          "ur": "یہ سب ایک ہی مقدار ہیں، بس تین طریقوں سے لکھی گئی!"
+        }
+      },
+      "text": {
+        "en": "A percent is hundredths. Percent to decimal: divide by 100, so the point moves two places left (25% = 0.25, 7% = 0.07). Decimal to percent: multiply by 100 (0.6 = 60%). Percent to fraction: write it over 100 and simplify (40% = 40/100 = 2/5). Fraction to percent: make the bottom 100 (3/4 = 75/100 = 75%).",
+        "ur": "فیصد سوویں حصے ہیں۔ فیصد سے اعشاریہ: 100 سے تقسیم کریں، یعنی اعشاریہ دو جگہ بائیں (25% = 0.25، 7% = 0.07)۔ اعشاریہ سے فیصد: 100 سے ضرب دیں (0.6 = 60%)۔ فیصد سے کسر: 100 کے اوپر لکھیں اور سادہ کریں (40% = 40/100 = 2/5)۔ کسر سے فیصد: نیچے والا 100 بنائیں (3/4 = 75/100 = 75%)۔"
+      }
+    },
+    {
+      "id": "s4_dec_to_pc",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 0.6 as a percent. Type just the number.",
+        "ur": "0.6 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply by 100.",
+        "ur": "100 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 0.6 = 60%.",
+        "ur": "درست! 0.6 = 60%"
+      },
+      "feedback_wrong": {
+        "en": "0.6 × 100 = 60, so 60%.",
+        "ur": "0.6 × 100 = 60، یعنی 60%"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "0.6 is 6 tenths, which is 60 hundredths: 60%.",
+            "ur": "0.6 یعنی 6 دسویں، جو 60 سوویں ہیں: 60%"
+          },
+          "misconception_id": "one_place"
+        }
+      ]
+    },
+    {
+      "id": "s5_pc_to_dec",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 25% as a decimal.",
+        "ur": "25% کو اعشاریہ میں لکھیں۔"
+      },
+      "answer": 0.25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 100: move the point two places left.",
+        "ur": "100 سے تقسیم کریں: اعشاریہ دو جگہ بائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 25% = 0.25.",
+        "ur": "درست! 25% = 0.25"
+      },
+      "feedback_wrong": {
+        "en": "25 ÷ 100 = 0.25.",
+        "ur": "25 ÷ 100 = 0.25"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "Divide by 100 to get the decimal: 0.25.",
+            "ur": "اعشاریہ کے لیے 100 سے تقسیم کریں: 0.25"
+          },
+          "misconception_id": "percent_is_decimal"
+        },
+        {
+          "answer": 2.5,
+          "feedback": {
+            "en": "That divides by 10. Divide by 100: 0.25.",
+            "ur": "یہ 10 سے تقسیم ہے۔ 100 سے تقسیم کریں: 0.25"
+          },
+          "misconception_id": "one_place"
+        }
+      ]
+    },
+    {
+      "id": "s6_frac_to_pc",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 3/4 as a percent. Type just the number.",
+        "ur": "3/4 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+      },
+      "answer": 75,
+      "checker": "numeric",
+      "hint": {
+        "en": "3/4 = ?/100. Multiply top and bottom by 25.",
+        "ur": "3/4 = ?/100۔ اوپر اور نیچے کو 25 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3/4 = 75%.",
+        "ur": "درست! 3/4 = 75%"
+      },
+      "feedback_wrong": {
+        "en": "3/4 = 75/100 = 75%.",
+        "ur": "3/4 = 75/100 = 75%"
+      },
+      "common_wrong": [
+        {
+          "answer": 34,
+          "feedback": {
+            "en": "3/4 is not 34%. Make the bottom 100: 75/100 = 75%.",
+            "ur": "3/4، 34% نہیں ہے۔ نیچے والا 100 بنائیں: 75/100 = 75%"
+          }
+        },
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "25% is 1/4. Three quarters is 3 × 25 = 75%.",
+            "ur": "25% یعنی 1/4۔ تین چوتھائی 3 × 25 = 75% ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_pc_to_frac",
+      "type": "choice",
+      "prompt": {
+        "en": "Write 40% as a fraction in its simplest form.",
+        "ur": "40% کو سادہ ترین کسر میں لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "two_fifths",
+          "text": {
+            "en": "2/5",
+            "ur": "2/5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 40/100 = 4/10 = 2/5.",
+            "ur": "جی ہاں! 40/100 = 4/10 = 2/5"
+          }
+        },
+        {
+          "id": "forty",
+          "text": {
+            "en": "40/100",
+            "ur": "40/100"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That's right, but not the simplest form. Divide top and bottom by 20: 2/5.",
+            "ur": "یہ درست ہے، لیکن سادہ ترین نہیں۔ اوپر اور نیچے کو 20 سے تقسیم کریں: 2/5"
+          },
+          "misconception_id": "not_simplest"
+        },
+        {
+          "id": "four",
+          "text": {
+            "en": "4/5",
+            "ur": "4/5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4/5 = 80/100. 40/100 simplifies to 2/5.",
+            "ur": "4/5 = 80/100۔ 40/100 سادہ ہو کر 2/5 بنتا ہے۔"
+          },
+          "misconception_id": "not_simplest"
+        }
+      ]
+    },
+    {
+      "id": "s8_small",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 7% as a decimal.",
+        "ur": "7% کو اعشاریہ میں لکھیں۔"
+      },
+      "answer": 0.07,
+      "checker": "numeric",
+      "hint": {
+        "en": "7% is 7 hundredths.",
+        "ur": "7% یعنی 7 سوویں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7% = 0.07.",
+        "ur": "درست! 7% = 0.07"
+      },
+      "feedback_wrong": {
+        "en": "7 ÷ 100 = 0.07.",
+        "ur": "7 ÷ 100 = 0.07"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.7,
+          "feedback": {
+            "en": "0.7 is 70%. 7% is 7 hundredths: 0.07.",
+            "ur": "0.7 یعنی 70%۔ 7% یعنی 7 سوویں: 0.07"
+          },
+          "misconception_id": "one_place"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Divide by 100 to get the decimal: 0.07.",
+            "ur": "اعشاریہ کے لیے 100 سے تقسیم کریں: 0.07"
+          },
+          "misconception_id": "percent_is_decimal"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sara writes 0.5 = 5%. What went wrong?",
+        "ur": "سارہ لکھتی ہے 0.5 = 5%۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "hundred",
+          "text": {
+            "en": "Multiply by 100: 0.5 = 50%.",
+            "ur": "100 سے ضرب دیں: 0.5 = 50%"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 0.5 is a half, and a half is 50%.",
+            "ur": "جی ہاں! 0.5 آدھا ہے، اور آدھا 50% ہے۔"
+          }
+        },
+        {
+          "id": "half_pc",
+          "text": {
+            "en": "0.5 is 0.5%.",
+            "ur": "0.5 یعنی 0.5%۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0.5 is a half, which is 50%.",
+            "ur": "0.5 آدھا ہے، جو 50% ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5% is only 5 out of 100. 0.5 is a half: 50%.",
+            "ur": "5% صرف 100 میں سے 5 ہے۔ 0.5 آدھا ہے: 50%"
+          },
+          "misconception_id": "one_place"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does the point move two places when we turn a percent into a decimal? Can you teach me?",
+          "ur": "فیصد کو اعشاریہ بناتے ہوئے اعشاریہ دو جگہ کیوں ہلتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why does 25% become 0.25?",
+        "ur": "اپنے الفاظ میں بتائیں: 25%، 0.25 کیوں بن جاتا ہے؟"
+      },
+      "key_idea": "A percent is a number of hundredths. 25% is 25 hundredths, and the second place after the decimal point is the hundredths place, so 25 hundredths is 0.25. Dividing by 100 moves every digit two places.",
+      "levels": {
+        "got_it": "Says a percent means hundredths (out of 100), so dividing by 100 gives the decimal.",
+        "partly": "Says divide by 100, without saying why.",
+        "not_yet": "Gives no reason, or just repeats the rule."
+      },
+      "keywords": [
+        [
+          "hundredth",
+          "100",
+          "hundred",
+          "سوویں",
+          "سو"
+        ],
+        [
+          "divide",
+          "تقسیم"
+        ],
+        [
+          "out of",
+          "میں سے"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! A percent is hundredths, and that is two places after the point.",
+          "ur": "بہت خوب! فیصد سوویں حصے ہیں، جو اعشاریہ کے بعد دوسری جگہ ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why dividing by 100 is the right thing to do.",
+          "ur": "اچھی شروعات! اب بتائیں 100 سے تقسیم کرنا کیوں درست ہے۔"
+        },
+        "not_yet": {
+          "en": "Remember: 25% means 25 out of 100. How do you write 25 hundredths as a decimal?",
+          "ur": "یاد کریں: 25% یعنی 100 میں سے 25۔ 25 سوویں کو اعشاریہ میں کیسے لکھتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_twentyfifths",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a class, 9/25 of the children wear glasses. What percent is that? Type just the number.",
+        "ur": "ایک کلاس میں 9/25 بچے عینک لگاتے ہیں۔ یہ کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 36,
+      "checker": "numeric",
+      "hint": {
+        "en": "25 × 4 = 100, so multiply the top by 4 too.",
+        "ur": "25 × 4 = 100، تو اوپر والے کو بھی 4 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9/25 = 36/100 = 36%.",
+        "ur": "درست! 9/25 = 36/100 = 36%"
+      },
+      "feedback_wrong": {
+        "en": "9/25 = 36/100, so 36%.",
+        "ur": "9/25 = 36/100، یعنی 36%"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Make the bottom 100 first: 9/25 = 36/100 = 36%.",
+            "ur": "پہلے نیچے والا 100 بنائیں: 9/25 = 36/100 = 36%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Half, 0.5 and 50%: you can switch between them now!",
+          "ur": "آدھا، 0.5 اور 50%: اب آپ انہیں بدل سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Percents are hundredths. Percent to decimal: divide by 100. Decimal to percent: multiply by 100. Percent to fraction: put it over 100 and simplify. Fraction to percent: make the bottom 100. Good ones to know: 50% = 1/2 = 0.5, 25% = 1/4 = 0.25, 10% = 1/10 = 0.1.",
+        "ur": "فیصد سوویں حصے ہیں۔ فیصد سے اعشاریہ: 100 سے تقسیم۔ اعشاریہ سے فیصد: 100 سے ضرب۔ فیصد سے کسر: 100 کے اوپر لکھ کر سادہ کریں۔ کسر سے فیصد: نیچے والا 100 بنائیں۔ یاد رکھنے والے: 50% = 1/2 = 0.5، 25% = 1/4 = 0.25، 10% = 1/10 = 0.1"
+      },
+      "points": [
+        {
+          "en": "Percent ÷ 100 = decimal.",
+          "ur": "فیصد ÷ 100 = اعشاریہ۔"
+        },
+        {
+          "en": "Decimal × 100 = percent.",
+          "ur": "اعشاریہ × 100 = فیصد۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_dec",
+      "type": "apply",
+      "skill": "maths.percent.convert",
+      "step": {
+        "id": "r_dec",
+        "type": "number",
+        "prompt": {
+          "en": "Write 80% as a decimal.",
+          "ur": "80% کو اعشاریہ میں لکھیں۔"
+        },
+        "answer": 0.8,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide by 100.",
+          "ur": "100 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 0.8.",
+          "ur": "درست! 0.8"
+        },
+        "feedback_wrong": {
+          "en": "80 ÷ 100 = 0.8.",
+          "ur": "80 ÷ 100 = 0.8"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "Divide by 100, not 10: 0.8.",
+              "ur": "10 نہیں، 100 سے تقسیم کریں: 0.8"
+            },
+            "misconception_id": "one_place"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_frac",
+      "type": "apply",
+      "skill": "maths.percent.convert",
+      "step": {
+        "id": "r_frac",
+        "type": "number",
+        "prompt": {
+          "en": "Write 2/5 as a percent. Type just the number.",
+          "ur": "2/5 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+        },
+        "answer": 40,
+        "checker": "numeric",
+        "hint": {
+          "en": "2/5 = ?/100",
+          "ur": "2/5 = ?/100"
+        },
+        "feedback_correct": {
+          "en": "Right! 40%.",
+          "ur": "درست! 40%"
+        },
+        "feedback_wrong": {
+          "en": "2/5 = 40/100 = 40%.",
+          "ur": "2/5 = 40/100 = 40%"
+        },
+        "common_wrong": [
+          {
+            "answer": 25,
+            "feedback": {
+              "en": "2/5 is not 25%. Make the bottom 100: 40/100 = 40%.",
+              "ur": "2/5، 25% نہیں ہے۔ نیچے والا 100 بنائیں: 40/100 = 40%"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Percentages unit. No textbook text or exercises were used.",
+    "Percents are presented as hundredths, linking straight back to decimal place value.",
+    "Urdu terms to check: فیصد (percent), اعشاریہ (decimal), سوویں حصے (hundredths).",
+    "The numbers were worked out in content/sources/g6-maths-11/percent_fraction_decimal.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
