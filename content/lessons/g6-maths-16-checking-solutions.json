@@ -1,0 +1,745 @@
+{
+  "id": "g6-maths-16-checking-solutions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Check whether a number is a solution of a linear equation by putting it in place of the letter.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Linear Equations"
+    }
+  ],
+  "skills": [
+    "maths.equations.check_solution"
+  ],
+  "title": {
+    "en": "Checking a solution",
+    "ur": "حل کی جانچ"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.simple_equations"
+    },
+    {
+      "skill": "maths.algebra.substitution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "joins_digits",
+      "description": "Reads 3x with x = 6 as 36 instead of 3 × 6."
+    },
+    {
+      "id": "one_side",
+      "description": "Works out one side but does not compare it with the other side."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.check_solution": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.check_solution": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "A solution of an equation is a number that …",
+            "ur": "مساوات کا حل وہ عدد ہے جو …"
+          },
+          "options": [
+            {
+              "id": "equal",
+              "text": {
+                "en": "makes both sides equal",
+                "ur": "دونوں اطراف کو برابر کر دے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Put it in and both sides match.",
+                "ur": "جی ہاں! اسے رکھیں تو دونوں اطراف برابر ہو جائیں۔"
+              }
+            },
+            {
+              "id": "biggest",
+              "text": {
+                "en": "is the biggest number in it",
+                "ur": "اس میں سب سے بڑا عدد ہو"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "No. It is the number that makes the left side equal the right side.",
+                "ur": "نہیں۔ یہ وہ عدد ہے جو بائیں طرف کو دائیں طرف کے برابر کر دے۔"
+              },
+              "misconception_id": "one_side"
+            },
+            {
+              "id": "right",
+              "text": {
+                "en": "is on the right side",
+                "ur": "دائیں طرف لکھا ہو"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The right side is just part of the equation. The solution makes both sides equal.",
+                "ur": "دائیں طرف مساوات کا ایک حصہ ہے۔ حل دونوں اطراف کو برابر کرتا ہے۔"
+              },
+              "misconception_id": "one_side"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Which of 3, 4 or 5 is the solution of 6x − 5 = 25? Type it.",
+            "ur": "3، 4 یا 5 میں سے کون سا 6x − 5 = 25 کا حل ہے؟ اسے لکھیں۔"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "Try each: 6 × 3 − 5, 6 × 4 − 5, 6 × 5 − 5.",
+            "ur": "ہر ایک آزمائیں: 6 × 3 − 5، 6 × 4 − 5، 6 × 5 − 5"
+          },
+          "feedback_correct": {
+            "en": "Right! 6 × 5 − 5 = 25.",
+            "ur": "درست! 6 × 5 − 5 = 25"
+          },
+          "feedback_wrong": {
+            "en": "6 × 5 = 30, 30 − 5 = 25. Both sides are 25.",
+            "ur": "6 × 5 = 30، 30 − 5 = 25۔ دونوں اطراف 25 ہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "6 × 4 − 5 = 19, not 25. Try 5: 30 − 5 = 25.",
+                "ur": "6 × 4 − 5 = 19، 25 نہیں۔ 5 آزمائیں: 30 − 5 = 25"
+              },
+              "misconception_id": "one_side"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Rida checks a = 4 in 2a + 1 = 9. She writes 24 + 1 = 25, so 'not a solution'. What is wrong?",
+            "ur": "ردا 2a + 1 = 9 میں a = 4 جانچتی ہے۔ وہ لکھتی ہے 24 + 1 = 25، تو 'حل نہیں'۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "times",
+              "text": {
+                "en": "2a means 2 × 4 = 8. 8 + 1 = 9, so a = 4 is a solution.",
+                "ur": "2a یعنی 2 × 4 = 8۔ 8 + 1 = 9، تو a = 4 حل ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A number next to a letter means multiply.",
+                "ur": "جی ہاں! حرف کے ساتھ عدد یعنی ضرب۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "2a is 2 × a, not 24. 2 × 4 + 1 = 9: it is a solution.",
+                "ur": "2a یعنی 2 × a، 24 نہیں۔ 2 × 4 + 1 = 9: یہ حل ہے۔"
+              },
+              "misconception_id": "joins_digits"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_solution",
+      "front": {
+        "en": "Solution of an equation?",
+        "ur": "مساوات کا حل؟"
+      },
+      "back": {
+        "en": "The number that makes both sides equal.",
+        "ur": "وہ عدد جو دونوں اطراف کو برابر کرے۔"
+      }
+    },
+    {
+      "id": "f_check",
+      "front": {
+        "en": "How to check?",
+        "ur": "جانچ کیسے؟"
+      },
+      "back": {
+        "en": "Put the number in, work out each side, compare.",
+        "ur": "عدد رکھیں، ہر طرف حل کریں، موازنہ کریں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_guess",
+      "text": {
+        "en": "Ask someone at home to think of a number, multiply it by 2 and add 5, and tell you the answer. Guess their number, then check it.",
+        "ur": "گھر میں کسی سے کہیں کہ ایک عدد سوچیں، اسے 2 سے ضرب دیں اور 5 جمع کریں، اور آپ کو جواب بتائیں۔ ان کا عدد بوجھیں، پھر جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Solution",
+      "ur": "حل"
+    },
+    {
+      "en": "Equation",
+      "ur": "مساوات"
+    },
+    {
+      "en": "Side",
+      "ur": "طرف"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Is 4 the answer to 2x + 3 = 11? How can we be sure?",
+          "ur": "کیا 2x + 3 = 11 کا جواب 4 ہے؟ ہم یقین کیسے کریں؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn to check whether a number is the solution of an equation. First, a quick substitution check.",
+        "ur": "آج ہم جانچنا سیکھیں گے کہ کوئی عدد مساوات کا حل ہے یا نہیں۔ پہلے قیمت رکھنے کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.algebra.substitution",
+      "prompt": {
+        "en": "Find the value of 3n + 2 when n = 4.",
+        "ur": "جب n = 4 ہو تو 3n + 2 کی قیمت معلوم کریں۔"
+      },
+      "answer": 14,
+      "checker": "numeric",
+      "hint": {
+        "en": "3n means 3 × n.",
+        "ur": "3n یعنی 3 × n"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 4 + 2 = 14.",
+        "ur": "درست! 3 × 4 + 2 = 14"
+      },
+      "feedback_wrong": {
+        "en": "3 × 4 = 12, then 12 + 2 = 14.",
+        "ur": "3 × 4 = 12، پھر 12 + 2 = 14"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "3n is 3 × 4, not 34: 12 + 2 = 14.",
+            "ur": "3n یعنی 3 × 4، 34 نہیں: 12 + 2 = 14"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Put the number in. If both sides match, it's the solution!",
+          "ur": "عدد رکھیں۔ اگر دونوں اطراف برابر ہوں تو یہی حل ہے!"
+        }
+      },
+      "text": {
+        "en": "A solution is a number that makes both sides of the equation equal. To check: 1. Put the number in place of the letter. 2. Work out the left side. 3. Compare it with the right side. For 2x + 3 = 11 and x = 4: 2 × 4 + 3 = 11. Both sides are 11, so x = 4 is the solution.",
+        "ur": "حل وہ عدد ہے جو مساوات کی دونوں اطراف کو برابر کر دے۔ جانچنے کے لیے: 1۔ حرف کی جگہ عدد رکھیں۔ 2۔ بائیں طرف حل کریں۔ 3۔ اسے دائیں طرف سے ملائیں۔ 2x + 3 = 11 اور x = 4 کے لیے: 2 × 4 + 3 = 11۔ دونوں اطراف 11 ہیں، تو x = 4 حل ہے۔"
+      }
+    },
+    {
+      "id": "s4_left_side",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Put y = 3 into 5y − 2. What do you get?",
+        "ur": "5y − 2 میں y = 3 رکھیں۔ کیا ملتا ہے؟"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 × 3, then − 2.",
+        "ur": "5 × 3، پھر − 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 − 2 = 13.",
+        "ur": "درست! 15 − 2 = 13"
+      },
+      "feedback_wrong": {
+        "en": "5 × 3 = 15, then 15 − 2 = 13.",
+        "ur": "5 × 3 = 15، پھر 15 − 2 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 51,
+          "feedback": {
+            "en": "5y is 5 × 3, not 53: 15 − 2 = 13.",
+            "ur": "5y یعنی 5 × 3، 53 نہیں: 15 − 2 = 13"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s5_is_solution",
+      "type": "choice",
+      "prompt": {
+        "en": "So, is y = 3 a solution of 5y − 2 = 13?",
+        "ur": "تو کیا y = 3 مساوات 5y − 2 = 13 کا حل ہے؟"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes",
+            "ur": "ہاں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The left side is 13 and the right side is 13.",
+            "ur": "جی ہاں! بائیں طرف 13 ہے اور دائیں طرف 13۔"
+          }
+        },
+        {
+          "id": "no",
+          "text": {
+            "en": "No",
+            "ur": "نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The left side came to 13, the same as the right side. So yes.",
+            "ur": "بائیں طرف 13 آیا، دائیں طرف جتنا۔ تو ہاں۔"
+          },
+          "misconception_id": "one_side"
+        }
+      ]
+    },
+    {
+      "id": "s6_which",
+      "type": "choice",
+      "prompt": {
+        "en": "Which number is the solution of 4x = 28?",
+        "ur": "کون سا عدد 4x = 28 کا حل ہے؟"
+      },
+      "options": [
+        {
+          "id": "seven",
+          "text": {
+            "en": "7",
+            "ur": "7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 4 × 7 = 28.",
+            "ur": "جی ہاں! 4 × 7 = 28"
+          }
+        },
+        {
+          "id": "twenty_four",
+          "text": {
+            "en": "24",
+            "ur": "24"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 × 24 = 96, not 28. Try 7: 4 × 7 = 28.",
+            "ur": "4 × 24 = 96، 28 نہیں۔ 7 آزمائیں: 4 × 7 = 28"
+          }
+        },
+        {
+          "id": "thirty_two",
+          "text": {
+            "en": "32",
+            "ur": "32"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 × 32 = 128, not 28. Try 7: 4 × 7 = 28.",
+            "ur": "4 × 32 = 128، 28 نہیں۔ 7 آزمائیں: 4 × 7 = 28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_try",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of 2, 3 or 4 is the solution of 3m + 1 = 13? Type it.",
+        "ur": "2، 3 یا 4 میں سے کون سا 3m + 1 = 13 کا حل ہے؟ اسے لکھیں۔"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try each one: 3 × 2 + 1, 3 × 3 + 1, 3 × 4 + 1.",
+        "ur": "ہر ایک آزمائیں: 3 × 2 + 1، 3 × 3 + 1، 3 × 4 + 1"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 4 + 1 = 13.",
+        "ur": "درست! 3 × 4 + 1 = 13"
+      },
+      "feedback_wrong": {
+        "en": "3 × 4 = 12, 12 + 1 = 13. Both sides are 13.",
+        "ur": "3 × 4 = 12، 12 + 1 = 13۔ دونوں اطراف 13 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 × 3 + 1 = 10, not 13. Try 4.",
+            "ur": "3 × 3 + 1 = 10، 13 نہیں۔ 4 آزمائیں۔"
+          },
+          "misconception_id": "one_side"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "3 × 2 + 1 = 7, not 13. Try 4.",
+            "ur": "3 × 2 + 1 = 7، 13 نہیں۔ 4 آزمائیں۔"
+          },
+          "misconception_id": "one_side"
+        }
+      ]
+    },
+    {
+      "id": "s8_divide",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Put x = 6 into x ÷ 2 + 5. What do you get?",
+        "ur": "x ÷ 2 + 5 میں x = 6 رکھیں۔ کیا ملتا ہے؟"
+      },
+      "answer": 8.0,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 ÷ 2 first, then + 5.",
+        "ur": "پہلے 6 ÷ 2، پھر + 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 + 5 = 8.",
+        "ur": "درست! 3 + 5 = 8"
+      },
+      "feedback_wrong": {
+        "en": "6 ÷ 2 = 3, then 3 + 5 = 8.",
+        "ur": "6 ÷ 2 = 3، پھر 3 + 5 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "That is 6 ÷ 2. Now add 5: 8.",
+            "ur": "یہ 6 ÷ 2 ہے۔ اب 5 جمع کریں: 8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Usman checks x = 6 in 3x − 4 = 14. He writes 36 − 4 = 32 and says 'no'. What went wrong?",
+        "ur": "عثمان 3x − 4 = 14 میں x = 6 جانچتا ہے۔ وہ لکھتا ہے 36 − 4 = 32 اور کہتا ہے 'نہیں'۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "times",
+          "text": {
+            "en": "3x means 3 × 6 = 18. 18 − 4 = 14, so x = 6 IS a solution.",
+            "ur": "3x یعنی 3 × 6 = 18۔ 18 − 4 = 14، تو x = 6 حل ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Multiply the number by 3; don't write 3 and 6 side by side.",
+            "ur": "جی ہاں! عدد کو 3 سے ضرب دیں؛ 3 اور 6 ساتھ ساتھ نہ لکھیں۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "He should add: 3 + 6 − 4 = 5.",
+            "ur": "اسے جمع کرنا چاہیے: 3 + 6 − 4 = 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3x means 3 × x, not 3 + x: 18 − 4 = 14.",
+            "ur": "3x یعنی 3 × x، 3 + x نہیں: 18 − 4 = 14"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3x is 3 × 6 = 18, not 36. 18 − 4 = 14: it is a solution.",
+            "ur": "3x یعنی 3 × 6 = 18، 36 نہیں۔ 18 − 4 = 14: یہ حل ہے۔"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How can you tell if a number is the solution, without solving? Can you teach me?",
+          "ur": "بغیر حل کیے کیسے پتا چلے کہ کوئی عدد حل ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how do you check whether x = 5 is the solution of 2x + 1 = 11?",
+        "ur": "اپنے الفاظ میں بتائیں: آپ کیسے جانچیں گے کہ x = 5 مساوات 2x + 1 = 11 کا حل ہے یا نہیں؟"
+      },
+      "key_idea": "Put 5 in place of x: 2 × 5 + 1 = 11. The left side equals the right side (11), so x = 5 is the solution. If the sides were different, it would not be.",
+      "levels": {
+        "got_it": "Puts 5 in for x, works out 2 × 5 + 1 = 11, and says the two sides are equal so it is the solution.",
+        "partly": "Puts 5 in but doesn't compare the two sides, or compares without working it out.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "11",
+          "eleven",
+          "گیارہ"
+        ],
+        [
+          "equal",
+          "same",
+          "برابر"
+        ],
+        [
+          "side",
+          "طرف"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Both sides came to 11.",
+          "ur": "بہت خوب! دونوں اطراف 11 آئیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now compare your answer with the right side.",
+          "ur": "اچھی شروعات! اب اپنا جواب دائیں طرف سے ملائیں۔"
+        },
+        "not_yet": {
+          "en": "Put 5 where x is. What is 2 × 5 + 1? Is it 11?",
+          "ur": "x کی جگہ 5 رکھیں۔ 2 × 5 + 1 کتنا ہے؟ کیا یہ 11 ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_think",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ali thinks of a number n. He says 4n + 3 = 23. Which of 4, 5 or 6 is his number?",
+        "ur": "علی ایک عدد n سوچتا ہے۔ وہ کہتا ہے 4n + 3 = 23۔ 4، 5 یا 6 میں سے اس کا عدد کون سا ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try each one in 4n + 3.",
+        "ur": "ہر ایک کو 4n + 3 میں آزمائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 5 + 3 = 23.",
+        "ur": "درست! 4 × 5 + 3 = 23"
+      },
+      "feedback_wrong": {
+        "en": "4 × 5 = 20, 20 + 3 = 23.",
+        "ur": "4 × 5 = 20، 20 + 3 = 23"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 × 4 + 3 = 19, not 23. Try 5.",
+            "ur": "4 × 4 + 3 = 19، 23 نہیں۔ 5 آزمائیں۔"
+          },
+          "misconception_id": "one_side"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "4 × 6 + 3 = 27, not 23. Try 5.",
+            "ur": "4 × 6 + 3 = 27، 23 نہیں۔ 5 آزمائیں۔"
+          },
+          "misconception_id": "one_side"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Put it in, work it out, compare. Now you can check any answer!",
+          "ur": "رکھیں، حل کریں، موازنہ کریں۔ اب آپ کوئی بھی جواب جانچ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A solution makes both sides of an equation equal. To check a number, put it in place of the letter, work out each side, and compare. A number next to a letter means multiply.",
+        "ur": "حل مساوات کی دونوں اطراف کو برابر کرتا ہے۔ کسی عدد کو جانچنے کے لیے اسے حرف کی جگہ رکھیں، ہر طرف حل کریں، اور موازنہ کریں۔ حرف کے ساتھ عدد یعنی ضرب۔"
+      },
+      "points": [
+        {
+          "en": "Both sides equal = solution.",
+          "ur": "دونوں اطراف برابر = حل"
+        },
+        {
+          "en": "3x means 3 × x.",
+          "ur": "3x یعنی 3 × x"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_value",
+      "type": "apply",
+      "skill": "maths.equations.check_solution",
+      "step": {
+        "id": "r_value",
+        "type": "number",
+        "prompt": {
+          "en": "Put a = 6 into 2a + 7. What do you get?",
+          "ur": "2a + 7 میں a = 6 رکھیں۔ کیا ملتا ہے؟"
+        },
+        "answer": 19,
+        "checker": "numeric",
+        "hint": {
+          "en": "2 × 6, then + 7.",
+          "ur": "2 × 6، پھر + 7"
+        },
+        "feedback_correct": {
+          "en": "Right! 12 + 7 = 19.",
+          "ur": "درست! 12 + 7 = 19"
+        },
+        "feedback_wrong": {
+          "en": "2 × 6 = 12, 12 + 7 = 19.",
+          "ur": "2 × 6 = 12، 12 + 7 = 19"
+        },
+        "common_wrong": [
+          {
+            "answer": 33,
+            "feedback": {
+              "en": "2a is 2 × 6, not 26: 12 + 7 = 19.",
+              "ur": "2a یعنی 2 × 6، 26 نہیں: 12 + 7 = 19"
+            },
+            "misconception_id": "joins_digits"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_which",
+      "type": "apply",
+      "skill": "maths.equations.check_solution",
+      "step": {
+        "id": "r_which",
+        "type": "number",
+        "prompt": {
+          "en": "Which of 7, 8 or 9 is the solution of 5k − 10 = 30? Type it.",
+          "ur": "7، 8 یا 9 میں سے کون سا 5k − 10 = 30 کا حل ہے؟ اسے لکھیں۔"
+        },
+        "answer": 8,
+        "checker": "numeric",
+        "hint": {
+          "en": "Try each one in 5k − 10.",
+          "ur": "ہر ایک کو 5k − 10 میں آزمائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5 × 8 − 10 = 30.",
+          "ur": "درست! 5 × 8 − 10 = 30"
+        },
+        "feedback_wrong": {
+          "en": "5 × 8 = 40, 40 − 10 = 30.",
+          "ur": "5 × 8 = 40، 40 − 10 = 30"
+        },
+        "common_wrong": [
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "5 × 7 − 10 = 25, not 30. Try 8.",
+              "ur": "5 × 7 − 10 = 25، 30 نہیں۔ 8 آزمائیں۔"
+            },
+            "misconception_id": "one_side"
+          },
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "5 × 9 − 10 = 35, not 30. Try 8.",
+              "ur": "5 × 9 − 10 = 35، 30 نہیں۔ 8 آزمائیں۔"
+            },
+            "misconception_id": "one_side"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Linear Equations unit. No textbook text or exercises were used.",
+    "Checking by substitution is taught before more solving, so children can check every answer they find later in the unit.",
+    "Urdu terms to check: مساوات (equation), حل (solution), طرف / اطراف (side / sides).",
+    "The numbers were worked out in content/sources/g6-maths-16/checking_solutions.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

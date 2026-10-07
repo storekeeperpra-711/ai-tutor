@@ -1,0 +1,777 @@
+{
+  "id": "g6-maths-16-two-step-equations",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve two-step linear equations (like 2x + 5 = 17 and x ÷ 3 + 2 = 7) by undoing the operations in reverse order.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Linear Equations"
+    }
+  ],
+  "skills": [
+    "maths.equations.two_step"
+  ],
+  "title": {
+    "en": "Two-step equations",
+    "ur": "دو قدمی مساوات"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.equations.forming"
+    },
+    {
+      "skill": "maths.algebra.simple_equations"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "divide_first",
+      "description": "Divides before undoing the + or −, or divides only one term."
+    },
+    {
+      "id": "one_step_only",
+      "description": "Stops after the first step and forgets to undo the × or ÷."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Undoes + by adding, or ÷ by dividing."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.two_step": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.two_step": [
+      {
+        "id": "qb_first",
+        "type": "recall",
+        "step": {
+          "id": "qb_first",
+          "type": "choice",
+          "prompt": {
+            "en": "To solve 3x + 2 = 14, what do you do first?",
+            "ur": "3x + 2 = 14 حل کرنے کے لیے پہلے کیا کریں گے؟"
+          },
+          "options": [
+            {
+              "id": "subtract",
+              "text": {
+                "en": "Subtract 2 from both sides",
+                "ur": "دونوں طرف سے 2 تفریق"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 3x = 12, then x = 4.",
+                "ur": "جی ہاں! 3x = 12، پھر x = 4"
+              }
+            },
+            {
+              "id": "divide",
+              "text": {
+                "en": "Divide both sides by 3",
+                "ur": "دونوں طرف کو 3 سے تقسیم"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Undo the + 2 first, then the × 3.",
+                "ur": "پہلے + 2 ختم کریں، پھر × 3"
+              },
+              "misconception_id": "divide_first"
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "Add 2 to both sides",
+                "ur": "دونوں طرف 2 جمع"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Undo + 2 by subtracting 2, not adding.",
+                "ur": "+ 2 کو 2 تفریق کرکے ختم کریں، جمع کرکے نہیں۔"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Solve 6k + 3 = 45. What is k?",
+            "ur": "6k + 3 = 45 حل کریں۔ k کیا ہے؟"
+          },
+          "answer": 7,
+          "checker": "numeric",
+          "hint": {
+            "en": "Subtract 3, then divide by 6.",
+            "ur": "3 تفریق کریں، پھر 6 سے تقسیم۔"
+          },
+          "feedback_correct": {
+            "en": "Right! k = 7.",
+            "ur": "درست! k = 7"
+          },
+          "feedback_wrong": {
+            "en": "45 − 3 = 42, then 42 ÷ 6 = 7.",
+            "ur": "45 − 3 = 42، پھر 42 ÷ 6 = 7"
+          },
+          "common_wrong": [
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "Undo + 3 by subtracting: 42 ÷ 6 = 7.",
+                "ur": "+ 3 کو تفریق سے ختم کریں: 42 ÷ 6 = 7"
+              },
+              "misconception_id": "wrong_inverse"
+            },
+            {
+              "answer": 42,
+              "feedback": {
+                "en": "That is 6k. Divide by 6: k = 7.",
+                "ur": "یہ 6k ہے۔ 6 سے تقسیم کریں: k = 7"
+              },
+              "misconception_id": "one_step_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana solves 5x − 2 = 18. She writes 5x = 16, so x = 3.2. What is wrong?",
+            "ur": "ثنا 5x − 2 = 18 حل کرتی ہے۔ وہ لکھتی ہے 5x = 16، تو x = 3.2۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "add",
+              "text": {
+                "en": "Undo − 2 by adding 2: 5x = 20, x = 4.",
+                "ur": "− 2 کو 2 جمع کرکے ختم کریں: 5x = 20، x = 4"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Check: 5 × 4 − 2 = 18.",
+                "ur": "جی ہاں! جانچ: 5 × 4 − 2 = 18"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check: 5 × 3.2 − 2 = 14, not 18. Add 2 first: 5x = 20, x = 4.",
+                "ur": "جانچ: 5 × 3.2 − 2 = 14، 18 نہیں۔ پہلے 2 جمع کریں: 5x = 20، x = 4"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_order",
+      "front": {
+        "en": "Two-step equation: first step?",
+        "ur": "دو قدمی مساوات: پہلا قدم؟"
+      },
+      "back": {
+        "en": "Undo + or − first, then × or ÷.",
+        "ur": "پہلے + یا − ختم کریں، پھر × یا ÷"
+      }
+    },
+    {
+      "id": "f_divide",
+      "front": {
+        "en": "Undo ÷ 3?",
+        "ur": "÷ 3 کیسے ختم کریں؟"
+      },
+      "back": {
+        "en": "Multiply by 3.",
+        "ur": "3 سے ضرب دیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_trick",
+      "text": {
+        "en": "Play 'think of a number' at home: someone doubles their number and adds 3, then tells you the answer. Use an equation to find their number.",
+        "ur": "گھر میں 'ایک عدد سوچیں' کھیلیں: کوئی اپنا عدد دگنا کرکے 3 جمع کرے اور جواب بتائے۔ مساوات سے ان کا عدد معلوم کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Two-step",
+      "ur": "دو قدمی"
+    },
+    {
+      "en": "Undo",
+      "ur": "ختم کرنا / الٹ کرنا"
+    },
+    {
+      "en": "Both sides",
+      "ur": "دونوں اطراف"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Putting on socks, then shoes. Taking them off, shoes come first! Equations work the same way.",
+          "ur": "پہلے جرابیں، پھر جوتے۔ اتارتے وقت پہلے جوتے! مساوات بھی ایسے ہی کام کرتی ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Today we solve equations that need two steps. First, a quick one-step check.",
+        "ur": "آج ہم ایسی مساوات حل کریں گے جن میں دو قدم لگتے ہیں۔ پہلے ایک قدم والا چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.algebra.simple_equations",
+      "prompt": {
+        "en": "Solve 3x = 18. What is x?",
+        "ur": "3x = 18 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide both sides by 3.",
+        "ur": "دونوں طرف کو 3 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 6.",
+        "ur": "درست! x = 6"
+      },
+      "feedback_wrong": {
+        "en": "18 ÷ 3 = 6.",
+        "ur": "18 ÷ 3 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "3x means 3 × x, so divide: 18 ÷ 3 = 6.",
+            "ur": "3x یعنی 3 × x، تو تقسیم کریں: 18 ÷ 3 = 6"
+          }
+        },
+        {
+          "answer": 54,
+          "feedback": {
+            "en": "Undo × 3 by dividing: 18 ÷ 3 = 6.",
+            "ur": "× 3 کو تقسیم سے ختم کریں: 18 ÷ 3 = 6"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Undo the last thing first, like taking off shoes before socks!",
+          "ur": "جو آخر میں ہوا اسے پہلے ختم کریں، جیسے جرابوں سے پہلے جوتے اتارنا!"
+        }
+      },
+      "text": {
+        "en": "In 2x + 5 = 17, x was multiplied by 2, then 5 was added. Undo in reverse order: first take 5 from both sides (2x = 12), then divide both sides by 2 (x = 6). Do the same to both sides each time. Check: 2 × 6 + 5 = 17.",
+        "ur": "2x + 5 = 17 میں x کو 2 سے ضرب دی گئی، پھر 5 جمع ہوا۔ الٹی ترتیب سے ختم کریں: پہلے دونوں طرف سے 5 تفریق (2x = 12)، پھر دونوں طرف کو 2 سے تقسیم (x = 6)۔ ہر بار دونوں طرف ایک ہی کام کریں۔ جانچ: 2 × 6 + 5 = 17"
+      }
+    },
+    {
+      "id": "s4_plus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 2x + 5 = 17. What is x?",
+        "ur": "2x + 5 = 17 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 5 away first, then divide by 2.",
+        "ur": "پہلے 5 تفریق کریں، پھر 2 سے تقسیم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 6.",
+        "ur": "درست! x = 6"
+      },
+      "feedback_wrong": {
+        "en": "17 − 5 = 12, then 12 ÷ 2 = 6.",
+        "ur": "17 − 5 = 12، پھر 12 ÷ 2 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "Undo + 5 by subtracting: 12 ÷ 2 = 6.",
+            "ur": "+ 5 کو تفریق سے ختم کریں: 12 ÷ 2 = 6"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That is 2x. Divide by 2: x = 6.",
+            "ur": "یہ 2x ہے۔ 2 سے تقسیم کریں: x = 6"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s5_minus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 3y − 4 = 11. What is y?",
+        "ur": "3y − 4 = 11 حل کریں۔ y کیا ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add 4 first, then divide by 3.",
+        "ur": "پہلے 4 جمع کریں، پھر 3 سے تقسیم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! y = 5.",
+        "ur": "درست! y = 5"
+      },
+      "feedback_wrong": {
+        "en": "11 + 4 = 15, then 15 ÷ 3 = 5.",
+        "ur": "11 + 4 = 15، پھر 15 ÷ 3 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That is 3y. Divide by 3: y = 5.",
+            "ur": "یہ 3y ہے۔ 3 سے تقسیم کریں: y = 5"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s6_first_step",
+      "type": "choice",
+      "prompt": {
+        "en": "To solve 4m + 7 = 31, what is the first step?",
+        "ur": "4m + 7 = 31 حل کرنے کا پہلا قدم کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "subtract7",
+          "text": {
+            "en": "Take 7 from both sides",
+            "ur": "دونوں طرف سے 7 تفریق"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 4m = 24, then m = 6.",
+            "ur": "جی ہاں! 4m = 24، پھر m = 6"
+          }
+        },
+        {
+          "id": "divide4",
+          "text": {
+            "en": "Divide both sides by 4",
+            "ur": "دونوں طرف کو 4 سے تقسیم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Undo the + 7 first. Then divide by 4.",
+            "ur": "پہلے + 7 ختم کریں۔ پھر 4 سے تقسیم۔"
+          },
+          "misconception_id": "divide_first"
+        },
+        {
+          "id": "add7",
+          "text": {
+            "en": "Add 7 to both sides",
+            "ur": "دونوں طرف 7 جمع"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Undo + 7 by subtracting 7.",
+            "ur": "+ 7 کو 7 تفریق کرکے ختم کریں۔"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s7_divide",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve x ÷ 3 + 2 = 7. What is x?",
+        "ur": "x ÷ 3 + 2 = 7 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 2 away, then multiply by 3.",
+        "ur": "2 تفریق کریں، پھر 3 سے ضرب۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 15.",
+        "ur": "درست! x = 15"
+      },
+      "feedback_wrong": {
+        "en": "7 − 2 = 5, then 5 × 3 = 15. Check: 15 ÷ 3 + 2 = 7.",
+        "ur": "7 − 2 = 5، پھر 5 × 3 = 15۔ جانچ: 15 ÷ 3 + 2 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is x ÷ 3. Multiply by 3: x = 15.",
+            "ur": "یہ x ÷ 3 ہے۔ 3 سے ضرب دیں: x = 15"
+          },
+          "misconception_id": "one_step_only"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Undo ÷ 3 by multiplying: 5 × 3 = 15.",
+            "ur": "÷ 3 کو ضرب سے ختم کریں: 5 × 3 = 15"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s8_minus_big",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 5n − 6 = 29. What is n?",
+        "ur": "5n − 6 = 29 حل کریں۔ n کیا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add 6, then divide by 5.",
+        "ur": "6 جمع کریں، پھر 5 سے تقسیم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! n = 7.",
+        "ur": "درست! n = 7"
+      },
+      "feedback_wrong": {
+        "en": "29 + 6 = 35, then 35 ÷ 5 = 7.",
+        "ur": "29 + 6 = 35، پھر 35 ÷ 5 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "That is 5n. Divide by 5: n = 7.",
+            "ur": "یہ 5n ہے۔ 5 سے تقسیم کریں: n = 7"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ahmed solves 2x + 6 = 20. He divides 20 by 2 to get x + 6 = 10, so x = 4. What went wrong?",
+        "ur": "احمد 2x + 6 = 20 حل کرتا ہے۔ وہ 20 کو 2 سے تقسیم کرکے x + 6 = 10 لکھتا ہے، تو x = 4۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "subtract_first",
+          "text": {
+            "en": "Take 6 away first: 2x = 14, so x = 7.",
+            "ur": "پہلے 6 تفریق کریں: 2x = 14، تو x = 7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! He divided only part of the left side. Check: 2 × 7 + 6 = 20.",
+            "ur": "جی ہاں! اس نے بائیں طرف کا صرف ایک حصہ تقسیم کیا۔ جانچ: 2 × 7 + 6 = 20"
+          }
+        },
+        {
+          "id": "multiply",
+          "text": {
+            "en": "He should multiply by 2: x = 40.",
+            "ur": "اسے 2 سے ضرب دینی چاہیے: x = 40"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2x means × 2, so we divide. But take 6 away first: x = 7.",
+            "ur": "2x یعنی × 2، تو تقسیم کریں۔ مگر پہلے 6 تفریق: x = 7"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: 2 × 4 + 6 = 14, not 20. Take 6 away first: x = 7.",
+            "ur": "جانچ: 2 × 4 + 6 = 14، 20 نہیں۔ پہلے 6 تفریق: x = 7"
+          },
+          "misconception_id": "divide_first"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we undo the + 5 before the × 2? Can you teach me?",
+          "ur": "ہم × 2 سے پہلے + 5 کیوں ختم کرتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: to solve 2x + 5 = 17, why do we take away 5 before dividing by 2?",
+        "ur": "اپنے الفاظ میں بتائیں: 2x + 5 = 17 حل کرنے کے لیے ہم 2 سے تقسیم کرنے سے پہلے 5 کیوں تفریق کرتے ہیں؟"
+      },
+      "key_idea": "x was multiplied by 2 first and then 5 was added, so we undo in reverse order: take away the 5 (the last thing done), then divide by 2. Dividing first would have to divide the 5 too.",
+      "levels": {
+        "got_it": "Says we undo in reverse order (the + 5 was done last), or that dividing first would also have to divide the 5.",
+        "partly": "Says 'take 5 first' without a reason.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "reverse",
+          "last",
+          "order",
+          "الٹ",
+          "آخر",
+          "ترتیب"
+        ],
+        [
+          "undo",
+          "ختم"
+        ],
+        [
+          "5",
+          "five",
+          "پانچ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Undo the last step first.",
+          "ur": "بہت خوب! آخری قدم پہلے ختم کریں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say why the order matters.",
+          "ur": "اچھی شروعات! اب بتائیں ترتیب کیوں اہم ہے۔"
+        },
+        "not_yet": {
+          "en": "Which happened to x last: × 2 or + 5? Which should you undo first?",
+          "ur": "x کے ساتھ آخر میں کیا ہوا: × 2 یا + 5؟ پہلے کسے ختم کرنا چاہیے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_quarter",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve m ÷ 4 − 1 = 5. What is m?",
+        "ur": "m ÷ 4 − 1 = 5 حل کریں۔ m کیا ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add 1, then multiply by 4.",
+        "ur": "1 جمع کریں، پھر 4 سے ضرب۔"
+      },
+      "feedback_correct": {
+        "en": "Right! m = 24.",
+        "ur": "درست! m = 24"
+      },
+      "feedback_wrong": {
+        "en": "5 + 1 = 6, then 6 × 4 = 24. Check: 24 ÷ 4 − 1 = 5.",
+        "ur": "5 + 1 = 6، پھر 6 × 4 = 24۔ جانچ: 24 ÷ 4 − 1 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "Undo − 1 by adding 1: 6 × 4 = 24.",
+            "ur": "− 1 کو 1 جمع کرکے ختم کریں: 6 × 4 = 24"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That is m ÷ 4. Multiply by 4: m = 24.",
+            "ur": "یہ m ÷ 4 ہے۔ 4 سے ضرب دیں: m = 24"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Two steps, reverse order, then check. You've got it!",
+          "ur": "دو قدم، الٹی ترتیب، پھر جانچ۔ آپ سیکھ گئے!"
+        }
+      },
+      "text": {
+        "en": "To solve a two-step equation, undo in reverse order: first undo + or −, then undo × or ÷. Do the same to both sides, and check your answer in the equation.",
+        "ur": "دو قدمی مساوات حل کرنے کے لیے الٹی ترتیب سے ختم کریں: پہلے + یا − ختم کریں، پھر × یا ÷۔ دونوں طرف ایک ہی کام کریں، اور جواب مساوات میں رکھ کر جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "First + or −, then × or ÷.",
+          "ur": "پہلے + یا −، پھر × یا ÷"
+        },
+        {
+          "en": "Always check your answer.",
+          "ur": "ہمیشہ جواب جانچیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_plus",
+      "type": "apply",
+      "skill": "maths.equations.two_step",
+      "step": {
+        "id": "r_plus",
+        "type": "number",
+        "prompt": {
+          "en": "Solve 4a + 1 = 21. What is a?",
+          "ur": "4a + 1 = 21 حل کریں۔ a کیا ہے؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "Subtract 1, then divide by 4.",
+          "ur": "1 تفریق کریں، پھر 4 سے تقسیم۔"
+        },
+        "feedback_correct": {
+          "en": "Right! a = 5.",
+          "ur": "درست! a = 5"
+        },
+        "feedback_wrong": {
+          "en": "21 − 1 = 20, then 20 ÷ 4 = 5.",
+          "ur": "21 − 1 = 20، پھر 20 ÷ 4 = 5"
+        },
+        "common_wrong": [
+          {
+            "answer": 20,
+            "feedback": {
+              "en": "That is 4a. Divide by 4: a = 5.",
+              "ur": "یہ 4a ہے۔ 4 سے تقسیم کریں: a = 5"
+            },
+            "misconception_id": "one_step_only"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_half",
+      "type": "apply",
+      "skill": "maths.equations.two_step",
+      "step": {
+        "id": "r_half",
+        "type": "number",
+        "prompt": {
+          "en": "Solve x ÷ 2 − 3 = 4. What is x?",
+          "ur": "x ÷ 2 − 3 = 4 حل کریں۔ x کیا ہے؟"
+        },
+        "answer": 14,
+        "checker": "numeric",
+        "hint": {
+          "en": "Add 3, then multiply by 2.",
+          "ur": "3 جمع کریں، پھر 2 سے ضرب۔"
+        },
+        "feedback_correct": {
+          "en": "Right! x = 14.",
+          "ur": "درست! x = 14"
+        },
+        "feedback_wrong": {
+          "en": "4 + 3 = 7, then 7 × 2 = 14.",
+          "ur": "4 + 3 = 7، پھر 7 × 2 = 14"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "Undo − 3 by adding 3: 7 × 2 = 14.",
+              "ur": "− 3 کو 3 جمع کرکے ختم کریں: 7 × 2 = 14"
+            },
+            "misconception_id": "wrong_inverse"
+          },
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "That is x ÷ 2. Multiply by 2: x = 14.",
+              "ur": "یہ x ÷ 2 ہے۔ 2 سے ضرب دیں: x = 14"
+            },
+            "misconception_id": "one_step_only"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Linear Equations unit. No textbook text or exercises were used.",
+    "The Introduction to Algebra unit met two-step equations briefly; this lesson practises them fully, including ÷ (x ÷ 3 + 2 = 7).",
+    "Urdu terms to check: دو قدمی مساوات (two-step equation), الٹی ترتیب (reverse order).",
+    "The numbers were worked out in content/sources/g6-maths-16/two_step_equations.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
