@@ -1,0 +1,682 @@
+{
+  "id": "g6-maths-13-order-of-operations",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Simplify expressions with +, −, × and ÷ using the correct order of operations.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Simplification"
+    }
+  ],
+  "skills": [
+    "maths.simplify.order_of_operations"
+  ],
+  "title": {
+    "en": "Order of operations",
+    "ur": "عملیات کی ترتیب"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.multiply_divide"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "left_to_right_all",
+      "description": "Works strictly from left to right, doing + or − before × or ÷."
+    },
+    {
+      "id": "add_before_subtract",
+      "description": "Always adds before subtracting (or multiplies before dividing) instead of going left to right."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.simplify.order_of_operations": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.simplify.order_of_operations": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "In 9 − 3 × 2, what do you do first?",
+            "ur": "9 − 3 × 2 میں پہلے کیا کرتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "times",
+              "text": {
+                "en": "3 × 2",
+                "ur": "3 × 2"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! × and ÷ come before + and −. 9 − 6 = 3.",
+                "ur": "جی ہاں! × اور ÷ پہلے، + اور − بعد میں۔ 9 − 6 = 3"
+              }
+            },
+            {
+              "id": "minus",
+              "text": {
+                "en": "9 − 3",
+                "ur": "9 − 3"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Multiplication comes before subtraction.",
+                "ur": "ضرب تفریق سے پہلے آتی ہے۔"
+              },
+              "misconception_id": "left_to_right_all"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Simplify: 7 + 2 × 6",
+            "ur": "مختصر کریں: 7 + 2 × 6"
+          },
+          "answer": 19,
+          "checker": "numeric",
+          "hint": {
+            "en": "Do 2 × 6 first.",
+            "ur": "پہلے 2 × 6 کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 7 + 12 = 19.",
+            "ur": "درست! 7 + 12 = 19"
+          },
+          "feedback_wrong": {
+            "en": "2 × 6 = 12, then 7 + 12 = 19.",
+            "ur": "2 × 6 = 12، پھر 7 + 12 = 19"
+          },
+          "common_wrong": [
+            {
+              "answer": 54,
+              "feedback": {
+                "en": "That adds first. Multiply first: 7 + 12 = 19.",
+                "ur": "یہ پہلے جمع ہے۔ پہلے ضرب: 7 + 12 = 19"
+              },
+              "misconception_id": "left_to_right_all"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hamza works out 10 − 4 ÷ 2 = 6 ÷ 2 = 3. What is wrong?",
+            "ur": "حمزہ 10 − 4 ÷ 2 = 6 ÷ 2 = 3 نکالتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "divide",
+              "text": {
+                "en": "He should divide first: 4 ÷ 2 = 2, so 10 − 2 = 8.",
+                "ur": "اسے پہلے تقسیم کرنی چاہیے: 4 ÷ 2 = 2، تو 10 − 2 = 8"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! ÷ comes before −.",
+                "ur": "جی ہاں! ÷، − سے پہلے آتا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "He subtracted first. Divide first: 10 − 2 = 8.",
+                "ur": "اس نے پہلے تفریق کی۔ پہلے تقسیم: 10 − 2 = 8"
+              },
+              "misconception_id": "left_to_right_all"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_order",
+      "front": {
+        "en": "Which first: × ÷ or + −?",
+        "ur": "پہلے کون: × ÷ یا + −؟"
+      },
+      "back": {
+        "en": "× and ÷ first, then + and −.",
+        "ur": "پہلے × اور ÷، پھر + اور −۔"
+      }
+    },
+    {
+      "id": "f_same",
+      "front": {
+        "en": "Two of the same level, like − and +?",
+        "ur": "ایک ہی درجے کے دو، جیسے − اور +؟"
+      },
+      "back": {
+        "en": "Work from left to right.",
+        "ur": "بائیں سے دائیں حل کریں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_puzzle",
+      "text": {
+        "en": "Write 2 + 3 × 4 on a paper and ask someone at home to work it out. Did they get 14 or 20? Explain the rule to them.",
+        "ur": "کاغذ پر 2 + 3 × 4 لکھیں اور گھر میں کسی سے حل کروائیں۔ کیا انہیں 14 ملا یا 20؟ انہیں قاعدہ سمجھائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Order of operations",
+      "ur": "عملیات کی ترتیب"
+    },
+    {
+      "en": "Simplify",
+      "ur": "مختصر کرنا"
+    },
+    {
+      "en": "Expression",
+      "ur": "عبارت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Aisha says 3 + 4 × 5 is 35. Bilal says 23. Who is right?",
+          "ur": "عائشہ کہتی ہے 3 + 4 × 5 کا جواب 35 ہے۔ بلال کہتا ہے 23۔ کون درست ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn the order to do + − × ÷ in. First, a quick check.",
+        "ur": "آج ہم سیکھیں گے کہ + − × ÷ کس ترتیب سے کرتے ہیں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.integers.multiply_divide",
+      "prompt": {
+        "en": "(−4) × 5 = ?",
+        "ur": "(−4) × 5 = ?"
+      },
+      "answer": -20,
+      "checker": "numeric",
+      "hint": {
+        "en": "A negative times a positive is negative.",
+        "ur": "منفی ضرب مثبت، منفی ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −20.",
+        "ur": "درست! −20"
+      },
+      "feedback_wrong": {
+        "en": "4 × 5 = 20, and the sign is negative: −20.",
+        "ur": "4 × 5 = 20، اور علامت منفی ہے: −20"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "Keep the sign: negative × positive = negative, −20.",
+            "ur": "علامت رکھیں: منفی × مثبت = منفی، −20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Times and divide first. Then add and take away. Same level? Left to right!",
+          "ur": "ضرب اور تقسیم پہلے۔ پھر جمع اور تفریق۔ ایک ہی درجہ؟ بائیں سے دائیں!"
+        }
+      },
+      "text": {
+        "en": "Everyone agrees on one order so that a sum has only one answer. 1) Do × and ÷, going from left to right. 2) Then do + and −, going from left to right. So 3 + 4 × 5 = 3 + 20 = 23. Bilal is right.",
+        "ur": "سب ایک ہی ترتیب مانتے ہیں تاکہ سوال کا ایک ہی جواب ہو۔ 1) × اور ÷ کریں، بائیں سے دائیں۔ 2) پھر + اور − کریں، بائیں سے دائیں۔ تو 3 + 4 × 5 = 3 + 20 = 23۔ بلال درست ہے۔"
+      }
+    },
+    {
+      "id": "s4_times_first",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: 3 + 4 × 5",
+        "ur": "مختصر کریں: 3 + 4 × 5"
+      },
+      "answer": 23,
+      "checker": "numeric",
+      "hint": {
+        "en": "Do 4 × 5 first.",
+        "ur": "پہلے 4 × 5 کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 + 20 = 23.",
+        "ur": "درست! 3 + 20 = 23"
+      },
+      "feedback_wrong": {
+        "en": "4 × 5 = 20, then 3 + 20 = 23.",
+        "ur": "4 × 5 = 20، پھر 3 + 20 = 23"
+      },
+      "common_wrong": [
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "That adds first. Multiply first: 3 + 20 = 23.",
+            "ur": "یہ پہلے جمع ہے۔ پہلے ضرب: 3 + 20 = 23"
+          },
+          "misconception_id": "left_to_right_all"
+        }
+      ]
+    },
+    {
+      "id": "s5_divide_first",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: 20 − 12 ÷ 4",
+        "ur": "مختصر کریں: 20 − 12 ÷ 4"
+      },
+      "answer": 17,
+      "checker": "numeric",
+      "hint": {
+        "en": "Do 12 ÷ 4 first.",
+        "ur": "پہلے 12 ÷ 4 کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 − 3 = 17.",
+        "ur": "درست! 20 − 3 = 17"
+      },
+      "feedback_wrong": {
+        "en": "12 ÷ 4 = 3, then 20 − 3 = 17.",
+        "ur": "12 ÷ 4 = 3، پھر 20 − 3 = 17"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That subtracts first. Divide first: 20 − 3 = 17.",
+            "ur": "یہ پہلے تفریق ہے۔ پہلے تقسیم: 20 − 3 = 17"
+          },
+          "misconception_id": "left_to_right_all"
+        }
+      ]
+    },
+    {
+      "id": "s6_which_first",
+      "type": "choice",
+      "prompt": {
+        "en": "In 18 − 6 × 2, which part do you work out first?",
+        "ur": "18 − 6 × 2 میں کون سا حصہ پہلے حل کرتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "times",
+          "text": {
+            "en": "6 × 2",
+            "ur": "6 × 2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Then 18 − 12 = 6.",
+            "ur": "جی ہاں! پھر 18 − 12 = 6"
+          }
+        },
+        {
+          "id": "minus",
+          "text": {
+            "en": "18 − 6",
+            "ur": "18 − 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "× comes before −. Do 6 × 2 first.",
+            "ur": "×، − سے پہلے آتا ہے۔ پہلے 6 × 2 کریں۔"
+          },
+          "misconception_id": "left_to_right_all"
+        }
+      ]
+    },
+    {
+      "id": "s7_left_to_right",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: 40 ÷ 8 × 2",
+        "ur": "مختصر کریں: 40 ÷ 8 × 2"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "÷ and × are the same level. Go left to right: 40 ÷ 8 first.",
+        "ur": "÷ اور × ایک ہی درجے کے ہیں۔ بائیں سے دائیں: پہلے 40 ÷ 8"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 2 = 10.",
+        "ur": "درست! 5 × 2 = 10"
+      },
+      "feedback_wrong": {
+        "en": "40 ÷ 8 = 5, then 5 × 2 = 10.",
+        "ur": "40 ÷ 8 = 5، پھر 5 × 2 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 2.5,
+          "feedback": {
+            "en": "Don't multiply first. Left to right: 40 ÷ 8 = 5, then 5 × 2 = 10.",
+            "ur": "پہلے ضرب نہ کریں۔ بائیں سے دائیں: 40 ÷ 8 = 5، پھر 5 × 2 = 10"
+          },
+          "misconception_id": "add_before_subtract"
+        }
+      ]
+    },
+    {
+      "id": "s8_minus_plus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: 30 − 10 + 5",
+        "ur": "مختصر کریں: 30 − 10 + 5"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "− and + are the same level. Go left to right.",
+        "ur": "− اور + ایک ہی درجے کے ہیں۔ بائیں سے دائیں حل کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 + 5 = 25.",
+        "ur": "درست! 20 + 5 = 25"
+      },
+      "feedback_wrong": {
+        "en": "30 − 10 = 20, then 20 + 5 = 25.",
+        "ur": "30 − 10 = 20، پھر 20 + 5 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "Don't add first. Left to right: 30 − 10 = 20, then 20 + 5 = 25.",
+            "ur": "پہلے جمع نہ کریں۔ بائیں سے دائیں: 30 − 10 = 20، پھر 20 + 5 = 25"
+          },
+          "misconception_id": "add_before_subtract"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana works out 6 + 6 ÷ 3 like this: 6 + 6 = 12, then 12 ÷ 3 = 4. What went wrong?",
+        "ur": "ثنا 6 + 6 ÷ 3 ایسے حل کرتی ہے: 6 + 6 = 12، پھر 12 ÷ 3 = 4۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "divide",
+          "text": {
+            "en": "She should divide first: 6 ÷ 3 = 2, so 6 + 2 = 8.",
+            "ur": "اسے پہلے تقسیم کرنی چاہیے: 6 ÷ 3 = 2، تو 6 + 2 = 8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! ÷ comes before +.",
+            "ur": "جی ہاں! ÷، + سے پہلے آتا ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "She added first. ÷ comes before +, so the answer is 8.",
+            "ur": "اس نے پہلے جمع کیا۔ ÷، + سے پہلے آتا ہے، تو جواب 8 ہے۔"
+          },
+          "misconception_id": "left_to_right_all"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does everyone need to follow the same order? Can you teach me?",
+          "ur": "سب کو ایک ہی ترتیب کیوں ماننی چاہیے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we all agree to do × and ÷ before + and −?",
+        "ur": "اپنے الفاظ میں بتائیں: ہم سب × اور ÷ کو + اور − سے پہلے کرنے پر کیوں متفق ہیں؟"
+      },
+      "key_idea": "If people worked in different orders, the same sum would give different answers (3 + 4 × 5 could be 23 or 35). One agreed order means everyone gets the same answer.",
+      "levels": {
+        "got_it": "Says without one agreed order, the same sum could give different answers, so everyone follows one rule to get the same answer.",
+        "partly": "Says it is the rule, or that the answer changes, but not both.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "same",
+          "one",
+          "ایک",
+          "ایک جیسا"
+        ],
+        [
+          "answer",
+          "جواب"
+        ],
+        [
+          "different",
+          "change",
+          "مختلف",
+          "بدل"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! One order means one answer for everyone.",
+          "ur": "بہت خوب! ایک ترتیب کا مطلب ہے سب کے لیے ایک جواب۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what would happen to the answer if people used different orders.",
+          "ur": "اچھی شروعات! اب بتائیں اگر لوگ مختلف ترتیب استعمال کریں تو جواب کا کیا ہوگا۔"
+        },
+        "not_yet": {
+          "en": "Work out 3 + 4 × 5 adding first, then multiplying first. Do you get the same answer?",
+          "ur": "3 + 4 × 5 پہلے جمع کر کے، پھر پہلے ضرب کر کے حل کریں۔ کیا ایک ہی جواب آتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_shopping",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ali buys a pen for Rs 25 and 3 notebooks at Rs 40 each. The total is 25 + 3 × 40. How many rupees is that?",
+        "ur": "علی 25 روپے کا ایک قلم اور 40 روپے فی کاپی کے حساب سے 3 کاپیاں خریدتا ہے۔ کل 25 + 3 × 40 ہے۔ یہ کتنے روپے ہیں؟"
+      },
+      "answer": 145,
+      "checker": "numeric",
+      "hint": {
+        "en": "Do 3 × 40 first.",
+        "ur": "پہلے 3 × 40 کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 25 + 120 = Rs 145.",
+        "ur": "درست! 25 + 120 = 145 روپے"
+      },
+      "feedback_wrong": {
+        "en": "3 × 40 = 120, then 25 + 120 = 145.",
+        "ur": "3 × 40 = 120، پھر 25 + 120 = 145"
+      },
+      "common_wrong": [
+        {
+          "answer": 1120,
+          "feedback": {
+            "en": "That adds first. 3 notebooks cost 120, so 25 + 120 = 145.",
+            "ur": "یہ پہلے جمع ہے۔ 3 کاپیاں 120 کی ہیں، تو 25 + 120 = 145"
+          },
+          "misconception_id": "left_to_right_all"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you know the order, so you get the same answer as everyone!",
+          "ur": "اب آپ ترتیب جانتے ہیں، اس لیے آپ کا جواب سب جیسا آئے گا!"
+        }
+      },
+      "text": {
+        "en": "First do × and ÷, from left to right. Then do + and −, from left to right. This order gives every sum one answer.",
+        "ur": "پہلے × اور ÷ کریں، بائیں سے دائیں۔ پھر + اور − کریں، بائیں سے دائیں۔ یہ ترتیب ہر سوال کو ایک جواب دیتی ہے۔"
+      },
+      "points": [
+        {
+          "en": "× ÷ before + −.",
+          "ur": "× ÷ پہلے، + − بعد میں۔"
+        },
+        {
+          "en": "Same level: left to right.",
+          "ur": "ایک ہی درجہ: بائیں سے دائیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_times",
+      "type": "apply",
+      "skill": "maths.simplify.order_of_operations",
+      "step": {
+        "id": "r_times",
+        "type": "number",
+        "prompt": {
+          "en": "Simplify: 50 − 5 × 6",
+          "ur": "مختصر کریں: 50 − 5 × 6"
+        },
+        "answer": 20,
+        "checker": "numeric",
+        "hint": {
+          "en": "Do 5 × 6 first.",
+          "ur": "پہلے 5 × 6 کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 50 − 30 = 20.",
+          "ur": "درست! 50 − 30 = 20"
+        },
+        "feedback_wrong": {
+          "en": "5 × 6 = 30, then 50 − 30 = 20.",
+          "ur": "5 × 6 = 30، پھر 50 − 30 = 20"
+        },
+        "common_wrong": [
+          {
+            "answer": 270,
+            "feedback": {
+              "en": "That subtracts first. Multiply first: 50 − 30 = 20.",
+              "ur": "یہ پہلے تفریق ہے۔ پہلے ضرب: 50 − 30 = 20"
+            },
+            "misconception_id": "left_to_right_all"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_divide",
+      "type": "apply",
+      "skill": "maths.simplify.order_of_operations",
+      "step": {
+        "id": "r_divide",
+        "type": "number",
+        "prompt": {
+          "en": "Simplify: 5 + 36 ÷ 4",
+          "ur": "مختصر کریں: 5 + 36 ÷ 4"
+        },
+        "answer": 14,
+        "checker": "numeric",
+        "hint": {
+          "en": "Do 36 ÷ 4 first.",
+          "ur": "پہلے 36 ÷ 4 کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5 + 9 = 14.",
+          "ur": "درست! 5 + 9 = 14"
+        },
+        "feedback_wrong": {
+          "en": "36 ÷ 4 = 9, then 5 + 9 = 14.",
+          "ur": "36 ÷ 4 = 9، پھر 5 + 9 = 14"
+        },
+        "common_wrong": [
+          {
+            "answer": 10.25,
+            "feedback": {
+              "en": "That adds first: (5 + 36) ÷ 4. Divide first: 5 + 9 = 14.",
+              "ur": "یہ پہلے جمع ہے: (5 + 36) ÷ 4۔ پہلے تقسیم: 5 + 9 = 14"
+            },
+            "misconception_id": "left_to_right_all"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Simplification unit. No textbook text or exercises were used.",
+    "Brackets come in the next lesson; this lesson only uses + − × ÷.",
+    "Urdu terms to check: عملیات کی ترتیب (order of operations), مختصر کرنا (simplify).",
+    "The numbers were worked out in content/sources/g6-maths-13/order_of_operations.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

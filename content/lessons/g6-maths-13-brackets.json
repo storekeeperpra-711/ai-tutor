@@ -1,0 +1,719 @@
+{
+  "id": "g6-maths-13-brackets",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Simplify expressions with brackets ( ), { } and [ ] using BODMAS, working from the inside out.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Simplification"
+    }
+  ],
+  "skills": [
+    "maths.simplify.brackets"
+  ],
+  "title": {
+    "en": "Brackets and BODMAS",
+    "ur": "قوسین اور BODMAS"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.simplify.order_of_operations"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "ignores_brackets",
+      "description": "Ignores the brackets and uses only × ÷ before + −."
+    },
+    {
+      "id": "partial_distribute",
+      "description": "Multiplies only the first number inside the brackets (3 × (4 + 5) = 12 + 5)."
+    },
+    {
+      "id": "outside_first",
+      "description": "Works the outer brackets before the inner ones."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.simplify.brackets": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.simplify.brackets": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "In [10 − {2 × (1 + 3)}], which part do you work out first?",
+            "ur": "[10 − {2 × (1 + 3)}] میں کون سا حصہ پہلے حل کرتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "inner",
+              "text": {
+                "en": "(1 + 3), the innermost brackets",
+                "ur": "(1 + 3)، سب سے اندر والی قوسین"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Work from the inside out.",
+                "ur": "جی ہاں! اندر سے باہر کی طرف حل کریں۔"
+              }
+            },
+            {
+              "id": "outer",
+              "text": {
+                "en": "10 − 2",
+                "ur": "10 − 2"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Start with the innermost brackets: (1 + 3).",
+                "ur": "سب سے اندر والی قوسین سے شروع کریں: (1 + 3)"
+              },
+              "misconception_id": "outside_first"
+            },
+            {
+              "id": "times",
+              "text": {
+                "en": "2 × 1",
+                "ur": "2 × 1"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The ( ) brackets come first, so 1 + 3 before the ×.",
+                "ur": "( ) پہلے آتی ہیں، تو × سے پہلے 1 + 3"
+              },
+              "misconception_id": "ignores_brackets"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Simplify: (9 − 3) × 4",
+            "ur": "مختصر کریں: (9 − 3) × 4"
+          },
+          "answer": 24,
+          "checker": "numeric",
+          "hint": {
+            "en": "Brackets first: 9 − 3.",
+            "ur": "پہلے قوسین: 9 − 3"
+          },
+          "feedback_correct": {
+            "en": "Right! 6 × 4 = 24.",
+            "ur": "درست! 6 × 4 = 24"
+          },
+          "feedback_wrong": {
+            "en": "9 − 3 = 6, then 6 × 4 = 24.",
+            "ur": "9 − 3 = 6، پھر 6 × 4 = 24"
+          },
+          "common_wrong": [
+            {
+              "answer": -3,
+              "feedback": {
+                "en": "That ignores the brackets. Brackets first: 6 × 4 = 24.",
+                "ur": "یہ قوسین نظر انداز کرتا ہے۔ پہلے قوسین: 6 × 4 = 24"
+              },
+              "misconception_id": "ignores_brackets"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Usman writes 2 × (5 + 3) = 10 + 3 = 13. What is wrong?",
+            "ur": "عثمان 2 × (5 + 3) = 10 + 3 = 13 لکھتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "brackets",
+              "text": {
+                "en": "He should add inside the brackets first: 2 × 8 = 16.",
+                "ur": "اسے پہلے قوسین کے اندر جمع کرنا چاہیے: 2 × 8 = 16"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The whole bracket is multiplied by 2.",
+                "ur": "جی ہاں! پوری قوسین کو 2 سے ضرب دی جاتی ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "He multiplied only the 5. Work out the brackets first: 2 × 8 = 16.",
+                "ur": "اس نے صرف 5 کو ضرب دی۔ پہلے قوسین حل کریں: 2 × 8 = 16"
+              },
+              "misconception_id": "partial_distribute"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_bodmas",
+      "front": {
+        "en": "BODMAS?",
+        "ur": "BODMAS؟"
+      },
+      "back": {
+        "en": "Brackets, then Division and Multiplication, then Addition and Subtraction.",
+        "ur": "پہلے قوسین، پھر تقسیم اور ضرب، پھر جمع اور تفریق۔"
+      }
+    },
+    {
+      "id": "f_kinds",
+      "front": {
+        "en": "Order of brackets?",
+        "ur": "قوسین کی ترتیب؟"
+      },
+      "back": {
+        "en": "( ) first, then { }, then [ ]: inside out.",
+        "ur": "پہلے ( )، پھر { }، پھر [ ]: اندر سے باہر۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_brackets",
+      "text": {
+        "en": "Take the numbers 2, 3 and 4. Using + and × and one pair of brackets, how many different answers can you make? Which one is the biggest?",
+        "ur": "عدد 2، 3 اور 4 لیں۔ + اور × اور ایک جوڑا قوسین سے آپ کتنے مختلف جواب بنا سکتے ہیں؟ سب سے بڑا کون سا ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Brackets",
+      "ur": "قوسین"
+    },
+    {
+      "en": "BODMAS",
+      "ur": "BODMAS"
+    },
+    {
+      "en": "Inside out",
+      "ur": "اندر سے باہر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "8 + 2 × 3 is 14. But what if we want to add first? Brackets can tell us!",
+          "ur": "8 + 2 × 3 کا جواب 14 ہے۔ لیکن اگر ہم پہلے جمع کرنا چاہیں؟ قوسین بتا سکتی ہیں!"
+        }
+      },
+      "text": {
+        "en": "Today we learn brackets and BODMAS. First, a quick check on the order of operations.",
+        "ur": "آج ہم قوسین اور BODMAS سیکھیں گے۔ پہلے عملیات کی ترتیب کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.simplify.order_of_operations",
+      "prompt": {
+        "en": "Simplify: 8 + 2 × 3",
+        "ur": "مختصر کریں: 8 + 2 × 3"
+      },
+      "answer": 14,
+      "checker": "numeric",
+      "hint": {
+        "en": "× before +.",
+        "ur": "× پہلے، + بعد میں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 + 6 = 14.",
+        "ur": "درست! 8 + 6 = 14"
+      },
+      "feedback_wrong": {
+        "en": "2 × 3 = 6, then 8 + 6 = 14.",
+        "ur": "2 × 3 = 6، پھر 8 + 6 = 14"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "That adds first. Multiply first: 8 + 6 = 14.",
+            "ur": "یہ پہلے جمع ہے۔ پہلے ضرب: 8 + 6 = 14"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_bodmas",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Brackets jump the queue! Work inside them first, from the inside out.",
+          "ur": "قوسین قطار توڑ دیتی ہیں! پہلے ان کے اندر حل کریں، اندر سے باہر۔"
+        }
+      },
+      "text": {
+        "en": "BODMAS gives the order: Brackets, then Division and Multiplication (left to right), then Addition and Subtraction (left to right). There are three kinds of brackets: ( ), { } and [ ]. Do ( ) first, then { }, then [ ]. So (8 + 2) × 3 = 10 × 3 = 30.",
+        "ur": "BODMAS ترتیب بتاتا ہے: پہلے قوسین، پھر تقسیم اور ضرب (بائیں سے دائیں)، پھر جمع اور تفریق (بائیں سے دائیں)۔ قوسین تین قسم کی ہیں: ( )، { } اور [ ]۔ پہلے ( )، پھر { }، پھر [ ]۔ تو (8 + 2) × 3 = 10 × 3 = 30"
+      }
+    },
+    {
+      "id": "s4_round",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: (8 + 2) × 3",
+        "ur": "مختصر کریں: (8 + 2) × 3"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Brackets first: 8 + 2.",
+        "ur": "پہلے قوسین: 8 + 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 10 × 3 = 30.",
+        "ur": "درست! 10 × 3 = 30"
+      },
+      "feedback_wrong": {
+        "en": "8 + 2 = 10, then 10 × 3 = 30.",
+        "ur": "8 + 2 = 10، پھر 10 × 3 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "That ignores the brackets. Brackets first: 10 × 3 = 30.",
+            "ur": "یہ قوسین نظر انداز کرتا ہے۔ پہلے قوسین: 10 × 3 = 30"
+          },
+          "misconception_id": "ignores_brackets"
+        },
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "Multiply the whole bracket, not just the 8: 10 × 3 = 30.",
+            "ur": "صرف 8 کو نہیں، پوری قوسین کو ضرب دیں: 10 × 3 = 30"
+          },
+          "misconception_id": "partial_distribute"
+        }
+      ]
+    },
+    {
+      "id": "s5_divide",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: 24 ÷ (2 + 4)",
+        "ur": "مختصر کریں: 24 ÷ (2 + 4)"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Brackets first: 2 + 4.",
+        "ur": "پہلے قوسین: 2 + 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 ÷ 6 = 4.",
+        "ur": "درست! 24 ÷ 6 = 4"
+      },
+      "feedback_wrong": {
+        "en": "2 + 4 = 6, then 24 ÷ 6 = 4.",
+        "ur": "2 + 4 = 6، پھر 24 ÷ 6 = 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That ignores the brackets. Brackets first: 24 ÷ 6 = 4.",
+            "ur": "یہ قوسین نظر انداز کرتا ہے۔ پہلے قوسین: 24 ÷ 6 = 4"
+          },
+          "misconception_id": "ignores_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s6_which_first",
+      "type": "choice",
+      "prompt": {
+        "en": "In 5 × (6 − 2), which part do you work out first?",
+        "ur": "5 × (6 − 2) میں کون سا حصہ پہلے حل کرتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "bracket",
+          "text": {
+            "en": "6 − 2",
+            "ur": "6 − 2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Brackets first, then 5 × 4 = 20.",
+            "ur": "جی ہاں! پہلے قوسین، پھر 5 × 4 = 20"
+          }
+        },
+        {
+          "id": "times",
+          "text": {
+            "en": "5 × 6",
+            "ur": "5 × 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Brackets come before ×. Do 6 − 2 first.",
+            "ur": "قوسین × سے پہلے آتی ہیں۔ پہلے 6 − 2 کریں۔"
+          },
+          "misconception_id": "ignores_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s7_curly",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: 50 − {6 × (3 + 2)}",
+        "ur": "مختصر کریں: 50 − {6 × (3 + 2)}"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Inside out: (3 + 2) first, then { }.",
+        "ur": "اندر سے باہر: پہلے (3 + 2)، پھر { }"
+      },
+      "feedback_correct": {
+        "en": "Right! 50 − 30 = 20.",
+        "ur": "درست! 50 − 30 = 20"
+      },
+      "feedback_wrong": {
+        "en": "3 + 2 = 5, 6 × 5 = 30, 50 − 30 = 20.",
+        "ur": "3 + 2 = 5، 6 × 5 = 30، 50 − 30 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "Multiply the whole bracket: 6 × 5 = 30, so 50 − 30 = 20.",
+            "ur": "پوری قوسین کو ضرب دیں: 6 × 5 = 30، تو 50 − 30 = 20"
+          },
+          "misconception_id": "partial_distribute"
+        }
+      ]
+    },
+    {
+      "id": "s8_square",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify: [20 − (4 + 6)] × 2",
+        "ur": "مختصر کریں: [20 − (4 + 6)] × 2"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "(4 + 6) first, then the [ ], then × 2.",
+        "ur": "پہلے (4 + 6)، پھر [ ]، پھر × 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 10 × 2 = 20.",
+        "ur": "درست! 10 × 2 = 20"
+      },
+      "feedback_wrong": {
+        "en": "4 + 6 = 10, 20 − 10 = 10, 10 × 2 = 20.",
+        "ur": "4 + 6 = 10، 20 − 10 = 10، 10 × 2 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "That ignores the brackets. Inside out: [20 − 10] × 2 = 20.",
+            "ur": "یہ قوسین نظر انداز کرتا ہے۔ اندر سے باہر: [20 − 10] × 2 = 20"
+          },
+          "misconception_id": "ignores_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Maria works out 3 × (4 + 5) like this: 3 × 4 = 12, then 12 + 5 = 17. What went wrong?",
+        "ur": "ماریہ 3 × (4 + 5) ایسے حل کرتی ہے: 3 × 4 = 12، پھر 12 + 5 = 17۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "brackets",
+          "text": {
+            "en": "She should add inside the brackets first: 3 × 9 = 27.",
+            "ur": "اسے پہلے قوسین کے اندر جمع کرنا چاہیے: 3 × 9 = 27"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Brackets first, then multiply.",
+            "ur": "جی ہاں! پہلے قوسین، پھر ضرب۔"
+          }
+        },
+        {
+          "id": "order",
+          "text": {
+            "en": "She should do 4 + 5 last.",
+            "ur": "اسے 4 + 5 آخر میں کرنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It's the other way: brackets come first.",
+            "ur": "الٹا ہے: قوسین سب سے پہلے آتی ہیں۔"
+          },
+          "misconception_id": "ignores_brackets"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "She multiplied only the 4. The whole bracket is 9, so 3 × 9 = 27.",
+            "ur": "اس نے صرف 4 کو ضرب دی۔ پوری قوسین 9 ہے، تو 3 × 9 = 27"
+          },
+          "misconception_id": "partial_distribute"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we need brackets at all? Can you teach me?",
+          "ur": "ہمیں قوسین کی ضرورت ہی کیوں ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why are (8 + 2) × 3 and 8 + 2 × 3 different?",
+        "ur": "اپنے الفاظ میں بتائیں: (8 + 2) × 3 اور 8 + 2 × 3 مختلف کیوں ہیں؟"
+      },
+      "key_idea": "Normally × comes before +, so 8 + 2 × 3 = 8 + 6 = 14. Brackets change the order: they say add 8 + 2 first, so (8 + 2) × 3 = 10 × 3 = 30.",
+      "levels": {
+        "got_it": "Says brackets are worked out first, so the adding happens before the multiplying, which changes the answer.",
+        "partly": "Says the brackets make it different, without saying they change the order.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "bracket",
+          "قوسین"
+        ],
+        [
+          "first",
+          "before",
+          "پہلے"
+        ],
+        [
+          "order",
+          "change",
+          "ترتیب",
+          "بدل"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Brackets change the order, so the answer changes.",
+          "ur": "بہت خوب! قوسین ترتیب بدلتی ہیں، اس لیے جواب بدلتا ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say which part gets done first in each one.",
+          "ur": "اچھی شروعات! اب بتائیں ہر ایک میں کون سا حصہ پہلے ہوتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Work out both. In which one do you add first?",
+          "ur": "دونوں حل کریں۔ کس میں آپ پہلے جمع کرتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_share",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Three friends share Rs 150 and Rs 90 equally. Each gets (150 + 90) ÷ 3 rupees. How much is that?",
+        "ur": "تین دوست 150 روپے اور 90 روپے برابر بانٹتے ہیں۔ ہر ایک کو (150 + 90) ÷ 3 روپے ملتے ہیں۔ یہ کتنے ہیں؟"
+      },
+      "answer": 80,
+      "checker": "numeric",
+      "hint": {
+        "en": "Brackets first: 150 + 90.",
+        "ur": "پہلے قوسین: 150 + 90"
+      },
+      "feedback_correct": {
+        "en": "Right! 240 ÷ 3 = Rs 80.",
+        "ur": "درست! 240 ÷ 3 = 80 روپے"
+      },
+      "feedback_wrong": {
+        "en": "150 + 90 = 240, then 240 ÷ 3 = 80.",
+        "ur": "150 + 90 = 240، پھر 240 ÷ 3 = 80"
+      },
+      "common_wrong": [
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "That ignores the brackets. All the money is shared: 240 ÷ 3 = 80.",
+            "ur": "یہ قوسین نظر انداز کرتا ہے۔ سارے پیسے بانٹے جاتے ہیں: 240 ÷ 3 = 80"
+          },
+          "misconception_id": "ignores_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Brackets first, inside out. You've got BODMAS!",
+          "ur": "پہلے قوسین، اندر سے باہر۔ آپ نے BODMAS سیکھ لیا!"
+        }
+      },
+      "text": {
+        "en": "BODMAS: Brackets first, then ÷ and × from left to right, then + and − from left to right. Work ( ), then { }, then [ ], from the inside out. Brackets can change the answer.",
+        "ur": "BODMAS: پہلے قوسین، پھر ÷ اور × بائیں سے دائیں، پھر + اور − بائیں سے دائیں۔ پہلے ( )، پھر { }، پھر [ ]، اندر سے باہر۔ قوسین جواب بدل سکتی ہیں۔"
+      },
+      "points": [
+        {
+          "en": "Brackets first, inside out.",
+          "ur": "پہلے قوسین، اندر سے باہر۔"
+        },
+        {
+          "en": "Then × ÷, then + −.",
+          "ur": "پھر × ÷، پھر + −۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_divide",
+      "type": "apply",
+      "skill": "maths.simplify.brackets",
+      "step": {
+        "id": "r_divide",
+        "type": "number",
+        "prompt": {
+          "en": "Simplify: 60 ÷ (5 + 7)",
+          "ur": "مختصر کریں: 60 ÷ (5 + 7)"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "Brackets first: 5 + 7.",
+          "ur": "پہلے قوسین: 5 + 7"
+        },
+        "feedback_correct": {
+          "en": "Right! 60 ÷ 12 = 5.",
+          "ur": "درست! 60 ÷ 12 = 5"
+        },
+        "feedback_wrong": {
+          "en": "5 + 7 = 12, then 60 ÷ 12 = 5.",
+          "ur": "5 + 7 = 12، پھر 60 ÷ 12 = 5"
+        },
+        "common_wrong": [
+          {
+            "answer": 19,
+            "feedback": {
+              "en": "That ignores the brackets: 60 ÷ 12 = 5.",
+              "ur": "یہ قوسین نظر انداز کرتا ہے: 60 ÷ 12 = 5"
+            },
+            "misconception_id": "ignores_brackets"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_nested",
+      "type": "apply",
+      "skill": "maths.simplify.brackets",
+      "step": {
+        "id": "r_nested",
+        "type": "number",
+        "prompt": {
+          "en": "Simplify: {12 − (2 × 3)} + 4",
+          "ur": "مختصر کریں: {12 − (2 × 3)} + 4"
+        },
+        "answer": 10,
+        "checker": "numeric",
+        "hint": {
+          "en": "(2 × 3) first, then { }.",
+          "ur": "پہلے (2 × 3)، پھر { }"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 + 4 = 10.",
+          "ur": "درست! 6 + 4 = 10"
+        },
+        "feedback_wrong": {
+          "en": "2 × 3 = 6, 12 − 6 = 6, 6 + 4 = 10.",
+          "ur": "2 × 3 = 6، 12 − 6 = 6، 6 + 4 = 10"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "Work the { } first, then add 4: 6 + 4 = 10.",
+              "ur": "پہلے { } حل کریں، پھر 4 جمع کریں: 6 + 4 = 10"
+            },
+            "misconception_id": "outside_first"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Simplification unit. No textbook text or exercises were used.",
+    "BODMAS here skips Orders (powers), which Grade 6 does not need yet.",
+    "Urdu terms to check: قوسین (brackets).",
+    "The numbers were worked out in content/sources/g6-maths-13/brackets.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
