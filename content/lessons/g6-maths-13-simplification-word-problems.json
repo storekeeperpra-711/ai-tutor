@@ -1,0 +1,861 @@
+{
+  "id": "g6-maths-13-simplification-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Write a number sentence for a real-life problem, using brackets where needed, and simplify it with BODMAS.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Simplification"
+    }
+  ],
+  "skills": [
+    "maths.simplify.word_problems"
+  ],
+  "title": {
+    "en": "Simplification word problems",
+    "ur": "مختصر کرنے کے عملی سوال"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.simplify.estimation"
+    },
+    {
+      "skill": "maths.simplify.fractions_decimals"
+    },
+    {
+      "skill": "maths.simplify.brackets"
+    },
+    {
+      "skill": "maths.simplify.order_of_operations"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "missing_brackets",
+      "description": "Leaves out brackets when a total must be found before sharing or multiplying."
+    },
+    {
+      "id": "extra_brackets",
+      "description": "Adds brackets where none are needed, changing what the story means."
+    },
+    {
+      "id": "forgets_quantity",
+      "description": "Uses the price of one item when several were bought."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.simplify.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.simplify.word_problems": [
+      {
+        "id": "qb_sentence",
+        "type": "recall",
+        "step": {
+          "id": "qb_sentence",
+          "type": "choice",
+          "prompt": {
+            "en": "Nida has Rs 250 and Zain has Rs 150. They put it together and share it equally among 4 friends. Which number sentence fits?",
+            "ur": "ندا کے پاس 250 اور زین کے پاس 150 روپے ہیں۔ وہ پیسے ملا کر 4 دوستوں میں برابر بانٹتے ہیں۔ کون سا عددی جملہ درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "brackets",
+              "text": {
+                "en": "(250 + 150) ÷ 4",
+                "ur": "(250 + 150) ÷ 4"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Find the total first, then share it: Rs 100 each.",
+                "ur": "جی ہاں! پہلے کل نکالیں، پھر بانٹیں: ہر ایک کو 100 روپے"
+              }
+            },
+            {
+              "id": "no_brackets",
+              "text": {
+                "en": "250 + 150 ÷ 4",
+                "ur": "250 + 150 ÷ 4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Without brackets only the Rs 150 is shared. All the money is shared: (250 + 150) ÷ 4.",
+                "ur": "قوسین کے بغیر صرف 150 روپے بٹتے ہیں۔ سارے پیسے بٹتے ہیں: (250 + 150) ÷ 4"
+              },
+              "misconception_id": "missing_brackets"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A hall has 6 rows of 7 chairs, and 5 more chairs at the front. How many chairs are there?",
+            "ur": "ایک ہال میں کرسیوں کی 6 قطاریں ہیں، ہر قطار میں 7، اور آگے 5 کرسیاں مزید۔ کل کتنی کرسیاں ہیں؟"
+          },
+          "answer": 47,
+          "checker": "numeric",
+          "hint": {
+            "en": "6 × 7 + 5.",
+            "ur": "6 × 7 + 5"
+          },
+          "feedback_correct": {
+            "en": "Right! 42 + 5 = 47.",
+            "ur": "درست! 42 + 5 = 47"
+          },
+          "feedback_wrong": {
+            "en": "6 × 7 = 42, then 42 + 5 = 47.",
+            "ur": "6 × 7 = 42، پھر 42 + 5 = 47"
+          },
+          "common_wrong": [
+            {
+              "answer": 72,
+              "feedback": {
+                "en": "The 5 chairs are not in every row: 6 × 7 + 5 = 47.",
+                "ur": "5 کرسیاں ہر قطار میں نہیں ہیں: 6 × 7 + 5 = 47"
+              },
+              "misconception_id": "extra_brackets"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A goat costs Rs 400 and Rs 100 was paid. The rest is paid in 3 equal parts. Amna writes 400 − 100 ÷ 3. What is wrong?",
+            "ur": "ایک بکری 400 روپے کی ہے اور 100 روپے دے دیے گئے۔ باقی 3 برابر قسطوں میں دینے ہیں۔ آمنہ 400 − 100 ÷ 3 لکھتی ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "brackets",
+              "text": {
+                "en": "It needs brackets: (400 − 100) ÷ 3 = Rs 100.",
+                "ur": "قوسین چاہییں: (400 − 100) ÷ 3 = 100 روپے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Find what is left first, then divide.",
+                "ur": "جی ہاں! پہلے باقی نکالیں، پھر تقسیم کریں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Without brackets, only the 100 is divided. The rest, 300, is shared: Rs 100.",
+                "ur": "قوسین کے بغیر صرف 100 تقسیم ہوتا ہے۔ باقی 300 بٹتا ہے: 100 روپے"
+              },
+              "misconception_id": "missing_brackets"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_total_first",
+      "front": {
+        "en": "Total, then share?",
+        "ur": "پہلے کل، پھر بانٹنا؟"
+      },
+      "back": {
+        "en": "Use brackets: (a + b) ÷ n.",
+        "ur": "قوسین لگائیں: (a + b) ÷ n"
+      }
+    },
+    {
+      "id": "f_steps",
+      "front": {
+        "en": "Solving a word problem?",
+        "ur": "عملی سوال حل کرنا؟"
+      },
+      "back": {
+        "en": "Write the number sentence, simplify with BODMAS, then estimate to check.",
+        "ur": "عددی جملہ لکھیں، BODMAS سے مختصر کریں، پھر اندازے سے جانچیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_story",
+      "text": {
+        "en": "Make up your own story for (20 + 10) ÷ 5, and another for 20 + 10 ÷ 5. Tell them to someone at home and ask them which story goes with which sentence.",
+        "ur": "(20 + 10) ÷ 5 کے لیے اپنی کہانی بنائیں، اور 20 + 10 ÷ 5 کے لیے ایک اور۔ گھر میں کسی کو سنائیں اور پوچھیں کون سی کہانی کس جملے کی ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Number sentence",
+      "ur": "عددی جملہ"
+    },
+    {
+      "en": "Word problem",
+      "ur": "عملی سوال"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Real problems don't come with brackets. We have to decide where they go!",
+          "ur": "اصل سوالوں میں قوسین لکھی نہیں ہوتیں۔ ہمیں خود فیصلہ کرنا پڑتا ہے کہ کہاں لگانی ہیں!"
+        }
+      },
+      "text": {
+        "en": "Today we turn stories into number sentences. First, a quick bracket check.",
+        "ur": "آج ہم کہانیوں کو عددی جملوں میں بدلیں گے۔ پہلے قوسین کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.simplify.brackets",
+      "prompt": {
+        "en": "Simplify: (12 + 8) ÷ 4",
+        "ur": "مختصر کریں: (12 + 8) ÷ 4"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Brackets first: 12 + 8.",
+        "ur": "پہلے قوسین: 12 + 8"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 ÷ 4 = 5.",
+        "ur": "درست! 20 ÷ 4 = 5"
+      },
+      "feedback_wrong": {
+        "en": "12 + 8 = 20, then 20 ÷ 4 = 5.",
+        "ur": "12 + 8 = 20، پھر 20 ÷ 4 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "Brackets first: 20 ÷ 4 = 5.",
+            "ur": "پہلے قوسین: 20 ÷ 4 = 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_steps",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Ask: what must I find first? If it's a total, it goes in brackets.",
+          "ur": "پوچھیں: پہلے کیا نکالنا ہے؟ اگر کل ہے تو وہ قوسین میں جائے گا۔"
+        }
+      },
+      "text": {
+        "en": "1) Read the story and write a number sentence. 2) If a total or a difference must be found before you multiply or share, put it in brackets. 3) Simplify with BODMAS. 4) Estimate to check the answer makes sense.",
+        "ur": "1) کہانی پڑھیں اور عددی جملہ لکھیں۔ 2) اگر ضرب یا بانٹنے سے پہلے کل یا فرق نکالنا ہو تو اسے قوسین میں رکھیں۔ 3) BODMAS سے مختصر کریں۔ 4) اندازے سے جانچیں کہ جواب درست لگتا ہے۔"
+      }
+    },
+    {
+      "id": "s4_pens",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal has Rs 500. He buys 3 pens at Rs 40 each. How much money is left? (500 − 3 × 40)",
+        "ur": "بلال کے پاس 500 روپے ہیں۔ وہ 40 روپے فی قلم کے حساب سے 3 قلم خریدتا ہے۔ کتنے پیسے بچے؟ (500 − 3 × 40)"
+      },
+      "answer": 380,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 × 40 first.",
+        "ur": "پہلے 3 × 40"
+      },
+      "feedback_correct": {
+        "en": "Right! 500 − 120 = Rs 380.",
+        "ur": "درست! 500 − 120 = 380 روپے"
+      },
+      "feedback_wrong": {
+        "en": "3 × 40 = 120, then 500 − 120 = 380.",
+        "ur": "3 × 40 = 120، پھر 500 − 120 = 380"
+      },
+      "common_wrong": [
+        {
+          "answer": 460,
+          "feedback": {
+            "en": "He bought 3 pens, not 1: 500 − 120 = 380.",
+            "ur": "اس نے 3 قلم خریدے، 1 نہیں: 500 − 120 = 380"
+          },
+          "misconception_id": "forgets_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s5_mangoes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "There are 4 boxes with 12 mangoes in each, and 6 loose mangoes. How many mangoes are there?",
+        "ur": "4 پیٹیاں ہیں، ہر ایک میں 12 آم، اور 6 آم الگ۔ کل کتنے آم ہیں؟"
+      },
+      "answer": 54,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × 12 + 6.",
+        "ur": "4 × 12 + 6"
+      },
+      "feedback_correct": {
+        "en": "Right! 48 + 6 = 54.",
+        "ur": "درست! 48 + 6 = 54"
+      },
+      "feedback_wrong": {
+        "en": "4 × 12 = 48, then 48 + 6 = 54.",
+        "ur": "4 × 12 = 48، پھر 48 + 6 = 54"
+      },
+      "common_wrong": [
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "The 6 loose mangoes are not in every box: 4 × 12 + 6 = 54.",
+            "ur": "6 الگ آم ہر پیٹی میں نہیں ہیں: 4 × 12 + 6 = 54"
+          },
+          "misconception_id": "extra_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s6_sentence",
+      "type": "choice",
+      "prompt": {
+        "en": "Two brothers have Rs 120 and Rs 60. They share all of it equally among 3 children. Which number sentence fits?",
+        "ur": "دو بھائیوں کے پاس 120 اور 60 روپے ہیں۔ وہ سارے پیسے 3 بچوں میں برابر بانٹتے ہیں۔ کون سا عددی جملہ درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "brackets",
+          "text": {
+            "en": "(120 + 60) ÷ 3",
+            "ur": "(120 + 60) ÷ 3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Total first: 180 ÷ 3 = Rs 60 each.",
+            "ur": "جی ہاں! پہلے کل: 180 ÷ 3 = ہر ایک کو 60 روپے"
+          }
+        },
+        {
+          "id": "no_brackets",
+          "text": {
+            "en": "120 + 60 ÷ 3",
+            "ur": "120 + 60 ÷ 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That shares only the Rs 60. All the money is shared.",
+            "ur": "یہ صرف 60 روپے بانٹتا ہے۔ سارے پیسے بٹتے ہیں۔"
+          },
+          "misconception_id": "missing_brackets"
+        },
+        {
+          "id": "times",
+          "text": {
+            "en": "(120 + 60) × 3",
+            "ur": "(120 + 60) × 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Sharing means dividing, not multiplying.",
+            "ur": "بانٹنے کا مطلب تقسیم ہے، ضرب نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_party",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "30 students each give Rs 50 for a class party. Rs 600 is spent on food. How much is left? (30 × 50 − 600)",
+        "ur": "30 طالب علم کلاس پارٹی کے لیے 50، 50 روپے دیتے ہیں۔ 600 روپے کھانے پر خرچ ہوتے ہیں۔ کتنے بچے؟ (30 × 50 − 600)"
+      },
+      "answer": 900,
+      "checker": "numeric",
+      "hint": {
+        "en": "30 × 50 first.",
+        "ur": "پہلے 30 × 50"
+      },
+      "feedback_correct": {
+        "en": "Right! 1500 − 600 = Rs 900.",
+        "ur": "درست! 1500 − 600 = 900 روپے"
+      },
+      "feedback_wrong": {
+        "en": "30 × 50 = 1500, then 1500 − 600 = 900.",
+        "ur": "30 × 50 = 1500، پھر 1500 − 600 = 900"
+      },
+      "common_wrong": [
+        {
+          "answer": 1500,
+          "feedback": {
+            "en": "Rs 1500 is what was collected. Take away 600: 900.",
+            "ur": "1500 روپے جمع ہوئے۔ 600 نفی کریں: 900"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_savings",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Sana gets Rs 300 from her uncle and Rs 100 from her aunt. She saves 1/4 of all of it. How much does she save? (1/4 of (300 + 100))",
+        "ur": "ثنا کو چچا سے 300 روپے اور خالہ سے 100 روپے ملتے ہیں۔ وہ سارے پیسوں کا 1/4 بچاتی ہے۔ وہ کتنے بچاتی ہے؟ ((300 + 100) کا 1/4)"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total first: 300 + 100 = 400.",
+        "ur": "پہلے کل: 300 + 100 = 400"
+      },
+      "feedback_correct": {
+        "en": "Right! 1/4 of 400 = Rs 100.",
+        "ur": "درست! 400 کا 1/4 = 100 روپے"
+      },
+      "feedback_wrong": {
+        "en": "300 + 100 = 400, then 400 ÷ 4 = 100.",
+        "ur": "300 + 100 = 400، پھر 400 ÷ 4 = 100"
+      },
+      "common_wrong": [
+        {
+          "answer": 175,
+          "feedback": {
+            "en": "She saves 1/4 of all the money, not just the 300: 100.",
+            "ur": "وہ سارے پیسوں کا 1/4 بچاتی ہے، صرف 300 کا نہیں: 100"
+          },
+          "misconception_id": "missing_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "There are 5 packets with 8 biscuits in each. Ali eats 3 biscuits. Hamza writes 5 × (8 − 3) = 25 biscuits left. What went wrong?",
+        "ur": "5 پیکٹ ہیں، ہر ایک میں 8 بسکٹ۔ علی 3 بسکٹ کھاتا ہے۔ حمزہ لکھتا ہے 5 × (8 − 3) = 25 بسکٹ بچے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "extra",
+          "text": {
+            "en": "The brackets mean 3 eaten from every packet. It should be 5 × 8 − 3 = 37.",
+            "ur": "قوسین کا مطلب ہے ہر پیکٹ سے 3 کھائے۔ یہ 5 × 8 − 3 = 37 ہونا چاہیے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Ali ate 3 in all, not 3 from each packet.",
+            "ur": "جی ہاں! علی نے کل 3 کھائے، ہر پیکٹ سے 3 نہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Ali ate only 3 biscuits in all, so 40 − 3 = 37.",
+            "ur": "علی نے کل صرف 3 بسکٹ کھائے، تو 40 − 3 = 37"
+          },
+          "misconception_id": "extra_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do you know when a story needs brackets? Can you teach me?",
+          "ur": "آپ کو کیسے پتا چلتا ہے کہ کہانی میں قوسین چاہییں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why does sharing Rs 120 and Rs 60 among 3 children need brackets?",
+        "ur": "اپنے الفاظ میں بتائیں: 120 اور 60 روپے 3 بچوں میں بانٹنے کے لیے قوسین کیوں چاہییں؟"
+      },
+      "key_idea": "All the money is shared, so the total (120 + 60) must be found before dividing. Without brackets, BODMAS divides first and only the Rs 60 would be shared.",
+      "levels": {
+        "got_it": "Says the total must be found first because all the money is shared, and without brackets only the 60 would be divided.",
+        "partly": "Says you add first, without saying what would go wrong without brackets.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "total",
+          "all",
+          "together",
+          "کل",
+          "سارے"
+        ],
+        [
+          "first",
+          "before",
+          "پہلے"
+        ],
+        [
+          "divide",
+          "share",
+          "تقسیم",
+          "بانٹ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Brackets make sure the total is shared, not just one part.",
+          "ur": "بہت خوب! قوسین یقینی بناتی ہیں کہ کل بٹے، صرف ایک حصہ نہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what would happen without the brackets.",
+          "ur": "اچھی شروعات! اب بتائیں قوسین کے بغیر کیا ہوتا۔"
+        },
+        "not_yet": {
+          "en": "Work out 120 + 60 ÷ 3 with BODMAS. Is all the money shared?",
+          "ur": "BODMAS سے 120 + 60 ÷ 3 حل کریں۔ کیا سارے پیسے بٹے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Simplification unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! مختصر کرنے کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on the order of operations, brackets, fractions, rounding and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں عملیات کی ترتیب، قوسین، کسور، قریب ترین عدد اور ایک اصل زندگی کا سوال ہے۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_order",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.simplify.order_of_operations",
+      "prompt": {
+        "en": "Test 1: Simplify 15 − 3 × 4",
+        "ur": "ٹیسٹ 1: 15 − 3 × 4 مختصر کریں"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "× before −.",
+        "ur": "× پہلے، − بعد میں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 − 12 = 3.",
+        "ur": "درست! 15 − 12 = 3"
+      },
+      "feedback_wrong": {
+        "en": "3 × 4 = 12, then 15 − 12 = 3.",
+        "ur": "3 × 4 = 12، پھر 15 − 12 = 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 48,
+          "feedback": {
+            "en": "That subtracts first. Multiply first: 15 − 12 = 3.",
+            "ur": "یہ پہلے تفریق ہے۔ پہلے ضرب: 15 − 12 = 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_brackets",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.simplify.brackets",
+      "prompt": {
+        "en": "Test 2: Simplify (7 + 5) × 3",
+        "ur": "ٹیسٹ 2: (7 + 5) × 3 مختصر کریں"
+      },
+      "answer": 36,
+      "checker": "numeric",
+      "hint": {
+        "en": "Brackets first.",
+        "ur": "پہلے قوسین۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 × 3 = 36.",
+        "ur": "درست! 12 × 3 = 36"
+      },
+      "feedback_wrong": {
+        "en": "7 + 5 = 12, then 12 × 3 = 36.",
+        "ur": "7 + 5 = 12، پھر 12 × 3 = 36"
+      },
+      "common_wrong": [
+        {
+          "answer": 22,
+          "feedback": {
+            "en": "That ignores the brackets: 12 × 3 = 36.",
+            "ur": "یہ قوسین نظر انداز کرتا ہے: 12 × 3 = 36"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_of",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.simplify.fractions_decimals",
+      "prompt": {
+        "en": "Test 3: Simplify 1/2 of (14 + 6)",
+        "ur": "ٹیسٹ 3: (14 + 6) کا 1/2 مختصر کریں"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Brackets first: 20.",
+        "ur": "پہلے قوسین: 20"
+      },
+      "feedback_correct": {
+        "en": "Right! Half of 20 = 10.",
+        "ur": "درست! 20 کا آدھا = 10"
+      },
+      "feedback_wrong": {
+        "en": "14 + 6 = 20, then 1/2 × 20 = 10.",
+        "ur": "14 + 6 = 20، پھر 1/2 × 20 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "'Of' applies to the whole bracket: half of 20 = 10.",
+            "ur": "'کا' پوری قوسین پر لگتا ہے: 20 کا آدھا = 10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u4_round",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.simplify.estimation",
+      "prompt": {
+        "en": "Test 4: Round 351 to the nearest 100.",
+        "ur": "ٹیسٹ 4: 351 کو قریب ترین 100 تک لائیں۔"
+      },
+      "answer": 400,
+      "checker": "numeric",
+      "hint": {
+        "en": "Look at the tens digit: 5.",
+        "ur": "دہائی کا ہندسہ دیکھیں: 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 400.",
+        "ur": "درست! 400"
+      },
+      "feedback_wrong": {
+        "en": "The tens digit is 5, so round up: 400.",
+        "ur": "دہائی کا ہندسہ 5 ہے، تو اوپر: 400"
+      },
+      "common_wrong": [
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "The tens digit is 5, so round up: 400.",
+            "ur": "دہائی کا ہندسہ 5 ہے، تو اوپر: 400"
+          }
+        },
+        {
+          "answer": 350,
+          "feedback": {
+            "en": "That is the nearest 10. To the nearest 100: 400.",
+            "ur": "یہ قریب ترین 10 ہے۔ قریب ترین 100 تک: 400"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_apples",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: Ammi buys 2 kg of apples at Rs 150 a kg and pays with a Rs 500 note. How much change does she get? (500 − 2 × 150)",
+        "ur": "ٹیسٹ 5: امی 150 روپے فی کلو کے حساب سے 2 کلو سیب خریدتی ہیں اور 500 روپے کا نوٹ دیتی ہیں۔ انہیں کتنا بقایا ملے گا؟ (500 − 2 × 150)"
+      },
+      "answer": 200,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 × 150 first.",
+        "ur": "پہلے 2 × 150"
+      },
+      "feedback_correct": {
+        "en": "Right! 500 − 300 = Rs 200.",
+        "ur": "درست! 500 − 300 = 200 روپے"
+      },
+      "feedback_wrong": {
+        "en": "2 × 150 = 300, then 500 − 300 = 200.",
+        "ur": "2 × 150 = 300، پھر 500 − 300 = 200"
+      },
+      "common_wrong": [
+        {
+          "answer": 350,
+          "feedback": {
+            "en": "She bought 2 kg, not 1: 500 − 300 = 200.",
+            "ur": "انہوں نے 2 کلو خریدے، 1 نہیں: 500 − 300 = 200"
+          },
+          "misconception_id": "forgets_quantity"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Simplification unit complete! You can turn any story into maths now.",
+          "ur": "مختصر کرنے کا باب مکمل! اب آپ کسی بھی کہانی کو ریاضی میں بدل سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Write a number sentence for the story. If a total or difference must be found first, put it in brackets. Simplify with BODMAS, then estimate to check the answer makes sense.",
+        "ur": "کہانی کا عددی جملہ لکھیں۔ اگر کل یا فرق پہلے نکالنا ہو تو اسے قوسین میں رکھیں۔ BODMAS سے مختصر کریں، پھر اندازے سے جانچیں کہ جواب درست لگتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Total first? Use brackets.",
+          "ur": "پہلے کل؟ قوسین لگائیں۔"
+        },
+        {
+          "en": "Then BODMAS, then check.",
+          "ur": "پھر BODMAS، پھر جانچ۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_food",
+      "type": "apply",
+      "skill": "maths.simplify.word_problems",
+      "step": {
+        "id": "r_food",
+        "type": "number",
+        "prompt": {
+          "en": "3 friends each pay Rs 90 for food, and they pay Rs 30 in all for drinks. What do they spend altogether? (3 × 90 + 30)",
+          "ur": "3 دوست کھانے کے لیے 90، 90 روپے دیتے ہیں، اور مشروبات کے لیے کل 30 روپے۔ وہ کل کتنا خرچ کرتے ہیں؟ (3 × 90 + 30)"
+        },
+        "answer": 300,
+        "checker": "numeric",
+        "hint": {
+          "en": "3 × 90 first.",
+          "ur": "پہلے 3 × 90"
+        },
+        "feedback_correct": {
+          "en": "Right! 270 + 30 = Rs 300.",
+          "ur": "درست! 270 + 30 = 300 روپے"
+        },
+        "feedback_wrong": {
+          "en": "3 × 90 = 270, then 270 + 30 = 300.",
+          "ur": "3 × 90 = 270، پھر 270 + 30 = 300"
+        },
+        "common_wrong": [
+          {
+            "answer": 360,
+            "feedback": {
+              "en": "The Rs 30 is for all of them, not each: 270 + 30 = 300.",
+              "ur": "30 روپے سب کے لیے ہیں، ہر ایک کے نہیں: 270 + 30 = 300"
+            },
+            "misconception_id": "extra_brackets"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_rest",
+      "type": "apply",
+      "skill": "maths.simplify.word_problems",
+      "step": {
+        "id": "r_rest",
+        "type": "number",
+        "prompt": {
+          "en": "A goat costs Rs 400. Rs 100 is paid now and the rest in 3 equal parts. How much is each part? ((400 − 100) ÷ 3)",
+          "ur": "ایک بکری 400 روپے کی ہے۔ 100 روپے ابھی دیے جاتے ہیں اور باقی 3 برابر قسطوں میں۔ ہر قسط کتنی ہے؟ ((400 − 100) ÷ 3)"
+        },
+        "answer": 100,
+        "checker": "numeric",
+        "hint": {
+          "en": "Brackets first: 400 − 100.",
+          "ur": "پہلے قوسین: 400 − 100"
+        },
+        "feedback_correct": {
+          "en": "Right! 300 ÷ 3 = Rs 100.",
+          "ur": "درست! 300 ÷ 3 = 100 روپے"
+        },
+        "feedback_wrong": {
+          "en": "400 − 100 = 300, then 300 ÷ 3 = 100.",
+          "ur": "400 − 100 = 300، پھر 300 ÷ 3 = 100"
+        },
+        "common_wrong": [
+          {
+            "answer": 300,
+            "feedback": {
+              "en": "Rs 300 is what is left. Share it in 3 parts: 100.",
+              "ur": "300 روپے باقی ہیں۔ 3 حصوں میں بانٹیں: 100"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Simplification unit. No textbook text or exercises were used.",
+    "Most practice steps show the number sentence in brackets after the story, so children practise simplifying; the choice and find-the-mistake steps practise writing the sentence.",
+    "The five-question unit test at the end covers every lesson of the unit.",
+    "The numbers were worked out in content/sources/g6-maths-13/simplification_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

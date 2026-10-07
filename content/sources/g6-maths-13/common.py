@@ -38,6 +38,12 @@ def num(x):
     return x
 
 
+def round_to(x, place):
+    """Round x to the nearest place (10, 100, 1) the school way: 5 rounds up."""
+    from decimal import ROUND_HALF_UP
+    return (D(x) / place).quantize(D(1), rounding=ROUND_HALF_UP) * place
+
+
 def dec(x) -> str:
     """A Decimal as children write it: 0.7, 12.05, 3."""
     x = D(x).normalize()
