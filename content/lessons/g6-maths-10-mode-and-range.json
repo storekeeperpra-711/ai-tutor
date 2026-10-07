@@ -1,0 +1,763 @@
+{
+  "id": "g6-maths-10-mode-and-range",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the mode (most common value) and the range (largest minus smallest) of a set of data, and say what each tells us.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Data Handling"
+    }
+  ],
+  "skills": [
+    "maths.data.mode_range"
+  ],
+  "title": {
+    "en": "Mode and range",
+    "ur": "عادہ (موڈ) اور وسعت (رینج)"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.data.mean"
+    },
+    {
+      "skill": "maths.data.tables"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "mode_is_count",
+      "description": "Gives how many times the mode appears instead of the mode itself."
+    },
+    {
+      "id": "range_is_largest",
+      "description": "Gives the largest value as the range."
+    },
+    {
+      "id": "range_not_smallest",
+      "description": "Takes away the first or another value instead of the smallest."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.mode_range": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.mode_range": [
+      {
+        "id": "qb_mode",
+        "type": "recall",
+        "step": {
+          "id": "qb_mode",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the mode of a set of data?",
+            "ur": "مواد کا عادہ (موڈ) کیا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "most",
+              "text": {
+                "en": "The value that appears most often",
+                "ur": "وہ قیمت جو سب سے زیادہ بار آئے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Mode = most often.",
+                "ur": "جی ہاں! موڈ = سب سے زیادہ بار۔"
+              }
+            },
+            {
+              "id": "biggest",
+              "text": {
+                "en": "The biggest value",
+                "ur": "سب سے بڑی قیمت"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The mode is the most common value, not the biggest.",
+                "ur": "موڈ سب سے عام قیمت ہے، سب سے بڑی نہیں۔"
+              }
+            },
+            {
+              "id": "spread",
+              "text": {
+                "en": "Largest minus smallest",
+                "ur": "سب سے بڑی منفی سب سے چھوٹی"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the range. The mode is the most common value.",
+                "ur": "یہ رینج ہے۔ موڈ سب سے عام قیمت ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Find the range of 15, 3, 22 and 9.",
+            "ur": "15، 3، 22 اور 9 کی رینج معلوم کریں۔"
+          },
+          "answer": 19,
+          "checker": "numeric",
+          "hint": {
+            "en": "Largest − smallest.",
+            "ur": "سب سے بڑا − سب سے چھوٹا"
+          },
+          "feedback_correct": {
+            "en": "Right! 22 − 3 = 19.",
+            "ur": "درست! 22 − 3 = 19"
+          },
+          "feedback_wrong": {
+            "en": "22 − 3 = 19.",
+            "ur": "22 − 3 = 19"
+          },
+          "common_wrong": [
+            {
+              "answer": 22,
+              "feedback": {
+                "en": "22 is the largest. Range = 22 − 3 = 19.",
+                "ur": "22 سب سے بڑا ہے۔ رینج = 22 − 3 = 19"
+              },
+              "misconception_id": "range_is_largest"
+            },
+            {
+              "answer": 13,
+              "feedback": {
+                "en": "Take away the smallest, 3: 22 − 3 = 19.",
+                "ur": "سب سے چھوٹا، 3، نفی کریں: 22 − 3 = 19"
+              },
+              "misconception_id": "range_not_smallest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Data: 2, 4, 4, 6, 4, 2. Imran says the mode is 3, because the most common number appears 3 times. What went wrong?",
+            "ur": "مواد: 2, 4, 4, 6, 4, 2۔ عمران کہتا ہے موڈ 3 ہے، کیونکہ سب سے عام عدد 3 بار آتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "value",
+              "text": {
+                "en": "The mode is the number itself, 4, not how many times it appears.",
+                "ur": "موڈ خود عدد، 4، ہے، نہ کہ کتنی بار آیا۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 4 appears 3 times, so the mode is 4.",
+                "ur": "جی ہاں! 4 تین بار آتا ہے، تو موڈ 4 ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3 isn't even in the data! The mode is 4.",
+                "ur": "3 تو مواد میں ہے ہی نہیں! موڈ 4 ہے۔"
+              },
+              "misconception_id": "mode_is_count"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_mode",
+      "front": {
+        "en": "Mode?",
+        "ur": "موڈ؟"
+      },
+      "back": {
+        "en": "The value that appears most often. In 3, 5, 5, 7 the mode is 5.",
+        "ur": "جو قیمت سب سے زیادہ بار آئے۔ 3، 5، 5، 7 میں موڈ 5 ہے۔"
+      }
+    },
+    {
+      "id": "f_range",
+      "front": {
+        "en": "Range?",
+        "ur": "رینج؟"
+      },
+      "back": {
+        "en": "Largest − smallest. It shows how spread out the data is.",
+        "ur": "سب سے بڑا − سب سے چھوٹا۔ یہ دکھاتی ہے مواد کتنا پھیلا ہوا ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_shoes",
+      "text": {
+        "en": "Find out the shoe size of everyone at home. Which size is the mode? What is the range, from the smallest foot to the biggest?",
+        "ur": "گھر میں سب کے جوتے کا سائز معلوم کریں۔ کون سا سائز موڈ ہے؟ سب سے چھوٹے سے سب سے بڑے پاؤں تک رینج کتنی ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Mode",
+      "ur": "عادہ (موڈ)"
+    },
+    {
+      "en": "Range",
+      "ur": "وسعت (رینج)"
+    },
+    {
+      "en": "Most often",
+      "ur": "سب سے زیادہ بار"
+    },
+    {
+      "en": "Spread",
+      "ur": "پھیلاؤ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shopkeeper orders school shoes. Which size should he order most of? And how big is the difference between the smallest and biggest feet?",
+          "ur": "دکاندار سکول کے جوتے منگواتا ہے۔ کون سا سائز سب سے زیادہ منگوائے؟ اور سب سے چھوٹے اور بڑے پاؤں میں کتنا فرق ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we meet two more ways to describe data: the mode and the range. First, a quick check.",
+        "ur": "آج ہم مواد بیان کرنے کے دو اور طریقے سیکھیں گے: موڈ اور رینج۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.data.mean",
+      "prompt": {
+        "en": "Find the mean of 3, 5, 7.",
+        "ur": "3, 5, 7 کی اوسط معلوم کریں۔"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total ÷ 3.",
+        "ur": "کل ÷ 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 5.",
+        "ur": "درست! 5"
+      },
+      "feedback_wrong": {
+        "en": "15 ÷ 3 = 5.",
+        "ur": "15 ÷ 3 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15 is the total. Divide by 3: 5.",
+            "ur": "15 کل ہے۔ 3 سے تقسیم کریں: 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_mode_range",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Mode: most often. Range: biggest minus smallest!",
+          "ur": "موڈ: سب سے زیادہ بار۔ رینج: سب سے بڑا منفی سب سے چھوٹا!"
+        }
+      },
+      "text": {
+        "en": "The mode is the value that appears most often: count how many times each value appears and pick the winner. The range is the largest value minus the smallest: it shows how spread out the data is. Always find the true smallest, not just the first number.",
+        "ur": "موڈ وہ قیمت ہے جو سب سے زیادہ بار آئے: ہر قیمت کتنی بار آئی گنیں اور جیتنے والی چنیں۔ رینج سب سے بڑی قیمت منفی سب سے چھوٹی ہے: یہ دکھاتی ہے مواد کتنا پھیلا ہوا ہے۔ ہمیشہ اصل سب سے چھوٹا عدد ڈھونڈیں، صرف پہلا نہیں۔"
+      }
+    },
+    {
+      "id": "s4_mode",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the mode of 3, 5, 5, 7, 2, 5, 3.",
+        "ur": "3, 5, 5, 7, 2, 5, 3 کا موڈ معلوم کریں۔"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which number appears most often?",
+        "ur": "کون سا عدد سب سے زیادہ بار آتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 appears 3 times.",
+        "ur": "درست! 5 تین بار آتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "5 appears 3 times, more than any other: the mode is 5.",
+        "ur": "5 تین بار آتا ہے، سب سے زیادہ: موڈ 5 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is how many times 5 appears. The mode is the number itself: 5.",
+            "ur": "3 یہ ہے کہ 5 کتنی بار آیا۔ موڈ خود عدد ہے: 5"
+          },
+          "misconception_id": "mode_is_count"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "7 is the largest, but it appears only once. The mode is 5.",
+            "ur": "7 سب سے بڑا ہے، لیکن صرف ایک بار آتا ہے۔ موڈ 5 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_range",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the range of 12, 4, 19, 8.",
+        "ur": "12, 4, 19, 8 کی رینج معلوم کریں۔"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Largest is 19, smallest is 4.",
+        "ur": "سب سے بڑا 19، سب سے چھوٹا 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 19 − 4 = 15.",
+        "ur": "درست! 19 − 4 = 15"
+      },
+      "feedback_wrong": {
+        "en": "19 − 4 = 15.",
+        "ur": "19 − 4 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 19,
+          "feedback": {
+            "en": "19 is the largest. Range = 19 − 4 = 15.",
+            "ur": "19 سب سے بڑا ہے۔ رینج = 19 − 4 = 15"
+          },
+          "misconception_id": "range_is_largest"
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "Use the largest and smallest, not the first two: 19 − 4 = 15.",
+            "ur": "سب سے بڑا اور سب سے چھوٹا لیں، پہلے دو نہیں: 19 − 4 = 15"
+          },
+          "misconception_id": "range_not_smallest"
+        }
+      ]
+    },
+    {
+      "id": "s6_shoes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Shoe sizes in a class: Size 3: 4 children; Size 4: 9 children; Size 5: 6 children. Which shoe size is the mode?",
+        "ur": "ایک جماعت کے جوتوں کے سائز: سائز 3: 4 بچے؛ سائز 4: 9 بچے؛ سائز 5: 6 بچے۔ کون سا سائز موڈ ہے؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which size has the most children?",
+        "ur": "کس سائز کے سب سے زیادہ بچے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! Size 4, with 9 children.",
+        "ur": "درست! سائز 4، 9 بچوں کے ساتھ۔"
+      },
+      "feedback_wrong": {
+        "en": "Size 4 has the most children (9), so the mode is size 4.",
+        "ur": "سائز 4 کے سب سے زیادہ بچے (9) ہیں، تو موڈ سائز 4 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 is how many children. The mode is the size: 4.",
+            "ur": "9 بچوں کی تعداد ہے۔ موڈ سائز ہے: 4"
+          },
+          "misconception_id": "mode_is_count"
+        }
+      ]
+    },
+    {
+      "id": "s7_temps",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Temperatures this week (°C): 18, 25, 21, 30, 16. What is the range?",
+        "ur": "اس ہفتے کا درجہ حرارت (°C): 18, 25, 21, 30, 16۔ رینج کتنی ہے؟"
+      },
+      "answer": 14,
+      "checker": "numeric",
+      "hint": {
+        "en": "Hottest minus coldest.",
+        "ur": "سب سے گرم منفی سب سے ٹھنڈا"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 − 16 = 14 degrees.",
+        "ur": "درست! 30 − 16 = 14 درجے"
+      },
+      "feedback_wrong": {
+        "en": "30 − 16 = 14.",
+        "ur": "30 − 16 = 14"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "The smallest is 16, not 18: 30 − 16 = 14.",
+            "ur": "سب سے چھوٹا 16 ہے، 18 نہیں: 30 − 16 = 14"
+          },
+          "misconception_id": "range_not_smallest"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is the hottest. Range = 30 − 16 = 14.",
+            "ur": "30 سب سے گرم ہے۔ رینج = 30 − 16 = 14"
+          },
+          "misconception_id": "range_is_largest"
+        }
+      ]
+    },
+    {
+      "id": "s8_which",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shopkeeper wants to know which uniform size to order the most of. Which should he find?",
+        "ur": "دکاندار جاننا چاہتا ہے کون سا یونیفارم سائز سب سے زیادہ منگوائے۔ اسے کیا معلوم کرنا چاہیے؟"
+      },
+      "options": [
+        {
+          "id": "mode",
+          "text": {
+            "en": "The mode",
+            "ur": "موڈ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The mode is the size most children wear.",
+            "ur": "جی ہاں! موڈ وہ سائز ہے جو سب سے زیادہ بچے پہنتے ہیں۔"
+          }
+        },
+        {
+          "id": "range",
+          "text": {
+            "en": "The range",
+            "ur": "رینج"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The range shows the spread, not the most common size.",
+            "ur": "رینج پھیلاؤ دکھاتی ہے، سب سے عام سائز نہیں۔"
+          }
+        },
+        {
+          "id": "mean",
+          "text": {
+            "en": "The mean",
+            "ur": "اوسط"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The mean might not be a real size. The mode is the most common size.",
+            "ur": "اوسط شاید اصل سائز نہ ہو۔ موڈ سب سے عام سائز ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "To find the range of 7, 2, 9, 4, Sana works out 9 − 7 = 2. What went wrong?",
+        "ur": "7، 2، 9، 4 کی رینج کے لیے ثنا 9 − 7 = 2 نکالتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "smallest",
+          "text": {
+            "en": "She took away the first number, not the smallest. 9 − 2 = 7.",
+            "ur": "اس نے پہلا عدد نفی کیا، سب سے چھوٹا نہیں۔ 9 − 2 = 7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Find the true smallest, 2.",
+            "ur": "جی ہاں! اصل سب سے چھوٹا، 2، ڈھونڈیں۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "She should add: 9 + 2 = 11.",
+            "ur": "اسے جمع کرنا چاہیے: 9 + 2 = 11"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Range is a take-away: largest − smallest = 7.",
+            "ur": "رینج نفی ہے: سب سے بڑا − سب سے چھوٹا = 7"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 isn't the smallest; 2 is. Range = 9 − 2 = 7.",
+            "ur": "7 سب سے چھوٹا نہیں؛ 2 ہے۔ رینج = 9 − 2 = 7"
+          },
+          "misconception_id": "range_not_smallest"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two classes both have a mean mark of 7. Why might the range still be useful? Can you teach me?",
+          "ur": "دو جماعتوں کے نمبروں کی اوسط 7 ہے۔ پھر بھی رینج کیوں کام کی ہو سکتی ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: what does the range tell us that the mean doesn't?",
+        "ur": "اپنے الفاظ میں بتائیں: رینج ہمیں کیا بتاتی ہے جو اوسط نہیں بتاتی؟"
+      },
+      "key_idea": "The range shows how spread out the data is. Two sets can have the same mean, but in one the values are close together (small range) and in the other they are far apart (big range).",
+      "levels": {
+        "got_it": "Says the range shows how spread out or different the values are, which the mean does not show.",
+        "partly": "Says range is largest minus smallest without saying what it tells us.",
+        "not_yet": "Gives no reason, or mixes it up with the mode."
+      },
+      "keywords": [
+        [
+          "spread",
+          "different",
+          "apart",
+          "پھیل",
+          "فرق"
+        ],
+        [
+          "largest",
+          "smallest",
+          "biggest",
+          "بڑا",
+          "چھوٹا"
+        ],
+        [
+          "close",
+          "same",
+          "together",
+          "قریب",
+          "ایک جیسے"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The range shows how spread out the values are.",
+          "ur": "بہت خوب! رینج دکھاتی ہے قیمتیں کتنی پھیلی ہوئی ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what a big range or a small range tells you.",
+          "ur": "اچھی شروعات! اب بتائیں بڑی یا چھوٹی رینج کیا بتاتی ہے۔"
+        },
+        "not_yet": {
+          "en": "Think of marks 6, 7, 8 and marks 1, 7, 13. Same mean, 7. What is different about them?",
+          "ur": "نمبر 6، 7، 8 اور نمبر 1، 7، 13 سوچیں۔ اوسط ایک، 7۔ ان میں کیا فرق ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_largest",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The smallest value in some data is 12 and the range is 25. What is the largest value?",
+        "ur": "کچھ مواد میں سب سے چھوٹی قیمت 12 اور رینج 25 ہے۔ سب سے بڑی قیمت کیا ہے؟"
+      },
+      "answer": 37,
+      "checker": "numeric",
+      "hint": {
+        "en": "Largest − 12 = 25.",
+        "ur": "سب سے بڑا − 12 = 25"
+      },
+      "feedback_correct": {
+        "en": "Right! 37. Check: 37 − 12 = 25.",
+        "ur": "درست! 37۔ جانچ: 37 − 12 = 25"
+      },
+      "feedback_wrong": {
+        "en": "12 + 25 = 37.",
+        "ur": "12 + 25 = 37"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "Add the range to the smallest: 12 + 25 = 37.",
+            "ur": "رینج کو سب سے چھوٹے میں جمع کریں: 12 + 25 = 37"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Mode and range done!",
+          "ur": "موڈ اور رینج مکمل!"
+        }
+      },
+      "text": {
+        "en": "The mode is the value that appears most often (the value, not the count). The range is largest − smallest, and shows how spread out the data is. Find the true smallest and largest, not just the first and last numbers.",
+        "ur": "موڈ وہ قیمت ہے جو سب سے زیادہ بار آئے (قیمت، گنتی نہیں)۔ رینج سب سے بڑا − سب سے چھوٹا ہے، اور دکھاتی ہے مواد کتنا پھیلا ہے۔ اصل سب سے چھوٹا اور بڑا ڈھونڈیں، صرف پہلا اور آخری عدد نہیں۔"
+      },
+      "points": [
+        {
+          "en": "Mode = most often.",
+          "ur": "موڈ = سب سے زیادہ بار۔"
+        },
+        {
+          "en": "Range = largest − smallest.",
+          "ur": "رینج = سب سے بڑا − سب سے چھوٹا۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_mode",
+      "type": "apply",
+      "skill": "maths.data.mode_range",
+      "step": {
+        "id": "r_mode",
+        "type": "number",
+        "prompt": {
+          "en": "Find the mode of 2, 4, 4, 6, 4, 2.",
+          "ur": "2, 4, 4, 6, 4, 2 کا موڈ معلوم کریں۔"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Most often.",
+          "ur": "سب سے زیادہ بار"
+        },
+        "feedback_correct": {
+          "en": "Right! 4.",
+          "ur": "درست! 4"
+        },
+        "feedback_wrong": {
+          "en": "4 appears 3 times: the mode is 4.",
+          "ur": "4 تین بار آتا ہے: موڈ 4 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "3 is the count. The mode is 4.",
+              "ur": "3 گنتی ہے۔ موڈ 4 ہے۔"
+            },
+            "misconception_id": "mode_is_count"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_range",
+      "type": "apply",
+      "skill": "maths.data.mode_range",
+      "step": {
+        "id": "r_range",
+        "type": "number",
+        "prompt": {
+          "en": "Find the range of 50, 35, 62 and 41.",
+          "ur": "50، 35، 62 اور 41 کی رینج معلوم کریں۔"
+        },
+        "answer": 27,
+        "checker": "numeric",
+        "hint": {
+          "en": "Largest − smallest.",
+          "ur": "سب سے بڑا − سب سے چھوٹا"
+        },
+        "feedback_correct": {
+          "en": "Right! 62 − 35 = 27.",
+          "ur": "درست! 62 − 35 = 27"
+        },
+        "feedback_wrong": {
+          "en": "62 − 35 = 27.",
+          "ur": "62 − 35 = 27"
+        },
+        "common_wrong": [
+          {
+            "answer": 12,
+            "feedback": {
+              "en": "The smallest is 35, not 50: 62 − 35 = 27.",
+              "ur": "سب سے چھوٹا 35 ہے، 50 نہیں: 62 − 35 = 27"
+            },
+            "misconception_id": "range_not_smallest"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
+    "Every data set has exactly one mode (checked in the script). Lists are deliberately not in order, so children must find the true smallest and largest for the range.",
+    "Urdu terms to check: عادہ / موڈ (mode), وسعت / رینج (range). Many teachers use the English words; please confirm the PCTB terms.",
+    "The numbers were worked out in content/sources/g6-maths-10/mode_range.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
