@@ -1,0 +1,784 @@
+{
+  "id": "g6-maths-12-selling-price",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the selling price when the cost price and the profit or loss percent are given.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Profit and Loss"
+    }
+  ],
+  "skills": [
+    "maths.money.selling_price"
+  ],
+  "title": {
+    "en": "Finding the selling price",
+    "ur": "قیمتِ فروخت معلوم کرنا"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.money.profit_loss_percent"
+    },
+    {
+      "skill": "maths.percent.of_amount"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "adds_percent_as_rupees",
+      "description": "Adds the percent as rupees (10% profit on Rs 500 gives Rs 510)."
+    },
+    {
+      "id": "stops_at_profit",
+      "description": "Finds the profit or loss in rupees and gives that as the selling price."
+    },
+    {
+      "id": "wrong_direction",
+      "description": "Adds a loss or takes away a profit."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.money.selling_price": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.money.selling_price": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "An item is sold at a loss. How do you find the selling price?",
+            "ur": "ایک چیز نقصان پر بیچی جاتی ہے۔ قیمتِ فروخت کیسے نکالتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "minus",
+              "text": {
+                "en": "Cost price − the loss",
+                "ur": "قیمتِ خرید − نقصان"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! With a loss, you get back less than the cost price.",
+                "ur": "جی ہاں! نقصان میں قیمتِ خرید سے کم واپس ملتا ہے۔"
+              }
+            },
+            {
+              "id": "plus",
+              "text": {
+                "en": "Cost price + the loss",
+                "ur": "قیمتِ خرید + نقصان"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Adding would make it a profit. A loss is taken away.",
+                "ur": "جمع کرنے سے نفع بن جائے گا۔ نقصان نفی کیا جاتا ہے۔"
+              },
+              "misconception_id": "wrong_direction"
+            },
+            {
+              "id": "loss",
+              "text": {
+                "en": "The selling price is the loss",
+                "ur": "قیمتِ فروخت نقصان کے برابر ہے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The loss is only the part lost. Take it away from the cost price.",
+                "ur": "نقصان صرف گیا ہوا حصہ ہے۔ اسے قیمتِ خرید سے نفی کریں۔"
+              },
+              "misconception_id": "stops_at_profit"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A chair costs Rs 200. It is sold at a 30% profit. What is the selling price, in rupees?",
+            "ur": "ایک کرسی 200 روپے کی ہے۔ اسے 30% نفع پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+          },
+          "answer": 260,
+          "checker": "numeric",
+          "hint": {
+            "en": "30% of 200 = 60. Then 200 + 60.",
+            "ur": "200 کا 30% = 60۔ پھر 200 + 60"
+          },
+          "feedback_correct": {
+            "en": "Right! Rs 260.",
+            "ur": "درست! 260 روپے"
+          },
+          "feedback_wrong": {
+            "en": "Profit = 60. SP = 200 + 60 = 260.",
+            "ur": "نفع = 60۔ قیمتِ فروخت = 200 + 60 = 260"
+          },
+          "common_wrong": [
+            {
+              "answer": 60,
+              "feedback": {
+                "en": "Rs 60 is the profit. Add it: 200 + 60 = 260.",
+                "ur": "60 روپے نفع ہے۔ اسے جمع کریں: 200 + 60 = 260"
+              },
+              "misconception_id": "stops_at_profit"
+            },
+            {
+              "answer": 230,
+              "feedback": {
+                "en": "30% is not Rs 30. 30% of 200 = 60, so 260.",
+                "ur": "30%، 30 روپے نہیں ہے۔ 200 کا 30% = 60، تو 260"
+              },
+              "misconception_id": "adds_percent_as_rupees"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A kettle costs Rs 500 and is sold at a 10% profit. Faisal says the selling price is Rs 510. What is wrong?",
+            "ur": "ایک کیتلی 500 روپے کی ہے اور 10% نفع پر بیچی جاتی ہے۔ فیصل کہتا ہے قیمتِ فروخت 510 روپے ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "percent",
+              "text": {
+                "en": "10% of 500 is Rs 50, not Rs 10. The selling price is Rs 550.",
+                "ur": "500 کا 10%، 50 روپے ہے، 10 نہیں۔ قیمتِ فروخت 550 روپے ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Work out the percent of the cost price first.",
+                "ur": "جی ہاں! پہلے قیمتِ خرید کی فیصد نکالیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "10% means 10 out of every 100. On Rs 500 that is Rs 50.",
+                "ur": "10% یعنی ہر 100 میں سے 10۔ 500 روپے پر یہ 50 روپے ہے۔"
+              },
+              "misconception_id": "adds_percent_as_rupees"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_sp_profit",
+      "front": {
+        "en": "Selling price with a profit?",
+        "ur": "نفع کے ساتھ قیمتِ فروخت؟"
+      },
+      "back": {
+        "en": "Cost price + (profit % of cost price)",
+        "ur": "قیمتِ خرید + (قیمتِ خرید کا نفع %)"
+      }
+    },
+    {
+      "id": "f_sp_loss",
+      "front": {
+        "en": "Selling price with a loss?",
+        "ur": "نقصان کے ساتھ قیمتِ فروخت؟"
+      },
+      "back": {
+        "en": "Cost price − (loss % of cost price)",
+        "ur": "قیمتِ خرید − (قیمتِ خرید کا نقصان %)"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_price_tag",
+      "text": {
+        "en": "Pretend you run a small shop. Pick three things from home and guess what they cost. If you want a 20% profit on each, what price would you sell them for?",
+        "ur": "فرض کریں آپ کی ایک چھوٹی سی دکان ہے۔ گھر سے تین چیزیں چنیں اور اندازہ لگائیں کہ ان کی قیمتِ خرید کیا ہے۔ اگر آپ ہر ایک پر 20% نفع چاہیں تو آپ انہیں کتنے میں بیچیں گے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Selling price",
+      "ur": "قیمتِ فروخت"
+    },
+    {
+      "en": "Profit percent",
+      "ur": "نفع کی فیصد"
+    },
+    {
+      "en": "Loss percent",
+      "ur": "نقصان کی فیصد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shopkeeper buys a fan for Rs 400 and wants a 10% profit. What price tag should he put on it?",
+          "ur": "ایک دکاندار 400 روپے کا پنکھا خریدتا ہے اور 10% نفع چاہتا ہے۔ وہ اس پر کون سی قیمت لکھے؟"
+        }
+      },
+      "text": {
+        "en": "Today we use a percent to find the selling price. First, a quick percent check.",
+        "ur": "آج ہم فیصد سے قیمتِ فروخت نکالیں گے۔ پہلے فیصد کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.percent.of_amount",
+      "prompt": {
+        "en": "What is 10% of Rs 350, in rupees?",
+        "ur": "350 روپے کا 10% کتنے روپے ہے؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% means divide by 10.",
+        "ur": "10% یعنی 10 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 35.",
+        "ur": "درست! 35 روپے"
+      },
+      "feedback_wrong": {
+        "en": "350 ÷ 10 = 35.",
+        "ur": "350 ÷ 10 = 35"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Not Rs 10. 10% of 350 = 350 ÷ 10 = 35.",
+            "ur": "10 روپے نہیں۔ 350 کا 10% = 350 ÷ 10 = 35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_two_steps",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Two steps: find the percent of the cost price, then add or take away.",
+          "ur": "دو قدم: قیمتِ خرید کی فیصد نکالیں، پھر جمع یا نفی کریں۔"
+        }
+      },
+      "text": {
+        "en": "Step 1: find the profit or loss in rupees: percent × cost price ÷ 100. Step 2: for a profit, selling price = cost price + profit. For a loss, selling price = cost price − loss. Example: Rs 400 with 10% profit: 10% of 400 = 40, so SP = 440.",
+        "ur": "قدم 1: روپوں میں نفع یا نقصان نکالیں: فیصد × قیمتِ خرید ÷ 100۔ قدم 2: نفع ہو تو قیمتِ فروخت = قیمتِ خرید + نفع۔ نقصان ہو تو قیمتِ فروخت = قیمتِ خرید − نقصان۔ مثال: 400 روپے پر 10% نفع: 400 کا 10% = 40، تو قیمتِ فروخت = 440"
+      }
+    },
+    {
+      "id": "s4_fan",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A fan costs Rs 400. It is sold at a 10% profit. What is the selling price, in rupees?",
+        "ur": "ایک پنکھا 400 روپے کا ہے۔ اسے 10% نفع پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+      },
+      "answer": 440,
+      "checker": "numeric",
+      "hint": {
+        "en": "10% of 400 = 40. Then 400 + 40.",
+        "ur": "400 کا 10% = 40۔ پھر 400 + 40"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 440.",
+        "ur": "درست! 440 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Profit = 40. SP = 400 + 40 = 440.",
+        "ur": "نفع = 40۔ قیمتِ فروخت = 400 + 40 = 440"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "Rs 40 is the profit. Add it: 400 + 40 = 440.",
+            "ur": "40 روپے نفع ہے۔ اسے جمع کریں: 400 + 40 = 440"
+          },
+          "misconception_id": "stops_at_profit"
+        },
+        {
+          "answer": 410,
+          "feedback": {
+            "en": "10% is not Rs 10. 10% of 400 = 40, so 440.",
+            "ur": "10%، 10 روپے نہیں ہے۔ 400 کا 10% = 40، تو 440"
+          },
+          "misconception_id": "adds_percent_as_rupees"
+        },
+        {
+          "answer": 360,
+          "feedback": {
+            "en": "It's a profit, so add: 400 + 40 = 440.",
+            "ur": "یہ نفع ہے، تو جمع کریں: 400 + 40 = 440"
+          },
+          "misconception_id": "wrong_direction"
+        }
+      ]
+    },
+    {
+      "id": "s5_phone",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "An old phone costs Rs 600. It is sold at a 20% loss. What is the selling price, in rupees?",
+        "ur": "ایک پرانا فون 600 روپے کا ہے۔ اسے 20% نقصان پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+      },
+      "answer": 480,
+      "checker": "numeric",
+      "hint": {
+        "en": "20% of 600 = 120. Then 600 − 120.",
+        "ur": "600 کا 20% = 120۔ پھر 600 − 120"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 480.",
+        "ur": "درست! 480 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Loss = 120. SP = 600 − 120 = 480.",
+        "ur": "نقصان = 120۔ قیمتِ فروخت = 600 − 120 = 480"
+      },
+      "common_wrong": [
+        {
+          "answer": 720,
+          "feedback": {
+            "en": "It's a loss, so take away: 600 − 120 = 480.",
+            "ur": "یہ نقصان ہے، تو نفی کریں: 600 − 120 = 480"
+          },
+          "misconception_id": "wrong_direction"
+        },
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "Rs 120 is the loss. 600 − 120 = 480.",
+            "ur": "120 روپے نقصان ہے۔ 600 − 120 = 480"
+          },
+          "misconception_id": "stops_at_profit"
+        }
+      ]
+    },
+    {
+      "id": "s6_choose",
+      "type": "choice",
+      "prompt": {
+        "en": "A pair of shoes costs Rs 200 and is sold at a 25% profit. What is the selling price?",
+        "ur": "جوتوں کا ایک جوڑا 200 روپے کا ہے اور 25% نفع پر بیچا جاتا ہے۔ قیمتِ فروخت کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "250",
+          "text": {
+            "en": "Rs 250",
+            "ur": "250 روپے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 25% of 200 = 50, and 200 + 50 = 250.",
+            "ur": "جی ہاں! 200 کا 25% = 50، اور 200 + 50 = 250"
+          }
+        },
+        {
+          "id": "225",
+          "text": {
+            "en": "Rs 225",
+            "ur": "225 روپے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "25% is not Rs 25. 25% of 200 = 50.",
+            "ur": "25%، 25 روپے نہیں ہے۔ 200 کا 25% = 50"
+          },
+          "misconception_id": "adds_percent_as_rupees"
+        },
+        {
+          "id": "150",
+          "text": {
+            "en": "Rs 150",
+            "ur": "150 روپے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It's a profit, so add 50: 250.",
+            "ur": "یہ نفع ہے، تو 50 جمع کریں: 250"
+          },
+          "misconception_id": "wrong_direction"
+        }
+      ]
+    },
+    {
+      "id": "s7_cycle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A sewing machine costs Rs 1500. It is sold at a 12% profit. What is the selling price, in rupees?",
+        "ur": "ایک سلائی مشین 1500 روپے کی ہے۔ اسے 12% نفع پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+      },
+      "answer": 1680,
+      "checker": "numeric",
+      "hint": {
+        "en": "12% of 1500 = 12 × 1500 ÷ 100.",
+        "ur": "1500 کا 12% = 12 × 1500 ÷ 100"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 1680.",
+        "ur": "درست! 1680 روپے"
+      },
+      "feedback_wrong": {
+        "en": "12 × 15 = 180. SP = 1500 + 180 = 1680.",
+        "ur": "12 × 15 = 180۔ قیمتِ فروخت = 1500 + 180 = 1680"
+      },
+      "common_wrong": [
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "Rs 180 is the profit. 1500 + 180 = 1680.",
+            "ur": "180 روپے نفع ہے۔ 1500 + 180 = 1680"
+          },
+          "misconception_id": "stops_at_profit"
+        },
+        {
+          "answer": 1512,
+          "feedback": {
+            "en": "12% is not Rs 12. 12% of 1500 = 180, so 1680.",
+            "ur": "12%، 12 روپے نہیں ہے۔ 1500 کا 12% = 180، تو 1680"
+          },
+          "misconception_id": "adds_percent_as_rupees"
+        }
+      ]
+    },
+    {
+      "id": "s8_pencil_box",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A pencil box costs Rs 80. It is sold at a 5% loss. What is the selling price, in rupees?",
+        "ur": "ایک پنسل باکس 80 روپے کا ہے۔ اسے 5% نقصان پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+      },
+      "answer": 76,
+      "checker": "numeric",
+      "hint": {
+        "en": "5% of 80 = 4. Then 80 − 4.",
+        "ur": "80 کا 5% = 4۔ پھر 80 − 4"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 76.",
+        "ur": "درست! 76 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Loss = 4. SP = 80 − 4 = 76.",
+        "ur": "نقصان = 4۔ قیمتِ فروخت = 80 − 4 = 76"
+      },
+      "common_wrong": [
+        {
+          "answer": 75,
+          "feedback": {
+            "en": "5% is not Rs 5. 5% of 80 = 4, so 76.",
+            "ur": "5%، 5 روپے نہیں ہے۔ 80 کا 5% = 4، تو 76"
+          },
+          "misconception_id": "adds_percent_as_rupees"
+        },
+        {
+          "answer": 84,
+          "feedback": {
+            "en": "It's a loss, so take away: 80 − 4 = 76.",
+            "ur": "یہ نقصان ہے، تو نفی کریں: 80 − 4 = 76"
+          },
+          "misconception_id": "wrong_direction"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A kettle costs Rs 500 and is sold at a 10% profit. Asma says, \"500 + 10 = Rs 510.\" What went wrong?",
+        "ur": "ایک کیتلی 500 روپے کی ہے اور 10% نفع پر بیچی جاتی ہے۔ عاصمہ کہتی ہے، \"500 + 10 = 510 روپے۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "percent",
+          "text": {
+            "en": "She added 10 rupees, not 10%. 10% of 500 = 50, so Rs 550.",
+            "ur": "اس نے 10 روپے جمع کیے، 10% نہیں۔ 500 کا 10% = 50، تو 550 روپے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Find the percent of the cost price first.",
+            "ur": "جی ہاں! پہلے قیمتِ خرید کی فیصد نکالیں۔"
+          }
+        },
+        {
+          "id": "subtract",
+          "text": {
+            "en": "She should take away: 500 − 10 = 490.",
+            "ur": "اسے نفی کرنا چاہیے: 500 − 10 = 490"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It's a profit, so adding is right. The mistake is adding Rs 10 instead of 10%.",
+            "ur": "یہ نفع ہے، تو جمع درست ہے۔ غلطی 10% کی جگہ 10 روپے جمع کرنا ہے۔"
+          },
+          "misconception_id": "wrong_direction"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "10% of Rs 500 is Rs 50, not Rs 10.",
+            "ur": "500 روپے کا 10%، 50 روپے ہے، 10 نہیں۔"
+          },
+          "misconception_id": "adds_percent_as_rupees"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is a 10% profit on Rs 500 not Rs 510? Can you teach me?",
+          "ur": "500 روپے پر 10% نفع 510 روپے کیوں نہیں ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we find 10% of the cost price before adding it?",
+        "ur": "اپنے الفاظ میں بتائیں: جمع کرنے سے پہلے ہم قیمتِ خرید کا 10% کیوں نکالتے ہیں؟"
+      },
+      "key_idea": "A percent is a part of an amount, not a number of rupees. 10% means 10 out of every 100, so on Rs 500 it is 5 lots of 10 = Rs 50. That profit in rupees is what we add to the cost price.",
+      "levels": {
+        "got_it": "Says 10% means 10 out of every 100, so on Rs 500 the profit is Rs 50, and that is what gets added.",
+        "partly": "Says you must find the percent first, without saying why 10% is not 10 rupees.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "100",
+          "every",
+          "hundred",
+          "سو"
+        ],
+        [
+          "50",
+          "fifty",
+          "پچاس"
+        ],
+        [
+          "part",
+          "of",
+          "حصہ",
+          "کا"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 10% of Rs 500 is Rs 50, so the selling price is Rs 550.",
+          "ur": "بہت خوب! 500 روپے کا 10%، 50 روپے ہے، تو قیمتِ فروخت 550 روپے ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how much 10% of Rs 500 is in rupees.",
+          "ur": "اچھی شروعات! اب بتائیں 500 روپے کا 10% کتنے روپے ہے۔"
+        },
+        "not_yet": {
+          "en": "10% means 10 out of every 100. How many 100s are there in 500?",
+          "ur": "10% یعنی ہر 100 میں سے 10۔ 500 میں کتنے 100 ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_eggs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shopkeeper buys a crate of eggs for Rs 600. He wants a 15% profit on the crate. For how many rupees should he sell the whole crate?",
+        "ur": "ایک دکاندار انڈوں کی پیٹی 600 روپے میں خریدتا ہے۔ وہ پیٹی پر 15% نفع چاہتا ہے۔ اسے پوری پیٹی کتنے روپے میں بیچنی چاہیے؟"
+      },
+      "answer": 690,
+      "checker": "numeric",
+      "hint": {
+        "en": "15% of 600 = 15 × 6.",
+        "ur": "600 کا 15% = 15 × 6"
+      },
+      "feedback_correct": {
+        "en": "Right! Rs 690.",
+        "ur": "درست! 690 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Profit = 90. SP = 600 + 90 = 690.",
+        "ur": "نفع = 90۔ قیمتِ فروخت = 600 + 90 = 690"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "Rs 90 is the profit. 600 + 90 = 690.",
+            "ur": "90 روپے نفع ہے۔ 600 + 90 = 690"
+          },
+          "misconception_id": "stops_at_profit"
+        },
+        {
+          "answer": 615,
+          "feedback": {
+            "en": "15% is not Rs 15. 15% of 600 = 90, so 690.",
+            "ur": "15%، 15 روپے نہیں ہے۔ 600 کا 15% = 90، تو 690"
+          },
+          "misconception_id": "adds_percent_as_rupees"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can put a fair price tag on anything!",
+          "ur": "اب آپ کسی بھی چیز پر مناسب قیمت لکھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "First find the profit or loss in rupees: percent × cost price ÷ 100. Then for a profit add it to the cost price; for a loss take it away. A percent is never just that many rupees.",
+        "ur": "پہلے روپوں میں نفع یا نقصان نکالیں: فیصد × قیمتِ خرید ÷ 100۔ پھر نفع ہو تو قیمتِ خرید میں جمع کریں؛ نقصان ہو تو نفی کریں۔ فیصد کبھی بھی اتنے ہی روپے نہیں ہوتی۔"
+      },
+      "points": [
+        {
+          "en": "Profit: SP = CP + profit.",
+          "ur": "نفع: قیمتِ فروخت = قیمتِ خرید + نفع۔"
+        },
+        {
+          "en": "Loss: SP = CP − loss.",
+          "ur": "نقصان: قیمتِ فروخت = قیمتِ خرید − نقصان۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_loss",
+      "type": "apply",
+      "skill": "maths.money.selling_price",
+      "step": {
+        "id": "r_loss",
+        "type": "number",
+        "prompt": {
+          "en": "A cupboard costs Rs 900. It is sold at a 10% loss. What is the selling price, in rupees?",
+          "ur": "ایک الماری 900 روپے کی ہے۔ اسے 10% نقصان پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+        },
+        "answer": 810,
+        "checker": "numeric",
+        "hint": {
+          "en": "10% of 900 = 90. Then 900 − 90.",
+          "ur": "900 کا 10% = 90۔ پھر 900 − 90"
+        },
+        "feedback_correct": {
+          "en": "Right! Rs 810.",
+          "ur": "درست! 810 روپے"
+        },
+        "feedback_wrong": {
+          "en": "900 − 90 = 810.",
+          "ur": "900 − 90 = 810"
+        },
+        "common_wrong": [
+          {
+            "answer": 990,
+            "feedback": {
+              "en": "It's a loss, so take away: 900 − 90 = 810.",
+              "ur": "یہ نقصان ہے، تو نفی کریں: 900 − 90 = 810"
+            },
+            "misconception_id": "wrong_direction"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_profit",
+      "type": "apply",
+      "skill": "maths.money.selling_price",
+      "step": {
+        "id": "r_profit",
+        "type": "number",
+        "prompt": {
+          "en": "A cricket ball costs Rs 120. It is sold at a 50% profit. What is the selling price, in rupees?",
+          "ur": "ایک کرکٹ گیند 120 روپے کی ہے۔ اسے 50% نفع پر بیچا جاتا ہے۔ قیمتِ فروخت کتنے روپے ہے؟"
+        },
+        "answer": 180,
+        "checker": "numeric",
+        "hint": {
+          "en": "50% is half: 60. Then 120 + 60.",
+          "ur": "50% یعنی آدھا: 60۔ پھر 120 + 60"
+        },
+        "feedback_correct": {
+          "en": "Right! Rs 180.",
+          "ur": "درست! 180 روپے"
+        },
+        "feedback_wrong": {
+          "en": "120 + 60 = 180.",
+          "ur": "120 + 60 = 180"
+        },
+        "common_wrong": [
+          {
+            "answer": 170,
+            "feedback": {
+              "en": "50% is not Rs 50. Half of 120 = 60, so 180.",
+              "ur": "50%، 50 روپے نہیں ہے۔ 120 کا آدھا = 60، تو 180"
+            },
+            "misconception_id": "adds_percent_as_rupees"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Profit and Loss unit. No textbook text or exercises were used.",
+    "The main error targeted is adding the percent as rupees (10% on Rs 500 gives Rs 510).",
+    "The numbers were worked out in content/sources/g6-maths-12/selling_price.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
