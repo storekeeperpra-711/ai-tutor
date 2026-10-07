@@ -1,0 +1,754 @@
+{
+  "id": "g6-maths-11-finding-the-percentage",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Write one amount as a percentage of another, such as test marks out of 20 as a percent.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Percentages"
+    }
+  ],
+  "skills": [
+    "maths.percent.find_percent"
+  ],
+  "title": {
+    "en": "Finding the percentage",
+    "ur": "فیصد معلوم کرنا"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.percent.of_amount"
+    },
+    {
+      "skill": "maths.percent.convert"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "part_as_percent",
+      "description": "Gives the part itself as the percent (15 out of 30 = 15%)."
+    },
+    {
+      "id": "upside_down",
+      "description": "Divides the whole by the part instead of the part by the whole."
+    },
+    {
+      "id": "forgets_100",
+      "description": "Stops at the fraction or decimal and forgets to multiply by 100 (0.9 instead of 90%)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.percent.find_percent": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.percent.find_percent": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "How do you find what percent 6 is of 24?",
+            "ur": "6، 24 کا کتنے فیصد ہے، یہ کیسے معلوم کرتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "part_whole",
+              "text": {
+                "en": "Work out 6/24, then multiply by 100",
+                "ur": "6/24 نکالیں، پھر 100 سے ضرب دیں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 6/24 = 1/4 = 25%.",
+                "ur": "جی ہاں! 6/24 = 1/4 = 25%"
+              }
+            },
+            {
+              "id": "whole_part",
+              "text": {
+                "en": "Work out 24/6, then multiply by 100",
+                "ur": "24/6 نکالیں، پھر 100 سے ضرب دیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That's upside down. Part over whole: 6/24.",
+                "ur": "یہ الٹا ہے۔ حصہ اوپر، کل نیچے: 6/24"
+              },
+              "misconception_id": "upside_down"
+            },
+            {
+              "id": "just_six",
+              "text": {
+                "en": "It is 6%",
+                "ur": "یہ 6% ہے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6% means 6 out of 100. Here it's 6 out of 24: 25%.",
+                "ur": "6% یعنی 100 میں سے 6۔ یہاں 24 میں سے 6 ہے: 25%"
+              },
+              "misconception_id": "part_as_percent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Bilal gets 9 out of 10 in a quiz. What percent is that? Type just the number.",
+            "ur": "بلال کوئز میں 10 میں سے 9 لیتا ہے۔ یہ کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+          },
+          "answer": 90,
+          "checker": "numeric",
+          "hint": {
+            "en": "9/10 = ?/100",
+            "ur": "9/10 = ?/100"
+          },
+          "feedback_correct": {
+            "en": "Right! 90%.",
+            "ur": "درست! 90%"
+          },
+          "feedback_wrong": {
+            "en": "9/10 = 90/100 = 90%.",
+            "ur": "9/10 = 90/100 = 90%"
+          },
+          "common_wrong": [
+            {
+              "answer": 9,
+              "feedback": {
+                "en": "9 out of 10 is not 9%. 9/10 = 90/100 = 90%.",
+                "ur": "10 میں سے 9، 9% نہیں ہے۔ 9/10 = 90/100 = 90%"
+              },
+              "misconception_id": "part_as_percent"
+            },
+            {
+              "answer": 0.9,
+              "feedback": {
+                "en": "0.9 is the decimal. Multiply by 100: 90%.",
+                "ur": "0.9 اعشاریہ ہے۔ 100 سے ضرب دیں: 90%"
+              },
+              "misconception_id": "forgets_100"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Out of 50 seeds, 40 grow. Mehwish works out 50 ÷ 40 × 100 = 125%. What went wrong?",
+            "ur": "50 بیجوں میں سے 40 اگتے ہیں۔ مہوش 50 ÷ 40 × 100 = 125% نکالتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "flip",
+              "text": {
+                "en": "It should be part ÷ whole: 40 ÷ 50 × 100 = 80%.",
+                "ur": "حصہ ÷ کل ہونا چاہیے: 40 ÷ 50 × 100 = 80%"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Only some seeds grew, so it must be less than 100%.",
+                "ur": "جی ہاں! کچھ ہی بیج اگے، تو یہ 100% سے کم ہونا چاہیے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "More than 100% would mean more seeds grew than were planted! 40 ÷ 50 × 100 = 80%.",
+                "ur": "100% سے زیادہ کا مطلب ہوتا کہ بوئے گئے سے زیادہ بیج اگے! 40 ÷ 50 × 100 = 80%"
+              },
+              "misconception_id": "upside_down"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rule",
+      "front": {
+        "en": "What percent is the part of the whole?",
+        "ur": "حصہ کل کا کتنے فیصد ہے؟"
+      },
+      "back": {
+        "en": "Part ÷ whole × 100. 18 out of 20: 18 ÷ 20 × 100 = 90%.",
+        "ur": "حصہ ÷ کل × 100۔ 20 میں سے 18: 18 ÷ 20 × 100 = 90%"
+      }
+    },
+    {
+      "id": "f_check",
+      "front": {
+        "en": "Quick check?",
+        "ur": "فوری جانچ؟"
+      },
+      "back": {
+        "en": "A part of the whole is never more than 100%.",
+        "ur": "کل کا حصہ کبھی 100% سے زیادہ نہیں ہوتا۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_marks",
+      "text": {
+        "en": "Look at a recent test or homework mark, like 14 out of 20. Work out the percentage. Then ask someone at home what mark out of 20 would make 100%.",
+        "ur": "کسی حالیہ ٹیسٹ یا کام کے نمبر دیکھیں، جیسے 20 میں سے 14۔ اس کا فیصد نکالیں۔ پھر گھر میں کسی سے پوچھیں 20 میں سے کتنے نمبر 100% بناتے ہیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Percentage",
+      "ur": "فیصد"
+    },
+    {
+      "en": "Part",
+      "ur": "حصہ"
+    },
+    {
+      "en": "Whole",
+      "ur": "کل"
+    },
+    {
+      "en": "Marks",
+      "ur": "نمبر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ayesha got 18 out of 20 in maths. Her report card asks for a percentage. What should she write?",
+          "ur": "عائشہ نے ریاضی میں 20 میں سے 18 لیے۔ رپورٹ کارڈ میں فیصد لکھنا ہے۔ وہ کیا لکھے؟"
+        }
+      },
+      "text": {
+        "en": "Today we find what percent one amount is of another. First, a quick check.",
+        "ur": "آج ہم معلوم کریں گے کہ ایک مقدار دوسری کا کتنے فیصد ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.percent.convert",
+      "prompt": {
+        "en": "Write 0.9 as a percent. Type just the number.",
+        "ur": "0.9 کو فیصد میں لکھیں۔ صرف عدد لکھیں۔"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply by 100.",
+        "ur": "100 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 0.9 = 90%.",
+        "ur": "درست! 0.9 = 90%"
+      },
+      "feedback_wrong": {
+        "en": "0.9 × 100 = 90.",
+        "ur": "0.9 × 100 = 90"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Multiply by 100, not 10: 90%.",
+            "ur": "10 نہیں، 100 سے ضرب دیں: 90%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_find",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Write it as a fraction, then turn the fraction into a percent!",
+          "ur": "اسے کسر لکھیں، پھر کسر کو فیصد بنائیں!"
+        }
+      },
+      "text": {
+        "en": "To find what percent a part is of a whole: write part/whole, then multiply by 100. 18 out of 20 is 18/20. Make the bottom 100: 18/20 = 90/100 = 90%. Or work out 18 ÷ 20 = 0.9, and 0.9 × 100 = 90%. The part goes on top. A part of something is never more than 100%.",
+        "ur": "یہ معلوم کرنے کے لیے کہ حصہ کل کا کتنے فیصد ہے: حصہ/کل لکھیں، پھر 100 سے ضرب دیں۔ 20 میں سے 18 یعنی 18/20۔ نیچے والا 100 بنائیں: 18/20 = 90/100 = 90%۔ یا 18 ÷ 20 = 0.9، اور 0.9 × 100 = 90%۔ حصہ اوپر آتا ہے۔ کسی چیز کا حصہ کبھی 100% سے زیادہ نہیں ہوتا۔"
+      }
+    },
+    {
+      "id": "s4_marks",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ayesha got 18 out of 20. What percent is that? Type just the number.",
+        "ur": "عائشہ نے 20 میں سے 18 لیے۔ یہ کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "18/20 = ?/100. Multiply top and bottom by 5.",
+        "ur": "18/20 = ?/100۔ اوپر اور نیچے کو 5 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 90%.",
+        "ur": "درست! 90%"
+      },
+      "feedback_wrong": {
+        "en": "18/20 = 90/100 = 90%.",
+        "ur": "18/20 = 90/100 = 90%"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "18 out of 20 is not 18%. 18/20 = 90/100 = 90%.",
+            "ur": "20 میں سے 18، 18% نہیں ہے۔ 18/20 = 90/100 = 90%"
+          },
+          "misconception_id": "part_as_percent"
+        },
+        {
+          "answer": 0.9,
+          "feedback": {
+            "en": "0.9 is the decimal. Multiply by 100: 90%.",
+            "ur": "0.9 اعشاریہ ہے۔ 100 سے ضرب دیں: 90%"
+          },
+          "misconception_id": "forgets_100"
+        }
+      ]
+    },
+    {
+      "id": "s5_fifty",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "12 out of 50 children in a school play hockey. What percent is that? Type just the number.",
+        "ur": "ایک اسکول کے 50 میں سے 12 بچے ہاکی کھیلتے ہیں۔ یہ کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "12/50 = ?/100. Multiply top and bottom by 2.",
+        "ur": "12/50 = ?/100۔ اوپر اور نیچے کو 2 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 24%.",
+        "ur": "درست! 24%"
+      },
+      "feedback_wrong": {
+        "en": "12/50 = 24/100 = 24%.",
+        "ur": "12/50 = 24/100 = 24%"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "Make the bottom 100: 12/50 = 24/100 = 24%.",
+            "ur": "نیچے والا 100 بنائیں: 12/50 = 24/100 = 24%"
+          },
+          "misconception_id": "part_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s6_absent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "7 of the 25 children in a class are absent. What percent are absent? Type just the number.",
+        "ur": "ایک کلاس کے 25 میں سے 7 بچے غیر حاضر ہیں۔ کتنے فیصد غیر حاضر ہیں؟ صرف عدد لکھیں۔"
+      },
+      "answer": 28,
+      "checker": "numeric",
+      "hint": {
+        "en": "7/25 = ?/100. Multiply top and bottom by 4.",
+        "ur": "7/25 = ?/100۔ اوپر اور نیچے کو 4 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 28%.",
+        "ur": "درست! 28%"
+      },
+      "feedback_wrong": {
+        "en": "7/25 = 28/100 = 28%.",
+        "ur": "7/25 = 28/100 = 28%"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "Make the bottom 100: 7/25 = 28/100 = 28%.",
+            "ur": "نیچے والا 100 بنائیں: 7/25 = 28/100 = 28%"
+          },
+          "misconception_id": "part_as_percent"
+        },
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "72% are present. Absent: 7/25 = 28%.",
+            "ur": "72% حاضر ہیں۔ غیر حاضر: 7/25 = 28%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_saved",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Usman had Rs 200 and saved Rs 30. What percent of his money did he save? Type just the number.",
+        "ur": "عثمان کے پاس 200 روپے تھے اور اس نے 30 روپے بچائے۔ اس نے اپنے پیسوں کا کتنے فیصد بچایا؟ صرف عدد لکھیں۔"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "30/200 = ?/100. Divide top and bottom by 2.",
+        "ur": "30/200 = ?/100۔ اوپر اور نیچے کو 2 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 15%.",
+        "ur": "درست! 15%"
+      },
+      "feedback_wrong": {
+        "en": "30/200 = 15/100 = 15%.",
+        "ur": "30/200 = 15/100 = 15%"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "Rs 30 out of Rs 200 is not 30%. 30/200 = 15/100 = 15%.",
+            "ur": "200 میں سے 30 روپے، 30% نہیں ہیں۔ 30/200 = 15/100 = 15%"
+          },
+          "misconception_id": "part_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s8_sixty",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bus has 60 seats. 45 are taken. What percent of the seats are taken? Type just the number.",
+        "ur": "ایک بس میں 60 نشستیں ہیں۔ 45 بھری ہیں۔ کتنے فیصد نشستیں بھری ہیں؟ صرف عدد لکھیں۔"
+      },
+      "answer": 75,
+      "checker": "numeric",
+      "hint": {
+        "en": "Simplify 45/60 first: divide top and bottom by 15.",
+        "ur": "پہلے 45/60 کو سادہ کریں: اوپر اور نیچے کو 15 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 45/60 = 3/4 = 75%.",
+        "ur": "درست! 45/60 = 3/4 = 75%"
+      },
+      "feedback_wrong": {
+        "en": "45/60 = 3/4 = 75/100 = 75%.",
+        "ur": "45/60 = 3/4 = 75/100 = 75%"
+      },
+      "common_wrong": [
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "Make it out of 100: 45/60 = 3/4 = 75%.",
+            "ur": "اسے 100 میں سے بنائیں: 45/60 = 3/4 = 75%"
+          },
+          "misconception_id": "part_as_percent"
+        },
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "25% of seats are empty. Taken: 3/4 = 75%.",
+            "ur": "25% نشستیں خالی ہیں۔ بھری: 3/4 = 75%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Rashid scores 15 out of 30 and says he got 15%. What went wrong?",
+        "ur": "راشد 30 میں سے 15 لیتا ہے اور کہتا ہے اس کے 15% ہیں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "half",
+          "text": {
+            "en": "15 out of 30 is half, which is 50%.",
+            "ur": "30 میں سے 15 آدھا ہے، جو 50% ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 15/30 = 1/2 = 50%.",
+            "ur": "جی ہاں! 15/30 = 1/2 = 50%"
+          }
+        },
+        {
+          "id": "thirty",
+          "text": {
+            "en": "It should be 30%.",
+            "ur": "یہ 30% ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "15/30 = 1/2, and a half is 50%.",
+            "ur": "15/30 = 1/2، اور آدھا 50% ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "15% is 15 out of 100. He got 15 out of 30: 50%.",
+            "ur": "15% یعنی 100 میں سے 15۔ اس کے 30 میں سے 15 ہیں: 50%"
+          },
+          "misconception_id": "part_as_percent"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we multiply part ÷ whole by 100 to get a percent? Can you teach me?",
+          "ur": "فیصد نکالنے کے لیے حصہ ÷ کل کو 100 سے ضرب کیوں دیتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is 18 out of 20 the same as 90%?",
+        "ur": "اپنے الفاظ میں بتائیں: 20 میں سے 18، 90% کے برابر کیوں ہے؟"
+      },
+      "key_idea": "A percent is out of 100. 18 out of 20 is the fraction 18/20. Changing it to an equal fraction with 100 at the bottom (90/100), or multiplying by 100, tells us how many there would be out of 100.",
+      "levels": {
+        "got_it": "Says percent means out of 100, and 18/20 becomes 90/100 (or 0.9 × 100) to show how many out of 100.",
+        "partly": "Says multiply by 100 or make it out of 100, without explaining the link.",
+        "not_yet": "Gives no reason, or just repeats the rule."
+      },
+      "keywords": [
+        [
+          "100",
+          "hundred",
+          "سو"
+        ],
+        [
+          "fraction",
+          "18/20",
+          "90/100",
+          "کسر"
+        ],
+        [
+          "equal",
+          "same",
+          "برابر",
+          "ایک جیسا"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 18 out of 20 is the same as 90 out of 100.",
+          "ur": "بہت خوب! 20 میں سے 18، 100 میں سے 90 کے برابر ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how 18/20 turns into a number out of 100.",
+          "ur": "اچھی شروعات! اب بتائیں 18/20 کیسے 100 میں سے عدد بنتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Percent means out of 100. If 20 marks became 100 marks, how many would 18 marks become?",
+          "ur": "فیصد یعنی 100 میں سے۔ اگر 20 نمبر 100 نمبر بن جائیں تو 18 نمبر کتنے بنیں گے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_mangoes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A crate has 40 mangoes. 6 are bad. What percent of the mangoes are bad? Type just the number.",
+        "ur": "ایک پیٹی میں 40 آم ہیں۔ 6 خراب ہیں۔ کتنے فیصد آم خراب ہیں؟ صرف عدد لکھیں۔"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 ÷ 40, then × 100.",
+        "ur": "6 ÷ 40، پھر × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 15% are bad.",
+        "ur": "درست! 15% خراب ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "6 ÷ 40 = 0.15, and 0.15 × 100 = 15.",
+        "ur": "6 ÷ 40 = 0.15، اور 0.15 × 100 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 out of 40 is not 6%. 6 ÷ 40 × 100 = 15%.",
+            "ur": "40 میں سے 6، 6% نہیں ہے۔ 6 ÷ 40 × 100 = 15%"
+          },
+          "misconception_id": "part_as_percent"
+        },
+        {
+          "answer": 85,
+          "feedback": {
+            "en": "85% are good. Bad: 6 ÷ 40 × 100 = 15%.",
+            "ur": "85% اچھے ہیں۔ خراب: 6 ÷ 40 × 100 = 15%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can work out your own test percentages!",
+          "ur": "اب آپ اپنے ٹیسٹ کا فیصد خود نکال سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "To find what percent a part is of a whole: part ÷ whole × 100. Or write part/whole and make the bottom 100. The part goes on top, and a part of something is never more than 100%.",
+        "ur": "یہ معلوم کرنے کے لیے کہ حصہ کل کا کتنے فیصد ہے: حصہ ÷ کل × 100۔ یا حصہ/کل لکھ کر نیچے والا 100 بنائیں۔ حصہ اوپر آتا ہے، اور کسی چیز کا حصہ کبھی 100% سے زیادہ نہیں ہوتا۔"
+      },
+      "points": [
+        {
+          "en": "Percent = part ÷ whole × 100.",
+          "ur": "فیصد = حصہ ÷ کل × 100۔"
+        },
+        {
+          "en": "Part on top, whole underneath.",
+          "ur": "حصہ اوپر، کل نیچے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_quarter",
+      "type": "apply",
+      "skill": "maths.percent.find_percent",
+      "step": {
+        "id": "r_quarter",
+        "type": "number",
+        "prompt": {
+          "en": "What percent is 3 out of 4? Type just the number.",
+          "ur": "4 میں سے 3 کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+        },
+        "answer": 75,
+        "checker": "numeric",
+        "hint": {
+          "en": "3/4 = ?/100",
+          "ur": "3/4 = ?/100"
+        },
+        "feedback_correct": {
+          "en": "Right! 75%.",
+          "ur": "درست! 75%"
+        },
+        "feedback_wrong": {
+          "en": "3/4 = 75/100 = 75%.",
+          "ur": "3/4 = 75/100 = 75%"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "3 out of 4 is not 3%. 3/4 = 75%.",
+              "ur": "4 میں سے 3، 3% نہیں ہے۔ 3/4 = 75%"
+            },
+            "misconception_id": "part_as_percent"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_eighty",
+      "type": "apply",
+      "skill": "maths.percent.find_percent",
+      "step": {
+        "id": "r_eighty",
+        "type": "number",
+        "prompt": {
+          "en": "What percent is 16 out of 80? Type just the number.",
+          "ur": "80 میں سے 16 کتنے فیصد ہے؟ صرف عدد لکھیں۔"
+        },
+        "answer": 20,
+        "checker": "numeric",
+        "hint": {
+          "en": "Simplify 16/80 first.",
+          "ur": "پہلے 16/80 کو سادہ کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 16/80 = 1/5 = 20%.",
+          "ur": "درست! 16/80 = 1/5 = 20%"
+        },
+        "feedback_wrong": {
+          "en": "16/80 = 1/5 = 20/100 = 20%.",
+          "ur": "16/80 = 1/5 = 20/100 = 20%"
+        },
+        "common_wrong": [
+          {
+            "answer": 500,
+            "feedback": {
+              "en": "That's upside down: 80 ÷ 16. Part ÷ whole: 16/80 = 20%.",
+              "ur": "یہ الٹا ہے: 80 ÷ 16۔ حصہ ÷ کل: 16/80 = 20%"
+            },
+            "misconception_id": "upside_down"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Percentages unit. No textbook text or exercises were used.",
+    "Two methods are shown: make the bottom 100, or part ÷ whole × 100. Every answer is a whole-number percent.",
+    "Urdu terms to check: فیصد (percentage), حصہ (part), کل (whole).",
+    "The numbers were worked out in content/sources/g6-maths-11/finding_the_percentage.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
