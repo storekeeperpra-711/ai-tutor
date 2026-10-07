@@ -9,6 +9,7 @@ REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills from earlier work that these lessons build on.
 TIMES_TABLES = "maths.multiplication.facts"
+SM_ORDER = "maths.simplify.order_of_operations"
 
 # Skills of the Whole Numbers unit.
 WN_PLACE_VALUE = "maths.whole.place_value"

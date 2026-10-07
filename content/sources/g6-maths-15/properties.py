@@ -1,0 +1,219 @@
+from common import (T, opt, say, wrong, number_question, write,
+                    REF, REVIEW, SM_ORDER, WN_COMPARE, WN_PROPERTIES)
+
+SKILL = WN_PROPERTIES
+
+# s2: 4 x (5 + 3) (left to right without brackets: 4 x 5 + 3 = 23)
+S2 = 4 * (5 + 3)
+assert S2 == 32 and 4 * 5 + 3 == 23
+# s4: 37 + 58 = 58 + ?
+S4 = 37
+assert 37 + 58 == 58 + S4 and 37 + 58 == 95
+# s5: 25 x 13 x 4 = (25 x 4) x 13
+S5 = 25 * 13 * 4
+assert S5 == (25 * 4) * 13 == 1300 and 25 + 13 + 4 == 42
+# s6: 9 - 4 is not 4 - 9
+assert 9 - 4 != 4 - 9 and 8 + 5 == 5 + 8 and 6 * 7 == 7 * 6
+# s7: 7 x 12 = 7 x 10 + 7 x 2 (forgetting to multiply the 2: 72)
+S7 = 7 * 10 + 7 * 2
+assert S7 == 7 * 12 == 84 and 7 * 10 + 2 == 72
+# s8: 4589 x 0
+S8 = 4589 * 0
+assert S8 == 0
+# s9: 5 x (8 + 2) = 50, not 5 x 8 + 2 = 42
+assert 5 * (8 + 2) == 5 * 8 + 5 * 2 == 50 and 5 * 8 + 2 == 42
+# s11: 8 packs of 25 and 8 packs of 15 = 8 x (25 + 15)
+S11 = 8 * (25 + 15)
+assert S11 == 8 * 25 + 8 * 15 == 320 and 8 * 25 + 15 == 215
+# question bank and review
+QB = 9 * 104
+assert QB == 9 * 100 + 9 * 4 == 936 and 9 * 100 + 4 == 904
+R1 = 50 * 17 * 2
+assert R1 == (50 * 2) * 17 == 1700
+R2 = 3687 + 0
+assert R2 == 3687
+
+lesson = {
+ "id": "g6-maths-15-properties",
+ "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
+ "curriculum_refs": [{"outcome": "Use the commutative, associative and distributive properties, and the rules for 0 and 1, to work out sums quickly.", "textbook": REF}],
+ "skills": [SKILL],
+ "title": T("Properties of whole numbers", "مکمل اعداد کی خصوصیات"),
+ "estimated_minutes": 15,
+ "prerequisites": [{"skill": WN_COMPARE}, {"skill": SM_ORDER}],
+ "misconceptions": [
+   {"id": "swap_subtract", "description": "Thinks the order can be swapped in subtraction or division too."},
+   {"id": "partial_distribute", "description": "Multiplies only the first number in the bracket: a × (b + c) = a × b + c."},
+   {"id": "zero_one", "description": "Mixes up the rules for 0 and 1 (thinks a × 0 = a, or a + 0 = 0)."},
+ ],
+ "mastery_criteria": {SKILL: {"question_types": ["recall", "apply", "find_error"], "days": 2}},
+ "question_bank": {SKILL: [
+   {"id": "qb_one", "type": "recall", "step": {
+     "id": "qb_one", "type": "choice",
+     "prompt": T("Any whole number multiplied by 1 gives …", "کسی بھی مکمل عدد کو 1 سے ضرب دیں تو جواب …"),
+     "options": [
+       opt("same", "the same number", "وہی عدد", True,
+           "Yes! 1 doesn't change a number when you multiply.", "جی ہاں! ضرب میں 1 عدد کو نہیں بدلتا۔"),
+       opt("one", "1", "1", False,
+           "Only 1 × 1 = 1. For example 9 × 1 = 9.", "صرف 1 × 1 = 1۔ مثلاً 9 × 1 = 9", "zero_one"),
+       opt("zero", "0", "0", False,
+           "That is × 0. × 1 keeps the number: 9 × 1 = 9.", "یہ × 0 ہے۔ × 1 عدد کو وہی رکھتا ہے: 9 × 1 = 9", "zero_one"),
+     ]}},
+   {"id": "qb_apply", "type": "apply", "step": number_question(
+     "qb_apply",
+     T("Work out 9 × 104 using 9 × 100 + 9 × 4.", "9 × 104 کو 9 × 100 + 9 × 4 سے حل کریں۔"),
+     QB,
+     T("900 + 36.", "900 + 36"),
+     T("Right! 936.", "درست! 936"),
+     T("9 × 100 = 900, 9 × 4 = 36, 900 + 36 = 936.", "9 × 100 = 900، 9 × 4 = 36، 900 + 36 = 936"),
+     common_wrong=[wrong(904, "Multiply the 4 by 9 too: 900 + 36 = 936.", "4 کو بھی 9 سے ضرب دیں: 900 + 36 = 936", "partial_distribute")],
+     qtype=None)},
+   {"id": "qb_find_error", "type": "find_error", "step": {
+     "id": "qb_find_error", "type": "choice",
+     "prompt": T("Hira says 12 ÷ 3 is the same as 3 ÷ 12. What is wrong?", "حرا کہتی ہے 12 ÷ 3 اور 3 ÷ 12 برابر ہیں۔ کیا غلطی ہے؟"),
+     "options": [
+       opt("order", "Order matters in division: 12 ÷ 3 = 4, but 3 ÷ 12 is less than 1.", "تقسیم میں ترتیب اہم ہے: 12 ÷ 3 = 4، مگر 3 ÷ 12 ایک سے کم ہے۔", True,
+           "Yes! Swapping works only for + and ×.", "جی ہاں! جگہ بدلنا صرف + اور × میں چلتا ہے۔"),
+       opt("nothing", "Nothing.", "کوئی غلطی نہیں۔", False,
+           "Sharing 12 among 3 is not sharing 3 among 12. Swapping works only for + and ×.", "12 کو 3 میں بانٹنا اور 3 کو 12 میں بانٹنا ایک نہیں۔ جگہ بدلنا صرف + اور × میں چلتا ہے۔", "swap_subtract"),
+     ]}},
+ ]},
+ "flashcards": [
+   {"id": "f_swap", "front": T("a + b and a × b?", "a + b اور a × b؟"),
+    "back": T("Order doesn't matter: a + b = b + a, a × b = b × a.", "ترتیب سے فرق نہیں: a + b = b + a، a × b = b × a")},
+   {"id": "f_distribute", "front": T("a × (b + c)?", "a × (b + c)؟"),
+    "back": T("a × b + a × c.", "a × b + a × c")},
+ ],
+ "home_tasks": [{"id": "h_shop", "text": T(
+   "At a shop, find something that costs Rs 99 or Rs 199. Work out the price of 5 of them in your head using 100 − 1 or 200 − 1.",
+   "دکان پر کوئی چیز ڈھونڈیں جو 99 یا 199 روپے کی ہو۔ 100 − 1 یا 200 − 1 استعمال کرکے ذہن میں 5 کی قیمت نکالیں۔")}],
+ "glossary": [T("Commutative (order) property", "خاصیت مبادلہ"), T("Associative (grouping) property", "خاصیت تلازم"), T("Distributive property", "خاصیت تقسیم")],
+ "steps": [
+   {"id": "s1_hook", "type": "explain",
+    "character": say("curious", "Can you work out 25 × 13 × 4 in your head? There's a trick!",
+                     "کیا آپ 25 × 13 × 4 ذہن میں نکال سکتے ہیں؟ اس کی ایک ترکیب ہے!"),
+    "text": T("Today we learn the rules that let us swap, group and break up numbers to work faster. First, a quick brackets check.", "آج ہم وہ اصول سیکھیں گے جن سے ہم اعداد کی جگہ بدل کر، گروپ بنا کر اور توڑ کر جلدی حساب کر سکتے ہیں۔ پہلے قوسین کا ایک چھوٹا سا سوال۔")},
+   number_question(
+     "s2_foundation",
+     T("Simplify 4 × (5 + 3).", "4 × (5 + 3) مختصر کریں۔"),
+     S2,
+     T("Brackets first.", "پہلے قوسین۔"),
+     T("Right! 4 × 8 = 32.", "درست! 4 × 8 = 32"),
+     T("5 + 3 = 8, then 4 × 8 = 32.", "5 + 3 = 8، پھر 4 × 8 = 32"),
+     common_wrong=[wrong(23, "Do the brackets first: 4 × 8 = 32.", "پہلے قوسین: 4 × 8 = 32")],
+     qtype="recall", skill=SM_ORDER),
+   {"id": "s3_rule", "type": "explain",
+    "character": say("happy", "Swap, group, break up. Three tricks for fast maths!", "جگہ بدلیں، گروپ بنائیں، توڑیں۔ تیز حساب کی تین ترکیبیں!"),
+    "text": T("Order (commutative): a + b = b + a and a × b = b × a, but not for − or ÷. Grouping (associative): (a + b) + c = a + (b + c), and the same for ×. Breaking up (distributive): a × (b + c) = a × b + a × c. Also: a + 0 = a, a × 1 = a, and a × 0 = 0.",
+              "ترتیب (مبادلہ): a + b = b + a اور a × b = b × a، مگر − اور ÷ میں نہیں۔ گروپ (تلازم): (a + b) + c = a + (b + c)، اور × میں بھی یہی۔ توڑنا (تقسیم): a × (b + c) = a × b + a × c۔ اور: a + 0 = a، a × 1 = a، اور a × 0 = 0")},
+   number_question(
+     "s4_order",
+     T("Fill the gap: 37 + 58 = 58 + ?", "خالی جگہ پُر کریں: 37 + 58 = 58 + ؟"),
+     S4,
+     T("Swapping the order keeps the sum the same.", "ترتیب بدلنے سے مجموعہ وہی رہتا ہے۔"),
+     T("Right! 37.", "درست! 37"),
+     T("37 + 58 = 58 + 37.", "37 + 58 = 58 + 37"),
+     common_wrong=[wrong(95, "95 is the sum. The missing number is 37: 58 + 37.", "95 مجموعہ ہے۔ خالی جگہ پر 37: 58 + 37")]),
+   number_question(
+     "s5_group",
+     T("Work out 25 × 13 × 4. (Hint: do 25 × 4 first.)", "25 × 13 × 4 نکالیں۔ (اشارہ: پہلے 25 × 4)"),
+     S5,
+     T("25 × 4 = 100.", "25 × 4 = 100"),
+     T("Right! 100 × 13 = 1300.", "درست! 100 × 13 = 1300"),
+     T("25 × 4 = 100, and 100 × 13 = 1300.", "25 × 4 = 100، اور 100 × 13 = 1300"),
+     common_wrong=[wrong(42, "Multiply, don't add: 100 × 13 = 1300.", "جمع نہیں، ضرب: 100 × 13 = 1300")]),
+   {"id": "s6_not_true", "type": "choice",
+    "prompt": T("Which one is NOT true?", "کون سا درست نہیں ہے؟"),
+    "options": [
+      opt("subtract", "9 − 4 = 4 − 9", "9 − 4 = 4 − 9", True, "Yes! 9 − 4 = 5, but 4 − 9 is not 5.", "جی ہاں! 9 − 4 = 5، مگر 4 − 9 پانچ نہیں ہے۔"),
+      opt("add", "8 + 5 = 5 + 8", "8 + 5 = 5 + 8", False, "That is true: both are 13.", "یہ درست ہے: دونوں 13 ہیں۔"),
+      opt("times", "6 × 7 = 7 × 6", "6 × 7 = 7 × 6", False, "That is true: both are 42.", "یہ درست ہے: دونوں 42 ہیں۔"),
+    ]},
+   number_question(
+     "s7_distribute",
+     T("Use 7 × 12 = 7 × 10 + 7 × 2. What is 7 × 12?", "7 × 12 = 7 × 10 + 7 × 2 استعمال کریں۔ 7 × 12 کتنا ہے؟"),
+     S7,
+     T("70 + 14.", "70 + 14"),
+     T("Right! 84.", "درست! 84"),
+     T("7 × 10 = 70, 7 × 2 = 14, 70 + 14 = 84.", "7 × 10 = 70، 7 × 2 = 14، 70 + 14 = 84"),
+     common_wrong=[wrong(72, "Multiply the 2 by 7 as well: 70 + 14 = 84.", "2 کو بھی 7 سے ضرب دیں: 70 + 14 = 84", "partial_distribute")]),
+   number_question(
+     "s8_zero",
+     T("What is 4589 × 0?", "4589 × 0 کتنا ہے؟"),
+     S8,
+     T("Anything times 0 is …", "کسی بھی عدد کو 0 سے ضرب دیں تو …"),
+     T("Right! 0.", "درست! 0"),
+     T("Any number × 0 = 0: 4589 zeros make 0.", "کوئی بھی عدد × 0 = 0: 4589 صفر مل کر 0"),
+     common_wrong=[wrong(4589, "That is × 1. Any number × 0 = 0.", "یہ × 1 ہے۔ کوئی بھی عدد × 0 = 0", "zero_one")]),
+   {"id": "s9_find_error", "type": "choice", "question_type": "find_error",
+    "prompt": T("Ali says 5 × (8 + 2) = 5 × 8 + 2 = 42. What went wrong?", "علی کہتا ہے 5 × (8 + 2) = 5 × 8 + 2 = 42۔ کیا غلطی ہوئی؟"),
+    "options": [
+      opt("both", "Multiply both numbers: 5 × 8 + 5 × 2 = 50.", "دونوں اعداد کو ضرب دیں: 5 × 8 + 5 × 2 = 50", True,
+          "Yes! The 5 multiplies everything in the bracket.", "جی ہاں! 5 قوسین کی ہر چیز کو ضرب دیتا ہے۔"),
+      opt("add", "He should add: 5 + 8 + 2 = 15.", "اسے جمع کرنا چاہیے: 5 + 8 + 2 = 15", False,
+          "It is ×, not +. 5 × 8 + 5 × 2 = 50.", "یہ × ہے، + نہیں۔ 5 × 8 + 5 × 2 = 50"),
+      opt("nothing", "Nothing.", "کوئی غلطی نہیں۔", False,
+          "5 × 10 = 50, not 42. He forgot 5 × 2.", "5 × 10 = 50، 42 نہیں۔ وہ 5 × 2 بھول گیا۔", "partial_distribute"),
+    ]},
+   {"id": "s10_explain_why", "type": "ai_explain", "question_type": "explain", "task_kind": "explain",
+    "character": say("curious", "Why is 3 × 5 the same as 5 × 3? Can you teach me?",
+                     "3 × 5 اور 5 × 3 برابر کیوں ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"),
+    "task": T("In your own words: why does 3 × 5 = 5 × 3? You can think of chairs in rows.", "اپنے الفاظ میں بتائیں: 3 × 5 = 5 × 3 کیوں ہے؟ آپ قطاروں میں کرسیوں کا سوچ سکتے ہیں۔"),
+    "key_idea": "3 rows of 5 chairs is the same set of chairs as 5 columns of 3 when you look from the side, so both are 15. Turning the rectangle doesn't change how many there are.",
+    "levels": {
+      "got_it": "Uses rows and columns (or groups) to show both give 15, so order doesn't matter.",
+      "partly": "Says both are 15 without a reason.",
+      "not_yet": "Gives no reason."},
+    "keywords": [
+      ["row", "column", "قطار", "کالم"],
+      ["15", "fifteen", "پندرہ"],
+      ["group", "گروپ"]],
+    "fallback_feedback": {
+      "got_it": T("Well explained! Turning the rows doesn't change the total.", "بہت خوب! قطاریں گھمانے سے کل نہیں بدلتا۔"),
+      "partly": T("Good start! Now explain it with rows and columns.", "اچھی شروعات! اب قطاروں اور کالموں سے سمجھائیں۔"),
+      "not_yet": T("Draw 3 rows of 5 dots. Now count them in columns. What do you see?", "5 نقطوں کی 3 قطاریں بنائیں۔ اب انہیں کالموں میں گنیں۔ آپ کیا دیکھتے ہیں؟")},
+    "limit_per_day": 3, "max_attempts": 2},
+   number_question(
+     "s11_biscuits",
+     T("A shop sells 8 packs of 25 biscuits and 8 packs of 15 biscuits. How many biscuits is that? (8 × (25 + 15))", "ایک دکان 25 بسکٹ والے 8 پیکٹ اور 15 بسکٹ والے 8 پیکٹ بیچتی ہے۔ کل کتنے بسکٹ ہیں؟ (8 × (25 + 15))"),
+     S11,
+     T("25 + 15 = 40 first.", "پہلے 25 + 15 = 40"),
+     T("Right! 8 × 40 = 320.", "درست! 8 × 40 = 320"),
+     T("8 × (25 + 15) = 8 × 40 = 320. (Or 200 + 120 = 320.)", "8 × (25 + 15) = 8 × 40 = 320۔ (یا 200 + 120 = 320)"),
+     common_wrong=[wrong(215, "The 15-biscuit packs are 8 packs too: 8 × 40 = 320.", "15 بسکٹ والے بھی 8 پیکٹ ہیں: 8 × 40 = 320", "partial_distribute")]),
+   {"id": "s12_summary", "type": "summary",
+    "character": say("celebrating", "Swap, group and break up numbers. Your sums just got faster!", "اعداد کی جگہ بدلیں، گروپ بنائیں اور توڑیں۔ اب آپ کا حساب تیز ہو گیا!"),
+    "text": T("For + and ×, order and grouping don't change the answer. a × (b + c) = a × b + a × c. a + 0 = a, a × 1 = a, a × 0 = 0. Order matters for − and ÷.",
+              "+ اور × میں ترتیب اور گروپ سے جواب نہیں بدلتا۔ a × (b + c) = a × b + a × c۔ a + 0 = a، a × 1 = a، a × 0 = 0۔ − اور ÷ میں ترتیب اہم ہے۔"),
+    "points": [T("+ and ×: swap and group freely.", "+ اور ×: آزادی سے جگہ بدلیں اور گروپ بنائیں۔"),
+               T("a × (b + c) = a × b + a × c.", "a × (b + c) = a × b + a × c")]},
+ ],
+ "review_questions": [
+   {"id": "r_group", "type": "apply", "skill": SKILL, "step": number_question(
+     "r_group",
+     T("Work out 50 × 17 × 2. (Hint: 50 × 2 first.)", "50 × 17 × 2 نکالیں۔ (اشارہ: پہلے 50 × 2)"),
+     R1,
+     T("50 × 2 = 100.", "50 × 2 = 100"),
+     T("Right! 100 × 17 = 1700.", "درست! 100 × 17 = 1700"),
+     T("50 × 2 = 100, and 100 × 17 = 1700.", "50 × 2 = 100، اور 100 × 17 = 1700"),
+     common_wrong=[wrong(69, "Multiply, don't add: 100 × 17 = 1700.", "جمع نہیں، ضرب: 100 × 17 = 1700")],
+     qtype=None)},
+   {"id": "r_zero", "type": "apply", "skill": SKILL, "step": number_question(
+     "r_zero",
+     T("What is 3687 + 0?", "3687 + 0 کتنا ہے؟"),
+     R2,
+     T("Adding 0 changes nothing.", "0 جمع کرنے سے کچھ نہیں بدلتا۔"),
+     T("Right! 3687.", "درست! 3687"),
+     T("Any number + 0 = the same number.", "کوئی بھی عدد + 0 = وہی عدد"),
+     common_wrong=[wrong(0, "That is × 0. Adding 0 keeps the number: 3687.", "یہ × 0 ہے۔ 0 جمع کرنے سے عدد وہی رہتا ہے: 3687", "zero_one")],
+     qtype=None)},
+ ],
+ "teacher_notes": [
+   "Written fresh for the Whole Numbers unit. No textbook text or exercises were used.",
+   "The lesson uses the everyday names (order, grouping, breaking up) next to the book names (commutative, associative, distributive).",
+   "Urdu terms to check: خاصیت مبادلہ, خاصیت تلازم, خاصیت تقسیم.",
+   "The numbers were worked out in content/sources/g6-maths-15/properties.py; edit that script, not this file.",
+ ],
+ "review": REVIEW,
+}
+write(lesson)
