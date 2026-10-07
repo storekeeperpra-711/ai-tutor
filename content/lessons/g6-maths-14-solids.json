@@ -1,0 +1,750 @@
+{
+  "id": "g6-maths-14-solids",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Name cubes and cuboids and count their faces, edges and corners (vertices).",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Three-dimensional Solids"
+    }
+  ],
+  "skills": [
+    "maths.solids.faces_edges_vertices"
+  ],
+  "title": {
+    "en": "Cubes and cuboids",
+    "ur": "مکعب اور مکعب نما"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.measurement.area_rectangle"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "counts_visible_only",
+      "description": "Counts only the faces, edges or corners that can be seen from one side."
+    },
+    {
+      "id": "mixes_parts",
+      "description": "Mixes up faces, edges and corners."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.solids.faces_edges_vertices": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.solids.faces_edges_vertices": [
+      {
+        "id": "qb_corners",
+        "type": "recall",
+        "step": {
+          "id": "qb_corners",
+          "type": "number",
+          "prompt": {
+            "en": "How many corners (vertices) does a cube have?",
+            "ur": "مکعب کے کتنے کونے (راس) ہوتے ہیں؟"
+          },
+          "answer": 8,
+          "checker": "numeric",
+          "hint": {
+            "en": "4 on top and 4 on the bottom.",
+            "ur": "4 اوپر اور 4 نیچے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 8 corners.",
+            "ur": "درست! 8 کونے"
+          },
+          "feedback_wrong": {
+            "en": "4 on top + 4 on the bottom = 8.",
+            "ur": "4 اوپر + 4 نیچے = 8"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "There are 4 on top and 4 more on the bottom: 8.",
+                "ur": "4 اوپر ہیں اور 4 مزید نیچے: 8"
+              },
+              "misconception_id": "counts_visible_only"
+            },
+            {
+              "answer": 6,
+              "feedback": {
+                "en": "6 is the number of faces. A cube has 8 corners.",
+                "ur": "6 سطحوں کی تعداد ہے۔ مکعب کے 8 کونے ہیں۔"
+              },
+              "misconception_id": "mixes_parts"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A box of tea is a cuboid. How many edges does it have?",
+            "ur": "چائے کا ڈبہ مکعب نما ہے۔ اس کے کتنے کنارے ہیں؟"
+          },
+          "answer": 12,
+          "checker": "numeric",
+          "hint": {
+            "en": "4 round the top, 4 round the bottom, 4 standing up.",
+            "ur": "4 اوپر، 4 نیچے، 4 کھڑے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 12 edges.",
+            "ur": "درست! 12 کنارے"
+          },
+          "feedback_wrong": {
+            "en": "4 + 4 + 4 = 12.",
+            "ur": "4 + 4 + 4 = 12"
+          },
+          "common_wrong": [
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "8 is the number of corners. A cuboid has 12 edges.",
+                "ur": "8 کونوں کی تعداد ہے۔ مکعب نما کے 12 کنارے ہیں۔"
+              },
+              "misconception_id": "mixes_parts"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zain looks at a dice on the table and says, \"A cube has 3 faces.\" What is wrong?",
+            "ur": "زین میز پر رکھے پانسے کو دیکھ کر کہتا ہے، \"مکعب کی 3 سطحیں ہوتی ہیں۔\" کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "hidden",
+              "text": {
+                "en": "He counted only the faces he can see. A cube has 6 faces.",
+                "ur": "اس نے صرف وہ سطحیں گنیں جو نظر آتی ہیں۔ مکعب کی 6 سطحیں ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The bottom and the back faces are hidden.",
+                "ur": "جی ہاں! نیچے اور پیچھے کی سطحیں چھپی ہوئی ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Some faces are hidden from view. A dice has 6 faces, numbered 1 to 6.",
+                "ur": "کچھ سطحیں نظر سے چھپی ہیں۔ پانسے کی 6 سطحیں ہیں، 1 سے 6 تک۔"
+              },
+              "misconception_id": "counts_visible_only"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_cuboid",
+      "front": {
+        "en": "Cuboid: faces, edges, corners?",
+        "ur": "مکعب نما: سطحیں، کنارے، کونے؟"
+      },
+      "back": {
+        "en": "6 faces, 12 edges, 8 corners.",
+        "ur": "6 سطحیں، 12 کنارے، 8 کونے۔"
+      }
+    },
+    {
+      "id": "f_cube",
+      "front": {
+        "en": "What makes a cube special?",
+        "ur": "مکعب میں خاص کیا ہے؟"
+      },
+      "back": {
+        "en": "All 6 faces are equal squares.",
+        "ur": "اس کی تمام 6 سطحیں برابر مربع ہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_hunt",
+      "text": {
+        "en": "Find three cuboids at home, like a matchbox, a brick or a book. For one of them, touch and count its faces, edges and corners.",
+        "ur": "گھر میں تین مکعب نما چیزیں ڈھونڈیں، جیسے ماچس کی ڈبیا، اینٹ یا کتاب۔ ان میں سے ایک کی سطحیں، کنارے اور کونے چھو کر گنیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Cube",
+      "ur": "مکعب"
+    },
+    {
+      "en": "Cuboid",
+      "ur": "مکعب نما"
+    },
+    {
+      "en": "Face",
+      "ur": "سطح"
+    },
+    {
+      "en": "Edge",
+      "ur": "کنارہ"
+    },
+    {
+      "en": "Corner (vertex)",
+      "ur": "کونا (راس)"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A matchbox, a brick and a dice. What shape are they, and how many sides do they have?",
+          "ur": "ماچس کی ڈبیا، اینٹ اور پانسہ۔ ان کی شکل کیا ہے، اور ان کے کتنے رخ ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we look at solid shapes. First, a quick area check.",
+        "ur": "آج ہم ٹھوس اشکال دیکھیں گے۔ پہلے رقبے کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.area_rectangle",
+      "prompt": {
+        "en": "A rectangle is 6 cm long and 4 cm wide. What is its area, in cm²?",
+        "ur": "ایک مستطیل 6 سینٹی میٹر لمبا اور 4 سینٹی میٹر چوڑا ہے۔ اس کا رقبہ کتنے مربع سینٹی میٹر ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "Area = length × width.",
+        "ur": "رقبہ = لمبائی × چوڑائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 cm².",
+        "ur": "درست! 24 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "6 × 4 = 24.",
+        "ur": "6 × 4 = 24"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 cm is the perimeter. Area = 6 × 4 = 24.",
+            "ur": "20 سینٹی میٹر احاطہ ہے۔ رقبہ = 6 × 4 = 24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_parts",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Flat sides are faces. Where two faces meet is an edge. Where edges meet is a corner.",
+          "ur": "چپٹے رخ سطحیں ہیں۔ جہاں دو سطحیں ملیں وہ کنارہ ہے۔ جہاں کنارے ملیں وہ کونا ہے۔"
+        }
+      },
+      "text": {
+        "en": "A matchbox and a brick are cuboids: every face is a rectangle. A dice is a cube: every face is the same square. Both have 6 faces (top and bottom, front and back, left and right), 12 edges (4 round the top, 4 round the bottom, 4 standing up) and 8 corners, also called vertices (4 on top, 4 on the bottom).",
+        "ur": "ماچس کی ڈبیا اور اینٹ مکعب نما ہیں: ہر سطح مستطیل ہے۔ پانسہ مکعب ہے: ہر سطح ایک جیسا مربع ہے۔ دونوں کی 6 سطحیں (اوپر اور نیچے، آگے اور پیچھے، دائیں اور بائیں)، 12 کنارے (4 اوپر، 4 نیچے، 4 کھڑے) اور 8 کونے یعنی راس (4 اوپر، 4 نیچے) ہوتے ہیں۔"
+      }
+    },
+    {
+      "id": "s4_faces",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A matchbox is a cuboid. How many faces does it have?",
+        "ur": "ماچس کی ڈبیا مکعب نما ہے۔ اس کی کتنی سطحیں ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Top and bottom, front and back, left and right.",
+        "ur": "اوپر اور نیچے، آگے اور پیچھے، دائیں اور بائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 faces.",
+        "ur": "درست! 6 سطحیں"
+      },
+      "feedback_wrong": {
+        "en": "2 + 2 + 2 = 6.",
+        "ur": "2 + 2 + 2 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't forget the top and bottom: 6 faces.",
+            "ur": "اوپر اور نیچے نہ بھولیں: 6 سطحیں"
+          },
+          "misconception_id": "counts_visible_only"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Some faces are hidden. A cuboid has 6.",
+            "ur": "کچھ سطحیں چھپی ہیں۔ مکعب نما کی 6 ہیں۔"
+          },
+          "misconception_id": "counts_visible_only"
+        }
+      ]
+    },
+    {
+      "id": "s5_edges",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A dice is a cube. How many edges does it have?",
+        "ur": "پانسہ مکعب ہے۔ اس کے کتنے کنارے ہیں؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 round the top, 4 round the bottom, 4 standing up.",
+        "ur": "4 اوپر، 4 نیچے، 4 کھڑے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 edges.",
+        "ur": "درست! 12 کنارے"
+      },
+      "feedback_wrong": {
+        "en": "4 + 4 + 4 = 12.",
+        "ur": "4 + 4 + 4 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the number of corners. A cube has 12 edges.",
+            "ur": "8 کونوں کی تعداد ہے۔ مکعب کے 12 کنارے ہیں۔"
+          },
+          "misconception_id": "mixes_parts"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the number of faces. A cube has 12 edges.",
+            "ur": "6 سطحوں کی تعداد ہے۔ مکعب کے 12 کنارے ہیں۔"
+          },
+          "misconception_id": "mixes_parts"
+        }
+      ]
+    },
+    {
+      "id": "s6_face_shape",
+      "type": "choice",
+      "prompt": {
+        "en": "What shape is each face of a cube?",
+        "ur": "مکعب کی ہر سطح کس شکل کی ہوتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "square",
+          "text": {
+            "en": "A square",
+            "ur": "مربع"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! All 6 faces are equal squares.",
+            "ur": "جی ہاں! تمام 6 سطحیں برابر مربع ہیں۔"
+          }
+        },
+        {
+          "id": "rectangle",
+          "text": {
+            "en": "A long rectangle",
+            "ur": "لمبا مستطیل"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a cuboid like a brick. A cube has square faces.",
+            "ur": "یہ اینٹ جیسا مکعب نما ہے۔ مکعب کی سطحیں مربع ہیں۔"
+          }
+        },
+        {
+          "id": "triangle",
+          "text": {
+            "en": "A triangle",
+            "ur": "مثلث"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A cube has no triangles. Its faces are squares.",
+            "ur": "مکعب میں کوئی مثلث نہیں۔ اس کی سطحیں مربع ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_corners",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A brick is a cuboid. How many corners does it have?",
+        "ur": "اینٹ مکعب نما ہے۔ اس کے کتنے کونے ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 on top and 4 on the bottom.",
+        "ur": "4 اوپر اور 4 نیچے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 corners.",
+        "ur": "درست! 8 کونے"
+      },
+      "feedback_wrong": {
+        "en": "4 + 4 = 8.",
+        "ur": "4 + 4 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "There are 4 more on the bottom: 8.",
+            "ur": "4 مزید نیچے ہیں: 8"
+          },
+          "misconception_id": "counts_visible_only"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the number of edges. A brick has 8 corners.",
+            "ur": "12 کناروں کی تعداد ہے۔ اینٹ کے 8 کونے ہیں۔"
+          },
+          "misconception_id": "mixes_parts"
+        }
+      ]
+    },
+    {
+      "id": "s8_three_dice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal has 3 dice, lying apart on the table. How many faces are there on all 3 dice?",
+        "ur": "بلال کے پاس 3 پانسے ہیں جو میز پر الگ الگ پڑے ہیں۔ تینوں پانسوں کی کل کتنی سطحیں ہیں؟"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each dice has 6 faces.",
+        "ur": "ہر پانسے کی 6 سطحیں ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 6 = 18.",
+        "ur": "درست! 3 × 6 = 18"
+      },
+      "feedback_wrong": {
+        "en": "3 × 6 = 18.",
+        "ur": "3 × 6 = 18"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Count every face, even the hidden ones: 3 × 6 = 18.",
+            "ur": "ہر سطح گنیں، چھپی ہوئی بھی: 3 × 6 = 18"
+          },
+          "misconception_id": "counts_visible_only"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hina says, \"A cuboid has 4 faces: front, back, left and right.\" What did she miss?",
+        "ur": "حنا کہتی ہے، \"مکعب نما کی 4 سطحیں ہیں: آگے، پیچھے، دائیں اور بائیں۔\" وہ کیا بھول گئی؟"
+      },
+      "options": [
+        {
+          "id": "top_bottom",
+          "text": {
+            "en": "The top and the bottom. A cuboid has 6 faces.",
+            "ur": "اوپر اور نیچے۔ مکعب نما کی 6 سطحیں ہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Top and bottom are faces too.",
+            "ur": "جی ہاں! اوپر اور نیچے بھی سطحیں ہیں۔"
+          }
+        },
+        {
+          "id": "edges",
+          "text": {
+            "en": "She should count edges instead.",
+            "ur": "اسے کنارے گننے چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question is about faces. She missed the top and the bottom.",
+            "ur": "سوال سطحوں کا ہے۔ وہ اوپر اور نیچے بھول گئی۔"
+          },
+          "misconception_id": "mixes_parts"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Look above and below the box: 2 more faces, so 6.",
+            "ur": "ڈبے کے اوپر اور نیچے دیکھیں: 2 سطحیں مزید، تو 6"
+          },
+          "misconception_id": "counts_visible_only"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How can we be sure a cube has 12 edges without losing count? Can you teach me?",
+          "ur": "ہم گنتی بھولے بغیر کیسے یقین کریں کہ مکعب کے 12 کنارے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: explain a way to count the 12 edges of a cube.",
+        "ur": "اپنے الفاظ میں بتائیں: مکعب کے 12 کنارے گننے کا ایک طریقہ۔"
+      },
+      "key_idea": "Count the edges in groups: 4 edges go round the top face, 4 go round the bottom face, and 4 stand up joining top to bottom. 4 + 4 + 4 = 12.",
+      "levels": {
+        "got_it": "Counts in groups: 4 round the top, 4 round the bottom and 4 standing up, making 12.",
+        "partly": "Says 4 + 4 + 4 or 3 groups, without saying where the groups are.",
+        "not_yet": "Gives no method."
+      },
+      "keywords": [
+        [
+          "top",
+          "upper",
+          "اوپر"
+        ],
+        [
+          "bottom",
+          "lower",
+          "نیچے"
+        ],
+        [
+          "standing",
+          "up",
+          "side",
+          "کھڑے",
+          "درمیان"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 4 on top, 4 on the bottom, 4 standing up.",
+          "ur": "بہت خوب! 4 اوپر، 4 نیچے، 4 کھڑے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say where each group of 4 edges is.",
+          "ur": "اچھی شروعات! اب بتائیں 4 کناروں کا ہر گروپ کہاں ہے۔"
+        },
+        "not_yet": {
+          "en": "Look at the top face of a dice. How many edges go round it? Now the bottom?",
+          "ur": "پانسے کی اوپر والی سطح دیکھیں۔ اس کے گرد کتنے کنارے ہیں؟ اب نیچے والی؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_no_lid",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shoe box has its lid taken off. How many faces does the open box have now?",
+        "ur": "جوتوں کے ڈبے کا ڈھکن اتار دیا گیا۔ کھلے ڈبے کی اب کتنی سطحیں ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "A closed box has 6 faces. The lid was one of them.",
+        "ur": "بند ڈبے کی 6 سطحیں ہیں۔ ڈھکن ان میں سے ایک تھا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 − 1 = 5.",
+        "ur": "درست! 6 − 1 = 5"
+      },
+      "feedback_wrong": {
+        "en": "6 faces − the lid = 5.",
+        "ur": "6 سطحیں − ڈھکن = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "The lid is gone, so one face fewer: 5.",
+            "ur": "ڈھکن ہٹ گیا، تو ایک سطح کم: 5"
+          }
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Only the top is gone. The bottom is still there: 5.",
+            "ur": "صرف اوپر والی ہٹی ہے۔ نیچے والی موجود ہے: 5"
+          },
+          "misconception_id": "counts_visible_only"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Six faces, twelve edges, eight corners. You know your boxes!",
+          "ur": "چھ سطحیں، بارہ کنارے، آٹھ کونے۔ آپ ڈبوں کو جان گئے!"
+        }
+      },
+      "text": {
+        "en": "Cubes and cuboids both have 6 faces, 12 edges and 8 corners (vertices). A cuboid's faces are rectangles; a cube's faces are equal squares. Count hidden faces too.",
+        "ur": "مکعب اور مکعب نما دونوں کی 6 سطحیں، 12 کنارے اور 8 کونے (راس) ہوتے ہیں۔ مکعب نما کی سطحیں مستطیل ہیں؛ مکعب کی سطحیں برابر مربع ہیں۔ چھپی ہوئی سطحیں بھی گنیں۔"
+      },
+      "points": [
+        {
+          "en": "6 faces, 12 edges, 8 corners.",
+          "ur": "6 سطحیں، 12 کنارے، 8 کونے۔"
+        },
+        {
+          "en": "Cube: all faces are squares.",
+          "ur": "مکعب: تمام سطحیں مربع۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_edges",
+      "type": "apply",
+      "skill": "maths.solids.faces_edges_vertices",
+      "step": {
+        "id": "r_edges",
+        "type": "number",
+        "prompt": {
+          "en": "A book is a cuboid. How many edges does it have?",
+          "ur": "کتاب مکعب نما ہے۔ اس کے کتنے کنارے ہیں؟"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "4 + 4 + 4.",
+          "ur": "4 + 4 + 4"
+        },
+        "feedback_correct": {
+          "en": "Right! 12.",
+          "ur": "درست! 12"
+        },
+        "feedback_wrong": {
+          "en": "4 round the top, 4 round the bottom, 4 standing up: 12.",
+          "ur": "4 اوپر، 4 نیچے، 4 کھڑے: 12"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "8 is the number of corners. A cuboid has 12 edges.",
+              "ur": "8 کونوں کی تعداد ہے۔ مکعب نما کے 12 کنارے ہیں۔"
+            },
+            "misconception_id": "mixes_parts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_two_boxes",
+      "type": "apply",
+      "skill": "maths.solids.faces_edges_vertices",
+      "step": {
+        "id": "r_two_boxes",
+        "type": "number",
+        "prompt": {
+          "en": "How many faces are there on 2 separate matchboxes?",
+          "ur": "2 الگ ماچس کی ڈبیوں کی کل کتنی سطحیں ہیں؟"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "Each matchbox has 6 faces.",
+          "ur": "ہر ڈبیا کی 6 سطحیں ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 2 × 6 = 12.",
+          "ur": "درست! 2 × 6 = 12"
+        },
+        "feedback_wrong": {
+          "en": "2 × 6 = 12.",
+          "ur": "2 × 6 = 12"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "That is for one matchbox. Two have 12.",
+              "ur": "یہ ایک ڈبیا کی ہیں۔ دو کی 12 ہیں۔"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Solids unit. No textbook text or exercises were used.",
+    "There are no pictures yet, so solids are described with everyday objects children can hold: a matchbox, a brick, a dice.",
+    "Urdu terms to check: مکعب (cube), مکعب نما (cuboid), سطح (face), کنارہ (edge), راس (vertex).",
+    "The numbers were worked out in content/sources/g6-maths-14/solids.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
