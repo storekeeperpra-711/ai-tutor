@@ -1,0 +1,740 @@
+{
+  "id": "g6-maths-09-angles-in-a-triangle",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Use the fact that the angles of a triangle add up to 180° to find a missing angle, including in right-angled, equilateral and isosceles triangles.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Angles"
+    }
+  ],
+  "skills": [
+    "maths.geometry.triangle_angles"
+  ],
+  "title": {
+    "en": "Angles in a triangle",
+    "ur": "مثلث کے زاویے"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.geometry.angles_on_line"
+    },
+    {
+      "skill": "maths.geometry.angle_types"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "triangle_is_360",
+      "description": "Uses 360° as the total for a triangle."
+    },
+    {
+      "id": "forgets_right_angle",
+      "description": "Leaves the right angle (90°) out of the sum in a right-angled triangle."
+    },
+    {
+      "id": "isosceles_no_halve",
+      "description": "Finds 180° minus the top angle but forgets to share it between the two equal angles."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.geometry.triangle_angles": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.geometry.triangle_angles": [
+      {
+        "id": "qb_sum",
+        "type": "recall",
+        "step": {
+          "id": "qb_sum",
+          "type": "choice",
+          "prompt": {
+            "en": "The three angles inside any triangle add up to how many degrees?",
+            "ur": "کسی بھی مثلث کے تینوں اندرونی زاویوں کا مجموعہ کتنے درجے ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "half",
+              "text": {
+                "en": "180°",
+                "ur": "180°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Always 180°, whatever the triangle.",
+                "ur": "جی ہاں! ہمیشہ 180°، مثلث جیسا بھی ہو۔"
+              }
+            },
+            {
+              "id": "full",
+              "text": {
+                "en": "360°",
+                "ur": "360°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "360° is a full turn. A triangle's angles make 180°.",
+                "ur": "360° پورا چکر ہے۔ مثلث کے زاویے 180° بناتے ہیں۔"
+              },
+              "misconception_id": "triangle_is_360"
+            },
+            {
+              "id": "depends",
+              "text": {
+                "en": "It depends on the triangle.",
+                "ur": "مثلث پر منحصر ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "It is always 180°, for every triangle.",
+                "ur": "یہ ہر مثلث کے لیے ہمیشہ 180° ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A right-angled triangle has one angle of 28°. What is the third angle?",
+            "ur": "ایک قائمہ الزاویہ مثلث کا ایک زاویہ 28° ہے۔ تیسرا زاویہ کتنا ہے؟"
+          },
+          "answer": 62,
+          "checker": "numeric",
+          "hint": {
+            "en": "The right angle is 90°. Then 180 − 90 − 28.",
+            "ur": "قائمہ زاویہ 90° ہے۔ پھر 180 − 90 − 28"
+          },
+          "feedback_correct": {
+            "en": "Right! 62°.",
+            "ur": "درست! 62°"
+          },
+          "feedback_wrong": {
+            "en": "180 − 90 − 28 = 62°.",
+            "ur": "180 − 90 − 28 = 62°"
+          },
+          "common_wrong": [
+            {
+              "answer": 152,
+              "feedback": {
+                "en": "Don't forget the right angle: 180 − 90 − 28 = 62°.",
+                "ur": "قائمہ زاویہ نہ بھولیں: 180 − 90 − 28 = 62°"
+              },
+              "misconception_id": "forgets_right_angle"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A triangle has angles of 100° and 30°. Rabia says the third angle is 360 − 100 − 30 = 230°. What went wrong?",
+            "ur": "ایک مثلث کے دو زاویے 100° اور 30° ہیں۔ رابعہ کہتی ہے تیسرا زاویہ 360 − 100 − 30 = 230° ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "sum",
+              "text": {
+                "en": "A triangle's angles add up to 180°. 180 − 100 − 30 = 50°.",
+                "ur": "مثلث کے زاویوں کا مجموعہ 180° ہے۔ 180 − 100 − 30 = 50°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 360° is for angles around a point.",
+                "ur": "جی ہاں! 360° نقطے کے گرد زاویوں کے لیے ہے۔"
+              }
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "She should add: 100 + 30 = 130°.",
+                "ur": "اسے جمع کرنا چاہیے: 100 + 30 = 130°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Take the two angles from 180°: 50°.",
+                "ur": "دونوں زاویے 180° سے نفی کریں: 50°"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "230° can't fit inside a triangle! 180 − 100 − 30 = 50°.",
+                "ur": "230° مثلث کے اندر نہیں آ سکتا! 180 − 100 − 30 = 50°"
+              },
+              "misconception_id": "triangle_is_360"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_sum",
+      "front": {
+        "en": "Angles in a triangle add up to?",
+        "ur": "مثلث کے زاویوں کا مجموعہ؟"
+      },
+      "back": {
+        "en": "180°. If two are 50° and 60°, the third is 70°.",
+        "ur": "180°۔ اگر دو زاویے 50° اور 60° ہوں تو تیسرا 70°۔"
+      }
+    },
+    {
+      "id": "f_special",
+      "front": {
+        "en": "Equilateral and isosceles triangles?",
+        "ur": "متساوی الاضلاع اور متساوی الساقین مثلث؟"
+      },
+      "back": {
+        "en": "Equilateral: all three angles are 60°. Isosceles: two angles are equal.",
+        "ur": "متساوی الاضلاع: تینوں زاویے 60°۔ متساوی الساقین: دو زاویے برابر۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_tear",
+      "text": {
+        "en": "Draw any triangle on paper and cut it out. Tear off the three corners and put their points together side by side. They make a straight line, 180°! Try it with a different triangle.",
+        "ur": "کاغذ پر کوئی بھی مثلث بنا کر کاٹیں۔ تینوں کونے پھاڑ کر ان کی نوکیں ساتھ ساتھ ملائیں۔ یہ سیدھی لکیر، 180°، بناتے ہیں! کسی اور مثلث کے ساتھ بھی آزمائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Triangle",
+      "ur": "مثلث"
+    },
+    {
+      "en": "Right-angled triangle",
+      "ur": "قائمہ الزاویہ مثلث"
+    },
+    {
+      "en": "Equilateral triangle",
+      "ur": "متساوی الاضلاع مثلث"
+    },
+    {
+      "en": "Isosceles triangle",
+      "ur": "متساوی الساقین مثلث"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Tear the three corners off a paper triangle and put them side by side. They make a straight line! Every time!",
+          "ur": "کاغذ کے مثلث کے تینوں کونے پھاڑ کر ساتھ ساتھ رکھیں۔ یہ سیدھی لکیر بناتے ہیں! ہر بار!"
+        }
+      },
+      "text": {
+        "en": "Today we find missing angles inside triangles. First, a quick check.",
+        "ur": "آج ہم مثلث کے اندر نامعلوم زاویے نکالیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.geometry.angles_on_line",
+      "prompt": {
+        "en": "Three angles sit on a straight line: 50°, 60° and a missing one. What is the missing angle?",
+        "ur": "سیدھی لکیر پر تین زاویے ہیں: 50°، 60° اور ایک نامعلوم۔ نامعلوم زاویہ کتنا ہے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "A straight line is 180°.",
+        "ur": "سیدھی لکیر 180° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 70°.",
+        "ur": "درست! 70°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 50 − 60 = 70°.",
+        "ur": "180 − 50 − 60 = 70°"
+      },
+      "common_wrong": [
+        {
+          "answer": 250,
+          "feedback": {
+            "en": "Use 180° for a line: 70°.",
+            "ur": "لکیر کے لیے 180° لیں: 70°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "The three corners make a straight line, so a triangle's angles add up to 180°!",
+          "ur": "تینوں کونے سیدھی لکیر بناتے ہیں، اس لیے مثلث کے زاویوں کا مجموعہ 180° ہے!"
+        }
+      },
+      "text": {
+        "en": "The three angles inside any triangle add up to 180°. To find a missing angle, take the other two away from 180°. In a right-angled triangle one angle is 90°. In an equilateral triangle all three angles are equal. In an isosceles triangle two angles are equal.",
+        "ur": "کسی بھی مثلث کے تینوں اندرونی زاویوں کا مجموعہ 180° ہے۔ نامعلوم زاویے کے لیے باقی دو کو 180° سے نفی کریں۔ قائمہ الزاویہ مثلث میں ایک زاویہ 90° ہوتا ہے۔ متساوی الاضلاع مثلث میں تینوں زاویے برابر ہوتے ہیں۔ متساوی الساقین مثلث میں دو زاویے برابر ہوتے ہیں۔"
+      }
+    },
+    {
+      "id": "s4_third",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has angles of 50° and 60°. What is the third angle?",
+        "ur": "ایک مثلث کے دو زاویے 50° اور 60° ہیں۔ تیسرا زاویہ کتنا ہے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "180 − 50 − 60.",
+        "ur": "180 − 50 − 60"
+      },
+      "feedback_correct": {
+        "en": "Right! 70°. Same as the line: the corners make a straight line!",
+        "ur": "درست! 70°۔ لکیر والا ہی جواب: کونے سیدھی لکیر بناتے ہیں!"
+      },
+      "feedback_wrong": {
+        "en": "50 + 60 = 110, and 180 − 110 = 70°.",
+        "ur": "50 + 60 = 110، اور 180 − 110 = 70°"
+      },
+      "common_wrong": [
+        {
+          "answer": 250,
+          "feedback": {
+            "en": "That used 360°. A triangle is 180°: 70°.",
+            "ur": "اس میں 360° لیا۔ مثلث 180° ہے: 70°"
+          },
+          "misconception_id": "triangle_is_360"
+        },
+        {
+          "answer": 110,
+          "feedback": {
+            "en": "110 is the two angles added. Take it from 180: 70°.",
+            "ur": "110 دونوں زاویوں کا مجموعہ ہے۔ 180 سے نفی کریں: 70°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_right",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A right-angled triangle has one angle of 35°. What is the third angle?",
+        "ur": "ایک قائمہ الزاویہ مثلث کا ایک زاویہ 35° ہے۔ تیسرا زاویہ کتنا ہے؟"
+      },
+      "answer": 55,
+      "checker": "numeric",
+      "hint": {
+        "en": "One angle is the right angle, 90°.",
+        "ur": "ایک زاویہ قائمہ، 90°، ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 55°.",
+        "ur": "درست! 55°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 90 − 35 = 55°.",
+        "ur": "180 − 90 − 35 = 55°"
+      },
+      "common_wrong": [
+        {
+          "answer": 145,
+          "feedback": {
+            "en": "Don't forget the right angle: 180 − 90 − 35 = 55°.",
+            "ur": "قائمہ زاویہ نہ بھولیں: 180 − 90 − 35 = 55°"
+          },
+          "misconception_id": "forgets_right_angle"
+        }
+      ]
+    },
+    {
+      "id": "s6_equilateral",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "All three angles of an equilateral triangle are equal. How big is each one?",
+        "ur": "متساوی الاضلاع مثلث کے تینوں زاویے برابر ہیں۔ ہر ایک کتنا بڑا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Share 180° between three.",
+        "ur": "180° کو تین میں بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60° each.",
+        "ur": "درست! ہر ایک 60°"
+      },
+      "feedback_wrong": {
+        "en": "180 ÷ 3 = 60°.",
+        "ur": "180 ÷ 3 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "That used 360°. A triangle is 180°: 180 ÷ 3 = 60°.",
+            "ur": "اس میں 360° لیا۔ مثلث 180° ہے: 180 ÷ 3 = 60°"
+          },
+          "misconception_id": "triangle_is_360"
+        }
+      ]
+    },
+    {
+      "id": "s7_isosceles",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "An isosceles triangle has a top angle of 40°. The other two angles are equal. How big is each of them?",
+        "ur": "ایک متساوی الساقین مثلث کا اوپر والا زاویہ 40° ہے۔ باقی دو زاویے برابر ہیں۔ ہر ایک کتنا ہے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "180 − 40 = 140. Share it between the two equal angles.",
+        "ur": "180 − 40 = 140۔ اسے دونوں برابر زاویوں میں بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 70° each. Check: 70 + 70 + 40 = 180.",
+        "ur": "درست! ہر ایک 70°۔ جانچ: 70 + 70 + 40 = 180"
+      },
+      "feedback_wrong": {
+        "en": "180 − 40 = 140, and 140 ÷ 2 = 70°.",
+        "ur": "180 − 40 = 140، اور 140 ÷ 2 = 70°"
+      },
+      "common_wrong": [
+        {
+          "answer": 140,
+          "feedback": {
+            "en": "That is both equal angles together. Each is 140 ÷ 2 = 70°.",
+            "ur": "یہ دونوں برابر زاویے مل کر ہیں۔ ہر ایک 140 ÷ 2 = 70°"
+          },
+          "misconception_id": "isosceles_no_halve"
+        }
+      ]
+    },
+    {
+      "id": "s8_two_right",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Can a triangle have two right angles?",
+        "ur": "کیا ایک مثلث میں دو قائمہ زاویے ہو سکتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "no",
+          "text": {
+            "en": "No. 90 + 90 = 180, leaving 0° for the third angle.",
+            "ur": "نہیں۔ 90 + 90 = 180، تیسرے زاویے کے لیے 0° بچتا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A triangle needs three real angles, so two right angles is impossible.",
+            "ur": "جی ہاں! مثلث کو تین اصل زاویے چاہییں، اس لیے دو قائمہ زاویے ناممکن ہیں۔"
+          }
+        },
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes, if it is big enough.",
+            "ur": "ہاں، اگر وہ کافی بڑا ہو۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Size doesn't change the angles. 90 + 90 = 180 already, so nothing is left.",
+            "ur": "سائز سے زاویے نہیں بدلتے۔ 90 + 90 = 180 پہلے ہی، کچھ نہیں بچتا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A triangle has angles of 65° and 45°. Faisal says the third angle is 360 − 65 − 45 = 250°. What went wrong?",
+        "ur": "ایک مثلث کے دو زاویے 65° اور 45° ہیں۔ فیصل کہتا ہے تیسرا زاویہ 360 − 65 − 45 = 250° ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "sum",
+          "text": {
+            "en": "A triangle's angles add up to 180°. 180 − 65 − 45 = 70°.",
+            "ur": "مثلث کے زاویوں کا مجموعہ 180° ہے۔ 180 − 65 − 45 = 70°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! An angle inside a triangle is always less than 180°.",
+            "ur": "جی ہاں! مثلث کا اندرونی زاویہ ہمیشہ 180° سے کم ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "He should add: 65 + 45 = 110°.",
+            "ur": "اسے جمع کرنا چاہیے: 65 + 45 = 110°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Take the two angles from 180°: 70°.",
+            "ur": "دونوں زاویے 180° سے نفی کریں: 70°"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "250° can't fit inside a triangle. 180 − 65 − 45 = 70°.",
+            "ur": "250° مثلث کے اندر نہیں آ سکتا۔ 180 − 65 − 45 = 70°"
+          },
+          "misconception_id": "triangle_is_360"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can a triangle have two obtuse angles? Why or why not? Can you teach me?",
+          "ur": "کیا ایک مثلث میں دو منفرجہ زاویے ہو سکتے ہیں؟ کیوں یا کیوں نہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why can't a triangle have two obtuse angles?",
+        "ur": "اپنے الفاظ میں بتائیں: ایک مثلث میں دو منفرجہ زاویے کیوں نہیں ہو سکتے؟"
+      },
+      "key_idea": "Each obtuse angle is more than 90°, so two of them add up to more than 180°. But all three angles of a triangle add up to exactly 180°, so there would be nothing left for the third angle.",
+      "levels": {
+        "got_it": "Says two obtuse angles are more than 180° together, but the triangle's angles must add up to 180°.",
+        "partly": "Mentions 180° or that obtuse angles are big, without putting the two together.",
+        "not_yet": "Says yes, or gives no reason."
+      },
+      "keywords": [
+        [
+          "180",
+          "straight",
+          "سیدھی"
+        ],
+        [
+          "90",
+          "more",
+          "bigger",
+          "obtuse",
+          "زیادہ",
+          "منفرجہ"
+        ],
+        [
+          "nothing",
+          "left",
+          "third",
+          "کچھ نہیں",
+          "تیسرا",
+          "باقی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Two obtuse angles already pass 180°, so there is no room for a third.",
+          "ur": "بہت خوب! دو منفرجہ زاویے پہلے ہی 180° سے آگے ہیں، تیسرے کی جگہ نہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now add two angles bigger than 90°. Is that more or less than 180°?",
+          "ur": "اچھی شروعات! اب 90° سے بڑے دو زاویے جمع کریں۔ کیا یہ 180° سے زیادہ ہے یا کم؟"
+        },
+        "not_yet": {
+          "en": "Obtuse angles are more than 90°. What do two of them make together? What must a triangle's angles add up to?",
+          "ur": "منفرجہ زاویے 90° سے زیادہ ہوتے ہیں۔ دو مل کر کتنے بنتے ہیں؟ مثلث کے زاویوں کا مجموعہ کتنا ہونا چاہیے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_top",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "An isosceles triangle has two equal angles of 65° each. What is the third angle?",
+        "ur": "ایک متساوی الساقین مثلث کے دو برابر زاویے 65° کے ہیں۔ تیسرا زاویہ کتنا ہے؟"
+      },
+      "answer": 50,
+      "checker": "numeric",
+      "hint": {
+        "en": "Both 65° angles count: 180 − 65 − 65.",
+        "ur": "دونوں 65° زاویے شمار کریں: 180 − 65 − 65"
+      },
+      "feedback_correct": {
+        "en": "Right! 50°.",
+        "ur": "درست! 50°"
+      },
+      "feedback_wrong": {
+        "en": "65 + 65 = 130, and 180 − 130 = 50°.",
+        "ur": "65 + 65 = 130، اور 180 − 130 = 50°"
+      },
+      "common_wrong": [
+        {
+          "answer": 115,
+          "feedback": {
+            "en": "There are two 65° angles. 180 − 65 − 65 = 50°.",
+            "ur": "65° کے دو زاویے ہیں۔ 180 − 65 − 65 = 50°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Triangle angles mastered! They always make 180°.",
+          "ur": "مثلث کے زاویے آ گئے! یہ ہمیشہ 180° بناتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "The angles inside a triangle add up to 180°. A right-angled triangle has one 90° angle. An equilateral triangle has three 60° angles. An isosceles triangle has two equal angles: take the third from 180° and halve what is left.",
+        "ur": "مثلث کے اندرونی زاویوں کا مجموعہ 180° ہے۔ قائمہ الزاویہ مثلث میں ایک زاویہ 90° ہے۔ متساوی الاضلاع مثلث میں تینوں زاویے 60° ہیں۔ متساوی الساقین مثلث میں دو زاویے برابر ہیں: تیسرا 180° سے نفی کریں اور باقی کا آدھا کریں۔"
+      },
+      "points": [
+        {
+          "en": "Triangle: 180°.",
+          "ur": "مثلث: 180°۔"
+        },
+        {
+          "en": "Equilateral: 60°, 60°, 60°.",
+          "ur": "متساوی الاضلاع: 60°، 60°، 60°۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_third",
+      "type": "apply",
+      "skill": "maths.geometry.triangle_angles",
+      "step": {
+        "id": "r_third",
+        "type": "number",
+        "prompt": {
+          "en": "A triangle has angles of 100° and 30°. What is the third angle?",
+          "ur": "ایک مثلث کے دو زاویے 100° اور 30° ہیں۔ تیسرا زاویہ کتنا ہے؟"
+        },
+        "answer": 50,
+        "checker": "numeric",
+        "hint": {
+          "en": "180 − 100 − 30.",
+          "ur": "180 − 100 − 30"
+        },
+        "feedback_correct": {
+          "en": "Right! 50°.",
+          "ur": "درست! 50°"
+        },
+        "feedback_wrong": {
+          "en": "180 − 130 = 50°.",
+          "ur": "180 − 130 = 50°"
+        },
+        "common_wrong": [
+          {
+            "answer": 230,
+            "feedback": {
+              "en": "Use 180° for a triangle: 50°.",
+              "ur": "مثلث کے لیے 180° لیں: 50°"
+            },
+            "misconception_id": "triangle_is_360"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_iso",
+      "type": "apply",
+      "skill": "maths.geometry.triangle_angles",
+      "step": {
+        "id": "r_iso",
+        "type": "number",
+        "prompt": {
+          "en": "An isosceles triangle has a top angle of 80°. How big is each of the two equal angles?",
+          "ur": "ایک متساوی الساقین مثلث کا اوپر والا زاویہ 80° ہے۔ دونوں برابر زاویوں میں سے ہر ایک کتنا ہے؟"
+        },
+        "answer": 50,
+        "checker": "numeric",
+        "hint": {
+          "en": "180 − 80, then halve.",
+          "ur": "180 − 80، پھر آدھا"
+        },
+        "feedback_correct": {
+          "en": "Right! 50° each.",
+          "ur": "درست! ہر ایک 50°"
+        },
+        "feedback_wrong": {
+          "en": "180 − 80 = 100, and 100 ÷ 2 = 50°.",
+          "ur": "180 − 80 = 100، اور 100 ÷ 2 = 50°"
+        },
+        "common_wrong": [
+          {
+            "answer": 100,
+            "feedback": {
+              "en": "Share it between the two angles: 100 ÷ 2 = 50°.",
+              "ur": "اسے دونوں زاویوں میں بانٹیں: 100 ÷ 2 = 50°"
+            },
+            "misconception_id": "isosceles_no_halve"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Angles unit. No textbook text or exercises were used.",
+    "Tearing the corners off a paper triangle (s1 and the home task) shows the 180° rule instead of just stating it. s2 and s4 use the same numbers on purpose, so children see the link with angles on a line.",
+    "Urdu terms to check: قائمہ الزاویہ مثلث (right-angled triangle), متساوی الاضلاع (equilateral), متساوی الساقین (isosceles).",
+    "The numbers were worked out in content/sources/g6-maths-09/triangle_angles.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

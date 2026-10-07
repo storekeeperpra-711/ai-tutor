@@ -17,7 +17,8 @@ Future<void> playLesson(
   required bool urdu,
 }) async {
   await tapKey(tester, 'open-previewer');
-  // The list is longer than the screen: scroll the lesson into view.
+  // The list is longer than the screen: scroll the lesson into view. Urdu
+  // titles make tiles taller, so allow plenty of scrolls for a long list.
   final tile = find.byKey(Key('lesson-${lesson.id}'));
   for (var i = 0; i < 100 && find.byType(ListTile).evaluate().isEmpty; i++) {
     await tester.runAsync(
@@ -25,7 +26,7 @@ Future<void> playLesson(
     );
     await tester.pump();
   }
-  await tester.scrollUntilVisible(tile, 200);
+  await tester.scrollUntilVisible(tile, 200, maxScrolls: 500);
   await tapKey(tester, 'lesson-${lesson.id}');
 
   for (final step in lesson.steps) {
