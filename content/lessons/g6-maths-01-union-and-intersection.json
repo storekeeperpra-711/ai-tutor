@@ -1,0 +1,770 @@
+{
+  "id": "g6-maths-01-union-and-intersection",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the union and intersection of two sets, recognise disjoint sets, and count their elements.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Sets"
+    }
+  ],
+  "skills": [
+    "maths.sets.union_intersection"
+  ],
+  "title": {
+    "en": "Union and intersection",
+    "ur": "اجتماع اور تقاطع"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.subsets"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "double_count",
+      "description": "Counts the shared elements twice in a union."
+    },
+    {
+      "id": "union_intersection_swap",
+      "description": "Mixes up union (in either set) and intersection (in both sets)."
+    },
+    {
+      "id": "disjoint_not_empty",
+      "description": "Thinks two sets with nothing in common still share some element."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.union_intersection": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.union_intersection": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "What is A ∩ B?",
+            "ur": "A ∩ B کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "both",
+              "text": {
+                "en": "The elements that are in both A and B",
+                "ur": "وہ رکن جو A اور B دونوں میں ہیں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! ∩ is the intersection: what they share.",
+                "ur": "جی ہاں! ∩ تقاطع ہے: جو دونوں میں مشترک ہے۔"
+              }
+            },
+            {
+              "id": "either",
+              "text": {
+                "en": "All the elements in A or B",
+                "ur": "A یا B کے تمام رکن"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the union, A ∪ B. ∩ means in both.",
+                "ur": "یہ اجتماع A ∪ B ہے۔ ∩ کا مطلب دونوں میں۔"
+              },
+              "misconception_id": "union_intersection_swap"
+            },
+            {
+              "id": "only_a",
+              "text": {
+                "en": "The elements only in A",
+                "ur": "صرف A کے رکن"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "∩ means in both A and B.",
+                "ur": "∩ کا مطلب A اور B دونوں میں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "How many elements are in {1, 3, 5} ∪ {1, 2, 3}?",
+            "ur": "{1, 3, 5} ∪ {1, 2, 3} میں کتنے رکن ہیں؟"
+          },
+          "answer": 4,
+          "checker": "numeric",
+          "hint": {
+            "en": "Write every element once: {1, 2, 3, 5}.",
+            "ur": "ہر رکن ایک بار لکھیں: {1, 2, 3, 5}"
+          },
+          "feedback_correct": {
+            "en": "Right! {1, 2, 3, 5} has 4.",
+            "ur": "درست! {1, 2, 3, 5} کے 4 رکن ہیں۔"
+          },
+          "feedback_wrong": {
+            "en": "{1, 2, 3, 5}: 4 elements. 1 and 3 are written once.",
+            "ur": "{1, 2, 3, 5}: چار رکن۔ 1 اور 3 ایک بار لکھے جاتے ہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 6,
+              "feedback": {
+                "en": "1 and 3 are in both sets, so count them once: 4.",
+                "ur": "1 اور 3 دونوں سیٹوں میں ہیں، انہیں ایک بار گنیں: 4"
+              },
+              "misconception_id": "double_count"
+            },
+            {
+              "answer": 2,
+              "feedback": {
+                "en": "That is the intersection. The union has every element: 4.",
+                "ur": "یہ تقاطع ہے۔ اجتماع میں ہر رکن ہوتا ہے: 4"
+              },
+              "misconception_id": "union_intersection_swap"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Nida says {2, 4} ∩ {1, 3} = {1, 2, 3, 4}. What is wrong?",
+            "ur": "ندا کہتی ہے {2, 4} ∩ {1, 3} = {1, 2, 3, 4}۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "empty",
+              "text": {
+                "en": "She found the union. They share nothing, so the intersection is { }.",
+                "ur": "اس نے اجتماع نکالا۔ ان میں کچھ مشترک نہیں، تو تقاطع { } ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! These sets are disjoint.",
+                "ur": "جی ہاں! یہ سیٹ جدا جدا ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "∩ means in both. No number is in both sets: { }.",
+                "ur": "∩ کا مطلب دونوں میں۔ کوئی عدد دونوں میں نہیں: { }"
+              },
+              "misconception_id": "union_intersection_swap"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_union",
+      "front": {
+        "en": "A ∪ B (union)?",
+        "ur": "A ∪ B (اجتماع)؟"
+      },
+      "back": {
+        "en": "Everything in A or B, each written once.",
+        "ur": "A یا B میں سب کچھ، ہر رکن ایک بار۔"
+      }
+    },
+    {
+      "id": "f_inter",
+      "front": {
+        "en": "A ∩ B (intersection)?",
+        "ur": "A ∩ B (تقاطع)؟"
+      },
+      "back": {
+        "en": "Only what is in both. If nothing, the sets are disjoint.",
+        "ur": "صرف جو دونوں میں ہو۔ کچھ نہ ہو تو سیٹ جدا جدا ہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_friends",
+      "text": {
+        "en": "Write the set of foods you like and ask a friend or sibling for theirs. Find the union (foods either of you likes) and the intersection (foods you both like).",
+        "ur": "اپنی پسندیدہ کھانوں کا سیٹ لکھیں اور کسی دوست یا بہن بھائی سے ان کا سیٹ پوچھیں۔ اجتماع (جو کسی ایک کو پسند ہوں) اور تقاطع (جو دونوں کو پسند ہوں) نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Union ∪",
+      "ur": "اجتماع ∪"
+    },
+    {
+      "en": "Intersection ∩",
+      "ur": "تقاطع ∩"
+    },
+    {
+      "en": "Disjoint sets",
+      "ur": "جدا جدا سیٹ"
+    },
+    {
+      "en": "Common",
+      "ur": "مشترک"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali's team and Sara's team share two players. If both teams come to the match, how many players are there?",
+          "ur": "علی کی ٹیم اور سارہ کی ٹیم کے دو کھلاڑی مشترک ہیں۔ اگر دونوں ٹیمیں میچ پر آئیں تو کتنے کھلاڑی ہوں گے؟"
+        }
+      },
+      "text": {
+        "en": "Today we join sets together and find what they share. First, a quick check.",
+        "ur": "آج ہم سیٹوں کو ملائیں گے اور دیکھیں گے ان میں کیا مشترک ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.sets.subsets",
+      "prompt": {
+        "en": "How many subsets does {x} have?",
+        "ur": "{x} کے کتنے ذیلی سیٹ ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Don't forget the empty set.",
+        "ur": "خالی سیٹ کو نہ بھولیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! { } and {x}.",
+        "ur": "درست! { } اور {x}"
+      },
+      "feedback_wrong": {
+        "en": "{ } and {x}: 2 subsets.",
+        "ur": "{ } اور {x}: دو ذیلی سیٹ"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "The empty set counts too: { } and {x}, 2.",
+            "ur": "خالی سیٹ بھی گنا جاتا ہے: { } اور {x}، دو"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_union",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Union joins everything together. Intersection keeps only what is shared!",
+          "ur": "اجتماع سب کچھ ملا دیتا ہے۔ تقاطع صرف مشترک رکھتا ہے!"
+        }
+      },
+      "text": {
+        "en": "The union A ∪ B has every element that is in A or B (or both), each written once. The intersection A ∩ B has only the elements in both. For A = {1, 2, 3, 4} and B = {3, 4, 5, 6}: A ∪ B = {1, 2, 3, 4, 5, 6} and A ∩ B = {3, 4}. If two sets share nothing, their intersection is { } and they are called disjoint.",
+        "ur": "اجتماع A ∪ B میں ہر وہ رکن ہے جو A یا B (یا دونوں) میں ہو، ہر ایک ایک بار۔ تقاطع A ∩ B میں صرف وہ رکن ہیں جو دونوں میں ہوں۔ A = {1, 2, 3, 4} اور B = {3, 4, 5, 6} کے لیے: A ∪ B = {1, 2, 3, 4, 5, 6} اور A ∩ B = {3, 4}۔ اگر دو سیٹوں میں کچھ مشترک نہ ہو تو ان کا تقاطع { } ہے اور وہ جدا جدا سیٹ کہلاتے ہیں۔"
+      }
+    },
+    {
+      "id": "s4_union",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A = {1, 2, 3, 4}, B = {3, 4, 5, 6}. How many elements are in A ∪ B?",
+        "ur": "A = {1, 2, 3, 4}، B = {3, 4, 5, 6}۔ A ∪ B میں کتنے رکن ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 and 4 are in both sets. Write them once.",
+        "ur": "3 اور 4 دونوں سیٹوں میں ہیں۔ انہیں ایک بار لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {1, 2, 3, 4, 5, 6} has 6.",
+        "ur": "درست! {1, 2, 3, 4, 5, 6} کے 6 رکن ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "A ∪ B = {1, 2, 3, 4, 5, 6}: 6 elements.",
+        "ur": "A ∪ B = {1, 2, 3, 4, 5, 6}: چھ رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "4 + 4 counts 3 and 4 twice. Write them once: 6.",
+            "ur": "4 + 4 میں 3 اور 4 دو بار گنے گئے۔ انہیں ایک بار لکھیں: 6"
+          },
+          "misconception_id": "double_count"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That is the intersection. The union has everything: 6.",
+            "ur": "یہ تقاطع ہے۔ اجتماع میں سب کچھ ہے: 6"
+          },
+          "misconception_id": "union_intersection_swap"
+        }
+      ]
+    },
+    {
+      "id": "s5_intersection",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A = {1, 2, 3, 4}, B = {3, 4, 5, 6}. How many elements are in A ∩ B?",
+        "ur": "A = {1, 2, 3, 4}، B = {3, 4, 5, 6}۔ A ∩ B میں کتنے رکن ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which numbers are in both sets?",
+        "ur": "کون سے اعداد دونوں سیٹوں میں ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! {3, 4}: 2.",
+        "ur": "درست! {3, 4}: دو"
+      },
+      "feedback_wrong": {
+        "en": "A ∩ B = {3, 4}: 2 elements.",
+        "ur": "A ∩ B = {3, 4}: دو رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That is the union. Only 3 and 4 are in both: 2.",
+            "ur": "یہ اجتماع ہے۔ صرف 3 اور 4 دونوں میں ہیں: 2"
+          },
+          "misconception_id": "union_intersection_swap"
+        }
+      ]
+    },
+    {
+      "id": "s6_letters",
+      "type": "choice",
+      "prompt": {
+        "en": "P = {a, b, c} and Q = {c, d}. What is P ∩ Q?",
+        "ur": "P = {a, b, c} اور Q = {c, d}۔ P ∩ Q کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "c",
+          "text": {
+            "en": "{c}",
+            "ur": "{c}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only c is in both.",
+            "ur": "جی ہاں! صرف c دونوں میں ہے۔"
+          }
+        },
+        {
+          "id": "all",
+          "text": {
+            "en": "{a, b, c, d}",
+            "ur": "{a, b, c, d}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is P ∪ Q. ∩ keeps only what is in both: {c}.",
+            "ur": "یہ P ∪ Q ہے۔ ∩ صرف دونوں میں موجود رکھتا ہے: {c}"
+          },
+          "misconception_id": "union_intersection_swap"
+        },
+        {
+          "id": "abd",
+          "text": {
+            "en": "{a, b, d}",
+            "ur": "{a, b, d}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These are the ones not shared. The shared one is c: {c}.",
+            "ur": "یہ وہ ہیں جو مشترک نہیں۔ مشترک c ہے: {c}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_factors",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A is the set of factors of 12 and B is the set of factors of 18. How many elements are in A ∩ B?",
+        "ur": "A، 12 کے اجزائے ضربی کا سیٹ ہے اور B، 18 کے اجزائے ضربی کا سیٹ۔ A ∩ B میں کتنے رکن ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "A = {1, 2, 3, 4, 6, 12}, B = {1, 2, 3, 6, 9, 18}. Which are in both?",
+        "ur": "A = {1, 2, 3, 4, 6, 12}، B = {1, 2, 3, 6, 9, 18}۔ کون سے دونوں میں ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! {1, 2, 3, 6}: the common factors. The biggest, 6, is the HCF.",
+        "ur": "درست! {1, 2, 3, 6}: مشترک اجزائے ضربی۔ سب سے بڑا، 6، عاد اعظم ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "A ∩ B = {1, 2, 3, 6}: 4 elements.",
+        "ur": "A ∩ B = {1, 2, 3, 6}: چار رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the highest common factor. The common factors are {1, 2, 3, 6}: 4.",
+            "ur": "6 عاد اعظم ہے۔ مشترک اجزائے ضربی {1, 2, 3, 6} ہیں: 4"
+          }
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "Count only the factors in both sets: {1, 2, 3, 6}, 4.",
+            "ur": "صرف دونوں سیٹوں والے اجزائے ضربی گنیں: {1, 2, 3, 6}، چار"
+          },
+          "misconception_id": "double_count"
+        }
+      ]
+    },
+    {
+      "id": "s8_disjoint",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "X = {2, 4, 6} and Y = {1, 3, 5}. How many elements are in X ∩ Y?",
+        "ur": "X = {2, 4, 6} اور Y = {1, 3, 5}۔ X ∩ Y میں کتنے رکن ہیں؟"
+      },
+      "answer": 0,
+      "checker": "numeric",
+      "hint": {
+        "en": "Is any number in both sets?",
+        "ur": "کیا کوئی عدد دونوں سیٹوں میں ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! None: X and Y are disjoint.",
+        "ur": "درست! کوئی نہیں: X اور Y جدا جدا ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "No number is both even and odd: X ∩ Y = { }, 0 elements.",
+        "ur": "کوئی عدد جفت اور طاق دونوں نہیں: X ∩ Y = { }، صفر رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That is the union. No number is in both: 0.",
+            "ur": "یہ اجتماع ہے۔ کوئی عدد دونوں میں نہیں: 0"
+          },
+          "misconception_id": "union_intersection_swap"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "Not even one number is in both sets: 0.",
+            "ur": "ایک عدد بھی دونوں سیٹوں میں نہیں: 0"
+          },
+          "misconception_id": "disjoint_not_empty"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal writes {1, 2} ∪ {2, 3} = {1, 2, 2, 3}. What went wrong?",
+        "ur": "بلال لکھتا ہے {1, 2} ∪ {2, 3} = {1, 2, 2, 3}۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "once",
+          "text": {
+            "en": "2 is written twice. The union is {1, 2, 3}.",
+            "ur": "2 دو بار لکھا ہے۔ اجتماع {1, 2, 3} ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each element is written once, even in a union.",
+            "ur": "جی ہاں! اجتماع میں بھی ہر رکن ایک بار لکھا جاتا ہے۔"
+          }
+        },
+        {
+          "id": "two",
+          "text": {
+            "en": "The union is {2}.",
+            "ur": "اجتماع {2} ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{2} is the intersection. The union is {1, 2, 3}.",
+            "ur": "{2} تقاطع ہے۔ اجتماع {1, 2, 3} ہے۔"
+          },
+          "misconception_id": "union_intersection_swap"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 appears twice. In a set it is written once: {1, 2, 3}.",
+            "ur": "2 دو بار ہے۔ سیٹ میں یہ ایک بار لکھا جاتا ہے: {1, 2, 3}"
+          },
+          "misconception_id": "double_count"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A has 4 elements and B has 4, but A ∪ B has only 6. Where did the other 2 go? Can you teach me?",
+          "ur": "A کے 4 رکن ہیں اور B کے 4، لیکن A ∪ B کے صرف 6۔ باقی 2 کہاں گئے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is n(A ∪ B) sometimes less than n(A) + n(B)?",
+        "ur": "اپنے الفاظ میں بتائیں: n(A ∪ B) کبھی کبھی n(A) + n(B) سے کم کیوں ہوتا ہے؟"
+      },
+      "key_idea": "Elements in both sets (the intersection) would be counted twice by adding, but in the union each is written only once. So n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+      "levels": {
+        "got_it": "Says the shared elements (in both sets) would be counted twice, but the union lists them once.",
+        "partly": "Mentions shared elements or writing once, without linking it to the count.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "both",
+          "shared",
+          "common",
+          "intersection",
+          "دونوں",
+          "مشترک",
+          "تقاطع"
+        ],
+        [
+          "twice",
+          "two times",
+          "double",
+          "دو بار"
+        ],
+        [
+          "once",
+          "one time",
+          "ایک بار"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Shared elements are only counted once in the union.",
+          "ur": "بہت خوب! مشترک رکن اجتماع میں صرف ایک بار گنے جاتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what happens to the shared elements when you add 4 + 4.",
+          "ur": "اچھی شروعات! اب بتائیں 4 + 4 جمع کرنے پر مشترک رکنوں کا کیا ہوتا ہے۔"
+        },
+        "not_yet": {
+          "en": "3 and 4 are in A and also in B. How many times are they counted in 4 + 4? How many times in A ∪ B?",
+          "ur": "3 اور 4، A میں بھی ہیں اور B میں بھی۔ 4 + 4 میں یہ کتنی بار گنے گئے؟ A ∪ B میں کتنی بار؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_evens_threes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "E is the set of even numbers less than 10, and M is the set of multiples of 3 less than 10. How many elements are in E ∪ M?",
+        "ur": "E، 10 سے چھوٹے جفت اعداد کا سیٹ ہے، اور M، 10 سے چھوٹے 3 کے اضعاف کا سیٹ۔ E ∪ M میں کتنے رکن ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "E = {2, 4, 6, 8}, M = {3, 6, 9}. 6 is in both.",
+        "ur": "E = {2, 4, 6, 8}، M = {3, 6, 9}۔ 6 دونوں میں ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {2, 3, 4, 6, 8, 9} has 6.",
+        "ur": "درست! {2, 3, 4, 6, 8, 9} کے 6 رکن ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "E ∪ M = {2, 3, 4, 6, 8, 9}: 6 elements.",
+        "ur": "E ∪ M = {2, 3, 4, 6, 8, 9}: چھ رکن"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "6 is in both sets; write it once: 6 elements.",
+            "ur": "6 دونوں سیٹوں میں ہے؛ اسے ایک بار لکھیں: چھ رکن"
+          },
+          "misconception_id": "double_count"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "That is E ∩ M = {6}. The union has 6 elements.",
+            "ur": "یہ E ∩ M = {6} ہے۔ اجتماع کے 6 رکن ہیں۔"
+          },
+          "misconception_id": "union_intersection_swap"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can join sets and find what they share!",
+          "ur": "اب آپ سیٹ ملا سکتے ہیں اور مشترک ڈھونڈ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Union A ∪ B: everything in A or B, each element once. Intersection A ∩ B: only what is in both. Disjoint sets share nothing, so their intersection is { }. Counting: n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+        "ur": "اجتماع A ∪ B: A یا B میں سب کچھ، ہر رکن ایک بار۔ تقاطع A ∩ B: صرف جو دونوں میں ہو۔ جدا جدا سیٹوں میں کچھ مشترک نہیں، تو ان کا تقاطع { } ہے۔ گنتی: n(A ∪ B) = n(A) + n(B) − n(A ∩ B)"
+      },
+      "points": [
+        {
+          "en": "∪: in either. ∩: in both.",
+          "ur": "∪: کسی ایک میں۔ ∩: دونوں میں۔"
+        },
+        {
+          "en": "Shared elements are written once.",
+          "ur": "مشترک رکن ایک بار لکھے جاتے ہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_union",
+      "type": "apply",
+      "skill": "maths.sets.union_intersection",
+      "step": {
+        "id": "r_union",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in {a, b, c} ∪ {c, d}?",
+          "ur": "{a, b, c} ∪ {c, d} میں کتنے رکن ہیں؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "c is in both; write it once.",
+          "ur": "c دونوں میں ہے؛ اسے ایک بار لکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! {a, b, c, d}: 4.",
+          "ur": "درست! {a, b, c, d}: چار"
+        },
+        "feedback_wrong": {
+          "en": "{a, b, c, d}: 4 elements.",
+          "ur": "{a, b, c, d}: چار رکن"
+        },
+        "common_wrong": [
+          {
+            "answer": 5,
+            "feedback": {
+              "en": "c is counted twice. Write it once: 4.",
+              "ur": "c دو بار گنا گیا۔ اسے ایک بار لکھیں: 4"
+            },
+            "misconception_id": "double_count"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_inter",
+      "type": "apply",
+      "skill": "maths.sets.union_intersection",
+      "step": {
+        "id": "r_inter",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in {5, 10, 15} ∩ {10, 20}?",
+          "ur": "{5, 10, 15} ∩ {10, 20} میں کتنے رکن ہیں؟"
+        },
+        "answer": 1,
+        "checker": "numeric",
+        "hint": {
+          "en": "Which number is in both?",
+          "ur": "کون سا عدد دونوں میں ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! {10}: 1.",
+          "ur": "درست! {10}: ایک"
+        },
+        "feedback_wrong": {
+          "en": "Only 10 is in both: 1 element.",
+          "ur": "صرف 10 دونوں میں ہے: ایک رکن"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That is the union. Only 10 is in both: 1.",
+              "ur": "یہ اجتماع ہے۔ صرف 10 دونوں میں ہے: 1"
+            },
+            "misconception_id": "union_intersection_swap"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Sets unit. No textbook text or exercises were used.",
+    "Step 7 links the intersection to common factors and the HCF from the Factors unit.",
+    "Urdu terms to check: اجتماع (union), تقاطع (intersection), جدا جدا سیٹ (disjoint sets), عاد اعظم (HCF).",
+    "The numbers were worked out in content/sources/g6-maths-01/union_intersection.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
