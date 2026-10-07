@@ -1,0 +1,771 @@
+{
+  "id": "g6-maths-10-median",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the median of a set of numbers by putting them in order and taking the middle value, or halfway between the two middle values when there is an even count.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management"
+    }
+  ],
+  "skills": [
+    "maths.data.median"
+  ],
+  "title": {
+    "en": "Median",
+    "ur": "وسطانیہ"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.data.mean"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "forgets_to_sort",
+      "description": "Does not put the numbers in order before looking for the middle."
+    },
+    {
+      "id": "unsorted_middle",
+      "description": "Takes the middle number of the list as it is written, which is not the median unless the list is in order."
+    },
+    {
+      "id": "picks_one_middle",
+      "description": "For an even count, gives one of the two middle values instead of the number halfway between them."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.median": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.median": [
+      {
+        "id": "qb_first",
+        "type": "recall",
+        "step": {
+          "id": "qb_first",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the first thing to do when finding the median?",
+            "ur": "وسطانیہ نکالتے وقت سب سے پہلے کیا کرتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "sort",
+              "text": {
+                "en": "Put the numbers in order",
+                "ur": "اعداد کو ترتیب میں لکھیں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Order first, then find the middle.",
+                "ur": "جی ہاں! پہلے ترتیب، پھر درمیان۔"
+              }
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "Add all the numbers",
+                "ur": "سب اعداد جمع کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Adding is for the mean. For the median, put them in order first.",
+                "ur": "جمع کرنا اوسط کے لیے ہے۔ وسطانیہ کے لیے پہلے ترتیب دیں۔"
+              }
+            },
+            {
+              "id": "middle",
+              "text": {
+                "en": "Pick the middle number as written",
+                "ur": "لکھے ہوئے اعداد میں سے درمیانی چنیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only after putting them in order! Sort first.",
+                "ur": "صرف ترتیب دینے کے بعد! پہلے ترتیب دیں۔"
+              },
+              "misconception_id": "forgets_to_sort"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Find the median of 15, 3, 11, 7, 9.",
+            "ur": "15، 3، 11، 7، 9 کا وسطانیہ معلوم کریں۔"
+          },
+          "answer": 9,
+          "checker": "numeric",
+          "hint": {
+            "en": "Put them in order first.",
+            "ur": "پہلے ترتیب دیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 9.",
+            "ur": "درست! 9"
+          },
+          "feedback_wrong": {
+            "en": "In order: 3, 7, 9, 11, 15. The middle one is 9.",
+            "ur": "ترتیب میں: 3، 7، 9، 11، 15۔ درمیانی عدد 9 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 11,
+              "feedback": {
+                "en": "11 is the middle of the list as written. In order: 3, 7, 9, 11, 15, so the median is 9.",
+                "ur": "11 لکھی ہوئی فہرست کا درمیانی عدد ہے۔ ترتیب میں: 3، 7، 9، 11، 15، تو وسطانیہ 9 ہے۔"
+              },
+              "misconception_id": "unsorted_middle"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Ali says the median of 8, 2, 6 is 2, because 2 is in the middle. What went wrong?",
+            "ur": "علی کہتا ہے 8، 2، 6 کا وسطانیہ 2 ہے، کیونکہ 2 درمیان میں ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "sort",
+              "text": {
+                "en": "He didn't sort first. In order: 2, 6, 8, so the median is 6.",
+                "ur": "اس نے پہلے ترتیب نہیں دی۔ ترتیب میں: 2، 6، 8، تو وسطانیہ 6 ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 2 is the smallest, so it can't be the middle.",
+                "ur": "جی ہاں! 2 سب سے چھوٹا ہے، یہ درمیانی نہیں ہو سکتا۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "2 is the smallest number! Sort first: 2, 6, 8. The median is 6.",
+                "ur": "2 تو سب سے چھوٹا عدد ہے! پہلے ترتیب: 2، 6، 8۔ وسطانیہ 6 ہے۔"
+              },
+              "misconception_id": "unsorted_middle"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_median",
+      "front": {
+        "en": "Median?",
+        "ur": "وسطانیہ؟"
+      },
+      "back": {
+        "en": "Put the numbers in order. The middle one is the median. 8, 3, 6 → 3, 6, 8 → 6.",
+        "ur": "اعداد کو ترتیب دیں۔ درمیانی عدد وسطانیہ ہے۔ 8، 3، 6 ← 3، 6، 8 ← 6"
+      }
+    },
+    {
+      "id": "f_even",
+      "front": {
+        "en": "Median of an even count?",
+        "ur": "جفت تعداد کا وسطانیہ؟"
+      },
+      "back": {
+        "en": "Halfway between the two middle numbers: add them and halve. 3, 5, 9, 11 → (5 + 9) ÷ 2 = 7.",
+        "ur": "دونوں درمیانی اعداد کے بیچ کا عدد: جمع کر کے آدھا کریں۔ 3، 5، 9، 11 ← (5 + 9) ÷ 2 = 7"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_line_up",
+      "text": {
+        "en": "Ask five people at home their ages. Write the ages on slips of paper and line them up from youngest to oldest. Which age is in the middle? That is the median age!",
+        "ur": "گھر کے پانچ افراد سے ان کی عمریں پوچھیں۔ عمریں کاغذ کی پرچیوں پر لکھ کر سب سے چھوٹی سے سب سے بڑی تک قطار بنائیں۔ درمیان میں کون سی عمر ہے؟ یہی وسطانیہ عمر ہے!"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Median",
+      "ur": "وسطانیہ"
+    },
+    {
+      "en": "In order",
+      "ur": "ترتیب میں"
+    },
+    {
+      "en": "Middle value",
+      "ur": "درمیانی قیمت"
+    },
+    {
+      "en": "Halfway",
+      "ur": "آدھے راستے پر / بیچ میں"
+    },
+    {
+      "en": "Average (mean)",
+      "ur": "اوسط"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Three children stand in a line by height. Who is in the middle? Easy, if they stand in order!",
+          "ur": "تین بچے قد کے حساب سے قطار میں کھڑے ہیں۔ درمیان میں کون ہے؟ آسان ہے، اگر وہ ترتیب سے کھڑے ہوں!"
+        }
+      },
+      "text": {
+        "en": "Today we find the median: the middle value. First, a quick check on the mean.",
+        "ur": "آج ہم وسطانیہ نکالیں گے: درمیانی قیمت۔ پہلے اوسط پر ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.data.mean",
+      "prompt": {
+        "en": "Find the mean of 3, 5 and 10.",
+        "ur": "3، 5 اور 10 کی اوسط معلوم کریں۔"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total, then divide by 3.",
+        "ur": "کل، پھر 3 سے تقسیم"
+      },
+      "feedback_correct": {
+        "en": "Right! 6.",
+        "ur": "درست! 6"
+      },
+      "feedback_wrong": {
+        "en": "3 + 5 + 10 = 18, and 18 ÷ 3 = 6.",
+        "ur": "3 + 5 + 10 = 18، اور 18 ÷ 3 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "18 is the total. Divide by 3: 6.",
+            "ur": "18 کل ہے۔ 3 سے تقسیم کریں: 6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_median",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Order first, then find the middle. That's the whole secret!",
+          "ur": "پہلے ترتیب، پھر درمیان۔ بس یہی راز ہے!"
+        }
+      },
+      "text": {
+        "en": "To find the median: 1) put the numbers in order, smallest to largest; 2) the middle number is the median. For 7, 2, 9: in order 2, 7, 9, so the median is 7. If there is an even count, there are two middle numbers. The median is halfway between them: add them and halve. For 3, 5, 9, 11: (5 + 9) ÷ 2 = 7.",
+        "ur": "وسطانیہ نکالنے کے لیے: 1) اعداد کو چھوٹے سے بڑے کی ترتیب میں لکھیں؛ 2) درمیانی عدد وسطانیہ ہے۔ 7، 2، 9 کے لیے: ترتیب میں 2، 7، 9، تو وسطانیہ 7 ہے۔ اگر اعداد کی تعداد جفت ہو تو دو درمیانی اعداد ہوتے ہیں۔ وسطانیہ ان کے بالکل بیچ میں ہوتا ہے: انہیں جمع کر کے آدھا کریں۔ 3، 5، 9، 11 کے لیے: (5 + 9) ÷ 2 = 7۔"
+      }
+    },
+    {
+      "id": "s4_three",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the median of 8, 3, 6.",
+        "ur": "8، 3، 6 کا وسطانیہ معلوم کریں۔"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Put them in order first.",
+        "ur": "پہلے ترتیب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! In order: 3, 6, 8. The middle is 6.",
+        "ur": "درست! ترتیب میں: 3، 6، 8۔ درمیانی 6 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "In order: 3, 6, 8. The middle one is 6.",
+        "ur": "ترتیب میں: 3، 6، 8۔ درمیانی عدد 6 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is in the middle of the list as written, but it is the smallest. In order: 3, 6, 8, so 6.",
+            "ur": "3 لکھی ہوئی فہرست کے درمیان ہے، لیکن یہ سب سے چھوٹا ہے۔ ترتیب میں: 3، 6، 8، تو 6۔"
+          },
+          "misconception_id": "unsorted_middle"
+        }
+      ]
+    },
+    {
+      "id": "s5_marks",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hamza's quiz marks out of 10 are 6, 9, 4, 8, 5. What is his median mark?",
+        "ur": "حمزہ کے 10 میں سے کوئز نمبر 6، 9، 4، 8، 5 ہیں۔ اس کے نمبروں کا وسطانیہ کیا ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Order all five, then take the third.",
+        "ur": "پانچوں کو ترتیب دیں، پھر تیسرا لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6.",
+        "ur": "درست! 6"
+      },
+      "feedback_wrong": {
+        "en": "In order: 4, 5, 6, 8, 9. The middle one is 6.",
+        "ur": "ترتیب میں: 4، 5، 6، 8، 9۔ درمیانی عدد 6 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is the middle of the list as written. Sort first: 4, 5, 6, 8, 9. The median is 6.",
+            "ur": "4 لکھی ہوئی فہرست کا درمیانی عدد ہے۔ پہلے ترتیب: 4، 5، 6، 8، 9۔ وسطانیہ 6 ہے۔"
+          },
+          "misconception_id": "unsorted_middle"
+        }
+      ]
+    },
+    {
+      "id": "s6_even",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the median of 12, 4, 10, 6.",
+        "ur": "12، 4، 10، 6 کا وسطانیہ معلوم کریں۔"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "In order: 4, 6, 10, 12. Two numbers are in the middle. Add them and halve.",
+        "ur": "ترتیب میں: 4، 6، 10، 12۔ درمیان میں دو اعداد ہیں۔ انہیں جمع کر کے آدھا کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (6 + 10) ÷ 2 = 8.",
+        "ur": "درست! (6 + 10) ÷ 2 = 8"
+      },
+      "feedback_wrong": {
+        "en": "In order: 4, 6, 10, 12. Halfway between 6 and 10 is (6 + 10) ÷ 2 = 8.",
+        "ur": "ترتیب میں: 4، 6، 10، 12۔ 6 اور 10 کے بیچ میں (6 + 10) ÷ 2 = 8 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is one of the two middle numbers. The median is halfway between 6 and 10: 8.",
+            "ur": "6 دو درمیانی اعداد میں سے ایک ہے۔ وسطانیہ 6 اور 10 کے بیچ میں ہے: 8"
+          },
+          "misconception_id": "picks_one_middle"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is one of the two middle numbers. The median is halfway between 6 and 10: 8.",
+            "ur": "10 دو درمیانی اعداد میں سے ایک ہے۔ وسطانیہ 6 اور 10 کے بیچ میں ہے: 8"
+          },
+          "misconception_id": "picks_one_middle"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "You used 4 and 10, the middle of the list as written. Sort first: 4, 6, 10, 12. The median is 8.",
+            "ur": "آپ نے 4 اور 10 لیے، جو لکھی ہوئی فہرست کے درمیان ہیں۔ پہلے ترتیب: 4، 6، 10، 12۔ وسطانیہ 8 ہے۔"
+          },
+          "misconception_id": "forgets_to_sort"
+        }
+      ]
+    },
+    {
+      "id": "s7_ages",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The ages of seven cousins are 11, 13, 12, 11, 14, 12, 13. What is the median age?",
+        "ur": "سات کزنز کی عمریں 11، 13، 12، 11، 14، 12، 13 ہیں۔ وسطانیہ عمر کیا ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write all seven in order, keeping repeats. The 4th one is the middle.",
+        "ur": "ساتوں کو ترتیب میں لکھیں، دہرائے ہوئے بھی۔ چوتھا درمیانی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12.",
+        "ur": "درست! 12"
+      },
+      "feedback_wrong": {
+        "en": "In order: 11, 11, 12, 12, 13, 13, 14. The 4th one is 12.",
+        "ur": "ترتیب میں: 11، 11، 12، 12، 13، 13، 14۔ چوتھا عدد 12 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "11 is the 4th number as written. Sort first: 11, 11, 12, 12, 13, 13, 14. The median is 12.",
+            "ur": "11 لکھی ہوئی فہرست میں چوتھا ہے۔ پہلے ترتیب: 11، 11، 12، 12، 13، 13، 14۔ وسطانیہ 12 ہے۔"
+          },
+          "misconception_id": "unsorted_middle"
+        }
+      ]
+    },
+    {
+      "id": "s8_big_value",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Five friends have saved 10, 20, 15, 25, 130 rupees. Their mean is 40 rupees, because one friend saved a lot. What is the median?",
+        "ur": "پانچ دوستوں نے 10، 20، 15، 25، 130 روپے بچائے ہیں۔ ان کی اوسط 40 روپے ہے، کیونکہ ایک دوست نے بہت زیادہ بچائے۔ وسطانیہ کیا ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Order them: 10, 15, 20, 25, 130.",
+        "ur": "ترتیب دیں: 10، 15، 20، 25، 130"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 rupees. The big 130 pulls the mean up to 40, but the median stays at 20, closer to what most friends saved.",
+        "ur": "درست! 20 روپے۔ بڑا 130 اوسط کو 40 تک کھینچ لیتا ہے، لیکن وسطانیہ 20 رہتا ہے، جو زیادہ تر دوستوں کی بچت کے قریب ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "In order: 10, 15, 20, 25, 130. The middle one is 20.",
+        "ur": "ترتیب میں: 10، 15، 20، 25، 130۔ درمیانی عدد 20 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "40 is the mean. The median is the middle value in order: 20.",
+            "ur": "40 اوسط ہے۔ وسطانیہ ترتیب میں درمیانی قیمت ہے: 20"
+          }
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15 is the middle of the list as written. In order: 10, 15, 20, 25, 130, so 20.",
+            "ur": "15 لکھی ہوئی فہرست کا درمیانی عدد ہے۔ ترتیب میں: 10، 15، 20، 25، 130، تو 20۔"
+          },
+          "misconception_id": "unsorted_middle"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hina finds the median of 3, 5, 9, 11. She says it is 5. What went wrong?",
+        "ur": "حنا 3، 5، 9، 11 کا وسطانیہ نکالتی ہے۔ وہ کہتی ہے یہ 5 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "halfway",
+          "text": {
+            "en": "There are two middle numbers, 5 and 9. The median is halfway: (5 + 9) ÷ 2 = 7.",
+            "ur": "دو درمیانی اعداد ہیں، 5 اور 9۔ وسطانیہ بیچ میں ہے: (5 + 9) ÷ 2 = 7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! With an even count, take halfway between the two middle numbers.",
+            "ur": "جی ہاں! جفت تعداد میں دونوں درمیانی اعداد کا بیچ لیں۔"
+          }
+        },
+        {
+          "id": "sort",
+          "text": {
+            "en": "She forgot to put them in order.",
+            "ur": "وہ ترتیب دینا بھول گئی۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "They are already in order. The mistake is taking only 5: the median is (5 + 9) ÷ 2 = 7.",
+            "ur": "یہ پہلے ہی ترتیب میں ہیں۔ غلطی صرف 5 لینا ہے: وسطانیہ (5 + 9) ÷ 2 = 7 ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 is only one of the two middle numbers. Halfway between 5 and 9 is 7.",
+            "ur": "5 دو درمیانی اعداد میں سے صرف ایک ہے۔ 5 اور 9 کے بیچ میں 7 ہے۔"
+          },
+          "misconception_id": "picks_one_middle"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why must we put the numbers in order before finding the median? Can you teach me?",
+          "ur": "وسطانیہ نکالنے سے پہلے اعداد کو ترتیب کیوں دینا ضروری ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do we sort the numbers before we pick the middle one?",
+        "ur": "اپنے الفاظ میں بتائیں: درمیانی عدد چننے سے پہلے ہم اعداد کو ترتیب کیوں دیتے ہیں؟"
+      },
+      "key_idea": "The median is the value with as many numbers below it as above it. Only when the numbers are in order does the middle position hold that value; in a jumbled list the middle position can hold the smallest or largest number.",
+      "levels": {
+        "got_it": "Says the median has half the values below and half above, and only sorting puts that value in the middle position.",
+        "partly": "Says sorting is needed, or that the median is the middle, without linking them.",
+        "not_yet": "Gives no reason, or just repeats the rule."
+      },
+      "keywords": [
+        [
+          "order",
+          "sort",
+          "smallest",
+          "ترتیب",
+          "چھوٹ"
+        ],
+        [
+          "middle",
+          "half",
+          "درمیان",
+          "آدھ",
+          "بیچ"
+        ],
+        [
+          "below",
+          "above",
+          "bigger",
+          "smaller",
+          "اوپر",
+          "نیچے",
+          "بڑ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Only in order is the middle place the true middle value.",
+          "ur": "بہت خوب! صرف ترتیب میں ہی درمیانی جگہ پر اصل درمیانی قیمت ہوتی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what goes wrong in the middle place if the list is jumbled.",
+          "ur": "اچھی شروعات! اب بتائیں اگر فہرست بے ترتیب ہو تو درمیانی جگہ پر کیا غلط ہوتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Think of 8, 3, 6. The 3 is in the middle place, but is it the middle value?",
+          "ur": "8، 3، 6 کو سوچیں۔ 3 درمیانی جگہ پر ہے، لیکن کیا یہ درمیانی قیمت ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_six",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Runs scored by six batters: 8, 14, 6, 20, 10, 16. What is the median?",
+        "ur": "چھ بلے بازوں کے رنز: 8، 14، 6، 20، 10، 16۔ وسطانیہ کیا ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Sort all six, then find halfway between the 3rd and 4th.",
+        "ur": "چھ کو ترتیب دیں، پھر تیسرے اور چوتھے کا بیچ نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (10 + 14) ÷ 2 = 12.",
+        "ur": "درست! (10 + 14) ÷ 2 = 12"
+      },
+      "feedback_wrong": {
+        "en": "In order: 6, 8, 10, 14, 16, 20. Halfway between 10 and 14 is 12.",
+        "ur": "ترتیب میں: 6، 8، 10، 14، 16، 20۔ 10 اور 14 کے بیچ میں 12 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is one of the two middle numbers. Halfway between 10 and 14 is 12.",
+            "ur": "10 دو درمیانی اعداد میں سے ایک ہے۔ 10 اور 14 کے بیچ میں 12 ہے۔"
+          },
+          "misconception_id": "picks_one_middle"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "14 is one of the two middle numbers. Halfway between 10 and 14 is 12.",
+            "ur": "14 دو درمیانی اعداد میں سے ایک ہے۔ 10 اور 14 کے بیچ میں 12 ہے۔"
+          },
+          "misconception_id": "picks_one_middle"
+        },
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "You used 6 and 20, the middle of the list as written. Sort first: the median is 12.",
+            "ur": "آپ نے 6 اور 20 لیے، جو لکھی ہوئی فہرست کے درمیان ہیں۔ پہلے ترتیب دیں: وسطانیہ 12 ہے۔"
+          },
+          "misconception_id": "forgets_to_sort"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can find the median now!",
+          "ur": "اب آپ وسطانیہ نکال سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Median = the middle value once the numbers are in order. With an even count, it is halfway between the two middle numbers: add them and halve. One very large value can pull the mean up a lot, but the median hardly moves.",
+        "ur": "وسطانیہ = اعداد کو ترتیب دینے کے بعد درمیانی قیمت۔ جفت تعداد ہو تو یہ دونوں درمیانی اعداد کے بیچ میں ہے: جمع کر کے آدھا کریں۔ ایک بہت بڑا عدد اوسط کو بہت اوپر لے جا سکتا ہے، لیکن وسطانیہ مشکل سے ہلتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Sort first, then take the middle.",
+          "ur": "پہلے ترتیب، پھر درمیانی۔"
+        },
+        {
+          "en": "Even count: add the two middle numbers and halve.",
+          "ur": "جفت تعداد: دونوں درمیانی اعداد جمع کر کے آدھا کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_median4",
+      "type": "apply",
+      "skill": "maths.data.median",
+      "step": {
+        "id": "r_median4",
+        "type": "number",
+        "prompt": {
+          "en": "Find the median of 21, 17, 25, 19.",
+          "ur": "21، 17، 25، 19 کا وسطانیہ معلوم کریں۔"
+        },
+        "answer": 20,
+        "checker": "numeric",
+        "hint": {
+          "en": "Sort, then halfway between the two middle numbers.",
+          "ur": "ترتیب دیں، پھر دونوں درمیانی اعداد کا بیچ۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 20.",
+          "ur": "درست! 20"
+        },
+        "feedback_wrong": {
+          "en": "In order: 17, 19, 21, 25. (19 + 21) ÷ 2 = 20.",
+          "ur": "ترتیب میں: 17، 19، 21، 25۔ (19 + 21) ÷ 2 = 20"
+        },
+        "common_wrong": [
+          {
+            "answer": 19,
+            "feedback": {
+              "en": "19 is one of the two middle numbers. Halfway between 19 and 21 is 20.",
+              "ur": "19 دو درمیانی اعداد میں سے ایک ہے۔ 19 اور 21 کے بیچ میں 20 ہے۔"
+            },
+            "misconception_id": "picks_one_middle"
+          },
+          {
+            "answer": 21,
+            "feedback": {
+              "en": "21 is one of the two middle numbers. Halfway between 19 and 21 is 20.",
+              "ur": "21 دو درمیانی اعداد میں سے ایک ہے۔ 19 اور 21 کے بیچ میں 20 ہے۔"
+            },
+            "misconception_id": "picks_one_middle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_median5",
+      "type": "apply",
+      "skill": "maths.data.median",
+      "step": {
+        "id": "r_median5",
+        "type": "number",
+        "prompt": {
+          "en": "Find the median of 40, 50, 10, 30, 20.",
+          "ur": "40، 50، 10، 30، 20 کا وسطانیہ معلوم کریں۔"
+        },
+        "answer": 30,
+        "checker": "numeric",
+        "hint": {
+          "en": "Put them in order first.",
+          "ur": "پہلے ترتیب دیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 30.",
+          "ur": "درست! 30"
+        },
+        "feedback_wrong": {
+          "en": "In order: 10, 20, 30, 40, 50. The middle one is 30.",
+          "ur": "ترتیب میں: 10، 20، 30، 40، 50۔ درمیانی عدد 30 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 10,
+            "feedback": {
+              "en": "10 is the middle of the list as written. Sort first: the median is 30.",
+              "ur": "10 لکھی ہوئی فہرست کا درمیانی عدد ہے۔ پہلے ترتیب دیں: وسطانیہ 30 ہے۔"
+            },
+            "misconception_id": "unsorted_middle"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Data Management sub-domain. No textbook text or exercises were used.",
+    "Most lists are deliberately not in order, so the middle of the list as written is a different (wrong) number; this catches children who skip sorting. Every median is a whole number: even-count lists were chosen so the two middle values add to an even number.",
+    "Step s8 compares mean and median once: one very large saving pulls the mean up to 40 while the median stays at 20.",
+    "Urdu terms to check: وسطانیہ (median), اوسط (mean), ترتیب (order), جفت (even). Please confirm these match the PCTB book.",
+    "The numbers were worked out in content/sources/g6-maths-10/median.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
