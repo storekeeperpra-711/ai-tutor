@@ -1,0 +1,765 @@
+{
+  "id": "g6-maths-16-equations-with-brackets",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve linear equations with brackets, like 3(x + 2) = 21, by dividing first or by multiplying out the brackets.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Linear Equations"
+    }
+  ],
+  "skills": [
+    "maths.equations.brackets"
+  ],
+  "title": {
+    "en": "Equations with brackets",
+    "ur": "قوسین والی مساوات"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.equations.two_step"
+    },
+    {
+      "skill": "maths.whole.properties"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "stops_at_bracket",
+      "description": "Finds the value of the bracket (like x + 2 = 7) and gives that as x."
+    },
+    {
+      "id": "partial_expand",
+      "description": "Multiplies only the first term: 3(x + 5) becomes 3x + 5."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Undoes − 3 by subtracting 3 again, or ÷ by dividing."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.brackets": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.brackets": [
+      {
+        "id": "qb_first",
+        "type": "recall",
+        "step": {
+          "id": "qb_first",
+          "type": "choice",
+          "prompt": {
+            "en": "To solve 4(x + 3) = 20, a good first step is …",
+            "ur": "4(x + 3) = 20 حل کرنے کا اچھا پہلا قدم ہے …"
+          },
+          "options": [
+            {
+              "id": "divide",
+              "text": {
+                "en": "divide both sides by 4",
+                "ur": "دونوں طرف کو 4 سے تقسیم"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! x + 3 = 5, so x = 2.",
+                "ur": "جی ہاں! x + 3 = 5، تو x = 2"
+              }
+            },
+            {
+              "id": "subtract3",
+              "text": {
+                "en": "subtract 3 from both sides",
+                "ur": "دونوں طرف سے 3 تفریق"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The 3 is inside the bracket, multiplied by 4. Divide by 4 first.",
+                "ur": "3 قوسین کے اندر ہے، 4 سے ضرب ہے۔ پہلے 4 سے تقسیم کریں۔"
+              }
+            },
+            {
+              "id": "subtract4",
+              "text": {
+                "en": "subtract 4 from both sides",
+                "ur": "دونوں طرف سے 4 تفریق"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The 4 multiplies the bracket, so undo it by dividing.",
+                "ur": "4 قوسین کو ضرب دیتا ہے، تو اسے تقسیم سے ختم کریں۔"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Solve 7(a + 1) = 42. What is a?",
+            "ur": "7(a + 1) = 42 حل کریں۔ a کیا ہے؟"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "Divide by 7, then subtract 1.",
+            "ur": "7 سے تقسیم کریں، پھر 1 تفریق۔"
+          },
+          "feedback_correct": {
+            "en": "Right! a = 5.",
+            "ur": "درست! a = 5"
+          },
+          "feedback_wrong": {
+            "en": "42 ÷ 7 = 6, so a + 1 = 6, a = 5.",
+            "ur": "42 ÷ 7 = 6، تو a + 1 = 6، a = 5"
+          },
+          "common_wrong": [
+            {
+              "answer": 6,
+              "feedback": {
+                "en": "That is a + 1. Subtract 1: a = 5.",
+                "ur": "یہ a + 1 ہے۔ 1 تفریق کریں: a = 5"
+              },
+              "misconception_id": "stops_at_bracket"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Kamran multiplies out 2(x + 4) = 14 as 2x + 4 = 14. What is wrong?",
+            "ur": "کامران 2(x + 4) = 14 کو 2x + 4 = 14 لکھتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "both",
+              "text": {
+                "en": "Multiply both terms: 2x + 8 = 14, so x = 3.",
+                "ur": "دونوں حصوں کو ضرب دیں: 2x + 8 = 14، تو x = 3"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The 2 multiplies the 4 too.",
+                "ur": "جی ہاں! 2 چار کو بھی ضرب دیتا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The 2 multiplies everything in the bracket: 2x + 8 = 14.",
+                "ur": "2 قوسین کی ہر چیز کو ضرب دیتا ہے: 2x + 8 = 14"
+              },
+              "misconception_id": "partial_expand"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_divide",
+      "front": {
+        "en": "3(x + 2) = 21: quick way?",
+        "ur": "3(x + 2) = 21: آسان طریقہ؟"
+      },
+      "back": {
+        "en": "Divide by 3: x + 2 = 7, so x = 5.",
+        "ur": "3 سے تقسیم: x + 2 = 7، تو x = 5"
+      }
+    },
+    {
+      "id": "f_expand",
+      "front": {
+        "en": "3(x + 5) multiplied out?",
+        "ur": "3(x + 5) کھول کر؟"
+      },
+      "back": {
+        "en": "3x + 15",
+        "ur": "3x + 15"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_bags",
+      "text": {
+        "en": "Put the same number of spoons in 3 cups, then add 2 more spoons to each cup. If there are 21 spoons in all, how many were in each cup at first? Write 3(x + 2) = 21.",
+        "ur": "3 کپوں میں برابر چمچ رکھیں، پھر ہر کپ میں 2 چمچ اور ڈالیں۔ اگر کل 21 چمچ ہوں تو شروع میں ہر کپ میں کتنے تھے؟ 3(x + 2) = 21 لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Brackets",
+      "ur": "قوسین"
+    },
+    {
+      "en": "Multiply out",
+      "ur": "قوسین کھولنا"
+    },
+    {
+      "en": "Equation",
+      "ur": "مساوات"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "3 bags, each with x apples and 2 oranges. 21 fruits in all. How many apples in each bag?",
+          "ur": "3 تھیلے، ہر ایک میں x سیب اور 2 مالٹے۔ کل 21 پھل۔ ہر تھیلے میں کتنے سیب ہیں؟"
+        }
+      },
+      "text": {
+        "en": "That story is 3(x + 2) = 21. Today we solve equations with brackets. First, a quick check on multiplying a bracket.",
+        "ur": "یہ کہانی 3(x + 2) = 21 ہے۔ آج ہم قوسین والی مساوات حل کریں گے۔ پہلے قوسین کو ضرب دینے کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.whole.properties",
+      "prompt": {
+        "en": "Work out 4 × 6 + 4 × 2, which is the same as 4 × (6 + 2).",
+        "ur": "4 × 6 + 4 × 2 نکالیں، جو 4 × (6 + 2) کے برابر ہے۔"
+      },
+      "answer": 32,
+      "checker": "numeric",
+      "hint": {
+        "en": "24 + 8.",
+        "ur": "24 + 8"
+      },
+      "feedback_correct": {
+        "en": "Right! 32.",
+        "ur": "درست! 32"
+      },
+      "feedback_wrong": {
+        "en": "4 × 6 = 24, 4 × 2 = 8, 24 + 8 = 32. And 4 × 8 = 32 too.",
+        "ur": "4 × 6 = 24، 4 × 2 = 8، 24 + 8 = 32۔ اور 4 × 8 بھی 32 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "Multiply the 2 by 4 as well: 24 + 8 = 32.",
+            "ur": "2 کو بھی 4 سے ضرب دیں: 24 + 8 = 32"
+          },
+          "misconception_id": "partial_expand"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Two ways: divide first, or open the brackets. Both give the same answer!",
+          "ur": "دو طریقے: پہلے تقسیم، یا قوسین کھولیں۔ دونوں کا جواب ایک!"
+        }
+      },
+      "text": {
+        "en": "Way 1, divide first: 3(x + 2) = 21. Divide both sides by 3: x + 2 = 7. Then x = 5. Way 2, open the brackets: 3(x + 2) = 3x + 6, so 3x + 6 = 21, 3x = 15, x = 5. When you open brackets, multiply EVERY term inside.",
+        "ur": "طریقہ 1، پہلے تقسیم: 3(x + 2) = 21۔ دونوں طرف کو 3 سے تقسیم: x + 2 = 7۔ پھر x = 5۔ طریقہ 2، قوسین کھولیں: 3(x + 2) = 3x + 6، تو 3x + 6 = 21، 3x = 15، x = 5۔ قوسین کھولتے وقت اندر کی ہر چیز کو ضرب دیں۔"
+      }
+    },
+    {
+      "id": "s4_divide_first",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 3(x + 2) = 21. What is x?",
+        "ur": "3(x + 2) = 21 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 3, then take away 2.",
+        "ur": "3 سے تقسیم کریں، پھر 2 تفریق۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 5.",
+        "ur": "درست! x = 5"
+      },
+      "feedback_wrong": {
+        "en": "21 ÷ 3 = 7, so x + 2 = 7, x = 5.",
+        "ur": "21 ÷ 3 = 7، تو x + 2 = 7، x = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That is x + 2. Take away 2: x = 5.",
+            "ur": "یہ x + 2 ہے۔ 2 تفریق کریں: x = 5"
+          },
+          "misconception_id": "stops_at_bracket"
+        }
+      ]
+    },
+    {
+      "id": "s5_minus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 2(y − 3) = 10. What is y?",
+        "ur": "2(y − 3) = 10 حل کریں۔ y کیا ہے؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 2, then add 3.",
+        "ur": "2 سے تقسیم کریں، پھر 3 جمع۔"
+      },
+      "feedback_correct": {
+        "en": "Right! y = 8.",
+        "ur": "درست! y = 8"
+      },
+      "feedback_wrong": {
+        "en": "10 ÷ 2 = 5, so y − 3 = 5, y = 8.",
+        "ur": "10 ÷ 2 = 5، تو y − 3 = 5، y = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is y − 3. Add 3: y = 8.",
+            "ur": "یہ y − 3 ہے۔ 3 جمع کریں: y = 8"
+          },
+          "misconception_id": "stops_at_bracket"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "Undo − 3 by adding 3: 5 + 3 = 8.",
+            "ur": "− 3 کو 3 جمع کرکے ختم کریں: 5 + 3 = 8"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s6_expand",
+      "type": "choice",
+      "prompt": {
+        "en": "What is 4(m + 1) with the brackets opened?",
+        "ur": "قوسین کھول کر 4(m + 1) کیا بنتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "both",
+          "text": {
+            "en": "4m + 4",
+            "ur": "4m + 4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 4 × m and 4 × 1.",
+            "ur": "جی ہاں! 4 × m اور 4 × 1"
+          }
+        },
+        {
+          "id": "first_only",
+          "text": {
+            "en": "4m + 1",
+            "ur": "4m + 1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Multiply the 1 by 4 too: 4m + 4.",
+            "ur": "1 کو بھی 4 سے ضرب دیں: 4m + 4"
+          },
+          "misconception_id": "partial_expand"
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "m + 4",
+            "ur": "m + 4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 multiplies the m as well: 4m + 4.",
+            "ur": "4 m کو بھی ضرب دیتا ہے: 4m + 4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_plus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 5(n + 4) = 35. What is n?",
+        "ur": "5(n + 4) = 35 حل کریں۔ n کیا ہے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 5, then take away 4.",
+        "ur": "5 سے تقسیم کریں، پھر 4 تفریق۔"
+      },
+      "feedback_correct": {
+        "en": "Right! n = 3.",
+        "ur": "درست! n = 3"
+      },
+      "feedback_wrong": {
+        "en": "35 ÷ 5 = 7, so n + 4 = 7, n = 3.",
+        "ur": "35 ÷ 5 = 7، تو n + 4 = 7، n = 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That is n + 4. Take away 4: n = 3.",
+            "ur": "یہ n + 4 ہے۔ 4 تفریق کریں: n = 3"
+          },
+          "misconception_id": "stops_at_bracket"
+        },
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "Undo + 4 by subtracting: 7 − 4 = 3.",
+            "ur": "+ 4 کو تفریق سے ختم کریں: 7 − 4 = 3"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s8_shared",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve (x + 6) ÷ 2 = 9. What is x?",
+        "ur": "(x + 6) ÷ 2 = 9 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply by 2 first, then take away 6.",
+        "ur": "پہلے 2 سے ضرب دیں، پھر 6 تفریق۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 12.",
+        "ur": "درست! x = 12"
+      },
+      "feedback_wrong": {
+        "en": "9 × 2 = 18, so x + 6 = 18, x = 12. Check: 18 ÷ 2 = 9.",
+        "ur": "9 × 2 = 18، تو x + 6 = 18، x = 12۔ جانچ: 18 ÷ 2 = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "The whole bracket is divided by 2. Multiply by 2 first: x + 6 = 18, x = 12.",
+            "ur": "پوری قوسین 2 سے تقسیم ہے۔ پہلے 2 سے ضرب دیں: x + 6 = 18، x = 12"
+          }
+        },
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "That is x + 6. Take away 6: x = 12.",
+            "ur": "یہ x + 6 ہے۔ 6 تفریق کریں: x = 12"
+          },
+          "misconception_id": "stops_at_bracket"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hira opens the brackets in 3(x + 5) = 27 and writes 3x + 5 = 27. What went wrong?",
+        "ur": "حرا 3(x + 5) = 27 کی قوسین کھول کر 3x + 5 = 27 لکھتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "both",
+          "text": {
+            "en": "The 3 multiplies the 5 too: 3x + 15 = 27, so x = 4.",
+            "ur": "3 پانچ کو بھی ضرب دیتا ہے: 3x + 15 = 27، تو x = 4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Or divide first: x + 5 = 9, x = 4.",
+            "ur": "جی ہاں! یا پہلے تقسیم: x + 5 = 9، x = 4"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "It should be x + 8 = 27.",
+            "ur": "یہ x + 8 = 27 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 multiplies the bracket; it is not added: 3x + 15 = 27.",
+            "ur": "3 قوسین کو ضرب دیتا ہے؛ جمع نہیں ہوتا: 3x + 15 = 27"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "She forgot 3 × 5. It is 3x + 15 = 27.",
+            "ur": "وہ 3 × 5 بھول گئی۔ یہ 3x + 15 = 27 ہے۔"
+          },
+          "misconception_id": "partial_expand"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why can we divide both sides by 2 first in 2(x + 3) = 16? Can you teach me?",
+          "ur": "2(x + 3) = 16 میں ہم پہلے دونوں طرف کو 2 سے تقسیم کیوں کر سکتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: solve 2(x + 3) = 16 and explain why dividing by 2 first works.",
+        "ur": "اپنے الفاظ میں بتائیں: 2(x + 3) = 16 حل کریں اور سمجھائیں کہ پہلے 2 سے تقسیم کیوں درست ہے۔"
+      },
+      "key_idea": "2(x + 3) means 2 lots of (x + 3). If 2 lots make 16, one lot is 16 ÷ 2 = 8. So x + 3 = 8 and x = 5. Dividing both sides by the same number keeps the equation balanced.",
+      "levels": {
+        "got_it": "Says 2 lots of (x + 3) make 16, so one lot is 8, then x = 5; or that doing the same to both sides keeps it balanced.",
+        "partly": "Gets x = 5 without explaining why dividing first works.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "8",
+          "eight",
+          "آٹھ"
+        ],
+        [
+          "5",
+          "five",
+          "پانچ"
+        ],
+        [
+          "both sides",
+          "balance",
+          "دونوں طرف",
+          "توازن"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Two lots make 16, so one lot is 8.",
+          "ur": "بہت خوب! دو حصے 16، تو ایک حصہ 8"
+        },
+        "partly": {
+          "en": "Good start! Now say why dividing both sides is allowed.",
+          "ur": "اچھی شروعات! اب بتائیں دونوں طرف تقسیم کرنا کیوں جائز ہے۔"
+        },
+        "not_yet": {
+          "en": "2(x + 3) means two lots of (x + 3). If two lots are 16, what is one lot?",
+          "ur": "2(x + 3) یعنی (x + 3) کے دو حصے۔ اگر دو حصے 16 ہیں تو ایک حصہ کتنا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_minus_big",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 6(k − 2) = 30. What is k?",
+        "ur": "6(k − 2) = 30 حل کریں۔ k کیا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 6, then add 2.",
+        "ur": "6 سے تقسیم کریں، پھر 2 جمع۔"
+      },
+      "feedback_correct": {
+        "en": "Right! k = 7.",
+        "ur": "درست! k = 7"
+      },
+      "feedback_wrong": {
+        "en": "30 ÷ 6 = 5, so k − 2 = 5, k = 7.",
+        "ur": "30 ÷ 6 = 5، تو k − 2 = 5، k = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is k − 2. Add 2: k = 7.",
+            "ur": "یہ k − 2 ہے۔ 2 جمع کریں: k = 7"
+          },
+          "misconception_id": "stops_at_bracket"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Undo − 2 by adding 2: 5 + 2 = 7.",
+            "ur": "− 2 کو 2 جمع کرکے ختم کریں: 5 + 2 = 7"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Brackets don't scare you any more. Divide first, or open them carefully!",
+          "ur": "قوسین اب آپ کو نہیں ڈراتیں۔ پہلے تقسیم کریں، یا احتیاط سے کھولیں!"
+        }
+      },
+      "text": {
+        "en": "To solve a(x + b) = c: divide both sides by a, then undo the + b. Or open the brackets, multiplying every term inside, and solve the two-step equation. Check your answer at the end.",
+        "ur": "a(x + b) = c حل کرنے کے لیے: دونوں طرف کو a سے تقسیم کریں، پھر + b ختم کریں۔ یا قوسین کھولیں، اندر کی ہر چیز کو ضرب دے کر، اور دو قدمی مساوات حل کریں۔ آخر میں جواب جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "Divide first, then undo + or −.",
+          "ur": "پہلے تقسیم، پھر + یا − ختم کریں۔"
+        },
+        {
+          "en": "Opening brackets: multiply every term.",
+          "ur": "قوسین کھولنا: ہر حصے کو ضرب دیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_plus",
+      "type": "apply",
+      "skill": "maths.equations.brackets",
+      "step": {
+        "id": "r_plus",
+        "type": "number",
+        "prompt": {
+          "en": "Solve 2(x + 5) = 18. What is x?",
+          "ur": "2(x + 5) = 18 حل کریں۔ x کیا ہے؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide by 2, then take away 5.",
+          "ur": "2 سے تقسیم کریں، پھر 5 تفریق۔"
+        },
+        "feedback_correct": {
+          "en": "Right! x = 4.",
+          "ur": "درست! x = 4"
+        },
+        "feedback_wrong": {
+          "en": "18 ÷ 2 = 9, so x + 5 = 9, x = 4.",
+          "ur": "18 ÷ 2 = 9، تو x + 5 = 9، x = 4"
+        },
+        "common_wrong": [
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "That is x + 5. Take away 5: x = 4.",
+              "ur": "یہ x + 5 ہے۔ 5 تفریق کریں: x = 4"
+            },
+            "misconception_id": "stops_at_bracket"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_minus",
+      "type": "apply",
+      "skill": "maths.equations.brackets",
+      "step": {
+        "id": "r_minus",
+        "type": "number",
+        "prompt": {
+          "en": "Solve 3(y − 1) = 12. What is y?",
+          "ur": "3(y − 1) = 12 حل کریں۔ y کیا ہے؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide by 3, then add 1.",
+          "ur": "3 سے تقسیم کریں، پھر 1 جمع۔"
+        },
+        "feedback_correct": {
+          "en": "Right! y = 5.",
+          "ur": "درست! y = 5"
+        },
+        "feedback_wrong": {
+          "en": "12 ÷ 3 = 4, so y − 1 = 4, y = 5.",
+          "ur": "12 ÷ 3 = 4، تو y − 1 = 4، y = 5"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That is y − 1. Add 1: y = 5.",
+              "ur": "یہ y − 1 ہے۔ 1 جمع کریں: y = 5"
+            },
+            "misconception_id": "stops_at_bracket"
+          },
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "Undo − 1 by adding 1: 4 + 1 = 5.",
+              "ur": "− 1 کو 1 جمع کرکے ختم کریں: 4 + 1 = 5"
+            },
+            "misconception_id": "wrong_inverse"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Linear Equations unit. No textbook text or exercises were used.",
+    "Both methods are shown; dividing first is quicker when the number outside divides the right side exactly, which it does in every question here.",
+    "Urdu terms to check: قوسین (brackets), قوسین کھولنا (multiply out the brackets).",
+    "The numbers were worked out in content/sources/g6-maths-16/equations_with_brackets.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

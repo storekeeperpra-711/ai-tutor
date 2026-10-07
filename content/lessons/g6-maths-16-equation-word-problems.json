@@ -1,0 +1,933 @@
+{
+  "id": "g6-maths-16-equation-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems by writing and solving a linear equation, then checking the answer in the story.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Linear Equations"
+    }
+  ],
+  "skills": [
+    "maths.equations.word_problems"
+  ],
+  "title": {
+    "en": "Equation word problems",
+    "ur": "مساوات کے عملی سوال"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.equations.brackets"
+    },
+    {
+      "skill": "maths.equations.two_step"
+    },
+    {
+      "skill": "maths.equations.forming"
+    },
+    {
+      "skill": "maths.equations.check_solution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "one_step_only",
+      "description": "Stops after one step (finds 3x, or the bracket) and gives that as the answer."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Adds a fixed charge instead of taking it away."
+    },
+    {
+      "id": "wrong_equation",
+      "description": "Writes the story the wrong way round, like 30 − x for 'spent 30'."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.word_problems": [
+      {
+        "id": "qb_check",
+        "type": "recall",
+        "step": {
+          "id": "qb_check",
+          "type": "choice",
+          "prompt": {
+            "en": "You have solved an equation from a story. What should you do next?",
+            "ur": "آپ نے کہانی سے بنی مساوات حل کر لی۔ اب کیا کرنا چاہیے؟"
+          },
+          "options": [
+            {
+              "id": "check",
+              "text": {
+                "en": "Put the answer back into the story to check it",
+                "ur": "جواب کو کہانی میں رکھ کر جانچیں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! If the story works, the answer is right.",
+                "ur": "جی ہاں! اگر کہانی ٹھیک بیٹھے تو جواب درست ہے۔"
+              }
+            },
+            {
+              "id": "stop",
+              "text": {
+                "en": "Nothing, you are done",
+                "ur": "کچھ نہیں، کام ختم"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Always check: put the answer back into the story.",
+                "ur": "ہمیشہ جانچیں: جواب کو کہانی میں واپس رکھیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Zara buys 3 books at Rs x each and a bag for Rs 150. She pays Rs 600 in all. What does one book cost? (3x + 150 = 600)",
+            "ur": "زارا x روپے فی کتاب کے حساب سے 3 کتابیں اور 150 روپے کا ایک بستہ خریدتی ہے۔ وہ کل 600 روپے دیتی ہے۔ ایک کتاب کتنے کی ہے؟ (3x + 150 = 600)"
+          },
+          "answer": 150,
+          "checker": "numeric",
+          "hint": {
+            "en": "Take 150 away, then divide by 3.",
+            "ur": "150 تفریق کریں، پھر 3 سے تقسیم۔"
+          },
+          "feedback_correct": {
+            "en": "Right! Rs 150.",
+            "ur": "درست! 150 روپے"
+          },
+          "feedback_wrong": {
+            "en": "600 − 150 = 450, then 450 ÷ 3 = 150.",
+            "ur": "600 − 150 = 450، پھر 450 ÷ 3 = 150"
+          },
+          "common_wrong": [
+            {
+              "answer": 250,
+              "feedback": {
+                "en": "The bag cost is taken away, not added: 450 ÷ 3 = 150.",
+                "ur": "بستے کی قیمت تفریق ہوتی ہے، جمع نہیں: 450 ÷ 3 = 150"
+              },
+              "misconception_id": "wrong_inverse"
+            },
+            {
+              "answer": 450,
+              "feedback": {
+                "en": "That is the 3 books together. One book: 450 ÷ 3 = 150.",
+                "ur": "یہ 3 کتابیں اکٹھی ہیں۔ ایک کتاب: 450 ÷ 3 = 150"
+              },
+              "misconception_id": "one_step_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "'Usman had some money, spent Rs 40 and has Rs 60 left.' He writes 40 − x = 60. What is wrong?",
+            "ur": "'عثمان کے پاس کچھ پیسے تھے، اس نے 40 روپے خرچ کیے اور 60 روپے بچے۔' وہ لکھتا ہے 40 − x = 60۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "order",
+              "text": {
+                "en": "He started with x and took 40 away: x − 40 = 60, so x = 100.",
+                "ur": "اس کے پاس x تھے اور 40 نکلے: x − 40 = 60، تو x = 100"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Start with what he had.",
+                "ur": "جی ہاں! جو اس کے پاس تھا وہاں سے شروع کریں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "He spent 40 from his money x: x − 40 = 60.",
+                "ur": "اس نے اپنے x پیسوں میں سے 40 خرچ کیے: x − 40 = 60"
+              },
+              "misconception_id": "wrong_equation"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_steps",
+      "front": {
+        "en": "Word problem steps?",
+        "ur": "عملی سوال کے قدم؟"
+      },
+      "back": {
+        "en": "Letter for the unknown, write the equation, solve, check in the story.",
+        "ur": "نامعلوم کے لیے حرف، مساوات لکھیں، حل کریں، کہانی میں جانچیں۔"
+      }
+    },
+    {
+      "id": "f_fixed",
+      "front": {
+        "en": "Rs 50 plus Rs 20 per km = Rs 210?",
+        "ur": "50 روپے جمع 20 روپے فی کلومیٹر = 210 روپے؟"
+      },
+      "back": {
+        "en": "20k + 50 = 210, so k = 8.",
+        "ur": "20k + 50 = 210، تو k = 8"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_bill",
+      "text": {
+        "en": "Look at a bill at home with a fixed charge plus a charge per unit (a phone package or electricity). Make up an equation from it and solve it.",
+        "ur": "گھر میں کوئی بل دیکھیں جس میں ایک مقررہ رقم اور فی یونٹ رقم ہو (فون پیکج یا بجلی)۔ اس سے ایک مساوات بنائیں اور حل کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Unknown",
+      "ur": "نامعلوم"
+    },
+    {
+      "en": "Fixed charge",
+      "ur": "مقررہ رقم"
+    },
+    {
+      "en": "Per",
+      "ur": "فی"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A rickshaw ride cost Rs 210. How many kilometres was it? An equation can tell us!",
+          "ur": "رکشے کا کرایہ 210 روپے آیا۔ کتنے کلومیٹر کا سفر تھا؟ ایک مساوات بتا سکتی ہے!"
+        }
+      },
+      "text": {
+        "en": "Today we solve real problems by writing an equation. First, a quick two-step check.",
+        "ur": "آج ہم مساوات لکھ کر اصل مسئلے حل کریں گے۔ پہلے دو قدمی مساوات کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.equations.two_step",
+      "prompt": {
+        "en": "Solve 2x + 3 = 15. What is x?",
+        "ur": "2x + 3 = 15 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 3 away, then divide by 2.",
+        "ur": "3 تفریق کریں، پھر 2 سے تقسیم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 6.",
+        "ur": "درست! x = 6"
+      },
+      "feedback_wrong": {
+        "en": "15 − 3 = 12, then 12 ÷ 2 = 6.",
+        "ur": "15 − 3 = 12، پھر 12 ÷ 2 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That is 2x. Divide by 2: x = 6.",
+            "ur": "یہ 2x ہے۔ 2 سے تقسیم کریں: x = 6"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Letter, equation, solve, check. Four steps to crack any story!",
+          "ur": "حرف، مساوات، حل، جانچ۔ ہر کہانی حل کرنے کے چار قدم!"
+        }
+      },
+      "text": {
+        "en": "1. Choose a letter for what you don't know. 2. Write an equation from the story. 3. Solve it. 4. Check the answer in the story and write it in words. Example: a rickshaw charges Rs 50, plus Rs 20 per km. The fare is Rs 210. 20k + 50 = 210, 20k = 160, k = 8 km. Check: 50 + 20 × 8 = 210.",
+        "ur": "1۔ جو معلوم نہیں اس کے لیے حرف چنیں۔ 2۔ کہانی سے مساوات لکھیں۔ 3۔ حل کریں۔ 4۔ جواب کہانی میں جانچیں اور الفاظ میں لکھیں۔ مثال: رکشہ 50 روپے، جمع 20 روپے فی کلومیٹر لیتا ہے۔ کرایہ 210 روپے ہے۔ 20k + 50 = 210، 20k = 160، k = 8 کلومیٹر۔ جانچ: 50 + 20 × 8 = 210"
+      }
+    },
+    {
+      "id": "s4_age",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ahmed is x years old. His father's age is 3 times Ahmed's age plus 4. His father is 40. How old is Ahmed? (3x + 4 = 40)",
+        "ur": "احمد کی عمر x سال ہے۔ اس کے والد کی عمر احمد کی عمر کا 3 گنا جمع 4 ہے۔ والد 40 سال کے ہیں۔ احمد کتنے سال کا ہے؟ (3x + 4 = 40)"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 4 away, then divide by 3.",
+        "ur": "4 تفریق کریں، پھر 3 سے تقسیم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Ahmed is 12.",
+        "ur": "درست! احمد 12 سال کا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "40 − 4 = 36, then 36 ÷ 3 = 12. Check: 3 × 12 + 4 = 40.",
+        "ur": "40 − 4 = 36، پھر 36 ÷ 3 = 12۔ جانچ: 3 × 12 + 4 = 40"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "That is 3 times his age. Divide by 3: 12.",
+            "ur": "یہ اس کی عمر کا 3 گنا ہے۔ 3 سے تقسیم کریں: 12"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s5_rickshaw",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A rickshaw charges Rs 50, plus Rs 20 for each km. A ride costs Rs 210. How many km was it? (20k + 50 = 210)",
+        "ur": "رکشہ 50 روپے، جمع ہر کلومیٹر کے 20 روپے لیتا ہے۔ ایک سفر کا کرایہ 210 روپے ہے۔ سفر کتنے کلومیٹر تھا؟ (20k + 50 = 210)"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take the Rs 50 away first.",
+        "ur": "پہلے 50 روپے تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 km.",
+        "ur": "درست! 8 کلومیٹر"
+      },
+      "feedback_wrong": {
+        "en": "210 − 50 = 160, then 160 ÷ 20 = 8.",
+        "ur": "210 − 50 = 160، پھر 160 ÷ 20 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "The Rs 50 is part of the fare, so take it away: 160 ÷ 20 = 8.",
+            "ur": "50 روپے کرائے کا حصہ ہیں، تو تفریق کریں: 160 ÷ 20 = 8"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 160,
+          "feedback": {
+            "en": "That is the money for the km. Divide by 20: 8 km.",
+            "ur": "یہ کلومیٹرز کے پیسے ہیں۔ 20 سے تقسیم کریں: 8 کلومیٹر"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s6_which",
+      "type": "choice",
+      "prompt": {
+        "en": "Sara had x rupees. She spent Rs 30 and has Rs 45 left. Which equation fits?",
+        "ur": "سارہ کے پاس x روپے تھے۔ اس نے 30 روپے خرچ کیے اور 45 روپے بچے۔ کون سی مساوات ٹھیک ہے؟"
+      },
+      "options": [
+        {
+          "id": "minus",
+          "text": {
+            "en": "x − 30 = 45",
+            "ur": "x − 30 = 45"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Then x = 75.",
+            "ur": "جی ہاں! پھر x = 75"
+          }
+        },
+        {
+          "id": "reverse",
+          "text": {
+            "en": "30 − x = 45",
+            "ur": "30 − x = 45"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "She started with x and spent 30: x − 30 = 45.",
+            "ur": "اس کے پاس x تھے اور 30 خرچ ہوئے: x − 30 = 45"
+          },
+          "misconception_id": "wrong_equation"
+        },
+        {
+          "id": "plus",
+          "text": {
+            "en": "x + 30 = 45",
+            "ur": "x + 30 = 45"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Spending takes away: x − 30 = 45.",
+            "ur": "خرچ کرنا یعنی نکالنا: x − 30 = 45"
+          },
+          "misconception_id": "wrong_equation"
+        }
+      ]
+    },
+    {
+      "id": "s7_pencils",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hina has 4 boxes with x pencils in each, and 6 loose pencils. She has 54 pencils in all. How many are in each box? (4x + 6 = 54)",
+        "ur": "حنا کے پاس 4 ڈبے ہیں، ہر ایک میں x پنسلیں، اور 6 کھلی پنسلیں۔ کل 54 پنسلیں ہیں۔ ہر ڈبے میں کتنی ہیں؟ (4x + 6 = 54)"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take the 6 loose ones away, then share by 4.",
+        "ur": "6 کھلی پنسلیں تفریق کریں، پھر 4 پر تقسیم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 pencils in each box.",
+        "ur": "درست! ہر ڈبے میں 12 پنسلیں"
+      },
+      "feedback_wrong": {
+        "en": "54 − 6 = 48, then 48 ÷ 4 = 12.",
+        "ur": "54 − 6 = 48، پھر 48 ÷ 4 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "Take the loose pencils away, don't add: 48 ÷ 4 = 12.",
+            "ur": "کھلی پنسلیں تفریق کریں، جمع نہیں: 48 ÷ 4 = 12"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 48,
+          "feedback": {
+            "en": "That is all 4 boxes. One box: 48 ÷ 4 = 12.",
+            "ur": "یہ چاروں ڈبے ہیں۔ ایک ڈبہ: 48 ÷ 4 = 12"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s8_sweets",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "5 children each get x toffees and 3 lollipops. 40 sweets are given out in all. How many toffees does each child get? (5(x + 3) = 40)",
+        "ur": "5 بچوں میں سے ہر ایک کو x ٹافیاں اور 3 لولی پاپ ملتے ہیں۔ کل 40 مٹھائیاں بٹتی ہیں۔ ہر بچے کو کتنی ٹافیاں ملتی ہیں؟ (5(x + 3) = 40)"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 5, then take 3 away.",
+        "ur": "5 سے تقسیم کریں، پھر 3 تفریق۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 toffees each.",
+        "ur": "درست! ہر ایک کو 5 ٹافیاں"
+      },
+      "feedback_wrong": {
+        "en": "40 ÷ 5 = 8 sweets each, and 8 − 3 = 5 toffees.",
+        "ur": "40 ÷ 5 = 8 مٹھائیاں فی بچہ، اور 8 − 3 = 5 ٹافیاں"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is all the sweets each child gets. Take away the 3 lollipops: 5.",
+            "ur": "8 ہر بچے کی کل مٹھائیاں ہیں۔ 3 لولی پاپ تفریق کریں: 5"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal solves 2x + 10 = 30 for a story and gets x = 20. What went wrong?",
+        "ur": "بلال ایک کہانی کی مساوات 2x + 10 = 30 حل کرکے x = 20 نکالتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "check",
+          "text": {
+            "en": "Check: 2 × 20 + 10 = 50, not 30. The answer is x = 10.",
+            "ur": "جانچ: 2 × 20 + 10 = 50، 30 نہیں۔ جواب x = 10 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 30 − 10 = 20, then 20 ÷ 2 = 10. He forgot to divide.",
+            "ur": "جی ہاں! 30 − 10 = 20، پھر 20 ÷ 2 = 10۔ وہ تقسیم بھول گیا۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "He should add 10: x = 40.",
+            "ur": "اسے 10 جمع کرنا چاہیے: x = 40"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Undo + 10 by subtracting, then divide by 2: x = 10.",
+            "ur": "+ 10 کو تفریق سے ختم کریں، پھر 2 سے تقسیم: x = 10"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check it: 2 × 20 + 10 = 50, not 30. He forgot to divide by 2.",
+            "ur": "جانچیں: 2 × 20 + 10 = 50، 30 نہیں۔ وہ 2 سے تقسیم بھول گیا۔"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why should we check our answer in the story? Can you teach me?",
+          "ur": "ہمیں جواب کہانی میں کیوں جانچنا چاہیے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is it a good idea to put your answer back into the story? Use the rickshaw (Rs 50 + Rs 20 per km = Rs 210) as an example.",
+        "ur": "اپنے الفاظ میں بتائیں: جواب کو کہانی میں واپس رکھنا کیوں اچھا ہے؟ رکشے (50 روپے + 20 روپے فی کلومیٹر = 210 روپے) کی مثال لیں۔"
+      },
+      "key_idea": "Checking catches mistakes in writing or solving the equation. For the rickshaw, 8 km gives 50 + 20 × 8 = 210, which matches the fare, so 8 km is right. A wrong answer like 13 km gives 310, which doesn't match.",
+      "levels": {
+        "got_it": "Says checking catches mistakes and shows 50 + 20 × 8 = 210 (or a wrong answer failing).",
+        "partly": "Says 'to see if it's right' without the example.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "mistake",
+          "wrong",
+          "right",
+          "غلطی",
+          "درست"
+        ],
+        [
+          "210"
+        ],
+        [
+          "8",
+          "eight",
+          "آٹھ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The story tells you if the answer works.",
+          "ur": "بہت خوب! کہانی بتا دیتی ہے کہ جواب ٹھیک ہے یا نہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now show the check with the rickshaw numbers.",
+          "ur": "اچھی شروعات! اب رکشے کے اعداد سے جانچ دکھائیں۔"
+        },
+        "not_yet": {
+          "en": "Try 8 km: what is 50 + 20 × 8? Does it match the fare?",
+          "ur": "8 کلومیٹر آزمائیں: 50 + 20 × 8 کتنا ہے؟ کیا یہ کرائے کے برابر ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Linear equations unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! خطی مساوات کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on checking a solution, writing equations, two-step equations, brackets and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں حل کی جانچ، مساوات لکھنے، دو قدمی مساوات، قوسین اور ایک اصل زندگی کے سوال ہیں۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_check",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.equations.check_solution",
+      "prompt": {
+        "en": "Test 1: Which of 3, 4 or 5 is the solution of 7x − 4 = 24? Type it.",
+        "ur": "ٹیسٹ 1: 3، 4 یا 5 میں سے کون سا 7x − 4 = 24 کا حل ہے؟ اسے لکھیں۔"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try each one in 7x − 4.",
+        "ur": "ہر ایک کو 7x − 4 میں آزمائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 × 4 − 4 = 24.",
+        "ur": "درست! 7 × 4 − 4 = 24"
+      },
+      "feedback_wrong": {
+        "en": "7 × 4 = 28, 28 − 4 = 24.",
+        "ur": "7 × 4 = 28، 28 − 4 = 24"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "7 × 3 − 4 = 17, not 24. Try 4.",
+            "ur": "7 × 3 − 4 = 17، 24 نہیں۔ 4 آزمائیں۔"
+          }
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "7 × 5 − 4 = 31, not 24. Try 4.",
+            "ur": "7 × 5 − 4 = 31، 24 نہیں۔ 4 آزمائیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_forming",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.equations.forming",
+      "prompt": {
+        "en": "Test 2: A number plus 15 is 42. What is the number?",
+        "ur": "ٹیسٹ 2: ایک عدد جمع 15 برابر 42۔ عدد کیا ہے؟"
+      },
+      "answer": 27,
+      "checker": "numeric",
+      "hint": {
+        "en": "x + 15 = 42. Take 15 away.",
+        "ur": "x + 15 = 42۔ 15 تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 27.",
+        "ur": "درست! 27"
+      },
+      "feedback_wrong": {
+        "en": "42 − 15 = 27.",
+        "ur": "42 − 15 = 27"
+      },
+      "common_wrong": [
+        {
+          "answer": 57,
+          "feedback": {
+            "en": "Undo + 15 by subtracting: 42 − 15 = 27.",
+            "ur": "+ 15 کو تفریق سے ختم کریں: 42 − 15 = 27"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "u3_two_step",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.equations.two_step",
+      "prompt": {
+        "en": "Test 3: Solve x ÷ 5 + 3 = 7. What is x?",
+        "ur": "ٹیسٹ 3: x ÷ 5 + 3 = 7 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 3 away, then multiply by 5.",
+        "ur": "3 تفریق کریں، پھر 5 سے ضرب۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 20.",
+        "ur": "درست! x = 20"
+      },
+      "feedback_wrong": {
+        "en": "7 − 3 = 4, then 4 × 5 = 20.",
+        "ur": "7 − 3 = 4، پھر 4 × 5 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That is x ÷ 5. Multiply by 5: x = 20.",
+            "ur": "یہ x ÷ 5 ہے۔ 5 سے ضرب دیں: x = 20"
+          },
+          "misconception_id": "one_step_only"
+        },
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "Undo + 3 by subtracting 3: 4 × 5 = 20.",
+            "ur": "+ 3 کو 3 تفریق کرکے ختم کریں: 4 × 5 = 20"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "u4_brackets",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.equations.brackets",
+      "prompt": {
+        "en": "Test 4: Solve 4(x − 2) = 24. What is x?",
+        "ur": "ٹیسٹ 4: 4(x − 2) = 24 حل کریں۔ x کیا ہے؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 4, then add 2.",
+        "ur": "4 سے تقسیم کریں، پھر 2 جمع۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 8.",
+        "ur": "درست! x = 8"
+      },
+      "feedback_wrong": {
+        "en": "24 ÷ 4 = 6, so x − 2 = 6, x = 8.",
+        "ur": "24 ÷ 4 = 6، تو x − 2 = 6، x = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That is x − 2. Add 2: x = 8.",
+            "ur": "یہ x − 2 ہے۔ 2 جمع کریں: x = 8"
+          },
+          "misconception_id": "one_step_only"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Undo − 2 by adding 2: 6 + 2 = 8.",
+            "ur": "− 2 کو 2 جمع کرکے ختم کریں: 6 + 2 = 8"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "u5_package",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: A phone package costs Rs 100 to start, plus Rs 25 for each day. Ali paid Rs 275. How many days did he use it? (25d + 100 = 275)",
+        "ur": "ٹیسٹ 5: فون پیکج شروع کرنے کے 100 روپے، جمع ہر دن کے 25 روپے ہیں۔ علی نے 275 روپے دیے۔ اس نے کتنے دن استعمال کیا؟ (25d + 100 = 275)"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take the Rs 100 away first.",
+        "ur": "پہلے 100 روپے تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 days.",
+        "ur": "درست! 7 دن"
+      },
+      "feedback_wrong": {
+        "en": "275 − 100 = 175, then 175 ÷ 25 = 7.",
+        "ur": "275 − 100 = 175، پھر 175 ÷ 25 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "Take the Rs 100 away, don't add it: 175 ÷ 25 = 7.",
+            "ur": "100 روپے تفریق کریں، جمع نہیں: 175 ÷ 25 = 7"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 175,
+          "feedback": {
+            "en": "That is the money for the days. Divide by 25: 7.",
+            "ur": "یہ دنوں کے پیسے ہیں۔ 25 سے تقسیم کریں: 7"
+          },
+          "misconception_id": "one_step_only"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Linear equations unit complete! Stories turn into equations, and equations give answers.",
+          "ur": "خطی مساوات کا باب مکمل! کہانیاں مساوات بنتی ہیں، اور مساوات جواب دیتی ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Choose a letter for the unknown, write the equation from the story, solve it step by step, and check the answer in the story. Fixed amounts are taken away first; amounts 'per' or 'each' are divided last.",
+        "ur": "نامعلوم کے لیے حرف چنیں، کہانی سے مساوات لکھیں، قدم بہ قدم حل کریں، اور جواب کہانی میں جانچیں۔ مقررہ رقم پہلے تفریق ہوتی ہے؛ 'فی' یا 'ہر ایک' والی رقم پر آخر میں تقسیم۔"
+      },
+      "points": [
+        {
+          "en": "Letter, equation, solve, check.",
+          "ur": "حرف، مساوات، حل، جانچ۔"
+        },
+        {
+          "en": "Take fixed amounts away first.",
+          "ur": "مقررہ رقم پہلے تفریق کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_twice",
+      "type": "apply",
+      "skill": "maths.equations.word_problems",
+      "step": {
+        "id": "r_twice",
+        "type": "number",
+        "prompt": {
+          "en": "5 more than twice a number is 31. What is the number? (2x + 5 = 31)",
+          "ur": "ایک عدد کے دگنے سے 5 زیادہ 31 ہے۔ عدد کیا ہے؟ (2x + 5 = 31)"
+        },
+        "answer": 13,
+        "checker": "numeric",
+        "hint": {
+          "en": "Take 5 away, then divide by 2.",
+          "ur": "5 تفریق کریں، پھر 2 سے تقسیم۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 13.",
+          "ur": "درست! 13"
+        },
+        "feedback_wrong": {
+          "en": "31 − 5 = 26, then 26 ÷ 2 = 13.",
+          "ur": "31 − 5 = 26، پھر 26 ÷ 2 = 13"
+        },
+        "common_wrong": [
+          {
+            "answer": 26,
+            "feedback": {
+              "en": "That is twice the number. Divide by 2: 13.",
+              "ur": "یہ عدد کا دگنا ہے۔ 2 سے تقسیم کریں: 13"
+            },
+            "misconception_id": "one_step_only"
+          },
+          {
+            "answer": 18,
+            "feedback": {
+              "en": "Undo + 5 by subtracting: 26 ÷ 2 = 13.",
+              "ur": "+ 5 کو تفریق سے ختم کریں: 26 ÷ 2 = 13"
+            },
+            "misconception_id": "wrong_inverse"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_packs",
+      "type": "apply",
+      "skill": "maths.equations.word_problems",
+      "step": {
+        "id": "r_packs",
+        "type": "number",
+        "prompt": {
+          "en": "A teacher has 6 packs of x chalks and 4 loose chalks: 40 chalks in all. How many chalks are in a pack? (6x + 4 = 40)",
+          "ur": "استاد کے پاس x چاکوں والے 6 پیکٹ اور 4 کھلے چاک ہیں: کل 40 چاک۔ ایک پیکٹ میں کتنے چاک ہیں؟ (6x + 4 = 40)"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "Take the 4 loose chalks away, then divide by 6.",
+          "ur": "4 کھلے چاک تفریق کریں، پھر 6 سے تقسیم۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 chalks in a pack.",
+          "ur": "درست! ایک پیکٹ میں 6 چاک"
+        },
+        "feedback_wrong": {
+          "en": "40 − 4 = 36, then 36 ÷ 6 = 6.",
+          "ur": "40 − 4 = 36، پھر 36 ÷ 6 = 6"
+        },
+        "common_wrong": [
+          {
+            "answer": 36,
+            "feedback": {
+              "en": "That is all 6 packs. One pack: 36 ÷ 6 = 6.",
+              "ur": "یہ چھ پیکٹ ہیں۔ ایک پیکٹ: 36 ÷ 6 = 6"
+            },
+            "misconception_id": "one_step_only"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Linear Equations unit. No textbook text or exercises were used.",
+    "Each story question shows its equation in brackets, so children practise solving; the choice and find-the-mistake steps practise writing the equation.",
+    "The five-question unit test at the end covers every lesson of the unit.",
+    "The numbers were worked out in content/sources/g6-maths-16/equation_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

@@ -10,6 +10,7 @@ REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 # Skills from earlier work that these lessons build on.
 ALG_SUBSTITUTION = "maths.algebra.substitution"
 ALG_EQUATIONS = "maths.algebra.simple_equations"
+WN_PROPERTIES = "maths.whole.properties"
 
 # Skills of the Linear Equations unit.
 EQ_CHECK = "maths.equations.check_solution"
