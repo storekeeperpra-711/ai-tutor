@@ -1,0 +1,769 @@
+{
+  "id": "g6-maths-15-millions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Read and write large numbers in the international system (millions) and change between the Pakistani and international systems.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Whole Numbers"
+    }
+  ],
+  "skills": [
+    "maths.whole.number_systems"
+  ],
+  "title": {
+    "en": "Millions: the international system",
+    "ur": "ملین: بین الاقوامی نظام"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.whole.place_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "million_lakh",
+      "description": "Thinks 1 million is 1 lakh, or 100 lakh."
+    },
+    {
+      "id": "million_crore",
+      "description": "Thinks 1 million is 1 crore."
+    },
+    {
+      "id": "mixed_commas",
+      "description": "Mixes Pakistani and international comma groups."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.whole.number_systems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.whole.number_systems": [
+      {
+        "id": "qb_million",
+        "type": "recall",
+        "step": {
+          "id": "qb_million",
+          "type": "choice",
+          "prompt": {
+            "en": "1 million is the same as …",
+            "ur": "1 ملین برابر ہے …"
+          },
+          "options": [
+            {
+              "id": "ten_lakh",
+              "text": {
+                "en": "10 lakh",
+                "ur": "10 لاکھ"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 1,000,000 = 10,00,000.",
+                "ur": "جی ہاں! 1,000,000 = 10,00,000"
+              }
+            },
+            {
+              "id": "crore",
+              "text": {
+                "en": "1 crore",
+                "ur": "1 کروڑ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "1 crore is 10 million. 1 million = 10 lakh.",
+                "ur": "1 کروڑ 10 ملین ہے۔ 1 ملین = 10 لاکھ"
+              },
+              "misconception_id": "million_crore"
+            },
+            {
+              "id": "lakh",
+              "text": {
+                "en": "1 lakh",
+                "ur": "1 لاکھ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "1 lakh is 1,00,000, which has 5 zeros. 1 million has 6: 10 lakh.",
+                "ur": "1 لاکھ 1,00,000 ہے، 5 صفر۔ 1 ملین میں 6 ہیں: 10 لاکھ"
+              },
+              "misconception_id": "million_lakh"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "7 million is how many lakh?",
+            "ur": "7 ملین کتنے لاکھ ہیں؟"
+          },
+          "answer": 70,
+          "checker": "numeric",
+          "hint": {
+            "en": "1 million = 10 lakh.",
+            "ur": "1 ملین = 10 لاکھ"
+          },
+          "feedback_correct": {
+            "en": "Right! 70 lakh.",
+            "ur": "درست! 70 لاکھ"
+          },
+          "feedback_wrong": {
+            "en": "7 × 10 = 70 lakh.",
+            "ur": "7 × 10 = 70 لاکھ"
+          },
+          "common_wrong": [
+            {
+              "answer": 7,
+              "feedback": {
+                "en": "1 million is 10 lakh, not 1: 70 lakh.",
+                "ur": "1 ملین 10 لاکھ ہے، 1 نہیں: 70 لاکھ"
+              },
+              "misconception_id": "million_lakh"
+            },
+            {
+              "answer": 700,
+              "feedback": {
+                "en": "1 million is 10 lakh, not 100: 70 lakh.",
+                "ur": "1 ملین 10 لاکھ ہے، 100 نہیں: 70 لاکھ"
+              },
+              "misconception_id": "million_lakh"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Ayesha writes 3,500,000 the Pakistani way as 3,50,00,000. What is wrong?",
+            "ur": "عائشہ 3,500,000 کو پاکستانی طریقے سے 3,50,00,000 لکھتی ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "extra_zero",
+              "text": {
+                "en": "She added a zero. It is 35,00,000 (35 lakh).",
+                "ur": "اس نے ایک صفر زیادہ لگایا۔ یہ 35,00,000 (35 لاکھ) ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Keep the same digits and only move the commas.",
+                "ur": "جی ہاں! ہندسے وہی رکھیں، صرف کامے بدلیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3,50,00,000 is 3.5 crore. 3,500,000 has 7 digits: 35,00,000.",
+                "ur": "3,50,00,000 ساڑھے 3 کروڑ ہے۔ 3,500,000 میں 7 ہندسے ہیں: 35,00,000"
+              },
+              "misconception_id": "mixed_commas"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_million",
+      "front": {
+        "en": "1 million?",
+        "ur": "1 ملین؟"
+      },
+      "back": {
+        "en": "1,000,000 = 10 lakh.",
+        "ur": "1,000,000 = 10 لاکھ"
+      }
+    },
+    {
+      "id": "f_crore",
+      "front": {
+        "en": "1 crore in millions?",
+        "ur": "1 کروڑ کتنے ملین؟"
+      },
+      "back": {
+        "en": "10 million.",
+        "ur": "10 ملین"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_population",
+      "text": {
+        "en": "Ask someone at home how many people live in Pakistan (about 240 million). Say it in crores too.",
+        "ur": "گھر میں کسی سے پوچھیں کہ پاکستان میں کتنے لوگ رہتے ہیں (تقریباً 240 ملین)۔ اسے کروڑ میں بھی بتائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Million",
+      "ur": "ملین (دس لاکھ)"
+    },
+    {
+      "en": "Billion",
+      "ur": "ارب"
+    },
+    {
+      "en": "International system",
+      "ur": "بین الاقوامی نظام"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "The news says 240 million people live in Pakistan. Is that more or less than a crore?",
+          "ur": "خبروں میں کہتے ہیں پاکستان میں 240 ملین لوگ رہتے ہیں۔ یہ ایک کروڑ سے زیادہ ہے یا کم؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn the international system, with millions, and change numbers between it and lakhs and crores. First, a quick lakh check.",
+        "ur": "آج ہم ملین والا بین الاقوامی نظام سیکھیں گے، اور اعداد کو اس سے لاکھ اور کروڑ میں بدلیں گے۔ پہلے لاکھ کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.whole.place_value",
+      "prompt": {
+        "en": "How many thousands make 1 lakh?",
+        "ur": "کتنے ہزار مل کر 1 لاکھ بنتے ہیں؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "1,00,000 ÷ 1000.",
+        "ur": "1,00,000 ÷ 1000"
+      },
+      "feedback_correct": {
+        "en": "Right! 100 thousand.",
+        "ur": "درست! 100 ہزار"
+      },
+      "feedback_wrong": {
+        "en": "1,00,000 ÷ 1000 = 100.",
+        "ur": "1,00,000 ÷ 1000 = 100"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 thousand is 10,000. 1 lakh = 100 thousand.",
+            "ur": "10 ہزار 10,000 ہے۔ 1 لاکھ = 100 ہزار"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Same number, different commas. Only the names change!",
+          "ur": "عدد وہی، کامے مختلف۔ صرف نام بدلتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "In the international system, put a comma after every 3 digits from the right: 1,000 is a thousand, 1,000,000 is a million, 1,000,000,000 is a billion. 1 million = 10 lakh. 10 million = 1 crore. 1 billion = 100 crore (1 arab). To change systems, keep the digits and move the commas: 2,500,000 = 25,00,000.",
+        "ur": "بین الاقوامی نظام میں دائیں سے ہر 3 ہندسوں کے بعد کاما لگائیں: 1,000 ایک ہزار، 1,000,000 ایک ملین، 1,000,000,000 ایک بلین۔ 1 ملین = 10 لاکھ۔ 10 ملین = 1 کروڑ۔ 1 بلین = 100 کروڑ (1 ارب)۔ نظام بدلنے کے لیے ہندسے وہی رکھیں اور کامے بدلیں: 2,500,000 = 25,00,000"
+      }
+    },
+    {
+      "id": "s4_million_lakh",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "1 million is how many lakh?",
+        "ur": "1 ملین کتنے لاکھ ہیں؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "1,000,000 = 10,00,000.",
+        "ur": "1,000,000 = 10,00,000"
+      },
+      "feedback_correct": {
+        "en": "Right! 10 lakh.",
+        "ur": "درست! 10 لاکھ"
+      },
+      "feedback_wrong": {
+        "en": "1,000,000 has 6 zeros. 1 lakh has 5. So 1 million = 10 lakh.",
+        "ur": "1,000,000 میں 6 صفر ہیں۔ 1 لاکھ میں 5۔ تو 1 ملین = 10 لاکھ"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "1 lakh is 1,00,000, smaller than a million: 10 lakh.",
+            "ur": "1 لاکھ 1,00,000 ہے، ملین سے چھوٹا: 10 لاکھ"
+          },
+          "misconception_id": "million_lakh"
+        },
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "100 lakh is 1 crore. 1 million = 10 lakh.",
+            "ur": "100 لاکھ 1 کروڑ ہے۔ 1 ملین = 10 لاکھ"
+          },
+          "misconception_id": "million_crore"
+        }
+      ]
+    },
+    {
+      "id": "s5_five_million",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "5 million is how many lakh?",
+        "ur": "5 ملین کتنے لاکھ ہیں؟"
+      },
+      "answer": 50,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each million is 10 lakh.",
+        "ur": "ہر ملین 10 لاکھ ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 50 lakh.",
+        "ur": "درست! 50 لاکھ"
+      },
+      "feedback_wrong": {
+        "en": "5 × 10 = 50 lakh.",
+        "ur": "5 × 10 = 50 لاکھ"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "1 million is 10 lakh: 50 lakh.",
+            "ur": "1 ملین 10 لاکھ ہے: 50 لاکھ"
+          },
+          "misconception_id": "million_lakh"
+        },
+        {
+          "answer": 500,
+          "feedback": {
+            "en": "1 million is 10 lakh, not 100: 50 lakh.",
+            "ur": "1 ملین 10 لاکھ ہے، 100 نہیں: 50 لاکھ"
+          },
+          "misconception_id": "million_crore"
+        }
+      ]
+    },
+    {
+      "id": "s6_commas",
+      "type": "choice",
+      "prompt": {
+        "en": "Write 2,500,000 with Pakistani commas.",
+        "ur": "2,500,000 کو پاکستانی طریقے سے کاما لگا کر لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "pk",
+          "text": {
+            "en": "25,00,000",
+            "ur": "25,00,000"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 25 lakh.",
+            "ur": "جی ہاں! 25 لاکھ"
+          }
+        },
+        {
+          "id": "extra",
+          "text": {
+            "en": "2,50,00,000",
+            "ur": "2,50,00,000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That adds a zero (2.5 crore). Keep the 7 digits: 25,00,000.",
+            "ur": "اس میں ایک صفر زیادہ ہے (ڈھائی کروڑ)۔ 7 ہندسے رکھیں: 25,00,000"
+          },
+          "misconception_id": "mixed_commas"
+        },
+        {
+          "id": "short",
+          "text": {
+            "en": "2,50,000",
+            "ur": "2,50,000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That drops a zero (2.5 lakh). Keep the 7 digits: 25,00,000.",
+            "ur": "اس میں ایک صفر کم ہے (ڈھائی لاکھ)۔ 7 ہندسے رکھیں: 25,00,000"
+          },
+          "misconception_id": "mixed_commas"
+        }
+      ]
+    },
+    {
+      "id": "s7_crore_million",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "3 crore is how many million?",
+        "ur": "3 کروڑ کتنے ملین ہیں؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "1 crore = 10 million.",
+        "ur": "1 کروڑ = 10 ملین"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 million.",
+        "ur": "درست! 30 ملین"
+      },
+      "feedback_wrong": {
+        "en": "3 × 10 = 30 million.",
+        "ur": "3 × 10 = 30 ملین"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "A crore is bigger than a million: 1 crore = 10 million, so 30.",
+            "ur": "کروڑ ملین سے بڑا ہے: 1 کروڑ = 10 ملین، تو 30"
+          },
+          "misconception_id": "million_crore"
+        },
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "1 crore is 10 million, not 100: 30 million.",
+            "ur": "1 کروڑ 10 ملین ہے، 100 نہیں: 30 ملین"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_thousands",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many thousands make 1 million?",
+        "ur": "کتنے ہزار مل کر 1 ملین بنتے ہیں؟"
+      },
+      "answer": 1000,
+      "checker": "numeric",
+      "hint": {
+        "en": "1,000,000 ÷ 1,000.",
+        "ur": "1,000,000 ÷ 1,000"
+      },
+      "feedback_correct": {
+        "en": "Right! 1000 thousands.",
+        "ur": "درست! 1000 ہزار"
+      },
+      "feedback_wrong": {
+        "en": "1,000,000 ÷ 1,000 = 1000.",
+        "ur": "1,000,000 ÷ 1,000 = 1000"
+      },
+      "common_wrong": [
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "100 thousand is 1 lakh. 1 million = 1000 thousand.",
+            "ur": "100 ہزار 1 لاکھ ہے۔ 1 ملین = 1000 ہزار"
+          },
+          "misconception_id": "million_lakh"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana says 1 million is the same as 1 crore. What went wrong?",
+        "ur": "ثنا کہتی ہے 1 ملین اور 1 کروڑ برابر ہیں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "ten",
+          "text": {
+            "en": "1 million = 10 lakh. 1 crore = 10 million.",
+            "ur": "1 ملین = 10 لاکھ۔ 1 کروڑ = 10 ملین۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 1,000,000 has 6 zeros; 1,00,00,000 has 7.",
+            "ur": "جی ہاں! 1,000,000 میں 6 صفر ہیں؛ 1,00,00,000 میں 7۔"
+          }
+        },
+        {
+          "id": "lakh",
+          "text": {
+            "en": "1 million = 1 lakh.",
+            "ur": "1 ملین = 1 لاکھ۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 lakh has 5 zeros, a million has 6: 1 million = 10 lakh.",
+            "ur": "1 لاکھ میں 5 صفر، ملین میں 6: 1 ملین = 10 لاکھ"
+          },
+          "misconception_id": "million_lakh"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Count the zeros: a million has 6, a crore has 7. A crore is 10 million.",
+            "ur": "صفر گنیں: ملین میں 6، کروڑ میں 7۔ کروڑ 10 ملین ہے۔"
+          },
+          "misconception_id": "million_crore"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do you change 4,000,000 into lakhs? Can you teach me?",
+          "ur": "آپ 4,000,000 کو لاکھ میں کیسے بدلتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: how do you change a number from millions to lakhs? Use 4 million as your example.",
+        "ur": "اپنے الفاظ میں بتائیں: ملین کو لاکھ میں کیسے بدلتے ہیں؟ 4 ملین کی مثال لیں۔"
+      },
+      "key_idea": "1 million = 10 lakh, so multiply the millions by 10: 4 million = 40 lakh. Or keep the digits 4000000 and put Pakistani commas: 40,00,000.",
+      "levels": {
+        "got_it": "Says 1 million = 10 lakh, so 4 million = 40 lakh (or rewrites the commas as 40,00,000).",
+        "partly": "Gets 40 lakh with no reason, or gives the rule without the example.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "10",
+          "ten",
+          "دس"
+        ],
+        [
+          "40",
+          "forty",
+          "چالیس"
+        ],
+        [
+          "comma",
+          "کاما"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Each million is 10 lakh.",
+          "ur": "بہت خوب! ہر ملین 10 لاکھ ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how many lakh are in one million.",
+          "ur": "اچھی شروعات! اب بتائیں ایک ملین میں کتنے لاکھ ہیں۔"
+        },
+        "not_yet": {
+          "en": "How many lakh make 1 million? Then what about 4 million?",
+          "ur": "کتنے لاکھ سے 1 ملین بنتا ہے؟ پھر 4 ملین؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_population",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Pakistan has about 240 million people. How many crore is that?",
+        "ur": "پاکستان میں تقریباً 240 ملین لوگ ہیں۔ یہ کتنے کروڑ ہیں؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "10 million = 1 crore.",
+        "ur": "10 ملین = 1 کروڑ"
+      },
+      "feedback_correct": {
+        "en": "Right! About 24 crore.",
+        "ur": "درست! تقریباً 24 کروڑ"
+      },
+      "feedback_wrong": {
+        "en": "240 ÷ 10 = 24 crore.",
+        "ur": "240 ÷ 10 = 24 کروڑ"
+      },
+      "common_wrong": [
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "A crore is 10 million, so divide by 10: 24 crore.",
+            "ur": "کروڑ 10 ملین ہے، تو 10 سے تقسیم کریں: 24 کروڑ"
+          },
+          "misconception_id": "million_crore"
+        },
+        {
+          "answer": 2400,
+          "feedback": {
+            "en": "That would be lakh. In crore, 240 ÷ 10 = 24.",
+            "ur": "یہ لاکھ ہوں گے۔ کروڑ میں 240 ÷ 10 = 24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can read big numbers both ways, Pakistani and international!",
+          "ur": "اب آپ بڑے اعداد دونوں طریقوں سے پڑھ سکتے ہیں، پاکستانی اور بین الاقوامی!"
+        }
+      },
+      "text": {
+        "en": "International commas go every 3 digits. 1 million = 10 lakh, 10 million = 1 crore, 1 billion = 100 crore. To change systems, keep the digits and move the commas.",
+        "ur": "بین الاقوامی کامے ہر 3 ہندسوں کے بعد۔ 1 ملین = 10 لاکھ، 10 ملین = 1 کروڑ، 1 بلین = 100 کروڑ۔ نظام بدلنے کے لیے ہندسے وہی رکھیں اور کامے بدلیں۔"
+      },
+      "points": [
+        {
+          "en": "1 million = 10 lakh.",
+          "ur": "1 ملین = 10 لاکھ"
+        },
+        {
+          "en": "1 crore = 10 million.",
+          "ur": "1 کروڑ = 10 ملین"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_crore",
+      "type": "apply",
+      "skill": "maths.whole.number_systems",
+      "step": {
+        "id": "r_crore",
+        "type": "number",
+        "prompt": {
+          "en": "2 crore is how many million?",
+          "ur": "2 کروڑ کتنے ملین ہیں؟"
+        },
+        "answer": 20,
+        "checker": "numeric",
+        "hint": {
+          "en": "1 crore = 10 million.",
+          "ur": "1 کروڑ = 10 ملین"
+        },
+        "feedback_correct": {
+          "en": "Right! 20 million.",
+          "ur": "درست! 20 ملین"
+        },
+        "feedback_wrong": {
+          "en": "2 × 10 = 20.",
+          "ur": "2 × 10 = 20"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "1 crore is 10 million: 20.",
+              "ur": "1 کروڑ 10 ملین ہے: 20"
+            },
+            "misconception_id": "million_crore"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_lakh",
+      "type": "apply",
+      "skill": "maths.whole.number_systems",
+      "step": {
+        "id": "r_lakh",
+        "type": "number",
+        "prompt": {
+          "en": "8 million is how many lakh?",
+          "ur": "8 ملین کتنے لاکھ ہیں؟"
+        },
+        "answer": 80,
+        "checker": "numeric",
+        "hint": {
+          "en": "1 million = 10 lakh.",
+          "ur": "1 ملین = 10 لاکھ"
+        },
+        "feedback_correct": {
+          "en": "Right! 80 lakh.",
+          "ur": "درست! 80 لاکھ"
+        },
+        "feedback_wrong": {
+          "en": "8 × 10 = 80.",
+          "ur": "8 × 10 = 80"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "1 million is 10 lakh: 80.",
+              "ur": "1 ملین 10 لاکھ ہے: 80"
+            },
+            "misconception_id": "million_lakh"
+          },
+          {
+            "answer": 800,
+            "feedback": {
+              "en": "1 million is 10 lakh, not 100: 80.",
+              "ur": "1 ملین 10 لاکھ ہے، 100 نہیں: 80"
+            },
+            "misconception_id": "million_crore"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Whole Numbers unit. No textbook text or exercises were used.",
+    "Pakistan's population (about 240 million, 24 crore) is rounded; it only gives the numbers a real-life feel.",
+    "Urdu terms to check: ملین, بلین / ارب, بین الاقوامی نظام (international system).",
+    "The numbers were worked out in content/sources/g6-maths-15/millions.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

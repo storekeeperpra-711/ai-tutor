@@ -27,6 +27,15 @@ void main() {
       expect(parseNumber('1 / 2'), 0.5);
     });
 
+    test('reads large numbers with Pakistani or international commas', () {
+      expect(parseNumber('6,00,000'), 600000);
+      expect(parseNumber('2,45,67,890'), 24567890);
+      expect(parseNumber('1,000,000'), 1000000);
+      expect(parseNumber('۶،۰۰،۰۰۰'), 600000);
+      expect(parseNumber('3,4'), isNull);
+      expect(parseNumber('1,0000'), isNull);
+    });
+
     test('rejects things that are not numbers', () {
       expect(parseNumber(''), isNull);
       expect(parseNumber('eighty eight'), isNull);
