@@ -1,0 +1,946 @@
+{
+  "id": "g6-maths-14-solids-word-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Solve real-life problems on volume, capacity and surface area, choosing which one the problem needs.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Three-dimensional Solids"
+    }
+  ],
+  "skills": [
+    "maths.solids.word_problems"
+  ],
+  "title": {
+    "en": "Solids word problems",
+    "ur": "ٹھوس اشکال کے عملی سوال"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.solids.surface_area"
+    },
+    {
+      "skill": "maths.solids.volume_cube_capacity"
+    },
+    {
+      "skill": "maths.solids.volume_cuboid"
+    },
+    {
+      "skill": "maths.solids.faces_edges_vertices"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "volume_or_area",
+      "description": "Finds surface area when the problem asks how much a box holds, or volume when it asks how much covers it."
+    },
+    {
+      "id": "litre_100",
+      "description": "Thinks 100 cm³ (not 1000 cm³) make 1 litre."
+    },
+    {
+      "id": "counts_lid",
+      "description": "Counts all 6 faces for an open box with no lid."
+    },
+    {
+      "id": "adds_sides",
+      "description": "Adds length, breadth and height instead of multiplying them."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.solids.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.solids.word_problems": [
+      {
+        "id": "qb_which",
+        "type": "recall",
+        "step": {
+          "id": "qb_which",
+          "type": "choice",
+          "prompt": {
+            "en": "To find how much water a tank holds, what do we find?",
+            "ur": "یہ معلوم کرنے کے لیے کہ ٹینکی میں کتنا پانی آتا ہے، ہم کیا نکالتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "volume",
+              "text": {
+                "en": "Its volume",
+                "ur": "اس کا حجم"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Volume is the space inside.",
+                "ur": "جی ہاں! حجم اندر کی جگہ ہے۔"
+              }
+            },
+            {
+              "id": "surface",
+              "text": {
+                "en": "Its surface area",
+                "ur": "اس کا سطحی رقبہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Surface area is the outside cover. What it holds is the volume.",
+                "ur": "سطحی رقبہ باہر کا غلاف ہے۔ جو اس میں آتا ہے وہ حجم ہے۔"
+              },
+              "misconception_id": "volume_or_area"
+            },
+            {
+              "id": "edges",
+              "text": {
+                "en": "The number of edges",
+                "ur": "کناروں کی تعداد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Edges don't tell how much it holds. Find the volume.",
+                "ur": "کنارے نہیں بتاتے کہ اس میں کتنا آتا ہے۔ حجم نکالیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A box is 30 cm long, 20 cm wide and 10 cm high. How many litres of rice does it hold?",
+            "ur": "ایک ڈبہ 30 سینٹی میٹر لمبا، 20 سینٹی میٹر چوڑا اور 10 سینٹی میٹر اونچا ہے۔ اس میں کتنے لیٹر چاول آتے ہیں؟"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "Volume in cm³, then ÷ 1000.",
+            "ur": "مکعب سینٹی میٹر میں حجم، پھر ÷ 1000"
+          },
+          "feedback_correct": {
+            "en": "Right! 6000 cm³ = 6 litres.",
+            "ur": "درست! 6000 مکعب سینٹی میٹر = 6 لیٹر"
+          },
+          "feedback_wrong": {
+            "en": "30 × 20 × 10 = 6000, and 6000 ÷ 1000 = 6.",
+            "ur": "30 × 20 × 10 = 6000، اور 6000 ÷ 1000 = 6"
+          },
+          "common_wrong": [
+            {
+              "answer": 60,
+              "feedback": {
+                "en": "1 litre is 1000 cm³, not 100: 6 litres.",
+                "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، 100 نہیں: 6 لیٹر"
+              },
+              "misconception_id": "litre_100"
+            },
+            {
+              "answer": 6000,
+              "feedback": {
+                "en": "That is in cm³. Divide by 1000: 6 litres.",
+                "ur": "یہ مکعب سینٹی میٹر میں ہے۔ 1000 سے تقسیم کریں: 6 لیٹر"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Kamran wants to know how much paint covers a box. He finds l × b × h. What is wrong?",
+            "ur": "کامران جاننا چاہتا ہے کہ ایک ڈبے پر کتنا رنگ لگے گا۔ وہ ل × چ × ا نکالتا ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "surface",
+              "text": {
+                "en": "Paint covers the faces, so he needs the surface area.",
+                "ur": "رنگ سطحوں پر لگتا ہے، تو اسے سطحی رقبہ چاہیے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! l × b × h is the space inside, not the outside.",
+                "ur": "جی ہاں! ل × چ × ا اندر کی جگہ ہے، باہر نہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "l × b × h is the volume. Paint needs the surface area.",
+                "ur": "ل × چ × ا حجم ہے۔ رنگ کے لیے سطحی رقبہ چاہیے۔"
+              },
+              "misconception_id": "volume_or_area"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_holds",
+      "front": {
+        "en": "How much a box holds?",
+        "ur": "ڈبے میں کتنا آتا ہے؟"
+      },
+      "back": {
+        "en": "Volume (cm³ or litres).",
+        "ur": "حجم (مکعب سینٹی میٹر یا لیٹر)"
+      }
+    },
+    {
+      "id": "f_covers",
+      "front": {
+        "en": "How much covers a box?",
+        "ur": "ڈبے کو کتنا ڈھانپتا ہے؟"
+      },
+      "back": {
+        "en": "Surface area (cm²).",
+        "ur": "سطحی رقبہ (مربع سینٹی میٹر)"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_room",
+      "text": {
+        "en": "Think of your school bag or a cupboard at home. Name one question about it that needs volume, and one that needs surface area.",
+        "ur": "اپنے سکول بیگ یا گھر کی الماری کے بارے میں سوچیں۔ اس کے بارے میں ایک سوال بتائیں جس کے لیے حجم چاہیے، اور ایک جس کے لیے سطحی رقبہ۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Volume",
+      "ur": "حجم"
+    },
+    {
+      "en": "Surface area",
+      "ur": "سطحی رقبہ"
+    },
+    {
+      "en": "Capacity",
+      "ur": "گنجائش"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Filling a tank or painting a box? One needs volume, one needs surface area!",
+          "ur": "ٹینکی بھرنی ہے یا ڈبہ رنگنا ہے؟ ایک کے لیے حجم چاہیے، ایک کے لیے سطحی رقبہ!"
+        }
+      },
+      "text": {
+        "en": "Today we solve real problems with boxes and tanks. First decide: does it ask what fits inside (volume) or what covers the outside (surface area)? First, a quick check.",
+        "ur": "آج ہم ڈبوں اور ٹینکیوں کے اصل سوال حل کریں گے۔ پہلے فیصلہ کریں: کیا سوال اندر آنے والی چیز (حجم) پوچھتا ہے یا باہر ڈھانپنے والی (سطحی رقبہ)؟ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.solids.surface_area",
+      "prompt": {
+        "en": "A cube has 2 cm sides. What is its surface area, in cm²?",
+        "ur": "ایک مکعب کے اضلاع 2 سینٹی میٹر ہیں۔ اس کا سطحی رقبہ کتنے مربع سینٹی میٹر ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 × 2 × 2.",
+        "ur": "6 × 2 × 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 4 = 24 cm².",
+        "ur": "درست! 6 × 4 = 24 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "One face is 4 cm², and 6 × 4 = 24.",
+        "ur": "ایک سطح 4 مربع سینٹی میٹر ہے، اور 6 × 4 = 24"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "That is the volume. 6 × 4 = 24.",
+            "ur": "یہ حجم ہے۔ 6 × 4 = 24"
+          },
+          "misconception_id": "volume_or_area"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Inside means volume. Outside means surface area. Easy!",
+          "ur": "اندر یعنی حجم۔ باہر یعنی سطحی رقبہ۔ آسان!"
+        }
+      },
+      "text": {
+        "en": "Holds, fills, fits inside: find the volume (l × b × h), in cm³, then ÷ 1000 for litres. Covers, paints, wraps: find the surface area, in cm². An open box with no lid has only 5 faces.",
+        "ur": "رکھتا ہے، بھرتا ہے، اندر آتا ہے: حجم نکالیں (ل × چ × ا)، مکعب سینٹی میٹر میں، پھر لیٹر کے لیے ÷ 1000۔ ڈھانپتا ہے، رنگتا ہے، لپیٹتا ہے: سطحی رقبہ نکالیں، مربع سینٹی میٹر میں۔ بغیر ڈھکن کے کھلے ڈبے کی صرف 5 سطحیں ہوتی ہیں۔"
+      }
+    },
+    {
+      "id": "s4_toy_box",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A toy box is 20 cm long, 10 cm wide and 5 cm high. What is its volume, in cm³?",
+        "ur": "کھلونوں کا ڈبہ 20 سینٹی میٹر لمبا، 10 سینٹی میٹر چوڑا اور 5 سینٹی میٹر اونچا ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 1000,
+      "checker": "numeric",
+      "hint": {
+        "en": "20 × 10 × 5.",
+        "ur": "20 × 10 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 1000 cm³, that is 1 litre.",
+        "ur": "درست! 1000 مکعب سینٹی میٹر، یعنی 1 لیٹر"
+      },
+      "feedback_wrong": {
+        "en": "20 × 10 = 200, and 200 × 5 = 1000.",
+        "ur": "20 × 10 = 200، اور 200 × 5 = 1000"
+      },
+      "common_wrong": [
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "Multiply, don't add: 20 × 10 × 5 = 1000.",
+            "ur": "جمع نہیں، ضرب: 20 × 10 × 5 = 1000"
+          },
+          "misconception_id": "adds_sides"
+        },
+        {
+          "answer": 200,
+          "feedback": {
+            "en": "That is the bottom only. × 5 high: 1000.",
+            "ur": "یہ صرف نچلی سطح ہے۔ × 5 اونچائی: 1000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_tank",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A water tank is 80 cm long, 50 cm wide and 50 cm high. How many litres does it hold?",
+        "ur": "پانی کی ٹینکی 80 سینٹی میٹر لمبی، 50 سینٹی میٹر چوڑی اور 50 سینٹی میٹر اونچی ہے۔ اس میں کتنے لیٹر آتے ہیں؟"
+      },
+      "answer": 200,
+      "checker": "numeric",
+      "hint": {
+        "en": "Volume in cm³, then ÷ 1000.",
+        "ur": "مکعب سینٹی میٹر میں حجم، پھر ÷ 1000"
+      },
+      "feedback_correct": {
+        "en": "Right! 200000 cm³ = 200 litres.",
+        "ur": "درست! 200000 مکعب سینٹی میٹر = 200 لیٹر"
+      },
+      "feedback_wrong": {
+        "en": "80 × 50 × 50 = 200000, and 200000 ÷ 1000 = 200.",
+        "ur": "80 × 50 × 50 = 200000، اور 200000 ÷ 1000 = 200"
+      },
+      "common_wrong": [
+        {
+          "answer": 2000,
+          "feedback": {
+            "en": "1 litre is 1000 cm³, not 100: 200 litres.",
+            "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، 100 نہیں: 200 لیٹر"
+          },
+          "misconception_id": "litre_100"
+        },
+        {
+          "answer": 200000,
+          "feedback": {
+            "en": "That is in cm³. Divide by 1000: 200 litres.",
+            "ur": "یہ مکعب سینٹی میٹر میں ہے۔ 1000 سے تقسیم کریں: 200 لیٹر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_which",
+      "type": "choice",
+      "prompt": {
+        "en": "Ali wants to cover his book box with brown paper. What should he find?",
+        "ur": "علی اپنی کتابوں کے ڈبے پر خاکی کاغذ چڑھانا چاہتا ہے۔ اسے کیا نکالنا چاہیے؟"
+      },
+      "options": [
+        {
+          "id": "surface",
+          "text": {
+            "en": "The surface area",
+            "ur": "سطحی رقبہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Paper covers the outside faces.",
+            "ur": "جی ہاں! کاغذ باہر کی سطحیں ڈھانپتا ہے۔"
+          }
+        },
+        {
+          "id": "volume",
+          "text": {
+            "en": "The volume",
+            "ur": "حجم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Volume is what fits inside. Paper covers the outside: surface area.",
+            "ur": "حجم وہ ہے جو اندر آتا ہے۔ کاغذ باہر ڈھانپتا ہے: سطحی رقبہ"
+          },
+          "misconception_id": "volume_or_area"
+        }
+      ]
+    },
+    {
+      "id": "s7_small_cubes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many 2 cm cubes fit in a box 10 cm long, 6 cm wide and 4 cm high?",
+        "ur": "10 سینٹی میٹر لمبے، 6 سینٹی میٹر چوڑے اور 4 سینٹی میٹر اونچے ڈبے میں 2 سینٹی میٹر کے کتنے مکعب آئیں گے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "How many fit along each side? 10 ÷ 2, 6 ÷ 2, 4 ÷ 2.",
+        "ur": "ہر طرف کتنے آئیں گے؟ 10 ÷ 2، 6 ÷ 2، 4 ÷ 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 3 × 2 = 30 cubes.",
+        "ur": "درست! 5 × 3 × 2 = 30 مکعب"
+      },
+      "feedback_wrong": {
+        "en": "5 along, 3 across, 2 up: 5 × 3 × 2 = 30. (Or 240 ÷ 8 = 30.)",
+        "ur": "5 لمبائی میں، 3 چوڑائی میں، 2 اوپر: 5 × 3 × 2 = 30۔ (یا 240 ÷ 8 = 30)"
+      },
+      "common_wrong": [
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "Each cube is 2 × 2 × 2 = 8 cm³, not 2. 240 ÷ 8 = 30.",
+            "ur": "ہر مکعب 2 × 2 × 2 = 8 مکعب سینٹی میٹر ہے، 2 نہیں۔ 240 ÷ 8 = 30"
+          }
+        },
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "240 is the volume in cm³. Each cube is 8 cm³: 30.",
+            "ur": "240 مکعب سینٹی میٹر میں حجم ہے۔ ہر مکعب 8 مکعب سینٹی میٹر ہے: 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_open_box",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A box with no lid is a cube with 30 cm sides. How much paint covers the outside of it, in cm²?",
+        "ur": "بغیر ڈھکن کا ایک ڈبہ 30 سینٹی میٹر اضلاع والا مکعب ہے۔ اس کے باہر کتنے مربع سینٹی میٹر رنگ لگے گا؟"
+      },
+      "answer": 4500,
+      "checker": "numeric",
+      "hint": {
+        "en": "No lid: only 5 faces of 30 × 30.",
+        "ur": "ڈھکن نہیں: 30 × 30 کی صرف 5 سطحیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 900 = 4500 cm².",
+        "ur": "درست! 5 × 900 = 4500 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "One face is 900 cm², and 5 × 900 = 4500.",
+        "ur": "ایک سطح 900 مربع سینٹی میٹر ہے، اور 5 × 900 = 4500"
+      },
+      "common_wrong": [
+        {
+          "answer": 5400,
+          "feedback": {
+            "en": "There is no lid, so 5 faces, not 6: 4500.",
+            "ur": "ڈھکن نہیں، تو 6 نہیں 5 سطحیں: 4500"
+          },
+          "misconception_id": "counts_lid"
+        },
+        {
+          "answer": 27000,
+          "feedback": {
+            "en": "That is the volume. Paint covers 5 faces: 4500.",
+            "ur": "یہ حجم ہے۔ رنگ 5 سطحوں پر لگتا ہے: 4500"
+          },
+          "misconception_id": "volume_or_area"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal wants to know how much water a tank holds. He adds up the areas of its 6 faces. What went wrong?",
+        "ur": "بلال جاننا چاہتا ہے کہ ٹینکی میں کتنا پانی آتا ہے۔ وہ اس کی 6 سطحوں کے رقبے جمع کرتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "volume",
+          "text": {
+            "en": "Water fills the inside, so he needs the volume.",
+            "ur": "پانی اندر بھرتا ہے، تو اسے حجم چاہیے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! l × b × h, then ÷ 1000 for litres.",
+            "ur": "جی ہاں! ل × چ × ا، پھر لیٹر کے لیے ÷ 1000"
+          }
+        },
+        {
+          "id": "five",
+          "text": {
+            "en": "He should add only 5 faces.",
+            "ur": "اسے صرف 5 سطحیں جمع کرنی چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Faces give the outside. Water needs the inside: volume.",
+            "ur": "سطحیں باہر بتاتی ہیں۔ پانی کے لیے اندر چاہیے: حجم"
+          },
+          "misconception_id": "volume_or_area"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding faces gives the surface area. Water needs the volume.",
+            "ur": "سطحیں جمع کرنے سے سطحی رقبہ ملتا ہے۔ پانی کے لیے حجم چاہیے۔"
+          },
+          "misconception_id": "volume_or_area"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do you know when to use volume and when to use surface area? Can you teach me?",
+          "ur": "آپ کو کیسے پتا چلتا ہے کہ کب حجم اور کب سطحی رقبہ استعمال کرنا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: when do we find volume, and when do we find surface area? Give an example of each.",
+        "ur": "اپنے الفاظ میں بتائیں: ہم کب حجم نکالتے ہیں اور کب سطحی رقبہ؟ ہر ایک کی ایک مثال دیں۔"
+      },
+      "key_idea": "Volume is the space inside, used for filling or holding (water in a tank). Surface area is the total area of the outside faces, used for covering or painting (wrapping a box).",
+      "levels": {
+        "got_it": "Says volume is for filling or the inside, surface area is for covering or the outside, with an example of each.",
+        "partly": "Explains one of the two, or gives no examples.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "inside",
+          "fill",
+          "hold",
+          "اندر",
+          "بھر"
+        ],
+        [
+          "outside",
+          "cover",
+          "paint",
+          "wrap",
+          "باہر",
+          "ڈھانپ",
+          "رنگ"
+        ],
+        [
+          "volume",
+          "حجم"
+        ],
+        [
+          "surface",
+          "سطح"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Inside is volume, outside is surface area.",
+          "ur": "بہت خوب! اندر حجم ہے، باہر سطحی رقبہ۔"
+        },
+        "partly": {
+          "en": "Good start! Now explain the other one too, with an example.",
+          "ur": "اچھی شروعات! اب دوسرے کی بھی مثال کے ساتھ وضاحت کریں۔"
+        },
+        "not_yet": {
+          "en": "Think of filling a bucket with water and painting a box. Which needs the inside?",
+          "ur": "بالٹی میں پانی بھرنے اور ڈبہ رنگنے کا سوچیں۔ کس کے لیے اندر کی جگہ چاہیے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Solids unit. You can do it!",
+          "ur": "ٹیسٹ کا وقت! ٹھوس اشکال کے پورے باب سے پانچ سوال۔ آپ کر سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on faces and edges, volume, litres, surface area and a real-life problem. Take your time.",
+        "ur": "اس چھوٹے ٹیسٹ میں سطحوں اور کناروں، حجم، لیٹر، سطحی رقبے اور ایک اصل زندگی کے سوال ہیں۔ آرام سے کریں۔"
+      }
+    },
+    {
+      "id": "u1_edges",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.solids.faces_edges_vertices",
+      "prompt": {
+        "en": "Test 1: How many edges does a cuboid have?",
+        "ur": "ٹیسٹ 1: مستطیلی ڈبے کے کتنے کنارے ہوتے ہیں؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 on top, 4 at the bottom, 4 standing up.",
+        "ur": "4 اوپر، 4 نیچے، 4 کھڑے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 edges.",
+        "ur": "درست! 12 کنارے"
+      },
+      "feedback_wrong": {
+        "en": "4 + 4 + 4 = 12.",
+        "ur": "4 + 4 + 4 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the corners. Edges: 4 + 4 + 4 = 12.",
+            "ur": "8 کونے ہیں۔ کنارے: 4 + 4 + 4 = 12"
+          }
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the faces. Edges: 12.",
+            "ur": "6 سطحیں ہیں۔ کنارے: 12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u2_volume",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.solids.volume_cuboid",
+      "prompt": {
+        "en": "Test 2: A box is 7 cm long, 4 cm wide and 3 cm high. What is its volume, in cm³?",
+        "ur": "ٹیسٹ 2: ایک ڈبہ 7 سینٹی میٹر لمبا، 4 سینٹی میٹر چوڑا اور 3 سینٹی میٹر اونچا ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 84,
+      "checker": "numeric",
+      "hint": {
+        "en": "7 × 4 × 3.",
+        "ur": "7 × 4 × 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 84 cm³.",
+        "ur": "درست! 84 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "7 × 4 = 28, and 28 × 3 = 84.",
+        "ur": "7 × 4 = 28، اور 28 × 3 = 84"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "Multiply, don't add: 7 × 4 × 3 = 84.",
+            "ur": "جمع نہیں، ضرب: 7 × 4 × 3 = 84"
+          },
+          "misconception_id": "adds_sides"
+        }
+      ]
+    },
+    {
+      "id": "u3_litres",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.solids.volume_cube_capacity",
+      "prompt": {
+        "en": "Test 3: A jug holds 3000 cm³. How many litres is that?",
+        "ur": "ٹیسٹ 3: ایک جگ میں 3000 مکعب سینٹی میٹر آتا ہے۔ یہ کتنے لیٹر ہے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 1000.",
+        "ur": "1000 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 litres.",
+        "ur": "درست! 3 لیٹر"
+      },
+      "feedback_wrong": {
+        "en": "3000 ÷ 1000 = 3.",
+        "ur": "3000 ÷ 1000 = 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "1 litre is 1000 cm³, not 100: 3 litres.",
+            "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، 100 نہیں: 3 لیٹر"
+          },
+          "misconception_id": "litre_100"
+        }
+      ]
+    },
+    {
+      "id": "u4_surface",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.solids.surface_area",
+      "prompt": {
+        "en": "Test 4: A box is 5 cm long, 4 cm wide and 2 cm high. What is its surface area, in cm²?",
+        "ur": "ٹیسٹ 4: ایک ڈبہ 5 سینٹی میٹر لمبا، 4 سینٹی میٹر چوڑا اور 2 سینٹی میٹر اونچا ہے۔ اس کا سطحی رقبہ کتنے مربع سینٹی میٹر ہے؟"
+      },
+      "answer": 76,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 × 4, 4 × 2 and 5 × 2. Add, then double.",
+        "ur": "5 × 4، 4 × 2 اور 5 × 2۔ جمع کریں، پھر دگنا کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 38 = 76 cm².",
+        "ur": "درست! 2 × 38 = 76 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "20 + 8 + 10 = 38, and 2 × 38 = 76.",
+        "ur": "20 + 8 + 10 = 38، اور 2 × 38 = 76"
+      },
+      "common_wrong": [
+        {
+          "answer": 38,
+          "feedback": {
+            "en": "That is 3 faces. Double it: 76.",
+            "ur": "یہ 3 سطحیں ہیں۔ دگنا کریں: 76"
+          }
+        },
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "That is the volume. Add the faces: 76.",
+            "ur": "یہ حجم ہے۔ سطحیں جمع کریں: 76"
+          },
+          "misconception_id": "volume_or_area"
+        }
+      ]
+    },
+    {
+      "id": "u5_juice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test 5: A carton has 12 juice packs. Each pack holds 250 cm³. How many litres of juice are in the carton?",
+        "ur": "ٹیسٹ 5: ایک کارٹن میں جوس کے 12 ڈبے ہیں۔ ہر ڈبے میں 250 مکعب سینٹی میٹر جوس ہے۔ کارٹن میں کل کتنے لیٹر جوس ہے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "12 × 250 first, then ÷ 1000.",
+        "ur": "پہلے 12 × 250، پھر ÷ 1000"
+      },
+      "feedback_correct": {
+        "en": "Right! 3000 cm³ = 3 litres.",
+        "ur": "درست! 3000 مکعب سینٹی میٹر = 3 لیٹر"
+      },
+      "feedback_wrong": {
+        "en": "12 × 250 = 3000, and 3000 ÷ 1000 = 3.",
+        "ur": "12 × 250 = 3000، اور 3000 ÷ 1000 = 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "1 litre is 1000 cm³, not 100: 3 litres.",
+            "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، 100 نہیں: 3 لیٹر"
+          },
+          "misconception_id": "litre_100"
+        },
+        {
+          "answer": 3000,
+          "feedback": {
+            "en": "That is in cm³. Divide by 1000: 3 litres.",
+            "ur": "یہ مکعب سینٹی میٹر میں ہے۔ 1000 سے تقسیم کریں: 3 لیٹر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Solids unit complete! Inside is volume, outside is surface area.",
+          "ur": "ٹھوس اشکال کا باب مکمل! اندر حجم ہے، باہر سطحی رقبہ۔"
+        }
+      },
+      "text": {
+        "en": "First decide what the problem asks. Filling or holding: volume, in cm³ or litres (÷ 1000). Covering or painting: surface area, in cm². Check for a missing lid.",
+        "ur": "پہلے فیصلہ کریں کہ سوال کیا پوچھتا ہے۔ بھرنا یا رکھنا: حجم، مکعب سینٹی میٹر یا لیٹر میں (÷ 1000)۔ ڈھانپنا یا رنگنا: سطحی رقبہ، مربع سینٹی میٹر میں۔ ڈھکن نہ ہو تو دھیان رکھیں۔"
+      },
+      "points": [
+        {
+          "en": "Holds or fills: volume.",
+          "ur": "رکھتا یا بھرتا: حجم۔"
+        },
+        {
+          "en": "Covers or paints: surface area.",
+          "ur": "ڈھانپتا یا رنگتا: سطحی رقبہ۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_cubes",
+      "type": "apply",
+      "skill": "maths.solids.word_problems",
+      "step": {
+        "id": "r_cubes",
+        "type": "number",
+        "prompt": {
+          "en": "How many 1 cm cubes fill a box 4 cm long, 3 cm wide and 2 cm high?",
+          "ur": "4 سینٹی میٹر لمبے، 3 سینٹی میٹر چوڑے اور 2 سینٹی میٹر اونچے ڈبے کو 1 سینٹی میٹر کے کتنے مکعب بھریں گے؟"
+        },
+        "answer": 24,
+        "checker": "numeric",
+        "hint": {
+          "en": "4 × 3 × 2.",
+          "ur": "4 × 3 × 2"
+        },
+        "feedback_correct": {
+          "en": "Right! 24 cubes.",
+          "ur": "درست! 24 مکعب"
+        },
+        "feedback_wrong": {
+          "en": "4 × 3 = 12 in a layer, 2 layers: 24.",
+          "ur": "ایک تہہ میں 4 × 3 = 12، 2 تہیں: 24"
+        },
+        "common_wrong": [
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "Multiply, don't add: 4 × 3 × 2 = 24.",
+              "ur": "جمع نہیں، ضرب: 4 × 3 × 2 = 24"
+            },
+            "misconception_id": "adds_sides"
+          },
+          {
+            "answer": 12,
+            "feedback": {
+              "en": "That is one layer. There are 2 layers: 24.",
+              "ur": "یہ ایک تہہ ہے۔ 2 تہیں ہیں: 24"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_paint",
+      "type": "apply",
+      "skill": "maths.solids.word_problems",
+      "step": {
+        "id": "r_paint",
+        "type": "number",
+        "prompt": {
+          "en": "Zara paints all 6 faces of a wooden cube with 3 cm sides. How many cm² does she paint?",
+          "ur": "زارا 3 سینٹی میٹر اضلاع والے لکڑی کے مکعب کی تمام 6 سطحیں رنگتی ہے۔ وہ کتنے مربع سینٹی میٹر رنگتی ہے؟"
+        },
+        "answer": 54,
+        "checker": "numeric",
+        "hint": {
+          "en": "6 × 3 × 3.",
+          "ur": "6 × 3 × 3"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 × 9 = 54 cm².",
+          "ur": "درست! 6 × 9 = 54 مربع سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "One face is 9 cm², and 6 × 9 = 54.",
+          "ur": "ایک سطح 9 مربع سینٹی میٹر ہے، اور 6 × 9 = 54"
+        },
+        "common_wrong": [
+          {
+            "answer": 27,
+            "feedback": {
+              "en": "That is the volume. Paint covers faces: 54.",
+              "ur": "یہ حجم ہے۔ رنگ سطحوں پر لگتا ہے: 54"
+            },
+            "misconception_id": "volume_or_area"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Solids unit. No textbook text or exercises were used.",
+    "The key skill is deciding between volume (inside: holds, fills) and surface area (outside: covers, paints).",
+    "The five-question unit test at the end covers every lesson of the unit.",
+    "The numbers were worked out in content/sources/g6-maths-14/solids_word_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
