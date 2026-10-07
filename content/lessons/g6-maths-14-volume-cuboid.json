@@ -1,0 +1,767 @@
+{
+  "id": "g6-maths-14-volume-cuboid",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the volume of a cuboid as length × breadth × height, in cubic centimetres.",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Three-dimensional Solids"
+    }
+  ],
+  "skills": [
+    "maths.solids.volume_cuboid"
+  ],
+  "title": {
+    "en": "Volume of a cuboid",
+    "ur": "مکعب نما کا حجم"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.solids.faces_edges_vertices"
+    },
+    {
+      "skill": "maths.measurement.area_rectangle"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "adds_lengths",
+      "description": "Adds the length, breadth and height instead of multiplying them."
+    },
+    {
+      "id": "area_only",
+      "description": "Finds only the area of the base and forgets the height."
+    },
+    {
+      "id": "square_units",
+      "description": "Writes volume in cm or cm² instead of cm³."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.solids.volume_cuboid": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.solids.volume_cuboid": [
+      {
+        "id": "qb_units",
+        "type": "recall",
+        "step": {
+          "id": "qb_units",
+          "type": "choice",
+          "prompt": {
+            "en": "Which unit is used for volume?",
+            "ur": "حجم کے لیے کون سی اکائی استعمال ہوتی ہے؟"
+          },
+          "options": [
+            {
+              "id": "cm3",
+              "text": {
+                "en": "cm³ (cubic centimetres)",
+                "ur": "مکعب سینٹی میٹر (cm³)"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Volume counts 1 cm cubes.",
+                "ur": "جی ہاں! حجم 1 سینٹی میٹر کے مکعب گنتا ہے۔"
+              }
+            },
+            {
+              "id": "cm2",
+              "text": {
+                "en": "cm² (square centimetres)",
+                "ur": "مربع سینٹی میٹر (cm²)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "cm² is for area. Volume is in cm³.",
+                "ur": "cm² رقبے کے لیے ہے۔ حجم cm³ میں ہوتا ہے۔"
+              },
+              "misconception_id": "square_units"
+            },
+            {
+              "id": "cm",
+              "text": {
+                "en": "cm",
+                "ur": "سینٹی میٹر"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "cm measures length. Volume is in cm³.",
+                "ur": "سینٹی میٹر لمبائی ناپتا ہے۔ حجم cm³ میں ہوتا ہے۔"
+              },
+              "misconception_id": "square_units"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A box is 6 cm long, 2 cm wide and 3 cm high. What is its volume, in cm³?",
+            "ur": "ایک ڈبہ 6 سینٹی میٹر لمبا، 2 سینٹی میٹر چوڑا اور 3 سینٹی میٹر اونچا ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+          },
+          "answer": 36,
+          "checker": "numeric",
+          "hint": {
+            "en": "Length × breadth × height.",
+            "ur": "لمبائی × چوڑائی × اونچائی"
+          },
+          "feedback_correct": {
+            "en": "Right! 36 cm³.",
+            "ur": "درست! 36 مکعب سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "6 × 2 × 3 = 36.",
+            "ur": "6 × 2 × 3 = 36"
+          },
+          "common_wrong": [
+            {
+              "answer": 11,
+              "feedback": {
+                "en": "Multiply, don't add: 6 × 2 × 3 = 36.",
+                "ur": "جمع نہیں، ضرب: 6 × 2 × 3 = 36"
+              },
+              "misconception_id": "adds_lengths"
+            },
+            {
+              "answer": 12,
+              "feedback": {
+                "en": "That is only the base. Multiply by the height too: 36.",
+                "ur": "یہ صرف تہہ ہے۔ اونچائی سے بھی ضرب دیں: 36"
+              },
+              "misconception_id": "area_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A tin box is 5 cm by 4 cm by 3 cm. Asad says its volume is 5 × 4 = 20 cm³. What is wrong?",
+            "ur": "ٹین کا ڈبہ 5 × 4 × 3 سینٹی میٹر ہے۔ اسد کہتا ہے اس کا حجم 5 × 4 = 20 مکعب سینٹی میٹر ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "height",
+              "text": {
+                "en": "He forgot the height: 5 × 4 × 3 = 60 cm³.",
+                "ur": "وہ اونچائی بھول گیا: 5 × 4 × 3 = 60 مکعب سینٹی میٹر"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 20 cubes cover the base, and there are 3 layers.",
+                "ur": "جی ہاں! 20 مکعب تہہ ڈھانپتے ہیں، اور 3 تہیں ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "5 × 4 is the area of the base. Multiply by the height, 3: 60.",
+                "ur": "5 × 4 تہہ کا رقبہ ہے۔ اونچائی 3 سے ضرب دیں: 60"
+              },
+              "misconception_id": "area_only"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_volume",
+      "front": {
+        "en": "Volume of a cuboid?",
+        "ur": "مکعب نما کا حجم؟"
+      },
+      "back": {
+        "en": "Length × breadth × height, in cm³.",
+        "ur": "لمبائی × چوڑائی × اونچائی، مکعب سینٹی میٹر میں۔"
+      }
+    },
+    {
+      "id": "f_layers",
+      "front": {
+        "en": "Another way?",
+        "ur": "دوسرا طریقہ؟"
+      },
+      "back": {
+        "en": "Area of the base × height (number of layers).",
+        "ur": "تہہ کا رقبہ × اونچائی (تہوں کی تعداد)۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_box",
+      "text": {
+        "en": "Find a box at home, like a tea box or a shoe box. Measure its length, breadth and height with a ruler, to the nearest centimetre, and work out its volume.",
+        "ur": "گھر میں کوئی ڈبہ ڈھونڈیں، جیسے چائے کا ڈبہ یا جوتوں کا ڈبہ۔ فٹے سے اس کی لمبائی، چوڑائی اور اونچائی قریب ترین سینٹی میٹر تک ناپیں اور اس کا حجم نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Volume",
+      "ur": "حجم"
+    },
+    {
+      "en": "Cubic centimetre (cm³)",
+      "ur": "مکعب سینٹی میٹر"
+    },
+    {
+      "en": "Height",
+      "ur": "اونچائی"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How many sugar cubes fit in a box? That's the box's volume!",
+          "ur": "ایک ڈبے میں چینی کے کتنے ٹکڑے آئیں گے؟ یہی ڈبے کا حجم ہے!"
+        }
+      },
+      "text": {
+        "en": "Today we find how much space is inside a box. First, a quick area check.",
+        "ur": "آج ہم معلوم کریں گے کہ ڈبے کے اندر کتنی جگہ ہے۔ پہلے رقبے کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.area_rectangle",
+      "prompt": {
+        "en": "A rectangle is 5 cm by 3 cm. What is its area, in cm²?",
+        "ur": "ایک مستطیل 5 × 3 سینٹی میٹر ہے۔ اس کا رقبہ کتنے مربع سینٹی میٹر ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Length × width.",
+        "ur": "لمبائی × چوڑائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 cm².",
+        "ur": "درست! 15 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "5 × 3 = 15.",
+        "ur": "5 × 3 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "16 is the perimeter. Area = 5 × 3 = 15.",
+            "ur": "16 احاطہ ہے۔ رقبہ = 5 × 3 = 15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Cover the bottom with cubes, then stack layers up to the top!",
+          "ur": "تہہ کو مکعبوں سے ڈھانپیں، پھر اوپر تک تہیں رکھیں!"
+        }
+      },
+      "text": {
+        "en": "Volume is the space inside a solid. We count it in 1 cm cubes, called cubic centimetres (cm³). For a box 4 cm long and 3 cm wide, 4 × 3 = 12 cubes cover the bottom. If it is 2 cm high, there are 2 layers: 12 × 2 = 24 cm³. So volume = length × breadth × height.",
+        "ur": "حجم کسی ٹھوس کے اندر کی جگہ ہے۔ ہم اسے 1 سینٹی میٹر کے مکعبوں میں گنتے ہیں، جنہیں مکعب سینٹی میٹر (cm³) کہتے ہیں۔ 4 سینٹی میٹر لمبے اور 3 سینٹی میٹر چوڑے ڈبے کی تہہ 4 × 3 = 12 مکعب ڈھانپتے ہیں۔ اگر یہ 2 سینٹی میٹر اونچا ہے تو 2 تہیں ہیں: 12 × 2 = 24 مکعب سینٹی میٹر۔ تو حجم = لمبائی × چوڑائی × اونچائی۔"
+      }
+    },
+    {
+      "id": "s4_first",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A box is 4 cm long, 3 cm wide and 2 cm high. What is its volume, in cm³?",
+        "ur": "ایک ڈبہ 4 سینٹی میٹر لمبا، 3 سینٹی میٹر چوڑا اور 2 سینٹی میٹر اونچا ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × 3 × 2.",
+        "ur": "4 × 3 × 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 cm³.",
+        "ur": "درست! 24 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "4 × 3 = 12, 12 × 2 = 24.",
+        "ur": "4 × 3 = 12، 12 × 2 = 24"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Multiply, don't add: 4 × 3 × 2 = 24.",
+            "ur": "جمع نہیں، ضرب: 4 × 3 × 2 = 24"
+          },
+          "misconception_id": "adds_lengths"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That covers only the bottom. There are 2 layers: 24.",
+            "ur": "یہ صرف تہہ ڈھانپتا ہے۔ 2 تہیں ہیں: 24"
+          },
+          "misconception_id": "area_only"
+        }
+      ]
+    },
+    {
+      "id": "s5_matchbox",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A matchbox is 5 cm long, 3 cm wide and 2 cm high. What is its volume, in cm³?",
+        "ur": "ماچس کی ڈبیا 5 سینٹی میٹر لمبی، 3 سینٹی میٹر چوڑی اور 2 سینٹی میٹر اونچی ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 × 3 × 2.",
+        "ur": "5 × 3 × 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 cm³.",
+        "ur": "درست! 30 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "5 × 3 = 15, 15 × 2 = 30.",
+        "ur": "5 × 3 = 15، 15 × 2 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That is only the base. Multiply by the height, 2: 30.",
+            "ur": "یہ صرف تہہ ہے۔ اونچائی 2 سے ضرب دیں: 30"
+          },
+          "misconception_id": "area_only"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Multiply all three: 5 × 3 × 2 = 30.",
+            "ur": "تینوں کو ضرب دیں: 5 × 3 × 2 = 30"
+          },
+          "misconception_id": "adds_lengths"
+        }
+      ]
+    },
+    {
+      "id": "s6_unit",
+      "type": "choice",
+      "prompt": {
+        "en": "The volume of a box is 30 ___. Which unit fits?",
+        "ur": "ایک ڈبے کا حجم 30 ___ ہے۔ کون سی اکائی درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "cm3",
+          "text": {
+            "en": "cm³",
+            "ur": "مکعب سینٹی میٹر (cm³)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Volume is in cubic units.",
+            "ur": "جی ہاں! حجم مکعب اکائیوں میں ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "cm2",
+          "text": {
+            "en": "cm²",
+            "ur": "مربع سینٹی میٹر (cm²)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "cm² is for area. Volume is cm³.",
+            "ur": "cm² رقبے کے لیے ہے۔ حجم cm³ ہے۔"
+          },
+          "misconception_id": "square_units"
+        },
+        {
+          "id": "cm",
+          "text": {
+            "en": "cm",
+            "ur": "سینٹی میٹر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "cm is for length. Volume is cm³.",
+            "ur": "سینٹی میٹر لمبائی کے لیے ہے۔ حجم cm³ ہے۔"
+          },
+          "misconception_id": "square_units"
+        }
+      ]
+    },
+    {
+      "id": "s7_brick",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A brick is 20 cm long, 10 cm wide and 5 cm high. What is its volume, in cm³?",
+        "ur": "ایک اینٹ 20 سینٹی میٹر لمبی، 10 سینٹی میٹر چوڑی اور 5 سینٹی میٹر اونچی ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 1000,
+      "checker": "numeric",
+      "hint": {
+        "en": "20 × 10 = 200, then × 5.",
+        "ur": "20 × 10 = 200، پھر × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 1000 cm³.",
+        "ur": "درست! 1000 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "20 × 10 × 5 = 1000.",
+        "ur": "20 × 10 × 5 = 1000"
+      },
+      "common_wrong": [
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "Multiply, don't add: 20 × 10 × 5 = 1000.",
+            "ur": "جمع نہیں، ضرب: 20 × 10 × 5 = 1000"
+          },
+          "misconception_id": "adds_lengths"
+        },
+        {
+          "answer": 200,
+          "feedback": {
+            "en": "That is only the base. Multiply by the height, 5: 1000.",
+            "ur": "یہ صرف تہہ ہے۔ اونچائی 5 سے ضرب دیں: 1000"
+          },
+          "misconception_id": "area_only"
+        }
+      ]
+    },
+    {
+      "id": "s8_base",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The bottom of a box has an area of 12 cm². The box is 5 cm high. What is its volume, in cm³?",
+        "ur": "ایک ڈبے کی تہہ کا رقبہ 12 مربع سینٹی میٹر ہے۔ ڈبہ 5 سینٹی میٹر اونچا ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Base area × height.",
+        "ur": "تہہ کا رقبہ × اونچائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 × 5 = 60 cm³.",
+        "ur": "درست! 12 × 5 = 60 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "12 cubes per layer, 5 layers: 60.",
+        "ur": "ہر تہہ میں 12 مکعب، 5 تہیں: 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 17,
+          "feedback": {
+            "en": "Multiply, don't add: 12 × 5 = 60.",
+            "ur": "جمع نہیں، ضرب: 12 × 5 = 60"
+          },
+          "misconception_id": "adds_lengths"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A box is 4 cm by 3 cm by 2 cm. Maria says its volume is 4 + 3 + 2 = 9 cm³. What went wrong?",
+        "ur": "ایک ڈبہ 4 × 3 × 2 سینٹی میٹر ہے۔ ماریہ کہتی ہے اس کا حجم 4 + 3 + 2 = 9 مکعب سینٹی میٹر ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "multiply",
+          "text": {
+            "en": "She added. She should multiply: 4 × 3 × 2 = 24 cm³.",
+            "ur": "اس نے جمع کیا۔ اسے ضرب دینی چاہیے: 4 × 3 × 2 = 24 مکعب سینٹی میٹر"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 12 cubes per layer, 2 layers.",
+            "ur": "جی ہاں! ہر تہہ میں 12 مکعب، 2 تہیں۔"
+          }
+        },
+        {
+          "id": "units",
+          "text": {
+            "en": "Only the unit is wrong.",
+            "ur": "صرف اکائی غلط ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The unit is right. The working is wrong: multiply to get 24.",
+            "ur": "اکائی درست ہے۔ حل غلط ہے: ضرب سے 24 آتا ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding gives the total length of three edges, not the space inside. 24 cm³.",
+            "ur": "جمع سے تین کناروں کی لمبائی آتی ہے، اندر کی جگہ نہیں۔ 24 مکعب سینٹی میٹر"
+          },
+          "misconception_id": "adds_lengths"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we multiply all three lengths to get the volume? Can you teach me?",
+          "ur": "حجم نکالنے کے لیے تینوں لمبائیوں کو ضرب کیوں دیتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the volume of a 4 cm × 3 cm × 2 cm box equal to 4 × 3 × 2?",
+        "ur": "اپنے الفاظ میں بتائیں: 4 × 3 × 2 سینٹی میٹر کے ڈبے کا حجم 4 × 3 × 2 کیوں ہے؟"
+      },
+      "key_idea": "4 × 3 = 12 one-centimetre cubes cover the bottom of the box in one layer. The box is 2 cm high, so there are 2 such layers. 12 × 2 = 24 cubes fill the box.",
+      "levels": {
+        "got_it": "Says 4 × 3 cubes make one layer covering the bottom, and the height tells how many layers, so multiply again.",
+        "partly": "Mentions layers or cubes, without linking both lengths of the base and the height.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "layer",
+          "تہہ",
+          "تہیں"
+        ],
+        [
+          "cube",
+          "مکعب"
+        ],
+        [
+          "bottom",
+          "base",
+          "height",
+          "نیچے",
+          "اونچائی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! One layer of 12 cubes, 2 layers high.",
+          "ur": "بہت خوب! 12 مکعبوں کی ایک تہہ، 2 تہیں اونچی۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how many cubes are in one layer, and how many layers there are.",
+          "ur": "اچھی شروعات! اب بتائیں ایک تہہ میں کتنے مکعب ہیں، اور کتنی تہیں ہیں۔"
+        },
+        "not_yet": {
+          "en": "Imagine filling the box with sugar cubes. How many cover the bottom? How many layers fit?",
+          "ur": "سوچیں ڈبے کو چینی کے ٹکڑوں سے بھر رہے ہیں۔ تہہ میں کتنے آتے ہیں؟ کتنی تہیں آتی ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_sugar",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A box is 10 cm long, 6 cm wide and 4 cm high. How many 1 cm sugar cubes fill it?",
+        "ur": "ایک ڈبہ 10 سینٹی میٹر لمبا، 6 سینٹی میٹر چوڑا اور 4 سینٹی میٹر اونچا ہے۔ 1 سینٹی میٹر کے چینی کے کتنے ٹکڑے اس میں آئیں گے؟"
+      },
+      "answer": 240,
+      "checker": "numeric",
+      "hint": {
+        "en": "10 × 6 cubes per layer, 4 layers.",
+        "ur": "ہر تہہ میں 10 × 6 مکعب، 4 تہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60 × 4 = 240 sugar cubes.",
+        "ur": "درست! 60 × 4 = 240 ٹکڑے"
+      },
+      "feedback_wrong": {
+        "en": "10 × 6 = 60, 60 × 4 = 240.",
+        "ur": "10 × 6 = 60، 60 × 4 = 240"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "That fills only one layer. 4 layers: 240.",
+            "ur": "یہ صرف ایک تہہ بھرتا ہے۔ 4 تہیں: 240"
+          },
+          "misconception_id": "area_only"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "Multiply, don't add: 10 × 6 × 4 = 240.",
+            "ur": "جمع نہیں، ضرب: 10 × 6 × 4 = 240"
+          },
+          "misconception_id": "adds_lengths"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Length times breadth times height. You can measure the space inside any box!",
+          "ur": "لمبائی ضرب چوڑائی ضرب اونچائی۔ اب آپ کسی بھی ڈبے کے اندر کی جگہ ناپ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Volume is the space inside a solid, measured in cm³. Volume of a cuboid = length × breadth × height, which is the same as the area of the base × the height.",
+        "ur": "حجم کسی ٹھوس کے اندر کی جگہ ہے، جو مکعب سینٹی میٹر میں ناپی جاتی ہے۔ مکعب نما کا حجم = لمبائی × چوڑائی × اونچائی، جو تہہ کے رقبے × اونچائی کے برابر ہے۔"
+      },
+      "points": [
+        {
+          "en": "V = l × b × h.",
+          "ur": "حجم = لمبائی × چوڑائی × اونچائی"
+        },
+        {
+          "en": "Volume is in cm³.",
+          "ur": "حجم مکعب سینٹی میٹر میں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_box",
+      "type": "apply",
+      "skill": "maths.solids.volume_cuboid",
+      "step": {
+        "id": "r_box",
+        "type": "number",
+        "prompt": {
+          "en": "A box is 8 cm long, 5 cm wide and 2 cm high. What is its volume, in cm³?",
+          "ur": "ایک ڈبہ 8 سینٹی میٹر لمبا، 5 سینٹی میٹر چوڑا اور 2 سینٹی میٹر اونچا ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+        },
+        "answer": 80,
+        "checker": "numeric",
+        "hint": {
+          "en": "8 × 5 × 2.",
+          "ur": "8 × 5 × 2"
+        },
+        "feedback_correct": {
+          "en": "Right! 80 cm³.",
+          "ur": "درست! 80 مکعب سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "8 × 5 = 40, 40 × 2 = 80.",
+          "ur": "8 × 5 = 40، 40 × 2 = 80"
+        },
+        "common_wrong": [
+          {
+            "answer": 15,
+            "feedback": {
+              "en": "Multiply, don't add: 8 × 5 × 2 = 80.",
+              "ur": "جمع نہیں، ضرب: 8 × 5 × 2 = 80"
+            },
+            "misconception_id": "adds_lengths"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_base",
+      "type": "apply",
+      "skill": "maths.solids.volume_cuboid",
+      "step": {
+        "id": "r_base",
+        "type": "number",
+        "prompt": {
+          "en": "The bottom of a tank has an area of 20 cm². It is 3 cm high. What is its volume, in cm³?",
+          "ur": "ایک ٹینکی کی تہہ کا رقبہ 20 مربع سینٹی میٹر ہے۔ یہ 3 سینٹی میٹر اونچی ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "Base area × height.",
+          "ur": "تہہ کا رقبہ × اونچائی"
+        },
+        "feedback_correct": {
+          "en": "Right! 60 cm³.",
+          "ur": "درست! 60 مکعب سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "20 × 3 = 60.",
+          "ur": "20 × 3 = 60"
+        },
+        "common_wrong": [
+          {
+            "answer": 23,
+            "feedback": {
+              "en": "Multiply, don't add: 20 × 3 = 60.",
+              "ur": "جمع نہیں، ضرب: 20 × 3 = 60"
+            },
+            "misconception_id": "adds_lengths"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Solids unit. No textbook text or exercises were used.",
+    "Volume is built from layers of 1 cm cubes before the formula, so the formula has a meaning.",
+    "Urdu terms to check: حجم (volume), مکعب سینٹی میٹر (cubic centimetre), تہہ (base/layer).",
+    "The numbers were worked out in content/sources/g6-maths-14/volume_cuboid.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

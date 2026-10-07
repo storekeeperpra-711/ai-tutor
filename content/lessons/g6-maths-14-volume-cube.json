@@ -1,0 +1,769 @@
+{
+  "id": "g6-maths-14-volume-cube",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the volume of a cube, and change cubic centimetres to litres (1000 cm³ = 1 litre).",
+      "textbook": "PCTB Grade 6 Mathematics (unit to be confirmed): Three-dimensional Solids"
+    }
+  ],
+  "skills": [
+    "maths.solids.volume_cube_capacity"
+  ],
+  "title": {
+    "en": "Volume of a cube, and litres",
+    "ur": "مکعب کا حجم اور لیٹر"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.solids.volume_cuboid"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "face_area",
+      "description": "Gives the area of one face (side × side) as the volume."
+    },
+    {
+      "id": "times_three",
+      "description": "Multiplies the side by 3 instead of side × side × side."
+    },
+    {
+      "id": "litre_100",
+      "description": "Thinks 100 cm³ (not 1000 cm³) make 1 litre."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.solids.volume_cube_capacity": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.solids.volume_cube_capacity": [
+      {
+        "id": "qb_litre",
+        "type": "recall",
+        "step": {
+          "id": "qb_litre",
+          "type": "choice",
+          "prompt": {
+            "en": "How many cm³ make 1 litre?",
+            "ur": "1 لیٹر میں کتنے مکعب سینٹی میٹر ہوتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "thousand",
+              "text": {
+                "en": "1000 cm³",
+                "ur": "1000 مکعب سینٹی میٹر"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A 10 cm cube holds exactly 1 litre.",
+                "ur": "جی ہاں! 10 سینٹی میٹر کا مکعب ٹھیک 1 لیٹر رکھتا ہے۔"
+              }
+            },
+            {
+              "id": "hundred",
+              "text": {
+                "en": "100 cm³",
+                "ur": "100 مکعب سینٹی میٹر"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "It is 1000 cm³: a 10 × 10 × 10 cube.",
+                "ur": "یہ 1000 مکعب سینٹی میٹر ہے: 10 × 10 × 10 کا مکعب۔"
+              },
+              "misconception_id": "litre_100"
+            },
+            {
+              "id": "ten",
+              "text": {
+                "en": "10 cm³",
+                "ur": "10 مکعب سینٹی میٹر"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Much more: 1000 cm³.",
+                "ur": "اس سے بہت زیادہ: 1000 مکعب سینٹی میٹر۔"
+              },
+              "misconception_id": "litre_100"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A cube has sides of 6 cm. What is its volume, in cm³?",
+            "ur": "ایک مکعب کے اضلاع 6 سینٹی میٹر ہیں۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+          },
+          "answer": 216,
+          "checker": "numeric",
+          "hint": {
+            "en": "6 × 6 × 6.",
+            "ur": "6 × 6 × 6"
+          },
+          "feedback_correct": {
+            "en": "Right! 216 cm³.",
+            "ur": "درست! 216 مکعب سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "6 × 6 = 36, 36 × 6 = 216.",
+            "ur": "6 × 6 = 36، 36 × 6 = 216"
+          },
+          "common_wrong": [
+            {
+              "answer": 36,
+              "feedback": {
+                "en": "That is one face. Multiply by 6 again: 216.",
+                "ur": "یہ ایک سطح ہے۔ پھر 6 سے ضرب دیں: 216"
+              },
+              "misconception_id": "face_area"
+            },
+            {
+              "answer": 18,
+              "feedback": {
+                "en": "Not 6 × 3. It is 6 × 6 × 6 = 216.",
+                "ur": "6 × 3 نہیں۔ یہ 6 × 6 × 6 = 216 ہے۔"
+              },
+              "misconception_id": "times_three"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A jug holds 2000 cm³ of water. Rida says that is 20 litres. What is wrong?",
+            "ur": "ایک جگ میں 2000 مکعب سینٹی میٹر پانی آتا ہے۔ ردا کہتی ہے یہ 20 لیٹر ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "thousand",
+              "text": {
+                "en": "1 litre is 1000 cm³, so 2000 cm³ is 2 litres.",
+                "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، تو 2000 مکعب سینٹی میٹر 2 لیٹر ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Divide by 1000, not 100.",
+                "ur": "جی ہاں! 1000 سے تقسیم کریں، 100 سے نہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "She divided by 100. Divide by 1000: 2 litres.",
+                "ur": "اس نے 100 سے تقسیم کیا۔ 1000 سے تقسیم کریں: 2 لیٹر"
+              },
+              "misconception_id": "litre_100"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_cube",
+      "front": {
+        "en": "Volume of a cube?",
+        "ur": "مکعب کا حجم؟"
+      },
+      "back": {
+        "en": "Side × side × side.",
+        "ur": "ضلع × ضلع × ضلع"
+      }
+    },
+    {
+      "id": "f_litre",
+      "front": {
+        "en": "1 litre?",
+        "ur": "1 لیٹر؟"
+      },
+      "back": {
+        "en": "1000 cm³ (a 10 cm cube).",
+        "ur": "1000 مکعب سینٹی میٹر (10 سینٹی میٹر کا مکعب)"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_bottle",
+      "text": {
+        "en": "Find a 1.5 litre water bottle at home. How many cm³ of water does it hold? (Hint: 1 litre = 1000 cm³.)",
+        "ur": "گھر میں 1.5 لیٹر کی پانی کی بوتل ڈھونڈیں۔ اس میں کتنے مکعب سینٹی میٹر پانی آتا ہے؟ (اشارہ: 1 لیٹر = 1000 مکعب سینٹی میٹر)"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Cube",
+      "ur": "مکعب"
+    },
+    {
+      "en": "Litre",
+      "ur": "لیٹر"
+    },
+    {
+      "en": "Capacity",
+      "ur": "گنجائش"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A milk carton says 1 litre. How big a box would hold exactly that much?",
+          "ur": "دودھ کے ڈبے پر 1 لیٹر لکھا ہے۔ کتنا بڑا ڈبہ ٹھیک اتنا رکھے گا؟"
+        }
+      },
+      "text": {
+        "en": "Today we find the volume of a cube and change cm³ to litres. First, a quick volume check.",
+        "ur": "آج ہم مکعب کا حجم نکالیں گے اور مکعب سینٹی میٹر کو لیٹر میں بدلیں گے۔ پہلے حجم کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.solids.volume_cuboid",
+      "prompt": {
+        "en": "A box is 3 cm long, 2 cm wide and 5 cm high. What is its volume, in cm³?",
+        "ur": "ایک ڈبہ 3 سینٹی میٹر لمبا، 2 سینٹی میٹر چوڑا اور 5 سینٹی میٹر اونچا ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Length × breadth × height.",
+        "ur": "لمبائی × چوڑائی × اونچائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 cm³.",
+        "ur": "درست! 30 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "3 × 2 × 5 = 30.",
+        "ur": "3 × 2 × 5 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Multiply, don't add: 3 × 2 × 5 = 30.",
+            "ur": "جمع نہیں، ضرب: 3 × 2 × 5 = 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "A cube's length, breadth and height are all the same side!",
+          "ur": "مکعب کی لمبائی، چوڑائی اور اونچائی سب ایک ہی ضلع ہیں!"
+        }
+      },
+      "text": {
+        "en": "In a cube, length, breadth and height are equal, so volume = side × side × side. A cube with 10 cm sides has volume 10 × 10 × 10 = 1000 cm³, and that holds exactly 1 litre. So 1 litre = 1000 cm³. To change cm³ to litres, divide by 1000.",
+        "ur": "مکعب میں لمبائی، چوڑائی اور اونچائی برابر ہوتی ہیں، تو حجم = ضلع × ضلع × ضلع۔ 10 سینٹی میٹر اضلاع والے مکعب کا حجم 10 × 10 × 10 = 1000 مکعب سینٹی میٹر ہے، اور اس میں ٹھیک 1 لیٹر آتا ہے۔ تو 1 لیٹر = 1000 مکعب سینٹی میٹر۔ مکعب سینٹی میٹر کو لیٹر میں بدلنے کے لیے 1000 سے تقسیم کریں۔"
+      }
+    },
+    {
+      "id": "s4_cube3",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A cube has sides of 3 cm. What is its volume, in cm³?",
+        "ur": "ایک مکعب کے اضلاع 3 سینٹی میٹر ہیں۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 27,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 × 3 × 3.",
+        "ur": "3 × 3 × 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 27 cm³.",
+        "ur": "درست! 27 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "3 × 3 = 9, 9 × 3 = 27.",
+        "ur": "3 × 3 = 9، 9 × 3 = 27"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That is one face, or 3 × 3. Multiply by 3 again: 27.",
+            "ur": "یہ ایک سطح ہے یعنی 3 × 3۔ پھر 3 سے ضرب دیں: 27"
+          },
+          "misconception_id": "face_area"
+        }
+      ]
+    },
+    {
+      "id": "s5_cube10",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A cube has sides of 10 cm. What is its volume, in cm³?",
+        "ur": "ایک مکعب کے اضلاع 10 سینٹی میٹر ہیں۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 1000,
+      "checker": "numeric",
+      "hint": {
+        "en": "10 × 10 × 10.",
+        "ur": "10 × 10 × 10"
+      },
+      "feedback_correct": {
+        "en": "Right! 1000 cm³, which is 1 litre.",
+        "ur": "درست! 1000 مکعب سینٹی میٹر، یعنی 1 لیٹر"
+      },
+      "feedback_wrong": {
+        "en": "10 × 10 × 10 = 1000.",
+        "ur": "10 × 10 × 10 = 1000"
+      },
+      "common_wrong": [
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "That is one face. 10 × 10 × 10 = 1000.",
+            "ur": "یہ ایک سطح ہے۔ 10 × 10 × 10 = 1000"
+          },
+          "misconception_id": "face_area"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "Not 10 × 3. It is 10 × 10 × 10 = 1000.",
+            "ur": "10 × 3 نہیں۔ یہ 10 × 10 × 10 = 1000 ہے۔"
+          },
+          "misconception_id": "times_three"
+        }
+      ]
+    },
+    {
+      "id": "s6_litre",
+      "type": "choice",
+      "prompt": {
+        "en": "How many cm³ make 1 litre?",
+        "ur": "1 لیٹر میں کتنے مکعب سینٹی میٹر ہوتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "thousand",
+          "text": {
+            "en": "1000",
+            "ur": "1000"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A 10 cm cube.",
+            "ur": "جی ہاں! 10 سینٹی میٹر کا مکعب۔"
+          }
+        },
+        {
+          "id": "hundred",
+          "text": {
+            "en": "100",
+            "ur": "100"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is too few: 1 litre = 1000 cm³.",
+            "ur": "یہ بہت کم ہے: 1 لیٹر = 1000 مکعب سینٹی میٹر"
+          },
+          "misconception_id": "litre_100"
+        },
+        {
+          "id": "ten_thousand",
+          "text": {
+            "en": "10000",
+            "ur": "10000"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 10 litres. 1 litre = 1000 cm³.",
+            "ur": "یہ 10 لیٹر ہے۔ 1 لیٹر = 1000 مکعب سینٹی میٹر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_tank",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A fish tank is 50 cm long, 20 cm wide and 30 cm high. How many litres of water does it hold?",
+        "ur": "مچھلیوں کی ٹینکی 50 سینٹی میٹر لمبی، 20 سینٹی میٹر چوڑی اور 30 سینٹی میٹر اونچی ہے۔ اس میں کتنے لیٹر پانی آتا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find the volume in cm³, then ÷ 1000.",
+        "ur": "پہلے مکعب سینٹی میٹر میں حجم نکالیں، پھر ÷ 1000"
+      },
+      "feedback_correct": {
+        "en": "Right! 30000 cm³ = 30 litres.",
+        "ur": "درست! 30000 مکعب سینٹی میٹر = 30 لیٹر"
+      },
+      "feedback_wrong": {
+        "en": "50 × 20 × 30 = 30000. 30000 ÷ 1000 = 30.",
+        "ur": "50 × 20 × 30 = 30000۔ 30000 ÷ 1000 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 30000,
+          "feedback": {
+            "en": "That is in cm³. Divide by 1000: 30 litres.",
+            "ur": "یہ مکعب سینٹی میٹر میں ہے۔ 1000 سے تقسیم کریں: 30 لیٹر"
+          }
+        },
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "1 litre is 1000 cm³, not 100: 30 litres.",
+            "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، 100 نہیں: 30 لیٹر"
+          },
+          "misconception_id": "litre_100"
+        }
+      ]
+    },
+    {
+      "id": "s8_cube5",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A wooden block is a cube with 5 cm sides. What is its volume, in cm³?",
+        "ur": "لکڑی کا ایک ٹکڑا 5 سینٹی میٹر اضلاع والا مکعب ہے۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+      },
+      "answer": 125,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 × 5 × 5.",
+        "ur": "5 × 5 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 125 cm³.",
+        "ur": "درست! 125 مکعب سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "5 × 5 = 25, 25 × 5 = 125.",
+        "ur": "5 × 5 = 25، 25 × 5 = 125"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "That is one face. Multiply by 5 again: 125.",
+            "ur": "یہ ایک سطح ہے۔ پھر 5 سے ضرب دیں: 125"
+          },
+          "misconception_id": "face_area"
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "Not 5 × 3. It is 5 × 5 × 5 = 125.",
+            "ur": "5 × 3 نہیں۔ یہ 5 × 5 × 5 = 125 ہے۔"
+          },
+          "misconception_id": "times_three"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A cube has 4 cm sides. Usman says its volume is 4 × 4 = 16 cm³. What went wrong?",
+        "ur": "ایک مکعب کے اضلاع 4 سینٹی میٹر ہیں۔ عثمان کہتا ہے اس کا حجم 4 × 4 = 16 مکعب سینٹی میٹر ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "third",
+          "text": {
+            "en": "He found one face. Volume = 4 × 4 × 4 = 64 cm³.",
+            "ur": "اس نے ایک سطح نکالی۔ حجم = 4 × 4 × 4 = 64 مکعب سینٹی میٹر"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 16 cubes make one layer, and there are 4 layers.",
+            "ur": "جی ہاں! 16 مکعب ایک تہہ بناتے ہیں، اور 4 تہیں ہیں۔"
+          }
+        },
+        {
+          "id": "times3",
+          "text": {
+            "en": "It should be 4 × 3 = 12.",
+            "ur": "یہ 4 × 3 = 12 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not × 3. Multiply the side three times: 4 × 4 × 4 = 64.",
+            "ur": "× 3 نہیں۔ ضلع کو تین بار ضرب دیں: 4 × 4 × 4 = 64"
+          },
+          "misconception_id": "times_three"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 × 4 is the area of one face. The cube is 4 layers high: 64.",
+            "ur": "4 × 4 ایک سطح کا رقبہ ہے۔ مکعب 4 تہیں اونچا ہے: 64"
+          },
+          "misconception_id": "face_area"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does a 10 cm cube hold 1000 small cubes, not 100? Can you teach me?",
+          "ur": "10 سینٹی میٹر کے مکعب میں 1000 چھوٹے مکعب کیوں آتے ہیں، 100 کیوں نہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why do 1000 one-centimetre cubes fit in a 10 cm cube?",
+        "ur": "اپنے الفاظ میں بتائیں: 10 سینٹی میٹر کے مکعب میں 1 سینٹی میٹر کے 1000 مکعب کیوں آتے ہیں؟"
+      },
+      "key_idea": "The bottom layer is 10 by 10, so it holds 100 small cubes. The cube is 10 cm high, so there are 10 such layers: 10 × 100 = 1000.",
+      "levels": {
+        "got_it": "Says one layer is 10 × 10 = 100 cubes, and there are 10 layers, so 1000.",
+        "partly": "Says 10 × 10 × 10, without explaining layers.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "layer",
+          "تہہ",
+          "تہیں"
+        ],
+        [
+          "100",
+          "hundred",
+          "سو"
+        ],
+        [
+          "10",
+          "ten",
+          "دس"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 100 cubes in each layer, 10 layers.",
+          "ur": "بہت خوب! ہر تہہ میں 100 مکعب، 10 تہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how many cubes are in one layer.",
+          "ur": "اچھی شروعات! اب بتائیں ایک تہہ میں کتنے مکعب ہیں۔"
+        },
+        "not_yet": {
+          "en": "How many small cubes cover the 10 cm by 10 cm bottom? How many layers fit?",
+          "ur": "10 × 10 سینٹی میٹر کی تہہ کتنے چھوٹے مکعب ڈھانپتے ہیں؟ کتنی تہیں آتی ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_water_tank",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A water tank on a roof is 100 cm long, 50 cm wide and 40 cm high. How many litres does it hold?",
+        "ur": "چھت پر پانی کی ٹینکی 100 سینٹی میٹر لمبی، 50 سینٹی میٹر چوڑی اور 40 سینٹی میٹر اونچی ہے۔ اس میں کتنے لیٹر آتے ہیں؟"
+      },
+      "answer": 200,
+      "checker": "numeric",
+      "hint": {
+        "en": "Volume in cm³, then ÷ 1000.",
+        "ur": "مکعب سینٹی میٹر میں حجم، پھر ÷ 1000"
+      },
+      "feedback_correct": {
+        "en": "Right! 200000 cm³ = 200 litres.",
+        "ur": "درست! 200000 مکعب سینٹی میٹر = 200 لیٹر"
+      },
+      "feedback_wrong": {
+        "en": "100 × 50 × 40 = 200000. 200000 ÷ 1000 = 200.",
+        "ur": "100 × 50 × 40 = 200000۔ 200000 ÷ 1000 = 200"
+      },
+      "common_wrong": [
+        {
+          "answer": 2000,
+          "feedback": {
+            "en": "1 litre is 1000 cm³, not 100: 200 litres.",
+            "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، 100 نہیں: 200 لیٹر"
+          },
+          "misconception_id": "litre_100"
+        },
+        {
+          "answer": 200000,
+          "feedback": {
+            "en": "That is in cm³. Divide by 1000: 200 litres.",
+            "ur": "یہ مکعب سینٹی میٹر میں ہے۔ 1000 سے تقسیم کریں: 200 لیٹر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Side times side times side, and 1000 cm³ make a litre!",
+          "ur": "ضلع ضرب ضلع ضرب ضلع، اور 1000 مکعب سینٹی میٹر ایک لیٹر!"
+        }
+      },
+      "text": {
+        "en": "Volume of a cube = side × side × side. 1 litre = 1000 cm³, so to change cm³ to litres, divide by 1000.",
+        "ur": "مکعب کا حجم = ضلع × ضلع × ضلع۔ 1 لیٹر = 1000 مکعب سینٹی میٹر، تو مکعب سینٹی میٹر کو لیٹر میں بدلنے کے لیے 1000 سے تقسیم کریں۔"
+      },
+      "points": [
+        {
+          "en": "Cube: side × side × side.",
+          "ur": "مکعب: ضلع × ضلع × ضلع۔"
+        },
+        {
+          "en": "1000 cm³ = 1 litre.",
+          "ur": "1000 مکعب سینٹی میٹر = 1 لیٹر۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_cube2",
+      "type": "apply",
+      "skill": "maths.solids.volume_cube_capacity",
+      "step": {
+        "id": "r_cube2",
+        "type": "number",
+        "prompt": {
+          "en": "A cube has sides of 2 cm. What is its volume, in cm³?",
+          "ur": "ایک مکعب کے اضلاع 2 سینٹی میٹر ہیں۔ اس کا حجم کتنے مکعب سینٹی میٹر ہے؟"
+        },
+        "answer": 8,
+        "checker": "numeric",
+        "hint": {
+          "en": "2 × 2 × 2.",
+          "ur": "2 × 2 × 2"
+        },
+        "feedback_correct": {
+          "en": "Right! 8 cm³.",
+          "ur": "درست! 8 مکعب سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "2 × 2 × 2 = 8.",
+          "ur": "2 × 2 × 2 = 8"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "Not 2 × 3. It is 2 × 2 × 2 = 8.",
+              "ur": "2 × 3 نہیں۔ یہ 2 × 2 × 2 = 8 ہے۔"
+            },
+            "misconception_id": "times_three"
+          },
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That is one face. 2 × 2 × 2 = 8.",
+              "ur": "یہ ایک سطح ہے۔ 2 × 2 × 2 = 8"
+            },
+            "misconception_id": "face_area"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_litres",
+      "type": "apply",
+      "skill": "maths.solids.volume_cube_capacity",
+      "step": {
+        "id": "r_litres",
+        "type": "number",
+        "prompt": {
+          "en": "A bucket holds 5000 cm³ of water. How many litres is that?",
+          "ur": "ایک بالٹی میں 5000 مکعب سینٹی میٹر پانی آتا ہے۔ یہ کتنے لیٹر ہے؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide by 1000.",
+          "ur": "1000 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5 litres.",
+          "ur": "درست! 5 لیٹر"
+        },
+        "feedback_wrong": {
+          "en": "5000 ÷ 1000 = 5.",
+          "ur": "5000 ÷ 1000 = 5"
+        },
+        "common_wrong": [
+          {
+            "answer": 50,
+            "feedback": {
+              "en": "1 litre is 1000 cm³, not 100: 5 litres.",
+              "ur": "1 لیٹر 1000 مکعب سینٹی میٹر ہے، 100 نہیں: 5 لیٹر"
+            },
+            "misconception_id": "litre_100"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Solids unit. No textbook text or exercises were used.",
+    "The 10 cm cube links cm³ to the litre, which children see on milk and water bottles.",
+    "Urdu terms to check: ضلع (side), لیٹر (litre), گنجائش (capacity).",
+    "The numbers were worked out in content/sources/g6-maths-14/volume_cube.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
