@@ -1,5 +1,7 @@
 from common import (T, opt, say, wrong, signed, number_question, number_line, write,
                     REF, REVIEW, INT_ADD, INT_SUBTRACT)
+from figs import (jumps_figure, chains_figure, thermometer_move, gap_thermometer, bar_pattern,
+                  attach)
 
 SKILL = INT_SUBTRACT
 S = signed
@@ -27,6 +29,58 @@ def minus(a, b):
     """'5 − (−3)': a negative number after − goes in brackets."""
     return f"{S(a)} − ({S(b)})" if b < 0 else f"{S(a)} − {b}"
 
+
+# ---------- pictures ----------
+
+FIG_S1 = thermometer_move(
+    -5, 5, 4, -7,
+    "A thermometer showing 4 °C. Beside it an arrow goes down 7 marks, marked −7, past 0, to a question mark.",
+    "ایک تھرمامیٹر جو 4 ڈگری دکھاتا ہے۔ ساتھ میں ایک تیر 7 نشان نیچے جاتا ہے، اس پر −7 لکھا ہے، 0 سے آگے، ایک سوالیہ نشان تک۔")
+
+FIG_S3 = jumps_figure(
+    -5, 5, [4, -7],
+    "A number line from −5 to 5. A jump marked −7 starts at 4 and goes 7 steps to the left, past 0, landing on −3.",
+    "−5 سے 5 تک عددی خط۔ −7 والی ایک چھلانگ 4 سے شروع ہو کر 7 قدم بائیں جاتی ہے، 0 سے آگے، اور −3 پر اترتی ہے۔")
+
+FIG_S5 = bar_pattern(
+    [minus(5, b).replace(" ", "") for b in (2, 1, 0, -1, -2)], PATTERN,
+    "Five bars, one for each sum: 5 − 2 = 3, 5 − 1 = 4, 5 − 0 = 5, 5 − (−1) = 6 and 5 − (−2) = 7. Each bar is one taller than the one before.",
+    "پانچ ستون، ہر سوال کے لیے ایک: 5 − 2 = 3، 5 − 1 = 4، 5 − 0 = 5، 5 − (−1) = 6 اور 5 − (−2) = 7۔ ہر ستون پچھلے سے ایک زیادہ اونچا ہے۔",
+    unit=13)
+
+FIG_S7 = jumps_figure(
+    -2, 10, [2, 6], end_text="?",
+    alt_en="A number line from −2 to 10. Taking away −6 is the same as adding 6: a jump marked +6 starts at 2 and goes 6 steps to the right, to a question mark.",
+    alt_ur="−2 سے 10 تک عددی خط۔ −6 کو منفی کرنا 6 جمع کرنے کے برابر ہے: +6 والی ایک چھلانگ 2 سے شروع ہو کر 6 قدم دائیں جاتی ہے، ایک سوالیہ نشان تک۔")
+
+FIG_S8 = jumps_figure(
+    -10, 1, [-3, -5], end_text="?",
+    alt_en="A number line from −10 to 1. A jump marked −5 starts at −3 and goes 5 steps to the left, to a question mark.",
+    alt_ur="−10 سے 1 تک عددی خط۔ −5 والی ایک چھلانگ −3 سے شروع ہو کر 5 قدم بائیں جاتی ہے، ایک سوالیہ نشان تک۔")
+
+FIG_S9 = jumps_figure(
+    -5, 6, [-4, 9], end_text="?",
+    alt_en="A number line from −5 to 6. Taking away −9 means adding 9: a jump marked +9 starts at −4 and goes 9 steps to the RIGHT, to a question mark.",
+    alt_ur="−5 سے 6 تک عددی خط۔ −9 کو منفی کرنے کا مطلب 9 جمع کرنا ہے: +9 والی ایک چھلانگ −4 سے شروع ہو کر 9 قدم دائیں جاتی ہے، ایک سوالیہ نشان تک۔")
+
+
+FIG_S10 = gap_thermometer(
+    -5, 15, 12, -3, (
+        "A thermometer from −5 to 15 °C. Its liquid reaches 12 (Lahore), and −3 (Murree) is marked lower down. "
+        "A measuring line from −3 up to 12 is marked with a question mark: it passes 0 on the way."), (
+        "−5 سے 15 ڈگری تک کا تھرمامیٹر۔ اس کا مائع 12 (لاہور) تک ہے، اور نیچے −3 (مری) کا نشان ہے۔ "
+        "−3 سے 12 تک ناپ کی لکیر پر سوالیہ نشان ہے: یہ راستے میں 0 سے گزرتی ہے۔"))
+
+FIG_S12 = chains_figure(
+    -4, 9, [[4, -7], [5, 3]],
+    "Two number lines from −4 to 9. Top: 4 − 7 is a jump marked −7, from 4 left to −3. Bottom: 5 − (−3) is the same as 5 + 3, a jump marked +3 from 5 right to 8.",
+    "−4 سے 9 تک دو عددی خط۔ اوپر: 4 − 7 ایک −7 والی چھلانگ ہے، 4 سے بائیں −3 تک۔ نیچے: 5 − (−3)، 5 + 3 کے برابر ہے، +3 والی چھلانگ 5 سے دائیں 8 تک۔",
+    every=5)
+
+FIG_QB_ERROR = jumps_figure(
+    -8, 4, [3, -9], end_text="?",
+    alt_en="A number line from −8 to 4. A jump marked −9 starts at 3 and goes 9 steps to the LEFT, past 0, to a question mark.",
+    alt_ur="−8 سے 4 تک عددی خط۔ −9 والی ایک چھلانگ 3 سے شروع ہو کر 9 قدم بائیں جاتی ہے، 0 سے آگے، ایک سوالیہ نشان تک۔")
 
 lesson = {
  "id": "g6-maths-04-subtracting-integers",
@@ -216,4 +270,9 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, {
+    "s1_hook": FIG_S1, "s3_see_it": FIG_S3, "s5_pattern": FIG_S5, "s7_minus_negative": FIG_S7,
+    "s8_negative_minus": FIG_S8, "s9_find_error": FIG_S9, "s10_explain_why": FIG_S10,
+    "s12_summary": FIG_S12, "qb_find_error": FIG_QB_ERROR,
+})
 write(lesson)

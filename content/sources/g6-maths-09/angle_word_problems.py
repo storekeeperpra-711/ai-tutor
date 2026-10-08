@@ -1,5 +1,135 @@
+import math
+
 from common import (T, opt, say, wrong, number_question, kind_of, kind_question, write,
                     REF, REVIEW, AN_TYPES, AN_LINE, AN_PAIRS, AN_TRIANGLE, AN_WORD_PROBLEMS)
+
+
+# ---- figure helpers (the same small block is copied into each Angles script) ----
+# Angles are in degrees, measured anticlockwise from +x like in a maths book;
+# the app's screen y goes down, so the helpers flip them.
+def pt(x, y):
+    return [round(x, 1), round(y, 1)]
+
+
+def ray_end(v, deg, length):
+    r = math.radians(deg)
+    return pt(v[0] + length * math.cos(r), v[1] - length * math.sin(r))
+
+
+def arc(center, radius, a0, a1, dashed=False):
+    """Arc from a0° to a1° (anticlockwise), in the app's clockwise screen terms."""
+    item = {"kind": "arc", "center": center, "radius": radius,
+            "start": round((-a1) % 360, 1), "sweep": round(a1 - a0, 1)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def line(a, b, dashed=False):
+    item = {"kind": "line", "from": a, "to": b}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": at, "text": text}
+
+
+def dot(at):
+    return {"kind": "point", "at": at}
+
+
+def square(v, a0, size=6):
+    """The little square that marks a right angle between a0° and a0 + 90°."""
+    p, q = ray_end(v, a0, size), ray_end(v, a0 + 90, size)
+    c = pt(p[0] + q[0] - v[0], p[1] + q[1] - v[1])
+    return [line(p, c), line(c, q)]
+
+
+def mark(v, a0, a1, text=None, r=10, dist=None, arc_only=False):
+    """Mark the angle from a0° to a1° at vertex v: a square for exactly 90°
+    (unless arc_only, when the square would give the answer away), an arc
+    otherwise, and its label on the middle direction."""
+    items = square(v, a0) if a1 - a0 == 90 and not arc_only else [arc(v, r, a0, a1)]
+    if text:
+        half = math.radians(min((a1 - a0) / 2, 90))
+        d = dist or max(r + 11, min(8 / math.sin(half), 40))
+        items.append(label(ray_end(v, (a0 + a1) / 2, d), text))
+    return items
+
+
+def figure(width, height, alt, items):
+    """Check the drawing fits the box (as tools/validate_lessons.py does)."""
+    assert len(items) <= 60, len(items)
+    margin = 0.025 * max(width, height)
+    for it in items:
+        reach = it.get("radius", 0)
+        for x, y in [*it.get("points", []), *(it[k] for k in ("from", "to", "center", "at") if k in it)]:
+            assert reach <= x <= width - reach and reach <= y <= height - reach, (it, width, height)
+            if it["kind"] == "label":
+                assert margin <= x <= width - margin and margin <= y <= height - margin, (it, width, height)
+    return {"width": width, "height": height, "alt": alt, "items": items}
+
+
+def fan(v, rays, marks, arm=40):
+    """Rays from one vertex v (two rays at 0° and 180° make a straight line),
+    with marked angles: marks are (a0, a1, text) or (a0, a1, text, dist).
+    Neighbouring arcs get different radii so each angle can be seen."""
+    items = [line(v, ray_end(v, d, arm)) for d in rays] + [dot(v)]
+    radii = [9 + 5 * (i % 2) for i in range(len(marks))]
+    if len(marks) % 2 and marks[-1][1] - marks[0][0] == 360:
+        radii[-1] = 19      # all the way round: the last arc also touches the first
+    for m, r in zip(marks, radii):
+        items += mark(v, m[0], m[1], m[2], r=r, dist=m[3] if len(m) > 3 else None)
+    return items
+
+
+def parts_text(texts):
+    """Words for the marked angles, for the alt text: '130°' and a missing one."""
+    en, ur = [], []
+    for t in texts:
+        if t == "?":
+            en.append("a missing angle marked ?")
+            ur.append("ایک نامعلوم زاویہ جس پر ? لکھا ہے")
+        elif t.endswith("°"):
+            en.append(t)
+            ur.append(t)
+        else:
+            en.append(f"an angle marked {t}")
+            ur.append(f"ایک زاویہ جس پر {t} لکھا ہے")
+
+    def join(xs, comma, also):
+        return xs[0] if len(xs) == 1 else comma.join(xs[:-1]) + also + xs[-1]
+    return join(en, ", ", " and "), join(ur, "، ", " اور ")
+
+
+def on_line(rays, texts):
+    """A straight line with rays from a point on it at the given angles
+    (measured from the right end); the angles between them, right to left,
+    are marked with texts."""
+    edges = [0, *rays, 180]
+    assert len(texts) == len(edges) - 1
+    v = pt(60, 50)
+    items = fan(v, [0, 180, *rays], [(a, b, t) for a, b, t in zip(edges, edges[1:], texts)], arm=50)
+    en, ur = parts_text(texts)
+    if len(rays) == 1:
+        alt = T(f"A straight line with a point on it. A ray from the point splits the straight angle into {en}.",
+                f"ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: {ur}۔")
+    else:
+        alt = T(f"A straight line with a point on it. {len(rays)} rays from the point split the straight angle into {en}.",
+                f"ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے {len(rays)} شعاعیں سیدھے زاویے کو ان حصوں میں بانٹتی ہیں: {ur}۔")
+    return figure(120, 66, alt, items)
+
+
+def attach(lesson, figures):
+    """Put each figure on the step with that id (steps, question bank, review)."""
+    steps = [*lesson["steps"], *(q["step"] for qs in lesson["question_bank"].values() for q in qs),
+             *(q["step"] for q in lesson.get("review_questions", []))]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures.pop(step["id"])
+    assert not figures, figures
 
 SKILL = AN_WORD_PROBLEMS
 CORNER, LINE, POINT = 90, 180, 360
@@ -41,6 +171,155 @@ R1 = POINT // 5
 assert R1 == 72 and LINE // 5 == 36
 R2 = 2 * (POINT // 12)
 assert R2 == 60
+
+
+
+# ---- figures -------------------------------------------------------------
+def deg(n):
+    return f"{n}°"
+
+
+def triangle_items(a, b, texts, box, ticks=(), fill=True, dists=(None, None, None)):
+    """A triangle drawn to scale with angle a° at the bottom left, b° at the
+    bottom right and the third angle at the top, fitted into box = (x0, y0, w, h).
+    texts label the three angles (left, right, top); a 90° angle gets a square.
+    ticks: sides to mark equal, from "left" (left to top), "right" (right to top), "base"."""
+    c = 180 - a - b
+    assert c > 0
+    side = math.sin(math.radians(b)) / math.sin(math.radians(c))     # bottom left to top, base 1
+    raw = [(0, 0), (1, 0), (side * math.cos(math.radians(a)), side * math.sin(math.radians(a)))]
+    x0, y0, w, h = box
+    pad = 15
+    lo, hi = min(x for x, _ in raw), max(x for x, _ in raw)
+    top = max(y for _, y in raw)
+    s = min((w - 2 * pad) / (hi - lo), (h - 2 * pad) / top)
+    ox = x0 + (w - s * (hi - lo)) / 2 - s * lo
+    oy = y0 + (h + s * top) / 2
+    L, R, P = (pt(ox + s * x, oy - s * y) for x, y in raw)
+    items = [{"kind": "polygon", "points": [L, R, P], "fill": fill}]
+    items += mark(L, 0, a, texts[0], r=10, dist=dists[0])
+    items += mark(R, 180 - b, 180, texts[1], r=10, dist=dists[1])
+    items += mark(P, 180 + a, 360 - b, texts[2], r=10, dist=dists[2])
+    ends = {"left": (L, P), "right": (R, P), "base": (L, R)}
+    for name in ticks:
+        p, q = ends[name]
+        m = ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2)
+        d = math.dist(p, q)
+        ux, uy = (q[1] - p[1]) / d, -(q[0] - p[0]) / d       # across the side
+        items.append(line(pt(m[0] - 3 * ux, m[1] - 3 * uy), pt(m[0] + 3 * ux, m[1] + 3 * uy)))
+    return items
+
+
+def triangle(a, b, texts, ticks=(), alt=None, size=(120, 90)):
+    if alt is None:
+        en, ur = parts_text(texts)
+        alt = T(f"A triangle with its three angles marked: {en}."
+                + (" A small square marks the right angle." if 90 in (a, b) else "")
+                + (" Small marks on two sides show they are equal." if len(ticks) == 2 else "")
+                + (" Small marks on all three sides show they are equal." if len(ticks) == 3 else ""),
+                f"ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: {ur}۔"
+                + (" ایک چھوٹا مربع قائمہ زاویہ دکھاتا ہے۔" if 90 in (a, b) else "")
+                + (" دو اضلاع پر چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں۔" if len(ticks) == 2 else "")
+                + (" تینوں اضلاع پر چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں۔" if len(ticks) == 3 else ""))
+    w, h = size
+    return figure(w, h, alt, triangle_items(a, b, texts, (0, 0, w, h), ticks))
+
+def clock(hour, text="?"):
+    """A clock face with the minute hand on 12 and the hour hand on `hour`,
+    and the angle between them marked (an arc, never a square: the child works it out)."""
+    c, r = pt(50, 50), 44
+    items = [{"kind": "circle", "center": c, "radius": r}]
+    for h in range(12):
+        a = 90 - 30 * h
+        items.append(line(ray_end(c, a, r - 5), ray_end(c, a, r)))
+    for h in (12, 3, 6, 9):
+        items.append(label(ray_end(c, 90 - 30 * h, 34), str(h)))
+    hand = 90 - 30 * hour
+    items += [line(c, ray_end(c, 90, 24)), line(c, ray_end(c, hand, 18)), dot(c)]
+    items += mark(c, hand, 90, text, arc_only=True)
+    alt = T(f"A clock face showing {hour} o'clock: the long hand points to 12 and the short hand points to {hour}. The angle between the hands is marked {text}.",
+            f"گھڑی {hour} بجا رہی ہے: لمبی سوئی 12 پر اور چھوٹی سوئی {hour} پر ہے۔ سوئیوں کے درمیان زاویے پر {text} لکھا ہے۔")
+    return figure(100, 100, alt, items)
+
+
+def at_point(rays, texts):
+    """Rays from a point; the angles between them, going round, marked with texts."""
+    edges = [*rays, rays[0] + POINT]
+    assert len(texts) == len(rays)
+    items = fan(pt(50, 50), rays, [(a, b, t) for a, b, t in zip(edges, edges[1:], texts)])
+    en, ur = parts_text(texts)
+    alt = T(f"{len(rays)} rays come out of one point. The angles between them, all the way round, are {en}.",
+            f"ایک نقطے سے {len(rays)} شعاعیں نکلتی ہیں۔ ان کے درمیان پورے گرد زاویے یہ ہیں: {ur}۔")
+    return figure(100, 100, alt, items)
+
+
+def wheel(n, en, ur, fill=False):
+    """A circle cut from the middle into n equal parts; one angle at the middle is marked ?."""
+    c = pt(50, 50)
+    step = POINT // n
+    items = [{"kind": "circle", "center": c, "radius": 42, "fill": fill}]
+    items += [line(c, ray_end(c, 90 + i * step, 42)) for i in range(n)] + [dot(c)]
+    items += mark(c, 90, 90 + step, "?", r=12, arc_only=True)
+    return figure(100, 100, T(en, ur), items)
+
+
+def leaning(ground, texts, en, ur):
+    """Something standing straight up from the ground (on the left), with a
+    slanting line from its top to the ground making `ground`° with it."""
+    w, h = 110, 120
+    # narrow triangle: the square alone marks the right angle, labels kept apart
+    items = triangle_items(90, ground, [None, *texts], (0, 0, w - 10, h), fill=False, dists=(None, 19, None))
+    foot, far, top = items[0]["points"]
+    items += [line(foot, pt(w - 4, foot[1])), line(foot, pt(foot[0], top[1] - 8)) if top[1] > 12 else line(foot, top)]
+    return figure(w, h, T(en, ur), items)
+
+
+# s3: the three totals
+totals = (fan(pt(16, 60), [0, CORNER], [(0, CORNER, "90°")], arm=44)
+          + fan(pt(112, 60), [0, LINE], [(0, LINE, "180°")], arm=36)
+          + [line(pt(180, 40), ray_end(pt(180, 40), 0, 24)), dot(pt(180, 40)), *mark(pt(180, 40), 0, POINT, "360°", r=12, dist=26)])
+
+roof = triangle(S8, S8, ["x", "x", "120°"], ticks=("left", "right"), size=(140, 80), alt=T(
+    "A roof frame drawn as a triangle with two equal sloping sides (small marks show they are equal). The top angle is 120°; the two equal angles at the bottom are marked x.",
+    "چھت کا ڈھانچہ ایک مثلث کی شکل میں جس کے دو ڈھلوان اضلاع برابر ہیں (چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں)۔ اوپر کا زاویہ 120° ہے؛ نیچے کے دونوں برابر زاویوں پر x لکھا ہے۔"))
+
+gate = on_line([75], ["75°", "?"])
+gate["alt"] = T("A straight fence drawn as a line, with a gate turning out from a point on it. The angle between the gate and the fence on one side is 75°; on the other side it is marked ?.",
+                "ایک سیدھی باڑ لکیر کی صورت میں، جس کے ایک نقطے سے دروازہ کھلتا ہے۔ ایک طرف دروازے اور باڑ کا زاویہ 75° ہے؛ دوسری طرف ? لکھا ہے۔")
+ramp = on_line([15], ["15°", "?"])
+ramp["alt"] = T("A straight road drawn as a line, with a ramp going up from a point on it at 15°. The angle between the ramp and the road on the other side is marked ?.",
+                "ایک سیدھی سڑک لکیر کی صورت میں، جس کے ایک نقطے سے ڈھلوان 15° پر اوپر جاتی ہے۔ دوسری طرف ڈھلوان اور سڑک کے زاویے پر ? لکھا ہے۔")
+roundabout = at_point([0, 100, 100 + 145], ["100°", "145°", "?"])
+roundabout["alt"] = T("Three roads drawn as rays meeting at a roundabout. The angles between them, all the way round, are 100°, 145° and a missing angle marked ?.",
+                      "تین سڑکیں شعاعوں کی صورت میں ایک گول چکر پر ملتی ہیں۔ ان کے درمیان پورے گرد زاویے 100°، 145° اور ایک نامعلوم زاویہ ہیں جس پر ? لکھا ہے۔")
+
+FIGS = {
+  "s2_foundation": triangle(90, 40, ["90°", "40°", "?"]),
+  "s3_plan": figure(210, 76, T(
+    "The three totals. Left: a square corner, a right angle of 90°. Middle: a straight line, a straight angle of 180°. Right: a ray with an arc going all the way round its point, a full turn of 360°.",
+    "تین مجموعے۔ بائیں: ایک چوکور کونا، 90° کا قائمہ زاویہ۔ درمیان: ایک سیدھی لکیر، 180° کا مستقیم زاویہ۔ دائیں: ایک شعاع جس کے نقطے کے پورے گرد قوس ہے، 360° کا پورا چکر۔"),
+    totals),
+  "s4_ladder": leaning(70, ["70°", "?"],
+    "A wall standing straight up from the ground, with a ladder leaning from the ground to the wall. The wall meets the ground at a right angle, marked with a square. The ladder makes 70° with the ground. The angle between the ladder and the wall, at the top, is marked ?.",
+    "زمین سے سیدھی کھڑی دیوار، اور زمین سے دیوار تک ٹکی سیڑھی۔ دیوار زمین سے قائمہ زاویے پر ملتی ہے، جس پر مربع کا نشان ہے۔ سیڑھی زمین کے ساتھ 70° بناتی ہے۔ اوپر سیڑھی اور دیوار کے زاویے پر ? لکھا ہے۔"),
+  "s5_roti": wheel(6,
+    "A round roti cut from the middle into 6 equal pieces. The angle of one piece at the middle is marked ?.",
+    "ایک گول روٹی درمیان سے 6 برابر ٹکڑوں میں کٹی ہوئی ہے۔ ایک ٹکڑے کے درمیان والے زاویے پر ? لکھا ہے۔", fill=True),
+  "s6_gate": gate,
+  "s7_clock": clock(4),
+  "s8_roof": roof,
+  "s9_find_error": ramp,
+  "u2_line": on_line([48], ["48°", "?"]),
+  "u4_triangle": triangle(45, 75, ["45°", "75°", "?"]),
+  "u5_roundabout": roundabout,
+  "qb_apply": leaning(55, ["55°", "?"],
+    "A pole standing straight up from flat ground, with a rope from its top down to the ground. The pole meets the ground at a right angle, marked with a square. The rope makes 55° with the ground. The angle between the rope and the pole, at the top, is marked ?.",
+    "ہموار زمین پر سیدھا کھڑا کھمبا، اور اس کی چوٹی سے زمین تک ایک رسی۔ کھمبا زمین سے قائمہ زاویے پر ملتا ہے، جس پر مربع کا نشان ہے۔ رسی زمین کے ساتھ 55° بناتی ہے۔ اوپر رسی اور کھمبے کے زاویے پر ? لکھا ہے۔"),
+  "r_star": wheel(5,
+    "A wheel with 5 equal spokes coming out from the middle. The angle between two spokes next to each other is marked ?.",
+    "ایک پہیہ جس کے درمیان سے 5 برابر تیلیاں نکلتی ہیں۔ ساتھ والی دو تیلیوں کے درمیان زاویے پر ? لکھا ہے۔"),
+  "r_clock": clock(2),
+}
 
 
 lesson = {
@@ -269,4 +548,5 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, FIGS)
 write(lesson)

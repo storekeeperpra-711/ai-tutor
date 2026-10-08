@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, signed, number_question, number_line, write,
                     REF, REVIEW, INT_MEANING, INT_ADD)
+from figs import jumps_figure, chains_figure, thermometer_move, attach
 
 SKILL = INT_ADD
 S = signed
@@ -26,6 +27,49 @@ def plus(a, b):
     """'−5 + (−3)': a negative number after + goes in brackets."""
     return f"{S(a)} + ({S(b)})" if b < 0 else f"{S(a)} + {b}"
 
+
+# ---------- pictures ----------
+
+FIG_S1 = thermometer_move(
+    -5, 5, -3, 5,
+    "A thermometer showing −3 °C, 3 marks below 0. Beside it an arrow goes up 5 marks, marked +5, to a question mark.",
+    "ایک تھرمامیٹر جو −3 ڈگری دکھاتا ہے، 0 سے 3 نشان نیچے۔ ساتھ میں ایک تیر 5 نشان اوپر جاتا ہے، اس پر +5 لکھا ہے، اور ایک سوالیہ نشان تک پہنچتا ہے۔")
+
+FIG_S3 = jumps_figure(
+    -5, 5, [-3, 5],
+    "A number line from −5 to 5. A jump marked +5 starts at −3 and goes 5 steps to the right, landing on 2.",
+    "−5 سے 5 تک عددی خط۔ +5 والی ایک چھلانگ −3 سے شروع ہو کر 5 قدم دائیں جاتی ہے اور 2 پر اترتی ہے۔")
+
+FIG_S6 = chains_figure(
+    -10, 0, [[-5, -3], [-9, 4]],
+    "Two number lines from −10 to 0. On the top one, a jump marked −3 goes left from −5 to −8. On the bottom one, a jump marked +4 goes right from −9 to −5.",
+    "−10 سے 0 تک دو عددی خط۔ اوپر والے پر −3 والی چھلانگ −5 سے بائیں −8 تک جاتی ہے۔ نیچے والے پر +4 والی چھلانگ −9 سے دائیں −5 تک جاتی ہے۔")
+
+FIG_S9 = jumps_figure(
+    -10, 1, [-7, 3], end_text="?",
+    alt_en="A number line from −10 to 1. A jump marked +3 starts at −7 and goes 3 steps to the RIGHT, to a question mark.",
+    alt_ur="−10 سے 1 تک عددی خط۔ +3 والی ایک چھلانگ −7 سے شروع ہو کر 3 قدم دائیں جاتی ہے، ایک سوالیہ نشان تک۔")
+
+FIG_S10 = jumps_figure(
+    -5, 5, [-4, 4],
+    "A number line from −5 to 5. A jump marked +4 starts at −4 and goes 4 steps to the right, landing exactly on 0.",
+    "−5 سے 5 تک عددی خط۔ +4 والی ایک چھلانگ −4 سے شروع ہو کر 4 قدم دائیں جاتی ہے اور ٹھیک 0 پر اترتی ہے۔")
+
+FIG_S11 = jumps_figure(
+    -4, 8, [6, -8], end_text="?",
+    alt_en="A number line from −4 to 8. A jump marked −8 starts at 6 and goes 8 steps to the left, past 0, to a question mark.",
+    alt_ur="−4 سے 8 تک عددی خط۔ −8 والی ایک چھلانگ 6 سے شروع ہو کر 8 قدم بائیں جاتی ہے، 0 سے آگے، ایک سوالیہ نشان تک۔")
+
+FIG_S12 = chains_figure(
+    -5, 5, [[-3, 5], [4, -6]],
+    "Two number lines from −5 to 5. Top: a jump marked +5 goes right from −3 to 2. Bottom: a jump marked −6 goes left from 4 to −2.",
+    "−5 سے 5 تک دو عددی خط۔ اوپر: +5 والی چھلانگ −3 سے دائیں 2 تک جاتی ہے۔ نیچے: −6 والی چھلانگ 4 سے بائیں −2 تک جاتی ہے۔",
+    every=5)
+
+FIG_QB_ERROR = jumps_figure(
+    -8, 4, [3, -10], end_text="?",
+    alt_en="A number line from −8 to 4. A jump marked −10 starts at 3 and goes 10 steps to the LEFT, to a question mark.",
+    alt_ur="−8 سے 4 تک عددی خط۔ −10 والی ایک چھلانگ 3 سے شروع ہو کر 10 قدم بائیں جاتی ہے، ایک سوالیہ نشان تک۔")
 
 lesson = {
  "id": "g6-maths-04-adding-integers",
@@ -217,4 +261,9 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, {
+    "s1_hook": FIG_S1, "s3_see_it": FIG_S3, "s6_rules": FIG_S6, "s9_find_error": FIG_S9,
+    "s10_explain_why": FIG_S10, "s11_money": FIG_S11, "s12_summary": FIG_S12,
+    "qb_find_error": FIG_QB_ERROR,
+})
 write(lesson)

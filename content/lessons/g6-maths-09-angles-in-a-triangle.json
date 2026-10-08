@@ -137,7 +137,101 @@
               },
               "misconception_id": "forgets_right_angle"
             }
-          ]
+          ],
+          "figure": {
+            "width": 120,
+            "height": 90,
+            "alt": {
+              "en": "A triangle with its three angles marked: 90°, 28° and a missing angle marked ?. A small square marks the right angle.",
+              "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 90°، 28° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔ ایک چھوٹا مربع قائمہ زاویہ دکھاتا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    15.0,
+                    68.9
+                  ],
+                  [
+                    105.0,
+                    68.9
+                  ],
+                  [
+                    15.0,
+                    21.1
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "line",
+                "from": [
+                  21.0,
+                  68.9
+                ],
+                "to": [
+                  21.0,
+                  62.9
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  21.0,
+                  62.9
+                ],
+                "to": [
+                  15.0,
+                  62.9
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  29.8,
+                  54.1
+                ],
+                "text": "90°"
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  105.0,
+                  68.9
+                ],
+                "radius": 10,
+                "start": 180,
+                "sweep": 28
+              },
+              {
+                "kind": "label",
+                "at": [
+                  72.9,
+                  60.9
+                ],
+                "text": "28°"
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  15.0,
+                  21.1
+                ],
+                "radius": 10,
+                "start": 28,
+                "sweep": 62
+              },
+              {
+                "kind": "label",
+                "at": [
+                  25.8,
+                  39.1
+                ],
+                "text": "?"
+              }
+            ]
+          }
         }
       },
       {
@@ -258,6 +352,193 @@
       "text": {
         "en": "Today we find missing angles inside triangles. First, a quick check.",
         "ur": "آج ہم مثلث کے اندر نامعلوم زاویے نکالیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 200,
+        "height": 92,
+        "alt": {
+          "en": "Left: a triangle with its corners marked a, b and c. Right: the same three corners put side by side at one point on a straight line, a then b then c, filling the straight angle with no gap.",
+          "ur": "بائیں: ایک مثلث جس کے کونوں پر a، b اور c لکھا ہے۔ دائیں: یہی تینوں کونے سیدھی لکیر کے ایک نقطے پر ساتھ ساتھ رکھے ہیں، پہلے a پھر b پھر c، اور سیدھا زاویہ بغیر خالی جگہ کے بھر جاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                72.1
+              ],
+              [
+                89.0,
+                72.1
+              ],
+              [
+                58.8,
+                19.9
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              15.0,
+              72.1
+            ],
+            "radius": 10,
+            "start": 310,
+            "sweep": 50
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              63.2
+            ],
+            "text": "a"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              89.0,
+              72.1
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.8,
+              61.6
+            ],
+            "text": "b"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              58.8,
+              19.9
+            ],
+            "radius": 10,
+            "start": 60,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              57.0,
+              40.8
+            ],
+            "text": "c"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150,
+              70
+            ],
+            "to": [
+              192.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150,
+              70
+            ],
+            "to": [
+              108.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150,
+              70
+            ],
+            "to": [
+              177.0,
+              37.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150,
+              70
+            ],
+            "to": [
+              135.6,
+              30.5
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              150,
+              70
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              150,
+              70
+            ],
+            "radius": 9,
+            "start": 310,
+            "sweep": 50
+          },
+          {
+            "kind": "label",
+            "at": [
+              168.1,
+              61.5
+            ],
+            "text": "a"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              150,
+              70
+            ],
+            "radius": 14,
+            "start": 250,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              154.3,
+              45.4
+            ],
+            "text": "b"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              150,
+              70
+            ],
+            "radius": 9,
+            "start": 180,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              133.6,
+              58.5
+            ],
+            "text": "c"
+          }
+        ]
       }
     },
     {
@@ -291,7 +572,122 @@
             "ur": "لکیر کے لیے 180° لیں: 70°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 66,
+        "alt": {
+          "en": "A straight line with a point on it. 2 rays from the point split the straight angle into 50°, 60° and a missing angle marked ?.",
+          "ur": "ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے 2 شعاعیں سیدھے زاویے کو ان حصوں میں بانٹتی ہیں: 50°، 60° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              110.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              10.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              92.1,
+              11.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              42.9,
+              3.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 310,
+            "sweep": 50
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.1,
+              41.5
+            ],
+            "text": "50°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 14,
+            "start": 250,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.3,
+              25.4
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 180,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              43.6,
+              38.5
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s3_rule",
@@ -306,6 +702,88 @@
       "text": {
         "en": "The three angles inside any triangle add up to 180°. To find a missing angle, take the other two away from 180°. In a right-angled triangle one angle is 90°. In an equilateral triangle all three angles are equal. In an isosceles triangle two angles are equal.",
         "ur": "کسی بھی مثلث کے تینوں اندرونی زاویوں کا مجموعہ 180° ہے۔ نامعلوم زاویے کے لیے باقی دو کو 180° سے نفی کریں۔ قائمہ الزاویہ مثلث میں ایک زاویہ 90° ہوتا ہے۔ متساوی الاضلاع مثلث میں تینوں زاویے برابر ہوتے ہیں۔ متساوی الساقین مثلث میں دو زاویے برابر ہوتے ہیں۔"
+      },
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: 40°, 80° and 60°.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 40°، 80° اور 60°۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                19.0,
+                75.0
+              ],
+              [
+                101.0,
+                75.0
+              ],
+              [
+                90.5,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              19.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 320,
+            "sweep": 40
+          },
+          {
+            "kind": "label",
+            "at": [
+              41.0,
+              67.0
+            ],
+            "text": "40°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              101.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 80
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.9,
+              61.5
+            ],
+            "text": "80°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              90.5,
+              15.0
+            ],
+            "radius": 10,
+            "start": 80,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.3,
+              34.7
+            ],
+            "text": "60°"
+          }
+        ]
       }
     },
     {
@@ -346,7 +824,89 @@
             "ur": "110 دونوں زاویوں کا مجموعہ ہے۔ 180 سے نفی کریں: 70°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: 50°, 60° and a missing angle marked ?.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 50°، 60° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.5,
+                75.0
+              ],
+              [
+                102.5,
+                75.0
+              ],
+              [
+                67.9,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              17.5,
+              75.0
+            ],
+            "radius": 10,
+            "start": 310,
+            "sweep": 50
+          },
+          {
+            "kind": "label",
+            "at": [
+              36.5,
+              66.1
+            ],
+            "text": "50°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              102.5,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.3,
+              64.5
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              67.9,
+              15.0
+            ],
+            "radius": 10,
+            "start": 60,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.1,
+              35.9
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s5_right",
@@ -379,7 +939,101 @@
           },
           "misconception_id": "forgets_right_angle"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: 90°, 35° and a missing angle marked ?. A small square marks the right angle.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 90°، 35° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔ ایک چھوٹا مربع قائمہ زاویہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.2,
+                75.0
+              ],
+              [
+                102.8,
+                75.0
+              ],
+              [
+                17.2,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.2,
+              75.0
+            ],
+            "to": [
+              23.2,
+              69.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.2,
+              69.0
+            ],
+            "to": [
+              17.2,
+              69.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.0,
+              60.2
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              102.8,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 35
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.4,
+              67.0
+            ],
+            "text": "35°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              17.2,
+              15.0
+            ],
+            "radius": 10,
+            "start": 35,
+            "sweep": 55
+          },
+          {
+            "kind": "label",
+            "at": [
+              26.9,
+              33.6
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s6_equilateral",
@@ -412,7 +1066,122 @@
           },
           "misconception_id": "triangle_is_360"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: an angle marked x, an angle marked x and an angle marked x. Small marks on all three sides show they are equal.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: ایک زاویہ جس پر x لکھا ہے، ایک زاویہ جس پر x لکھا ہے اور ایک زاویہ جس پر x لکھا ہے۔ تینوں اضلاع پر چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                25.4,
+                75.0
+              ],
+              [
+                94.6,
+                75.0
+              ],
+              [
+                60.0,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              25.4,
+              75.0
+            ],
+            "radius": 10,
+            "start": 300,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              43.6,
+              64.5
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              94.6,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.4,
+              64.5
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60.0,
+              15.0
+            ],
+            "radius": 10,
+            "start": 60,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              36.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "line",
+            "from": [
+              45.3,
+              46.5
+            ],
+            "to": [
+              40.1,
+              43.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              79.9,
+              43.5
+            ],
+            "to": [
+              74.7,
+              46.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              78.0
+            ],
+            "to": [
+              60.0,
+              72.0
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "s7_isosceles",
@@ -445,7 +1214,111 @@
           },
           "misconception_id": "isosceles_no_halve"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: an angle marked x, an angle marked x and 40°. Small marks on two sides show they are equal.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: ایک زاویہ جس پر x لکھا ہے، ایک زاویہ جس پر x لکھا ہے اور 40°۔ دو اضلاع پر چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                38.2,
+                75.0
+              ],
+              [
+                81.8,
+                75.0
+              ],
+              [
+                60.0,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              38.2,
+              75.0
+            ],
+            "radius": 10,
+            "start": 290,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.4,
+              63.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              81.8,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.6,
+              63.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60.0,
+              15.0
+            ],
+            "radius": 10,
+            "start": 70,
+            "sweep": 40
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              38.4
+            ],
+            "text": "40°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              51.9,
+              46.0
+            ],
+            "to": [
+              46.3,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              73.7,
+              44.0
+            ],
+            "to": [
+              68.1,
+              46.0
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "s8_two_right",
@@ -528,7 +1401,89 @@
           },
           "misconception_id": "triangle_is_360"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: 65°, 45° and a missing angle marked ?.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 65°، 45° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                75.0
+              ],
+              [
+                104.0,
+                75.0
+              ],
+              [
+                44.0,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              33.7,
+              63.7
+            ],
+            "text": "65°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              104.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 45
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.6,
+              67.0
+            ],
+            "text": "45°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              44.0,
+              15.0
+            ],
+            "radius": 10,
+            "start": 45,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              47.6,
+              35.7
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -622,7 +1577,111 @@
             "ur": "65° کے دو زاویے ہیں۔ 180 − 65 − 65 = 50°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: 65°, 65° and a missing angle marked ?. Small marks on two sides show they are equal.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 65°، 65° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔ دو اضلاع پر چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                32.0,
+                75.0
+              ],
+              [
+                88.0,
+                75.0
+              ],
+              [
+                60.0,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              32.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              49.7,
+              63.7
+            ],
+            "text": "65°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              88.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.3,
+              63.7
+            ],
+            "text": "65°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60.0,
+              15.0
+            ],
+            "radius": 10,
+            "start": 65,
+            "sweep": 50
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              36.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.7,
+              46.3
+            ],
+            "to": [
+              43.3,
+              43.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              76.7,
+              43.7
+            ],
+            "to": [
+              71.3,
+              46.3
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -685,7 +1744,89 @@
             },
             "misconception_id": "triangle_is_360"
           }
-        ]
+        ],
+        "figure": {
+          "width": 120,
+          "height": 90,
+          "alt": {
+            "en": "A triangle with its three angles marked: 100°, 30° and a missing angle marked ?.",
+            "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 100°، 30° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  24.2,
+                  71.0
+                ],
+                [
+                  105.0,
+                  71.0
+                ],
+                [
+                  15.0,
+                  19.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "arc",
+              "center": [
+                24.2,
+                71.0
+              ],
+              "radius": 10,
+              "start": 260,
+              "sweep": 100
+            },
+            {
+              "kind": "label",
+              "at": [
+                37.7,
+                54.9
+              ],
+              "text": "100°"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                105.0,
+                71.0
+              ],
+              "radius": 10,
+              "start": 180,
+              "sweep": 30
+            },
+            {
+              "kind": "label",
+              "at": [
+                75.1,
+                63.0
+              ],
+              "text": "30°"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                15.0,
+                19.0
+              ],
+              "radius": 10,
+              "start": 30,
+              "sweep": 50
+            },
+            {
+              "kind": "label",
+              "at": [
+                27.0,
+                36.2
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     },
     {
@@ -722,7 +1863,111 @@
             },
             "misconception_id": "isosceles_no_halve"
           }
-        ]
+        ],
+        "figure": {
+          "width": 120,
+          "height": 90,
+          "alt": {
+            "en": "A triangle with its three angles marked: an angle marked x, an angle marked x and 80°. Small marks on two sides show they are equal.",
+            "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: ایک زاویہ جس پر x لکھا ہے، ایک زاویہ جس پر x لکھا ہے اور 80°۔ دو اضلاع پر چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  15.0,
+                  71.8
+                ],
+                [
+                  105.0,
+                  71.8
+                ],
+                [
+                  60.0,
+                  18.2
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "arc",
+              "center": [
+                15.0,
+                71.8
+              ],
+              "radius": 10,
+              "start": 310,
+              "sweep": 50
+            },
+            {
+              "kind": "label",
+              "at": [
+                34.0,
+                62.9
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                105.0,
+                71.8
+              ],
+              "radius": 10,
+              "start": 180,
+              "sweep": 50
+            },
+            {
+              "kind": "label",
+              "at": [
+                86.0,
+                62.9
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                60.0,
+                18.2
+              ],
+              "radius": 10,
+              "start": 50,
+              "sweep": 80
+            },
+            {
+              "kind": "label",
+              "at": [
+                60.0,
+                39.2
+              ],
+              "text": "80°"
+            },
+            {
+              "kind": "line",
+              "from": [
+                39.8,
+                46.9
+              ],
+              "to": [
+                35.2,
+                43.1
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                84.8,
+                43.1
+              ],
+              "to": [
+                80.2,
+                46.9
+              ]
+            }
+          ]
+        }
       }
     }
   ],

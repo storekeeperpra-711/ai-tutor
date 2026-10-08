@@ -1,5 +1,135 @@
+import math
+
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, AN_TYPES, AN_LINE)
+
+
+# ---- figure helpers (the same small block is copied into each Angles script) ----
+# Angles are in degrees, measured anticlockwise from +x like in a maths book;
+# the app's screen y goes down, so the helpers flip them.
+def pt(x, y):
+    return [round(x, 1), round(y, 1)]
+
+
+def ray_end(v, deg, length):
+    r = math.radians(deg)
+    return pt(v[0] + length * math.cos(r), v[1] - length * math.sin(r))
+
+
+def arc(center, radius, a0, a1, dashed=False):
+    """Arc from a0° to a1° (anticlockwise), in the app's clockwise screen terms."""
+    item = {"kind": "arc", "center": center, "radius": radius,
+            "start": round((-a1) % 360, 1), "sweep": round(a1 - a0, 1)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def line(a, b, dashed=False):
+    item = {"kind": "line", "from": a, "to": b}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": at, "text": text}
+
+
+def dot(at):
+    return {"kind": "point", "at": at}
+
+
+def square(v, a0, size=6):
+    """The little square that marks a right angle between a0° and a0 + 90°."""
+    p, q = ray_end(v, a0, size), ray_end(v, a0 + 90, size)
+    c = pt(p[0] + q[0] - v[0], p[1] + q[1] - v[1])
+    return [line(p, c), line(c, q)]
+
+
+def mark(v, a0, a1, text=None, r=10, dist=None, arc_only=False):
+    """Mark the angle from a0° to a1° at vertex v: a square for exactly 90°
+    (unless arc_only, when the square would give the answer away), an arc
+    otherwise, and its label on the middle direction."""
+    items = square(v, a0) if a1 - a0 == 90 and not arc_only else [arc(v, r, a0, a1)]
+    if text:
+        half = math.radians(min((a1 - a0) / 2, 90))
+        d = dist or max(r + 11, min(8 / math.sin(half), 40))
+        items.append(label(ray_end(v, (a0 + a1) / 2, d), text))
+    return items
+
+
+def figure(width, height, alt, items):
+    """Check the drawing fits the box (as tools/validate_lessons.py does)."""
+    assert len(items) <= 60, len(items)
+    margin = 0.025 * max(width, height)
+    for it in items:
+        reach = it.get("radius", 0)
+        for x, y in [*it.get("points", []), *(it[k] for k in ("from", "to", "center", "at") if k in it)]:
+            assert reach <= x <= width - reach and reach <= y <= height - reach, (it, width, height)
+            if it["kind"] == "label":
+                assert margin <= x <= width - margin and margin <= y <= height - margin, (it, width, height)
+    return {"width": width, "height": height, "alt": alt, "items": items}
+
+
+def fan(v, rays, marks, arm=40):
+    """Rays from one vertex v (two rays at 0° and 180° make a straight line),
+    with marked angles: marks are (a0, a1, text) or (a0, a1, text, dist).
+    Neighbouring arcs get different radii so each angle can be seen."""
+    items = [line(v, ray_end(v, d, arm)) for d in rays] + [dot(v)]
+    radii = [9 + 5 * (i % 2) for i in range(len(marks))]
+    if len(marks) % 2 and marks[-1][1] - marks[0][0] == 360:
+        radii[-1] = 19      # all the way round: the last arc also touches the first
+    for m, r in zip(marks, radii):
+        items += mark(v, m[0], m[1], m[2], r=r, dist=m[3] if len(m) > 3 else None)
+    return items
+
+
+def parts_text(texts):
+    """Words for the marked angles, for the alt text: '130°' and a missing one."""
+    en, ur = [], []
+    for t in texts:
+        if t == "?":
+            en.append("a missing angle marked ?")
+            ur.append("ایک نامعلوم زاویہ جس پر ? لکھا ہے")
+        elif t.endswith("°"):
+            en.append(t)
+            ur.append(t)
+        else:
+            en.append(f"an angle marked {t}")
+            ur.append(f"ایک زاویہ جس پر {t} لکھا ہے")
+
+    def join(xs, comma, also):
+        return xs[0] if len(xs) == 1 else comma.join(xs[:-1]) + also + xs[-1]
+    return join(en, ", ", " and "), join(ur, "، ", " اور ")
+
+
+def on_line(rays, texts):
+    """A straight line with rays from a point on it at the given angles
+    (measured from the right end); the angles between them, right to left,
+    are marked with texts."""
+    edges = [0, *rays, 180]
+    assert len(texts) == len(edges) - 1
+    v = pt(60, 50)
+    items = fan(v, [0, 180, *rays], [(a, b, t) for a, b, t in zip(edges, edges[1:], texts)], arm=50)
+    en, ur = parts_text(texts)
+    if len(rays) == 1:
+        alt = T(f"A straight line with a point on it. A ray from the point splits the straight angle into {en}.",
+                f"ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: {ur}۔")
+    else:
+        alt = T(f"A straight line with a point on it. {len(rays)} rays from the point split the straight angle into {en}.",
+                f"ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے {len(rays)} شعاعیں سیدھے زاویے کو ان حصوں میں بانٹتی ہیں: {ur}۔")
+    return figure(120, 66, alt, items)
+
+
+def attach(lesson, figures):
+    """Put each figure on the step with that id (steps, question bank, review)."""
+    steps = [*lesson["steps"], *(q["step"] for qs in lesson["question_bank"].values() for q in qs),
+             *(q["step"] for q in lesson.get("review_questions", []))]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures.pop(step["id"])
+    assert not figures, figures
 
 SKILL = AN_LINE
 LINE, POINT = 180, 360
@@ -38,6 +168,63 @@ R1 = missing(LINE, 145)
 assert R1 == 35 and POINT - 145 == 215
 R2 = missing(POINT, 200, 95)
 assert R2 == 65 and 200 + 95 == 295
+
+
+# ---- figures -------------------------------------------------------------
+def at_point(rays, texts):
+    """Rays from a point; the angles between them, going round, marked with texts."""
+    edges = [*rays, rays[0] + POINT]
+    assert len(texts) == len(rays)
+    items = fan(pt(50, 50), rays, [(a, b, t) for a, b, t in zip(edges, edges[1:], texts)])
+    en, ur = parts_text(texts)
+    alt = T(f"{len(rays)} rays come out of one point. The angles between them, all the way round, are {en}.",
+            f"ایک نقطے سے {len(rays)} شعاعیں نکلتی ہیں۔ ان کے درمیان پورے گرد زاویے یہ ہیں: {ur}۔")
+    return figure(100, 100, alt, items)
+
+
+def roti(cuts):
+    c = pt(50, 50)
+    items = [{"kind": "circle", "center": c, "radius": 42, "fill": True}]
+    items += [line(c, ray_end(c, d, 42)) for d in cuts] + [dot(c)]
+    return items
+
+
+ROTI_CUTS = [20, 110, 170, 250, 315]
+assert sorted(ROTI_CUTS) == ROTI_CUTS and ROTI_CUTS[-1] - ROTI_CUTS[0] < POINT
+
+
+def deg(n):
+    return f"{n}°"
+
+
+# s3: one worked example of each total, numbers not used in the questions
+EX_LINE = 60
+EX_POINT = [10, 110, 250]
+assert [b - a for a, b in zip(EX_POINT, EX_POINT[1:] + [EX_POINT[0] + POINT])] == [100, 140, 120]
+rules = (fan(pt(48, 66), [0, LINE, EX_LINE], [(0, EX_LINE, deg(EX_LINE)), (EX_LINE, LINE, deg(LINE - EX_LINE))], arm=42)
+         + fan(pt(140, 46), EX_POINT, [(10, 110, "100°"), (110, 250, "140°"), (250, 370, "120°")], arm=38))
+
+FIGS = {
+  "s1_hook": figure(100, 100, T(
+    f"A round roti cut from the middle into {len(ROTI_CUTS)} slices of different sizes. All the slice corners meet at the centre.",
+    f"ایک گول روٹی درمیان سے {len(ROTI_CUTS)} مختلف سائز کے ٹکڑوں میں کٹی ہوئی ہے۔ سب ٹکڑوں کے کونے مرکز پر ملتے ہیں۔"),
+    roti(ROTI_CUTS)),
+  "s3_rules": figure(184, 90, T(
+    f"Left: a straight line split by a ray into {EX_LINE}° and {LINE - EX_LINE}°, which make 180°. Right: three rays from a point make angles of 100°, 140° and 120°, which make 360°.",
+    f"بائیں: ایک سیدھی لکیر جسے ایک شعاع {EX_LINE}° اور {LINE - EX_LINE}° میں بانٹتی ہے، جو مل کر 180° ہیں۔ دائیں: ایک نقطے سے تین شعاعیں 100°، 140° اور 120° کے زاویے بناتی ہیں، جو مل کر 360° ہیں۔"),
+    rules),
+  "s4_line": on_line([S4], ["?", "130°"]),
+  "s5_three": on_line([40, 40 + 75], ["40°", "75°", "?"]),
+  "s6_point": at_point([0, 100, 100 + 150], ["100°", "150°", "?"]),
+  "s8_two_equal": on_line([40, 40 + S8], ["40°", "x", "x"]),
+  "s9_find_error": on_line([70], ["70°", "?"]),
+  "s11_four": at_point([0, 90, 90 + 120, 90 + 120 + 85], ["90°", "120°", "85°", "?"]),
+  "qb_apply": on_line([75], ["75°", "?"]),
+  "qb_find_error": at_point([0, 120, 120 + 140], ["120°", "140°", "?"]),
+  "r_line": on_line([R1], ["?", "145°"]),
+  "r_point": at_point([0, 200, 200 + 95], ["200°", "95°", "?"]),
+}
+
 
 lesson = {
  "id": "g6-maths-09-angles-on-a-line",
@@ -230,4 +417,5 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, FIGS)
 write(lesson)

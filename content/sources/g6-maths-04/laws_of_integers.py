@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, signed, number_question, write,
                     BOOK_LAWS, REVIEW, INT_MULTIPLY, INT_LAWS)
+from figs import jumps_figure, chains_figure, area_model, attach
 
 SKILL = INT_LAWS
 S = signed
@@ -42,6 +43,55 @@ assert QB_FIRST_ONLY == -48
 assert 0 // -8 == 0
 assert (-3) * ((-2) * 5) == ((-3) * (-2)) * 5 == 30
 
+
+# ---------- pictures ----------
+
+def tm(x, y):
+    """A short product label for inside a picture: −2×6."""
+    return f"{S(x)}×{S(y)}"
+
+
+FIG_S1 = chains_figure(
+    -5, 9, [[-4, 9], [9, -4]],
+    "Two number lines from −5 to 9. Top: −4 + 9, a jump marked +9 from −4 right to 5. Bottom: 9 + (−4), a jump marked −4 from 9 left to 5. Both land on 5.",
+    "−5 سے 9 تک دو عددی خط۔ اوپر: −4 + 9، +9 والی چھلانگ −4 سے دائیں 5 تک۔ نیچے: 9 + (−4)، −4 والی چھلانگ 9 سے بائیں 5 تک۔ دونوں 5 پر اترتی ہیں۔",
+    every=5)
+
+FIG_S3 = area_model(
+    [6, 4], -2, [S(-2 * 6), S(-2 * 4)],
+    "A multiplication grid for (−2) × (6 + 4): a rectangle with −2 on its side, split into two parts with 6 and 4 on top. The parts hold −12 and −8, and −12 + (−8) = −20.",
+    "(−2) × (6 + 4) کے لیے ضرب کا خانہ: ایک مستطیل جس کی سائیڈ پر −2 ہے، دو حصوں میں بٹا ہوا، اوپر 6 اور 4۔ حصوں میں −12 اور −8 ہیں، اور −12 + (−8) = −20")
+
+FIG_S5 = jumps_figure(
+    -7, 9, [-6, 4 + 10], end_text="?",
+    alt_en="A number line from −7 to 9. 4 + 10 is grouped first to make 14: one jump marked +14 starts at −6 and goes right to a question mark.",
+    alt_ur="−7 سے 9 تک عددی خط۔ پہلے 4 + 10 کو ملا کر 14 بنایا: +14 والی ایک چھلانگ −6 سے شروع ہو کر دائیں ایک سوالیہ نشان تک جاتی ہے۔")
+
+FIG_S6 = area_model(
+    [6, 4], -2, [tm(-2, 6), tm(-2, 4)],
+    "A multiplication grid for (−2) × (6 + 4): a rectangle with −2 on its side, split into two parts with 6 and 4 on top. One part says −2 × 6 and the other says −2 × 4.",
+    "(−2) × (6 + 4) کے لیے ضرب کا خانہ: ایک مستطیل جس کی سائیڈ پر −2 ہے، دو حصوں میں بٹا ہوا، اوپر 6 اور 4۔ ایک حصے میں −2 × 6 اور دوسرے میں −2 × 4 لکھا ہے۔")
+
+FIG_S7 = area_model(
+    [20, 3], -4, [tm(-4, 20), tm(-4, 3)],
+    "A multiplication grid for (−4) × 23: a rectangle with −4 on its side, split into a wide part with 20 on top and a thin part with 3 on top. The parts say −4 × 20 and −4 × 3.",
+    "(−4) × 23 کے لیے ضرب کا خانہ: ایک مستطیل جس کی سائیڈ پر −4 ہے، ایک چوڑے حصے (اوپر 20) اور ایک پتلے حصے (اوپر 3) میں بٹا ہوا۔ حصوں میں −4 × 20 اور −4 × 3 لکھا ہے۔")
+
+FIG_S9 = area_model(
+    [4, 5], -3, [S(-3 * 4), "?"],
+    "A multiplication grid for (−3) × (4 + 5): a rectangle with −3 on its side, split into two parts with 4 and 5 on top. The first part holds −12; the second part, for the 5, has a question mark: it must be multiplied by −3 too.",
+    "(−3) × (4 + 5) کے لیے ضرب کا خانہ: ایک مستطیل جس کی سائیڈ پر −3 ہے، دو حصوں میں بٹا ہوا، اوپر 4 اور 5۔ پہلے حصے میں −12 ہے؛ دوسرے حصے میں، 5 کے لیے، سوالیہ نشان ہے: اسے بھی −3 سے ضرب دینا ہے۔")
+
+FIG_S12 = chains_figure(
+    -8, 10, [[-6, 4, 10], [-6, 4 + 10]],
+    "Two number lines from −8 to 10, with a mark every 2. Top: (−6 + 4) + 10, a jump marked +4 from −6 to −2, then a jump marked +10 to 8. Bottom: −6 + (4 + 10), one jump marked +14 from −6 to 8. Both land on 8.",
+    "−8 سے 10 تک دو عددی خط، ہر 2 پر ایک نشان۔ اوپر: (−6 + 4) + 10، +4 والی چھلانگ −6 سے −2 تک، پھر +10 والی چھلانگ 8 تک۔ نیچے: −6 + (4 + 10)، +14 والی ایک چھلانگ −6 سے 8 تک۔ دونوں 8 پر اترتی ہیں۔",
+    every=5, ticks_every=2)
+
+FIG_QB_APPLY = area_model(
+    [10, 2], -5, [tm(-5, 10), tm(-5, 2)],
+    "A multiplication grid for (−5) × (10 + 2): a rectangle with −5 on its side, split into a wide part with 10 on top and a thin part with 2 on top. The parts say −5 × 10 and −5 × 2.",
+    "(−5) × (10 + 2) کے لیے ضرب کا خانہ: ایک مستطیل جس کی سائیڈ پر −5 ہے، ایک چوڑے حصے (اوپر 10) اور ایک پتلے حصے (اوپر 2) میں بٹا ہوا۔ حصوں میں −5 × 10 اور −5 × 2 لکھا ہے۔")
 
 lesson = {
  "id": "g6-maths-04-laws-of-integers",
@@ -251,4 +301,9 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, {
+    "s1_hook": FIG_S1, "s3_laws": FIG_S3, "s5_group": FIG_S5, "s6_distribute": FIG_S6,
+    "s7_mental": FIG_S7, "s9_find_error": FIG_S9, "s12_summary": FIG_S12,
+    "qb_apply": FIG_QB_APPLY,
+})
 write(lesson)

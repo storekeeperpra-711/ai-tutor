@@ -1,3 +1,4 @@
+import math
 from common import (T, opt, say, wrong, number_question, write,
                     BOOK, REVIEW, PA_AREA, PA_COMPOUND, PA_PATH)
 
@@ -53,6 +54,250 @@ R1 = path_area(12, 9, 1)
 assert R1 == 154 - 108 == 46 and width_once(12, 9, 1) == 22
 R2 = 6 + 2 * 1
 assert R2 == 8 and 6 + 1 == 7
+
+
+
+# ---------- figure helpers ----------
+# Shapes are drawn to scale from the same numbers as the step text. Boxes are
+# W wide; a label is about CHAR wide per letter and TALL high on a phone, so
+# side labels are pushed out far enough not to touch the lines.
+
+W = 100
+CHAR = W / 30
+TALL = W / 16
+
+
+def r1(v):
+    return round(v + 0.0, 1)
+
+
+def pt(x, y):
+    return [r1(x), r1(y)]
+
+
+def poly(points, fill=True, dashed=False):
+    item = {"kind": "polygon", "points": [pt(*p) for p in points]}
+    if fill:
+        item["fill"] = True
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def seg(a, b, dashed=False):
+    item = {"kind": "line", "from": pt(*a), "to": pt(*b)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": pt(*at), "text": text}
+
+
+def fig(height, alt, items):
+    """A figure W wide; checks the labels' letters stay inside the box."""
+    assert len(items) <= 60, len(items)
+    for it in items:
+        if it["kind"] == "label":
+            x, y = it["at"]
+            half_w, half_h = len(it["text"]) * CHAR / 2, TALL / 2
+            assert x - half_w >= 0.5 and x + half_w <= W - 0.5, it
+            assert y - half_h >= 0.5 and y + half_h <= height - 0.5, it
+    return {"width": W, "height": r1(height), "alt": alt, "items": items}
+
+
+def cm(n):
+    return f"{n}cm"
+
+
+def m(n):
+    return f"{n}m"
+
+
+class Scale:
+    """Maps lengths (cm or m) to the box, the same scale both ways, centred.
+    The box height follows the shape (at most max_h)."""
+
+    def __init__(self, width, height, max_h=64, padx=15, pady=10):
+        self.s = min((W - 2 * padx) / width, (max_h - 2 * pady) / height)
+        self.h = height * self.s + 2 * pady
+        self.x0 = (W - width * self.s) / 2
+        self.y0 = pady
+
+    def __call__(self, x, y):
+        return (self.x0 + x * self.s, self.y0 + y * self.s)
+
+
+def side(a, b, text, inside, gap=1.5):
+    """Label for the side a-b, just outside it (away from the point inside)."""
+    mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    n = math.hypot(dx, dy)
+    nx, ny = -dy / n, dx / n
+    if (inside[0] - mx) * nx + (inside[1] - my) * ny > 0:
+        nx, ny = -nx, -ny
+    off = gap + abs(nx) * len(text) * CHAR / 2 + abs(ny) * TALL / 2
+    return label((mx + nx * off, my + ny * off), text)
+
+
+def centre(points):
+    return (sum(p[0] for p in points) / len(points), sum(p[1] for p in points) / len(points))
+
+
+def rect_pts(sc, x, y, w, h):
+    return [sc(x, y), sc(x + w, y), sc(x + w, y + h), sc(x, y + h)]
+
+
+def grid(sc, x, y, w, h, rows=None, cols=None):
+    """Lines that split a w by h rectangle into unit squares (or only the
+    first row and column of them, when rows/cols say how far to go)."""
+    rows = h if rows is None else rows
+    cols = w if cols is None else cols
+    items = []
+    for i in range(1, w):
+        items.append(seg(sc(x + i, y), sc(x + i, y + (h if i <= cols else rows))))
+    for j in range(1, h):
+        items.append(seg(sc(x, y + j), sc(x + (w if j <= rows else cols), y + j)))
+    return items
+
+
+def rect_fig(length, width, unit, alt, sides=2, grid_lines=False, top=None, left=None, max_h=64):
+    """A length by width rectangle to scale. sides=2 labels the bottom and
+    the right; sides=4 labels all four sides. top/left replace a label."""
+    sc = Scale(length, width, max_h=max_h)
+    p = rect_pts(sc, 0, 0, length, width)
+    c = centre(p)
+    items = [poly(p)]
+    if grid_lines:
+        items += grid(sc, 0, 0, length, width)
+    bottom_t = unit(length) if top is None else top
+    right_t = unit(width) if left is None else left
+    items += [side(p[3], p[2], bottom_t, c), side(p[1], p[2], right_t, c)]
+    if sides == 4:
+        items += [side(p[0], p[1], bottom_t, c), side(p[0], p[3], right_t, c)]
+    return fig(sc.h, alt, items)
+
+
+def right_angle(corner, toward_a, toward_b, size=3.5):
+    """A small square mark in the corner between two directions."""
+    def step(p, q):
+        d = math.hypot(q[0] - p[0], q[1] - p[1])
+        return ((q[0] - p[0]) / d * size, (q[1] - p[1]) / d * size)
+    ax, ay = step(corner, toward_a)
+    bx, by = step(corner, toward_b)
+    p1 = (corner[0] + ax, corner[1] + ay)
+    p2 = (corner[0] + ax + bx, corner[1] + ay + by)
+    p3 = (corner[0] + bx, corner[1] + by)
+    return [seg(p1, p2), seg(p2, p3)]
+
+
+def with_figures(lesson, figures):
+    """Attach each figure to the step with that id (main steps, question
+    bank and review), and check every figure found its step."""
+    used = set()
+    steps = list(lesson["steps"])
+    steps += [q["step"] for qs in lesson["question_bank"].values() for q in qs]
+    steps += [q["step"] for q in lesson.get("review_questions", [])]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures[step["id"]]
+            used.add(step["id"])
+    assert used == set(figures), set(figures) - used
+
+# ---------- figures ----------
+
+def path_fig(length, breadth, w, alt, field=True, band=None, outer=None, max_h=68, padx=14, pady=10, min_band=9):
+    """A field (shaded) with a path of width w all round it (the band between
+    the field and the outer rectangle). The field is to scale; the path is
+    drawn at least min_band thick so its label fits, so a thin path is drawn
+    a little wider than it really is.
+    field: label the field's length and breadth inside it (True), or give
+    the two texts. band: text for the path width, shown in the left and
+    right parts of the path. outer: texts for the outer length and breadth."""
+    t = min_band
+    for _ in range(4):
+        s = min((W - 2 * padx - 2 * t) / length, (max_h - 2 * pady - 2 * t) / breadth)
+        t = max(min_band, w * s)
+    x0, y0 = (W - length * s) / 2, pady + t
+    x1, y1 = x0 + length * s, y0 + breadth * s
+    inner = [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+    out = [(x0 - t, y0 - t), (x1 + t, y0 - t), (x1 + t, y1 + t), (x0 - t, y1 + t)]
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    items = [poly(out, fill=False), poly(inner)]
+    if field:
+        ft = (m(length), m(breadth)) if field is True else field
+        items += [label((cx, y0 + TALL / 2 + 1.5), ft[0])]
+        if ft[1]:
+            items.append(label((x0 + len(ft[1]) * CHAR / 2 + 2, cy), ft[1]))
+    if band:
+        # Low in the band, so it is not read together with the field's breadth.
+        by = y1 - TALL / 2 - 1
+        items += [label((x0 - t / 2, by), band), label((x1 + t / 2, by), band)]
+    if outer:
+        o = out
+        k = ((o[0][0] + o[2][0]) / 2, (o[0][1] + o[2][1]) / 2)
+        items.append(side(o[0], o[1], outer[0], k))
+        if outer[1]:
+            items.append(side(o[1], o[2], outer[1], k))
+    return fig(y1 + t + pady, alt, items)
+
+
+def path_alt(length, breadth, w, what_en, what_ur, outside=True, extra_en="", extra_ur=""):
+    where_en = "all round the outside of it" if outside else "inside it, along all four edges"
+    where_ur = "اس کے باہر چاروں طرف" if outside else "اس کے اندر چاروں کناروں کے ساتھ"
+    return T(f"{what_en} {length} m long and {breadth} m broad, shaded, with a path {w} m wide {where_en}. The path is the white band between the shaded rectangle and the outer rectangle. The path width, {w} m, is written in the path near the bottom of the left end and again of the right end.{extra_en}",
+             f"{what_ur} {length} میٹر لمبا اور {breadth} میٹر چوڑا، رنگا ہوا، اور {where_ur} {w} میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، {w} میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔{extra_ur}")
+
+
+F_HOOK = path_fig(20, 12, 2, T("A school field, a shaded rectangle, with a path of the same width all round it: a white band between the field and a bigger outer rectangle.",
+                               "سکول کا میدان، رنگی ہوئی مستطیل، جس کے چاروں طرف ایک جیسی چوڑائی کا راستہ ہے: میدان اور بڑی باہر کی مستطیل کے درمیان سفید پٹی۔"),
+                  field=False)
+F_EXPLAIN = path_fig(20, 12, 2, T("A field, a shaded rectangle with its length marked L, and a path all round it, the white band out to a bigger outer rectangle. The path's width is marked w at the left end and again at the right end, so the outer length is L + w + w.",
+                                  "ایک میدان، رنگی ہوئی مستطیل جس کی لمبائی پر L لکھا ہے، اور اس کے چاروں طرف راستہ، باہر کی بڑی مستطیل تک سفید پٹی۔ راستے کی چوڑائی پر بائیں سرے اور پھر دائیں سرے پر w لکھا ہے، اس لیے باہر کی لمبائی L + w + w ہے۔"),
+                     field=("L", None), band="w")
+F_OUTER_LEN = path_fig(20, 12, 2, path_alt(20, 12, 2, "The school field,", "سکول کا میدان،",
+                       extra_en=" The field's length 20 m and breadth 12 m are written inside it. The outer length, along the top, is marked ?.",
+                       extra_ur=" میدان کی لمبائی 20 میٹر اور چوڑائی 12 میٹر اس کے اندر لکھی ہیں۔ اوپر باہر کی لمبائی پر ? ہے۔"),
+                       band=m(2), outer=("?", None))
+F_OUTER_AREA = path_fig(20, 12, 2, path_alt(20, 12, 2, "The school field,", "سکول کا میدان،",
+                        extra_en=" The outer rectangle is labelled 24 m along the top and 16 m down the right side.",
+                        extra_ur=" باہر کی مستطیل پر اوپر 24 میٹر اور دائیں طرف 16 میٹر لکھا ہے۔"),
+                        field=False, band=m(2), outer=(m(24), m(16)))
+F_PATH_AREA = path_fig(20, 12, 2, path_alt(20, 12, 2, "The school field,", "سکول کا میدان،",
+                       extra_en=" The field is labelled 20 m and 12 m inside it; the outer rectangle is labelled 24 m along the top and 16 m down the right side.",
+                       extra_ur=" میدان کے اندر 20 میٹر اور 12 میٹر لکھا ہے؛ باہر کی مستطیل پر اوپر 24 میٹر اور دائیں طرف 16 میٹر لکھا ہے۔"),
+                       outer=(m(24), m(16)))
+
+
+def simple_path(length, breadth, w, what_en, what_ur, outer=None, extra_en="", extra_ur=""):
+    return path_fig(length, breadth, w, path_alt(length, breadth, w, what_en, what_ur,
+                    extra_en=f" The {length} m and {breadth} m are written inside the shaded rectangle.{extra_en}",
+                    extra_ur=f" {length} میٹر اور {breadth} میٹر رنگی ہوئی مستطیل کے اندر لکھے ہیں۔{extra_ur}"),
+                    band=m(w), outer=outer)
+
+
+F_GARDEN = simple_path(15, 10, 1, "Amna's garden,", "آمنہ کا باغیچہ،")
+F_POOL = simple_path(10, 6, 2, "A pool", "ایک تالاب")
+F_GROUND = simple_path(30, 20, 3, "A school ground", "سکول کا ایک میدان")
+F_PARK = path_fig(40, 30, 2, path_alt(36, 26, 2, "The grass of a park in Lahore,", "لاہور کے ایک پارک کی گھاس،", outside=True,
+                  extra_en=" The outer rectangle is the edge of the whole park, labelled 40 m along the top and 30 m down the right side, so the path runs inside the park along its four edges. The grass is labelled 36 m and 26 m inside it.",
+                  extra_ur=" باہر کی مستطیل پورے پارک کا کنارہ ہے، اوپر 40 میٹر اور دائیں طرف 30 میٹر، اس لیے راستہ پارک کے اندر چاروں کناروں کے ساتھ ہے۔ گھاس کے اندر 36 میٹر اور 26 میٹر لکھا ہے۔"),
+                  field=(m(36), m(26)), band=m(2), outer=(m(40), m(30)))
+F_QB = simple_path(10, 8, 1, "A field", "ایک میدان")
+F_QB_ERR = simple_path(12, 8, 2, "A pool", "ایک تالاب", outer=(m(16), m(12)),
+                       extra_en=" The outer rectangle is labelled 16 m along the top and 12 m down the right side.",
+                       extra_ur=" باہر کی مستطیل پر اوپر 16 میٹر اور دائیں طرف 12 میٹر لکھا ہے۔")
+F_R_PATH = simple_path(12, 9, 1, "A garden", "ایک باغیچہ")
+F_R_OUTER = path_fig(6, 3, 1, T("A flower bed, a shaded rectangle with its length 6 m written inside, and a path 1 m wide all round the outside. The path width, 1 m, is written in the path near the bottom of the left end and again of the right end. The outer length, along the top, is marked ?.",
+                                "ایک کیاری، رنگی ہوئی مستطیل جس کے اندر اس کی لمبائی 6 میٹر لکھی ہے، اور باہر چاروں طرف 1 میٹر چوڑا راستہ۔ راستے کی چوڑائی، 1 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ اوپر باہر کی لمبائی پر ? ہے۔"),
+                     field=(m(6), None), band=m(1), outer=("?", None), max_h=56)
+
+FIGS = {
+    "s1_hook": F_HOOK, "s3_outer_inner": F_EXPLAIN, "s4_outer_length": F_OUTER_LEN, "s5_outer_area": F_OUTER_AREA,
+    "s6_path_area": F_PATH_AREA, "s7_garden": F_GARDEN, "s8_cost": F_POOL, "s9_find_error": F_GROUND,
+    "s11_inside_path": F_PARK, "qb_apply": F_QB, "qb_find_error": F_QB_ERR, "r_path": F_R_PATH, "r_outer": F_R_OUTER,
+}
 
 
 lesson = {
@@ -243,11 +488,12 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Perimeter and Area unit (a gap lesson matching the book chapter on area). No textbook text or exercises were used.",
-   "The lesson has no pictures: fields, paths and pools are described in words. Ask pupils to draw each one on a slate or the board, the field as a rectangle and the path as a band all round it, and to mark the path width at both ends.",
+   "Most steps show the field (shaded) and the path (the white band round it) with the path width written at both ends. The fields are to scale, but a thin path is drawn a little wider than it really is so its label fits. Ask pupils to draw their own on a slate or the board as well.",
    "Step s11 has the path inside the park's edge; point out that here the width is taken away twice to get the inner rectangle.",
    "Urdu terms to check: راستہ (path), چوڑائی (width / breadth), باہر کی مستطیل (outer rectangle).",
    "The numbers were worked out in content/sources/g6-maths-08/area_of_path.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+with_figures(lesson, FIGS)
 write(lesson)

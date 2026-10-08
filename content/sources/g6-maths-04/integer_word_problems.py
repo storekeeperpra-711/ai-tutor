@@ -1,6 +1,8 @@
 from common import (T, opt, say, wrong, signed, number_question, write,
                     REF, REVIEW, INT_MEANING, INT_ADD, INT_SUBTRACT, INT_MULTIPLY,
                     INT_WORD_PROBLEMS)
+from figs import (jumps_figure, gap_thermometer, building, vertical_line, bracket_v, arrow_v,
+                  line, label, point, circle, figure, attach, signed_change, W)
 
 SKILL = INT_WORD_PROBLEMS
 S = signed
@@ -44,6 +46,96 @@ assert SUB == -25
 MATCH = 3 * 4 + 2 * -3
 assert MATCH == 6
 
+
+# ---------- pictures ----------
+
+FIG_S1 = jumps_figure(
+    -4, 6, [0, -2],
+    "A number line from −4 to 6. A score starts at 0. A jump marked −2, for one wrong answer, goes left from 0 and lands on −2, below zero.",
+    "−4 سے 6 تک عددی خط۔ اسکور 0 سے شروع ہوتا ہے۔ −2 والی ایک چھلانگ، ایک غلط جواب کے لیے، 0 سے بائیں جا کر −2 پر اترتی ہے، صفر سے نیچے۔")
+
+
+def lift_up():
+    start, up = -2, LIFT + 2
+    items, y_mid, bottom = building(start, 4, lift=start, top=14, floor_h=24)
+    items += arrow_v(250, y_mid(start), y_mid(start + up) + 4)
+    items.append(label((276, (y_mid(start) + y_mid(start + up)) / 2), signed_change(up)))
+    items.append(label((250, y_mid(start + up) - 8), "?"))
+    return figure(W, bottom + 14, (
+        f"A building cut open, with floors numbered 4 at the top down to 0 (the ground floor, on the dashed ground line), then −1 and {S(start)} below the ground. "
+        f"The lift car is shaded, at floor {S(start)}, the car park. An arrow beside the building goes up {up} floors, marked +{up}, to a question mark."), (
+        f"ایک عمارت کا اندرونی منظر، منزلیں اوپر 4 سے نیچے 0 تک (گراؤنڈ فلور، ڈیش والی زمین کی لکیر پر)، پھر زمین کے نیچے −1 اور {S(start)}۔ "
+        f"لفٹ سایہ دار ڈبہ ہے، منزل {S(start)} پر، یعنی کار پارک۔ عمارت کے ساتھ ایک تیر {up} منزلیں اوپر جاتا ہے، اس پر +{up} لکھا ہے، ایک سوالیہ نشان تک۔"), items)
+
+
+FIG_S4 = lift_up()
+
+FIG_S6 = gap_thermometer(
+    -10, 5, 4, -9, (
+        "A thermometer from −10 to 5 °C. Its liquid reaches 4 (noon), and −9 (night) is marked lower down. "
+        "A measuring line from −9 up to 4 is marked with a question mark: it passes 0 on the way."), (
+        "−10 سے 5 ڈگری تک کا تھرمامیٹر۔ اس کا مائع 4 (دوپہر) تک ہے، اور نیچے −9 (رات) کا نشان ہے۔ "
+        "−9 سے 4 تک ناپ کی لکیر پر سوالیہ نشان ہے: یہ راستے میں 0 سے گزرتی ہے۔"))
+
+FIG_S7 = jumps_figure(
+    -13, 1, [0] + [PER_HOUR] * 4, end_text=None, text_of=lambda s: "?", stop_labels=False, every=100,
+    alt_en="A number line from −13 to 1, labelled at 0 and −12. The fall from 0 to −12 is split into 4 equal jumps to the left, one for each hour; each jump is marked with a question mark.",
+    alt_ur="−13 سے 1 تک عددی خط، جس پر 0 اور −12 لکھا ہے۔ 0 سے −12 تک کی کمی 4 برابر چھلانگوں میں بٹی ہے، ہر گھنٹے کے لیے ایک، بائیں طرف؛ ہر چھلانگ پر سوالیہ نشان ہے۔")
+
+
+def floors_gap():
+    lo, hi = -5, 3
+    items, y_mid, bottom = building(lo, hi, top=14, floor_h=22)
+    items += bracket_v(250, y_mid(hi), y_mid(lo), "?")
+    return figure(W, bottom + 14, (
+        f"A building cut open, with floors numbered {hi} at the top down to 0 (the ground floor, on the dashed ground line) and on down to {S(lo)}, the lowest basement. "
+        f"A dashed measuring line beside it, from floor {S(lo)} up to floor {hi}, is marked with a question mark."), (
+        f"ایک عمارت کا اندرونی منظر، منزلیں اوپر {hi} سے 0 تک (گراؤنڈ فلور، ڈیش والی زمین کی لکیر پر) اور نیچے {S(lo)} تک، جو سب سے نچلا تہہ خانہ ہے۔ "
+        f"ساتھ میں منزل {S(lo)} سے منزل {hi} تک ڈیش والی ناپ کی لکیر پر سوالیہ نشان ہے۔"), items)
+
+
+FIG_S8 = floors_gap()
+
+
+def sea_scale(lo, hi, keys):
+    """A vertical number line in metres with the sea surface (0) as a dashed line."""
+    items, v = vertical_line(lo, hi, 110, 20, 220, keys=keys, ticks_every=5)
+    items.insert(0, line((116, v.y(0)), (W - 24, v.y(0)), dashed=True))
+    return items, v
+
+
+def diver_kite():
+    items, v = sea_scale(-15, 20, (20, -15))
+    for n in (20, -15):
+        items += [circle((110, v.y(n)), 7, fill=True), point((110, v.y(n)))]
+    items += bracket_v(190, v.y(20), v.y(-15), "?")
+    for n in (20, -15):
+        items.append(line((122, v.y(n)), (184, v.y(n)), dashed=True))
+    return figure(W, 240, (
+        "A vertical number line in metres. The sea surface, 0, is a dashed line going right from the 0 mark. A dot at 20 is the kite, above the sea; a dot at −15 is the diver, below it. "
+        "A measuring line from −15 up to 20, passing 0, is marked with a question mark."), (
+        "میٹر میں ایک عمودی عددی خط۔ سمندر کی سطح، 0، کے نشان سے دائیں جاتی ڈیش والی لکیر ہے۔ 20 پر نقطہ پتنگ ہے، سمندر سے اوپر؛ −15 پر نقطہ غوطہ خور ہے، اس سے نیچے۔ "
+        "−15 سے 20 تک ناپ کی لکیر، جو 0 سے گزرتی ہے، اس پر سوالیہ نشان ہے۔"), items)
+
+
+FIG_S9 = diver_kite()
+
+
+def submarine():
+    start, rise = -40, SUB + 40
+    items, v = sea_scale(-45, 5, (start,))
+    items += [circle((110, v.y(start)), 7, fill=True), point((110, v.y(start)))]
+    items += arrow_v(160, v.y(start), v.y(start + rise))
+    items.append(label((190, (v.y(start) + v.y(start + rise)) / 2), signed_change(rise)))
+    items.append(label((160, v.y(start + rise) - 12), "?"))
+    return figure(W, 240, (
+        f"A vertical number line in metres from −45 to 5. The sea surface, 0, is a dashed line. A dot at {S(start)} is the submarine. "
+        f"An arrow beside it goes UP {rise} metres, marked +{rise}, towards the surface, to a question mark."), (
+        f"میٹر میں −45 سے 5 تک ایک عمودی عددی خط۔ سمندر کی سطح، 0، ایک ڈیش والی لکیر ہے۔ {S(start)} پر نقطہ آبدوز ہے۔ "
+        f"اس کے ساتھ ایک تیر {rise} میٹر اوپر جاتا ہے، اس پر +{rise} لکھا ہے، سطح کی طرف، ایک سوالیہ نشان تک۔"), items)
+
+
+FIG_QB_ERROR = submarine()
 
 lesson = {
  "id": "g6-maths-04-integer-word-problems",
@@ -287,4 +379,8 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, {
+    "s1_hook": FIG_S1, "s4_lift": FIG_S4, "s6_skardu": FIG_S6, "s7_per_hour": FIG_S7,
+    "s8_find_error": FIG_S8, "s9_explain_why": FIG_S9, "qb_find_error": FIG_QB_ERROR,
+})
 write(lesson)

@@ -131,7 +131,55 @@
               },
               "misconception_id": "wrong_measure"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 64.0,
+            "alt": {
+              "en": "A square plot. Two of its sides are labelled 25 m; all four sides are 25 m.",
+              "ur": "ایک مربع پلاٹ۔ دو اضلاع پر 25 میٹر لکھا ہے؛ چاروں اضلاع 25 میٹر ہیں۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    28.0,
+                    10.0
+                  ],
+                  [
+                    72.0,
+                    10.0
+                  ],
+                  [
+                    72.0,
+                    54.0
+                  ],
+                  [
+                    28.0,
+                    54.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  58.6
+                ],
+                "text": "25m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  78.5,
+                  32.0
+                ],
+                "text": "25m"
+              }
+            ]
+          }
         }
       },
       {
@@ -170,7 +218,55 @@
               },
               "misconception_id": "wrong_measure"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 64.0,
+            "alt": {
+              "en": "A field, a rectangle, 20 m long and 15 m wide, drawn to scale. The long side is labelled 20 m and the short side 15 m.",
+              "ur": "ایک میدان، مستطیل، 20 میٹر لمبا اور 15 میٹر چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر 20 میٹر اور چھوٹے ضلع پر 15 میٹر لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    20.7,
+                    10.0
+                  ],
+                  [
+                    79.3,
+                    10.0
+                  ],
+                  [
+                    79.3,
+                    54.0
+                  ],
+                  [
+                    20.7,
+                    54.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  58.6
+                ],
+                "text": "20m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  85.8,
+                  32.0
+                ],
+                "text": "15m"
+              }
+            ]
+          }
         }
       }
     ]
@@ -225,6 +321,169 @@
       "text": {
         "en": "Today we solve real problems with perimeter and area, including costs. First, a quick check.",
         "ur": "آج ہم احاطے اور رقبے کے اصل سوال حل کریں گے، خرچ سمیت۔ پہلے ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 42.4,
+        "alt": {
+          "en": "Two rectangles. Left: an empty rectangle with a dashed line running all the way round its edge, like a fence or a border (perimeter). Right: a shaded rectangle covered completely by small squares, like carpet or tiles (area).",
+          "ur": "دو مستطیلیں۔ بائیں: خالی مستطیل جس کے کنارے کے چاروں طرف ڈیش والی لکیر ہے، جیسے باڑ یا بارڈر (احاطہ)۔ دائیں: رنگی ہوئی مستطیل جو پوری چھوٹے مربعوں سے ڈھکی ہے، جیسے قالین یا ٹائلیں (رقبہ)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                8.0,
+                10.0
+              ],
+              [
+                41.6,
+                10.0
+              ],
+              [
+                41.6,
+                32.4
+              ],
+              [
+                8.0,
+                32.4
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                5.5,
+                7.5
+              ],
+              [
+                44.1,
+                7.5
+              ],
+              [
+                44.1,
+                34.9
+              ],
+              [
+                5.5,
+                34.9
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.4,
+                10.0
+              ],
+              [
+                92.0,
+                10.0
+              ],
+              [
+                92.0,
+                32.4
+              ],
+              [
+                58.4,
+                32.4
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.0,
+              10.0
+            ],
+            "to": [
+              64.0,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.6,
+              10.0
+            ],
+            "to": [
+              69.6,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              75.2,
+              10.0
+            ],
+            "to": [
+              75.2,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              80.8,
+              10.0
+            ],
+            "to": [
+              80.8,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              86.4,
+              10.0
+            ],
+            "to": [
+              86.4,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.4,
+              15.6
+            ],
+            "to": [
+              92.0,
+              15.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.4,
+              21.2
+            ],
+            "to": [
+              92.0,
+              21.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.4,
+              26.8
+            ],
+            "to": [
+              92.0,
+              26.8
+            ]
+          }
+        ]
       }
     },
     {
@@ -273,6 +532,169 @@
       "text": {
         "en": "Around the edge (fence, border, lace, skirting): use the perimeter, in m or cm. Covering the inside (carpet, paint, tiles, grass): use the area, in m² or cm². For a cost, multiply the amount by the price of one metre or one square metre.",
         "ur": "کنارے کے گرد (باڑ، بارڈر، لیس): احاطہ لیں، میٹر یا سینٹی میٹر میں۔ اندر ڈھانپنا (قالین، رنگ، ٹائلیں، گھاس): رقبہ لیں، مربع میٹر یا مربع سینٹی میٹر میں۔ خرچ کے لیے مقدار کو ایک میٹر یا ایک مربع میٹر کی قیمت سے ضرب دیں۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 42.4,
+        "alt": {
+          "en": "Two rectangles. Left: an empty rectangle with a dashed line running all the way round its edge, like a fence or a border (perimeter). Right: a shaded rectangle covered completely by small squares, like carpet or tiles (area).",
+          "ur": "دو مستطیلیں۔ بائیں: خالی مستطیل جس کے کنارے کے چاروں طرف ڈیش والی لکیر ہے، جیسے باڑ یا بارڈر (احاطہ)۔ دائیں: رنگی ہوئی مستطیل جو پوری چھوٹے مربعوں سے ڈھکی ہے، جیسے قالین یا ٹائلیں (رقبہ)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                8.0,
+                10.0
+              ],
+              [
+                41.6,
+                10.0
+              ],
+              [
+                41.6,
+                32.4
+              ],
+              [
+                8.0,
+                32.4
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                5.5,
+                7.5
+              ],
+              [
+                44.1,
+                7.5
+              ],
+              [
+                44.1,
+                34.9
+              ],
+              [
+                5.5,
+                34.9
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.4,
+                10.0
+              ],
+              [
+                92.0,
+                10.0
+              ],
+              [
+                92.0,
+                32.4
+              ],
+              [
+                58.4,
+                32.4
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.0,
+              10.0
+            ],
+            "to": [
+              64.0,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.6,
+              10.0
+            ],
+            "to": [
+              69.6,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              75.2,
+              10.0
+            ],
+            "to": [
+              75.2,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              80.8,
+              10.0
+            ],
+            "to": [
+              80.8,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              86.4,
+              10.0
+            ],
+            "to": [
+              86.4,
+              32.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.4,
+              15.6
+            ],
+            "to": [
+              92.0,
+              15.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.4,
+              21.2
+            ],
+            "to": [
+              92.0,
+              21.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.4,
+              26.8
+            ],
+            "to": [
+              92.0,
+              26.8
+            ]
+          }
+        ]
       }
     },
     {
@@ -358,7 +780,55 @@
           },
           "misconception_id": "stops_early"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A field, a rectangle, 20 m long and 15 m wide, drawn to scale. The long side is labelled 20 m and the short side 15 m.",
+          "ur": "ایک میدان، مستطیل، 20 میٹر لمبا اور 15 میٹر چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر 20 میٹر اور چھوٹے ضلع پر 15 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.7,
+                10.0
+              ],
+              [
+                79.3,
+                10.0
+              ],
+              [
+                79.3,
+                54.0
+              ],
+              [
+                20.7,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "20m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.8,
+              32.0
+            ],
+            "text": "15m"
+          }
+        ]
+      }
     },
     {
       "id": "s6_carpet_cost",
@@ -399,7 +869,55 @@
           },
           "misconception_id": "stops_early"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "The floor of a room, a rectangle, 5 m long and 4 m wide, drawn to scale. The long side is labelled 5 m and the short side 4 m.",
+          "ur": "کمرے کا فرش، مستطیل، 5 میٹر لمبا اور 4 میٹر چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر 5 میٹر اور چھوٹے ضلع پر 4 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                22.5,
+                10.0
+              ],
+              [
+                77.5,
+                10.0
+              ],
+              [
+                77.5,
+                54.0
+              ],
+              [
+                22.5,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "5m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.3,
+              32.0
+            ],
+            "text": "4m"
+          }
+        ]
+      }
     },
     {
       "id": "s7_paint",
@@ -432,7 +950,55 @@
           },
           "misconception_id": "stops_early"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A wall drawn to scale: 4 m wide along the bottom and 3 m high up the side.",
+          "ur": "پیمانے کے مطابق ایک دیوار: نیچے 4 میٹر چوڑی اور ایک طرف 3 میٹر اونچی۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.7,
+                10.0
+              ],
+              [
+                79.3,
+                10.0
+              ],
+              [
+                79.3,
+                54.0
+              ],
+              [
+                20.7,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "4m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.2,
+              32.0
+            ],
+            "text": "3m"
+          }
+        ]
+      }
     },
     {
       "id": "s8_square_field",
@@ -509,7 +1075,55 @@
           },
           "misconception_id": "wrong_measure"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A lawn, a rectangle, 9 m long and 6 m wide, drawn to scale. The long side is labelled 9 m and the short side 6 m.",
+          "ur": "ایک لان، مستطیل، 9 میٹر لمبا اور 6 میٹر چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر 9 میٹر اور چھوٹے ضلع پر 6 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.0,
+                10.0
+              ],
+              [
+                83.0,
+                10.0
+              ],
+              [
+                83.0,
+                54.0
+              ],
+              [
+                17.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "9m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              87.8,
+              32.0
+            ],
+            "text": "6m"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -694,7 +1308,93 @@
             "ur": "کمرہ گھٹائیں، جمع نہیں: 54 − 6 = 48"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A yard 9 m by 6 m, shaded and drawn to scale. Inside it, a shed 2 m by 3 m is marked with a dashed outline.",
+          "ur": "پیمانے کے مطابق 9 ضرب 6 میٹر کا احاطہ، رنگا ہوا۔ اس کے اندر 2 ضرب 3 میٹر کا کمرہ ڈیش والے خاکے سے دکھایا گیا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                10.0
+              ],
+              [
+                80.0,
+                10.0
+              ],
+              [
+                80.0,
+                50.0
+              ],
+              [
+                20.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                56.7,
+                20.0
+              ],
+              [
+                70.0,
+                20.0
+              ],
+              [
+                70.0,
+                40.0
+              ],
+              [
+                56.7,
+                40.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "9m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.8,
+              30.0
+            ],
+            "text": "6m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              63.3,
+              15.4
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              51.8,
+              30.0
+            ],
+            "text": "3m"
+          }
+        ]
+      }
     },
     {
       "id": "u4_triangle",
@@ -727,7 +1427,85 @@
             "ur": "آدھا کریں: 40"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 46.9,
+        "alt": {
+          "en": "A triangle drawn to scale. Its base along the bottom is labelled 16 cm. A dashed line goes straight up from the base to the top corner, at a right angle: the height, labelled 5 cm.",
+          "ur": "پیمانے کے مطابق ایک مثلث۔ نیچے قاعدے پر 16 سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر 5 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                7.0,
+                36.9
+              ],
+              [
+                93.0,
+                36.9
+              ],
+              [
+                66.1,
+                10.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.1,
+              10.0
+            ],
+            "to": [
+              66.1,
+              36.9
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.1,
+              33.4
+            ],
+            "to": [
+              62.6,
+              33.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              62.6,
+              33.4
+            ],
+            "to": [
+              62.6,
+              36.9
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              41.5
+            ],
+            "text": "16cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56.6,
+              33.2
+            ],
+            "text": "5cm"
+          }
+        ]
+      }
     },
     {
       "id": "u5_ribbon",
@@ -760,7 +1538,55 @@
           },
           "misconception_id": "wrong_measure"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A card, a rectangle, 15 cm long and 10 cm wide, drawn to scale. The long side is labelled 15 cm and the short side 10 cm.",
+          "ur": "ایک کارڈ، مستطیل، 15 سینٹی میٹر لمبا اور 10 سینٹی میٹر چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر 15 سینٹی میٹر اور چھوٹے ضلع پر 10 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.0,
+                10.0
+              ],
+              [
+                83.0,
+                10.0
+              ],
+              [
+                83.0,
+                54.0
+              ],
+              [
+                17.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "15cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              91.2,
+              32.0
+            ],
+            "text": "10cm"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -823,7 +1649,55 @@
             },
             "misconception_id": "stops_early"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 55.0,
+          "alt": {
+            "en": "The floor of a room, a rectangle, 6 m long and 3 m wide, drawn to scale. The long side is labelled 6 m and the short side 3 m.",
+            "ur": "کمرے کا فرش، مستطیل، 6 میٹر لمبا اور 3 میٹر چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر 6 میٹر اور چھوٹے ضلع پر 3 میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  15.0,
+                  10.0
+                ],
+                [
+                  85.0,
+                  10.0
+                ],
+                [
+                  85.0,
+                  45.0
+                ],
+                [
+                  15.0,
+                  45.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                49.6
+              ],
+              "text": "6m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                89.8,
+                27.5
+              ],
+              "text": "3m"
+            }
+          ]
+        }
       }
     },
     {
@@ -868,7 +1742,55 @@
             },
             "misconception_id": "two_sides_only"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 55.0,
+          "alt": {
+            "en": "A tablecloth, a rectangle, 2 m long and 1 m wide, drawn to scale. The long side is labelled 2 m and the short side 1 m.",
+            "ur": "ایک میز پوش، مستطیل، 2 میٹر لمبا اور 1 میٹر چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر 2 میٹر اور چھوٹے ضلع پر 1 میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  15.0,
+                  10.0
+                ],
+                [
+                  85.0,
+                  10.0
+                ],
+                [
+                  85.0,
+                  45.0
+                ],
+                [
+                  15.0,
+                  45.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                49.6
+              ],
+              "text": "2m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                89.8,
+                27.5
+              ],
+              "text": "1m"
+            }
+          ]
+        }
       }
     }
   ],

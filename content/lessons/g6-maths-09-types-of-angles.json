@@ -173,7 +173,64 @@
                 "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 160° منفرجہ زاویہ ہے۔"
               }
             }
-          ]
+          ],
+          "figure": {
+            "width": 120,
+            "height": 80,
+            "alt": {
+              "en": "Two arms meet at a point. The turn from one arm to the other is marked with an arc and labelled 160°.",
+              "ur": "دو بازو ایک نقطے پر ملتے ہیں۔ ایک بازو سے دوسرے تک کا گھماؤ ایک قوس سے دکھایا گیا ہے اور اس پر 160° لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  110.0,
+                  64.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  13.0,
+                  46.9
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  60,
+                  64
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  60,
+                  64
+                ],
+                "radius": 14,
+                "start": 200,
+                "sweep": 160
+              },
+              {
+                "kind": "label",
+                "at": [
+                  64.3,
+                  39.4
+                ],
+                "text": "160°"
+              }
+            ]
+          }
         }
       },
       {
@@ -225,7 +282,76 @@
               },
               "misconception_id": "near_90_is_right"
             }
-          ]
+          ],
+          "figure": {
+            "width": 120,
+            "height": 80,
+            "alt": {
+              "en": "An angle of 95° marked with an arc. A dashed ray shows where a right angle, 90°, would be: the arm of the 95° angle is just past it.",
+              "ur": "95° کا زاویہ جو ایک قوس سے دکھایا گیا ہے۔ ایک ڈیش والی شعاع دکھاتی ہے کہ قائمہ زاویہ، 90°، کہاں ہوتا: 95° والا بازو اس سے ذرا آگے ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  60.0,
+                  14.0
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  110.0,
+                  64.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  55.6,
+                  14.2
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  60,
+                  64
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  60,
+                  64
+                ],
+                "radius": 14,
+                "start": 265,
+                "sweep": 95
+              },
+              {
+                "kind": "label",
+                "at": [
+                  76.9,
+                  45.6
+                ],
+                "text": "95°"
+              }
+            ]
+          }
         }
       }
     ]
@@ -307,6 +433,123 @@
       "text": {
         "en": "An angle measures how far something turns. We measure it in degrees (°). A full turn is 360°. First, a quick check.",
         "ur": "زاویہ بتاتا ہے کوئی چیز کتنا گھومی۔ ہم اسے درجوں (°) میں ناپتے ہیں۔ پورا چکر 360° ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 120,
+        "height": 86,
+        "alt": {
+          "en": "A door seen from above, turning open from a fixed line: first 30°, then 75°, then 140°. Each opening is marked with an arc, and the arcs get bigger as the door turns further.",
+          "ur": "اوپر سے دیکھا گیا دروازہ ایک ثابت لکیر سے کھلتا ہے: پہلے 30°، پھر 75°، پھر 140°۔ ہر کھلاؤ ایک قوس سے دکھایا گیا ہے، اور دروازہ جتنا گھومتا ہے قوس اتنی بڑی ہوتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              106.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              64
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              98.1,
+              42.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              64
+            ],
+            "radius": 9,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              105.9,
+              37.5
+            ],
+            "text": "30°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              71.4,
+              21.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              64
+            ],
+            "radius": 15,
+            "start": 285,
+            "sweep": 75
+          },
+          {
+            "kind": "label",
+            "at": [
+              73.7,
+              12.8
+            ],
+            "text": "75°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              26.3,
+              35.7
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              64
+            ],
+            "radius": 21,
+            "start": 220,
+            "sweep": 140
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.4,
+              29.9
+            ],
+            "text": "140°"
+          }
+        ]
       }
     },
     {
@@ -370,6 +613,263 @@
       "text": {
         "en": "Acute: less than 90° (a narrow opening). Right: exactly 90° (a square corner). Obtuse: between 90° and 180° (wider than a corner). Straight: exactly 180° (a straight line). Reflex: between 180° and 360° (more than half a turn).",
         "ur": "حادہ: 90° سے کم (تنگ کھلاؤ)۔ قائمہ: بالکل 90° (چوکور کونا)۔ منفرجہ: 90° اور 180° کے درمیان (کونے سے زیادہ کھلا)۔ مستقیم: بالکل 180° (سیدھی لکیر)۔ منعکس: 180° اور 360° کے درمیان (آدھے چکر سے زیادہ)۔"
+      },
+      "figure": {
+        "width": 160,
+        "height": 112,
+        "alt": {
+          "en": "Five angles. Top row: an acute angle of 40°, a right angle of 90° with a small square in its corner, and an obtuse angle of 130°. Bottom row: a straight angle of 180°, which is a straight line, and a reflex angle of 250°, whose arc goes the long way round.",
+          "ur": "پانچ زاویے۔ اوپر کی قطار: 40° کا حادہ زاویہ، 90° کا قائمہ زاویہ جس کے کونے میں چھوٹا مربع ہے، اور 130° کا منفرجہ زاویہ۔ نیچے کی قطار: 180° کا مستقیم زاویہ، جو سیدھی لکیر ہے، اور 250° کا منعکس زاویہ، جس کی قوس لمبے راستے سے گھومتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              10,
+              46
+            ],
+            "to": [
+              46.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10,
+              46
+            ],
+            "to": [
+              37.6,
+              22.9
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              10,
+              46
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              10,
+              46
+            ],
+            "radius": 9,
+            "start": 320,
+            "sweep": 40
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.0,
+              38.0
+            ],
+            "text": "40°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              62,
+              46
+            ],
+            "to": [
+              96.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              62,
+              46
+            ],
+            "to": [
+              62.0,
+              12.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              62,
+              46
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              46.0
+            ],
+            "to": [
+              68.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              40.0
+            ],
+            "to": [
+              62.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.1,
+              31.9
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              128,
+              46
+            ],
+            "to": [
+              156.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              128,
+              46
+            ],
+            "to": [
+              110.0,
+              24.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              128,
+              46
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              128,
+              46
+            ],
+            "radius": 9,
+            "start": 230,
+            "sweep": 130
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.5,
+              27.9
+            ],
+            "text": "130°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44,
+              94
+            ],
+            "to": [
+              76.0,
+              94.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44,
+              94
+            ],
+            "to": [
+              12.0,
+              94.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              44,
+              94
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              44,
+              94
+            ],
+            "radius": 9,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "label",
+            "at": [
+              44.0,
+              74.0
+            ],
+            "text": "180°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              124,
+              82
+            ],
+            "to": [
+              148.0,
+              82.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              124,
+              82
+            ],
+            "to": [
+              115.8,
+              104.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              124,
+              82
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              124,
+              82
+            ],
+            "radius": 9,
+            "start": 110,
+            "sweep": 250
+          },
+          {
+            "kind": "label",
+            "at": [
+              112.0,
+              64.8
+            ],
+            "text": "250°"
+          }
+        ]
       }
     },
     {
@@ -442,7 +942,64 @@
             "ur": "ابھی نہیں۔ حادہ زاویہ 90° سے کم ہوتا ہے۔ اس لیے 35° حادہ زاویہ ہے۔"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 80,
+        "alt": {
+          "en": "Two arms meet at a point. The turn from one arm to the other is marked with an arc and labelled 35°.",
+          "ur": "دو بازو ایک نقطے پر ملتے ہیں۔ ایک بازو سے دوسرے تک کا گھماؤ ایک قوس سے دکھایا گیا ہے اور اس پر 35° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              22,
+              64
+            ],
+            "to": [
+              82.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              64
+            ],
+            "to": [
+              71.1,
+              29.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              22,
+              64
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              22,
+              64
+            ],
+            "radius": 14,
+            "start": 325,
+            "sweep": 35
+          },
+          {
+            "kind": "label",
+            "at": [
+              47.4,
+              56.0
+            ],
+            "text": "35°"
+          }
+        ]
+      }
     },
     {
       "id": "s5_obtuse",
@@ -515,7 +1072,64 @@
             "ur": "ابھی نہیں۔ منفرجہ زاویہ 90° اور 180° کے درمیان ہوتا ہے۔ اس لیے 120° منفرجہ زاویہ ہے۔"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two arms meet at a point. The turn from one arm to the other is marked with an arc and labelled 120°.",
+          "ur": "دو بازو ایک نقطے پر ملتے ہیں۔ ایک بازو سے دوسرے تک کا گھماؤ ایک قوس سے دکھایا گیا ہے اور اس پر 120° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              110.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              35.0,
+              20.7
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              64
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              64
+            ],
+            "radius": 14,
+            "start": 240,
+            "sweep": 120
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.5,
+              42.3
+            ],
+            "text": "120°"
+          }
+        ]
+      }
     },
     {
       "id": "s6_two_rights",
@@ -547,7 +1161,64 @@
             "ur": "چار قائمہ زاویے پورا چکر، 360°، بناتے ہیں۔ مستقیم 180° ہے: دو۔"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "A straight line with a point in the middle. The half turn from one side of the line to the other is marked with an arc and labelled 180°.",
+          "ur": "ایک سیدھی لکیر جس کے درمیان ایک نقطہ ہے۔ لکیر کی ایک طرف سے دوسری طرف تک آدھا چکر ایک قوس سے دکھایا گیا ہے اور اس پر 180° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              110.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              10.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              64
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              64
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              39.0
+            ],
+            "text": "180°"
+          }
+        ]
+      }
     },
     {
       "id": "s7_reflex",
@@ -620,7 +1291,64 @@
             "ur": "جی ہاں! 250° منعکس زاویہ ہے۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 100,
+        "alt": {
+          "en": "Two arms meet at a point. The turn from one arm to the other is marked with an arc and labelled 250°. The arc goes the long way round, more than half a turn.",
+          "ur": "دو بازو ایک نقطے پر ملتے ہیں۔ ایک بازو سے دوسرے تک کا گھماؤ ایک قوس سے دکھایا گیا ہے اور اس پر 250° لکھا ہے۔ قوس لمبے راستے سے، آدھے چکر سے زیادہ، گھومتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              92.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              35.6,
+              89.5
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 14,
+            "start": 110,
+            "sweep": 250
+          },
+          {
+            "kind": "label",
+            "at": [
+              35.7,
+              29.5
+            ],
+            "text": "250°"
+          }
+        ]
+      }
     },
     {
       "id": "s8_clock",
@@ -659,7 +1387,236 @@
             "ur": "یہ منٹ ہیں۔ درجے لیں: 3 × 30 = 90°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 100,
+        "alt": {
+          "en": "A clock face showing 3 o'clock: the long hand points to 12 and the short hand points to 3. The angle between the hands is marked ?.",
+          "ur": "گھڑی 3 بجا رہی ہے: لمبی سوئی 12 پر اور چھوٹی سوئی 3 پر ہے۔ سوئیوں کے درمیان زاویے پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 44
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              11.0
+            ],
+            "to": [
+              50.0,
+              6.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.5,
+              16.2
+            ],
+            "to": [
+              72.0,
+              11.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.8,
+              30.5
+            ],
+            "to": [
+              88.1,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              89.0,
+              50.0
+            ],
+            "to": [
+              94.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.8,
+              69.5
+            ],
+            "to": [
+              88.1,
+              72.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.5,
+              83.8
+            ],
+            "to": [
+              72.0,
+              88.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              89.0
+            ],
+            "to": [
+              50.0,
+              94.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.5,
+              83.8
+            ],
+            "to": [
+              28.0,
+              88.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.2,
+              69.5
+            ],
+            "to": [
+              11.9,
+              72.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11.0,
+              50.0
+            ],
+            "to": [
+              6.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.2,
+              30.5
+            ],
+            "to": [
+              11.9,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.5,
+              16.2
+            ],
+            "to": [
+              28.0,
+              11.9
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              16.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.0,
+              50.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              84.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              16.0,
+              50.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              50.0,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              68.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 10,
+            "start": 270,
+            "sweep": 90
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.8,
+              35.2
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -806,7 +1763,236 @@
             "ur": "یہ ایک گھنٹہ ہے۔ چھ گھنٹے: 6 × 30 = 180°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 100,
+        "alt": {
+          "en": "A clock face showing 6 o'clock: the long hand points to 12 and the short hand points to 6. The angle between the hands is marked ?.",
+          "ur": "گھڑی 6 بجا رہی ہے: لمبی سوئی 12 پر اور چھوٹی سوئی 6 پر ہے۔ سوئیوں کے درمیان زاویے پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 44
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              11.0
+            ],
+            "to": [
+              50.0,
+              6.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.5,
+              16.2
+            ],
+            "to": [
+              72.0,
+              11.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.8,
+              30.5
+            ],
+            "to": [
+              88.1,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              89.0,
+              50.0
+            ],
+            "to": [
+              94.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.8,
+              69.5
+            ],
+            "to": [
+              88.1,
+              72.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.5,
+              83.8
+            ],
+            "to": [
+              72.0,
+              88.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              89.0
+            ],
+            "to": [
+              50.0,
+              94.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.5,
+              83.8
+            ],
+            "to": [
+              28.0,
+              88.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.2,
+              69.5
+            ],
+            "to": [
+              11.9,
+              72.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11.0,
+              50.0
+            ],
+            "to": [
+              6.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.2,
+              30.5
+            ],
+            "to": [
+              11.9,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.5,
+              16.2
+            ],
+            "to": [
+              28.0,
+              11.9
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              16.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.0,
+              50.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              84.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              16.0,
+              50.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              50.0,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              50.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 10,
+            "start": 270,
+            "sweep": 180
+          },
+          {
+            "kind": "label",
+            "at": [
+              71.0,
+              50.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -985,13 +2171,70 @@
               "ur": "جی ہاں! 300° منعکس زاویہ ہے۔ منعکس زاویہ 180° اور 360° کے درمیان ہوتا ہے۔"
             }
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 100,
+          "alt": {
+            "en": "Two arms meet at a point. The turn from one arm to the other is marked with an arc and labelled 300°. The arc goes the long way round, more than half a turn.",
+            "ur": "دو بازو ایک نقطے پر ملتے ہیں۔ ایک بازو سے دوسرے تک کا گھماؤ ایک قوس سے دکھایا گیا ہے اور اس پر 300° لکھا ہے۔ قوس لمبے راستے سے، آدھے چکر سے زیادہ، گھومتی ہے۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                92.0,
+                50.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                71.0,
+                86.4
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                50,
+                50
+              ]
+            },
+            {
+              "kind": "arc",
+              "center": [
+                50,
+                50
+              ],
+              "radius": 14,
+              "start": 60,
+              "sweep": 300
+            },
+            {
+              "kind": "label",
+              "at": [
+                28.3,
+                37.5
+              ],
+              "text": "300°"
+            }
+          ]
+        }
       }
     }
   ],
   "teacher_notes": [
     "Written fresh for the Angles unit. No textbook text or exercises were used.",
-    "There are no pictures yet, so every angle is given in degrees or as a clock or door. Doors, book corners and clock hands make the sizes concrete; the home task is an angle hunt.",
+    "Every angle is given in degrees or as a clock or door, and most steps also draw it (arms, arc and degree label; the drawings are made in the script). Kind questions show the angle but not its name. Doors, book corners and clock hands make the sizes concrete; the home task is an angle hunt.",
     "Urdu terms to check: زاویہ (angle), درجہ (degree), حادہ (acute), قائمہ (right), منفرجہ (obtuse), مستقیم (straight), منعکس (reflex).",
     "The numbers were worked out in content/sources/g6-maths-09/angle_types.py; edit that script, not this file."
   ],

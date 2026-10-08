@@ -142,7 +142,55 @@
               },
               "misconception_id": "area_for_perimeter"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 37.5,
+            "alt": {
+              "en": "A rectangle, 12 cm long and 3 cm wide, drawn to scale. The long side is labelled 12 cm and the short side 3 cm.",
+              "ur": "ایک مستطیل، 12 سینٹی میٹر لمبی اور 3 سینٹی میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 12 سینٹی میٹر اور چھوٹے ضلع پر 3 سینٹی میٹر لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    15.0,
+                    10.0
+                  ],
+                  [
+                    85.0,
+                    10.0
+                  ],
+                  [
+                    85.0,
+                    27.5
+                  ],
+                  [
+                    15.0,
+                    27.5
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  32.1
+                ],
+                "text": "12cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  91.5,
+                  18.8
+                ],
+                "text": "3cm"
+              }
+            ]
+          }
         }
       },
       {
@@ -181,7 +229,71 @@
               },
               "misconception_id": "area_for_perimeter"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 64.0,
+            "alt": {
+              "en": "A square. Each of its four equal sides is labelled 5 cm.",
+              "ur": "ایک مربع۔ اس کے چاروں برابر اضلاع میں سے ہر ایک پر 5 سینٹی میٹر لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    28.0,
+                    10.0
+                  ],
+                  [
+                    72.0,
+                    10.0
+                  ],
+                  [
+                    72.0,
+                    54.0
+                  ],
+                  [
+                    28.0,
+                    54.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  58.6
+                ],
+                "text": "5cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  78.5,
+                  32.0
+                ],
+                "text": "5cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  5.4
+                ],
+                "text": "5cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  21.5,
+                  32.0
+                ],
+                "text": "5cm"
+              }
+            ]
+          }
         }
       }
     ]
@@ -247,6 +359,54 @@
       "text": {
         "en": "The distance around a shape is called its perimeter. First, a quick times-table check.",
         "ur": "کسی شکل کے گرد کے فاصلے کو اس کا احاطہ کہتے ہیں۔ پہلے پہاڑے کا ایک سوال۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 63.8,
+        "alt": {
+          "en": "Dada's garden, a rectangle, 8 m long and 5 m wide, drawn to scale. The long side is labelled 8 m and the short side 5 m.",
+          "ur": "دادا کا باغیچہ، ایک مستطیل، 8 میٹر لمبی اور 5 میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 8 میٹر اور چھوٹے ضلع پر 5 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                10.0
+              ],
+              [
+                85.0,
+                10.0
+              ],
+              [
+                85.0,
+                53.8
+              ],
+              [
+                15.0,
+                53.8
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.4
+            ],
+            "text": "8m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89.8,
+              31.9
+            ],
+            "text": "5m"
+          }
+        ]
       }
     },
     {
@@ -295,6 +455,124 @@
       "text": {
         "en": "Perimeter = the lengths of all the sides added together. A rectangle has two lengths and two widths, so perimeter = length + width + length + width = 2 × (length + width). A square has four equal sides, so perimeter = 4 × side.",
         "ur": "احاطہ = تمام اضلاع کی لمبائیوں کا مجموعہ۔ مستطیل کی دو لمبائیاں اور دو چوڑائیاں ہوتی ہیں، اس لیے احاطہ = لمبائی + چوڑائی + لمبائی + چوڑائی = 2 × (لمبائی + چوڑائی)۔ مربع کے چار برابر اضلاع ہیں، اس لیے احاطہ = 4 × ضلع۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 40.0,
+        "alt": {
+          "en": "Left: a rectangle with its two long sides marked L (length) and its two short sides marked W (width). Right: a square with all four sides marked S (side).",
+          "ur": "بائیں: ایک مستطیل جس کے دونوں لمبے اضلاع پر L (لمبائی) اور دونوں چھوٹے اضلاع پر W (چوڑائی) لکھا ہے۔ دائیں: ایک مربع جس کے چاروں اضلاع پر S (ضلع) لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                10.0
+              ],
+              [
+                50.0,
+                10.0
+              ],
+              [
+                50.0,
+                30.0
+              ],
+              [
+                15.0,
+                30.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                65.0,
+                10.0
+              ],
+              [
+                85.0,
+                10.0
+              ],
+              [
+                85.0,
+                30.0
+              ],
+              [
+                65.0,
+                30.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.5,
+              5.4
+            ],
+            "text": "L"
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.5,
+              34.6
+            ],
+            "text": "L"
+          },
+          {
+            "kind": "label",
+            "at": [
+              53.2,
+              20.0
+            ],
+            "text": "W"
+          },
+          {
+            "kind": "label",
+            "at": [
+              11.8,
+              20.0
+            ],
+            "text": "W"
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.0,
+              5.4
+            ],
+            "text": "S"
+          },
+          {
+            "kind": "label",
+            "at": [
+              88.2,
+              20.0
+            ],
+            "text": "S"
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.0,
+              34.6
+            ],
+            "text": "S"
+          },
+          {
+            "kind": "label",
+            "at": [
+              61.8,
+              20.0
+            ],
+            "text": "S"
+          }
+        ]
       }
     },
     {
@@ -336,7 +614,71 @@
           },
           "misconception_id": "area_for_perimeter"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 63.8,
+        "alt": {
+          "en": "Dada's garden, a rectangle, 8 m long and 5 m wide, drawn to scale. All four sides are labelled: 8, 5, 8 and 5 m.",
+          "ur": "دادا کا باغیچہ، ایک مستطیل، 8 میٹر لمبی اور 5 میٹر چوڑی، پیمانے کے مطابق۔ چاروں اضلاع پر لمبائی لکھی ہے: 8، 5، 8 اور 5 میٹر۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                10.0
+              ],
+              [
+                85.0,
+                10.0
+              ],
+              [
+                85.0,
+                53.8
+              ],
+              [
+                15.0,
+                53.8
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.4
+            ],
+            "text": "8m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89.8,
+              31.9
+            ],
+            "text": "5m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "8m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              10.2,
+              31.9
+            ],
+            "text": "5m"
+          }
+        ]
+      }
     },
     {
       "id": "s5_square",
@@ -377,7 +719,71 @@
           },
           "misconception_id": "two_sides_only"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A square. Each of its four equal sides is labelled 7 cm.",
+          "ur": "ایک مربع۔ اس کے چاروں برابر اضلاع میں سے ہر ایک پر 7 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                28.0,
+                10.0
+              ],
+              [
+                72.0,
+                10.0
+              ],
+              [
+                72.0,
+                54.0
+              ],
+              [
+                28.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "7cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.5,
+              32.0
+            ],
+            "text": "7cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "7cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              21.5,
+              32.0
+            ],
+            "text": "7cm"
+          }
+        ]
+      }
     },
     {
       "id": "s6_triangle",
@@ -409,7 +815,59 @@
             "ur": "احاطے میں ضرب نہیں، جمع: 5 + 6 + 9 = 20"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 44.4,
+        "alt": {
+          "en": "A triangle drawn to scale. Its sides are labelled 5 cm, 6 cm and 9 cm; the 9 cm side is along the bottom.",
+          "ur": "پیمانے کے مطابق ایک مثلث۔ اس کے اضلاع پر 5، 6 اور 9 سینٹی میٹر لکھا ہے؛ 9 سینٹی میٹر والا ضلع نیچے ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                34.4
+              ],
+              [
+                85.0,
+                34.4
+              ],
+              [
+                45.2,
+                10.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              39.1
+            ],
+            "text": "9cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              25.7,
+              16.7
+            ],
+            "text": "5cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              68.7,
+              16.4
+            ],
+            "text": "6cm"
+          }
+        ]
+      }
     },
     {
       "id": "s7_hexagon",
@@ -441,7 +899,95 @@
             "ur": "مسدس کے 4 نہیں، 6 اضلاع ہیں: 6 × 4 = 24"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 66.0,
+        "alt": {
+          "en": "A regular hexagon: six equal sides, each labelled 4 cm.",
+          "ur": "ایک باقاعدہ مسدس: چھ برابر اضلاع، ہر ایک پر 4 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                76.6,
+                33.0
+              ],
+              [
+                63.3,
+                56.0
+              ],
+              [
+                36.7,
+                56.0
+              ],
+              [
+                23.4,
+                33.0
+              ],
+              [
+                36.7,
+                10.0
+              ],
+              [
+                63.3,
+                10.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.9,
+              47.9
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              60.1
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.1,
+              47.9
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.1,
+              18.1
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.9
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.9,
+              18.1
+            ],
+            "text": "4cm"
+          }
+        ]
+      }
     },
     {
       "id": "s8_missing",
@@ -481,7 +1027,71 @@
             "ur": "دونوں لمبائیاں گھٹائیں: 30 − 9 − 9 = 12 دو چوڑائیاں ہیں۔ ایک چوڑائی: 6"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A rectangle drawn to scale. Its long side is labelled 9 cm. Its short side is marked ? because we must find it. The perimeter, all the way round, is 30 cm.",
+          "ur": "پیمانے کے مطابق ایک مستطیل۔ لمبے ضلع پر 9 سینٹی میٹر لکھا ہے۔ چھوٹے ضلع پر ? ہے کیونکہ وہ معلوم کرنا ہے۔ پورے گرد کا فاصلہ (احاطہ) 30 سینٹی میٹر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.0,
+                10.0
+              ],
+              [
+                83.0,
+                10.0
+              ],
+              [
+                83.0,
+                54.0
+              ],
+              [
+                17.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "9cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              86.2,
+              32.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "9cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              13.8,
+              32.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -530,7 +1140,71 @@
           },
           "misconception_id": "two_sides_only"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A rectangle, 6 cm long and 4 cm wide, drawn to scale. All four sides are labelled: 6, 4, 6 and 4 cm.",
+          "ur": "ایک مستطیل، 6 سینٹی میٹر لمبی اور 4 سینٹی میٹر چوڑی، پیمانے کے مطابق۔ چاروں اضلاع پر لمبائی لکھی ہے: 6، 4، 6 اور 4 سینٹی میٹر۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.0,
+                10.0
+              ],
+              [
+                83.0,
+                10.0
+              ],
+              [
+                83.0,
+                54.0
+              ],
+              [
+                17.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "6cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89.5,
+              32.0
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "6cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              10.5,
+              32.0
+            ],
+            "text": "4cm"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -630,7 +1304,71 @@
             "ur": "4 سے تقسیم کریں، گھٹائیں نہیں: 36 ÷ 4 = 9"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A square. Each of its four equal sides is labelled an unknown length, marked ?.",
+          "ur": "ایک مربع۔ اس کے چاروں برابر اضلاع میں سے ہر ایک پر نامعلوم لمبائی، ? سے دکھائی گئی لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                28.0,
+                10.0
+              ],
+              [
+                72.0,
+                10.0
+              ],
+              [
+                72.0,
+                54.0
+              ],
+              [
+                28.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.2,
+              32.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.8,
+              32.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -701,7 +1439,55 @@
             },
             "misconception_id": "area_for_perimeter"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 48.0,
+          "alt": {
+            "en": "A rectangle, 10 m long and 4 m wide, drawn to scale. The long side is labelled 10 m and the short side 4 m.",
+            "ur": "ایک مستطیل، 10 میٹر لمبی اور 4 میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 10 میٹر اور چھوٹے ضلع پر 4 میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  15.0,
+                  10.0
+                ],
+                [
+                  85.0,
+                  10.0
+                ],
+                [
+                  85.0,
+                  38.0
+                ],
+                [
+                  15.0,
+                  38.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                42.6
+              ],
+              "text": "10m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                89.8,
+                24.0
+              ],
+              "text": "4m"
+            }
+          ]
+        }
       }
     },
     {
@@ -738,13 +1524,77 @@
             },
             "misconception_id": "area_for_perimeter"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 64.0,
+          "alt": {
+            "en": "A square. Each of its four equal sides is labelled 6 cm.",
+            "ur": "ایک مربع۔ اس کے چاروں برابر اضلاع میں سے ہر ایک پر 6 سینٹی میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  28.0,
+                  10.0
+                ],
+                [
+                  72.0,
+                  10.0
+                ],
+                [
+                  72.0,
+                  54.0
+                ],
+                [
+                  28.0,
+                  54.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                58.6
+              ],
+              "text": "6cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                78.5,
+                32.0
+              ],
+              "text": "6cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                5.4
+              ],
+              "text": "6cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                21.5,
+                32.0
+              ],
+              "text": "6cm"
+            }
+          ]
+        }
       }
     }
   ],
   "teacher_notes": [
     "Written fresh for the Perimeter and Area unit. No textbook text or exercises were used.",
-    "There are no pictures yet: every shape is described in words. A drawing of each shape on the board helps.",
+    "Most steps show the shape drawn to scale with its side lengths. Drawing each shape on the board helps too.",
     "Urdu terms to check: احاطہ (perimeter), مستطیل (rectangle), مربع (square), مسدس (hexagon).",
     "The numbers were worked out in content/sources/g6-maths-08/perimeter.py; edit that script, not this file."
   ],

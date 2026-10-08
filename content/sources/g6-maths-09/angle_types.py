@@ -1,5 +1,117 @@
+import math
+
 from common import (T, opt, say, wrong, number_question, kind_of, kind_question, write,
                     REF, REVIEW, PA_TRIANGLE, AN_TYPES)
+
+
+# ---- figure helpers (the same small block is copied into each Angles script) ----
+# Angles are in degrees, measured anticlockwise from +x like in a maths book;
+# the app's screen y goes down, so the helpers flip them.
+def pt(x, y):
+    return [round(x, 1), round(y, 1)]
+
+
+def ray_end(v, deg, length):
+    r = math.radians(deg)
+    return pt(v[0] + length * math.cos(r), v[1] - length * math.sin(r))
+
+
+def arc(center, radius, a0, a1, dashed=False):
+    """Arc from a0° to a1° (anticlockwise), in the app's clockwise screen terms."""
+    item = {"kind": "arc", "center": center, "radius": radius,
+            "start": round((-a1) % 360, 1), "sweep": round(a1 - a0, 1)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def line(a, b, dashed=False):
+    item = {"kind": "line", "from": a, "to": b}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": at, "text": text}
+
+
+def dot(at):
+    return {"kind": "point", "at": at}
+
+
+def square(v, a0, size=6):
+    """The little square that marks a right angle between a0° and a0 + 90°."""
+    p, q = ray_end(v, a0, size), ray_end(v, a0 + 90, size)
+    c = pt(p[0] + q[0] - v[0], p[1] + q[1] - v[1])
+    return [line(p, c), line(c, q)]
+
+
+def mark(v, a0, a1, text=None, r=10, dist=None, arc_only=False):
+    """Mark the angle from a0° to a1° at vertex v: a square for exactly 90°
+    (unless arc_only, when the square would give the answer away), an arc
+    otherwise, and its label on the middle direction."""
+    items = square(v, a0) if a1 - a0 == 90 and not arc_only else [arc(v, r, a0, a1)]
+    if text:
+        half = math.radians(min((a1 - a0) / 2, 90))
+        d = dist or max(r + 11, 8 / math.sin(half))
+        items.append(label(ray_end(v, (a0 + a1) / 2, d), text))
+    return items
+
+
+def figure(width, height, alt, items):
+    """Check the drawing fits the box (as tools/validate_lessons.py does)."""
+    assert len(items) <= 60, len(items)
+    margin = 0.025 * max(width, height)
+    for it in items:
+        reach = it.get("radius", 0)
+        for x, y in [*it.get("points", []), *(it[k] for k in ("from", "to", "center", "at") if k in it)]:
+            assert reach <= x <= width - reach and reach <= y <= height - reach, (it, width, height)
+            if it["kind"] == "label":
+                assert margin <= x <= width - margin and margin <= y <= height - margin, (it, width, height)
+    return {"width": width, "height": height, "alt": alt, "items": items}
+
+
+def fan(v, rays, marks, arm=40):
+    """Rays from one vertex v (two rays at 0° and 180° make a straight line),
+    with marked angles: marks are (a0, a1, text) or (a0, a1, text, dist).
+    Neighbouring arcs get different radii so each angle can be seen."""
+    items = [line(v, ray_end(v, d, arm)) for d in rays] + [dot(v)]
+    radii = [9 + 5 * (i % 2) for i in range(len(marks))]
+    if len(marks) % 2 and marks[-1][1] - marks[0][0] == 360:
+        radii[-1] = 19      # all the way round: the last arc also touches the first
+    for m, r in zip(marks, radii):
+        items += mark(v, m[0], m[1], m[2], r=r, dist=m[3] if len(m) > 3 else None)
+    return items
+
+
+def parts_text(texts):
+    """Words for the marked angles, for the alt text: '130°' and a missing one."""
+    en, ur = [], []
+    for t in texts:
+        if t == "?":
+            en.append("a missing angle marked ?")
+            ur.append("ایک نامعلوم زاویہ جس پر ? لکھا ہے")
+        elif t.endswith("°"):
+            en.append(t)
+            ur.append(t)
+        else:
+            en.append(f"an angle marked {t}")
+            ur.append(f"ایک زاویہ جس پر {t} لکھا ہے")
+
+    def join(xs, comma, also):
+        return xs[0] if len(xs) == 1 else comma.join(xs[:-1]) + also + xs[-1]
+    return join(en, ", ", " and "), join(ur, "، ", " اور ")
+
+
+def attach(lesson, figures):
+    """Put each figure on the step with that id (steps, question bank, review)."""
+    steps = [*lesson["steps"], *(q["step"] for qs in lesson["question_bank"].values() for q in qs),
+             *(q["step"] for q in lesson.get("review_questions", []))]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures.pop(step["id"])
+    assert not figures, figures
 
 SKILL = AN_TYPES
 
@@ -21,6 +133,98 @@ assert kind_of(160) == "obtuse" and kind_of(89) == "acute" and kind_of(300) == "
 assert kind_of(95) == "obtuse"
 
 TYPE_MIS = {"acute": "big_is_acute", "right": "near_90_is_right"}
+
+
+# ---- figures -------------------------------------------------------------
+def deg(n):
+    return f"{n}°"
+
+
+def one_angle(d, alt, dashed_at=None):
+    """A single angle of d°: a base arm to the right and a second arm at d°.
+    dashed_at adds a dashed ray (for comparing with a right angle)."""
+    if d <= 90:
+        w, h, v, arm = 100, 80, pt(22, 64), 60
+    elif d <= 180:
+        w, h, v, arm = 120, 80, pt(60, 64), 50
+    else:
+        w, h, v, arm = 100, 100, pt(50, 50), 42
+    items = fan(v, [0, d], [], arm=arm) + mark(v, 0, d, deg(d), r=14)
+    if dashed_at is not None:
+        items.insert(0, line(v, ray_end(v, dashed_at, arm), dashed=True))
+    return figure(w, h, alt, items)
+
+
+def angle_alt(d, kind_en=None):
+    """Alt text for one_angle: says the size, not the kind (the child names that)."""
+    en = f"Two arms meet at a point. The turn from one arm to the other is marked with an arc and labelled {d}°."
+    ur = f"دو بازو ایک نقطے پر ملتے ہیں۔ ایک بازو سے دوسرے تک کا گھماؤ ایک قوس سے دکھایا گیا ہے اور اس پر {d}° لکھا ہے۔"
+    if d > 180:
+        en += " The arc goes the long way round, more than half a turn."
+        ur += " قوس لمبے راستے سے، آدھے چکر سے زیادہ، گھومتی ہے۔"
+    return T(en, ur)
+
+
+def clock(hour, text="?"):
+    """A clock face with the minute hand on 12 and the hour hand on `hour`,
+    and the angle between them marked (an arc, never a square: the child works it out)."""
+    c, r = pt(50, 50), 44
+    items = [{"kind": "circle", "center": c, "radius": r}]
+    for h in range(12):
+        a = 90 - 30 * h
+        items.append(line(ray_end(c, a, r - 5), ray_end(c, a, r)))
+    for h in (12, 3, 6, 9):
+        items.append(label(ray_end(c, 90 - 30 * h, 34), str(h)))
+    hand = 90 - 30 * hour
+    items += [line(c, ray_end(c, 90, 24)), line(c, ray_end(c, hand, 18)), dot(c)]
+    items += mark(c, hand, 90, text, arc_only=True)
+    alt = T(f"A clock face showing {hour} o'clock: the long hand points to 12 and the short hand points to {hour}. The angle between the hands is marked {text}.",
+            f"گھڑی {hour} بجا رہی ہے: لمبی سوئی 12 پر اور چھوٹی سوئی {hour} پر ہے۔ سوئیوں کے درمیان زاویے پر {text} لکھا ہے۔")
+    return figure(100, 100, alt, items)
+
+
+# s1: a door turning further and further open
+DOOR = [30, 75, 140]
+door_v = pt(60, 64)
+door = [line(door_v, ray_end(door_v, 0, 46)), dot(door_v)]
+for i, d in enumerate(DOOR):
+    door += [line(door_v, ray_end(door_v, d, 44), dashed=d != DOOR[-1]),
+             arc(door_v, 9 + 6 * i, 0, d), label(ray_end(door_v, d, 53), deg(d))]
+
+# s3: one angle of each kind
+KIND_EXAMPLES = [40, 90, 130, 180, 250]
+assert [kind_of(d) for d in KIND_EXAMPLES] == ["acute", "right", "obtuse", "straight", "reflex"]
+kinds = (fan(pt(10, 46), [0, 40], [(0, 40, "40°")], arm=36)
+         + fan(pt(62, 46), [0, 90], [(0, 90, "90°")], arm=34)
+         + fan(pt(128, 46), [0, 130], [(0, 130, "130°")], arm=28)
+         + fan(pt(44, 94), [0, 180], [(0, 180, "180°")], arm=32)
+         + fan(pt(124, 82), [0, 250], [(0, 250, "250°", 21)], arm=24))
+
+FIGS = {
+  "s1_hook": figure(120, 86, T(
+    "A door seen from above, turning open from a fixed line: first 30°, then 75°, then 140°. Each opening is marked with an arc, and the arcs get bigger as the door turns further.",
+    "اوپر سے دیکھا گیا دروازہ ایک ثابت لکیر سے کھلتا ہے: پہلے 30°، پھر 75°، پھر 140°۔ ہر کھلاؤ ایک قوس سے دکھایا گیا ہے، اور دروازہ جتنا گھومتا ہے قوس اتنی بڑی ہوتی ہے۔"),
+    door),
+  "s3_kinds": figure(160, 112, T(
+    "Five angles. Top row: an acute angle of 40°, a right angle of 90° with a small square in its corner, and an obtuse angle of 130°. Bottom row: a straight angle of 180°, which is a straight line, and a reflex angle of 250°, whose arc goes the long way round.",
+    "پانچ زاویے۔ اوپر کی قطار: 40° کا حادہ زاویہ، 90° کا قائمہ زاویہ جس کے کونے میں چھوٹا مربع ہے، اور 130° کا منفرجہ زاویہ۔ نیچے کی قطار: 180° کا مستقیم زاویہ، جو سیدھی لکیر ہے، اور 250° کا منعکس زاویہ، جس کی قوس لمبے راستے سے گھومتی ہے۔"),
+    kinds),
+  "s4_acute": one_angle(35, angle_alt(35)),
+  "s5_obtuse": one_angle(120, angle_alt(120)),
+  "s6_two_rights": one_angle(180, T(
+    "A straight line with a point in the middle. The half turn from one side of the line to the other is marked with an arc and labelled 180°.",
+    "ایک سیدھی لکیر جس کے درمیان ایک نقطہ ہے۔ لکیر کی ایک طرف سے دوسری طرف تک آدھا چکر ایک قوس سے دکھایا گیا ہے اور اس پر 180° لکھا ہے۔")),
+  "s7_reflex": one_angle(250, angle_alt(250)),
+  "s8_clock": clock(3),
+  "s11_six": clock(6),
+  "qb_apply": one_angle(160, angle_alt(160)),
+  "qb_find_error": one_angle(95, T(
+    "An angle of 95° marked with an arc. A dashed ray shows where a right angle, 90°, would be: the arm of the 95° angle is just past it.",
+    "95° کا زاویہ جو ایک قوس سے دکھایا گیا ہے۔ ایک ڈیش والی شعاع دکھاتی ہے کہ قائمہ زاویہ، 90°، کہاں ہوتا: 95° والا بازو اس سے ذرا آگے ہے۔"),
+    dashed_at=90),
+  "r_reflex": one_angle(300, angle_alt(300)),
+}
+
 
 lesson = {
  "id": "g6-maths-09-types-of-angles",
@@ -167,10 +371,11 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Angles unit. No textbook text or exercises were used.",
-   "There are no pictures yet, so every angle is given in degrees or as a clock or door. Doors, book corners and clock hands make the sizes concrete; the home task is an angle hunt.",
+   "Every angle is given in degrees or as a clock or door, and most steps also draw it (arms, arc and degree label; the drawings are made in the script). Kind questions show the angle but not its name. Doors, book corners and clock hands make the sizes concrete; the home task is an angle hunt.",
    "Urdu terms to check: زاویہ (angle), درجہ (degree), حادہ (acute), قائمہ (right), منفرجہ (obtuse), مستقیم (straight), منعکس (reflex).",
    "The numbers were worked out in content/sources/g6-maths-09/angle_types.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+attach(lesson, FIGS)
 write(lesson)

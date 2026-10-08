@@ -136,7 +136,93 @@
                 "ur": "مکمل 180° ہے، 360° نہیں: 180 − 128 = 52°"
               }
             }
-          ]
+          ],
+          "figure": {
+            "width": 120,
+            "height": 66,
+            "alt": {
+              "en": "A straight line with a point on it. A ray from the point splits the straight angle into a missing angle marked ? and 128°.",
+              "ur": "ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: ایک نامعلوم زاویہ جس پر ? لکھا ہے اور 128°۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  50
+                ],
+                "to": [
+                  110.0,
+                  50.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  50
+                ],
+                "to": [
+                  10.0,
+                  50.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  50
+                ],
+                "to": [
+                  90.8,
+                  10.6
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  60,
+                  50
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  60,
+                  50
+                ],
+                "radius": 9,
+                "start": 308,
+                "sweep": 52
+              },
+              {
+                "kind": "label",
+                "at": [
+                  78.0,
+                  41.2
+                ],
+                "text": "?"
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  60,
+                  50
+                ],
+                "radius": 14,
+                "start": 180,
+                "sweep": 128
+              },
+              {
+                "kind": "label",
+                "at": [
+                  49.0,
+                  27.5
+                ],
+                "text": "128°"
+              }
+            ]
+          }
         }
       },
       {
@@ -187,7 +273,84 @@
               },
               "misconception_id": "mixes_up_pairs"
             }
-          ]
+          ],
+          "figure": {
+            "width": 120,
+            "height": 80,
+            "alt": {
+              "en": "An angle of 120° marked with an arc. A dashed ray straight up shows 90°: the 120° arm has already gone past it.",
+              "ur": "120° کا زاویہ جو ایک قوس سے دکھایا گیا ہے۔ سیدھی اوپر ایک ڈیش والی شعاع 90° دکھاتی ہے: 120° والا بازو اس سے آگے نکل چکا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  60.0,
+                  14.0
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  60.0,
+                  7.0
+                ],
+                "text": "90°"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  110.0,
+                  64.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  60,
+                  64
+                ],
+                "to": [
+                  35.0,
+                  20.7
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  60,
+                  64
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  60,
+                  64
+                ],
+                "radius": 14,
+                "start": 240,
+                "sweep": 120
+              },
+              {
+                "kind": "label",
+                "at": [
+                  73.0,
+                  41.5
+                ],
+                "text": "120°"
+              }
+            ]
+          }
         }
       }
     ]
@@ -257,6 +420,88 @@
       "text": {
         "en": "Today we meet two special pairs of angles. First, a quick check.",
         "ur": "آج ہم زاویوں کے دو خاص جوڑوں سے ملیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 120,
+        "height": 72,
+        "alt": {
+          "en": "Two shaded angle pieces lying apart, like puzzle pieces: one of 30° and one of 60°.",
+          "ur": "دو سایہ دار زاویے کے ٹکڑے الگ الگ پڑے ہیں، پہیلی کے ٹکڑوں کی طرح: ایک 30° کا اور ایک 60° کا۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16,
+                58
+              ],
+              [
+                64.0,
+                58.0
+              ],
+              [
+                57.6,
+                34.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              58
+            ],
+            "radius": 14,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.9,
+              50.0
+            ],
+            "text": "30°"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                72,
+                58
+              ],
+              [
+                116.0,
+                58.0
+              ],
+              [
+                94.0,
+                19.9
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              72,
+              58
+            ],
+            "radius": 12,
+            "start": 300,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              91.9,
+              46.5
+            ],
+            "text": "60°"
+          }
+        ]
       }
     },
     {
@@ -290,7 +535,93 @@
             "ur": "لکیر کے لیے 180° لیں: 30°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 66,
+        "alt": {
+          "en": "A straight line with a point on it. A ray from the point splits the straight angle into a missing angle marked ? and 150°.",
+          "ur": "ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: ایک نامعلوم زاویہ جس پر ? لکھا ہے اور 150°۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              110.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              10.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              103.3,
+              25.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              89.9,
+              42.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 150
+          },
+          {
+            "kind": "label",
+            "at": [
+              53.5,
+              25.9
+            ],
+            "text": "150°"
+          }
+        ]
+      }
     },
     {
       "id": "s3_pairs",
@@ -305,6 +636,168 @@
       "text": {
         "en": "Two angles are complementary if they add up to 90°: together they fill a corner. Two angles are supplementary if they add up to 180°: together they make a straight line. The complement of 30° is 90 − 30 = 60°. The supplement of 30° is 180 − 30 = 150°.",
         "ur": "دو زاویے متمم ہیں اگر ان کا مجموعہ 90° ہو: مل کر کونا بھرتے ہیں۔ دو زاویے مکمل ہیں اگر ان کا مجموعہ 180° ہو: مل کر سیدھی لکیر بناتے ہیں۔ 30° کا متمم 90 − 30 = 60° ہے۔ 30° کا مکمل زاویہ 180 − 30 = 150° ہے۔"
+      },
+      "figure": {
+        "width": 200,
+        "height": 92,
+        "alt": {
+          "en": "Left: a square corner, 90°, split by a ray into 30° and 60°: complementary angles. Right: a straight line, 180°, split by a ray into 30° and 150°: supplementary angles.",
+          "ur": "بائیں: ایک چوکور کونا، 90°، جسے ایک شعاع 30° اور 60° میں بانٹتی ہے: متمم زاویے۔ دائیں: ایک سیدھی لکیر، 180°، جسے ایک شعاع 30° اور 150° میں بانٹتی ہے: مکمل زاویے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16,
+              76
+            ],
+            "to": [
+              74.0,
+              76.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              76
+            ],
+            "to": [
+              16.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              76
+            ],
+            "to": [
+              66.2,
+              47.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              16,
+              76
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              76
+            ],
+            "radius": 9,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.9,
+              68.0
+            ],
+            "text": "30°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              76
+            ],
+            "radius": 14,
+            "start": 270,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.5,
+              54.3
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              146,
+              76
+            ],
+            "to": [
+              196.0,
+              76.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              146,
+              76
+            ],
+            "to": [
+              96.0,
+              76.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              146,
+              76
+            ],
+            "to": [
+              189.3,
+              51.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              146,
+              76
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              146,
+              76
+            ],
+            "radius": 9,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              175.9,
+              68.0
+            ],
+            "text": "30°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              146,
+              76
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 150
+          },
+          {
+            "kind": "label",
+            "at": [
+              139.5,
+              51.9
+            ],
+            "text": "150°"
+          }
+        ]
       }
     },
     {
@@ -338,7 +831,93 @@
           },
           "misconception_id": "complement_from_180"
         }
-      ]
+      ],
+      "figure": {
+        "width": 90,
+        "height": 90,
+        "alt": {
+          "en": "A square corner, a right angle of 90°: one arm goes right and one goes straight up. A ray from the corner splits it into 30° and a missing angle marked ?.",
+          "ur": "ایک چوکور کونا، 90° کا قائمہ زاویہ: ایک بازو دائیں اور ایک سیدھا اوپر جاتا ہے۔ کونے سے ایک شعاع اسے ان حصوں میں بانٹتی ہے: 30° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              82.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              16.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              73.2,
+              41.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              16,
+              74
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              74
+            ],
+            "radius": 9,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.9,
+              66.0
+            ],
+            "text": "30°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              74
+            ],
+            "radius": 14,
+            "start": 270,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.5,
+              52.3
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s5_supplement",
@@ -371,7 +950,93 @@
           },
           "misconception_id": "supplement_from_90"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 66,
+        "alt": {
+          "en": "A straight line with a point on it. A ray from the point splits the straight angle into 65° and a missing angle marked ?.",
+          "ur": "ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: 65° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              110.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              10.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              81.1,
+              4.7
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.9,
+              39.3
+            ],
+            "text": "65°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 115
+          },
+          {
+            "kind": "label",
+            "at": [
+              46.6,
+              28.9
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s6_which",
@@ -499,7 +1164,93 @@
             "ur": "90° اور اس کا متمم 90° سے زیادہ ہو جائے گا۔ 90 کا آدھا: 45°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 90,
+        "height": 90,
+        "alt": {
+          "en": "A square corner, a right angle of 90°: one arm goes right and one goes straight up. A ray from the corner splits it into an angle marked x and an angle marked x.",
+          "ur": "ایک چوکور کونا، 90° کا قائمہ زاویہ: ایک بازو دائیں اور ایک سیدھا اوپر جاتا ہے۔ کونے سے ایک شعاع اسے ان حصوں میں بانٹتی ہے: ایک زاویہ جس پر x لکھا ہے اور ایک زاویہ جس پر x لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              82.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              16.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              62.7,
+              27.3
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              16,
+              74
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              74
+            ],
+            "radius": 9,
+            "start": 315,
+            "sweep": 45
+          },
+          {
+            "kind": "label",
+            "at": [
+              35.3,
+              66.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              74
+            ],
+            "radius": 14,
+            "start": 270,
+            "sweep": 45
+          },
+          {
+            "kind": "label",
+            "at": [
+              25.6,
+              50.9
+            ],
+            "text": "x"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -547,7 +1298,93 @@
           },
           "misconception_id": "complement_from_180"
         }
-      ]
+      ],
+      "figure": {
+        "width": 90,
+        "height": 90,
+        "alt": {
+          "en": "A square corner, a right angle of 90°: one arm goes right and one goes straight up. A ray from the corner splits it into 40° and a missing angle marked ?.",
+          "ur": "ایک چوکور کونا، 90° کا قائمہ زاویہ: ایک بازو دائیں اور ایک سیدھا اوپر جاتا ہے۔ کونے سے ایک شعاع اسے ان حصوں میں بانٹتی ہے: 40° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              82.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              16.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              74
+            ],
+            "to": [
+              66.6,
+              31.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              16,
+              74
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              74
+            ],
+            "radius": 9,
+            "start": 320,
+            "sweep": 40
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.0,
+              66.0
+            ],
+            "text": "40°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              74
+            ],
+            "radius": 14,
+            "start": 270,
+            "sweep": 50
+          },
+          {
+            "kind": "label",
+            "at": [
+              26.6,
+              51.3
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -609,7 +1446,84 @@
         }
       },
       "limit_per_day": 3,
-      "max_attempts": 2
+      "max_attempts": 2,
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "An angle of 100° marked with an arc. A dashed ray straight up shows 90°: the 100° arm has already gone past it.",
+          "ur": "100° کا زاویہ جو ایک قوس سے دکھایا گیا ہے۔ سیدھی اوپر ایک ڈیش والی شعاع 90° دکھاتی ہے: 100° والا بازو اس سے آگے نکل چکا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              60.0,
+              14.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              7.0
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              110.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              64
+            ],
+            "to": [
+              51.3,
+              14.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              64
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              64
+            ],
+            "radius": 14,
+            "start": 260,
+            "sweep": 100
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.7,
+              44.1
+            ],
+            "text": "100°"
+          }
+        ]
+      }
     },
     {
       "id": "s11_two_step",
@@ -641,7 +1555,93 @@
             "ur": "80° تو خود زاویہ ہے۔ اس کا متمم 90 − 80 = 10° ہے۔"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 66,
+        "alt": {
+          "en": "A straight line with a point on it. A ray from the point splits the straight angle into a missing angle marked ? and 100°.",
+          "ur": "ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: ایک نامعلوم زاویہ جس پر ? لکھا ہے اور 100°۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              110.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              10.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              68.7,
+              0.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 280,
+            "sweep": 80
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.3,
+              37.1
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 100
+          },
+          {
+            "kind": "label",
+            "at": [
+              43.9,
+              30.8
+            ],
+            "text": "100°"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -704,7 +1704,93 @@
             },
             "misconception_id": "complement_from_180"
           }
-        ]
+        ],
+        "figure": {
+          "width": 90,
+          "height": 90,
+          "alt": {
+            "en": "A square corner, a right angle of 90°: one arm goes right and one goes straight up. A ray from the corner splits it into 72° and a missing angle marked ?.",
+            "ur": "ایک چوکور کونا، 90° کا قائمہ زاویہ: ایک بازو دائیں اور ایک سیدھا اوپر جاتا ہے۔ کونے سے ایک شعاع اسے ان حصوں میں بانٹتی ہے: 72° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                16,
+                74
+              ],
+              "to": [
+                82.0,
+                74.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                74
+              ],
+              "to": [
+                16.0,
+                8.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                74
+              ],
+              "to": [
+                36.4,
+                11.2
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                16,
+                74
+              ]
+            },
+            {
+              "kind": "arc",
+              "center": [
+                16,
+                74
+              ],
+              "radius": 9,
+              "start": 288,
+              "sweep": 72
+            },
+            {
+              "kind": "label",
+              "at": [
+                32.2,
+                62.2
+              ],
+              "text": "72°"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                16,
+                74
+              ],
+              "radius": 14,
+              "start": 270,
+              "sweep": 18
+            },
+            {
+              "kind": "label",
+              "at": [
+                22.3,
+                34.5
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     },
     {
@@ -741,7 +1827,93 @@
             },
             "misconception_id": "supplement_from_90"
           }
-        ]
+        ],
+        "figure": {
+          "width": 120,
+          "height": 66,
+          "alt": {
+            "en": "A straight line with a point on it. A ray from the point splits the straight angle into 45° and a missing angle marked ?.",
+            "ur": "ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: 45° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                60,
+                50
+              ],
+              "to": [
+                110.0,
+                50.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                60,
+                50
+              ],
+              "to": [
+                10.0,
+                50.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                60,
+                50
+              ],
+              "to": [
+                95.4,
+                14.6
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                60,
+                50
+              ]
+            },
+            {
+              "kind": "arc",
+              "center": [
+                60,
+                50
+              ],
+              "radius": 9,
+              "start": 315,
+              "sweep": 45
+            },
+            {
+              "kind": "label",
+              "at": [
+                79.3,
+                42.0
+              ],
+              "text": "45°"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                60,
+                50
+              ],
+              "radius": 14,
+              "start": 180,
+              "sweep": 135
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.4,
+                26.9
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     }
   ],

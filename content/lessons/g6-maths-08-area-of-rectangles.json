@@ -142,7 +142,55 @@
               },
               "misconception_id": "perimeter_for_area"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 49.2,
+            "alt": {
+              "en": "A rectangle, 12 cm long and 5 cm wide, drawn to scale. The long side is labelled 12 cm and the short side 5 cm.",
+              "ur": "ایک مستطیل، 12 سینٹی میٹر لمبی اور 5 سینٹی میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 12 سینٹی میٹر اور چھوٹے ضلع پر 5 سینٹی میٹر لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    15.0,
+                    10.0
+                  ],
+                  [
+                    85.0,
+                    10.0
+                  ],
+                  [
+                    85.0,
+                    39.2
+                  ],
+                  [
+                    15.0,
+                    39.2
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  43.8
+                ],
+                "text": "12cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  91.5,
+                  24.6
+                ],
+                "text": "5cm"
+              }
+            ]
+          }
         }
       },
       {
@@ -193,7 +241,121 @@
               },
               "misconception_id": "area_wrong_units"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 64.0,
+            "alt": {
+              "en": "A square with sides of 4 cm; two of its sides are labelled 4 cm. Lines split it into 4 rows of 4 small squares.",
+              "ur": "ایک مربع جس کا ہر ضلع 4 سینٹی میٹر ہے؛ دو اضلاع پر 4 سینٹی میٹر لکھا ہے۔ لکیریں اسے 4 چھوٹے مربعوں کی 4 قطاروں میں بانٹتی ہیں۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    28.0,
+                    10.0
+                  ],
+                  [
+                    72.0,
+                    10.0
+                  ],
+                  [
+                    72.0,
+                    54.0
+                  ],
+                  [
+                    28.0,
+                    54.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "line",
+                "from": [
+                  39.0,
+                  10.0
+                ],
+                "to": [
+                  39.0,
+                  54.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  50.0,
+                  10.0
+                ],
+                "to": [
+                  50.0,
+                  54.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  61.0,
+                  10.0
+                ],
+                "to": [
+                  61.0,
+                  54.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  28.0,
+                  21.0
+                ],
+                "to": [
+                  72.0,
+                  21.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  28.0,
+                  32.0
+                ],
+                "to": [
+                  72.0,
+                  32.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  28.0,
+                  43.0
+                ],
+                "to": [
+                  72.0,
+                  43.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  58.6
+                ],
+                "text": "4cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  78.5,
+                  32.0
+                ],
+                "text": "4cm"
+              }
+            ]
+          }
         }
       }
     ]
@@ -255,6 +417,142 @@
       "text": {
         "en": "The space a flat shape covers is its area. First, a quick check on perimeter.",
         "ur": "کوئی چپٹی شکل جتنی جگہ گھیرتی ہے وہ اس کا رقبہ ہے۔ پہلے احاطے کا ایک سوال۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "Ammi's rug, a rectangle, 6 m long and 4 m wide, drawn to scale. The long side is labelled 6 m and the short side 4 m. Lines split it into 1 m squares: 4 rows of 6 squares.",
+          "ur": "امی کا قالین، ایک مستطیل، 6 میٹر لمبی اور 4 میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 6 میٹر اور چھوٹے ضلع پر 4 میٹر لکھا ہے۔ لکیریں اسے 1 میٹر کے مربعوں میں بانٹتی ہیں: 6 مربعوں کی 4 قطاریں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.0,
+                10.0
+              ],
+              [
+                83.0,
+                10.0
+              ],
+              [
+                83.0,
+                54.0
+              ],
+              [
+                17.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              10.0
+            ],
+            "to": [
+              28.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.0,
+              10.0
+            ],
+            "to": [
+              39.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              10.0
+            ],
+            "to": [
+              50.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              61.0,
+              10.0
+            ],
+            "to": [
+              61.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              72.0,
+              10.0
+            ],
+            "to": [
+              72.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              17.0,
+              21.0
+            ],
+            "to": [
+              83.0,
+              21.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              17.0,
+              32.0
+            ],
+            "to": [
+              83.0,
+              32.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              17.0,
+              43.0
+            ],
+            "to": [
+              83.0,
+              43.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "6m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              87.8,
+              32.0
+            ],
+            "text": "4m"
+          }
+        ]
       }
     },
     {
@@ -303,6 +601,109 @@
       "text": {
         "en": "Cover a rectangle 4 cm long and 3 cm wide with 1 cm squares: 3 rows of 4 squares. That is 4 × 3 = 12 squares, so the area is 12 square centimetres, written 12 cm². Area of a rectangle = length × width. Area of a square = side × side.",
         "ur": "4 سینٹی میٹر لمبی اور 3 سینٹی میٹر چوڑی مستطیل کو 1 سینٹی میٹر کے مربعوں سے ڈھانپیں: 4 مربعوں کی 3 قطاریں۔ یعنی 4 × 3 = 12 مربع، اس لیے رقبہ 12 مربع سینٹی میٹر ہے، جسے 12 cm² لکھتے ہیں۔ مستطیل کا رقبہ = لمبائی × چوڑائی۔ مربع کا رقبہ = ضلع × ضلع۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A rectangle, 4 cm long and 3 cm wide, drawn to scale. The long side is labelled 4 cm and the short side 3 cm. Lines split it into 1 cm squares: 3 rows of 4 squares.",
+          "ur": "ایک مستطیل، 4 سینٹی میٹر لمبی اور 3 سینٹی میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 4 سینٹی میٹر اور چھوٹے ضلع پر 3 سینٹی میٹر لکھا ہے۔ لکیریں اسے 1 سینٹی میٹر کے مربعوں میں بانٹتی ہیں: 4 مربعوں کی 3 قطاریں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.7,
+                10.0
+              ],
+              [
+                79.3,
+                10.0
+              ],
+              [
+                79.3,
+                54.0
+              ],
+              [
+                20.7,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.3,
+              10.0
+            ],
+            "to": [
+              35.3,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              10.0
+            ],
+            "to": [
+              50.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.7,
+              10.0
+            ],
+            "to": [
+              64.7,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.7,
+              24.7
+            ],
+            "to": [
+              79.3,
+              24.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.7,
+              39.3
+            ],
+            "to": [
+              79.3,
+              39.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.8,
+              32.0
+            ],
+            "text": "3cm"
+          }
+        ]
       }
     },
     {
@@ -344,7 +745,110 @@
           },
           "misconception_id": "perimeter_for_area"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A rectangle, 4 cm long and 3 cm wide, drawn to scale. The long side is labelled 4 cm and the short side 3 cm. Lines split it into 1 cm squares: 3 rows of 4 squares.",
+          "ur": "ایک مستطیل، 4 سینٹی میٹر لمبی اور 3 سینٹی میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 4 سینٹی میٹر اور چھوٹے ضلع پر 3 سینٹی میٹر لکھا ہے۔ لکیریں اسے 1 سینٹی میٹر کے مربعوں میں بانٹتی ہیں: 4 مربعوں کی 3 قطاریں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.7,
+                10.0
+              ],
+              [
+                79.3,
+                10.0
+              ],
+              [
+                79.3,
+                54.0
+              ],
+              [
+                20.7,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.3,
+              10.0
+            ],
+            "to": [
+              35.3,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              10.0
+            ],
+            "to": [
+              50.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.7,
+              10.0
+            ],
+            "to": [
+              64.7,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.7,
+              24.7
+            ],
+            "to": [
+              79.3,
+              24.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.7,
+              39.3
+            ],
+            "to": [
+              79.3,
+              39.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.8,
+              32.0
+            ],
+            "text": "3cm"
+          }
+        ]
+      }
     },
     {
       "id": "s5_rug",
@@ -377,7 +881,55 @@
           },
           "misconception_id": "perimeter_for_area"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "Ammi's rug, a rectangle, 6 m long and 4 m wide, drawn to scale. The long side is labelled 6 m and the short side 4 m.",
+          "ur": "امی کا قالین، ایک مستطیل، 6 میٹر لمبی اور 4 میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 6 میٹر اور چھوٹے ضلع پر 4 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.0,
+                10.0
+              ],
+              [
+                83.0,
+                10.0
+              ],
+              [
+                83.0,
+                54.0
+              ],
+              [
+                17.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "6m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              87.8,
+              32.0
+            ],
+            "text": "4m"
+          }
+        ]
+      }
     },
     {
       "id": "s6_square",
@@ -417,7 +969,55 @@
             "ur": "یہ 9 × 2 ہے۔ مربع کا رقبہ 9 × 9 = 81"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A square with sides of 9 cm; two of its sides are labelled 9 cm.",
+          "ur": "ایک مربع جس کا ہر ضلع 9 سینٹی میٹر ہے؛ دو اضلاع پر 9 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                28.0,
+                10.0
+              ],
+              [
+                72.0,
+                10.0
+              ],
+              [
+                72.0,
+                54.0
+              ],
+              [
+                28.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "9cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.5,
+              32.0
+            ],
+            "text": "9cm"
+          }
+        ]
+      }
     },
     {
       "id": "s7_missing",
@@ -449,7 +1049,55 @@
             "ur": "گھٹائیں نہیں، تقسیم کریں: 40 ÷ 8 = 5"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 63.8,
+        "alt": {
+          "en": "A rectangle drawn to scale. Its long side is labelled 8 cm. Its short side is marked ? because we must find it. Its area is 40 cm².",
+          "ur": "پیمانے کے مطابق ایک مستطیل۔ لمبے ضلع پر 8 سینٹی میٹر لکھا ہے۔ چھوٹے ضلع پر ? ہے کیونکہ وہ معلوم کرنا ہے۔ اس کا رقبہ 40 مربع سینٹی میٹر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                10.0
+              ],
+              [
+                85.0,
+                10.0
+              ],
+              [
+                85.0,
+                53.8
+              ],
+              [
+                15.0,
+                53.8
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.4
+            ],
+            "text": "8cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              88.2,
+              31.9
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s8_same_perimeter",
@@ -482,7 +1130,269 @@
           },
           "misconception_id": "same_perimeter_same_area"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 48.6,
+        "alt": {
+          "en": "Two gardens drawn to scale on 1 m squares. Left: a rectangle 7 m long and 3 m wide, 3 rows of 7 squares. Right: a square 5 m by 5 m, 5 rows of 5 squares. Both have a perimeter of 20 m.",
+          "ur": "1 میٹر کے مربعوں پر پیمانے کے مطابق دو باغیچے۔ بائیں: 7 میٹر لمبی اور 3 میٹر چوڑی مستطیل، 7 مربعوں کی 3 قطاریں۔ دائیں: 5 ضرب 5 میٹر کا مربع، 5 مربعوں کی 5 قطاریں۔ دونوں کا احاطہ 20 میٹر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10.0,
+                21.4
+              ],
+              [
+                50.0,
+                21.4
+              ],
+              [
+                50.0,
+                38.6
+              ],
+              [
+                10.0,
+                38.6
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                61.4,
+                10.0
+              ],
+              [
+                90.0,
+                10.0
+              ],
+              [
+                90.0,
+                38.6
+              ],
+              [
+                61.4,
+                38.6
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              15.7,
+              21.4
+            ],
+            "to": [
+              15.7,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              21.4,
+              21.4
+            ],
+            "to": [
+              21.4,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              27.1,
+              21.4
+            ],
+            "to": [
+              27.1,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.9,
+              21.4
+            ],
+            "to": [
+              32.9,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.6,
+              21.4
+            ],
+            "to": [
+              38.6,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.3,
+              21.4
+            ],
+            "to": [
+              44.3,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              27.1
+            ],
+            "to": [
+              50.0,
+              27.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              32.9
+            ],
+            "to": [
+              50.0,
+              32.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              67.1,
+              10.0
+            ],
+            "to": [
+              67.1,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              72.9,
+              10.0
+            ],
+            "to": [
+              72.9,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.6,
+              10.0
+            ],
+            "to": [
+              78.6,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              84.3,
+              10.0
+            ],
+            "to": [
+              84.3,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              61.4,
+              15.7
+            ],
+            "to": [
+              90.0,
+              15.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              61.4,
+              21.4
+            ],
+            "to": [
+              90.0,
+              21.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              61.4,
+              27.1
+            ],
+            "to": [
+              90.0,
+              27.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              61.4,
+              32.9
+            ],
+            "to": [
+              90.0,
+              32.9
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              30.0,
+              43.2
+            ],
+            "text": "7m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              5.2,
+              30.0
+            ],
+            "text": "3m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.7,
+              43.2
+            ],
+            "text": "5m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              94.8,
+              24.3
+            ],
+            "text": "5m"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -531,7 +1441,55 @@
           },
           "misconception_id": "perimeter_for_area"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 62.0,
+        "alt": {
+          "en": "A rectangle, 5 cm long and 3 cm wide, drawn to scale. The long side is labelled 5 cm and the short side 3 cm.",
+          "ur": "ایک مستطیل، 5 سینٹی میٹر لمبی اور 3 سینٹی میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 5 سینٹی میٹر اور چھوٹے ضلع پر 3 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                10.0
+              ],
+              [
+                85.0,
+                10.0
+              ],
+              [
+                85.0,
+                52.0
+              ],
+              [
+                15.0,
+                52.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              56.6
+            ],
+            "text": "5cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              91.5,
+              31.0
+            ],
+            "text": "3cm"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -629,7 +1587,187 @@
             "ur": "جمع نہیں، ضرب: 8 × 6 = 48"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A floor 8 m long and 6 m wide, drawn to scale. The first row of 1 m tiles is drawn along the top (8 tiles) and the first column down the left side (6 tiles); the rest of the floor is still to be tiled the same way.",
+          "ur": "8 میٹر لمبا اور 6 میٹر چوڑا فرش، پیمانے کے مطابق۔ اوپر 1 میٹر ٹائلوں کی پہلی قطار (8 ٹائلیں) اور بائیں طرف پہلا کالم (6 ٹائلیں) بنا ہے؛ باقی فرش پر بھی اسی طرح ٹائلیں لگنی ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                23.3,
+                10.0
+              ],
+              [
+                76.7,
+                10.0
+              ],
+              [
+                76.7,
+                50.0
+              ],
+              [
+                23.3,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.0,
+              10.0
+            ],
+            "to": [
+              30.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              36.7,
+              10.0
+            ],
+            "to": [
+              36.7,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              43.3,
+              10.0
+            ],
+            "to": [
+              43.3,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              10.0
+            ],
+            "to": [
+              50.0,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              56.7,
+              10.0
+            ],
+            "to": [
+              56.7,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              63.3,
+              10.0
+            ],
+            "to": [
+              63.3,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              10.0
+            ],
+            "to": [
+              70.0,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              16.7
+            ],
+            "to": [
+              76.7,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              23.3
+            ],
+            "to": [
+              30.0,
+              23.3
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              30.0
+            ],
+            "to": [
+              30.0,
+              30.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              36.7
+            ],
+            "to": [
+              30.0,
+              36.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              43.3
+            ],
+            "to": [
+              30.0,
+              43.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "8m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              81.5,
+              30.0
+            ],
+            "text": "6m"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -692,7 +1830,55 @@
             },
             "misconception_id": "perimeter_for_area"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 64.0,
+          "alt": {
+            "en": "A rectangle, 9 cm long and 7 cm wide, drawn to scale. The long side is labelled 9 cm and the short side 7 cm.",
+            "ur": "ایک مستطیل، 9 سینٹی میٹر لمبی اور 7 سینٹی میٹر چوڑی، پیمانے کے مطابق۔ لمبے ضلع پر 9 سینٹی میٹر اور چھوٹے ضلع پر 7 سینٹی میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  21.7,
+                  10.0
+                ],
+                [
+                  78.3,
+                  10.0
+                ],
+                [
+                  78.3,
+                  54.0
+                ],
+                [
+                  21.7,
+                  54.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                58.6
+              ],
+              "text": "9cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                84.8,
+                32.0
+              ],
+              "text": "7cm"
+            }
+          ]
+        }
       }
     },
     {
@@ -729,7 +1915,55 @@
             },
             "misconception_id": "perimeter_for_area"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 64.0,
+          "alt": {
+            "en": "A square with sides of 10 m; two of its sides are labelled 10 m.",
+            "ur": "ایک مربع جس کا ہر ضلع 10 میٹر ہے؛ دو اضلاع پر 10 میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  28.0,
+                  10.0
+                ],
+                [
+                  72.0,
+                  10.0
+                ],
+                [
+                  72.0,
+                  54.0
+                ],
+                [
+                  28.0,
+                  54.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                58.6
+              ],
+              "text": "10m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                78.5,
+                32.0
+              ],
+              "text": "10m"
+            }
+          ]
+        }
       }
     }
   ],

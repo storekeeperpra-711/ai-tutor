@@ -1,5 +1,7 @@
 from common import (T, opt, say, wrong, signed, number_question, write,
                     REVIEW, BOOK_INTEGERS, INT_MEANING, INT_ABSOLUTE)
+from figs import (NumberLine, number_line_figure, two_thermometers, building, bracket_v,
+                  figure, attach, LABEL_DY, W)
 
 SKILL = INT_ABSOLUTE
 
@@ -50,6 +52,58 @@ assert abs(0) == 0
 R1 = abs(-15)
 assert R1 == 15 and -15 != R1
 assert abs(-6) > abs(2) and 2 > -6
+
+# ---------- pictures ----------
+
+def distances(lo, hi, nums, alt_en, alt_ur):
+    """Dots on nums, each with a dashed measuring line to 0 marked with its distance."""
+    y = 52
+    nl = NumberLine(lo, hi, y, keys=tuple(nums))
+    nl.mark(0)
+    for n in nums:
+        nl.mark(n)
+        nl.bracket(min(0, n), max(0, n), str(abs(n)), off=16)
+    return number_line_figure(alt_en, alt_ur, [nl], y + LABEL_DY + 14)
+
+
+FIG_S1, _ = two_thermometers(
+    -8, 8, SKARDU, MULTAN,
+    f"Two thermometers. The left one (Skardu) shows {signed(SKARDU)} °C, 7 small marks below 0. The right one (Multan) shows {MULTAN} °C, 7 small marks above 0.",
+    f"دو تھرمامیٹر۔ بائیں والا (سکردو) {signed(SKARDU)} ڈگری دکھاتا ہے، 0 سے 7 نشان نیچے۔ دائیں والا (ملتان) {MULTAN} ڈگری دکھاتا ہے، 0 سے 7 نشان اوپر۔",
+    under=(f"{signed(SKARDU)}°C", f"{MULTAN}°C"), ticks_every=1, height=230)
+
+FIG_S3 = distances(
+    -8, 8, [SKARDU, MULTAN],
+    "A number line from −8 to 8 with dots on −7, 0 and 7. A dashed measuring line from −7 to 0 is marked 7, and another from 0 to 7 is also marked 7: both numbers are 7 steps from 0.",
+    "−8 سے 8 تک عددی خط جس پر −7، 0 اور 7 پر نقطے ہیں۔ −7 سے 0 تک ڈیش والی ناپ کی لکیر پر 7 لکھا ہے، اور 0 سے 7 تک دوسری پر بھی 7: دونوں اعداد 0 سے 7 قدم دور ہیں۔")
+
+
+def lift_figure():
+    items, y_mid, bottom = building(FLOOR, 1, lift=FLOOR, top=14, floor_h=24, labels=None)
+    items += bracket_v(250, y_mid(0), y_mid(FLOOR), "?")
+    return figure(W, bottom + 14, (
+        f"A building cut open, with floors numbered 1, 0 (the ground floor, on the dashed ground line) and −1 to {signed(FLOOR)} below the ground. "
+        f"The lift car is shaded, at floor {signed(FLOOR)}. A dashed measuring line from floor 0 down to floor {signed(FLOOR)} is marked with a question mark."), (
+        f"ایک عمارت کا اندرونی منظر، منزلیں 1، 0 (گراؤنڈ فلور، ڈیش والی زمین کی لکیر پر) اور زمین کے نیچے −1 سے {signed(FLOOR)} تک۔ "
+        f"لفٹ سایہ دار ڈبہ ہے، منزل {signed(FLOOR)} پر۔ منزل 0 سے منزل {signed(FLOOR)} تک ڈیش والی ناپ کی لکیر پر سوالیہ نشان ہے۔"), items)
+
+
+FIG_S7 = lift_figure()
+
+FIG_S9 = distances(
+    -9, 3, [-8, 2],
+    "A number line from −9 to 3 with dots on −8, 0 and 2. A measuring line from −8 to 0 is marked 8 and one from 0 to 2 is marked 2. −8 is further from 0, but it is to the left of 2.",
+    "−9 سے 3 تک عددی خط جس پر −8، 0 اور 2 پر نقطے ہیں۔ −8 سے 0 تک ناپ کی لکیر پر 8 اور 0 سے 2 تک پر 2 لکھا ہے۔ −8 زیادہ دور ہے، لیکن یہ 2 کے بائیں طرف ہے۔")
+
+FIG_S10 = distances(
+    -7, 7, [-6],
+    "A number line from −7 to 7 with dots on −6 and 0. A dashed measuring line from −6 to 0 is marked 6: the distance is 6 steps.",
+    "−7 سے 7 تک عددی خط جس پر −6 اور 0 پر نقطے ہیں۔ −6 سے 0 تک ڈیش والی ناپ کی لکیر پر 6 لکھا ہے: فاصلہ 6 قدم ہے۔")
+
+FIG_S12 = distances(
+    -10, 4, [-9, 3],
+    "A number line from −10 to 4 with dots on −9, 0 and 3. A measuring line from −9 to 0 is marked 9 and one from 0 to 3 is marked 3. −9 is further from 0, but 3 is further right, so 3 is the greater number.",
+    "−10 سے 4 تک عددی خط جس پر −9، 0 اور 3 پر نقطے ہیں۔ −9 سے 0 تک ناپ کی لکیر پر 9 اور 0 سے 3 تک پر 3 لکھا ہے۔ −9، 0 سے زیادہ دور ہے، لیکن 3 زیادہ دائیں ہے، اس لیے 3 بڑا عدد ہے۔")
 
 lesson = {
  "id": "g6-maths-04-absolute-value",
@@ -249,4 +303,8 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, {
+    "s1_hook": FIG_S1, "s3_see_it": FIG_S3, "s7_lift": FIG_S7, "s9_find_error": FIG_S9,
+    "s10_explain_why": FIG_S10, "s12_summary": FIG_S12,
+})
 write(lesson)
