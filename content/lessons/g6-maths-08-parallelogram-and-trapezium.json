@@ -1,0 +1,789 @@
+{
+  "id": "g6-maths-08-parallelogram-and-trapezium",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the area of a parallelogram as base × perpendicular height, and of a trapezium as ½ × (sum of the parallel sides) × height.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 8: Surface Area and Volume"
+    }
+  ],
+  "skills": [
+    "maths.measurement.area_parallelogram"
+  ],
+  "title": {
+    "en": "Area of a parallelogram and a trapezium",
+    "ur": "متوازی الاضلاع اور ذوزنقہ کا رقبہ"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.measurement.area_triangle"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "slant_height",
+      "description": "Multiplies by the slanting side instead of the perpendicular height."
+    },
+    {
+      "id": "trap_forgets_half",
+      "description": "Adds the parallel sides and multiplies by the height, forgetting to halve."
+    },
+    {
+      "id": "one_parallel_side",
+      "description": "Uses only one of the parallel sides of a trapezium instead of their sum."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.measurement.area_parallelogram": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.measurement.area_parallelogram": [
+      {
+        "id": "qb_formula",
+        "type": "recall",
+        "step": {
+          "id": "qb_formula",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the area of a parallelogram?",
+            "ur": "متوازی الاضلاع کا رقبہ کیا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "base_height",
+              "text": {
+                "en": "Base × perpendicular height",
+                "ur": "قاعدہ × عمودی اونچائی"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Move a triangle from one end to the other and it becomes a rectangle.",
+                "ur": "جی ہاں! ایک سرے سے مثلث کاٹ کر دوسرے سرے پر لگائیں تو مستطیل بن جاتی ہے۔"
+              }
+            },
+            {
+              "id": "base_slant",
+              "text": {
+                "en": "Base × slanting side",
+                "ur": "قاعدہ × ترچھا ضلع"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The slanting side is longer than the height. Use the straight-up height.",
+                "ur": "ترچھا ضلع اونچائی سے لمبا ہے۔ سیدھی اوپر والی اونچائی لیں۔"
+              },
+              "misconception_id": "slant_height"
+            },
+            {
+              "id": "half",
+              "text": {
+                "en": "Half of base × height",
+                "ur": "قاعدہ × اونچائی کا آدھا"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is a triangle. A parallelogram is a whole rectangle's worth: base × height.",
+                "ur": "یہ مثلث کا ہے۔ متوازی الاضلاع پوری مستطیل جتنا ہے: قاعدہ × اونچائی۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A trapezium has parallel sides of 4 cm and 10 cm, and a height of 6 cm. What is its area in cm²?",
+            "ur": "ایک ذوزنقہ کے متوازی اضلاع 4 اور 10 سینٹی میٹر ہیں، اور اونچائی 6 سینٹی میٹر ہے۔ اس کا رقبہ کتنے مربع سینٹی میٹر ہے؟"
+          },
+          "answer": 42,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add the parallel sides, multiply by the height, then halve.",
+            "ur": "متوازی اضلاع جمع کریں، اونچائی سے ضرب دیں، پھر آدھا کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 42 cm².",
+            "ur": "درست! 42 مربع سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "4 + 10 = 14, 14 × 6 = 84, half is 42 cm².",
+            "ur": "4 + 10 = 14، 14 × 6 = 84، آدھا 42"
+          },
+          "common_wrong": [
+            {
+              "answer": 84,
+              "feedback": {
+                "en": "Don't forget to halve: 84 ÷ 2 = 42.",
+                "ur": "آدھا کرنا نہ بھولیں: 84 ÷ 2 = 42"
+              },
+              "misconception_id": "trap_forgets_half"
+            },
+            {
+              "answer": 60,
+              "feedback": {
+                "en": "Use both parallel sides: ½ × (4 + 10) × 6 = 42.",
+                "ur": "دونوں متوازی اضلاع لیں: ½ × (4 + 10) × 6 = 42"
+              },
+              "misconception_id": "one_parallel_side"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A parallelogram has base 12 cm, height 6 cm and slanting sides of 8 cm. Bilal says its area is 12 × 8 = 96 cm². What went wrong?",
+            "ur": "ایک متوازی الاضلاع کا قاعدہ 12، اونچائی 6 اور ترچھے اضلاع 8 سینٹی میٹر ہیں۔ بلال کہتا ہے رقبہ 12 × 8 = 96 ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "height",
+              "text": {
+                "en": "He used the slanting side. Use the height: 12 × 6 = 72 cm².",
+                "ur": "اس نے ترچھا ضلع لیا۔ اونچائی لیں: 12 × 6 = 72"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The height goes straight up from the base, at a right angle.",
+                "ur": "جی ہاں! اونچائی قاعدے سے سیدھی اوپر، زاویہ قائمہ پر جاتی ہے۔"
+              }
+            },
+            {
+              "id": "half",
+              "text": {
+                "en": "He forgot to halve: 48 cm².",
+                "ur": "وہ آدھا کرنا بھول گیا: 48"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A parallelogram is not halved. The mistake is the slanting side: 12 × 6 = 72.",
+                "ur": "متوازی الاضلاع آدھا نہیں ہوتا۔ غلطی ترچھا ضلع ہے: 12 × 6 = 72"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "8 cm is the slanting side, not the height. 12 × 6 = 72 cm².",
+                "ur": "8 ترچھا ضلع ہے، اونچائی نہیں۔ 12 × 6 = 72"
+              },
+              "misconception_id": "slant_height"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_para",
+      "front": {
+        "en": "Area of a parallelogram?",
+        "ur": "متوازی الاضلاع کا رقبہ؟"
+      },
+      "back": {
+        "en": "Base × perpendicular height. Base 9, height 5: 45 cm².",
+        "ur": "قاعدہ × عمودی اونچائی۔ قاعدہ 9، اونچائی 5: 45 مربع سینٹی میٹر"
+      }
+    },
+    {
+      "id": "f_trap",
+      "front": {
+        "en": "Area of a trapezium?",
+        "ur": "ذوزنقہ کا رقبہ؟"
+      },
+      "back": {
+        "en": "½ × (sum of the parallel sides) × height. Sides 6 and 10, height 4: 32 cm².",
+        "ur": "½ × (متوازی اضلاع کا مجموعہ) × اونچائی۔ اضلاع 6 اور 10، اونچائی 4: 32 مربع سینٹی میٹر"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_cut",
+      "text": {
+        "en": "Draw a parallelogram on paper and measure its base and height. Cut a triangle off one end and stick it on the other end. Is it a rectangle now? Work out its area both ways.",
+        "ur": "کاغذ پر ایک متوازی الاضلاع بنائیں اور اس کا قاعدہ اور اونچائی ناپیں۔ ایک سرے سے مثلث کاٹ کر دوسرے سرے پر لگائیں۔ کیا اب یہ مستطیل ہے؟ دونوں طریقوں سے رقبہ نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Parallelogram",
+      "ur": "متوازی الاضلاع"
+    },
+    {
+      "en": "Trapezium",
+      "ur": "ذوزنقہ"
+    },
+    {
+      "en": "Parallel sides",
+      "ur": "متوازی اضلاع"
+    },
+    {
+      "en": "Base",
+      "ur": "قاعدہ"
+    },
+    {
+      "en": "Height",
+      "ur": "اونچائی (ارتفاع)"
+    },
+    {
+      "en": "Slanting side",
+      "ur": "ترچھا ضلع"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A parallelogram looks like a rectangle pushed sideways. Does pushing it change its area?",
+          "ur": "متوازی الاضلاع ایسی مستطیل لگتی ہے جسے ایک طرف دھکیل دیا گیا ہو۔ کیا دھکیلنے سے رقبہ بدلتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we find the area of a parallelogram and a trapezium, using rectangles and triangles. First, a quick check.",
+        "ur": "آج ہم مستطیل اور مثلث کی مدد سے متوازی الاضلاع اور ذوزنقہ کا رقبہ نکالیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.area_triangle",
+      "prompt": {
+        "en": "A triangle has a base of 10 cm and a height of 6 cm. What is its area in cm²?",
+        "ur": "ایک مثلث کا قاعدہ 10 اور اونچائی 6 سینٹی میٹر ہے۔ اس کا رقبہ کیا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "½ × base × height.",
+        "ur": "½ × قاعدہ × اونچائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 cm².",
+        "ur": "درست! 30 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "10 × 6 = 60, half is 30 cm².",
+        "ur": "10 × 6 = 60، آدھا 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "That is the rectangle. A triangle is half: 30.",
+            "ur": "یہ مستطیل ہے۔ مثلث آدھا ہے: 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_shapes",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Cut, move, and it's a rectangle!",
+          "ur": "کاٹیں، کھسکائیں، اور مستطیل بن گئی!"
+        }
+      },
+      "text": {
+        "en": "A parallelogram has two pairs of parallel sides. Cut a triangle off one end and move it to the other end: it becomes a rectangle. So area of a parallelogram = base × height. A trapezium has one pair of parallel sides. Two copies, one turned upside down, fit together into a parallelogram whose base is the two parallel sides added. So area of a trapezium = ½ × (sum of the parallel sides) × height. The height always goes straight across between the parallel sides, at a right angle. It is not the slanting side.",
+        "ur": "متوازی الاضلاع کے دو جوڑے متوازی اضلاع ہوتے ہیں۔ ایک سرے سے مثلث کاٹ کر دوسرے سرے پر لگائیں: یہ مستطیل بن جاتی ہے۔ اس لیے متوازی الاضلاع کا رقبہ = قاعدہ × اونچائی۔ ذوزنقہ کا ایک جوڑا متوازی اضلاع کا ہوتا ہے۔ اس کی دو کاپیاں، ایک الٹی کر کے، جوڑیں تو متوازی الاضلاع بنتا ہے جس کا قاعدہ دونوں متوازی اضلاع کا مجموعہ ہے۔ اس لیے ذوزنقہ کا رقبہ = ½ × (متوازی اضلاع کا مجموعہ) × اونچائی۔ اونچائی ہمیشہ متوازی اضلاع کے درمیان زاویہ قائمہ پر سیدھی ہوتی ہے۔ یہ ترچھا ضلع نہیں۔"
+      }
+    },
+    {
+      "id": "s4_para",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A parallelogram has a base of 9 cm, a height of 5 cm and slanting sides of 7 cm. What is its area in cm²?",
+        "ur": "ایک متوازی الاضلاع کا قاعدہ 9، اونچائی 5 اور ترچھے اضلاع 7 سینٹی میٹر ہیں۔ اس کا رقبہ کیا ہے؟"
+      },
+      "answer": 45,
+      "checker": "numeric",
+      "hint": {
+        "en": "Base × height. Use 5, not 7.",
+        "ur": "قاعدہ × اونچائی۔ 5 لیں، 7 نہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9 × 5 = 45 cm².",
+        "ur": "درست! 9 × 5 = 45 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "9 × 5 = 45 cm². The 7 cm sides are not needed.",
+        "ur": "9 × 5 = 45۔ 7 والے اضلاع نہیں چاہییں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 63,
+          "feedback": {
+            "en": "7 cm is the slanting side. Use the height: 9 × 5 = 45.",
+            "ur": "7 ترچھا ضلع ہے۔ اونچائی لیں: 9 × 5 = 45"
+          },
+          "misconception_id": "slant_height"
+        },
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "32 cm is the perimeter. Area: 9 × 5 = 45.",
+            "ur": "32 سینٹی میٹر احاطہ ہے۔ رقبہ: 9 × 5 = 45"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_missing_height",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A parallelogram-shaped field has an area of 48 m² and a base of 8 m. What is its height in m?",
+        "ur": "ایک متوازی الاضلاع شکل کے کھیت کا رقبہ 48 مربع میٹر اور قاعدہ 8 میٹر ہے۔ اس کی اونچائی کتنے میٹر ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Base × height = 48, so height = 48 ÷ 8.",
+        "ur": "قاعدہ × اونچائی = 48، تو اونچائی = 48 ÷ 8"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 m. Check: 8 × 6 = 48.",
+        "ur": "درست! 6 میٹر۔ جانچ: 8 × 6 = 48"
+      },
+      "feedback_wrong": {
+        "en": "48 ÷ 8 = 6 m.",
+        "ur": "48 ÷ 8 = 6 میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Check: 8 × 3 = 24, not 48. A parallelogram has no ½: 48 ÷ 8 = 6.",
+            "ur": "جانچیں: 8 × 3 = 24، نہ کہ 48۔ متوازی الاضلاع میں ½ نہیں: 48 ÷ 8 = 6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_two_copies",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two copies of a trapezium with parallel sides of 6 cm and 10 cm are joined, one upside down, to make a parallelogram. What is the base of the parallelogram in cm?",
+        "ur": "6 اور 10 سینٹی میٹر متوازی اضلاع والے ذوزنقہ کی دو کاپیاں، ایک الٹی کر کے، جوڑ کر متوازی الاضلاع بنایا گیا۔ اس متوازی الاضلاع کا قاعدہ کتنے سینٹی میٹر ہے؟"
+      },
+      "answer": 16,
+      "checker": "numeric",
+      "hint": {
+        "en": "Along the bottom, the short side of one copy meets the long side of the other.",
+        "ur": "نیچے ایک کاپی کا چھوٹا ضلع دوسری کے لمبے ضلع سے ملتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 + 10 = 16 cm. That is why we add the parallel sides.",
+        "ur": "درست! 6 + 10 = 16۔ اسی لیے ہم متوازی اضلاع جمع کرتے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "The base is 6 + 10 = 16 cm.",
+        "ur": "قاعدہ 6 + 10 = 16 سینٹی میٹر ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "The bottom has one side from each copy: 6 + 10 = 16.",
+            "ur": "نیچے ہر کاپی کا ایک ضلع ہے: 6 + 10 = 16"
+          },
+          "misconception_id": "one_parallel_side"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Add, don't take away: 6 + 10 = 16.",
+            "ur": "جمع کریں، تفریق نہیں: 6 + 10 = 16"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_trap",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "That trapezium has parallel sides of 6 cm and 10 cm, and a height of 4 cm. What is its area in cm²?",
+        "ur": "اس ذوزنقہ کے متوازی اضلاع 6 اور 10 سینٹی میٹر ہیں، اور اونچائی 4 سینٹی میٹر۔ اس کا رقبہ کیا ہے؟"
+      },
+      "answer": 32,
+      "checker": "numeric",
+      "hint": {
+        "en": "½ × (6 + 10) × 4.",
+        "ur": "½ × (6 + 10) × 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 16 × 4 = 64, half is 32 cm².",
+        "ur": "درست! 16 × 4 = 64، آدھا 32 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "6 + 10 = 16, 16 × 4 = 64, half is 32 cm².",
+        "ur": "6 + 10 = 16، 16 × 4 = 64، آدھا 32"
+      },
+      "common_wrong": [
+        {
+          "answer": 64,
+          "feedback": {
+            "en": "That is the whole parallelogram of two copies. One trapezium is half: 32.",
+            "ur": "یہ دو کاپیوں کا پورا متوازی الاضلاع ہے۔ ایک ذوزنقہ آدھا ہے: 32"
+          },
+          "misconception_id": "trap_forgets_half"
+        },
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "Use both parallel sides: ½ × (6 + 10) × 4 = 32.",
+            "ur": "دونوں متوازی اضلاع لیں: ½ × (6 + 10) × 4 = 32"
+          },
+          "misconception_id": "one_parallel_side"
+        }
+      ]
+    },
+    {
+      "id": "s8_trap_slant",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A trapezium-shaped garden has parallel sides of 5 m and 9 m, a height of 6 m, and slanting sides of 7 m. What is its area in m²?",
+        "ur": "ایک ذوزنقہ شکل کے باغ کے متوازی اضلاع 5 اور 9 میٹر، اونچائی 6 میٹر اور ترچھے اضلاع 7 میٹر ہیں۔ اس کا رقبہ کتنے مربع میٹر ہے؟"
+      },
+      "answer": 42,
+      "checker": "numeric",
+      "hint": {
+        "en": "½ × (5 + 9) × 6. The 7 m sides are not needed.",
+        "ur": "½ × (5 + 9) × 6۔ 7 میٹر والے اضلاع نہیں چاہییں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 14 × 6 = 84, half is 42 m².",
+        "ur": "درست! 14 × 6 = 84، آدھا 42 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "5 + 9 = 14, 14 × 6 = 84, half is 42 m².",
+        "ur": "5 + 9 = 14، 14 × 6 = 84، آدھا 42"
+      },
+      "common_wrong": [
+        {
+          "answer": 84,
+          "feedback": {
+            "en": "Halve it: 84 ÷ 2 = 42.",
+            "ur": "آدھا کریں: 84 ÷ 2 = 42"
+          },
+          "misconception_id": "trap_forgets_half"
+        },
+        {
+          "answer": 49,
+          "feedback": {
+            "en": "7 m is the slanting side. Use the height 6: ½ × 14 × 6 = 42.",
+            "ur": "7 ترچھا ضلع ہے۔ اونچائی 6 لیں: ½ × 14 × 6 = 42"
+          },
+          "misconception_id": "slant_height"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hina says a trapezium with parallel sides 8 cm and 12 cm and height 5 cm has an area of (8 + 12) × 5 = 100 cm². What went wrong?",
+        "ur": "حنا کہتی ہے 8 اور 12 سینٹی میٹر متوازی اضلاع اور 5 اونچائی والے ذوزنقہ کا رقبہ (8 + 12) × 5 = 100 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "half",
+          "text": {
+            "en": "She forgot to halve. ½ × 20 × 5 = 50 cm².",
+            "ur": "وہ آدھا کرنا بھول گئی۔ ½ × 20 × 5 = 50"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 100 is two trapeziums together; one is half.",
+            "ur": "جی ہاں! 100 دو ذوزنقہ مل کر ہیں؛ ایک آدھا ہے۔"
+          }
+        },
+        {
+          "id": "long_side",
+          "text": {
+            "en": "She should use only the longer side: 12 × 5 = 60 cm².",
+            "ur": "اسے صرف لمبا ضلع لینا چاہیے: 12 × 5 = 60"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Both parallel sides count. ½ × (8 + 12) × 5 = 50.",
+            "ur": "دونوں متوازی اضلاع گنے جاتے ہیں۔ ½ × (8 + 12) × 5 = 50"
+          },
+          "misconception_id": "one_parallel_side"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "(8 + 12) × 5 is two trapeziums. Halve it: 50 cm².",
+            "ur": "(8 + 12) × 5 دو ذوزنقہ ہیں۔ آدھا کریں: 50"
+          },
+          "misconception_id": "trap_forgets_half"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is a parallelogram's area just base × height, like a rectangle? Can you teach me?",
+          "ur": "متوازی الاضلاع کا رقبہ مستطیل کی طرح صرف قاعدہ × اونچائی کیوں ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the area of a parallelogram base × height?",
+        "ur": "اپنے الفاظ میں بتائیں: متوازی الاضلاع کا رقبہ قاعدہ × اونچائی کیوں ہوتا ہے؟"
+      },
+      "key_idea": "Cutting a triangle off one end and moving it to the other end turns the parallelogram into a rectangle with the same base and height, and nothing is lost or added.",
+      "levels": {
+        "got_it": "Explains cutting a triangle off one end and moving it to the other to make a rectangle of the same base and height, with the same area.",
+        "partly": "Says it becomes a rectangle, without saying how or why the area stays the same.",
+        "not_yet": "Gives no reason, or says it is just the rule."
+      },
+      "keywords": [
+        [
+          "rectangle",
+          "مستطیل",
+          "mustateel"
+        ],
+        [
+          "cut",
+          "move",
+          "triangle",
+          "کاٹ",
+          "مثلث",
+          "کھسکا"
+        ],
+        [
+          "same",
+          "height",
+          "برابر",
+          "وہی",
+          "اونچائی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The cut triangle moves across and a rectangle appears, with the same area.",
+          "ur": "بہت خوب! کٹا ہوا مثلث دوسری طرف جاتا ہے اور اتنے ہی رقبے کی مستطیل بن جاتی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how it becomes a rectangle, and why the area stays the same.",
+          "ur": "اچھی شروعات! اب بتائیں یہ مستطیل کیسے بنتی ہے، اور رقبہ وہی کیوں رہتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Imagine cutting a triangle off one end of the parallelogram and sliding it to the other end. What shape do you get?",
+          "ur": "سوچیں کہ متوازی الاضلاع کے ایک سرے سے مثلث کاٹ کر دوسرے سرے پر لگا دیں۔ کون سی شکل بنتی ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_tile",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A floor tile is a parallelogram with a base of 15 cm, a height of 8 cm and slanting sides of 10 cm. What is its area in cm²?",
+        "ur": "فرش کی ایک ٹائل متوازی الاضلاع ہے جس کا قاعدہ 15، اونچائی 8 اور ترچھے اضلاع 10 سینٹی میٹر ہیں۔ اس کا رقبہ کیا ہے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "Base × height. Which number is the height?",
+        "ur": "قاعدہ × اونچائی۔ اونچائی کون سا عدد ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 × 8 = 120 cm².",
+        "ur": "درست! 15 × 8 = 120 مربع سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "15 × 8 = 120 cm². The 10 cm sides are slanting.",
+        "ur": "15 × 8 = 120۔ 10 والے اضلاع ترچھے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "10 cm is the slanting side. Use the height: 15 × 8 = 120.",
+            "ur": "10 ترچھا ضلع ہے۔ اونچائی لیں: 15 × 8 = 120"
+          },
+          "misconception_id": "slant_height"
+        },
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "A parallelogram is not halved: 15 × 8 = 120.",
+            "ur": "متوازی الاضلاع آدھا نہیں ہوتا: 15 × 8 = 120"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Parallelograms and trapeziums done!",
+          "ur": "متوازی الاضلاع اور ذوزنقہ مکمل!"
+        }
+      },
+      "text": {
+        "en": "Area of a parallelogram = base × height. Area of a trapezium = ½ × (sum of the parallel sides) × height. The height is straight across at a right angle; never use the slanting side. To find a missing height of a parallelogram, divide the area by the base.",
+        "ur": "متوازی الاضلاع کا رقبہ = قاعدہ × اونچائی۔ ذوزنقہ کا رقبہ = ½ × (متوازی اضلاع کا مجموعہ) × اونچائی۔ اونچائی زاویہ قائمہ پر سیدھی ہوتی ہے؛ ترچھا ضلع کبھی نہ لیں۔ متوازی الاضلاع کی نامعلوم اونچائی کے لیے رقبے کو قاعدے سے تقسیم کریں۔"
+      },
+      "points": [
+        {
+          "en": "A parallelogram is a rectangle with one triangle moved.",
+          "ur": "متوازی الاضلاع ایک مستطیل ہے جس کا ایک مثلث کھسکا دیا گیا ہو۔"
+        },
+        {
+          "en": "A trapezium is half of a parallelogram: add both parallel sides, then halve.",
+          "ur": "ذوزنقہ متوازی الاضلاع کا آدھا ہے: دونوں متوازی اضلاع جمع کریں، پھر آدھا کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_para",
+      "type": "apply",
+      "skill": "maths.measurement.area_parallelogram",
+      "step": {
+        "id": "r_para",
+        "type": "number",
+        "prompt": {
+          "en": "Find the area of a parallelogram with base 11 m and height 4 m, in m².",
+          "ur": "11 میٹر قاعدے اور 4 میٹر اونچائی والے متوازی الاضلاع کا رقبہ معلوم کریں۔"
+        },
+        "answer": 44,
+        "checker": "numeric",
+        "hint": {
+          "en": "Base × height.",
+          "ur": "قاعدہ × اونچائی"
+        },
+        "feedback_correct": {
+          "en": "Right! 44 m².",
+          "ur": "درست! 44 مربع میٹر"
+        },
+        "feedback_wrong": {
+          "en": "11 × 4 = 44 m².",
+          "ur": "11 × 4 = 44"
+        },
+        "common_wrong": [
+          {
+            "answer": 22,
+            "feedback": {
+              "en": "A parallelogram is not halved: 11 × 4 = 44.",
+              "ur": "متوازی الاضلاع آدھا نہیں ہوتا: 11 × 4 = 44"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_trap",
+      "type": "apply",
+      "skill": "maths.measurement.area_parallelogram",
+      "step": {
+        "id": "r_trap",
+        "type": "number",
+        "prompt": {
+          "en": "Find the area of a trapezium with parallel sides 3 cm and 7 cm and height 8 cm, in cm².",
+          "ur": "3 اور 7 سینٹی میٹر متوازی اضلاع اور 8 سینٹی میٹر اونچائی والے ذوزنقہ کا رقبہ معلوم کریں۔"
+        },
+        "answer": 40,
+        "checker": "numeric",
+        "hint": {
+          "en": "½ × (3 + 7) × 8.",
+          "ur": "½ × (3 + 7) × 8"
+        },
+        "feedback_correct": {
+          "en": "Right! 40 cm².",
+          "ur": "درست! 40 مربع سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "3 + 7 = 10, 10 × 8 = 80, half is 40.",
+          "ur": "3 + 7 = 10، 10 × 8 = 80، آدھا 40"
+        },
+        "common_wrong": [
+          {
+            "answer": 80,
+            "feedback": {
+              "en": "Halve it: 40.",
+              "ur": "آدھا کریں: 40"
+            },
+            "misconception_id": "trap_forgets_half"
+          },
+          {
+            "answer": 56,
+            "feedback": {
+              "en": "Use both parallel sides: ½ × (3 + 7) × 8 = 40.",
+              "ur": "دونوں متوازی اضلاع لیں: ½ × (3 + 7) × 8 = 40"
+            },
+            "misconception_id": "one_parallel_side"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh to fill a gap in the Perimeter and Area unit. No textbook text or exercises were used.",
+    "Lessons have no pictures, so every shape is described in words, giving the base, the height and the slanting side so the child must choose the height. Drawing the shapes on paper or cutting them out helps.",
+    "The parallelogram is shown as a rectangle with a triangle moved from one end to the other; the trapezium as half of a parallelogram made from two copies (s6).",
+    "Urdu terms to check: متوازی الاضلاع (parallelogram), ذوزنقہ (trapezium), متوازی اضلاع (parallel sides), قاعدہ (base), اونچائی / ارتفاع (height), ترچھا ضلع (slanting side), زاویہ قائمہ (right angle).",
+    "The numbers were worked out in content/sources/g6-maths-08/parallelogram_trapezium.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

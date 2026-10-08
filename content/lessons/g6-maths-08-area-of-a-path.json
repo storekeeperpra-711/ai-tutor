@@ -1,0 +1,776 @@
+{
+  "id": "g6-maths-08-area-of-a-path",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the area of a path of equal width around or inside a rectangle, by taking the inner area away from the outer area.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 8: Surface Area and Volume"
+    }
+  ],
+  "skills": [
+    "maths.measurement.area_path"
+  ],
+  "title": {
+    "en": "Area of a path",
+    "ur": "راستے کا رقبہ"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.measurement.compound_area"
+    },
+    {
+      "skill": "maths.measurement.area_rectangle"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "width_once",
+      "description": "Adds the path width only once to the length and breadth, instead of on both sides."
+    },
+    {
+      "id": "outer_only",
+      "description": "Finds the area of the outer rectangle and forgets to take away the inner rectangle."
+    },
+    {
+      "id": "subtracts_lengths",
+      "description": "Subtracts the lengths and breadths and multiplies the differences, instead of subtracting the areas."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.measurement.area_path": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.measurement.area_path": [
+      {
+        "id": "qb_method",
+        "type": "recall",
+        "step": {
+          "id": "qb_method",
+          "type": "choice",
+          "prompt": {
+            "en": "How do you find the area of a path that runs round a rectangular field?",
+            "ur": "مستطیل نما میدان کے گرد بنے راستے کا رقبہ کیسے نکالیں؟"
+          },
+          "options": [
+            {
+              "id": "outer_minus_inner",
+              "text": {
+                "en": "Outer rectangle area take away the field's area.",
+                "ur": "باہر کی مستطیل کے رقبے میں سے میدان کا رقبہ گھٹائیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! What is left is the path.",
+                "ur": "جی ہاں! جو بچتا ہے وہی راستہ ہے۔"
+              }
+            },
+            {
+              "id": "outer_only",
+              "text": {
+                "en": "Find the area of the outer rectangle.",
+                "ur": "باہر کی مستطیل کا رقبہ نکالیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That includes the field too. Take the field's area away.",
+                "ur": "اس میں میدان بھی شامل ہے۔ میدان کا رقبہ گھٹائیں۔"
+              },
+              "misconception_id": "outer_only"
+            },
+            {
+              "id": "lengths",
+              "text": {
+                "en": "Take the lengths away, then multiply.",
+                "ur": "لمبائیاں گھٹا کر ضرب دیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Take away areas, not lengths: outer area − inner area.",
+                "ur": "لمبائیاں نہیں، رقبے گھٹائیں: باہر کا رقبہ − اندر کا رقبہ۔"
+              },
+              "misconception_id": "subtracts_lengths"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A field is 10 m long and 8 m broad. A path 1 m wide runs round the outside. What is the area of the path in m²?",
+            "ur": "ایک میدان 10 میٹر لمبا اور 8 میٹر چوڑا ہے۔ اس کے باہر چاروں طرف 1 میٹر چوڑا راستہ ہے۔ راستے کا رقبہ مربع میٹر میں کتنا ہے؟"
+          },
+          "answer": 40,
+          "checker": "numeric",
+          "hint": {
+            "en": "Outer rectangle is 12 m by 10 m.",
+            "ur": "باہر کی مستطیل 12 ضرب 10 میٹر ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 120 − 80 = 40 m².",
+            "ur": "درست! 120 − 80 = 40 مربع میٹر"
+          },
+          "feedback_wrong": {
+            "en": "Outer 12 × 10 = 120, field 10 × 8 = 80, so 120 − 80 = 40 m².",
+            "ur": "باہر 12 × 10 = 120، میدان 10 × 8 = 80، تو 120 − 80 = 40"
+          },
+          "common_wrong": [
+            {
+              "answer": 120,
+              "feedback": {
+                "en": "That includes the field. Take away 80: 40.",
+                "ur": "اس میں میدان شامل ہے۔ 80 گھٹائیں: 40"
+              },
+              "misconception_id": "outer_only"
+            },
+            {
+              "answer": 19,
+              "feedback": {
+                "en": "The path is on both sides, so add 2 m: 12 by 10. 120 − 80 = 40.",
+                "ur": "راستہ دونوں طرف ہے، 2 میٹر جمع کریں: 12 ضرب 10۔ 120 − 80 = 40"
+              },
+              "misconception_id": "width_once"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A pool is 12 m by 8 m with a 2 m path round it, so the outside is 16 m by 12 m. Sana says the path area is (16 − 12) × (12 − 8) = 16 m². What went wrong?",
+            "ur": "ایک تالاب 12 ضرب 8 میٹر ہے اور گرد 2 میٹر کا راستہ ہے، تو باہر سے 16 ضرب 12 میٹر ہے۔ ثنا کہتی ہے راستے کا رقبہ (16 − 12) × (12 − 8) = 16 مربع میٹر ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "areas",
+              "text": {
+                "en": "She took away lengths. Take away areas: 192 − 96 = 96 m².",
+                "ur": "اس نے لمبائیاں گھٹائیں۔ رقبے گھٹائیں: 192 − 96 = 96 مربع میٹر"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Find both areas first, then subtract.",
+                "ur": "جی ہاں! پہلے دونوں رقبے نکالیں، پھر گھٹائیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "16 m² is far too small for a path round a pool. 192 − 96 = 96 m².",
+                "ur": "تالاب کے گرد راستے کے لیے 16 مربع میٹر بہت کم ہے۔ 192 − 96 = 96"
+              },
+              "misconception_id": "subtracts_lengths"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_outer",
+      "front": {
+        "en": "Path 2 m wide round a 20 m long field: outer length?",
+        "ur": "20 میٹر لمبے میدان کے گرد 2 میٹر کا راستہ: باہر کی لمبائی؟"
+      },
+      "back": {
+        "en": "20 + 2 × 2 = 24 m. The path is on both ends.",
+        "ur": "20 + 2 × 2 = 24 میٹر۔ راستہ دونوں سروں پر ہے۔"
+      }
+    },
+    {
+      "id": "f_path",
+      "front": {
+        "en": "Area of a path?",
+        "ur": "راستے کا رقبہ؟"
+      },
+      "back": {
+        "en": "Outer area − inner area: 24 × 16 − 20 × 12 = 144.",
+        "ur": "باہر کا رقبہ − اندر کا رقبہ: 24 × 16 − 20 × 12 = 144"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_border",
+      "text": {
+        "en": "Find a rectangular mat, table cloth or carpet at home that has a border of the same width all round. Measure the whole thing and the middle part, and work out the area of the border.",
+        "ur": "گھر میں کوئی مستطیل چٹائی، میز پوش یا قالین ڈھونڈیں جس کے چاروں طرف ایک جیسی چوڑائی کا کنارا ہو۔ پوری چیز اور درمیانی حصہ ناپیں، اور کنارے کا رقبہ نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Path",
+      "ur": "راستہ"
+    },
+    {
+      "en": "Width",
+      "ur": "چوڑائی"
+    },
+    {
+      "en": "Outer rectangle",
+      "ur": "باہر کی مستطیل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Our school field has a brick path all round it. How much ground does the path cover?",
+          "ur": "ہمارے سکول کے میدان کے چاروں طرف اینٹوں کا راستہ ہے۔ راستہ کتنی زمین گھیرتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "A path often runs round a field, a garden or a pool. Today we find its area. First, a quick area check.",
+        "ur": "اکثر میدان، باغیچے یا تالاب کے گرد راستہ بنا ہوتا ہے۔ آج ہم اس کا رقبہ نکالیں گے۔ پہلے رقبے کا ایک سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.measurement.area_rectangle",
+      "prompt": {
+        "en": "What is the area of a rectangle 9 m by 6 m, in m²?",
+        "ur": "9 ضرب 6 میٹر مستطیل کا رقبہ مربع میٹر میں کیا ہے؟"
+      },
+      "answer": 54,
+      "checker": "numeric",
+      "hint": {
+        "en": "Length × breadth.",
+        "ur": "لمبائی × چوڑائی"
+      },
+      "feedback_correct": {
+        "en": "Right! 54 m².",
+        "ur": "درست! 54 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "9 × 6 = 54 m².",
+        "ur": "9 × 6 = 54"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 m is the perimeter. Area: 9 × 6 = 54.",
+            "ur": "30 میٹر احاطہ ہے۔ رقبہ: 9 × 6 = 54"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_outer_inner",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "The path is on both sides, so add its width twice!",
+          "ur": "راستہ دونوں طرف ہے، اس لیے اس کی چوڑائی دو بار جمع کریں!"
+        }
+      },
+      "text": {
+        "en": "Picture a field with a path of the same width all round it. Field and path together make a bigger outer rectangle. Outer length = length + 2 × width of path. Outer breadth = breadth + 2 × width of path. Area of path = outer area − field area.",
+        "ur": "ایک میدان سوچیں جس کے چاروں طرف ایک جیسی چوڑائی کا راستہ ہے۔ میدان اور راستہ مل کر باہر ایک بڑی مستطیل بناتے ہیں۔ باہر کی لمبائی = لمبائی + 2 × راستے کی چوڑائی۔ باہر کی چوڑائی = چوڑائی + 2 × راستے کی چوڑائی۔ راستے کا رقبہ = باہر کا رقبہ − میدان کا رقبہ۔"
+      }
+    },
+    {
+      "id": "s4_outer_length",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Our school field is 20 m long and 12 m broad. A path 2 m wide runs round the outside. What is the outer length, in m?",
+        "ur": "ہمارا سکول کا میدان 20 میٹر لمبا اور 12 میٹر چوڑا ہے۔ اس کے باہر چاروں طرف 2 میٹر چوڑا راستہ ہے۔ باہر کی لمبائی کتنے میٹر ہے؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "The path adds 2 m at each end.",
+        "ur": "راستہ ہر سرے پر 2 میٹر بڑھاتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 + 2 + 2 = 24 m.",
+        "ur": "درست! 20 + 2 + 2 = 24 میٹر"
+      },
+      "feedback_wrong": {
+        "en": "The path is at both ends: 20 + 2 × 2 = 24 m.",
+        "ur": "راستہ دونوں سروں پر ہے: 20 + 2 × 2 = 24 میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 22,
+          "feedback": {
+            "en": "The path is at both ends, so add 2 twice: 24.",
+            "ur": "راستہ دونوں سروں پر ہے، 2 دو بار جمع کریں: 24"
+          },
+          "misconception_id": "width_once"
+        }
+      ]
+    },
+    {
+      "id": "s5_outer_area",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The outer breadth is 12 + 2 × 2 = 16 m and the outer length is 24 m. What is the area of the outer rectangle, in m²?",
+        "ur": "باہر کی چوڑائی 12 + 2 × 2 = 16 میٹر اور باہر کی لمبائی 24 میٹر ہے۔ باہر کی مستطیل کا رقبہ مربع میٹر میں کتنا ہے؟"
+      },
+      "answer": 384,
+      "checker": "numeric",
+      "hint": {
+        "en": "24 × 16.",
+        "ur": "24 × 16"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 × 16 = 384 m².",
+        "ur": "درست! 24 × 16 = 384 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "24 × 16 = 384 m².",
+        "ur": "24 × 16 = 384"
+      },
+      "common_wrong": [
+        {
+          "answer": 308,
+          "feedback": {
+            "en": "That uses 22 by 14. The path is on both sides: 24 × 16 = 384.",
+            "ur": "یہ 22 ضرب 14 ہے۔ راستہ دونوں طرف ہے: 24 × 16 = 384"
+          },
+          "misconception_id": "width_once"
+        },
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "That is the perimeter. Area: 24 × 16 = 384.",
+            "ur": "یہ احاطہ ہے۔ رقبہ: 24 × 16 = 384"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_path_area",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The outer area is 384 m² and the field is 20 m by 12 m. What is the area of the path, in m²?",
+        "ur": "باہر کا رقبہ 384 مربع میٹر ہے اور میدان 20 ضرب 12 میٹر ہے۔ راستے کا رقبہ مربع میٹر میں کتنا ہے؟"
+      },
+      "answer": 144,
+      "checker": "numeric",
+      "hint": {
+        "en": "Outer area take away the field's area.",
+        "ur": "باہر کا رقبہ منفی میدان کا رقبہ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 384 − 240 = 144 m².",
+        "ur": "درست! 384 − 240 = 144 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Field 20 × 12 = 240, so path 384 − 240 = 144 m².",
+        "ur": "میدان 20 × 12 = 240، تو راستہ 384 − 240 = 144"
+      },
+      "common_wrong": [
+        {
+          "answer": 384,
+          "feedback": {
+            "en": "That includes the field. Take away 240: 144.",
+            "ur": "اس میں میدان شامل ہے۔ 240 گھٹائیں: 144"
+          },
+          "misconception_id": "outer_only"
+        },
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "Take away areas, not lengths: 384 − 240 = 144.",
+            "ur": "لمبائیاں نہیں، رقبے گھٹائیں: 384 − 240 = 144"
+          },
+          "misconception_id": "subtracts_lengths"
+        }
+      ]
+    },
+    {
+      "id": "s7_garden",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Amna's garden is 15 m long and 10 m broad. A path 1 m wide runs round the outside. What is the area of the path, in m²?",
+        "ur": "آمنہ کا باغیچہ 15 میٹر لمبا اور 10 میٹر چوڑا ہے۔ اس کے باہر چاروں طرف 1 میٹر چوڑا راستہ ہے۔ راستے کا رقبہ مربع میٹر میں کتنا ہے؟"
+      },
+      "answer": 54,
+      "checker": "numeric",
+      "hint": {
+        "en": "Outer rectangle is 17 m by 12 m.",
+        "ur": "باہر کی مستطیل 17 ضرب 12 میٹر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 204 − 150 = 54 m².",
+        "ur": "درست! 204 − 150 = 54 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Outer 17 × 12 = 204, garden 15 × 10 = 150, so 54 m².",
+        "ur": "باہر 17 × 12 = 204، باغیچہ 15 × 10 = 150، تو 54"
+      },
+      "common_wrong": [
+        {
+          "answer": 204,
+          "feedback": {
+            "en": "That includes the garden. Take away 150: 54.",
+            "ur": "اس میں باغیچہ شامل ہے۔ 150 گھٹائیں: 54"
+          },
+          "misconception_id": "outer_only"
+        },
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "Add 1 m on both sides: 17 by 12. 204 − 150 = 54.",
+            "ur": "دونوں طرف 1 میٹر جمع کریں: 17 ضرب 12۔ 204 − 150 = 54"
+          },
+          "misconception_id": "width_once"
+        }
+      ]
+    },
+    {
+      "id": "s8_cost",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A pool is 10 m by 6 m with a path 2 m wide round it, so the path area is 140 − 60 = 80 m². Tiles cost Rs 250 per m². What does tiling the path cost, in rupees?",
+        "ur": "ایک تالاب 10 ضرب 6 میٹر ہے اور گرد 2 میٹر چوڑا راستہ ہے، تو راستے کا رقبہ 140 − 60 = 80 مربع میٹر ہے۔ ٹائلیں 250 روپے فی مربع میٹر ہیں۔ راستے پر ٹائلیں لگانے کا خرچ کتنے روپے ہے؟"
+      },
+      "answer": 20000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Path area × rupees per m².",
+        "ur": "راستے کا رقبہ × روپے فی مربع میٹر"
+      },
+      "feedback_correct": {
+        "en": "Right! 80 × 250 = Rs 20000.",
+        "ur": "درست! 80 × 250 = 20000 روپے"
+      },
+      "feedback_wrong": {
+        "en": "80 × 250 = 20000 rupees.",
+        "ur": "80 × 250 = 20000 روپے"
+      },
+      "common_wrong": [
+        {
+          "answer": 35000,
+          "feedback": {
+            "en": "That tiles the pool too. Use the path only: 80 × 250 = 20000.",
+            "ur": "اس میں تالاب بھی شامل ہے۔ صرف راستہ: 80 × 250 = 20000"
+          },
+          "misconception_id": "outer_only"
+        },
+        {
+          "answer": 330,
+          "feedback": {
+            "en": "Multiply, don't add: 80 × 250 = 20000.",
+            "ur": "جمع نہیں، ضرب دیں: 80 × 250 = 20000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A school ground is 30 m by 20 m with a path 3 m wide round the outside. Bilal says the outer rectangle is 33 m by 23 m. What went wrong?",
+        "ur": "ایک سکول کا میدان 30 ضرب 20 میٹر ہے اور باہر چاروں طرف 3 میٹر چوڑا راستہ ہے۔ بلال کہتا ہے باہر کی مستطیل 33 ضرب 23 میٹر ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "both_sides",
+          "text": {
+            "en": "The path is on both sides: it should be 36 m by 26 m.",
+            "ur": "راستہ دونوں طرف ہے: یہ 36 ضرب 26 میٹر ہونا چاہیے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Add 3 m at each end: path area 936 − 600 = 336 m².",
+            "ur": "جی ہاں! ہر سرے پر 3 میٹر جمع کریں: راستے کا رقبہ 936 − 600 = 336"
+          }
+        },
+        {
+          "id": "subtract",
+          "text": {
+            "en": "He should take 3 m away: 27 m by 17 m.",
+            "ur": "اسے 3 میٹر گھٹانے چاہییں: 27 ضرب 17"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The path is outside, so the outer rectangle is bigger: 36 m by 26 m.",
+            "ur": "راستہ باہر ہے، اس لیے باہر کی مستطیل بڑی ہے: 36 ضرب 26"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "He added the width on one side only. It is 36 m by 26 m.",
+            "ur": "اس نے چوڑائی صرف ایک طرف جمع کی۔ یہ 36 ضرب 26 ہے۔"
+          },
+          "misconception_id": "width_once"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we add the path's width two times, not one? Can you teach me?",
+          "ur": "ہم راستے کی چوڑائی ایک بار نہیں، دو بار کیوں جمع کرتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the outer length the field's length plus two times the path's width?",
+        "ur": "اپنے الفاظ میں بتائیں: باہر کی لمبائی میدان کی لمبائی جمع راستے کی دو گنا چوڑائی کیوں ہوتی ہے؟"
+      },
+      "key_idea": "The path goes all the way round, so walking along the outer length you cross the path at one end, then the field, then the path again at the other end. That is the width twice.",
+      "levels": {
+        "got_it": "Explains that the path lies at both ends (both sides), so its width is added once for each end.",
+        "partly": "Says the path is on both sides without linking it to adding the width twice.",
+        "not_yet": "Gives no reason, or thinks the width is added once."
+      },
+      "keywords": [
+        [
+          "both",
+          "ends",
+          "sides",
+          "دونوں",
+          "طرف"
+        ],
+        [
+          "twice",
+          "two",
+          "دو"
+        ],
+        [
+          "width",
+          "path",
+          "چوڑائی",
+          "راستہ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The path is at both ends, so its width counts twice.",
+          "ur": "بہت خوب! راستہ دونوں سروں پر ہے، اس لیے چوڑائی دو بار گنی جاتی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how that changes the outer length.",
+          "ur": "اچھی شروعات! اب بتائیں اس سے باہر کی لمبائی کیسے بدلتی ہے۔"
+        },
+        "not_yet": {
+          "en": "Imagine walking across the outer rectangle: how many times do you cross the path?",
+          "ur": "باہر کی مستطیل کے آر پار چلنا سوچیں: آپ کتنی بار راستہ پار کرتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_inside_path",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A park in Lahore is 40 m long and 30 m broad. A path 2 m wide runs inside it, along all four edges. The grass inside is 36 m by 26 m. What is the area of the path, in m²?",
+        "ur": "لاہور کا ایک پارک 40 میٹر لمبا اور 30 میٹر چوڑا ہے۔ اس کے اندر چاروں کناروں کے ساتھ 2 میٹر چوڑا راستہ ہے۔ اندر کی گھاس 36 ضرب 26 میٹر ہے۔ راستے کا رقبہ مربع میٹر میں کتنا ہے؟"
+      },
+      "answer": 264,
+      "checker": "numeric",
+      "hint": {
+        "en": "Whole park take away the grass inside.",
+        "ur": "پورا پارک منفی اندر کی گھاس۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1200 − 936 = 264 m².",
+        "ur": "درست! 1200 − 936 = 264 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Park 40 × 30 = 1200, grass 36 × 26 = 936, so 264 m².",
+        "ur": "پارک 40 × 30 = 1200، گھاس 36 × 26 = 936، تو 264"
+      },
+      "common_wrong": [
+        {
+          "answer": 1200,
+          "feedback": {
+            "en": "That is the whole park. Take away the grass: 264.",
+            "ur": "یہ پورا پارک ہے۔ گھاس گھٹائیں: 264"
+          },
+          "misconception_id": "outer_only"
+        },
+        {
+          "answer": 296,
+          "feedback": {
+            "en": "This path is inside, so the grass is smaller: 36 by 26. 1200 − 936 = 264.",
+            "ur": "یہ راستہ اندر ہے، اس لیے گھاس چھوٹی ہے: 36 ضرب 26۔ 1200 − 936 = 264"
+          }
+        },
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "Take away areas, not lengths: 1200 − 936 = 264.",
+            "ur": "لمبائیاں نہیں، رقبے گھٹائیں: 1200 − 936 = 264"
+          },
+          "misconception_id": "subtracts_lengths"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can work out any path, outside or inside!",
+          "ur": "اب آپ کوئی بھی راستہ نکال سکتے ہیں، باہر ہو یا اندر!"
+        }
+      },
+      "text": {
+        "en": "Area of a path = outer area − inner area. For a path outside, add 2 × width to the length and to the breadth to get the outer rectangle. For a path inside, take 2 × width away to get the inner rectangle. Cost = path area × price per m².",
+        "ur": "راستے کا رقبہ = باہر کا رقبہ − اندر کا رقبہ۔ باہر والے راستے کے لیے لمبائی اور چوڑائی میں 2 × راستے کی چوڑائی جمع کریں۔ اندر والے راستے کے لیے 2 × چوڑائی گھٹا کر اندر کی مستطیل بنائیں۔ خرچ = راستے کا رقبہ × قیمت فی مربع میٹر۔"
+      },
+      "points": [
+        {
+          "en": "The path is on both sides: use 2 × width.",
+          "ur": "راستہ دونوں طرف ہے: 2 × چوڑائی لیں۔"
+        },
+        {
+          "en": "Take away areas, not lengths.",
+          "ur": "لمبائیاں نہیں، رقبے گھٹائیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_path",
+      "type": "apply",
+      "skill": "maths.measurement.area_path",
+      "step": {
+        "id": "r_path",
+        "type": "number",
+        "prompt": {
+          "en": "A garden is 12 m by 9 m with a path 1 m wide round the outside. What is the area of the path, in m²?",
+          "ur": "ایک باغیچہ 12 ضرب 9 میٹر ہے اور باہر چاروں طرف 1 میٹر چوڑا راستہ ہے۔ راستے کا رقبہ مربع میٹر میں کتنا ہے؟"
+        },
+        "answer": 46,
+        "checker": "numeric",
+        "hint": {
+          "en": "Outer rectangle is 14 m by 11 m.",
+          "ur": "باہر کی مستطیل 14 ضرب 11 میٹر ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 154 − 108 = 46 m².",
+          "ur": "درست! 154 − 108 = 46 مربع میٹر"
+        },
+        "feedback_wrong": {
+          "en": "Outer 14 × 11 = 154, garden 12 × 9 = 108, so 46 m².",
+          "ur": "باہر 14 × 11 = 154، باغیچہ 12 × 9 = 108، تو 46"
+        },
+        "common_wrong": [
+          {
+            "answer": 154,
+            "feedback": {
+              "en": "That includes the garden. Take away 108: 46.",
+              "ur": "اس میں باغیچہ شامل ہے۔ 108 گھٹائیں: 46"
+            },
+            "misconception_id": "outer_only"
+          },
+          {
+            "answer": 22,
+            "feedback": {
+              "en": "Add 1 m on both sides: 14 by 11. 154 − 108 = 46.",
+              "ur": "دونوں طرف 1 میٹر جمع کریں: 14 ضرب 11۔ 154 − 108 = 46"
+            },
+            "misconception_id": "width_once"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_outer",
+      "type": "recall",
+      "skill": "maths.measurement.area_path",
+      "step": {
+        "id": "r_outer",
+        "type": "number",
+        "prompt": {
+          "en": "A flower bed is 6 m long. A path 1 m wide runs round the outside. What is the outer length, in m?",
+          "ur": "ایک کیاری 6 میٹر لمبی ہے۔ اس کے باہر چاروں طرف 1 میٹر چوڑا راستہ ہے۔ باہر کی لمبائی کتنے میٹر ہے؟"
+        },
+        "answer": 8,
+        "checker": "numeric",
+        "hint": {
+          "en": "Add the width at both ends.",
+          "ur": "دونوں سروں پر چوڑائی جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 + 1 + 1 = 8 m.",
+          "ur": "درست! 6 + 1 + 1 = 8 میٹر"
+        },
+        "feedback_wrong": {
+          "en": "6 + 2 × 1 = 8 m.",
+          "ur": "6 + 2 × 1 = 8 میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "The path is at both ends: 6 + 2 = 8.",
+              "ur": "راستہ دونوں سروں پر ہے: 6 + 2 = 8"
+            },
+            "misconception_id": "width_once"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Perimeter and Area unit (a gap lesson matching the book chapter on area). No textbook text or exercises were used.",
+    "The lesson has no pictures: fields, paths and pools are described in words. Ask pupils to draw each one on a slate or the board, the field as a rectangle and the path as a band all round it, and to mark the path width at both ends.",
+    "Step s11 has the path inside the park's edge; point out that here the width is taken away twice to get the inner rectangle.",
+    "Urdu terms to check: راستہ (path), چوڑائی (width / breadth), باہر کی مستطیل (outer rectangle).",
+    "The numbers were worked out in content/sources/g6-maths-08/area_of_path.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
