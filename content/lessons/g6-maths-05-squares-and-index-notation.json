@@ -1,0 +1,832 @@
+{
+  "id": "g6-maths-05-squares-and-index-notation",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find squares of numbers, use index notation (base and index), work out powers, and write a prime factorisation in index form.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples"
+    }
+  ],
+  "skills": [
+    "maths.factors.index_notation"
+  ],
+  "title": {
+    "en": "Squares and index notation",
+    "ur": "مربع اور قوت کی شکل"
+  },
+  "estimated_minutes": 14,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.primes"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "times_index",
+      "description": "Multiplies the base by the index: 5² = 5 × 2 = 10."
+    },
+    {
+      "id": "repeated_add",
+      "description": "Adds the base instead of multiplying it: 2³ = 2 + 2 + 2 = 6."
+    },
+    {
+      "id": "swap_base_index",
+      "description": "Counts the base instead of how many times it is multiplied: writes 2 × 2 × 2 × 2 × 2 as 5²."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.index_notation": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.index_notation": [
+      {
+        "id": "qb_index_means",
+        "type": "recall",
+        "step": {
+          "id": "qb_index_means",
+          "type": "choice",
+          "prompt": {
+            "en": "In 4³, what does the small 3 tell you?",
+            "ur": "4³ میں چھوٹا 3 کیا بتاتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "times",
+              "text": {
+                "en": "Multiply 4 by itself, using three 4s: 4 × 4 × 4.",
+                "ur": "4 کو خود سے ضرب دیں، تین 4 لے کر: 4 × 4 × 4"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The index 3 says how many 4s are multiplied.",
+                "ur": "جی ہاں! قوت 3 بتاتی ہے کہ کتنے 4 ضرب ہو رہے ہیں۔"
+              }
+            },
+            {
+              "id": "mult3",
+              "text": {
+                "en": "Multiply 4 by 3.",
+                "ur": "4 کو 3 سے ضرب دیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "4 × 3 = 12, but 4³ = 4 × 4 × 4 = 64.",
+                "ur": "4 × 3 = 12، مگر 4³ = 4 × 4 × 4 = 64"
+              },
+              "misconception_id": "times_index"
+            },
+            {
+              "id": "add3",
+              "text": {
+                "en": "Add three 4s: 4 + 4 + 4.",
+                "ur": "تین 4 جمع کریں: 4 + 4 + 4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Index means multiply, not add: 4 × 4 × 4 = 64.",
+                "ur": "قوت کا مطلب ضرب ہے، جمع نہیں: 4 × 4 × 4 = 64"
+              },
+              "misconception_id": "repeated_add"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_five_cubed",
+        "type": "apply",
+        "step": {
+          "id": "qb_five_cubed",
+          "type": "number",
+          "prompt": {
+            "en": "Work out 5³.",
+            "ur": "5³ معلوم کریں۔"
+          },
+          "answer": 125,
+          "checker": "numeric",
+          "hint": {
+            "en": "5³ = 5 × 5 × 5. Start with 5 × 5 = 25.",
+            "ur": "5³ = 5 × 5 × 5۔ پہلے 5 × 5 = 25"
+          },
+          "feedback_correct": {
+            "en": "Right! 5 × 5 × 5 = 125.",
+            "ur": "درست! 5 × 5 × 5 = 125"
+          },
+          "feedback_wrong": {
+            "en": "5 × 5 = 25, then 25 × 5 = 125.",
+            "ur": "5 × 5 = 25، پھر 25 × 5 = 125"
+          },
+          "common_wrong": [
+            {
+              "answer": 15,
+              "feedback": {
+                "en": "That is 5 × 3. Multiply three 5s: 5 × 5 × 5 = 125.",
+                "ur": "یہ 5 × 3 ہے۔ تین 5 ضرب دیں: 5 × 5 × 5 = 125"
+              },
+              "misconception_id": "times_index"
+            },
+            {
+              "answer": 25,
+              "feedback": {
+                "en": "That is 5², only two 5s. 5³ needs three: 25 × 5 = 125.",
+                "ur": "یہ 5² ہے، صرف دو 5۔ 5³ میں تین چاہییں: 25 × 5 = 125"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal wrote 3 × 3 × 3 × 3 as 4³. What went wrong?",
+            "ur": "بلال نے 3 × 3 × 3 × 3 کو 4³ لکھا۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "swap",
+              "text": {
+                "en": "He swapped them. The base is 3 and there are four 3s, so it is 3⁴.",
+                "ur": "اس نے الٹ دیا۔ اساس 3 ہے اور چار 3 ہیں، اس لیے یہ 3⁴ ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Base = the number multiplied, index = how many times.",
+                "ur": "جی ہاں! اساس = جو عدد ضرب ہو رہا ہے، قوت = کتنی بار۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 4³ and 3⁴ are the same.",
+                "ur": "کوئی غلطی نہیں۔ 4³ اور 3⁴ ایک ہی ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check: 4³ = 64 but 3⁴ = 81. They are different.",
+                "ur": "دیکھیں: 4³ = 64 مگر 3⁴ = 81۔ یہ مختلف ہیں۔"
+              },
+              "misconception_id": "swap_base_index"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_square",
+      "front": {
+        "en": "What is a square number?",
+        "ur": "مربع عدد کیا ہے؟"
+      },
+      "back": {
+        "en": "A number times itself, like 7² = 7 × 7 = 49. Its dots make a square: 1, 4, 9, 16, 25, 36 …",
+        "ur": "کسی عدد کو خود سے ضرب دیں، جیسے 7² = 7 × 7 = 49۔ اس کے نقطے مربع بناتے ہیں: 1، 4، 9، 16، 25، 36 …"
+      }
+    },
+    {
+      "id": "f_index",
+      "front": {
+        "en": "In 2³, which is the base and which is the index?",
+        "ur": "2³ میں اساس کون سا ہے اور قوت کون سی؟"
+      },
+      "back": {
+        "en": "Base 2, index 3: 2³ = 2 × 2 × 2 = 8.",
+        "ur": "اساس 2، قوت 3: 2³ = 2 × 2 × 2 = 8"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_dots",
+      "text": {
+        "en": "Use bottle caps or buttons. Make squares: 1 by 1, 2 by 2, 3 by 3, up to 6 by 6. Count the caps in each square and write it like 3² = 9. Which numbers did you get?",
+        "ur": "بوتل کے ڈھکن یا بٹن لیں۔ مربع بنائیں: 1 ضرب 1، 2 ضرب 2، 3 ضرب 3، 6 ضرب 6 تک۔ ہر مربع کے ڈھکن گنیں اور یوں لکھیں: 3² = 9۔ آپ کو کون سے اعداد ملے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Square number",
+      "ur": "مربع عدد"
+    },
+    {
+      "en": "Index (power)",
+      "ur": "قوت"
+    },
+    {
+      "en": "Base",
+      "ur": "اساس"
+    },
+    {
+      "en": "Index form",
+      "ur": "قوت کی شکل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali put 16 marbles in 4 rows of 4: a perfect square! He tried 15 marbles but could not make a square. Why?",
+          "ur": "علی نے 16 کنچے 4، 4 کی 4 قطاروں میں رکھے: پورا مربع! اس نے 15 کنچوں سے کوشش کی مگر مربع نہ بنا۔ کیوں؟"
+        }
+      },
+      "text": {
+        "en": "Some numbers make a perfect square of dots. Today we learn about them, and a short way to write repeated multiplication. First, a quick check on prime factors.",
+        "ur": "کچھ اعداد کے نقطے پورا مربع بناتے ہیں۔ آج ہم ان کے بارے میں سیکھیں گے، اور بار بار ضرب کو مختصر لکھنے کا طریقہ بھی۔ پہلے مفرد اجزائے ضربی کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.factors.primes",
+      "prompt": {
+        "en": "Find the missing prime: 72 = 2 × 2 × 2 × 3 × ?",
+        "ur": "غائب مفرد عدد معلوم کریں: 72 = 2 × 2 × 2 × 3 × ?"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 × 2 × 2 × 3 = 24. What times 24 makes 72?",
+        "ur": "2 × 2 × 2 × 3 = 24۔ 24 کو کس سے ضرب دیں تو 72 بنے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 72 = 2 × 2 × 2 × 3 × 3. Keep this one; we will use it later.",
+        "ur": "درست! 72 = 2 × 2 × 2 × 3 × 3۔ اسے یاد رکھیں؛ ہم بعد میں استعمال کریں گے۔"
+      },
+      "feedback_wrong": {
+        "en": "2 × 2 × 2 × 3 = 24 and 72 ÷ 24 = 3.",
+        "ur": "2 × 2 × 2 × 3 = 24 اور 72 ÷ 24 = 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 is not prime (3 × 3). 72 ÷ 24 = 3.",
+            "ur": "9 مفرد نہیں (3 × 3)۔ 72 ÷ 24 = 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "16 = 4 × 4, a number times itself. That is why it makes a square!",
+          "ur": "16 = 4 × 4، ایک عدد خود سے ضرب۔ اسی لیے یہ مربع بناتا ہے!"
+        }
+      },
+      "text": {
+        "en": "A number times itself is its square. 7 × 7 = 49, written 7² and read \"7 squared\". 49 dots fit in 7 rows of 7, so 49 is a square number. The square numbers are 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 … The same short way works for more copies: 2 × 2 × 2 = 2³. The big number 2 is the base: the number being multiplied. The small number 3 is the index (or power): how many times the base is multiplied. So 2³ = 8, not 6.",
+        "ur": "کسی عدد کو خود سے ضرب دیں تو اس کا مربع ملتا ہے۔ 7 × 7 = 49، جسے 7² لکھتے ہیں اور \"7 کا مربع\" پڑھتے ہیں۔ 49 نقطے 7، 7 کی 7 قطاروں میں آ جاتے ہیں، اس لیے 49 مربع عدد ہے۔ مربع اعداد یہ ہیں: 1، 4، 9، 16، 25، 36، 49، 64، 81، 100 … زیادہ بار ضرب کے لیے بھی یہی مختصر طریقہ ہے: 2 × 2 × 2 = 2³۔ بڑا عدد 2 اساس ہے: جو عدد ضرب ہو رہا ہے۔ چھوٹا عدد 3 قوت ہے: اساس کتنی بار ضرب ہو رہی ہے۔ اس لیے 2³ = 8، 6 نہیں۔"
+      }
+    },
+    {
+      "id": "s4_seven_squared",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 7².",
+        "ur": "7² معلوم کریں۔"
+      },
+      "answer": 49,
+      "checker": "numeric",
+      "hint": {
+        "en": "7² means 7 × 7.",
+        "ur": "7² کا مطلب ہے 7 × 7"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 × 7 = 49.",
+        "ur": "درست! 7 × 7 = 49"
+      },
+      "feedback_wrong": {
+        "en": "7² = 7 × 7 = 49: 7 rows of 7 dots.",
+        "ur": "7² = 7 × 7 = 49: نقطوں کی 7، 7 کی 7 قطاریں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "That is 7 × 2. Squared means 7 × 7 = 49.",
+            "ur": "یہ 7 × 2 ہے۔ مربع کا مطلب 7 × 7 = 49"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That adds 7 + 2. Squared means 7 × 7 = 49.",
+            "ur": "یہ 7 + 2 جمع ہے۔ مربع کا مطلب 7 × 7 = 49"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_which_square",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a square number?",
+        "ur": "ان میں سے کون سا مربع عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "n36",
+          "text": {
+            "en": "36",
+            "ur": "36"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 36 = 6 × 6 = 6², so 36 dots make a 6 by 6 square.",
+            "ur": "جی ہاں! 36 = 6 × 6 = 6²، اس لیے 36 نقطے 6 ضرب 6 کا مربع بناتے ہیں۔"
+          }
+        },
+        {
+          "id": "n18",
+          "text": {
+            "en": "18",
+            "ur": "18"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "18 = 9 × 2, not a number times itself. 4 × 4 = 16 and 5 × 5 = 25.",
+            "ur": "18 = 9 × 2، کوئی عدد خود سے ضرب نہیں۔ 4 × 4 = 16 اور 5 × 5 = 25"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "id": "n20",
+          "text": {
+            "en": "20",
+            "ur": "20"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 × 4 = 16 and 5 × 5 = 25, so 20 is not a square number.",
+            "ur": "4 × 4 = 16 اور 5 × 5 = 25، اس لیے 20 مربع عدد نہیں۔"
+          }
+        },
+        {
+          "id": "n32",
+          "text": {
+            "en": "32",
+            "ur": "32"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 × 5 = 25 and 6 × 6 = 36, so 32 is not a square number.",
+            "ur": "5 × 5 = 25 اور 6 × 6 = 36، اس لیے 32 مربع عدد نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_write_index",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 2 × 2 × 2 × 2 × 2 in index form.",
+        "ur": "2 × 2 × 2 × 2 × 2 کو قوت کی شکل میں لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "two_5",
+          "text": {
+            "en": "2⁵",
+            "ur": "2⁵"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The base is 2 and it is multiplied 5 times.",
+            "ur": "جی ہاں! اساس 2 ہے اور یہ 5 بار ضرب ہو رہی ہے۔"
+          }
+        },
+        {
+          "id": "five_2",
+          "text": {
+            "en": "5²",
+            "ur": "5²"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5² = 5 × 5. The number multiplied is 2, so the base is 2: 2⁵.",
+            "ur": "5² = 5 × 5۔ ضرب ہونے والا عدد 2 ہے، اس لیے اساس 2 ہے: 2⁵"
+          },
+          "misconception_id": "swap_base_index"
+        },
+        {
+          "id": "ten",
+          "text": {
+            "en": "2 × 5",
+            "ur": "2 × 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 × 5 = 10, but 2 × 2 × 2 × 2 × 2 = 32. Write 2⁵.",
+            "ur": "2 × 5 = 10، مگر 2 × 2 × 2 × 2 × 2 = 32۔ 2⁵ لکھیں۔"
+          },
+          "misconception_id": "times_index"
+        }
+      ]
+    },
+    {
+      "id": "s7_three_power_four",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out 3⁴.",
+        "ur": "3⁴ معلوم کریں۔"
+      },
+      "answer": 81,
+      "checker": "numeric",
+      "hint": {
+        "en": "3⁴ = 3 × 3 × 3 × 3. Go step by step: 3 × 3 = 9 …",
+        "ur": "3⁴ = 3 × 3 × 3 × 3۔ قدم بہ قدم: 3 × 3 = 9 …"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 3 × 3 × 3 = 81.",
+        "ur": "درست! 3 × 3 × 3 × 3 = 81"
+      },
+      "feedback_wrong": {
+        "en": "3 × 3 = 9, 9 × 3 = 27, 27 × 3 = 81.",
+        "ur": "3 × 3 = 9، 9 × 3 = 27، 27 × 3 = 81"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That is 3 × 4. Multiply four 3s: 3 × 3 × 3 × 3 = 81.",
+            "ur": "یہ 3 × 4 ہے۔ چار 3 ضرب دیں: 3 × 3 × 3 × 3 = 81"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "answer": 27,
+          "feedback": {
+            "en": "That is only three 3s. One more: 27 × 3 = 81.",
+            "ur": "یہ صرف تین 3 ہیں۔ ایک اور: 27 × 3 = 81"
+          }
+        },
+        {
+          "answer": 64,
+          "feedback": {
+            "en": "That is 4³ = 4 × 4 × 4. Here the base is 3: 3 × 3 × 3 × 3 = 81.",
+            "ur": "یہ 4³ = 4 × 4 × 4 ہے۔ یہاں اساس 3 ہے: 3 × 3 × 3 × 3 = 81"
+          },
+          "misconception_id": "swap_base_index"
+        }
+      ]
+    },
+    {
+      "id": "s8_seventy_two",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "72 = 2 × 2 × 2 × 3 × 3. Which shows this in index form?",
+        "ur": "72 = 2 × 2 × 2 × 3 × 3۔ کون سا اسے قوت کی شکل میں دکھاتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "2³ × 3²",
+            "ur": "2³ × 3²"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Three 2s and two 3s: 8 × 9 = 72.",
+            "ur": "جی ہاں! تین 2 اور دو 3: 8 × 9 = 72"
+          }
+        },
+        {
+          "id": "swapped",
+          "text": {
+            "en": "2² × 3³",
+            "ur": "2² × 3³"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Count again: there are three 2s and two 3s. 2² × 3³ = 4 × 27 = 108.",
+            "ur": "دوبارہ گنیں: تین 2 ہیں اور دو 3۔ 2² × 3³ = 4 × 27 = 108"
+          },
+          "misconception_id": "swap_base_index"
+        },
+        {
+          "id": "one_three",
+          "text": {
+            "en": "2³ × 3",
+            "ur": "2³ × 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are two 3s, so write 3². 2³ × 3 = 24.",
+            "ur": "دو 3 ہیں، اس لیے 3² لکھیں۔ 2³ × 3 = 24"
+          }
+        },
+        {
+          "id": "six_sq",
+          "text": {
+            "en": "6²",
+            "ur": "6²"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6² = 36, not 72. Count each prime: 2³ × 3².",
+            "ur": "6² = 36، 72 نہیں۔ ہر مفرد عدد گنیں: 2³ × 3²"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza says 2³ = 6. What went wrong?",
+        "ur": "حمزہ کہتا ہے 2³ = 6۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "mult",
+          "text": {
+            "en": "2³ means 2 × 2 × 2 = 8. He did 2 × 3 (or 2 + 2 + 2).",
+            "ur": "2³ کا مطلب ہے 2 × 2 × 2 = 8۔ اس نے 2 × 3 (یا 2 + 2 + 2) کیا۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The index tells how many 2s to multiply.",
+            "ur": "جی ہاں! قوت بتاتی ہے کہ کتنے 2 ضرب دینے ہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 2 × 3 = 6.",
+            "ur": "کوئی غلطی نہیں۔ 2 × 3 = 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 × 3 = 6 is true, but 2³ is 2 × 2 × 2 = 8.",
+            "ur": "2 × 3 = 6 درست ہے، مگر 2³ = 2 × 2 × 2 = 8"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "id": "nine",
+          "text": {
+            "en": "2³ = 9, because 3 × 3 = 9.",
+            "ur": "2³ = 9، کیونکہ 3 × 3 = 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The base is 2, not 3. 2³ = 2 × 2 × 2 = 8.",
+            "ur": "اساس 2 ہے، 3 نہیں۔ 2³ = 2 × 2 × 2 = 8"
+          },
+          "misconception_id": "swap_base_index"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My friend says 5² is 10, because 5 times 2 is 10. Is he right?",
+          "ur": "میرا دوست کہتا ہے 5² برابر 10 ہے، کیونکہ 5 ضرب 2 برابر 10۔ کیا وہ درست ہے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: what is 5², and why is it not 10?",
+        "ur": "اپنے الفاظ میں بتائیں: 5² کتنا ہے، اور یہ 10 کیوں نہیں؟"
+      },
+      "key_idea": "5² means 5 × 5 = 25. The index 2 says how many 5s are multiplied together; it does not mean multiply 5 by 2.",
+      "levels": {
+        "got_it": "Says 5² = 25 because it means 5 × 5, and the 2 tells how many 5s are multiplied.",
+        "partly": "Says 5² = 25 or 5 × 5 but does not say what the small 2 means, or says it is not 10 with no reason.",
+        "not_yet": "Agrees that 5² = 10, or gives no reason."
+      },
+      "keywords": [
+        [
+          "5 × 5",
+          "5 x 5",
+          "5*5",
+          "five times five",
+          "5 ضرب 5",
+          "خود سے ضرب",
+          "itself"
+        ],
+        [
+          "25",
+          "پچیس"
+        ],
+        [
+          "how many times",
+          "two fives",
+          "two 5s",
+          "کتنی بار",
+          "دو بار",
+          "دو 5"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 5² = 5 × 5 = 25. The small 2 says how many 5s to multiply.",
+          "ur": "بہت خوب سمجھایا! 5² = 5 × 5 = 25۔ چھوٹا 2 بتاتا ہے کہ کتنے 5 ضرب دینے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what the small 2 tells us: how many 5s are multiplied?",
+          "ur": "اچھی شروعات! اب بتائیں چھوٹا 2 کیا بتاتا ہے: کتنے 5 ضرب ہو رہے ہیں؟"
+        },
+        "not_yet": {
+          "en": "Remember: 7² = 7 × 7 = 49. So what is 5²?",
+          "ur": "یاد کریں: 7² = 7 × 7 = 49۔ تو 5² کتنا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_product",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which number is 2² × 5²?",
+        "ur": "2² × 5² کون سا عدد ہے؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "Work out each power first: 2² = 4 and 5² = 25.",
+        "ur": "پہلے ہر قوت معلوم کریں: 2² = 4 اور 5² = 25"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 25 = 100.",
+        "ur": "درست! 4 × 25 = 100"
+      },
+      "feedback_wrong": {
+        "en": "2² = 2 × 2 = 4, 5² = 5 × 5 = 25, and 4 × 25 = 100.",
+        "ur": "2² = 2 × 2 = 4، 5² = 5 × 5 = 25، اور 4 × 25 = 100"
+      },
+      "common_wrong": [
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "That is 2 × 2 + 5 × 2. Use 2² = 4 and 5² = 25, then 4 × 25 = 100.",
+            "ur": "یہ 2 × 2 + 5 × 2 ہے۔ 2² = 4 اور 5² = 25 لیں، پھر 4 × 25 = 100"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "5² is 5 × 5, not just 5. 4 × 25 = 100.",
+            "ur": "5² کا مطلب 5 × 5 ہے، صرف 5 نہیں۔ 4 × 25 = 100"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Index form is a short way to write long multiplications!",
+          "ur": "قوت کی شکل لمبی ضربوں کو مختصر لکھنے کا طریقہ ہے!"
+        }
+      },
+      "text": {
+        "en": "A number times itself is its square: 7² = 7 × 7 = 49, and 49 dots make a 7 by 7 square. In 2³, 2 is the base and 3 is the index (power): 2³ = 2 × 2 × 2 = 8. Prime factors can be written in index form: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3².",
+        "ur": "کسی عدد کو خود سے ضرب دیں تو اس کا مربع ملتا ہے: 7² = 7 × 7 = 49، اور 49 نقطے 7 ضرب 7 کا مربع بناتے ہیں۔ 2³ میں 2 اساس ہے اور 3 قوت: 2³ = 2 × 2 × 2 = 8۔ مفرد اجزائے ضربی کو قوت کی شکل میں لکھ سکتے ہیں: 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²"
+      },
+      "points": [
+        {
+          "en": "5² is 5 × 5 = 25, not 5 × 2.",
+          "ur": "5² کا مطلب 5 × 5 = 25 ہے، 5 × 2 نہیں۔"
+        },
+        {
+          "en": "The index counts how many times the base is multiplied.",
+          "ur": "قوت گنتی ہے کہ اساس کتنی بار ضرب ہوئی۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_six_squared",
+      "type": "recall",
+      "skill": "maths.factors.index_notation",
+      "step": {
+        "id": "r_six_squared",
+        "type": "number",
+        "prompt": {
+          "en": "Work out 6².",
+          "ur": "6² معلوم کریں۔"
+        },
+        "answer": 36,
+        "checker": "numeric",
+        "hint": {
+          "en": "6² means 6 × 6.",
+          "ur": "6² کا مطلب ہے 6 × 6"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 × 6 = 36.",
+          "ur": "درست! 6 × 6 = 36"
+        },
+        "feedback_wrong": {
+          "en": "6² = 6 × 6 = 36.",
+          "ur": "6² = 6 × 6 = 36"
+        },
+        "common_wrong": [
+          {
+            "answer": 12,
+            "feedback": {
+              "en": "That is 6 × 2. Squared means 6 × 6 = 36.",
+              "ur": "یہ 6 × 2 ہے۔ مربع کا مطلب 6 × 6 = 36"
+            },
+            "misconception_id": "times_index"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_ten_cubed",
+      "type": "apply",
+      "skill": "maths.factors.index_notation",
+      "step": {
+        "id": "r_ten_cubed",
+        "type": "number",
+        "prompt": {
+          "en": "Work out 10³.",
+          "ur": "10³ معلوم کریں۔"
+        },
+        "answer": 1000,
+        "checker": "numeric",
+        "hint": {
+          "en": "10³ = 10 × 10 × 10.",
+          "ur": "10³ = 10 × 10 × 10"
+        },
+        "feedback_correct": {
+          "en": "Right! 10 × 10 × 10 = 1000.",
+          "ur": "درست! 10 × 10 × 10 = 1000"
+        },
+        "feedback_wrong": {
+          "en": "10 × 10 = 100, then 100 × 10 = 1000.",
+          "ur": "10 × 10 = 100، پھر 100 × 10 = 1000"
+        },
+        "common_wrong": [
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "That is 10 × 3. Multiply three 10s: 1000.",
+              "ur": "یہ 10 × 3 ہے۔ تین 10 ضرب دیں: 1000"
+            },
+            "misconception_id": "times_index"
+          },
+          {
+            "answer": 100,
+            "feedback": {
+              "en": "That is 10², only two 10s. One more: 100 × 10 = 1000.",
+              "ur": "یہ 10² ہے، صرف دو 10۔ ایک اور: 100 × 10 = 1000"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Factors and Multiples unit. No textbook text or exercises were used.",
+    "Index forms are asked as choice questions (not typed answers), so children do not need to type superscripts.",
+    "Urdu terms to check against the Punjab textbook: مربع / مربع عدد (square / square number), قوت (index / power), اساس (base), قوت کی شکل (index form).",
+    "The numbers were worked out in content/sources/g6-maths-05/squares_index_notation.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

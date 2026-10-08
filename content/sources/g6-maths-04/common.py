@@ -16,6 +16,12 @@ INT_ADD = "maths.integers.add"
 INT_SUBTRACT = "maths.integers.subtract"
 INT_MULTIPLY = "maths.integers.multiply_divide"
 INT_WORD_PROBLEMS = "maths.integers.word_problems"
+INT_ABSOLUTE = "maths.integers.absolute_value"
+INT_LAWS = "maths.integers.laws"
+
+# The book chapters the gap lessons (absolute value, laws of integers) match.
+BOOK_INTEGERS = "PCTB Mathematics 6 (SNC 2022), Sub-domain 2: Integers"
+BOOK_LAWS = "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers"
 
 
 def T(en, ur):

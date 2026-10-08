@@ -1,0 +1,769 @@
+{
+  "id": "g6-maths-04-absolute-value",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Understand the absolute value of an integer as its distance from 0 on the number line, find it, and tell ordering by absolute value apart from ordering by value.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 2: Integers"
+    }
+  ],
+  "skills": [
+    "maths.integers.absolute_value"
+  ],
+  "title": {
+    "en": "Absolute value",
+    "ur": "مطلق قیمت"
+  },
+  "estimated_minutes": 12,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.meaning"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "keeps_sign",
+      "description": "Thinks the absolute value of a negative number is still negative, e.g. |−7| = −7."
+    },
+    {
+      "id": "bigger_abs_bigger",
+      "description": "Thinks a bigger absolute value means a bigger integer, so −9 > 3."
+    },
+    {
+      "id": "zero_abs",
+      "description": "Thinks |0| is 1, or that 0 has no absolute value."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.absolute_value": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.absolute_value": [
+      {
+        "id": "qb_abs_four",
+        "type": "recall",
+        "step": {
+          "id": "qb_abs_four",
+          "type": "choice",
+          "prompt": {
+            "en": "What is |−4|?",
+            "ur": "|−4| کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "four",
+              "text": {
+                "en": "4",
+                "ur": "4"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! −4 is 4 steps from 0, so |−4| = 4.",
+                "ur": "جی ہاں! −4، 0 سے 4 قدم دور ہے، اس لیے |−4| = 4"
+              }
+            },
+            {
+              "id": "minus_4",
+              "text": {
+                "en": "−4",
+                "ur": "−4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A distance is never negative. −4 is 4 steps from 0, so |−4| = 4.",
+                "ur": "فاصلہ کبھی منفی نہیں ہوتا۔ −4، 0 سے 4 قدم دور ہے، اس لیے |−4| = 4"
+              },
+              "misconception_id": "keeps_sign"
+            },
+            {
+              "id": "zero",
+              "text": {
+                "en": "0",
+                "ur": "0"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only 0 is 0 steps from 0. −4 is 4 steps away.",
+                "ur": "صرف 0 ہی 0 سے 0 قدم دور ہے۔ −4، 4 قدم دور ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_owed",
+        "type": "apply",
+        "step": {
+          "id": "qb_owed",
+          "type": "number",
+          "prompt": {
+            "en": "Zara's bank balance is −150 rupees: she owes the shop money. How many rupees does she owe? Type the absolute value.",
+            "ur": "زارا کا حساب −150 روپے ہے: اس نے دکان کے پیسے دینے ہیں۔ اس پر کتنے روپے ادھار ہیں؟ مطلق قیمت لکھیں۔"
+          },
+          "answer": 150,
+          "checker": "numeric",
+          "hint": {
+            "en": "How far is −150 from 0?",
+            "ur": "−150، 0 سے کتنا دور ہے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! |−150| = 150, so she owes Rs 150.",
+            "ur": "درست! |−150| = 150، اس لیے اس پر 150 روپے ادھار ہیں۔"
+          },
+          "feedback_wrong": {
+            "en": "The minus sign shows she owes money. The amount is the distance from 0: |−150| = 150.",
+            "ur": "منفی کی علامت بتاتی ہے کہ ادھار ہے۔ رقم 0 سے فاصلہ ہے: |−150| = 150"
+          },
+          "common_wrong": [
+            {
+              "answer": -150,
+              "feedback": {
+                "en": "The amount owed is a distance from 0, so it is not negative: 150.",
+                "ur": "ادھار کی رقم 0 سے فاصلہ ہے، اس لیے منفی نہیں: 150"
+              },
+              "misconception_id": "keeps_sign"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hina says |0| = 1, because every absolute value must be at least 1. Is she right?",
+            "ur": "حنا کہتی ہے |0| = 1، کیونکہ ہر مطلق قیمت کم از کم 1 ہونی چاہیے۔ کیا وہ درست ہے؟"
+          },
+          "options": [
+            {
+              "id": "no",
+              "text": {
+                "en": "No. 0 is 0 steps from 0, so |0| = 0.",
+                "ur": "نہیں۔ 0، 0 سے 0 قدم دور ہے، اس لیے |0| = 0"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Right! The absolute value of 0 is 0.",
+                "ur": "درست! 0 کی مطلق قیمت 0 ہے۔"
+              }
+            },
+            {
+              "id": "yes",
+              "text": {
+                "en": "Yes. An absolute value cannot be 0.",
+                "ur": "ہاں۔ مطلق قیمت 0 نہیں ہو سکتی۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Absolute value is distance from 0. From 0 to 0 you move no steps, so |0| = 0.",
+                "ur": "مطلق قیمت 0 سے فاصلہ ہے۔ 0 سے 0 تک کوئی قدم نہیں، اس لیے |0| = 0"
+              },
+              "misconception_id": "zero_abs"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_meaning",
+      "front": {
+        "en": "What is the absolute value of an integer?",
+        "ur": "کسی صحیح عدد کی مطلق قیمت کیا ہے؟"
+      },
+      "back": {
+        "en": "Its distance from 0 on the number line. It is never negative: |−7| = 7, |7| = 7, |0| = 0.",
+        "ur": "عددی خط پر 0 سے اس کا فاصلہ۔ یہ کبھی منفی نہیں ہوتی: |−7| = 7، |7| = 7، |0| = 0"
+      }
+    },
+    {
+      "id": "f_compare",
+      "front": {
+        "en": "|−9| is bigger than |3|. Is −9 bigger than 3?",
+        "ur": "|−9|، |3| سے بڑا ہے۔ کیا −9، 3 سے بڑا ہے؟"
+      },
+      "back": {
+        "en": "No! −9 is further from 0, but it is to the left of 3, so −9 < 3.",
+        "ur": "نہیں! −9، 0 سے زیادہ دور ہے، لیکن 3 کے بائیں طرف ہے، اس لیے −9 < 3"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_lift",
+      "text": {
+        "en": "Find a lift, a staircase or a building plan with floors below the ground floor (a basement), or ask an adult about one. Write each floor as an integer, then write how many floors it is from the ground floor using absolute value.",
+        "ur": "کوئی لفٹ، سیڑھیاں یا عمارت کا نقشہ تلاش کریں جس میں زمینی منزل سے نیچے منزلیں ہوں (تہہ خانہ)، یا کسی بڑے سے پوچھیں۔ ہر منزل کو صحیح عدد کی شکل میں لکھیں، پھر مطلق قیمت سے لکھیں کہ وہ زمینی منزل سے کتنی منزلیں دور ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Absolute value",
+      "ur": "مطلق قیمت"
+    },
+    {
+      "en": "Distance",
+      "ur": "فاصلہ"
+    },
+    {
+      "en": "Integer",
+      "ur": "صحیح عدد"
+    },
+    {
+      "en": "Number line",
+      "ur": "عددی خط"
+    },
+    {
+      "en": "Negative",
+      "ur": "منفی"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Skardu is −7 °C and Multan is 7 °C. One is cold, one is warm, but both are 7 degrees away from zero!",
+          "ur": "سکردو میں −7 ڈگری اور ملتان میں 7 ڈگری ہے۔ ایک ٹھنڈا، ایک گرم، مگر دونوں صفر سے 7 ڈگری دور ہیں!"
+        }
+      },
+      "text": {
+        "en": "Today we measure how far a number is from zero. First, a quick check.",
+        "ur": "آج ہم ناپیں گے کہ کوئی عدد صفر سے کتنا دور ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.integers.meaning",
+      "prompt": {
+        "en": "Which is greater, −3 or 2?",
+        "ur": "کون سا بڑا ہے، −3 یا 2؟"
+      },
+      "options": [
+        {
+          "id": "two",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2 is to the right of −3 on the number line.",
+            "ur": "جی ہاں! عددی خط پر 2، −3 کے دائیں طرف ہے۔"
+          }
+        },
+        {
+          "id": "minus_3",
+          "text": {
+            "en": "−3",
+            "ur": "−3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−3 is to the left of 0, and 2 is to the right, so 2 is greater.",
+            "ur": "−3، 0 کے بائیں طرف ہے اور 2 دائیں طرف، اس لیے 2 بڑا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_see_it",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Absolute value is just counting steps to zero!",
+          "ur": "مطلق قیمت بس صفر تک قدم گننا ہے!"
+        }
+      },
+      "text": {
+        "en": "The absolute value of a number is its distance from 0 on the number line. We write it with two bars: |−7| means \"the absolute value of −7\". −7 is 7 steps from 0, so |−7| = 7. 7 is also 7 steps from 0, so |7| = 7. And |0| = 0. A distance is never negative, so an absolute value is never negative.",
+        "ur": "کسی عدد کی مطلق قیمت عددی خط پر 0 سے اس کا فاصلہ ہے۔ ہم اسے دو لکیروں کے درمیان لکھتے ہیں: |−7| کا مطلب ہے \"−7 کی مطلق قیمت\"۔ −7، 0 سے 7 قدم دور ہے، اس لیے |−7| = 7۔ 7 بھی 0 سے 7 قدم دور ہے، اس لیے |7| = 7۔ اور |0| = 0۔ فاصلہ کبھی منفی نہیں ہوتا، اس لیے مطلق قیمت کبھی منفی نہیں ہوتی۔"
+      }
+    },
+    {
+      "id": "s4_abs_seven",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is |−7|?",
+        "ur": "|−7| کیا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the steps from −7 to 0.",
+        "ur": "−7 سے 0 تک قدم گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! −7 is 7 steps from 0, so |−7| = 7.",
+        "ur": "جی ہاں! −7، 0 سے 7 قدم دور ہے، اس لیے |−7| = 7"
+      },
+      "feedback_wrong": {
+        "en": "Absolute value is the distance from 0. −7 is 7 steps away, so |−7| = 7.",
+        "ur": "مطلق قیمت 0 سے فاصلہ ہے۔ −7، 7 قدم دور ہے، اس لیے |−7| = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": -7,
+          "feedback": {
+            "en": "A distance cannot be negative. Drop the minus sign: |−7| = 7.",
+            "ur": "فاصلہ منفی نہیں ہو سکتا۔ منفی کی علامت ہٹا دیں: |−7| = 7"
+          },
+          "misconception_id": "keeps_sign"
+        }
+      ]
+    },
+    {
+      "id": "s5_abs_zero",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is |0|?",
+        "ur": "|0| کیا ہے؟"
+      },
+      "answer": 0,
+      "checker": "numeric",
+      "hint": {
+        "en": "How many steps is it from 0 to 0?",
+        "ur": "0 سے 0 تک کتنے قدم ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 0 is no steps from 0, so |0| = 0.",
+        "ur": "درست! 0، 0 سے کوئی قدم دور نہیں، اس لیے |0| = 0"
+      },
+      "feedback_wrong": {
+        "en": "You do not move at all from 0 to 0, so the distance is 0: |0| = 0.",
+        "ur": "0 سے 0 تک آپ بالکل نہیں چلتے، اس لیے فاصلہ 0 ہے: |0| = 0"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "From 0 to 0 you take no steps, not 1. |0| = 0.",
+            "ur": "0 سے 0 تک کوئی قدم نہیں، 1 نہیں۔ |0| = 0"
+          },
+          "misconception_id": "zero_abs"
+        }
+      ]
+    },
+    {
+      "id": "s6_two_numbers",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which two integers have an absolute value of 5?",
+        "ur": "کن دو صحیح اعداد کی مطلق قیمت 5 ہے؟"
+      },
+      "options": [
+        {
+          "id": "both",
+          "text": {
+            "en": "5 and −5",
+            "ur": "5 اور −5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Both are 5 steps from 0, one on each side.",
+            "ur": "جی ہاں! دونوں 0 سے 5 قدم دور ہیں، ایک ایک طرف۔"
+          }
+        },
+        {
+          "id": "zero_five",
+          "text": {
+            "en": "0 and 5",
+            "ur": "0 اور 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "|0| = 0, not 5. Look 5 steps to the left of 0 too.",
+            "ur": "|0| = 0 ہے، 5 نہیں۔ 0 سے 5 قدم بائیں طرف بھی دیکھیں۔"
+          },
+          "misconception_id": "zero_abs"
+        },
+        {
+          "id": "only_five",
+          "text": {
+            "en": "Only 5",
+            "ur": "صرف 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−5 is also 5 steps from 0, on the left side. So |−5| = 5 too.",
+            "ur": "−5 بھی 0 سے 5 قدم دور ہے، بائیں طرف۔ اس لیے |−5| = 5 بھی ہے۔"
+          },
+          "misconception_id": "keeps_sign"
+        }
+      ]
+    },
+    {
+      "id": "s7_lift",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A lift goes down to floor −4, below the ground floor (0). How many floors is it from the ground floor?",
+        "ur": "ایک لفٹ نیچے منزل −4 پر جاتی ہے، زمینی منزل (0) سے نیچے۔ یہ زمینی منزل سے کتنی منزلیں دور ہے؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the floors from −4 up to 0.",
+        "ur": "−4 سے اوپر 0 تک منزلیں گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Yes! |−4| = 4, so it is 4 floors away.",
+        "ur": "جی ہاں! |−4| = 4، اس لیے یہ 4 منزلیں دور ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Floor −4 is 4 floors below 0. The distance is |−4| = 4.",
+        "ur": "منزل −4، 0 سے 4 منزلیں نیچے ہے۔ فاصلہ |−4| = 4 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -4,
+          "feedback": {
+            "en": "−4 is the floor number. The number of floors away is a distance: 4.",
+            "ur": "−4 منزل کا نمبر ہے۔ کتنی منزلیں دور ہے، یہ فاصلہ ہے: 4"
+          },
+          "misconception_id": "keeps_sign"
+        }
+      ]
+    },
+    {
+      "id": "s8_value_vs_abs",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "|−9| = 9 and |3| = 3. Which integer is greater, −9 or 3?",
+        "ur": "|−9| = 9 اور |3| = 3۔ کون سا صحیح عدد بڑا ہے، −9 یا 3؟"
+      },
+      "options": [
+        {
+          "id": "three",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3 is to the right of −9, so 3 > −9, even though −9 is further from 0.",
+            "ur": "جی ہاں! 3، −9 کے دائیں طرف ہے، اس لیے 3 > −9، حالانکہ −9، 0 سے زیادہ دور ہے۔"
+          }
+        },
+        {
+          "id": "minus_9",
+          "text": {
+            "en": "−9",
+            "ur": "−9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−9 is further from 0, but it is on the left, so it is smaller. −9 °C is much colder than 3 °C.",
+            "ur": "−9، 0 سے زیادہ دور ہے، لیکن بائیں طرف ہے، اس لیے چھوٹا ہے۔ −9 ڈگری، 3 ڈگری سے بہت ٹھنڈا ہے۔"
+          },
+          "misconception_id": "bigger_abs_bigger"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Usman says −8 > 2, because |−8| = 8 and 8 is more than 2. What went wrong?",
+        "ur": "عثمان کہتا ہے −8 > 2، کیونکہ |−8| = 8 اور 8، 2 سے زیادہ ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "distance",
+          "text": {
+            "en": "He compared distances from 0, not the numbers. −8 is to the left of 2, so −8 < 2.",
+            "ur": "اس نے 0 سے فاصلوں کا موازنہ کیا، اعداد کا نہیں۔ −8، 2 کے بائیں طرف ہے، اس لیے −8 < 2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Bigger absolute value means further from 0, not greater.",
+            "ur": "جی ہاں! بڑی مطلق قیمت کا مطلب 0 سے زیادہ دور ہے، بڑا عدد نہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. The bigger absolute value is the bigger number.",
+            "ur": "کوئی غلطی نہیں۔ بڑی مطلق قیمت والا عدد بڑا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That only works for positive numbers. −8 is on the left of 2, so it is smaller.",
+            "ur": "یہ صرف مثبت اعداد کے لیے درست ہے۔ −8، 2 کے بائیں طرف ہے، اس لیے چھوٹا ہے۔"
+          },
+          "misconception_id": "bigger_abs_bigger"
+        },
+        {
+          "id": "abs_wrong",
+          "text": {
+            "en": "|−8| should be −8.",
+            "ur": "|−8| کو −8 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "|−8| = 8 is correct: a distance is never negative. The mistake is in the comparison.",
+            "ur": "|−8| = 8 درست ہے: فاصلہ کبھی منفی نہیں ہوتا۔ غلطی موازنے میں ہے۔"
+          },
+          "misconception_id": "keeps_sign"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you teach me? Why is |−6| equal to 6 and not −6?",
+          "ur": "کیا آپ مجھے سمجھا سکتے ہیں؟ |−6| برابر 6 کیوں ہے، −6 کیوں نہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is |−6| = 6 and not −6? You can use a number line, a lift or the weather.",
+        "ur": "اپنے الفاظ میں بتائیں: |−6| = 6 کیوں ہے، −6 کیوں نہیں؟ آپ عددی خط، لفٹ یا موسم کی مثال دے سکتے ہیں۔"
+      },
+      "key_idea": "Absolute value is the distance from 0. −6 is 6 steps from 0 on the number line, and a distance is never negative, so |−6| = 6.",
+      "levels": {
+        "got_it": "Says absolute value is the distance (or number of steps) from 0, that −6 is 6 away from 0, and that a distance cannot be negative.",
+        "partly": "Says |−6| = 6 or mentions distance or steps, but does not link it to the distance from 0.",
+        "not_yet": "Says |−6| is −6, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "distance",
+          "far",
+          "away",
+          "steps",
+          "فاصلہ",
+          "دور",
+          "قدم",
+          "fasla",
+          "door",
+          "qadam"
+        ],
+        [
+          "zero",
+          "0",
+          "صفر",
+          "sifar"
+        ],
+        [
+          "never negative",
+          "not negative",
+          "positive",
+          "منفی نہیں",
+          "مثبت",
+          "manfi nahi",
+          "musbat"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! −6 is 6 steps from 0, and a distance is never negative, so |−6| = 6.",
+          "ur": "بہت خوب سمجھایا! −6، 0 سے 6 قدم دور ہے، اور فاصلہ کبھی منفی نہیں ہوتا، اس لیے |−6| = 6"
+        },
+        "partly": {
+          "en": "Good start! Now say what absolute value measures: the distance from where?",
+          "ur": "اچھی شروعات! اب بتائیں کہ مطلق قیمت کیا ناپتی ہے: کہاں سے فاصلہ؟"
+        },
+        "not_yet": {
+          "en": "Think: if you walk from −6 to 0 on the number line, how many steps do you take? Can that be negative?",
+          "ur": "سوچیں: اگر آپ عددی خط پر −6 سے 0 تک چلیں، تو کتنے قدم لیں گے؟ کیا یہ منفی ہو سکتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_order_abs",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Order −8, 2, −3, 5 by absolute value, from closest to 0 to furthest from 0.",
+        "ur": "−8، 2، −3، 5 کو مطلق قیمت کے لحاظ سے ترتیب دیں، 0 کے سب سے قریب سے سب سے دور تک۔"
+      },
+      "options": [
+        {
+          "id": "by_abs",
+          "text": {
+            "en": "2, −3, 5, −8",
+            "ur": "2، −3، 5، −8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Their absolute values are 2, 3, 5, 8.",
+            "ur": "جی ہاں! ان کی مطلق قیمتیں 2، 3، 5، 8 ہیں۔"
+          }
+        },
+        {
+          "id": "by_value",
+          "text": {
+            "en": "−8, −3, 2, 5",
+            "ur": "−8، −3، 2، 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the order by value, smallest to greatest. Here we want distance from 0: 2, 3, 5, 8.",
+            "ur": "یہ قیمت کے لحاظ سے چھوٹے سے بڑے کی ترتیب ہے۔ یہاں 0 سے فاصلہ چاہیے: 2، 3، 5، 8"
+          }
+        },
+        {
+          "id": "negatives_first",
+          "text": {
+            "en": "−3, −8, 2, 5",
+            "ur": "−3، −8، 2، 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Ignore the signs and look at the distances: |2| = 2 is the smallest, |−8| = 8 the biggest.",
+            "ur": "علامتیں چھوڑ کر فاصلے دیکھیں: |2| = 2 سب سے چھوٹا ہے، |−8| = 8 سب سے بڑا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can measure how far any integer is from zero!",
+          "ur": "اب آپ ناپ سکتے ہیں کہ کوئی بھی صحیح عدد صفر سے کتنا دور ہے!"
+        }
+      },
+      "text": {
+        "en": "The absolute value of a number is its distance from 0, written with two bars. It is never negative: |−7| = 7, |7| = 7, |0| = 0. A bigger absolute value means further from 0, not a greater number: |−9| > |3|, but −9 < 3.",
+        "ur": "کسی عدد کی مطلق قیمت 0 سے اس کا فاصلہ ہے، جو دو لکیروں کے درمیان لکھی جاتی ہے۔ یہ کبھی منفی نہیں ہوتی: |−7| = 7، |7| = 7، |0| = 0۔ بڑی مطلق قیمت کا مطلب 0 سے زیادہ دور ہے، بڑا عدد نہیں: |−9| > |3|، لیکن −9 < 3"
+      },
+      "points": [
+        {
+          "en": "Floor −4 is |−4| = 4 floors below the ground floor.",
+          "ur": "منزل −4، زمینی منزل سے |−4| = 4 منزلیں نیچے ہے۔"
+        },
+        {
+          "en": "5 and −5 both have absolute value 5.",
+          "ur": "5 اور −5 دونوں کی مطلق قیمت 5 ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_abs_fifteen",
+      "type": "apply",
+      "skill": "maths.integers.absolute_value",
+      "step": {
+        "id": "r_abs_fifteen",
+        "type": "number",
+        "prompt": {
+          "en": "A diver is at −15 m, below sea level (0). How many metres is she from the surface?",
+          "ur": "ایک غوطہ خور −15 میٹر پر ہے، سطح سمندر (0) سے نیچے۔ وہ سطح سے کتنے میٹر دور ہے؟"
+        },
+        "answer": 15,
+        "checker": "numeric",
+        "hint": {
+          "en": "Find |−15|: the distance from 0.",
+          "ur": "|−15| معلوم کریں: 0 سے فاصلہ۔"
+        },
+        "feedback_correct": {
+          "en": "Right! |−15| = 15 m.",
+          "ur": "درست! |−15| = 15 میٹر۔"
+        },
+        "feedback_wrong": {
+          "en": "The distance from 0 is the absolute value: |−15| = 15.",
+          "ur": "0 سے فاصلہ مطلق قیمت ہے: |−15| = 15"
+        },
+        "common_wrong": [
+          {
+            "answer": -15,
+            "feedback": {
+              "en": "A distance is never negative: 15 m.",
+              "ur": "فاصلہ کبھی منفی نہیں ہوتا: 15 میٹر۔"
+            },
+            "misconception_id": "keeps_sign"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_compare",
+      "type": "recall",
+      "skill": "maths.integers.absolute_value",
+      "step": {
+        "id": "r_compare",
+        "type": "choice",
+        "prompt": {
+          "en": "|−6| is bigger than |2|. Which integer is greater, −6 or 2?",
+          "ur": "|−6|، |2| سے بڑا ہے۔ کون سا صحیح عدد بڑا ہے، −6 یا 2؟"
+        },
+        "options": [
+          {
+            "id": "two",
+            "text": {
+              "en": "2",
+              "ur": "2"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! 2 is to the right of −6.",
+              "ur": "جی ہاں! 2، −6 کے دائیں طرف ہے۔"
+            }
+          },
+          {
+            "id": "minus_6",
+            "text": {
+              "en": "−6",
+              "ur": "−6"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "−6 is further from 0, but on the left, so it is smaller.",
+              "ur": "−6، 0 سے زیادہ دور ہے، لیکن بائیں طرف، اس لیے چھوٹا ہے۔"
+            },
+            "misconception_id": "bigger_abs_bigger"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Integers sub-domain. No textbook text or exercises were used.",
+    "Absolute value is written with two bars, |−7|. Check that the bars display clearly in both languages on the device.",
+    "Urdu terms to check against the Punjab textbook: مطلق قیمت (absolute value), فاصلہ (distance), صحیح عدد (integer), عددی خط (number line), منفی (negative), مثبت (positive).",
+    "Typed negative answers accept the keyboard minus and the − sign. The common wrong answers catch a child who keeps the minus sign (−7 for |−7|) or gives 1 for |0|.",
+    "Temperatures, floors and money amounts are made-up examples, not real readings.",
+    "The numbers were worked out in content/sources/g6-maths-04/absolute_value.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
