@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 
-REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Fractions"
+REF = "Not a chapter of PCTB Mathematics 6 (SNC 2022) (revision unit): Fractions"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills of the Fractions unit (dividing by a fraction is taught in its own,

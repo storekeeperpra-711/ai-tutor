@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 
-REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Three-dimensional Solids"
+REF = "PCTB Mathematics 6 (SNC 2022), Sub-domain 8: Surface Area and Volume"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills from earlier work that these lessons build on.
