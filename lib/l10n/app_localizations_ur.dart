@@ -1470,4 +1470,37 @@ class AppLocalizationsUr extends AppLocalizations {
   @override
   String get badgesIntro =>
       'بیجز محنت پر ملتے ہیں: سبق مکمل کرنا، دوبارہ کوشش کرنا، اپنی سوچ بتانا اور روز واپس آنا۔';
+
+  @override
+  String get courseTitle => 'میرا کورس';
+
+  @override
+  String coursePercent(int percent) {
+    return '$percent% مکمل';
+  }
+
+  @override
+  String courseLessonsDone(int done, int total) {
+    return '$total میں سے $done سبق مکمل';
+  }
+
+  @override
+  String get courseDoneMeans =>
+      'مکمل کا مطلب ہے کہ آپ نے سبق ختم کر لیا۔ مہارت کے نقطے تب بھرتے ہیں جب آپ اگلے دنوں میں دہرائی کے سوالوں کے صحیح جواب دیتے ہیں۔';
+
+  @override
+  String get lessonNotStarted => 'ابھی شروع نہیں کیا';
+
+  @override
+  String lessonAtStep(int step, int total) {
+    return 'مرحلہ $step از $total';
+  }
+
+  @override
+  String get otherLessons => 'دوسرے اسباق';
+
+  @override
+  String skillLevel(String level) {
+    return 'مہارت: $level';
+  }
 }

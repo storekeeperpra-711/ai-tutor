@@ -2105,5 +2105,63 @@
   "badgesIntro": "You earn badges for effort: finishing a lesson, trying again, explaining your thinking and coming back each day.",
   "@badgesIntro": {
     "description": "Badges page: what badges are for."
+  },
+  "courseTitle": "My course",
+  "@courseTitle": {
+    "description": "Lessons tab: heading of the course progress card."
+  },
+  "coursePercent": "{percent}% done",
+  "@coursePercent": {
+    "description": "Lessons tab: share of the course's lessons finished.",
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "courseLessonsDone": "{done} of {total} lessons done",
+  "@courseLessonsDone": {
+    "description": "Lessons tab: lessons finished out of all lessons in the course.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "courseDoneMeans": "Done means you finished the lesson. The skill dots fill up when you get review questions right on later days.",
+  "@courseDoneMeans": {
+    "description": "Lessons tab: why a finished lesson can still show Practising."
+  },
+  "lessonNotStarted": "Not started",
+  "@lessonNotStarted": {
+    "description": "Course list: lesson not opened yet."
+  },
+  "lessonAtStep": "Step {step} of {total}",
+  "@lessonAtStep": {
+    "description": "Course list: lesson started, next step.",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "otherLessons": "Other lessons",
+  "@otherLessons": {
+    "description": "Lessons tab: lessons from other classes."
+  },
+  "skillLevel": "Skill: {level}",
+  "@skillLevel": {
+    "description": "Lesson tile: the lesson's skill level, like Skill: Practising.",
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
   }
 }

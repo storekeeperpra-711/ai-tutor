@@ -11,7 +11,8 @@ String levelName(AppLocalizations l10n, MasteryLevel level) => switch (level) {
   MasteryLevel.secure => l10n.levelSecure,
 };
 
-/// Four dots that fill up from Learning to Secure, with the level's name.
+/// Four dots that fill up from Learning to Secure, with the level's name
+/// ("Skill: Practising"), so it isn't read as the lesson's status.
 class MasteryDots extends StatelessWidget {
   const MasteryDots({super.key, required this.level});
 
@@ -41,7 +42,7 @@ class MasteryDots extends StatelessWidget {
           const SizedBox(width: 4),
           Flexible(
             child: Text(
-              name,
+              AppLocalizations.of(context).skillLevel(name),
               style: Theme.of(context).textTheme.bodySmall,
               overflow: TextOverflow.ellipsis,
             ),
