@@ -1,0 +1,778 @@
+{
+  "id": "g6-maths-07-adding-subtracting-expressions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Add and subtract algebraic expressions, removing brackets and collecting like terms.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Addition and subtraction of algebraic expressions"
+    }
+  ],
+  "skills": [
+    "maths.algebra.add_subtract"
+  ],
+  "title": {
+    "en": "Adding and subtracting expressions",
+    "ur": "عبارتوں کی جمع اور تفریق"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.expressions_basic"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "first_term_only",
+      "description": "When subtracting a bracket, changes the sign of only the first term inside it."
+    },
+    {
+      "id": "unlike_joined",
+      "description": "Adds unlike terms together (5x + 6 becomes 11x)."
+    },
+    {
+      "id": "lone_letter_zero",
+      "description": "Forgets that a lone letter (a) means 1a when collecting."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.add_subtract": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.add_subtract": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "To take away (3a + 4), you …",
+            "ur": "(3a + 4) تفریق کرنے کے لیے آپ …"
+          },
+          "options": [
+            {
+              "id": "both",
+              "text": {
+                "en": "take away 3a AND take away 4",
+                "ur": "3a بھی تفریق کریں اور 4 بھی"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! −(3a + 4) = −3a − 4.",
+                "ur": "جی ہاں! −(3a + 4) = −3a − 4"
+              }
+            },
+            {
+              "id": "first",
+              "text": {
+                "en": "take away 3a and add 4",
+                "ur": "3a تفریق کریں اور 4 جمع کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The whole bracket is taken away, so 4 is taken away too: −3a − 4.",
+                "ur": "پوری بریکٹ تفریق ہوتی ہے، تو 4 بھی تفریق: −3a − 4"
+              },
+              "misconception_id": "first_term_only"
+            },
+            {
+              "id": "ignore",
+              "text": {
+                "en": "just drop the bracket",
+                "ur": "بس بریکٹ ہٹا دیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The minus in front changes every sign inside: −3a − 4.",
+                "ur": "سامنے کا منفی اندر کی ہر علامت بدلتا ہے: −3a − 4"
+              },
+              "misconception_id": "first_term_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "text_check",
+          "prompt": {
+            "en": "Simplify (9k + 7) − (4k + 2).",
+            "ur": "(9k + 7) − (4k + 2) کو مختصر کریں۔"
+          },
+          "checker": "text",
+          "expected": "5k + 5",
+          "accept": [
+            "5+5k"
+          ],
+          "hint": {
+            "en": "Take away 4k AND take away 2.",
+            "ur": "4k بھی تفریق کریں اور 2 بھی۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 5k + 5.",
+            "ur": "درست! 5k + 5"
+          },
+          "feedback_wrong": {
+            "en": "9k − 4k = 5k and 7 − 2 = 5: 5k + 5.",
+            "ur": "9k − 4k = 5k اور 7 − 2 = 5: 5k + 5"
+          },
+          "common_wrong": [
+            {
+              "answer": "5k + 9",
+              "feedback": {
+                "en": "Take away the 2 as well: 7 − 2 = 5. 5k + 5.",
+                "ur": "2 بھی تفریق کریں: 7 − 2 = 5۔ 5k + 5"
+              },
+              "misconception_id": "first_term_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hamza writes (2a + b) + (3a + 4b) = 5a + 4b. What is wrong?",
+            "ur": "حمزہ لکھتا ہے (2a + b) + (3a + 4b) = 5a + 4b۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "one_b",
+              "text": {
+                "en": "b means 1b, so b + 4b = 5b: the answer is 5a + 5b.",
+                "ur": "b یعنی 1b، تو b + 4b = 5b: جواب 5a + 5b"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Don't lose the lone b.",
+                "ur": "جی ہاں! اکیلا b نہ کھوئیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "He left out the first b. b + 4b = 5b: 5a + 5b.",
+                "ur": "اس نے پہلا b چھوڑ دیا۔ b + 4b = 5b: 5a + 5b"
+              },
+              "misconception_id": "lone_letter_zero"
+            },
+            {
+              "id": "all",
+              "text": {
+                "en": "It should be 10ab.",
+                "ur": "یہ 10ab ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "a and b are unlike terms; they stay apart: 5a + 5b.",
+                "ur": "a اور b غیر یکساں ارکان ہیں؛ الگ رہتے ہیں: 5a + 5b"
+              },
+              "misconception_id": "unlike_joined"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_add",
+      "front": {
+        "en": "(3a + 2b) + (4a + b)?",
+        "ur": "(3a + 2b) + (4a + b)؟"
+      },
+      "back": {
+        "en": "Collect like terms: 7a + 3b.",
+        "ur": "یکساں ارکان جمع کریں: 7a + 3b"
+      }
+    },
+    {
+      "id": "f_sub",
+      "front": {
+        "en": "−(2x + 1)?",
+        "ur": "−(2x + 1)؟"
+      },
+      "back": {
+        "en": "Change EVERY sign in the bracket: −2x − 1.",
+        "ur": "بریکٹ کی ہر علامت بدلیں: −2x − 1"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_fruit",
+      "text": {
+        "en": "Put 5 apples and 4 oranges in a basket (5a + 4o). Take out 2 apples and 1 orange. Write what you took out as a bracket and what is left as an expression.",
+        "ur": "ایک ٹوکری میں 5 سیب اور 4 مالٹے رکھیں (5a + 4o)۔ 2 سیب اور 1 مالٹا نکالیں۔ جو نکالا اسے بریکٹ میں اور جو بچا اسے عبارت میں لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Expression",
+      "ur": "عبارت"
+    },
+    {
+      "en": "Like terms",
+      "ur": "یکساں ارکان"
+    },
+    {
+      "en": "Bracket",
+      "ur": "بریکٹ (قوسین)"
+    },
+    {
+      "en": "Simplify",
+      "ur": "مختصر کرنا"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A basket has 6 mangoes and 5 bananas. Take out 2 mangoes and 3 bananas. Can algebra keep track?",
+          "ur": "ٹوکری میں 6 آم اور 5 کیلے ہیں۔ 2 آم اور 3 کیلے نکالیں۔ کیا الجبرا حساب رکھ سکتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we add and subtract whole expressions, with brackets. First, collect like terms.",
+        "ur": "آج ہم بریکٹ والی پوری عبارتیں جمع اور تفریق کریں گے۔ پہلے یکساں ارکان جمع کریں۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.algebra.expressions_basic",
+      "prompt": {
+        "en": "Simplify 3a + 2a.",
+        "ur": "3a + 2a کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "5a",
+      "hint": {
+        "en": "3 a's and 2 more a's.",
+        "ur": "3 a اور 2 مزید a"
+      },
+      "feedback_correct": {
+        "en": "Right! 5a.",
+        "ur": "درست! 5a"
+      },
+      "feedback_wrong": {
+        "en": "3a + 2a = 5a, like 3 apples + 2 apples.",
+        "ur": "3a + 2a = 5a، جیسے 3 سیب + 2 سیب"
+      },
+      "common_wrong": [
+        {
+          "answer": "6a",
+          "feedback": {
+            "en": "Add the coefficients, don't multiply: 3 + 2 = 5. 5a.",
+            "ur": "عددی سر جمع کریں، ضرب نہیں: 3 + 2 = 5۔ 5a"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Adding? Just collect like terms. Subtracting? Change every sign in the bracket first!",
+          "ur": "جمع؟ بس یکساں ارکان جمع کریں۔ تفریق؟ پہلے بریکٹ کی ہر علامت بدلیں!"
+        }
+      },
+      "text": {
+        "en": "To add expressions, remove the brackets and collect like terms: (3a + 2b) + (4a + b) = 3a + 2b + 4a + b = 7a + 3b. To subtract, the minus sign takes away EVERYTHING in the bracket, so every sign inside changes: (5x + 4) − (2x + 1) = 5x + 4 − 2x − 1 = 3x + 3. Unlike terms, like 3x and 3, stay apart.",
+        "ur": "عبارتیں جمع کرنے کے لیے بریکٹ ہٹائیں اور یکساں ارکان جمع کریں: (3a + 2b) + (4a + b) = 3a + 2b + 4a + b = 7a + 3b۔ تفریق میں منفی کی علامت بریکٹ کی ہر چیز تفریق کرتی ہے، تو اندر کی ہر علامت بدل جاتی ہے: (5x + 4) − (2x + 1) = 5x + 4 − 2x − 1 = 3x + 3۔ غیر یکساں ارکان، جیسے 3x اور 3، الگ رہتے ہیں۔"
+      }
+    },
+    {
+      "id": "s4_add",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify (2x + 5) + (3x + 1).",
+        "ur": "(2x + 5) + (3x + 1) کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "5x + 6",
+      "accept": [
+        "6+5x"
+      ],
+      "hint": {
+        "en": "x terms together, numbers together.",
+        "ur": "x والے ارکان اکٹھے، اعداد اکٹھے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5x + 6.",
+        "ur": "درست! 5x + 6"
+      },
+      "feedback_wrong": {
+        "en": "2x + 3x = 5x and 5 + 1 = 6: 5x + 6.",
+        "ur": "2x + 3x = 5x اور 5 + 1 = 6: 5x + 6"
+      },
+      "common_wrong": [
+        {
+          "answer": "11x",
+          "feedback": {
+            "en": "5x and 6 are unlike terms; they stay apart: 5x + 6.",
+            "ur": "5x اور 6 غیر یکساں ہیں؛ الگ رہتے ہیں: 5x + 6"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "s5_add_two",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify (4a + 3b) + (a − b).",
+        "ur": "(4a + 3b) + (a − b) کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "5a + 2b",
+      "accept": [
+        "2b+5a"
+      ],
+      "hint": {
+        "en": "a means 1a, and −b means −1b.",
+        "ur": "a یعنی 1a، اور −b یعنی −1b"
+      },
+      "feedback_correct": {
+        "en": "Right! 5a + 2b.",
+        "ur": "درست! 5a + 2b"
+      },
+      "feedback_wrong": {
+        "en": "4a + a = 5a and 3b − b = 2b: 5a + 2b.",
+        "ur": "4a + a = 5a اور 3b − b = 2b: 5a + 2b"
+      },
+      "common_wrong": [
+        {
+          "answer": "4a + 2b",
+          "feedback": {
+            "en": "Don't lose the lone a: 4a + a = 5a. 5a + 2b.",
+            "ur": "اکیلا a نہ کھوئیں: 4a + a = 5a۔ 5a + 2b"
+          },
+          "misconception_id": "lone_letter_zero"
+        }
+      ]
+    },
+    {
+      "id": "s6_subtract",
+      "type": "choice",
+      "prompt": {
+        "en": "What is (6m + 5) − (2m + 3)?",
+        "ur": "(6m + 5) − (2m + 3) کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "4m + 2",
+            "ur": "4m + 2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 6m − 2m = 4m and 5 − 3 = 2.",
+            "ur": "جی ہاں! 6m − 2m = 4m اور 5 − 3 = 2"
+          }
+        },
+        {
+          "id": "first_only",
+          "text": {
+            "en": "4m + 8",
+            "ur": "4m + 8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 3 must be taken away too: 5 − 3 = 2. 4m + 2.",
+            "ur": "3 بھی تفریق کرنا ہے: 5 − 3 = 2۔ 4m + 2"
+          },
+          "misconception_id": "first_term_only"
+        },
+        {
+          "id": "added",
+          "text": {
+            "en": "8m + 2",
+            "ur": "8m + 2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Take away 2m, don't add it: 6m − 2m = 4m.",
+            "ur": "2m تفریق کریں، جمع نہیں: 6m − 2m = 4m"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_subtract",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify (7y + 9) − (3y + 4).",
+        "ur": "(7y + 9) − (3y + 4) کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "4y + 5",
+      "accept": [
+        "5+4y"
+      ],
+      "hint": {
+        "en": "−(3y + 4) = −3y − 4.",
+        "ur": "−(3y + 4) = −3y − 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 4y + 5.",
+        "ur": "درست! 4y + 5"
+      },
+      "feedback_wrong": {
+        "en": "7y − 3y = 4y and 9 − 4 = 5: 4y + 5.",
+        "ur": "7y − 3y = 4y اور 9 − 4 = 5: 4y + 5"
+      },
+      "common_wrong": [
+        {
+          "answer": "4y + 13",
+          "feedback": {
+            "en": "The 4 is taken away too: 9 − 4 = 5. 4y + 5.",
+            "ur": "4 بھی تفریق ہوتا ہے: 9 − 4 = 5۔ 4y + 5"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "s8_negative",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify (5p − 2) − (p − 6).",
+        "ur": "(5p − 2) − (p − 6) کو مختصر کریں۔"
+      },
+      "checker": "text",
+      "expected": "4p + 4",
+      "accept": [
+        "4+4p"
+      ],
+      "hint": {
+        "en": "−(p − 6) = −p + 6: taking away −6 adds 6.",
+        "ur": "−(p − 6) = −p + 6: −6 تفریق کرنے سے 6 جمع ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4p + 4.",
+        "ur": "درست! 4p + 4"
+      },
+      "feedback_wrong": {
+        "en": "5p − p = 4p and −2 + 6 = 4: 4p + 4.",
+        "ur": "5p − p = 4p اور −2 + 6 = 4: 4p + 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "4p - 8",
+          "feedback": {
+            "en": "−(−6) is +6, so −2 + 6 = 4: 4p + 4.",
+            "ur": "−(−6) یعنی +6، تو −2 + 6 = 4: 4p + 4"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana writes (8n + 3) − (5n + 2) = 3n + 5. What is wrong?",
+        "ur": "ثنا لکھتی ہے (8n + 3) − (5n + 2) = 3n + 5۔ کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "both_signs",
+          "text": {
+            "en": "She added the 2. Take it away: 3 − 2 = 1, so 3n + 1.",
+            "ur": "اس نے 2 جمع کر دیا۔ اسے تفریق کریں: 3 − 2 = 1، تو 3n + 1"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The minus takes away the whole bracket.",
+            "ur": "جی ہاں! منفی پوری بریکٹ تفریق کرتا ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−(5n + 2) = −5n − 2. 3 − 2 = 1: 3n + 1.",
+            "ur": "−(5n + 2) = −5n − 2۔ 3 − 2 = 1: 3n + 1"
+          },
+          "misconception_id": "first_term_only"
+        },
+        {
+          "id": "n_wrong",
+          "text": {
+            "en": "The n part is wrong: it should be 13n.",
+            "ur": "n والا حصہ غلط ہے: 13n ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8n − 5n = 3n is right. The mistake is +2; it should be −2: 3n + 1.",
+            "ur": "8n − 5n = 3n ٹھیک ہے۔ غلطی +2 میں ہے؛ −2 ہونا چاہیے: 3n + 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does −(2x + 1) turn the + 1 into − 1? It wasn't next to the minus! Help me.",
+          "ur": "−(2x + 1) میں + 1، − 1 کیوں بن جاتا ہے؟ یہ تو منفی کے ساتھ نہیں تھا! میری مدد کریں۔"
+        }
+      },
+      "task": {
+        "en": "Explain why (5x + 4) − (2x + 1) is 3x + 3 and not 3x + 5.",
+        "ur": "بتائیں کہ (5x + 4) − (2x + 1) کا جواب 3x + 3 کیوں ہے، 3x + 5 کیوں نہیں۔"
+      },
+      "key_idea": "The minus sign takes away the whole bracket, both 2x and 1. So −(2x + 1) = −2x − 1. Then 5x − 2x = 3x and 4 − 1 = 3, giving 3x + 3. 3x + 5 comes from taking away only 2x and adding the 1.",
+      "levels": {
+        "got_it": "Says the whole bracket is taken away (−2x − 1), so 4 − 1 = 3, giving 3x + 3.",
+        "partly": "Gets 3x + 3 but doesn't say why the 1 is subtracted.",
+        "not_yet": "Gives no reason."
+      },
+      "keywords": [
+        [
+          "whole",
+          "both",
+          "everything",
+          "پوری",
+          "دونوں"
+        ],
+        [
+          "-1",
+          "− 1",
+          "minus 1",
+          "take away 1",
+          "1 تفریق"
+        ],
+        [
+          "3x + 3",
+          "3x+3"
+        ],
+        [
+          "bracket",
+          "بریکٹ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The whole bracket goes, so − 1.",
+          "ur": "بہت خوب! پوری بریکٹ تفریق، تو − 1"
+        },
+        "partly": {
+          "en": "Good start! Why is the 1 taken away and not added?",
+          "ur": "اچھی شروعات! 1 تفریق کیوں ہوتا ہے، جمع کیوں نہیں؟"
+        },
+        "not_yet": {
+          "en": "If you give away (2 mangoes + 1 banana), do you give the banana too?",
+          "ur": "اگر آپ (2 آم + 1 کیلا) دیں، تو کیا کیلا بھی دیں گے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_perimeter",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has sides x + 2, 2x + 1 and 3x. Write its perimeter as simply as you can.",
+        "ur": "ایک مثلث کے اضلاع x + 2، 2x + 1 اور 3x ہیں۔ اس کا احاطہ جتنا مختصر ہو سکے لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "6x + 3",
+      "accept": [
+        "3+6x"
+      ],
+      "hint": {
+        "en": "Add all three sides: x terms, then numbers.",
+        "ur": "تینوں اضلاع جمع کریں: پہلے x والے، پھر اعداد۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6x + 3.",
+        "ur": "درست! 6x + 3"
+      },
+      "feedback_wrong": {
+        "en": "x + 2x + 3x = 6x and 2 + 1 = 3: 6x + 3.",
+        "ur": "x + 2x + 3x = 6x اور 2 + 1 = 3: 6x + 3"
+      },
+      "common_wrong": [
+        {
+          "answer": "5x + 3",
+          "feedback": {
+            "en": "x means 1x: 1 + 2 + 3 = 6. 6x + 3.",
+            "ur": "x یعنی 1x: 1 + 2 + 3 = 6۔ 6x + 3"
+          },
+          "misconception_id": "lone_letter_zero"
+        },
+        {
+          "answer": "9x",
+          "feedback": {
+            "en": "6x and 3 are unlike terms: 6x + 3.",
+            "ur": "6x اور 3 غیر یکساں ہیں: 6x + 3"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Brackets don't scare you now. Collect, and watch the minus signs!",
+          "ur": "اب بریکٹ سے ڈر نہیں لگتا۔ جمع کریں، اور منفی علامات کا دھیان رکھیں!"
+        }
+      },
+      "text": {
+        "en": "To add expressions, remove the brackets and collect like terms. To subtract, change the sign of every term in the bracket being taken away, then collect. Unlike terms stay apart, and a lone letter means 1 of it.",
+        "ur": "عبارتیں جمع کرنے کے لیے بریکٹ ہٹائیں اور یکساں ارکان جمع کریں۔ تفریق کے لیے تفریق ہونے والی بریکٹ کے ہر رکن کی علامت بدلیں، پھر جمع کریں۔ غیر یکساں ارکان الگ رہتے ہیں، اور اکیلا حرف یعنی اس کا 1۔"
+      },
+      "points": [
+        {
+          "en": "−(a + b) = −a − b",
+          "ur": "−(a + b) = −a − b"
+        },
+        {
+          "en": "Collect like terms only.",
+          "ur": "صرف یکساں ارکان جمع کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_add",
+      "type": "apply",
+      "skill": "maths.algebra.add_subtract",
+      "step": {
+        "id": "r_add",
+        "type": "text_check",
+        "prompt": {
+          "en": "Simplify (3x + 2y) + (x + 5y).",
+          "ur": "(3x + 2y) + (x + 5y) کو مختصر کریں۔"
+        },
+        "checker": "text",
+        "expected": "4x + 7y",
+        "accept": [
+          "7y+4x"
+        ],
+        "hint": {
+          "en": "x means 1x.",
+          "ur": "x یعنی 1x"
+        },
+        "feedback_correct": {
+          "en": "Right! 4x + 7y.",
+          "ur": "درست! 4x + 7y"
+        },
+        "feedback_wrong": {
+          "en": "3x + x = 4x and 2y + 5y = 7y: 4x + 7y.",
+          "ur": "3x + x = 4x اور 2y + 5y = 7y: 4x + 7y"
+        },
+        "common_wrong": [
+          {
+            "answer": "3x + 7y",
+            "feedback": {
+              "en": "Don't lose the lone x: 3x + x = 4x.",
+              "ur": "اکیلا x نہ کھوئیں: 3x + x = 4x"
+            },
+            "misconception_id": "lone_letter_zero"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_subtract",
+      "type": "apply",
+      "skill": "maths.algebra.add_subtract",
+      "step": {
+        "id": "r_subtract",
+        "type": "text_check",
+        "prompt": {
+          "en": "Simplify (10m + 6) − (3m + 4).",
+          "ur": "(10m + 6) − (3m + 4) کو مختصر کریں۔"
+        },
+        "checker": "text",
+        "expected": "7m + 2",
+        "accept": [
+          "2+7m"
+        ],
+        "hint": {
+          "en": "Take away 3m and take away 4.",
+          "ur": "3m تفریق کریں اور 4 بھی۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 7m + 2.",
+          "ur": "درست! 7m + 2"
+        },
+        "feedback_wrong": {
+          "en": "10m − 3m = 7m and 6 − 4 = 2: 7m + 2.",
+          "ur": "10m − 3m = 7m اور 6 − 4 = 2: 7m + 2"
+        },
+        "common_wrong": [
+          {
+            "answer": "7m + 10",
+            "feedback": {
+              "en": "The 4 is taken away too: 6 − 4 = 2. 7m + 2.",
+              "ur": "4 بھی تفریق ہوتا ہے: 6 − 4 = 2۔ 7m + 2"
+            },
+            "misconception_id": "first_term_only"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh after matching the app with PCTB Mathematics 6 (Sub-domain 6, addition and subtraction of expressions). No textbook text or exercises were used.",
+    "Typed answers accept the terms in any order (5x + 6 or 6 + 5x); spaces don't matter.",
+    "Urdu terms to check: عبارت (expression), یکساں ارکان (like terms), بریکٹ / قوسین (bracket), مختصر کرنا (simplify).",
+    "The numbers were worked out in content/sources/g6-maths-07/adding_subtracting_expressions.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

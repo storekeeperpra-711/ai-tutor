@@ -9,6 +9,7 @@ Scripts that write the Grade 6 Maths lessons of the Percentages unit (`content/l
 | `percent_of_amount.py` | `g6-maths-11-percent-of-an-amount` | `maths.percent.of_amount` |
 | `finding_the_percentage.py` | `g6-maths-11-finding-the-percentage` | `maths.percent.find_percent` |
 | `percent_word_problems.py` | `g6-maths-11-percent-word-problems` | `maths.percent.word_problems` |
+| `percentage_change.py` | `g6-maths-11-percentage-change` | `maths.percent.change` (added after matching the PCTB book) |
 
 Every answer, and every common wrong answer (like reading 7% as 7 out of 10, or giving the percent itself as the answer), is worked out in Python with exact decimals (`percent_of` and `as_percent` in `common.py`) and checked with `assert`, so no number is typed by hand. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill. Percent answers are typed without the % sign.
 

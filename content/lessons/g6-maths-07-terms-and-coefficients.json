@@ -1,0 +1,775 @@
+{
+  "id": "g6-maths-07-terms-and-coefficients",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Name the terms, variables, coefficients and constant of an algebraic expression.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Terms, coefficients and constants"
+    }
+  ],
+  "skills": [
+    "maths.algebra.terms"
+  ],
+  "title": {
+    "en": "Terms, coefficients and constants",
+    "ur": "ارکان، عددی سر اور مستقل"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.variables"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "coefficient_is_constant",
+      "description": "Mixes up the coefficient (the number with the letter) and the constant (the number on its own)."
+    },
+    {
+      "id": "lone_letter_zero",
+      "description": "Thinks a letter on its own (b) has coefficient 0 instead of 1."
+    },
+    {
+      "id": "drops_sign",
+      "description": "Leaves out the minus sign that belongs to a term (−5x has coefficient −5)."
+    },
+    {
+      "id": "splits_terms",
+      "description": "Splits a term like 5x into two terms, 5 and x."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.terms": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.terms": [
+      {
+        "id": "qb_name",
+        "type": "recall",
+        "step": {
+          "id": "qb_name",
+          "type": "choice",
+          "prompt": {
+            "en": "In the term 8k, the 8 is called the …",
+            "ur": "رکن 8k میں 8 کو کہتے ہیں …"
+          },
+          "options": [
+            {
+              "id": "coefficient",
+              "text": {
+                "en": "coefficient",
+                "ur": "عددی سر"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The number multiplying the letter.",
+                "ur": "جی ہاں! وہ عدد جو حرف سے ضرب ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "constant",
+              "text": {
+                "en": "constant",
+                "ur": "مستقل"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A constant has no letter. 8 here multiplies k: coefficient.",
+                "ur": "مستقل کے ساتھ حرف نہیں ہوتا۔ یہاں 8، k سے ضرب ہے: عددی سر۔"
+              },
+              "misconception_id": "coefficient_is_constant"
+            },
+            {
+              "id": "variable",
+              "text": {
+                "en": "variable",
+                "ur": "متغیر"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The variable is the letter, k. 8 is the coefficient.",
+                "ur": "متغیر حرف k ہے۔ 8 عددی سر ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "What is the coefficient of q in 6p − q + 4?",
+            "ur": "6p − q + 4 میں q کا عددی سر کیا ہے؟"
+          },
+          "answer": -1,
+          "checker": "numeric",
+          "hint": {
+            "en": "−q means −1 × q.",
+            "ur": "−q یعنی −1 × q"
+          },
+          "feedback_correct": {
+            "en": "Right! −q is −1q, so the coefficient is −1.",
+            "ur": "درست! −q یعنی −1q، تو عددی سر −1 ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "The term is −q = −1q: coefficient −1.",
+            "ur": "رکن −q = −1q ہے: عددی سر −1"
+          },
+          "common_wrong": [
+            {
+              "answer": 1,
+              "feedback": {
+                "en": "Keep the minus sign with the term: −q has coefficient −1.",
+                "ur": "منفی کی علامت رکن کے ساتھ رکھیں: −q کا عددی سر −1 ہے۔"
+              },
+              "misconception_id": "drops_sign"
+            },
+            {
+              "answer": 0,
+              "feedback": {
+                "en": "A letter on its own counts once: −q = −1q.",
+                "ur": "اکیلا حرف ایک بار گنا جاتا ہے: −q = −1q"
+              },
+              "misconception_id": "lone_letter_zero"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Usman says 5x − 3 has three terms: 5, x and 3. What is wrong?",
+            "ur": "عثمان کہتا ہے 5x − 3 کے تین ارکان ہیں: 5، x اور 3۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "two_terms",
+              "text": {
+                "en": "5x is one term. The terms are 5x and −3: two terms.",
+                "ur": "5x ایک رکن ہے۔ ارکان 5x اور −3 ہیں: دو ارکان۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Terms are split by + and − signs only.",
+                "ur": "جی ہاں! ارکان صرف + اور − سے الگ ہوتے ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "5x means 5 × x: one term. 5x − 3 has two terms.",
+                "ur": "5x یعنی 5 × x: ایک رکن۔ 5x − 3 کے دو ارکان ہیں۔"
+              },
+              "misconception_id": "splits_terms"
+            },
+            {
+              "id": "one",
+              "text": {
+                "en": "It has one term.",
+                "ur": "اس کا ایک رکن ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The − sign splits it into two terms: 5x and −3.",
+                "ur": "− کی علامت اسے دو ارکان میں بانٹتی ہے: 5x اور −3"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_parts",
+      "front": {
+        "en": "In 5x + 3y − 7?",
+        "ur": "5x + 3y − 7 میں؟"
+      },
+      "back": {
+        "en": "Terms 5x, 3y, −7. Coefficient of x is 5, of y is 3. Constant −7.",
+        "ur": "ارکان 5x، 3y، −7۔ x کا عددی سر 5، y کا 3۔ مستقل −7"
+      }
+    },
+    {
+      "id": "f_one",
+      "front": {
+        "en": "Coefficient of b in a + b?",
+        "ur": "a + b میں b کا عددی سر؟"
+      },
+      "back": {
+        "en": "1, because b means 1b.",
+        "ur": "1، کیونکہ b یعنی 1b"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_shop",
+      "text": {
+        "en": "A shopkeeper charges Rs 10 for each pen and Rs 25 for a bag, so x pens cost 10x + 25. Ask someone at home to make up a price rule like this. Name its coefficient and constant.",
+        "ur": "دکاندار ہر قلم کے 10 روپے اور تھیلے کے 25 روپے لیتا ہے، تو x قلم 10x + 25 کے ہیں۔ گھر میں کسی سے ایسا ایک قیمت کا اصول بنوائیں۔ اس کا عددی سر اور مستقل بتائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Term",
+      "ur": "رکن"
+    },
+    {
+      "en": "Variable",
+      "ur": "متغیر"
+    },
+    {
+      "en": "Coefficient",
+      "ur": "عددی سر"
+    },
+    {
+      "en": "Constant",
+      "ur": "مستقل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "5x + 3y − 7 looks like a puzzle. Let's name every piece of it!",
+          "ur": "5x + 3y − 7 ایک پہیلی لگتی ہے۔ آئیں اس کے ہر ٹکڑے کا نام رکھیں!"
+        }
+      },
+      "text": {
+        "en": "Today we learn the names of the parts of an expression: terms, variables, coefficients and constants. First, write an expression.",
+        "ur": "آج ہم عبارت کے حصوں کے نام سیکھیں گے: ارکان، متغیر، عددی سر اور مستقل۔ پہلے ایک عبارت لکھیں۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "text_check",
+      "question_type": "recall",
+      "skill": "maths.algebra.variables",
+      "prompt": {
+        "en": "Ali has x marbles. He gets 3 more. Write how many he has now.",
+        "ur": "علی کے پاس x کنچے ہیں۔ اسے 3 اور ملتے ہیں۔ لکھیں اب اس کے پاس کتنے ہیں۔"
+      },
+      "checker": "text",
+      "expected": "x+3",
+      "accept": [
+        "3+x"
+      ],
+      "hint": {
+        "en": "Start with x, then add 3.",
+        "ur": "x سے شروع کریں، پھر 3 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x + 3.",
+        "ur": "درست! x + 3"
+      },
+      "feedback_wrong": {
+        "en": "x marbles and 3 more: x + 3.",
+        "ur": "x کنچے اور 3 مزید: x + 3"
+      },
+      "common_wrong": [
+        {
+          "answer": "3x",
+          "feedback": {
+            "en": "3x means 3 times x. He gets 3 MORE: x + 3.",
+            "ur": "3x یعنی x کا تین گنا۔ اسے 3 مزید ملتے ہیں: x + 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "The letter is the variable, its number is the coefficient, and a lonely number is the constant!",
+          "ur": "حرف متغیر ہے، اس کا عدد عددی سر، اور اکیلا عدد مستقل!"
+        }
+      },
+      "text": {
+        "en": "In 5x + 3y − 7 the terms are 5x, 3y and −7; + and − signs separate them, and each sign belongs to the term after it. x and y are variables. The number in front of a variable is its coefficient: 5 is the coefficient of x, 3 of y. A term with no letter, −7, is the constant. A letter on its own has coefficient 1: b means 1b, and −b means −1b.",
+        "ur": "5x + 3y − 7 میں ارکان 5x، 3y اور −7 ہیں؛ + اور − کی علامات انہیں الگ کرتی ہیں، اور ہر علامت اپنے بعد والے رکن کی ہوتی ہے۔ x اور y متغیر ہیں۔ متغیر سے پہلے کا عدد اس کا عددی سر ہے: 5، x کا عددی سر ہے، 3، y کا۔ بغیر حرف والا رکن، −7، مستقل ہے۔ اکیلے حرف کا عددی سر 1 ہوتا ہے: b یعنی 1b، اور −b یعنی −1b۔"
+      }
+    },
+    {
+      "id": "s4_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many terms does 4a + 2b − 6 + c have?",
+        "ur": "4a + 2b − 6 + c کے کتنے ارکان ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the parts between + and − signs.",
+        "ur": "+ اور − کے درمیان حصے گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4a, 2b, −6 and c: 4 terms.",
+        "ur": "درست! 4a، 2b، −6 اور c: 4 ارکان"
+      },
+      "feedback_wrong": {
+        "en": "The terms are 4a, 2b, −6 and c: 4.",
+        "ur": "ارکان 4a، 2b، −6 اور c ہیں: 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Don't forget c on the end: it is a term too. 4 terms.",
+            "ur": "آخر میں c نہ بھولیں: یہ بھی رکن ہے۔ 4 ارکان"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_coefficient",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the coefficient of y in 7x + 9y − 2?",
+        "ur": "7x + 9y − 2 میں y کا عددی سر کیا ہے؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which number is with y?",
+        "ur": "y کے ساتھ کون سا عدد ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 9.",
+        "ur": "درست! 9"
+      },
+      "feedback_wrong": {
+        "en": "The term with y is 9y, so the coefficient is 9.",
+        "ur": "y والا رکن 9y ہے، تو عددی سر 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "7 goes with x. The coefficient of y is 9.",
+            "ur": "7، x کے ساتھ ہے۔ y کا عددی سر 9 ہے۔"
+          }
+        },
+        {
+          "answer": -2,
+          "feedback": {
+            "en": "−2 has no letter: it is the constant. y's coefficient is 9.",
+            "ur": "−2 کے ساتھ حرف نہیں: یہ مستقل ہے۔ y کا عددی سر 9"
+          },
+          "misconception_id": "coefficient_is_constant"
+        }
+      ]
+    },
+    {
+      "id": "s6_constant",
+      "type": "choice",
+      "prompt": {
+        "en": "What is the constant in 3m − 8 + 2n?",
+        "ur": "3m − 8 + 2n میں مستقل کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "minus_eight",
+          "text": {
+            "en": "−8",
+            "ur": "−8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! It has no letter, and the minus sign belongs to it.",
+            "ur": "جی ہاں! اس کے ساتھ حرف نہیں، اور منفی علامت اسی کی ہے۔"
+          }
+        },
+        {
+          "id": "eight",
+          "text": {
+            "en": "8",
+            "ur": "8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The sign in front belongs to the term: −8.",
+            "ur": "سامنے کی علامت رکن کی ہوتی ہے: −8"
+          },
+          "misconception_id": "drops_sign"
+        },
+        {
+          "id": "three",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 is the coefficient of m. The constant has no letter: −8.",
+            "ur": "3، m کا عددی سر ہے۔ مستقل کے ساتھ حرف نہیں: −8"
+          },
+          "misconception_id": "coefficient_is_constant"
+        }
+      ]
+    },
+    {
+      "id": "s7_lone_letter",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the coefficient of b in a + b + 6?",
+        "ur": "a + b + 6 میں b کا عددی سر کیا ہے؟"
+      },
+      "answer": 1,
+      "checker": "numeric",
+      "hint": {
+        "en": "b on its own means 1 × b.",
+        "ur": "اکیلا b یعنی 1 × b"
+      },
+      "feedback_correct": {
+        "en": "Right! b = 1b, so 1.",
+        "ur": "درست! b = 1b، تو 1"
+      },
+      "feedback_wrong": {
+        "en": "A letter on its own has coefficient 1.",
+        "ur": "اکیلے حرف کا عددی سر 1 ہوتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "b is there once, so 1b: coefficient 1.",
+            "ur": "b ایک بار ہے، یعنی 1b: عددی سر 1"
+          },
+          "misconception_id": "lone_letter_zero"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 has no letter: it is the constant. b's coefficient is 1.",
+            "ur": "6 کے ساتھ حرف نہیں: یہ مستقل ہے۔ b کا عددی سر 1"
+          },
+          "misconception_id": "coefficient_is_constant"
+        }
+      ]
+    },
+    {
+      "id": "s8_negative",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the coefficient of x in 12 − 5x?",
+        "ur": "12 − 5x میں x کا عددی سر کیا ہے؟"
+      },
+      "answer": -5,
+      "checker": "numeric",
+      "hint": {
+        "en": "The sign in front of 5x belongs to it.",
+        "ur": "5x سے پہلے کی علامت اسی کی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −5.",
+        "ur": "درست! −5"
+      },
+      "feedback_wrong": {
+        "en": "The term is −5x, so the coefficient is −5.",
+        "ur": "رکن −5x ہے، تو عددی سر −5"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "Keep the sign: the term is −5x, so −5.",
+            "ur": "علامت ساتھ رکھیں: رکن −5x ہے، تو −5"
+          },
+          "misconception_id": "drops_sign"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the constant. x's coefficient is −5.",
+            "ur": "12 مستقل ہے۔ x کا عددی سر −5"
+          },
+          "misconception_id": "coefficient_is_constant"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "In 4p + 9, Bilal says the coefficient of p is 9. What is wrong?",
+        "ur": "4p + 9 میں بلال کہتا ہے کہ p کا عددی سر 9 ہے۔ کیا غلطی ہے؟"
+      },
+      "options": [
+        {
+          "id": "four",
+          "text": {
+            "en": "The coefficient is 4, the number with p. 9 is the constant.",
+            "ur": "عددی سر 4 ہے، p کے ساتھ والا عدد۔ 9 مستقل ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Coefficient goes with the letter; constant stands alone.",
+            "ur": "جی ہاں! عددی سر حرف کے ساتھ؛ مستقل اکیلا۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 has no letter, so it is the constant. p's coefficient is 4.",
+            "ur": "9 کے ساتھ حرف نہیں، تو یہ مستقل ہے۔ p کا عددی سر 4"
+          },
+          "misconception_id": "coefficient_is_constant"
+        },
+        {
+          "id": "thirteen",
+          "text": {
+            "en": "It is 13, because 4 + 9 = 13.",
+            "ur": "یہ 13 ہے، کیونکہ 4 + 9 = 13"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4p and 9 are different terms; they are not added. p's coefficient is 4.",
+            "ur": "4p اور 9 مختلف ارکان ہیں؛ جمع نہیں ہوتے۔ p کا عددی سر 4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "The shopkeeper's price rule is 10x + 25. What do the 10 and the 25 mean? Teach me!",
+          "ur": "دکاندار کا قیمت کا اصول 10x + 25 ہے۔ 10 اور 25 کا کیا مطلب ہے؟ مجھے سکھائیں!"
+        }
+      },
+      "task": {
+        "en": "x pens and one bag cost 10x + 25 rupees. Which is the coefficient and which is the constant? What does each mean in the shop?",
+        "ur": "x قلم اور ایک تھیلا 10x + 25 روپے کے ہیں۔ عددی سر کون سا ہے اور مستقل کون سا؟ دکان میں ہر ایک کا کیا مطلب ہے؟"
+      },
+      "key_idea": "10 is the coefficient of x: each pen costs Rs 10, so it is multiplied by the number of pens. 25 is the constant: the bag costs Rs 25 however many pens you buy.",
+      "levels": {
+        "got_it": "Says 10 is the coefficient (price of each pen, multiplied by x) and 25 is the constant (the bag, which doesn't change).",
+        "partly": "Names the coefficient and constant correctly but doesn't say what they mean, or the other way round.",
+        "not_yet": "Mixes them up or gives no reason."
+      },
+      "keywords": [
+        [
+          "coefficient",
+          "عددی سر"
+        ],
+        [
+          "constant",
+          "مستقل"
+        ],
+        [
+          "each pen",
+          "per pen",
+          "ہر قلم"
+        ],
+        [
+          "bag",
+          "تھیلا"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 10 per pen, 25 for the bag.",
+          "ur": "بہت خوب! ہر قلم کے 10، تھیلے کے 25۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what 10 and 25 mean in the shop.",
+          "ur": "اچھی شروعات! اب بتائیں دکان میں 10 اور 25 کا کیا مطلب ہے۔"
+        },
+        "not_yet": {
+          "en": "Which number goes with x? Which one stays the same?",
+          "ur": "کون سا عدد x کے ساتھ ہے؟ کون سا ویسا ہی رہتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_combine",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "2n + 5n can be written as one term. What is its coefficient?",
+        "ur": "2n + 5n کو ایک رکن میں لکھا جا سکتا ہے۔ اس کا عددی سر کیا ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 n's and 5 more n's.",
+        "ur": "2 n اور 5 مزید n"
+      },
+      "feedback_correct": {
+        "en": "Right! 2n + 5n = 7n, coefficient 7.",
+        "ur": "درست! 2n + 5n = 7n، عددی سر 7"
+      },
+      "feedback_wrong": {
+        "en": "Like terms add their coefficients: 2 + 5 = 7, so 7n.",
+        "ur": "یکساں ارکان کے عددی سر جمع ہوتے ہیں: 2 + 5 = 7، تو 7n"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "Add the coefficients, don't multiply: 2 + 5 = 7.",
+            "ur": "عددی سر جمع کریں، ضرب نہیں: 2 + 5 = 7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Terms, variables, coefficients, constants. You can name every part now!",
+          "ur": "ارکان، متغیر، عددی سر، مستقل۔ اب آپ ہر حصے کا نام لے سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Terms are separated by + and − signs, and each sign belongs to the term after it. The letter is the variable; the number with it is the coefficient; a number on its own is the constant. A lone letter has coefficient 1 (or −1).",
+        "ur": "ارکان + اور − سے الگ ہوتے ہیں، اور ہر علامت اپنے بعد والے رکن کی ہوتی ہے۔ حرف متغیر ہے؛ اس کے ساتھ کا عدد عددی سر؛ اکیلا عدد مستقل۔ اکیلے حرف کا عددی سر 1 (یا −1) ہوتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "5x: coefficient 5, variable x.",
+          "ur": "5x: عددی سر 5، متغیر x"
+        },
+        {
+          "en": "−7 alone: the constant.",
+          "ur": "اکیلا −7: مستقل"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_terms",
+      "type": "apply",
+      "skill": "maths.algebra.terms",
+      "step": {
+        "id": "r_terms",
+        "type": "number",
+        "prompt": {
+          "en": "How many terms does 2x + 3y − z + 7 have?",
+          "ur": "2x + 3y − z + 7 کے کتنے ارکان ہیں؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Split at every + and − sign.",
+          "ur": "ہر + اور − پر الگ کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 2x, 3y, −z and 7: 4.",
+          "ur": "درست! 2x، 3y، −z اور 7: 4"
+        },
+        "feedback_wrong": {
+          "en": "The terms are 2x, 3y, −z and 7.",
+          "ur": "ارکان 2x، 3y، −z اور 7 ہیں۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "−z is a term too: 4 terms.",
+              "ur": "−z بھی رکن ہے: 4 ارکان"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_coefficient",
+      "type": "apply",
+      "skill": "maths.algebra.terms",
+      "step": {
+        "id": "r_coefficient",
+        "type": "number",
+        "prompt": {
+          "en": "What is the coefficient of m in 11 + 4m?",
+          "ur": "11 + 4m میں m کا عددی سر کیا ہے؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Which number is with m?",
+          "ur": "m کے ساتھ کون سا عدد ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 4.",
+          "ur": "درست! 4"
+        },
+        "feedback_wrong": {
+          "en": "The term is 4m, so the coefficient is 4. 11 is the constant.",
+          "ur": "رکن 4m ہے، تو عددی سر 4۔ 11 مستقل ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 11,
+            "feedback": {
+              "en": "11 has no letter: it is the constant. m's coefficient is 4.",
+              "ur": "11 کے ساتھ حرف نہیں: یہ مستقل ہے۔ m کا عددی سر 4"
+            },
+            "misconception_id": "coefficient_is_constant"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh after matching the app with PCTB Mathematics 6 (Sub-domain 6, terms, coefficients and constants). No textbook text or exercises were used.",
+    "Negative coefficients (−5x, −q) use the integers taught in the Integers unit.",
+    "Urdu terms to check: رکن / ارکان (term / terms), متغیر (variable), عددی سر (coefficient), مستقل (constant).",
+    "The numbers were worked out in content/sources/g6-maths-07/terms_and_coefficients.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
