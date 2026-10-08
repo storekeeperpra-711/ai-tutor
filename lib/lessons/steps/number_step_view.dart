@@ -21,6 +21,7 @@ class NumberStepView extends StatelessWidget {
     feedbackWrong: step.feedbackWrong,
     maxAttempts: step.maxAttempts,
     character: step.character,
+    figure: step.figure,
     unit: step.unit,
     numberKeyboard: step.checker == 'numeric',
     check: (input, l10n, language) =>

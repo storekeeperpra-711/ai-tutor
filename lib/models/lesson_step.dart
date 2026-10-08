@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'figure.dart';
 import 'localized_text.dart';
 
 part 'lesson_step.g.dart';
@@ -35,6 +36,9 @@ sealed class LessonStep {
 
   /// What Mithu says at this step, if anything.
   CharacterLine? get character => null;
+
+  /// A drawing shown under the step's text or prompt, if any.
+  StepFigure? get figure => null;
 }
 
 /// A step that asks a question. With a [questionType], its answers count
@@ -72,6 +76,7 @@ class ExplainStep extends LessonStep {
     required this.text,
     this.character,
     this.image,
+    this.figure,
   });
 
   factory ExplainStep.fromJson(Map<String, dynamic> json) =>
@@ -80,6 +85,8 @@ class ExplainStep extends LessonStep {
   final LocalizedText text;
   @override
   final CharacterLine? character;
+  @override
+  final StepFigure? figure;
   final String? image;
 }
 
@@ -93,6 +100,7 @@ class ChoiceStep extends LessonStep implements QuestionStep {
     required this.prompt,
     required this.options,
     this.character,
+    this.figure,
   });
 
   factory ChoiceStep.fromJson(Map<String, dynamic> json) =>
@@ -107,6 +115,8 @@ class ChoiceStep extends LessonStep implements QuestionStep {
   final List<ChoiceOption> options;
   @override
   final CharacterLine? character;
+  @override
+  final StepFigure? figure;
 }
 
 @JsonSerializable()
@@ -150,6 +160,7 @@ class NumberStep extends LessonStep implements QuestionStep {
     this.maxAttempts = 3,
     this.commonWrong = const [],
     this.character,
+    this.figure,
   });
 
   factory NumberStep.fromJson(Map<String, dynamic> json) =>
@@ -181,6 +192,8 @@ class NumberStep extends LessonStep implements QuestionStep {
   final List<CommonWrong> commonWrong;
   @override
   final CharacterLine? character;
+  @override
+  final StepFigure? figure;
 }
 
 /// A wrong answer students often give, with feedback for that exact mistake.
@@ -222,6 +235,7 @@ class TextCheckStep extends LessonStep implements QuestionStep {
     this.maxAttempts = 3,
     this.commonWrong = const [],
     this.character,
+    this.figure,
   });
 
   factory TextCheckStep.fromJson(Map<String, dynamic> json) =>
@@ -248,6 +262,8 @@ class TextCheckStep extends LessonStep implements QuestionStep {
   final List<CommonWrongText> commonWrong;
   @override
   final CharacterLine? character;
+  @override
+  final StepFigure? figure;
 }
 
 /// A typed wrong answer students often give, with feedback for it.
@@ -275,6 +291,7 @@ class SummaryStep extends LessonStep {
     required this.text,
     this.points = const [],
     this.character,
+    this.figure,
   });
 
   factory SummaryStep.fromJson(Map<String, dynamic> json) =>
@@ -284,6 +301,8 @@ class SummaryStep extends LessonStep {
   final List<LocalizedText> points;
   @override
   final CharacterLine? character;
+  @override
+  final StepFigure? figure;
 }
 
 /// A simulation (HTML in a WebView, or a native interactive) and,
@@ -433,6 +452,7 @@ class AiExplainStep extends LessonStep implements QuestionStep {
     this.limitPerDay = 3,
     this.maxAttempts = 2,
     this.character,
+    this.figure,
   });
 
   factory AiExplainStep.fromJson(Map<String, dynamic> json) =>
@@ -454,6 +474,8 @@ class AiExplainStep extends LessonStep implements QuestionStep {
   final int maxAttempts;
   @override
   final CharacterLine? character;
+  @override
+  final StepFigure? figure;
 }
 
 /// Feedback for each level of an explanation.
@@ -496,6 +518,7 @@ class PhotoCheckStep extends LessonStep implements QuestionStep {
     this.limitPerDay = 2,
     this.maxAttempts = 3,
     this.character,
+    this.figure,
   });
 
   factory PhotoCheckStep.fromJson(Map<String, dynamic> json) =>
@@ -522,6 +545,8 @@ class PhotoCheckStep extends LessonStep implements QuestionStep {
   final int maxAttempts;
   @override
   final CharacterLine? character;
+  @override
+  final StepFigure? figure;
 
   /// linear_equation checks every line; the others the final answer.
   bool get checksWorking => checker == 'linear_equation';

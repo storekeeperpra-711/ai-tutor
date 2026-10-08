@@ -128,6 +128,8 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
     for where, step in all_steps(lesson):
         problems += [f"{where}/{step.get('id')}: {p}" for p in check_media(step)]
         problems += [f"{where}/{step.get('id')}: {p}" for p in check_ai_step(step)]
+        if "figure" in step:
+            problems += [f"{where}/{step.get('id')}: figure {p}" for p in check_figure(step["figure"])]
 
     problems += check_voice(lesson)
 
@@ -267,6 +269,37 @@ def check_media(step: dict) -> list[str]:
     elif kind == "lottie":
         if not (ASSETS / "lottie" / step["src"]).exists():
             problems.append(f"assets/lottie/{step['src']} doesn't exist")
+    return problems
+
+
+# Figure labels are drawn as they are in both languages, so they must be
+# short and language-neutral (A, B, 1, 60°), never words.
+MAX_LABEL = 6
+ARABIC_SCRIPT = re.compile(r"[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]")
+
+
+def check_figure(figure: dict) -> list[str]:
+    """Everything is drawn inside the box, the alt text is in both
+    languages and labels are short."""
+    problems = []
+    width, height = figure["width"], figure["height"]
+    for lang in LANGUAGES:
+        if not figure["alt"].get(lang, "").strip():
+            problems.append(f"alt.{lang} is missing (describe the picture in words)")
+    for i, item in enumerate(figure["items"]):
+        name = f"item {i + 1} ({item['kind']})"
+        reach = item.get("radius", 0)
+        points = [*item.get("points", []), *(item[k] for k in ("from", "to", "center", "at") if k in item)]
+        for x, y in points:
+            if not (reach <= x <= width - reach and reach <= y <= height - reach):
+                where = f"[{x:g}, {y:g}]" + (f" with radius {reach:g}" if reach else "")
+                problems.append(f"{name}: {where} goes outside the {width:g} x {height:g} box")
+        if item["kind"] == "label":
+            text = item["text"]
+            if len(text.strip()) > MAX_LABEL or not text.strip():
+                problems.append(f"{name}: label '{text}' must be 1 to {MAX_LABEL} characters (put words in the step's text)")
+            elif ARABIC_SCRIPT.search(text) or re.search(r"[A-Za-z]{3,}", text):
+                problems.append(f"{name}: label '{text}' must be a letter, number or angle, not a word (it is not translated)")
     return problems
 
 

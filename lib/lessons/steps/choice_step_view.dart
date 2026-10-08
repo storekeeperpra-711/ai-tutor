@@ -5,6 +5,7 @@ import '../../character/mithu_bubble.dart';
 import '../../character/sounds.dart';
 import '../../l10n/app_localizations.dart';
 import '../../models/lesson_step.dart';
+import '../lesson_figure.dart';
 import '../lesson_text.dart';
 import '../step_result.dart';
 import 'step_scaffold.dart';
@@ -74,7 +75,11 @@ class _ChoiceStepViewState extends ConsumerState<ChoiceStepView> {
           ),
           const SizedBox(height: 24),
         ],
-        LessonText(step.prompt, style: textTheme.titleLarge),
+        StepPrompt(
+          step.prompt,
+          figure: step.figure,
+          style: textTheme.titleLarge,
+        ),
         const SizedBox(height: 16),
         for (final (i, option) in step.options.indexed)
           Padding(

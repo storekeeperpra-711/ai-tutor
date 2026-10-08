@@ -333,6 +333,26 @@ Choice options carry feedback for every option, each wrong option linked to a `m
 }
 ```
 
+**Figure block (optional)**
+
+`explain`, `choice`, `number`, `text_check`, `summary`, `ai_explain` and `photo_check` steps can carry a `figure`: a simple drawing the app paints itself under the step's text or prompt (no image file, works offline). Use it for geometry such as symmetry and constructions. Coordinates are in a `width` × `height` box with (0, 0) at the top left and y going down; the app scales the box to the screen width and keeps its shape. Items: `polygon` (`points`, optional `fill`), `line` (`from`, `to`), `circle` (`center`, `radius`, optional `fill`), `arc` (`center`, `radius`, `start`, `sweep` in degrees, measured clockwise on screen from the +x direction; for angle marks and compass arcs), `point` (`at`) and `label` (`at`, `text`, centred on the point). Lines, polygons, circles and arcs take `"style": "dashed"` (mirror and construction lines, drawn in orange); everything else is `solid`. `alt` is required in both languages: it says in words what the picture shows, for screen readers and for students who can't see it well. Labels are drawn as written in both languages, so keep them to a letter, number or angle (at most 6 characters, never a word). `tools/validate_lessons.py` checks that everything lies inside the box.
+
+```json
+"figure": {
+  "width": 100, "height": 60,
+  "alt": {"en": "A triangle and its mirror image across a dashed line.",
+          "ur": "ایک مثلث اور ڈیش والی لکیر کے پار اس کا عکس۔"},
+  "items": [
+    {"kind": "polygon", "points": [[10, 10], [40, 10], [40, 40]], "fill": true},
+    {"kind": "polygon", "points": [[90, 10], [60, 10], [60, 40]]},
+    {"kind": "line", "from": [50, 0], "to": [50, 60], "style": "dashed"},
+    {"kind": "arc", "center": [40, 40], "radius": 8, "start": 225, "sweep": 45},
+    {"kind": "point", "at": [40, 40]},
+    {"kind": "label", "at": [6, 6], "text": "A"}
+  ]
+}
+```
+
 If a lesson needs something the format cannot express, propose a schema change; never invent fields silently.
 
 ### E3. Language rules

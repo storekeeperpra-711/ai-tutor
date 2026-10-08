@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../character/mithu_bubble.dart';
 import '../../l10n/app_localizations.dart';
 import '../../models/lesson_step.dart';
+import '../lesson_figure.dart';
 import '../lesson_text.dart';
 import '../step_result.dart';
 import 'step_scaffold.dart';
@@ -24,7 +25,7 @@ class SummaryStepView extends StatelessWidget {
           MithuBubble(line: step.character!),
           const SizedBox(height: 24),
         ],
-        LessonText(step.text, style: textTheme.titleLarge),
+        StepPrompt(step.text, figure: step.figure, style: textTheme.titleLarge),
         const SizedBox(height: 16),
         for (final point in step.points)
           ListTile(
