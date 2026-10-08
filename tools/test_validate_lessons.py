@@ -261,6 +261,12 @@ class FigureTest(unittest.TestCase):
             figure["items"][6]["text"] = good
             self.assertEqual(v.check_figure(figure), [], good)
 
+    def test_labels_stay_away_from_the_edge(self):
+        for at in ([1, 30], [99, 30], [50, 1], [50, 59]):
+            figure = mirror_figure()
+            figure["items"][6]["at"] = at
+            self.assertProblem(v.check_figure(figure), "too close to the edge")
+
 
 class AiStepsTest(unittest.TestCase):
     """ai_explain and photo_check steps (Phase 6)."""

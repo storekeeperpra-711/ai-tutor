@@ -26,7 +26,7 @@ Future<Curriculum> loadDashboardCurriculum(
     if (!path.startsWith(lessonsFolder) || !path.endsWith('.json')) continue;
     try {
       final lesson = Lesson.fromJson(
-        jsonDecode(await rootBundle.loadString(path)) as Map<String, dynamic>,
+        jsonDecode(await loadLessonText(path)) as Map<String, dynamic>,
       );
       lessons[lesson.id] = lesson;
     } catch (_) {

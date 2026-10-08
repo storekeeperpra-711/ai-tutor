@@ -1,0 +1,2315 @@
+{
+  "id": "g6-maths-19-bisectors-and-perpendiculars",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Construct a line segment of given length, its perpendicular bisector, and a perpendicular to a line from a point on it and from a point outside it, using a ruler and compasses.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions"
+    }
+  ],
+  "skills": [
+    "maths.constructions.perpendicular_bisector"
+  ],
+  "title": {
+    "en": "Perpendicular bisectors and perpendiculars",
+    "ur": "عمودی ناصف اور عمود"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.symmetry.parallel_transversal"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "compass_too_small",
+      "description": "Opens the compass to less than half of AB, so the arcs from A and B do not meet."
+    },
+    {
+      "id": "any_bisector_perpendicular",
+      "description": "Thinks any line through the midpoint is a perpendicular bisector, even if it is not at 90°."
+    },
+    {
+      "id": "nearer_one_end",
+      "description": "Thinks a point on the perpendicular bisector is nearer to one end of the segment than the other."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.constructions.perpendicular_bisector": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.constructions.perpendicular_bisector": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "What does the perpendicular bisector of AB do?",
+            "ur": "AB کا عمودی ناصف کیا کرتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "both",
+              "text": {
+                "en": "Cuts AB into two equal parts at 90°",
+                "ur": "AB کو 90° پر دو برابر حصوں میں کاٹتا ہے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Equal halves and a right angle, both together.",
+                "ur": "جی ہاں! برابر حصے اور زاویہ قائمہ، دونوں ساتھ۔"
+              }
+            },
+            {
+              "id": "halves",
+              "text": {
+                "en": "Cuts AB into two equal parts at any angle",
+                "ur": "AB کو کسی بھی زاویے پر دو برابر حصوں میں کاٹتا ہے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is just a bisector. A perpendicular bisector must also be at 90°.",
+                "ur": "یہ صرف ناصف ہے۔ عمودی ناصف کو 90° پر بھی ہونا چاہیے۔"
+              },
+              "misconception_id": "any_bisector_perpendicular"
+            },
+            {
+              "id": "right",
+              "text": {
+                "en": "Meets AB at 90° anywhere along it",
+                "ur": "AB سے کہیں بھی 90° پر ملتا ہے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "It must also go through the middle of AB.",
+                "ur": "اسے AB کے درمیان سے بھی گزرنا چاہیے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "AB is 12 cm. Its perpendicular bisector cuts it at M. How long is AM, in cm?",
+            "ur": "AB کی لمبائی 12 سینٹی میٹر ہے۔ اس کا عمودی ناصف اسے M پر کاٹتا ہے۔ AM کتنے سینٹی میٹر ہے؟"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "M is the middle of AB: 12 ÷ 2.",
+            "ur": "M، AB کا درمیان ہے: 12 ÷ 2"
+          },
+          "feedback_correct": {
+            "en": "Right! 6 cm.",
+            "ur": "درست! 6 سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "The bisector cuts AB in half: 12 ÷ 2 = 6 cm.",
+            "ur": "ناصف AB کو آدھا کرتا ہے: 12 ÷ 2 = 6 سینٹی میٹر"
+          },
+          "common_wrong": [
+            {
+              "answer": 12,
+              "feedback": {
+                "en": "12 cm is all of AB. AM is half: 6 cm.",
+                "ur": "12 پورا AB ہے۔ AM آدھا ہے: 6 سینٹی میٹر"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "AB is 8 cm. Ayesha opens her compass to 3 cm and draws arcs from A and from B, but the arcs never cross. What went wrong?",
+            "ur": "AB کی لمبائی 8 سینٹی میٹر ہے۔ عائشہ پرکار 3 سینٹی میٹر کھول کر A اور B سے قوسیں لگاتی ہے، لیکن قوسیں آپس میں نہیں ملتیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "more",
+              "text": {
+                "en": "3 cm is less than half of 8 cm. She must open it more than 4 cm.",
+                "ur": "3 سینٹی میٹر، 8 کے آدھے سے کم ہے۔ اسے پرکار 4 سے زیادہ کھولنا چاہیے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Each arc must reach past the middle so they can cross.",
+                "ur": "جی ہاں! ہر قوس کو درمیان سے آگے پہنچنا چاہیے تاکہ وہ مل سکیں۔"
+              }
+            },
+            {
+              "id": "change",
+              "text": {
+                "en": "She should change the compass between A and B.",
+                "ur": "اسے A اور B کے درمیان پرکار بدل دینا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Keep the same opening for both. The problem is that 3 cm is too small.",
+                "ur": "دونوں کے لیے ایک ہی کھلاؤ رکھیں۔ مسئلہ یہ ہے کہ 3 سینٹی میٹر بہت کم ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. Arcs never cross.",
+                "ur": "کوئی غلطی نہیں۔ قوسیں کبھی نہیں ملتیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "They do cross if the compass opens more than half of AB, more than 4 cm.",
+                "ur": "اگر پرکار AB کے آدھے، یعنی 4 سے زیادہ کھلے تو وہ ملتی ہیں۔"
+              },
+              "misconception_id": "compass_too_small"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_bisector",
+      "front": {
+        "en": "What is a perpendicular bisector?",
+        "ur": "عمودی ناصف کیا ہے؟"
+      },
+      "back": {
+        "en": "A line that cuts a segment into two equal parts at 90°.",
+        "ur": "وہ لکیر جو قطعۂ خط کو 90° پر دو برابر حصوں میں کاٹے۔"
+      }
+    },
+    {
+      "id": "f_compass",
+      "front": {
+        "en": "How wide should the compass open?",
+        "ur": "پرکار کتنا کھولنا چاہیے؟"
+      },
+      "back": {
+        "en": "More than half of AB, the same for both arcs.",
+        "ur": "AB کے آدھے سے زیادہ، دونوں قوسوں کے لیے ایک جیسا۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_construct",
+      "text": {
+        "en": "On paper, draw AB = 8 cm with a ruler. Open your compass more than 4 cm and draw arcs from A and from B, above and below AB. Join the two crossing points. No compass? Tie a string to a pencil, hold the other end on A, and draw the arcs; keep the same string length for B. Now fold the paper so A lands exactly on B. The fold should lie on your line and cross AB at a right angle.",
+        "ur": "کاغذ پر پیمانے سے 8 سینٹی میٹر کا AB بنائیں۔ پرکار 4 سے زیادہ کھولیں اور A اور B سے، AB کے اوپر اور نیچے قوسیں لگائیں۔ ملنے والے دونوں نقطوں کو ملا دیں۔ پرکار نہیں ہے؟ پنسل سے دھاگا باندھیں، دوسرا سرا A پر پکڑیں اور قوس بنائیں؛ B کے لیے دھاگے کی لمبائی وہی رکھیں۔ اب کاغذ ایسے موڑیں کہ A بالکل B پر آ جائے۔ تہ آپ کی لکیر پر آنی چاہیے اور AB کو زاویہ قائمہ پر کاٹنا چاہیے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Perpendicular bisector",
+      "ur": "عمودی ناصف"
+    },
+    {
+      "en": "Bisector",
+      "ur": "ناصف"
+    },
+    {
+      "en": "Perpendicular",
+      "ur": "عمود"
+    },
+    {
+      "en": "Pair of compasses",
+      "ur": "پرکار"
+    },
+    {
+      "en": "Arc",
+      "ur": "قوس"
+    },
+    {
+      "en": "Line segment",
+      "ur": "قطعۂ خط"
+    },
+    {
+      "en": "Midpoint",
+      "ur": "درمیانی نقطہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Bilal wants to tie the kite string exactly in the middle of a stick, at a right angle. How can he find that spot without guessing?",
+          "ur": "بلال پتنگ کی ڈور ڈنڈی کے بالکل درمیان میں، زاویہ قائمہ پر باندھنا چاہتا ہے۔ وہ اندازے کے بغیر وہ جگہ کیسے ڈھونڈے؟"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 36,
+        "alt": {
+          "en": "A straight line segment from point A to point B, 6 cm long.",
+          "ur": "نقطہ A سے نقطہ B تک ایک سیدھا قطعۂ خط، جس کی لمبائی 6 سینٹی میٹر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              15,
+              18
+            ],
+            "to": [
+              85,
+              18
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              15,
+              18
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              85,
+              18
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              18
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              91,
+              18
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50,
+              28
+            ],
+            "text": "6 cm"
+          }
+        ]
+      },
+      "text": {
+        "en": "Today we construct lines with three tools: a ruler for straight lines and lengths, a pair of compasses for arcs, and a protractor for checking angles. First we draw a line segment AB of a given length, like 6 cm, with the ruler. Then we find its middle and a line at 90° through it.",
+        "ur": "آج ہم تین اوزاروں سے لکیریں بنائیں گے: سیدھی لکیر اور لمبائی کے لیے پیمانہ (ruler)، قوس کے لیے پرکار (pair of compasses)، اور زاویے جانچنے کے لیے زاویہ پیما (protractor)۔ پہلے پیمانے سے دی گئی لمبائی کا قطعۂ خط (line segment) AB بنائیں، جیسے 6 سینٹی میٹر۔ پھر اس کا درمیان اور اس سے 90° پر گزرنے والی لکیر ڈھونڈیں گے۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.symmetry.parallel_transversal",
+      "prompt": {
+        "en": "Two perpendicular lines meet. What angle do they make, in degrees?",
+        "ur": "دو عمودی لکیریں ملتی ہیں۔ وہ کتنے درجے کا زاویہ بناتی ہیں؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "Think of the corner of a page.",
+        "ur": "کاپی کے صفحے کے کونے کے بارے میں سوچیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Perpendicular lines meet at 90°.",
+        "ur": "درست! عمودی لکیریں 90° پر ملتی ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "Perpendicular lines meet at a right angle, 90°.",
+        "ur": "عمودی لکیریں زاویہ قائمہ، 90° پر ملتی ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "180° is a straight line. Perpendicular lines make a right angle: 90°.",
+            "ur": "180° سیدھی لکیر ہے۔ عمودی لکیریں زاویہ قائمہ بناتی ہیں: 90°"
+          }
+        },
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "45° is half a right angle. Perpendicular means 90°.",
+            "ur": "45° زاویہ قائمہ کا آدھا ہے۔ عمودی کا مطلب 90° ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_construct",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Same compass opening from A and from B. That is the whole secret!",
+          "ur": "A اور B سے پرکار کا ایک جیسا کھلاؤ۔ یہی سارا راز ہے!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "Line segment AB with its midpoint M. Dashed compass arcs from A and from B cross above AB at P and below AB at Q. A dashed line joins P and Q and cuts AB at M, with a small square showing a right angle.",
+          "ur": "قطعۂ خط AB اور اس کا درمیانی نقطہ M۔ A اور B سے پرکار کی ڈیش والی قوسیں AB کے اوپر P پر اور نیچے Q پر ملتی ہیں۔ ڈیش والی لکیر P اور Q کو ملاتی ہے اور AB کو M پر کاٹتی ہے، اور ایک چھوٹا مربع زاویہ قائمہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              30,
+              35
+            ],
+            "to": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 300.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 29.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 209.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 120.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              8
+            ],
+            "to": [
+              50,
+              62
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              31
+            ],
+            "to": [
+              54,
+              31
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54,
+              31
+            ],
+            "to": [
+              54,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              15.4
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              54.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24,
+              35
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76,
+              35
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              12
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              58
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45,
+              41
+            ],
+            "text": "M"
+          }
+        ]
+      },
+      "text": {
+        "en": "A bisector cuts a line segment into two equal parts. A perpendicular bisector (right bisector) does more: it cuts AB into two equal parts AND makes 90° with it. To construct it: 1. Draw AB with a ruler. 2. Open the compass more than half of AB. Put the point on A and draw arcs above and below AB. 3. Without changing the opening, do the same from B. 4. Join the two crossing points P and Q with a ruler. PQ cuts AB at its midpoint M at 90°. To draw a perpendicular from a point P to a line, draw arcs from P that cut the line at C and D (if P is on the line, C and D are on either side of it), then construct the perpendicular bisector of CD.",
+        "ur": "ناصف (bisector) قطعۂ خط کو دو برابر حصوں میں کاٹتا ہے۔ عمودی ناصف (perpendicular bisector) اس سے زیادہ کرتا ہے: یہ AB کو دو برابر حصوں میں کاٹتا ہے اور اس کے ساتھ 90° بھی بناتا ہے۔ اسے بنانے کا طریقہ: 1۔ پیمانے سے AB کھینچیں۔ 2۔ پرکار AB کے آدھے سے زیادہ کھولیں۔ نوک A پر رکھ کر AB کے اوپر اور نیچے قوسیں (arcs) لگائیں۔ 3۔ کھلاؤ بدلے بغیر یہی B سے کریں۔ 4۔ ملنے والے دونوں نقطوں P اور Q کو پیمانے سے ملا دیں۔ PQ، AB کو اس کے درمیانی نقطے M پر 90° پر کاٹتا ہے۔ کسی نقطے P سے لکیر پر عمود (perpendicular) بنانے کے لیے P سے قوسیں لگائیں جو لکیر کو C اور D پر کاٹیں (اگر P لکیر پر ہو تو C اور D اس کے دونوں طرف ہوں گے)، پھر CD کا عمودی ناصف بنائیں۔"
+      }
+    },
+    {
+      "id": "s4_order",
+      "type": "choice",
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "Line segment AB with its midpoint M. Dashed compass arcs from A and from B cross above AB at P and below AB at Q. A dashed line joins P and Q and cuts AB at M, with a small square showing a right angle.",
+          "ur": "قطعۂ خط AB اور اس کا درمیانی نقطہ M۔ A اور B سے پرکار کی ڈیش والی قوسیں AB کے اوپر P پر اور نیچے Q پر ملتی ہیں۔ ڈیش والی لکیر P اور Q کو ملاتی ہے اور AB کو M پر کاٹتی ہے، اور ایک چھوٹا مربع زاویہ قائمہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              30,
+              35
+            ],
+            "to": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 300.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 29.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 209.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 120.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              8
+            ],
+            "to": [
+              50,
+              62
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              31
+            ],
+            "to": [
+              54,
+              31
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54,
+              31
+            ],
+            "to": [
+              54,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              15.4
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              54.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24,
+              35
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76,
+              35
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              12
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              58
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45,
+              41
+            ],
+            "text": "M"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "Which order of steps constructs the perpendicular bisector of AB?",
+        "ur": "کس ترتیب سے AB کا عمودی ناصف بنتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "join_first",
+          "text": {
+            "en": "Join P and Q; draw AB; draw arcs from A; draw arcs from B",
+            "ur": "P اور Q ملائیں؛ AB کھینچیں؛ A سے قوسیں؛ B سے قوسیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P and Q don't exist yet! They come from the arcs. Draw AB first.",
+            "ur": "P اور Q ابھی موجود ہی نہیں! یہ قوسوں سے بنتے ہیں۔ پہلے AB کھینچیں۔"
+          }
+        },
+        {
+          "id": "right_order",
+          "text": {
+            "en": "Draw AB; arcs from A; arcs from B with the same opening; join P and Q",
+            "ur": "AB کھینچیں؛ A سے قوسیں؛ اسی کھلاؤ سے B سے قوسیں؛ P اور Q ملائیں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Segment, arcs, arcs, then join the crossings.",
+            "ur": "جی ہاں! قطعہ، قوسیں، قوسیں، پھر ملنے کے نقطے ملائیں۔"
+          }
+        },
+        {
+          "id": "arcs_first",
+          "text": {
+            "en": "Draw arcs from A and B; then draw AB; then join P and Q",
+            "ur": "A اور B سے قوسیں؛ پھر AB کھینچیں؛ پھر P اور Q ملائیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "You need A and B on the paper before you can put the compass on them. Draw AB first.",
+            "ur": "پرکار رکھنے سے پہلے کاغذ پر A اور B ہونے چاہییں۔ پہلے AB کھینچیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_why_half",
+      "type": "choice",
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "Line segment AB. A short dashed arc is drawn from A and another from B, but the compass was opened less than half of AB, so the two arcs stop before the middle and leave a gap. They do not cross.",
+          "ur": "قطعۂ خط AB۔ A سے ایک چھوٹی ڈیش والی قوس اور B سے دوسری قوس لگائی گئی، لیکن پرکار AB کے آدھے سے کم کھولا گیا، اس لیے دونوں قوسیں درمیان سے پہلے رک جاتی ہیں اور خالی جگہ رہ جاتی ہے۔ وہ آپس میں نہیں ملتیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              25,
+              30
+            ],
+            "to": [
+              75,
+              30
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              25,
+              30
+            ],
+            "radius": 15,
+            "start": 300,
+            "sweep": 120,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              75,
+              30
+            ],
+            "radius": 15,
+            "start": 120,
+            "sweep": 120,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              25,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              75,
+              30
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19,
+              30
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              81,
+              30
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50,
+              22
+            ],
+            "text": "?"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "Hira's arcs from A and B did not meet. Why must the compass open more than half of AB?",
+        "ur": "حرا کی A اور B والی قوسیں نہیں ملیں۔ پرکار AB کے آدھے سے زیادہ کیوں کھلنا چاہیے؟"
+      },
+      "options": [
+        {
+          "id": "reach",
+          "text": {
+            "en": "So each arc reaches past the middle of AB and the two arcs can cross",
+            "ur": "تاکہ ہر قوس AB کے درمیان سے آگے پہنچے اور دونوں قوسیں مل سکیں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Less than half and the arcs stop short of each other, like in the picture.",
+            "ur": "جی ہاں! آدھے سے کم ہو تو قوسیں ایک دوسرے سے پہلے رک جاتی ہیں، جیسے تصویر میں۔"
+          }
+        },
+        {
+          "id": "neat",
+          "text": {
+            "en": "So the drawing looks neater",
+            "ur": "تاکہ شکل زیادہ صاف لگے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It is not about looks. With less than half, the arcs cannot meet at all.",
+            "ur": "بات خوبصورتی کی نہیں۔ آدھے سے کم ہو تو قوسیں مل ہی نہیں سکتیں۔"
+          },
+          "misconception_id": "compass_too_small"
+        },
+        {
+          "id": "any",
+          "text": {
+            "en": "It doesn't matter; any opening works",
+            "ur": "کوئی فرق نہیں؛ کوئی بھی کھلاؤ چلے گا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Look at the picture: the arcs left a gap. The opening must be more than half of AB.",
+            "ur": "تصویر دیکھیں: قوسوں میں خالی جگہ رہ گئی۔ کھلاؤ AB کے آدھے سے زیادہ ہونا چاہیے۔"
+          },
+          "misconception_id": "compass_too_small"
+        }
+      ]
+    },
+    {
+      "id": "s6_half",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "AB is 10 cm. Its perpendicular bisector cuts AB at M. How long is AM, in cm?",
+        "ur": "AB کی لمبائی 10 سینٹی میٹر ہے۔ اس کا عمودی ناصف AB کو M پر کاٹتا ہے۔ AM کتنے سینٹی میٹر ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "M is the midpoint, so AM is half of 10.",
+        "ur": "M درمیانی نقطہ ہے، تو AM، 10 کا آدھا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 cm, and MB is 5 cm too.",
+        "ur": "درست! 5 سینٹی میٹر، اور MB بھی 5 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The bisector cuts AB into two equal parts: 10 ÷ 2 = 5 cm.",
+        "ur": "ناصف AB کو دو برابر حصوں میں کاٹتا ہے: 10 ÷ 2 = 5 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 cm is the whole of AB. Each half is 10 ÷ 2 = 5 cm.",
+            "ur": "10 پورا AB ہے۔ ہر آدھا 10 ÷ 2 = 5 ہے۔"
+          }
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "Bisect means cut in half, not double: 5 cm.",
+            "ur": "ناصف کا مطلب آدھا کرنا ہے، دگنا نہیں: 5 سینٹی میٹر"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 50,
+        "alt": {
+          "en": "Line segment AB, 10 cm long, with its midpoint M. A dashed perpendicular bisector goes through M. The part from A to M is marked with a question mark.",
+          "ur": "10 سینٹی میٹر لمبا قطعۂ خط AB اور اس کا درمیانی نقطہ M۔ ڈیش والا عمودی ناصف M سے گزرتا ہے۔ A سے M تک کے حصے پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              10,
+              25
+            ],
+            "to": [
+              90,
+              25
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              5
+            ],
+            "to": [
+              50,
+              45
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              21
+            ],
+            "to": [
+              54,
+              21
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54,
+              21
+            ],
+            "to": [
+              54,
+              25
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              10,
+              25
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              90,
+              25
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              25
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              5,
+              25
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              95,
+              25
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45,
+              31
+            ],
+            "text": "M"
+          },
+          {
+            "kind": "label",
+            "at": [
+              30,
+              18
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              72,
+              40
+            ],
+            "text": "10 cm"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7_angle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Sana draws a perpendicular from P to line l, as in the picture. What angle does it make with l, in degrees?",
+        "ur": "ثنا نے تصویر کی طرح P سے لکیر l پر عمود بنایا۔ یہ l کے ساتھ کتنے درجے کا زاویہ بناتا ہے؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "Perpendicular means it meets the line at a right angle.",
+        "ur": "عمود کا مطلب ہے لکیر سے زاویہ قائمہ پر ملنا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 90°. Check it with a protractor.",
+        "ur": "درست! 90°۔ زاویہ پیما سے جانچ لیں۔"
+      },
+      "feedback_wrong": {
+        "en": "A perpendicular always makes 90° with the line.",
+        "ur": "عمود ہمیشہ لکیر کے ساتھ 90° بناتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "180° is a straight line. A perpendicular makes 90°.",
+            "ur": "180° سیدھی لکیر ہے۔ عمود 90° بناتا ہے۔"
+          }
+        },
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "The construction gives a right angle, not 45°: 90°.",
+            "ur": "یہ بناوٹ زاویہ قائمہ دیتی ہے، 45° نہیں: 90°"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 75,
+        "alt": {
+          "en": "A straight line l with point P above it. Dashed arcs from P cut the line at C and D. Dashed arcs from C and D cross below the line. A dashed line from P through that crossing meets l. The angle where it meets l is marked with a question mark.",
+          "ur": "سیدھی لکیر l اور اس کے اوپر نقطہ P۔ P سے ڈیش والی قوسیں لکیر کو C اور D پر کاٹتی ہیں۔ C اور D سے ڈیش والی قوسیں لکیر کے نیچے ملتی ہیں۔ P سے اس ملنے کی جگہ تک ڈیش والی لکیر l سے ملتی ہے۔ جہاں یہ l سے ملتی ہے وہاں کے زاویے پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              5,
+              45
+            ],
+            "to": [
+              95,
+              45
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              30
+            ],
+            "radius": 22,
+            "start": 122.0,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              30
+            ],
+            "radius": 22,
+            "start": 28.0,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              33.9,
+              45
+            ],
+            "radius": 22,
+            "start": 28.0,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              66.1,
+              45
+            ],
+            "radius": 22,
+            "start": 122.0,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              30
+            ],
+            "to": [
+              50,
+              70
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              33.9,
+              45
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.1,
+              45
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              26
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              30.9,
+              51
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.1,
+              51
+            ],
+            "text": "D"
+          },
+          {
+            "kind": "label",
+            "at": [
+              92,
+              40
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "label",
+            "at": [
+              58,
+              40
+            ],
+            "text": "?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8_equal",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "AB is 10 cm. Point P is on the perpendicular bisector of AB, and P is 7 cm from A. How far is P from B, in cm?",
+        "ur": "AB کی لمبائی 10 سینٹی میٹر ہے۔ نقطہ P، AB کے عمودی ناصف پر ہے اور A سے 7 سینٹی میٹر دور ہے۔ P، B سے کتنے سینٹی میٹر دور ہے؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "The arcs from A and B had the same radius. What does that tell you about P?",
+        "ur": "A اور B سے قوسوں کا رداس ایک جیسا تھا۔ اس سے P کے بارے میں کیا پتا چلتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 cm. Every point on the perpendicular bisector is the same distance from A and B.",
+        "ur": "درست! 7 سینٹی میٹر۔ عمودی ناصف کا ہر نقطہ A اور B سے برابر فاصلے پر ہوتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "A point on the perpendicular bisector is equally far from both ends: 7 cm.",
+        "ur": "عمودی ناصف کا نقطہ دونوں سروں سے برابر دور ہوتا ہے: 7 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "10 − 7 does not work here. P is on the bisector, so PB = PA = 7 cm.",
+            "ur": "یہاں 10 − 7 نہیں چلتا۔ P ناصف پر ہے، اس لیے PB = PA = 7 سینٹی میٹر"
+          },
+          "misconception_id": "nearer_one_end"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "P is not twice as far from B. It is equally far: 7 cm.",
+            "ur": "P، B سے دگنا دور نہیں۔ برابر دور ہے: 7 سینٹی میٹر"
+          },
+          "misconception_id": "nearer_one_end"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "Line segment AB with a dashed perpendicular bisector. Point P is on the bisector above AB. Lines join P to A and P to B. PA is marked 7 and PB is marked with a question mark.",
+          "ur": "قطعۂ خط AB اور ڈیش والا عمودی ناصف۔ نقطہ P ناصف پر AB کے اوپر ہے۔ P کو A سے اور P کو B سے لکیریں ملاتی ہیں۔ PA پر 7 لکھا ہے اور PB پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              20,
+              50
+            ],
+            "to": [
+              80,
+              50
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              5
+            ],
+            "to": [
+              50,
+              57
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              15
+            ],
+            "to": [
+              20,
+              50
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              15
+            ],
+            "to": [
+              80,
+              50
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              46
+            ],
+            "to": [
+              54,
+              46
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54,
+              46
+            ],
+            "to": [
+              54,
+              50
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              20,
+              50
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              80,
+              50
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              15
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              50
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              86,
+              50
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              11
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              29,
+              29
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              71,
+              29
+            ],
+            "text": "?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "Line segment AB with its midpoint M. A dashed line goes through M but slants across AB; it does not make a right angle with AB.",
+          "ur": "قطعۂ خط AB اور اس کا درمیانی نقطہ M۔ ڈیش والی لکیر M سے گزرتی ہے لیکن AB پر ترچھی ہے؛ یہ AB کے ساتھ زاویہ قائمہ نہیں بناتی۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              20,
+              30
+            ],
+            "to": [
+              80,
+              30
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35,
+              5
+            ],
+            "to": [
+              65,
+              55
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              20,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              80,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              30
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              30
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              86,
+              30
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              57,
+              35
+            ],
+            "text": "M"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "Usman marks the midpoint M of AB and draws a slanting line through it. He says it is the perpendicular bisector. What went wrong?",
+        "ur": "عثمان AB کا درمیانی نقطہ M لگاتا ہے اور اس سے ترچھی لکیر کھینچتا ہے۔ وہ کہتا ہے یہ عمودی ناصف ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "not_90",
+          "text": {
+            "en": "It bisects AB but is not at 90°, so it is not perpendicular.",
+            "ur": "یہ AB کو آدھا کرتی ہے لیکن 90° پر نہیں، اس لیے عمودی نہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A perpendicular bisector needs both: the middle AND 90°.",
+            "ur": "جی ہاں! عمودی ناصف کو دونوں چاہییں: درمیان بھی اور 90° بھی۔"
+          }
+        },
+        {
+          "id": "not_middle",
+          "text": {
+            "en": "It doesn't go through the middle of AB.",
+            "ur": "یہ AB کے درمیان سے نہیں گزرتی۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It does go through M, the middle. The problem is the angle: it is not 90°.",
+            "ur": "یہ درمیان M سے گزرتی ہے۔ مسئلہ زاویے کا ہے: یہ 90° نہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. Any line through the midpoint is a perpendicular bisector.",
+            "ur": "کوئی غلطی نہیں۔ درمیانی نقطے سے گزرنے والی ہر لکیر عمودی ناصف ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Many lines pass through M, but only one makes 90° with AB.",
+            "ur": "M سے بہت سی لکیریں گزرتی ہیں، لیکن صرف ایک AB سے 90° بناتی ہے۔"
+          },
+          "misconception_id": "any_bisector_perpendicular"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is every point on the perpendicular bisector the same distance from A and from B? Can you teach me?",
+          "ur": "عمودی ناصف کا ہر نقطہ A اور B سے برابر فاصلے پر کیوں ہوتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "Line segment AB with its midpoint M. Dashed compass arcs from A and from B cross above AB at P and below AB at Q. A dashed line joins P and Q and cuts AB at M, with a small square showing a right angle.",
+          "ur": "قطعۂ خط AB اور اس کا درمیانی نقطہ M۔ A اور B سے پرکار کی ڈیش والی قوسیں AB کے اوپر P پر اور نیچے Q پر ملتی ہیں۔ ڈیش والی لکیر P اور Q کو ملاتی ہے اور AB کو M پر کاٹتی ہے، اور ایک چھوٹا مربع زاویہ قائمہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              30,
+              35
+            ],
+            "to": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 300.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 29.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 209.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 120.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              8
+            ],
+            "to": [
+              50,
+              62
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              31
+            ],
+            "to": [
+              54,
+              31
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54,
+              31
+            ],
+            "to": [
+              54,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              15.4
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              54.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24,
+              35
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76,
+              35
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              12
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              58
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45,
+              41
+            ],
+            "text": "M"
+          }
+        ]
+      },
+      "task": {
+        "en": "In your own words: why is a point on the perpendicular bisector of AB equally far from A and B?",
+        "ur": "اپنے الفاظ میں بتائیں: AB کے عمودی ناصف کا نقطہ A اور B سے برابر دور کیوں ہوتا ہے؟"
+      },
+      "key_idea": "The crossing points come from arcs of the same radius drawn from A and from B, so they are equally far from both. Folding the paper so A lands on B makes a fold along the perpendicular bisector: the two sides match, so any point on the fold is the same distance from A and B.",
+      "levels": {
+        "got_it": "Says the arcs from A and B had the same radius (same compass opening), or that folding A onto B puts the two halves on top of each other, so distances to A and B match.",
+        "partly": "Says the line is in the middle or is a mirror line, without linking it to equal arcs or matching halves.",
+        "not_yet": "Gives no reason, or says one end is nearer."
+      },
+      "keywords": [
+        [
+          "same",
+          "equal",
+          "radius",
+          "opening",
+          "ایک جیسا",
+          "برابر",
+          "رداس",
+          "کھلاؤ",
+          "barabar"
+        ],
+        [
+          "fold",
+          "mirror",
+          "match",
+          "تہ",
+          "موڑ",
+          "عکس",
+          "mor"
+        ],
+        [
+          "arc",
+          "compass",
+          "قوس",
+          "پرکار",
+          "parkar"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Same compass opening from A and B, so the crossing points are equally far from both.",
+          "ur": "بہت خوب! A اور B سے پرکار کا ایک جیسا کھلاؤ، اس لیے ملنے کے نقطے دونوں سے برابر دور ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how the same compass opening, or folding A onto B, makes the distances equal.",
+          "ur": "اچھی شروعات! اب بتائیں کہ پرکار کا ایک جیسا کھلاؤ، یا A کو B پر موڑنا، فاصلے برابر کیسے کرتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Think: the arcs from A and B used the same compass opening. What does that say about P?",
+          "ur": "سوچیں: A اور B کی قوسیں پرکار کے ایک ہی کھلاؤ سے بنیں۔ اس سے P کے بارے میں کیا پتا چلتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_which",
+      "type": "choice",
+      "figure": {
+        "width": 150,
+        "height": 62,
+        "alt": {
+          "en": "Three drawings, numbered 1, 2 and 3, each with a line segment and a dashed line. In 1 the dashed line goes through the middle of the segment but slants. In 2 the dashed line goes through the middle of the segment at a right angle. In 3 the dashed line makes a right angle but crosses the segment near its left end, not the middle.",
+          "ur": "تین شکلیں، نمبر 1، 2 اور 3، ہر ایک میں ایک قطعۂ خط اور ایک ڈیش والی لکیر ہے۔ 1 میں ڈیش والی لکیر قطعے کے درمیان سے گزرتی ہے لیکن ترچھی ہے۔ 2 میں ڈیش والی لکیر قطعے کے درمیان سے زاویہ قائمہ پر گزرتی ہے۔ 3 میں ڈیش والی لکیر زاویہ قائمہ بناتی ہے لیکن قطعے کو بائیں سرے کے قریب کاٹتی ہے، درمیان سے نہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              35
+            ],
+            "to": [
+              42,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              8,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              42,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              25,
+              5
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              15,
+              12
+            ],
+            "to": [
+              35,
+              58
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              58,
+              35
+            ],
+            "to": [
+              92,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              58,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              92,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              75,
+              5
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              75,
+              12
+            ],
+            "to": [
+              75,
+              58
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              75,
+              32
+            ],
+            "to": [
+              78,
+              32
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78,
+              32
+            ],
+            "to": [
+              78,
+              35
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              108,
+              35
+            ],
+            "to": [
+              142,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              108,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              142,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              125,
+              5
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "line",
+            "from": [
+              116,
+              12
+            ],
+            "to": [
+              116,
+              58
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              116,
+              32
+            ],
+            "to": [
+              119,
+              32
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              119,
+              32
+            ],
+            "to": [
+              119,
+              35
+            ]
+          }
+        ]
+      },
+      "prompt": {
+        "en": "Which drawing shows a perpendicular bisector of the segment?",
+        "ur": "کس شکل میں قطعۂ خط کا عمودی ناصف ہے؟"
+      },
+      "options": [
+        {
+          "id": "fig_1",
+          "text": {
+            "en": "Drawing 1",
+            "ur": "شکل 1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It goes through the middle but slants. It is not at 90°.",
+            "ur": "یہ درمیان سے گزرتی ہے لیکن ترچھی ہے۔ 90° پر نہیں۔"
+          },
+          "misconception_id": "any_bisector_perpendicular"
+        },
+        {
+          "id": "fig_2",
+          "text": {
+            "en": "Drawing 2",
+            "ur": "شکل 2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Through the middle and at a right angle.",
+            "ur": "جی ہاں! درمیان سے اور زاویہ قائمہ پر۔"
+          }
+        },
+        {
+          "id": "fig_3",
+          "text": {
+            "en": "Drawing 3",
+            "ur": "شکل 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It is at 90°, but it does not cut the segment into two equal parts.",
+            "ur": "یہ 90° پر ہے، لیکن قطعے کو دو برابر حصوں میں نہیں کاٹتی۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Middle and 90°, made with one compass opening. Well done!",
+          "ur": "درمیان اور 90°، پرکار کے ایک کھلاؤ سے۔ شاباش!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "Line segment AB with its midpoint M. Dashed compass arcs from A and from B cross above AB at P and below AB at Q. A dashed line joins P and Q and cuts AB at M, with a small square showing a right angle.",
+          "ur": "قطعۂ خط AB اور اس کا درمیانی نقطہ M۔ A اور B سے پرکار کی ڈیش والی قوسیں AB کے اوپر P پر اور نیچے Q پر ملتی ہیں۔ ڈیش والی لکیر P اور Q کو ملاتی ہے اور AB کو M پر کاٹتی ہے، اور ایک چھوٹا مربع زاویہ قائمہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              30,
+              35
+            ],
+            "to": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 300.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 29.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 209.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 120.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              8
+            ],
+            "to": [
+              50,
+              62
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              31
+            ],
+            "to": [
+              54,
+              31
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54,
+              31
+            ],
+            "to": [
+              54,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              15.4
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              54.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24,
+              35
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76,
+              35
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              12
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              58
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45,
+              41
+            ],
+            "text": "M"
+          }
+        ]
+      },
+      "text": {
+        "en": "A perpendicular bisector cuts a line segment into two equal parts at 90°. Open the compass more than half of AB, draw arcs from A and from B with the same opening, and join the crossing points. Every point on it is equally far from A and B. A perpendicular from a point to a line is made the same way, using the two points where your arcs cut the line. Check by folding or with a protractor.",
+        "ur": "عمودی ناصف قطعۂ خط کو 90° پر دو برابر حصوں میں کاٹتا ہے۔ پرکار AB کے آدھے سے زیادہ کھولیں، ایک ہی کھلاؤ سے A اور B سے قوسیں لگائیں، اور ملنے کے نقطے ملا دیں۔ اس کا ہر نقطہ A اور B سے برابر دور ہوتا ہے۔ کسی نقطے سے لکیر پر عمود بھی اسی طرح بنتا ہے، ان دو نقطوں سے جہاں قوسیں لکیر کو کاٹتی ہیں۔ کاغذ موڑ کر یا زاویہ پیما سے جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "Equal halves and 90°.",
+          "ur": "برابر حصے اور 90°۔"
+        },
+        {
+          "en": "Compass: more than half of AB.",
+          "ur": "پرکار: AB کے آدھے سے زیادہ۔"
+        },
+        {
+          "en": "Points on it: equally far from A and B.",
+          "ur": "اس کے نقطے: A اور B سے برابر دور۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_half",
+      "type": "apply",
+      "skill": "maths.constructions.perpendicular_bisector",
+      "step": {
+        "id": "r_half",
+        "type": "number",
+        "prompt": {
+          "en": "AB is 14 cm. Its perpendicular bisector cuts it at M. How long is MB, in cm?",
+          "ur": "AB کی لمبائی 14 سینٹی میٹر ہے۔ اس کا عمودی ناصف اسے M پر کاٹتا ہے۔ MB کتنے سینٹی میٹر ہے؟"
+        },
+        "answer": 7,
+        "checker": "numeric",
+        "hint": {
+          "en": "14 ÷ 2.",
+          "ur": "14 ÷ 2"
+        },
+        "feedback_correct": {
+          "en": "Right! 7 cm.",
+          "ur": "درست! 7 سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "M is the middle: 14 ÷ 2 = 7 cm.",
+          "ur": "M درمیان ہے: 14 ÷ 2 = 7 سینٹی میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 14,
+            "feedback": {
+              "en": "14 cm is all of AB. MB is half: 7 cm.",
+              "ur": "14 پورا AB ہے۔ MB آدھا ہے: 7 سینٹی میٹر"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_equal",
+      "type": "apply",
+      "skill": "maths.constructions.perpendicular_bisector",
+      "step": {
+        "id": "r_equal",
+        "type": "number",
+        "prompt": {
+          "en": "AB is 16 cm. A point on the perpendicular bisector of AB is 9 cm from B. How far is it from A, in cm?",
+          "ur": "AB کی لمبائی 16 سینٹی میٹر ہے۔ AB کے عمودی ناصف پر ایک نقطہ B سے 9 سینٹی میٹر دور ہے۔ یہ A سے کتنا دور ہے؟"
+        },
+        "answer": 9,
+        "checker": "numeric",
+        "hint": {
+          "en": "Points on the perpendicular bisector are equally far from A and B.",
+          "ur": "عمودی ناصف کے نقطے A اور B سے برابر دور ہوتے ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 9 cm.",
+          "ur": "درست! 9 سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "Same distance from both ends: 9 cm.",
+          "ur": "دونوں سروں سے برابر فاصلہ: 9 سینٹی میٹر"
+        },
+        "common_wrong": [
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "16 − 9 does not work here. It is equally far from both: 9 cm.",
+              "ur": "یہاں 16 − 9 نہیں چلتا۔ دونوں سے برابر دور ہے: 9 سینٹی میٹر"
+            },
+            "misconception_id": "nearer_one_end"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Geometrical Constructions unit. No textbook text or exercises were used.",
+    "The app cannot see real drawings, so practice checks the reasoning behind the construction (order of steps, why the compass opens more than half of AB, equal halves, 90°, equal distances). The home task is the real construction; ask students to show the folded paper or the arcs in class.",
+    "The figures are drawn by the app from coordinates worked out in the script; the arcs are placed where the circles really cross.",
+    "Perpendiculars from a point on a line and from a point outside it are taught as the same idea: arcs from the point cut the line at C and D, then construct the perpendicular bisector of CD.",
+    "Urdu terms to check: عمودی ناصف (perpendicular bisector), ناصف (bisector), عمود (perpendicular), پرکار (pair of compasses), زاویہ پیما (protractor), پیمانہ (ruler), قوس (arc), قطعۂ خط (line segment), درمیانی نقطہ (midpoint).",
+    "The numbers and figures were worked out in content/sources/g6-maths-19/bisectors_perpendiculars.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

@@ -1,0 +1,2214 @@
+{
+  "id": "g6-maths-18-line-symmetry",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise line (reflective) symmetry, find and count the lines of symmetry of 2-D shapes and letters, and complete a shape across a mirror line.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 9: Symmetry"
+    }
+  ],
+  "skills": [
+    "maths.symmetry.line_symmetry"
+  ],
+  "title": {
+    "en": "Line symmetry",
+    "ur": "خطی تشاکل"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.symmetry.shapes_2d_3d"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "rect_diagonals",
+      "description": "Thinks a rectangle's diagonals are lines of symmetry, so gives a rectangle 4 lines."
+    },
+    {
+      "id": "every_triangle_3",
+      "description": "Thinks every triangle has 3 lines of symmetry."
+    },
+    {
+      "id": "slides_not_flips",
+      "description": "Reflects a shape by sliding it across the mirror line instead of flipping it."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.symmetry.line_symmetry": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.symmetry.line_symmetry": [
+      {
+        "id": "qb_circle",
+        "type": "recall",
+        "step": {
+          "id": "qb_circle",
+          "type": "choice",
+          "prompt": {
+            "en": "How many lines of symmetry does a circle have?",
+            "ur": "دائرے کی کتنی تشاکل کی لکیریں ہوتی ہیں؟"
+          },
+          "options": [
+            {
+              "id": "many",
+              "text": {
+                "en": "Infinitely many",
+                "ur": "لا تعداد"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Every line through the centre folds a circle into two matching halves.",
+                "ur": "جی ہاں! مرکز سے گزرنے والی ہر لکیر دائرے کو دو برابر حصوں میں تہہ کرتی ہے۔"
+              }
+            },
+            {
+              "id": "four",
+              "text": {
+                "en": "4",
+                "ur": "4"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "More than 4! Any line through the centre works, so there are infinitely many.",
+                "ur": "4 سے زیادہ! مرکز سے گزرنے والی ہر لکیر چلتی ہے، اس لیے لا تعداد ہیں۔"
+              }
+            },
+            {
+              "id": "two",
+              "text": {
+                "en": "2",
+                "ur": "2"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Not just up-down and across. Every line through the centre works: infinitely many.",
+                "ur": "صرف اوپر نیچے اور دائیں بائیں نہیں۔ مرکز سے ہر لکیر چلتی ہے: لا تعداد۔"
+              }
+            },
+            {
+              "id": "none",
+              "text": {
+                "en": "0",
+                "ur": "0"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Fold a paper circle in half: the halves match. Every line through the centre works.",
+                "ur": "کاغذ کا دائرہ آدھا تہہ کریں: حصے مل جاتے ہیں۔ مرکز سے ہر لکیر چلتی ہے۔"
+              }
+            }
+          ],
+          "figure": {
+            "width": 100,
+            "height": 60,
+            "alt": {
+              "en": "A circle with a dot at its centre.",
+              "ur": "ایک دائرہ جس کے مرکز پر نقطہ ہے۔"
+            },
+            "items": [
+              {
+                "kind": "circle",
+                "center": [
+                  50,
+                  30
+                ],
+                "radius": 24,
+                "fill": true
+              },
+              {
+                "kind": "point",
+                "at": [
+                  50,
+                  30
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Point P is 3 squares to the left of the dashed mirror line. How many squares to the right of the mirror line is its reflection?",
+            "ur": "نقطہ P ڈیش والی آئینہ لکیر سے 3 خانے بائیں ہے۔ اس کا عکس آئینہ لکیر سے کتنے خانے دائیں ہوگا؟"
+          },
+          "answer": 3,
+          "checker": "numeric",
+          "hint": {
+            "en": "A reflection is the same distance from the mirror, on the other side.",
+            "ur": "عکس آئینے سے اتنے ہی فاصلے پر ہوتا ہے، دوسری طرف۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 3 squares, the same distance on the other side.",
+            "ur": "درست! 3 خانے، دوسری طرف اتنا ہی فاصلہ۔"
+          },
+          "feedback_wrong": {
+            "en": "P is 3 squares from the mirror, so its reflection is 3 squares on the other side.",
+            "ur": "P آئینے سے 3 خانے دور ہے، اس لیے عکس دوسری طرف 3 خانے پر ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 6,
+              "feedback": {
+                "en": "6 is the distance from P all the way to its reflection. From the mirror it is 3 squares.",
+                "ur": "6 تو P سے اس کے عکس تک کا پورا فاصلہ ہے۔ آئینے سے یہ 3 خانے ہے۔"
+              }
+            }
+          ],
+          "figure": {
+            "width": 110,
+            "height": 50,
+            "alt": {
+              "en": "A squared grid 10 squares wide and 4 squares tall. A dashed mirror line goes down the middle. Point P is 3 squares to the left of the mirror line.",
+              "ur": "10 خانے چوڑا اور 4 خانے اونچا چوکور جال۔ بیچ میں اوپر سے نیچے ڈیش والی آئینہ لکیر ہے۔ نقطہ P آئینہ لکیر سے 3 خانے بائیں ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  5.0,
+                  5.0
+                ],
+                "to": [
+                  5.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  15.0,
+                  5.0
+                ],
+                "to": [
+                  15.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  25.0,
+                  5.0
+                ],
+                "to": [
+                  25.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  35.0,
+                  5.0
+                ],
+                "to": [
+                  35.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  45.0,
+                  5.0
+                ],
+                "to": [
+                  45.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  55.0,
+                  5.0
+                ],
+                "to": [
+                  55.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  65.0,
+                  5.0
+                ],
+                "to": [
+                  65.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  75.0,
+                  5.0
+                ],
+                "to": [
+                  75.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  85.0,
+                  5.0
+                ],
+                "to": [
+                  85.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  95.0,
+                  5.0
+                ],
+                "to": [
+                  95.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  105.0,
+                  5.0
+                ],
+                "to": [
+                  105.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  5.0,
+                  5.0
+                ],
+                "to": [
+                  105.0,
+                  5.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  5.0,
+                  15.0
+                ],
+                "to": [
+                  105.0,
+                  15.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  5.0,
+                  25.0
+                ],
+                "to": [
+                  105.0,
+                  25.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  5.0,
+                  35.0
+                ],
+                "to": [
+                  105.0,
+                  35.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  5.0,
+                  45.0
+                ],
+                "to": [
+                  105.0,
+                  45.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  55.0,
+                  1.0
+                ],
+                "to": [
+                  55.0,
+                  49.0
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "point",
+                "at": [
+                  25.0,
+                  25.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  22.0,
+                  20.0
+                ],
+                "text": "P"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana says: “Every triangle has 3 lines of symmetry.” She points to this triangle. What went wrong?",
+            "ur": "ثنا کہتی ہے: ”ہر مثلث کی 3 تشاکل کی لکیریں ہوتی ہیں۔“ وہ اس مثلث کی طرف اشارہ کرتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "depends",
+              "text": {
+                "en": "Only an equilateral triangle has 3. This one has all sides different, so it has 0.",
+                "ur": "صرف مساوی الاضلاع مثلث کی 3 ہوتی ہیں۔ اس کے سب اضلاع مختلف ہیں، اس لیے 0۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! No fold of this triangle makes the halves match.",
+                "ur": "جی ہاں! اس مثلث کو کسی طرح تہہ کریں، حصے نہیں ملتے۔"
+              }
+            },
+            {
+              "id": "one",
+              "text": {
+                "en": "Every triangle has exactly 1.",
+                "ur": "ہر مثلث کی بالکل 1 ہوتی ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only isosceles triangles have 1. This scalene one has 0.",
+                "ur": "صرف مساوی الساقین مثلث کی 1 ہوتی ہے۔ اس مختلف الاضلاع کی 0 ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, she is right.",
+                "ur": "کوئی غلطی نہیں، وہ ٹھیک ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Try folding it: the halves never match. A triangle with all sides different has 0.",
+                "ur": "تہہ کر کے دیکھیں: حصے کبھی نہیں ملتے۔ سب اضلاع مختلف ہوں تو 0۔"
+              },
+              "misconception_id": "every_triangle_3"
+            }
+          ],
+          "figure": {
+            "width": 100,
+            "height": 60,
+            "alt": {
+              "en": "A triangle whose three sides all have different lengths (a scalene triangle). No lines are drawn on it.",
+              "ur": "ایک مثلث جس کے تینوں اضلاع کی لمبائیاں مختلف ہیں (مختلف الاضلاع مثلث)۔ اس پر کوئی لکیر نہیں۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    14.0,
+                    50.0
+                  ],
+                  [
+                    86.0,
+                    50.0
+                  ],
+                  [
+                    34.0,
+                    10.0
+                  ]
+                ],
+                "fill": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_line",
+      "front": {
+        "en": "What is a line of symmetry?",
+        "ur": "تشاکل کی لکیر کیا ہے؟"
+      },
+      "back": {
+        "en": "A mirror line that folds a shape into two halves that match exactly.",
+        "ur": "آئینہ لکیر جو شکل کو تہہ کر کے دو بالکل برابر حصوں میں بانٹتی ہے۔"
+      }
+    },
+    {
+      "id": "f_counts",
+      "front": {
+        "en": "Lines of symmetry: square, rectangle, equilateral triangle?",
+        "ur": "تشاکل کی لکیریں: مربع، مستطیل، مساوی الاضلاع مثلث؟"
+      },
+      "back": {
+        "en": "Square 4, rectangle 2 (not the diagonals), equilateral triangle 3.",
+        "ur": "مربع 4، مستطیل 2 (وتر نہیں)، مساوی الاضلاع مثلث 3۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_fold",
+      "text": {
+        "en": "Fold a sheet of paper in half. Draw half a mosque, a kite or a butterfly against the fold and cut it out. Open it: the fold is a line of symmetry. Then cut out a paper rectangle, fold it along a diagonal and see that the halves do not match. Write the capital letters of your name and mark any lines of symmetry with a ruler.",
+        "ur": "کاغذ کو آدھا تہہ کریں۔ تہہ کی طرف آدھی مسجد، پتنگ یا تتلی بنا کر کاٹیں۔ کھولیں: تہہ تشاکل کی لکیر ہے۔ پھر کاغذ کی مستطیل کاٹیں، اسے وتر پر تہہ کریں اور دیکھیں کہ حصے نہیں ملتے۔ اپنے نام کے بڑے انگریزی حروف لکھیں اور فٹے سے ان کی تشاکل کی لکیریں لگائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Line of symmetry",
+      "ur": "تشاکل کی لکیر"
+    },
+    {
+      "en": "Mirror line",
+      "ur": "آئینہ لکیر"
+    },
+    {
+      "en": "Reflection",
+      "ur": "عکس"
+    },
+    {
+      "en": "Diagonal",
+      "ur": "وتر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Fold a rooftop kite down the middle. Do the two halves match exactly? Let's find out!",
+          "ur": "چھت والی پتنگ کو بیچ سے تہہ کریں۔ کیا دونوں آدھے بالکل ملتے ہیں؟ آئیں دیکھیں!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 80,
+        "alt": {
+          "en": "A rooftop kite shape: four sides, wide at the top and long at the bottom. A dashed line goes straight down its middle from the top corner to the bottom corner.",
+          "ur": "چھت پر اڑنے والی پتنگ کی شکل: چار اضلاع، اوپر سے چوڑی اور نیچے سے لمبی۔ ایک ڈیش والی لکیر اوپر والے کونے سے نیچے والے کونے تک بیچ میں سیدھی جاتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                6.0
+              ],
+              [
+                74.0,
+                28.0
+              ],
+              [
+                50.0,
+                74.0
+              ],
+              [
+                26.0,
+                28.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              2.0
+            ],
+            "to": [
+              50.0,
+              78.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      },
+      "text": {
+        "en": "Today we look for lines that fold a shape into two matching halves. First, a quick check.",
+        "ur": "آج ہم وہ لکیریں ڈھونڈیں گے جو شکل کو تہہ کر کے دو برابر حصے بناتی ہیں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.symmetry.shapes_2d_3d",
+      "prompt": {
+        "en": "How many vertices (corners) does a pentagon have?",
+        "ur": "مخمس کے کتنے راس (کونے) ہوتے ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Penta means five. Count the sides: there are as many corners as sides.",
+        "ur": "مخمس کے پانچ اضلاع ہیں۔ جتنے اضلاع اتنے ہی کونے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 sides and 5 vertices.",
+        "ur": "درست! 5 اضلاع اور 5 راس۔"
+      },
+      "feedback_wrong": {
+        "en": "A pentagon has 5 sides and 5 vertices.",
+        "ur": "مخمس کے 5 اضلاع اور 5 راس ہوتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is a hexagon. A pentagon has 5.",
+            "ur": "6 مسدس کے ہوتے ہیں۔ مخمس کے 5۔"
+          }
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is a quadrilateral. A pentagon has 5.",
+            "ur": "4 چوکور کے ہوتے ہیں۔ مخمس کے 5۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_explain",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "A mirror line is like a fold. Each side is the flipped picture of the other!",
+          "ur": "آئینہ لکیر ایک تہہ کی طرح ہے۔ ہر طرف دوسری طرف کی الٹی تصویر ہے!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "An equilateral triangle with three dashed lines. Each dashed line goes from a corner to the middle of the opposite side.",
+          "ur": "ایک مساوی الاضلاع مثلث جس پر تین ڈیش والی لکیریں ہیں۔ ہر لکیر ایک کونے سے سامنے والے ضلع کے درمیان تک جاتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                8.0
+              ],
+              [
+                72.5,
+                47.0
+              ],
+              [
+                27.5,
+                47.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              8.0
+            ],
+            "to": [
+              50.0,
+              47.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              72.5,
+              47.0
+            ],
+            "to": [
+              38.8,
+              27.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              27.5,
+              47.0
+            ],
+            "to": [
+              61.2,
+              27.5
+            ],
+            "style": "dashed"
+          }
+        ]
+      },
+      "text": {
+        "en": "A line of symmetry, or mirror line, folds a shape into two halves that match exactly. Each half is the reflection of the other, so we call this reflective symmetry. Some shapes have more than one: an equilateral triangle has 3, a square has 4, a rectangle has only 2. A circle has infinitely many. To test a line, imagine folding along it: if the two halves sit exactly on top of each other, it is a line of symmetry.",
+        "ur": "تشاکل کی لکیر یا آئینہ لکیر شکل کو تہہ کر کے دو بالکل برابر حصوں میں بانٹتی ہے۔ ہر حصہ دوسرے کا عکس ہوتا ہے، اس لیے اسے انعکاسی تشاکل کہتے ہیں۔ کچھ شکلوں کی ایک سے زیادہ ہوتی ہیں: مساوی الاضلاع مثلث کی 3، مربع کی 4، اور مستطیل کی صرف 2۔ دائرے کی لا تعداد ہوتی ہیں۔ لکیر کو جانچنے کے لیے اس پر تہہ کرنے کا سوچیں: اگر دونوں حصے بالکل ایک دوسرے پر آ جائیں تو یہ تشاکل کی لکیر ہے۔"
+      }
+    },
+    {
+      "id": "s4_rectangle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many lines of symmetry does this rectangle have?",
+        "ur": "اس مستطیل کی کتنی تشاکل کی لکیریں ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try folding it down the middle, across the middle and corner to corner.",
+        "ur": "بیچ سے اوپر نیچے، بیچ سے دائیں بائیں اور کونے سے کونے تک تہہ کر کے سوچیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2: one down the middle and one across the middle.",
+        "ur": "درست! 2: ایک بیچ میں اوپر نیچے اور ایک بیچ میں دائیں بائیں۔"
+      },
+      "feedback_wrong": {
+        "en": "A rectangle has 2 lines of symmetry, through the middles of opposite sides. The diagonals don't work.",
+        "ur": "مستطیل کی 2 تشاکل کی لکیریں ہیں، آمنے سامنے اضلاع کے درمیان سے۔ وتر نہیں چلتے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "The diagonals are not lines of symmetry: fold a rectangle corner to corner and the halves don't match. It has 2.",
+            "ur": "وتر تشاکل کی لکیریں نہیں: مستطیل کو کونے سے کونے تہہ کریں تو حصے نہیں ملتے۔ اس کی 2 ہیں۔"
+          },
+          "misconception_id": "rect_diagonals"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "There is a second one: across the middle as well as down the middle. It has 2.",
+            "ur": "ایک اور بھی ہے: اوپر نیچے کے ساتھ دائیں بائیں بھی۔ اس کی 2 ہیں۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "A rectangle, longer than it is tall, with no lines drawn on it.",
+          "ur": "ایک مستطیل جو اونچائی سے زیادہ لمبی ہے، اس پر کوئی لکیر نہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                12.0
+              ],
+              [
+                85.0,
+                12.0
+              ],
+              [
+                85.0,
+                48.0
+              ],
+              [
+                15.0,
+                48.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_diagonal",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Is the dashed diagonal a line of symmetry of this rectangle?",
+        "ur": "کیا ڈیش والا وتر اس مستطیل کی تشاکل کی لکیر ہے؟"
+      },
+      "options": [
+        {
+          "id": "no",
+          "text": {
+            "en": "No: folded along it, the halves don't match.",
+            "ur": "نہیں: اس پر تہہ کریں تو حصے نہیں ملتے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The corners stick out past each other. Only a square's diagonals are mirror lines.",
+            "ur": "جی ہاں! کونے ایک دوسرے سے باہر نکل جاتے ہیں۔ صرف مربع کے وتر آئینہ لکیریں ہیں۔"
+          }
+        },
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes: it cuts the rectangle into two equal halves.",
+            "ur": "ہاں: یہ مستطیل کو دو برابر حصوں میں کاٹتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The two triangles are equal in size, but folding one onto the other doesn't make them match. So it is not a line of symmetry.",
+            "ur": "دونوں مثلثیں برابر ہیں، لیکن ایک کو دوسری پر تہہ کریں تو نہیں ملتیں۔ اس لیے یہ تشاکل کی لکیر نہیں۔"
+          },
+          "misconception_id": "rect_diagonals"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "A rectangle, longer than it is tall. A dashed line goes from its top left corner to its bottom right corner (a diagonal).",
+          "ur": "ایک مستطیل جو اونچائی سے زیادہ لمبی ہے۔ ایک ڈیش والی لکیر اوپر بائیں کونے سے نیچے دائیں کونے تک جاتی ہے (وتر)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                12.0
+              ],
+              [
+                85.0,
+                12.0
+              ],
+              [
+                85.0,
+                48.0
+              ],
+              [
+                15.0,
+                48.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              15.0,
+              12.0
+            ],
+            "to": [
+              85.0,
+              48.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_isosceles",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "This triangle has two equal sides. How many lines of symmetry does it have?",
+        "ur": "اس مثلث کے دو اضلاع برابر ہیں۔ اس کی کتنی تشاکل کی لکیریں ہیں؟"
+      },
+      "answer": 1,
+      "checker": "numeric",
+      "hint": {
+        "en": "Only one fold makes the two equal sides land on each other.",
+        "ur": "صرف ایک تہہ سے دونوں برابر اضلاع ایک دوسرے پر آتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1: from the top corner down to the middle of the bottom side.",
+        "ur": "درست! 1: اوپر والے کونے سے نیچے والے ضلع کے درمیان تک۔"
+      },
+      "feedback_wrong": {
+        "en": "An isosceles triangle has 1 line of symmetry, from the top corner to the middle of the bottom.",
+        "ur": "مساوی الساقین مثلث کی 1 تشاکل کی لکیر ہے، اوپر کے کونے سے نیچے کے درمیان تک۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "Only an equilateral triangle, with all three sides equal, has 3. This one has 1.",
+            "ur": "صرف مساوی الاضلاع مثلث، جس کے تینوں اضلاع برابر ہوں، کی 3 ہیں۔ اس کی 1 ہے۔"
+          },
+          "misconception_id": "every_triangle_3"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "A triangle with two equal sloping sides and a shorter flat bottom side (an isosceles triangle). No lines are drawn on it.",
+          "ur": "ایک مثلث جس کے دو ترچھے اضلاع برابر ہیں اور نیچے کا ضلع چھوٹا ہے (مساوی الساقین مثلث)۔ اس پر کوئی لکیر نہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                6.0
+              ],
+              [
+                74.0,
+                54.0
+              ],
+              [
+                26.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7_letters",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Look at the letters A, H, M, T and X. How many of them have exactly one line of symmetry?",
+        "ur": "حروف A، H، M، T اور X کو دیکھیں۔ ان میں سے کتنے حروف کی بالکل ایک تشاکل کی لکیر ہے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "For each letter, check down the middle and across the middle.",
+        "ur": "ہر حرف کو بیچ سے اوپر نیچے اور دائیں بائیں جانچیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! A, M and T have one line, straight down. H and X have two.",
+        "ur": "درست! A، M اور T کی ایک لکیر ہے، سیدھی نیچے۔ H اور X کی دو ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "A, M and T have 1 line each (down the middle). H and X have 2 (down and across). So the answer is 3.",
+        "ur": "A، M اور T کی 1، 1 لکیر ہے (بیچ میں نیچے)۔ H اور X کی 2 ہیں (نیچے اور دائیں بائیں)۔ اس لیے جواب 3۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "H and X also fold across the middle, so they have 2 lines, not 1. The answer is 3.",
+            "ur": "H اور X دائیں بائیں سے بھی تہہ ہوتے ہیں، اس لیے ان کی 2 لکیریں ہیں۔ جواب 3۔"
+          }
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That counts H and X, which have 2 lines. The letters with exactly 1 are A, M and T: 3.",
+            "ur": "یہ H اور X ہیں جن کی 2 لکیریں ہیں۔ بالکل 1 والے A، M اور T ہیں: 3۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 164,
+        "height": 52,
+        "alt": {
+          "en": "Five capital letters drawn with straight strokes, numbered 1 to 5: A, H, M, T and X. Each letter is taller than it is wide.",
+          "ur": "سیدھی لکیروں سے بنے پانچ بڑے انگریزی حروف، 1 سے 5 تک نمبر: A، H، M، T اور X۔ ہر حرف چوڑائی سے زیادہ اونچا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              34.0
+            ],
+            "to": [
+              18.0,
+              6.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              6.0
+            ],
+            "to": [
+              28.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              13.0,
+              20.0
+            ],
+            "to": [
+              23.0,
+              20.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              18.0,
+              44.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              6.0
+            ],
+            "to": [
+              40.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              6.0
+            ],
+            "to": [
+              60.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              20.0
+            ],
+            "to": [
+              60.0,
+              20.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              44.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              72.0,
+              34.0
+            ],
+            "to": [
+              72.0,
+              6.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              72.0,
+              6.0
+            ],
+            "to": [
+              82.0,
+              22.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              82.0,
+              22.0
+            ],
+            "to": [
+              92.0,
+              6.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              92.0,
+              6.0
+            ],
+            "to": [
+              92.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.0,
+              44.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "line",
+            "from": [
+              104.0,
+              6.0
+            ],
+            "to": [
+              124.0,
+              6.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              114.0,
+              6.0
+            ],
+            "to": [
+              114.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              114.0,
+              44.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              136.0,
+              6.0
+            ],
+            "to": [
+              156.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              156.0,
+              6.0
+            ],
+            "to": [
+              136.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              146.0,
+              44.0
+            ],
+            "text": "5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8_hexagon",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A floor tile is a regular hexagon. How many lines of symmetry does it have?",
+        "ur": "فرش کی ایک ٹائل باقاعدہ مسدس ہے۔ اس کی کتنی تشاکل کی لکیریں ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Lines go corner to opposite corner, and also middle of a side to middle of the opposite side.",
+        "ur": "لکیریں کونے سے سامنے والے کونے تک جاتی ہیں، اور ضلع کے درمیان سے سامنے والے ضلع کے درمیان تک بھی۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6: 3 through opposite corners and 3 through opposite sides.",
+        "ur": "درست! 6: 3 آمنے سامنے کونوں سے اور 3 آمنے سامنے اضلاع سے۔"
+      },
+      "feedback_wrong": {
+        "en": "3 lines join opposite corners and 3 join the middles of opposite sides: 6 in all.",
+        "ur": "3 لکیریں آمنے سامنے کونے ملاتی ہیں اور 3 آمنے سامنے اضلاع کے درمیان: کل 6۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "That is only the corner-to-corner lines. Side-to-side lines work too: 6 in all.",
+            "ur": "یہ صرف کونے سے کونے والی ہیں۔ ضلع سے ضلع والی بھی چلتی ہیں: کل 6۔"
+          }
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "A regular hexagon has as many lines of symmetry as sides: 6.",
+            "ur": "باقاعدہ مسدس کی جتنے اضلاع اتنی ہی تشاکل کی لکیریں: 6۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A regular hexagon: six equal sides and six equal corners, like a floor tile. No lines are drawn on it.",
+          "ur": "ایک باقاعدہ مسدس: چھ برابر اضلاع اور چھ برابر کونے، فرش کی ٹائل کی طرح۔ اس پر کوئی لکیر نہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                76.0,
+                32.0
+              ],
+              [
+                63.0,
+                54.5
+              ],
+              [
+                37.0,
+                54.5
+              ],
+              [
+                24.0,
+                32.0
+              ],
+              [
+                37.0,
+                9.5
+              ],
+              [
+                63.0,
+                9.5
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ayesha reflected the flag in the dashed mirror line. Her picture is on the right. What went wrong?",
+        "ur": "عائشہ نے جھنڈے کا ڈیش والی آئینہ لکیر میں عکس بنایا۔ اس کی تصویر دائیں طرف ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "slid",
+          "text": {
+            "en": "She slid the flag across. A reflection flips it, so the flag should point left, towards the mirror.",
+            "ur": "اس نے جھنڈا کھسکا دیا۔ عکس الٹ جاتا ہے، اس لیے جھنڈا بائیں طرف، آئینے کی طرف ہونا چاہیے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! In a mirror, the side nearest the mirror stays nearest the mirror.",
+            "ur": "جی ہاں! آئینے میں جو حصہ آئینے کے قریب ہے وہ قریب ہی رہتا ہے۔"
+          }
+        },
+        {
+          "id": "upside",
+          "text": {
+            "en": "The flag should be upside down.",
+            "ur": "جھنڈا الٹا (اوپر نیچے) ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A down-the-middle mirror swaps left and right, not top and bottom. The flag should point left.",
+            "ur": "اوپر سے نیچے والا آئینہ دائیں بائیں بدلتا ہے، اوپر نیچے نہیں۔ جھنڈا بائیں طرف ہونا چاہیے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, it is correct.",
+            "ur": "کوئی غلطی نہیں، یہ درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a slide, not a reflection. Folded along the mirror, the two flags would not match.",
+            "ur": "یہ کھسکانا ہے، عکس نہیں۔ آئینہ لکیر پر تہہ کریں تو دونوں جھنڈے نہیں ملیں گے۔"
+          },
+          "misconception_id": "slides_not_flips"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 56,
+        "alt": {
+          "en": "A dashed mirror line goes down the middle. On the left is a flag on a pole with its triangle pointing right. On the right, Ayesha drew the same flag, still pointing right.",
+          "ur": "بیچ میں اوپر سے نیچے ایک ڈیش والی آئینہ لکیر ہے۔ بائیں طرف ڈنڈے پر جھنڈا ہے جس کی تکون دائیں طرف ہے۔ دائیں طرف عائشہ نے وہی جھنڈا بنایا، اس کی تکون بھی دائیں طرف ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              2.0
+            ],
+            "to": [
+              50.0,
+              54.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.0,
+              10.0
+            ],
+            "to": [
+              20.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                10.0
+              ],
+              [
+                40.0,
+                18.0
+              ],
+              [
+                20.0,
+                26.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              10.0
+            ],
+            "to": [
+              60.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                60.0,
+                10.0
+              ],
+              [
+                80.0,
+                18.0
+              ],
+              [
+                60.0,
+                26.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A rectangle's diagonal cuts it into two equal triangles. So why isn't it a line of symmetry? Can you teach me?",
+          "ur": "مستطیل کا وتر اسے دو برابر مثلثوں میں کاٹتا ہے۔ پھر یہ تشاکل کی لکیر کیوں نہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "A rectangle, longer than it is tall. A dashed line goes from its top left corner to its bottom right corner (a diagonal).",
+          "ur": "ایک مستطیل جو اونچائی سے زیادہ لمبی ہے۔ ایک ڈیش والی لکیر اوپر بائیں کونے سے نیچے دائیں کونے تک جاتی ہے (وتر)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                12.0
+              ],
+              [
+                85.0,
+                12.0
+              ],
+              [
+                85.0,
+                48.0
+              ],
+              [
+                15.0,
+                48.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              15.0,
+              12.0
+            ],
+            "to": [
+              85.0,
+              48.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      },
+      "task": {
+        "en": "In your own words: why is a rectangle's diagonal not a line of symmetry, even though it makes two equal halves?",
+        "ur": "اپنے الفاظ میں بتائیں: مستطیل کا وتر تشاکل کی لکیر کیوں نہیں، حالانکہ یہ دو برابر حصے بناتا ہے؟"
+      },
+      "key_idea": "A line of symmetry must fold one half exactly onto the other. If you fold a rectangle along a diagonal, the corners stick out and the halves don't sit on top of each other. The two triangles are equal, but only by turning one, not by folding.",
+      "levels": {
+        "got_it": "Says that folding along the diagonal makes the halves not match (corners stick out), so equal halves are not enough; it has to be a fold.",
+        "partly": "Says the halves don't match when folded, but gives no reason, or says equal halves are not enough without mentioning folding.",
+        "not_yet": "Says it is a line of symmetry, or gives no reason."
+      },
+      "keywords": [
+        [
+          "fold",
+          "تہہ",
+          "tah"
+        ],
+        [
+          "match",
+          "on top",
+          "stick out",
+          "ملتے",
+          "باہر",
+          "milte"
+        ],
+        [
+          "corner",
+          "کونے",
+          "kone"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Equal halves are not enough: the fold must make them match.",
+          "ur": "بہت خوب! برابر حصے کافی نہیں: تہہ کرنے پر ملنا ضروری ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what happens to the corners when you fold along the diagonal.",
+          "ur": "اچھی شروعات! اب بتائیں وتر پر تہہ کرنے سے کونوں کا کیا ہوتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Fold a paper rectangle corner to corner. Do the halves sit exactly on top of each other?",
+          "ur": "کاغذ کی مستطیل کونے سے کونے تہہ کریں۔ کیا حصے بالکل ایک دوسرے پر آتے ہیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_complete",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal is drawing a truck-art pattern. He has drawn the flag on the left of each dashed mirror line. Which picture, A, B or C, shows it correctly reflected?",
+        "ur": "بلال ٹرک آرٹ کا نمونہ بنا رہا ہے۔ اس نے ہر ڈیش والی آئینہ لکیر کے بائیں طرف جھنڈا بنایا ہے۔ کون سی تصویر، A، B یا C، میں اس کا درست عکس ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A",
+            "ur": "A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "In A the flag was slid across, not flipped. A reflection points back towards the mirror: B.",
+            "ur": "A میں جھنڈا کھسکایا گیا، الٹا نہیں گیا۔ عکس آئینے کی طرف ہوتا ہے: B۔"
+          },
+          "misconception_id": "slides_not_flips"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "B",
+            "ur": "B"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The flag flips: it is the same distance from the mirror and points towards it.",
+            "ur": "جی ہاں! جھنڈا الٹ جاتا ہے: آئینے سے اتنا ہی دور اور اس کی طرف۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "C",
+            "ur": "C"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "C is also turned upside down. A down-the-middle mirror only swaps left and right: B.",
+            "ur": "C اوپر نیچے بھی الٹا ہے۔ اوپر سے نیچے والا آئینہ صرف دائیں بائیں بدلتا ہے: B۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 210,
+        "height": 66,
+        "alt": {
+          "en": "Three pictures, A, B and C. Each has a dashed mirror line down the middle and the same flag on the left, pointing right. In A the flag on the right also points right. In B the flag on the right points left, towards the mirror. In C the flag on the right points left but hangs at the bottom of its pole.",
+          "ur": "تین تصویریں، A، B اور C۔ ہر ایک کے بیچ میں ڈیش والی آئینہ لکیر ہے اور بائیں طرف وہی جھنڈا ہے جس کی تکون دائیں طرف ہے۔ A میں دائیں طرف کا جھنڈا بھی دائیں طرف ہے۔ B میں دائیں طرف کا جھنڈا بائیں طرف، آئینے کی طرف ہے۔ C میں دائیں طرف کا جھنڈا بائیں طرف ہے لیکن ڈنڈے کے نیچے لٹکا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              35.0,
+              4.0
+            ],
+            "to": [
+              35.0,
+              52.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              17.0,
+              8.0
+            ],
+            "to": [
+              17.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                17.0,
+                8.0
+              ],
+              [
+                37.0,
+                16.0
+              ],
+              [
+                17.0,
+                24.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              53.0,
+              8.0
+            ],
+            "to": [
+              53.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                53.0,
+                8.0
+              ],
+              [
+                73.0,
+                16.0
+              ],
+              [
+                53.0,
+                24.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              35.0,
+              60.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "line",
+            "from": [
+              105.0,
+              4.0
+            ],
+            "to": [
+              105.0,
+              52.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              87.0,
+              8.0
+            ],
+            "to": [
+              87.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                87.0,
+                8.0
+              ],
+              [
+                107.0,
+                16.0
+              ],
+              [
+                87.0,
+                24.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              123.0,
+              8.0
+            ],
+            "to": [
+              123.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                123.0,
+                8.0
+              ],
+              [
+                103.0,
+                16.0
+              ],
+              [
+                123.0,
+                24.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              105.0,
+              60.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "line",
+            "from": [
+              175.0,
+              4.0
+            ],
+            "to": [
+              175.0,
+              52.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              157.0,
+              8.0
+            ],
+            "to": [
+              157.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                157.0,
+                8.0
+              ],
+              [
+                177.0,
+                16.0
+              ],
+              [
+                157.0,
+                24.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              193.0,
+              8.0
+            ],
+            "to": [
+              193.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                193.0,
+                48.0
+              ],
+              [
+                173.0,
+                40.0
+              ],
+              [
+                193.0,
+                32.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              175.0,
+              60.0
+            ],
+            "text": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Fold, match, flip! You can spot mirror lines everywhere now. Well done!",
+          "ur": "تہہ کریں، ملائیں، الٹیں! اب آپ ہر جگہ آئینہ لکیریں پہچان سکتے ہیں۔ شاباش!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "A square with four dashed lines: one down the middle, one across the middle and the two diagonals.",
+          "ur": "ایک مربع جس پر چار ڈیش والی لکیریں ہیں: ایک بیچ میں اوپر سے نیچے، ایک بیچ میں دائیں سے بائیں، اور دونوں وتر۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                30.0,
+                10.0
+              ],
+              [
+                70.0,
+                10.0
+              ],
+              [
+                70.0,
+                50.0
+              ],
+              [
+                30.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              6.0
+            ],
+            "to": [
+              50.0,
+              54.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              26.0,
+              30.0
+            ],
+            "to": [
+              74.0,
+              30.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.0,
+              10.0
+            ],
+            "to": [
+              70.0,
+              50.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              10.0
+            ],
+            "to": [
+              30.0,
+              50.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      },
+      "text": {
+        "en": "A line of symmetry folds a shape into two halves that match exactly. Square 4, rectangle 2 (not the diagonals), equilateral triangle 3, isosceles triangle 1, scalene triangle 0, regular hexagon 6, circle infinitely many. To reflect a shape, flip it: each point lands the same distance from the mirror on the other side.",
+        "ur": "تشاکل کی لکیر شکل کو تہہ کر کے دو بالکل برابر حصے بناتی ہے۔ مربع 4، مستطیل 2 (وتر نہیں)، مساوی الاضلاع مثلث 3، مساوی الساقین مثلث 1، مختلف الاضلاع مثلث 0، باقاعدہ مسدس 6، دائرہ لا تعداد۔ عکس بنانے کے لیے شکل الٹیں: ہر نقطہ دوسری طرف آئینے سے اتنے ہی فاصلے پر آتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Test a line by folding: the halves must match.",
+          "ur": "لکیر کو تہہ کر کے جانچیں: حصے ملنے چاہییں۔"
+        },
+        {
+          "en": "A rectangle's diagonals are not mirror lines.",
+          "ur": "مستطیل کے وتر آئینہ لکیریں نہیں۔"
+        },
+        {
+          "en": "Reflect by flipping, not sliding.",
+          "ur": "عکس الٹ کر بنائیں، کھسکا کر نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_square_diag",
+      "type": "apply",
+      "skill": "maths.symmetry.line_symmetry",
+      "step": {
+        "id": "r_square_diag",
+        "type": "choice",
+        "prompt": {
+          "en": "Is the dashed diagonal a line of symmetry of this square?",
+          "ur": "کیا ڈیش والا وتر اس مربع کی تشاکل کی لکیر ہے؟"
+        },
+        "options": [
+          {
+            "id": "yes",
+            "text": {
+              "en": "Yes",
+              "ur": "ہاں"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Right! A square's sides are all equal, so folding corner to corner makes the halves match.",
+              "ur": "درست! مربع کے سب اضلاع برابر ہیں، اس لیے کونے سے کونے تہہ کرنے پر حصے مل جاتے ہیں۔"
+            }
+          },
+          {
+            "id": "no",
+            "text": {
+              "en": "No",
+              "ur": "نہیں"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "For a square it works: the halves match when folded corner to corner. (For a rectangle it doesn't.)",
+              "ur": "مربع کے لیے یہ چلتا ہے: کونے سے کونے تہہ کرنے پر حصے ملتے ہیں۔ (مستطیل کے لیے نہیں۔)"
+            }
+          }
+        ],
+        "figure": {
+          "width": 100,
+          "height": 60,
+          "alt": {
+            "en": "A square. A dashed line goes from its top left corner to its bottom right corner (a diagonal).",
+            "ur": "ایک مربع۔ ایک ڈیش والی لکیر اوپر بائیں کونے سے نیچے دائیں کونے تک جاتی ہے (وتر)۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  30.0,
+                  10.0
+                ],
+                [
+                  70.0,
+                  10.0
+                ],
+                [
+                  70.0,
+                  50.0
+                ],
+                [
+                  30.0,
+                  50.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "line",
+              "from": [
+                30.0,
+                10.0
+              ],
+              "to": [
+                70.0,
+                50.0
+              ],
+              "style": "dashed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r_grid",
+      "type": "apply",
+      "skill": "maths.symmetry.line_symmetry",
+      "step": {
+        "id": "r_grid",
+        "type": "number",
+        "prompt": {
+          "en": "Point P is 4 squares to the left of the dashed mirror line. How many squares to the right of the mirror line is its reflection?",
+          "ur": "نقطہ P ڈیش والی آئینہ لکیر سے 4 خانے بائیں ہے۔ اس کا عکس آئینہ لکیر سے کتنے خانے دائیں ہوگا؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Same distance from the mirror, on the other side.",
+          "ur": "آئینے سے اتنا ہی فاصلہ، دوسری طرف۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 4 squares.",
+          "ur": "درست! 4 خانے۔"
+        },
+        "feedback_wrong": {
+          "en": "P is 4 squares from the mirror, so its reflection is 4 squares on the other side.",
+          "ur": "P آئینے سے 4 خانے دور ہے، اس لیے عکس دوسری طرف 4 خانے پر ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "8 is from P to its reflection. From the mirror it is 4.",
+              "ur": "8 تو P سے عکس تک ہے۔ آئینے سے 4 ہے۔"
+            }
+          }
+        ],
+        "figure": {
+          "width": 110,
+          "height": 50,
+          "alt": {
+            "en": "A squared grid 10 squares wide and 4 squares tall. A dashed mirror line goes down the middle. Point P is 4 squares to the left of the mirror line.",
+            "ur": "10 خانے چوڑا اور 4 خانے اونچا چوکور جال۔ بیچ میں اوپر سے نیچے ڈیش والی آئینہ لکیر ہے۔ نقطہ P آئینہ لکیر سے 4 خانے بائیں ہے۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                5.0,
+                5.0
+              ],
+              "to": [
+                5.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                15.0,
+                5.0
+              ],
+              "to": [
+                15.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                25.0,
+                5.0
+              ],
+              "to": [
+                25.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                35.0,
+                5.0
+              ],
+              "to": [
+                35.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                45.0,
+                5.0
+              ],
+              "to": [
+                45.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                55.0,
+                5.0
+              ],
+              "to": [
+                55.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                65.0,
+                5.0
+              ],
+              "to": [
+                65.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                75.0,
+                5.0
+              ],
+              "to": [
+                75.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                85.0,
+                5.0
+              ],
+              "to": [
+                85.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                95.0,
+                5.0
+              ],
+              "to": [
+                95.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                105.0,
+                5.0
+              ],
+              "to": [
+                105.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                5.0,
+                5.0
+              ],
+              "to": [
+                105.0,
+                5.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                5.0,
+                15.0
+              ],
+              "to": [
+                105.0,
+                15.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                5.0,
+                25.0
+              ],
+              "to": [
+                105.0,
+                25.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                5.0,
+                35.0
+              ],
+              "to": [
+                105.0,
+                35.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                5.0,
+                45.0
+              ],
+              "to": [
+                105.0,
+                45.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                55.0,
+                1.0
+              ],
+              "to": [
+                55.0,
+                49.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "point",
+              "at": [
+                15.0,
+                25.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                12.0,
+                20.0
+              ],
+              "text": "P"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Symmetry unit. No textbook text or exercises were used.",
+    "Every count of lines of symmetry in this lesson (and the letters A, H, M, T, X) was checked in the script by reflecting the drawn shape in every line through its centre. Letters are drawn taller than wide, so X has 2 lines, not 4; if a child draws X inside a square, its diagonal strokes are also mirror lines.",
+    "The two big slips are giving a rectangle 4 lines (the diagonals cut it into equal halves but don't fold onto each other) and sliding a shape across the mirror instead of flipping it. Paper folding settles both quickly.",
+    "Urdu terms to check: خطی تشاکل (line symmetry), تشاکل کی لکیر (line of symmetry), آئینہ لکیر (mirror line), انعکاسی تشاکل (reflective symmetry), عکس (reflection), وتر (diagonal), مساوی الاضلاع / مساوی الساقین / مختلف الاضلاع مثلث, مسدس (hexagon), مخمس (pentagon), راس (vertex), لا تعداد (infinitely many).",
+    "The figures and numbers were worked out in content/sources/g6-maths-18/line_symmetry.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
