@@ -1,5 +1,6 @@
 from fractions import Fraction as F
 
+from figs import attach, hundred_grid, scale_bar
 from common import (D, T, opt, say, wrong, number_question, write,
                     REF, REVIEW, DEC_PLACE_VALUE, PC_MEANING, PC_CONVERT, as_percent)
 
@@ -226,4 +227,55 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# Pictures: a bar from 0 to 1 with the number (fraction or decimal) above
+# and the same point as a percent below, and grids of 100 squares.
+attach(lesson, {
+ "s1_hook": scale_bar(0.5, [(0, "0"), (0.5, "0.5"), (1, "1")], [(0, "0%"), (0.5, "50%"), (1, "100%")],
+   "A bar cut into two equal halves, the first half shaded. Above the bar: 0, 0.5 in the middle and 1 at the end. Below it: 0%, 50% in the middle and 100% at the end.",
+   "ایک پٹی جو دو برابر حصوں میں بٹی ہے، پہلا آدھا رنگا ہوا ہے۔ پٹی کے اوپر: 0، درمیان میں 0.5 اور آخر میں 1۔ نیچے: 0%، درمیان میں 50% اور آخر میں 100%۔",
+   pieces=2),
+ "s3_convert": scale_bar(0.75, [(q / 4, t) for q, t in enumerate(["0", "0.25", "0.5", "0.75", "1"])],
+   [(q / 4, f"{25 * q}%") for q in range(5)],
+   "A bar cut into four equal parts, three of them shaded. Above the bar the marks are 0, 0.25, 0.5, 0.75 and 1. Below the same marks are 0%, 25%, 50%, 75% and 100%.",
+   "ایک پٹی جو چار برابر حصوں میں بٹی ہے، ان میں سے تین رنگے ہیں۔ پٹی کے اوپر نشان 0، 0.25، 0.5، 0.75 اور 1 ہیں۔ نیچے انہی نشانوں پر 0%، 25%، 50%، 75% اور 100% ہیں۔",
+   pieces=4),
+ "s4_dec_to_pc": scale_bar(float(S4 / 100), [(0, "0"), (float(S4 / 100), "0.6"), (1, "1")],
+   [(0, "0%"), (float(S4 / 100), "?"), (1, "100%")],
+   "A bar cut into ten equal parts, six of them shaded. Above the bar: 0, 0.6 at the end of the shading, and 1. Below: 0%, a question mark under 0.6, and 100%.",
+   "ایک پٹی جو دس برابر حصوں میں بٹی ہے، ان میں سے چھ رنگے ہیں۔ پٹی کے اوپر: 0، رنگ کے آخر میں 0.6، اور 1۔ نیچے: 0%، 0.6 کے نیچے سوالیہ نشان، اور 100%۔",
+   pieces=10),
+ "s5_pc_to_dec": scale_bar(0.25, [(0, "0"), (0.25, "?"), (1, "1")], [(0, "0%"), (0.25, "25%"), (1, "100%")],
+   "A bar cut into four equal parts, the first one shaded. Below the bar: 0%, 25% at the end of the shading, and 100%. Above: 0, a question mark over 25%, and 1.",
+   "ایک پٹی جو چار برابر حصوں میں بٹی ہے، پہلا حصہ رنگا ہے۔ پٹی کے نیچے: 0%، رنگ کے آخر میں 25%، اور 100%۔ اوپر: 0، 25% کے اوپر سوالیہ نشان، اور 1۔",
+   pieces=4),
+ "s6_frac_to_pc": scale_bar(0.75, [(0, "0"), (0.75, "3/4"), (1, "1")], [(0, "0%"), (0.75, "?"), (1, "100%")],
+   "A bar cut into four equal parts, three of them shaded. Above the bar: 0, 3/4 at the end of the shading, and 1. Below: 0%, a question mark under 3/4, and 100%.",
+   "ایک پٹی جو چار برابر حصوں میں بٹی ہے، ان میں سے تین رنگے ہیں۔ پٹی کے اوپر: 0، رنگ کے آخر میں 3/4، اور 1۔ نیچے: 0%، 3/4 کے نیچے سوالیہ نشان، اور 100%۔",
+   pieces=4),
+ "s8_small": hundred_grid(int(S8 * 100),
+   "A grid of 100 small squares with 7 squares shaded in the top row, marked 7%.",
+   "100 چھوٹے خانوں کا جال جس کی اوپر والی قطار میں 7 خانے رنگے ہیں، اور ان پر 7% لکھا ہے۔",
+   shaded_text="7%"),
+ "s9_find_error": scale_bar(0.05, [(0, "0"), (0.5, "0.5"), (1, "1")], [(0, "0%"), (0.05, "5%"), (1, "100%")],
+   "A bar from 0 to 1, cut into ten equal parts. Above the bar, 0.5 is marked in the middle. Below the bar, 5% is marked near the start, far from 0.5, and the small piece up to 5% is shaded.",
+   "0 سے 1 تک ایک پٹی جو دس برابر حصوں میں بٹی ہے۔ پٹی کے اوپر درمیان میں 0.5 کا نشان ہے۔ پٹی کے نیچے شروع کے قریب 5% کا نشان ہے، جو 0.5 سے بہت دور ہے، اور 5% تک کا چھوٹا سا حصہ رنگا ہوا ہے۔",
+   pieces=10),
+ "s11_twentyfifths": scale_bar(9 / 25, [(0, "0"), (9 / 25, "9/25"), (1, "1")], [(0, "0%"), (9 / 25, "?"), (1, "100%")],
+   "A bar cut into 25 equal parts, 9 of them shaded. Above the bar: 0, 9/25 at the end of the shading, and 1. Below: 0%, a question mark under 9/25, and 100%.",
+   "ایک پٹی جو 25 برابر حصوں میں بٹی ہے، ان میں سے 9 رنگے ہیں۔ پٹی کے اوپر: 0، رنگ کے آخر میں 9/25، اور 1۔ نیچے: 0%، 9/25 کے نیچے سوالیہ نشان، اور 100%۔",
+   pieces=25),
+ "qb_apply": hundred_grid(int(QB),
+   "A grid of 100 small squares. Four rows and 5 more squares are shaded, 45 squares in all, marked 0.45.",
+   "100 چھوٹے خانوں کا جال۔ چار قطاریں اور 5 مزید خانے رنگے ہیں، کل 45 خانے، اور ان پر 0.45 لکھا ہے۔",
+   shaded_text="0.45"),
+ "r_dec": scale_bar(float(R1), [(0, "0"), (float(R1), "?"), (1, "1")], [(0, "0%"), (0.8, "80%"), (1, "100%")],
+   "A bar cut into ten equal parts, eight of them shaded. Below the bar: 0%, 80% at the end of the shading, and 100%. Above: 0, a question mark over 80%, and 1.",
+   "ایک پٹی جو دس برابر حصوں میں بٹی ہے، ان میں سے آٹھ رنگے ہیں۔ پٹی کے نیچے: 0%، رنگ کے آخر میں 80%، اور 100%۔ اوپر: 0، 80% کے اوپر سوالیہ نشان، اور 1۔",
+   pieces=10),
+ "r_frac": scale_bar(0.4, [(0, "0"), (0.4, "2/5"), (1, "1")], [(0, "0%"), (0.4, "?"), (1, "100%")],
+   "A bar cut into five equal parts, two of them shaded. Above the bar: 0, 2/5 at the end of the shading, and 1. Below: 0%, a question mark under 2/5, and 100%.",
+   "ایک پٹی جو پانچ برابر حصوں میں بٹی ہے، ان میں سے دو رنگے ہیں۔ پٹی کے اوپر: 0، رنگ کے آخر میں 2/5، اور 1۔ نیچے: 0%، 2/5 کے نیچے سوالیہ نشان، اور 100%۔",
+   pieces=5),
+})
 write(lesson)

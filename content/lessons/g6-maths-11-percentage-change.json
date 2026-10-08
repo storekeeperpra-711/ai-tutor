@@ -150,7 +150,119 @@
               },
               "misconception_id": "adds_the_number"
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 120.0,
+            "alt": {
+              "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, Rs 600. In the bottom bar a piece at the end is taken away (drawn dashed), marked −5% on its right. The new amount is a question mark.",
+              "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 600 روپے۔ نیچے والی پٹی میں آخر سے ایک ٹکڑا نکال دیا گیا ہے (ڈیش والی لکیروں سے بنا)، اس کے دائیں طرف −5% لکھا ہے۔ نئی مقدار پر سوالیہ نشان ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    24.0,
+                    24.0
+                  ],
+                  [
+                    210.0,
+                    24.0
+                  ],
+                  [
+                    210.0,
+                    50.0
+                  ],
+                  [
+                    24.0,
+                    50.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  117.0,
+                  13.0
+                ],
+                "text": "Rs600"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    24.0,
+                    82.0
+                  ],
+                  [
+                    200.7,
+                    82.0
+                  ],
+                  [
+                    200.7,
+                    108.0
+                  ],
+                  [
+                    24.0,
+                    108.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    200.7,
+                    82.0
+                  ],
+                  [
+                    210.0,
+                    82.0
+                  ],
+                  [
+                    210.0,
+                    108.0
+                  ],
+                  [
+                    200.7,
+                    108.0
+                  ]
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  210.0,
+                  50.0
+                ],
+                "to": [
+                  210.0,
+                  82.0
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  112.3,
+                  71.0
+                ],
+                "text": "?"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  234.4,
+                  95.0
+                ],
+                "text": "−5%"
+              }
+            ]
+          }
         }
       },
       {
@@ -304,7 +416,273 @@
             "ur": "45 تو 10% ہے۔ 20% اس کا دگنا: 90"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 94.0,
+        "alt": {
+          "en": "A bar for 450 cut into 10 equal parts, with the first 2 parts shaded. Above the bar: 0, a question mark at the end of the shading, and 450 at the end. Below the bar: 0%, 20% under the question mark, and 100% under 450.",
+          "ur": "450 کے لیے ایک پٹی جو 10 برابر حصوں میں بٹی ہے، پہلے 2 حصے رنگے ہیں۔ پٹی کے اوپر: 0، رنگ کے آخر میں سوالیہ نشان، اور آخر میں 450۔ پٹی کے نیچے: 0%، سوالیہ نشان کے نیچے 20%، اور 450 کے نیچے 100%۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                34.0
+              ],
+              [
+                74.4,
+                34.0
+              ],
+              [
+                74.4,
+                64.0
+              ],
+              [
+                24.0,
+                64.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                34.0
+              ],
+              [
+                276.0,
+                34.0
+              ],
+              [
+                276.0,
+                64.0
+              ],
+              [
+                24.0,
+                64.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              49.2,
+              34.0
+            ],
+            "to": [
+              49.2,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              74.4,
+              34.0
+            ],
+            "to": [
+              74.4,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.6,
+              34.0
+            ],
+            "to": [
+              99.6,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              124.8,
+              34.0
+            ],
+            "to": [
+              124.8,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              34.0
+            ],
+            "to": [
+              150.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              175.2,
+              34.0
+            ],
+            "to": [
+              175.2,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              200.4,
+              34.0
+            ],
+            "to": [
+              200.4,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              225.6,
+              34.0
+            ],
+            "to": [
+              225.6,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              250.8,
+              34.0
+            ],
+            "to": [
+              250.8,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              24.0,
+              28.0
+            ],
+            "to": [
+              24.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              74.4,
+              28.0
+            ],
+            "to": [
+              74.4,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              276.0,
+              28.0
+            ],
+            "to": [
+              276.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              24.0,
+              64.0
+            ],
+            "to": [
+              24.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              74.4,
+              64.0
+            ],
+            "to": [
+              74.4,
+              70.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              276.0,
+              64.0
+            ],
+            "to": [
+              276.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              18.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "label",
+            "at": [
+              74.4,
+              18.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              18.0
+            ],
+            "text": "450"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              80.0
+            ],
+            "text": "0%"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              80.0
+            ],
+            "text": "100%"
+          },
+          {
+            "kind": "label",
+            "at": [
+              74.4,
+              80.0
+            ],
+            "text": "20%"
+          }
+        ]
+      }
     },
     {
       "id": "s3_rule",
@@ -319,6 +697,125 @@
       "text": {
         "en": "To increase Rs 800 by 10%: 10% of 800 = 80, so the new price is 800 + 80 = Rs 880. To decrease, take it away instead. To find the percentage change: change ÷ original amount × 100. A fare goes from Rs 40 to Rs 50: the change is 10, and 10 ÷ 40 × 100 = 25%. Always divide by the ORIGINAL amount.",
         "ur": "800 روپے میں 10% اضافہ: 800 کا 10% = 80، تو نئی قیمت 800 + 80 = 880 روپے۔ کمی کے لیے اسے تفریق کریں۔ فیصد تبدیلی نکالنے کے لیے: تبدیلی ÷ اصل مقدار × 100۔ کرایہ 40 سے 50 روپے ہو جاتا ہے: تبدیلی 10 ہے، اور 10 ÷ 40 × 100 = 25%۔ ہمیشہ اصل مقدار سے تقسیم کریں۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 138.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, Rs 800. The bottom bar is the same bar with an extra piece added on the end, marked +10% on its right, with +80 under it. The new amount is Rs 880.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 800 روپے۔ نیچے والی پٹی وہی پٹی ہے جس کے آخر میں ایک اضافی ٹکڑا جوڑا گیا ہے، اس کے دائیں طرف +10% لکھا ہے، اور اس کے نیچے +80۔ نئی مقدار 880 روپے ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                193.1,
+                24.0
+              ],
+              [
+                193.1,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.5,
+              13.0
+            ],
+            "text": "Rs800"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                193.1,
+                82.0
+              ],
+              [
+                193.1,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                193.1,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                193.1,
+                108.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              193.1,
+              50.0
+            ],
+            "to": [
+              193.1,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.5,
+              71.0
+            ],
+            "text": "Rs880"
+          },
+          {
+            "kind": "label",
+            "at": [
+              239.2,
+              95.0
+            ],
+            "text": "+10%"
+          },
+          {
+            "kind": "label",
+            "at": [
+              201.5,
+              123.0
+            ],
+            "text": "+80"
+          }
+        ]
       }
     },
     {
@@ -360,7 +857,118 @@
           },
           "misconception_id": "adds_the_number"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 120.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, Rs 800. The bottom bar is the same bar with an extra piece added on the end, marked +10% on its right. The new amount is a question mark.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 800 روپے۔ نیچے والی پٹی وہی پٹی ہے جس کے آخر میں ایک اضافی ٹکڑا جوڑا گیا ہے، اس کے دائیں طرف +10% لکھا ہے۔ نئی مقدار پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                193.1,
+                24.0
+              ],
+              [
+                193.1,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.5,
+              13.0
+            ],
+            "text": "Rs800"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                193.1,
+                82.0
+              ],
+              [
+                193.1,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                193.1,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                193.1,
+                108.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              193.1,
+              50.0
+            ],
+            "to": [
+              193.1,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.5,
+              71.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              239.2,
+              95.0
+            ],
+            "text": "+10%"
+          }
+        ]
+      }
     },
     {
       "id": "s5_sale",
@@ -400,7 +1008,152 @@
             "ur": "'رعایت' یعنی قیمت کم ہوتی ہے: 1,200 − 300 = 900"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 120.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, Rs 1200, cut into 4 equal parts. In the bottom bar a piece at the end is taken away (drawn dashed), marked −25% on its right. The new amount is a question mark.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 1200 روپے، جو 4 برابر حصوں میں بٹی ہے۔ نیچے والی پٹی میں آخر سے ایک ٹکڑا نکال دیا گیا ہے (ڈیش والی لکیروں سے بنا)، اس کے دائیں طرف −25% لکھا ہے۔ نئی مقدار پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                210.0,
+                24.0
+              ],
+              [
+                210.0,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.5,
+              24.0
+            ],
+            "to": [
+              70.5,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              117.0,
+              24.0
+            ],
+            "to": [
+              117.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              163.5,
+              24.0
+            ],
+            "to": [
+              163.5,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              117.0,
+              13.0
+            ],
+            "text": "Rs1200"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                163.5,
+                82.0
+              ],
+              [
+                163.5,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                163.5,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                163.5,
+                108.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              210.0,
+              50.0
+            ],
+            "to": [
+              210.0,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              93.8,
+              71.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              239.2,
+              95.0
+            ],
+            "text": "−25%"
+          }
+        ]
+      }
     },
     {
       "id": "s6_students",
@@ -448,7 +1201,126 @@
           },
           "misconception_id": "new_as_base"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 138.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, 500. The bottom bar is the same bar with an extra piece added on the end, marked with a question mark on its right, with +50 under it. The new amount is 550.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 500۔ نیچے والی پٹی وہی پٹی ہے جس کے آخر میں ایک اضافی ٹکڑا جوڑا گیا ہے، اس کے دائیں طرف سوالیہ نشان ہے، اور اس کے نیچے +50۔ نئی مقدار 550 ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                193.1,
+                24.0
+              ],
+              [
+                193.1,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.5,
+              13.0
+            ],
+            "text": "500"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                193.1,
+                82.0
+              ],
+              [
+                193.1,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                193.1,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                193.1,
+                108.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              193.1,
+              50.0
+            ],
+            "to": [
+              193.1,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.5,
+              71.0
+            ],
+            "text": "550"
+          },
+          {
+            "kind": "label",
+            "at": [
+              224.8,
+              95.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              201.5,
+              123.0
+            ],
+            "text": "+50"
+          }
+        ]
+      }
     },
     {
       "id": "s7_fare",
@@ -489,7 +1361,126 @@
           },
           "misconception_id": "difference_as_percent"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 138.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, Rs 40. The bottom bar is the same bar with an extra piece added on the end, marked with a question mark on its right, with +10 under it. The new amount is Rs 50.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 40 روپے۔ نیچے والی پٹی وہی پٹی ہے جس کے آخر میں ایک اضافی ٹکڑا جوڑا گیا ہے، اس کے دائیں طرف سوالیہ نشان ہے، اور اس کے نیچے +10۔ نئی مقدار 50 روپے ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                172.8,
+                24.0
+              ],
+              [
+                172.8,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.4,
+              13.0
+            ],
+            "text": "Rs40"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                172.8,
+                82.0
+              ],
+              [
+                172.8,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                172.8,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                172.8,
+                108.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              172.8,
+              50.0
+            ],
+            "to": [
+              172.8,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.4,
+              71.0
+            ],
+            "text": "Rs50"
+          },
+          {
+            "kind": "label",
+            "at": [
+              224.8,
+              95.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              191.4,
+              123.0
+            ],
+            "text": "+10"
+          }
+        ]
+      }
     },
     {
       "id": "s8_decrease",
@@ -530,7 +1521,127 @@
           },
           "misconception_id": "difference_as_percent"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 138.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, 25 kg. In the bottom bar a piece at the end is taken away (drawn dashed), marked with a question mark on its right, with −5 under it. The new amount is 20 kg.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 25 کلو۔ نیچے والی پٹی میں آخر سے ایک ٹکڑا نکال دیا گیا ہے (ڈیش والی لکیروں سے بنا)، اس کے دائیں طرف سوالیہ نشان ہے، اور اس کے نیچے −5۔ نئی مقدار 20 کلو ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                210.0,
+                24.0
+              ],
+              [
+                210.0,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              117.0,
+              13.0
+            ],
+            "text": "25kg"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                172.8,
+                82.0
+              ],
+              [
+                172.8,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                172.8,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                172.8,
+                108.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              210.0,
+              50.0
+            ],
+            "to": [
+              210.0,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.4,
+              71.0
+            ],
+            "text": "20kg"
+          },
+          {
+            "kind": "label",
+            "at": [
+              224.8,
+              95.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              191.4,
+              123.0
+            ],
+            "text": "−5"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -579,7 +1690,126 @@
           },
           "misconception_id": "difference_as_percent"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 138.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, Rs 200. The bottom bar is the same bar with an extra piece added on the end, marked with a question mark on its right, with +50 under it. The new amount is Rs 250.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 200 روپے۔ نیچے والی پٹی وہی پٹی ہے جس کے آخر میں ایک اضافی ٹکڑا جوڑا گیا ہے، اس کے دائیں طرف سوالیہ نشان ہے، اور اس کے نیچے +50۔ نئی مقدار 250 روپے ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                172.8,
+                24.0
+              ],
+              [
+                172.8,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.4,
+              13.0
+            ],
+            "text": "Rs200"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                172.8,
+                82.0
+              ],
+              [
+                172.8,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                172.8,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                172.8,
+                108.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              172.8,
+              50.0
+            ],
+            "to": [
+              172.8,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.4,
+              71.0
+            ],
+            "text": "Rs250"
+          },
+          {
+            "kind": "label",
+            "at": [
+              224.8,
+              95.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              191.4,
+              123.0
+            ],
+            "text": "+50"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -678,7 +1908,118 @@
           },
           "misconception_id": "adds_the_number"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 120.0,
+        "alt": {
+          "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, 2000. The bottom bar is the same bar with an extra piece added on the end, marked +15% on its right. The new amount is a question mark.",
+          "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 2000۔ نیچے والی پٹی وہی پٹی ہے جس کے آخر میں ایک اضافی ٹکڑا جوڑا گیا ہے، اس کے دائیں طرف +15% لکھا ہے۔ نئی مقدار پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                24.0
+              ],
+              [
+                185.7,
+                24.0
+              ],
+              [
+                185.7,
+                50.0
+              ],
+              [
+                24.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              104.9,
+              13.0
+            ],
+            "text": "2000"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.0,
+                82.0
+              ],
+              [
+                185.7,
+                82.0
+              ],
+              [
+                185.7,
+                108.0
+              ],
+              [
+                24.0,
+                108.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                185.7,
+                82.0
+              ],
+              [
+                210.0,
+                82.0
+              ],
+              [
+                210.0,
+                108.0
+              ],
+              [
+                185.7,
+                108.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              185.7,
+              50.0
+            ],
+            "to": [
+              185.7,
+              82.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              104.9,
+              71.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              239.2,
+              95.0
+            ],
+            "text": "+15%"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -778,7 +2119,127 @@
             },
             "misconception_id": "difference_as_percent"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 138.0,
+          "alt": {
+            "en": "Two bars drawn to the same scale. The top bar, shaded, is the old amount, 80. In the bottom bar a piece at the end is taken away (drawn dashed), marked with a question mark on its right, with −20 under it. The new amount is 60.",
+            "ur": "ایک ہی پیمانے پر بنی دو پٹیاں۔ اوپر والی رنگی ہوئی پٹی پرانی مقدار ہے، 80۔ نیچے والی پٹی میں آخر سے ایک ٹکڑا نکال دیا گیا ہے (ڈیش والی لکیروں سے بنا)، اس کے دائیں طرف سوالیہ نشان ہے، اور اس کے نیچے −20۔ نئی مقدار 60 ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  24.0,
+                  24.0
+                ],
+                [
+                  210.0,
+                  24.0
+                ],
+                [
+                  210.0,
+                  50.0
+                ],
+                [
+                  24.0,
+                  50.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                117.0,
+                13.0
+              ],
+              "text": "80"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  24.0,
+                  82.0
+                ],
+                [
+                  163.5,
+                  82.0
+                ],
+                [
+                  163.5,
+                  108.0
+                ],
+                [
+                  24.0,
+                  108.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  163.5,
+                  82.0
+                ],
+                [
+                  210.0,
+                  82.0
+                ],
+                [
+                  210.0,
+                  108.0
+                ],
+                [
+                  163.5,
+                  108.0
+                ]
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "line",
+              "from": [
+                210.0,
+                50.0
+              ],
+              "to": [
+                210.0,
+                82.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "label",
+              "at": [
+                93.8,
+                71.0
+              ],
+              "text": "60"
+            },
+            {
+              "kind": "label",
+              "at": [
+                224.8,
+                95.0
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "label",
+              "at": [
+                186.8,
+                123.0
+              ],
+              "text": "−20"
+            }
+          ]
+        }
       }
     }
   ],

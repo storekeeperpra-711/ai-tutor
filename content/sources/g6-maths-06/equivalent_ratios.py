@@ -234,4 +234,38 @@ lesson = {
  "review": REVIEW,
 }
 assert 15 == 5 + (12 - 2)
+# ---------- pictures ----------
+from figs import attach, counters, grouped_counters, double_line
+
+attach(lesson, {
+  "s1_hook": counters(
+    [(2, True, "2"), (5, False, "5"), (4, True, "4"), (10, False, "10")],
+    "Two drinks. Ali's: a row of 2 shaded dots (glasses of lemon juice) and a row of 5 empty dots (glasses of water). Sara's, under a dashed line: a row of 4 shaded dots and a row of 10 empty dots.",
+    "دو مشروب۔ علی کا: 2 بھرے نقطوں کی قطار (لیموں کے رس کے گلاس) اور 5 خالی نقطوں کی قطار (پانی کے گلاس)۔ سارہ کا، ڈیش والی لکیر کے نیچے: 4 بھرے نقطوں کی قطار اور 10 خالی نقطوں کی قطار۔",
+    sp=18, r=6, breaks=(2,)),
+  "s4_see_it": grouped_counters(
+    [(1, ratio(2, 5)), (2, ratio(4, 10)), (3, ratio(6, 15))],
+    "Three rows. Each dashed box holds 2 shaded dots (lemon juice) over 5 empty dots (water). The first row has 1 box: 2:5. The second has 2 boxes: 4:10. The third has 3 boxes: 6:15. Every row is made of the same 2:5 group.",
+    "تین قطاریں۔ ہر ڈیش والے خانے میں 2 بھرے نقطے (لیموں کا رس) اور ان کے نیچے 5 خالی نقطے (پانی) ہیں۔ پہلی قطار میں 1 خانہ: 2:5۔ دوسری میں 2 خانے: 4:10۔ تیسری میں 3 خانے: 6:15۔ ہر قطار ایک ہی 2:5 والے گروپ سے بنی ہے۔",
+    a=2, b=5),
+  "s5_fill_gap": double_line(
+    3, 4, 20 // 4, {1: ("3", "4"), 20 // 4: ("?", "20")},
+    "A double number line. The top line has 3 and a question mark; the bottom line has 4 and 20 under them. An arrow marked ×5 jumps from the first pair to the second.",
+    "دوہری عددی لکیر۔ اوپر کی لکیر پر 3 اور سوالیہ نشان ہیں؛ نیچے کی لکیر پر ان کے نیچے 4 اور 20 ہیں۔ ×5 لکھا تیر پہلے جوڑے سے دوسرے جوڑے تک جاتا ہے۔",
+    arrows=[(1, 20 // 4, "×5")]),
+  "s6_simplest": grouped_counters(
+    [(6, ratio(12, 18))],
+    "12 shaded dots and 18 empty dots put into 6 dashed boxes. Each box holds 2 shaded dots over 3 empty dots, so 12:18 is 6 groups of 2:3.",
+    "12 بھرے اور 18 خالی نقطے 6 ڈیش والے خانوں میں رکھے گئے ہیں۔ ہر خانے میں 2 بھرے نقطے اور ان کے نیچے 3 خالی نقطے ہیں، یعنی 12:18 میں 2:3 کے 6 گروپ ہیں۔",
+    a=2, b=3, sp=13, r=5),
+  "s7_simplify": counters(
+    [(8, True, "8"), (12, False, "12")],
+    "The class: a row of 8 shaded dots for the girls and a row of 12 empty dots for the boys.",
+    "جماعت: لڑکیوں کے لیے 8 بھرے نقطوں کی قطار اور لڑکوں کے لیے 12 خالی نقطوں کی قطار۔", sp=18, r=6),
+  "r_fill_gap": double_line(
+    5, 2, 12 // 2, {1: ("5", "2"), 12 // 2: ("?", "12")},
+    "A double number line. The top line has 5 and a question mark; the bottom line has 2 and 12 under them. An arrow marked ×6 jumps from the first pair to the second.",
+    "دوہری عددی لکیر۔ اوپر کی لکیر پر 5 اور سوالیہ نشان ہیں؛ نیچے کی لکیر پر ان کے نیچے 2 اور 12 ہیں۔ ×6 لکھا تیر پہلے جوڑے سے دوسرے جوڑے تک جاتا ہے۔",
+    arrows=[(1, 12 // 2, "×6")]),
+})
 write(lesson)

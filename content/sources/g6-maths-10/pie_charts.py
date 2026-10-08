@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, table_text, write,
                     BOOK, REVIEW, DH_BAR_GRAPHS, DH_PIE_CHARTS)
+from figs import pie_chart, double_bar_graph, squares_bar, attach
 
 SKILL = DH_PIE_CHARTS
 WHOLE = 360
@@ -17,7 +18,7 @@ def angle_of(part, total):
     return part * WHOLE // total
 
 
-# Slices and double bars written as text, since lessons have no pictures yet.
+# Slices and double bars, written as text in the steps and drawn in the pictures.
 SPORTS = [(("Cricket", "کرکٹ"), 180), (("Hockey", "ہاکی"), 90), (("Football", "فٹ بال"), 90)]
 SPORTS_EN, SPORTS_UR = table_text(SPORTS, "°", "°")
 assert sum(a for _, a in SPORTS) == WHOLE
@@ -114,8 +115,8 @@ lesson = {
    {"id": "s1_hook", "type": "explain",
     "character": say("curious", "Imagine a round roti cut into pieces, one piece for each sport. The biggest piece shows the favourite!",
                      "سوچیں ایک گول روٹی ٹکڑوں میں کٹی ہے، ہر کھیل کا ایک ٹکڑا۔ سب سے بڑا ٹکڑا پسندیدہ کھیل دکھاتا ہے!"),
-    "text": T("Today we read pie charts and double bar graphs. There are no pictures yet, so each chart is described in words. First, a quick check.",
-              "آج ہم پائی چارٹ اور دوہرے بار گراف پڑھیں گے۔ ابھی تصویریں نہیں، اس لیے ہر چارٹ الفاظ میں بتایا گیا ہے۔ پہلے ایک چھوٹا سا سوال۔")},
+    "text": T("Today we read pie charts, like the one in the picture, and double bar graphs. First, a quick check.",
+              "آج ہم پائی چارٹ، جیسے تصویر والا، اور دوہرے بار گراف پڑھیں گے۔ پہلے ایک چھوٹا سا سوال۔")},
    number_question(
      "s2_foundation",
      T("On a bar graph, each square stands for 5 children. A bar is 6 squares tall. How many children does it show?", "ایک بار گراف میں ہر خانہ 5 بچوں کو ظاہر کرتا ہے۔ ایک ستون 6 خانے اونچا ہے۔ یہ کتنے بچے دکھاتا ہے؟"),
@@ -237,11 +238,63 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
-   "There are no pictures yet: every pie chart is written as its slices with angles (e.g. Cricket: 180°, Hockey: 90°, Football: 90°) and every double bar graph as text lists (e.g. Class 6: boys 20, girls 25). Drawing them on the board helps.",
+   "Pie charts and double bar graphs are drawn as pictures (slices marked with a short letter and their angle; boys' bars filled, girls' bars empty) and also written in words in each step (e.g. Cricket: 180°, Hockey: 90°, Football: 90°; Class 6: boys 20, girls 25). Drawing them on the board helps.",
    "All slices are simple fractions of the circle (half, quarter, third), so every answer is a whole number.",
    "Urdu terms to check: دائری نقشہ / پائی چارٹ (pie chart), ٹکڑا (slice), زاویہ (angle), درجہ (degree), دوہرا بار گراف (multiple/double bar graph).",
    "The numbers were worked out in content/sources/g6-maths-10/pie_charts.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+SPORT_SLICES = [(a, en[0], f"{a}°") for (en, _), a in SPORTS]      # C, H, F
+SPORT_EN = "C (cricket) 180°, half the circle; H (hockey) 90°, a quarter; F (football) 90°, a quarter"
+SPORT_UR = "C (کرکٹ) 180°، آدھا دائرہ؛ H (ہاکی) 90°، چوتھائی؛ F (فٹ بال) 90°، چوتھائی"
+
+
+def sports_pie(shade=None):
+    i = [n for _, n, _ in SPORT_SLICES].index(shade) if shade else None
+    extra_en = f" The {dict(C='cricket', H='hockey', F='football')[shade]} slice is shaded." if shade else ""
+    extra_ur = f" {dict(C='کرکٹ', H='ہاکی', F='فٹ بال')[shade]} والا ٹکڑا رنگا ہوا ہے۔" if shade else ""
+    return pie_chart(SPORT_SLICES, f"A pie chart of favourite sports: {SPORT_EN}.{extra_en}",
+                     f"پسندیدہ کھیلوں کا پائی چارٹ: {SPORT_UR}۔{extra_ur}", fill=(i,) if shade else ())
+
+
+def classes_graph():
+    return double_bar_graph([(b, g) for _, _, b, g in CLASSES], [en.split()[1] for en, _, _, _ in CLASSES],
+        "A double bar graph with a scale from 0 to 25 in 5s. For each class two bars stand side by side: a filled bar for boys (B) and an empty bar for girls (G). "
+        "Class 6: boys 20, girls 25. Class 7: boys 18, girls 22. Class 8: boys 24, girls 19. The classes are written as 6, 7 and 8 under the bars.",
+        "دوہرا بار گراف، پیمانہ 0 سے 25 تک، 5 کے وقفے سے۔ ہر جماعت کے دو ستون ساتھ ساتھ ہیں: لڑکوں (B) کا بھرا ہوا ستون اور لڑکیوں (G) کا خالی ستون۔ "
+        "جماعت 6: لڑکے 20، لڑکیاں 25۔ جماعت 7: لڑکے 18، لڑکیاں 22۔ جماعت 8: لڑکے 24، لڑکیاں 19۔ جماعتیں ستونوں کے نیچے 6، 7 اور 8 لکھی ہیں۔",
+        top=25, step=5)
+
+
+def one_slice(angle):
+    return pie_chart([(angle, None, f"{angle}°"), (WHOLE - angle, None, None)],
+                     f"A pie chart with one shaded slice marked {angle}°; the rest of the circle is not shaded.",
+                     f"ایک پائی چارٹ جس میں ایک رنگا ہوا ٹکڑا {angle}° کا ہے؛ باقی دائرہ رنگا ہوا نہیں۔", fill=(0,))
+
+
+attach(lesson, {
+    "s1_hook": sports_pie(),
+    "s2_foundation": squares_bar(6, 5, "C", "One bar made of 6 squares stacked up. A key beside it shows one square = 5.",
+                                 "6 خانوں سے بنا ایک ستون۔ ساتھ کی کلید دکھاتی ہے: ایک خانہ = 5۔"),
+    "s3_pie": sports_pie("H"),
+    "s4_quarter": sports_pie("H"),
+    "s7_double": classes_graph(),
+    "s8_more_boys": classes_graph(),
+    "s9_find_error": sports_pie("C"),
+    "s11_missing": pie_chart([(150, "Ri", "150°"), (120, "Ro", "120°"), (S11, "D", "?")],
+        "A pie chart of dinners: Ri (rice) 150°, Ro (roti) 120°, and the last slice D (daal) is shaded and marked with a question mark.",
+        "رات کے کھانوں کا پائی چارٹ: Ri (چاول) 150°، Ro (روٹی) 120°، اور آخری ٹکڑا D (دال) رنگا ہوا ہے اور اس پر سوالیہ نشان ہے۔", fill=(2,)),
+    "qb_apply": one_slice(120),
+    "qb_find_error": double_bar_graph([(20, 25)], ["6"],
+        "A double bar graph for Class 6 with a scale from 0 to 25 in 5s: a filled bar for boys (B) at 20 and an empty bar for girls (G) at 25, side by side.",
+        "جماعت 6 کا دوہرا بار گراف، پیمانہ 0 سے 25 تک، 5 کے وقفے سے: لڑکوں (B) کا بھرا ہوا ستون 20 پر اور لڑکیوں (G) کا خالی ستون 25 پر، ساتھ ساتھ۔",
+        top=25, step=5),
+    "r_half": one_slice(180),
+    "r_double": double_bar_graph([(14, 9)], ["Mo"],
+        "A double bar graph of fruit sold on Monday (Mo) with a scale from 0 to 15 in 5s: a filled bar for apples (A) at 14 and an empty bar for oranges (O) at 9, side by side.",
+        "پیر (Mo) کو بکنے والے پھلوں کا دوہرا بار گراف، پیمانہ 0 سے 15 تک، 5 کے وقفے سے: سیبوں (A) کا بھرا ہوا ستون 14 پر اور مالٹوں (O) کا خالی ستون 9 پر، ساتھ ساتھ۔",
+        top=15, step=5, keys=("A", "O")),
+})
 write(lesson)

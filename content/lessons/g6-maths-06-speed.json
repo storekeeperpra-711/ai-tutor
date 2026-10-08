@@ -257,6 +257,182 @@
       "text": {
         "en": "Today we find speed, distance and time, and change km/h to m/s. First, a rate.",
         "ur": "آج ہم رفتار، فاصلہ اور وقت نکالیں گے، اور کلومیٹر فی گھنٹہ کو میٹر فی سیکنڈ میں بدلیں گے۔ پہلے ایک شرح۔"
+      },
+      "figure": {
+        "width": 320.0,
+        "height": 106.0,
+        "alt": {
+          "en": "A road cut into 3 equal pieces of 30 m each. The marks above say 1s, 2s and 3s: the cheetah runs 30 m in every second.",
+          "ur": "سڑک 30، 30 میٹر کے 3 برابر ٹکڑوں میں بٹی ہوئی۔ اوپر کے نشانوں پر 1s، 2s اور 3s لکھا ہے: چیتا ہر سیکنڈ میں 30 میٹر دوڑتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              44.0
+            ],
+            "to": [
+              304.0,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              74.0
+            ],
+            "to": [
+              304.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              59.0
+            ],
+            "to": [
+              304.0,
+              59.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                24.0
+              ],
+              [
+                50.0,
+                24.0
+              ],
+              [
+                50.0,
+                36.0
+              ],
+              [
+                20.0,
+                36.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              27.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              43.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              38.0
+            ],
+            "to": [
+              16.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              112.0,
+              38.0
+            ],
+            "to": [
+              112.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112.0,
+              28.0
+            ],
+            "text": "1s"
+          },
+          {
+            "kind": "line",
+            "from": [
+              208.0,
+              38.0
+            ],
+            "to": [
+              208.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              208.0,
+              28.0
+            ],
+            "text": "2s"
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              38.0
+            ],
+            "to": [
+              304.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              304.0,
+              28.0
+            ],
+            "text": "3s"
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.0,
+              90.0
+            ],
+            "text": "30m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              90.0
+            ],
+            "text": "30m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              256.0,
+              90.0
+            ],
+            "text": "30m"
+          }
+        ]
       }
     },
     {
@@ -291,7 +467,224 @@
           },
           "misconception_id": "wrong_operation"
         }
-      ]
+      ],
+      "figure": {
+        "width": 320.0,
+        "height": 142.0,
+        "alt": {
+          "en": "A road 150 km long, marked with a bracket under it, cut into 3 equal pieces. The marks above say 1h, 2h and 3h; each piece has a question mark.",
+          "ur": "150 کلومیٹر لمبی سڑک، نیچے قوس کے ساتھ، 3 برابر ٹکڑوں میں بٹی ہوئی۔ اوپر کے نشانوں پر 1h، 2h اور 3h لکھا ہے؛ ہر ٹکڑے پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              44.0
+            ],
+            "to": [
+              304.0,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              74.0
+            ],
+            "to": [
+              304.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              59.0
+            ],
+            "to": [
+              304.0,
+              59.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                24.0
+              ],
+              [
+                50.0,
+                24.0
+              ],
+              [
+                50.0,
+                36.0
+              ],
+              [
+                20.0,
+                36.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              27.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              43.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              38.0
+            ],
+            "to": [
+              16.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              112.0,
+              38.0
+            ],
+            "to": [
+              112.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112.0,
+              28.0
+            ],
+            "text": "1h"
+          },
+          {
+            "kind": "line",
+            "from": [
+              208.0,
+              38.0
+            ],
+            "to": [
+              208.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              208.0,
+              28.0
+            ],
+            "text": "2h"
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              38.0
+            ],
+            "to": [
+              304.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              304.0,
+              28.0
+            ],
+            "text": "3h"
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.0,
+              90.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              90.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              256.0,
+              90.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              106.0
+            ],
+            "to": [
+              304.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              101.0
+            ],
+            "to": [
+              16.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              101.0
+            ],
+            "to": [
+              304.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              120.0
+            ],
+            "text": "150km"
+          }
+        ]
+      }
     },
     {
       "id": "s3_rule",
@@ -306,6 +699,223 @@
       "text": {
         "en": "Speed = distance ÷ time. So distance = speed × time, and time = distance ÷ speed. Speed can be in km/h or in m/s. To change km/h to m/s: 1 km = 1000 m and 1 hour = 3600 s, so multiply by 1000 and divide by 3600 (the same as × 5/18): 36 km/h = 10 m/s. To change m/s to km/h, multiply by 3600 and divide by 1000 (× 18/5).",
         "ur": "رفتار = فاصلہ ÷ وقت۔ اس لیے فاصلہ = رفتار × وقت، اور وقت = فاصلہ ÷ رفتار۔ رفتار کلومیٹر فی گھنٹہ (km/h) یا میٹر فی سیکنڈ (m/s) میں ہو سکتی ہے۔ km/h کو m/s میں بدلنے کے لیے: 1 کلومیٹر = 1000 میٹر اور 1 گھنٹہ = 3600 سیکنڈ، تو 1000 سے ضرب دیں اور 3600 سے تقسیم کریں (یعنی × 5/18): 36 km/h = 10 m/s۔ m/s کو km/h میں بدلنے کے لیے 3600 سے ضرب اور 1000 سے تقسیم کریں (× 18/5)۔"
+      },
+      "figure": {
+        "width": 320.0,
+        "height": 142.0,
+        "alt": {
+          "en": "At 36 km/h a car goes 36 km in each hour: a road cut into 3 pieces of 36 km, marked 1h, 2h and 3h above, 108 km in all.",
+          "ur": "36 کلومیٹر فی گھنٹہ کی رفتار سے گاڑی ہر گھنٹے میں 36 کلومیٹر جاتی ہے: سڑک 36 کلومیٹر کے 3 ٹکڑوں میں بٹی ہوئی، اوپر 1h، 2h اور 3h، کل 108 کلومیٹر۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              44.0
+            ],
+            "to": [
+              304.0,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              74.0
+            ],
+            "to": [
+              304.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              59.0
+            ],
+            "to": [
+              304.0,
+              59.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                24.0
+              ],
+              [
+                50.0,
+                24.0
+              ],
+              [
+                50.0,
+                36.0
+              ],
+              [
+                20.0,
+                36.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              27.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              43.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              38.0
+            ],
+            "to": [
+              16.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              112.0,
+              38.0
+            ],
+            "to": [
+              112.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112.0,
+              28.0
+            ],
+            "text": "1h"
+          },
+          {
+            "kind": "line",
+            "from": [
+              208.0,
+              38.0
+            ],
+            "to": [
+              208.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              208.0,
+              28.0
+            ],
+            "text": "2h"
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              38.0
+            ],
+            "to": [
+              304.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              304.0,
+              28.0
+            ],
+            "text": "3h"
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.0,
+              90.0
+            ],
+            "text": "36km"
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              90.0
+            ],
+            "text": "36km"
+          },
+          {
+            "kind": "label",
+            "at": [
+              256.0,
+              90.0
+            ],
+            "text": "36km"
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              106.0
+            ],
+            "to": [
+              304.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              101.0
+            ],
+            "to": [
+              16.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              101.0
+            ],
+            "to": [
+              304.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              120.0
+            ],
+            "text": "108km"
+          }
+        ]
       }
     },
     {
@@ -339,7 +949,251 @@
           },
           "misconception_id": "wrong_operation"
         }
-      ]
+      ],
+      "figure": {
+        "width": 320.0,
+        "height": 142.0,
+        "alt": {
+          "en": "A road cut into 4 equal pieces of 60 km, marked 1h, 2h, 3h and 4h above. The bracket under the whole road has a question mark.",
+          "ur": "سڑک 60 کلومیٹر کے 4 برابر ٹکڑوں میں بٹی ہوئی، اوپر 1h، 2h، 3h اور 4h۔ پوری سڑک کے نیچے قوس پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              44.0
+            ],
+            "to": [
+              304.0,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              74.0
+            ],
+            "to": [
+              304.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              59.0
+            ],
+            "to": [
+              304.0,
+              59.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                24.0
+              ],
+              [
+                50.0,
+                24.0
+              ],
+              [
+                50.0,
+                36.0
+              ],
+              [
+                20.0,
+                36.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              27.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              43.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              38.0
+            ],
+            "to": [
+              16.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              38.0
+            ],
+            "to": [
+              88.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              88.0,
+              28.0
+            ],
+            "text": "1h"
+          },
+          {
+            "kind": "line",
+            "from": [
+              160.0,
+              38.0
+            ],
+            "to": [
+              160.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              28.0
+            ],
+            "text": "2h"
+          },
+          {
+            "kind": "line",
+            "from": [
+              232.0,
+              38.0
+            ],
+            "to": [
+              232.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              232.0,
+              28.0
+            ],
+            "text": "3h"
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              38.0
+            ],
+            "to": [
+              304.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              304.0,
+              28.0
+            ],
+            "text": "4h"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              90.0
+            ],
+            "text": "60km"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              90.0
+            ],
+            "text": "60km"
+          },
+          {
+            "kind": "label",
+            "at": [
+              196.0,
+              90.0
+            ],
+            "text": "60km"
+          },
+          {
+            "kind": "label",
+            "at": [
+              268.0,
+              90.0
+            ],
+            "text": "60km"
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              106.0
+            ],
+            "to": [
+              304.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              101.0
+            ],
+            "to": [
+              16.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              101.0
+            ],
+            "to": [
+              304.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              120.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s5_time",
@@ -372,7 +1226,170 @@
           },
           "misconception_id": "wrong_operation"
         }
-      ]
+      ],
+      "figure": {
+        "width": 320.0,
+        "height": 142.0,
+        "alt": {
+          "en": "A road 300 km long, marked with a bracket under it. Only the first piece is marked: 75 km, gone in 1h. How many such pieces fit in the road?",
+          "ur": "300 کلومیٹر لمبی سڑک، نیچے قوس کے ساتھ۔ صرف پہلا ٹکڑا دکھایا گیا ہے: 75 کلومیٹر، 1h میں۔ سڑک میں ایسے کتنے ٹکڑے آتے ہیں؟"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              44.0
+            ],
+            "to": [
+              304.0,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              74.0
+            ],
+            "to": [
+              304.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              59.0
+            ],
+            "to": [
+              304.0,
+              59.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                24.0
+              ],
+              [
+                50.0,
+                24.0
+              ],
+              [
+                50.0,
+                36.0
+              ],
+              [
+                20.0,
+                36.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              27.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              43.0,
+              39.0
+            ],
+            "radius": 4.0,
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              38.0
+            ],
+            "to": [
+              16.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              38.0
+            ],
+            "to": [
+              88.0,
+              80.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              88.0,
+              28.0
+            ],
+            "text": "1h"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              90.0
+            ],
+            "text": "75km"
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              106.0
+            ],
+            "to": [
+              304.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              101.0
+            ],
+            "to": [
+              16.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              304.0,
+              101.0
+            ],
+            "to": [
+              304.0,
+              111.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              120.0
+            ],
+            "text": "300km"
+          }
+        ]
+      }
     },
     {
       "id": "s6_units",
@@ -695,7 +1712,197 @@
             },
             "misconception_id": "wrong_operation"
           }
-        ]
+        ],
+        "figure": {
+          "width": 320.0,
+          "height": 142.0,
+          "alt": {
+            "en": "A road cut into 2 equal pieces of 45 km, marked 1h and 2h above. The bracket under the whole road has a question mark.",
+            "ur": "سڑک 45 کلومیٹر کے 2 برابر ٹکڑوں میں بٹی ہوئی، اوپر 1h اور 2h۔ پوری سڑک کے نیچے قوس پر سوالیہ نشان ہے۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                16.0,
+                44.0
+              ],
+              "to": [
+                304.0,
+                44.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16.0,
+                74.0
+              ],
+              "to": [
+                304.0,
+                74.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16.0,
+                59.0
+              ],
+              "to": [
+                304.0,
+                59.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  20.0,
+                  24.0
+                ],
+                [
+                  50.0,
+                  24.0
+                ],
+                [
+                  50.0,
+                  36.0
+                ],
+                [
+                  20.0,
+                  36.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "circle",
+              "center": [
+                27.0,
+                39.0
+              ],
+              "radius": 4.0,
+              "fill": true
+            },
+            {
+              "kind": "circle",
+              "center": [
+                43.0,
+                39.0
+              ],
+              "radius": 4.0,
+              "fill": true
+            },
+            {
+              "kind": "line",
+              "from": [
+                16.0,
+                38.0
+              ],
+              "to": [
+                16.0,
+                80.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                160.0,
+                38.0
+              ],
+              "to": [
+                160.0,
+                80.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                160.0,
+                28.0
+              ],
+              "text": "1h"
+            },
+            {
+              "kind": "line",
+              "from": [
+                304.0,
+                38.0
+              ],
+              "to": [
+                304.0,
+                80.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                304.0,
+                28.0
+              ],
+              "text": "2h"
+            },
+            {
+              "kind": "label",
+              "at": [
+                88.0,
+                90.0
+              ],
+              "text": "45km"
+            },
+            {
+              "kind": "label",
+              "at": [
+                232.0,
+                90.0
+              ],
+              "text": "45km"
+            },
+            {
+              "kind": "line",
+              "from": [
+                16.0,
+                106.0
+              ],
+              "to": [
+                304.0,
+                106.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16.0,
+                101.0
+              ],
+              "to": [
+                16.0,
+                111.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                304.0,
+                101.0
+              ],
+              "to": [
+                304.0,
+                111.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                160.0,
+                120.0
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     },
     {

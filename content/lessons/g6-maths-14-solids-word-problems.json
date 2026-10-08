@@ -154,7 +154,142 @@
                 "ur": "یہ مکعب سینٹی میٹر میں ہے۔ 1000 سے تقسیم کریں: 6 لیٹر"
               }
             }
-          ]
+          ],
+          "figure": {
+            "width": 300,
+            "height": 121.4,
+            "alt": {
+              "en": "A box of rice drawn in 3-D, 30 cm long, 20 cm wide and 10 cm high; the three lengths are labelled on its edges. The front is a rectangle, the top and the right side are shaded, and the hidden edges at the back are dashed.",
+              "ur": "چاولوں کا ڈبہ تین رخی (3-D) شکل میں، 30 سینٹی میٹر لمبا، 20 سینٹی میٹر چوڑا اور 10 سینٹی میٹر اونچا؛ تینوں لمبائیاں کناروں پر لکھی ہیں۔ سامنے کا رخ مستطیل ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    59.6,
+                    93.4
+                  ],
+                  [
+                    230.2,
+                    93.4
+                  ],
+                  [
+                    230.2,
+                    36.5
+                  ],
+                  [
+                    59.6,
+                    36.5
+                  ]
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    59.6,
+                    36.5
+                  ],
+                  [
+                    230.2,
+                    36.5
+                  ],
+                  [
+                    279.6,
+                    8.0
+                  ],
+                  [
+                    108.8,
+                    8.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    230.2,
+                    93.4
+                  ],
+                  [
+                    279.6,
+                    64.9
+                  ],
+                  [
+                    279.6,
+                    8.0
+                  ],
+                  [
+                    230.2,
+                    36.5
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "line",
+                "from": [
+                  108.8,
+                  64.9
+                ],
+                "to": [
+                  59.6,
+                  93.4
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  108.8,
+                  64.9
+                ],
+                "to": [
+                  279.6,
+                  64.9
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  108.8,
+                  64.9
+                ],
+                "to": [
+                  108.8,
+                  8.0
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  145.0,
+                  105.4
+                ],
+                "text": "30cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  35.4,
+                  64.9
+                ],
+                "text": "10cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  264.6,
+                  96.1
+                ],
+                "text": "20cm"
+              }
+            ]
+          }
         }
       },
       {
@@ -259,6 +394,240 @@
       "text": {
         "en": "Today we solve real problems with boxes and tanks. First decide: does it ask what fits inside (volume) or what covers the outside (surface area)? First, a quick check.",
         "ur": "آج ہم ڈبوں اور ٹینکیوں کے اصل سوال حل کریں گے۔ پہلے فیصلہ کریں: کیا سوال اندر آنے والی چیز (حجم) پوچھتا ہے یا باہر ڈھانپنے والی (سطحی رقبہ)؟ پہلے ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 300,
+        "height": 106.5,
+        "alt": {
+          "en": "Left: a water tank drawn in 3-D, with water inside seen through the front; filling it is about the space inside, the volume. Right: a closed box drawn in 3-D with its top and side shaded; painting it is about its outside faces, the surface area. Hidden edges are dashed.",
+          "ur": "بائیں: پانی کی ٹینکی تین رخی (3-D) شکل میں، اندر پانی سامنے سے نظر آتا ہے؛ اسے بھرنا اندر کی جگہ یعنی حجم کا سوال ہے۔ دائیں: ایک بند ڈبہ تین رخی (3-D) شکل میں، اوپر اور پہلو پر رنگ؛ اسے رنگنا باہر کی سطحوں یعنی سطحی رقبے کا سوال ہے۔ چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                98.5
+              ],
+              [
+                110.3,
+                98.5
+              ],
+              [
+                110.3,
+                22.3
+              ],
+              [
+                15.0,
+                22.3
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                98.5
+              ],
+              [
+                110.3,
+                98.5
+              ],
+              [
+                110.3,
+                41.3
+              ],
+              [
+                15.0,
+                41.3
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                22.3
+              ],
+              [
+                110.3,
+                22.3
+              ],
+              [
+                135.0,
+                8.0
+              ],
+              [
+                39.7,
+                8.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                110.3,
+                98.5
+              ],
+              [
+                135.0,
+                84.2
+              ],
+              [
+                135.0,
+                8.0
+              ],
+              [
+                110.3,
+                22.3
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.7,
+              84.2
+            ],
+            "to": [
+              15.0,
+              98.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.7,
+              84.2
+            ],
+            "to": [
+              135.0,
+              84.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.7,
+              84.2
+            ],
+            "to": [
+              39.7,
+              8.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                175.0,
+                98.5
+              ],
+              [
+                258.0,
+                98.5
+              ],
+              [
+                258.0,
+                57.0
+              ],
+              [
+                175.0,
+                57.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                175.0,
+                57.0
+              ],
+              [
+                258.0,
+                57.0
+              ],
+              [
+                285.0,
+                41.4
+              ],
+              [
+                202.0,
+                41.4
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                258.0,
+                98.5
+              ],
+              [
+                285.0,
+                82.9
+              ],
+              [
+                285.0,
+                41.4
+              ],
+              [
+                258.0,
+                57.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              202.0,
+              82.9
+            ],
+            "to": [
+              175.0,
+              98.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              202.0,
+              82.9
+            ],
+            "to": [
+              285.0,
+              82.9
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              202.0,
+              82.9
+            ],
+            "to": [
+              202.0,
+              41.4
+            ],
+            "style": "dashed"
+          }
+        ]
       }
     },
     {
@@ -308,6 +677,115 @@
       "text": {
         "en": "Holds, fills, fits inside: find the volume (l × b × h), in cm³, then ÷ 1000 for litres. Covers, paints, wraps: find the surface area, in cm². An open box with no lid has only 5 faces.",
         "ur": "رکھتا ہے، بھرتا ہے، اندر آتا ہے: حجم نکالیں (ل × چ × ا)، مکعب سینٹی میٹر میں، پھر لیٹر کے لیے ÷ 1000۔ ڈھانپتا ہے، رنگتا ہے، لپیٹتا ہے: سطحی رقبہ نکالیں، مربع سینٹی میٹر میں۔ بغیر ڈھکن کے کھلے ڈبے کی صرف 5 سطحیں ہوتی ہیں۔"
+      },
+      "figure": {
+        "width": 300,
+        "height": 134.8,
+        "alt": {
+          "en": "An open box with no lid, drawn in 3-D. Its top is open, so you can see inside to the back corner. It has only 5 faces: the bottom, the front, the back and the two sides. The front and right side can be seen; the hidden edges along the bottom at the back are dashed.",
+          "ur": "بغیر ڈھکن کا کھلا ڈبہ، تین رخی (3-D) شکل میں۔ اس کا اوپر کھلا ہے، تو اندر پیچھے کا کونا نظر آتا ہے۔ اس کی صرف 5 سطحیں ہیں: نیچے، سامنے، پیچھے اور دونوں پہلو۔ سامنے اور دایاں رخ نظر آتے ہیں؛ پیچھے نیچے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                126.8
+              ],
+              [
+                198.5,
+                126.8
+              ],
+              [
+                198.5,
+                37.7
+              ],
+              [
+                50.0,
+                37.7
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                37.7
+              ],
+              [
+                198.5,
+                37.7
+              ],
+              [
+                250.0,
+                8.0
+              ],
+              [
+                101.5,
+                8.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                198.5,
+                126.8
+              ],
+              [
+                250.0,
+                97.1
+              ],
+              [
+                250.0,
+                8.0
+              ],
+              [
+                198.5,
+                37.7
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              101.5,
+              8.0
+            ],
+            "to": [
+              101.5,
+              37.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              101.5,
+              97.1
+            ],
+            "to": [
+              50.0,
+              126.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              101.5,
+              97.1
+            ],
+            "to": [
+              250.0,
+              97.1
+            ],
+            "style": "dashed"
+          }
+        ]
       }
     },
     {
@@ -348,7 +826,142 @@
             "ur": "یہ صرف نچلی سطح ہے۔ × 5 اونچائی: 1000"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300,
+        "height": 103.8,
+        "alt": {
+          "en": "A toy box drawn in 3-D, 20 cm long, 10 cm wide and 5 cm high; the three lengths are labelled on its edges. The front is a rectangle, the top and the right side are shaded, and the hidden edges at the back are dashed.",
+          "ur": "کھلونوں کا ڈبہ تین رخی (3-D) شکل میں، 20 سینٹی میٹر لمبا، 10 سینٹی میٹر چوڑا اور 5 سینٹی میٹر اونچا؛ تینوں لمبائیاں کناروں پر لکھی ہیں۔ سامنے کا رخ مستطیل ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.2,
+                75.8
+              ],
+              [
+                233.0,
+                75.8
+              ],
+              [
+                233.0,
+                30.6
+              ],
+              [
+                52.2,
+                30.6
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.2,
+                30.6
+              ],
+              [
+                233.0,
+                30.6
+              ],
+              [
+                272.2,
+                8.0
+              ],
+              [
+                91.4,
+                8.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                233.0,
+                75.8
+              ],
+              [
+                272.2,
+                53.2
+              ],
+              [
+                272.2,
+                8.0
+              ],
+              [
+                233.0,
+                30.6
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              91.4,
+              53.2
+            ],
+            "to": [
+              52.2,
+              75.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              91.4,
+              53.2
+            ],
+            "to": [
+              272.2,
+              53.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              91.4,
+              53.2
+            ],
+            "to": [
+              91.4,
+              8.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              142.6,
+              87.8
+            ],
+            "text": "20cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.8,
+              53.2
+            ],
+            "text": "5cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              262.4,
+              81.4
+            ],
+            "text": "10cm"
+          }
+        ]
+      }
     },
     {
       "id": "s5_tank",
@@ -388,7 +1001,164 @@
             "ur": "یہ مکعب سینٹی میٹر میں ہے۔ 1000 سے تقسیم کریں: 200 لیٹر"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300,
+        "height": 159.0,
+        "alt": {
+          "en": "A water tank drawn in 3-D, 80 cm long, 50 cm wide and 50 cm high; the three lengths are labelled on its edges. The front is a rectangle, the top and the right side are shaded, and the hidden edges at the back are dashed. Water is shown inside, seen through the front.",
+          "ur": "پانی کی ٹینکی تین رخی (3-D) شکل میں، 80 سینٹی میٹر لمبا، 50 سینٹی میٹر چوڑا اور 50 سینٹی میٹر اونچا؛ تینوں لمبائیاں کناروں پر لکھی ہیں۔ سامنے کا رخ مستطیل ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔ اندر پانی دکھایا گیا ہے جو سامنے سے نظر آتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                67.8,
+                131.0
+              ],
+              [
+                225.2,
+                131.0
+              ],
+              [
+                225.2,
+                32.6
+              ],
+              [
+                67.8,
+                32.6
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                67.8,
+                131.0
+              ],
+              [
+                225.2,
+                131.0
+              ],
+              [
+                225.2,
+                57.2
+              ],
+              [
+                67.8,
+                57.2
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                67.8,
+                32.6
+              ],
+              [
+                225.2,
+                32.6
+              ],
+              [
+                267.9,
+                8.0
+              ],
+              [
+                110.4,
+                8.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                225.2,
+                131.0
+              ],
+              [
+                267.9,
+                106.4
+              ],
+              [
+                267.9,
+                8.0
+              ],
+              [
+                225.2,
+                32.6
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              110.4,
+              106.4
+            ],
+            "to": [
+              67.8,
+              131.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              110.4,
+              106.4
+            ],
+            "to": [
+              267.9,
+              106.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              110.4,
+              106.4
+            ],
+            "to": [
+              110.4,
+              8.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              146.6,
+              143.0
+            ],
+            "text": "80cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              43.6,
+              81.8
+            ],
+            "text": "50cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              256.4,
+              135.6
+            ],
+            "text": "50cm"
+          }
+        ]
+      }
     },
     {
       "id": "s6_which",
@@ -462,7 +1232,296 @@
             "ur": "240 مکعب سینٹی میٹر میں حجم ہے۔ ہر مکعب 8 مکعب سینٹی میٹر ہے: 30"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300,
+        "height": 132.0,
+        "alt": {
+          "en": "A box drawn in 3-D, 10 cm long, 6 cm wide and 4 cm high; the three lengths are labelled on its edges. The front is a rectangle, the top and the right side are shaded, and the hidden edges at the back are dashed. Its faces are split into 2 cm squares, showing the 2 cm cubes that fill it.",
+          "ur": "ایک ڈبہ تین رخی (3-D) شکل میں، 10 سینٹی میٹر لمبا، 6 سینٹی میٹر چوڑا اور 4 سینٹی میٹر اونچا؛ تینوں لمبائیاں کناروں پر لکھی ہیں۔ سامنے کا رخ مستطیل ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔ اس کی سطحوں پر 2 سینٹی میٹر کے خانے بنے ہیں، جو اسے بھرنے والے 2 سینٹی میٹر کے مکعب دکھاتے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                56.7,
+                104.0
+              ],
+              [
+                231.3,
+                104.0
+              ],
+              [
+                231.3,
+                34.1
+              ],
+              [
+                56.7,
+                34.1
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                56.7,
+                34.1
+              ],
+              [
+                231.3,
+                34.1
+              ],
+              [
+                276.8,
+                8.0
+              ],
+              [
+                102.1,
+                8.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                231.3,
+                104.0
+              ],
+              [
+                276.8,
+                77.8
+              ],
+              [
+                276.8,
+                8.0
+              ],
+              [
+                231.3,
+                34.1
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              91.6,
+              104.0
+            ],
+            "to": [
+              91.6,
+              34.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              126.6,
+              104.0
+            ],
+            "to": [
+              126.6,
+              34.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              161.5,
+              104.0
+            ],
+            "to": [
+              161.5,
+              34.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              196.4,
+              104.0
+            ],
+            "to": [
+              196.4,
+              34.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              56.7,
+              69.1
+            ],
+            "to": [
+              231.3,
+              69.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              91.6,
+              34.1
+            ],
+            "to": [
+              137.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              126.6,
+              34.1
+            ],
+            "to": [
+              171.9,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              161.5,
+              34.1
+            ],
+            "to": [
+              206.8,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              196.4,
+              34.1
+            ],
+            "to": [
+              241.8,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              71.8,
+              25.4
+            ],
+            "to": [
+              246.6,
+              25.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              86.9,
+              16.7
+            ],
+            "to": [
+              261.6,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              246.6,
+              95.3
+            ],
+            "to": [
+              246.6,
+              25.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              261.6,
+              86.5
+            ],
+            "to": [
+              261.6,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              231.3,
+              69.1
+            ],
+            "to": [
+              276.8,
+              42.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              102.1,
+              77.8
+            ],
+            "to": [
+              56.7,
+              104.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              102.1,
+              77.8
+            ],
+            "to": [
+              276.8,
+              77.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              102.1,
+              77.8
+            ],
+            "to": [
+              102.1,
+              8.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              116.0
+            ],
+            "text": "10cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              37.3,
+              69.1
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              262.6,
+              105.7
+            ],
+            "text": "6cm"
+          }
+        ]
+      }
     },
     {
       "id": "s8_open_box",
@@ -503,7 +1562,140 @@
           },
           "misconception_id": "volume_or_area"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300,
+        "height": 166.0,
+        "alt": {
+          "en": "An open box with no lid, drawn in 3-D, 30 cm long, 30 cm wide and 30 cm high (labelled on its edges). Its top is open, so you can see inside to the back corner. It has only 5 faces: the bottom, the front, the back and the two sides. The front and right side can be seen; the hidden edges along the bottom at the back are dashed.",
+          "ur": "بغیر ڈھکن کا کھلا ڈبہ، تین رخی (3-D) شکل میں، 30 سینٹی میٹر لمبا، 30 سینٹی میٹر چوڑا اور 30 سینٹی میٹر اونچا (کناروں پر لکھا ہے)۔ اس کا اوپر کھلا ہے، تو اندر پیچھے کا کونا نظر آتا ہے۔ اس کی صرف 5 سطحیں ہیں: نیچے، سامنے، پیچھے اور دونوں پہلو۔ سامنے اور دایاں رخ نظر آتے ہیں؛ پیچھے نیچے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                93.9,
+                138.0
+              ],
+              [
+                197.9,
+                138.0
+              ],
+              [
+                197.9,
+                34.0
+              ],
+              [
+                93.9,
+                34.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                93.9,
+                34.0
+              ],
+              [
+                197.9,
+                34.0
+              ],
+              [
+                242.9,
+                8.0
+              ],
+              [
+                138.9,
+                8.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                197.9,
+                138.0
+              ],
+              [
+                242.9,
+                112.0
+              ],
+              [
+                242.9,
+                8.0
+              ],
+              [
+                197.9,
+                34.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              138.9,
+              8.0
+            ],
+            "to": [
+              138.9,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              138.9,
+              112.0
+            ],
+            "to": [
+              93.9,
+              138.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              138.9,
+              112.0
+            ],
+            "to": [
+              242.9,
+              112.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              145.9,
+              150.0
+            ],
+            "text": "30cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.7,
+              86.0
+            ],
+            "text": "30cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              230.2,
+              141.9
+            ],
+            "text": "30cm"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -706,7 +1898,142 @@
           },
           "misconception_id": "adds_sides"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300,
+        "height": 136.8,
+        "alt": {
+          "en": "A box drawn in 3-D, 7 cm long, 4 cm wide and 3 cm high; the three lengths are labelled on its edges. The front is a rectangle, the top and the right side are shaded, and the hidden edges at the back are dashed.",
+          "ur": "ایک ڈبہ تین رخی (3-D) شکل میں، 7 سینٹی میٹر لمبا، 4 سینٹی میٹر چوڑا اور 3 سینٹی میٹر اونچا؛ تینوں لمبائیاں کناروں پر لکھی ہیں۔ سامنے کا رخ مستطیل ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                56.4,
+                108.8
+              ],
+              [
+                232.8,
+                108.8
+              ],
+              [
+                232.8,
+                33.2
+              ],
+              [
+                56.4,
+                33.2
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                56.4,
+                33.2
+              ],
+              [
+                232.8,
+                33.2
+              ],
+              [
+                276.4,
+                8.0
+              ],
+              [
+                100.0,
+                8.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                232.8,
+                108.8
+              ],
+              [
+                276.4,
+                83.6
+              ],
+              [
+                276.4,
+                8.0
+              ],
+              [
+                232.8,
+                33.2
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              100.0,
+              83.6
+            ],
+            "to": [
+              56.4,
+              108.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              100.0,
+              83.6
+            ],
+            "to": [
+              276.4,
+              83.6
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              100.0,
+              83.6
+            ],
+            "to": [
+              100.0,
+              8.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.6,
+              120.8
+            ],
+            "text": "7cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              37.0,
+              71.0
+            ],
+            "text": "3cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              263.1,
+              111.0
+            ],
+            "text": "4cm"
+          }
+        ]
+      }
     },
     {
       "id": "u3_litres",
@@ -781,7 +2108,142 @@
           },
           "misconception_id": "volume_or_area"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300,
+        "height": 134.0,
+        "alt": {
+          "en": "A box drawn in 3-D, 5 cm long, 4 cm wide and 2 cm high; the three lengths are labelled on its edges. The front is a rectangle, the top and the right side are shaded, and the hidden edges at the back are dashed.",
+          "ur": "ایک ڈبہ تین رخی (3-D) شکل میں، 5 سینٹی میٹر لمبا، 4 سینٹی میٹر چوڑا اور 2 سینٹی میٹر اونچا؛ تینوں لمبائیاں کناروں پر لکھی ہیں۔ سامنے کا رخ مستطیل ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                56.9,
+                106.0
+              ],
+              [
+                220.3,
+                106.0
+              ],
+              [
+                220.3,
+                40.6
+              ],
+              [
+                56.9,
+                40.6
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                56.9,
+                40.6
+              ],
+              [
+                220.3,
+                40.6
+              ],
+              [
+                276.9,
+                8.0
+              ],
+              [
+                113.5,
+                8.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                220.3,
+                106.0
+              ],
+              [
+                276.9,
+                73.3
+              ],
+              [
+                276.9,
+                8.0
+              ],
+              [
+                220.3,
+                40.6
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              113.5,
+              73.3
+            ],
+            "to": [
+              56.9,
+              106.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              113.5,
+              73.3
+            ],
+            "to": [
+              276.9,
+              73.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              113.5,
+              73.3
+            ],
+            "to": [
+              113.5,
+              8.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              138.6,
+              118.0
+            ],
+            "text": "5cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              37.5,
+              73.3
+            ],
+            "text": "2cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              257.2,
+              104.5
+            ],
+            "text": "4cm"
+          }
+        ]
+      }
     },
     {
       "id": "u5_juice",
@@ -891,7 +2353,274 @@
               "ur": "یہ ایک تہہ ہے۔ 2 تہیں ہیں: 24"
             }
           }
-        ]
+        ],
+        "figure": {
+          "width": 300,
+          "height": 146.0,
+          "alt": {
+            "en": "A box drawn in 3-D, 4 cm long, 3 cm wide and 2 cm high; the three lengths are labelled on its edges. The front is a rectangle, the top and the right side are shaded, and the hidden edges at the back are dashed. Its faces are split into 1 cm squares, showing the 1 cm cubes that fill it.",
+            "ur": "ایک ڈبہ تین رخی (3-D) شکل میں، 4 سینٹی میٹر لمبا، 3 سینٹی میٹر چوڑا اور 2 سینٹی میٹر اونچا؛ تینوں لمبائیاں کناروں پر لکھی ہیں۔ سامنے کا رخ مستطیل ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔ اس کی سطحوں پر 1 سینٹی میٹر کے خانے بنے ہیں، جو اسے بھرنے والے 1 سینٹی میٹر کے مکعب دکھاتے ہیں۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  60.9,
+                  118.0
+                ],
+                [
+                  220.9,
+                  118.0
+                ],
+                [
+                  220.9,
+                  38.0
+                ],
+                [
+                  60.9,
+                  38.0
+                ]
+              ]
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  60.9,
+                  38.0
+                ],
+                [
+                  220.9,
+                  38.0
+                ],
+                [
+                  272.9,
+                  8.0
+                ],
+                [
+                  112.9,
+                  8.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  220.9,
+                  118.0
+                ],
+                [
+                  272.9,
+                  88.0
+                ],
+                [
+                  272.9,
+                  8.0
+                ],
+                [
+                  220.9,
+                  38.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "line",
+              "from": [
+                100.9,
+                118.0
+              ],
+              "to": [
+                100.9,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                140.9,
+                118.0
+              ],
+              "to": [
+                140.9,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                180.9,
+                118.0
+              ],
+              "to": [
+                180.9,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                60.9,
+                78.0
+              ],
+              "to": [
+                220.9,
+                78.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                100.9,
+                38.0
+              ],
+              "to": [
+                152.9,
+                8.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                140.9,
+                38.0
+              ],
+              "to": [
+                192.9,
+                8.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                180.9,
+                38.0
+              ],
+              "to": [
+                232.9,
+                8.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                78.2,
+                28.0
+              ],
+              "to": [
+                238.2,
+                28.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                95.5,
+                18.0
+              ],
+              "to": [
+                255.5,
+                18.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                238.2,
+                108.0
+              ],
+              "to": [
+                238.2,
+                28.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                255.5,
+                98.0
+              ],
+              "to": [
+                255.5,
+                18.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                220.9,
+                78.0
+              ],
+              "to": [
+                272.9,
+                48.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                112.9,
+                88.0
+              ],
+              "to": [
+                60.9,
+                118.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "line",
+              "from": [
+                112.9,
+                88.0
+              ],
+              "to": [
+                272.9,
+                88.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "line",
+              "from": [
+                112.9,
+                88.0
+              ],
+              "to": [
+                112.9,
+                8.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "label",
+              "at": [
+                140.9,
+                130.0
+              ],
+              "text": "4cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                41.5,
+                78.0
+              ],
+              "text": "2cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                255.4,
+                117.8
+              ],
+              "text": "3cm"
+            }
+          ]
+        }
       }
     },
     {
@@ -928,7 +2657,142 @@
             },
             "misconception_id": "volume_or_area"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300,
+          "height": 166.0,
+          "alt": {
+            "en": "A wooden cube drawn in 3-D with all its sides 3 cm long; its length, width and height are each labelled 3 cm. The front is a square, the top and the right side are shaded, and the hidden edges at the back are dashed.",
+            "ur": "لکڑی کا مکعب تین رخی (3-D) شکل میں، جس کا ہر ضلع 3 سینٹی میٹر ہے؛ لمبائی، چوڑائی اور اونچائی تینوں پر 3 سینٹی میٹر لکھا ہے۔ سامنے کا رخ مربع ہے، اوپر اور دائیں رخ پر رنگ ہے، اور پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  92.1,
+                  138.0
+                ],
+                [
+                  196.1,
+                  138.0
+                ],
+                [
+                  196.1,
+                  34.0
+                ],
+                [
+                  92.1,
+                  34.0
+                ]
+              ]
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  92.1,
+                  34.0
+                ],
+                [
+                  196.1,
+                  34.0
+                ],
+                [
+                  241.1,
+                  8.0
+                ],
+                [
+                  137.1,
+                  8.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  196.1,
+                  138.0
+                ],
+                [
+                  241.1,
+                  112.0
+                ],
+                [
+                  241.1,
+                  8.0
+                ],
+                [
+                  196.1,
+                  34.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "line",
+              "from": [
+                137.1,
+                112.0
+              ],
+              "to": [
+                92.1,
+                138.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "line",
+              "from": [
+                137.1,
+                112.0
+              ],
+              "to": [
+                241.1,
+                112.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "line",
+              "from": [
+                137.1,
+                112.0
+              ],
+              "to": [
+                137.1,
+                8.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "label",
+              "at": [
+                144.1,
+                150.0
+              ],
+              "text": "3cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                72.8,
+                86.0
+              ],
+              "text": "3cm"
+            },
+            {
+              "kind": "label",
+              "at": [
+                227.2,
+                139.8
+              ],
+              "text": "3cm"
+            }
+          ]
+        }
       }
     }
   ],

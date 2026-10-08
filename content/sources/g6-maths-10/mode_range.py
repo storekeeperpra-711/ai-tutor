@@ -2,6 +2,7 @@ from collections import Counter
 
 from common import (T, opt, say, wrong, number_question, table_text, write,
                     REF, REVIEW, DH_TABLES, DH_MEAN, DH_MODE_RANGE)
+from figs import Line, bar_graph, figure, label, line, attach, W
 
 SKILL = DH_MODE_RANGE
 
@@ -125,8 +126,8 @@ lesson = {
      qtype="recall", skill=DH_MEAN),
    {"id": "s3_mode_range", "type": "explain",
     "character": say("happy", "Mode: most often. Range: biggest minus smallest!", "موڈ: سب سے زیادہ بار۔ رینج: سب سے بڑا منفی سب سے چھوٹا!"),
-    "text": T("The mode is the value that appears most often: count how many times each value appears and pick the winner. The range is the largest value minus the smallest: it shows how spread out the data is. Always find the true smallest, not just the first number.",
-              "موڈ وہ قیمت ہے جو سب سے زیادہ بار آئے: ہر قیمت کتنی بار آئی گنیں اور جیتنے والی چنیں۔ رینج سب سے بڑی قیمت منفی سب سے چھوٹی ہے: یہ دکھاتی ہے مواد کتنا پھیلا ہوا ہے۔ ہمیشہ اصل سب سے چھوٹا عدد ڈھونڈیں، صرف پہلا نہیں۔")},
+    "text": T("The mode is the value that appears most often: count how many times each value appears and pick the winner. The range is the largest value minus the smallest: it shows how spread out the data is. Always find the true smallest, not just the first number. In the picture, the data 3, 5, 5, 7: the tallest stack is at 5, so the mode is 5, and the range is 7 − 3 = 4.",
+              "موڈ وہ قیمت ہے جو سب سے زیادہ بار آئے: ہر قیمت کتنی بار آئی گنیں اور جیتنے والی چنیں۔ رینج سب سے بڑی قیمت منفی سب سے چھوٹی ہے: یہ دکھاتی ہے مواد کتنا پھیلا ہوا ہے۔ ہمیشہ اصل سب سے چھوٹا عدد ڈھونڈیں، صرف پہلا نہیں۔ تصویر میں مواد 3، 5، 5، 7 ہے: سب سے اونچا ڈھیر 5 پر ہے، تو موڈ 5 ہے، اور رینج 7 − 3 = 4 ہے۔")},
    number_question(
      "s4_mode",
      T(f"Find the mode of {nums(S4_DATA)}.", f"{nums(S4_DATA)} کا موڈ معلوم کریں۔"),
@@ -240,4 +241,87 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+EXAMPLE = (3, 5, 5, 7)
+assert mode(*EXAMPLE) == 5 and spread(*EXAMPLE) == 4
+
+
+def nums_ur(xs):
+    return "، ".join(str(x) for x in xs)
+
+
+def example_plot():
+    """A dot plot of 3, 5, 5, 7 with the range measured above it."""
+    nl = Line(2, 8, 92)
+    nl.ticks(range(2, 9))
+    nl.stacks(EXAMPLE)
+    lo, hi = min(EXAMPLE), max(EXAMPLE)
+    y = 34
+    nl.items += [line((nl.x(lo), y), (nl.x(hi), y), dashed=True),
+                 line((nl.x(lo), y - 5), (nl.x(lo), y + 5)), line((nl.x(hi), y - 5), (nl.x(hi), y + 5)),
+                 label(((nl.x(lo) + nl.x(hi)) / 2, y - 14), f"{hi}-{lo}={hi - lo}")]
+    return figure(W, 124,
+        "A number line from 2 to 8 with a dot for each value of 3, 5, 5, 7: one dot above 3, a stack of two dots above 5 and one dot above 7. Above them a dashed line runs from 3 to 7, marked 7-3=4.",
+        "2 سے 8 تک عددی لکیر، 3، 5، 5، 7 کی ہر قیمت کا ایک نقطہ: 3 کے اوپر ایک نقطہ، 5 کے اوپر دو نقطوں کا ڈھیر اور 7 کے اوپر ایک نقطہ۔ ان کے اوپر 3 سے 7 تک ڈیش والی لکیر ہے، جس پر 7-3=4 لکھا ہے۔",
+        nl.items)
+
+
+def spread_line(data, lo, hi, tick=1):
+    """The values as dots on a number line, each with its number above."""
+    nl = Line(lo, hi, 0)
+    rows = nl.dots(data, texts=True)
+    y = 30 + rows * 17
+    nl = Line(lo, hi, y)
+    nl.ticks(range(lo, hi + 1, tick), labelled=[v for v in (lo, hi) if v not in data])
+    nl.dots(data)
+    return figure(W, y + 32,
+        f"A number line from {lo} to {hi}, with a tick at every whole number, and a dot at each value: {', '.join(map(str, data))}. Each dot has its number above it.",
+        f"{lo} سے {hi} تک عددی لکیر، ہر مکمل عدد پر نشان، اور ہر قیمت پر ایک نقطہ: {nums_ur(data)}۔ ہر نقطے کے اوپر اس کا عدد لکھا ہے۔",
+        nl.items)
+
+
+def largest_from_range():
+    nl = Line(0, 40, 64)
+    nl.ticks([v for v in range(0, 41, 5) if abs(v - S11) > 2], labelled=(0,))
+    a, b = 12, S11
+    nl.items += [line((nl.x(a), nl.y - 6), (nl.x(a), nl.y + 6)), label((nl.x(a), nl.y + 18), a),
+                 line((nl.x(b), nl.y - 6), (nl.x(b), nl.y + 6)), label((nl.x(b), nl.y + 18), "?")]
+    nl.items.append({"kind": "circle", "center": [round(nl.x(a), 1), nl.y], "radius": 5, "fill": True})
+    y = nl.y - 24
+    nl.items += [line((nl.x(a), y), (nl.x(b), y), dashed=True),
+                 line((nl.x(a), y - 5), (nl.x(a), y + 5)), line((nl.x(b), y - 5), (nl.x(b), y + 5)),
+                 label(((nl.x(a) + nl.x(b)) / 2, y - 13), 25)]
+    return figure(W, 96,
+        "A number line from 0. A dot marks the smallest value, 12. A dashed line marked 25 (the range) runs from 12 to a point marked with a question mark, the largest value.",
+        "0 سے شروع ہونے والی عددی لکیر۔ ایک نقطہ سب سے چھوٹی قیمت، 12، دکھاتا ہے۔ 25 (رینج) والی ڈیش لکیر 12 سے سوالیہ نشان والے نقطے تک جاتی ہے، جو سب سے بڑی قیمت ہے۔",
+        nl.items)
+
+
+def mode_plot(data, lo, hi):
+    nl = Line(lo, hi, 18 + 13 * max(data.count(v) for v in data) + 8)
+    nl.ticks(range(lo, hi + 1))
+    nl.stacks(data)
+    counts = ", ".join(f"{data.count(v)} above {v}" for v in sorted(set(data)))
+    counts_ur = "، ".join(f"{v} کے اوپر {data.count(v)}" for v in sorted(set(data)))
+    return figure(W, nl.y + 32,
+        f"A dot plot on a number line from {lo} to {hi}, one dot for each value of {', '.join(map(str, data))}: {counts}.",
+        f"{lo} سے {hi} تک عددی لکیر پر نقطوں کا خاکہ، {nums_ur(data)} کی ہر قیمت کا ایک نقطہ: {counts_ur}۔",
+        nl.items)
+
+
+SHOE_SIZES = [en.split()[1] for (en, _), _ in SHOES]
+attach(lesson, {
+    "s3_mode_range": example_plot(),
+    "s5_range": spread_line(S5_DATA, 0, 20),
+    "s6_shoes": bar_graph([v for _, v in SHOES], SHOE_SIZES,
+        "A bar graph of shoe sizes, with a scale from 0 to 10 going up in 2s: size 3 has 4 children, size 4 has 9 and size 5 has 6. The sizes are written under the bars.",
+        "جوتوں کے سائز کا بار گراف، پیمانہ 0 سے 10 تک، 2 کے وقفے سے: سائز 3 کے 4 بچے، سائز 4 کے 9 اور سائز 5 کے 6۔ سائز ستونوں کے نیچے لکھے ہیں۔",
+        top=10, step=2),
+    "s7_temps": spread_line(S7_DATA, 15, 30),
+    "s9_find_error": spread_line((7, 2, 9, 4), 0, 10),
+    "s11_largest": largest_from_range(),
+    "qb_apply": spread_line((15, 3, 22, 9), 0, 25),
+    "qb_find_error": mode_plot(R1_DATA, 1, 7),
+    "r_range": spread_line((50, 35, 62, 41), 30, 65),
+})
 write(lesson)

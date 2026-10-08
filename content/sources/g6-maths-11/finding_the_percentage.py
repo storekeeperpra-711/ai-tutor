@@ -1,3 +1,6 @@
+from math import gcd
+
+from figs import attach, percent_bar
 from common import (D, T, opt, say, wrong, number_question, write,
                     REF, REVIEW, PC_CONVERT, PC_OF_AMOUNT, PC_FIND, as_percent)
 
@@ -223,4 +226,35 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+
+def bar_of(part, whole, pct=None, *, rs=False):
+    """A percentage bar for part out of whole: amounts above, percents below,
+    the part's percent shown as pct or as a question mark."""
+    pieces = whole // gcd(part, whole)
+    cut = (f" cut into {pieces} equal pieces", f" جو {pieces} برابر ٹکڑوں میں بٹی ہے") if pieces <= 25 else ("", "")
+    rs_en, rs_ur = ("Rs ", " روپے") if rs else ("", "")
+    shown_en = pct if pct else "a question mark"
+    shown_ur = pct if pct else "سوالیہ نشان"
+    en = (f"A bar for the whole, {rs_en}{whole},{cut[0]}, shaded from the start up to {rs_en}{part}. "
+          f"Above the bar: 0, {part} at the end of the shading, and {whole} at the end. "
+          f"Below the bar: 0%, {shown_en} under {part}, and 100% under {whole}.")
+    ur = (f"پورے {whole}{rs_ur} کے لیے ایک پٹی{cut[1]}، شروع سے {part}{rs_ur} تک رنگی ہوئی۔ "
+          f"پٹی کے اوپر: 0، رنگ کے آخر میں {part}، اور آخر میں {whole}۔ "
+          f"پٹی کے نیچے: 0%، {part} کے نیچے {shown_ur}، اور {whole} کے نیچے 100%۔")
+    return percent_bar(part, whole, en, ur, bottom=pct or "?")
+
+
+# Pictures: percentage bars, the amounts above and 0% to 100% below.
+attach(lesson, {
+ "s3_find": bar_of(18, 20, f"{S4}%"),
+ "s4_marks": bar_of(18, 20),
+ "s5_fifty": bar_of(12, 50),
+ "s6_absent": bar_of(7, 25),
+ "s7_saved": bar_of(30, 200, rs=True),
+ "s8_sixty": bar_of(45, 60),
+ "s11_mangoes": bar_of(6, 40),
+ "qb_find_error": bar_of(40, 50),
+ "r_eighty": bar_of(16, 80),
+})
 write(lesson)

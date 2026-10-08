@@ -257,4 +257,35 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, clock, day_line, time_line
+
+
+def clock_q(h, m, half, display):
+    shown = "a question mark" if display == "?" else display
+    ur_shown = "سوالیہ نشان" if display == "?" else display
+    return clock(h, m, half, display,
+                 f"A clock face showing {h}:{m:02d}, with {half} written under it. An arrow points to a 24-hour clock display showing {shown}.",
+                 f"گھڑی کا ڈائل جو {h}:{m:02d} دکھاتا ہے، اس کے نیچے {half} لکھا ہے۔ ایک تیر 24 گھنٹے والی گھڑی کے ڈسپلے کی طرف ہے جس پر {ur_shown} ہے۔")
+
+
+attach(lesson, {
+  "s1_hook": clock_q(3, 45, "pm", S4),
+  "s3_rule": day_line(
+    "A line for one day from midnight to midnight, with a tick for every hour. Above: 00:00, 06:00, 12:00 and 18:00. Below: 12am, 6am, 12pm and 6pm, and 12am again at the end. The half after 12 noon is shaded: there the hours are 12 more.",
+    "ایک دن کی لکیر، آدھی رات سے آدھی رات تک، ہر گھنٹے کا نشان۔ اوپر: 00:00، 06:00، 12:00 اور 18:00۔ نیچے: 12am، 6am، 12pm اور 6pm، اور آخر میں پھر 12am۔ دوپہر 12 کے بعد والا آدھا حصہ بھرا ہوا ہے: وہاں گھنٹے 12 زیادہ ہوتے ہیں۔"),
+  "s4_pm": clock_q(3, 45, "pm", "?"),
+  "s5_am": clock_q(9, 10, "am", "?"),
+  "s7_midnight": clock_q(12, 20, "am", "?"),
+  "s8_journey": time_line(
+    (8, 30), (13, 15),
+    "A time line with the hours 8 to 14. The train leaves at 08:30 and arrives at 13:15. Jumps above: 30 minutes to 9, then 4 hours to 13, then 15 minutes.",
+    "8 سے 14 گھنٹوں کی وقت کی لکیر۔ ٹرین 08:30 پر چلتی ہے اور 13:15 پر پہنچتی ہے۔ اوپر چھلانگیں: 9 تک 30 منٹ، پھر 13 تک 4 گھنٹے، پھر 15 منٹ۔"),
+  "s11_night": clock_q(11, 5, "pm", "?"),
+  "qb_apply": clock_q(6, 40, "pm", "?"),
+  "r_minutes": time_line(
+    (9, 45), (11, 15),
+    "A time line with the hours 9 to 12. The class starts at 09:45 and ends at 11:15. Jumps above: 15 minutes to 10, then 1 hour to 11, then 15 minutes.",
+    "9 سے 12 گھنٹوں کی وقت کی لکیر۔ کلاس 09:45 پر شروع ہوتی ہے اور 11:15 پر ختم ہوتی ہے۔ اوپر چھلانگیں: 10 تک 15 منٹ، پھر 11 تک 1 گھنٹہ، پھر 15 منٹ۔"),
+})
 write(lesson)

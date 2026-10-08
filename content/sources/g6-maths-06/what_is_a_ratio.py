@@ -228,4 +228,47 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, counters, ratio_beside, part_whole, bars, scale_bars
+
+attach(lesson, {
+  "s1_hook": counters(
+    [(MANGOES, True, str(MANGOES)), (APPLES, False, str(APPLES))],
+    f"Amna's basket: a row of {MANGOES} shaded dots for the mangoes and a row of {APPLES} empty dots for the apples.",
+    f"آمنہ کی ٹوکری: آموں کے لیے {MANGOES} بھرے ہوئے نقطوں کی قطار اور سیبوں کے لیے {APPLES} خالی نقطوں کی قطار۔"),
+  "s3_see_it": counters(
+    [(MANGOES, True, str(MANGOES)), (APPLES, False, str(APPLES))],
+    f"{MANGOES} shaded dots (mangoes) over {APPLES} empty dots (apples), joined by a bracket marked {ratio(MANGOES, APPLES)}: for every {MANGOES} mangoes there are {APPLES} apples.",
+    f"{MANGOES} بھرے نقطے (آم) اور ان کے نیچے {APPLES} خالی نقطے (سیب)، ایک قوس سے جڑے جس پر {ratio(MANGOES, APPLES)} لکھا ہے: ہر {MANGOES} آموں کے مقابلے میں {APPLES} سیب۔",
+    extra=ratio_beside(ratio(MANGOES, APPLES))),
+  "s5_class": counters(
+    [(GIRLS, True, str(GIRLS)), (BOYS, False, str(BOYS))],
+    f"A row of {GIRLS} shaded dots for the girls and a row of {BOYS} empty dots for the boys.",
+    f"لڑکیوں کے لیے {GIRLS} بھرے نقطوں کی قطار اور لڑکوں کے لیے {BOYS} خالی نقطوں کی قطار۔", sp=16, r=6),
+  "s6_part_whole": part_whole(
+    [GIRLS, BOYS], [str(GIRLS), str(BOYS)], str(CLASS),
+    f"A strip for the whole class of {CLASS}, with a bracket marked {CLASS} over it. The shaded part is the {GIRLS} girls and the rest is the {BOYS} boys.",
+    f"پوری جماعت کی ایک پٹی، اس کے اوپر {CLASS} لکھی قوس۔ بھرا ہوا حصہ {GIRLS} لڑکیاں ہیں اور باقی {BOYS} لڑکے۔"),
+  "s7_missing_part": part_whole(
+    [13, BOYS_7], ["13", "?"], "30",
+    "A strip for all 30 children, with a bracket marked 30 over it. The shaded part is the 13 girls; the other part, the boys, is marked with a question mark.",
+    "تمام 30 بچوں کی ایک پٹی، اس کے اوپر 30 لکھی قوس۔ بھرا ہوا حصہ 13 لڑکیاں ہیں؛ دوسرا حصہ، یعنی لڑکے، سوالیہ نشان سے دکھایا گیا ہے۔"),
+  "s8_find_error": counters(
+    [(4, True, "4"), (7, False, "7")],
+    "Usman's things: a row of 4 shaded dots for the pencils and a row of 7 empty dots for the pens.",
+    "عثمان کی چیزیں: پنسلوں کے لیے 4 بھرے نقطوں کی قطار اور قلموں کے لیے 7 خالی نقطوں کی قطار۔"),
+  "s9_units": scale_bars(
+    [(PENCIL_CM, f"{PENCIL_CM}cm", True, None), (RULER_CM, "1m", False, 10)],
+    f"Drawn to scale: a shaded bar for the {PENCIL_CM} cm pencil, and under it a ruler 1 m long cut into 10 equal pieces of 10 cm each.",
+    f"پیمانے کے مطابق: {PENCIL_CM} سینٹی میٹر کی پنسل کے لیے ایک بھری پٹی، اور اس کے نیچے 1 میٹر لمبا فٹا جو 10، 10 سینٹی میٹر کے 10 برابر حصوں میں بٹا ہے۔",
+  ),
+  "s11_recipe": bars(
+    [(RICE, None, str(RICE), True), (WATER, None, str(WATER), False)],
+    f"Nani's pot: a row of {RICE} shaded boxes, one for each cup of rice, and a row of {WATER} empty boxes, one for each cup of water.",
+    f"نانی کی دیگچی: چاول کے ہر کپ کے لیے ایک، یعنی {RICE} بھرے خانوں کی قطار، اور پانی کے ہر کپ کے لیے ایک، یعنی {WATER} خالی خانوں کی قطار۔"),
+  "qb_write_ratio": counters(
+    [(9, True, "9"), (4, False, "4")],
+    "The balloons: a row of 9 shaded circles for the red balloons and a row of 4 empty circles for the blue balloons.",
+    "غبارے: سرخ غباروں کے لیے 9 بھرے دائروں کی قطار اور نیلے غباروں کے لیے 4 خالی دائروں کی قطار۔"),
+})
 write(lesson)

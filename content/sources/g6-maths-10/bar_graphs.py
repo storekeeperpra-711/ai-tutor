@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, tally, table_text, write,
                     REF, REVIEW, DH_TABLES, DH_BAR_GRAPHS)
+from figs import bar_graph, squares_bar, tally_figure, attach
 
 SKILL = DH_BAR_GRAPHS
 
@@ -91,7 +92,7 @@ lesson = {
    {"id": "s1_hook", "type": "explain",
     "character": say("curious", "A picture can show data faster than a list. Tall bars, short bars: you see the winner at once!",
                      "تصویر فہرست سے جلدی مواد دکھاتی ہے۔ اونچے ستون، چھوٹے ستون: جیتنے والا فوراً نظر آتا ہے!"),
-    "text": T("Today we read bar graphs. There are no pictures yet, so each graph is described in words. First, a quick check.", "آج ہم بار گراف پڑھیں گے۔ ابھی تصویریں نہیں، اس لیے ہر گراف الفاظ میں بتایا گیا ہے۔ پہلے ایک چھوٹا سا سوال۔")},
+    "text": T("Today we read bar graphs, like the one in the picture. First, a quick check.", "آج ہم بار گراف پڑھیں گے، جیسے تصویر والا۔ پہلے ایک چھوٹا سا سوال۔")},
    number_question(
      "s2_foundation",
      T(f"How many do these tally marks show? {tally(S2)}", f"یہ ٹیلی کے نشان کتنے دکھاتے ہیں؟ {tally(S2)}"),
@@ -210,11 +211,63 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
-   "There are no pictures yet, so every bar graph is described in words (bar heights, or squares and a scale). Drawing one on squared paper (the home task) makes it concrete.",
+   "Each bar graph is drawn as a picture (bars against a scale, or bars made of squares with a key such as one square = 5) and also written in words in the step. Drawing one on squared paper (the home task) makes it concrete.",
    "The scale questions (one square stands for 2, 5 or 10) catch the most common mistake: counting squares as the value.",
    "Urdu terms to check: بار گراف / ستونی گراف (bar graph), ستون (bar), پیمانہ (scale), محور (axis).",
    "The numbers were worked out in content/sources/g6-maths-10/bar_graphs.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+BOOK_CATS = [en[0] for (en, _), _ in BOOKS]                 # A, S, O, H
+BOOK_VALS = [v for _, v in BOOKS]
+DAY_CATS = ["Mo", "Tu", "We", "Th"]
+assert [en[:2] for (en, _), _ in SAVED] == DAY_CATS
+SAVED_VALS = [v for _, v in SAVED]
+
+
+def books_graph():
+    return bar_graph(BOOK_VALS, BOOK_CATS,
+                     "A bar graph of books read this month, with a scale from 0 to 12 going up in 2s: A (Ali) 7, S (Sara) 12, O (Omar) 9, H (Hina) 4. Sara's bar is the tallest and Hina's the shortest.",
+                     "اس مہینے پڑھی گئی کتابوں کا بار گراف، پیمانہ 0 سے 12 تک، 2 کے وقفے سے: A (علی) 7، S (سارہ) 12، O (عمر) 9، H (حنا) 4۔ سارہ کا ستون سب سے اونچا اور حنا کا سب سے چھوٹا ہے۔",
+                     top=12, step=2)
+
+
+def saved_graph():
+    return bar_graph(SAVED_VALS, DAY_CATS,
+                     "A bar graph of rupees Bilal saved, with a scale from 0 to 25 going up in 5s: Mo (Monday) 15, Tu (Tuesday) 20, We (Wednesday) 10, Th (Thursday) 25.",
+                     "بلال کی بچت (روپے) کا بار گراف، پیمانہ 0 سے 25 تک، 5 کے وقفے سے: Mo (پیر) 15، Tu (منگل) 20، We (بدھ) 10، Th (جمعرات) 25۔",
+                     top=25, step=5)
+
+
+def one_bar(n, each, cat, what_en, what_ur):
+    return squares_bar(n, each, cat,
+                       f"One bar of {what_en} made of {n} squares stacked up. A key beside it shows one square = {each}.",
+                       f"{what_ur} کا ایک ستون جو {n} خانوں سے بنا ہے۔ ساتھ کی کلید دکھاتی ہے: ایک خانہ = {each}۔")
+
+
+attach(lesson, {
+    "s1_hook": books_graph(),
+    "s2_foundation": tally_figure(S2, "Tally marks: two groups of five, each four upright lines with a fifth line across them, then 1 single line.",
+                                  "ٹیلی کے نشان: پانچ کے 2 گروہ، ہر ایک میں چار کھڑی لکیریں اور ان کے اوپر پانچویں ترچھی لکیر، پھر 1 اکیلی لکیر۔"),
+    "s3_bars": bar_graph(SAVED_VALS, DAY_CATS,
+                         "A bar graph where each bar is made of squares and a key shows one square = 5. The scale goes 0, 5, 10, 15, 20, 25. Mo is 3 squares (15), Tu 4 squares (20), We 2 squares (10), Th 5 squares (25).",
+                         "ایک بار گراف جس کا ہر ستون خانوں سے بنا ہے اور کلید دکھاتی ہے: ایک خانہ = 5۔ پیمانہ 0، 5، 10، 15، 20، 25۔ Mo تین خانے (15)، Tu چار خانے (20)، We دو خانے (10)، Th پانچ خانے (25)۔",
+                         top=25, step=5, square=5, legend=5),
+    "s4_more": books_graph(),
+    "s5_scale2": one_bar(6, 2, "M", "mango votes", "آم کے ووٹوں"),
+    "s6_scale5": one_bar(7, 5, "C", "cars", "گاڑیوں"),
+    "s7_total": saved_graph(),
+    "s8_least": saved_graph(),
+    "s9_find_error": one_bar(4, 10, "P", "people", "لوگوں"),
+    "s11_halfway": bar_graph([S11], None,
+                             "A bar graph with a scale from 0 to 40 in 10s and dashed lines across at 20 and 30. One bar ends exactly halfway between the 20 line and the 30 line.",
+                             "ایک بار گراف جس کا پیمانہ 0 سے 40 تک، 10 کے وقفے سے، اور 20 اور 30 پر ڈیش والی لکیریں ہیں۔ ایک ستون 20 والی اور 30 والی لکیر کے بالکل درمیان ختم ہوتا ہے۔",
+                             top=40, step=10, grid=(20, 30), height=180),
+    "qb_height": books_graph(),
+    "qb_apply": one_bar(5, 4, "C", "children", "بچوں"),
+    "qb_find_error": one_bar(4, 10, "P", "people", "لوگوں"),
+    "r_scale": one_bar(9, 2, "G", "goats", "بکریوں"),
+    "r_more": saved_graph(),
+})
 write(lesson)

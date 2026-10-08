@@ -232,4 +232,51 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, bars, road
+
+HOURS = ["1h", "2h", "3h"]
+
+attach(lesson, {
+  "s1_hook": bars(
+    [(3, "Rs250", None, False)],
+    "Three equal boxes in a row, each a bag of 1 kg of rice marked Rs 250: every kg costs Rs 250.",
+    "ایک قطار میں تین برابر خانے، ہر خانہ 1 کلوگرام چاول کا تھیلا جس پر Rs 250 لکھا ہے: ہر کلوگرام Rs 250 کا ہے۔",
+    box=64, under="1kg"),
+  "s3_rule": bars(
+    [(4, str(S4), None, False)],
+    f"A strip of 4 equal boxes, one for each kg of rice, with 1kg under each box. A bracket over the strip is marked Rs 1000, and each box is marked {S4}.",
+    f"4 برابر خانوں کی پٹی، چاول کے ہر کلوگرام کے لیے ایک، ہر خانے کے نیچے 1kg۔ پٹی کے اوپر قوس پر Rs 1000 لکھا ہے، اور ہر خانے پر {S4} لکھا ہے۔",
+    box=56, over="Rs1000", under="1kg"),
+  "s4_rice": bars(
+    [(4, "?", None, False)],
+    "A strip of 4 equal boxes, one for each kg of rice, with 1kg under each box. A bracket over the strip is marked Rs 1000; each box has a question mark.",
+    "4 برابر خانوں کی پٹی، چاول کے ہر کلوگرام کے لیے ایک، ہر خانے کے نیچے 1kg۔ پٹی کے اوپر قوس پر Rs 1000 لکھا ہے؛ ہر خانے پر سوالیہ نشان ہے۔",
+    box=56, over="Rs1000", under="1kg"),
+  "s5_bus": road(
+    180, 3,
+    "A road 180 km long, marked with a bracket under it, cut into 3 equal pieces. The marks above say 1h, 2h and 3h; each piece has a question mark.",
+    "180 کلومیٹر لمبی سڑک، نیچے قوس کے ساتھ، 3 برابر ٹکڑوں میں بٹی ہوئی۔ اوپر کے نشانوں پر 1h، 2h اور 3h لکھا ہے؛ ہر ٹکڑے پر سوالیہ نشان ہے۔",
+    piece_text="?", times=HOURS, total_text="180km"),
+  "s7_typing": bars(
+    [(6, "?", None, False)],
+    "A strip of 6 equal boxes, one for each minute, with a bracket over it marked 240 words. Each box has a question mark.",
+    "6 برابر خانوں کی پٹی، ہر منٹ کے لیے ایک، اس کے اوپر 240 الفاظ لکھی قوس۔ ہر خانے پر سوالیہ نشان ہے۔",
+    over="240"),
+  "s8_petrol": bars(
+    [(5, "260", None, False)],
+    "A strip of 5 equal boxes, one for each litre of petrol, with 1L under each box and 260 rupees in each box. The bracket over the whole strip has a question mark.",
+    "5 برابر خانوں کی پٹی، پیٹرول کے ہر لیٹر کے لیے ایک، ہر خانے کے نیچے 1L اور ہر خانے میں 260 روپے۔ پوری پٹی کے اوپر قوس پر سوالیہ نشان ہے۔",
+    box=50, over="?", under="1L"),
+  "s11_eggs": bars(
+    [(6, None, "180", False), (12, ["?"] + [None] * 11, "324", True)],
+    "Two packs of eggs drawn as strips of equal boxes, one box for each egg. Pack A has 6 boxes and costs Rs 180. Pack B has 12 boxes and costs Rs 324; its first box has a question mark.",
+    "انڈوں کے دو پیکٹ، برابر خانوں کی پٹیوں کی شکل میں، ہر انڈے کے لیے ایک خانہ۔ پیکٹ A میں 6 خانے ہیں اور قیمت Rs 180 ہے۔ پیکٹ B میں 12 خانے ہیں اور قیمت Rs 324 ہے؛ اس کے پہلے خانے پر سوالیہ نشان ہے۔",
+    box=20, left=["A", "B"]),
+  "qb_apply": road(
+    45, 3,
+    "A road 45 km long, marked with a bracket under it, cut into 3 equal pieces. The marks above say 1h, 2h and 3h; each piece has a question mark.",
+    "45 کلومیٹر لمبی سڑک، نیچے قوس کے ساتھ، 3 برابر ٹکڑوں میں بٹی ہوئی۔ اوپر کے نشانوں پر 1h، 2h اور 3h لکھا ہے؛ ہر ٹکڑے پر سوالیہ نشان ہے۔",
+    piece_text="?", times=HOURS, total_text="45km"),
+})
 write(lesson)

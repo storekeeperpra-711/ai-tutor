@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, tally, table_text, write,
                     REF, REVIEW, TIMES_TABLES, DH_TABLES)
+from figs import tally_figure, table_figure, attach
 
 SKILL = DH_TABLES
 
@@ -205,10 +206,61 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
-   "There are no pictures yet, so a tally group of five is written IIII/ and tables are written as short lists. Real tally marks on paper (the home task) help children see the 'gate'.",
+   "The pictures draw real tally marks (four upright lines and a fifth across) and frequency tables; in the step text a tally group of five is still written IIII/. Real tally marks on paper (the home task) help children see the 'gate'.",
    "Urdu terms to check: مواد / ڈیٹا (data), جدول (table), ٹیلی کے نشان (tally marks), تعدد (frequency).",
    "The numbers were worked out in content/sources/g6-maths-10/tables_tallies.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+FRUIT_ROWS = [(en[0], v) for (en, _), v in FRUIT]          # M, B, A, O
+BIRD_ROWS = [(en[0], v) for (en, _), v in BIRDS]           # S, C, P
+FRUIT_NAMES = ("M is mango, B is banana, A is apple and O is orange",
+               "M آم، B کیلا، A سیب اور O کینو ہے")
+BIRD_NAMES = ("S is sparrows, C is crows and P is parrots", "S چڑیاں، C کوّے اور P طوطے ہیں")
+
+
+def fruit_table(counts=True):
+    words_en = "; ".join(f"{n} {v}" for n, v in FRUIT_ROWS)
+    return table_figure(
+        FRUIT_ROWS,
+        f"A table of favourite fruit votes with tally marks{' and totals' if counts else ''}: {words_en}. {FRUIT_NAMES[0]}.",
+        f"پسندیدہ پھل کے ووٹوں کا جدول، ٹیلی کے نشانوں{' اور کل تعداد' if counts else ''} کے ساتھ: {words_en}۔ {FRUIT_NAMES[1]}۔",
+        counts=counts)
+
+
+def tally_alt(n):
+    gates, rest = divmod(n, 5)
+    en = f"Tally marks: {gates} group{'s' if gates != 1 else ''} of five, each four upright lines with a fifth line across them"
+    ur = f"ٹیلی کے نشان: پانچ کے {gates} گروہ، ہر ایک میں چار کھڑی لکیریں اور ان کے اوپر پانچویں ترچھی لکیر"
+    if rest:
+        en += f", then {rest} single line{'s' if rest != 1 else ''}"
+        ur += f"، پھر {rest} اکیلی لکیریں"
+    return en + ".", ur + "۔"
+
+
+def tally_pic(n):
+    return tally_figure(n, *tally_alt(n))
+
+
+S3_EN, S3_UR = tally_alt(S4)
+attach(lesson, {
+    "s1_hook": fruit_table(counts=False),
+    "s3_tally": tally_figure(S4, S3_EN[:-1] + ". Under the groups are written 5, 5 and 3, and at the end =13.",
+                             S3_UR[:-1] + "۔ گروہوں کے نیچے 5، 5 اور 3 لکھا ہے، اور آخر میں =13۔", parts=True),
+    "s4_read_tally": tally_pic(S4),
+    "s5_total": fruit_table(),
+    "s6_more": fruit_table(),
+    "s7_most": fruit_table(),
+    "s9_find_error": tally_pic(12),
+    "s11_classes": table_figure([("6A", 32), ("6B", 28), ("6C", 35)],
+                                "A table of three classes: 6A has 32 students, 6B has 28 and 6C has 35.",
+                                "تین جماعتوں کا جدول: 6A میں 32، 6B میں 28 اور 6C میں 35 طالب علم ہیں۔", tallies=False),
+    "qb_apply": tally_pic(QB),
+    "qb_find_error": table_figure(BIRD_ROWS, "A table of birds seen, with tally marks and totals: S 14, C 9, P 5. " + BIRD_NAMES[0] + ".",
+                                  "دیکھے گئے پرندوں کا جدول، ٹیلی کے نشانوں اور کل تعداد کے ساتھ: S 14، C 9، P 5۔ " + BIRD_NAMES[1] + "۔"),
+    "r_tally": tally_pic(R1),
+    "r_more": table_figure(BIRD_ROWS, "A table of birds seen, with tally marks and totals: S 14, C 9, P 5. " + BIRD_NAMES[0] + ".",
+                           "دیکھے گئے پرندوں کا جدول، ٹیلی کے نشانوں اور کل تعداد کے ساتھ: S 14، C 9، P 5۔ " + BIRD_NAMES[1] + "۔"),
+})
 write(lesson)

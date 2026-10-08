@@ -1,3 +1,4 @@
+from figs import attach, bars, scale_bar, strip
 from common import (D, T, opt, say, wrong, number_question, write,
                     REF, REVIEW, PC_MEANING, PC_CONVERT, PC_OF_AMOUNT, PC_FIND, PC_WORD_PROBLEMS,
                     percent_of, as_percent)
@@ -276,4 +277,28 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+
+# Pictures: percentage bars, strips and before/after bars.
+attach(lesson, {
+ "s2_foundation": scale_bar(0.1, [(0, "0"), (0.1, "?"), (1, "250")], [(0, "0%"), (0.1, "10%"), (1, "100%")],
+   "A bar for 250 cut into 10 equal parts, with the first part shaded. Above the bar: 0, a question mark at the end of the shading, and 250 at the end. Below the bar: 0%, 10% under the question mark, and 100% under 250.",
+   "250 کے لیے ایک پٹی جو 10 برابر حصوں میں بٹی ہے، پہلا حصہ رنگا ہے۔ پٹی کے اوپر: 0، رنگ کے آخر میں سوالیہ نشان، اور آخر میں 250۔ پٹی کے نیچے: 0%، سوالیہ نشان کے نیچے 10%، اور 250 کے نیچے 100%۔",
+   pieces=10),
+ "s3_steps": bars(800, S4, unit="Rs", ask=None, quarters=True),
+ "s4_shirt": bars(800, S4, unit="Rs", ask="new", quarters=True),
+ "s5_pocket": bars(200, S5, unit="Rs", ask="new"),
+ "s6_boys": strip("600", 20, 9,
+   "A strip for all 600 children, cut into 20 equal parts. The first 9 parts, the girls, are shaded. The parts that are not shaded, the boys, are marked with a question mark. Under the strip: 0%, 45% at the end of the shading, and 100%.",
+   "سارے 600 بچوں کے لیے ایک پٹی جو 20 برابر حصوں میں بٹی ہے۔ پہلے 9 حصے، یعنی لڑکیاں، رنگے ہیں۔ جو حصے رنگے نہیں، یعنی لڑکے، ان پر سوالیہ نشان ہے۔ پٹی کے نیچے: 0%، رنگ کے آخر میں 45%، اور 100%۔",
+   ask="rest", under=[(0, "0%"), (0.45, "45%"), (1, "100%")]),
+ "s7_percent_off": bars(400, 340, unit="Rs"),
+ "s8_spend": strip("Rs1500", 10, 2,
+   "A strip for Rs 1500 cut into 10 equal parts. The first 2 parts, the money saved, are shaded. The rest, the money spent, is marked with a question mark. Under the strip: 0%, 20% at the end of the shading, and 100%.",
+   "1500 روپے کے لیے ایک پٹی جو 10 برابر حصوں میں بٹی ہے۔ پہلے 2 حصے، یعنی بچائے گئے پیسے، رنگے ہیں۔ باقی حصے، یعنی خرچ کیے گئے پیسے، پر سوالیہ نشان ہے۔ پٹی کے نیچے: 0%، رنگ کے آخر میں 20%، اور 100%۔",
+   ask="rest", under=[(0, "0%"), (0.2, "20%"), (1, "100%")]),
+ "s9_find_error": bars(1000, 900, unit="Rs", ask="new", show_change=True),
+ "qb_apply": bars(300, QB, unit="Rs", ask="new"),
+ "r_increase": bars(50, R1, unit="kg", ask="new"),
+})
 write(lesson)

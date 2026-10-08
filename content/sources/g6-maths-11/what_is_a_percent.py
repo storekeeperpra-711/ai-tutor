@@ -1,3 +1,4 @@
+from figs import attach, battery, hundred_grid, two_grids
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, FRACTIONS_EQUIVALENT, PC_MEANING, as_percent)
 
@@ -216,4 +217,35 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# Pictures: grids of 100 small squares, and a battery for the hook.
+attach(lesson, {
+ "s1_hook": battery(75,
+   "A phone battery cut into four equal parts by dashed lines. Three of the four parts are shaded, and it says 75%.",
+   "فون کی ایک بیٹری جسے ڈیش والی لکیروں سے چار برابر حصوں میں بانٹا گیا ہے۔ چار میں سے تین حصے رنگے ہوئے ہیں اور اس پر 75% لکھا ہے۔"),
+ "s3_percent": two_grids(25, 100, "25%", "100%",
+   "Two grids of 100 small squares. In the first, 25 squares (two and a half rows of 10) are shaded and it says 25%. In the second, all 100 squares are shaded and it says 100%.",
+   "100 چھوٹے خانوں والے دو جال۔ پہلے میں 25 خانے (10 کی ڈھائی قطاریں) رنگے ہیں اور 25% لکھا ہے۔ دوسرے میں سارے 100 خانے رنگے ہیں اور 100% لکھا ہے۔"),
+ "s4_squares": hundred_grid(S4,
+   f"A grid of 100 small squares in 10 rows of 10. The first {S4 // 10} rows and {S4 % 10} more squares are shaded.",
+   f"100 چھوٹے خانوں کا جال، 10 خانوں کی 10 قطاریں۔ پہلی {S4 // 10} قطاریں اور {S4 % 10} خانے مزید رنگے ہوئے ہیں۔"),
+ "s5_rest": hundred_grid(100 - S5,
+   f"A grid of 100 small squares for the wall. {100 - S5} squares are shaded and marked {100 - S5}%. The squares that are not shaded are marked with a question mark.",
+   f"دیوار کے لیے 100 چھوٹے خانوں کا جال۔ {100 - S5} خانے رنگے ہیں اور ان پر {100 - S5}% لکھا ہے۔ جو خانے رنگے نہیں ان پر سوالیہ نشان ہے۔",
+   shaded_text=f"{100 - S5}%", rest_text="?"),
+ "s6_hundredths": hundred_grid(S6,
+   f"A grid of 100 small squares with {S6} squares shaded in the top row.",
+   f"100 چھوٹے خانوں کا جال جس کی اوپر والی قطار میں {S6} خانے رنگے ہیں۔"),
+ "s8_tenths": hundred_grid(S8,
+   "A grid of 100 small squares in 10 rows of 10. 3 of the 10 rows are shaded, and it says 3/10 next to them.",
+   "100 چھوٹے خانوں کا جال، 10 خانوں کی 10 قطاریں۔ 10 میں سے 3 قطاریں رنگی ہیں اور ان کے ساتھ 3/10 لکھا ہے۔",
+   shaded_text="3/10"),
+ "s11_mangoes": hundred_grid(100 - S11,
+   f"A grid of 100 small squares, one for each mango. {100 - S11} squares are shaded and marked {100 - S11}: the bad mangoes. The rest, the good mangoes, are marked with a question mark.",
+   f"100 چھوٹے خانوں کا جال، ہر آم کے لیے ایک خانہ۔ {100 - S11} خانے رنگے ہیں اور ان پر {100 - S11} لکھا ہے: یہ خراب آم ہیں۔ باقی خانوں پر، یعنی اچھے آموں پر، سوالیہ نشان ہے۔",
+   shaded_text=str(100 - S11), rest_text="?"),
+ "r_rest": hundred_grid(100 - R2,
+   f"A grid of 100 small squares for the seats on the bus. {100 - R2} squares are shaded and marked {100 - R2}%: the seats that are taken. The empty seats are marked with a question mark.",
+   f"بس کی نشستوں کے لیے 100 چھوٹے خانوں کا جال۔ {100 - R2} خانے رنگے ہیں اور ان پر {100 - R2}% لکھا ہے: یہ بھری نشستیں ہیں۔ خالی نشستوں پر سوالیہ نشان ہے۔",
+   shaded_text=f"{100 - R2}%", rest_text="?"),
+})
 write(lesson)

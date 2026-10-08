@@ -38,6 +38,85 @@ assert R1 == 96 and cuboid_volume(4, 4, 4) == 64
 R2 = cuboid_surface(8, 5, 2)
 assert R2 == 132 and 8 * 5 + 5 * 2 + 8 * 2 == 66 and cuboid_volume(8, 5, 2) == 80
 
+# ---------- figures ----------
+from figs import (figure, box_items, box_fig, cube_fig, cube_alt, net_items, label, line, circle, cm, with_figures, TALL)
+
+
+def gift_fig(side, labels):
+    """A cube gift box with a ribbon round it and a bow on top."""
+    items, b = box_items(side, side, side, labels=labels, max_w=170, max_h=150)
+    m = side / 2
+    ribbon = [line(b.p(m, 0, 0), b.p(m, 0, side)), line(b.p(m, 0, side), b.p(m, side, side)),
+              line(b.p(0, m, side), b.p(side, m, side)), line(b.p(side, m, side), b.p(side, m, 0))]
+    bx, by = b.p(m, m, side)
+    bow = [circle((bx - 8, by - 6), 7), circle((bx + 8, by - 6), 7)]
+    items[3:3] = ribbon + bow
+    en, ur = cube_alt(side, "Bano's gift box, a cube,", "بانو کا تحفے کا ڈبہ، ایک مکعب،") if labels else (
+        "Bano's gift box, a cube, drawn in 3-D: its front, its shaded top and its shaded right side. The hidden edges at the back are dashed.",
+        "بانو کا تحفے کا ڈبہ، ایک مکعب، تین رخی (3-D) شکل میں: سامنے، اوپر اور دائیں رخ پر رنگ۔ پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔")
+    return figure(en + " A ribbon goes round it, with a bow on top.", ur + " اس کے گرد ایک ربن ہے، اور اوپر ربن کی گانٹھ۔", items)
+
+
+def net_size(l, w, h, max_w=280, max_h=170):
+    return min(max_w / (2 * l + 2 * w), max_h / (2 * w + h))
+
+
+RULE_DIMS = (5, 3, 2)
+
+
+def rule_net():
+    l, w, h = RULE_DIMS
+    items = net_items(l, w, h, net_size(l, w, h), texts={"lw": "l×b", "lh": "l×h", "wh": "b×h"})
+    return figure(
+        "The net of a cuboid: the box opened out flat into 6 rectangles. In the middle row are four faces: a side marked b×h, the front marked l×h, "
+        "the other side marked b×h and the back marked l×h. Above and below the front are the top and the bottom, both shaded and marked l×b. "
+        "So the faces come in 3 pairs of equal rectangles.",
+        "مستطیلی ڈبے کا جال (net): ڈبہ کھول کر چپٹا کیا گیا، 6 مستطیلیں۔ درمیانی قطار میں چار سطحیں ہیں: ایک پہلو جس پر b×h لکھا ہے، سامنے والی جس پر l×h، "
+        "دوسرا پہلو b×h اور پیچھے والی l×h۔ سامنے والی کے اوپر اور نیچے اوپر اور نیچے کی سطحیں ہیں، دونوں رنگی ہوئی اور ان پر l×b لکھا ہے۔ "
+        "تو سطحیں برابر مستطیلوں کے 3 جوڑوں میں ہیں۔ (l لمبائی، b چوڑائی، h اونچائی)",
+        items)
+
+
+def cube_net(side):
+    sc = net_size(side, side, side, max_h=150)
+    items = net_items(side, side, side, sc, cell=1)
+    # The side length under the bottom face.
+    items.append(label((side * sc * 1.5, side * sc * 3 + 4 + TALL / 2), cm(side)))
+    return figure(
+        f"The net of a cube with {side} cm sides: 6 equal squares laid flat in a cross, 4 in a row with one above and one below the second square. "
+        f"Each square is split into 1 cm squares, {side} rows of {side}. The bottom square's side is labelled {side} cm.",
+        f"{side} سینٹی میٹر اضلاع والے مکعب کا جال (net): 6 برابر مربع صلیب کی شکل میں چپٹے رکھے ہیں، 4 ایک قطار میں اور دوسرے مربع کے اوپر اور نیچے ایک ایک۔ "
+        f"ہر مربع 1 سینٹی میٹر کے خانوں میں بٹا ہے، {side} کی {side} قطاریں۔ نیچے والے مربع کے ضلع پر {side} سینٹی میٹر لکھا ہے۔",
+        items)
+
+
+def error_net(l, w, h):
+    lw, lh, wh = l * w, l * h, w * h
+    items = net_items(l, w, h, net_size(l, w, h), texts={"lw": str(lw), "lh": str(lh), "wh": str(wh)})
+    return figure(
+        f"The net of the {l} cm by {w} cm by {h} cm cuboid: 6 rectangles laid flat, each with its area in cm² written on it. "
+        f"The top and bottom (shaded) are {lw} each, the front and back are {lh} each, and the two sides are {wh} each.",
+        f"{l} × {w} × {h} سینٹی میٹر کے مستطیلی ڈبے کا جال (net): 6 مستطیلیں چپٹی رکھی ہیں، ہر ایک پر اس کا رقبہ مربع سینٹی میٹر میں لکھا ہے۔ "
+        f"اوپر اور نیچے (رنگی ہوئی) {lw}، {lw} ہیں، آگے اور پیچھے {lh}، {lh} ہیں، اور دونوں پہلو {wh}، {wh} ہیں۔",
+        items)
+
+
+FIGS = {
+    "s1_hook": gift_fig(10, labels=False),
+    "s3_rule": rule_net(),
+    "s4_cube3": cube_net(3),
+    "s5_cuboid": box_fig(5, 3, 2, "A cuboid", "ایک مستطیلی ڈبہ", max_s=40),
+    "s7_shoe_box": box_fig(10, 6, 4, "A shoe box", "جوتوں کا ڈبہ"),
+    "s8_cube5": cube_fig(5, "A dice, a cube,", "ایک پانسہ، یعنی مکعب،", max_w=150, max_h=130),
+    "s9_find_error": error_net(4, 3, 2),
+    "s11_gift_box": gift_fig(10, labels=True),
+    "qb_apply": box_fig(6, 4, 3, max_s=34),
+    "qb_find_error": cube_fig(2, max_w=130, max_h=110),
+    "r_cube4": cube_fig(4, max_w=150, max_h=130),
+    "r_cuboid": box_fig(8, 5, 2),
+}
+
+
 lesson = {
  "id": "g6-maths-14-surface-area",
  "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
@@ -230,4 +309,4 @@ lesson = {
  ],
  "review": REVIEW,
 }
-write(lesson)
+write(with_figures(lesson, FIGS))

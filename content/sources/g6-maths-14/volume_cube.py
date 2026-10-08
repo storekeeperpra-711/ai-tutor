@@ -38,6 +38,63 @@ assert R1 == 8 and 2 * 3 == 6
 R2 = 5000 // CM3_PER_LITRE
 assert R2 == 5
 
+# ---------- figures ----------
+from figs import Box, fit, figure, box_items, box_fig, box_alt, cube_fig, label, poly, water, with_figures
+
+
+def carton_fig():
+    """A milk carton: a tall box with a sloping roof, marked 1L."""
+    l, d, h, ridge = 4, 3, 6, 1.4
+    b = Box(l, d, h, fit(l, d, h + ridge, 120, 150))
+    peak_f, peak_b = b.p(l / 2, 0, h + ridge), b.p(l / 2, d, h + ridge)
+    items = [poly([b.p(0, 0, 0), b.p(l, 0, 0), b.p(l, 0, h), b.p(0, 0, h)]),
+             poly([b.p(l, 0, 0), b.p(l, d, 0), b.p(l, d, h), b.p(l, 0, h)], fill=True),
+             poly([b.p(0, 0, h), b.p(l, 0, h), peak_f]),
+             poly([b.p(l, 0, h), b.p(l, d, h), peak_b, peak_f], fill=True),
+             label(b.p(l / 2, 0, h / 2), "1L")]
+    return figure("A milk carton drawn in 3-D: a tall box with a sloping roof on top, marked 1L on its front.",
+                  "دودھ کا ڈبہ تین رخی (3-D) شکل میں: ایک اونچا ڈبہ جس کے اوپر ڈھلوان چھت ہے، اور سامنے 1L لکھا ہے۔",
+                  items)
+
+
+def litre_cube_fig():
+    """A 10 cm cube: its front split into 1 cm squares, lines on the top
+    for the 10 columns going back and on the side for the 10 layers."""
+    items, b = box_items(10, 10, 10, hidden=False, max_w=200, max_h=170)
+    items[3:3] = b.grid(1, "f") + b.grid(1, "t")[:9] + b.grid(1, "s")[9:]
+    return figure(
+        "A cube with 10 cm sides drawn in 3-D; each side is labelled 10cm. Its front is split into 1 cm squares, 10 rows of 10, "
+        "so one layer of the cube holds 10 × 10 = 100 small 1 cm cubes. Lines on the right side show 10 such layers, one above the other: "
+        "1000 small cubes. This cube holds exactly 1 litre.",
+        "10 سینٹی میٹر اضلاع والا مکعب تین رخی (3-D) شکل میں؛ ہر ضلع پر 10cm لکھا ہے۔ اس کی سامنے والی سطح 1 سینٹی میٹر کے خانوں میں بٹی ہے، 10 کی 10 قطاریں، "
+        "تو مکعب کی ایک تہہ میں 1 سینٹی میٹر کے 10 × 10 = 100 چھوٹے مکعب آتے ہیں۔ دائیں سطح پر لکیریں ایسی 10 تہیں اوپر تلے دکھاتی ہیں: "
+        "1000 چھوٹے مکعب۔ یہ مکعب ٹھیک 1 لیٹر رکھتا ہے۔",
+        items)
+
+
+def tank_fig(l, d, h, en, ur):
+    items, b = box_items(l, d, h, max_w=200, max_h=130)
+    items.insert(1, water(b))
+    en_, ur_ = box_alt(l, d, h, en, ur)
+    return figure(en_ + " Water is shown inside, seen through the front.",
+                  ur_ + " اندر پانی دکھایا گیا ہے جو سامنے سے نظر آتا ہے۔", items)
+
+
+FIGS = {
+    "s1_hook": carton_fig(),
+    "s2_foundation": box_fig(3, 2, 5, max_s=26),
+    "s3_rule": litre_cube_fig(),
+    "s4_cube3": cube_fig(3, grid=1, max_s=34),
+    "s5_cube10": cube_fig(10, max_w=150, max_h=130),
+    "s7_tank": tank_fig(50, 20, 30, "A fish tank", "مچھلیوں کی ٹینکی"),
+    "s8_cube5": cube_fig(5, "A wooden block, a cube,", "لکڑی کا ٹکڑا، ایک مکعب،", max_w=150, max_h=130),
+    "s9_find_error": cube_fig(4, grid=1, max_s=30),
+    "s11_water_tank": tank_fig(100, 50, 40, "A water tank", "پانی کی ٹینکی"),
+    "qb_apply": cube_fig(6, max_w=150, max_h=130),
+    "r_cube2": cube_fig(2, grid=1, max_s=40),
+}
+
+
 lesson = {
  "id": "g6-maths-14-volume-cube",
  "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
@@ -227,4 +284,4 @@ lesson = {
  ],
  "review": REVIEW,
 }
-write(lesson)
+write(with_figures(lesson, FIGS))

@@ -31,6 +31,74 @@ assert R1 == 80
 R2 = 20 * 3
 assert R2 == 60
 
+# ---------- figures ----------
+from figs import (Box, fit, figure, row, box_items, box_fig, box_alt, label, line, poly, cm, shift, extent,
+                  with_figures)
+
+
+def grid_box(l, d, h, en="A box", ur="ایک ڈبہ", **kw):
+    """A box with its faces split into 1 cm squares: the 1 cm cubes that fill it."""
+    return box_fig(l, d, h, en, ur, grid=1, **kw)
+
+
+def layers_fig(l, d, h):
+    """Left: one layer of l × d cubes on the bottom. Right: h such layers."""
+    layer, _ = box_items(l, d, 1, grid=1, max_w=100, max_h=100, max_s=26, texts=(cm(l), cm(d), None))
+    full, _ = box_items(l, d, h, grid=1, max_w=100, max_h=100, max_s=26)
+    return figure(
+        f"Two boxes made of 1 cm cubes, drawn in 3-D. Left: one layer, {l} cubes long and {d} cubes wide, so {l} × {d} = {l * d} cubes cover the bottom. "
+        f"Right: the full box, {l} cm long, {d} cm wide and {h} cm high, which is {h} such layers stacked up: {l * d} × {h} = {l * d * h} cubes. "
+        f"Hidden edges at the back are dashed.",
+        f"1 سینٹی میٹر کے مکعبوں سے بنے دو ڈبے، تین رخی (3-D) شکل میں۔ بائیں: ایک تہہ، {l} مکعب لمبی اور {d} مکعب چوڑی، تو {l} × {d} = {l * d} مکعب تہہ ڈھانپتے ہیں۔ "
+        f"دائیں: پورا ڈبہ، {l} سینٹی میٹر لمبا، {d} سینٹی میٹر چوڑا اور {h} سینٹی میٹر اونچا، جو ایسی {h} تہیں اوپر تلے ہیں: {l * d} × {h} = {l * d * h} مکعب۔ "
+        f"پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔",
+        row([layer, full], gap=20))
+
+
+def base_fig(area, h, l, d):
+    """A box h cm high standing above its bottom face, drawn apart and
+    shaded, with the area of the bottom written on it. l and d only set
+    the shape of the bottom; they are not labelled."""
+    items, b = box_items(l, d, h, max_w=170, max_h=110, texts=(None, None, cm(h)))
+    gap = 26
+    base = [b.p(0, 0, 0), b.p(l, 0, 0), b.p(l, d, 0), b.p(0, d, 0)]
+    base = [(x, y + gap + b.s * d * 0.25) for x, y in base]
+    items.append(poly(base, fill=True))
+    for i in (0, l):
+        top = b.p(i, 0, 0)
+        items.append(line((top[0], top[1] + 4), (top[0], base[0][1] - 4 if i == 0 else base[1][1] - 4), dashed=True))
+    cx = sum(x for x, _ in base) / 4
+    cy = sum(y for _, y in base) / 4
+    items.append(label((cx, cy), f"{area}cm²"))
+    return figure(
+        f"A box drawn in 3-D, {h} cm high (labelled on its left edge). Its bottom face is drawn again just below it as a shaded flat shape, "
+        f"joined to it by dashed lines, with its area, {area} cm², written on it. Hidden edges at the back of the box are dashed.",
+        f"ایک ڈبہ تین رخی (3-D) شکل میں، {h} سینٹی میٹر اونچا (بائیں کنارے پر لکھا ہے)۔ اس کی نچلی سطح (تہہ) نیچے الگ سے ایک رنگی ہوئی چپٹی شکل میں بنی ہے، "
+        f"ڈیش والی لکیروں سے جڑی، اور اس پر اس کا رقبہ {area} مربع سینٹی میٹر لکھا ہے۔ ڈبے کے پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔",
+        items)
+
+
+F_HOOK = figure(
+    "A box filled with 1 cm sugar cubes, drawn in 3-D: the lines on its front, top and side show the rows of small cubes inside. Hidden edges at the back are dashed.",
+    "1 سینٹی میٹر کے چینی کے ٹکڑوں سے بھرا ڈبہ، تین رخی (3-D) شکل میں: سامنے، اوپر اور پہلو پر لکیریں اندر چھوٹے مکعبوں کی قطاریں دکھاتی ہیں۔ پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔",
+    box_items(4, 3, 2, labels=False, grid=1, max_s=40)[0])
+
+FIGS = {
+    "s1_hook": F_HOOK,
+    "s3_rule": layers_fig(4, 3, 2),
+    "s4_first": grid_box(4, 3, 2, max_s=40),
+    "s5_matchbox": box_fig(5, 3, 2, "A matchbox", "ماچس کی ڈبیا", max_s=40),
+    "s7_brick": box_fig(20, 10, 5, "A brick", "ایک اینٹ"),
+    "s8_base": base_fig(S8 // 5, 5, 4, 3),
+    "s9_find_error": grid_box(4, 3, 2, max_s=40),
+    "s11_sugar": grid_box(10, 6, 4),
+    "qb_apply": box_fig(6, 2, 3, max_s=30),
+    "qb_find_error": grid_box(5, 4, 3, "A tin box", "ٹین کا ڈبہ", max_s=32),
+    "r_box": box_fig(8, 5, 2),
+    "r_base": base_fig(20, R2 // 20, 5, 4),
+}
+
+
 lesson = {
  "id": "g6-maths-14-volume-cuboid",
  "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
@@ -219,4 +287,4 @@ lesson = {
  ],
  "review": REVIEW,
 }
-write(lesson)
+write(with_figures(lesson, FIGS))

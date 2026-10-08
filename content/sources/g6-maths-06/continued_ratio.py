@@ -223,4 +223,46 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, counters, bars
+
+
+def share_bars(parts, ask, total_text, alt_en, alt_ur):
+    """One strip of equal boxes for each share; the share asked for is
+    shaded and marked "?", all the strips together make total_text."""
+    rows = [(p, None, "?" if i == ask else None, i == ask) for i, p in enumerate(parts)]
+    return bars(rows, alt_en, alt_ur, total=total_text)
+
+
+attach(lesson, {
+  "s1_hook": counters(
+    [(2, True, "2"), (3, True, "3"), (4, True, "4")],
+    "Three rows of sweets: 2 dots for Ali, 3 dots for Bilal and 4 dots for Hamza.",
+    "مٹھائیوں کی تین قطاریں: علی کے لیے 2 نقطے، بلال کے لیے 3 نقطے اور حمزہ کے لیے 4 نقطے۔"),
+  "s3_rule": bars(
+    [(2, None, "2", False), (3, None, "3", False), (4, None, "4", False)],
+    "A bar model for 2 : 3 : 4: three strips of equal boxes, 2 boxes, 3 boxes and 4 boxes. A bracket joins all three strips and is marked 9, the total number of parts.",
+    "2 : 3 : 4 کا پٹی ماڈل: برابر خانوں کی تین پٹیاں، 2 خانے، 3 خانے اور 4 خانے۔ ایک قوس تینوں پٹیوں کو ملاتی ہے اور اس پر 9 لکھا ہے، یعنی کل حصے۔",
+    total=str(sum((2, 3, 4)))),
+  "s5_share": share_bars(
+    (2, 3, 4), 0, "Rs900",
+    "A bar model: strips of 2, 3 and 4 equal boxes, joined by a bracket marked Rs 900. The smallest strip, 2 boxes, is shaded and marked with a question mark.",
+    "پٹی ماڈل: 2، 3 اور 4 برابر خانوں کی پٹیاں، جنہیں Rs 900 لکھی قوس ملاتی ہے۔ سب سے چھوٹی پٹی، 2 خانے، بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+  "s8_recipe": share_bars(
+    (5, 2, 3), 1, "500g",
+    "A bar model for flour, sugar and butter: strips of 5, 2 and 3 equal boxes, joined by a bracket marked 500 g. The sugar strip, 2 boxes, is shaded and marked with a question mark.",
+    "آٹے، چینی اور مکھن کا پٹی ماڈل: 5، 2 اور 3 برابر خانوں کی پٹیاں، جنہیں 500 گرام لکھی قوس ملاتی ہے۔ چینی کی پٹی، 2 خانے، بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+  "s11_ages": share_bars(
+    (3, 4, 5), 2, "36",
+    "A bar model for the three brothers' ages: strips of 3, 4 and 5 equal boxes, joined by a bracket marked 36. The oldest brother's strip, 5 boxes, is shaded and marked with a question mark.",
+    "تین بھائیوں کی عمروں کا پٹی ماڈل: 3، 4 اور 5 برابر خانوں کی پٹیاں، جنہیں 36 لکھی قوس ملاتی ہے۔ سب سے بڑے بھائی کی پٹی، 5 خانے، بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+  "qb_apply": share_bars(
+    (1, 2, 3), 2, "Rs120",
+    "A bar model: strips of 1, 2 and 3 equal boxes, joined by a bracket marked Rs 120. The largest strip, 3 boxes, is shaded and marked with a question mark.",
+    "پٹی ماڈل: 1، 2 اور 3 برابر خانوں کی پٹیاں، جنہیں Rs 120 لکھی قوس ملاتی ہے۔ سب سے بڑی پٹی، 3 خانے، بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+  "r_share": share_bars(
+    (1, 4, 5), 1, "Rs1000",
+    "A bar model: strips of 1, 4 and 5 equal boxes, joined by a bracket marked Rs 1,000. The middle strip, 4 boxes, is shaded and marked with a question mark.",
+    "پٹی ماڈل: 1، 4 اور 5 برابر خانوں کی پٹیاں، جنہیں Rs 1,000 لکھی قوس ملاتی ہے۔ درمیانی پٹی، 4 خانے، بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+})
 write(lesson)
