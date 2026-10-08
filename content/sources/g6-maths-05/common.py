@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 
-REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Factors and Multiples"
+REF = "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills from earlier work that these lessons build on.
@@ -15,6 +15,11 @@ FM_PRIMES = "maths.factors.primes"
 FM_HCF = "maths.factors.hcf"
 FM_LCM = "maths.factors.lcm"
 FM_WORD_PROBLEMS = "maths.factors.word_problems"
+FM_INDEX = "maths.factors.index_notation"
+FM_HCF_LCM = "maths.factors.hcf_lcm_product"
+
+# The book chapter the gap lessons (squares and index notation, HCF × LCM) match.
+BOOK = "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples"
 
 
 def factors(n):

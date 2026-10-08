@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 
-REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Integers"
+REF = "PCTB Mathematics 6 (SNC 2022), Sub-domains 2 and 3: Integers, Laws of Integers"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills from earlier work that these lessons build on.
@@ -16,6 +16,12 @@ INT_ADD = "maths.integers.add"
 INT_SUBTRACT = "maths.integers.subtract"
 INT_MULTIPLY = "maths.integers.multiply_divide"
 INT_WORD_PROBLEMS = "maths.integers.word_problems"
+INT_ABSOLUTE = "maths.integers.absolute_value"
+INT_LAWS = "maths.integers.laws"
+
+# The book chapters the gap lessons (absolute value, laws of integers) match.
+BOOK_INTEGERS = "PCTB Mathematics 6 (SNC 2022), Sub-domain 2: Integers"
+BOOK_LAWS = "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers"
 
 
 def T(en, ur):

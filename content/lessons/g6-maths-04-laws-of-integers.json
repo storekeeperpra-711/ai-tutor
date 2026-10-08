@@ -1,0 +1,799 @@
+{
+  "id": "g6-maths-04-laws-of-integers",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Use the commutative, associative and distributive laws with integers, and know that division by zero is not defined.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers"
+    }
+  ],
+  "skills": [
+    "maths.integers.laws"
+  ],
+  "title": {
+    "en": "Laws of integers",
+    "ur": "صحیح اعداد کے قوانین"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.multiply_divide"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "subtraction_commutative",
+      "description": "Thinks the order does not matter in subtraction (or division): 7 − 3 = 3 − 7."
+    },
+    {
+      "id": "distributes_first_only",
+      "description": "Multiplies only the first number in the bracket: −3 × (4 + 5) = −12 + 5."
+    },
+    {
+      "id": "divide_by_zero_is_zero",
+      "description": "Thinks any number divided by 0 is 0: (−7) ÷ 0 = 0."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.laws": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.laws": [
+      {
+        "id": "qb_which_law",
+        "type": "recall",
+        "step": {
+          "id": "qb_which_law",
+          "type": "choice",
+          "prompt": {
+            "en": "Which law says (−6) × 2 = 2 × (−6)?",
+            "ur": "کون سا قانون کہتا ہے کہ (−6) × 2 = 2 × (−6)؟"
+          },
+          "options": [
+            {
+              "id": "commutative",
+              "text": {
+                "en": "Commutative law",
+                "ur": "خاصیت مبادلہ"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Swapping the order does not change the answer.",
+                "ur": "جی ہاں! ترتیب بدلنے سے جواب نہیں بدلتا۔"
+              }
+            },
+            {
+              "id": "associative",
+              "text": {
+                "en": "Associative law",
+                "ur": "خاصیت تلازم"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The associative law is about grouping with brackets. Here the order is swapped: commutative.",
+                "ur": "خاصیت تلازم قوسین سے گروہ بنانے کے بارے میں ہے۔ یہاں ترتیب بدلی ہے: خاصیت مبادلہ۔"
+              }
+            },
+            {
+              "id": "distributive",
+              "text": {
+                "en": "Distributive law",
+                "ur": "خاصیت تقسیم"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The distributive law has a bracket with + inside. Here the order is swapped: commutative.",
+                "ur": "خاصیت تقسیم میں قوسین کے اندر + ہوتا ہے۔ یہاں ترتیب بدلی ہے: خاصیت مبادلہ۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Work out (−5) × (10 + 2) by multiplying each number in the bracket.",
+            "ur": "قوسین کے ہر عدد کو ضرب دے کر حل کریں: (−5) × (10 + 2)"
+          },
+          "answer": -60,
+          "checker": "numeric",
+          "hint": {
+            "en": "(−5) × 10 = −50 and (−5) × 2 = −10. Add them.",
+            "ur": "(−5) × 10 = −50 اور (−5) × 2 = −10۔ انہیں جمع کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! (−5) × (10 + 2) = −50 + (−10) = −60.",
+            "ur": "درست! (−5) × (10 + 2) = −50 + (−10) = −60"
+          },
+          "feedback_wrong": {
+            "en": "(−5) × 10 = −50 and (−5) × 2 = −10, so the answer is −60.",
+            "ur": "(−5) × 10 = −50 اور (−5) × 2 = −10، اس لیے جواب −60 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": -48,
+              "feedback": {
+                "en": "Multiply BOTH numbers in the bracket by −5: −50 + (−10) = −60.",
+                "ur": "قوسین کے دونوں اعداد کو −5 سے ضرب دیں: −50 + (−10) = −60"
+              },
+              "misconception_id": "distributes_first_only"
+            },
+            {
+              "answer": 60,
+              "feedback": {
+                "en": "Different signs give a negative answer: −60.",
+                "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −60"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana wrote 9 ÷ 0 = 0. What went wrong?",
+            "ur": "ثناء نے لکھا 9 ÷ 0 = 0۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "undefined",
+              "text": {
+                "en": "Dividing by 0 is not defined, so 9 ÷ 0 has no answer.",
+                "ur": "0 سے تقسیم کی تعریف نہیں، اس لیے 9 ÷ 0 کا کوئی جواب نہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! No number times 0 gives 9.",
+                "ur": "جی ہاں! کوئی عدد ضرب 0، 9 نہیں دیتا۔"
+              }
+            },
+            {
+              "id": "nine",
+              "text": {
+                "en": "The answer should be 9.",
+                "ur": "جواب 9 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Check: 9 × 0 = 0, not 9. Dividing by 0 is not defined.",
+                "ur": "جانچیں: 9 × 0 = 0 ہے، 9 نہیں۔ 0 سے تقسیم کی تعریف نہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. Anything with 0 gives 0.",
+                "ur": "کوئی غلطی نہیں۔ 0 کے ساتھ ہر جواب 0 ہوتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0 ÷ 9 = 0, but 9 ÷ 0 is not defined.",
+                "ur": "0 ÷ 9 = 0 ہے، لیکن 9 ÷ 0 کی تعریف نہیں۔"
+              },
+              "misconception_id": "divide_by_zero_is_zero"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_laws",
+      "front": {
+        "en": "Which operations can swap order?",
+        "ur": "کن عملوں میں ترتیب بدل سکتے ہیں؟"
+      },
+      "back": {
+        "en": "+ and × only. −4 + 9 = 9 + (−4) and (−3) × 5 = 5 × (−3). Not − or ÷.",
+        "ur": "صرف + اور ×۔ −4 + 9 = 9 + (−4) اور (−3) × 5 = 5 × (−3)۔ − اور ÷ میں نہیں۔"
+      }
+    },
+    {
+      "id": "f_distribute",
+      "front": {
+        "en": "(−2) × (6 + 4) = ?",
+        "ur": "(−2) × (6 + 4) = ؟"
+      },
+      "back": {
+        "en": "(−2 × 6) + (−2 × 4) = −12 + (−8) = −20",
+        "ur": "(−2 × 6) + (−2 × 4) = −12 + (−8) = −20"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_check",
+      "text": {
+        "en": "Pick two integers, one of them negative. Check that a + b = b + a and a × b = b × a. Then check a − b and b − a. Show someone at home what you found.",
+        "ur": "دو صحیح اعداد چنیں، ایک منفی ہو۔ جانچیں کہ a + b = b + a اور a × b = b × a۔ پھر a − b اور b − a جانچیں۔ گھر میں کسی کو دکھائیں کہ آپ نے کیا پایا۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Commutative law",
+      "ur": "خاصیت مبادلہ"
+    },
+    {
+      "en": "Associative law",
+      "ur": "خاصیت تلازم"
+    },
+    {
+      "en": "Distributive law",
+      "ur": "خاصیت تقسیم"
+    },
+    {
+      "en": "Not defined",
+      "ur": "غیر معین"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I added −4 + 9 and my friend added 9 + (−4). We both got 5! Does order ever matter?",
+          "ur": "میں نے −4 + 9 جمع کیا اور میرے دوست نے 9 + (−4)۔ دونوں کا جواب 5 آیا! کیا ترتیب کبھی اہم ہوتی ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn the laws of integers: rules that make sums easier. First, a quick multiplication check.",
+        "ur": "آج ہم صحیح اعداد کے قوانین سیکھیں گے: ایسے اصول جو سوال آسان بناتے ہیں۔ پہلے ضرب کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.integers.multiply_divide",
+      "prompt": {
+        "en": "Work out (−3) × 5",
+        "ur": "حل کریں: (−3) × 5"
+      },
+      "answer": -15,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 × 5 = 15. The signs are different.",
+        "ur": "3 × 5 = 15۔ علامتیں مختلف ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−3) × 5 = −15.",
+        "ur": "درست! (−3) × 5 = −15"
+      },
+      "feedback_wrong": {
+        "en": "3 × 5 = 15, and different signs give a negative answer: −15.",
+        "ur": "3 × 5 = 15، اور مختلف علامتوں کا جواب منفی ہوتا ہے: −15"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "Different signs give a negative answer: −15.",
+            "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_laws",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Three laws help us: swap, group, and share out!",
+          "ur": "تین قوانین ہماری مدد کرتے ہیں: ترتیب بدلنا، گروہ بنانا، اور بانٹنا!"
+        }
+      },
+      "text": {
+        "en": "Commutative law: order does not matter for + and ×. (−3) × 5 = 5 × (−3) = −15. But 7 − 3 is not 3 − 7, and 8 ÷ 2 is not 2 ÷ 8. Associative law: for + and ×, grouping does not matter. (−6 + 4) + 10 = −6 + (4 + 10) = 8. Distributive law: multiply EACH number in the bracket. (−2) × (6 + 4) = (−2 × 6) + (−2 × 4) = −20. Zero: 0 ÷ (−9) = 0, but dividing by 0 is not defined.",
+        "ur": "خاصیت مبادلہ: + اور × میں ترتیب سے فرق نہیں پڑتا۔ (−3) × 5 = 5 × (−3) = −15۔ لیکن 7 − 3 اور 3 − 7 برابر نہیں، اور 8 ÷ 2 اور 2 ÷ 8 بھی برابر نہیں۔ خاصیت تلازم: + اور × میں گروہ بدلنے سے فرق نہیں پڑتا۔ (−6 + 4) + 10 = −6 + (4 + 10) = 8۔ خاصیت تقسیم: قوسین کے ہر عدد کو ضرب دیں۔ (−2) × (6 + 4) = (−2 × 6) + (−2 × 4) = −20۔ صفر: 0 ÷ (−9) = 0، لیکن 0 سے تقسیم کی تعریف نہیں۔"
+      }
+    },
+    {
+      "id": "s4_order",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which one is TRUE?",
+        "ur": "کون سا درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "times",
+          "text": {
+            "en": "(−3) × 5 = 5 × (−3)",
+            "ur": "(−3) × 5 = 5 × (−3)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Both are −15. Order does not matter for ×.",
+            "ur": "جی ہاں! دونوں −15 ہیں۔ ضرب میں ترتیب سے فرق نہیں پڑتا۔"
+          }
+        },
+        {
+          "id": "minus",
+          "text": {
+            "en": "7 − 3 = 3 − 7",
+            "ur": "7 − 3 = 3 − 7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 − 3 = 4 but 3 − 7 = −4. Order matters for −.",
+            "ur": "7 − 3 = 4 لیکن 3 − 7 = −4۔ تفریق میں ترتیب اہم ہے۔"
+          },
+          "misconception_id": "subtraction_commutative"
+        },
+        {
+          "id": "divide",
+          "text": {
+            "en": "8 ÷ 2 = 2 ÷ 8",
+            "ur": "8 ÷ 2 = 2 ÷ 8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8 ÷ 2 = 4 but 2 ÷ 8 is less than 1. Order matters for ÷.",
+            "ur": "8 ÷ 2 = 4 لیکن 2 ÷ 8 ایک سے کم ہے۔ تقسیم میں ترتیب اہم ہے۔"
+          },
+          "misconception_id": "subtraction_commutative"
+        }
+      ]
+    },
+    {
+      "id": "s5_group",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Group the easy numbers first: work out −6 + (4 + 10)",
+        "ur": "آسان اعداد کا پہلے گروہ بنائیں: حل کریں −6 + (4 + 10)"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 + 10 = 14. Then −6 + 14.",
+        "ur": "4 + 10 = 14۔ پھر −6 + 14"
+      },
+      "feedback_correct": {
+        "en": "Right! −6 + 14 = 8. And (−6 + 4) + 10 = −2 + 10 = 8 too.",
+        "ur": "درست! −6 + 14 = 8۔ اور (−6 + 4) + 10 = −2 + 10 = 8 بھی۔"
+      },
+      "feedback_wrong": {
+        "en": "4 + 10 = 14, and −6 + 14 = 8.",
+        "ur": "4 + 10 = 14، اور −6 + 14 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": -8,
+          "feedback": {
+            "en": "14 is bigger than 6, so the answer is positive: 8.",
+            "ur": "14، 6 سے بڑا ہے، اس لیے جواب مثبت ہے: 8"
+          }
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "−6 is negative, so take 6 away: 14 − 6 = 8.",
+            "ur": "−6 منفی ہے، اس لیے 6 گھٹائیں: 14 − 6 = 8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_distribute",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out (−2) × (6 + 4) by multiplying each number in the bracket.",
+        "ur": "قوسین کے ہر عدد کو ضرب دے کر حل کریں: (−2) × (6 + 4)"
+      },
+      "answer": -20,
+      "checker": "numeric",
+      "hint": {
+        "en": "(−2) × 6 = −12 and (−2) × 4 = −8. Add them.",
+        "ur": "(−2) × 6 = −12 اور (−2) × 4 = −8۔ انہیں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −12 + (−8) = −20. Check: (−2) × 10 = −20.",
+        "ur": "درست! −12 + (−8) = −20۔ جانچیں: (−2) × 10 = −20"
+      },
+      "feedback_wrong": {
+        "en": "(−2) × 6 = −12 and (−2) × 4 = −8, so −12 + (−8) = −20.",
+        "ur": "(−2) × 6 = −12 اور (−2) × 4 = −8، اس لیے −12 + (−8) = −20"
+      },
+      "common_wrong": [
+        {
+          "answer": -8,
+          "feedback": {
+            "en": "Multiply the 4 by −2 as well: −12 + (−8) = −20.",
+            "ur": "4 کو بھی −2 سے ضرب دیں: −12 + (−8) = −20"
+          },
+          "misconception_id": "distributes_first_only"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "Different signs give a negative answer: −20.",
+            "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_mental",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Make it easy: (−4) × 23 = (−4) × 20 + (−4) × 3. What is the answer?",
+        "ur": "آسان بنائیں: (−4) × 23 = (−4) × 20 + (−4) × 3۔ جواب کیا ہے؟"
+      },
+      "answer": -92,
+      "checker": "numeric",
+      "hint": {
+        "en": "(−4) × 20 = −80 and (−4) × 3 = −12.",
+        "ur": "(−4) × 20 = −80 اور (−4) × 3 = −12"
+      },
+      "feedback_correct": {
+        "en": "Right! −80 + (−12) = −92.",
+        "ur": "درست! −80 + (−12) = −92"
+      },
+      "feedback_wrong": {
+        "en": "(−4) × 20 = −80 and (−4) × 3 = −12, so the answer is −92.",
+        "ur": "(−4) × 20 = −80 اور (−4) × 3 = −12، اس لیے جواب −92 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -77,
+          "feedback": {
+            "en": "Multiply the 3 by −4 too: −80 + (−12) = −92.",
+            "ur": "3 کو بھی −4 سے ضرب دیں: −80 + (−12) = −92"
+          },
+          "misconception_id": "distributes_first_only"
+        },
+        {
+          "answer": 92,
+          "feedback": {
+            "en": "Different signs give a negative answer: −92.",
+            "ur": "مختلف علامتوں کا جواب منفی ہوتا ہے: −92"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_zero",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is (−7) ÷ 0?",
+        "ur": "(−7) ÷ 0 کتنا ہے؟"
+      },
+      "options": [
+        {
+          "id": "undefined",
+          "text": {
+            "en": "Not defined",
+            "ur": "اس کی تعریف نہیں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! No number times 0 gives −7, so dividing by 0 is not defined.",
+            "ur": "جی ہاں! کوئی عدد ضرب 0، −7 نہیں دیتا، اس لیے 0 سے تقسیم کی تعریف نہیں۔"
+          }
+        },
+        {
+          "id": "zero",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 ÷ (−7) = 0, but (−7) ÷ 0 is not defined.",
+            "ur": "0 ÷ (−7) = 0 ہے، لیکن (−7) ÷ 0 کی تعریف نہیں۔"
+          },
+          "misconception_id": "divide_by_zero_is_zero"
+        },
+        {
+          "id": "minus_seven",
+          "text": {
+            "en": "−7",
+            "ur": "−7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: (−7) × 0 = 0, not −7. Dividing by 0 is not defined.",
+            "ur": "جانچیں: (−7) × 0 = 0 ہے، −7 نہیں۔ 0 سے تقسیم کی تعریف نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza wrote (−3) × (4 + 5) = −12 + 5 = −7. What went wrong?",
+        "ur": "حمزہ نے لکھا (−3) × (4 + 5) = −12 + 5 = −7۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "both",
+          "text": {
+            "en": "He must multiply the 5 by −3 too: −12 + (−15) = −27.",
+            "ur": "اسے 5 کو بھی −3 سے ضرب دینی تھی: −12 + (−15) = −27"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Multiply each number in the bracket. Check: (−3) × 9 = −27.",
+            "ur": "جی ہاں! قوسین کے ہر عدد کو ضرب دیں۔ جانچیں: (−3) × 9 = −27"
+          }
+        },
+        {
+          "id": "sign",
+          "text": {
+            "en": "The answer should be positive: 7.",
+            "ur": "جواب مثبت ہونا چاہیے: 7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The real mistake is the 5: it must be multiplied by −3 too. The answer is −27.",
+            "ur": "اصل غلطی 5 میں ہے: اسے بھی −3 سے ضرب دینی تھی۔ جواب −27 ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. Multiply the first number only.",
+            "ur": "کوئی غلطی نہیں۔ صرف پہلے عدد کو ضرب دیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every number in the bracket is multiplied: (−3) × 4 and (−3) × 5. The answer is −27.",
+            "ur": "قوسین کے ہر عدد کو ضرب دی جاتی ہے: (−3) × 4 اور (−3) × 5۔ جواب −27 ہے۔"
+          },
+          "misconception_id": "distributes_first_only"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "My cousin says 6 ÷ 0 = 0, because 0 ÷ 6 = 0. Can you teach us?",
+          "ur": "میرا کزن کہتا ہے 6 ÷ 0 = 0، کیونکہ 0 ÷ 6 = 0۔ کیا آپ ہمیں سمجھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is 0 ÷ 6 = 0, but 6 ÷ 0 is not defined? Think: what number times 0 gives 6?",
+        "ur": "اپنے الفاظ میں بتائیں: 0 ÷ 6 = 0 کیوں ہے، لیکن 6 ÷ 0 کی تعریف کیوں نہیں؟ سوچیں: کون سا عدد ضرب 0، 6 دیتا ہے؟"
+      },
+      "key_idea": "Division undoes multiplication. 0 ÷ 6 = 0 because 6 × 0 = 0. For 6 ÷ 0 we need a number that times 0 gives 6, but anything times 0 is 0, so there is no answer: it is not defined.",
+      "levels": {
+        "got_it": "Uses the check by multiplication: 6 × 0 = 0 so 0 ÷ 6 = 0, while nothing times 0 gives 6, so 6 ÷ 0 is not defined.",
+        "partly": "States that dividing by 0 is not defined, or that order matters in ÷, without the multiplication reason.",
+        "not_yet": "Agrees 6 ÷ 0 = 0, gives no reason, or the reasoning is wrong."
+      },
+      "keywords": [
+        [
+          "times 0",
+          "× 0",
+          "multiply",
+          "ضرب",
+          "zarb"
+        ],
+        [
+          "not defined",
+          "no answer",
+          "undefined",
+          "تعریف نہیں",
+          "کوئی جواب نہیں",
+          "tareef"
+        ],
+        [
+          "0",
+          "zero",
+          "صفر",
+          "sifar"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Anything times 0 is 0, so no number times 0 gives 6. That is why 6 ÷ 0 is not defined.",
+          "ur": "بہت خوب سمجھایا! ہر عدد ضرب 0، 0 ہوتا ہے، اس لیے کوئی عدد ضرب 0، 6 نہیں دیتا۔ اسی لیے 6 ÷ 0 کی تعریف نہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now check with multiplication: what number times 0 gives 6?",
+          "ur": "اچھی شروعات! اب ضرب سے جانچیں: کون سا عدد ضرب 0، 6 دیتا ہے؟"
+        },
+        "not_yet": {
+          "en": "Look: 0 ÷ 6 = 0 because 6 × 0 = 0. Now, can any number times 0 give 6?",
+          "ur": "دیکھیں: 0 ÷ 6 = 0 کیونکہ 6 × 0 = 0۔ اب، کیا کوئی عدد ضرب 0، 6 دے سکتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_which_law",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "(−2 + 7) + 3 = −2 + (7 + 3). Which law is this?",
+        "ur": "(−2 + 7) + 3 = −2 + (7 + 3)۔ یہ کون سا قانون ہے؟"
+      },
+      "options": [
+        {
+          "id": "associative",
+          "text": {
+            "en": "Associative law",
+            "ur": "خاصیت تلازم"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only the grouping changed. Both sides are 8.",
+            "ur": "جی ہاں! صرف گروہ بدلا ہے۔ دونوں طرف 8 ہے۔"
+          }
+        },
+        {
+          "id": "commutative",
+          "text": {
+            "en": "Commutative law",
+            "ur": "خاصیت مبادلہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The numbers stay in the same order. Only the brackets moved: associative.",
+            "ur": "اعداد کی ترتیب وہی ہے۔ صرف قوسین بدلی ہیں: خاصیت تلازم۔"
+          }
+        },
+        {
+          "id": "distributive",
+          "text": {
+            "en": "Distributive law",
+            "ur": "خاصیت تقسیم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There is no multiplying here. Only the brackets moved: associative.",
+            "ur": "یہاں ضرب نہیں ہے۔ صرف قوسین بدلی ہیں: خاصیت تلازم۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Swap, group, share out, and never divide by zero. Well done!",
+          "ur": "ترتیب بدلیں، گروہ بنائیں، بانٹیں، اور کبھی 0 سے تقسیم نہ کریں۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "Commutative: −4 + 9 = 9 + (−4), (−3) × 5 = 5 × (−3), but not for − or ÷. Associative: (−6 + 4) + 10 = −6 + (4 + 10). Distributive: (−2) × (6 + 4) = (−2 × 6) + (−2 × 4) = −20. 0 ÷ (−9) = 0, but dividing by 0 is not defined.",
+        "ur": "خاصیت مبادلہ: −4 + 9 = 9 + (−4)، (−3) × 5 = 5 × (−3)، لیکن − اور ÷ میں نہیں۔ خاصیت تلازم: (−6 + 4) + 10 = −6 + (4 + 10)۔ خاصیت تقسیم: (−2) × (6 + 4) = (−2 × 6) + (−2 × 4) = −20۔ 0 ÷ (−9) = 0، لیکن 0 سے تقسیم کی تعریف نہیں۔"
+      },
+      "points": [
+        {
+          "en": "a × (b + c) = a × b + a × c",
+          "ur": "a × (b + c) = a × b + a × c"
+        },
+        {
+          "en": "a ÷ 0: not defined",
+          "ur": "a ÷ 0: تعریف نہیں"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_zero",
+      "type": "apply",
+      "skill": "maths.integers.laws",
+      "step": {
+        "id": "r_zero",
+        "type": "number",
+        "prompt": {
+          "en": "Work out 0 ÷ (−8)",
+          "ur": "حل کریں: 0 ÷ (−8)"
+        },
+        "answer": 0,
+        "checker": "numeric",
+        "hint": {
+          "en": "What number times −8 gives 0?",
+          "ur": "کون سا عدد ضرب −8، 0 دیتا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 0 ÷ (−8) = 0, because (−8) × 0 = 0.",
+          "ur": "درست! 0 ÷ (−8) = 0، کیونکہ (−8) × 0 = 0"
+        },
+        "feedback_wrong": {
+          "en": "0 divided by any non-zero number is 0.",
+          "ur": "0 کو کسی بھی غیر صفر عدد سے تقسیم کریں تو جواب 0 ہوتا ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": -8,
+            "feedback": {
+              "en": "Check: (−8) × (−8) = 64, not 0. The answer is 0.",
+              "ur": "جانچیں: (−8) × (−8) = 64 ہے، 0 نہیں۔ جواب 0 ہے۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_group",
+      "type": "apply",
+      "skill": "maths.integers.laws",
+      "step": {
+        "id": "r_group",
+        "type": "number",
+        "prompt": {
+          "en": "Work out (−3) × ((−2) × 5)",
+          "ur": "حل کریں: (−3) × ((−2) × 5)"
+        },
+        "answer": 30,
+        "checker": "numeric",
+        "hint": {
+          "en": "Group it as ((−3) × (−2)) × 5 = 6 × 5.",
+          "ur": "اسے یوں گروہ بنائیں: ((−3) × (−2)) × 5 = 6 × 5"
+        },
+        "feedback_correct": {
+          "en": "Right! Either way the answer is 30.",
+          "ur": "درست! کسی بھی طرح جواب 30 ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "(−2) × 5 = −10, and (−3) × (−10) = 30.",
+          "ur": "(−2) × 5 = −10، اور (−3) × (−10) = 30"
+        },
+        "common_wrong": [
+          {
+            "answer": -30,
+            "feedback": {
+              "en": "Two negatives multiplied give a positive answer: 30.",
+              "ur": "دو منفی اعداد کی ضرب مثبت ہوتی ہے: 30"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Laws of Integers chapter. No textbook text or exercises were used.",
+    "The laws are taught by name and by example; children are not asked to write a, b, c proofs.",
+    "Division by zero is shown as 'not defined' using the multiplication check (s8, s10).",
+    "Urdu terms to check: خاصیت مبادلہ (commutative), خاصیت تلازم (associative), خاصیت تقسیم (distributive), غیر معین / تعریف نہیں (not defined).",
+    "The numbers were worked out in content/sources/g6-maths-04/laws_of_integers.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

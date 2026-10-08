@@ -9,6 +9,8 @@ Scripts that write the Grade 6 Maths lessons of the Perimeter and Area unit (`co
 | `compound_shapes.py` | `g6-maths-08-compound-shapes` | `maths.measurement.compound_area` |
 | `triangles.py` | `g6-maths-08-area-of-triangles` | `maths.measurement.area_triangle` |
 | `area_word_problems.py` | `g6-maths-08-area-word-problems` | `maths.measurement.word_problems` |
+| `parallelogram_trapezium.py` | `g6-maths-08-parallelogram-and-trapezium` | `maths.measurement.area_parallelogram` |
+| `area_of_path.py` | `g6-maths-08-area-of-a-path` | `maths.measurement.area_path` |
 
 Every answer, and every common wrong answer (like giving the perimeter when the area is asked), is worked out in Python and checked with `assert`, so no number is typed by hand. There are no pictures yet: each shape is described in words. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 
@@ -17,4 +19,4 @@ To change a lesson, edit its script and run it, then run the validator:
     python content/sources/g6-maths-08/perimeter.py
     python tools/validate_lessons.py
 
-Edit the script, not the JSON file, or the next run will undo the change. The unit number (08) and the Urdu terms are still to be confirmed against the PCTB Grade 6 book.
+Edit the script, not the JSON file, or the next run will undo the change. The last two lessons fill gaps found against the PCTB Grade 6 book (Sub-domain 8). The Urdu terms are still to be checked.

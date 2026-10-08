@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 
-REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Angles"
+REF = "PCTB Mathematics 6 (SNC 2022), Sub-domains 9 and 10: Symmetry, Geometrical Constructions (angle facts)"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills from earlier work that these lessons build on.

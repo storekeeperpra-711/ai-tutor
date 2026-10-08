@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 
-REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Ratio and Proportion"
+REF = "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills from other units that these lessons build on.

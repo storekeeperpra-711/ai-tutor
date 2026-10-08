@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 
-REF = "PCTB Grade 6 Mathematics (unit to be confirmed): Perimeter and Area"
+REF = "PCTB Mathematics 6 (SNC 2022), Sub-domain 8: Surface Area and Volume"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
 
 # Skills from earlier work that these lessons build on.
@@ -15,6 +15,11 @@ PA_AREA = "maths.measurement.area_rectangle"
 PA_COMPOUND = "maths.measurement.compound_area"
 PA_TRIANGLE = "maths.measurement.area_triangle"
 PA_WORD_PROBLEMS = "maths.measurement.word_problems"
+PA_PARALLELOGRAM = "maths.measurement.area_parallelogram"
+PA_PATH = "maths.measurement.area_path"
+
+# The book chapter the gap lessons (parallelogram and trapezium, path) match.
+BOOK = "PCTB Mathematics 6 (SNC 2022), Sub-domain 8: Surface Area and Volume"
 
 
 def T(en, ur):
