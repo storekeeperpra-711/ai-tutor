@@ -12,9 +12,9 @@ Print this page, or copy the tables into a notebook.
 
 1. **Charge the phone to 100%.**
 2. **Install the test app.**
-   1. On a computer, open GitHub → **Actions** → the newest green **CI** run on **main**.
-   2. Scroll to the bottom and download **ai-tutor-dev-release-apks**.
-   3. Unzip it and copy the file with `arm64-v8a` in its name to the phone (USB cable, or send it to yourself on WhatsApp).
+   1. On the phone, open this page in Chrome: https://github.com/storekeeperpra-711/ai-tutor/releases/tag/test-app
+   2. Under **Assets**, tap **ai-tutor-test-arm64.apk** to download it. (It is always the newest test app.)
+   3. When the download finishes, tap **Open** (or find it in **Files** → **Downloads**).
    4. On the phone, tap the file. If Android asks, allow **Install unknown apps** for that app, then tap **Install**.
 3. **Stop XOS from closing the app.** Infinix phones close apps in the background to save battery, which can stop progress from saving.
    1. Open **Settings** → **Battery** (or **Power Marathon / Battery manager**). If you can't find it, type **battery** in the search box at the top of Settings.

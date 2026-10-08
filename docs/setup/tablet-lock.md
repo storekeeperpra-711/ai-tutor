@@ -38,7 +38,7 @@ You need:
    1. Open **Settings**, then **Google**, then **Find My Device**.
    2. Turn it **On**.
 5. Install AI Tutor.
-   - From Google Play once it is there. Until then, use the test version: GitHub → Actions → the newest CI run on main → **ai-tutor-dev-release-apks** at the bottom. Inside, use the `arm64-v8a` file (most tablets); if it won't install, use the `armeabi-v7a` file.
+   - From Google Play once it is there. Until then, use the test version: open https://github.com/storekeeperpra-711/ai-tutor/releases/tag/test-app on the tablet and download **ai-tutor-test-arm64.apk** (most tablets); if it won't install, use **ai-tutor-test-older-phones.apk**.
 6. Update Android if the tablet asks to. Then turn off automatic app updates on mobile data: **Play Store** → your picture → **Settings** → **Network preferences** → **App download preference** → **Over Wi-Fi only**.
 
 ---
