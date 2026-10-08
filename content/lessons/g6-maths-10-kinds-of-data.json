@@ -1,0 +1,762 @@
+{
+  "id": "g6-maths-10-kinds-of-data",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Tell ungrouped data from grouped data, group values into classes and count the frequency of each class, and tell discrete (counted) data from continuous (measured) data.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management"
+    }
+  ],
+  "skills": [
+    "maths.data.kinds"
+  ],
+  "title": {
+    "en": "Kinds of data",
+    "ur": "مواد کی اقسام"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.data.tables"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "whole_means_discrete",
+      "description": "Thinks a measurement is discrete because it is written as a whole number (e.g. height in whole cm)."
+    },
+    {
+      "id": "counts_class_edges",
+      "description": "Leaves out values that sit exactly on the ends of a class, such as 20 in the class 11–20, or counts them in the wrong class."
+    },
+    {
+      "id": "number_means_discrete",
+      "description": "Thinks any data made of numbers is discrete, and only words are continuous (or the other way round)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.kinds": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.kinds": [
+      {
+        "id": "qb_continuous",
+        "type": "recall",
+        "step": {
+          "id": "qb_continuous",
+          "type": "choice",
+          "prompt": {
+            "en": "What is continuous data?",
+            "ur": "مسلسل مواد کیا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "measured",
+              "text": {
+                "en": "Data we get by measuring, like height or time",
+                "ur": "وہ مواد جو ناپ کر ملے، جیسے قد یا وقت"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Measured data can take any value in between.",
+                "ur": "جی ہاں! ناپا گیا مواد درمیان کی کوئی بھی قیمت لے سکتا ہے۔"
+              }
+            },
+            {
+              "id": "counted",
+              "text": {
+                "en": "Data we get by counting, like number of pens",
+                "ur": "وہ مواد جو گن کر ملے، جیسے قلموں کی تعداد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Counted data is discrete. Continuous data is measured.",
+                "ur": "گنا گیا مواد منفصل ہے۔ مسلسل مواد ناپا جاتا ہے۔"
+              }
+            },
+            {
+              "id": "words",
+              "text": {
+                "en": "Data written in words, not numbers",
+                "ur": "وہ مواد جو الفاظ میں لکھا ہو، اعداد میں نہیں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Both kinds are numbers. Continuous data is measured.",
+                "ur": "دونوں اقسام اعداد ہیں۔ مسلسل مواد ناپا جاتا ہے۔"
+              },
+              "misconception_id": "number_means_discrete"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Data: 3, 14, 18, 7, 20, 11, 9. How many values are in the class 11–20?",
+            "ur": "مواد: 3، 14، 18، 7، 20، 11، 9۔ گروہ 11 تا 20 میں کتنی قیمتیں ہیں؟"
+          },
+          "answer": 4,
+          "checker": "numeric",
+          "hint": {
+            "en": "Look for values from 11 up to 20, including 11 and 20.",
+            "ur": "11 سے 20 تک کی قیمتیں ڈھونڈیں، 11 اور 20 سمیت۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 14, 18, 20 and 11.",
+            "ur": "درست! 14، 18، 20 اور 11"
+          },
+          "feedback_wrong": {
+            "en": "14, 18, 20 and 11 are in 11–20: that is 4.",
+            "ur": "14، 18، 20 اور 11 گروہ 11 تا 20 میں ہیں: یہ 4 ہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 3,
+              "feedback": {
+                "en": "Don't forget 20. It is the end of the class, so it counts: 4.",
+                "ur": "20 نہ بھولیں۔ یہ گروہ کا آخری عدد ہے، تو یہ گنا جائے گا: 4"
+              },
+              "misconception_id": "counts_class_edges"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zainab says the time she takes to walk to school is discrete data, because her watch shows 12 minutes. What went wrong?",
+            "ur": "زینب کہتی ہے کہ اسکول پیدل جانے کا وقت منفصل مواد ہے، کیونکہ اس کی گھڑی 12 منٹ دکھاتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "measured",
+              "text": {
+                "en": "Time is measured, so it is continuous. It could be 12 and a half minutes.",
+                "ur": "وقت ناپا جاتا ہے، اس لیے یہ مسلسل ہے۔ یہ ساڑھے 12 منٹ بھی ہو سکتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A rounded reading is still a measurement.",
+                "ur": "جی ہاں! گول کی ہوئی قیمت بھی پیمائش ہی ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 12 is a whole number.",
+                "ur": "کوئی غلطی نہیں۔ 12 مکمل عدد ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The watch rounds it. Time is measured, so it is continuous.",
+                "ur": "گھڑی اسے گول کرتی ہے۔ وقت ناپا جاتا ہے، اس لیے مسلسل ہے۔"
+              },
+              "misconception_id": "whole_means_discrete"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_disc_cont",
+      "front": {
+        "en": "Discrete or continuous?",
+        "ur": "منفصل یا مسلسل؟"
+      },
+      "back": {
+        "en": "Counted (children, goals) = discrete. Measured (height, weight, time) = continuous.",
+        "ur": "گنا گیا (بچے، گول) = منفصل۔ ناپا گیا (قد، وزن، وقت) = مسلسل۔"
+      }
+    },
+    {
+      "id": "f_grouped",
+      "front": {
+        "en": "Grouped data?",
+        "ur": "گروہ بند مواد؟"
+      },
+      "back": {
+        "en": "Values put into classes like 1–10, 11–20, with how many fall in each (the frequency).",
+        "ur": "قیمتیں گروہوں میں رکھی جائیں جیسے 1 تا 10، 11 تا 20، اور ہر ایک میں کتنی ہیں (تعدد)۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_family",
+      "text": {
+        "en": "Write down two things about your family you can count (like number of cousins) and two things you can measure (like each person's height). Which are discrete and which are continuous?",
+        "ur": "اپنے گھر والوں کے بارے میں دو چیزیں لکھیں جو گنی جا سکیں (جیسے کزنز کی تعداد) اور دو جو ناپی جا سکیں (جیسے ہر ایک کا قد)۔ کون سی منفصل ہیں اور کون سی مسلسل؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Ungrouped data",
+      "ur": "غیر گروہ بند مواد"
+    },
+    {
+      "en": "Grouped data",
+      "ur": "گروہ بند مواد"
+    },
+    {
+      "en": "Class (group)",
+      "ur": "گروہ (جماعت)"
+    },
+    {
+      "en": "Frequency",
+      "ur": "تعدد"
+    },
+    {
+      "en": "Discrete data",
+      "ur": "منفصل مواد"
+    },
+    {
+      "en": "Continuous data",
+      "ur": "مسلسل مواد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Hamza counted his class: 32 children. Then he measured his height: 141 cm. Are these the same kind of number?",
+          "ur": "حمزہ نے اپنی جماعت گنی: 32 بچے۔ پھر اپنا قد ناپا: 141 سینٹی میٹر۔ کیا یہ ایک ہی قسم کے اعداد ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn the kinds of data: ungrouped and grouped, discrete and continuous. First, a quick check.",
+        "ur": "آج ہم مواد کی اقسام سیکھیں گے: غیر گروہ بند اور گروہ بند، منفصل اور مسلسل۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.data.tables",
+      "prompt": {
+        "en": "Fruit sold at a stall: Mangoes: 7; Bananas: 5; Apples: 8. How many fruits altogether?",
+        "ur": "ایک ٹھیلے پر بکنے والے پھل: آم: 7؛ کیلے: 5؛ سیب: 8۔ کل کتنے پھل؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add all three.",
+        "ur": "تینوں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20.",
+        "ur": "درست! 20"
+      },
+      "feedback_wrong": {
+        "en": "7 + 5 + 8 = 20.",
+        "ur": "7 + 5 + 8 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the number of kinds of fruit. Add them: 20.",
+            "ur": "3 پھلوں کی اقسام کی تعداد ہے۔ جمع کریں: 20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_kinds",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Counted things jump in steps of one. Measured things can be any size in between!",
+          "ur": "گنی جانے والی چیزیں ایک ایک کر کے بڑھتی ہیں۔ ناپی جانے والی چیزیں درمیان کی کوئی بھی قیمت لے سکتی ہیں!"
+        }
+      },
+      "text": {
+        "en": "Ungrouped data is a plain list of values, like 4, 17, 9, 22. When there are many values, we make grouped data: we choose classes such as 1–10, 11–20 and 21–30, and count how many values fall in each class. That count is the frequency. Both ends belong to the class: 20 goes in 11–20.\nDiscrete data is counted: number of children, goals, books. It can only be whole steps (you can't have 2.5 children). Continuous data is measured: height, weight, time, temperature. It can take any value in between, like 141.5 cm, even if we round it.",
+        "ur": "غیر گروہ بند مواد قیمتوں کی سادہ فہرست ہے، جیسے 4، 17، 9، 22۔ جب قیمتیں بہت ہوں تو ہم گروہ بند مواد بناتے ہیں: ہم گروہ چنتے ہیں جیسے 1 تا 10، 11 تا 20 اور 21 تا 30، اور گنتے ہیں کہ ہر گروہ میں کتنی قیمتیں ہیں۔ یہ گنتی تعدد کہلاتی ہے۔ دونوں سرے گروہ میں شامل ہیں: 20 گروہ 11 تا 20 میں جائے گا۔\nمنفصل مواد گنا جاتا ہے: بچوں، گولوں یا کتابوں کی تعداد۔ یہ صرف پورے قدموں میں ہوتا ہے (ڈھائی بچے نہیں ہو سکتے)۔ مسلسل مواد ناپا جاتا ہے: قد، وزن، وقت، درجہ حرارت۔ یہ درمیان کی کوئی بھی قیمت لے سکتا ہے، جیسے 141.5 سینٹی میٹر، چاہے ہم اسے گول کر دیں۔"
+      }
+    },
+    {
+      "id": "s4_class_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Test marks out of 30 of twelve children: 4, 17, 9, 22, 13, 28, 11, 6, 19, 25, 15, 8. How many marks are in the class 11–20?",
+        "ur": "بارہ بچوں کے 30 میں سے ٹیسٹ نمبر: 4، 17، 9، 22، 13، 28، 11، 6، 19، 25، 15، 8۔ گروہ 11 تا 20 میں کتنے نمبر ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Go through the list and tick each mark from 11 to 20.",
+        "ur": "فہرست میں سے ہر وہ نمبر نشان لگائیں جو 11 سے 20 تک ہو۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 17, 13, 11, 19 and 15.",
+        "ur": "درست! 17، 13، 11، 19 اور 15"
+      },
+      "feedback_wrong": {
+        "en": "17, 13, 11, 19 and 15 are in 11–20: that is 5.",
+        "ur": "17، 13، 11، 19 اور 15 گروہ 11 تا 20 میں ہیں: یہ 5 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't leave out 11. It is the start of the class: 5.",
+            "ur": "11 نہ چھوڑیں۔ یہ گروہ کا پہلا عدد ہے: 5"
+          },
+          "misconception_id": "counts_class_edges"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is how many children there are. Count only marks from 11 to 20: 5.",
+            "ur": "12 بچوں کی تعداد ہے۔ صرف 11 سے 20 تک کے نمبر گنیں: 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_class_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Same marks: 4, 17, 9, 22, 13, 28, 11, 6, 19, 25, 15, 8. What is the frequency of the class 21–30?",
+        "ur": "وہی نمبر: 4، 17، 9، 22، 13، 28، 11، 6، 19، 25، 15، 8۔ گروہ 21 تا 30 کا تعدد کیا ہے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Frequency means how many. Count marks from 21 to 30.",
+        "ur": "تعدد کا مطلب ہے کتنے۔ 21 سے 30 تک کے نمبر گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 22, 28 and 25.",
+        "ur": "درست! 22، 28 اور 25"
+      },
+      "feedback_wrong": {
+        "en": "22, 28 and 25 are in 21–30: the frequency is 3.",
+        "ur": "22، 28 اور 25 گروہ 21 تا 30 میں ہیں: تعدد 3 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is how many are in 1–10. For 21–30 there are 3.",
+            "ur": "4 گروہ 1 تا 10 میں ہیں۔ 21 تا 30 میں 3 ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_which_continuous",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these is continuous data?",
+        "ur": "ان میں سے کون سا مسلسل مواد ہے؟"
+      },
+      "options": [
+        {
+          "id": "weight",
+          "text": {
+            "en": "The weights of children in a class",
+            "ur": "جماعت کے بچوں کے وزن"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Weight is measured, so it is continuous.",
+            "ur": "جی ہاں! وزن ناپا جاتا ہے، اس لیے یہ مسلسل ہے۔"
+          }
+        },
+        {
+          "id": "brothers",
+          "text": {
+            "en": "The number of brothers each child has",
+            "ur": "ہر بچے کے بھائیوں کی تعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Brothers are counted, so that is discrete.",
+            "ur": "بھائی گنے جاتے ہیں، اس لیے یہ منفصل ہے۔"
+          }
+        },
+        {
+          "id": "goals",
+          "text": {
+            "en": "Goals scored in hockey matches",
+            "ur": "ہاکی میچوں میں کیے گئے گول"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Goals are counted, so that is discrete.",
+            "ur": "گول گنے جاتے ہیں، اس لیے یہ منفصل ہے۔"
+          },
+          "misconception_id": "number_means_discrete"
+        }
+      ]
+    },
+    {
+      "id": "s7_mangoes",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal records the number of mangoes in each crate at his father's shop. What kind of data is this?",
+        "ur": "بلال اپنے ابو کی دکان پر ہر پیٹی میں آموں کی تعداد لکھتا ہے۔ یہ کس قسم کا مواد ہے؟"
+      },
+      "options": [
+        {
+          "id": "discrete",
+          "text": {
+            "en": "Discrete",
+            "ur": "منفصل"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Mangoes are counted: 40, 41, 42, never 40.5.",
+            "ur": "جی ہاں! آم گنے جاتے ہیں: 40، 41، 42، کبھی 40.5 نہیں۔"
+          }
+        },
+        {
+          "id": "continuous",
+          "text": {
+            "en": "Continuous",
+            "ur": "مسلسل"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The number of mangoes is counted, not measured, so it is discrete.",
+            "ur": "آموں کی تعداد گنی جاتی ہے، ناپی نہیں جاتی، اس لیے یہ منفصل ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_total_freq",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A grouped table of the ages of people at a wedding: Age 1–10: 6 people; Age 11–20: 9 people; Age 21–30: 4 people. How many people are in the table altogether?",
+        "ur": "ایک شادی میں لوگوں کی عمروں کا گروہ بند جدول: عمر 1 تا 10: 6 افراد؛ عمر 11 تا 20: 9 افراد؛ عمر 21 تا 30: 4 افراد۔ جدول میں کل کتنے افراد ہیں؟"
+      },
+      "answer": 19,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the frequencies of all the classes.",
+        "ur": "سب گروہوں کے تعدد جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 19 people.",
+        "ur": "درست! 19 افراد"
+      },
+      "feedback_wrong": {
+        "en": "6 + 9 + 4 = 19.",
+        "ur": "6 + 9 + 4 = 19"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the number of classes. Add the frequencies: 19.",
+            "ur": "3 گروہوں کی تعداد ہے۔ تعدد جمع کریں: 19"
+          }
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is the end of the last class. Add the frequencies: 19.",
+            "ur": "30 آخری گروہ کا آخری عدد ہے۔ تعدد جمع کریں: 19"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Fatima says: \"Height is discrete data, because we always write it in whole centimetres, like 138 cm.\" What went wrong?",
+        "ur": "فاطمہ کہتی ہے: \"قد منفصل مواد ہے، کیونکہ ہم اسے ہمیشہ پورے سینٹی میٹر میں لکھتے ہیں، جیسے 138 سینٹی میٹر۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "measured",
+          "text": {
+            "en": "Height is measured. It could be 138.4 cm; we just round it. So it is continuous.",
+            "ur": "قد ناپا جاتا ہے۔ یہ 138.4 سینٹی میٹر بھی ہو سکتا ہے؛ ہم بس اسے گول کرتے ہیں۔ اس لیے یہ مسلسل ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Rounding doesn't change the kind of data.",
+            "ur": "جی ہاں! گول کرنے سے مواد کی قسم نہیں بدلتی۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. Whole numbers are always discrete.",
+            "ur": "کوئی غلطی نہیں۔ مکمل اعداد ہمیشہ منفصل ہوتے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "We write whole cm only because we round. Height is measured, so it is continuous.",
+            "ur": "ہم صرف گول کرنے کی وجہ سے پورے سینٹی میٹر لکھتے ہیں۔ قد ناپا جاتا ہے، اس لیے مسلسل ہے۔"
+          },
+          "misconception_id": "whole_means_discrete"
+        },
+        {
+          "id": "grouped",
+          "text": {
+            "en": "Height is grouped data, not discrete.",
+            "ur": "قد گروہ بند مواد ہے، منفصل نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Any data can be grouped. The question is counted or measured: height is measured, so continuous.",
+            "ur": "کوئی بھی مواد گروہ بند ہو سکتا ہے۔ سوال یہ ہے کہ گنا گیا یا ناپا گیا: قد ناپا جاتا ہے، اس لیے مسلسل۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "The number of children is discrete, but their heights are continuous. Why? Can you teach me?",
+          "ur": "بچوں کی تعداد منفصل ہے، لیکن ان کے قد مسلسل ہیں۔ کیوں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the number of children discrete, but their heights continuous?",
+        "ur": "اپنے الفاظ میں بتائیں: بچوں کی تعداد منفصل کیوں ہے، لیکن ان کے قد مسلسل کیوں ہیں؟"
+      },
+      "key_idea": "Children are counted, so the number can only go up in whole steps (no half child). Height is measured, so it can be any value between two whole centimetres, even if we round when we write it.",
+      "levels": {
+        "got_it": "Says children are counted in whole steps while height is measured and can take any value in between.",
+        "partly": "Mentions counting or measuring, but not both, or doesn't say why that matters.",
+        "not_yet": "Gives no reason, or says it depends on whether the number is whole."
+      },
+      "keywords": [
+        [
+          "count",
+          "گن",
+          "گنتی"
+        ],
+        [
+          "measure",
+          "ناپ",
+          "پیمائش"
+        ],
+        [
+          "between",
+          "half",
+          "any",
+          "درمیان",
+          "آدھا",
+          "کوئی بھی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Counted means discrete, measured means continuous.",
+          "ur": "بہت خوب! گنا گیا یعنی منفصل، ناپا گیا یعنی مسلسل۔"
+        },
+        "partly": {
+          "en": "Good start! Now say which one is counted and which is measured.",
+          "ur": "اچھی شروعات! اب بتائیں کون سا گنا جاتا ہے اور کون سا ناپا جاتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Can a class have 32 and a half children? Can a child be 141 and a half cm tall?",
+          "ur": "کیا جماعت میں ساڑھے 32 بچے ہو سکتے ہیں؟ کیا کسی بچے کا قد ساڑھے 141 سینٹی میٹر ہو سکتا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_runs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Runs scored by ten batters in a school match: 12, 25, 31, 8, 27, 22, 40, 19, 29, 35. How many scores are in the class 21–30?",
+        "ur": "اسکول کے ایک میچ میں دس بلے بازوں کے رنز: 12، 25، 31، 8، 27، 22، 40، 19، 29، 35۔ گروہ 21 تا 30 میں کتنے اسکور ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Tick each score from 21 to 30.",
+        "ur": "21 سے 30 تک کا ہر اسکور نشان لگائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 25, 27, 22 and 29.",
+        "ur": "درست! 25، 27، 22 اور 29"
+      },
+      "feedback_wrong": {
+        "en": "25, 27, 22 and 29 are in 21–30: that is 4.",
+        "ur": "25، 27، 22 اور 29 گروہ 21 تا 30 میں ہیں: یہ 4 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "31 is not in 21–30; it starts the next class. The answer is 4.",
+            "ur": "31 گروہ 21 تا 30 میں نہیں؛ یہ اگلا گروہ شروع کرتا ہے۔ جواب 4 ہے۔"
+          },
+          "misconception_id": "counts_class_edges"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is how many batters there are. Count only 21 to 30: 4.",
+            "ur": "10 بلے بازوں کی تعداد ہے۔ صرف 21 تا 30 گنیں: 4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Now you can sort data like a scientist!",
+          "ur": "اب آپ سائنس دان کی طرح مواد کو ترتیب دے سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "Ungrouped data is a plain list. Grouped data puts values into classes like 1–10, 11–20, and the frequency is how many are in each class (both ends count). Discrete data is counted (children, goals); continuous data is measured (height, weight, time, temperature), even when we round it.",
+        "ur": "غیر گروہ بند مواد ایک سادہ فہرست ہے۔ گروہ بند مواد قیمتوں کو گروہوں میں رکھتا ہے جیسے 1 تا 10، 11 تا 20، اور تعدد یہ ہے کہ ہر گروہ میں کتنی قیمتیں ہیں (دونوں سرے شامل)۔ منفصل مواد گنا جاتا ہے (بچے، گول)؛ مسلسل مواد ناپا جاتا ہے (قد، وزن، وقت، درجہ حرارت)، چاہے ہم اسے گول کر دیں۔"
+      },
+      "points": [
+        {
+          "en": "Grouped data: classes and their frequencies.",
+          "ur": "گروہ بند مواد: گروہ اور ان کے تعدد۔"
+        },
+        {
+          "en": "Counted = discrete. Measured = continuous.",
+          "ur": "گنا گیا = منفصل۔ ناپا گیا = مسلسل۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_temp",
+      "type": "apply",
+      "skill": "maths.data.kinds",
+      "step": {
+        "id": "r_temp",
+        "type": "choice",
+        "prompt": {
+          "en": "The temperature in Lahore at noon each day is recorded. What kind of data is this?",
+          "ur": "لاہور میں ہر روز دوپہر کا درجہ حرارت لکھا جاتا ہے۔ یہ کس قسم کا مواد ہے؟"
+        },
+        "options": [
+          {
+            "id": "continuous",
+            "text": {
+              "en": "Continuous",
+              "ur": "مسلسل"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! Temperature is measured.",
+              "ur": "جی ہاں! درجہ حرارت ناپا جاتا ہے۔"
+            }
+          },
+          {
+            "id": "discrete",
+            "text": {
+              "en": "Discrete",
+              "ur": "منفصل"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "Temperature is measured, not counted, so it is continuous.",
+              "ur": "درجہ حرارت ناپا جاتا ہے، گنا نہیں جاتا، اس لیے مسلسل ہے۔"
+            },
+            "misconception_id": "whole_means_discrete"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_class",
+      "type": "apply",
+      "skill": "maths.data.kinds",
+      "step": {
+        "id": "r_class",
+        "type": "number",
+        "prompt": {
+          "en": "Data: 5, 12, 10, 1, 16, 7, 19. What is the frequency of the class 1–10?",
+          "ur": "مواد: 5، 12، 10، 1، 16، 7، 19۔ گروہ 1 تا 10 کا تعدد کیا ہے؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Count values from 1 to 10, including 10.",
+          "ur": "1 سے 10 تک کی قیمتیں گنیں، 10 سمیت۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5, 10, 1 and 7.",
+          "ur": "درست! 5، 10، 1 اور 7"
+        },
+        "feedback_wrong": {
+          "en": "5, 10, 1 and 7 are in 1–10: the frequency is 4.",
+          "ur": "5، 10، 1 اور 7 گروہ 1 تا 10 میں ہیں: تعدد 4 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "Don't forget 10. It is the end of the class: 4.",
+              "ur": "10 نہ بھولیں۔ یہ گروہ کا آخری عدد ہے: 4"
+            },
+            "misconception_id": "counts_class_edges"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Data Management sub-domain (kinds of data). No textbook text or exercises were used.",
+    "Classes include both ends (1–10, 11–20, ...), so a value like 20 goes in 11–20. With no pictures yet, data are given as lists and tables written in a line.",
+    "The key test for discrete vs continuous is counted vs measured; the find-error steps target the idea that a rounded whole number (138 cm, 12 minutes) makes data discrete.",
+    "Urdu terms to check: مواد (data), گروہ بند مواد / غیر گروہ بند مواد (grouped / ungrouped data), گروہ (class), تعدد (frequency), منفصل مواد (discrete data), مسلسل مواد (continuous data).",
+    "The numbers were worked out in content/sources/g6-maths-10/kinds_of_data.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

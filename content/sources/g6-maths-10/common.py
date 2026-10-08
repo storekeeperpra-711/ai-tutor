@@ -15,6 +15,12 @@ DH_BAR_GRAPHS = "maths.data.bar_graphs"
 DH_MEAN = "maths.data.mean"
 DH_MODE_RANGE = "maths.data.mode_range"
 DH_WORD_PROBLEMS = "maths.data.word_problems"
+DH_KINDS = "maths.data.kinds"
+DH_MEDIAN = "maths.data.median"
+DH_PIE_CHARTS = "maths.data.pie_charts"
+
+# The book chapter the gap lessons (kinds of data, median, pie charts) match.
+BOOK = "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management"
 
 
 def T(en, ur):

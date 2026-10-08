@@ -1,0 +1,754 @@
+{
+  "id": "g6-maths-10-pie-charts-and-multiple-bar-graphs",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Read and work out the angles of a pie chart, where the whole circle is 360°, and compare two sets of data on a multiple bar graph.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management"
+    }
+  ],
+  "skills": [
+    "maths.data.pie_charts"
+  ],
+  "title": {
+    "en": "Pie charts and multiple bar graphs",
+    "ur": "دائری نقشہ (پائی چارٹ) اور دوہرے بار گراف"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.data.bar_graphs"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "angle_as_count",
+      "description": "Reads a slice's angle in degrees as the number of people or things it stands for."
+    },
+    {
+      "id": "not_360",
+      "description": "Thinks the whole circle is 100 or 180 instead of 360 degrees."
+    },
+    {
+      "id": "adds_for_difference",
+      "description": "Adds the two bars of a pair when the question asks how many more."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.pie_charts": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.pie_charts": [
+      {
+        "id": "qb_whole",
+        "type": "recall",
+        "step": {
+          "id": "qb_whole",
+          "type": "choice",
+          "prompt": {
+            "en": "How many degrees make the whole circle of a pie chart?",
+            "ur": "پائی چارٹ کا پورا دائرہ کتنے درجے کا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "d360",
+              "text": {
+                "en": "360°",
+                "ur": "360°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The whole circle is 360° and stands for all the data.",
+                "ur": "جی ہاں! پورا دائرہ 360° ہے اور سارا مواد دکھاتا ہے۔"
+              }
+            },
+            {
+              "id": "d100",
+              "text": {
+                "en": "100°",
+                "ur": "100°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A full turn is 360°, not 100°.",
+                "ur": "ایک پورا چکر 360° ہے، 100° نہیں۔"
+              },
+              "misconception_id": "not_360"
+            },
+            {
+              "id": "d180",
+              "text": {
+                "en": "180°",
+                "ur": "180°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "180° is only half the circle. The whole is 360°.",
+                "ur": "180° صرف آدھا دائرہ ہے۔ پورا 360° ہے۔"
+              },
+              "misconception_id": "not_360"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "A pie chart shows 24 children. One slice is 120°. How many children does it stand for?",
+            "ur": "ایک پائی چارٹ 24 بچے دکھاتا ہے۔ ایک ٹکڑا 120° کا ہے۔ یہ کتنے بچوں کو ظاہر کرتا ہے؟"
+          },
+          "answer": 8,
+          "checker": "numeric",
+          "hint": {
+            "en": "120° is what part of 360°?",
+            "ur": "120°، 360° کا کتنا حصہ ہے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! 8 children.",
+            "ur": "درست! 8 بچے"
+          },
+          "feedback_wrong": {
+            "en": "120° is one third of 360°, and one third of 24 is 8.",
+            "ur": "120°، 360° کا تیسرا حصہ ہے، اور 24 کا تیسرا حصہ 8 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 120,
+              "feedback": {
+                "en": "120 is the angle, not the number of children. 120° is a third of the circle: 24 ÷ 3 = 8.",
+                "ur": "120 زاویہ ہے، بچوں کی تعداد نہیں۔ 120° دائرے کا تیسرا حصہ ہے: 24 ÷ 3 = 8"
+              },
+              "misconception_id": "angle_as_count"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A double bar graph shows Class 6: boys 20, girls 25. Ahmed says there are 45 more girls than boys. What went wrong?",
+            "ur": "ایک دوہرا بار گراف دکھاتا ہے جماعت 6: لڑکے 20، لڑکیاں 25۔ احمد کہتا ہے لڑکیاں لڑکوں سے 45 زیادہ ہیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "subtract",
+              "text": {
+                "en": "He added. 'How many more' means 25 − 20 = 5.",
+                "ur": "اس نے جمع کیا۔ 'کتنے زیادہ' یعنی 25 − 20 = 5"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 45 is how many children in all.",
+                "ur": "جی ہاں! 45 کل بچوں کی تعداد ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "45 is the total. The difference is 25 − 20 = 5.",
+                "ur": "45 کل ہے۔ فرق 25 − 20 = 5 ہے۔"
+              },
+              "misconception_id": "adds_for_difference"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_angle",
+      "front": {
+        "en": "Angle of a slice?",
+        "ur": "ٹکڑے کا زاویہ؟"
+      },
+      "back": {
+        "en": "(part ÷ total) × 360°. 15 out of 60: a quarter, so 90°.",
+        "ur": "(حصہ ÷ کل) × 360°۔ 60 میں سے 15: چوتھائی، یعنی 90°"
+      }
+    },
+    {
+      "id": "f_half",
+      "front": {
+        "en": "Half and quarter of a pie chart?",
+        "ur": "پائی چارٹ کا آدھا اور چوتھائی؟"
+      },
+      "back": {
+        "en": "Half = 180°. Quarter = 90°. Whole = 360°.",
+        "ur": "آدھا = 180°۔ چوتھائی = 90°۔ پورا = 360°"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_survey",
+      "text": {
+        "en": "Ask 4 people at home whether they like tea or milk best. Draw a circle and split it into 4 equal slices, one for each person, and colour them by drink. Each slice is 90°. How many degrees is tea?",
+        "ur": "گھر میں 4 لوگوں سے پوچھیں کہ انہیں چائے پسند ہے یا دودھ۔ ایک دائرہ بنائیں اور اسے 4 برابر ٹکڑوں میں بانٹیں، ہر شخص کا ایک، اور مشروب کے حساب سے رنگ کریں۔ ہر ٹکڑا 90° ہے۔ چائے کتنے درجے ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Pie chart",
+      "ur": "دائری نقشہ (پائی چارٹ)"
+    },
+    {
+      "en": "Slice",
+      "ur": "ٹکڑا"
+    },
+    {
+      "en": "Angle",
+      "ur": "زاویہ"
+    },
+    {
+      "en": "Degree",
+      "ur": "درجہ"
+    },
+    {
+      "en": "Multiple (double) bar graph",
+      "ur": "دوہرا بار گراف"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Imagine a round roti cut into pieces, one piece for each sport. The biggest piece shows the favourite!",
+          "ur": "سوچیں ایک گول روٹی ٹکڑوں میں کٹی ہے، ہر کھیل کا ایک ٹکڑا۔ سب سے بڑا ٹکڑا پسندیدہ کھیل دکھاتا ہے!"
+        }
+      },
+      "text": {
+        "en": "Today we read pie charts and double bar graphs. There are no pictures yet, so each chart is described in words. First, a quick check.",
+        "ur": "آج ہم پائی چارٹ اور دوہرے بار گراف پڑھیں گے۔ ابھی تصویریں نہیں، اس لیے ہر چارٹ الفاظ میں بتایا گیا ہے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.data.bar_graphs",
+      "prompt": {
+        "en": "On a bar graph, each square stands for 5 children. A bar is 6 squares tall. How many children does it show?",
+        "ur": "ایک بار گراف میں ہر خانہ 5 بچوں کو ظاہر کرتا ہے۔ ایک ستون 6 خانے اونچا ہے۔ یہ کتنے بچے دکھاتا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 squares, 5 each.",
+        "ur": "6 خانے، ہر ایک 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 children.",
+        "ur": "درست! 30 بچے"
+      },
+      "feedback_wrong": {
+        "en": "6 × 5 = 30.",
+        "ur": "6 × 5 = 30"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Each square is 5 children: 6 × 5 = 30.",
+            "ur": "ہر خانہ 5 بچے ہے: 6 × 5 = 30"
+          }
+        },
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "Multiply, don't add: 6 × 5 = 30.",
+            "ur": "جمع نہیں، ضرب: 6 × 5 = 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_pie",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "The whole circle is all the data, and it is 360°. Half is 180°, a quarter is 90°.",
+          "ur": "پورا دائرہ سارا مواد ہے، اور یہ 360° ہے۔ آدھا 180°، چوتھائی 90°۔"
+        }
+      },
+      "text": {
+        "en": "A pie chart is a circle split into slices. The whole circle stands for all the data and measures 360°. A bigger share gets a bigger slice. Angle of a slice = (part ÷ total) × 360. To read a slice, go the other way: a 90° slice is a quarter of the circle, so it is a quarter of the total. A multiple (double) bar graph puts two bars side by side for each group, such as boys and girls in each class, so you can compare them.",
+        "ur": "پائی چارٹ ایک دائرہ ہے جو ٹکڑوں میں بٹا ہوتا ہے۔ پورا دائرہ سارا مواد دکھاتا ہے اور 360° کا ہوتا ہے۔ بڑے حصے کا ٹکڑا بڑا ہوتا ہے۔ ٹکڑے کا زاویہ = (حصہ ÷ کل) × 360۔ ٹکڑا پڑھنے کے لیے الٹا چلیں: 90° کا ٹکڑا دائرے کا چوتھائی ہے، تو یہ کل کا چوتھائی ہے۔ دوہرے بار گراف میں ہر گروہ کے دو ستون ساتھ ساتھ ہوتے ہیں، جیسے ہر جماعت کے لڑکے اور لڑکیاں، تاکہ آپ موازنہ کر سکیں۔"
+      }
+    },
+    {
+      "id": "s4_quarter",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A pie chart shows the favourite sport of 40 children: Cricket: 180°; Hockey: 90°; Football: 90°. How many children chose hockey?",
+        "ur": "ایک پائی چارٹ 40 بچوں کا پسندیدہ کھیل دکھاتا ہے: کرکٹ: 180°؛ ہاکی: 90°؛ فٹ بال: 90°۔ کتنے بچوں نے ہاکی چنی؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "90° is a quarter of 360°.",
+        "ur": "90°، 360° کا چوتھائی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 10 children.",
+        "ur": "درست! 10 بچے"
+      },
+      "feedback_wrong": {
+        "en": "A quarter of 40 is 40 ÷ 4 = 10.",
+        "ur": "40 کا چوتھائی 40 ÷ 4 = 10 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90 is the angle, not the children. 90° is a quarter: 40 ÷ 4 = 10.",
+            "ur": "90 زاویہ ہے، بچے نہیں۔ 90° چوتھائی ہے: 40 ÷ 4 = 10"
+          },
+          "misconception_id": "angle_as_count"
+        }
+      ]
+    },
+    {
+      "id": "s5_angle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a class of 60 children, 15 chose mango as their favourite fruit. What angle should the mango slice have, in degrees?",
+        "ur": "60 بچوں کی جماعت میں 15 نے آم کو پسندیدہ پھل چنا۔ آم کے ٹکڑے کا زاویہ کتنے درجے ہونا چاہیے؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "15 out of 60 is what part? Take that part of 360.",
+        "ur": "60 میں سے 15 کتنا حصہ ہے؟ 360 کا اتنا حصہ لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 90°.",
+        "ur": "درست! 90°"
+      },
+      "feedback_wrong": {
+        "en": "15 ÷ 60 is a quarter, and a quarter of 360 is 90.",
+        "ur": "15 ÷ 60 چوتھائی ہے، اور 360 کا چوتھائی 90 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15 is the number of children. Their slice is 15 out of 60 of 360°: 90°.",
+            "ur": "15 بچوں کی تعداد ہے۔ ان کا ٹکڑا 360° کا 60 میں سے 15 حصہ ہے: 90°"
+          },
+          "misconception_id": "angle_as_count"
+        }
+      ]
+    },
+    {
+      "id": "s6_angle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "36 children were asked how they come to school. 12 walk. What is the angle of the 'walk' slice, in degrees?",
+        "ur": "36 بچوں سے پوچھا گیا کہ وہ سکول کیسے آتے ہیں۔ 12 پیدل آتے ہیں۔ 'پیدل' والے ٹکڑے کا زاویہ کتنے درجے ہے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "(12 ÷ 36) × 360.",
+        "ur": "(12 ÷ 36) × 360"
+      },
+      "feedback_correct": {
+        "en": "Right! 120°.",
+        "ur": "درست! 120°"
+      },
+      "feedback_wrong": {
+        "en": "12 out of 36 is one third, and a third of 360 is 120.",
+        "ur": "36 میں سے 12 تیسرا حصہ ہے، اور 360 کا تیسرا حصہ 120 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the number of children. A third of 360° is 120°.",
+            "ur": "12 بچوں کی تعداد ہے۔ 360° کا تیسرا حصہ 120° ہے۔"
+          },
+          "misconception_id": "angle_as_count"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "That is 360 ÷ 12. Use the part of the total: 12 ÷ 36 is a third, so 120°.",
+            "ur": "یہ 360 ÷ 12 ہے۔ کل کا حصہ لیں: 12 ÷ 36 تیسرا حصہ ہے، تو 120°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7_double",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A double bar graph shows children in each class: Class 6: boys 20, girls 25; Class 7: boys 18, girls 22; Class 8: boys 24, girls 19. In Class 6, how many more girls are there than boys?",
+        "ur": "ایک دوہرا بار گراف ہر جماعت کے بچے دکھاتا ہے: جماعت 6: لڑکے 20، لڑکیاں 25؛ جماعت 7: لڑکے 18، لڑکیاں 22؛ جماعت 8: لڑکے 24، لڑکیاں 19۔ جماعت 6 میں لڑکیاں لڑکوں سے کتنی زیادہ ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take the shorter bar from the taller one.",
+        "ur": "اونچے ستون میں سے چھوٹا نفی کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 more girls.",
+        "ur": "درست! 5 لڑکیاں زیادہ"
+      },
+      "feedback_wrong": {
+        "en": "25 − 20 = 5.",
+        "ur": "25 − 20 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "That adds them. 'How many more' is 25 − 20 = 5.",
+            "ur": "یہ جمع ہے۔ 'کتنے زیادہ' یعنی 25 − 20 = 5"
+          },
+          "misconception_id": "adds_for_difference"
+        }
+      ]
+    },
+    {
+      "id": "s8_more_boys",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Same graph: Class 6: boys 20, girls 25; Class 7: boys 18, girls 22; Class 8: boys 24, girls 19. In which class are there more boys than girls?",
+        "ur": "وہی گراف: جماعت 6: لڑکے 20، لڑکیاں 25؛ جماعت 7: لڑکے 18، لڑکیاں 22؛ جماعت 8: لڑکے 24، لڑکیاں 19۔ کس جماعت میں لڑکے لڑکیوں سے زیادہ ہیں؟"
+      },
+      "options": [
+        {
+          "id": "class_8",
+          "text": {
+            "en": "Class 8",
+            "ur": "جماعت 8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Boys 24, girls 19: the boys' bar is taller.",
+            "ur": "جی ہاں! لڑکے 24، لڑکیاں 19: لڑکوں کا ستون اونچا ہے۔"
+          }
+        },
+        {
+          "id": "class_6",
+          "text": {
+            "en": "Class 6",
+            "ur": "جماعت 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "In Class 6 the girls' bar is taller: 25 against 20.",
+            "ur": "جماعت 6 میں لڑکیوں کا ستون اونچا ہے: 25 بمقابلہ 20۔"
+          }
+        },
+        {
+          "id": "class_7",
+          "text": {
+            "en": "Class 7",
+            "ur": "جماعت 7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "In Class 7 the girls' bar is taller: 22 against 18.",
+            "ur": "جماعت 7 میں لڑکیوں کا ستون اونچا ہے: 22 بمقابلہ 18۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A pie chart of 40 children shows Cricket: 180°; Hockey: 90°; Football: 90°. Zain says 180 children chose cricket. What went wrong?",
+        "ur": "40 بچوں کا ایک پائی چارٹ دکھاتا ہے کرکٹ: 180°؛ ہاکی: 90°؛ فٹ بال: 90°۔ زین کہتا ہے 180 بچوں نے کرکٹ چنی۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "angle",
+          "text": {
+            "en": "180° is an angle, not children. It is half the circle, so half of 40: 20.",
+            "ur": "180° زاویہ ہے، بچے نہیں۔ یہ آدھا دائرہ ہے، تو 40 کا آدھا: 20"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only 40 children were asked, so it can't be 180.",
+            "ur": "جی ہاں! صرف 40 بچوں سے پوچھا گیا، تو 180 نہیں ہو سکتے۔"
+          }
+        },
+        {
+          "id": "quarter",
+          "text": {
+            "en": "180° is a quarter, so it is 10 children.",
+            "ur": "180° چوتھائی ہے، تو 10 بچے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A quarter is 90°. 180° is half: 20 children.",
+            "ur": "چوتھائی 90° ہے۔ 180° آدھا ہے: 20 بچے"
+          },
+          "misconception_id": "not_360"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are only 40 children! 180° is half the circle: 20.",
+            "ur": "بچے صرف 40 ہیں! 180° آدھا دائرہ ہے: 20"
+          },
+          "misconception_id": "angle_as_count"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does a 90° slice stand for a quarter of the children? Can you teach me?",
+          "ur": "90° کا ٹکڑا بچوں کا چوتھائی کیوں ظاہر کرتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why does a 90° slice of a pie chart stand for a quarter of the total?",
+        "ur": "اپنے الفاظ میں بتائیں: پائی چارٹ کا 90° والا ٹکڑا کل کا چوتھائی کیوں ظاہر کرتا ہے؟"
+      },
+      "key_idea": "The whole circle is 360° and stands for all the data. 90° is a quarter of 360°, so the slice is a quarter of the circle and stands for a quarter of the total.",
+      "levels": {
+        "got_it": "Says the whole circle is 360° (all the data) and 90° is a quarter of 360°, so the slice is a quarter of the total.",
+        "partly": "Mentions 360° or a quarter, without linking the angle to the share of the data.",
+        "not_yet": "Gives no reason, or just repeats the rule."
+      },
+      "keywords": [
+        [
+          "360",
+          "whole",
+          "circle",
+          "پورا",
+          "دائرہ"
+        ],
+        [
+          "quarter",
+          "four",
+          "چوتھائی",
+          "چار"
+        ],
+        [
+          "total",
+          "all",
+          "data",
+          "کل",
+          "سب"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! 90° is a quarter of 360°, so it is a quarter of the data.",
+          "ur": "بہت خوب! 90°، 360° کا چوتھائی ہے، تو یہ مواد کا چوتھائی ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how 90° compares with the whole 360°.",
+          "ur": "اچھی شروعات! اب بتائیں 90° کا پورے 360° سے کیا تعلق ہے۔"
+        },
+        "not_yet": {
+          "en": "Think of a round roti cut into 4 equal pieces. How many degrees is each piece?",
+          "ur": "ایک گول روٹی سوچیں جو 4 برابر ٹکڑوں میں کٹی ہے۔ ہر ٹکڑا کتنے درجے کا ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A pie chart shows what families cooked for dinner: Rice 150°, Roti 120°, Daal is the last slice. What is the angle of the Daal slice, in degrees?",
+        "ur": "ایک پائی چارٹ دکھاتا ہے خاندانوں نے رات کو کیا پکایا: چاول 150°، روٹی 120°، دال آخری ٹکڑا ہے۔ دال کے ٹکڑے کا زاویہ کتنے درجے ہے؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "All the slices together make 360°.",
+        "ur": "سب ٹکڑے مل کر 360° بنتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 90°.",
+        "ur": "درست! 90°"
+      },
+      "feedback_wrong": {
+        "en": "150 + 120 = 270, and 360 − 270 = 90.",
+        "ur": "150 + 120 = 270، اور 360 − 270 = 90"
+      },
+      "common_wrong": [
+        {
+          "answer": 270,
+          "feedback": {
+            "en": "270 is the two slices you know. Take it from 360: 90°.",
+            "ur": "270 معلوم دو ٹکڑے ہیں۔ اسے 360 میں سے نفی کریں: 90°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You can read pie charts and double bar graphs now!",
+          "ur": "اب آپ پائی چارٹ اور دوہرے بار گراف پڑھ سکتے ہیں!"
+        }
+      },
+      "text": {
+        "en": "A pie chart is a circle of 360° that stands for all the data. Angle of a slice = (part ÷ total) × 360. Half the circle is 180°, a quarter is 90°. A slice's angle is not the number of things: work out what part of 360° it is, then take that part of the total. A double bar graph shows two bars side by side; subtract to find how many more.",
+        "ur": "پائی چارٹ 360° کا دائرہ ہے جو سارا مواد دکھاتا ہے۔ ٹکڑے کا زاویہ = (حصہ ÷ کل) × 360۔ آدھا دائرہ 180°، چوتھائی 90°۔ ٹکڑے کا زاویہ چیزوں کی تعداد نہیں: دیکھیں یہ 360° کا کتنا حصہ ہے، پھر کل کا اتنا حصہ لیں۔ دوہرے بار گراف میں دو ستون ساتھ ساتھ ہوتے ہیں؛ کتنے زیادہ کے لیے نفی کریں۔"
+      },
+      "points": [
+        {
+          "en": "Whole circle = 360° = all the data.",
+          "ur": "پورا دائرہ = 360° = سارا مواد۔"
+        },
+        {
+          "en": "Angle = (part ÷ total) × 360.",
+          "ur": "زاویہ = (حصہ ÷ کل) × 360۔"
+        },
+        {
+          "en": "Double bars: subtract to compare.",
+          "ur": "دوہرے ستون: موازنے کے لیے نفی کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_half",
+      "type": "apply",
+      "skill": "maths.data.pie_charts",
+      "step": {
+        "id": "r_half",
+        "type": "number",
+        "prompt": {
+          "en": "A pie chart shows 60 people. One slice is 180°. How many people does it stand for?",
+          "ur": "ایک پائی چارٹ 60 لوگ دکھاتا ہے۔ ایک ٹکڑا 180° کا ہے۔ یہ کتنے لوگوں کو ظاہر کرتا ہے؟"
+        },
+        "answer": 30,
+        "checker": "numeric",
+        "hint": {
+          "en": "180° is half the circle.",
+          "ur": "180° آدھا دائرہ ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 30 people.",
+          "ur": "درست! 30 لوگ"
+        },
+        "feedback_wrong": {
+          "en": "Half of 60 is 30.",
+          "ur": "60 کا آدھا 30 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 180,
+            "feedback": {
+              "en": "180 is the angle. Half of 60 is 30.",
+              "ur": "180 زاویہ ہے۔ 60 کا آدھا 30 ہے۔"
+            },
+            "misconception_id": "angle_as_count"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_double",
+      "type": "apply",
+      "skill": "maths.data.pie_charts",
+      "step": {
+        "id": "r_double",
+        "type": "number",
+        "prompt": {
+          "en": "A double bar graph of fruit sold on Monday shows apples 14, oranges 9. How many more apples than oranges were sold?",
+          "ur": "پیر کو بکنے والے پھلوں کا دوہرا بار گراف دکھاتا ہے سیب 14، مالٹے 9۔ مالٹوں سے کتنے زیادہ سیب بکے؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "Subtract the shorter bar.",
+          "ur": "چھوٹا ستون نفی کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5 more.",
+          "ur": "درست! 5 زیادہ"
+        },
+        "feedback_wrong": {
+          "en": "14 − 9 = 5.",
+          "ur": "14 − 9 = 5"
+        },
+        "common_wrong": [
+          {
+            "answer": 23,
+            "feedback": {
+              "en": "That adds them. 14 − 9 = 5.",
+              "ur": "یہ جمع ہے۔ 14 − 9 = 5"
+            },
+            "misconception_id": "adds_for_difference"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Data Handling unit. No textbook text or exercises were used.",
+    "There are no pictures yet: every pie chart is written as its slices with angles (e.g. Cricket: 180°, Hockey: 90°, Football: 90°) and every double bar graph as text lists (e.g. Class 6: boys 20, girls 25). Drawing them on the board helps.",
+    "All slices are simple fractions of the circle (half, quarter, third), so every answer is a whole number.",
+    "Urdu terms to check: دائری نقشہ / پائی چارٹ (pie chart), ٹکڑا (slice), زاویہ (angle), درجہ (degree), دوہرا بار گراف (multiple/double bar graph).",
+    "The numbers were worked out in content/sources/g6-maths-10/pie_charts.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
