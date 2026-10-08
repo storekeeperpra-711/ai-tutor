@@ -278,6 +278,10 @@ MAX_LABEL = 6
 ARABIC_SCRIPT = re.compile(r"[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]")
 
 
+# How far a label must stay from the picture's edge, as a share of its size.
+LABEL_MARGIN = 0.025
+
+
 def check_figure(figure: dict) -> list[str]:
     """Everything is drawn inside the box, the alt text is in both
     languages and labels are short."""
@@ -296,6 +300,13 @@ def check_figure(figure: dict) -> list[str]:
                 problems.append(f"{name}: {where} goes outside the {width:g} x {height:g} box")
         if item["kind"] == "label":
             text = item["text"]
+            # A label is centred on its point; keep room for the letters so
+            # they are not cut off at the edge of the picture.
+            x, y = item["at"]
+            margin = LABEL_MARGIN * max(width, height)
+            inside = 0 <= x <= width and 0 <= y <= height
+            if inside and not (margin <= x <= width - margin and margin <= y <= height - margin):
+                problems.append(f"{name}: label '{text}' at [{x:g}, {y:g}] is too close to the edge (keep {margin:g} away)")
             if len(text.strip()) > MAX_LABEL or not text.strip():
                 problems.append(f"{name}: label '{text}' must be 1 to {MAX_LABEL} characters (put words in the step's text)")
             elif ARABIC_SCRIPT.search(text) or re.search(r"[A-Za-z]{3,}", text):

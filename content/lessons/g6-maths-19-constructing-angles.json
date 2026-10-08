@@ -1,0 +1,2050 @@
+{
+  "id": "g6-maths-19-constructing-angles",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Bisect a given angle with a compass, and construct angles of 60°, 30°, 120°, 90°, 45°, 75°, 105° and 150° with a ruler and compass.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions"
+    }
+  ],
+  "skills": [
+    "maths.constructions.angles"
+  ],
+  "title": {
+    "en": "Bisecting and constructing angles",
+    "ur": "زاویوں کی تنصیف اور زاویے بنانا"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.constructions.perpendicular_bisector"
+    },
+    {
+      "skill": "maths.geometry.angle_types"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "half_right_is_30",
+      "description": "Thinks bisecting a right angle (90°) gives 30° instead of 45°."
+    },
+    {
+      "id": "changes_width",
+      "description": "Changes the compass width between the two equal arcs, so the crossing point is off the bisector."
+    },
+    {
+      "id": "doubles_not_halves",
+      "description": "Adds or doubles instead of halving: says bisecting 60° gives 120°."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.constructions.angles": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.constructions.angles": [
+      {
+        "id": "qb_basic",
+        "type": "recall",
+        "step": {
+          "id": "qb_basic",
+          "type": "choice",
+          "prompt": {
+            "en": "With only a ruler and compass, which angle do we make first, using arcs of the same width that form an equilateral triangle?",
+            "ur": "صرف رولر اور پرکار سے، ہم سب سے پہلے کون سا زاویہ بناتے ہیں، ایک ہی چوڑائی کی قوسوں سے جو مساوی الاضلاع مثلث بناتی ہیں؟"
+          },
+          "options": [
+            {
+              "id": "sixty",
+              "text": {
+                "en": "60°",
+                "ur": "60°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 60° is the basic angle. The others come from it.",
+                "ur": "جی ہاں! 60° بنیادی زاویہ ہے۔ باقی اسی سے بنتے ہیں۔"
+              }
+            },
+            {
+              "id": "ninety",
+              "text": {
+                "en": "90°",
+                "ur": "90°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "90° comes later, by bisecting between 60° and 120°. The first one is 60°.",
+                "ur": "90° بعد میں آتا ہے، 60° اور 120° کے درمیان تنصیف سے۔ پہلا 60° ہے۔"
+              }
+            },
+            {
+              "id": "fortyfive",
+              "text": {
+                "en": "45°",
+                "ur": "45°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "45° is half of 90°, so it needs 90° first. We start with 60°.",
+                "ur": "45° تو 90° کا آدھا ہے، پہلے 90° چاہیے۔ ہم 60° سے شروع کرتے ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Sana makes 90° and 120° on the same base arm, then bisects the gap between those two rays. What angle does the new ray make with the base?",
+            "ur": "ثنا ایک ہی بنیادی بازو پر 90° اور 120° بناتی ہے، پھر ان دونوں شعاعوں کے درمیان فاصلے کی تنصیف کرتی ہے۔ نئی شعاع بنیاد کے ساتھ کتنا زاویہ بناتی ہے؟"
+          },
+          "answer": 105,
+          "checker": "numeric",
+          "hint": {
+            "en": "Halfway between 90 and 120.",
+            "ur": "90 اور 120 کا درمیان۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 105°.",
+            "ur": "درست! 105°"
+          },
+          "feedback_wrong": {
+            "en": "The gap is 30°, half is 15°, and 90 + 15 = 105°.",
+            "ur": "فاصلہ 30° ہے، آدھا 15° ہے، اور 90 + 15 = 105°"
+          },
+          "common_wrong": [
+            {
+              "answer": 15,
+              "feedback": {
+                "en": "15° is only half the gap. Add it to 90°: 105°.",
+                "ur": "15° صرف فاصلے کا آدھا ہے۔ اسے 90° میں جمع کریں: 105°"
+              }
+            },
+            {
+              "answer": 210,
+              "feedback": {
+                "en": "That added 90 and 120. Bisecting goes halfway between them: 105°.",
+                "ur": "اس میں 90 اور 120 جمع کیے۔ تنصیف دونوں کے بیچ میں جاتی ہے: 105°"
+              },
+              "misconception_id": "doubles_not_halves"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hamza bisects an angle. He draws the arc from P with his compass open 4 cm, then opens it to 6 cm for the arc from Q. His line misses the middle. What went wrong?",
+            "ur": "حمزہ ایک زاویے کی تنصیف کرتا ہے۔ وہ P سے قوس پرکار 4 سینٹی میٹر کھول کر لگاتا ہے، پھر Q سے قوس کے لیے 6 سینٹی میٹر کھول لیتا ہے۔ اس کی لکیر درمیان سے ہٹ جاتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "figure": {
+            "width": 125,
+            "height": 102,
+            "alt": {
+              "en": "An angle at O with arms through P and Q. A dashed arc from O cuts both arms. Two dashed arcs from P and Q cross at R, and a dashed line from O through R splits the angle.",
+              "ur": "O پر ایک زاویہ جس کے بازو P اور Q سے گزرتے ہیں۔ O سے ایک ڈیش والی قوس دونوں بازوؤں کو کاٹتی ہے۔ P اور Q سے دو ڈیش والی قوسیں R پر ملتی ہیں، اور O سے R تک ڈیش والی لکیر زاویے کو تقسیم کرتی ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  32,
+                  70
+                ],
+                "to": [
+                  117.0,
+                  70.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  32,
+                  70
+                ],
+                "to": [
+                  53.2,
+                  11.7
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  32,
+                  70
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  32,
+                  70
+                ],
+                "radius": 30,
+                "start": 284,
+                "sweep": 82,
+                "style": "dashed"
+              },
+              {
+                "kind": "point",
+                "at": [
+                  62.0,
+                  70.0
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  42.3,
+                  41.8
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  62.0,
+                  70.0
+                ],
+                "radius": 24,
+                "start": 261.1,
+                "sweep": 36.0,
+                "style": "dashed"
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  42.3,
+                  41.8
+                ],
+                "radius": 24,
+                "start": 352.8,
+                "sweep": 36.0,
+                "style": "dashed"
+              },
+              {
+                "kind": "point",
+                "at": [
+                  65.8,
+                  46.3
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  32,
+                  70
+                ],
+                "to": [
+                  80.6,
+                  36.0
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  25,
+                  76
+                ],
+                "text": "O"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  64.0,
+                  78.0
+                ],
+                "text": "P"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  35.7,
+                  39.4
+                ],
+                "text": "Q"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  69.8,
+                  52.0
+                ],
+                "text": "R"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "width",
+              "text": {
+                "en": "The arcs from P and Q must use the same compass width.",
+                "ur": "P اور Q سے قوسیں ایک ہی پرکار چوڑائی سے لگنی چاہییں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Equal arcs put the crossing exactly in the middle.",
+                "ur": "جی ہاں! برابر قوسیں ملاپ کو بالکل درمیان میں لاتی ہیں۔"
+              }
+            },
+            {
+              "id": "first_arc",
+              "text": {
+                "en": "The first arc from O should be bigger.",
+                "ur": "O سے پہلی قوس بڑی ہونی چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The first arc can be any size. The problem is the two different widths, 4 cm and 6 cm.",
+                "ur": "پہلی قوس کسی بھی سائز کی ہو سکتی ہے۔ مسئلہ دو مختلف چوڑائیاں ہیں، 4 اور 6 سینٹی میٹر۔"
+              },
+              "misconception_id": "changes_width"
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing; any widths work.",
+                "ur": "کوئی غلطی نہیں؛ کوئی بھی چوڑائی چلتی ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "With different widths the crossing slides towards one arm. Keep the width the same.",
+                "ur": "مختلف چوڑائی سے ملاپ ایک بازو کی طرف کھسک جاتا ہے۔ چوڑائی ایک جیسی رکھیں۔"
+              },
+              "misconception_id": "changes_width"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_bisect",
+      "front": {
+        "en": "How do you bisect an angle with a compass?",
+        "ur": "پرکار سے زاویے کی تنصیف کیسے کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Arc from the vertex cutting both arms; equal arcs from those two points; join the vertex to where they cross.",
+        "ur": "راس سے قوس جو دونوں بازو کاٹے؛ ان دو نقطوں سے برابر قوسیں؛ راس کو ان کے ملاپ سے ملائیں۔"
+      }
+    },
+    {
+      "id": "f_family",
+      "front": {
+        "en": "How do you get 30°, 90° and 45° from 60°?",
+        "ur": "60° سے 30°، 90° اور 45° کیسے بنتے ہیں؟"
+      },
+      "back": {
+        "en": "Bisect 60° for 30°. Bisect between 60° and 120° for 90°. Bisect 90° for 45°.",
+        "ur": "60° کی تنصیف سے 30°۔ 60° اور 120° کے درمیان تنصیف سے 90°۔ 90° کی تنصیف سے 45°۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_construct",
+      "text": {
+        "en": "On paper, use a ruler and compass to construct 60°, then 90°, then 45°. Measure each with a protractor. If you have no protractor, fold a paper corner neatly in half twice to make a right angle and check your 90° against it, then fold that corner once more to check 45°.",
+        "ur": "کاغذ پر رولر اور پرکار سے پہلے 60°، پھر 90°، پھر 45° بنائیں۔ ہر ایک کو چاند (پروٹریکٹر) سے ناپیں۔ اگر چاند نہیں ہے تو کاغذ کو دو بار احتیاط سے تہہ کر کے قائمہ زاویہ بنائیں اور اپنے 90° کو اس سے جانچیں، پھر اس کونے کو ایک بار اور تہہ کر کے 45° جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Bisect",
+      "ur": "تنصیف کرنا"
+    },
+    {
+      "en": "Angle bisector",
+      "ur": "ناصف زاویہ"
+    },
+    {
+      "en": "Compass",
+      "ur": "پرکار"
+    },
+    {
+      "en": "Arc",
+      "ur": "قوس"
+    },
+    {
+      "en": "Vertex",
+      "ur": "راس"
+    },
+    {
+      "en": "Arm",
+      "ur": "بازو"
+    },
+    {
+      "en": "Equilateral triangle",
+      "ur": "مساوی الاضلاع مثلث"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali's kite frame needs a stick exactly in the middle of an angle. No protractor! Can a compass find the middle?",
+          "ur": "علی کی پتنگ کے ڈھانچے میں زاویے کے بالکل درمیان ایک تیلی لگانی ہے۔ چاند نہیں ہے! کیا پرکار درمیان ڈھونڈ سکتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Today we split angles exactly in half and build angles like 60°, 90° and 45° with only a ruler and a compass. First, a quick check.",
+        "ur": "آج ہم زاویوں کو بالکل آدھا کریں گے اور صرف رولر اور پرکار سے 60°، 90° اور 45° جیسے زاویے بنائیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.geometry.angle_types",
+      "prompt": {
+        "en": "What kind of angle is this 120° angle?",
+        "ur": "یہ 120° کا زاویہ کس قسم کا ہے؟"
+      },
+      "figure": {
+        "width": 130,
+        "height": 80,
+        "alt": {
+          "en": "Two arms meet at a point. One arm goes right; the other goes up and to the left. The angle between them is marked 120°.",
+          "ur": "دو بازو ایک نقطے پر ملتے ہیں۔ ایک بازو دائیں جاتا ہے؛ دوسرا اوپر بائیں طرف۔ ان کے درمیان زاویے پر 120° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              117.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              39.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65,
+              68
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65,
+              68
+            ],
+            "radius": 12,
+            "start": 240,
+            "sweep": 120
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.0,
+              48.9
+            ],
+            "text": "120°"
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "obtuse",
+          "text": {
+            "en": "Obtuse",
+            "ur": "منفرجہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 120° is between 90° and 180°.",
+            "ur": "جی ہاں! 120°، 90° اور 180° کے درمیان ہے۔"
+          }
+        },
+        {
+          "id": "acute",
+          "text": {
+            "en": "Acute",
+            "ur": "حادہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Acute angles are less than 90°. 120° is bigger, so it is obtuse.",
+            "ur": "حادہ زاویہ 90° سے کم ہوتا ہے۔ 120° بڑا ہے، اس لیے منفرجہ ہے۔"
+          }
+        },
+        {
+          "id": "right",
+          "text": {
+            "en": "Right",
+            "ur": "قائمہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A right angle is exactly 90°. 120° is more, so it is obtuse.",
+            "ur": "قائمہ زاویہ بالکل 90° ہوتا ہے۔ 120° زیادہ ہے، اس لیے منفرجہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_bisect",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Keep the compass width the same for the two middle arcs. That is the whole trick!",
+          "ur": "درمیان والی دونوں قوسوں کے لیے پرکار کی چوڑائی ایک جیسی رکھیں۔ یہی سارا راز ہے!"
+        }
+      },
+      "figure": {
+        "width": 125,
+        "height": 102,
+        "alt": {
+          "en": "An angle at vertex O. A dashed arc drawn from O cuts one arm at P and the other at Q. Two dashed arcs of the same width, one from P and one from Q, cross at R. A dashed line from O through R splits the angle into two equal parts.",
+          "ur": "راس O پر ایک زاویہ۔ O سے لگائی گئی ڈیش والی قوس ایک بازو کو P پر اور دوسرے کو Q پر کاٹتی ہے۔ ایک ہی چوڑائی کی دو ڈیش والی قوسیں، ایک P سے اور ایک Q سے، R پر ملتی ہیں۔ O سے R تک ڈیش والی لکیر زاویے کو دو برابر حصوں میں بانٹتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              32,
+              70
+            ],
+            "to": [
+              117.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32,
+              70
+            ],
+            "to": [
+              53.2,
+              11.7
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              32,
+              70
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              32,
+              70
+            ],
+            "radius": 30,
+            "start": 284,
+            "sweep": 82,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              62.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              42.3,
+              41.8
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              62.0,
+              70.0
+            ],
+            "radius": 24,
+            "start": 261.1,
+            "sweep": 36.0,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              42.3,
+              41.8
+            ],
+            "radius": 24,
+            "start": 352.8,
+            "sweep": 36.0,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.8,
+              46.3
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32,
+              70
+            ],
+            "to": [
+              80.6,
+              36.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              25,
+              76
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.0,
+              78.0
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              35.7,
+              39.4
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.8,
+              52.0
+            ],
+            "text": "R"
+          }
+        ]
+      },
+      "text": {
+        "en": "To bisect an angle means to split it into two equal angles. 1) Put the compass point on the vertex O and draw an arc that cuts both arms, at P and Q. 2) From P, draw an arc inside the angle. Without changing the width, draw an arc from Q that crosses it at R. 3) Join O to R. OR is the angle bisector: each half is exactly half the angle. Using the same idea we can also copy an angle onto another line, or put a copy next to it to double it.",
+        "ur": "زاویے کی تنصیف کا مطلب ہے اسے دو برابر زاویوں میں بانٹنا۔ 1) پرکار کی نوک راس O پر رکھیں اور ایسی قوس لگائیں جو دونوں بازوؤں کو P اور Q پر کاٹے۔ 2) P سے زاویے کے اندر ایک قوس لگائیں۔ چوڑائی بدلے بغیر Q سے قوس لگائیں جو اسے R پر کاٹے۔ 3) O کو R سے ملائیں۔ OR ناصف زاویہ ہے: ہر حصہ زاویے کا بالکل آدھا ہے۔ اسی طریقے سے ہم کسی زاویے کی نقل دوسری لکیر پر بنا سکتے ہیں، یا ساتھ میں نقل لگا کر اسے دگنا کر سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "s4_half",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ali's kite frame has an angle of 84° at the top. He bisects it to fix the middle stick. How big is each half, in degrees?",
+        "ur": "علی کی پتنگ کے ڈھانچے کے اوپر 84° کا زاویہ ہے۔ وہ درمیان والی تیلی لگانے کے لیے اس کی تنصیف کرتا ہے۔ ہر آدھا حصہ کتنے درجے کا ہے؟"
+      },
+      "answer": 42,
+      "checker": "numeric",
+      "hint": {
+        "en": "Bisect means split into two equal parts: 84 ÷ 2.",
+        "ur": "تنصیف کا مطلب دو برابر حصے: 84 ÷ 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 42°. Check: 42 + 42 = 84.",
+        "ur": "درست! 42°۔ جانچ: 42 + 42 = 84"
+      },
+      "feedback_wrong": {
+        "en": "84 ÷ 2 = 42°.",
+        "ur": "84 ÷ 2 = 42°"
+      },
+      "common_wrong": [
+        {
+          "answer": 168,
+          "feedback": {
+            "en": "168° is double. Bisecting halves the angle: 84 ÷ 2 = 42°.",
+            "ur": "168° تو دگنا ہے۔ تنصیف زاویے کو آدھا کرتی ہے: 84 ÷ 2 = 42°"
+          },
+          "misconception_id": "doubles_not_halves"
+        }
+      ],
+      "figure": {
+        "width": 110,
+        "height": 80,
+        "alt": {
+          "en": "An angle of 84° at the top of a kite frame, drawn as two arms from a point, with a dashed line from the point splitting it into two equal parts.",
+          "ur": "پتنگ کے ڈھانچے کے اوپر 84° کا زاویہ، ایک نقطے سے دو بازو، اور نقطے سے ایک ڈیش والی لکیر جو اسے دو برابر حصوں میں بانٹتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              74.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              27.4,
+              16.3
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              22,
+              68
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              60.6,
+              33.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              22,
+              68
+            ],
+            "radius": 12,
+            "start": 276,
+            "sweep": 84
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.9,
+              46.6
+            ],
+            "text": "84°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_sixty",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Draw a line OA. With the compass point on O, draw an arc cutting OA at P. Keep the same width, put the point on P and draw an arc cutting the first arc at Q. O, P and Q make an equilateral triangle. How many degrees is angle AOQ?",
+        "ur": "ایک لکیر OA بنائیں۔ پرکار کی نوک O پر رکھ کر قوس لگائیں جو OA کو P پر کاٹے۔ وہی چوڑائی رکھیں، نوک P پر رکھیں اور قوس لگائیں جو پہلی قوس کو Q پر کاٹے۔ O، P اور Q مساوی الاضلاع مثلث بناتے ہیں۔ زاویہ AOQ کتنے درجے کا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "All three sides are one compass width, so all three angles are equal. They share 180°.",
+        "ur": "تینوں اضلاع ایک پرکار چوڑائی کے ہیں، اس لیے تینوں زاویے برابر ہیں۔ وہ 180° بانٹتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60°: 180 ÷ 3. This is our basic angle.",
+        "ur": "درست! 60°: 180 ÷ 3۔ یہ ہمارا بنیادی زاویہ ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "An equilateral triangle has three equal angles: 180 ÷ 3 = 60°.",
+        "ur": "مساوی الاضلاع مثلث کے تین برابر زاویے ہیں: 180 ÷ 3 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "It is not a right angle. The triangle's three equal angles make 180°: each is 60°.",
+            "ur": "یہ قائمہ زاویہ نہیں۔ مثلث کے تین برابر زاویے 180° بناتے ہیں: ہر ایک 60°۔"
+          }
+        },
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "45° needs a 90° first. Here each angle of the equilateral triangle is 180 ÷ 3 = 60°.",
+            "ur": "45° کے لیے پہلے 90° چاہیے۔ یہاں مساوی الاضلاع مثلث کا ہر زاویہ 180 ÷ 3 = 60° ہے۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 140,
+        "height": 100,
+        "alt": {
+          "en": "A line from O to A. A dashed arc from O cuts it at P. A dashed arc of the same width from P cuts the first arc at Q. The ray OQ is drawn, and the angle between OA and OQ is marked 60°.",
+          "ur": "O سے A تک ایک لکیر۔ O سے ڈیش والی قوس اسے P پر کاٹتی ہے۔ P سے اسی چوڑائی کی ڈیش والی قوس پہلی قوس کو Q پر کاٹتی ہے۔ شعاع OQ بنی ہے، اور OA اور OQ کے درمیان زاویے پر 60° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              42,
+              60
+            ],
+            "to": [
+              132.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              42,
+              60
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              42,
+              60
+            ],
+            "radius": 40,
+            "start": 285,
+            "sweep": 81,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              82.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              82.0,
+              60.0
+            ],
+            "radius": 40,
+            "start": 225,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              62.0,
+              25.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              42,
+              60
+            ],
+            "to": [
+              70.0,
+              11.5
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              35,
+              66
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.0,
+              68.0
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.0,
+              21.4
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              134.0,
+              60.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              42,
+              60
+            ],
+            "radius": 12,
+            "start": 300,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              61.1,
+              49.0
+            ],
+            "text": "60°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_thirty",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Zainab makes a 60° angle with her compass, then bisects it. What angle does each half make?",
+        "ur": "زینب پرکار سے 60° کا زاویہ بناتی ہے، پھر اس کی تنصیف کرتی ہے۔ ہر آدھا حصہ کتنا زاویہ بناتا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Half of 60.",
+        "ur": "60 کا آدھا"
+      },
+      "feedback_correct": {
+        "en": "Right! 30°.",
+        "ur": "درست! 30°"
+      },
+      "feedback_wrong": {
+        "en": "60 ÷ 2 = 30°.",
+        "ur": "60 ÷ 2 = 30°"
+      },
+      "common_wrong": [
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "120° is two 60° steps. Bisecting halves: 60 ÷ 2 = 30°.",
+            "ur": "120° تو 60° کے دو قدم ہیں۔ تنصیف آدھا کرتی ہے: 60 ÷ 2 = 30°"
+          },
+          "misconception_id": "doubles_not_halves"
+        }
+      ],
+      "figure": {
+        "width": 110,
+        "height": 80,
+        "alt": {
+          "en": "An angle of 60° made of two arms from a point, with a dashed line from the point splitting it into two equal parts.",
+          "ur": "دو بازوؤں سے بنا 60° کا زاویہ، اور نقطے سے ایک ڈیش والی لکیر جو اسے دو برابر حصوں میں بانٹتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              74.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              48.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              22,
+              68
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              67.0,
+              42.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              22,
+              68
+            ],
+            "radius": 12,
+            "start": 300,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              39.0,
+              51.0
+            ],
+            "text": "60°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7_which",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "On one base arm we have made rays at 60°, 90° and 120°. Which bisection gives 45°?",
+        "ur": "ایک بنیادی بازو پر ہم نے 60°، 90° اور 120° پر شعاعیں بنائی ہیں۔ کون سی تنصیف سے 45° ملتا ہے؟"
+      },
+      "figure": {
+        "width": 130,
+        "height": 80,
+        "alt": {
+          "en": "A base arm going right from a point O. From O, a ray at 60° to the base, a dashed ray straight up at 90°, and a ray at 120°. Labels 60°, 90° and 120° sit at the ends of the rays.",
+          "ur": "نقطہ O سے دائیں طرف ایک بنیادی بازو۔ O سے بنیاد کے ساتھ 60° پر ایک شعاع، 90° پر سیدھی اوپر ایک ڈیش والی شعاع، اور 120° پر ایک شعاع۔ شعاعوں کے سروں پر 60°، 90° اور 120° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              117.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              39.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65,
+              68
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              91.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              94.5,
+              16.9
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              65.0,
+              16.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.0,
+              9.0
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65,
+              68
+            ],
+            "radius": 12,
+            "start": 240,
+            "sweep": 120
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              14.3
+            ],
+            "text": "120°"
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "ninety",
+          "text": {
+            "en": "Bisect the 90° angle",
+            "ur": "90° کے زاویے کی تنصیف"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 90 ÷ 2 = 45°.",
+            "ur": "جی ہاں! 90 ÷ 2 = 45°"
+          }
+        },
+        {
+          "id": "sixty",
+          "text": {
+            "en": "Bisect the 60° angle",
+            "ur": "60° کے زاویے کی تنصیف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Half of 60° is 30°. For 45° bisect 90°.",
+            "ur": "60° کا آدھا 30° ہے۔ 45° کے لیے 90° کی تنصیف کریں۔"
+          }
+        },
+        {
+          "id": "onetwenty",
+          "text": {
+            "en": "Bisect the 120° angle",
+            "ur": "120° کے زاویے کی تنصیف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Half of 120° is 60°. For 45° bisect 90°.",
+            "ur": "120° کا آدھا 60° ہے۔ 45° کے لیے 90° کی تنصیف کریں۔"
+          }
+        },
+        {
+          "id": "between",
+          "text": {
+            "en": "Bisect between 60° and 120°",
+            "ur": "60° اور 120° کے درمیان تنصیف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 90°. Bisect that 90° to get 45°.",
+            "ur": "اس سے 90° ملتا ہے۔ 45° کے لیے اس 90° کی تنصیف کریں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8_steps",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Kashif builds an angle in steps on one base arm: make 60°, make another 60° to reach 120°, bisect between 60° and 120°, then bisect between 60° and that new ray. What angle does the last ray make with the base arm?",
+        "ur": "کاشف ایک بنیادی بازو پر قدم بہ قدم زاویہ بناتا ہے: 60° بنائیں، ایک اور 60° بنا کر 120° تک پہنچیں، 60° اور 120° کے درمیان تنصیف کریں، پھر 60° اور اس نئی شعاع کے درمیان تنصیف کریں۔ آخری شعاع بنیادی بازو کے ساتھ کتنا زاویہ بناتی ہے؟"
+      },
+      "answer": 75,
+      "checker": "numeric",
+      "hint": {
+        "en": "Between 60° and 120° is 90°. Then go halfway between 60° and 90°.",
+        "ur": "60° اور 120° کا درمیان 90° ہے۔ پھر 60° اور 90° کے بیچ میں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 75°. The gap 60° to 90° is 30°, half is 15°, and 60 + 15 = 75.",
+        "ur": "درست! 75°۔ 60° سے 90° تک فاصلہ 30° ہے، آدھا 15° ہے، اور 60 + 15 = 75"
+      },
+      "feedback_wrong": {
+        "en": "First ray: 90°. Halfway between 60° and 90°: 60 + 15 = 75°.",
+        "ur": "پہلی نئی شعاع: 90°۔ 60° اور 90° کا درمیان: 60 + 15 = 75°"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15° is half the gap between 60° and 90°. Measure from the base: 60 + 15 = 75°.",
+            "ur": "15° تو 60° اور 90° کے فاصلے کا آدھا ہے۔ بنیاد سے ناپیں: 60 + 15 = 75°"
+          }
+        },
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "That added 60 and 90. Bisecting goes halfway between them: 75°.",
+            "ur": "اس میں 60 اور 90 جمع کیے۔ تنصیف دونوں کے بیچ میں جاتی ہے: 75°"
+          },
+          "misconception_id": "doubles_not_halves"
+        }
+      ],
+      "figure": {
+        "width": 110,
+        "height": 80,
+        "alt": {
+          "en": "A base arm going right from a point. A ray at 60° labelled 60°, a ray straight up labelled 90°, and a dashed ray halfway between them labelled with a question mark.",
+          "ur": "ایک نقطے سے دائیں طرف بنیادی بازو۔ 60° پر ایک شعاع جس پر 60° لکھا ہے، سیدھی اوپر ایک شعاع جس پر 90° لکھا ہے، اور ان کے بیچ میں ایک ڈیش والی شعاع جس پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              74.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              48.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              22,
+              68
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              48.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              51.5,
+              16.9
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              22.0,
+              16.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              22.0,
+              9.0
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              35.5,
+              17.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              37.3,
+              11.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal constructs a right angle and bisects it. He says each half is 30°. What went wrong?",
+        "ur": "بلال قائمہ زاویہ بناتا ہے اور اس کی تنصیف کرتا ہے۔ وہ کہتا ہے ہر آدھا 30° ہے۔ کیا غلطی ہوئی؟"
+      },
+      "figure": {
+        "width": 110,
+        "height": 80,
+        "alt": {
+          "en": "A right angle marked 90°, with a dashed line from the corner splitting it into two equal parts.",
+          "ur": "ایک قائمہ زاویہ جس پر 90° لکھا ہے، اور کونے سے ایک ڈیش والی لکیر جو اسے دو برابر حصوں میں بانٹتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              74.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              22.0,
+              16.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              22,
+              68
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22,
+              68
+            ],
+            "to": [
+              58.8,
+              31.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              22,
+              68
+            ],
+            "radius": 12,
+            "start": 270,
+            "sweep": 90
+          },
+          {
+            "kind": "label",
+            "at": [
+              31.2,
+              45.8
+            ],
+            "text": "90°"
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "half",
+          "text": {
+            "en": "Bisecting splits it into two: 90 ÷ 2 = 45°.",
+            "ur": "تنصیف دو حصے کرتی ہے: 90 ÷ 2 = 45°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Bisect means two equal parts, so 45° each.",
+            "ur": "جی ہاں! تنصیف یعنی دو برابر حصے، تو ہر ایک 45°۔"
+          }
+        },
+        {
+          "id": "third",
+          "text": {
+            "en": "Nothing; 90 ÷ 3 = 30°.",
+            "ur": "کوئی غلطی نہیں؛ 90 ÷ 3 = 30°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Dividing by 3 makes three parts. Bisecting makes two: 45°.",
+            "ur": "3 سے تقسیم تین حصے بناتی ہے۔ تنصیف دو بناتی ہے: 45°"
+          },
+          "misconception_id": "half_right_is_30"
+        },
+        {
+          "id": "double",
+          "text": {
+            "en": "Each half should be 180°.",
+            "ur": "ہر آدھا 180° ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "180° doubles the angle. Half of 90° is 45°.",
+            "ur": "180° تو زاویے کو دگنا کرتا ہے۔ 90° کا آدھا 45° ہے۔"
+          },
+          "misconception_id": "doubles_not_halves"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two arcs of the same width always give exactly 60°. Why does that work? Can you teach me?",
+          "ur": "ایک ہی چوڑائی کی دو قوسیں ہمیشہ بالکل 60° دیتی ہیں۔ ایسا کیوں ہوتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "figure": {
+        "width": 140,
+        "height": 100,
+        "alt": {
+          "en": "A line from O to A. A dashed arc from O cuts it at P. A dashed arc of the same width from P cuts the first arc at Q. The ray OQ makes a 60° angle with OA, and a dashed triangle joins O, P and Q.",
+          "ur": "O سے A تک ایک لکیر۔ O سے ڈیش والی قوس اسے P پر کاٹتی ہے۔ P سے اسی چوڑائی کی ڈیش والی قوس پہلی قوس کو Q پر کاٹتی ہے۔ شعاع OQ، OA کے ساتھ 60° کا زاویہ بناتی ہے، اور ڈیش والی مثلث O، P اور Q کو ملاتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              42,
+              60
+            ],
+            "to": [
+              132.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              42,
+              60
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              42,
+              60
+            ],
+            "radius": 40,
+            "start": 285,
+            "sweep": 81,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              82.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              82.0,
+              60.0
+            ],
+            "radius": 40,
+            "start": 225,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              62.0,
+              25.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              42,
+              60
+            ],
+            "to": [
+              70.0,
+              11.5
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              35,
+              66
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.0,
+              68.0
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.0,
+              21.4
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              134.0,
+              60.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              42,
+              60
+            ],
+            "radius": 12,
+            "start": 300,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              61.1,
+              49.0
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                42,
+                60
+              ],
+              [
+                82.0,
+                60.0
+              ],
+              [
+                62.0,
+                25.4
+              ]
+            ],
+            "style": "dashed"
+          }
+        ]
+      },
+      "task": {
+        "en": "In your own words: why does this compass construction make an angle of exactly 60°?",
+        "ur": "اپنے الفاظ میں بتائیں: پرکار کی یہ بناوٹ بالکل 60° کا زاویہ کیوں بناتی ہے؟"
+      },
+      "key_idea": "OP, OQ and PQ are all one compass width, so triangle OPQ is equilateral. Its three angles are equal and add up to 180°, so each is 60°.",
+      "levels": {
+        "got_it": "Says the three sides are equal (same compass width) so the triangle is equilateral, and its equal angles share 180° to make 60° each.",
+        "partly": "Says the triangle is equilateral or the sides are equal, but not why that makes 60° (or the reverse).",
+        "not_yet": "Gives no reason, or only repeats the steps."
+      },
+      "keywords": [
+        [
+          "equal",
+          "same width",
+          "equilateral",
+          "برابر",
+          "مساوی",
+          "barabar"
+        ],
+        [
+          "triangle",
+          "مثلث",
+          "musallas"
+        ],
+        [
+          "180",
+          "three",
+          "تین",
+          "teen"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Equal sides make equal angles, and 180 ÷ 3 = 60°.",
+          "ur": "بہت خوب! برابر اضلاع برابر زاویے بناتے ہیں، اور 180 ÷ 3 = 60°۔"
+        },
+        "partly": {
+          "en": "Good start! Now say how the three equal angles share the triangle's 180°.",
+          "ur": "اچھی شروعات! اب بتائیں تین برابر زاویے مثلث کے 180° کیسے بانٹتے ہیں۔"
+        },
+        "not_yet": {
+          "en": "Look at OP, OQ and PQ: all drawn with one compass width. What kind of triangle is that?",
+          "ur": "OP، OQ اور PQ دیکھیں: سب ایک پرکار چوڑائی سے بنے ہیں۔ یہ کون سی مثلث ہے؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_order",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hira wants to bisect an angle. Her steps are mixed up: X) join the vertex to where the arcs cross; Y) draw an arc from the vertex cutting both arms; Z) from the two cut points, draw equal arcs that cross. What is the right order?",
+        "ur": "حرا ایک زاویے کی تنصیف کرنا چاہتی ہے۔ اس کے قدم الٹ پلٹ ہو گئے ہیں: X) راس کو قوسوں کے ملاپ سے ملائیں؛ Y) راس سے قوس لگائیں جو دونوں بازو کاٹے؛ Z) کٹے ہوئے دو نقطوں سے برابر قوسیں لگائیں جو ایک دوسرے کو کاٹیں۔ صحیح ترتیب کیا ہے؟"
+      },
+      "figure": {
+        "width": 125,
+        "height": 102,
+        "alt": {
+          "en": "An angle at O. A dashed arc from O cuts the arms at P and Q. Equal dashed arcs from P and Q cross at R, and a dashed line joins O to R.",
+          "ur": "O پر ایک زاویہ۔ O سے ڈیش والی قوس بازوؤں کو P اور Q پر کاٹتی ہے۔ P اور Q سے برابر ڈیش والی قوسیں R پر ملتی ہیں، اور ڈیش والی لکیر O کو R سے ملاتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              32,
+              70
+            ],
+            "to": [
+              117.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32,
+              70
+            ],
+            "to": [
+              71.9,
+              22.5
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              32,
+              70
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              32,
+              70
+            ],
+            "radius": 30,
+            "start": 304,
+            "sweep": 62,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              62.0,
+              70.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              51.3,
+              47.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              62.0,
+              70.0
+            ],
+            "radius": 24,
+            "start": 285.1,
+            "sweep": 36.0,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              51.3,
+              47.0
+            ],
+            "radius": 24,
+            "start": 348.9,
+            "sweep": 36.0,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              75.1,
+              49.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32,
+              70
+            ],
+            "to": [
+              91.4,
+              42.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              25,
+              76
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.0,
+              78.0
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.9,
+              42.5
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.1,
+              56.2
+            ],
+            "text": "R"
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "yzx",
+          "text": {
+            "en": "Y, Z, X",
+            "ur": "Y، Z، X"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Arc from the vertex, equal arcs, then join.",
+            "ur": "جی ہاں! راس سے قوس، برابر قوسیں، پھر ملائیں۔"
+          }
+        },
+        {
+          "id": "zyx",
+          "text": {
+            "en": "Z, Y, X",
+            "ur": "Z، Y، X"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The cut points come from the first arc, so Y comes first: Y, Z, X.",
+            "ur": "کٹے ہوئے نقطے پہلی قوس سے بنتے ہیں، اس لیے Y پہلے: Y، Z، X"
+          }
+        },
+        {
+          "id": "xyz",
+          "text": {
+            "en": "X, Y, Z",
+            "ur": "X، Y، Z"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "You can't join to the crossing before the arcs exist. Y, Z, X.",
+            "ur": "قوسیں بننے سے پہلے ملاپ سے نہیں ملا سکتے۔ Y، Z، X"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "One basic angle, 60°, and bisecting gives a whole family of angles. Shabash!",
+          "ur": "ایک بنیادی زاویہ، 60°، اور تنصیف سے زاویوں کا پورا خاندان بن جاتا ہے۔ شاباش!"
+        }
+      },
+      "figure": {
+        "width": 130,
+        "height": 80,
+        "alt": {
+          "en": "A base arm going right from a point O. From O, a ray at 60° to the base, a dashed ray straight up at 90°, and a ray at 120°. Labels 60°, 90° and 120° sit at the ends of the rays.",
+          "ur": "نقطہ O سے دائیں طرف ایک بنیادی بازو۔ O سے بنیاد کے ساتھ 60° پر ایک شعاع، 90° پر سیدھی اوپر ایک ڈیش والی شعاع، اور 120° پر ایک شعاع۔ شعاعوں کے سروں پر 60°، 90° اور 120° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              117.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              39.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65,
+              68
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              91.0,
+              23.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              94.5,
+              16.9
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              65.0,
+              16.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.0,
+              9.0
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65,
+              68
+            ],
+            "radius": 12,
+            "start": 240,
+            "sweep": 120
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              14.3
+            ],
+            "text": "120°"
+          }
+        ]
+      },
+      "text": {
+        "en": "To bisect an angle: arc from the vertex cutting both arms, equal arcs from those two points, then join the vertex to the crossing. The basic angle is 60°, from an equilateral triangle of arcs. From it: 30° (bisect 60°), 120° (two 60° steps), 90° (bisect between 60° and 120°), 45° (bisect 90°), 75° (between 60° and 90°), 105° (between 90° and 120°) and 150° (between 120° and the straight line). Copy an angle next to itself to double it.",
+        "ur": "زاویے کی تنصیف: راس سے قوس جو دونوں بازو کاٹے، ان دو نقطوں سے برابر قوسیں، پھر راس کو ملاپ سے ملائیں۔ بنیادی زاویہ 60° ہے، قوسوں کی مساوی الاضلاع مثلث سے۔ اس سے: 30° (60° کی تنصیف)، 120° (60° کے دو قدم)، 90° (60° اور 120° کے درمیان تنصیف)، 45° (90° کی تنصیف)، 75° (60° اور 90° کے درمیان)، 105° (90° اور 120° کے درمیان) اور 150° (120° اور سیدھی لکیر کے درمیان)۔ کسی زاویے کو دگنا کرنے کے لیے اس کی نقل ساتھ لگائیں۔"
+      },
+      "points": [
+        {
+          "en": "Bisecting halves an angle; keep the compass width the same.",
+          "ur": "تنصیف زاویے کو آدھا کرتی ہے؛ پرکار کی چوڑائی ایک جیسی رکھیں۔"
+        },
+        {
+          "en": "60° is the basic angle; the rest come from it.",
+          "ur": "60° بنیادی زاویہ ہے؛ باقی اسی سے بنتے ہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_150",
+      "type": "apply",
+      "skill": "maths.constructions.angles",
+      "step": {
+        "id": "r_150",
+        "type": "number",
+        "prompt": {
+          "en": "Make 120° on a straight line, then bisect between the 120° ray and the rest of the straight line (180°). What angle does the new ray make with the base?",
+          "ur": "ایک سیدھی لکیر پر 120° بنائیں، پھر 120° والی شعاع اور سیدھی لکیر کے باقی حصے (180°) کے درمیان تنصیف کریں۔ نئی شعاع بنیاد کے ساتھ کتنا زاویہ بناتی ہے؟"
+        },
+        "answer": 150,
+        "checker": "numeric",
+        "hint": {
+          "en": "Halfway between 120 and 180.",
+          "ur": "120 اور 180 کا درمیان۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 150°.",
+          "ur": "درست! 150°"
+        },
+        "feedback_wrong": {
+          "en": "The gap is 60°, half is 30°, and 120 + 30 = 150°.",
+          "ur": "فاصلہ 60° ہے، آدھا 30° ہے، اور 120 + 30 = 150°"
+        },
+        "common_wrong": [
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "30° is only half the gap. Add it to 120°: 150°.",
+              "ur": "30° صرف فاصلے کا آدھا ہے۔ اسے 120° میں جمع کریں: 150°"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_double",
+      "type": "apply",
+      "skill": "maths.constructions.angles",
+      "step": {
+        "id": "r_double",
+        "type": "number",
+        "prompt": {
+          "en": "Nida copies a 40° angle with her compass and places the copy right next to it, sharing one arm. How big is the whole angle now?",
+          "ur": "ندا پرکار سے 40° کے زاویے کی نقل بناتی ہے اور نقل کو ایک بازو مشترک رکھ کر بالکل ساتھ لگا دیتی ہے۔ اب پورا زاویہ کتنا ہے؟"
+        },
+        "answer": 80,
+        "checker": "numeric",
+        "hint": {
+          "en": "Two 40° angles side by side.",
+          "ur": "دو 40° کے زاویے ساتھ ساتھ۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 80°: copying next to itself doubles the angle.",
+          "ur": "درست! 80°: ساتھ نقل لگانے سے زاویہ دگنا ہو جاتا ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "40 + 40 = 80°.",
+          "ur": "40 + 40 = 80°"
+        },
+        "common_wrong": [
+          {
+            "answer": 20,
+            "feedback": {
+              "en": "That halved it. A copy placed alongside doubles it: 80°.",
+              "ur": "یہ تو آدھا ہو گیا۔ ساتھ لگی نقل دگنا کرتی ہے: 80°"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Geometrical Constructions unit. No textbook text or exercises were used.",
+    "Every angle here comes from one basic angle, 60°, made from an equilateral triangle of equal compass arcs, plus bisection. Ask students to say which two rays they bisect between: 90° is between 60° and 120°, 75° between 60° and 90°, 105° between 90° and 120°, 150° between 120° and 180°.",
+    "The most common construction slip is changing the compass width between the two equal arcs; the second is calling half of 90° '30°'. Watch real constructions on paper and check them with a protractor or a folded paper corner.",
+    "Copying an angle: draw an arc across the given angle and the same arc from the new vertex; set the compass to the chord between the two cut points and transfer it. Placing the copy next to the original doubles the angle.",
+    "Urdu terms to check: تنصیف (bisect), ناصف زاویہ (angle bisector), پرکار (compass), قوس (arc), راس (vertex), بازو (arm), چاند/پروٹریکٹر (protractor), مساوی الاضلاع مثلث (equilateral triangle).",
+    "The numbers and figure coordinates were worked out in content/sources/g6-maths-19/constructing_angles.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

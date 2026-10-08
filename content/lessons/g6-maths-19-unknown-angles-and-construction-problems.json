@@ -1,0 +1,1819 @@
+{
+  "id": "g6-maths-19-unknown-angles-and-construction-problems",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find unknown angles on a straight line, around a point and in triangles (including exterior angles, equilateral and isosceles triangles), and solve simple real-life construction problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions, 10.4"
+    }
+  ],
+  "skills": [
+    "maths.constructions.word_problems"
+  ],
+  "title": {
+    "en": "Unknown angles and construction problems",
+    "ur": "نامعلوم زاویے اور تعمیر کے سوالات"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.constructions.angles"
+    },
+    {
+      "skill": "maths.geometry.triangle_angles"
+    },
+    {
+      "skill": "maths.constructions.perpendicular_bisector"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "triangle_is_360",
+      "description": "Uses 360° as the total of the angles of a triangle."
+    },
+    {
+      "id": "exterior_is_adjacent",
+      "description": "Thinks the exterior angle equals the interior angle next to it."
+    },
+    {
+      "id": "isosceles_forgot",
+      "description": "Forgets that the two base angles of an isosceles triangle are equal."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.constructions.word_problems": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.constructions.word_problems": [
+      {
+        "id": "qb_exterior",
+        "type": "recall",
+        "step": {
+          "id": "qb_exterior",
+          "type": "choice",
+          "prompt": {
+            "en": "The exterior angle of a triangle is equal to…",
+            "ur": "مثلث کا بیرونی زاویہ برابر ہوتا ہے…"
+          },
+          "options": [
+            {
+              "id": "sum",
+              "text": {
+                "en": "the sum of the two opposite interior angles",
+                "ur": "دو سامنے والے اندرونی زاویوں کے مجموعے کے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Exterior angle = sum of the two opposite interior angles.",
+                "ur": "جی ہاں! بیرونی زاویہ = سامنے والے دو اندرونی زاویوں کا مجموعہ۔"
+              }
+            },
+            {
+              "id": "next",
+              "text": {
+                "en": "the interior angle next to it",
+                "ur": "ساتھ والے اندرونی زاویے کے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The angle next to it makes 180° with it, so they are usually different.",
+                "ur": "ساتھ والا زاویہ اس کے ساتھ مل کر 180° بناتا ہے، تو عموماً دونوں مختلف ہوتے ہیں۔"
+              },
+              "misconception_id": "exterior_is_adjacent"
+            },
+            {
+              "id": "always",
+              "text": {
+                "en": "always 180°",
+                "ur": "ہمیشہ 180° کے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "180° is the exterior and the interior angle next to it together.",
+                "ur": "180° تو بیرونی اور ساتھ والا اندرونی زاویہ مل کر ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "An isosceles triangle has a top angle of 30°. Its two base angles are equal. How big is each base angle?",
+            "ur": "ایک متساوی الساقین مثلث کا اوپر والا زاویہ 30° ہے۔ اس کے دونوں قاعدے والے زاویے برابر ہیں۔ ہر قاعدے والا زاویہ کتنا ہے؟"
+          },
+          "answer": 75,
+          "checker": "numeric",
+          "hint": {
+            "en": "180 − 30 = 150. Share it between the two base angles.",
+            "ur": "180 − 30 = 150۔ اسے دونوں قاعدے والے زاویوں میں بانٹیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 75°. Check: 75 + 75 + 30 = 180.",
+            "ur": "درست! 75°۔ جانچ: 75 + 75 + 30 = 180"
+          },
+          "feedback_wrong": {
+            "en": "180 − 30 = 150, and 150 ÷ 2 = 75°.",
+            "ur": "180 − 30 = 150، اور 150 ÷ 2 = 75°"
+          },
+          "common_wrong": [
+            {
+              "answer": 150,
+              "feedback": {
+                "en": "150° is both base angles together. Each one is 150 ÷ 2 = 75°.",
+                "ur": "150° دونوں قاعدے والے زاویے مل کر ہیں۔ ہر ایک 150 ÷ 2 = 75°"
+              },
+              "misconception_id": "isosceles_forgot"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A triangle has angles of 35° and 85°. Sana says the third angle is 360 − 35 − 85 = 240°. What went wrong?",
+            "ur": "ایک مثلث کے دو زاویے 35° اور 85° ہیں۔ ثنا کہتی ہے تیسرا زاویہ 360 − 35 − 85 = 240° ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "tri",
+              "text": {
+                "en": "A triangle's angles add up to 180°: 180 − 35 − 85 = 60°.",
+                "ur": "مثلث کے زاویوں کا مجموعہ 180° ہے: 180 − 35 − 85 = 60°"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 360° is for angles around a point.",
+                "ur": "جی ہاں! 360° نقطے کے گرد زاویوں کے لیے ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "240° is bigger than a straight angle, so it can't fit in a triangle. Use 180°: 60°.",
+                "ur": "240° مستقیم زاویے سے بڑا ہے، مثلث میں نہیں آ سکتا۔ 180° لیں: 60°"
+              },
+              "misconception_id": "triangle_is_360"
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "She should add: 35 + 85 = 120°.",
+                "ur": "اسے جمع کرنا چاہیے: 35 + 85 = 120°"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "120° is the two known angles. Take them from 180°: 60°.",
+                "ur": "120° دو معلوم زاویے ہیں۔ انہیں 180° سے نفی کریں: 60°"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_exterior",
+      "front": {
+        "en": "Exterior angle of a triangle = ?",
+        "ur": "مثلث کا بیرونی زاویہ = ؟"
+      },
+      "back": {
+        "en": "The sum of the two opposite interior angles. 40° and 75° give 115°.",
+        "ur": "سامنے والے دو اندرونی زاویوں کا مجموعہ۔ 40° اور 75° سے 115°۔"
+      }
+    },
+    {
+      "id": "f_special",
+      "front": {
+        "en": "Equilateral and isosceles triangle angles?",
+        "ur": "متساوی الاضلاع اور متساوی الساقین مثلث کے زاویے؟"
+      },
+      "back": {
+        "en": "Equilateral: 60° each. Isosceles: the two base angles are equal.",
+        "ur": "متساوی الاضلاع: ہر زاویہ 60°۔ متساوی الساقین: قاعدے والے دونوں زاویے برابر۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_exterior",
+      "text": {
+        "en": "Draw any triangle on paper with a ruler and extend one side past a corner. Tear off the two corners opposite that outside angle and place them side by side in the outside angle. Do they fill it exactly? Check with a protractor too.",
+        "ur": "کاغذ پر رولر سے کوئی بھی مثلث بنائیں اور ایک ضلع کو ایک کونے سے آگے بڑھائیں۔ اس باہر والے زاویے کے سامنے والے دو کونے پھاڑیں اور انہیں ساتھ ساتھ باہر والے زاویے میں رکھیں۔ کیا وہ اسے پورا بھر دیتے ہیں؟ چاندا (پروٹیکٹر) سے بھی جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Exterior angle",
+      "ur": "بیرونی زاویہ"
+    },
+    {
+      "en": "Interior angle",
+      "ur": "اندرونی زاویہ"
+    },
+    {
+      "en": "Isosceles triangle",
+      "ur": "متساوی الساقین مثلث"
+    },
+    {
+      "en": "Equilateral triangle",
+      "ur": "متساوی الاضلاع مثلث"
+    },
+    {
+      "en": "Unknown angle",
+      "ur": "نامعلوم زاویہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Abbu builds kites to fly from our rooftop. The two sticks must cross at exactly 90°, or the kite flies crooked! How do builders get angles right?",
+          "ur": "ابو چھت سے اڑانے کے لیے پتنگیں بناتے ہیں۔ دونوں تیلیاں بالکل 90° پر ملنی چاہییں، ورنہ پتنگ ٹیڑھی اڑتی ہے! بنانے والے زاویے ٹھیک کیسے رکھتے ہیں؟"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 76,
+        "alt": {
+          "en": "A kite frame: a long upright stick and a shorter cross stick meet inside a diamond shape. A small square at the crossing shows the sticks meet at a right angle.",
+          "ur": "پتنگ کا ڈھانچا: ایک لمبی کھڑی تیلی اور ایک چھوٹی آڑی تیلی ہیرے جیسی شکل کے اندر ملتی ہیں۔ ملنے کی جگہ پر چھوٹا سا مربع بتاتا ہے کہ تیلیاں زاویہ قائمہ پر ملتی ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50,
+                6
+              ],
+              [
+                74,
+                26
+              ],
+              [
+                50,
+                70
+              ],
+              [
+                26,
+                26
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              6
+            ],
+            "to": [
+              50,
+              70
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              26,
+              26
+            ],
+            "to": [
+              74,
+              26
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50,
+                26
+              ],
+              [
+                55.0,
+                26.0
+              ],
+              [
+                55.0,
+                31.0
+              ],
+              [
+                50.0,
+                31.0
+              ]
+            ]
+          }
+        ]
+      },
+      "text": {
+        "en": "Today we find unknown angles on lines, around points and in triangles, and solve real construction problems. This is the last lesson of the Constructions unit, so it ends with a short unit test. First, a warm-up.",
+        "ur": "آج ہم لکیروں پر، نقطوں کے گرد اور مثلثوں میں نامعلوم زاویے نکالیں گے، اور تعمیر کے اصل سوال حل کریں گے۔ یہ تعمیرات کے باب کا آخری سبق ہے، اس لیے آخر میں ایک چھوٹا ٹیسٹ ہے۔ پہلے ایک سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.geometry.triangle_angles",
+      "prompt": {
+        "en": "The three angles of a triangle add up to how many degrees?",
+        "ur": "مثلث کے تینوں زاویوں کا مجموعہ کتنے درجے ہوتا ہے؟"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "Tear off the three corners and put them together: they make a straight line.",
+        "ur": "تینوں کونے پھاڑ کر ساتھ رکھیں: وہ سیدھی لکیر بناتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180°.",
+        "ur": "درست! 180°"
+      },
+      "feedback_wrong": {
+        "en": "The angles of a triangle add up to 180°.",
+        "ur": "مثلث کے زاویوں کا مجموعہ 180° ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 360,
+          "feedback": {
+            "en": "360° is around a point. A triangle's angles make a straight line: 180°.",
+            "ur": "360° نقطے کے گرد ہے۔ مثلث کے زاویے سیدھی لکیر بناتے ہیں: 180°"
+          },
+          "misconception_id": "triangle_is_360"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° is a right angle. All three together make 180°.",
+            "ur": "90° قائمہ زاویہ ہے۔ تینوں مل کر 180° بناتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Line 180, point 360, triangle 180. And the outside angle is the two far angles added!",
+          "ur": "لکیر 180، نقطہ 360، مثلث 180۔ اور باہر والا زاویہ دور والے دو زاویوں کا جوڑ ہے!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 66,
+        "alt": {
+          "en": "A triangle sits on a straight line. The two angles inside it at the top and on the left are marked a and b. The base is extended to the right, and the outside angle there is marked a+b.",
+          "ur": "ایک مثلث سیدھی لکیر پر ہے۔ اس کے اندر اوپر اور بائیں والے زاویوں پر a اور b لکھا ہے۔ قاعدہ دائیں طرف بڑھایا گیا ہے، اور وہاں باہر والے زاویے پر a+b لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                12,
+                58
+              ],
+              [
+                64,
+                58
+              ],
+              [
+                50.1,
+                19.9
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              64,
+              58
+            ],
+            "to": [
+              94,
+              58
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50.1,
+              19.9
+            ],
+            "radius": 7,
+            "start": 70.0,
+            "sweep": 65.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              47.1,
+              33.5
+            ],
+            "text": "a"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              12,
+              58
+            ],
+            "radius": 8,
+            "start": 315.0,
+            "sweep": 45.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.9,
+              52.6
+            ],
+            "text": "b"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              64,
+              58
+            ],
+            "radius": 6,
+            "start": 250.0,
+            "sweep": 110.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.6,
+              45.7
+            ],
+            "text": "a+b"
+          }
+        ]
+      },
+      "text": {
+        "en": "Angles on a straight line add up to 180°. Angles around a point add up to 360°. The angles of a triangle add up to 180°. If you extend one side of a triangle, the outside angle is called the exterior angle. It equals the two opposite interior angles added together (a + b). In an equilateral triangle every angle is 60°. In an isosceles triangle the two base angles are equal. Three angles can make a triangle only if they add up to exactly 180°.",
+        "ur": "سیدھی لکیر پر زاویوں کا مجموعہ 180° ہے۔ نقطے کے گرد زاویوں کا مجموعہ 360° ہے۔ مثلث کے زاویوں کا مجموعہ 180° ہے۔ اگر مثلث کا ایک ضلع آگے بڑھائیں تو باہر بننے والا زاویہ بیرونی زاویہ (Exterior angle) کہلاتا ہے۔ یہ سامنے والے دو اندرونی زاویوں کے مجموعے (a + b) کے برابر ہوتا ہے۔ متساوی الاضلاع مثلث (Equilateral triangle) کا ہر زاویہ 60° ہے۔ متساوی الساقین مثلث (Isosceles triangle) کے قاعدے والے دونوں زاویے برابر ہوتے ہیں۔ تین زاویے مثلث صرف تب بناتے ہیں جب ان کا مجموعہ بالکل 180° ہو۔"
+      }
+    },
+    {
+      "id": "s4_line",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A ray stands on a straight line. One angle is 125°. What is angle a, in degrees?",
+        "ur": "ایک سیدھی لکیر پر ایک شعاع کھڑی ہے۔ ایک زاویہ 125° ہے۔ زاویہ a کتنے درجے ہے؟"
+      },
+      "answer": 55,
+      "checker": "numeric",
+      "hint": {
+        "en": "Angles on a straight line: 180 − 125.",
+        "ur": "سیدھی لکیر پر زاویے: 180 − 125"
+      },
+      "feedback_correct": {
+        "en": "Right! 55°. Check: 125 + 55 = 180.",
+        "ur": "درست! 55°۔ جانچ: 125 + 55 = 180"
+      },
+      "feedback_wrong": {
+        "en": "180 − 125 = 55°.",
+        "ur": "180 − 125 = 55°"
+      },
+      "common_wrong": [
+        {
+          "answer": 235,
+          "feedback": {
+            "en": "That used 360°. A straight line is 180°: 55°.",
+            "ur": "اس میں 360° لیا۔ سیدھی لکیر 180° ہے: 55°"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "A straight line with a point in the middle. A ray goes up and to the left from the point. The angle on the right of the ray is 125°. The angle on the left is a.",
+          "ur": "ایک سیدھی لکیر جس کے درمیان ایک نقطہ ہے۔ نقطے سے ایک شعاع اوپر بائیں طرف جاتی ہے۔ شعاع کے دائیں طرف کا زاویہ 125° ہے۔ بائیں طرف کا زاویہ a ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              48
+            ],
+            "to": [
+              92,
+              48
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              48
+            ],
+            "to": [
+              28.2,
+              16.9
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              48
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              48
+            ],
+            "radius": 8,
+            "start": 235.0,
+            "sweep": 125.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              57.8,
+              32.9
+            ],
+            "text": "125°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              48
+            ],
+            "radius": 10,
+            "start": 180.0,
+            "sweep": 55.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              35.8,
+              40.6
+            ],
+            "text": "a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_triangle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has angles of 50° and 70°. What is the third angle x?",
+        "ur": "ایک مثلث کے دو زاویے 50° اور 70° ہیں۔ تیسرا زاویہ x کتنا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "50 + 70 = 120. Then 180 − 120.",
+        "ur": "50 + 70 = 120۔ پھر 180 − 120"
+      },
+      "feedback_correct": {
+        "en": "Right! 60°.",
+        "ur": "درست! 60°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 50 − 70 = 60°.",
+        "ur": "180 − 50 − 70 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "That used 360°. A triangle's angles add up to 180°: 60°.",
+            "ur": "اس میں 360° لیا۔ مثلث کے زاویوں کا مجموعہ 180° ہے: 60°"
+          },
+          "misconception_id": "triangle_is_360"
+        },
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "120 is the two known angles. Take it from 180: 60°.",
+            "ur": "120 دو معلوم زاویے ہیں۔ 180 سے نفی کریں: 60°"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 72,
+        "alt": {
+          "en": "A triangle. The angle at the bottom left is 50°, the angle at the bottom right is 70°, and the angle at the top is x.",
+          "ur": "ایک مثلث۔ نیچے بائیں زاویہ 50° ہے، نیچے دائیں زاویہ 70° ہے، اور اوپر والا زاویہ x ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20,
+                64
+              ],
+              [
+                80,
+                64
+              ],
+              [
+                61.8,
+                14.1
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              20,
+              64
+            ],
+            "radius": 8,
+            "start": 310.0,
+            "sweep": 50.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              35.4,
+              56.8
+            ],
+            "text": "50°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              80,
+              64
+            ],
+            "radius": 8,
+            "start": 180.0,
+            "sweep": 70.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.1,
+              54.2
+            ],
+            "text": "70°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              61.8,
+              14.1
+            ],
+            "radius": 7,
+            "start": 70.0,
+            "sweep": 60.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              59.6,
+              26.9
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_exterior",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A triangle has interior angles of 40° and 75°. The base is extended at the third corner. What is the exterior angle x?",
+        "ur": "ایک مثلث کے دو اندرونی زاویے 40° اور 75° ہیں۔ تیسرے کونے پر قاعدہ آگے بڑھایا گیا ہے۔ بیرونی زاویہ x کتنا ہے؟"
+      },
+      "answer": 115,
+      "checker": "numeric",
+      "hint": {
+        "en": "Exterior angle = the two opposite interior angles added.",
+        "ur": "بیرونی زاویہ = سامنے والے دو اندرونی زاویوں کا جوڑ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 40 + 75 = 115°.",
+        "ur": "درست! 40 + 75 = 115°"
+      },
+      "feedback_wrong": {
+        "en": "x = 40 + 75 = 115°. (The angle inside next to it is 65°, and 65 + 115 = 180.)",
+        "ur": "x = 40 + 75 = 115°۔ (اس کے ساتھ اندر والا زاویہ 65° ہے، اور 65 + 115 = 180)"
+      },
+      "common_wrong": [
+        {
+          "answer": 65,
+          "feedback": {
+            "en": "65° is the interior angle next to x. The exterior angle is 40 + 75 = 115°.",
+            "ur": "65° اندر والا ساتھی زاویہ ہے۔ بیرونی زاویہ 40 + 75 = 115° ہے۔"
+          },
+          "misconception_id": "exterior_is_adjacent"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "A triangle with its base extended to the right. Inside, the angle at the bottom left is 40° and the angle at the top is 75°. The outside angle made by the extended base at the bottom right is x.",
+          "ur": "ایک مثلث جس کا قاعدہ دائیں طرف بڑھایا گیا ہے۔ اندر نیچے بائیں زاویہ 40° اور اوپر والا زاویہ 75° ہے۔ نیچے دائیں بڑھائے ہوئے قاعدے سے بننے والا باہر کا زاویہ x ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                12,
+                60
+              ],
+              [
+                68,
+                60
+              ],
+              [
+                52.3,
+                26.2
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              68,
+              60
+            ],
+            "to": [
+              94,
+              60
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              12,
+              60
+            ],
+            "radius": 9,
+            "start": 320.0,
+            "sweep": 40.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.9,
+              53.8
+            ],
+            "text": "40°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              52.3,
+              26.2
+            ],
+            "radius": 6,
+            "start": 65.0,
+            "sweep": 75.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              49.2,
+              39.9
+            ],
+            "text": "75°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              68,
+              60
+            ],
+            "radius": 7,
+            "start": 245.0,
+            "sweep": 115.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.0,
+              49.0
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7_isosceles",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "An isosceles triangle has two equal sides. One base angle is 65°. What is the top angle a?",
+        "ur": "ایک متساوی الساقین مثلث کے دو اضلاع برابر ہیں۔ ایک قاعدے والا زاویہ 65° ہے۔ اوپر والا زاویہ a کتنا ہے؟"
+      },
+      "answer": 50,
+      "checker": "numeric",
+      "hint": {
+        "en": "The other base angle is also 65°.",
+        "ur": "دوسرا قاعدے والا زاویہ بھی 65° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 − 65 − 65 = 50°.",
+        "ur": "درست! 180 − 65 − 65 = 50°"
+      },
+      "feedback_wrong": {
+        "en": "Both base angles are 65°: 180 − 130 = 50°.",
+        "ur": "دونوں قاعدے والے زاویے 65° ہیں: 180 − 130 = 50°"
+      },
+      "common_wrong": [
+        {
+          "answer": 115,
+          "feedback": {
+            "en": "Don't forget the other base angle is also 65°: 180 − 65 − 65 = 50°.",
+            "ur": "یاد رکھیں دوسرا قاعدے والا زاویہ بھی 65° ہے: 180 − 65 − 65 = 50°"
+          },
+          "misconception_id": "isosceles_forgot"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 74,
+        "alt": {
+          "en": "A tall triangle with two equal sides, each marked with a small tick. The angle at the bottom left is 65°. The angle at the top is a.",
+          "ur": "ایک اونچی مثلث جس کے دو اضلاع برابر ہیں، ہر ایک پر چھوٹا سا نشان ہے۔ نیچے بائیں زاویہ 65° ہے۔ اوپر والا زاویہ a ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                25,
+                66
+              ],
+              [
+                75,
+                66
+              ],
+              [
+                50.0,
+                12.4
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.2,
+              40.5
+            ],
+            "to": [
+              34.8,
+              37.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.2,
+              37.9
+            ],
+            "to": [
+              59.8,
+              40.5
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              25,
+              66
+            ],
+            "radius": 7,
+            "start": 295.0,
+            "sweep": 65.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.5,
+              57.4
+            ],
+            "text": "65°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50.0,
+              12.4
+            ],
+            "radius": 7,
+            "start": 65.0,
+            "sweep": 50.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              25.4
+            ],
+            "text": "a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8_ramp",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal builds a ramp for his bicycle against an upright wall. The ramp makes 15° with the ground, and the wall makes 90° with the ground. What is angle x at the top, between the ramp and the wall?",
+        "ur": "بلال سائیکل کے لیے ایک کھڑی دیوار کے ساتھ ڈھلوان بناتا ہے۔ ڈھلوان زمین سے 15° بناتی ہے، اور دیوار زمین سے 90°۔ اوپر ڈھلوان اور دیوار کے درمیان زاویہ x کتنا ہے؟"
+      },
+      "answer": 75,
+      "checker": "numeric",
+      "hint": {
+        "en": "Ground, wall and ramp make a triangle: 180 − 90 − 15.",
+        "ur": "زمین، دیوار اور ڈھلوان مثلث بناتے ہیں: 180 − 90 − 15"
+      },
+      "feedback_correct": {
+        "en": "Right! 75°.",
+        "ur": "درست! 75°"
+      },
+      "feedback_wrong": {
+        "en": "180 − 90 − 15 = 75°.",
+        "ur": "180 − 90 − 15 = 75°"
+      },
+      "common_wrong": [
+        {
+          "answer": 165,
+          "feedback": {
+            "en": "Don't forget the right angle at the wall: 180 − 90 − 15 = 75°.",
+            "ur": "دیوار والا قائمہ زاویہ نہ بھولیں: 180 − 90 − 15 = 75°"
+          }
+        },
+        {
+          "answer": 255,
+          "feedback": {
+            "en": "That used 360°. It is a triangle: 180 − 90 − 15 = 75°.",
+            "ur": "اس میں 360° لیا۔ یہ مثلث ہے: 180 − 90 − 15 = 75°"
+          },
+          "misconception_id": "triangle_is_360"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 62,
+        "alt": {
+          "en": "A ramp drawn as a long thin right triangle. The ground runs along the bottom, an upright wall stands on the right with a right-angle square at its foot, and the ramp slopes up from the left. The angle between the ramp and the ground is 15°. The angle at the top, between the ramp and the wall, is x.",
+          "ur": "ڈھلوان ایک لمبی پتلی قائمہ زاویہ مثلث کی شکل میں۔ نیچے زمین ہے، دائیں طرف کھڑی دیوار ہے جس کے نیچے قائمہ زاویے کا مربع ہے، اور ڈھلوان بائیں سے اوپر جاتی ہے۔ ڈھلوان اور زمین کے درمیان زاویہ 15° ہے۔ اوپر ڈھلوان اور دیوار کے درمیان زاویہ x ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16,
+                46
+              ],
+              [
+                90,
+                46
+              ],
+              [
+                90,
+                26.2
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                90,
+                46
+              ],
+              [
+                85.0,
+                46.0
+              ],
+              [
+                85.0,
+                41.0
+              ],
+              [
+                90.0,
+                41.0
+              ]
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              16,
+              46
+            ],
+            "radius": 14,
+            "start": 345.0,
+            "sweep": 15.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.8,
+              43.0
+            ],
+            "text": "15°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              90,
+              26.2
+            ],
+            "radius": 6,
+            "start": 90.0,
+            "sweep": 75.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.7,
+              35.7
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "A triangle with its base extended to the right. Inside, the angle at the bottom left is 50° and the angle at the top is 60°. The outside angle at the bottom right is x.",
+          "ur": "ایک مثلث جس کا قاعدہ دائیں طرف بڑھایا گیا ہے۔ اندر نیچے بائیں زاویہ 50° اور اوپر والا زاویہ 60° ہے۔ نیچے دائیں باہر والا زاویہ x ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                12,
+                60
+              ],
+              [
+                68,
+                60
+              ],
+              [
+                51.1,
+                13.5
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              68,
+              60
+            ],
+            "to": [
+              94,
+              60
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              12,
+              60
+            ],
+            "radius": 8,
+            "start": 310.0,
+            "sweep": 50.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              27.4,
+              52.8
+            ],
+            "text": "50°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              51.1,
+              13.5
+            ],
+            "radius": 6,
+            "start": 70.0,
+            "sweep": 60.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.6,
+              27.2
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              68,
+              60
+            ],
+            "radius": 7,
+            "start": 250.0,
+            "sweep": 110.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.5,
+              49.4
+            ],
+            "text": "x"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "A triangle has interior angles of 50° and 60°. Its base is extended to make the exterior angle x. Hamza says x = 70°, the same as the angle inside next to it. What went wrong?",
+        "ur": "ایک مثلث کے دو اندرونی زاویے 50° اور 60° ہیں۔ اس کا قاعدہ بڑھا کر بیرونی زاویہ x بنایا گیا ہے۔ حمزہ کہتا ہے x = 70° ہے، اندر کے ساتھ والے زاویے جتنا۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "sum",
+          "text": {
+            "en": "x is the two opposite interior angles added: 50 + 60 = 110°.",
+            "ur": "x سامنے والے دو اندرونی زاویوں کا جوڑ ہے: 50 + 60 = 110°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 70° is the angle inside. Together 70 + 110 = 180 on the line.",
+            "ur": "جی ہاں! 70° اندر والا زاویہ ہے۔ لکیر پر 70 + 110 = 180"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The inside angle and x sit on a straight line, so they add to 180°: x = 110°.",
+            "ur": "اندر والا زاویہ اور x سیدھی لکیر پر ہیں، مجموعہ 180°: x = 110°"
+          },
+          "misconception_id": "exterior_is_adjacent"
+        },
+        {
+          "id": "diff",
+          "text": {
+            "en": "x = 60 − 50 = 10°.",
+            "ur": "x = 60 − 50 = 10°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Add the two opposite angles, don't subtract: 50 + 60 = 110°.",
+            "ur": "سامنے والے دو زاویے جمع کریں، نفی نہیں: 50 + 60 = 110°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is the outside angle of a triangle the two far inside angles added? Can you teach me?",
+          "ur": "مثلث کا باہر والا زاویہ دور والے دو اندرونی زاویوں کا جوڑ کیوں ہوتا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is the exterior angle of a triangle equal to the sum of the two opposite interior angles?",
+        "ur": "اپنے الفاظ میں بتائیں: مثلث کا بیرونی زاویہ سامنے والے دو اندرونی زاویوں کے مجموعے کے برابر کیوں ہوتا ہے؟"
+      },
+      "key_idea": "The exterior angle and the interior angle next to it sit on a straight line, so they add to 180°. The three interior angles also add to 180°. Both times the angle next to it plus something makes 180°, so the exterior angle must equal the other two interior angles added.",
+      "levels": {
+        "got_it": "Uses both facts: the exterior and its neighbour make 180° on a line, and the three interior angles make 180°, so the exterior equals the other two.",
+        "partly": "Uses only one of the two facts, or shows it with numbers for one triangle without a reason.",
+        "not_yet": "Gives no reason, or says it is just the rule."
+      },
+      "keywords": [
+        [
+          "straight line",
+          "line",
+          "سیدھی لکیر",
+          "لکیر"
+        ],
+        [
+          "180"
+        ],
+        [
+          "triangle",
+          "three angles",
+          "مثلث",
+          "تین زاویے"
+        ],
+        [
+          "same",
+          "equal",
+          "left over",
+          "برابر",
+          "باقی"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Both groups make 180°, so the exterior angle equals the two far angles.",
+          "ur": "بہت خوب! دونوں گروہ 180° بناتے ہیں، تو بیرونی زاویہ دور والے دو زاویوں کے برابر ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now use both facts: the straight line makes 180°, and the triangle makes 180° too.",
+          "ur": "اچھی شروعات! اب دونوں باتیں استعمال کریں: سیدھی لکیر 180° بناتی ہے، اور مثلث بھی 180°۔"
+        },
+        "not_yet": {
+          "en": "Look at the outside angle and the inside angle next to it. What do they add up to? And the three inside angles?",
+          "ur": "باہر والے زاویے اور اس کے ساتھ والے اندرونی زاویے کو دیکھیں۔ ان کا مجموعہ کیا ہے؟ اور تینوں اندرونی زاویوں کا؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_unit_test",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Test time! Five questions from the whole Constructions unit. Take your time!",
+          "ur": "ٹیسٹ کا وقت! تعمیرات کے پورے باب سے پانچ سوال۔ آرام سے کریں!"
+        }
+      },
+      "text": {
+        "en": "This short test has questions on perpendicular bisectors, constructing and bisecting angles, and real-life angle problems.",
+        "ur": "اس چھوٹے ٹیسٹ میں عمودی ناصف، زاویے بنانے اور ان کی تنصیف، اور زاویوں کے عملی سوالات ہیں۔"
+      }
+    },
+    {
+      "id": "u1_kite",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.constructions.perpendicular_bisector",
+      "prompt": {
+        "en": "Test 1: In a kite frame, the long stick is the perpendicular bisector of the cross stick. The cross stick is 60 cm long. How far is it, in cm, from the crossing point to each end of the cross stick?",
+        "ur": "ٹیسٹ 1: پتنگ کے ڈھانچے میں لمبی تیلی آڑی تیلی کا عمودی ناصف ہے۔ آڑی تیلی 60 سینٹی میٹر لمبی ہے۔ ملنے کے نقطے سے آڑی تیلی کے ہر سرے تک کتنے سینٹی میٹر ہیں؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "A bisector cuts the stick into two equal halves.",
+        "ur": "ناصف تیلی کو دو برابر آدھے حصوں میں کاٹتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60 ÷ 2 = 30 cm.",
+        "ur": "درست! 60 ÷ 2 = 30 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "The perpendicular bisector cuts it in half: 60 ÷ 2 = 30 cm.",
+        "ur": "عمودی ناصف اسے آدھا کرتا ہے: 60 ÷ 2 = 30 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "60 cm is the whole stick. Bisect means cut in half: 30 cm.",
+            "ur": "60 سینٹی میٹر پوری تیلی ہے۔ تنصیف کا مطلب آدھا کرنا: 30"
+          }
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90 is the angle at the crossing. The length to each end is 60 ÷ 2 = 30 cm.",
+            "ur": "90 ملنے کی جگہ کا زاویہ ہے۔ ہر سرے تک لمبائی 60 ÷ 2 = 30 سینٹی میٹر"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 76,
+        "alt": {
+          "en": "A kite frame. The long upright stick crosses the middle of the shorter cross stick at a right angle, shown by a small square. The two halves of the cross stick are each marked with a question mark.",
+          "ur": "پتنگ کا ڈھانچا۔ لمبی کھڑی تیلی چھوٹی آڑی تیلی کے درمیان سے زاویہ قائمہ پر گزرتی ہے، جو چھوٹا سا مربع دکھاتا ہے۔ آڑی تیلی کے دونوں آدھے حصوں پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50,
+                6
+              ],
+              [
+                74,
+                26
+              ],
+              [
+                50,
+                70
+              ],
+              [
+                26,
+                26
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              6
+            ],
+            "to": [
+              50,
+              70
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              26,
+              26
+            ],
+            "to": [
+              74,
+              26
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50,
+                26
+              ],
+              [
+                55.0,
+                26.0
+              ],
+              [
+                55.0,
+                31.0
+              ],
+              [
+                50.0,
+                31.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              38,
+              31
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              62,
+              31
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              26
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "u2_bisect",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.constructions.angles",
+      "prompt": {
+        "en": "Test 2: Ayesha constructs a 90° angle with her compass and then bisects it. How big is each of the two new angles?",
+        "ur": "ٹیسٹ 2: عائشہ پرکار سے 90° کا زاویہ بناتی ہے اور پھر اس کی تنصیف کرتی ہے۔ دونوں نئے زاویوں میں سے ہر ایک کتنا ہے؟"
+      },
+      "answer": 45,
+      "checker": "numeric",
+      "hint": {
+        "en": "Bisecting cuts an angle into two equal halves.",
+        "ur": "تنصیف زاویے کو دو برابر حصوں میں کاٹتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 90 ÷ 2 = 45°.",
+        "ur": "درست! 90 ÷ 2 = 45°"
+      },
+      "feedback_wrong": {
+        "en": "90 ÷ 2 = 45°.",
+        "ur": "90 ÷ 2 = 45°"
+      },
+      "common_wrong": [
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "Bisecting halves an angle, it doesn't double it: 45°.",
+            "ur": "تنصیف زاویے کو آدھا کرتی ہے، دگنا نہیں: 45°"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u3_equilateral",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.constructions.angles",
+      "prompt": {
+        "en": "Test 3: To construct a 60° angle, we draw two arcs with the same compass width. This makes an equilateral triangle. How big is each angle of an equilateral triangle?",
+        "ur": "ٹیسٹ 3: 60° کا زاویہ بنانے کے لیے ہم پرکار کی ایک ہی چوڑائی سے دو قوسیں لگاتے ہیں۔ اس سے متساوی الاضلاع مثلث بنتی ہے۔ متساوی الاضلاع مثلث کا ہر زاویہ کتنا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Three equal angles share 180°.",
+        "ur": "تین برابر زاویے 180° بانٹتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 ÷ 3 = 60°.",
+        "ur": "درست! 180 ÷ 3 = 60°"
+      },
+      "feedback_wrong": {
+        "en": "All three angles are equal: 180 ÷ 3 = 60°.",
+        "ur": "تینوں زاویے برابر ہیں: 180 ÷ 3 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "That used 360°. A triangle has 180°: 180 ÷ 3 = 60°.",
+            "ur": "اس میں 360° لیا۔ مثلث میں 180° ہیں: 180 ÷ 3 = 60°"
+          },
+          "misconception_id": "triangle_is_360"
+        }
+      ]
+    },
+    {
+      "id": "u4_check",
+      "type": "choice",
+      "question_type": "apply",
+      "skill": "maths.constructions.word_problems",
+      "prompt": {
+        "en": "Test 4: Zainab wants to cut a triangle from card. Which three angles can she use?",
+        "ur": "ٹیسٹ 4: زینب گتے سے ایک مثلث کاٹنا چاہتی ہے۔ وہ کون سے تین زاویے استعمال کر سکتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "equal",
+          "text": {
+            "en": "60°, 60°, 60°",
+            "ur": "60°، 60°، 60°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 60 + 60 + 60 = 180°: an equilateral triangle.",
+            "ur": "جی ہاں! 60 + 60 + 60 = 180°: متساوی الاضلاع مثلث۔"
+          }
+        },
+        {
+          "id": "two_right",
+          "text": {
+            "en": "90°, 90°, 30°",
+            "ur": "90°، 90°، 30°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These add up to 210°, more than 180°. Two right angles can't fit in one triangle.",
+            "ur": "ان کا مجموعہ 210° ہے، 180° سے زیادہ۔ ایک مثلث میں دو قائمہ زاویے نہیں آ سکتے۔"
+          }
+        },
+        {
+          "id": "too_big",
+          "text": {
+            "en": "100°, 50°, 40°",
+            "ur": "100°، 50°، 40°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These add up to 190°. A triangle needs exactly 180°.",
+            "ur": "ان کا مجموعہ 190° ہے۔ مثلث کے لیے بالکل 180° چاہیے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u5_carpenter",
+      "type": "number",
+      "question_type": "apply",
+      "skill": "maths.constructions.word_problems",
+      "prompt": {
+        "en": "Test 5: A carpenter cuts the ends of two wooden strips at 45° and joins them to make the corner of a photo frame. What angle does the corner make?",
+        "ur": "ٹیسٹ 5: ایک بڑھئی لکڑی کی دو پٹیوں کے سرے 45° پر کاٹ کر جوڑتا ہے اور فوٹو فریم کا کونا بناتا ہے۔ کونا کتنے درجے کا بنتا ہے؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "The two 45° parts sit side by side at the corner.",
+        "ur": "دونوں 45° والے حصے کونے پر ساتھ ساتھ ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 45 + 45 = 90°, a right angle, just right for a frame.",
+        "ur": "درست! 45 + 45 = 90°، قائمہ زاویہ، فریم کے لیے بالکل ٹھیک۔"
+      },
+      "feedback_wrong": {
+        "en": "45 + 45 = 90°.",
+        "ur": "45 + 45 = 90°"
+      },
+      "common_wrong": [
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "That is one strip. The corner has both: 45 + 45 = 90°.",
+            "ur": "یہ ایک پٹی ہے۔ کونے میں دونوں ہیں: 45 + 45 = 90°"
+          }
+        },
+        {
+          "answer": 135,
+          "feedback": {
+            "en": "The corner is made of the two 45° cuts only: 45 + 45 = 90°.",
+            "ur": "کونا صرف دو 45° کے کٹوں سے بنتا ہے: 45 + 45 = 90°"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 72,
+        "alt": {
+          "en": "The corner of a wooden photo frame. One strip lies flat along the bottom and one stands up on the left. A dashed line runs from the outer corner up and to the right, where the two cut ends meet. Each strip makes a 45° angle with the dashed line.",
+          "ur": "لکڑی کے فوٹو فریم کا ایک کونا۔ ایک پٹی نیچے لیٹی ہے اور ایک بائیں طرف کھڑی ہے۔ باہر کے کونے سے اوپر دائیں ایک نقطہ دار لکیر جاتی ہے، جہاں دونوں کٹے سرے ملتے ہیں۔ ہر پٹی نقطہ دار لکیر سے 45° کا زاویہ بناتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                12,
+                62
+              ],
+              [
+                92,
+                62
+              ],
+              [
+                92,
+                48
+              ],
+              [
+                26,
+                48
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                12,
+                62
+              ],
+              [
+                26,
+                48
+              ],
+              [
+                26,
+                6
+              ],
+              [
+                12,
+                6
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              12,
+              62
+            ],
+            "to": [
+              26,
+              48
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              12,
+              62
+            ],
+            "radius": 10,
+            "start": 315.0,
+            "sweep": 45.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.3,
+              53.6
+            ],
+            "text": "45°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              12,
+              62
+            ],
+            "radius": 10,
+            "start": 270.0,
+            "sweep": 45.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              20.4,
+              41.7
+            ],
+            "text": "45°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Constructions unit complete! Now you can build kites, frames and ramps with the right angles.",
+          "ur": "تعمیرات کا باب مکمل! اب آپ صحیح زاویوں کے ساتھ پتنگ، فریم اور ڈھلوان بنا سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Line 180°, point 360°, triangle 180°. The exterior angle of a triangle equals the two opposite interior angles added, not the angle next to it. Equilateral: 60° each. Isosceles: the base angles are equal, so use the same number twice. Three angles make a triangle only if they add up to 180°.",
+        "ur": "لکیر 180°، نقطہ 360°، مثلث 180°۔ مثلث کا بیرونی زاویہ سامنے والے دو اندرونی زاویوں کے جوڑ کے برابر ہے، ساتھ والے زاویے کے نہیں۔ متساوی الاضلاع: ہر زاویہ 60°۔ متساوی الساقین: قاعدے والے زاویے برابر، تو وہی عدد دو بار لیں۔ تین زاویے مثلث تب بناتے ہیں جب ان کا مجموعہ 180° ہو۔"
+      },
+      "points": [
+        {
+          "en": "Triangle: 180°, not 360°.",
+          "ur": "مثلث: 180°، نہ کہ 360°۔"
+        },
+        {
+          "en": "Exterior angle = two opposite angles added.",
+          "ur": "بیرونی زاویہ = سامنے والے دو زاویوں کا جوڑ۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_point",
+      "type": "apply",
+      "skill": "maths.constructions.word_problems",
+      "step": {
+        "id": "r_point",
+        "type": "number",
+        "prompt": {
+          "en": "In a floor pattern, four angles meet at the centre: 110°, 95°, 85° and x. What is x?",
+          "ur": "فرش کے ایک نقش میں مرکز پر چار زاویے ملتے ہیں: 110°، 95°، 85° اور x۔ x کتنا ہے؟"
+        },
+        "answer": 70,
+        "checker": "numeric",
+        "hint": {
+          "en": "Around a point: 360 − 110 − 95 − 85.",
+          "ur": "نقطے کے گرد: 360 − 110 − 95 − 85"
+        },
+        "feedback_correct": {
+          "en": "Right! 70°.",
+          "ur": "درست! 70°"
+        },
+        "feedback_wrong": {
+          "en": "110 + 95 + 85 = 290, and 360 − 290 = 70°.",
+          "ur": "110 + 95 + 85 = 290، اور 360 − 290 = 70°"
+        },
+        "common_wrong": [
+          {
+            "answer": 290,
+            "feedback": {
+              "en": "290 is the known angles. Take it from 360: 70°.",
+              "ur": "290 معلوم زاویے ہیں۔ 360 سے نفی کریں: 70°"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_kite",
+      "type": "apply",
+      "skill": "maths.constructions.word_problems",
+      "step": {
+        "id": "r_kite",
+        "type": "number",
+        "prompt": {
+          "en": "A kite's sticks cross at 90°. One small triangle inside the kite has angles of 90° and 35°. What is its third angle?",
+          "ur": "پتنگ کی تیلیاں 90° پر ملتی ہیں۔ پتنگ کے اندر ایک چھوٹی مثلث کے دو زاویے 90° اور 35° ہیں۔ تیسرا زاویہ کتنا ہے؟"
+        },
+        "answer": 55,
+        "checker": "numeric",
+        "hint": {
+          "en": "180 − 90 − 35.",
+          "ur": "180 − 90 − 35"
+        },
+        "feedback_correct": {
+          "en": "Right! 55°.",
+          "ur": "درست! 55°"
+        },
+        "feedback_wrong": {
+          "en": "180 − 90 − 35 = 55°.",
+          "ur": "180 − 90 − 35 = 55°"
+        },
+        "common_wrong": [
+          {
+            "answer": 145,
+            "feedback": {
+              "en": "Don't forget the 90°: 180 − 90 − 35 = 55°.",
+              "ur": "90° نہ بھولیں: 180 − 90 − 35 = 55°"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Constructions unit (PCTB Mathematics 6, Sub-domain 10, 10.4). No textbook text or exercises were used.",
+    "This is the last lesson of the unit: the unit test (u1 to u5) covers perpendicular bisectors, constructing and bisecting angles, and real-life angle problems.",
+    "The figures are drawn from computed coordinates so the drawn angles roughly match the numbers; students should still work from the numbers, not measure the screen.",
+    "Urdu terms to check: بیرونی زاویہ (exterior angle), اندرونی زاویہ (interior angle), متساوی الساقین مثلث (isosceles triangle), متساوی الاضلاع مثلث (equilateral triangle), عمودی ناصف (perpendicular bisector), تنصیف (bisecting), ڈھلوان (ramp), بڑھئی (carpenter).",
+    "The numbers and figures were worked out in content/sources/g6-maths-19/construction_problems.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

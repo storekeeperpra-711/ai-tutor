@@ -9,6 +9,13 @@ import '../services/local_db.dart';
 /// Folder of lesson files, bundled into the app (see pubspec.yaml).
 const lessonsFolder = 'content/lessons/';
 
+/// Reads a bundled lesson file. rootBundle.loadString decodes files over
+/// 50 KB on a background isolate; lessons with pictures pass that, and
+/// decoding here keeps loading the same for every lesson (and lets widget
+/// tests load them).
+Future<String> loadLessonText(String path) async =>
+    utf8.decode((await rootBundle.load(path)).buffer.asUint8List());
+
 /// IDs of all lessons: the ones bundled in the app plus the ones downloaded
 /// from Firestore (lesson_updates.dart), sorted.
 final lessonIdsProvider = FutureProvider<List<String>>((ref) async {
@@ -27,8 +34,7 @@ final lessonProvider = FutureProvider.family<Lesson, String>(
   (ref, id) async {
     final downloaded = await ref.watch(localDbProvider).downloadedLesson(id);
     final text =
-        downloaded?.content ??
-        await rootBundle.loadString('$lessonsFolder$id.json');
+        downloaded?.content ?? await loadLessonText('$lessonsFolder$id.json');
     return Lesson.fromJson(jsonDecode(text) as Map<String, dynamic>);
   },
   // A broken lesson file won't fix itself, so don't retry.

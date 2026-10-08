@@ -1,0 +1,3081 @@
+{
+  "id": "g6-maths-18-1d-2d-3d-shapes",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Tell 1-D, 2-D and 3-D shapes apart by their dimensions, and describe 2-D shapes by their sides and vertices and 3-D shapes by their surfaces, edges and vertices.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 9: Symmetry"
+    }
+  ],
+  "skills": [
+    "maths.symmetry.shapes_2d_3d"
+  ],
+  "title": {
+    "en": "1-D, 2-D and 3-D shapes",
+    "ur": "1-D، 2-D اور 3-D اشکال"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.solids.faces_edges_vertices"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "flat_is_3d",
+      "description": "Thinks a flat shape drawn on paper, such as a circle, is 3-D because it looks round like a ball."
+    },
+    {
+      "id": "curved_surface",
+      "description": "Treats curved surfaces like flat faces: leaves the curved surface out of the count, or gives a sphere or cylinder corners (vertices) like a cube."
+    },
+    {
+      "id": "edge_vertex_mix",
+      "description": "Confuses edges (lines where two surfaces meet) with vertices (corner points)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.symmetry.shapes_2d_3d": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.symmetry.shapes_2d_3d": [
+      {
+        "id": "qb_dims",
+        "type": "recall",
+        "step": {
+          "id": "qb_dims",
+          "type": "choice",
+          "prompt": {
+            "en": "A 3-D shape has which measurements?",
+            "ur": "3-D شکل کی کون سی پیمائشیں ہوتی ہیں؟"
+          },
+          "options": [
+            {
+              "id": "lbh",
+              "text": {
+                "en": "Length, breadth and height",
+                "ur": "لمبائی، چوڑائی اور اونچائی"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Three dimensions, so it is 3-D.",
+                "ur": "جی ہاں! تین ابعاد، اس لیے 3-D۔"
+              }
+            },
+            {
+              "id": "lb",
+              "text": {
+                "en": "Length and breadth only",
+                "ur": "صرف لمبائی اور چوڑائی"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is a flat 2-D shape. A 3-D shape also has height.",
+                "ur": "یہ چپٹی 2-D شکل ہے۔ 3-D شکل کی اونچائی بھی ہوتی ہے۔"
+              },
+              "misconception_id": "flat_is_3d"
+            },
+            {
+              "id": "l",
+              "text": {
+                "en": "Length only",
+                "ur": "صرف لمبائی"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only length is 1-D, like a line segment.",
+                "ur": "صرف لمبائی 1-D ہے، جیسے قطعہ خط۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "How many edges does a cone have?",
+            "ur": "مخروط کے کتنے کنارے ہوتے ہیں؟"
+          },
+          "answer": 1,
+          "checker": "numeric",
+          "hint": {
+            "en": "An edge is where two surfaces meet. Where does the curved surface meet the flat base?",
+            "ur": "کنارہ وہاں ہوتا ہے جہاں دو سطحیں ملیں۔ خمدار سطح چپٹے قاعدے سے کہاں ملتی ہے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! 1 curved edge round the base.",
+            "ur": "درست! قاعدے کے گرد 1 خمدار کنارہ۔"
+          },
+          "feedback_wrong": {
+            "en": "A cone has 1 edge: the circle where the curved surface meets the base.",
+            "ur": "مخروط کا 1 کنارہ ہے: وہ دائرہ جہاں خمدار سطح قاعدے سے ملتی ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 0,
+              "feedback": {
+                "en": "A curved edge is still an edge. The circle round the base is 1 edge.",
+                "ur": "خمدار کنارہ بھی کنارہ ہے۔ قاعدے کے گرد دائرہ 1 کنارہ ہے۔"
+              },
+              "misconception_id": "curved_surface"
+            },
+            {
+              "answer": 2,
+              "feedback": {
+                "en": "The tip is a vertex, not an edge. A cone has 1 edge.",
+                "ur": "چوٹی راس ہے، کنارہ نہیں۔ مخروط کا 1 کنارہ ہے۔"
+              },
+              "misconception_id": "edge_vertex_mix"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal looks at a ludo dice (a cube) and says: \"It has 8 edges and 12 vertices.\" What went wrong?",
+            "ur": "بلال لوڈو کا پانسہ (مکعب) دیکھ کر کہتا ہے: \"اس کے 8 کنارے اور 12 راس ہیں۔\" کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "swap",
+              "text": {
+                "en": "He swapped them: a cube has 12 edges and 8 vertices.",
+                "ur": "اس نے الٹ دیا: مکعب کے 12 کنارے اور 8 راس ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Edges are the lines, vertices are the corner points.",
+                "ur": "جی ہاں! کنارے لکیریں ہیں، راس کونے کے نقطے ہیں۔"
+              }
+            },
+            {
+              "id": "faces",
+              "text": {
+                "en": "A cube has 6 edges.",
+                "ur": "مکعب کے 6 کنارے ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6 is the number of faces. A cube has 12 edges and 8 vertices.",
+                "ur": "6 سطحوں کی تعداد ہے۔ مکعب کے 12 کنارے اور 8 راس ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, he is right.",
+                "ur": "کوئی غلطی نہیں، وہ درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Count the corners: 4 on top and 4 below makes 8 vertices. The 12 are edges.",
+                "ur": "کونے گنیں: 4 اوپر اور 4 نیچے، 8 راس۔ 12 کنارے ہیں۔"
+              },
+              "misconception_id": "edge_vertex_mix"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_dims",
+      "front": {
+        "en": "1-D, 2-D, 3-D: what does each have?",
+        "ur": "1-D، 2-D، 3-D: ہر ایک کی کیا ہوتا ہے؟"
+      },
+      "back": {
+        "en": "1-D: length (a line segment). 2-D: length and breadth (a triangle). 3-D: length, breadth and height (a brick).",
+        "ur": "1-D: لمبائی (قطعہ خط)۔ 2-D: لمبائی اور چوڑائی (مثلث)۔ 3-D: لمبائی، چوڑائی اور اونچائی (اینٹ)۔"
+      }
+    },
+    {
+      "id": "f_curved",
+      "front": {
+        "en": "Surfaces, edges, vertices of a cylinder and a cone?",
+        "ur": "اسطوانہ اور مخروط کی سطحیں، کنارے، راس؟"
+      },
+      "back": {
+        "en": "Cylinder: 3 surfaces, 2 edges, 0 vertices. Cone: 2 surfaces, 1 edge, 1 vertex.",
+        "ur": "اسطوانہ: 3 سطحیں، 2 کنارے، 0 راس۔ مخروط: 2 سطحیں، 1 کنارہ، 1 راس۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sort",
+      "text": {
+        "en": "Find 6 things at home (a thread, a coin, a matchbox, a ball, a glass, a picture in a book) and sort them into 1-D, 2-D and 3-D. Then draw a cube: draw a square, draw a second square a little up and to the right, and join their corners with a ruler. Make the hidden edges dashed.",
+        "ur": "گھر میں 6 چیزیں ڈھونڈیں (دھاگا، سکہ، ماچس کی ڈبیا، گیند، گلاس، کتاب کی کوئی تصویر) اور انہیں 1-D، 2-D اور 3-D میں بانٹیں۔ پھر مکعب بنائیں: ایک مربع بنائیں، اس سے تھوڑا اوپر اور دائیں دوسرا مربع بنائیں، اور فٹے سے ان کے کونے جوڑ دیں۔ چھپے کنارے نقطہ دار بنائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Dimension",
+      "ur": "بُعد"
+    },
+    {
+      "en": "Line segment",
+      "ur": "قطعہ خط"
+    },
+    {
+      "en": "Cylinder",
+      "ur": "اسطوانہ"
+    },
+    {
+      "en": "Cone",
+      "ur": "مخروط"
+    },
+    {
+      "en": "Sphere",
+      "ur": "کرہ"
+    },
+    {
+      "en": "Hemisphere",
+      "ur": "نصف کرہ"
+    },
+    {
+      "en": "Curved surface",
+      "ur": "خمدار سطح"
+    },
+    {
+      "en": "Vertex",
+      "ur": "راس"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A kite string, a kite and a cricket ball. One is a line, one is flat, one is solid. Can you tell which?",
+          "ur": "پتنگ کی ڈور، پتنگ اور کرکٹ کی گیند۔ ایک لکیر ہے، ایک چپٹی ہے، ایک ٹھوس ہے۔ بتا سکتے ہیں کون سی کیا ہے؟"
+        }
+      },
+      "figure": {
+        "width": 120,
+        "height": 70,
+        "alt": {
+          "en": "Three things: a straight kite string drawn as a line from A to B, a kite drawn flat as a four-sided shape, and a cricket ball drawn as a round ball.",
+          "ur": "تین چیزیں: پتنگ کی تنی ہوئی ڈور A سے B تک ایک لکیر، پتنگ چار اضلاع والی چپٹی شکل، اور کرکٹ کی گیند ایک گول گیند۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              6,
+              60
+            ],
+            "to": [
+              34,
+              12
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              6,
+              60
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              34,
+              12
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              10,
+              66
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              30,
+              6
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                62,
+                8
+              ],
+              [
+                76,
+                30
+              ],
+              [
+                62,
+                62
+              ],
+              [
+                48,
+                30
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              100,
+              36
+            ],
+            "radius": 14,
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              114.0,
+              36.0
+            ],
+            "to": [
+              113.3,
+              37.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              113.3,
+              37.2
+            ],
+            "to": [
+              111.3,
+              38.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              111.3,
+              38.4
+            ],
+            "to": [
+              108.2,
+              39.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              108.2,
+              39.2
+            ],
+            "to": [
+              104.3,
+              39.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              104.3,
+              39.8
+            ],
+            "to": [
+              100.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              100.0,
+              40.0
+            ],
+            "to": [
+              95.7,
+              39.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.7,
+              39.8
+            ],
+            "to": [
+              91.8,
+              39.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              91.8,
+              39.2
+            ],
+            "to": [
+              88.7,
+              38.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.7,
+              38.4
+            ],
+            "to": [
+              86.7,
+              37.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              86.7,
+              37.2
+            ],
+            "to": [
+              86.0,
+              36.0
+            ]
+          }
+        ]
+      },
+      "text": {
+        "en": "Today we sort shapes into 1-D, 2-D and 3-D, and count their sides, surfaces, edges and vertices. First, a quick check on solids.",
+        "ur": "آج ہم اشکال کو 1-D، 2-D اور 3-D میں بانٹیں گے، اور ان کے اضلاع، سطحیں، کنارے اور راس گنیں گے۔ پہلے ٹھوس اشکال پر ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.solids.faces_edges_vertices",
+      "prompt": {
+        "en": "A ludo dice is a cube. How many faces does it have?",
+        "ur": "لوڈو کا پانسہ مکعب ہے۔ اس کی کتنی سطحیں ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Top and bottom, front and back, left and right.",
+        "ur": "اوپر اور نیچے، آگے اور پیچھے، دائیں اور بائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 faces, one for each number 1 to 6.",
+        "ur": "درست! 6 سطحیں، 1 سے 6 تک ہر عدد کے لیے ایک۔"
+      },
+      "feedback_wrong": {
+        "en": "A cube has 6 faces: top, bottom, front, back, left, right.",
+        "ur": "مکعب کی 6 سطحیں ہیں: اوپر، نیچے، آگے، پیچھے، دائیں، بائیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "You can see only 3 at once. Turn it over: there are 6.",
+            "ur": "ایک وقت میں صرف 3 نظر آتی ہیں۔ پلٹ کر دیکھیں: 6 ہیں۔"
+          }
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the number of corners (vertices). Faces: 6.",
+            "ur": "8 کونوں (راس) کی تعداد ہے۔ سطحیں: 6۔"
+          }
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the number of edges. Faces: 6.",
+            "ur": "12 کناروں کی تعداد ہے۔ سطحیں: 6۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_dimensions",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "Count the measurements: one for a line, two for flat, three for solid!",
+          "ur": "پیمائشیں گنیں: لکیر کی ایک، چپٹی کی دو، ٹھوس کی تین!"
+        }
+      },
+      "figure": {
+        "width": 150,
+        "height": 64,
+        "alt": {
+          "en": "Three shapes side by side. Left, labelled 1-D: a line segment AB, which has only length. Middle, labelled 2-D: a flat triangle, which has length and breadth. Right, labelled 3-D: a cuboid drawn as a front rectangle joined to a back rectangle; the hidden edges at the back are dashed. It has length, breadth and height.",
+          "ur": "تین اشکال ساتھ ساتھ۔ بائیں، 1-D: قطعہ خط AB، جس کی صرف لمبائی ہے۔ درمیان، 2-D: چپٹی مثلث، جس کی لمبائی اور چوڑائی ہے۔ دائیں، 3-D: مکعب نما، آگے کا مستطیل پیچھے کے مستطیل سے جڑا ہوا؛ پیچھے کے چھپے کنارے نقطہ دار ہیں۔ اس کی لمبائی، چوڑائی اور اونچائی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              6,
+              30
+            ],
+            "to": [
+              40,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              6,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              40,
+              30
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              6,
+              22
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              40,
+              22
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              23,
+              56
+            ],
+            "text": "1-D"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                55,
+                44
+              ],
+              [
+                90,
+                44
+              ],
+              [
+                70,
+                12
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              72,
+              56
+            ],
+            "text": "2-D"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                104,
+                20
+              ],
+              [
+                132,
+                20
+              ],
+              [
+                132,
+                44
+              ],
+              [
+                104,
+                44
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              116,
+              10
+            ],
+            "to": [
+              144,
+              10
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144,
+              10
+            ],
+            "to": [
+              144,
+              34
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144,
+              34
+            ],
+            "to": [
+              116,
+              34
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              116,
+              34
+            ],
+            "to": [
+              116,
+              10
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              104,
+              20
+            ],
+            "to": [
+              116,
+              10
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              132,
+              20
+            ],
+            "to": [
+              144,
+              10
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              132,
+              44
+            ],
+            "to": [
+              144,
+              34
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              104,
+              44
+            ],
+            "to": [
+              116,
+              34
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124,
+              56
+            ],
+            "text": "3-D"
+          }
+        ]
+      },
+      "text": {
+        "en": "A 1-D (one-dimensional) shape has only length, like a line segment or a thread pulled tight. A 2-D shape is flat: it has length and breadth, like a triangle, square, rectangle or circle drawn on paper. We describe it by its sides and vertices (corners). A 3-D shape is a solid: it has length, breadth and height, like a cube, cuboid, cylinder, sphere, hemisphere or cone. We describe it by its surfaces, edges and vertices. Some surfaces are curved: a cylinder has 2 flat circles and 1 curved surface.",
+        "ur": "1-D (یک بعدی) شکل کی صرف لمبائی ہوتی ہے، جیسے قطعہ خط یا تنا ہوا دھاگا۔ 2-D شکل چپٹی ہوتی ہے: اس کی لمبائی اور چوڑائی ہوتی ہے، جیسے کاغذ پر بنی مثلث، مربع، مستطیل یا دائرہ۔ ہم اسے اس کے اضلاع اور راس (کونوں) سے بیان کرتے ہیں۔ 3-D شکل ٹھوس ہوتی ہے: اس کی لمبائی، چوڑائی اور اونچائی ہوتی ہے، جیسے مکعب، مکعب نما، اسطوانہ، کرہ، نصف کرہ یا مخروط۔ ہم اسے اس کی سطحوں، کناروں اور راسوں سے بیان کرتے ہیں۔ کچھ سطحیں خمدار ہوتی ہیں: اسطوانے کے 2 چپٹے دائرے اور 1 خمدار سطح ہوتی ہے۔"
+      }
+    },
+    {
+      "id": "s4_sort",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these is a 3-D shape?",
+        "ur": "ان میں سے کون سی 3-D شکل ہے؟"
+      },
+      "options": [
+        {
+          "id": "brick",
+          "text": {
+            "en": "A brick",
+            "ur": "ایک اینٹ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A brick has length, breadth and height. It is a cuboid.",
+            "ur": "جی ہاں! اینٹ کی لمبائی، چوڑائی اور اونچائی ہے۔ یہ مکعب نما ہے۔"
+          }
+        },
+        {
+          "id": "circle",
+          "text": {
+            "en": "A circle drawn on paper",
+            "ur": "کاغذ پر بنا دائرہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A drawn circle is flat: length and breadth only. It is 2-D.",
+            "ur": "بنا ہوا دائرہ چپٹا ہے: صرف لمبائی اور چوڑائی۔ یہ 2-D ہے۔"
+          },
+          "misconception_id": "flat_is_3d"
+        },
+        {
+          "id": "thread",
+          "text": {
+            "en": "A thread pulled tight",
+            "ur": "تنا ہوا دھاگا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A tight thread is like a line segment: length only. It is 1-D.",
+            "ur": "تنا ہوا دھاگا قطعہ خط جیسا ہے: صرف لمبائی۔ یہ 1-D ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_sides",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "This flat house shape is drawn on paper. How many sides does it have? (The dashed line is only a guide.)",
+        "ur": "یہ چپٹی گھر جیسی شکل کاغذ پر بنی ہے۔ اس کے کتنے اضلاع ہیں؟ (نقطہ دار لکیر صرف رہنما ہے۔)"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Go round the outline and count each straight side once.",
+        "ur": "باہر کے خاکے کے گرد چلیں اور ہر سیدھا ضلع ایک بار گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 sides, and so 5 vertices too.",
+        "ur": "درست! 5 اضلاع، اور اس لیے 5 راس بھی۔"
+      },
+      "feedback_wrong": {
+        "en": "Bottom, two walls and two roof sides: 5 sides.",
+        "ur": "نیچے، دو دیواریں اور چھت کے دو اضلاع: 5 اضلاع۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "The dashed line is inside the shape, not a side. Count the outline: 5.",
+            "ur": "نقطہ دار لکیر شکل کے اندر ہے، ضلع نہیں۔ خاکہ گنیں: 5۔"
+          }
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't stop at the square: the roof adds 2 sides, not 1. Total 5.",
+            "ur": "مربع پر نہ رکیں: چھت 2 اضلاع جوڑتی ہے۔ کل 5۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 80,
+        "height": 76,
+        "alt": {
+          "en": "A flat house shape: a square with a triangle roof on top, drawn as one outline. A dashed guide line shows where the square and the roof meet; it is not a side of the shape.",
+          "ur": "ایک چپٹی گھر جیسی شکل: مربع جس کے اوپر مثلث چھت ہے، ایک ہی بیرونی خاکے میں۔ ایک نقطہ دار رہنما لکیر دکھاتی ہے کہ مربع اور چھت کہاں ملتے ہیں؛ یہ شکل کا ضلع نہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16,
+                70
+              ],
+              [
+                64,
+                70
+              ],
+              [
+                64,
+                34
+              ],
+              [
+                40,
+                8
+              ],
+              [
+                16,
+                34
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              34
+            ],
+            "to": [
+              64,
+              34
+            ],
+            "style": "dashed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_cyl_edges",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A ghee tin is a cylinder. How many edges does it have?",
+        "ur": "گھی کا ڈبہ اسطوانہ ہے۔ اس کے کتنے کنارے ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "An edge is where two surfaces meet. Look at the top and the bottom rims.",
+        "ur": "کنارہ وہاں ہے جہاں دو سطحیں ملیں۔ اوپر اور نیچے کے کنارے دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 curved edges: one round the top, one round the bottom.",
+        "ur": "درست! 2 خمدار کنارے: ایک اوپر کے گرد، ایک نیچے کے گرد۔"
+      },
+      "feedback_wrong": {
+        "en": "The curved side meets the top circle and the bottom circle: 2 edges.",
+        "ur": "خمدار سطح اوپر والے اور نیچے والے دائرے سے ملتی ہے: 2 کنارے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "Curved edges still count. The top rim and bottom rim are 2 edges.",
+            "ur": "خمدار کنارے بھی گنے جاتے ہیں۔ اوپر اور نیچے کے کنارے 2 ہیں۔"
+          },
+          "misconception_id": "curved_surface"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the number of surfaces. Edges are where they meet: 2.",
+            "ur": "3 سطحوں کی تعداد ہے۔ کنارے وہاں ہیں جہاں وہ ملیں: 2۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 70,
+        "height": 80,
+        "alt": {
+          "en": "A cylinder standing up, like a ghee tin. The top is a flat circle drawn as an oval. Two straight side lines go down to the bottom circle. The back half of the bottom circle is dashed because it is hidden.",
+          "ur": "کھڑا ہوا اسطوانہ، گھی کے ڈبے کی طرح۔ اوپر چپٹا دائرہ بیضوی شکل میں بنا ہے۔ دو سیدھی لکیریں نیچے والے دائرے تک جاتی ہیں۔ نیچے والے دائرے کا پچھلا آدھا حصہ چھپا ہے اس لیے نقطہ دار ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                59.0,
+                14.0
+              ],
+              [
+                58.2,
+                15.8
+              ],
+              [
+                55.8,
+                17.5
+              ],
+              [
+                52.0,
+                18.9
+              ],
+              [
+                47.0,
+                20.1
+              ],
+              [
+                41.2,
+                20.8
+              ],
+              [
+                35.0,
+                21.0
+              ],
+              [
+                28.8,
+                20.8
+              ],
+              [
+                23.0,
+                20.1
+              ],
+              [
+                18.0,
+                18.9
+              ],
+              [
+                14.2,
+                17.5
+              ],
+              [
+                11.8,
+                15.8
+              ],
+              [
+                11.0,
+                14.0
+              ],
+              [
+                11.8,
+                12.2
+              ],
+              [
+                14.2,
+                10.5
+              ],
+              [
+                18.0,
+                9.1
+              ],
+              [
+                23.0,
+                7.9
+              ],
+              [
+                28.8,
+                7.2
+              ],
+              [
+                35.0,
+                7.0
+              ],
+              [
+                41.2,
+                7.2
+              ],
+              [
+                47.0,
+                7.9
+              ],
+              [
+                52.0,
+                9.1
+              ],
+              [
+                55.8,
+                10.5
+              ],
+              [
+                58.2,
+                12.2
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11,
+              14
+            ],
+            "to": [
+              11,
+              66
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              59,
+              14
+            ],
+            "to": [
+              59,
+              66
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              59.0,
+              66.0
+            ],
+            "to": [
+              57.2,
+              68.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              57.2,
+              68.7
+            ],
+            "to": [
+              52.0,
+              70.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              52.0,
+              70.9
+            ],
+            "to": [
+              44.2,
+              72.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.2,
+              72.5
+            ],
+            "to": [
+              35.0,
+              73.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.0,
+              73.0
+            ],
+            "to": [
+              25.8,
+              72.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              25.8,
+              72.5
+            ],
+            "to": [
+              18.0,
+              70.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              70.9
+            ],
+            "to": [
+              12.8,
+              68.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.8,
+              68.7
+            ],
+            "to": [
+              11.0,
+              66.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11.0,
+              66.0
+            ],
+            "to": [
+              12.8,
+              63.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.8,
+              63.3
+            ],
+            "to": [
+              18.0,
+              61.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              61.1
+            ],
+            "to": [
+              25.8,
+              59.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              25.8,
+              59.5
+            ],
+            "to": [
+              35.0,
+              59.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.0,
+              59.0
+            ],
+            "to": [
+              44.2,
+              59.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.2,
+              59.5
+            ],
+            "to": [
+              52.0,
+              61.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              52.0,
+              61.1
+            ],
+            "to": [
+              57.2,
+              63.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              57.2,
+              63.3
+            ],
+            "to": [
+              59.0,
+              66.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7_cone_vertex",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "An ice-cream cone is shaped like a cone. How many vertices does a cone have?",
+        "ur": "آئس کریم کون مخروط جیسی ہے۔ مخروط کے کتنے راس ہوتے ہیں؟"
+      },
+      "answer": 1,
+      "checker": "numeric",
+      "hint": {
+        "en": "A vertex is a sharp point. Look for the pointed tip.",
+        "ur": "راس نوکیلا نقطہ ہے۔ نوکیلی چوٹی ڈھونڈیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1 vertex, the tip.",
+        "ur": "درست! 1 راس، چوٹی۔"
+      },
+      "feedback_wrong": {
+        "en": "The only sharp point is the tip: 1 vertex. The round base has an edge but no corners.",
+        "ur": "واحد نوکیلا نقطہ چوٹی ہے: 1 راس۔ گول قاعدے کا کنارہ ہے لیکن کونے نہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "The pointed tip is a vertex: 1.",
+            "ur": "نوکیلی چوٹی راس ہے: 1۔"
+          }
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "The circle round the base is an edge, not a vertex. Only the tip: 1.",
+            "ur": "قاعدے کا دائرہ کنارہ ہے، راس نہیں۔ صرف چوٹی: 1۔"
+          },
+          "misconception_id": "edge_vertex_mix"
+        }
+      ],
+      "figure": {
+        "width": 70,
+        "height": 80,
+        "alt": {
+          "en": "A cone, like an ice-cream cone turned upside down. It has a pointed tip at the top marked with a dot, two straight slanting lines going down, and a round base drawn as an oval with its hidden back half dashed.",
+          "ur": "مخروط، الٹی رکھی آئس کریم کون کی طرح۔ اوپر نوکیلی چوٹی پر نقطہ ہے، دو ترچھی سیدھی لکیریں نیچے آتی ہیں، اور گول قاعدہ بیضوی شکل میں ہے جس کا چھپا پچھلا آدھا حصہ نقطہ دار ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              35,
+              8
+            ],
+            "to": [
+              11,
+              64
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35,
+              8
+            ],
+            "to": [
+              59,
+              64
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              35,
+              8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              59.0,
+              64.0
+            ],
+            "to": [
+              57.2,
+              66.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              57.2,
+              66.7
+            ],
+            "to": [
+              52.0,
+              68.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              52.0,
+              68.9
+            ],
+            "to": [
+              44.2,
+              70.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.2,
+              70.5
+            ],
+            "to": [
+              35.0,
+              71.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.0,
+              71.0
+            ],
+            "to": [
+              25.8,
+              70.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              25.8,
+              70.5
+            ],
+            "to": [
+              18.0,
+              68.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              68.9
+            ],
+            "to": [
+              12.8,
+              66.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.8,
+              66.7
+            ],
+            "to": [
+              11.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11.0,
+              64.0
+            ],
+            "to": [
+              12.8,
+              61.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.8,
+              61.3
+            ],
+            "to": [
+              18.0,
+              59.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              59.1
+            ],
+            "to": [
+              25.8,
+              57.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              25.8,
+              57.5
+            ],
+            "to": [
+              35.0,
+              57.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.0,
+              57.0
+            ],
+            "to": [
+              44.2,
+              57.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.2,
+              57.5
+            ],
+            "to": [
+              52.0,
+              59.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              52.0,
+              59.1
+            ],
+            "to": [
+              57.2,
+              61.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              57.2,
+              61.3
+            ],
+            "to": [
+              59.0,
+              64.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8_cyl_surfaces",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Look at the cylinder again. How many surfaces does it have, flat and curved together?",
+        "ur": "اسطوانہ پھر دیکھیں۔ اس کی کتنی سطحیں ہیں، چپٹی اور خمدار ملا کر؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Top, bottom, and the part that wraps round.",
+        "ur": "اوپر، نیچے، اور وہ حصہ جو گرد لپٹا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 flat circles and 1 curved surface: 3.",
+        "ur": "درست! 2 چپٹے دائرے اور 1 خمدار سطح: 3۔"
+      },
+      "feedback_wrong": {
+        "en": "2 flat circles + 1 curved surface = 3 surfaces.",
+        "ur": "2 چپٹے دائرے + 1 خمدار سطح = 3 سطحیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That counts only the flat circles. Add the curved surface: 3.",
+            "ur": "یہ صرف چپٹے دائرے ہیں۔ خمدار سطح جوڑیں: 3۔"
+          },
+          "misconception_id": "curved_surface"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "A cylinder is not a cuboid. It has 2 flat circles and 1 curved surface: 3.",
+            "ur": "اسطوانہ مکعب نما نہیں۔ اس کے 2 چپٹے دائرے اور 1 خمدار سطح ہے: 3۔"
+          },
+          "misconception_id": "curved_surface"
+        }
+      ],
+      "figure": {
+        "width": 70,
+        "height": 80,
+        "alt": {
+          "en": "A cylinder standing up, like a ghee tin. The top is a flat circle drawn as an oval. Two straight side lines go down to the bottom circle. The back half of the bottom circle is dashed because it is hidden.",
+          "ur": "کھڑا ہوا اسطوانہ، گھی کے ڈبے کی طرح۔ اوپر چپٹا دائرہ بیضوی شکل میں بنا ہے۔ دو سیدھی لکیریں نیچے والے دائرے تک جاتی ہیں۔ نیچے والے دائرے کا پچھلا آدھا حصہ چھپا ہے اس لیے نقطہ دار ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                59.0,
+                14.0
+              ],
+              [
+                58.2,
+                15.8
+              ],
+              [
+                55.8,
+                17.5
+              ],
+              [
+                52.0,
+                18.9
+              ],
+              [
+                47.0,
+                20.1
+              ],
+              [
+                41.2,
+                20.8
+              ],
+              [
+                35.0,
+                21.0
+              ],
+              [
+                28.8,
+                20.8
+              ],
+              [
+                23.0,
+                20.1
+              ],
+              [
+                18.0,
+                18.9
+              ],
+              [
+                14.2,
+                17.5
+              ],
+              [
+                11.8,
+                15.8
+              ],
+              [
+                11.0,
+                14.0
+              ],
+              [
+                11.8,
+                12.2
+              ],
+              [
+                14.2,
+                10.5
+              ],
+              [
+                18.0,
+                9.1
+              ],
+              [
+                23.0,
+                7.9
+              ],
+              [
+                28.8,
+                7.2
+              ],
+              [
+                35.0,
+                7.0
+              ],
+              [
+                41.2,
+                7.2
+              ],
+              [
+                47.0,
+                7.9
+              ],
+              [
+                52.0,
+                9.1
+              ],
+              [
+                55.8,
+                10.5
+              ],
+              [
+                58.2,
+                12.2
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11,
+              14
+            ],
+            "to": [
+              11,
+              66
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              59,
+              14
+            ],
+            "to": [
+              59,
+              66
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              59.0,
+              66.0
+            ],
+            "to": [
+              57.2,
+              68.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              57.2,
+              68.7
+            ],
+            "to": [
+              52.0,
+              70.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              52.0,
+              70.9
+            ],
+            "to": [
+              44.2,
+              72.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.2,
+              72.5
+            ],
+            "to": [
+              35.0,
+              73.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.0,
+              73.0
+            ],
+            "to": [
+              25.8,
+              72.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              25.8,
+              72.5
+            ],
+            "to": [
+              18.0,
+              70.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              70.9
+            ],
+            "to": [
+              12.8,
+              68.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.8,
+              68.7
+            ],
+            "to": [
+              11.0,
+              66.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11.0,
+              66.0
+            ],
+            "to": [
+              12.8,
+              63.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.8,
+              63.3
+            ],
+            "to": [
+              18.0,
+              61.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              61.1
+            ],
+            "to": [
+              25.8,
+              59.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              25.8,
+              59.5
+            ],
+            "to": [
+              35.0,
+              59.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.0,
+              59.0
+            ],
+            "to": [
+              44.2,
+              59.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.2,
+              59.5
+            ],
+            "to": [
+              52.0,
+              61.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              52.0,
+              61.1
+            ],
+            "to": [
+              57.2,
+              63.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              57.2,
+              63.3
+            ],
+            "to": [
+              59.0,
+              66.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "figure": {
+        "width": 80,
+        "height": 60,
+        "alt": {
+          "en": "A circle drawn in a notebook, shaded in. It is flat on the page.",
+          "ur": "کاپی میں بنا ہوا ایک دائرہ، اندر سے رنگا ہوا۔ یہ صفحے پر چپٹا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                4,
+                6
+              ],
+              [
+                76,
+                6
+              ],
+              [
+                76,
+                54
+              ],
+              [
+                4,
+                54
+              ]
+            ]
+          },
+          {
+            "kind": "circle",
+            "center": [
+              40,
+              30
+            ],
+            "radius": 16,
+            "fill": true
+          }
+        ]
+      },
+      "prompt": {
+        "en": "Hamza draws this circle in his notebook and says: \"It is round like a cricket ball, so it is 3-D.\" What went wrong?",
+        "ur": "حمزہ اپنی کاپی میں یہ دائرہ بنا کر کہتا ہے: \"یہ کرکٹ کی گیند کی طرح گول ہے، اس لیے 3-D ہے۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "flat",
+          "text": {
+            "en": "The drawn circle is flat: it has no height. It is 2-D. A ball is a sphere, which is 3-D.",
+            "ur": "بنا ہوا دائرہ چپٹا ہے: اس کی اونچائی نہیں۔ یہ 2-D ہے۔ گیند کرہ ہے جو 3-D ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Round is not the test. Height is.",
+            "ur": "جی ہاں! گول ہونا پیمانہ نہیں۔ اونچائی ہے۔"
+          }
+        },
+        {
+          "id": "onedim",
+          "text": {
+            "en": "A circle is 1-D because it is a curved line.",
+            "ur": "دائرہ 1-D ہے کیونکہ یہ خمدار لکیر ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The circle covers a flat space with length and breadth. It is 2-D.",
+            "ur": "دائرہ لمبائی اور چوڑائی والی چپٹی جگہ گھیرتا ہے۔ یہ 2-D ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing, he is right.",
+            "ur": "کوئی غلطی نہیں، وہ درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Can you pick the drawing up off the page? It has no height, so it is 2-D.",
+            "ur": "کیا آپ تصویر صفحے سے اٹھا سکتے ہیں؟ اس کی اونچائی نہیں، اس لیے 2-D ہے۔"
+          },
+          "misconception_id": "flat_is_3d"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A coin and a circle drawn on paper look the same from above. Why is the coin 3-D but the drawing 2-D?",
+          "ur": "اوپر سے سکہ اور کاغذ پر بنا دائرہ ایک جیسے لگتے ہیں۔ سکہ 3-D اور تصویر 2-D کیوں ہے؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: why is a coin a 3-D shape but a circle drawn on paper a 2-D shape?",
+        "ur": "اپنے الفاظ میں بتائیں: سکہ 3-D شکل کیوں ہے جبکہ کاغذ پر بنا دائرہ 2-D شکل؟"
+      },
+      "key_idea": "A coin has thickness (height) as well as length and breadth, so it is a very short cylinder, a 3-D solid. A drawn circle is flat on the page with only length and breadth, so it is 2-D.",
+      "levels": {
+        "got_it": "Says the coin has thickness or height (a third measurement) and the drawn circle has only length and breadth / is flat.",
+        "partly": "Says the coin is thick or solid, or the drawing is flat, but not both.",
+        "not_yet": "Gives no reason, or says it is because of the shape or size."
+      },
+      "keywords": [
+        [
+          "thick",
+          "height",
+          "thickness",
+          "موٹا",
+          "موٹائی",
+          "اونچائی",
+          "motai"
+        ],
+        [
+          "flat",
+          "paper",
+          "چپٹا",
+          "کاغذ",
+          "chapta"
+        ],
+        [
+          "three",
+          "solid",
+          "تین",
+          "ٹھوس",
+          "cylinder",
+          "اسطوانہ"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The coin has thickness, a third measurement, so it is a short cylinder.",
+          "ur": "بہت خوب! سکے کی موٹائی ہے، تیسری پیمائش، اس لیے یہ چھوٹا سا اسطوانہ ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now compare both: what does the coin have that the drawing does not?",
+          "ur": "اچھی شروعات! اب دونوں کا موازنہ کریں: سکے میں کیا ہے جو تصویر میں نہیں؟"
+        },
+        "not_yet": {
+          "en": "Stand a coin on its edge. Can you do that with a drawing? Think about thickness.",
+          "ur": "سکے کو کنارے پر کھڑا کریں۔ کیا تصویر کے ساتھ ایسا ہو سکتا ہے؟ موٹائی کے بارے میں سوچیں۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_hemisphere",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Cut a cricket ball in half and you get a hemisphere. How many surfaces does a hemisphere have?",
+        "ur": "کرکٹ کی گیند آدھی کاٹیں تو نصف کرہ بنتا ہے۔ نصف کرہ کی کتنی سطحیں ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "One surface is where you cut. The other is the round dome.",
+        "ur": "ایک سطح وہاں ہے جہاں کاٹا۔ دوسری گول گنبد ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1 flat circle and 1 curved surface: 2.",
+        "ur": "درست! 1 چپٹا دائرہ اور 1 خمدار سطح: 2۔"
+      },
+      "feedback_wrong": {
+        "en": "1 flat surface + 1 curved surface = 2 surfaces.",
+        "ur": "1 چپٹی سطح + 1 خمدار سطح = 2 سطحیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "Don't forget the flat face from the cut. 1 curved + 1 flat = 2.",
+            "ur": "کاٹنے سے بنی چپٹی سطح نہ بھولیں۔ 1 خمدار + 1 چپٹی = 2۔"
+          },
+          "misconception_id": "curved_surface"
+        }
+      ],
+      "figure": {
+        "width": 80,
+        "height": 74,
+        "alt": {
+          "en": "Half a ball (a hemisphere) resting on its flat side: a curved dome on top and a flat round base drawn as an oval, with the hidden back half of the base dashed.",
+          "ur": "آدھی گیند (نصف کرہ) اپنی چپٹی طرف پر رکھی ہے: اوپر خمدار گنبد اور نیچے چپٹا گول قاعدہ بیضوی شکل میں، جس کا چھپا پچھلا آدھا حصہ نقطہ دار ہے۔"
+        },
+        "items": [
+          {
+            "kind": "arc",
+            "center": [
+              40,
+              40
+            ],
+            "radius": 28,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              40.0
+            ],
+            "to": [
+              65.9,
+              43.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.9,
+              43.1
+            ],
+            "to": [
+              59.8,
+              45.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              59.8,
+              45.7
+            ],
+            "to": [
+              50.7,
+              47.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.7,
+              47.4
+            ],
+            "to": [
+              40.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              48.0
+            ],
+            "to": [
+              29.3,
+              47.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              29.3,
+              47.4
+            ],
+            "to": [
+              20.2,
+              45.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.2,
+              45.7
+            ],
+            "to": [
+              14.1,
+              43.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              14.1,
+              43.1
+            ],
+            "to": [
+              12.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.0,
+              40.0
+            ],
+            "to": [
+              14.1,
+              36.9
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              14.1,
+              36.9
+            ],
+            "to": [
+              20.2,
+              34.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.2,
+              34.3
+            ],
+            "to": [
+              29.3,
+              32.6
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              29.3,
+              32.6
+            ],
+            "to": [
+              40.0,
+              32.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              32.0
+            ],
+            "to": [
+              50.7,
+              32.6
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.7,
+              32.6
+            ],
+            "to": [
+              59.8,
+              34.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              59.8,
+              34.3
+            ],
+            "to": [
+              65.9,
+              36.9
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.9,
+              36.9
+            ],
+            "to": [
+              68.0,
+              40.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Line, flat, solid: 1-D, 2-D, 3-D. And curved surfaces count too! Well done!",
+          "ur": "لکیر، چپٹی، ٹھوس: 1-D، 2-D، 3-D۔ اور خمدار سطحیں بھی گنی جاتی ہیں! شاباش!"
+        }
+      },
+      "figure": {
+        "width": 150,
+        "height": 64,
+        "alt": {
+          "en": "Three solids side by side: a cylinder with a flat circle on top and bottom, a cone with a pointed tip, and a cube drawn as two squares joined at the corners with hidden edges dashed.",
+          "ur": "تین ٹھوس اشکال ساتھ ساتھ: اسطوانہ جس کے اوپر اور نیچے چپٹے دائرے ہیں، نوکیلی چوٹی والا مخروط، اور مکعب جو کونوں سے جڑے دو مربعوں کی شکل میں ہے، چھپے کنارے نقطہ دار۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                38.0,
+                12.0
+              ],
+              [
+                37.5,
+                13.3
+              ],
+              [
+                35.9,
+                14.5
+              ],
+              [
+                33.3,
+                15.5
+              ],
+              [
+                30.0,
+                16.3
+              ],
+              [
+                26.1,
+                16.8
+              ],
+              [
+                22.0,
+                17.0
+              ],
+              [
+                17.9,
+                16.8
+              ],
+              [
+                14.0,
+                16.3
+              ],
+              [
+                10.7,
+                15.5
+              ],
+              [
+                8.1,
+                14.5
+              ],
+              [
+                6.5,
+                13.3
+              ],
+              [
+                6.0,
+                12.0
+              ],
+              [
+                6.5,
+                10.7
+              ],
+              [
+                8.1,
+                9.5
+              ],
+              [
+                10.7,
+                8.5
+              ],
+              [
+                14.0,
+                7.7
+              ],
+              [
+                17.9,
+                7.2
+              ],
+              [
+                22.0,
+                7.0
+              ],
+              [
+                26.1,
+                7.2
+              ],
+              [
+                30.0,
+                7.7
+              ],
+              [
+                33.3,
+                8.5
+              ],
+              [
+                35.9,
+                9.5
+              ],
+              [
+                37.5,
+                10.7
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              6,
+              12
+            ],
+            "to": [
+              6,
+              52
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38,
+              12
+            ],
+            "to": [
+              38,
+              52
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              52.0
+            ],
+            "to": [
+              36.8,
+              53.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              36.8,
+              53.9
+            ],
+            "to": [
+              33.3,
+              55.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.3,
+              55.5
+            ],
+            "to": [
+              28.1,
+              56.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.1,
+              56.6
+            ],
+            "to": [
+              22.0,
+              57.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22.0,
+              57.0
+            ],
+            "to": [
+              15.9,
+              56.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              15.9,
+              56.6
+            ],
+            "to": [
+              10.7,
+              55.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.7,
+              55.5
+            ],
+            "to": [
+              7.2,
+              53.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              7.2,
+              53.9
+            ],
+            "to": [
+              6.0,
+              52.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              6.0,
+              52.0
+            ],
+            "to": [
+              7.2,
+              50.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              7.2,
+              50.1
+            ],
+            "to": [
+              10.7,
+              48.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.7,
+              48.5
+            ],
+            "to": [
+              15.9,
+              47.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              15.9,
+              47.4
+            ],
+            "to": [
+              22.0,
+              47.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              22.0,
+              47.0
+            ],
+            "to": [
+              28.1,
+              47.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.1,
+              47.4
+            ],
+            "to": [
+              33.3,
+              48.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.3,
+              48.5
+            ],
+            "to": [
+              36.8,
+              50.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              36.8,
+              50.1
+            ],
+            "to": [
+              38.0,
+              52.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              70,
+              8
+            ],
+            "to": [
+              54,
+              52
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              70,
+              8
+            ],
+            "to": [
+              86,
+              52
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              70,
+              8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              86.0,
+              52.0
+            ],
+            "to": [
+              84.8,
+              53.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              84.8,
+              53.9
+            ],
+            "to": [
+              81.3,
+              55.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              81.3,
+              55.5
+            ],
+            "to": [
+              76.1,
+              56.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              76.1,
+              56.6
+            ],
+            "to": [
+              70.0,
+              57.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              57.0
+            ],
+            "to": [
+              63.9,
+              56.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              63.9,
+              56.6
+            ],
+            "to": [
+              58.7,
+              55.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.7,
+              55.5
+            ],
+            "to": [
+              55.2,
+              53.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              53.9
+            ],
+            "to": [
+              54.0,
+              52.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54.0,
+              52.0
+            ],
+            "to": [
+              55.2,
+              50.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              50.1
+            ],
+            "to": [
+              58.7,
+              48.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.7,
+              48.5
+            ],
+            "to": [
+              63.9,
+              47.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              63.9,
+              47.4
+            ],
+            "to": [
+              70.0,
+              47.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              47.0
+            ],
+            "to": [
+              76.1,
+              47.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              76.1,
+              47.4
+            ],
+            "to": [
+              81.3,
+              48.5
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              81.3,
+              48.5
+            ],
+            "to": [
+              84.8,
+              50.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              84.8,
+              50.1
+            ],
+            "to": [
+              86.0,
+              52.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                104,
+                24
+              ],
+              [
+                130,
+                24
+              ],
+              [
+                130,
+                50
+              ],
+              [
+                104,
+                50
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              116,
+              14
+            ],
+            "to": [
+              142,
+              14
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              142,
+              14
+            ],
+            "to": [
+              142,
+              40
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              142,
+              40
+            ],
+            "to": [
+              116,
+              40
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              116,
+              40
+            ],
+            "to": [
+              116,
+              14
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              104,
+              24
+            ],
+            "to": [
+              116,
+              14
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              130,
+              24
+            ],
+            "to": [
+              142,
+              14
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              130,
+              50
+            ],
+            "to": [
+              142,
+              40
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              104,
+              50
+            ],
+            "to": [
+              116,
+              40
+            ],
+            "style": "dashed"
+          }
+        ]
+      },
+      "text": {
+        "en": "1-D shapes have length only. 2-D shapes are flat with length and breadth, and we count their sides and vertices. 3-D shapes are solids with length, breadth and height, and we count their surfaces, edges and vertices. Edges are lines where surfaces meet; vertices are corner points. Curved surfaces and curved edges count too.",
+        "ur": "1-D اشکال کی صرف لمبائی ہوتی ہے۔ 2-D اشکال چپٹی ہوتی ہیں، لمبائی اور چوڑائی کے ساتھ، اور ہم ان کے اضلاع اور راس گنتے ہیں۔ 3-D اشکال ٹھوس ہوتی ہیں، لمبائی، چوڑائی اور اونچائی کے ساتھ، اور ہم ان کی سطحیں، کنارے اور راس گنتے ہیں۔ کنارے وہ لکیریں ہیں جہاں سطحیں ملتی ہیں؛ راس کونے کے نقطے ہیں۔ خمدار سطحیں اور خمدار کنارے بھی گنے جاتے ہیں۔"
+      },
+      "points": [
+        {
+          "en": "Cylinder: 3 surfaces, 2 edges, 0 vertices.",
+          "ur": "اسطوانہ: 3 سطحیں، 2 کنارے، 0 راس۔"
+        },
+        {
+          "en": "Cone: 2 surfaces, 1 edge, 1 vertex.",
+          "ur": "مخروط: 2 سطحیں، 1 کنارہ، 1 راس۔"
+        },
+        {
+          "en": "Sphere: 1 curved surface, no edges, no vertices.",
+          "ur": "کرہ: 1 خمدار سطح، کوئی کنارہ نہیں، کوئی راس نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_kite",
+      "type": "apply",
+      "skill": "maths.symmetry.shapes_2d_3d",
+      "step": {
+        "id": "r_kite",
+        "type": "number",
+        "prompt": {
+          "en": "This rooftop kite is drawn flat on paper. How many vertices does it have?",
+          "ur": "چھت کی یہ پتنگ کاغذ پر چپٹی بنی ہے۔ اس کے کتنے راس ہیں؟"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Count the corner dots.",
+          "ur": "کونوں کے نقطے گنیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 4 vertices, and 4 sides too.",
+          "ur": "درست! 4 راس، اور 4 اضلاع بھی۔"
+        },
+        "feedback_wrong": {
+          "en": "Top, bottom, left and right corners: 4 vertices.",
+          "ur": "اوپر، نیچے، بائیں اور دائیں کونے: 4 راس۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "Count each corner once: 4 vertices. Sides and vertices are not added.",
+              "ur": "ہر کونا ایک بار گنیں: 4 راس۔ اضلاع اور راس جمع نہیں کرتے۔"
+            }
+          }
+        ],
+        "figure": {
+          "width": 70,
+          "height": 80,
+          "alt": {
+            "en": "A rooftop kite (patang) drawn flat: a four-sided shape, wide in the middle and pointed at the top and bottom, with a dot at each corner.",
+            "ur": "چھت پر اڑنے والی پتنگ چپٹی بنی ہے: چار اضلاع والی شکل، درمیان سے چوڑی اور اوپر نیچے سے نوکیلی، ہر کونے پر نقطہ۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  35,
+                  6
+                ],
+                [
+                  60,
+                  30
+                ],
+                [
+                  35,
+                  74
+                ],
+                [
+                  10,
+                  30
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "point",
+              "at": [
+                35,
+                6
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                60,
+                30
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                35,
+                74
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                10,
+                30
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "r_sphere",
+      "type": "recall",
+      "skill": "maths.symmetry.shapes_2d_3d",
+      "step": {
+        "id": "r_sphere",
+        "type": "choice",
+        "prompt": {
+          "en": "A cricket ball is a sphere. Which is true?",
+          "ur": "کرکٹ کی گیند کرہ ہے۔ کون سی بات درست ہے؟"
+        },
+        "options": [
+          {
+            "id": "one",
+            "text": {
+              "en": "1 curved surface, no edges, no vertices",
+              "ur": "1 خمدار سطح، کوئی کنارہ نہیں، کوئی راس نہیں"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! It is curved all over, with nothing sharp.",
+              "ur": "جی ہاں! یہ ہر طرف سے خمدار ہے، کچھ نوکیلا نہیں۔"
+            }
+          },
+          {
+            "id": "cube",
+            "text": {
+              "en": "6 faces, 12 edges, 8 vertices",
+              "ur": "6 سطحیں، 12 کنارے، 8 راس"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "That is a cube. A sphere has 1 curved surface and no edges or vertices.",
+              "ur": "یہ مکعب ہے۔ کرہ کی 1 خمدار سطح ہے اور کوئی کنارہ یا راس نہیں۔"
+            },
+            "misconception_id": "curved_surface"
+          },
+          {
+            "id": "flat",
+            "text": {
+              "en": "It is 2-D because it is round",
+              "ur": "یہ 2-D ہے کیونکہ گول ہے"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "A ball has height too. It is a 3-D solid.",
+              "ur": "گیند کی اونچائی بھی ہے۔ یہ 3-D ٹھوس ہے۔"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Symmetry unit. No textbook text or exercises were used.",
+    "The test for each kind of shape is the number of measurements: length (1-D), length and breadth (2-D), length, breadth and height (3-D). Round versus straight is not the test, which is why the coin and the drawn circle are compared.",
+    "Solids are drawn with straight lines and ovals made of short segments; hidden edges and hidden halves of circles are dashed. Remind children that the dashed lines are edges we cannot see from the front.",
+    "We use 'surface' for both flat and curved surfaces (some books say a cylinder has 2 faces and 1 curved surface). Edges are where two surfaces meet, so curved rims count as edges.",
+    "Urdu terms to check: بُعد (dimension), قطعہ خط (line segment), اسطوانہ (cylinder), مخروط (cone), کرہ (sphere), نصف کرہ (hemisphere), خمدار سطح (curved surface), راس (vertex), کنارہ (edge).",
+    "The numbers and figures were worked out in content/sources/g6-maths-18/shapes_2d_3d.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
