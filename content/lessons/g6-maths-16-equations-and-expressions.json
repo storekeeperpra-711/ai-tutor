@@ -1,0 +1,1149 @@
+{
+  "id": "g6-maths-16-equations-and-expressions",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Tell an algebraic equation from an algebraic expression in one variable, and recognise a linear equation in one variable (7.1, 7.1.1, 7.2.1).",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 7: Linear Equations"
+    }
+  ],
+  "skills": [
+    "maths.equations.equation_or_expression"
+  ],
+  "title": {
+    "en": "Equations and expressions",
+    "ur": "مساوات اور الجبری جملے"
+  },
+  "estimated_minutes": 13,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.substitution"
+    },
+    {
+      "skill": "maths.algebra.simple_equations"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "letter_means_equation",
+      "description": "Thinks anything with a letter is an equation, even with no = sign."
+    },
+    {
+      "id": "power_is_linear",
+      "description": "Counts x² = 9 or xy = 6 as a linear equation in one variable."
+    },
+    {
+      "id": "joins_digits",
+      "description": "Reads 4x with x = 3 as 43 instead of 4 × 3."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.equation_or_expression": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.equation_or_expression": [
+      {
+        "id": "qb_meaning",
+        "type": "recall",
+        "step": {
+          "id": "qb_meaning",
+          "type": "choice",
+          "prompt": {
+            "en": "What does an equation have that an expression does not?",
+            "ur": "مساوات میں ایسا کیا ہوتا ہے جو الجبری جملے میں نہیں ہوتا؟"
+          },
+          "options": [
+            {
+              "id": "equals",
+              "text": {
+                "en": "An = sign",
+                "ur": "= کا نشان"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! An equation says two things are equal.",
+                "ur": "جی ہاں! مساوات بتاتی ہے کہ دو چیزیں برابر ہیں۔"
+              }
+            },
+            {
+              "id": "letter",
+              "text": {
+                "en": "A letter",
+                "ur": "ایک حرف"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Expressions have letters too, like 3x + 5. The = sign makes an equation.",
+                "ur": "الجبری جملوں میں بھی حرف ہوتے ہیں، جیسے 3x + 5۔ = کا نشان مساوات بناتا ہے۔"
+              },
+              "misconception_id": "letter_means_equation"
+            },
+            {
+              "id": "plus",
+              "text": {
+                "en": "A + sign",
+                "ur": "+ کا نشان"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3x + 5 has a + sign but is an expression. Look for the = sign.",
+                "ur": "3x + 5 میں + ہے مگر یہ الجبری جملہ ہے۔ = کا نشان دیکھیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "Find the value of the expression 5m + 1 when m = 3.",
+            "ur": "جب m = 3 ہو تو الجبری جملے 5m + 1 کی قیمت معلوم کریں۔"
+          },
+          "answer": 16,
+          "checker": "numeric",
+          "hint": {
+            "en": "5m means 5 × m.",
+            "ur": "5m یعنی 5 × m"
+          },
+          "feedback_correct": {
+            "en": "Right! 5 × 3 + 1 = 16.",
+            "ur": "درست! 5 × 3 + 1 = 16"
+          },
+          "feedback_wrong": {
+            "en": "5 × 3 = 15, then 15 + 1 = 16.",
+            "ur": "5 × 3 = 15، پھر 15 + 1 = 16"
+          },
+          "common_wrong": [
+            {
+              "answer": 54,
+              "feedback": {
+                "en": "5m is 5 × 3, not 53: 15 + 1 = 16.",
+                "ur": "5m یعنی 5 × 3، 53 نہیں: 15 + 1 = 16"
+              },
+              "misconception_id": "joins_digits"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal says x² = 16 is a linear equation in one variable. What is wrong?",
+            "ur": "بلال کہتا ہے x² = 16 ایک متغیر والی خطی مساوات ہے۔ کیا غلطی ہے؟"
+          },
+          "options": [
+            {
+              "id": "power",
+              "text": {
+                "en": "x has power 2. In a linear equation the letter has power 1 only.",
+                "ur": "x کی طاقت 2 ہے۔ خطی مساوات میں حرف کی طاقت صرف 1 ہوتی ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! x² is x × x, so it is not linear.",
+                "ur": "جی ہاں! x² یعنی x × x، اس لیے یہ خطی نہیں۔"
+              }
+            },
+            {
+              "id": "no_equals",
+              "text": {
+                "en": "It has no = sign.",
+                "ur": "اس میں = کا نشان نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "It does have =. The problem is the power 2 on x.",
+                "ur": "اس میں = ہے۔ مسئلہ x پر طاقت 2 کا ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "x² means x × x: power 2. Linear needs power 1.",
+                "ur": "x² یعنی x × x: طاقت 2۔ خطی کے لیے طاقت 1 چاہیے۔"
+              },
+              "misconception_id": "power_is_linear"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_difference",
+      "front": {
+        "en": "Expression or equation?",
+        "ur": "الجبری جملہ یا مساوات؟"
+      },
+      "back": {
+        "en": "3x + 5 is an expression (no =). 3x + 5 = 20 is an equation.",
+        "ur": "3x + 5 الجبری جملہ ہے (= نہیں)۔ 3x + 5 = 20 مساوات ہے۔"
+      }
+    },
+    {
+      "id": "f_linear",
+      "front": {
+        "en": "Linear equation in one variable?",
+        "ur": "ایک متغیر والی خطی مساوات؟"
+      },
+      "back": {
+        "en": "One letter, power 1 only: x + 4 = 9.",
+        "ur": "ایک حرف، صرف طاقت 1: x + 4 = 9"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_balance",
+      "text": {
+        "en": "Hang two plastic bags from the ends of a ruler or hanger. Put the same number of coins in each so it hangs level: that is an equation. Write one equation and one expression about your coins, e.g. c + 3 = 8 and c + 3.",
+        "ur": "ایک فٹے یا ہینگر کے دونوں سروں پر دو تھیلیاں لٹکائیں۔ دونوں میں برابر سکے ڈالیں تاکہ وہ سیدھا لٹکے: یہ مساوات ہے۔ اپنے سکوں کے بارے میں ایک مساوات اور ایک الجبری جملہ لکھیں، جیسے c + 3 = 8 اور c + 3۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Equation",
+      "ur": "مساوات"
+    },
+    {
+      "en": "Expression",
+      "ur": "الجبری جملہ"
+    },
+    {
+      "en": "Variable",
+      "ur": "متغیر"
+    },
+    {
+      "en": "Linear equation",
+      "ur": "خطی مساوات"
+    },
+    {
+      "en": "Open sentence",
+      "ur": "کھلا جملہ"
+    },
+    {
+      "en": "Closed sentence",
+      "ur": "بند جملہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Babar scored 3x + 5 runs. Is that a question with an answer, or just a way to write runs?",
+          "ur": "بابر نے 3x + 5 رنز بنائے۔ کیا یہ سوال ہے جس کا جواب ہو، یا رنز لکھنے کا ایک طریقہ؟"
+        }
+      },
+      "text": {
+        "en": "Today we learn the difference between an expression and an equation. First, a quick substitution check.",
+        "ur": "آج ہم الجبری جملے اور مساوات کا فرق سیکھیں گے۔ پہلے قیمت رکھنے کا ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "number",
+      "question_type": "recall",
+      "skill": "maths.algebra.substitution",
+      "prompt": {
+        "en": "Find the value of 2x + 5 when x = 4.",
+        "ur": "جب x = 4 ہو تو 2x + 5 کی قیمت معلوم کریں۔"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "2x means 2 × x.",
+        "ur": "2x یعنی 2 × x"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 4 + 5 = 13.",
+        "ur": "درست! 2 × 4 + 5 = 13"
+      },
+      "feedback_wrong": {
+        "en": "2 × 4 = 8, then 8 + 5 = 13.",
+        "ur": "2 × 4 = 8، پھر 8 + 5 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 29,
+          "feedback": {
+            "en": "2x is 2 × 4, not 24: 8 + 5 = 13.",
+            "ur": "2x یعنی 2 × 4، 24 نہیں: 8 + 5 = 13"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s3_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "No = sign? Expression. An = sign? Equation, like a balance that is level!",
+          "ur": "= کا نشان نہیں؟ الجبری جملہ۔ = کا نشان ہے؟ مساوات، برابر ترازو کی طرح!"
+        }
+      },
+      "text": {
+        "en": "An expression has no = sign, like 3x + 5. We can find its value when we know x. An equation says two things are equal, like 3x + 5 = 20, a level balance. We can solve it: find the x that makes it true (here x = 5). 4 + 3 = 7 is an arithmetic equation: no letter, and it is either true or false (a closed sentence). 3x + 5 = 20 is an algebraic equation: it has a letter, so it is an open sentence until we know x. If the letter has power 1 only, like x + 4 = 9, it is a linear equation in one variable. x² = 9 (power 2) and xy = 6 (two letters) are not.",
+        "ur": "الجبری جملے میں = کا نشان نہیں ہوتا، جیسے 3x + 5۔ x معلوم ہو تو ہم اس کی قیمت نکال سکتے ہیں۔ مساوات بتاتی ہے کہ دو چیزیں برابر ہیں، جیسے 3x + 5 = 20، ایک برابر ترازو۔ ہم اسے حل کر سکتے ہیں: وہ x ڈھونڈیں جو اسے درست کرے (یہاں x = 5)۔ 4 + 3 = 7 حسابی مساوات ہے: اس میں حرف نہیں، اور یہ یا درست ہے یا غلط (بند جملہ)۔ 3x + 5 = 20 الجبری مساوات ہے: اس میں حرف ہے، اس لیے جب تک x معلوم نہ ہو یہ کھلا جملہ ہے۔ اگر حرف کی طاقت صرف 1 ہو، جیسے x + 4 = 9، تو یہ ایک متغیر والی خطی مساوات ہے۔ x² = 9 (طاقت 2) اور xy = 6 (دو حرف) خطی مساوات نہیں۔"
+      },
+      "figure": {
+        "width": 200,
+        "height": 110,
+        "alt": {
+          "en": "A level balance scale. The left pan holds 3x + 5 and the right pan holds 20, with an equals sign above the middle.",
+          "ur": "ایک برابر ترازو۔ بائیں پلڑے میں 3x + 5 اور دائیں پلڑے میں 20 ہے، اور درمیان کے اوپر برابر کا نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                85,
+                105
+              ],
+              [
+                115,
+                105
+              ],
+              [
+                100,
+                92
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              100,
+              92
+            ],
+            "to": [
+              100,
+              30
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40,
+              30
+            ],
+            "to": [
+              160,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              100,
+              30
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40,
+              30
+            ],
+            "to": [
+              15,
+              60
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40,
+              30
+            ],
+            "to": [
+              65,
+              60
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10,
+                60
+              ],
+              [
+                70,
+                60
+              ],
+              [
+                60,
+                72
+              ],
+              [
+                20,
+                72
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              40,
+              86
+            ],
+            "text": "3x+5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              160,
+              30
+            ],
+            "to": [
+              135,
+              60
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              160,
+              30
+            ],
+            "to": [
+              185,
+              60
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                130,
+                60
+              ],
+              [
+                190,
+                60
+              ],
+              [
+                180,
+                72
+              ],
+              [
+                140,
+                72
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              160,
+              86
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              100,
+              16
+            ],
+            "text": "="
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_which_equation",
+      "type": "choice",
+      "prompt": {
+        "en": "Which one is an equation?",
+        "ur": "ان میں سے مساوات کون سی ہے؟"
+      },
+      "options": [
+        {
+          "id": "eq",
+          "text": {
+            "en": "3x + 5 = 20",
+            "ur": "3x + 5 = 20"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! It has an = sign: two sides that are equal.",
+            "ur": "جی ہاں! اس میں = ہے: دو برابر اطراف۔"
+          }
+        },
+        {
+          "id": "expr",
+          "text": {
+            "en": "3x + 5",
+            "ur": "3x + 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It has a letter, but no = sign. It is an expression.",
+            "ur": "اس میں حرف ہے مگر = نہیں۔ یہ الجبری جملہ ہے۔"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "id": "term",
+          "text": {
+            "en": "7y",
+            "ur": "7y"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7y means 7 × y. No = sign, so it is an expression.",
+            "ur": "7y یعنی 7 × y۔ = نہیں، اس لیے یہ الجبری جملہ ہے۔"
+          },
+          "misconception_id": "letter_means_equation"
+        }
+      ]
+    },
+    {
+      "id": "s5_closed",
+      "type": "choice",
+      "prompt": {
+        "en": "8 + 5 = 12 is an arithmetic equation (no letter). Is it true or false?",
+        "ur": "8 + 5 = 12 ایک حسابی مساوات ہے (حرف نہیں)۔ کیا یہ درست ہے یا غلط؟"
+      },
+      "options": [
+        {
+          "id": "false",
+          "text": {
+            "en": "False",
+            "ur": "غلط"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 8 + 5 = 13, not 12. With no letter, we can say true or false straight away.",
+            "ur": "جی ہاں! 8 + 5 = 13، 12 نہیں۔ حرف نہ ہو تو فوراً درست یا غلط کہہ سکتے ہیں۔"
+          }
+        },
+        {
+          "id": "true",
+          "text": {
+            "en": "True",
+            "ur": "درست"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8 + 5 = 13, so 8 + 5 = 12 is false.",
+            "ur": "8 + 5 = 13، اس لیے 8 + 5 = 12 غلط ہے۔"
+          }
+        },
+        {
+          "id": "cant_tell",
+          "text": {
+            "en": "We can't tell",
+            "ur": "نہیں بتا سکتے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There is no letter, so we can tell: 8 + 5 = 13, so it is false. A closed sentence.",
+            "ur": "حرف نہیں، اس لیے بتا سکتے ہیں: 8 + 5 = 13، تو یہ غلط ہے۔ بند جملہ۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6_evaluate",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A mango costs x rupees. 4 mangoes with a 2 rupee discount cost 4x − 2. Find the value of 4x − 2 when x = 3.",
+        "ur": "ایک آم x روپے کا ہے۔ 2 روپے رعایت کے ساتھ 4 آم 4x − 2 کے ہیں۔ جب x = 3 ہو تو 4x − 2 کی قیمت معلوم کریں۔"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 × 3 first, then − 2.",
+        "ur": "پہلے 4 × 3، پھر − 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 − 2 = 10. An expression gives a value once we know x.",
+        "ur": "درست! 12 − 2 = 10۔ x معلوم ہو تو الجبری جملے کی قیمت ملتی ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "4 × 3 = 12, then 12 − 2 = 10.",
+        "ur": "4 × 3 = 12، پھر 12 − 2 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 41,
+          "feedback": {
+            "en": "4x is 4 × 3, not 43: 12 − 2 = 10.",
+            "ur": "4x یعنی 4 × 3، 43 نہیں: 12 − 2 = 10"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s7_linear",
+      "type": "choice",
+      "prompt": {
+        "en": "Which is a linear equation in one variable?",
+        "ur": "ان میں سے ایک متغیر والی خطی مساوات کون سی ہے؟"
+      },
+      "options": [
+        {
+          "id": "linear",
+          "text": {
+            "en": "x + 4 = 9",
+            "ur": "x + 4 = 9"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! One letter, x, with power 1.",
+            "ur": "جی ہاں! ایک حرف، x، طاقت 1 کے ساتھ۔"
+          }
+        },
+        {
+          "id": "square",
+          "text": {
+            "en": "x² = 9",
+            "ur": "x² = 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "x² is x × x: power 2. Linear needs power 1.",
+            "ur": "x² یعنی x × x: طاقت 2۔ خطی کے لیے طاقت 1 چاہیے۔"
+          },
+          "misconception_id": "power_is_linear"
+        },
+        {
+          "id": "two_vars",
+          "text": {
+            "en": "xy = 6",
+            "ur": "xy = 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "xy has two letters, x and y. We want one variable only.",
+            "ur": "xy میں دو حرف ہیں، x اور y۔ ہمیں صرف ایک متغیر چاہیے۔"
+          },
+          "misconception_id": "power_is_linear"
+        }
+      ]
+    },
+    {
+      "id": "s8_sentence",
+      "type": "choice",
+      "prompt": {
+        "en": "Ahmed had n mangoes. He got 5 more and now has 12. Which matches '5 more than a number is 12'?",
+        "ur": "احمد کے پاس n آم تھے۔ اسے 5 اور ملے اور اب اس کے پاس 12 ہیں۔ '5 زیادہ ایک عدد سے، 12 ہے' کس سے ملتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "equation",
+          "text": {
+            "en": "n + 5 = 12",
+            "ur": "n + 5 = 12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 'is 12' becomes '= 12', so it is an equation.",
+            "ur": "جی ہاں! '12 ہے' بنتا ہے '= 12'، اس لیے یہ مساوات ہے۔"
+          }
+        },
+        {
+          "id": "expression",
+          "text": {
+            "en": "n + 5",
+            "ur": "n + 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "n + 5 is only '5 more than a number'. 'is 12' adds '= 12'.",
+            "ur": "n + 5 صرف 'ایک عدد سے 5 زیادہ' ہے۔ '12 ہے' سے '= 12' لگتا ہے۔"
+          }
+        },
+        {
+          "id": "times",
+          "text": {
+            "en": "5n = 12",
+            "ur": "5n = 12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5n means 5 times n. '5 more' means + 5: n + 5 = 12.",
+            "ur": "5n یعنی 5 گنا n۔ '5 زیادہ' یعنی + 5: n + 5 = 12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hira says, '2y + 7 is an equation because it has a letter.' What went wrong?",
+        "ur": "حرا کہتی ہے، '2y + 7 مساوات ہے کیونکہ اس میں حرف ہے۔' کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "no_equals",
+          "text": {
+            "en": "It has no = sign, so it is an expression.",
+            "ur": "اس میں = کا نشان نہیں، اس لیے یہ الجبری جملہ ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A letter alone does not make an equation; the = sign does.",
+            "ur": "جی ہاں! صرف حرف سے مساوات نہیں بنتی؛ = کا نشان بناتا ہے۔"
+          }
+        },
+        {
+          "id": "two_letters",
+          "text": {
+            "en": "An equation needs two letters.",
+            "ur": "مساوات کے لیے دو حرف چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "x + 4 = 9 has one letter and is an equation. The = sign is what matters.",
+            "ur": "x + 4 = 9 میں ایک حرف ہے اور یہ مساوات ہے۔ اصل بات = کا نشان ہے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2y + 7 has no = sign. It is an expression, not an equation.",
+            "ur": "2y + 7 میں = نہیں۔ یہ الجبری جملہ ہے، مساوات نہیں۔"
+          },
+          "misconception_id": "letter_means_equation"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "x + 6 and x + 6 = 10 look nearly the same. What is the difference? Can you teach me?",
+          "ur": "x + 6 اور x + 6 = 10 تقریباً ایک جیسے لگتے ہیں۔ فرق کیا ہے؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: what is the difference between x + 6 and x + 6 = 10?",
+        "ur": "اپنے الفاظ میں بتائیں: x + 6 اور x + 6 = 10 میں کیا فرق ہے؟"
+      },
+      "key_idea": "x + 6 is an expression: it has no = sign, and we can find its value for any x. x + 6 = 10 is an equation: the = sign says both sides are equal, so we can solve it and find x = 4.",
+      "levels": {
+        "got_it": "Says x + 6 is an expression with no = sign, and x + 6 = 10 is an equation (has =) that can be solved (x = 4).",
+        "partly": "Points to the = sign but does not say which is the expression and which the equation, or does not mention solving.",
+        "not_yet": "Gives no difference, or says they are the same."
+      },
+      "keywords": [
+        [
+          "expression",
+          "الجبری جملہ",
+          "jumla"
+        ],
+        [
+          "equation",
+          "مساوات",
+          "masawat"
+        ],
+        [
+          "=",
+          "equal",
+          "equals",
+          "برابر"
+        ],
+        [
+          "solve",
+          "4",
+          "حل"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! The = sign turns an expression into an equation we can solve.",
+          "ur": "بہت خوب! = کا نشان الجبری جملے کو مساوات بنا دیتا ہے جسے ہم حل کر سکتے ہیں۔"
+        },
+        "partly": {
+          "en": "Good start! Now say which one is the equation, and what x makes it true.",
+          "ur": "اچھی شروعات! اب بتائیں مساوات کون سی ہے، اور کون سا x اسے درست کرتا ہے۔"
+        },
+        "not_yet": {
+          "en": "Look for the = sign. Which one has it? That one is the equation.",
+          "ur": "= کا نشان ڈھونڈیں۔ کس میں ہے؟ وہی مساوات ہے۔"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_solve",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In 6 years Ali will be 18, so a + 6 = 18. What value of a makes this equation true?",
+        "ur": "6 سال بعد علی 18 سال کا ہو گا، تو a + 6 = 18۔ a کی کون سی قیمت اس مساوات کو درست کرتی ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "What number plus 6 makes 18?",
+        "ur": "کون سا عدد جمع 6 برابر 18؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 + 6 = 18, so Ali is 12 now.",
+        "ur": "درست! 12 + 6 = 18، تو علی ابھی 12 سال کا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "18 − 6 = 12. Check: 12 + 6 = 18.",
+        "ur": "18 − 6 = 12۔ جانچ: 12 + 6 = 18"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24 + 6 = 30, not 18. Take 6 away: 18 − 6 = 12.",
+            "ur": "24 + 6 = 30، 18 نہیں۔ 6 نفی کریں: 18 − 6 = 12"
+          }
+        }
+      ],
+      "figure": {
+        "width": 200,
+        "height": 110,
+        "alt": {
+          "en": "A level balance scale. The left pan holds a + 6 and the right pan holds 18, with an equals sign above the middle.",
+          "ur": "ایک برابر ترازو۔ بائیں پلڑے میں a + 6 اور دائیں پلڑے میں 18 ہے، اور درمیان کے اوپر برابر کا نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                85,
+                105
+              ],
+              [
+                115,
+                105
+              ],
+              [
+                100,
+                92
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              100,
+              92
+            ],
+            "to": [
+              100,
+              30
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40,
+              30
+            ],
+            "to": [
+              160,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              100,
+              30
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40,
+              30
+            ],
+            "to": [
+              15,
+              60
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40,
+              30
+            ],
+            "to": [
+              65,
+              60
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10,
+                60
+              ],
+              [
+                70,
+                60
+              ],
+              [
+                60,
+                72
+              ],
+              [
+                20,
+                72
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              40,
+              86
+            ],
+            "text": "a+6"
+          },
+          {
+            "kind": "line",
+            "from": [
+              160,
+              30
+            ],
+            "to": [
+              135,
+              60
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              160,
+              30
+            ],
+            "to": [
+              185,
+              60
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                130,
+                60
+              ],
+              [
+                190,
+                60
+              ],
+              [
+                180,
+                72
+              ],
+              [
+                140,
+                72
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              160,
+              86
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              100,
+              16
+            ],
+            "text": "="
+          }
+        ]
+      }
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "No = sign: expression, find its value. An = sign: equation, solve it. Well done!",
+          "ur": "= نہیں: الجبری جملہ، قیمت نکالیں۔ = ہے: مساوات، حل کریں۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "An expression, like 3x + 5, has no = sign; we can find its value when we know x. An equation, like 3x + 5 = 20, says two sides are equal; we can solve it. With no letter (4 + 3 = 7) an equation is simply true or false. A linear equation in one variable has one letter with power 1, like x + 4 = 9.",
+        "ur": "الجبری جملہ، جیسے 3x + 5، میں = نہیں ہوتا؛ x معلوم ہو تو اس کی قیمت نکلتی ہے۔ مساوات، جیسے 3x + 5 = 20، بتاتی ہے کہ دونوں اطراف برابر ہیں؛ ہم اسے حل کر سکتے ہیں۔ حرف کے بغیر (4 + 3 = 7) مساوات بس درست یا غلط ہوتی ہے۔ ایک متغیر والی خطی مساوات میں ایک حرف طاقت 1 کے ساتھ ہوتا ہے، جیسے x + 4 = 9۔"
+      },
+      "points": [
+        {
+          "en": "No = : expression. With = : equation.",
+          "ur": "= نہیں: الجبری جملہ۔ = ہے: مساوات۔"
+        },
+        {
+          "en": "Linear: one letter, power 1.",
+          "ur": "خطی: ایک حرف، طاقت 1۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_which",
+      "type": "recall",
+      "skill": "maths.equations.equation_or_expression",
+      "step": {
+        "id": "r_which",
+        "type": "choice",
+        "prompt": {
+          "en": "Which one is an expression?",
+          "ur": "ان میں سے الجبری جملہ کون سا ہے؟"
+        },
+        "options": [
+          {
+            "id": "expr",
+            "text": {
+              "en": "k + 9",
+              "ur": "k + 9"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! No = sign, so it is an expression.",
+              "ur": "جی ہاں! = نہیں، اس لیے یہ الجبری جملہ ہے۔"
+            }
+          },
+          {
+            "id": "eq",
+            "text": {
+              "en": "k + 9 = 15",
+              "ur": "k + 9 = 15"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "This has an = sign, so it is an equation.",
+              "ur": "اس میں = ہے، اس لیے یہ مساوات ہے۔"
+            }
+          },
+          {
+            "id": "arith",
+            "text": {
+              "en": "6 + 9 = 15",
+              "ur": "6 + 9 = 15"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "This has an = sign: an arithmetic equation.",
+              "ur": "اس میں = ہے: حسابی مساوات۔"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_value",
+      "type": "apply",
+      "skill": "maths.equations.equation_or_expression",
+      "step": {
+        "id": "r_value",
+        "type": "number",
+        "prompt": {
+          "en": "Find the value of 6 + 2y when y = 5.",
+          "ur": "جب y = 5 ہو تو 6 + 2y کی قیمت معلوم کریں۔"
+        },
+        "answer": 16,
+        "checker": "numeric",
+        "hint": {
+          "en": "2y means 2 × y.",
+          "ur": "2y یعنی 2 × y"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 + 10 = 16.",
+          "ur": "درست! 6 + 10 = 16"
+        },
+        "feedback_wrong": {
+          "en": "2 × 5 = 10, then 6 + 10 = 16.",
+          "ur": "2 × 5 = 10، پھر 6 + 10 = 16"
+        },
+        "common_wrong": [
+          {
+            "answer": 31,
+            "feedback": {
+              "en": "2y is 2 × 5, not 25: 6 + 10 = 16.",
+              "ur": "2y یعنی 2 × 5، 25 نہیں: 6 + 10 = 16"
+            },
+            "misconception_id": "joins_digits"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Linear Equations unit (7.1, 7.1.1, 7.2.1). No textbook text or exercises were used.",
+    "The key test is the = sign: a letter alone does not make an equation. The balance scale picture shows an equation as two equal sides.",
+    "Open and closed sentences are named once; the main aim is sorting expression / equation and linear / not linear.",
+    "Urdu terms to check: مساوات (equation), الجبری جملہ (algebraic expression), حسابی مساوات (arithmetic equation), خطی مساوات (linear equation), متغیر (variable), کھلا / بند جملہ (open / closed sentence), طاقت (power).",
+    "The numbers were worked out in content/sources/g6-maths-16/equations_and_expressions.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

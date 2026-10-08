@@ -132,8 +132,8 @@ void main() {
       s.states[skill]?.level(curriculum.criteriaFor(skill)) ??
       MasteryLevel.notStarted;
 
-  test('eighty-nine weeks of plans: every lesson done, skills secure', () {
-    final s = SimulatedStudent(curriculum)..studyFor(623, start);
+  test('ninety-five weeks of plans: every lesson done, skills secure', () {
+    final s = SimulatedStudent(curriculum)..studyFor(665, start);
 
     for (final lesson in curriculum.lessons) {
       expect(s.lessons[lesson.id]?.completed, isTrue, reason: lesson.id);
@@ -156,14 +156,14 @@ void main() {
     expect(shown.lessons.length, lessThan(curriculum.lessons.length));
     expect(isHiddenLesson('g6-maths-02-dividing-fractions'), isTrue);
     expect(isHiddenLesson('g6-maths-04-adding-integers'), isFalse);
-    final s = SimulatedStudent(shown)..studyFor(623, start);
+    final s = SimulatedStudent(shown)..studyFor(665, start);
     for (final lesson in shown.lessons) {
       expect(s.lessons[lesson.id]?.completed, isTrue, reason: lesson.id);
     }
   });
 
   test('levels only rise in order for a strong student', () {
-    final s = SimulatedStudent(curriculum, skill: 1)..studyFor(623, start);
+    final s = SimulatedStudent(curriculum, skill: 1)..studyFor(665, start);
     for (final skill in [fractions, equations, balancing]) {
       final levels = [
         for (final (_, sk, level) in s.levelChanges)

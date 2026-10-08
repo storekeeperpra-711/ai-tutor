@@ -18,6 +18,7 @@ EQ_FORMING = "maths.equations.forming"
 EQ_TWO_STEP = "maths.equations.two_step"
 EQ_BRACKETS = "maths.equations.brackets"
 EQ_WORD_PROBLEMS = "maths.equations.word_problems"
+EQ_RECOGNISE = "maths.equations.equation_or_expression"
 
 
 def value(expr, **values):
