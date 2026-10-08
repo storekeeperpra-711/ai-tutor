@@ -180,6 +180,88 @@ class ValidateLessonsTest(unittest.TestCase):
         self.assertEqual(v.check_prerequisite_loops([a]), [])
 
 
+def mirror_figure():
+    """A triangle and its mirror image across a dashed line."""
+    return {
+        "width": 100,
+        "height": 60,
+        "alt": {"en": "A triangle and its mirror image.", "ur": "ایک مثلث اور اس کا عکس۔"},
+        "items": [
+            {"kind": "polygon", "points": [[10, 10], [40, 10], [40, 40]], "fill": True},
+            {"kind": "polygon", "points": [[90, 10], [60, 10], [60, 40]]},
+            {"kind": "line", "from": [50, 0], "to": [50, 60], "style": "dashed"},
+            {"kind": "circle", "center": [20, 45], "radius": 8},
+            {"kind": "arc", "center": [40, 10], "radius": 6, "start": 90, "sweep": 45},
+            {"kind": "point", "at": [40, 40]},
+            {"kind": "label", "at": [8, 6], "text": "A"},
+            {"kind": "label", "at": [30, 50], "text": "60°"},
+        ],
+    }
+
+
+class FigureTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.validator = v.load_validator()
+        cls.lesson = json.loads(SAMPLE.read_text(encoding="utf-8"))
+
+    check = ValidateLessonsTest.check
+    mutated = ValidateLessonsTest.mutated
+    assertProblem = ValidateLessonsTest.assertProblem
+
+    def with_figure(self, figure, step_type="explain"):
+        lesson = self.mutated()
+        step = next(s for s in lesson["steps"] if s["type"] == step_type)
+        step["figure"] = figure
+        return lesson
+
+    def test_figure_on_steps_is_valid(self):
+        for step_type in ("explain", "choice", "number", "summary"):
+            self.assertEqual(self.check(self.with_figure(mirror_figure(), step_type)), [], step_type)
+
+    def test_figure_needs_alt_in_both_languages(self):
+        figure = mirror_figure()
+        del figure["alt"]["ur"]
+        self.assertProblem(self.check(self.with_figure(figure)), "'ur' is a required property")
+        del figure["alt"]
+        self.assertProblem(self.check(self.with_figure(figure)), "'alt' is a required property")
+        figure = mirror_figure()
+        figure["alt"]["ur"] = "  "
+        self.assertProblem(v.check_figure(figure), "alt.ur is missing")
+
+    def test_unknown_kind_and_fields(self):
+        figure = mirror_figure()
+        figure["items"].append({"kind": "image", "src": "a.png"})
+        self.assertProblem(self.check(self.with_figure(figure)), "'image' is not one of")
+        figure = mirror_figure()
+        figure["items"][2]["style"] = "dotted"
+        self.assertProblem(self.check(self.with_figure(figure)), "'dotted' is not one of")
+        figure = mirror_figure()
+        figure["items"][3]["colour"] = "red"
+        self.assertProblem(self.check(self.with_figure(figure)), "Additional properties")
+
+    def test_everything_inside_the_box(self):
+        figure = mirror_figure()
+        figure["items"][0]["points"][1] = [140, 10]
+        figure["items"][3]["center"] = [5, 45]
+        figure["items"][6]["at"] = [8, -2]
+        problems = self.check(self.with_figure(figure))
+        self.assertProblem(problems, "item 1 (polygon): [140, 10] goes outside the 100 x 60 box")
+        self.assertProblem(problems, "item 4 (circle): [5, 45] with radius 8 goes outside")
+        self.assertProblem(problems, "item 7 (label): [8, -2] goes outside")
+        self.assertEqual(len(problems), 3, problems)
+
+    def test_labels_are_short_and_not_words(self):
+        for bad in ["Mirror", "A very long label", "دیکھو"]:
+            figure = mirror_figure()
+            figure["items"][6]["text"] = bad
+            self.assertProblem(v.check_figure(figure), "label")
+        for good in ["A", "B'", "60°", "5 cm", "90°", "12"]:
+            figure = mirror_figure()
+            figure["items"][6]["text"] = good
+            self.assertEqual(v.check_figure(figure), [], good)
+
+
 class AiStepsTest(unittest.TestCase):
     """ai_explain and photo_check steps (Phase 6)."""
 

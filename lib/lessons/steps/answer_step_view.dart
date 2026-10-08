@@ -4,9 +4,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../character/mithu_bubble.dart';
 import '../../character/sounds.dart';
 import '../../l10n/app_localizations.dart';
+import '../../models/figure.dart';
 import '../../models/lesson_step.dart';
 import '../../models/localized_text.dart';
 import '../answer_checking.dart';
+import '../lesson_figure.dart';
 import '../lesson_text.dart';
 import '../step_result.dart';
 import 'step_scaffold.dart';
@@ -34,6 +36,7 @@ class AnswerStepView extends ConsumerStatefulWidget {
     required this.check,
     required this.onDone,
     this.character,
+    this.figure,
     this.unit,
     this.multiline = false,
     this.numberKeyboard = false,
@@ -48,6 +51,7 @@ class AnswerStepView extends ConsumerStatefulWidget {
   final AnswerChecker check;
   final StepDone onDone;
   final CharacterLine? character;
+  final StepFigure? figure;
   final LocalizedText? unit;
   final bool multiline;
   final bool numberKeyboard;
@@ -125,7 +129,11 @@ class _AnswerStepViewState extends ConsumerState<AnswerStepView> {
           ),
           const SizedBox(height: 24),
         ],
-        LessonText(widget.prompt, style: textTheme.titleLarge),
+        StepPrompt(
+          widget.prompt,
+          figure: widget.figure,
+          style: textTheme.titleLarge,
+        ),
         const SizedBox(height: 16),
         TextField(
           key: const Key('answer-input'),

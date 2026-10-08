@@ -316,6 +316,66 @@
           "ur": "کاٹیں، کھسکائیں، اور مستطیل بن گئی!"
         }
       },
+      "figure": {
+        "width": 100,
+        "height": 56,
+        "alt": {
+          "en": "A parallelogram leaning to the right. Its base b is along the bottom. A dashed line goes straight up from the base to the top side: that is the height h.",
+          "ur": "دائیں طرف جھکا ہوا متوازی الاضلاع۔ نیچے اس کا قاعدہ b ہے۔ قاعدے سے اوپر والے ضلع تک سیدھی نقطہ دار لکیر اونچائی h ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                8,
+                42
+              ],
+              [
+                68,
+                42
+              ],
+              [
+                90,
+                8
+              ],
+              [
+                30,
+                8
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              30,
+              8
+            ],
+            "to": [
+              30,
+              42
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              38,
+              50
+            ],
+            "text": "b"
+          },
+          {
+            "kind": "label",
+            "at": [
+              35,
+              25
+            ],
+            "text": "h"
+          }
+        ]
+      },
       "text": {
         "en": "A parallelogram has two pairs of parallel sides. Cut a triangle off one end and move it to the other end: it becomes a rectangle. So area of a parallelogram = base × height. A trapezium has one pair of parallel sides. Two copies, one turned upside down, fit together into a parallelogram whose base is the two parallel sides added. So area of a trapezium = ½ × (sum of the parallel sides) × height. The height always goes straight across between the parallel sides, at a right angle. It is not the slanting side.",
         "ur": "متوازی الاضلاع کے دو جوڑے متوازی اضلاع ہوتے ہیں۔ ایک سرے سے مثلث کاٹ کر دوسرے سرے پر لگائیں: یہ مستطیل بن جاتی ہے۔ اس لیے متوازی الاضلاع کا رقبہ = قاعدہ × اونچائی۔ ذوزنقہ کا ایک جوڑا متوازی اضلاع کا ہوتا ہے۔ اس کی دو کاپیاں، ایک الٹی کر کے، جوڑیں تو متوازی الاضلاع بنتا ہے جس کا قاعدہ دونوں متوازی اضلاع کا مجموعہ ہے۔ اس لیے ذوزنقہ کا رقبہ = ½ × (متوازی اضلاع کا مجموعہ) × اونچائی۔ اونچائی ہمیشہ متوازی اضلاع کے درمیان زاویہ قائمہ پر سیدھی ہوتی ہے۔ یہ ترچھا ضلع نہیں۔"

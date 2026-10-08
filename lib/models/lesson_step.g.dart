@@ -40,6 +40,11 @@ ExplainStep _$ExplainStepFromJson(Map<String, dynamic> json) =>
               : CharacterLine.fromJson(v as Map<String, dynamic>),
         ),
         image: $checkedConvert('image', (v) => v as String?),
+        figure: $checkedConvert(
+          'figure',
+          (v) =>
+              v == null ? null : StepFigure.fromJson(v as Map<String, dynamic>),
+        ),
       );
       return val;
     });
@@ -66,6 +71,11 @@ ChoiceStep _$ChoiceStepFromJson(Map<String, dynamic> json) =>
           (v) => v == null
               ? null
               : CharacterLine.fromJson(v as Map<String, dynamic>),
+        ),
+        figure: $checkedConvert(
+          'figure',
+          (v) =>
+              v == null ? null : StepFigure.fromJson(v as Map<String, dynamic>),
         ),
       );
       return val;
@@ -151,6 +161,11 @@ NumberStep _$NumberStepFromJson(Map<String, dynamic> json) => $checkedCreate(
             ? null
             : CharacterLine.fromJson(v as Map<String, dynamic>),
       ),
+      figure: $checkedConvert(
+        'figure',
+        (v) =>
+            v == null ? null : StepFigure.fromJson(v as Map<String, dynamic>),
+      ),
     );
     return val;
   },
@@ -181,79 +196,83 @@ CommonWrong _$CommonWrongFromJson(Map<String, dynamic> json) => $checkedCreate(
   fieldKeyMap: const {'misconceptionId': 'misconception_id'},
 );
 
-TextCheckStep _$TextCheckStepFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      'TextCheckStep',
-      json,
-      ($checkedConvert) {
-        final val = TextCheckStep(
-          id: $checkedConvert('id', (v) => v as String),
-          type: $checkedConvert('type', (v) => v as String),
-          questionType: $checkedConvert('question_type', (v) => v as String?),
-          skill: $checkedConvert('skill', (v) => v as String?),
-          prompt: $checkedConvert(
-            'prompt',
-            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
-          ),
-          checker: $checkedConvert('checker', (v) => v as String),
-          expected: $checkedConvert('expected', (v) => v as String),
-          hint: $checkedConvert(
-            'hint',
-            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
-          ),
-          feedbackCorrect: $checkedConvert(
-            'feedback_correct',
-            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
-          ),
-          feedbackWrong: $checkedConvert(
-            'feedback_wrong',
-            (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
-          ),
-          accept: $checkedConvert(
-            'accept',
-            (v) =>
-                (v as List<dynamic>?)?.map((e) => e as String).toList() ??
-                const [],
-          ),
-          variable: $checkedConvert('variable', (v) => v as String? ?? 'x'),
-          requireSimplest: $checkedConvert(
-            'require_simplest',
-            (v) => v as bool? ?? false,
-          ),
-          multiline: $checkedConvert('multiline', (v) => v as bool? ?? false),
-          maxAttempts: $checkedConvert(
-            'max_attempts',
-            (v) => (v as num?)?.toInt() ?? 3,
-          ),
-          commonWrong: $checkedConvert(
-            'common_wrong',
-            (v) =>
-                (v as List<dynamic>?)
-                    ?.map(
-                      (e) =>
-                          CommonWrongText.fromJson(e as Map<String, dynamic>),
-                    )
-                    .toList() ??
-                const [],
-          ),
-          character: $checkedConvert(
-            'character',
-            (v) => v == null
-                ? null
-                : CharacterLine.fromJson(v as Map<String, dynamic>),
-          ),
-        );
-        return val;
-      },
-      fieldKeyMap: const {
-        'questionType': 'question_type',
-        'feedbackCorrect': 'feedback_correct',
-        'feedbackWrong': 'feedback_wrong',
-        'requireSimplest': 'require_simplest',
-        'maxAttempts': 'max_attempts',
-        'commonWrong': 'common_wrong',
-      },
+TextCheckStep _$TextCheckStepFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate(
+  'TextCheckStep',
+  json,
+  ($checkedConvert) {
+    final val = TextCheckStep(
+      id: $checkedConvert('id', (v) => v as String),
+      type: $checkedConvert('type', (v) => v as String),
+      questionType: $checkedConvert('question_type', (v) => v as String?),
+      skill: $checkedConvert('skill', (v) => v as String?),
+      prompt: $checkedConvert(
+        'prompt',
+        (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      checker: $checkedConvert('checker', (v) => v as String),
+      expected: $checkedConvert('expected', (v) => v as String),
+      hint: $checkedConvert(
+        'hint',
+        (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      feedbackCorrect: $checkedConvert(
+        'feedback_correct',
+        (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      feedbackWrong: $checkedConvert(
+        'feedback_wrong',
+        (v) => LocalizedText.fromJson(v as Map<String, dynamic>),
+      ),
+      accept: $checkedConvert(
+        'accept',
+        (v) =>
+            (v as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+      ),
+      variable: $checkedConvert('variable', (v) => v as String? ?? 'x'),
+      requireSimplest: $checkedConvert(
+        'require_simplest',
+        (v) => v as bool? ?? false,
+      ),
+      multiline: $checkedConvert('multiline', (v) => v as bool? ?? false),
+      maxAttempts: $checkedConvert(
+        'max_attempts',
+        (v) => (v as num?)?.toInt() ?? 3,
+      ),
+      commonWrong: $checkedConvert(
+        'common_wrong',
+        (v) =>
+            (v as List<dynamic>?)
+                ?.map(
+                  (e) => CommonWrongText.fromJson(e as Map<String, dynamic>),
+                )
+                .toList() ??
+            const [],
+      ),
+      character: $checkedConvert(
+        'character',
+        (v) => v == null
+            ? null
+            : CharacterLine.fromJson(v as Map<String, dynamic>),
+      ),
+      figure: $checkedConvert(
+        'figure',
+        (v) =>
+            v == null ? null : StepFigure.fromJson(v as Map<String, dynamic>),
+      ),
     );
+    return val;
+  },
+  fieldKeyMap: const {
+    'questionType': 'question_type',
+    'feedbackCorrect': 'feedback_correct',
+    'feedbackWrong': 'feedback_wrong',
+    'requireSimplest': 'require_simplest',
+    'maxAttempts': 'max_attempts',
+    'commonWrong': 'common_wrong',
+  },
+);
 
 CommonWrongText _$CommonWrongTextFromJson(Map<String, dynamic> json) =>
     $checkedCreate('CommonWrongText', json, ($checkedConvert) {
@@ -293,6 +312,10 @@ SummaryStep _$SummaryStepFromJson(
       'character',
       (v) =>
           v == null ? null : CharacterLine.fromJson(v as Map<String, dynamic>),
+    ),
+    figure: $checkedConvert(
+      'figure',
+      (v) => v == null ? null : StepFigure.fromJson(v as Map<String, dynamic>),
     ),
   );
   return val;
@@ -487,6 +510,11 @@ AiExplainStep _$AiExplainStepFromJson(
             ? null
             : CharacterLine.fromJson(v as Map<String, dynamic>),
       ),
+      figure: $checkedConvert(
+        'figure',
+        (v) =>
+            v == null ? null : StepFigure.fromJson(v as Map<String, dynamic>),
+      ),
     );
     return val;
   },
@@ -579,6 +607,12 @@ PhotoCheckStep _$PhotoCheckStepFromJson(Map<String, dynamic> json) =>
             (v) => v == null
                 ? null
                 : CharacterLine.fromJson(v as Map<String, dynamic>),
+          ),
+          figure: $checkedConvert(
+            'figure',
+            (v) => v == null
+                ? null
+                : StepFigure.fromJson(v as Map<String, dynamic>),
           ),
         );
         return val;

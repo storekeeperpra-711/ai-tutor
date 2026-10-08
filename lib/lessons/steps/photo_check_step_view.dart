@@ -9,6 +9,7 @@ import '../../l10n/app_localizations.dart';
 import '../../models/lesson_step.dart';
 import '../../services/profiles.dart';
 import '../answer_checking.dart';
+import '../lesson_figure.dart';
 import '../lesson_text.dart';
 import '../step_context.dart';
 import '../step_result.dart';
@@ -271,7 +272,11 @@ class _PhotoCheckStepViewState extends ConsumerState<PhotoCheckStepView> {
           MithuBubble(line: widget.step.character!),
           const SizedBox(height: 24),
         ],
-        LessonText(widget.step.problem, style: textTheme.titleLarge),
+        StepPrompt(
+          widget.step.problem,
+          figure: widget.step.figure,
+          style: textTheme.titleLarge,
+        ),
         const SizedBox(height: 16),
         if (notice != null)
           Padding(

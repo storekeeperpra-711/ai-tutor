@@ -14,7 +14,7 @@ import '../../models/localized_text.dart';
 import '../../services/local_db.dart';
 import '../../services/profiles.dart';
 import '../../services/sync_service.dart';
-import '../lesson_text.dart';
+import '../lesson_figure.dart';
 import '../step_context.dart';
 import '../step_result.dart';
 import 'step_scaffold.dart';
@@ -200,7 +200,11 @@ class _AiExplainStepViewState extends ConsumerState<AiExplainStepView> {
           MithuBubble(line: widget.step.character!),
           const SizedBox(height: 24),
         ],
-        LessonText(widget.step.task, style: textTheme.titleLarge),
+        StepPrompt(
+          widget.step.task,
+          figure: widget.step.figure,
+          style: textTheme.titleLarge,
+        ),
         const SizedBox(height: 16),
         TextField(
           key: const Key('answer-input'),

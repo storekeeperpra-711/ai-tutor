@@ -26,6 +26,7 @@ class TextCheckStepView extends StatelessWidget {
     feedbackWrong: step.feedbackWrong,
     maxAttempts: step.maxAttempts,
     character: step.character,
+    figure: step.figure,
     multiline: step.multiline,
     check: (input, l10n, language) =>
         checkTextStep(step, input, l10n, language),
