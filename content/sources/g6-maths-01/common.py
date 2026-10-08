@@ -16,6 +16,7 @@ SET_KINDS = "maths.sets.kinds"
 SET_SUBSETS = "maths.sets.subsets"
 SET_UNION_INTERSECTION = "maths.sets.union_intersection"
 SET_WORD_PROBLEMS = "maths.sets.word_problems"
+SET_VENN = "maths.sets.universal_venn"
 
 
 def show(s):

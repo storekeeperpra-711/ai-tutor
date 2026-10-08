@@ -1,0 +1,2258 @@
+{
+  "id": "g6-maths-01-universal-set-and-venn-diagrams",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognise the universal set U (p. 75) and use Venn diagrams to represent sets (5.3, 5.3.1) and subsets (5.3.2): draw U as a rectangle and sets as circles inside it, and read elements, n(A) and the tabular form from a diagram.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 5: Sets"
+    }
+  ],
+  "skills": [
+    "maths.sets.universal_venn"
+  ],
+  "title": {
+    "en": "The universal set and Venn diagrams",
+    "ur": "عالمی سیٹ اور وین ڈایاگرام"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.subsets"
+    },
+    {
+      "skill": "maths.sets.kinds"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "counts_universal",
+      "description": "Counts every element in the rectangle U when asked for n(A) or for the elements of A."
+    },
+    {
+      "id": "outside_is_in",
+      "description": "Thinks an element drawn in the rectangle but outside a circle belongs to that set."
+    },
+    {
+      "id": "subset_outside",
+      "description": "Draws a subset as a separate circle instead of inside the bigger set's circle."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.universal_venn": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.universal_venn": [
+      {
+        "id": "qb_rectangle",
+        "type": "recall",
+        "step": {
+          "id": "qb_rectangle",
+          "type": "choice",
+          "prompt": {
+            "en": "In a Venn diagram, what does the rectangle show?",
+            "ur": "وین ڈایاگرام میں مستطیل کیا دکھاتی ہے؟"
+          },
+          "options": [
+            {
+              "id": "universal",
+              "text": {
+                "en": "The universal set U: all the elements we are talking about",
+                "ur": "عالمی سیٹ U: وہ تمام رکن جن کی ہم بات کر رہے ہیں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Every other set is drawn inside it.",
+                "ur": "جی ہاں! باقی ہر سیٹ اس کے اندر بنتا ہے۔"
+              }
+            },
+            {
+              "id": "subset",
+              "text": {
+                "en": "The smallest set",
+                "ur": "سب سے چھوٹا سیٹ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The rectangle is the biggest: U holds everything under discussion.",
+                "ur": "مستطیل سب سے بڑی ہے: U میں زیرِ بحث سب کچھ ہے۔"
+              }
+            },
+            {
+              "id": "empty",
+              "text": {
+                "en": "The empty set",
+                "ur": "خالی سیٹ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The rectangle is U, the set of all the elements we are talking about.",
+                "ur": "مستطیل U ہے، ان تمام رکنوں کا سیٹ جن کی ہم بات کر رہے ہیں۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "U = the months of the year. A = the months with 31 days. A has 7 elements. How many months of U are outside the circle A?",
+            "ur": "U = سال کے مہینے۔ A = وہ مہینے جن میں 31 دن ہوں۔ A کے 7 رکن ہیں۔ U کے کتنے مہینے دائرہ A سے باہر ہیں؟"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "n(U) = 12. Take away the 7 inside A.",
+            "ur": "n(U) = 12۔ A کے اندر والے 7 نفی کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 12 − 7 = 5 months.",
+            "ur": "درست! 12 − 7 = 5 مہینے"
+          },
+          "feedback_wrong": {
+            "en": "12 − 7 = 5 months are outside A.",
+            "ur": "12 − 7 = 5 مہینے A سے باہر ہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 7,
+              "feedback": {
+                "en": "7 are inside A. Outside A: 12 − 7 = 5.",
+                "ur": "7 تو A کے اندر ہیں۔ A سے باہر: 12 − 7 = 5"
+              }
+            },
+            {
+              "answer": 12,
+              "feedback": {
+                "en": "12 is n(U), all the months. Outside A: 12 − 7 = 5.",
+                "ur": "12 تو n(U) ہے، سب مہینے۔ A سے باہر: 12 − 7 = 5"
+              },
+              "misconception_id": "counts_universal"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "figure": {
+            "width": 100,
+            "height": 64,
+            "alt": {
+              "en": "A rectangle U holds the numbers 1 to 8. A circle A inside it holds 1, 2, 4 and 8. The numbers 3, 5, 6 and 7 are in the rectangle outside the circle.",
+              "ur": "مستطیل U میں 1 سے 8 تک اعداد ہیں۔ اس کے اندر دائرہ A میں 1، 2، 4 اور 8 ہیں۔ اعداد 3، 5، 6 اور 7 مستطیل میں دائرے سے باہر ہیں۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    97,
+                    3
+                  ],
+                  [
+                    97,
+                    61
+                  ],
+                  [
+                    3,
+                    61
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  60,
+                  32
+                ],
+                "radius": 18,
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  9,
+                  10
+                ],
+                "text": "U"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  43.7,
+                  15.7
+                ],
+                "text": "A"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  60.0,
+                  23.0
+                ],
+                "text": "1"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  69.0,
+                  32.0
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  16,
+                  22
+                ],
+                "text": "3"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  60.0,
+                  41.0
+                ],
+                "text": "4"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  30,
+                  22
+                ],
+                "text": "5"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  16,
+                  44
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  30,
+                  44
+                ],
+                "text": "7"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  51.0,
+                  32.0
+                ],
+                "text": "8"
+              }
+            ]
+          },
+          "prompt": {
+            "en": "Look at the Venn diagram. Ayesha says 3 ∈ A, because 3 is in the picture. What went wrong?",
+            "ur": "وین ڈایاگرام دیکھیں۔ عائشہ کہتی ہے 3 ∈ A، کیونکہ 3 تصویر میں ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "outside",
+              "text": {
+                "en": "3 is inside U but outside the circle A, so 3 ∉ A.",
+                "ur": "3، U کے اندر لیکن دائرہ A سے باہر ہے، اس لیے 3 ∉ A۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Only the elements inside the circle belong to A.",
+                "ur": "جی ہاں! صرف دائرے کے اندر والے رکن A کے ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing, everything in the picture is in A.",
+                "ur": "کوئی غلطی نہیں، تصویر کی ہر چیز A میں ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The rectangle is U. A is only what is inside its circle: 1, 2, 4, 8.",
+                "ur": "مستطیل U ہے۔ A صرف اس کے دائرے کے اندر ہے: 1، 2، 4، 8"
+              },
+              "misconception_id": "outside_is_in"
+            },
+            {
+              "id": "not_u",
+              "text": {
+                "en": "3 is not in U either.",
+                "ur": "3، U میں بھی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3 is inside the rectangle, so 3 ∈ U. It is outside the circle, so 3 ∉ A.",
+                "ur": "3 مستطیل کے اندر ہے، تو 3 ∈ U۔ یہ دائرے سے باہر ہے، تو 3 ∉ A۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_universal",
+      "front": {
+        "en": "Universal set U?",
+        "ur": "عالمی سیٹ U؟"
+      },
+      "back": {
+        "en": "The set of all the elements under discussion. In a Venn diagram it is the rectangle.",
+        "ur": "زیرِ بحث تمام رکنوں کا سیٹ۔ وین ڈایاگرام میں یہ مستطیل ہے۔"
+      }
+    },
+    {
+      "id": "f_subset_circle",
+      "front": {
+        "en": "How do we draw B ⊆ A in a Venn diagram?",
+        "ur": "وین ڈایاگرام میں B ⊆ A کیسے بناتے ہیں؟"
+      },
+      "back": {
+        "en": "Circle B inside circle A, both inside the rectangle U.",
+        "ur": "دائرہ B دائرہ A کے اندر، اور دونوں مستطیل U کے اندر۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_week",
+      "text": {
+        "en": "With a ruler, draw a rectangle on paper and write U = the days of the week in its corner. Inside it, draw a circle S for the days you go to school, and write those days inside the circle. Write the other days inside the rectangle but outside the circle. What is n(S)?",
+        "ur": "فٹے سے کاغذ پر ایک مستطیل بنائیں اور کونے میں لکھیں U = ہفتے کے دن۔ اس کے اندر ایک دائرہ S بنائیں ان دنوں کے لیے جب آپ سکول جاتے ہیں، اور وہ دن دائرے میں لکھیں۔ باقی دن مستطیل کے اندر لیکن دائرے سے باہر لکھیں۔ n(S) کتنا ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Universal set",
+      "ur": "عالمی سیٹ"
+    },
+    {
+      "en": "Venn diagram",
+      "ur": "وین ڈایاگرام"
+    },
+    {
+      "en": "Tabular form",
+      "ur": "جدولی شکل"
+    },
+    {
+      "en": "Descriptive form",
+      "ur": "بیانیہ شکل"
+    },
+    {
+      "en": "Subset",
+      "ur": "ذیلی سیٹ"
+    },
+    {
+      "en": "Element",
+      "ur": "رکن"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_hook",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "At the bazaar, one big basket holds all the fruit. The mangoes sit in a small bowl inside it. Can we draw sets like that?",
+          "ur": "بازار میں ایک بڑی ٹوکری میں سارے پھل ہیں۔ آم اس کے اندر ایک چھوٹے پیالے میں رکھے ہیں۔ کیا ہم سیٹ بھی ایسے بنا سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Today we meet the universal set and learn to draw sets as pictures called Venn diagrams. First, a quick check.",
+        "ur": "آج ہم عالمی سیٹ سے ملیں گے اور سیٹوں کو تصویر کی شکل میں بنانا سیکھیں گے جسے وین ڈایاگرام کہتے ہیں۔ پہلے ایک چھوٹا سا سوال۔"
+      }
+    },
+    {
+      "id": "s2_foundation",
+      "type": "choice",
+      "question_type": "recall",
+      "skill": "maths.sets.subsets",
+      "prompt": {
+        "en": "A = {2, 4} and B = {1, 2, 3, 4}. Which is true?",
+        "ur": "A = {2, 4} اور B = {1, 2, 3, 4}۔ کون سا درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a_in_b",
+          "text": {
+            "en": "A ⊆ B",
+            "ur": "A ⊆ B"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2 and 4 are both in B.",
+            "ur": "جی ہاں! 2 اور 4 دونوں B میں ہیں۔"
+          }
+        },
+        {
+          "id": "b_in_a",
+          "text": {
+            "en": "B ⊆ A",
+            "ur": "B ⊆ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 and 3 are in B but not in A, so B is not a subset of A. A ⊆ B.",
+            "ur": "1 اور 3، B میں ہیں لیکن A میں نہیں، اس لیے B، A کا ذیلی سیٹ نہیں۔ A ⊆ B"
+          }
+        },
+        {
+          "id": "neither",
+          "text": {
+            "en": "Neither",
+            "ur": "کوئی بھی نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every element of A is in B, so A ⊆ B.",
+            "ur": "A کا ہر رکن B میں ہے، اس لیے A ⊆ B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3_venn",
+      "type": "explain",
+      "character": {
+        "emotion": "happy",
+        "say": {
+          "en": "The rectangle holds everything we are talking about. Each circle is one set inside it!",
+          "ur": "مستطیل میں وہ سب ہے جس کی ہم بات کر رہے ہیں۔ ہر دائرہ اس کے اندر ایک سیٹ ہے!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle marked U holds the numbers 1 to 10. Inside it is a circle marked A holding 2, 4, 6, 8 and 10. The numbers 1, 3, 5, 7 and 9 are inside the rectangle but outside the circle.",
+          "ur": "ایک مستطیل پر U لکھا ہے، اس میں 1 سے 10 تک اعداد ہیں۔ اس کے اندر ایک دائرہ A ہے جس میں 2، 4، 6، 8 اور 10 ہیں۔ اعداد 1، 3، 5، 7 اور 9 مستطیل کے اندر لیکن دائرے سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              58,
+              32
+            ],
+            "radius": 22,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.9,
+              12.9
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              22
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              58.0,
+              20.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              26,
+              36
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.4,
+              28.3
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              50
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.1,
+              41.7
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              16
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.9,
+              41.7
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              48
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              46.6,
+              28.3
+            ],
+            "text": "10"
+          }
+        ]
+      },
+      "text": {
+        "en": "The universal set U is the set of all the elements under discussion. Here U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. In a Venn diagram we draw U as a rectangle and each set as a circle (or oval) inside it, and write the elements in their places. A = {2, 4, 6, 8, 10} (tabular form), or A = the even numbers in U (descriptive form). The elements 2, 4, 6, 8, 10 go inside the circle, so 6 ∈ A. The other elements of U go inside the rectangle but outside the circle, so 5 ∈ U but 5 ∉ A. Counting the circle gives n(A) = 5.",
+        "ur": "عالمی سیٹ U زیرِ بحث تمام رکنوں کا سیٹ ہے۔ یہاں U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}۔ وین ڈایاگرام میں U کو مستطیل اور ہر سیٹ کو اس کے اندر دائرے (یا بیضوی شکل) کی صورت میں بناتے ہیں، اور رکن ان کی جگہ پر لکھتے ہیں۔ A = {2, 4, 6, 8, 10} (جدولی شکل)، یا A = U کے جفت اعداد (بیانیہ شکل)۔ رکن 2، 4، 6، 8، 10 دائرے کے اندر آتے ہیں، اس لیے 6 ∈ A۔ U کے باقی رکن مستطیل کے اندر لیکن دائرے سے باہر آتے ہیں، اس لیے 5 ∈ U لیکن 5 ∉ A۔ دائرے کے رکن گننے سے n(A) = 5۔"
+      }
+    },
+    {
+      "id": "s4_where_7",
+      "type": "choice",
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle U holds the numbers 1 to 12. A circle A inside it holds 3, 6, 9 and 12. The numbers 1, 2, 4, 5, 7, 8, 10 and 11 are in the rectangle outside the circle.",
+          "ur": "مستطیل U میں 1 سے 12 تک اعداد ہیں۔ اس کے اندر دائرہ A میں 3، 6، 9 اور 12 ہیں۔ اعداد 1، 2، 4، 5، 7، 8، 10 اور 11 مستطیل میں دائرے سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              60,
+              32
+            ],
+            "radius": 20,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              42.3,
+              14.3
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              20
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              20
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              22.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              34
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              34
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              32.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              48
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              48
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              42.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              18
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              46
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              32.0
+            ],
+            "text": "12"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "Look at the Venn diagram. Which is true about 7?",
+        "ur": "وین ڈایاگرام دیکھیں۔ 7 کے بارے میں کون سا درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "u_not_a",
+          "text": {
+            "en": "7 ∈ U but 7 ∉ A",
+            "ur": "7 ∈ U لیکن 7 ∉ A"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 7 is inside the rectangle but outside the circle.",
+            "ur": "جی ہاں! 7 مستطیل کے اندر لیکن دائرے سے باہر ہے۔"
+          }
+        },
+        {
+          "id": "in_a",
+          "text": {
+            "en": "7 ∈ A",
+            "ur": "7 ∈ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is outside the circle A, so 7 ∉ A. A = {3, 6, 9, 12}.",
+            "ur": "7 دائرہ A سے باہر ہے، اس لیے 7 ∉ A۔ A = {3, 6, 9, 12}"
+          },
+          "misconception_id": "outside_is_in"
+        },
+        {
+          "id": "not_u",
+          "text": {
+            "en": "7 ∉ U",
+            "ur": "7 ∉ U"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is inside the rectangle, so 7 ∈ U. Every element in the picture belongs to U.",
+            "ur": "7 مستطیل کے اندر ہے، اس لیے 7 ∈ U۔ تصویر کا ہر رکن U کا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A cricket team's shirt numbers make the set U. The circle A shows the players who bowled today. What is n(A)?",
+        "ur": "کرکٹ ٹیم کی قمیضوں کے نمبر سیٹ U بناتے ہیں۔ دائرہ A ان کھلاڑیوں کو دکھاتا ہے جنہوں نے آج بولنگ کی۔ n(A) کتنا ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count only the numbers inside the circle.",
+        "ur": "صرف دائرے کے اندر والے نمبر گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! A = {3, 5, 8, 10, 11}, so n(A) = 5.",
+        "ur": "درست! A = {3, 5, 8, 10, 11}، تو n(A) = 5"
+      },
+      "feedback_wrong": {
+        "en": "Inside the circle are 3, 5, 8, 10 and 11: n(A) = 5.",
+        "ur": "دائرے کے اندر 3، 5، 8، 10 اور 11 ہیں: n(A) = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "11 is n(U), the whole team. Count only inside the circle: 5.",
+            "ur": "11 تو n(U) ہے، پوری ٹیم۔ صرف دائرے کے اندر گنیں: 5"
+          },
+          "misconception_id": "counts_universal"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 players are outside the circle. Inside it are 5.",
+            "ur": "6 کھلاڑی دائرے سے باہر ہیں۔ اندر 5 ہیں۔"
+          },
+          "misconception_id": "outside_is_in"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle U holds the shirt numbers 1 to 11 of a cricket team. A circle A inside it holds 3, 5, 8, 10 and 11. The numbers 1, 2, 4, 6, 7 and 9 are in the rectangle outside the circle.",
+          "ur": "مستطیل U میں کرکٹ ٹیم کی قمیضوں کے نمبر 1 سے 11 تک ہیں۔ اس کے اندر دائرہ A میں 3، 5، 8، 10 اور 11 ہیں۔ نمبر 1، 2، 4، 6، 7 اور 9 مستطیل میں دائرے سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              62,
+              32
+            ],
+            "radius": 21,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              43.6,
+              13.6
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              20
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              20
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              62.0,
+              20.5
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              34
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.9,
+              28.4
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              34
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              48
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              68.8,
+              41.3
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              48
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.2,
+              41.3
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              51.1,
+              28.4
+            ],
+            "text": "11"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_tabular",
+      "type": "choice",
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle U holds the letters P, A, K, I, S, T and N. A circle V inside it holds A and I. The letters P, K, S, T and N are in the rectangle outside the circle.",
+          "ur": "مستطیل U میں حروف P، A، K، I، S، T اور N ہیں۔ اس کے اندر دائرہ V میں A اور I ہیں۔ حروف P، K، S، T اور N مستطیل میں دائرے سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              60,
+              32
+            ],
+            "radius": 16,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.2,
+              17.2
+            ],
+            "text": "V"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              22
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              53.0,
+              32.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              22
+            ],
+            "text": "K"
+          },
+          {
+            "kind": "label",
+            "at": [
+              67.0,
+              32.0
+            ],
+            "text": "I"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              44
+            ],
+            "text": "S"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              44
+            ],
+            "text": "T"
+          },
+          {
+            "kind": "label",
+            "at": [
+              88,
+              48
+            ],
+            "text": "N"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "U is the set of letters of the word PAKISTAN, and V is the set of its vowels. Which writes V in tabular form?",
+        "ur": "U لفظ PAKISTAN کے حروف کا سیٹ ہے، اور V اس کے حروفِ علت کا سیٹ ہے۔ کون سا V کو جدولی شکل میں لکھتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "vowels",
+          "text": {
+            "en": "V = {A, I}",
+            "ur": "V = {A, I}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only A and I are inside the circle.",
+            "ur": "جی ہاں! صرف A اور I دائرے کے اندر ہیں۔"
+          }
+        },
+        {
+          "id": "all",
+          "text": {
+            "en": "V = {P, A, K, I, S, T, N}",
+            "ur": "V = {P, A, K, I, S, T, N}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is U, every letter in the rectangle. V is only inside the circle: {A, I}.",
+            "ur": "یہ U ہے، مستطیل کا ہر حرف۔ V صرف دائرے کے اندر ہے: {A, I}"
+          },
+          "misconception_id": "counts_universal"
+        },
+        {
+          "id": "outside",
+          "text": {
+            "en": "V = {P, K, S, T, N}",
+            "ur": "V = {P, K, S, T, N}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Those letters are outside the circle, so they are not in V. V = {A, I}.",
+            "ur": "یہ حروف دائرے سے باہر ہیں، اس لیے V میں نہیں۔ V = {A, I}"
+          },
+          "misconception_id": "outside_is_in"
+        }
+      ]
+    },
+    {
+      "id": "s7_outside",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "U = {1, 2, 3, …, 12} and P is the set of prime numbers in U. How many elements of U are outside the circle P?",
+        "ur": "U = {1, 2, 3, …, 12} اور P، U کے مفرد اعداد کا سیٹ ہے۔ U کے کتنے رکن دائرہ P سے باہر ہیں؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "n(U) = 12 and n(P) = 5. Or count the numbers outside the circle.",
+        "ur": "n(U) = 12 اور n(P) = 5۔ یا دائرے سے باہر والے اعداد گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1, 4, 6, 8, 9, 10, 12: that is 7.",
+        "ur": "درست! 1، 4، 6، 8، 9، 10، 12: یعنی 7"
+      },
+      "feedback_wrong": {
+        "en": "12 − 5 = 7. They are 1, 4, 6, 8, 9, 10 and 12.",
+        "ur": "12 − 5 = 7۔ یہ 1، 4، 6، 8، 9، 10 اور 12 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is n(P), the numbers inside the circle. Outside: 12 − 5 = 7.",
+            "ur": "5 تو n(P) ہے، دائرے کے اندر والے۔ باہر: 12 − 5 = 7"
+          }
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is all of U. Leave out the 5 primes: 7.",
+            "ur": "12 تو پورا U ہے۔ 5 مفرد نکالیں: 7"
+          },
+          "misconception_id": "counts_universal"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle U holds the numbers 1 to 12. A circle P inside it holds 2, 3, 5, 7 and 11. The numbers 1, 4, 6, 8, 9, 10 and 12 are in the rectangle outside the circle.",
+          "ur": "مستطیل U میں 1 سے 12 تک اعداد ہیں۔ اس کے اندر دائرہ P میں 2، 3، 5، 7 اور 11 ہیں۔ اعداد 1، 4، 6، 8، 9، 10 اور 12 مستطیل میں دائرے سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              62,
+              32
+            ],
+            "radius": 21,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              43.6,
+              13.6
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              20
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              62.0,
+              20.5
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.9,
+              28.4
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              20
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              68.8,
+              41.3
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              34
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.2,
+              41.3
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              34
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14,
+              48
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              48
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              51.1,
+              28.4
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              50
+            ],
+            "text": "12"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8_subset_inside",
+      "type": "choice",
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle U holds the numbers 1 to 10. Inside it a big circle A holds 2, 6 and 10, and a small circle B drawn inside A holds 4 and 8. The numbers 1, 3, 5, 7 and 9 are outside both circles.",
+          "ur": "مستطیل U میں 1 سے 10 تک اعداد ہیں۔ اس کے اندر بڑے دائرے A میں 2، 6 اور 10 ہیں، اور A کے اندر بنے چھوٹے دائرے B میں 4 اور 8 ہیں۔ اعداد 1، 3، 5، 7 اور 9 دونوں دائروں سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              56,
+              32
+            ],
+            "radius": 25,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              64,
+              32
+            ],
+            "radius": 10,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.8,
+              10.8
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              71.5,
+              19.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              13,
+              22
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              42,
+              22
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              13,
+              40
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60,
+              32
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              22,
+              54
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              40,
+              36
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              14
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              68,
+              32
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              50
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              48,
+              48
+            ],
+            "text": "10"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "U = {1, 2, …, 10}, A = the even numbers in U and B = the multiples of 4 in U. Circle B is drawn inside circle A. Which is true?",
+        "ur": "U = {1, 2, …, 10}، A = U کے جفت اعداد اور B = U میں 4 کے اضعاف۔ دائرہ B دائرہ A کے اندر بنا ہے۔ کون سا درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "b_sub_a",
+          "text": {
+            "en": "B ⊂ A",
+            "ur": "B ⊂ A"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 4 and 8 are even too, so every element of B is in A.",
+            "ur": "جی ہاں! 4 اور 8 جفت بھی ہیں، اس لیے B کا ہر رکن A میں ہے۔"
+          }
+        },
+        {
+          "id": "a_sub_b",
+          "text": {
+            "en": "A ⊂ B",
+            "ur": "A ⊂ B"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2, 6 and 10 are in A but not in B. The smaller circle B is the subset: B ⊂ A.",
+            "ur": "2، 6 اور 10، A میں ہیں لیکن B میں نہیں۔ چھوٹا دائرہ B ذیلی سیٹ ہے: B ⊂ A"
+          }
+        },
+        {
+          "id": "apart",
+          "text": {
+            "en": "A and B have no elements in common",
+            "ur": "A اور B کا کوئی رکن مشترک نہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 and 8 are in both, because B is drawn inside A: B ⊂ A.",
+            "ur": "4 اور 8 دونوں میں ہیں، کیونکہ B، A کے اندر بنا ہے: B ⊂ A"
+          },
+          "misconception_id": "subset_outside"
+        }
+      ]
+    },
+    {
+      "id": "s9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "Hamza's drawing: a rectangle U with two separate circles side by side. Circle A holds 2, 4, 6, 8 and 10. Circle B, outside A, holds 4 and 8 again.",
+          "ur": "حمزہ کی تصویر: مستطیل U میں دو الگ الگ دائرے ساتھ ساتھ ہیں۔ دائرہ A میں 2، 4، 6، 8 اور 10 ہیں۔ A سے باہر دائرہ B میں دوبارہ 4 اور 8 ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              32,
+              34
+            ],
+            "radius": 19,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              76,
+              34
+            ],
+            "radius": 12,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              15.0,
+              17.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              88.0,
+              22.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.0,
+              23.5
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              42.0,
+              30.8
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.2,
+              42.5
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              25.8,
+              42.5
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              22.0,
+              30.8
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              34.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.0,
+              34.0
+            ],
+            "text": "8"
+          }
+        ]
+      },
+      "prompt": {
+        "en": "U = {1, 2, …, 10}, A = {2, 4, 6, 8, 10} and B = {4, 8}. Hamza draws circle B next to circle A, not touching it, and writes 4 and 8 in both circles. What went wrong?",
+        "ur": "U = {1, 2, …, 10}، A = {2, 4, 6, 8, 10} اور B = {4, 8}۔ حمزہ دائرہ B کو دائرہ A کے ساتھ الگ بناتا ہے، اور 4 اور 8 دونوں دائروں میں لکھتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "inside",
+          "text": {
+            "en": "B ⊂ A, so circle B should be inside circle A, with 4 and 8 written once.",
+            "ur": "B ⊂ A، اس لیے دائرہ B دائرہ A کے اندر ہونا چاہیے، اور 4 اور 8 ایک ہی بار لکھے جائیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A subset's circle goes inside the bigger set's circle.",
+            "ur": "جی ہاں! ذیلی سیٹ کا دائرہ بڑے سیٹ کے دائرے کے اندر بنتا ہے۔"
+          }
+        },
+        {
+          "id": "bigger",
+          "text": {
+            "en": "Circle B should be bigger than circle A.",
+            "ur": "دائرہ B دائرہ A سے بڑا ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "B has fewer elements. The mistake is where B is: it belongs inside A.",
+            "ur": "B کے رکن کم ہیں۔ غلطی B کی جگہ میں ہے: یہ A کے اندر ہونا چاہیے۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing.",
+            "ur": "کوئی غلطی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each element is written once in a Venn diagram. Since B ⊂ A, draw B inside A.",
+            "ur": "وین ڈایاگرام میں ہر رکن ایک بار لکھا جاتا ہے۔ چونکہ B ⊂ A، B کو A کے اندر بنائیں۔"
+          },
+          "misconception_id": "subset_outside"
+        }
+      ]
+    },
+    {
+      "id": "s10_explain_why",
+      "type": "ai_explain",
+      "question_type": "explain",
+      "task_kind": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we draw the circle of a subset inside the circle of the bigger set? Can you teach me?",
+          "ur": "ذیلی سیٹ کا دائرہ بڑے سیٹ کے دائرے کے اندر کیوں بناتے ہیں؟ کیا آپ مجھے سکھا سکتے ہیں؟"
+        }
+      },
+      "task": {
+        "en": "In your own words: if B ⊆ A, why is circle B drawn inside circle A?",
+        "ur": "اپنے الفاظ میں بتائیں: اگر B ⊆ A ہو تو دائرہ B دائرہ A کے اندر کیوں بنتا ہے؟"
+      },
+      "key_idea": "Every element of B is also an element of A. Each element is written only once, so the elements of B must be inside A's circle as well, which puts the whole circle B inside circle A.",
+      "levels": {
+        "got_it": "Says every element of B is also in A, so B's elements (and so its circle) must lie inside A's circle.",
+        "partly": "Says B is smaller or part of A, without saying every element of B is in A.",
+        "not_yet": "Gives no reason, or says it is just how it is drawn."
+      },
+      "keywords": [
+        [
+          "every",
+          "all",
+          "each",
+          "ہر",
+          "تمام",
+          "har"
+        ],
+        [
+          "element",
+          "member",
+          "رکن",
+          "rukn"
+        ],
+        [
+          "inside",
+          "also",
+          "in a",
+          "اندر",
+          "بھی",
+          "andar"
+        ]
+      ],
+      "fallback_feedback": {
+        "got_it": {
+          "en": "Well explained! Every element of B is in A, so B sits inside A.",
+          "ur": "بہت خوب! B کا ہر رکن A میں ہے، اس لیے B، A کے اندر ہے۔"
+        },
+        "partly": {
+          "en": "Good start! Now say what is true about every element of B.",
+          "ur": "اچھی شروعات! اب بتائیں B کے ہر رکن کے بارے میں کیا سچ ہے۔"
+        },
+        "not_yet": {
+          "en": "Take A = {2, 4, 6, 8} and B = {4, 8}. Is 4 in A? Is 8 in A? So where must 4 and 8 be written?",
+          "ur": "A = {2, 4, 6, 8} اور B = {4, 8} لیں۔ کیا 4، A میں ہے؟ کیا 8، A میں ہے؟ تو 4 اور 8 کہاں لکھے جائیں؟"
+        }
+      },
+      "limit_per_day": 3,
+      "max_attempts": 2
+    },
+    {
+      "id": "s11_two_sets",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "U is a cricket team, shirt numbers 1 to 11. B = the batters and W = the bowlers. No player is in both, so the two circles do not touch. How many players are outside both circles?",
+        "ur": "U ایک کرکٹ ٹیم ہے، قمیضوں کے نمبر 1 سے 11۔ B = بلے باز اور W = گیند باز۔ کوئی کھلاڑی دونوں میں نہیں، اس لیے دونوں دائرے ایک دوسرے کو نہیں چھوتے۔ کتنے کھلاڑی دونوں دائروں سے باہر ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "n(U) = 11. Take away n(B) and n(W).",
+        "ur": "n(U) = 11۔ n(B) اور n(W) نفی کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 and 7: 2 players.",
+        "ur": "درست! 6 اور 7: دو کھلاڑی"
+      },
+      "feedback_wrong": {
+        "en": "11 − 5 − 4 = 2. They are 6 and 7.",
+        "ur": "11 − 5 − 4 = 2۔ یہ 6 اور 7 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 players are inside the circles. Outside both: 11 − 9 = 2.",
+            "ur": "9 کھلاڑی دائروں کے اندر ہیں۔ دونوں سے باہر: 11 − 9 = 2"
+          }
+        },
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "11 is the whole team, n(U). Outside both circles: 2.",
+            "ur": "11 تو پوری ٹیم، n(U) ہے۔ دونوں دائروں سے باہر: 2"
+          },
+          "misconception_id": "counts_universal"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle U holds the shirt numbers 1 to 11. Two separate circles that do not touch are inside it: circle B holds 1, 2, 3, 4 and 5, and circle W holds 8, 9, 10 and 11. The numbers 6 and 7 are outside both circles.",
+          "ur": "مستطیل U میں قمیضوں کے نمبر 1 سے 11 تک ہیں۔ اس کے اندر دو الگ دائرے ہیں جو ایک دوسرے کو نہیں چھوتے: دائرہ B میں 1، 2، 3، 4 اور 5 ہیں، اور دائرہ W میں 8، 9، 10 اور 11 ہیں۔ نمبر 6 اور 7 دونوں دائروں سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              30,
+              30
+            ],
+            "radius": 17,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              72,
+              30
+            ],
+            "radius": 15,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              14.4,
+              45.6
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              86.1,
+              15.9
+            ],
+            "text": "W"
+          },
+          {
+            "kind": "label",
+            "at": [
+              30.0,
+              21.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.6,
+              27.2
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              35.3,
+              37.3
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.7,
+              37.3
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              21.4,
+              27.2
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              42,
+              55
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              58,
+              55
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.7,
+              24.3
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.7,
+              35.7
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.3,
+              35.7
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.3,
+              24.3
+            ],
+            "text": "11"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s12_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Rectangle for U, circles for sets, and a subset inside its bigger set. Well done!",
+          "ur": "U کے لیے مستطیل، سیٹوں کے لیے دائرے، اور ذیلی سیٹ اپنے بڑے سیٹ کے اندر۔ شاباش!"
+        }
+      },
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A rectangle U holds the numbers 1 to 10. Inside it a big circle A holds 2, 6 and 10, and a small circle B drawn inside A holds 4 and 8. The numbers 1, 3, 5, 7 and 9 are outside both circles.",
+          "ur": "مستطیل U میں 1 سے 10 تک اعداد ہیں۔ اس کے اندر بڑے دائرے A میں 2، 6 اور 10 ہیں، اور A کے اندر بنے چھوٹے دائرے B میں 4 اور 8 ہیں۔ اعداد 1، 3، 5، 7 اور 9 دونوں دائروں سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                3,
+                3
+              ],
+              [
+                97,
+                3
+              ],
+              [
+                97,
+                61
+              ],
+              [
+                3,
+                61
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              56,
+              32
+            ],
+            "radius": 25,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              64,
+              32
+            ],
+            "radius": 10,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              9,
+              10
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.8,
+              10.8
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              71.5,
+              19.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              13,
+              22
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              42,
+              22
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              13,
+              40
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60,
+              32
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              22,
+              54
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              40,
+              36
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              14
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              68,
+              32
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89,
+              50
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              48,
+              48
+            ],
+            "text": "10"
+          }
+        ]
+      },
+      "text": {
+        "en": "The universal set U holds all the elements under discussion; in a Venn diagram it is a rectangle. Each set is a circle inside it, with its elements written inside. Elements outside a circle are in U but not in that set (∉). If B ⊆ A, circle B goes inside circle A. Two sets with no common elements are drawn as separate circles. To read a set, list what is inside its circle (tabular form) and count it for n(A).",
+        "ur": "عالمی سیٹ U میں زیرِ بحث تمام رکن ہوتے ہیں؛ وین ڈایاگرام میں یہ مستطیل ہے۔ ہر سیٹ اس کے اندر ایک دائرہ ہے، جس کے رکن اس میں لکھے ہوتے ہیں۔ دائرے سے باہر کے رکن U میں ہیں لیکن اس سیٹ میں نہیں (∉)۔ اگر B ⊆ A ہو تو دائرہ B دائرہ A کے اندر آتا ہے۔ جن دو سیٹوں کا کوئی رکن مشترک نہ ہو وہ الگ الگ دائروں میں بنتے ہیں۔ سیٹ پڑھنے کے لیے اس کے دائرے کے رکن لکھیں (جدولی شکل) اور n(A) کے لیے گنیں۔"
+      },
+      "points": [
+        {
+          "en": "Rectangle = U; circle = a set.",
+          "ur": "مستطیل = U؛ دائرہ = ایک سیٹ۔"
+        },
+        {
+          "en": "Subset: a circle inside a circle.",
+          "ur": "ذیلی سیٹ: دائرے کے اندر دائرہ۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_odd",
+      "type": "apply",
+      "skill": "maths.sets.universal_venn",
+      "step": {
+        "id": "r_odd",
+        "type": "number",
+        "prompt": {
+          "en": "U = {1, 2, …, 10}. In a Venn diagram, circle A holds the odd numbers of U. What is n(A)?",
+          "ur": "U = {1, 2, …, 10}۔ وین ڈایاگرام میں دائرہ A میں U کے طاق اعداد ہیں۔ n(A) کتنا ہے؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "A = {1, 3, 5, …}. Count them.",
+          "ur": "A = {1, 3, 5, …}۔ انہیں گنیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! A = {1, 3, 5, 7, 9}, so n(A) = 5.",
+          "ur": "درست! A = {1, 3, 5, 7, 9}، تو n(A) = 5"
+        },
+        "feedback_wrong": {
+          "en": "A = {1, 3, 5, 7, 9}: n(A) = 5.",
+          "ur": "A = {1, 3, 5, 7, 9}: n(A) = 5"
+        },
+        "common_wrong": [
+          {
+            "answer": 10,
+            "feedback": {
+              "en": "10 is n(U). Count only the odd numbers: 5.",
+              "ur": "10 تو n(U) ہے۔ صرف طاق اعداد گنیں: 5"
+            },
+            "misconception_id": "counts_universal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_days",
+      "type": "apply",
+      "skill": "maths.sets.universal_venn",
+      "step": {
+        "id": "r_days",
+        "type": "number",
+        "prompt": {
+          "en": "U = the days of the week. Circle T holds the days whose English name starts with T: Tuesday and Thursday. How many days are outside circle T?",
+          "ur": "U = ہفتے کے دن۔ دائرہ T میں وہ دن ہیں جن کا انگریزی نام T سے شروع ہو: Tuesday اور Thursday۔ کتنے دن دائرہ T سے باہر ہیں؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "n(U) = 7 and n(T) = 2.",
+          "ur": "n(U) = 7 اور n(T) = 2"
+        },
+        "feedback_correct": {
+          "en": "Right! 7 − 2 = 5 days.",
+          "ur": "درست! 7 − 2 = 5 دن"
+        },
+        "feedback_wrong": {
+          "en": "7 − 2 = 5 days are outside T.",
+          "ur": "7 − 2 = 5 دن T سے باہر ہیں۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 2,
+            "feedback": {
+              "en": "2 days are inside T. Outside: 7 − 2 = 5.",
+              "ur": "2 دن T کے اندر ہیں۔ باہر: 7 − 2 = 5"
+            }
+          },
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "7 is all the days, n(U). Outside T: 5.",
+              "ur": "7 تو سب دن، n(U) ہے۔ T سے باہر: 5"
+            },
+            "misconception_id": "counts_universal"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "Written fresh for the Sets unit. No textbook text or exercises were used.",
+    "Follows the book's order: the universal set U (p. 75), then 5.3 Venn diagrams: 5.3.1 representing a set and 5.3.2 representing a subset. Union and intersection are deliberately not taught here.",
+    "Every picture is drawn by the app from the figure data; the script checks that each number or letter sits inside exactly the circles of the sets it belongs to (Hamza's wrong drawing in s9 is the only exception, on purpose).",
+    "The vowel set in s6 is called V, not A, so its name does not clash with the letter A inside it.",
+    "Urdu terms to check: عالمی سیٹ (universal set; some books use کائناتی سیٹ), وین ڈایاگرام (Venn diagram), جدولی شکل (tabular form), بیانیہ شکل (descriptive form), حروفِ علت (vowels), اضعاف (multiples).",
+    "The numbers and pictures were worked out in content/sources/g6-maths-01/universal_set_venn.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
