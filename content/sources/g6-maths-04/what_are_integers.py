@@ -1,5 +1,7 @@
 from common import (T, opt, say, wrong, signed, number_question, number_line, write,
                     REF, REVIEW, INT_MEANING)
+from figs import (NumberLine, number_line_figure, jumps_figure, two_thermometers, with_figure,
+                  arrow_h, attach, LABEL_DY)
 
 SKILL = INT_MEANING
 
@@ -16,6 +18,83 @@ assert ORDER == [-5, -1, 0, 3]
 
 # s8: the opposite of 6.
 assert -6 + 6 == 0
+
+
+# ---------- pictures ----------
+
+def deg(n):
+    return f"{signed(n)}°C"
+
+
+# s1: Lahore 12 °C and Murree −3 °C on two thermometers.
+FIG_S1, _ = two_thermometers(
+    -5, 15, LAHORE, MURREE,
+    f"Two thermometers. The left one (Lahore) shows {LAHORE} °C, well above 0. The right one (Murree) shows {signed(MURREE)} °C: its liquid is 3 marks below 0.",
+    f"دو تھرمامیٹر۔ بائیں والا (لاہور) {LAHORE} ڈگری دکھاتا ہے، 0 سے کافی اوپر۔ دائیں والا (مری) {signed(MURREE)} ڈگری دکھاتا ہے: اس کا مائع 0 سے 3 نشان نیچے ہے۔",
+    under=(deg(LAHORE), deg(MURREE)))
+
+# s3: from 0, three steps to the left land on −3.
+FIG_S3 = jumps_figure(
+    -5, 5, [0, -1, -1, MURREE + 2], text_of=lambda s: None,
+    alt_en=f"A number line from −5 to 5. Three small jumps go left from 0 to −1, −2 and {signed(MURREE)}, where there is a dot. Negative numbers are on the left of 0, positive numbers on the right.",
+    alt_ur=f"−5 سے 5 تک عددی خط۔ تین چھوٹی چھلانگیں 0 سے بائیں −1، −2 اور {signed(MURREE)} تک جاتی ہیں، جہاں ایک نقطہ ہے۔ منفی اعداد 0 کے بائیں، مثبت اعداد دائیں طرف ہیں۔")
+
+
+def compare_line(lo, hi, a, b, alt_en, alt_ur):
+    """Dots on a and b, and an arrow above pointing right: greater this way."""
+    nl = NumberLine(lo, hi, 44, keys=(a, b))
+    nl.mark(a)
+    nl.mark(b)
+    nl.items += arrow_h(16, nl.x(lo), nl.x(hi))
+    return number_line_figure(alt_en, alt_ur, [nl], 44 + LABEL_DY + 14)
+
+
+# s6: −2 is right of −7.
+FIG_S6 = compare_line(
+    -8, 2, -7, -2,
+    "A number line from −8 to 2 with dots on −7 and −2. An arrow above points right: numbers get greater that way, so −2 is greater than −7.",
+    "−8 سے 2 تک عددی خط جس پر −7 اور −2 پر نقطے ہیں۔ اوپر ایک تیر دائیں طرف اشارہ کرتا ہے: اس طرف اعداد بڑے ہوتے ہیں، اس لیے −2، −7 سے بڑا ہے۔")
+
+
+def opposites(n, hidden, alt_en, alt_ur):
+    nl = NumberLine(-n - 1, n + 1, 44, keys=(n, -n), hide=(-n,) if hidden else ())
+    nl.mark(n)
+    nl.mark(-n, "?" if hidden else None)
+    nl.bracket(0, n, str(n))
+    nl.bracket(-n, 0, str(n))
+    return number_line_figure(alt_en, alt_ur, [nl], 44 + LABEL_DY + 14)
+
+
+# s8: 6 is 6 steps right of 0; the same distance on the left is "?".
+FIG_S8 = opposites(
+    6, True,
+    "A number line from −7 to 7. A dot on 6, with a measuring line from 0 to 6 marked 6. A second measuring line, also marked 6, goes the same distance to the left of 0, to a dot marked with a question mark.",
+    "−7 سے 7 تک عددی خط۔ 6 پر ایک نقطہ، اور 0 سے 6 تک ایک ناپ کی لکیر جس پر 6 لکھا ہے۔ دوسری ناپ کی لکیر، اس پر بھی 6 لکھا ہے، 0 کے بائیں اتنا ہی فاصلہ جاتی ہے، ایک نقطے تک جس پر سوالیہ نشان ہے۔")
+
+# s9: −8 and −3.
+FIG_S9 = compare_line(
+    -9, 1, -8, -3,
+    "A number line from −9 to 1 with dots on −8 and −3. An arrow above points right, the way numbers get greater. −8 is further left than −3.",
+    "−9 سے 1 تک عددی خط جس پر −8 اور −3 پر نقطے ہیں۔ اوپر ایک تیر دائیں طرف اشارہ کرتا ہے، جدھر اعداد بڑے ہوتے ہیں۔ −8، −3 سے زیادہ بائیں ہے۔")
+
+# s10: −7 °C and −2 °C on two thermometers.
+FIG_S10, _ = two_thermometers(
+    -10, 5, -7, -2,
+    "Two thermometers, both below 0. The left one shows −7 °C, with its liquid lower down. The right one shows −2 °C, higher up and warmer.",
+    "دو تھرمامیٹر، دونوں 0 سے نیچے۔ بائیں والا −7 ڈگری دکھاتا ہے، اس کا مائع زیادہ نیچے ہے۔ دائیں والا −2 ڈگری دکھاتا ہے، اوپر اور زیادہ گرم۔",
+    under=(deg(-7), deg(-2)))
+
+# s12: the opposites 6 and −6.
+FIG_S12 = opposites(
+    6, False,
+    "A number line from −7 to 7 with dots on −6 and 6. Two measuring lines, each marked 6, show that both are 6 steps from 0, one on each side.",
+    "−7 سے 7 تک عددی خط جس پر −6 اور 6 پر نقطے ہیں۔ دو ناپ کی لکیریں، ہر ایک پر 6 لکھا ہے، دکھاتی ہیں کہ دونوں 0 سے 6 قدم دور ہیں، ایک ایک طرف۔")
+
+# qb_find_error: −9 and −1.
+FIG_QB_ERROR = compare_line(
+    -10, 0, -9, -1,
+    "A number line from −10 to 0 with dots on −9 and −1. An arrow above points right, the way numbers get greater. −1 is to the right of −9.",
+    "−10 سے 0 تک عددی خط جس پر −9 اور −1 پر نقطے ہیں۔ اوپر ایک تیر دائیں طرف اشارہ کرتا ہے، جدھر اعداد بڑے ہوتے ہیں۔ −1، −9 کے دائیں طرف ہے۔")
 
 lesson = {
  "id": "g6-maths-04-what-are-integers",
@@ -195,4 +274,9 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, {
+    "s1_hook": FIG_S1, "s3_see_it": FIG_S3, "s6_compare_rule": FIG_S6, "s8_opposite": FIG_S8,
+    "s9_find_error": FIG_S9, "s10_explain_why": FIG_S10, "s12_summary": FIG_S12,
+    "qb_find_error": FIG_QB_ERROR,
+})
 write(lesson)

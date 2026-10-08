@@ -1,3 +1,4 @@
+import math
 from fractions import Fraction as F
 
 from common import (T, opt, say, wrong, number_question, write,
@@ -42,6 +43,280 @@ R1 = tri(14, 3)
 assert R1 == 21 and 14 * 3 == 42
 R2 = tri(5, 6)
 assert R2 == 15 and 5 * 6 == 30
+
+
+
+# ---------- figure helpers ----------
+# Shapes are drawn to scale from the same numbers as the step text. Boxes are
+# W wide; a label is about CHAR wide per letter and TALL high on a phone, so
+# side labels are pushed out far enough not to touch the lines.
+
+W = 100
+CHAR = W / 30
+TALL = W / 16
+
+
+def r1(v):
+    return round(v + 0.0, 1)
+
+
+def pt(x, y):
+    return [r1(x), r1(y)]
+
+
+def poly(points, fill=True, dashed=False):
+    item = {"kind": "polygon", "points": [pt(*p) for p in points]}
+    if fill:
+        item["fill"] = True
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def seg(a, b, dashed=False):
+    item = {"kind": "line", "from": pt(*a), "to": pt(*b)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": pt(*at), "text": text}
+
+
+def fig(height, alt, items):
+    """A figure W wide; checks the labels' letters stay inside the box."""
+    assert len(items) <= 60, len(items)
+    for it in items:
+        if it["kind"] == "label":
+            x, y = it["at"]
+            half_w, half_h = len(it["text"]) * CHAR / 2, TALL / 2
+            assert x - half_w >= 0.5 and x + half_w <= W - 0.5, it
+            assert y - half_h >= 0.5 and y + half_h <= height - 0.5, it
+    return {"width": W, "height": r1(height), "alt": alt, "items": items}
+
+
+def cm(n):
+    return f"{n}cm"
+
+
+def m(n):
+    return f"{n}m"
+
+
+class Scale:
+    """Maps lengths (cm or m) to the box, the same scale both ways, centred.
+    The box height follows the shape (at most max_h)."""
+
+    def __init__(self, width, height, max_h=64, padx=15, pady=10):
+        self.s = min((W - 2 * padx) / width, (max_h - 2 * pady) / height)
+        self.h = height * self.s + 2 * pady
+        self.x0 = (W - width * self.s) / 2
+        self.y0 = pady
+
+    def __call__(self, x, y):
+        return (self.x0 + x * self.s, self.y0 + y * self.s)
+
+
+def side(a, b, text, inside, gap=1.5):
+    """Label for the side a-b, just outside it (away from the point inside)."""
+    mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    n = math.hypot(dx, dy)
+    nx, ny = -dy / n, dx / n
+    if (inside[0] - mx) * nx + (inside[1] - my) * ny > 0:
+        nx, ny = -nx, -ny
+    off = gap + abs(nx) * len(text) * CHAR / 2 + abs(ny) * TALL / 2
+    return label((mx + nx * off, my + ny * off), text)
+
+
+def centre(points):
+    return (sum(p[0] for p in points) / len(points), sum(p[1] for p in points) / len(points))
+
+
+def rect_pts(sc, x, y, w, h):
+    return [sc(x, y), sc(x + w, y), sc(x + w, y + h), sc(x, y + h)]
+
+
+def grid(sc, x, y, w, h, rows=None, cols=None):
+    """Lines that split a w by h rectangle into unit squares (or only the
+    first row and column of them, when rows/cols say how far to go)."""
+    rows = h if rows is None else rows
+    cols = w if cols is None else cols
+    items = []
+    for i in range(1, w):
+        items.append(seg(sc(x + i, y), sc(x + i, y + (h if i <= cols else rows))))
+    for j in range(1, h):
+        items.append(seg(sc(x, y + j), sc(x + (w if j <= rows else cols), y + j)))
+    return items
+
+
+def rect_fig(length, width, unit, alt, sides=2, grid_lines=False, top=None, left=None, max_h=64):
+    """A length by width rectangle to scale. sides=2 labels the bottom and
+    the right; sides=4 labels all four sides. top/left replace a label."""
+    sc = Scale(length, width, max_h=max_h)
+    p = rect_pts(sc, 0, 0, length, width)
+    c = centre(p)
+    items = [poly(p)]
+    if grid_lines:
+        items += grid(sc, 0, 0, length, width)
+    bottom_t = unit(length) if top is None else top
+    right_t = unit(width) if left is None else left
+    items += [side(p[3], p[2], bottom_t, c), side(p[1], p[2], right_t, c)]
+    if sides == 4:
+        items += [side(p[0], p[1], bottom_t, c), side(p[0], p[3], right_t, c)]
+    return fig(sc.h, alt, items)
+
+
+def right_angle(corner, toward_a, toward_b, size=3.5):
+    """A small square mark in the corner between two directions."""
+    def step(p, q):
+        d = math.hypot(q[0] - p[0], q[1] - p[1])
+        return ((q[0] - p[0]) / d * size, (q[1] - p[1]) / d * size)
+    ax, ay = step(corner, toward_a)
+    bx, by = step(corner, toward_b)
+    p1 = (corner[0] + ax, corner[1] + ay)
+    p2 = (corner[0] + ax + bx, corner[1] + ay + by)
+    p3 = (corner[0] + bx, corner[1] + by)
+    return [seg(p1, p2), seg(p2, p3)]
+
+
+def with_figures(lesson, figures):
+    """Attach each figure to the step with that id (main steps, question
+    bank and review), and check every figure found its step."""
+    used = set()
+    steps = list(lesson["steps"])
+    steps += [q["step"] for qs in lesson["question_bank"].values() for q in qs]
+    steps += [q["step"] for q in lesson.get("review_questions", [])]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures[step["id"]]
+            used.add(step["id"])
+    assert used == set(figures), set(figures) - used
+
+# ---------- figures ----------
+
+def height_label(top, foot, d, t):
+    """Label beside a dashed height: halfway up when the triangle is tall,
+    else low down (where the triangle is wide), clear of the right-angle mark."""
+    if foot[1] - top[1] > 30:
+        return label((foot[0] + d * (len(t) * CHAR / 2 + 1.5), (top[1] + foot[1]) / 2), t)
+    return label((foot[0] + d * (len(t) * CHAR / 2 + 5), foot[1] - TALL / 2 - 1), t)
+
+
+def tri_items(sc, x, y, base, height, apex_x, unit, h_text=None, b_text=None):
+    """Triangle with its base along y + height, from x to x + base, and the top
+    corner above x + apex_x; a dashed height with a right-angle mark."""
+    a, b, top = sc(x, y + height), sc(x + base, y + height), sc(x + apex_x, y)
+    foot = sc(x + apex_x, y + height)
+    k = centre([a, b, top])
+    items = [poly([a, b, top]), side(a, b, b_text or unit(base), k)]
+    if 0 < apex_x < base:
+        items.append(seg(top, foot, dashed=True))
+        toward = b if apex_x < base / 2 else a
+        items += right_angle(foot, top, toward)
+        t = h_text or unit(height)
+        d = 1 if toward is b else -1
+        items.append(height_label(top, foot, d, t))
+    return items
+
+
+def tri_fig(base, height, apex_x, unit, unit_en, unit_ur, h_text=None, max_h=60, padx=15):
+    sc = Scale(base, height, max_h=max_h, padx=padx)
+    h_en = f"labelled {height} {unit_en}" if h_text is None else "marked ? because we must find it"
+    h_ur = f"اس پر {height} {unit_ur} لکھا ہے" if h_text is None else "اس پر ? ہے کیونکہ وہ معلوم کرنی ہے"
+    return fig(sc.h, T(f"A triangle drawn to scale. Its base along the bottom is labelled {base} {unit_en}. A dashed line goes straight up from the base to the top corner, at a right angle: that is the height, {h_en}.",
+                       f"پیمانے کے مطابق ایک مثلث۔ نیچے اس کے قاعدے پر {base} {unit_ur} لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، {h_ur}۔"),
+               tri_items(sc, 0, 0, base, height, apex_x, unit, h_text))
+
+
+def rect_cut_fig(labels, half_filled):
+    sc = Scale(8, 6, max_h=60)
+    p = rect_pts(sc, 0, 0, 8, 6)
+    c = centre(p)
+    if half_filled:
+        items = [poly(p, fill=False), poly([p[0], p[2], p[3]]), seg(p[0], p[2])]
+    else:
+        items = [poly(p), seg(p[0], p[2], dashed=True)]
+    if labels:
+        items += [side(p[3], p[2], cm(8), c), side(p[1], p[2], cm(6), c)]
+    return items, sc.h
+
+
+_items, _h = rect_cut_fig(False, False)
+F_HOOK = fig(_h, T("A rectangle with a dashed line from its top left corner to its bottom right corner, cutting it into two triangles.",
+                   "ایک مستطیل جس پر اوپر بائیں کونے سے نیچے دائیں کونے تک ڈیش والی لکیر ہے، جو اسے دو مثلثوں میں کاٹتی ہے۔"), _items)
+_items, _h = rect_cut_fig(True, True)
+F_HALF = fig(_h, T("An 8 cm by 6 cm rectangle, drawn to scale, cut from its top left corner to its bottom right corner. The bottom left triangle is shaded; the other triangle is the same size, so each is half of the rectangle.",
+                   "پیمانے کے مطابق 8 ضرب 6 سینٹی میٹر کی مستطیل، اوپر بائیں کونے سے نیچے دائیں کونے تک کٹی ہوئی۔ نیچے بائیں والا مثلث رنگا ہوا ہے؛ دوسرا مثلث بھی اتنا ہی ہے، اس لیے ہر ایک مستطیل کا آدھا ہے۔"), _items)
+
+
+def right_tri_fig(base, height, slant, unit, alt, dashed_rect=False):
+    sc = Scale(base, height, max_h=60)
+    tl, bl, br = sc(0, 0), sc(0, height), sc(base, height)
+    k = centre([tl, bl, br])
+    items = [poly([tl, bl, br])]
+    if dashed_rect:
+        items += [seg(tl, sc(base, 0), dashed=True), seg(sc(base, 0), br, dashed=True)]
+    items += right_angle(bl, tl, br)
+    items += [side(bl, br, unit(base), k), side(tl, bl, unit(height), k)]
+    if slant:
+        items.append(side(tl, br, unit(slant), k))
+    return fig(sc.h, alt, items)
+
+
+F_RIGHT_8_6 = right_tri_fig(8, 6, None, cm, T(
+    "A right-angled triangle drawn to scale: base 8 cm along the bottom and height 6 cm up the left side, with a right angle between them. Dashed lines along the top and the right complete the 8 cm by 6 cm rectangle around it.",
+    "پیمانے کے مطابق زاویہ قائمہ والا مثلث: نیچے 8 سینٹی میٹر قاعدہ اور بائیں طرف 6 سینٹی میٹر اونچائی، ان کے درمیان زاویہ قائمہ۔ اوپر اور دائیں ڈیش والی لکیریں اس کے گرد 8 ضرب 6 سینٹی میٹر کی مستطیل پوری کرتی ہیں۔"),
+    dashed_rect=True)
+F_5_12_13 = right_tri_fig(12, 5, 13, cm, T(
+    "A right-angled triangle drawn to scale: base 12 cm along the bottom, height 5 cm straight up the left side with a right angle at the bottom left corner, and a slanted side of 13 cm from the top to the right end of the base.",
+    "پیمانے کے مطابق زاویہ قائمہ والا مثلث: نیچے 12 سینٹی میٹر قاعدہ، بائیں طرف سیدھی اوپر 5 سینٹی میٹر اونچائی جس کے نیچے بائیں کونے پر زاویہ قائمہ ہے، اور اوپر سے قاعدے کے دائیں سرے تک 13 سینٹی میٹر کا ترچھا ضلع۔"))
+F_10_7 = tri_fig(10, 7, 3.5, cm, "cm", "سینٹی میٹر")
+F_MISSING = tri_fig(8, S7, 2.5, cm, "cm", "سینٹی میٹر", h_text="?")
+
+
+def kite_fig():
+    sc = Scale(10, 8, max_h=64)
+    left, right, top, bottom = sc(0, 4), sc(10, 4), sc(3, 0), sc(3, 8)
+    mid = sc(3, 4)
+    k = centre([left, right, top, bottom])
+    items = [poly([left, top, right, bottom]), seg(left, right, dashed=True), seg(top, bottom, dashed=True)]
+    items += right_angle(mid, top, right)
+    items += [label((sc(7, 4)[0], mid[1] - TALL / 2 - 1), cm(10)),
+              label((mid[0] + len(cm(4)) * CHAR / 2 + 1.5, sc(0, 1.8)[1]), cm(4)),
+              label((mid[0] + len(cm(4)) * CHAR / 2 + 1.5, sc(0, 6)[1]), cm(4))]
+    return fig(sc.h, T("A kite drawn to scale. A dashed line 10 cm long goes across it, from the left corner to the right corner, and is the base of two equal triangles, one above and one below. A dashed line goes straight up and down through the kite: each triangle's height is 4 cm.",
+                       "پیمانے کے مطابق ایک پتنگ۔ بائیں کونے سے دائیں کونے تک 10 سینٹی میٹر کی ڈیش والی لکیر دو برابر مثلثوں کا قاعدہ ہے، ایک اوپر اور ایک نیچے۔ ایک ڈیش والی لکیر پتنگ میں سیدھی اوپر نیچے جاتی ہے: ہر مثلث کی اونچائی 4 سینٹی میٹر ہے۔"), items)
+
+
+F_KITE = kite_fig()
+F_6_4 = tri_fig(6, 4, 2, cm, "cm", "سینٹی میٹر")
+
+
+def house_fig():
+    sc = Scale(6, 7, max_h=80)
+    wall = rect_pts(sc, 0, 3, 6, 4)
+    cw = centre(wall)
+    roof_top, foot = sc(3, 0), sc(3, 3)
+    items = [poly(wall), poly([wall[0], wall[1], roof_top]), seg(roof_top, foot, dashed=True)]
+    items += right_angle(foot, roof_top, wall[1])
+    items += [side(wall[3], wall[2], cm(6), cw), side(wall[1], wall[2], cm(4), cw),
+              height_label(roof_top, foot, 1, cm(3))]
+    return fig(sc.h, T("A house drawn to scale: a rectangle 6 cm wide and 4 cm high, with a triangle roof on top. The roof's base is the 6 cm top of the rectangle, and a dashed line from the roof's top corner straight down to its base shows the height, 3 cm.",
+                       "پیمانے کے مطابق ایک گھر: 6 سینٹی میٹر چوڑی اور 4 سینٹی میٹر اونچی مستطیل، اوپر مثلث چھت۔ چھت کا قاعدہ مستطیل کا 6 سینٹی میٹر والا اوپر کا ضلع ہے، اور چھت کے اوپر والے کونے سے سیدھی نیچے ڈیش والی لکیر اونچائی 3 سینٹی میٹر دکھاتی ہے۔"), items)
+
+
+F_HOUSE = house_fig()
+F_QB = tri_fig(9, 4, 6, cm, "cm", "سینٹی میٹر")
+F_R1 = tri_fig(14, 3, 4, cm, "cm", "سینٹی میٹر")
+F_R2 = tri_fig(5, 6, 1.5, m, "m", "میٹر", max_h=66)
+
+FIGS = {
+    "s1_hook": F_HOOK, "s3_half": F_HALF, "s4_half_rect": F_RIGHT_8_6, "s5_any": F_10_7, "s6_slant": F_5_12_13,
+    "s7_missing_height": F_MISSING, "s8_kite": F_KITE, "s9_find_error": F_6_4, "s11_house": F_HOUSE,
+    "qb_apply": F_QB, "qb_find_error": F_5_12_13, "r_tri": F_R1, "r_tri2": F_R2,
+}
 
 
 lesson = {
@@ -230,4 +505,5 @@ lesson = {
  ],
  "review": REVIEW,
 }
+with_figures(lesson, FIGS)
 write(lesson)

@@ -141,7 +141,91 @@
               },
               "misconception_id": "multiplies_parts"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 60.0,
+            "alt": {
+              "en": "A shape drawn to scale: a 5 cm by 4 cm rectangle with a 2 cm by 3 cm rectangle joined to its right side, at the bottom. A dashed line separates the two rectangles.",
+              "ur": "پیمانے کے مطابق ایک شکل: 5 ضرب 4 سینٹی میٹر کی مستطیل جس کے دائیں طرف، نیچے، 2 ضرب 3 سینٹی میٹر کی مستطیل جڑی ہے۔ ڈیش والی لکیر دونوں مستطیلوں کو الگ کرتی ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    15.0,
+                    10.0
+                  ],
+                  [
+                    65.0,
+                    10.0
+                  ],
+                  [
+                    65.0,
+                    20.0
+                  ],
+                  [
+                    85.0,
+                    20.0
+                  ],
+                  [
+                    85.0,
+                    50.0
+                  ],
+                  [
+                    15.0,
+                    50.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "line",
+                "from": [
+                  65.0,
+                  20.0
+                ],
+                "to": [
+                  65.0,
+                  50.0
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  40.0,
+                  5.4
+                ],
+                "text": "5cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  8.5,
+                  30.0
+                ],
+                "text": "4cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  75.0,
+                  54.6
+                ],
+                "text": "2cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  91.5,
+                  35.0
+                ],
+                "text": "3cm"
+              }
+            ]
+          }
         }
       },
       {
@@ -180,7 +264,93 @@
               },
               "misconception_id": "adds_hole"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 64.0,
+            "alt": {
+              "en": "A garden, 10 m by 8 m, shaded and drawn to scale. Inside it, a pond 3 m by 2 m is marked with a dashed outline.",
+              "ur": "ایک باغیچہ، 10 ضرب 8 میٹر، رنگا ہوا اور پیمانے کے مطابق۔ اس کے اندر 3 ضرب 2 میٹر کا تالاب ڈیش والے خاکے سے دکھایا گیا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    22.5,
+                    10.0
+                  ],
+                  [
+                    77.5,
+                    10.0
+                  ],
+                  [
+                    77.5,
+                    54.0
+                  ],
+                  [
+                    22.5,
+                    54.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    55.5,
+                    22.1
+                  ],
+                  [
+                    72.0,
+                    22.1
+                  ],
+                  [
+                    72.0,
+                    33.1
+                  ],
+                  [
+                    55.5,
+                    33.1
+                  ]
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  58.6
+                ],
+                "text": "10m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  82.3,
+                  32.0
+                ],
+                "text": "8m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  63.8,
+                  17.5
+                ],
+                "text": "3m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.7,
+                  27.6
+                ],
+                "text": "2m"
+              }
+            ]
+          }
         }
       }
     ]
@@ -238,6 +408,46 @@
       "text": {
         "en": "Many real floors and gardens are made of rectangles joined together. First, a quick area check.",
         "ur": "بہت سے اصل فرش اور باغیچے جڑی ہوئی مستطیلوں سے بنے ہوتے ہیں۔ پہلے رقبے کا ایک سوال۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "The floor of a room shaped like the letter L lying down: a wide part on top and a smaller part sticking out below its left end.",
+          "ur": "لیٹے ہوئے L حرف جیسا کمرے کا فرش: اوپر چوڑا حصہ اور اس کے بائیں سرے کے نیچے نکلا ہوا چھوٹا حصہ۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                28.0,
+                10.0
+              ],
+              [
+                72.0,
+                10.0
+              ],
+              [
+                72.0,
+                39.3
+              ],
+              [
+                50.0,
+                39.3
+              ],
+              [
+                50.0,
+                54.0
+              ],
+              [
+                28.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
       }
     },
     {
@@ -286,6 +496,134 @@
       "text": {
         "en": "Way 1: split the shape into rectangles, find each area, and add them. Way 2: draw the big rectangle around it, then take away the area of the missing piece. Both ways give the same answer.",
         "ur": "طریقہ 1: شکل کو مستطیلوں میں بانٹیں، ہر ایک کا رقبہ نکالیں، اور جمع کریں۔ طریقہ 2: اس کے گرد بڑی مستطیل بنائیں، پھر خالی حصے کا رقبہ گھٹائیں۔ دونوں طریقوں سے ایک ہی جواب آتا ہے۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 52.0,
+        "alt": {
+          "en": "Two copies of the same L-shape. Left (way 1): a dashed line splits it into two rectangles, numbered 1 and 2; add their areas. Right (way 2): a dashed outline fills in the missing corner to make one big rectangle, numbered 3; take the missing piece away from it.",
+          "ur": "ایک ہی L شکل کی دو کاپیاں۔ بائیں (طریقہ 1): ڈیش والی لکیر اسے دو مستطیلوں میں بانٹتی ہے، نمبر 1 اور 2؛ ان کے رقبے جمع کریں۔ دائیں (طریقہ 2): ڈیش والا خاکہ خالی کونا بھر کر ایک بڑی مستطیل بناتا ہے، نمبر 3؛ اس میں سے خالی حصہ گھٹائیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                12.7,
+                10.0
+              ],
+              [
+                44.7,
+                10.0
+              ],
+              [
+                44.7,
+                31.3
+              ],
+              [
+                28.7,
+                31.3
+              ],
+              [
+                28.7,
+                42.0
+              ],
+              [
+                12.7,
+                42.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.7,
+              31.3
+            ],
+            "to": [
+              28.7,
+              31.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                55.3,
+                10.0
+              ],
+              [
+                87.3,
+                10.0
+              ],
+              [
+                87.3,
+                31.3
+              ],
+              [
+                71.3,
+                31.3
+              ],
+              [
+                71.3,
+                42.0
+              ],
+              [
+                55.3,
+                42.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                71.3,
+                31.3
+              ],
+              [
+                87.3,
+                31.3
+              ],
+              [
+                87.3,
+                42.0
+              ],
+              [
+                71.3,
+                42.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              20.7,
+              20.7
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              20.7,
+              36.7
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              71.3,
+              20.7
+            ],
+            "text": "3"
+          }
+        ]
       }
     },
     {
@@ -327,7 +665,91 @@
           },
           "misconception_id": "multiplies_parts"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "Our room shaped like an L, drawn to scale: a 6 m by 4 m rectangle on top, with a 3 m by 2 m rectangle joined under its left end. A dashed line separates the two rectangles. The sides are labelled 6, 4, 3 and 2 m.",
+          "ur": "L شکل کا ہمارا کمرہ، پیمانے کے مطابق: اوپر 6 ضرب 4 میٹر کی مستطیل، اور اس کے بائیں سرے کے نیچے 3 ضرب 2 میٹر کی مستطیل جڑی ہے۔ ڈیش والی لکیر دونوں مستطیلوں کو الگ کرتی ہے۔ اضلاع پر 6، 4، 3 اور 2 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                28.0,
+                10.0
+              ],
+              [
+                72.0,
+                10.0
+              ],
+              [
+                72.0,
+                39.3
+              ],
+              [
+                50.0,
+                39.3
+              ],
+              [
+                50.0,
+                54.0
+              ],
+              [
+                28.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              39.3
+            ],
+            "to": [
+              50.0,
+              39.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "6m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.8,
+              24.7
+            ],
+            "text": "4m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              39.0,
+              58.6
+            ],
+            "text": "3m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              23.2,
+              46.7
+            ],
+            "text": "2m"
+          }
+        ]
+      }
     },
     {
       "id": "s5_pond",
@@ -368,7 +790,93 @@
           },
           "misconception_id": "one_part_only"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A garden, 10 m by 8 m, shaded and drawn to scale. Inside it, a pond 3 m by 2 m is marked with a dashed outline.",
+          "ur": "ایک باغیچہ، 10 ضرب 8 میٹر، رنگا ہوا اور پیمانے کے مطابق۔ اس کے اندر 3 ضرب 2 میٹر کا تالاب ڈیش والے خاکے سے دکھایا گیا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                22.5,
+                10.0
+              ],
+              [
+                77.5,
+                10.0
+              ],
+              [
+                77.5,
+                54.0
+              ],
+              [
+                22.5,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                55.5,
+                22.1
+              ],
+              [
+                72.0,
+                22.1
+              ],
+              [
+                72.0,
+                33.1
+              ],
+              [
+                55.5,
+                33.1
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "10m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.3,
+              32.0
+            ],
+            "text": "8m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              63.8,
+              17.5
+            ],
+            "text": "3m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.7,
+              27.6
+            ],
+            "text": "2m"
+          }
+        ]
+      }
     },
     {
       "id": "s6_t_shape",
@@ -409,7 +917,99 @@
           },
           "misconception_id": "multiplies_parts"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A T-shaped sign drawn to scale: a bar 9 cm long and 2 cm high on top, and a stem 3 cm wide and 5 cm high under its middle. A dashed line separates the bar from the stem.",
+          "ur": "پیمانے کے مطابق T شکل کا نشان: اوپر 9 سینٹی میٹر لمبی اور 2 سینٹی میٹر اونچی پٹی، اور اس کے بیچ کے نیچے 3 سینٹی میٹر چوڑا اور 5 سینٹی میٹر اونچا تنا۔ ڈیش والی لکیر پٹی کو تنے سے الگ کرتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                21.7,
+                10.0
+              ],
+              [
+                78.3,
+                10.0
+              ],
+              [
+                78.3,
+                22.6
+              ],
+              [
+                59.4,
+                22.6
+              ],
+              [
+                59.4,
+                54.0
+              ],
+              [
+                40.6,
+                54.0
+              ],
+              [
+                40.6,
+                22.6
+              ],
+              [
+                21.7,
+                22.6
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.6,
+              22.6
+            ],
+            "to": [
+              59.4,
+              22.6
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "9cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.8,
+              16.3
+            ],
+            "text": "2cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              58.6
+            ],
+            "text": "3cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.9,
+              38.3
+            ],
+            "text": "5cm"
+          }
+        ]
+      }
     },
     {
       "id": "s7_wall",
@@ -450,7 +1050,93 @@
           },
           "misconception_id": "one_part_only"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 62.0,
+        "alt": {
+          "en": "A wall, 5 m by 3 m, shaded and drawn to scale. Inside it, a door 1 m by 2 m is marked with a dashed outline.",
+          "ur": "ایک دیوار، 5 ضرب 3 میٹر، رنگا ہوا اور پیمانے کے مطابق۔ اس کے اندر 1 ضرب 2 میٹر کا دروازہ ڈیش والے خاکے سے دکھایا گیا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                10.0
+              ],
+              [
+                85.0,
+                10.0
+              ],
+              [
+                85.0,
+                52.0
+              ],
+              [
+                15.0,
+                52.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                43.0,
+                24.0
+              ],
+              [
+                57.0,
+                24.0
+              ],
+              [
+                57.0,
+                52.0
+              ],
+              [
+                43.0,
+                52.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              56.6
+            ],
+            "text": "5m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              89.8,
+              31.0
+            ],
+            "text": "3m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              19.4
+            ],
+            "text": "1m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.2,
+              38.0
+            ],
+            "text": "2m"
+          }
+        ]
+      }
     },
     {
       "id": "s8_frame",
@@ -491,7 +1177,93 @@
           },
           "misconception_id": "adds_hole"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A picture frame drawn to scale: the outside is 8 cm by 6 cm and is shaded. The photo inside, 6 cm by 4 cm, has a dashed outline; its sizes are written just inside it.",
+          "ur": "پیمانے کے مطابق تصویر کا فریم: باہر سے 8 ضرب 6 سینٹی میٹر، رنگا ہوا۔ اندر 6 ضرب 4 سینٹی میٹر کی تصویر ڈیش والے خاکے سے دکھائی گئی ہے؛ اس کی لمبائیاں اس کے اندر لکھی ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                23.3,
+                10.0
+              ],
+              [
+                76.7,
+                10.0
+              ],
+              [
+                76.7,
+                50.0
+              ],
+              [
+                23.3,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                30.0,
+                16.7
+              ],
+              [
+                70.0,
+                16.7
+              ],
+              [
+                70.0,
+                43.3
+              ],
+              [
+                30.0,
+                43.3
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "8cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.2,
+              30.0
+            ],
+            "text": "6cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              21.3
+            ],
+            "text": "6cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              36.5,
+              30.0
+            ],
+            "text": "4cm"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -539,7 +1311,91 @@
           },
           "misconception_id": "multiplies_parts"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "Our room shaped like an L, drawn to scale: a 6 m by 4 m rectangle on top, with a 3 m by 2 m rectangle joined under its left end. A dashed line separates the two rectangles. The sides are labelled 6, 4, 3 and 2 m.",
+          "ur": "L شکل کا ہمارا کمرہ، پیمانے کے مطابق: اوپر 6 ضرب 4 میٹر کی مستطیل، اور اس کے بائیں سرے کے نیچے 3 ضرب 2 میٹر کی مستطیل جڑی ہے۔ ڈیش والی لکیر دونوں مستطیلوں کو الگ کرتی ہے۔ اضلاع پر 6، 4، 3 اور 2 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                28.0,
+                10.0
+              ],
+              [
+                72.0,
+                10.0
+              ],
+              [
+                72.0,
+                39.3
+              ],
+              [
+                50.0,
+                39.3
+              ],
+              [
+                50.0,
+                54.0
+              ],
+              [
+                28.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              39.3
+            ],
+            "to": [
+              50.0,
+              39.3
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "6m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.8,
+              24.7
+            ],
+            "text": "4m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              39.0,
+              58.6
+            ],
+            "text": "3m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              23.2,
+              46.7
+            ],
+            "text": "2m"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -639,7 +1495,101 @@
           },
           "misconception_id": "one_part_only"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "An 8 cm by 5 cm rectangle, drawn to scale, with a 3 cm by 2 cm piece cut from its top right corner. The cut piece is shown by a dashed outline; the part left is shaded.",
+          "ur": "پیمانے کے مطابق 8 ضرب 5 سینٹی میٹر کی مستطیل جس کے اوپر دائیں کونے سے 3 ضرب 2 سینٹی میٹر کا ٹکڑا کاٹا گیا ہے۔ کٹا ہوا ٹکڑا ڈیش والے خاکے سے دکھایا گیا ہے؛ بچا ہوا حصہ رنگا ہوا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                18.0,
+                10.0
+              ],
+              [
+                58.0,
+                10.0
+              ],
+              [
+                58.0,
+                26.0
+              ],
+              [
+                82.0,
+                26.0
+              ],
+              [
+                82.0,
+                50.0
+              ],
+              [
+                18.0,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.0,
+                10.0
+              ],
+              [
+                82.0,
+                10.0
+              ],
+              [
+                82.0,
+                26.0
+              ],
+              [
+                58.0,
+                26.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "8cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              11.5,
+              30.0
+            ],
+            "text": "5cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              5.4
+            ],
+            "text": "3cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              88.5,
+              18.0
+            ],
+            "text": "2cm"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -702,7 +1652,91 @@
             },
             "misconception_id": "one_part_only"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 64.0,
+          "alt": {
+            "en": "A shape drawn to scale: a 7 m by 3 m rectangle on top, with a 4 m by 2 m rectangle joined under its left end. A dashed line separates the two rectangles. The sides are labelled 7, 3, 4 and 2 m.",
+            "ur": "پیمانے کے مطابق ایک شکل: اوپر 7 ضرب 3 میٹر کی مستطیل، اور اس کے بائیں سرے کے نیچے 4 ضرب 2 میٹر کی مستطیل جڑی ہے۔ ڈیش والی لکیر دونوں مستطیلوں کو الگ کرتی ہے۔ اضلاع پر 7، 3، 4 اور 2 میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  19.2,
+                  10.0
+                ],
+                [
+                  80.8,
+                  10.0
+                ],
+                [
+                  80.8,
+                  36.4
+                ],
+                [
+                  54.4,
+                  36.4
+                ],
+                [
+                  54.4,
+                  54.0
+                ],
+                [
+                  19.2,
+                  54.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "line",
+              "from": [
+                19.2,
+                36.4
+              ],
+              "to": [
+                54.4,
+                36.4
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                5.4
+              ],
+              "text": "7m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                85.6,
+                23.2
+              ],
+              "text": "3m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                36.8,
+                58.6
+              ],
+              "text": "4m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                14.4,
+                45.2
+              ],
+              "text": "2m"
+            }
+          ]
+        }
       }
     },
     {
@@ -739,13 +1773,99 @@
             },
             "misconception_id": "adds_hole"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 64.0,
+          "alt": {
+            "en": "A courtyard, 12 m by 10 m, shaded and drawn to scale. Inside it, a flower bed 4 m by 3 m is marked with a dashed outline.",
+            "ur": "ایک صحن، 12 ضرب 10 میٹر، رنگا ہوا اور پیمانے کے مطابق۔ اس کے اندر 4 ضرب 3 میٹر کا کیاری ڈیش والے خاکے سے دکھایا گیا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  23.6,
+                  10.0
+                ],
+                [
+                  76.4,
+                  10.0
+                ],
+                [
+                  76.4,
+                  54.0
+                ],
+                [
+                  23.6,
+                  54.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  52.2,
+                  34.2
+                ],
+                [
+                  69.8,
+                  34.2
+                ],
+                [
+                  69.8,
+                  47.4
+                ],
+                [
+                  52.2,
+                  47.4
+                ]
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                58.6
+              ],
+              "text": "12m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                82.9,
+                32.0
+              ],
+              "text": "10m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                61.0,
+                29.6
+              ],
+              "text": "4m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                47.4,
+                40.8
+              ],
+              "text": "3m"
+            }
+          ]
+        }
       }
     }
   ],
   "teacher_notes": [
     "Written fresh for the Perimeter and Area unit. No textbook text or exercises were used.",
-    "Shapes are described in words; sketching each one on the board or squared paper helps a lot.",
+    "Each shape is drawn to scale with its side lengths; dashed lines split it into rectangles or mark the piece taken away (pond, door, photo). Sketching them on squared paper still helps.",
     "Urdu term to check: مرکب شکل (compound shape).",
     "The numbers were worked out in content/sources/g6-maths-08/compound_shapes.py; edit that script, not this file."
   ],

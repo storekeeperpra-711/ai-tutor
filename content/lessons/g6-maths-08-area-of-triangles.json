@@ -137,7 +137,85 @@
               },
               "misconception_id": "forgets_half"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 51.1,
+            "alt": {
+              "en": "A triangle drawn to scale. Its base along the bottom is labelled 9 cm. A dashed line goes straight up from the base to the top corner, at a right angle: that is the height, labelled 4 cm.",
+              "ur": "پیمانے کے مطابق ایک مثلث۔ نیچے اس کے قاعدے پر 9 سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر 4 سینٹی میٹر لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    15.0,
+                    41.1
+                  ],
+                  [
+                    85.0,
+                    41.1
+                  ],
+                  [
+                    61.7,
+                    10.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  45.7
+                ],
+                "text": "9cm"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  61.7,
+                  10.0
+                ],
+                "to": [
+                  61.7,
+                  41.1
+                ],
+                "style": "dashed"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  61.7,
+                  37.6
+                ],
+                "to": [
+                  58.2,
+                  37.6
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  58.2,
+                  37.6
+                ],
+                "to": [
+                  58.2,
+                  41.1
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  55.2,
+                  25.6
+                ],
+                "text": "4cm"
+              }
+            ]
+          }
         }
       },
       {
@@ -176,7 +254,81 @@
               },
               "misconception_id": "slant_height"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 49.2,
+            "alt": {
+              "en": "A right-angled triangle drawn to scale: base 12 cm along the bottom, height 5 cm straight up the left side with a right angle at the bottom left corner, and a slanted side of 13 cm from the top to the right end of the base.",
+              "ur": "پیمانے کے مطابق زاویہ قائمہ والا مثلث: نیچے 12 سینٹی میٹر قاعدہ، بائیں طرف سیدھی اوپر 5 سینٹی میٹر اونچائی جس کے نیچے بائیں کونے پر زاویہ قائمہ ہے، اور اوپر سے قاعدے کے دائیں سرے تک 13 سینٹی میٹر کا ترچھا ضلع۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    15.0,
+                    10.0
+                  ],
+                  [
+                    15.0,
+                    39.2
+                  ],
+                  [
+                    85.0,
+                    39.2
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "line",
+                "from": [
+                  15.0,
+                  35.7
+                ],
+                "to": [
+                  18.5,
+                  35.7
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  18.5,
+                  35.7
+                ],
+                "to": [
+                  18.5,
+                  39.2
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  43.8
+                ],
+                "text": "12cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  8.5,
+                  24.6
+                ],
+                "text": "5cm"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  52.7,
+                  18.2
+                ],
+                "text": "13cm"
+              }
+            ]
+          }
         }
       }
     ]
@@ -246,6 +398,50 @@
       "text": {
         "en": "Today we find the area of triangles using what we know about rectangles. First, a quick check.",
         "ur": "آج ہم مستطیل کی مدد سے مثلث کا رقبہ نکالیں گے۔ پہلے ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A rectangle with a dashed line from its top left corner to its bottom right corner, cutting it into two triangles.",
+          "ur": "ایک مستطیل جس پر اوپر بائیں کونے سے نیچے دائیں کونے تک ڈیش والی لکیر ہے، جو اسے دو مثلثوں میں کاٹتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                23.3,
+                10.0
+              ],
+              [
+                76.7,
+                10.0
+              ],
+              [
+                76.7,
+                50.0
+              ],
+              [
+                23.3,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              10.0
+            ],
+            "to": [
+              76.7,
+              50.0
+            ],
+            "style": "dashed"
+          }
+        ]
       }
     },
     {
@@ -294,6 +490,82 @@
       "text": {
         "en": "Cutting an 8 cm by 6 cm rectangle corner to corner makes two equal triangles. Each is half of 48 cm². So the area of a triangle = ½ × base × height. The height must go straight up from the base, at a right angle, to the top corner. It is not the slanted side.",
         "ur": "8 ضرب 6 سینٹی میٹر کی مستطیل کو کونے سے کونے تک کاٹنے سے دو برابر مثلث بنتے ہیں۔ ہر ایک 48 کا آدھا ہے۔ اس لیے مثلث کا رقبہ = ½ × قاعدہ × اونچائی۔ اونچائی قاعدے سے سیدھی اوپر، زاویہ قائمہ پر، اوپر کے کونے تک جاتی ہے۔ یہ ترچھا ضلع نہیں۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "An 8 cm by 6 cm rectangle, drawn to scale, cut from its top left corner to its bottom right corner. The bottom left triangle is shaded; the other triangle is the same size, so each is half of the rectangle.",
+          "ur": "پیمانے کے مطابق 8 ضرب 6 سینٹی میٹر کی مستطیل، اوپر بائیں کونے سے نیچے دائیں کونے تک کٹی ہوئی۔ نیچے بائیں والا مثلث رنگا ہوا ہے؛ دوسرا مثلث بھی اتنا ہی ہے، اس لیے ہر ایک مستطیل کا آدھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                23.3,
+                10.0
+              ],
+              [
+                76.7,
+                10.0
+              ],
+              [
+                76.7,
+                50.0
+              ],
+              [
+                23.3,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                23.3,
+                10.0
+              ],
+              [
+                76.7,
+                50.0
+              ],
+              [
+                23.3,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              10.0
+            ],
+            "to": [
+              76.7,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "8cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.2,
+              30.0
+            ],
+            "text": "6cm"
+          }
+        ]
       }
     },
     {
@@ -334,7 +606,97 @@
             "ur": "ضرب دیں، پھر آدھا: 8 × 6 ÷ 2 = 24"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A right-angled triangle drawn to scale: base 8 cm along the bottom and height 6 cm up the left side, with a right angle between them. Dashed lines along the top and the right complete the 8 cm by 6 cm rectangle around it.",
+          "ur": "پیمانے کے مطابق زاویہ قائمہ والا مثلث: نیچے 8 سینٹی میٹر قاعدہ اور بائیں طرف 6 سینٹی میٹر اونچائی، ان کے درمیان زاویہ قائمہ۔ اوپر اور دائیں ڈیش والی لکیریں اس کے گرد 8 ضرب 6 سینٹی میٹر کی مستطیل پوری کرتی ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                23.3,
+                10.0
+              ],
+              [
+                23.3,
+                50.0
+              ],
+              [
+                76.7,
+                50.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              10.0
+            ],
+            "to": [
+              76.7,
+              10.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              76.7,
+              10.0
+            ],
+            "to": [
+              76.7,
+              50.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              46.5
+            ],
+            "to": [
+              26.8,
+              46.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              26.8,
+              46.5
+            ],
+            "to": [
+              26.8,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "8cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              16.8,
+              30.0
+            ],
+            "text": "6cm"
+          }
+        ]
+      }
     },
     {
       "id": "s5_any",
@@ -367,7 +729,85 @@
           },
           "misconception_id": "forgets_half"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A triangle drawn to scale. Its base along the bottom is labelled 10 cm. A dashed line goes straight up from the base to the top corner, at a right angle: that is the height, labelled 7 cm.",
+          "ur": "پیمانے کے مطابق ایک مثلث۔ نیچے اس کے قاعدے پر 10 سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر 7 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                21.4,
+                50.0
+              ],
+              [
+                78.6,
+                50.0
+              ],
+              [
+                41.4,
+                10.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "10cm"
+          },
+          {
+            "kind": "line",
+            "from": [
+              41.4,
+              10.0
+            ],
+            "to": [
+              41.4,
+              50.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              41.4,
+              46.5
+            ],
+            "to": [
+              44.9,
+              46.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.9,
+              46.5
+            ],
+            "to": [
+              44.9,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              47.9,
+              30.0
+            ],
+            "text": "7cm"
+          }
+        ]
+      }
     },
     {
       "id": "s6_slant",
@@ -408,7 +848,81 @@
           },
           "misconception_id": "forgets_half"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 49.2,
+        "alt": {
+          "en": "A right-angled triangle drawn to scale: base 12 cm along the bottom, height 5 cm straight up the left side with a right angle at the bottom left corner, and a slanted side of 13 cm from the top to the right end of the base.",
+          "ur": "پیمانے کے مطابق زاویہ قائمہ والا مثلث: نیچے 12 سینٹی میٹر قاعدہ، بائیں طرف سیدھی اوپر 5 سینٹی میٹر اونچائی جس کے نیچے بائیں کونے پر زاویہ قائمہ ہے، اور اوپر سے قاعدے کے دائیں سرے تک 13 سینٹی میٹر کا ترچھا ضلع۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                10.0
+              ],
+              [
+                15.0,
+                39.2
+              ],
+              [
+                85.0,
+                39.2
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              15.0,
+              35.7
+            ],
+            "to": [
+              18.5,
+              35.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.5,
+              35.7
+            ],
+            "to": [
+              18.5,
+              39.2
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              43.8
+            ],
+            "text": "12cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              8.5,
+              24.6
+            ],
+            "text": "5cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.7,
+              18.2
+            ],
+            "text": "13cm"
+          }
+        ]
+      }
     },
     {
       "id": "s7_missing_height",
@@ -441,7 +955,85 @@
           },
           "misconception_id": "missing_height_no_double"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A triangle drawn to scale. Its base along the bottom is labelled 8 cm. A dashed line goes straight up from the base to the top corner, at a right angle: that is the height, marked ? because we must find it.",
+          "ur": "پیمانے کے مطابق ایک مثلث۔ نیچے اس کے قاعدے پر 8 سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر ? ہے کیونکہ وہ معلوم کرنی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                23.3,
+                50.0
+              ],
+              [
+                76.7,
+                50.0
+              ],
+              [
+                40.0,
+                10.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "8cm"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              10.0
+            ],
+            "to": [
+              40.0,
+              50.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              46.5
+            ],
+            "to": [
+              43.5,
+              46.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              43.5,
+              46.5
+            ],
+            "to": [
+              43.5,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              43.2,
+              30.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s8_kite",
@@ -481,7 +1073,109 @@
           },
           "misconception_id": "forgets_half"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64.0,
+        "alt": {
+          "en": "A kite drawn to scale. A dashed line 10 cm long goes across it, from the left corner to the right corner, and is the base of two equal triangles, one above and one below. A dashed line goes straight up and down through the kite: each triangle's height is 4 cm.",
+          "ur": "پیمانے کے مطابق ایک پتنگ۔ بائیں کونے سے دائیں کونے تک 10 سینٹی میٹر کی ڈیش والی لکیر دو برابر مثلثوں کا قاعدہ ہے، ایک اوپر اور ایک نیچے۔ ایک ڈیش والی لکیر پتنگ میں سیدھی اوپر نیچے جاتی ہے: ہر مثلث کی اونچائی 4 سینٹی میٹر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                22.5,
+                32.0
+              ],
+              [
+                39.0,
+                10.0
+              ],
+              [
+                77.5,
+                32.0
+              ],
+              [
+                39.0,
+                54.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              22.5,
+              32.0
+            ],
+            "to": [
+              77.5,
+              32.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.0,
+              10.0
+            ],
+            "to": [
+              39.0,
+              54.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.0,
+              28.5
+            ],
+            "to": [
+              42.5,
+              28.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              42.5,
+              28.5
+            ],
+            "to": [
+              42.5,
+              32.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              61.0,
+              27.9
+            ],
+            "text": "10cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.5,
+              19.9
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.5,
+              43.0
+            ],
+            "text": "4cm"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -529,7 +1223,85 @@
           },
           "misconception_id": "forgets_half"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60.0,
+        "alt": {
+          "en": "A triangle drawn to scale. Its base along the bottom is labelled 6 cm. A dashed line goes straight up from the base to the top corner, at a right angle: that is the height, labelled 4 cm.",
+          "ur": "پیمانے کے مطابق ایک مثلث۔ نیچے اس کے قاعدے پر 6 سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر 4 سینٹی میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                50.0
+              ],
+              [
+                80.0,
+                50.0
+              ],
+              [
+                40.0,
+                10.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              54.6
+            ],
+            "text": "6cm"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              10.0
+            ],
+            "to": [
+              40.0,
+              50.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              46.5
+            ],
+            "to": [
+              43.5,
+              46.5
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              43.5,
+              46.5
+            ],
+            "to": [
+              43.5,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              46.5,
+              30.0
+            ],
+            "text": "4cm"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -630,7 +1402,115 @@
             "ur": "چھت بھی جمع کریں: 24 + 9 = 33"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 80.0,
+        "alt": {
+          "en": "A house drawn to scale: a rectangle 6 cm wide and 4 cm high, with a triangle roof on top. The roof's base is the 6 cm top of the rectangle, and a dashed line from the roof's top corner straight down to its base shows the height, 3 cm.",
+          "ur": "پیمانے کے مطابق ایک گھر: 6 سینٹی میٹر چوڑی اور 4 سینٹی میٹر اونچی مستطیل، اوپر مثلث چھت۔ چھت کا قاعدہ مستطیل کا 6 سینٹی میٹر والا اوپر کا ضلع ہے، اور چھت کے اوپر والے کونے سے سیدھی نیچے ڈیش والی لکیر اونچائی 3 سینٹی میٹر دکھاتی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.3,
+                35.7
+              ],
+              [
+                75.7,
+                35.7
+              ],
+              [
+                75.7,
+                70.0
+              ],
+              [
+                24.3,
+                70.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.3,
+                35.7
+              ],
+              [
+                75.7,
+                35.7
+              ],
+              [
+                50.0,
+                10.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              10.0
+            ],
+            "to": [
+              50.0,
+              35.7
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              32.2
+            ],
+            "to": [
+              53.5,
+              32.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              53.5,
+              32.2
+            ],
+            "to": [
+              53.5,
+              35.7
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              74.6
+            ],
+            "text": "6cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.2,
+              52.9
+            ],
+            "text": "4cm"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              31.6
+            ],
+            "text": "3cm"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -693,7 +1573,85 @@
             },
             "misconception_id": "forgets_half"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 35.0,
+          "alt": {
+            "en": "A triangle drawn to scale. Its base along the bottom is labelled 14 cm. A dashed line goes straight up from the base to the top corner, at a right angle: that is the height, labelled 3 cm.",
+            "ur": "پیمانے کے مطابق ایک مثلث۔ نیچے اس کے قاعدے پر 14 سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر 3 سینٹی میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  15.0,
+                  25.0
+                ],
+                [
+                  85.0,
+                  25.0
+                ],
+                [
+                  35.0,
+                  10.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                29.6
+              ],
+              "text": "14cm"
+            },
+            {
+              "kind": "line",
+              "from": [
+                35.0,
+                10.0
+              ],
+              "to": [
+                35.0,
+                25.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "line",
+              "from": [
+                35.0,
+                21.5
+              ],
+              "to": [
+                38.5,
+                21.5
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                38.5,
+                21.5
+              ],
+              "to": [
+                38.5,
+                25.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                45.0,
+                20.9
+              ],
+              "text": "3cm"
+            }
+          ]
+        }
       }
     },
     {
@@ -730,7 +1688,85 @@
             },
             "misconception_id": "forgets_half"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 66.0,
+          "alt": {
+            "en": "A triangle drawn to scale. Its base along the bottom is labelled 5 m. A dashed line goes straight up from the base to the top corner, at a right angle: that is the height, labelled 6 m.",
+            "ur": "پیمانے کے مطابق ایک مثلث۔ نیچے اس کے قاعدے پر 5 میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر 6 میٹر لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  30.8,
+                  56.0
+                ],
+                [
+                  69.2,
+                  56.0
+                ],
+                [
+                  42.3,
+                  10.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                60.6
+              ],
+              "text": "5m"
+            },
+            {
+              "kind": "line",
+              "from": [
+                42.3,
+                10.0
+              ],
+              "to": [
+                42.3,
+                56.0
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "line",
+              "from": [
+                42.3,
+                52.5
+              ],
+              "to": [
+                45.8,
+                52.5
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                45.8,
+                52.5
+              ],
+              "to": [
+                45.8,
+                56.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                47.2,
+                33.0
+              ],
+              "text": "6m"
+            }
+          ]
+        }
       }
     }
   ],

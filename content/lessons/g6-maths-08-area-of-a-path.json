@@ -146,7 +146,92 @@
               },
               "misconception_id": "width_once"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 68.0,
+            "alt": {
+              "en": "A field 10 m long and 8 m broad, shaded, with a path 1 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 1 m, is written in the path near the bottom of the left end and again of the right end. The 10 m and 8 m are written inside the shaded rectangle.",
+              "ur": "ایک میدان 10 میٹر لمبا اور 8 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 1 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 1 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ 10 میٹر اور 8 میٹر رنگی ہوئی مستطیل کے اندر لکھے ہیں۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    22.2,
+                    10.0
+                  ],
+                  [
+                    77.8,
+                    10.0
+                  ],
+                  [
+                    77.8,
+                    58.0
+                  ],
+                  [
+                    22.2,
+                    58.0
+                  ]
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    31.2,
+                    19.0
+                  ],
+                  [
+                    68.8,
+                    19.0
+                  ],
+                  [
+                    68.8,
+                    49.0
+                  ],
+                  [
+                    31.2,
+                    49.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  23.6
+                ],
+                "text": "10m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  36.6,
+                  34.0
+                ],
+                "text": "8m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  26.8,
+                  44.9
+                ],
+                "text": "1m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  73.2,
+                  44.9
+                ],
+                "text": "1m"
+              }
+            ]
+          }
         }
       },
       {
@@ -185,7 +270,108 @@
               },
               "misconception_id": "subtracts_lengths"
             }
-          ]
+          ],
+          "figure": {
+            "width": 100,
+            "height": 68.0,
+            "alt": {
+              "en": "A pool 12 m long and 8 m broad, shaded, with a path 2 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 2 m, is written in the path near the bottom of the left end and again of the right end. The 12 m and 8 m are written inside the shaded rectangle. The outer rectangle is labelled 16 m along the top and 12 m down the right side.",
+              "ur": "ایک تالاب 12 میٹر لمبا اور 8 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 2 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 2 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ 12 میٹر اور 8 میٹر رنگی ہوئی مستطیل کے اندر لکھے ہیں۔ باہر کی مستطیل پر اوپر 16 میٹر اور دائیں طرف 12 میٹر لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    18.5,
+                    10.0
+                  ],
+                  [
+                    81.5,
+                    10.0
+                  ],
+                  [
+                    81.5,
+                    58.0
+                  ],
+                  [
+                    18.5,
+                    58.0
+                  ]
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    27.5,
+                    19.0
+                  ],
+                  [
+                    72.5,
+                    19.0
+                  ],
+                  [
+                    72.5,
+                    49.0
+                  ],
+                  [
+                    27.5,
+                    49.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  23.6
+                ],
+                "text": "12m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  32.8,
+                  34.0
+                ],
+                "text": "8m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  23.0,
+                  44.9
+                ],
+                "text": "2m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  77.0,
+                  44.9
+                ],
+                "text": "2m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  50.0,
+                  5.4
+                ],
+                "text": "16m"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  88.0,
+                  34.0
+                ],
+                "text": "12m"
+              }
+            ]
+          }
         }
       }
     ]
@@ -251,6 +437,59 @@
       "text": {
         "en": "A path often runs round a field, a garden or a pool. Today we find its area. First, a quick area check.",
         "ur": "اکثر میدان، باغیچے یا تالاب کے گرد راستہ بنا ہوتا ہے۔ آج ہم اس کا رقبہ نکالیں گے۔ پہلے رقبے کا ایک سوال۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "A school field, a shaded rectangle, with a path of the same width all round it: a white band between the field and a bigger outer rectangle.",
+          "ur": "سکول کا میدان، رنگی ہوئی مستطیل، جس کے چاروں طرف ایک جیسی چوڑائی کا راستہ ہے: میدان اور بڑی باہر کی مستطیل کے درمیان سفید پٹی۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                10.0
+              ],
+              [
+                84.0,
+                10.0
+              ],
+              [
+                84.0,
+                58.0
+              ],
+              [
+                16.0,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                25.0,
+                19.0
+              ],
+              [
+                75.0,
+                19.0
+              ],
+              [
+                75.0,
+                49.0
+              ],
+              [
+                25.0,
+                49.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
       }
     },
     {
@@ -299,6 +538,83 @@
       "text": {
         "en": "Picture a field with a path of the same width all round it. Field and path together make a bigger outer rectangle. Outer length = length + 2 × width of path. Outer breadth = breadth + 2 × width of path. Area of path = outer area − field area.",
         "ur": "ایک میدان سوچیں جس کے چاروں طرف ایک جیسی چوڑائی کا راستہ ہے۔ میدان اور راستہ مل کر باہر ایک بڑی مستطیل بناتے ہیں۔ باہر کی لمبائی = لمبائی + 2 × راستے کی چوڑائی۔ باہر کی چوڑائی = چوڑائی + 2 × راستے کی چوڑائی۔ راستے کا رقبہ = باہر کا رقبہ − میدان کا رقبہ۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "A field, a shaded rectangle with its length marked L, and a path all round it, the white band out to a bigger outer rectangle. The path's width is marked w at the left end and again at the right end, so the outer length is L + w + w.",
+          "ur": "ایک میدان، رنگی ہوئی مستطیل جس کی لمبائی پر L لکھا ہے، اور اس کے چاروں طرف راستہ، باہر کی بڑی مستطیل تک سفید پٹی۔ راستے کی چوڑائی پر بائیں سرے اور پھر دائیں سرے پر w لکھا ہے، اس لیے باہر کی لمبائی L + w + w ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                10.0
+              ],
+              [
+                84.0,
+                10.0
+              ],
+              [
+                84.0,
+                58.0
+              ],
+              [
+                16.0,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                25.0,
+                19.0
+              ],
+              [
+                75.0,
+                19.0
+              ],
+              [
+                75.0,
+                49.0
+              ],
+              [
+                25.0,
+                49.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              23.6
+            ],
+            "text": "L"
+          },
+          {
+            "kind": "label",
+            "at": [
+              20.5,
+              44.9
+            ],
+            "text": "w"
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.5,
+              44.9
+            ],
+            "text": "w"
+          }
+        ]
       }
     },
     {
@@ -332,7 +648,100 @@
           },
           "misconception_id": "width_once"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "The school field, 20 m long and 12 m broad, shaded, with a path 2 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 2 m, is written in the path near the bottom of the left end and again of the right end. The field's length 20 m and breadth 12 m are written inside it. The outer length, along the top, is marked ?.",
+          "ur": "سکول کا میدان، 20 میٹر لمبا اور 12 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 2 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 2 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ میدان کی لمبائی 20 میٹر اور چوڑائی 12 میٹر اس کے اندر لکھی ہیں۔ اوپر باہر کی لمبائی پر ? ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                10.0
+              ],
+              [
+                84.0,
+                10.0
+              ],
+              [
+                84.0,
+                58.0
+              ],
+              [
+                16.0,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                25.0,
+                19.0
+              ],
+              [
+                75.0,
+                19.0
+              ],
+              [
+                75.0,
+                49.0
+              ],
+              [
+                25.0,
+                49.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              23.6
+            ],
+            "text": "20m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.0,
+              34.0
+            ],
+            "text": "12m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              20.5,
+              44.9
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.5,
+              44.9
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s5_outer_area",
@@ -372,7 +781,92 @@
             "ur": "یہ احاطہ ہے۔ رقبہ: 24 × 16 = 384"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "The school field, 20 m long and 12 m broad, shaded, with a path 2 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 2 m, is written in the path near the bottom of the left end and again of the right end. The outer rectangle is labelled 24 m along the top and 16 m down the right side.",
+          "ur": "سکول کا میدان، 20 میٹر لمبا اور 12 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 2 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 2 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ باہر کی مستطیل پر اوپر 24 میٹر اور دائیں طرف 16 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                10.0
+              ],
+              [
+                84.0,
+                10.0
+              ],
+              [
+                84.0,
+                58.0
+              ],
+              [
+                16.0,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                25.0,
+                19.0
+              ],
+              [
+                75.0,
+                19.0
+              ],
+              [
+                75.0,
+                49.0
+              ],
+              [
+                25.0,
+                49.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              20.5,
+              44.9
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.5,
+              44.9
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "24m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              90.5,
+              34.0
+            ],
+            "text": "16m"
+          }
+        ]
+      }
     },
     {
       "id": "s6_path_area",
@@ -413,7 +907,92 @@
           },
           "misconception_id": "subtracts_lengths"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "The school field, 20 m long and 12 m broad, shaded, with a path 2 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 2 m, is written in the path near the bottom of the left end and again of the right end. The field is labelled 20 m and 12 m inside it; the outer rectangle is labelled 24 m along the top and 16 m down the right side.",
+          "ur": "سکول کا میدان، 20 میٹر لمبا اور 12 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 2 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 2 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ میدان کے اندر 20 میٹر اور 12 میٹر لکھا ہے؛ باہر کی مستطیل پر اوپر 24 میٹر اور دائیں طرف 16 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                10.0
+              ],
+              [
+                84.0,
+                10.0
+              ],
+              [
+                84.0,
+                58.0
+              ],
+              [
+                16.0,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                25.0,
+                19.0
+              ],
+              [
+                75.0,
+                19.0
+              ],
+              [
+                75.0,
+                49.0
+              ],
+              [
+                25.0,
+                49.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              23.6
+            ],
+            "text": "20m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              32.0,
+              34.0
+            ],
+            "text": "12m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "24m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              90.5,
+              34.0
+            ],
+            "text": "16m"
+          }
+        ]
+      }
     },
     {
       "id": "s7_garden",
@@ -454,7 +1033,92 @@
           },
           "misconception_id": "width_once"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "Amna's garden, 15 m long and 10 m broad, shaded, with a path 1 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 1 m, is written in the path near the bottom of the left end and again of the right end. The 15 m and 10 m are written inside the shaded rectangle.",
+          "ur": "آمنہ کا باغیچہ، 15 میٹر لمبا اور 10 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 1 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 1 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ 15 میٹر اور 10 میٹر رنگی ہوئی مستطیل کے اندر لکھے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                18.5,
+                10.0
+              ],
+              [
+                81.5,
+                10.0
+              ],
+              [
+                81.5,
+                58.0
+              ],
+              [
+                18.5,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                27.5,
+                19.0
+              ],
+              [
+                72.5,
+                19.0
+              ],
+              [
+                72.5,
+                49.0
+              ],
+              [
+                27.5,
+                49.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              23.6
+            ],
+            "text": "15m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.5,
+              34.0
+            ],
+            "text": "10m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              23.0,
+              44.9
+            ],
+            "text": "1m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.0,
+              44.9
+            ],
+            "text": "1m"
+          }
+        ]
+      }
     },
     {
       "id": "s8_cost",
@@ -494,7 +1158,92 @@
             "ur": "جمع نہیں، ضرب دیں: 80 × 250 = 20000"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 67.4,
+        "alt": {
+          "en": "A pool 10 m long and 6 m broad, shaded, with a path 2 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 2 m, is written in the path near the bottom of the left end and again of the right end. The 10 m and 6 m are written inside the shaded rectangle.",
+          "ur": "ایک تالاب 10 میٹر لمبا اور 6 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 2 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 2 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ 10 میٹر اور 6 میٹر رنگی ہوئی مستطیل کے اندر لکھے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.8,
+                10.0
+              ],
+              [
+                83.2,
+                10.0
+              ],
+              [
+                83.2,
+                57.4
+              ],
+              [
+                16.8,
+                57.4
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                26.3,
+                19.5
+              ],
+              [
+                73.7,
+                19.5
+              ],
+              [
+                73.7,
+                47.9
+              ],
+              [
+                26.3,
+                47.9
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              24.1
+            ],
+            "text": "10m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              31.6,
+              33.7
+            ],
+            "text": "6m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              21.6,
+              43.8
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.4,
+              43.8
+            ],
+            "text": "2m"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -542,7 +1291,92 @@
           },
           "misconception_id": "width_once"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "A school ground 30 m long and 20 m broad, shaded, with a path 3 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 3 m, is written in the path near the bottom of the left end and again of the right end. The 30 m and 20 m are written inside the shaded rectangle.",
+          "ur": "سکول کا ایک میدان 30 میٹر لمبا اور 20 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 3 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 3 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ 30 میٹر اور 20 میٹر رنگی ہوئی مستطیل کے اندر لکھے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                18.5,
+                10.0
+              ],
+              [
+                81.5,
+                10.0
+              ],
+              [
+                81.5,
+                58.0
+              ],
+              [
+                18.5,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                27.5,
+                19.0
+              ],
+              [
+                72.5,
+                19.0
+              ],
+              [
+                72.5,
+                49.0
+              ],
+              [
+                27.5,
+                49.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              23.6
+            ],
+            "text": "30m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.5,
+              34.0
+            ],
+            "text": "20m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              23.0,
+              44.9
+            ],
+            "text": "3m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.0,
+              44.9
+            ],
+            "text": "3m"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -649,7 +1483,108 @@
           },
           "misconception_id": "subtracts_lengths"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 68.0,
+        "alt": {
+          "en": "The grass of a park in Lahore, 36 m long and 26 m broad, shaded, with a path 2 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 2 m, is written in the path near the bottom of the left end and again of the right end. The outer rectangle is the edge of the whole park, labelled 40 m along the top and 30 m down the right side, so the path runs inside the park along its four edges. The grass is labelled 36 m and 26 m inside it.",
+          "ur": "لاہور کے ایک پارک کی گھاس، 36 میٹر لمبا اور 26 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 2 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 2 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ باہر کی مستطیل پورے پارک کا کنارہ ہے، اوپر 40 میٹر اور دائیں طرف 30 میٹر، اس لیے راستہ پارک کے اندر چاروں کناروں کے ساتھ ہے۔ گھاس کے اندر 36 میٹر اور 26 میٹر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                21.0,
+                10.0
+              ],
+              [
+                79.0,
+                10.0
+              ],
+              [
+                79.0,
+                58.0
+              ],
+              [
+                21.0,
+                58.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                30.0,
+                19.0
+              ],
+              [
+                70.0,
+                19.0
+              ],
+              [
+                70.0,
+                49.0
+              ],
+              [
+                30.0,
+                49.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              23.6
+            ],
+            "text": "36m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              37.0,
+              34.0
+            ],
+            "text": "26m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              25.5,
+              44.9
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              74.5,
+              44.9
+            ],
+            "text": "2m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              5.4
+            ],
+            "text": "40m"
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.5,
+              34.0
+            ],
+            "text": "30m"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -720,7 +1655,92 @@
             },
             "misconception_id": "width_once"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 68.0,
+          "alt": {
+            "en": "A garden 12 m long and 9 m broad, shaded, with a path 1 m wide all round the outside of it. The path is the white band between the shaded rectangle and the outer rectangle. The path width, 1 m, is written in the path near the bottom of the left end and again of the right end. The 12 m and 9 m are written inside the shaded rectangle.",
+            "ur": "ایک باغیچہ 12 میٹر لمبا اور 9 میٹر چوڑا، رنگا ہوا، اور اس کے باہر چاروں طرف 1 میٹر چوڑا راستہ۔ راستہ رنگی ہوئی مستطیل اور باہر کی مستطیل کے درمیان سفید پٹی ہے۔ راستے کی چوڑائی، 1 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ 12 میٹر اور 9 میٹر رنگی ہوئی مستطیل کے اندر لکھے ہیں۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  21.0,
+                  10.0
+                ],
+                [
+                  79.0,
+                  10.0
+                ],
+                [
+                  79.0,
+                  58.0
+                ],
+                [
+                  21.0,
+                  58.0
+                ]
+              ]
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  30.0,
+                  19.0
+                ],
+                [
+                  70.0,
+                  19.0
+                ],
+                [
+                  70.0,
+                  49.0
+                ],
+                [
+                  30.0,
+                  49.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                23.6
+              ],
+              "text": "12m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                35.3,
+                34.0
+              ],
+              "text": "9m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                25.5,
+                44.9
+              ],
+              "text": "1m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                74.5,
+                44.9
+              ],
+              "text": "1m"
+            }
+          ]
+        }
       }
     },
     {
@@ -757,13 +1777,98 @@
             },
             "misconception_id": "width_once"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 56.0,
+          "alt": {
+            "en": "A flower bed, a shaded rectangle with its length 6 m written inside, and a path 1 m wide all round the outside. The path width, 1 m, is written in the path near the bottom of the left end and again of the right end. The outer length, along the top, is marked ?.",
+            "ur": "ایک کیاری، رنگی ہوئی مستطیل جس کے اندر اس کی لمبائی 6 میٹر لکھی ہے، اور باہر چاروں طرف 1 میٹر چوڑا راستہ۔ راستے کی چوڑائی، 1 میٹر، بائیں سرے اور پھر دائیں سرے کے نچلے حصے میں راستے میں لکھی ہے۔ اوپر باہر کی لمبائی پر ? ہے۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  23.0,
+                  10.0
+                ],
+                [
+                  77.0,
+                  10.0
+                ],
+                [
+                  77.0,
+                  46.0
+                ],
+                [
+                  23.0,
+                  46.0
+                ]
+              ]
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  32.0,
+                  19.0
+                ],
+                [
+                  68.0,
+                  19.0
+                ],
+                [
+                  68.0,
+                  37.0
+                ],
+                [
+                  32.0,
+                  37.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                23.6
+              ],
+              "text": "6m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                27.5,
+                32.9
+              ],
+              "text": "1m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                72.5,
+                32.9
+              ],
+              "text": "1m"
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                5.4
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     }
   ],
   "teacher_notes": [
     "Written fresh for the Perimeter and Area unit (a gap lesson matching the book chapter on area). No textbook text or exercises were used.",
-    "The lesson has no pictures: fields, paths and pools are described in words. Ask pupils to draw each one on a slate or the board, the field as a rectangle and the path as a band all round it, and to mark the path width at both ends.",
+    "Most steps show the field (shaded) and the path (the white band round it) with the path width written at both ends. The fields are to scale, but a thin path is drawn a little wider than it really is so its label fits. Ask pupils to draw their own on a slate or the board as well.",
     "Step s11 has the path inside the park's edge; point out that here the width is taken away twice to get the inner rectangle.",
     "Urdu terms to check: راستہ (path), چوڑائی (width / breadth), باہر کی مستطیل (outer rectangle).",
     "The numbers were worked out in content/sources/g6-maths-08/area_of_path.py; edit that script, not this file."

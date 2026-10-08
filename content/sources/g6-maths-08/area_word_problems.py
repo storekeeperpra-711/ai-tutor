@@ -1,3 +1,4 @@
+import math
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, PA_PERIMETER, PA_AREA, PA_COMPOUND, PA_TRIANGLE, PA_WORD_PROBLEMS)
 
@@ -41,6 +42,223 @@ R1 = 6 * 3 * 200
 assert R1 == 3600 and rect_p(6, 3) * 200 == 3600  # same number, so no perimeter wrong answer here
 R2 = rect_p(2, 1)
 assert R2 == 6 and 2 * 1 == 2
+
+
+
+# ---------- figure helpers ----------
+# Shapes are drawn to scale from the same numbers as the step text. Boxes are
+# W wide; a label is about CHAR wide per letter and TALL high on a phone, so
+# side labels are pushed out far enough not to touch the lines.
+
+W = 100
+CHAR = W / 30
+TALL = W / 16
+
+
+def r1(v):
+    return round(v + 0.0, 1)
+
+
+def pt(x, y):
+    return [r1(x), r1(y)]
+
+
+def poly(points, fill=True, dashed=False):
+    item = {"kind": "polygon", "points": [pt(*p) for p in points]}
+    if fill:
+        item["fill"] = True
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def seg(a, b, dashed=False):
+    item = {"kind": "line", "from": pt(*a), "to": pt(*b)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": pt(*at), "text": text}
+
+
+def fig(height, alt, items):
+    """A figure W wide; checks the labels' letters stay inside the box."""
+    assert len(items) <= 60, len(items)
+    for it in items:
+        if it["kind"] == "label":
+            x, y = it["at"]
+            half_w, half_h = len(it["text"]) * CHAR / 2, TALL / 2
+            assert x - half_w >= 0.5 and x + half_w <= W - 0.5, it
+            assert y - half_h >= 0.5 and y + half_h <= height - 0.5, it
+    return {"width": W, "height": r1(height), "alt": alt, "items": items}
+
+
+def cm(n):
+    return f"{n}cm"
+
+
+def m(n):
+    return f"{n}m"
+
+
+class Scale:
+    """Maps lengths (cm or m) to the box, the same scale both ways, centred.
+    The box height follows the shape (at most max_h)."""
+
+    def __init__(self, width, height, max_h=64, padx=15, pady=10):
+        self.s = min((W - 2 * padx) / width, (max_h - 2 * pady) / height)
+        self.h = height * self.s + 2 * pady
+        self.x0 = (W - width * self.s) / 2
+        self.y0 = pady
+
+    def __call__(self, x, y):
+        return (self.x0 + x * self.s, self.y0 + y * self.s)
+
+
+def side(a, b, text, inside, gap=1.5):
+    """Label for the side a-b, just outside it (away from the point inside)."""
+    mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    n = math.hypot(dx, dy)
+    nx, ny = -dy / n, dx / n
+    if (inside[0] - mx) * nx + (inside[1] - my) * ny > 0:
+        nx, ny = -nx, -ny
+    off = gap + abs(nx) * len(text) * CHAR / 2 + abs(ny) * TALL / 2
+    return label((mx + nx * off, my + ny * off), text)
+
+
+def centre(points):
+    return (sum(p[0] for p in points) / len(points), sum(p[1] for p in points) / len(points))
+
+
+def rect_pts(sc, x, y, w, h):
+    return [sc(x, y), sc(x + w, y), sc(x + w, y + h), sc(x, y + h)]
+
+
+def grid(sc, x, y, w, h, rows=None, cols=None):
+    """Lines that split a w by h rectangle into unit squares (or only the
+    first row and column of them, when rows/cols say how far to go)."""
+    rows = h if rows is None else rows
+    cols = w if cols is None else cols
+    items = []
+    for i in range(1, w):
+        items.append(seg(sc(x + i, y), sc(x + i, y + (h if i <= cols else rows))))
+    for j in range(1, h):
+        items.append(seg(sc(x, y + j), sc(x + (w if j <= rows else cols), y + j)))
+    return items
+
+
+def rect_fig(length, width, unit, alt, sides=2, grid_lines=False, top=None, left=None, max_h=64):
+    """A length by width rectangle to scale. sides=2 labels the bottom and
+    the right; sides=4 labels all four sides. top/left replace a label."""
+    sc = Scale(length, width, max_h=max_h)
+    p = rect_pts(sc, 0, 0, length, width)
+    c = centre(p)
+    items = [poly(p)]
+    if grid_lines:
+        items += grid(sc, 0, 0, length, width)
+    bottom_t = unit(length) if top is None else top
+    right_t = unit(width) if left is None else left
+    items += [side(p[3], p[2], bottom_t, c), side(p[1], p[2], right_t, c)]
+    if sides == 4:
+        items += [side(p[0], p[1], bottom_t, c), side(p[0], p[3], right_t, c)]
+    return fig(sc.h, alt, items)
+
+
+def right_angle(corner, toward_a, toward_b, size=3.5):
+    """A small square mark in the corner between two directions."""
+    def step(p, q):
+        d = math.hypot(q[0] - p[0], q[1] - p[1])
+        return ((q[0] - p[0]) / d * size, (q[1] - p[1]) / d * size)
+    ax, ay = step(corner, toward_a)
+    bx, by = step(corner, toward_b)
+    p1 = (corner[0] + ax, corner[1] + ay)
+    p2 = (corner[0] + ax + bx, corner[1] + ay + by)
+    p3 = (corner[0] + bx, corner[1] + by)
+    return [seg(p1, p2), seg(p2, p3)]
+
+
+def with_figures(lesson, figures):
+    """Attach each figure to the step with that id (main steps, question
+    bank and review), and check every figure found its step."""
+    used = set()
+    steps = list(lesson["steps"])
+    steps += [q["step"] for qs in lesson["question_bank"].values() for q in qs]
+    steps += [q["step"] for q in lesson.get("review_questions", [])]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures[step["id"]]
+            used.add(step["id"])
+    assert used == set(figures), set(figures) - used
+
+# ---------- figures ----------
+
+def rect_alt(length, width, unit_en, unit_ur, what_en="A rectangle", what_ur="ایک مستطیل"):
+    return T(f"{what_en}, {length} {unit_en} long and {width} {unit_en} wide, drawn to scale. The long side is labelled {length} {unit_en} and the short side {width} {unit_en}.",
+             f"{what_ur}، {length} {unit_ur} لمبا اور {width} {unit_ur} چوڑا، پیمانے کے مطابق۔ لمبے ضلع پر {length} {unit_ur} اور چھوٹے ضلع پر {width} {unit_ur} لکھا ہے۔")
+
+
+def edge_or_cover():
+    sc = Scale(6 + 3 + 6, 4, max_h=50, padx=8)
+    a = rect_pts(sc, 0, 0, 6, 4)
+    g = 0.45
+    fence = [sc(-g, -g), sc(6 + g, -g), sc(6 + g, 4 + g), sc(-g, 4 + g)]
+    items = [poly(a, fill=False), poly(fence, fill=False, dashed=True), poly(rect_pts(sc, 9, 0, 6, 4))]
+    items += grid(sc, 9, 0, 6, 4)
+    return fig(sc.h, T("Two rectangles. Left: an empty rectangle with a dashed line running all the way round its edge, like a fence or a border (perimeter). Right: a shaded rectangle covered completely by small squares, like carpet or tiles (area).",
+                       "دو مستطیلیں۔ بائیں: خالی مستطیل جس کے کنارے کے چاروں طرف ڈیش والی لکیر ہے، جیسے باڑ یا بارڈر (احاطہ)۔ دائیں: رنگی ہوئی مستطیل جو پوری چھوٹے مربعوں سے ڈھکی ہے، جیسے قالین یا ٹائلیں (رقبہ)۔"), items)
+
+
+F_EDGE_COVER = edge_or_cover()
+F_FIELD = rect_fig(20, 15, m, rect_alt(20, 15, "m", "میٹر", "A field, a rectangle", "ایک میدان، مستطیل"))
+F_ROOM = rect_fig(5, 4, m, rect_alt(5, 4, "m", "میٹر", "The floor of a room, a rectangle", "کمرے کا فرش، مستطیل"))
+F_WALL = rect_fig(4, 3, m, T("A wall drawn to scale: 4 m wide along the bottom and 3 m high up the side.",
+                             "پیمانے کے مطابق ایک دیوار: نیچے 4 میٹر چوڑی اور ایک طرف 3 میٹر اونچی۔"))
+F_LAWN = rect_fig(9, 6, m, rect_alt(9, 6, "m", "میٹر", "A lawn, a rectangle", "ایک لان، مستطیل"))
+
+
+def yard_fig():
+    sc = Scale(9, 6, max_h=60)
+    p = rect_pts(sc, 0, 0, 9, 6)
+    q = rect_pts(sc, 5.5, 1.5, 2, 3)
+    c, cq = centre(p), centre(q)
+    items = [poly(p), poly(q, fill=False, dashed=True),
+             side(p[3], p[2], m(9), c), side(p[1], p[2], m(6), c),
+             side(q[0], q[1], m(2), cq), side(q[0], q[3], m(3), cq)]
+    return fig(sc.h, T("A yard 9 m by 6 m, shaded and drawn to scale. Inside it, a shed 2 m by 3 m is marked with a dashed outline.",
+                       "پیمانے کے مطابق 9 ضرب 6 میٹر کا احاطہ، رنگا ہوا۔ اس کے اندر 2 ضرب 3 میٹر کا کمرہ ڈیش والے خاکے سے دکھایا گیا ہے۔"), items)
+
+
+F_YARD = yard_fig()
+
+
+def tri_fig(base, height, apex_x, padx=15):
+    sc = Scale(base, height, max_h=60, padx=padx)
+    a, b, top, foot = sc(0, height), sc(base, height), sc(apex_x, 0), sc(apex_x, height)
+    k = centre([a, b, top])
+    # The mark and the height's label go on the side with more room.
+    d = 1 if apex_x < base / 2 else -1
+    items = [poly([a, b, top]), seg(top, foot, dashed=True)] + right_angle(foot, top, b if d > 0 else a)
+    t = cm(height)
+    items += [side(a, b, cm(base), k), label((foot[0] + d * (len(t) * CHAR / 2 + 4.5), foot[1] - TALL / 2 - 0.5), t)]
+    return fig(sc.h, T(f"A triangle drawn to scale. Its base along the bottom is labelled {base} cm. A dashed line goes straight up from the base to the top corner, at a right angle: the height, labelled {height} cm.",
+                       f"پیمانے کے مطابق ایک مثلث۔ نیچے قاعدے پر {base} سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر {height} سینٹی میٹر لکھا ہے۔"), items)
+
+
+F_U4 = tri_fig(16, 5, 11, padx=7)
+F_CARD = rect_fig(15, 10, cm, rect_alt(15, 10, "cm", "سینٹی میٹر", "A card, a rectangle", "ایک کارڈ، مستطیل"))
+F_PLOT = rect_fig(25, 25, m, T("A square plot. Two of its sides are labelled 25 m; all four sides are 25 m.",
+                               "ایک مربع پلاٹ۔ دو اضلاع پر 25 میٹر لکھا ہے؛ چاروں اضلاع 25 میٹر ہیں۔"))
+F_CARPET = rect_fig(6, 3, m, rect_alt(6, 3, "m", "میٹر", "The floor of a room, a rectangle", "کمرے کا فرش، مستطیل"))
+F_CLOTH = rect_fig(2, 1, m, rect_alt(2, 1, "m", "میٹر", "A tablecloth, a rectangle", "ایک میز پوش، مستطیل"))
+
+FIGS = {
+    "s1_hook": F_EDGE_COVER, "s3_which": F_EDGE_COVER, "s5_fence_cost": F_FIELD, "s6_carpet_cost": F_ROOM,
+    "s7_paint": F_WALL, "s9_find_error": F_LAWN, "u3_compound": F_YARD, "u4_triangle": F_U4, "u5_ribbon": F_CARD,
+    "qb_apply": F_PLOT, "qb_find_error": F_FIELD, "r_carpet": F_CARPET, "r_lace": F_CLOTH,
+}
 
 
 lesson = {
@@ -266,4 +484,5 @@ lesson = {
  ],
  "review": REVIEW,
 }
+with_figures(lesson, FIGS)
 write(lesson)

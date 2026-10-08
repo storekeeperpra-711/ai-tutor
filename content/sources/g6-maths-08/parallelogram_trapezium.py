@@ -1,3 +1,4 @@
+import math
 from fractions import Fraction as F
 
 from common import (T, opt, say, wrong, number_question, write,
@@ -37,9 +38,9 @@ assert S6 == 16 and 10 - 6 == 4
 # s7: trapezium parallel sides 6 and 10, height 4
 S7 = trap(6, 10, 4)
 assert S7 == 32 and (6 + 10) * 4 == 64 and 10 * 4 == 40 and para(S6, 4) == 2 * S7
-# s8: trapezium parallel sides 5 m and 9 m, height 6 m, slanting sides 7 m
-S8 = trap(5, 9, 6)
-assert S8 == 42 and (5 + 9) * 6 == 84 and trap(5, 9, 7) == 49
+# s8: trapezium parallel sides 4 m and 10 m, height 4 m, slanting sides 5 m
+S8 = trap(4, 10, 4)
+assert S8 == 28 and (4 + 10) * 4 == 56 and trap(4, 10, 5) == 35 and 3 ** 2 + 4 ** 2 == 5 ** 2
 # s9: parallel sides 8 and 12, height 5
 S9 = trap(8, 12, 5)
 assert S9 == 50 and (8 + 12) * 5 == 100 and 12 * 5 == 60
@@ -56,6 +57,256 @@ R1 = para(11, 4)
 assert R1 == 44 and tri(11, 4) == 22
 R2 = trap(3, 7, 8)
 assert R2 == 40 and (3 + 7) * 8 == 80 and 7 * 8 == 56
+
+
+
+# ---------- figure helpers ----------
+# Shapes are drawn to scale from the same numbers as the step text. Boxes are
+# W wide; a label is about CHAR wide per letter and TALL high on a phone, so
+# side labels are pushed out far enough not to touch the lines.
+
+W = 100
+CHAR = W / 30
+TALL = W / 16
+
+
+def r1(v):
+    return round(v + 0.0, 1)
+
+
+def pt(x, y):
+    return [r1(x), r1(y)]
+
+
+def poly(points, fill=True, dashed=False):
+    item = {"kind": "polygon", "points": [pt(*p) for p in points]}
+    if fill:
+        item["fill"] = True
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def seg(a, b, dashed=False):
+    item = {"kind": "line", "from": pt(*a), "to": pt(*b)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": pt(*at), "text": text}
+
+
+def fig(height, alt, items):
+    """A figure W wide; checks the labels' letters stay inside the box."""
+    assert len(items) <= 60, len(items)
+    for it in items:
+        if it["kind"] == "label":
+            x, y = it["at"]
+            half_w, half_h = len(it["text"]) * CHAR / 2, TALL / 2
+            assert x - half_w >= 0.5 and x + half_w <= W - 0.5, it
+            assert y - half_h >= 0.5 and y + half_h <= height - 0.5, it
+    return {"width": W, "height": r1(height), "alt": alt, "items": items}
+
+
+def cm(n):
+    return f"{n}cm"
+
+
+def m(n):
+    return f"{n}m"
+
+
+class Scale:
+    """Maps lengths (cm or m) to the box, the same scale both ways, centred.
+    The box height follows the shape (at most max_h)."""
+
+    def __init__(self, width, height, max_h=64, padx=15, pady=10):
+        self.s = min((W - 2 * padx) / width, (max_h - 2 * pady) / height)
+        self.h = height * self.s + 2 * pady
+        self.x0 = (W - width * self.s) / 2
+        self.y0 = pady
+
+    def __call__(self, x, y):
+        return (self.x0 + x * self.s, self.y0 + y * self.s)
+
+
+def side(a, b, text, inside, gap=1.5):
+    """Label for the side a-b, just outside it (away from the point inside)."""
+    mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    n = math.hypot(dx, dy)
+    nx, ny = -dy / n, dx / n
+    if (inside[0] - mx) * nx + (inside[1] - my) * ny > 0:
+        nx, ny = -nx, -ny
+    off = gap + abs(nx) * len(text) * CHAR / 2 + abs(ny) * TALL / 2
+    return label((mx + nx * off, my + ny * off), text)
+
+
+def centre(points):
+    return (sum(p[0] for p in points) / len(points), sum(p[1] for p in points) / len(points))
+
+
+def rect_pts(sc, x, y, w, h):
+    return [sc(x, y), sc(x + w, y), sc(x + w, y + h), sc(x, y + h)]
+
+
+def grid(sc, x, y, w, h, rows=None, cols=None):
+    """Lines that split a w by h rectangle into unit squares (or only the
+    first row and column of them, when rows/cols say how far to go)."""
+    rows = h if rows is None else rows
+    cols = w if cols is None else cols
+    items = []
+    for i in range(1, w):
+        items.append(seg(sc(x + i, y), sc(x + i, y + (h if i <= cols else rows))))
+    for j in range(1, h):
+        items.append(seg(sc(x, y + j), sc(x + (w if j <= rows else cols), y + j)))
+    return items
+
+
+def rect_fig(length, width, unit, alt, sides=2, grid_lines=False, top=None, left=None, max_h=64):
+    """A length by width rectangle to scale. sides=2 labels the bottom and
+    the right; sides=4 labels all four sides. top/left replace a label."""
+    sc = Scale(length, width, max_h=max_h)
+    p = rect_pts(sc, 0, 0, length, width)
+    c = centre(p)
+    items = [poly(p)]
+    if grid_lines:
+        items += grid(sc, 0, 0, length, width)
+    bottom_t = unit(length) if top is None else top
+    right_t = unit(width) if left is None else left
+    items += [side(p[3], p[2], bottom_t, c), side(p[1], p[2], right_t, c)]
+    if sides == 4:
+        items += [side(p[0], p[1], bottom_t, c), side(p[0], p[3], right_t, c)]
+    return fig(sc.h, alt, items)
+
+
+def right_angle(corner, toward_a, toward_b, size=3.5):
+    """A small square mark in the corner between two directions."""
+    def step(p, q):
+        d = math.hypot(q[0] - p[0], q[1] - p[1])
+        return ((q[0] - p[0]) / d * size, (q[1] - p[1]) / d * size)
+    ax, ay = step(corner, toward_a)
+    bx, by = step(corner, toward_b)
+    p1 = (corner[0] + ax, corner[1] + ay)
+    p2 = (corner[0] + ax + bx, corner[1] + ay + by)
+    p3 = (corner[0] + bx, corner[1] + by)
+    return [seg(p1, p2), seg(p2, p3)]
+
+
+def with_figures(lesson, figures):
+    """Attach each figure to the step with that id (main steps, question
+    bank and review), and check every figure found its step."""
+    used = set()
+    steps = list(lesson["steps"])
+    steps += [q["step"] for qs in lesson["question_bank"].values() for q in qs]
+    steps += [q["step"] for q in lesson.get("review_questions", [])]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures[step["id"]]
+            used.add(step["id"])
+    assert used == set(figures), set(figures) - used
+
+# ---------- figures ----------
+
+def height_label(top, foot, t):
+    """Label just right of a dashed height, clear of the right-angle mark."""
+    if foot[1] - top[1] > 30:
+        return label((foot[0] + len(t) * CHAR / 2 + 1.5, (top[1] + foot[1]) / 2), t)
+    return label((foot[0] + len(t) * CHAR / 2 + 5, foot[1] - TALL / 2 - 1), t)
+
+
+def para_fig(base, height, slant, unit, unit_en, unit_ur, h_text=None, lean=None, max_h=60):
+    """Parallelogram leaning right, to scale: base along the bottom, the
+    slanting side on the left, and a dashed height from the top left corner."""
+    d = math.sqrt(slant * slant - height * height) if slant else lean
+    sc = Scale(base + d, height, max_h=max_h)
+    p = [sc(0, height), sc(base, height), sc(base + d, 0), sc(d, 0)]
+    k = centre(p)
+    top, foot = sc(d, 0), sc(d, height)
+    t = h_text or unit(height)
+    items = [poly(p), seg(top, foot, dashed=True)] + right_angle(foot, top, p[1])
+    items += [side(p[0], p[1], unit(base), k), height_label(top, foot, t)]
+    if slant:
+        items.append(side(p[0], p[3], unit(slant), k))
+    slant_en = f" The slanting sides are {slant} {unit_en}; one is labelled." if slant else ""
+    slant_ur = f" ترچھے اضلاع {slant} {unit_ur} ہیں؛ ایک پر لکھا ہے۔" if slant else ""
+    h_en = f"labelled {height} {unit_en}" if h_text is None else "marked ? because we must find it"
+    h_ur = f"اس پر {height} {unit_ur} لکھا ہے" if h_text is None else "اس پر ? ہے کیونکہ وہ معلوم کرنی ہے"
+    return fig(sc.h, T(f"A parallelogram leaning to the right, drawn to scale. Its base along the bottom is labelled {base} {unit_en}. A dashed line goes straight down from the top side to the base, at a right angle: that is the height, {h_en}.{slant_en}",
+                       f"دائیں طرف جھکا ہوا متوازی الاضلاع، پیمانے کے مطابق۔ نیچے قاعدے پر {base} {unit_ur} لکھا ہے۔ اوپر والے ضلع سے قاعدے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، {h_ur}۔{slant_ur}"), items)
+
+
+def trap_items(sc, x, top_len, bottom_len, height, unit, slant_text=None, dashed=False, show_height=True, fill=True):
+    """Trapezium with the longer parallel side at the bottom, the same overhang
+    at both ends; a dashed height from the top left corner."""
+    o = (bottom_len - top_len) / 2
+    p = [sc(x, height), sc(x + bottom_len, height), sc(x + o + top_len, 0), sc(x + o, 0)]
+    k = centre(p)
+    items = [poly(p, fill=fill, dashed=dashed)]
+    items += [side(p[0], p[1], unit(bottom_len), k), side(p[3], p[2], unit(top_len), k)]
+    if show_height:
+        top, foot = sc(x + o, 0), sc(x + o, height)
+        items += [seg(top, foot, dashed=True)] + right_angle(foot, top, p[1])
+        items.append(height_label(top, foot, unit(height)))
+    if slant_text:
+        items += [side(p[0], p[3], slant_text, k), side(p[1], p[2], slant_text, k)]
+    return items
+
+
+def trap_fig(top_len, bottom_len, height, unit, unit_en, unit_ur, slant=None, what_en="A trapezium", what_ur="ایک ذوزنقہ", max_h=60):
+    sc = Scale(bottom_len, height, max_h=max_h)
+    items = trap_items(sc, 0, top_len, bottom_len, height, unit, unit(slant) if slant else None)
+    slant_en = f" Both slanting sides are labelled {slant} {unit_en}." if slant else ""
+    slant_ur = f" دونوں ترچھے اضلاع پر {slant} {unit_ur} لکھا ہے۔" if slant else ""
+    return fig(sc.h, T(f"{what_en} drawn to scale, with its two parallel sides across the top ({top_len} {unit_en}) and the bottom ({bottom_len} {unit_en}). A dashed line goes straight down between them, at a right angle: the height, {height} {unit_en}.{slant_en}",
+                       f"{what_ur}، پیمانے کے مطابق، جس کے دو متوازی اضلاع اوپر ({top_len} {unit_ur}) اور نیچے ({bottom_len} {unit_ur}) ہیں۔ ان کے درمیان زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، {height} {unit_ur}۔{slant_ur}"), items)
+
+
+def triangle_fig(base, height, apex_x):
+    sc = Scale(base, height, max_h=60)
+    a, b, top, foot = sc(0, height), sc(base, height), sc(apex_x, 0), sc(apex_x, height)
+    k = centre([a, b, top])
+    items = [poly([a, b, top]), seg(top, foot, dashed=True)] + right_angle(foot, top, b)
+    items += [side(a, b, cm(base), k), height_label(top, foot, cm(height))]
+    return fig(sc.h, T(f"A triangle drawn to scale. Its base along the bottom is labelled {base} cm. A dashed line goes straight up from the base to the top corner, at a right angle: the height, labelled {height} cm.",
+                       f"پیمانے کے مطابق ایک مثلث۔ نیچے قاعدے پر {base} سینٹی میٹر لکھا ہے۔ قاعدے سے اوپر کے کونے تک زاویہ قائمہ پر سیدھی ڈیش والی لکیر اونچائی ہے، اس پر {height} سینٹی میٹر لکھا ہے۔"), items)
+
+
+def two_copies_fig(a, b, height):
+    """Trapezium (a on top, b at the bottom) and a copy turned upside down,
+    side by side, making a parallelogram with base a + b."""
+    o = (b - a) / 2
+    sc = Scale(a + b + o, height, max_h=56, padx=10)
+    first = [sc(0, height), sc(b, height), sc(o + a, 0), sc(o, 0)]
+    second = [sc(o + a, 0), sc(o + a + b, 0), sc(b + a, height), sc(b, height)]
+    k1, k2 = centre(first), centre(second)
+    items = [poly(first), poly(second, fill=False, dashed=True)]
+    items += [side(first[0], first[1], cm(b), k1), side(first[3], first[2], cm(a), k1),
+              side(second[3], second[2], cm(a), k2), side(second[0], second[1], cm(b), k2)]
+    return fig(sc.h, T(f"Two copies of a trapezium side by side, drawn to scale. The first, shaded, has {a} cm on top and {b} cm at the bottom. The second, with a dashed outline, is turned upside down: {b} cm on top and {a} cm at the bottom. Together they make a parallelogram; along its bottom are the {b} cm side of one and the {a} cm side of the other.",
+                       f"پیمانے کے مطابق ایک ذوزنقہ کی دو کاپیاں ساتھ ساتھ۔ پہلی، رنگی ہوئی، اوپر {a} اور نیچے {b} سینٹی میٹر۔ دوسری، ڈیش والے خاکے کے ساتھ، الٹی ہے: اوپر {b} اور نیچے {a} سینٹی میٹر۔ دونوں مل کر متوازی الاضلاع بناتی ہیں؛ اس کے نیچے ایک کا {b} سینٹی میٹر اور دوسری کا {a} سینٹی میٹر والا ضلع ہے۔"), items)
+
+
+F_S2 = triangle_fig(10, 6, 3.5)
+F_S4 = para_fig(9, 5, 7, cm, "cm", "سینٹی میٹر")
+F_S5 = para_fig(8, S5, None, m, "m", "میٹر", h_text="?", lean=3)
+F_S6 = two_copies_fig(6, 10, 4)
+F_S7 = trap_fig(6, 10, 4, cm, "cm", "سینٹی میٹر")
+F_S8 = trap_fig(4, 10, 4, m, "m", "میٹر", slant=5, what_en="A trapezium-shaped garden", what_ur="ذوزنقہ شکل کا باغ")
+F_S9 = trap_fig(8, 12, 5, cm, "cm", "سینٹی میٹر")
+F_S11 = para_fig(15, 8, 10, cm, "cm", "سینٹی میٹر")
+F_QB = trap_fig(4, 10, 6, cm, "cm", "سینٹی میٹر")
+F_QB_ERR = para_fig(12, 6, 8, cm, "cm", "سینٹی میٹر")
+F_R1 = para_fig(11, 4, None, m, "m", "میٹر", lean=2.5)
+F_R2 = trap_fig(3, 7, 8, cm, "cm", "سینٹی میٹر", max_h=70)
+
+FIGS = {
+    "s2_foundation": F_S2, "s4_para": F_S4, "s5_missing_height": F_S5, "s6_two_copies": F_S6, "s7_trap": F_S7,
+    "s8_trap_slant": F_S8, "s9_find_error": F_S9, "s11_tile": F_S11,
+    "qb_apply": F_QB, "qb_find_error": F_QB_ERR, "r_para": F_R1, "r_trap": F_R2,
+}
 
 
 lesson = {
@@ -189,14 +440,14 @@ lesson = {
                    wrong(40, "Use both parallel sides: ½ × (6 + 10) × 4 = 32.", "دونوں متوازی اضلاع لیں: ½ × (6 + 10) × 4 = 32", "one_parallel_side")]),
    number_question(
      "s8_trap_slant",
-     T("A trapezium-shaped garden has parallel sides of 5 m and 9 m, a height of 6 m, and slanting sides of 7 m. What is its area in m²?",
-       "ایک ذوزنقہ شکل کے باغ کے متوازی اضلاع 5 اور 9 میٹر، اونچائی 6 میٹر اور ترچھے اضلاع 7 میٹر ہیں۔ اس کا رقبہ کتنے مربع میٹر ہے؟"),
+     T("A trapezium-shaped garden has parallel sides of 4 m and 10 m, a height of 4 m, and slanting sides of 5 m. What is its area in m²?",
+       "ایک ذوزنقہ شکل کے باغ کے متوازی اضلاع 4 اور 10 میٹر، اونچائی 4 میٹر اور ترچھے اضلاع 5 میٹر ہیں۔ اس کا رقبہ کتنے مربع میٹر ہے؟"),
      S8,
-     T("½ × (5 + 9) × 6. The 7 m sides are not needed.", "½ × (5 + 9) × 6۔ 7 میٹر والے اضلاع نہیں چاہییں۔"),
-     T("Right! 14 × 6 = 84, half is 42 m².", "درست! 14 × 6 = 84، آدھا 42 مربع میٹر"),
-     T("5 + 9 = 14, 14 × 6 = 84, half is 42 m².", "5 + 9 = 14، 14 × 6 = 84، آدھا 42"),
-     common_wrong=[wrong(84, "Halve it: 84 ÷ 2 = 42.", "آدھا کریں: 84 ÷ 2 = 42", "trap_forgets_half"),
-                   wrong(49, "7 m is the slanting side. Use the height 6: ½ × 14 × 6 = 42.", "7 ترچھا ضلع ہے۔ اونچائی 6 لیں: ½ × 14 × 6 = 42", "slant_height")]),
+     T("½ × (4 + 10) × 4. The 5 m sides are not needed.", "½ × (4 + 10) × 4۔ 5 میٹر والے اضلاع نہیں چاہییں۔"),
+     T("Right! 14 × 4 = 56, half is 28 m².", "درست! 14 × 4 = 56، آدھا 28 مربع میٹر"),
+     T("4 + 10 = 14, 14 × 4 = 56, half is 28 m².", "4 + 10 = 14، 14 × 4 = 56، آدھا 28"),
+     common_wrong=[wrong(56, "Halve it: 56 ÷ 2 = 28.", "آدھا کریں: 56 ÷ 2 = 28", "trap_forgets_half"),
+                   wrong(35, "5 m is the slanting side. Use the height 4: ½ × 14 × 4 = 28.", "5 ترچھا ضلع ہے۔ اونچائی 4 لیں: ½ × 14 × 4 = 28", "slant_height")]),
    {"id": "s9_find_error", "type": "choice", "question_type": "find_error",
     "prompt": T("Hina says a trapezium with parallel sides 8 cm and 12 cm and height 5 cm has an area of (8 + 12) × 5 = 100 cm². What went wrong?",
                 "حنا کہتی ہے 8 اور 12 سینٹی میٹر متوازی اضلاع اور 5 اونچائی والے ذوزنقہ کا رقبہ (8 + 12) × 5 = 100 ہے۔ کیا غلطی ہوئی؟"),
@@ -267,11 +518,12 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh to fill a gap in the Perimeter and Area unit. No textbook text or exercises were used.",
-   "Lessons have no pictures, so every shape is described in words, giving the base, the height and the slanting side so the child must choose the height. Drawing the shapes on paper or cutting them out helps.",
+   "Shapes are drawn to scale with the base, the dashed height and (where given) the slanting side labelled, so the child must still choose the height. Drawing the shapes on paper or cutting them out helps.",
    "The parallelogram is shown as a rectangle with a triangle moved from one end to the other; the trapezium as half of a parallelogram made from two copies (s6).",
    "Urdu terms to check: متوازی الاضلاع (parallelogram), ذوزنقہ (trapezium), متوازی اضلاع (parallel sides), قاعدہ (base), اونچائی / ارتفاع (height), ترچھا ضلع (slanting side), زاویہ قائمہ (right angle).",
    "The numbers were worked out in content/sources/g6-maths-08/parallelogram_trapezium.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+with_figures(lesson, FIGS)
 write(lesson)

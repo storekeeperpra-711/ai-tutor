@@ -1,3 +1,4 @@
+import math
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, PA_AREA, PA_COMPOUND)
 
@@ -30,6 +31,297 @@ R1 = 7 * 3 + 4 * 2
 assert R1 == 29
 R2 = 12 * 10 - 4 * 3
 assert R2 == 108 and 12 * 10 == 120
+
+
+
+# ---------- figure helpers ----------
+# Shapes are drawn to scale from the same numbers as the step text. Boxes are
+# W wide; a label is about CHAR wide per letter and TALL high on a phone, so
+# side labels are pushed out far enough not to touch the lines.
+
+W = 100
+CHAR = W / 30
+TALL = W / 16
+
+
+def r1(v):
+    return round(v + 0.0, 1)
+
+
+def pt(x, y):
+    return [r1(x), r1(y)]
+
+
+def poly(points, fill=True, dashed=False):
+    item = {"kind": "polygon", "points": [pt(*p) for p in points]}
+    if fill:
+        item["fill"] = True
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def seg(a, b, dashed=False):
+    item = {"kind": "line", "from": pt(*a), "to": pt(*b)}
+    if dashed:
+        item["style"] = "dashed"
+    return item
+
+
+def label(at, text):
+    return {"kind": "label", "at": pt(*at), "text": text}
+
+
+def fig(height, alt, items):
+    """A figure W wide; checks the labels' letters stay inside the box."""
+    assert len(items) <= 60, len(items)
+    for it in items:
+        if it["kind"] == "label":
+            x, y = it["at"]
+            half_w, half_h = len(it["text"]) * CHAR / 2, TALL / 2
+            assert x - half_w >= 0.5 and x + half_w <= W - 0.5, it
+            assert y - half_h >= 0.5 and y + half_h <= height - 0.5, it
+    return {"width": W, "height": r1(height), "alt": alt, "items": items}
+
+
+def cm(n):
+    return f"{n}cm"
+
+
+def m(n):
+    return f"{n}m"
+
+
+class Scale:
+    """Maps lengths (cm or m) to the box, the same scale both ways, centred.
+    The box height follows the shape (at most max_h)."""
+
+    def __init__(self, width, height, max_h=64, padx=15, pady=10):
+        self.s = min((W - 2 * padx) / width, (max_h - 2 * pady) / height)
+        self.h = height * self.s + 2 * pady
+        self.x0 = (W - width * self.s) / 2
+        self.y0 = pady
+
+    def __call__(self, x, y):
+        return (self.x0 + x * self.s, self.y0 + y * self.s)
+
+
+def side(a, b, text, inside, gap=1.5):
+    """Label for the side a-b, just outside it (away from the point inside)."""
+    mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    n = math.hypot(dx, dy)
+    nx, ny = -dy / n, dx / n
+    if (inside[0] - mx) * nx + (inside[1] - my) * ny > 0:
+        nx, ny = -nx, -ny
+    off = gap + abs(nx) * len(text) * CHAR / 2 + abs(ny) * TALL / 2
+    return label((mx + nx * off, my + ny * off), text)
+
+
+def centre(points):
+    return (sum(p[0] for p in points) / len(points), sum(p[1] for p in points) / len(points))
+
+
+def rect_pts(sc, x, y, w, h):
+    return [sc(x, y), sc(x + w, y), sc(x + w, y + h), sc(x, y + h)]
+
+
+def grid(sc, x, y, w, h, rows=None, cols=None):
+    """Lines that split a w by h rectangle into unit squares (or only the
+    first row and column of them, when rows/cols say how far to go)."""
+    rows = h if rows is None else rows
+    cols = w if cols is None else cols
+    items = []
+    for i in range(1, w):
+        items.append(seg(sc(x + i, y), sc(x + i, y + (h if i <= cols else rows))))
+    for j in range(1, h):
+        items.append(seg(sc(x, y + j), sc(x + (w if j <= rows else cols), y + j)))
+    return items
+
+
+def rect_fig(length, width, unit, alt, sides=2, grid_lines=False, top=None, left=None, max_h=64):
+    """A length by width rectangle to scale. sides=2 labels the bottom and
+    the right; sides=4 labels all four sides. top/left replace a label."""
+    sc = Scale(length, width, max_h=max_h)
+    p = rect_pts(sc, 0, 0, length, width)
+    c = centre(p)
+    items = [poly(p)]
+    if grid_lines:
+        items += grid(sc, 0, 0, length, width)
+    bottom_t = unit(length) if top is None else top
+    right_t = unit(width) if left is None else left
+    items += [side(p[3], p[2], bottom_t, c), side(p[1], p[2], right_t, c)]
+    if sides == 4:
+        items += [side(p[0], p[1], bottom_t, c), side(p[0], p[3], right_t, c)]
+    return fig(sc.h, alt, items)
+
+
+def right_angle(corner, toward_a, toward_b, size=3.5):
+    """A small square mark in the corner between two directions."""
+    def step(p, q):
+        d = math.hypot(q[0] - p[0], q[1] - p[1])
+        return ((q[0] - p[0]) / d * size, (q[1] - p[1]) / d * size)
+    ax, ay = step(corner, toward_a)
+    bx, by = step(corner, toward_b)
+    p1 = (corner[0] + ax, corner[1] + ay)
+    p2 = (corner[0] + ax + bx, corner[1] + ay + by)
+    p3 = (corner[0] + bx, corner[1] + by)
+    return [seg(p1, p2), seg(p2, p3)]
+
+
+def with_figures(lesson, figures):
+    """Attach each figure to the step with that id (main steps, question
+    bank and review), and check every figure found its step."""
+    used = set()
+    steps = list(lesson["steps"])
+    steps += [q["step"] for qs in lesson["question_bank"].values() for q in qs]
+    steps += [q["step"] for q in lesson.get("review_questions", [])]
+    for step in steps:
+        if step["id"] in figures:
+            step["figure"] = figures[step["id"]]
+            used.add(step["id"])
+    assert used == set(figures), set(figures) - used
+
+# ---------- figures ----------
+
+def l_shape(a_w, a_h, b_w, b_h, unit, alt, labels=True, split=True, complete=False, max_h=64):
+    """An a_w by a_h rectangle with a b_w by b_h rectangle joined under its
+    left end (an L lying down), to scale. split: a dashed line between the
+    two parts; complete: the dashed missing piece that makes the big
+    rectangle around the shape."""
+    sc = Scale(a_w, a_h + b_h, max_h=max_h)
+    outline = [sc(0, 0), sc(a_w, 0), sc(a_w, a_h), sc(b_w, a_h), sc(b_w, a_h + b_h), sc(0, a_h + b_h)]
+    ca, cb = centre(rect_pts(sc, 0, 0, a_w, a_h)), centre(rect_pts(sc, 0, a_h, b_w, b_h))
+    items = [poly(outline)]
+    if split:
+        items.append(seg(sc(0, a_h), sc(b_w, a_h), dashed=True))
+    if complete:
+        items.append(poly([sc(b_w, a_h), sc(a_w, a_h), sc(a_w, a_h + b_h), sc(b_w, a_h + b_h)], fill=False, dashed=True))
+    if labels:
+        items += [side(outline[0], outline[1], unit(a_w), ca), side(outline[1], outline[2], unit(a_h), ca),
+                  side(outline[4], outline[5], unit(b_w), cb), side(outline[5], sc(0, a_h), unit(b_h), cb)]
+    return fig(sc.h, alt, items)
+
+
+def l_alt(a_w, a_h, b_w, b_h, unit_en, unit_ur, what_en, what_ur):
+    return T(f"{what_en} shaped like an L, drawn to scale: a {a_w} {unit_en} by {a_h} {unit_en} rectangle on top, with a {b_w} {unit_en} by {b_h} {unit_en} rectangle joined under its left end. A dashed line separates the two rectangles. The sides are labelled {a_w}, {a_h}, {b_w} and {b_h} {unit_en}.",
+             f"L شکل کا {what_ur}، پیمانے کے مطابق: اوپر {a_w} ضرب {a_h} {unit_ur} کی مستطیل، اور اس کے بائیں سرے کے نیچے {b_w} ضرب {b_h} {unit_ur} کی مستطیل جڑی ہے۔ ڈیش والی لکیر دونوں مستطیلوں کو الگ کرتی ہے۔ اضلاع پر {a_w}، {a_h}، {b_w} اور {b_h} {unit_ur} لکھا ہے۔")
+
+
+F_HOOK = l_shape(6, 4, 3, 2, m, T("The floor of a room shaped like the letter L lying down: a wide part on top and a smaller part sticking out below its left end.",
+                                  "لیٹے ہوئے L حرف جیسا کمرے کا فرش: اوپر چوڑا حصہ اور اس کے بائیں سرے کے نیچے نکلا ہوا چھوٹا حصہ۔"),
+                 labels=False, split=False)
+
+
+def two_ways():
+    """Way 1 (split) beside way 2 (fill in the missing piece), same L."""
+    sc = Scale(6 + 2 + 6, 6, max_h=52, padx=6)
+    items = []
+    for dx, way in ((0, 1), (8, 2)):
+        o = [sc(dx, 0), sc(dx + 6, 0), sc(dx + 6, 4), sc(dx + 3, 4), sc(dx + 3, 6), sc(dx, 6)]
+        items.append(poly(o))
+        if way == 1:
+            items.append(seg(sc(dx, 4), sc(dx + 3, 4), dashed=True))
+        else:
+            items.append(poly([sc(dx + 3, 4), sc(dx + 6, 4), sc(dx + 6, 6), sc(dx + 3, 6)], fill=False, dashed=True))
+    items += [label(sc(1.5, 2), "1"), label(sc(1.5, 5), "2"), label(sc(11, 2), "3")]
+    return fig(sc.h, T("Two copies of the same L-shape. Left (way 1): a dashed line splits it into two rectangles, numbered 1 and 2; add their areas. Right (way 2): a dashed outline fills in the missing corner to make one big rectangle, numbered 3; take the missing piece away from it.",
+                       "ایک ہی L شکل کی دو کاپیاں۔ بائیں (طریقہ 1): ڈیش والی لکیر اسے دو مستطیلوں میں بانٹتی ہے، نمبر 1 اور 2؛ ان کے رقبے جمع کریں۔ دائیں (طریقہ 2): ڈیش والا خاکہ خالی کونا بھر کر ایک بڑی مستطیل بناتا ہے، نمبر 3؛ اس میں سے خالی حصہ گھٹائیں۔"), items)
+
+
+F_TWO_WAYS = two_ways()
+F_L_ROOM = l_shape(6, 4, 3, 2, m, l_alt(6, 4, 3, 2, "m", "میٹر", "Our room", "ہمارا کمرہ"))
+
+
+def hole_fig(big_w, big_h, hole_w, hole_h, hx, hy, unit, alt, max_h=64):
+    """A big rectangle, shaded, with a dashed hole (pond, door, bed) in it."""
+    sc = Scale(big_w, big_h, max_h=max_h)
+    p = rect_pts(sc, 0, 0, big_w, big_h)
+    q = rect_pts(sc, hx, hy, hole_w, hole_h)
+    c, cq = centre(p), centre(q)
+    items = [poly(p), poly(q, fill=False, dashed=True)]
+    items += [side(p[3], p[2], unit(big_w), c), side(p[1], p[2], unit(big_h), c)]
+    # The hole's sizes go just outside it, inside the big rectangle.
+    items += [side(q[0], q[1], unit(hole_w), cq), side(q[0], q[3], unit(hole_h), cq)]
+    return fig(sc.h, alt, items)
+
+
+def hole_alt(big_w, big_h, hole_w, hole_h, unit_en, unit_ur, big_en, big_ur, hole_en, hole_ur):
+    return T(f"{big_en}, {big_w} {unit_en} by {big_h} {unit_en}, shaded and drawn to scale. Inside it, {hole_en} {hole_w} {unit_en} by {hole_h} {unit_en} is marked with a dashed outline.",
+             f"{big_ur}، {big_w} ضرب {big_h} {unit_ur}، رنگا ہوا اور پیمانے کے مطابق۔ اس کے اندر {hole_w} ضرب {hole_h} {unit_ur} کا {hole_ur} ڈیش والے خاکے سے دکھایا گیا ہے۔")
+
+
+F_POND = hole_fig(10, 8, 3, 2, 6, 2.2, m, hole_alt(10, 8, 3, 2, "m", "میٹر", "A garden", "ایک باغیچہ", "a pond", "تالاب"))
+
+
+def t_shape():
+    sc = Scale(9, 7, max_h=64)
+    o = [sc(0, 0), sc(9, 0), sc(9, 2), sc(6, 2), sc(6, 7), sc(3, 7), sc(3, 2), sc(0, 2)]
+    cbar, cstem = centre(rect_pts(sc, 0, 0, 9, 2)), centre(rect_pts(sc, 3, 2, 3, 5))
+    items = [poly(o), seg(sc(3, 2), sc(6, 2), dashed=True),
+             side(o[0], o[1], cm(9), cbar), side(o[1], o[2], cm(2), cbar),
+             side(o[4], o[5], cm(3), cstem), side(o[3], o[4], cm(5), cstem)]
+    return fig(sc.h, T("A T-shaped sign drawn to scale: a bar 9 cm long and 2 cm high on top, and a stem 3 cm wide and 5 cm high under its middle. A dashed line separates the bar from the stem.",
+                       "پیمانے کے مطابق T شکل کا نشان: اوپر 9 سینٹی میٹر لمبی اور 2 سینٹی میٹر اونچی پٹی، اور اس کے بیچ کے نیچے 3 سینٹی میٹر چوڑا اور 5 سینٹی میٹر اونچا تنا۔ ڈیش والی لکیر پٹی کو تنے سے الگ کرتی ہے۔"), items)
+
+
+F_T = t_shape()
+F_WALL = hole_fig(5, 3, 1, 2, 2, 1, m, hole_alt(5, 3, 1, 2, "m", "میٹر", "A wall", "ایک دیوار", "a door", "دروازہ"))
+
+
+def frame_fig():
+    sc = Scale(8, 6, max_h=60)
+    p = rect_pts(sc, 0, 0, 8, 6)
+    q = rect_pts(sc, 1, 1, 6, 4)
+    c, cq = centre(p), centre(q)
+    items = [poly(p), poly(q, fill=False, dashed=True),
+             side(p[3], p[2], cm(8), c), side(p[1], p[2], cm(6), c),
+             side(q[0], q[1], cm(6), (cq[0], cq[1] - 30)), side(q[0], q[3], cm(4), (cq[0] - 50, cq[1]))]
+    return fig(sc.h, T("A picture frame drawn to scale: the outside is 8 cm by 6 cm and is shaded. The photo inside, 6 cm by 4 cm, has a dashed outline; its sizes are written just inside it.",
+                       "پیمانے کے مطابق تصویر کا فریم: باہر سے 8 ضرب 6 سینٹی میٹر، رنگا ہوا۔ اندر 6 ضرب 4 سینٹی میٹر کی تصویر ڈیش والے خاکے سے دکھائی گئی ہے؛ اس کی لمبائیاں اس کے اندر لکھی ہیں۔"), items)
+
+
+F_FRAME = frame_fig()
+
+
+def cut_corner():
+    sc = Scale(8, 5, max_h=60)
+    o = [sc(0, 0), sc(5, 0), sc(5, 2), sc(8, 2), sc(8, 5), sc(0, 5)]
+    cut = rect_pts(sc, 5, 0, 3, 2)
+    c, cc = centre(rect_pts(sc, 0, 0, 8, 5)), centre(cut)
+    items = [poly(o), poly(cut, fill=False, dashed=True),
+             side(o[4], o[5], cm(8), c), side(o[5], o[0], cm(5), c),
+             side(cut[0], cut[1], cm(3), cc), side(cut[1], cut[2], cm(2), cc)]
+    return fig(sc.h, T("An 8 cm by 5 cm rectangle, drawn to scale, with a 3 cm by 2 cm piece cut from its top right corner. The cut piece is shown by a dashed outline; the part left is shaded.",
+                       "پیمانے کے مطابق 8 ضرب 5 سینٹی میٹر کی مستطیل جس کے اوپر دائیں کونے سے 3 ضرب 2 سینٹی میٹر کا ٹکڑا کاٹا گیا ہے۔ کٹا ہوا ٹکڑا ڈیش والے خاکے سے دکھایا گیا ہے؛ بچا ہوا حصہ رنگا ہوا ہے۔"), items)
+
+
+F_CUT = cut_corner()
+
+
+def side_step():
+    """5 by 4 rectangle with a 2 by 3 rectangle joined to its right, at the bottom."""
+    sc = Scale(7, 4, max_h=60)
+    o = [sc(0, 0), sc(5, 0), sc(5, 1), sc(7, 1), sc(7, 4), sc(0, 4)]
+    ca, cb = centre(rect_pts(sc, 0, 0, 5, 4)), centre(rect_pts(sc, 5, 1, 2, 3))
+    items = [poly(o), seg(sc(5, 1), sc(5, 4), dashed=True),
+             side(o[0], o[1], cm(5), ca), side(o[5], o[0], cm(4), ca),
+             side(sc(5, 4), o[4], cm(2), cb), side(o[3], o[4], cm(3), cb)]
+    return fig(sc.h, T("A shape drawn to scale: a 5 cm by 4 cm rectangle with a 2 cm by 3 cm rectangle joined to its right side, at the bottom. A dashed line separates the two rectangles.",
+                       "پیمانے کے مطابق ایک شکل: 5 ضرب 4 سینٹی میٹر کی مستطیل جس کے دائیں طرف، نیچے، 2 ضرب 3 سینٹی میٹر کی مستطیل جڑی ہے۔ ڈیش والی لکیر دونوں مستطیلوں کو الگ کرتی ہے۔"), items)
+
+
+F_QB = side_step()
+F_R_ADD = l_shape(7, 3, 4, 2, m, T(
+    "A shape drawn to scale: a 7 m by 3 m rectangle on top, with a 4 m by 2 m rectangle joined under its left end. A dashed line separates the two rectangles. The sides are labelled 7, 3, 4 and 2 m.",
+    "پیمانے کے مطابق ایک شکل: اوپر 7 ضرب 3 میٹر کی مستطیل، اور اس کے بائیں سرے کے نیچے 4 ضرب 2 میٹر کی مستطیل جڑی ہے۔ ڈیش والی لکیر دونوں مستطیلوں کو الگ کرتی ہے۔ اضلاع پر 7، 3، 4 اور 2 میٹر لکھا ہے۔"))
+F_R_HOLE = hole_fig(12, 10, 4, 3, 6.5, 5.5, m, hole_alt(12, 10, 4, 3, "m", "میٹر", "A courtyard", "ایک صحن", "a flower bed", "کیاری"))
+
+FIGS = {
+    "s1_hook": F_HOOK, "s3_split": F_TWO_WAYS, "s4_l_shape": F_L_ROOM, "s5_pond": F_POND, "s6_t_shape": F_T,
+    "s7_wall": F_WALL, "s8_frame": F_FRAME, "s9_find_error": F_L_ROOM, "s11_cut_corner": F_CUT,
+    "qb_apply": F_QB, "qb_find_error": F_POND, "r_add": F_R_ADD, "r_hole": F_R_HOLE,
+}
 
 
 lesson = {
@@ -215,10 +507,11 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Perimeter and Area unit. No textbook text or exercises were used.",
-   "Shapes are described in words; sketching each one on the board or squared paper helps a lot.",
+   "Each shape is drawn to scale with its side lengths; dashed lines split it into rectangles or mark the piece taken away (pond, door, photo). Sketching them on squared paper still helps.",
    "Urdu term to check: مرکب شکل (compound shape).",
    "The numbers were worked out in content/sources/g6-maths-08/compound_shapes.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+with_figures(lesson, FIGS)
 write(lesson)

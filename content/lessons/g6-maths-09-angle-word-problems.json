@@ -140,7 +140,115 @@
               },
               "misconception_id": "forgets_right_angle"
             }
-          ]
+          ],
+          "figure": {
+            "width": 110,
+            "height": 120,
+            "alt": {
+              "en": "A pole standing straight up from flat ground, with a rope from its top down to the ground. The pole meets the ground at a right angle, marked with a square. The rope makes 55° with the ground. The angle between the rope and the pole, at the top, is marked ?.",
+              "ur": "ہموار زمین پر سیدھا کھڑا کھمبا، اور اس کی چوٹی سے زمین تک ایک رسی۔ کھمبا زمین سے قائمہ زاویے پر ملتا ہے، جس پر مربع کا نشان ہے۔ رسی زمین کے ساتھ 55° بناتی ہے۔ اوپر رسی اور کھمبے کے زاویے پر ? لکھا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    18.5,
+                    105.0
+                  ],
+                  [
+                    81.5,
+                    105.0
+                  ],
+                  [
+                    18.5,
+                    15.0
+                  ]
+                ],
+                "fill": false
+              },
+              {
+                "kind": "line",
+                "from": [
+                  24.5,
+                  105.0
+                ],
+                "to": [
+                  24.5,
+                  99.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  24.5,
+                  99.0
+                ],
+                "to": [
+                  18.5,
+                  99.0
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  81.5,
+                  105.0
+                ],
+                "radius": 10,
+                "start": 180,
+                "sweep": 55
+              },
+              {
+                "kind": "label",
+                "at": [
+                  64.6,
+                  96.2
+                ],
+                "text": "55°"
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  18.5,
+                  15.0
+                ],
+                "radius": 10,
+                "start": 55,
+                "sweep": 35
+              },
+              {
+                "kind": "label",
+                "at": [
+                  26.5,
+                  40.4
+                ],
+                "text": "?"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  18.5,
+                  105.0
+                ],
+                "to": [
+                  106,
+                  105.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  18.5,
+                  105.0
+                ],
+                "to": [
+                  18.5,
+                  7.0
+                ]
+              }
+            ]
+          }
         }
       },
       {
@@ -283,7 +391,101 @@
           },
           "misconception_id": "forgets_right_angle"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: 90°, 40° and a missing angle marked ?. A small square marks the right angle.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 90°، 40° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔ ایک چھوٹا مربع قائمہ زاویہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                24.2,
+                75.0
+              ],
+              [
+                95.8,
+                75.0
+              ],
+              [
+                24.2,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.2,
+              75.0
+            ],
+            "to": [
+              30.2,
+              69.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.2,
+              69.0
+            ],
+            "to": [
+              24.2,
+              69.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              39.0,
+              60.2
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              95.8,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 40
+          },
+          {
+            "kind": "label",
+            "at": [
+              73.8,
+              67.0
+            ],
+            "text": "40°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              24.2,
+              15.0
+            ],
+            "radius": 10,
+            "start": 40,
+            "sweep": 50
+          },
+          {
+            "kind": "label",
+            "at": [
+              33.1,
+              34.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s3_plan",
@@ -298,6 +500,158 @@
       "text": {
         "en": "For an angle problem: 1) Picture it, or draw it. 2) Choose the total: a corner is 90°, a straight line or a triangle is 180°, all the way round a point is 360°. 3) Take the known angles away. Watch for right angles hidden in words, like a wall meeting the ground.",
         "ur": "زاویے کے سوال کے لیے: 1) تصور کریں یا بنائیں۔ 2) مجموعہ چنیں: کونا 90°، سیدھی لکیر یا مثلث 180°، نقطے کے پورے گرد 360°۔ 3) معلوم زاویے نفی کریں۔ الفاظ میں چھپے قائمہ زاویے دیکھیں، جیسے دیوار کا زمین سے ملنا۔"
+      },
+      "figure": {
+        "width": 210,
+        "height": 76,
+        "alt": {
+          "en": "The three totals. Left: a square corner, a right angle of 90°. Middle: a straight line, a straight angle of 180°. Right: a ray with an arc going all the way round its point, a full turn of 360°.",
+          "ur": "تین مجموعے۔ بائیں: ایک چوکور کونا، 90° کا قائمہ زاویہ۔ درمیان: ایک سیدھی لکیر، 180° کا مستقیم زاویہ۔ دائیں: ایک شعاع جس کے نقطے کے پورے گرد قوس ہے، 360° کا پورا چکر۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              16,
+              60
+            ],
+            "to": [
+              60.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              60
+            ],
+            "to": [
+              16.0,
+              16.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              16,
+              60
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22.0,
+              60.0
+            ],
+            "to": [
+              22.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22.0,
+              54.0
+            ],
+            "to": [
+              16.0,
+              54.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              30.1,
+              45.9
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              112,
+              60
+            ],
+            "to": [
+              148.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              112,
+              60
+            ],
+            "to": [
+              76.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              112,
+              60
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              112,
+              60
+            ],
+            "radius": 9,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "label",
+            "at": [
+              112.0,
+              40.0
+            ],
+            "text": "180°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              180,
+              40
+            ],
+            "to": [
+              204.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              180,
+              40
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              180,
+              40
+            ],
+            "radius": 12,
+            "start": 0,
+            "sweep": 360
+          },
+          {
+            "kind": "label",
+            "at": [
+              154.0,
+              40.0
+            ],
+            "text": "360°"
+          }
+        ]
       }
     },
     {
@@ -331,7 +685,115 @@
           },
           "misconception_id": "forgets_right_angle"
         }
-      ]
+      ],
+      "figure": {
+        "width": 110,
+        "height": 120,
+        "alt": {
+          "en": "A wall standing straight up from the ground, with a ladder leaning from the ground to the wall. The wall meets the ground at a right angle, marked with a square. The ladder makes 70° with the ground. The angle between the ladder and the wall, at the top, is marked ?.",
+          "ur": "زمین سے سیدھی کھڑی دیوار، اور زمین سے دیوار تک ٹکی سیڑھی۔ دیوار زمین سے قائمہ زاویے پر ملتی ہے، جس پر مربع کا نشان ہے۔ سیڑھی زمین کے ساتھ 70° بناتی ہے۔ اوپر سیڑھی اور دیوار کے زاویے پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                33.6,
+                105.0
+              ],
+              [
+                66.4,
+                105.0
+              ],
+              [
+                33.6,
+                15.0
+              ]
+            ],
+            "fill": false
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.6,
+              105.0
+            ],
+            "to": [
+              39.6,
+              99.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              39.6,
+              99.0
+            ],
+            "to": [
+              33.6,
+              99.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              66.4,
+              105.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.8,
+              94.1
+            ],
+            "text": "70°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              33.6,
+              15.0
+            ],
+            "radius": 10,
+            "start": 70,
+            "sweep": 20
+          },
+          {
+            "kind": "label",
+            "at": [
+              40.5,
+              54.4
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.6,
+              105.0
+            ],
+            "to": [
+              106,
+              105.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.6,
+              105.0
+            ],
+            "to": [
+              33.6,
+              7.0
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "s5_roti",
@@ -364,7 +826,117 @@
           },
           "misconception_id": "wrong_total"
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 100,
+        "alt": {
+          "en": "A round roti cut from the middle into 6 equal pieces. The angle of one piece at the middle is marked ?.",
+          "ur": "ایک گول روٹی درمیان سے 6 برابر ٹکڑوں میں کٹی ہوئی ہے۔ ایک ٹکڑے کے درمیان والے زاویے پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 42,
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              50.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              13.6,
+              29.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              13.6,
+              71.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              50.0,
+              92.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              86.4,
+              71.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              86.4,
+              29.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 12,
+            "start": 210,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              38.5,
+              30.1
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s6_gate",
@@ -397,7 +969,93 @@
           },
           "misconception_id": "wrong_total"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 66,
+        "alt": {
+          "en": "A straight fence drawn as a line, with a gate turning out from a point on it. The angle between the gate and the fence on one side is 75°; on the other side it is marked ?.",
+          "ur": "ایک سیدھی باڑ لکیر کی صورت میں، جس کے ایک نقطے سے دروازہ کھلتا ہے۔ ایک طرف دروازے اور باڑ کا زاویہ 75° ہے؛ دوسری طرف ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              110.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              10.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              72.9,
+              1.7
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 285,
+            "sweep": 75
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.9,
+              37.8
+            ],
+            "text": "75°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 105
+          },
+          {
+            "kind": "label",
+            "at": [
+              44.8,
+              30.2
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s7_clock",
@@ -436,7 +1094,236 @@
             "ur": "ہر گھنٹہ 30° ہے، 10° نہیں: 4 × 30 = 120°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 100,
+        "alt": {
+          "en": "A clock face showing 4 o'clock: the long hand points to 12 and the short hand points to 4. The angle between the hands is marked ?.",
+          "ur": "گھڑی 4 بجا رہی ہے: لمبی سوئی 12 پر اور چھوٹی سوئی 4 پر ہے۔ سوئیوں کے درمیان زاویے پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 44
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              11.0
+            ],
+            "to": [
+              50.0,
+              6.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.5,
+              16.2
+            ],
+            "to": [
+              72.0,
+              11.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.8,
+              30.5
+            ],
+            "to": [
+              88.1,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              89.0,
+              50.0
+            ],
+            "to": [
+              94.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.8,
+              69.5
+            ],
+            "to": [
+              88.1,
+              72.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.5,
+              83.8
+            ],
+            "to": [
+              72.0,
+              88.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              89.0
+            ],
+            "to": [
+              50.0,
+              94.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.5,
+              83.8
+            ],
+            "to": [
+              28.0,
+              88.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.2,
+              69.5
+            ],
+            "to": [
+              11.9,
+              72.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              11.0,
+              50.0
+            ],
+            "to": [
+              6.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.2,
+              30.5
+            ],
+            "to": [
+              11.9,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.5,
+              16.2
+            ],
+            "to": [
+              28.0,
+              11.9
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              16.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.0,
+              50.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.0,
+              84.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              16.0,
+              50.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              50.0,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              65.6,
+              59.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 10,
+            "start": 270,
+            "sweep": 120
+          },
+          {
+            "kind": "label",
+            "at": [
+              68.2,
+              39.5
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s8_roof",
@@ -468,7 +1355,111 @@
             "ur": "یہ نیچے کے دونوں زاویے مل کر ہیں۔ ہر ایک 60 ÷ 2 = 30°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 140,
+        "height": 80,
+        "alt": {
+          "en": "A roof frame drawn as a triangle with two equal sloping sides (small marks show they are equal). The top angle is 120°; the two equal angles at the bottom are marked x.",
+          "ur": "چھت کا ڈھانچہ ایک مثلث کی شکل میں جس کے دو ڈھلوان اضلاع برابر ہیں (چھوٹے نشان دکھاتے ہیں کہ وہ برابر ہیں)۔ اوپر کا زاویہ 120° ہے؛ نیچے کے دونوں برابر زاویوں پر x لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                15.0,
+                55.9
+              ],
+              [
+                125.0,
+                55.9
+              ],
+              [
+                70.0,
+                24.1
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              15.0,
+              55.9
+            ],
+            "radius": 10,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              44.9,
+              47.9
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              125.0,
+              55.9
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              95.1,
+              47.9
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70.0,
+              24.1
+            ],
+            "radius": 10,
+            "start": 30,
+            "sweep": 120
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              45.1
+            ],
+            "text": "120°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.0,
+              42.6
+            ],
+            "to": [
+              41.0,
+              37.4
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.0,
+              37.4
+            ],
+            "to": [
+              96.0,
+              42.6
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -517,7 +1508,93 @@
           },
           "misconception_id": "wrong_total"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 66,
+        "alt": {
+          "en": "A straight road drawn as a line, with a ramp going up from a point on it at 15°. The angle between the ramp and the road on the other side is marked ?.",
+          "ur": "ایک سیدھی سڑک لکیر کی صورت میں، جس کے ایک نقطے سے ڈھلوان 15° پر اوپر جاتی ہے۔ دوسری طرف ڈھلوان اور سڑک کے زاویے پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              110.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              10.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              108.3,
+              37.1
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 345,
+            "sweep": 15
+          },
+          {
+            "kind": "label",
+            "at": [
+              99.7,
+              44.8
+            ],
+            "text": "15°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 165
+          },
+          {
+            "kind": "label",
+            "at": [
+              56.7,
+              25.2
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s10_explain_why",
@@ -701,7 +1778,93 @@
           },
           "misconception_id": "wrong_total"
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 66,
+        "alt": {
+          "en": "A straight line with a point on it. A ray from the point splits the straight angle into 48° and a missing angle marked ?.",
+          "ur": "ایک سیدھی لکیر پر ایک نقطہ۔ اس نقطے سے ایک شعاع سیدھے زاویے کو ان حصوں میں بانٹتی ہے: 48° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              110.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              10.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60,
+              50
+            ],
+            "to": [
+              93.5,
+              12.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 9,
+            "start": 312,
+            "sweep": 48
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.3,
+              41.9
+            ],
+            "text": "48°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              60,
+              50
+            ],
+            "radius": 14,
+            "start": 180,
+            "sweep": 132
+          },
+          {
+            "kind": "label",
+            "at": [
+              49.8,
+              27.2
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "u3_complement",
@@ -768,7 +1931,89 @@
             "ur": "120 دونوں زاویوں کا مجموعہ ہے۔ 180 سے نفی کریں: 60°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 120,
+        "height": 90,
+        "alt": {
+          "en": "A triangle with its three angles marked: 45°, 75° and a missing angle marked ?.",
+          "ur": "ایک مثلث جس کے تینوں زاویے دکھائے گئے ہیں: 45°، 75° اور ایک نامعلوم زاویہ جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                22.0,
+                75.0
+              ],
+              [
+                98.0,
+                75.0
+              ],
+              [
+                82.0,
+                15.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "arc",
+            "center": [
+              22.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 315,
+            "sweep": 45
+          },
+          {
+            "kind": "label",
+            "at": [
+              41.4,
+              67.0
+            ],
+            "text": "45°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              98.0,
+              75.0
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 75
+          },
+          {
+            "kind": "label",
+            "at": [
+              81.3,
+              62.2
+            ],
+            "text": "75°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              82.0,
+              15.0
+            ],
+            "radius": 10,
+            "start": 75,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.6,
+              35.3
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "u5_roundabout",
@@ -800,7 +2045,111 @@
             "ur": "245 دونوں زاویوں کا مجموعہ ہے۔ 360 سے نفی کریں: 115°"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 100,
+        "height": 100,
+        "alt": {
+          "en": "Three roads drawn as rays meeting at a roundabout. The angles between them, all the way round, are 100°, 145° and a missing angle marked ?.",
+          "ur": "تین سڑکیں شعاعوں کی صورت میں ایک گول چکر پر ملتی ہیں۔ ان کے درمیان پورے گرد زاویے 100°، 145° اور ایک نامعلوم زاویہ ہیں جس پر ? لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              90.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              43.1,
+              10.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              50
+            ],
+            "to": [
+              33.1,
+              86.3
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              50
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 9,
+            "start": 260,
+            "sweep": 100
+          },
+          {
+            "kind": "label",
+            "at": [
+              62.9,
+              34.7
+            ],
+            "text": "100°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 14,
+            "start": 115,
+            "sweep": 145
+          },
+          {
+            "kind": "label",
+            "at": [
+              25.2,
+              46.7
+            ],
+            "text": "145°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              50
+            ],
+            "radius": 19,
+            "start": 0,
+            "sweep": 115
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.1,
+              75.3
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -863,7 +2212,106 @@
             },
             "misconception_id": "wrong_total"
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 100,
+          "alt": {
+            "en": "A wheel with 5 equal spokes coming out from the middle. The angle between two spokes next to each other is marked ?.",
+            "ur": "ایک پہیہ جس کے درمیان سے 5 برابر تیلیاں نکلتی ہیں۔ ساتھ والی دو تیلیوں کے درمیان زاویے پر ? لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "circle",
+              "center": [
+                50,
+                50
+              ],
+              "radius": 42,
+              "fill": false
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                50.0,
+                8.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                10.1,
+                37.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                25.3,
+                84.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                74.7,
+                84.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                89.9,
+                37.0
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                50,
+                50
+              ]
+            },
+            {
+              "kind": "arc",
+              "center": [
+                50,
+                50
+              ],
+              "radius": 12,
+              "start": 198,
+              "sweep": 72
+            },
+            {
+              "kind": "label",
+              "at": [
+                36.5,
+                31.4
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     },
     {
@@ -899,7 +2347,236 @@
               "ur": "2 گھنٹہ ہے۔ ہر گھنٹہ 30°: 60°"
             }
           }
-        ]
+        ],
+        "figure": {
+          "width": 100,
+          "height": 100,
+          "alt": {
+            "en": "A clock face showing 2 o'clock: the long hand points to 12 and the short hand points to 2. The angle between the hands is marked ?.",
+            "ur": "گھڑی 2 بجا رہی ہے: لمبی سوئی 12 پر اور چھوٹی سوئی 2 پر ہے۔ سوئیوں کے درمیان زاویے پر ? لکھا ہے۔"
+          },
+          "items": [
+            {
+              "kind": "circle",
+              "center": [
+                50,
+                50
+              ],
+              "radius": 44
+            },
+            {
+              "kind": "line",
+              "from": [
+                50.0,
+                11.0
+              ],
+              "to": [
+                50.0,
+                6.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                69.5,
+                16.2
+              ],
+              "to": [
+                72.0,
+                11.9
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                83.8,
+                30.5
+              ],
+              "to": [
+                88.1,
+                28.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                89.0,
+                50.0
+              ],
+              "to": [
+                94.0,
+                50.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                83.8,
+                69.5
+              ],
+              "to": [
+                88.1,
+                72.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                69.5,
+                83.8
+              ],
+              "to": [
+                72.0,
+                88.1
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                50.0,
+                89.0
+              ],
+              "to": [
+                50.0,
+                94.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                30.5,
+                83.8
+              ],
+              "to": [
+                28.0,
+                88.1
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16.2,
+                69.5
+              ],
+              "to": [
+                11.9,
+                72.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                11.0,
+                50.0
+              ],
+              "to": [
+                6.0,
+                50.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16.2,
+                30.5
+              ],
+              "to": [
+                11.9,
+                28.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                30.5,
+                16.2
+              ],
+              "to": [
+                28.0,
+                11.9
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                16.0
+              ],
+              "text": "12"
+            },
+            {
+              "kind": "label",
+              "at": [
+                84.0,
+                50.0
+              ],
+              "text": "3"
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.0,
+                84.0
+              ],
+              "text": "6"
+            },
+            {
+              "kind": "label",
+              "at": [
+                16.0,
+                50.0
+              ],
+              "text": "9"
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                50.0,
+                26.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                50,
+                50
+              ],
+              "to": [
+                65.6,
+                41.0
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                50,
+                50
+              ]
+            },
+            {
+              "kind": "arc",
+              "center": [
+                50,
+                50
+              ],
+              "radius": 10,
+              "start": 270,
+              "sweep": 60
+            },
+            {
+              "kind": "label",
+              "at": [
+                60.5,
+                31.8
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     }
   ],

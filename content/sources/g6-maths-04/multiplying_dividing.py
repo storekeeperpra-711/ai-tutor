@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, signed, number_question, number_line, write,
                     REF, REVIEW, INT_ADD, INT_MULTIPLY)
+from figs import jumps_figure, bar_pattern, label, attach
 
 SKILL = INT_MULTIPLY
 S = signed
@@ -37,6 +38,41 @@ assert 18 // -3 == -6 and -3 * -6 == 18
 # question bank and review
 assert -8 * -2 == 16 and -5 * 3 == -15 and -30 // 6 == -5 and -36 // -9 == 4 and 9 * -3 == -27
 
+
+# ---------- pictures ----------
+
+FIG_S1 = jumps_figure(
+    -9, 1, [0, -2, -2, -2, -2], end_text="?",
+    alt_en="A number line from −9 to 1. Starting at 0, four equal jumps, each marked −2, go to the left, one for each hour. The last one lands on a question mark.",
+    alt_ur="−9 سے 1 تک عددی خط۔ 0 سے شروع ہو کر چار برابر چھلانگیں، ہر ایک پر −2 لکھا ہے، بائیں جاتی ہیں، ہر گھنٹے کے لیے ایک۔ آخری چھلانگ ایک سوالیہ نشان پر اترتی ہے۔")
+
+FIG_S3 = jumps_figure(
+    -7, 1, [0, -2, -2, -2],
+    "A number line from −7 to 1. Starting at 0, three equal jumps, each marked −2, go left to −2, −4 and −6: three lots of −2 make −6.",
+    "−7 سے 1 تک عددی خط۔ 0 سے شروع ہو کر تین برابر چھلانگیں، ہر ایک پر −2 لکھا ہے، بائیں −2، −4 اور −6 تک جاتی ہیں: −2 کے تین گروپ −6 بناتے ہیں۔")
+
+_pattern = bar_pattern(
+    [S(a) for a in (3, 2, 1, 0, -1, -2)], PATTERN,
+    "Bars for n × (−2), with n = 3, 2, 1, 0, −1 and −2 written underneath. The answers are −6, −4, −2, 0, 2 and 4: the bars go down for the first three, there is no bar for 0, and then they go up. Each answer is 2 more than the one before.",
+    "n × (−2) کے ستون، نیچے n = 3، 2، 1، 0، −1 اور −2 لکھا ہے۔ جواب −6، −4، −2، 0، 2 اور 4 ہیں: پہلے تین ستون نیچے جاتے ہیں، 0 کا کوئی ستون نہیں، پھر ستون اوپر جاتے ہیں۔ ہر جواب پچھلے سے 2 زیادہ ہے۔",
+    unit=9, caption="n")
+_pattern["items"].append(label((40, 18), "n×(−2)"))
+FIG_S5 = _pattern
+
+FIG_S7 = jumps_figure(
+    -26, 2, [0, -6, -6, -6, -6], end_text="?", ticks_every=2,
+    alt_en="A number line from −26 to 2, with a mark every 2. (−6) × 4 is four lots of −6: starting at 0, four equal jumps, each marked −6, go left. The last one lands on a question mark.",
+    alt_ur="−26 سے 2 تک عددی خط، ہر 2 پر ایک نشان۔ (−6) × 4 کا مطلب −6 کے چار گروپ ہیں: 0 سے شروع ہو کر چار برابر چھلانگیں، ہر ایک پر −6 لکھا ہے، بائیں جاتی ہیں۔ آخری چھلانگ ایک سوالیہ نشان پر اترتی ہے۔")
+
+FIG_S8 = jumps_figure(
+    -13, 1, [0, -4, -4, -4],
+    "A number line from −13 to 1. The jump from 0 to −12 is split into 3 equal jumps, each marked −4, landing on −4, −8 and −12. So (−12) ÷ 3 = −4.",
+    "−13 سے 1 تک عددی خط۔ 0 سے −12 تک کا فاصلہ 3 برابر چھلانگوں میں بٹا ہے، ہر ایک پر −4 لکھا ہے، جو −4، −8 اور −12 پر اترتی ہیں۔ اس لیے (−12) ÷ 3 = −4")
+
+FIG_S13 = jumps_figure(
+    -9, 1, [0, -2, -2, -2, -2],
+    "A number line from −9 to 1. Starting at 0, four equal jumps, each marked −2, go left to −2, −4, −6 and −8: 4 × (−2) = −8.",
+    "−9 سے 1 تک عددی خط۔ 0 سے شروع ہو کر چار برابر چھلانگیں، ہر ایک پر −2 لکھا ہے، بائیں −2، −4، −6 اور −8 تک جاتی ہیں: 4 × (−2) = −8")
 
 lesson = {
  "id": "g6-maths-04-multiplying-and-dividing-integers",
@@ -229,4 +265,8 @@ lesson = {
  ],
  "review": REVIEW,
 }
+attach(lesson, {
+    "s1_hook": FIG_S1, "s3_see_it": FIG_S3, "s5_pattern": FIG_S5, "s7_neg_pos": FIG_S7,
+    "s8_divide": FIG_S8, "s13_summary": FIG_S13,
+})
 write(lesson)
