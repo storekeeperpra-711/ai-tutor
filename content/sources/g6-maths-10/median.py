@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, write,
                     BOOK, REVIEW, DH_MEAN, DH_MEDIAN)
+from figs import cards, arrow_right, height_bars, figure, label, line, attach, W
 
 SKILL = DH_MEDIAN
 
@@ -303,4 +304,60 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+def median_example():
+    """Row 1: 7, 2, 9 as written, an arrow, then 2, 7, 9 in order with the
+    middle card ringed. Row 2: 3, 5, 9, 11 with the two middle cards ringed
+    and 7 written halfway between them."""
+    s = sorted(EX)
+    mid = len(s) // 2
+    items, _ = cards(66, 14, list(EX))
+    items += arrow_right(128, 160, 29)
+    more, _ = cards(232, 14, s, ring=(mid,))
+    items += more
+    n = len(EX_EVEN)
+    row2, xs = cards(W / 2, 96, list(EX_EVEN), ring=(n // 2 - 1, n // 2), gap=26)
+    items += row2
+    xm = (xs[n // 2 - 1] + xs[n // 2]) / 2
+    items += [line((xm, 132), (xm, 146)), label((xm, 160), median(*EX_EVEN))]
+    return figure(W, 176,
+        "Top row: cards 7, 2, 9, an arrow, then the same cards in order, 2, 7, 9, with a ring round the middle card, 7. "
+        "Bottom row: cards 3, 5, 9, 11 in order, with rings round the two middle cards, 5 and 9, and 7 written halfway between them.",
+        "اوپر کی قطار: کارڈ 7، 2، 9، ایک تیر، پھر وہی کارڈ ترتیب میں، 2، 7، 9، اور درمیانی کارڈ 7 کے گرد دائرہ۔ "
+        "نیچے کی قطار: کارڈ 3، 5، 9، 11 ترتیب میں، دونوں درمیانی کارڈوں 5 اور 9 کے گرد دائرے، اور ان کے بالکل بیچ میں 7 لکھا ہے۔",
+        items)
+
+
+def hook_children():
+    """Three children in a line from shortest to tallest; the middle one is empty."""
+    return height_bars([3, 4, 5], "Three bars like three children standing in a line from shortest to tallest. The middle one is drawn empty: the child in the middle.",
+                       "تین ستون، جیسے تین بچے سب سے چھوٹے سے سب سے لمبے تک قطار میں کھڑے ہوں۔ درمیانی ستون خالی ہے: درمیان والا بچہ۔",
+                       ring=(1,), texts=False)
+
+
+def as_bars(xs, what_en="", what_ur=""):
+    return height_bars(list(xs),
+                       f"Bars{what_en} in the order the numbers are written, each as tall as its number, with the number above it: {nums(xs)}.",
+                       f"ستون{what_ur} اسی ترتیب میں جس میں اعداد لکھے ہیں، ہر ایک اپنے عدد جتنا اونچا، اوپر عدد لکھا ہے: {nums_ur(xs)}۔")
+
+
+def as_cards(xs):
+    items, _ = cards(W / 2, 8, list(xs), gap=min(14, (W - 40 - len(xs) * 30) / (len(xs) - 1)))
+    return figure(W, 46, f"Number cards in a row: {nums(xs)}.", f"عدد کارڈ ایک قطار میں: {nums_ur(xs)}۔", items)
+
+
+attach(lesson, {
+    "s1_hook": hook_children(),
+    "s3_median": median_example(),
+    "s4_three": as_bars(S4_DATA),
+    "s5_marks": as_bars(S5_DATA, " for Hamza's five marks", " (حمزہ کے پانچ نمبر)"),
+    "s6_even": as_bars(S6_DATA),
+    "s7_ages": as_cards(S7_DATA),
+    "s8_big_value": as_bars(S8_DATA, " for the five friends' savings", " (پانچ دوستوں کی بچت)"),
+    "s9_find_error": as_cards(S9_DATA),
+    "s11_six": as_bars(S11_DATA, " for the six batters' runs", " (چھ بلے بازوں کے رنز)"),
+    "qb_apply": as_bars(QB_DATA),
+    "qb_find_error": as_bars(QBE_DATA),
+    "r_median4": as_bars(R1_DATA),
+})
 write(lesson)

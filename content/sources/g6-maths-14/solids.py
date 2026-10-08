@@ -25,6 +25,105 @@ assert S11 == 5
 R2 = 2 * FACES
 assert R2 == 12
 
+# ---------- figures ----------
+from figs import Box, fit, figure, row, box_items, point, line, poly, circle, with_figures
+
+# Everyday boxes in cm (only their shapes are drawn, not their sizes).
+MATCHBOX = (5, 3, 2)
+BRICK = (20, 10, 7)
+DICE = 2
+
+
+def plain_box(l, d, h, max_w=150, max_h=90, open_top=False):
+    items, b = box_items(l, d, h, labels=False, max_w=max_w, max_h=max_h, open_top=open_top)
+    return items, b
+
+
+def dice(size_w=80, dots=5):
+    """A cube with dots on its front face, like a dice."""
+    items, b = plain_box(DICE, DICE, DICE, max_w=size_w, max_h=size_w)
+    q = DICE / 4
+    spots = {1: [(2, 2)], 3: [(1, 3), (2, 2), (3, 1)], 5: [(1, 1), (1, 3), (2, 2), (3, 1), (3, 3)]}[dots]
+    items += [circle(b.p(q * a, 0, q * c), b.s * 0.22, fill=True) for a, c in spots]
+    return items
+
+
+HIDDEN_EN = "The hidden edges at the back are dashed."
+HIDDEN_UR = "پیچھے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے دکھائے گئے ہیں۔"
+
+F_HOOK = figure(
+    "Three solids side by side: a matchbox and a long brick, both cuboids with rectangle faces, and a dice, a cube with a square front face showing five dots. "
+    "Each is drawn in 3-D: the front, a shaded top and a shaded right side.",
+    "تین ٹھوس اشکال ساتھ ساتھ: ماچس کی ڈبیا اور لمبی اینٹ، دونوں مکعب نما جن کی سطحیں مستطیل ہیں، اور پانسہ، یعنی مکعب جس کی سامنے والی مربع سطح پر پانچ نقطے ہیں۔ "
+    "ہر ایک تین رخی (3-D) شکل میں ہے: سامنے کا رخ، اوپر اور دائیں رخ پر رنگ۔",
+    row([plain_box(*MATCHBOX, max_w=74, max_h=70)[0], plain_box(*BRICK, max_w=118, max_h=70)[0], dice(60)], gap=16))
+
+
+def parts_fig():
+    """A cuboid with its 8 corners marked and its hidden edges dashed."""
+    items, b = box_items(*MATCHBOX, labels=False, max_w=200, max_h=120)
+    items += b.corners()
+    return figure(
+        "A cuboid drawn in 3-D. Its front face is a rectangle and its top and right side are shaded, so 3 faces can be seen; "
+        "the other 3 (back, bottom and left) are hidden. Its edges are the lines where two faces meet: 4 round the top, 4 round the bottom "
+        "and 4 standing up. A dot marks each of its 8 corners, 4 on top and 4 on the bottom. The 3 edges at the hidden back corner are dashed.",
+        "ایک مکعب نما تین رخی (3-D) شکل میں۔ سامنے کی سطح مستطیل ہے اور اوپر اور دائیں رخ پر رنگ ہے، تو 3 سطحیں نظر آتی ہیں؛ "
+        "باقی 3 (پیچھے، نیچے اور بائیں) چھپی ہیں۔ کنارے وہ لکیریں ہیں جہاں دو سطحیں ملتی ہیں: 4 اوپر، 4 نیچے اور 4 کھڑے۔ "
+        "اس کے 8 کونوں میں سے ہر ایک پر نقطہ ہے، 4 اوپر اور 4 نیچے۔ چھپے ہوئے پچھلے کونے کے 3 کنارے ڈیش والی لکیروں سے ہیں۔",
+        items)
+
+
+def solid_fig(dims, en, ur, max_w=200, max_h=120):
+    items, _ = box_items(*dims, labels=False, max_w=max_w, max_h=max_h)
+    return figure(en + " " + HIDDEN_EN, ur + " " + HIDDEN_UR, items)
+
+
+F_PARTS = parts_fig()
+F_MATCHBOX = solid_fig(MATCHBOX, "A matchbox, a cuboid, drawn in 3-D: its front face, its shaded top and its shaded right side can be seen.",
+                       "ماچس کی ڈبیا، ایک مکعب نما، تین رخی (3-D) شکل میں: اس کی سامنے والی سطح، رنگی ہوئی اوپر والی اور دائیں سطح نظر آتی ہیں۔")
+F_DICE = figure("A dice, a cube, drawn in 3-D: its square front face with five dots, its shaded top and its shaded right side. " + HIDDEN_EN,
+                "ایک پانسہ، یعنی مکعب، تین رخی (3-D) شکل میں: اس کی سامنے والی مربع سطح جس پر پانچ نقطے ہیں، اوپر اور دائیں رخ پر رنگ۔ " + HIDDEN_UR,
+                dice(120))
+F_BRICK = solid_fig(BRICK, "A brick, a long cuboid, drawn in 3-D: its front face, its shaded top and its shaded right side can be seen.",
+                    "ایک اینٹ، لمبا مکعب نما، تین رخی (3-D) شکل میں: اس کی سامنے والی سطح، رنگی ہوئی اوپر والی اور دائیں سطح نظر آتی ہیں۔", max_w=230)
+F_THREE_DICE = figure(f"{S8 // FACES} dice lying apart in a row, each a cube drawn in 3-D with dots on its front. On each dice only 3 faces can be seen. " + HIDDEN_EN,
+                      f"{S8 // FACES} پانسے ایک قطار میں الگ الگ، ہر ایک مکعب تین رخی (3-D) شکل میں، سامنے نقطے۔ ہر پانسے کی صرف 3 سطحیں نظر آتی ہیں۔ " + HIDDEN_UR,
+                      row([dice(64, 1), dice(64, 3), dice(64, 5)], gap=26))
+
+
+def no_lid_fig():
+    """A shoe box with its lid lifted off and floating above it."""
+    l, d, h = 6, 4, 2.5
+    items, b = box_items(l, d, h, labels=False, max_w=200, max_h=100, open_top=True)
+    lift = -b.s * 2.2
+    lid = [b.p(0, 0, h), b.p(l, 0, h), b.p(l, d, h), b.p(0, d, h)]
+    items.append(poly([(x, y + lift) for x, y in lid], fill=True))
+    return figure("A shoe box drawn in 3-D with its lid lifted off. The lid, a shaded flat rectangle, floats above the box, and the top of the box is open. "
+                  "The front, the right side, the back, the left side and the bottom are still there. The two hidden edges along the bottom at the back are dashed.",
+                  "جوتوں کا ڈبہ تین رخی (3-D) شکل میں، جس کا ڈھکن اتار دیا گیا ہے۔ ڈھکن، ایک رنگی ہوئی چپٹی مستطیل، ڈبے کے اوپر ہوا میں ہے، اور ڈبے کا اوپر والا حصہ کھلا ہے۔ "
+                  "سامنے، دایاں، پیچھے، بایاں رخ اور نیچے کی سطح ابھی موجود ہیں۔ پیچھے نیچے کے دو چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔",
+                  items)
+
+
+F_NO_LID = no_lid_fig()
+F_CUBE = figure("A cube drawn in 3-D: its square front face, its shaded top and its shaded right side. " + HIDDEN_EN,
+                "ایک مکعب تین رخی (3-D) شکل میں: اس کی سامنے والی مربع سطح، اوپر اور دائیں رخ پر رنگ۔ " + HIDDEN_UR,
+                plain_box(2, 2, 2, max_w=120, max_h=120)[0])
+F_TEA = solid_fig((4, 3, 6), "A tall box of tea, a cuboid, drawn in 3-D: its front face, its shaded top and its shaded right side can be seen.",
+                  "چائے کا اونچا ڈبہ، ایک مکعب نما، تین رخی (3-D) شکل میں: اس کی سامنے والی سطح، رنگی ہوئی اوپر والی اور دائیں سطح نظر آتی ہیں۔", max_h=140)
+F_BOOK = solid_fig((6, 8, 1), "A book lying flat, a thin cuboid, drawn in 3-D: its front edge face, its large shaded top and its shaded right side can be seen.",
+                   "میز پر رکھی ایک کتاب، پتلا مکعب نما، تین رخی (3-D) شکل میں: اس کی سامنے والی پتلی سطح، رنگی ہوئی بڑی اوپر والی سطح اور دائیں سطح نظر آتی ہیں۔")
+F_TWO_BOXES = figure(f"{R2 // FACES} matchboxes lying apart, each a cuboid drawn in 3-D with its front, its shaded top and its shaded right side. " + HIDDEN_EN,
+                     f"{R2 // FACES} ماچس کی ڈبیاں الگ الگ، ہر ایک مکعب نما تین رخی (3-D) شکل میں: سامنے، اوپر اور دائیں رخ پر رنگ۔ " + HIDDEN_UR,
+                     row([plain_box(*MATCHBOX, max_w=110, max_h=80)[0], plain_box(*MATCHBOX, max_w=110, max_h=80)[0]], gap=40))
+
+FIGS = {
+    "s1_hook": F_HOOK, "s3_parts": F_PARTS, "s4_faces": F_MATCHBOX, "s5_edges": F_DICE, "s7_corners": F_BRICK,
+    "s8_three_dice": F_THREE_DICE, "s11_no_lid": F_NO_LID, "qb_corners": F_CUBE, "qb_apply": F_TEA,
+    "qb_find_error": F_DICE, "r_edges": F_BOOK, "r_two_boxes": F_TWO_BOXES,
+}
+
+
 lesson = {
  "id": "g6-maths-14-solids",
  "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
@@ -204,10 +303,10 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Solids unit. No textbook text or exercises were used.",
-   "There are no pictures yet, so solids are described with everyday objects children can hold: a matchbox, a brick, a dice.",
+   "Solids are drawn in a simple 3-D view (figs.py): front face, shaded top and side, hidden edges dashed. They are also linked to everyday objects children can hold: a matchbox, a brick, a dice.",
    "Urdu terms to check: مکعب (cube), مکعب نما (cuboid), سطح (face), کنارہ (edge), راس (vertex).",
    "The numbers were worked out in content/sources/g6-maths-14/solids.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
-write(lesson)
+write(with_figures(lesson, FIGS))

@@ -1,3 +1,4 @@
+from figs import attach, scale_bar, strip
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, FRACTIONS_MULTIPLY, PC_CONVERT, PC_OF_AMOUNT, percent_of)
 
@@ -225,4 +226,45 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+
+def part_of(p, amount, parts, *, rs=False):
+    """A percentage bar: a bar for `amount` cut into `parts` equal parts with
+    p% shaded. Above it the amounts 0, "?" and the whole amount; below it
+    0%, p% and 100%. Its alt text in both languages."""
+    shaded = p * parts // 100
+    assert shaded * 100 == p * parts
+    whole = f"Rs{amount}" if rs else str(amount)
+    rupees = ("Rs " if rs else "", " روپے" if rs else "")
+    en = (f"A bar for the whole amount, {rupees[0]}{amount}, cut into {parts} equal parts, with {shaded} of them shaded. "
+          f"Above the bar: 0 at the start, a question mark at the end of the shading, and {rupees[0]}{amount} at the end. "
+          f"Below the bar: 0%, {p}% under the question mark, and 100% under {amount}.")
+    ur = (f"پوری رقم {amount}{rupees[1]} کے لیے ایک پٹی جو {parts} برابر حصوں میں بٹی ہے، ان میں سے {shaded} رنگے ہیں۔ "
+          f"پٹی کے اوپر: شروع میں 0، رنگ کے آخر میں سوالیہ نشان، اور آخر میں {amount}{rupees[1]}۔ "
+          f"پٹی کے نیچے: 0%، سوالیہ نشان کے نیچے {p}%، اور {amount} کے نیچے 100%۔")
+    f = p / 100
+    return scale_bar(f, [(0, "0"), (f, "?"), (1, whole)], [(0, "0%"), (f, f"{p}%"), (1, "100%")], en, ur, pieces=parts)
+
+
+# Pictures: strip (bar) models, the whole amount above, the percents under.
+assert S7 == 2 * 500 / 10
+attach(lesson, {
+ "s2_foundation": scale_bar(0.25, [(0, "0"), (0.25, "?"), (1, "20")], [(0, "0"), (0.25, "1/4"), (1, "1")],
+   "A bar for 20 cut into 4 equal parts, the first part shaded. Above the bar: 0, a question mark at the end of the shading, and 20 at the end. Below the bar: 0, 1/4 under the question mark, and 1 at the end.",
+   "20 کے لیے ایک پٹی جو 4 برابر حصوں میں بٹی ہے، پہلا حصہ رنگا ہے۔ پٹی کے اوپر: 0، رنگ کے آخر میں سوالیہ نشان، اور آخر میں 20۔ پٹی کے نیچے: 0، سوالیہ نشان کے نیچے 1/4، اور آخر میں 1۔",
+   pieces=4),
+ "s3_blocks": strip("500", 10, 2,
+   "A strip for 500 cut into 10 equal parts, with 50 written in each part. The first 2 parts are shaded. Under the strip: 0% at the start, 10% after one part, 20% after two parts, and 100% at the end.",
+   "500 کے لیے ایک پٹی جو 10 برابر حصوں میں بٹی ہے، ہر حصے میں 50 لکھا ہے۔ پہلے 2 حصے رنگے ہیں۔ پٹی کے نیچے: شروع میں 0%، ایک حصے کے بعد 10%، دو حصوں کے بعد 20%، اور آخر میں 100%۔",
+   ask=None, inside=str(500 // 10), under=[(0, "0%"), (0.1, "10%"), (0.2, "20%"), (1, "100%")]),
+ "s4_ten": part_of(10, 300, 10),
+ "s5_half": part_of(50, 84, 2),
+ "s6_quarter": part_of(25, 200, 4),
+ "s7_bag": part_of(20, 500, 10, rs=True),
+ "s8_fifteen": part_of(15, 60, 20),
+ "s9_find_error": part_of(20, 40, 10),
+ "s11_class": part_of(75, 40, 4),
+ "qb_apply": part_of(5, 80, 20),
+ "r_quarter": part_of(25, 48, 4),
+})
 write(lesson)

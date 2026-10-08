@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, table_text, write,
                     BOOK, REVIEW, DH_TABLES, DH_KINDS)
+from figs import Line, bar_graph, table_figure, figure, label, line, circle, attach, W
 
 SKILL = DH_KINDS
 
@@ -246,11 +247,97 @@ lesson = {
  ],
  "teacher_notes": [
    "Written fresh for the Data Management sub-domain (kinds of data). No textbook text or exercises were used.",
-   "Classes include both ends (1–10, 11–20, ...), so a value like 20 goes in 11–20. With no pictures yet, data are given as lists and tables written in a line.",
+   "Classes include both ends (1–10, 11–20, ...), so a value like 20 goes in 11–20. Data are given in the steps as lists and tables written in a line; the pictures put the values as dots on a number line split into classes by dashed lines.",
    "The key test for discrete vs continuous is counted vs measured; the find-error steps target the idea that a rounded whole number (138 cm, 12 minutes) makes data discrete.",
    "Urdu terms to check: مواد (data), گروہ بند مواد / غیر گروہ بند مواد (grouped / ungrouped data), گروہ (class), تعدد (frequency), منفصل مواد (discrete data), مسلسل مواد (continuous data).",
    "The numbers were worked out in content/sources/g6-maths-10/kinds_of_data.py; edit that script, not this file.",
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+def class_line(data, classes, y):
+    """A number line with each value as a dot (its number above) and dashed
+    lines between the classes, whose ranges are written under the line."""
+    lo, hi = classes[0][0] - 1, classes[-1][1]
+    nl = Line(lo, hi, y)
+    for a, b in classes[:-1]:
+        nl.items.append(line((nl.x(b + 0.5), y - 12), (nl.x(b + 0.5), y + 12), dashed=True))
+    for a, b in classes:
+        nl.items.append(label(((nl.x(a - 0.5) + nl.x(b + 0.5)) / 2, y + 20), f"{a}-{b}"))
+    nl.dots(data, radius=4)
+    return nl
+
+
+def class_figure(data, classes):
+    rows = Line(0, classes[-1][1], 0).dots(data)
+    y = 30 + rows * 17
+    nl = class_line(data, classes, y)
+    names = ", ".join(f"{a} to {b}" for a, b in classes)
+    names_ur = "، ".join(f"{a} تا {b}" for a, b in classes)
+    return figure(W, y + 36,
+        f"A number line with a dot for each value, its number above it: {nums(data)}. Dashed lines split the line into the classes {names}, written under the line.",
+        f"ایک عددی لکیر جس پر ہر قیمت کا ایک نقطہ ہے، اوپر اس کا عدد: {nums(data, '، ')}۔ ڈیش والی لکیریں اسے گروہوں {names_ur} میں بانٹتی ہیں، جو لکیر کے نیچے لکھے ہیں۔",
+        nl.items)
+
+
+def ruler(lo, y, value, *, text=None):
+    """A ruler from lo to lo + 2 with a tick every tenth and a dot at value."""
+    nl = Line(lo, lo + 2, y, margin=40)
+    for k in range(21):
+        v = lo + k / 10
+        size = 7 if k % 10 == 0 else (5 if k % 5 == 0 else 3)
+        nl.items.append(line((nl.x(v), y - size), (nl.x(v), y)))
+    nl.items += [label((nl.x(lo), y + 14), lo), label((nl.x(lo + 1), y + 14), lo + 1), label((nl.x(lo + 2), y + 14), lo + 2),
+                 circle((nl.x(value), y), 5, fill=True), label((nl.x(value), y - 18), text or value)]
+    return nl.items
+
+
+def ruler_figure(lo, value, unit_en, unit_ur):
+    return figure(W, 64,
+        f"A ruler from {lo} to {lo + 2} {unit_en} with a small mark every tenth. A dot sits at {value}, between the whole numbers {int(value)} and {int(value) + 1}.",
+        f"{lo} سے {lo + 2} {unit_ur} تک ایک پیمانہ (رولر)، ہر دسویں حصے پر چھوٹا نشان۔ ایک نقطہ {value} پر ہے، مکمل اعداد {int(value)} اور {int(value) + 1} کے درمیان۔",
+        ruler(lo, 38, value))
+
+
+def kinds_figure():
+    """Top: 4, 17, 9, 22 sorted into classes. Bottom left: counted values on
+    whole numbers only. Bottom: a ruler with 141.5 between 141 and 142."""
+    first = MARKS[:4]
+    assert first == (4, 17, 9, 22)
+    nl = class_line(first, [(1, 10), (11, 20), (21, 30)], 30)
+    items = nl.items
+    count = Line(0, 4, 98, margin=40)
+    for v in range(1, 5):
+        count.items += [circle((count.x(v), 98), 5, fill=True), label((count.x(v), 114), v)]
+    items += count.items
+    items += ruler(141, 160, 141.5)
+    return figure(W, 182,
+        "Three pictures. Top: a number line with dots at 4, 17, 9 and 22, split by dashed lines into the classes 1 to 10, 11 to 20 and 21 to 30. "
+        "Middle: counted (discrete) data, a line with dots only on the whole numbers 1, 2, 3 and 4. "
+        "Bottom: measured (continuous) data, a ruler from 141 to 143 cm with a mark every tenth and a dot at 141.5, between 141 and 142.",
+        "تین تصویریں۔ اوپر: ایک عددی لکیر جس پر 4، 17، 9 اور 22 پر نقطے ہیں، اور ڈیش والی لکیریں اسے گروہوں 1 تا 10، 11 تا 20 اور 21 تا 30 میں بانٹتی ہیں۔ "
+        "درمیان: گنا گیا (منفصل) مواد، ایک لکیر جس پر صرف مکمل اعداد 1، 2، 3 اور 4 پر نقطے ہیں۔ "
+        "نیچے: ناپا گیا (مسلسل) مواد، 141 سے 143 سینٹی میٹر تک پیمانہ، ہر دسویں حصے پر نشان، اور 141.5 پر نقطہ، 141 اور 142 کے درمیان۔",
+        items)
+
+
+FRUIT_ROWS = [(en[0], v) for (en, _), v in FRUIT]          # M, B, A
+CLASSES_30 = [(1, 10), (11, 20), (21, 30)]
+attach(lesson, {
+    "s2_foundation": table_figure(FRUIT_ROWS,
+        "A table of fruit sold: M (mangoes) 7, B (bananas) 5, A (apples) 8.",
+        "بکنے والے پھلوں کا جدول: M (آم) 7، B (کیلے) 5، A (سیب) 8۔", tallies=False),
+    "s3_kinds": kinds_figure(),
+    "s4_class_count": class_figure(MARKS, CLASSES_30),
+    "s5_class_count": class_figure(MARKS, CLASSES_30),
+    "s8_total_freq": bar_graph([v for _, v in AGES], ["1-10", "11-20", "21-30"],
+        "A bar graph of the grouped ages, with a scale from 0 to 10 in 2s: age 1 to 10 has 6 people, 11 to 20 has 9, and 21 to 30 has 4.",
+        "گروہ بند عمروں کا بار گراف، پیمانہ 0 سے 10 تک، 2 کے وقفے سے: عمر 1 تا 10 کے 6 افراد، 11 تا 20 کے 9، اور 21 تا 30 کے 4۔",
+        top=10, step=2),
+    "s9_find_error": ruler_figure(137, 138.4, "cm", "سینٹی میٹر"),
+    "s11_runs": class_figure(RUNS, CLASSES_30 + [(31, 40)]),
+    "qb_apply": class_figure(QB_DATA, CLASSES_30[:2]),
+    "qb_find_error": ruler_figure(11, 12.5, "minutes", "منٹ"),
+    "r_class": class_figure(R2_DATA, CLASSES_30[:2]),
+})
 write(lesson)

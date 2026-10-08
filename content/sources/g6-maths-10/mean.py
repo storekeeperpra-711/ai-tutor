@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, table_text, write,
                     REF, REVIEW, DH_TABLES, DH_MEAN)
+from figs import levelling_figure, columns_figure, height_bars, bar_graph, attach
 
 SKILL = DH_MEAN
 
@@ -229,4 +230,50 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+def ur_list(xs):
+    return "، ".join(str(x) for x in xs)
+
+
+def en_list(xs):
+    return ", ".join(str(x) for x in xs)
+
+
+def counters(xs, what_en="", what_ur=""):
+    return columns_figure(list(xs),
+                          f"Columns of counters{what_en}: {en_list(xs)} counters, with each number written under its column.",
+                          f"گوٹیوں کے ستون{what_ur}: {ur_list(xs)} گوٹیاں، ہر ستون کے نیچے اس کا عدد لکھا ہے۔")
+
+
+def bars(xs, what_en, what_ur):
+    return height_bars(list(xs),
+                       f"Bars for {what_en}, as tall as each value, with the value above each bar: {en_list(xs)}.",
+                       f"{what_ur} کے ستون، ہر قیمت جتنے اونچے، ہر ستون کے اوپر اس کی قیمت: {ur_list(xs)}۔")
+
+
+S8_KNOWN = [10, 20, 12]
+assert S8_KNOWN == [10, 20, 12] and S8 + sum(S8_KNOWN) == 15 * 4
+
+attach(lesson, {
+    "s1_hook": counters((4, 6, 8), " (sweets of three friends)", " (تین دوستوں کی ٹافیاں)"),
+    "s3_mean": levelling_figure([4, 6, 8],
+        "Left: three columns of sweets, 4, 6 and 8, with a dashed line at 6. The 2 sweets above the line in the column of 8 are dashed circles. An arrow points right. Right: the same sweets shared fairly, three columns of 6 each; the 2 dashed circles have moved onto the column that had 4.",
+        "بائیں: ٹافیوں کے تین ستون، 4، 6 اور 8، اور 6 پر ڈیش والی لکیر۔ 8 والے ستون میں لکیر کے اوپر کی 2 ٹافیاں ڈیش والے دائرے ہیں۔ ایک تیر دائیں طرف۔ دائیں: وہی ٹافیاں برابر بانٹی گئیں، 6 کے تین ستون؛ 2 ڈیش والے دائرے 4 والے ستون پر آ گئے ہیں۔"),
+    "s4_sweets": counters((4, 6, 8)),
+    "s5_marks": bars((7, 9, 5, 10, 9), "Ayesha's five test marks", "عائشہ کے پانچ ٹیسٹ نمبروں"),
+    "s6_runs": bars((12, 30, 25, 33), "Babar's runs in four matches", "بابر کے چار میچوں کے رنز"),
+    "s7_total": counters((10, 10, 10), " (three numbers whose mean is 10, shared out equally)", " (تین اعداد جن کی اوسط 10 ہے، برابر بانٹے ہوئے)"),
+    "s8_missing": bar_graph(S8_KNOWN + [0], None,
+        "Four bars. The first three are 10, 20 and 12, with the value above each. The fourth bar is not drawn and has a question mark. A dashed line across the graph at the mean, 15.",
+        "چار ستون۔ پہلے تین 10، 20 اور 12 ہیں، ہر ایک کے اوپر اس کی قیمت۔ چوتھا ستون نہیں بنا اور اس پر سوالیہ نشان ہے۔ گراف کے آر پار اوسط، 15، پر ڈیش والی لکیر۔",
+        top=20, step=5, numbers=False, bar_text=[str(v) for v in S8_KNOWN] + [None], missing=3, mean_line=15, mean_text="15"),
+    "s9_find_error": counters((2, 4, 9)),
+    "qb_apply": counters((5, 7, 12)),
+    "qb_find_error": bar_graph([6, 8, 10], None,
+        "Three bars for Nadia's scores, 6, 8 and 10, with the value above each. A dashed line marked 24 is far above all three bars.",
+        "نادیہ کے نمبروں کے تین ستون، 6، 8 اور 10، ہر ایک کے اوپر اس کی قیمت۔ 24 والی ڈیش لکیر تینوں ستونوں سے بہت اوپر ہے۔",
+        top=24, step=4, numbers=False, bar_text=["6", "8", "10"], mean_line=24, mean_text="24"),
+    "r_mean4": bars((10, 20, 30, 40), "four numbers", "چار اعداد"),
+    "r_mean3": counters((6, 6, 9)),
+})
 write(lesson)

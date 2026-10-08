@@ -249,4 +249,53 @@ lesson = {
  "review": REVIEW,
 }
 assert 120 + 3 == 123 and 150 + 2 == 152 and 144 - 7 == 137 and 250 + 3 == 253
+# ---------- pictures ----------
+from figs import attach, double_line
+
+
+def unit_line(one, n, marks, tags, alt_en, alt_ur, **kw):
+    """A double number line: each step is 1 thing on top and `one` (its
+    value) below; marks {count: (top, bottom)}."""
+    return double_line(1, one, n, marks, alt_en, alt_ur, tags=tags, **kw)
+
+
+attach(lesson, {
+  "s1_hook": unit_line(
+    PEN, 7, {4: ("4", "120"), 7: ("7", "?")}, ("", "Rs"),
+    "A double number line in steps of one pen. On top, 4 pens and 7 pens; below, Rs 120 under the 4 and a question mark under the 7.",
+    "ایک ایک قلم کے قدموں والی دوہری عددی لکیر۔ اوپر 4 قلم اور 7 قلم؛ نیچے 4 کے نیچے Rs 120 اور 7 کے نیچے سوالیہ نشان۔"),
+  "s4_method": unit_line(
+    PEN, 7, {1: ("1", str(PEN)), 4: ("4", "120"), 7: ("7", str(SEVEN_PENS))}, ("", "Rs"),
+    f"A double number line in steps of one pen. On top 1, 4 and 7 pens; below them Rs {PEN}, Rs 120 and Rs {SEVEN_PENS}.",
+    f"ایک ایک قلم کے قدموں والی دوہری عددی لکیر۔ اوپر 1، 4 اور 7 قلم؛ ان کے نیچے Rs {PEN}، Rs 120 اور Rs {SEVEN_PENS}۔"),
+  "s5_one_kg": unit_line(
+    SUGAR, 5, {1: ("1", "?"), 5: ("5", "750")}, ("kg", "Rs"),
+    "A double number line in steps of 1 kg. On top, 1 kg and 5 kg; below, a question mark under the 1 and Rs 750 under the 5.",
+    "1 کلوگرام کے قدموں والی دوہری عددی لکیر۔ اوپر 1 کلوگرام اور 5 کلوگرام؛ نیچے 1 کے نیچے سوالیہ نشان اور 5 کے نیچے Rs 750۔"),
+  "s6_eggs": unit_line(
+    EGG, 10, {6: ("6", "180"), 10: ("10", "?")}, ("", "Rs"),
+    "A double number line in steps of one egg. On top, 6 eggs and 10 eggs; below, Rs 180 under the 6 and a question mark under the 10.",
+    "ایک ایک انڈے کے قدموں والی دوہری عددی لکیر۔ اوپر 6 انڈے اور 10 انڈے؛ نیچے 6 کے نیچے Rs 180 اور 10 کے نیچے سوالیہ نشان۔"),
+  "s7_bus": unit_line(
+    KM_PER_HOUR, 5, {3: ("3", "150"), 5: ("5", "?")}, ("h", "km"),
+    "A double number line in steps of one hour. On top, 3 hours and 5 hours; below, 150 km under the 3 and a question mark under the 5.",
+    "ایک ایک گھنٹے کے قدموں والی دوہری عددی لکیر۔ اوپر 3 گھنٹے اور 5 گھنٹے؛ نیچے 3 کے نیچے 150 کلومیٹر اور 5 کے نیچے سوالیہ نشان۔"),
+  "s9_atta": unit_line(
+    ATTA_KG, 8, {8: ("8", "960"), ATTA_FOR_600: ("?", "600")}, ("kg", "Rs"),
+    "A double number line for atta: kg on top, rupees below. 8 kg is over Rs 960. Further left, Rs 600 has a question mark over it.",
+    "آٹے کی دوہری عددی لکیر: اوپر کلوگرام، نیچے روپے۔ 8 کلوگرام Rs 960 کے اوپر ہے۔ اس سے بائیں طرف Rs 600 کے اوپر سوالیہ نشان ہے۔",
+    ticks=False),
+  "s11_bananas": unit_line(
+    BANANA, 12, {5: ("5", "?"), 12: ("12", "144")}, ("", "Rs"),
+    "A double number line in steps of one banana. On top, 5 and 12 bananas; below, a question mark under the 5 and Rs 144 under the 12.",
+    "ایک ایک کیلے کے قدموں والی دوہری عددی لکیر۔ اوپر 5 اور 12 کیلے؛ نیچے 5 کے نیچے سوالیہ نشان اور 12 کے نیچے Rs 144۔"),
+  "qb_mangoes": unit_line(
+    84 // 7, 7, {3: ("3", "?"), 7: ("7", "84")}, ("", "Rs"),
+    "A double number line in steps of one mango. On top, 3 and 7 mangoes; below, a question mark under the 3 and Rs 84 under the 7.",
+    "ایک ایک آم کے قدموں والی دوہری عددی لکیر۔ اوپر 3 اور 7 آم؛ نیچے 3 کے نیچے سوالیہ نشان اور 7 کے نیچے Rs 84۔"),
+  "r_rice": unit_line(
+    250 // 5, 8, {5: ("5", "250"), 8: ("8", "?")}, ("kg", "Rs"),
+    "A double number line in steps of 1 kg of rice. On top, 5 kg and 8 kg; below, Rs 250 under the 5 and a question mark under the 8.",
+    "چاول کے 1 کلوگرام کے قدموں والی دوہری عددی لکیر۔ اوپر 5 کلوگرام اور 8 کلوگرام؛ نیچے 5 کے نیچے Rs 250 اور 8 کے نیچے سوالیہ نشان۔"),
+})
 write(lesson)

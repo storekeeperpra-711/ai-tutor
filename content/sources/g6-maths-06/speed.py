@@ -239,4 +239,44 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, road
+
+
+def hours(n, unit="h"):
+    return [f"{k}{unit}" for k in range(1, n + 1)]
+
+
+attach(lesson, {
+  "s1_hook": road(
+    90, 3,
+    "A road cut into 3 equal pieces of 30 m each. The marks above say 1s, 2s and 3s: the cheetah runs 30 m in every second.",
+    "سڑک 30، 30 میٹر کے 3 برابر ٹکڑوں میں بٹی ہوئی۔ اوپر کے نشانوں پر 1s، 2s اور 3s لکھا ہے: چیتا ہر سیکنڈ میں 30 میٹر دوڑتا ہے۔",
+    piece_text="30m", times=hours(3, "s")),
+  "s2_foundation": road(
+    150, 3,
+    "A road 150 km long, marked with a bracket under it, cut into 3 equal pieces. The marks above say 1h, 2h and 3h; each piece has a question mark.",
+    "150 کلومیٹر لمبی سڑک، نیچے قوس کے ساتھ، 3 برابر ٹکڑوں میں بٹی ہوئی۔ اوپر کے نشانوں پر 1h، 2h اور 3h لکھا ہے؛ ہر ٹکڑے پر سوالیہ نشان ہے۔",
+    piece_text="?", times=hours(3), total_text="150km"),
+  "s3_rule": road(
+    36 * 3, 3,
+    "At 36 km/h a car goes 36 km in each hour: a road cut into 3 pieces of 36 km, marked 1h, 2h and 3h above, 108 km in all.",
+    "36 کلومیٹر فی گھنٹہ کی رفتار سے گاڑی ہر گھنٹے میں 36 کلومیٹر جاتی ہے: سڑک 36 کلومیٹر کے 3 ٹکڑوں میں بٹی ہوئی، اوپر 1h، 2h اور 3h، کل 108 کلومیٹر۔",
+    piece_text="36km", times=hours(3), total_text=f"{36 * 3}km"),
+  "s4_distance": road(
+    S4, 4,
+    "A road cut into 4 equal pieces of 60 km, marked 1h, 2h, 3h and 4h above. The bracket under the whole road has a question mark.",
+    "سڑک 60 کلومیٹر کے 4 برابر ٹکڑوں میں بٹی ہوئی، اوپر 1h، 2h، 3h اور 4h۔ پوری سڑک کے نیچے قوس پر سوالیہ نشان ہے۔",
+    piece_text="60km", times=hours(4), total_text="?"),
+  "s5_time": road(
+    300, 300 // 75,
+    "A road 300 km long, marked with a bracket under it. Only the first piece is marked: 75 km, gone in 1h. How many such pieces fit in the road?",
+    "300 کلومیٹر لمبی سڑک، نیچے قوس کے ساتھ۔ صرف پہلا ٹکڑا دکھایا گیا ہے: 75 کلومیٹر، 1h میں۔ سڑک میں ایسے کتنے ٹکڑے آتے ہیں؟",
+    piece_text=["75km"], times=["1h"], total_text="300km", shown=1),
+  "r_distance": road(
+    R1, 2,
+    "A road cut into 2 equal pieces of 45 km, marked 1h and 2h above. The bracket under the whole road has a question mark.",
+    "سڑک 45 کلومیٹر کے 2 برابر ٹکڑوں میں بٹی ہوئی، اوپر 1h اور 2h۔ پوری سڑک کے نیچے قوس پر سوالیہ نشان ہے۔",
+    piece_text="45km", times=hours(2), total_text="?"),
+})
 write(lesson)

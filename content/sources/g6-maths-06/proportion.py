@@ -227,4 +227,48 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, double_line, two_flags
+
+SMALL_FLAG = {"w": 40, "l": 60, "grid": (FLAG_W, FLAG_L), "w_text": str(FLAG_W), "l_text": str(FLAG_L)}
+assert SMALL_FLAG["w"] * FLAG_L == SMALL_FLAG["l"] * FLAG_W
+
+attach(lesson, {
+  "s1_hook": two_flags(
+    SMALL_FLAG, {"w": 100, "l": 150, "w_text": "20cm", "l_text": "?"},
+    "Two flags of the same shape. The small one is cut into 2 rows of 3 equal squares: 2 wide and 3 long. The big school flag is 20 cm wide; its length is marked with a question mark.",
+    "ایک ہی شکل کے دو جھنڈے۔ چھوٹا جھنڈا 3، 3 برابر مربعوں کی 2 قطاروں میں بٹا ہے: چوڑائی 2 اور لمبائی 3۔ سکول کا بڑا جھنڈا 20 سینٹی میٹر چوڑا ہے؛ اس کی لمبائی پر سوالیہ نشان ہے۔"),
+  "s3_see_it": two_flags(
+    SMALL_FLAG, {"w": 100, "l": 150, "grid": (FLAG_W, FLAG_L), "w_text": "20cm", "l_text": "30cm"},
+    "Two flags of the same shape, each cut into 2 rows of 3 equal squares. The small one is 2 wide and 3 long. The big school flag is 20 cm wide and 30 cm long, each square 10 cm: 2 : 3 = 20 : 30.",
+    "ایک ہی شکل کے دو جھنڈے، ہر ایک 3، 3 برابر مربعوں کی 2 قطاروں میں بٹا۔ چھوٹا 2 چوڑا اور 3 لمبا ہے۔ سکول کا بڑا جھنڈا 20 سینٹی میٹر چوڑا اور 30 سینٹی میٹر لمبا ہے، ہر مربع 10 سینٹی میٹر: 2 : 3 = 20 : 30"),
+  "s6_missing_explain": double_line(
+    3, 5, 12 // 3, {1: ("3", "5"), 12 // 3: ("12", str(S6))},
+    f"A double number line. The top line has 3 and 12; the bottom line has 5 and {S6} under them. An arrow marked ×4 jumps from the first pair to the second.",
+    f"دوہری عددی لکیر۔ اوپر کی لکیر پر 3 اور 12 ہیں؛ نیچے کی لکیر پر ان کے نیچے 5 اور {S6} ہیں۔ ×4 لکھا تیر پہلے جوڑے سے دوسرے جوڑے تک جاتا ہے۔",
+    arrows=[(1, 12 // 3, "×4")]),
+  "s7_missing": double_line(
+    4, 7, 12 // 4, {1: ("4", "7"), 12 // 4: ("12", "?")},
+    "A double number line for 4 : 7 :: 12 : ?. The top line has 4 and 12; the bottom line has 7 under the 4 and a question mark under the 12. An arrow marked ×3 jumps from 4 to 12.",
+    "4 : 7 :: 12 : ? کی دوہری عددی لکیر۔ اوپر کی لکیر پر 4 اور 12 ہیں؛ نیچے کی لکیر پر 4 کے نیچے 7 اور 12 کے نیچے سوالیہ نشان ہے۔ ×3 لکھا تیر 4 سے 12 تک جاتا ہے۔",
+    arrows=[(1, 12 // 4, "×3")]),
+  "s8_flag": two_flags(
+    {"w": 40, "l": 60, "w_text": str(FLAG_W), "l_text": str(FLAG_L)}, {"w": 100, "l": 150, "w_text": "40cm", "l_text": "?"},
+    "Two flags of the same shape. The small one is 2 wide and 3 long. The big one is 40 cm wide; its length is marked with a question mark.",
+    "ایک ہی شکل کے دو جھنڈے۔ چھوٹا 2 چوڑا اور 3 لمبا ہے۔ بڑا 40 سینٹی میٹر چوڑا ہے؛ اس کی لمبائی پر سوالیہ نشان ہے۔"),
+  "s11_missing_first": double_line(
+    2, 3, 5, {2: ("?", "6"), 5: ("10", "15")},
+    "A double number line for ? : 6 :: 10 : 15, with equal steps. The bottom line has 6 and 15; above them the top line has a question mark and 10.",
+    "? : 6 :: 10 : 15 کی دوہری عددی لکیر، برابر قدموں کے ساتھ۔ نیچے کی لکیر پر 6 اور 15 ہیں؛ ان کے اوپر، اوپر کی لکیر پر سوالیہ نشان اور 10 ہیں۔"),
+  "qb_missing": double_line(
+    5, 8, 15 // 5, {1: ("5", "8"), 15 // 5: ("15", "?")},
+    "A double number line for 5 : 8 :: 15 : ?. The top line has 5 and 15; the bottom line has 8 under the 5 and a question mark under the 15. An arrow marked ×3 jumps from 5 to 15.",
+    "5 : 8 :: 15 : ? کی دوہری عددی لکیر۔ اوپر کی لکیر پر 5 اور 15 ہیں؛ نیچے کی لکیر پر 5 کے نیچے 8 اور 15 کے نیچے سوالیہ نشان ہے۔ ×3 لکھا تیر 5 سے 15 تک جاتا ہے۔",
+    arrows=[(1, 15 // 5, "×3")]),
+  "r_missing": double_line(
+    3, 2, 15 // 3, {1: ("3", "2"), 15 // 3: ("15", "?")},
+    "A double number line for 3 : 2 :: 15 : ?. The top line has 3 and 15; the bottom line has 2 under the 3 and a question mark under the 15. An arrow marked ×5 jumps from 3 to 15.",
+    "3 : 2 :: 15 : ? کی دوہری عددی لکیر۔ اوپر کی لکیر پر 3 اور 15 ہیں؛ نیچے کی لکیر پر 3 کے نیچے 2 اور 15 کے نیچے سوالیہ نشان ہے۔ ×5 لکھا تیر 3 سے 15 تک جاتا ہے۔",
+    arrows=[(1, 15 // 3, "×5")]),
+})
 write(lesson)

@@ -290,4 +290,40 @@ lesson = {
  "review": REVIEW,
 }
 assert 12 + (10 - 4) == 18 and 540 + 2 == 542 and 9 + 6 == 15
+# ---------- pictures ----------
+from figs import attach, bars, double_line, part_whole, shadows
+
+attach(lesson, {
+  "s5_rotis": double_line(
+    1, ROTIS_EACH, 10, {4: ("4", "12"), 10: ("10", "?")},
+    "A double number line in steps of one guest. On top, 4 guests and 10 guests; below, 12 rotis under the 4 and a question mark under the 10.",
+    "ایک ایک مہمان کے قدموں والی دوہری عددی لکیر۔ اوپر 4 مہمان اور 10 مہمان؛ نیچے 4 کے نیچے 12 روٹیاں اور 10 کے نیچے سوالیہ نشان۔"),
+  "s6_profit": bars(
+    [(3, None, "?", True), (2, None, None, False)],
+    "A bar model: Zahid's strip of 3 equal boxes, shaded and marked with a question mark, and Asif's strip of 2 equal boxes, joined by a bracket marked Rs 1500.",
+    "پٹی ماڈل: زاہد کی 3 برابر خانوں کی پٹی، بھری ہوئی اور سوالیہ نشان کے ساتھ، اور آصف کی 2 برابر خانوں کی پٹی، جنہیں Rs 1500 لکھی قوس ملاتی ہے۔",
+    total="Rs1500"),
+  "s7_school": part_whole(
+    [96, BOYS_7], ["96", "?"], "240",
+    "A strip for all 240 students, with a bracket marked 240 over it. The shaded part is the 96 girls; the other part, the boys, has a question mark.",
+    "تمام 240 طلبہ کی پٹی، اس کے اوپر 240 لکھی قوس۔ بھرا ہوا حصہ 96 لڑکیاں ہیں؛ دوسرا حصہ، یعنی لڑکے، سوالیہ نشان کے ساتھ ہے۔"),
+  "s8_tree": shadows(
+    5, 3, 12,
+    "A 5 m pole with a 3 m shadow, and a tree with a 12 m shadow, both on flat ground. Dashed sun rays go from the top of each to the end of its shadow. The tree's height has a question mark.",
+    "5 میٹر کا کھمبا جس کا سایہ 3 میٹر ہے، اور ایک درخت جس کا سایہ 12 میٹر ہے، دونوں ہموار زمین پر۔ ڈیش والی دھوپ کی لکیریں ہر ایک کی چوٹی سے اس کے سائے کے سرے تک جاتی ہیں۔ درخت کی اونچائی پر سوالیہ نشان ہے۔"),
+  "qb_kites": double_line(
+    1, 12 // 3, 8, {3: ("3", "12"), 8: ("8", "?")},
+    "A double number line in steps of one kite. On top, 3 kites and 8 kites; below, 12 m of string under the 3 and a question mark under the 8.",
+    "ایک ایک پتنگ کے قدموں والی دوہری عددی لکیر۔ اوپر 3 پتنگیں اور 8 پتنگیں؛ نیچے 3 کے نیچے 12 میٹر ڈور اور 8 کے نیچے سوالیہ نشان۔",
+    tags=("", "m")),
+  "r_paint": bars(
+    [(2, None, "?", True), (5, None, "15", False)],
+    "A bar model: the blue paint is a strip of 2 equal boxes, shaded and marked with a question mark; the white paint is a strip of 5 boxes of the same size, marked 15 tins.",
+    "پٹی ماڈل: نیلا رنگ 2 برابر خانوں کی پٹی ہے، بھری ہوئی اور سوالیہ نشان کے ساتھ؛ سفید رنگ اسی ناپ کے 5 خانوں کی پٹی ہے، جس پر 15 ڈبے لکھا ہے۔"),
+  "r_proportion": double_line(
+    2, 5, 14 // 2, {1: ("2", "5"), 14 // 2: ("14", "?")},
+    "A double number line for the map: cm on top, km below. 2 cm is over 5 km; 14 cm is over a question mark. An arrow marked ×7 jumps from 2 to 14.",
+    "نقشے کی دوہری عددی لکیر: اوپر سینٹی میٹر، نیچے کلومیٹر۔ 2 سینٹی میٹر 5 کلومیٹر کے اوپر ہے؛ 14 سینٹی میٹر سوالیہ نشان کے اوپر ہے۔ ×7 لکھا تیر 2 سے 14 تک جاتا ہے۔",
+    tags=("cm", "km"), arrows=[(1, 14 // 2, "×7")]),
+})
 write(lesson)

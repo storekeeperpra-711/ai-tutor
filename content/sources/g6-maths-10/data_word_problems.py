@@ -2,6 +2,7 @@ from collections import Counter
 
 from common import (T, opt, say, wrong, number_question, tally, table_text, write,
                     REF, REVIEW, DH_TABLES, DH_BAR_GRAPHS, DH_MEAN, DH_MODE_RANGE, DH_WORD_PROBLEMS)
+from figs import bar_graph, squares_bar, tally_figure, height_bars, attach
 
 SKILL = DH_WORD_PROBLEMS
 
@@ -295,4 +296,49 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+DAYS = [en[:2] for (en, _), _ in SAMOSAS]
+assert DAYS == ["Mo", "Tu", "We", "Th", "Fr"]
+
+
+def samosa_graph():
+    return bar_graph(SOLD, DAYS,
+        "A bar graph of samosas sold, with a scale from 0 to 50 in 10s: Mo (Monday) 40, Tu (Tuesday) 35, We (Wednesday) 50, Th (Thursday) 45, Fr (Friday) 30.",
+        "بکنے والے سموسوں کا بار گراف، پیمانہ 0 سے 50 تک، 10 کے وقفے سے: Mo (پیر) 40، Tu (منگل) 35، We (بدھ) 50، Th (جمعرات) 45، Fr (جمعہ) 30۔",
+        top=50, step=10)
+
+
+def one_bar(n, each, cat, what_en, what_ur):
+    return squares_bar(n, each, cat,
+                       f"One bar of {what_en} made of {n} squares stacked up. A key beside it shows one square = {each}.",
+                       f"{what_ur} کا ایک ستون جو {n} خانوں سے بنا ہے۔ ساتھ کی کلید دکھاتی ہے: ایک خانہ = {each}۔")
+
+
+WEEKS = [40, 60, 45]
+assert S8 + sum(WEEKS) == 50 * 4
+attach(lesson, {
+    "s4_samosas": samosa_graph(),
+    "s5_range": samosa_graph(),
+    "s6_wheat": one_bar(7, 10, "W", "wheat", "گندم"),
+    "s7_runs": bar_graph([30] * 5, ["1", "2", "3", "4", "5"],
+        "Five equal bars, one for each match 1 to 5, each at the mean, 30 runs, with 30 written above each bar.",
+        "پانچ برابر ستون، ہر میچ 1 سے 5 کا ایک، ہر ایک اوسط یعنی 30 رنز پر، ہر ستون کے اوپر 30 لکھا ہے۔",
+        top=30, step=10, numbers=False, bar_text=["30"] * 5, height=130),
+    "s8_savings": bar_graph(WEEKS + [0], ["1", "2", "3", "4"],
+        "Bars for weeks 1 to 4 of Sana's savings: 40, 60 and 45 rupees, with the value above each. Week 4 has no bar, only a question mark. A dashed line across the graph shows the mean, 50.",
+        "ثنا کی بچت کے ہفتوں 1 سے 4 کے ستون: 40، 60 اور 45 روپے، ہر ایک کے اوپر اس کی قیمت۔ ہفتہ 4 کا کوئی ستون نہیں، صرف سوالیہ نشان۔ گراف کے آر پار ڈیش والی لکیر اوسط، 50، دکھاتی ہے۔",
+        top=60, step=10, numbers=False, bar_text=["40", "60", "45", None], missing=3, mean_line=50, mean_text="50"),
+    "s9_find_error": bar_graph([10, 0, 20], ["1", "2", "3"],
+        "Bars for cakes sold on days 1, 2 and 3: 10, 0 and 20, with the value above each. Day 2 has no bar, only 0 written on the line, but it is still one of the 3 days.",
+        "دن 1، 2 اور 3 کو بکنے والے کیکوں کے ستون: 10، 0 اور 20، ہر ایک کے اوپر اس کی قیمت۔ دن 2 کا کوئی ستون نہیں، صرف لکیر پر 0 لکھا ہے، لیکن یہ بھی 3 دنوں میں سے ایک دن ہے۔",
+        top=20, step=5, numbers=False, bar_text=["10", "0", "20"], height=130),
+    "u1_tally": tally_figure(U1, "Tally marks: 3 groups of five, each four upright lines with a fifth line across them, then 4 single lines.",
+                             "ٹیلی کے نشان: پانچ کے 3 گروہ، ہر ایک میں چار کھڑی لکیریں اور ان کے اوپر پانچویں ترچھی لکیر، پھر 4 اکیلی لکیریں۔"),
+    "u2_bar": one_bar(8, 5, "B", "books", "کتابوں"),
+    "u5_heights": height_bars(list(U5_DATA),
+        "Bars for the heights of four children, in the order given, with the height in cm above each: 120, 135, 128, 142.",
+        "چار بچوں کے قد کے ستون، دی گئی ترتیب میں، ہر ایک کے اوپر قد سینٹی میٹر میں: 120، 135، 128، 142۔"),
+    "qb_find_error": one_bar(6, 20, "P", "people", "لوگوں"),
+    "r_scale": one_bar(6, 20, "P", "people", "لوگوں"),
+})
 write(lesson)

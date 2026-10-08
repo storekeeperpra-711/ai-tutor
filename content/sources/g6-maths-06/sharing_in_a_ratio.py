@@ -244,4 +244,52 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, bars
+
+
+def two_shares(a, b, total_text, alt_en, alt_ur, *, rights=(None, "?"), inside=None):
+    """Two strips of equal boxes, a and b of them, joined by a bracket
+    marked total_text; the strip marked "?" is shaded."""
+    rows = [(a, inside, rights[0], rights[0] == "?"), (b, inside, rights[1], rights[1] == "?")]
+    return bars(rows, alt_en, alt_ur, total=total_text)
+
+
+attach(lesson, {
+  "s1_hook": two_shares(
+    2, 3, f"Rs{TOTAL}",
+    f"A bar model: Hamid's strip of 2 equal boxes and Saad's strip of 3 equal boxes, joined by a bracket marked Rs {TOTAL}.",
+    f"پٹی ماڈل: حامد کی 2 برابر خانوں کی پٹی اور سعد کی 3 برابر خانوں کی پٹی، جنہیں Rs {TOTAL} لکھی قوس ملاتی ہے۔",
+    rights=(None, None)),
+  "s4_method": two_shares(
+    2, 3, f"Rs{TOTAL}",
+    f"A bar model: Hamid's 2 boxes and Saad's 3 boxes, each box worth {ONE_PART}, joined by a bracket marked Rs {TOTAL}. Hamid's strip ends with {HAMID} and Saad's with {SAAD}.",
+    f"پٹی ماڈل: حامد کے 2 خانے اور سعد کے 3 خانے، ہر خانہ {ONE_PART} کا، جنہیں Rs {TOTAL} لکھی قوس ملاتی ہے۔ حامد کی پٹی کے آخر میں {HAMID} اور سعد کی پٹی کے آخر میں {SAAD} لکھا ہے۔",
+    rights=(str(HAMID), str(SAAD)), inside=str(ONE_PART)),
+  "s6_share": two_shares(
+    3, 4, "Rs700",
+    "A bar model: Fatima's strip of 3 equal boxes and Zainab's strip of 4 equal boxes, joined by a bracket marked Rs 700. Zainab's strip is shaded and marked with a question mark.",
+    "پٹی ماڈل: فاطمہ کی 3 برابر خانوں کی پٹی اور زینب کی 4 برابر خانوں کی پٹی، جنہیں Rs 700 لکھی قوس ملاتی ہے۔ زینب کی پٹی بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+  "s7_marbles": two_shares(
+    1, 2, "36",
+    "A bar model: Amna's strip of 1 box and Bilal's strip of 2 equal boxes, joined by a bracket marked 36 marbles. Bilal's strip is shaded and marked with a question mark.",
+    "پٹی ماڈل: آمنہ کی 1 خانے کی پٹی اور بلال کی 2 برابر خانوں کی پٹی، جنہیں 36 کنچے لکھی قوس ملاتی ہے۔ بلال کی پٹی بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+  "s9_class": two_shares(
+    4, 5, "36",
+    "A bar model: the girls' strip of 4 equal boxes and the boys' strip of 5 equal boxes, joined by a bracket marked 36 children. The girls' strip is shaded and marked with a question mark.",
+    "پٹی ماڈل: لڑکیوں کی 4 برابر خانوں کی پٹی اور لڑکوں کی 5 برابر خانوں کی پٹی، جنہیں 36 بچے لکھی قوس ملاتی ہے۔ لڑکیوں کی پٹی بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔",
+    rights=("?", None)),
+  "s11_one_share_known": bars(
+    [(2, None, "80", False), (3, None, "?", True)],
+    "A bar model: Hamid's strip of 2 equal boxes marked Rs 80, and Saad's strip of 3 boxes of the same size, shaded and marked with a question mark. There is no total.",
+    "پٹی ماڈل: حامد کی 2 برابر خانوں کی پٹی جس پر Rs 80 لکھا ہے، اور سعد کی اسی ناپ کے 3 خانوں کی پٹی، بھری ہوئی اور سوالیہ نشان کے ساتھ۔ کل رقم نہیں دی گئی۔"),
+  "qb_share": two_shares(
+    4, 5, "45",
+    "A bar model: Asad's strip of 4 equal boxes and Hina's strip of 5 equal boxes, joined by a bracket marked 45 apples. Hina's strip is shaded and marked with a question mark.",
+    "پٹی ماڈل: اسد کی 4 برابر خانوں کی پٹی اور حنا کی 5 برابر خانوں کی پٹی، جنہیں 45 سیب لکھی قوس ملاتی ہے۔ حنا کی پٹی بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+  "r_share": two_shares(
+    1, 3, "Rs60",
+    "A bar model: Ahmed's strip of 1 box and Kiran's strip of 3 equal boxes, joined by a bracket marked Rs 60. Kiran's strip is shaded and marked with a question mark.",
+    "پٹی ماڈل: احمد کی 1 خانے کی پٹی اور کرن کی 3 برابر خانوں کی پٹی، جنہیں Rs 60 لکھی قوس ملاتی ہے۔ کرن کی پٹی بھری ہوئی ہے اور اس پر سوالیہ نشان ہے۔"),
+})
 write(lesson)

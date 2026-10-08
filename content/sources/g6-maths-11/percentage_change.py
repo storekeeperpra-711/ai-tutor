@@ -1,3 +1,4 @@
+from figs import attach, bars, scale_bar
 from common import (T, opt, say, wrong, number_question, write, percent_of,
                     as_percent, REVIEW, PC_OF_AMOUNT, PC_FIND)
 
@@ -245,4 +246,23 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+
+# Pictures: before and after bars drawn to the same scale.
+attach(lesson, {
+ "s2_foundation": scale_bar(0.2, [(0, "0"), (0.2, "?"), (1, "450")], [(0, "0%"), (0.2, "20%"), (1, "100%")],
+   "A bar for 450 cut into 10 equal parts, with the first 2 parts shaded. Above the bar: 0, a question mark at the end of the shading, and 450 at the end. Below the bar: 0%, 20% under the question mark, and 100% under 450.",
+   "450 کے لیے ایک پٹی جو 10 برابر حصوں میں بٹی ہے، پہلے 2 حصے رنگے ہیں۔ پٹی کے اوپر: 0، رنگ کے آخر میں سوالیہ نشان، اور آخر میں 450۔ پٹی کے نیچے: 0%، سوالیہ نشان کے نیچے 20%، اور 450 کے نیچے 100%۔",
+   pieces=10),
+ "s3_rule": bars(800, S4, unit="Rs", ask=None),
+ "s4_increase": bars(800, S4, unit="Rs", ask="new"),
+ "s5_sale": bars(1200, S5, unit="Rs", ask="new", quarters=True),
+ "s6_students": bars(500, 550),
+ "s7_fare": bars(40, 50, unit="Rs"),
+ "s8_decrease": bars(25, 20, unit="kg"),
+ "s9_find_error": bars(200, 250, unit="Rs"),
+ "s11_village": bars(2000, S11, ask="new"),
+ "qb_apply": bars(600, QB, unit="Rs", ask="new"),
+ "r_change": bars(80, 60),
+})
 write(lesson)

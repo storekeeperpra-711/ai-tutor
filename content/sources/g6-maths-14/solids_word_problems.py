@@ -39,6 +39,60 @@ assert R1 == 24 and 4 + 3 + 2 == 9
 R2 = cuboid_surface(3, 3, 3)
 assert R2 == 54 and cuboid_volume(3, 3, 3) == 27
 
+# ---------- figures ----------
+from figs import figure, row, box_items, box_fig, box_alt, cube_fig, water, with_figures
+
+WATER_EN = " Water is shown inside, seen through the front."
+WATER_UR = " اندر پانی دکھایا گیا ہے جو سامنے سے نظر آتا ہے۔"
+
+
+def tank_fig(l, d, h):
+    items, b = box_items(l, d, h, max_w=200, max_h=130)
+    items.insert(1, water(b))
+    en, ur = box_alt(l, d, h, "A water tank", "پانی کی ٹینکی")
+    return figure(en + WATER_EN, ur + WATER_UR, items)
+
+
+def hook_fig():
+    tank, tb = box_items(5, 3, 4, labels=False, max_w=120, max_h=100)
+    tank.insert(1, water(tb))
+    box, _ = box_items(4, 3, 2, labels=False, max_w=110, max_h=100)
+    return figure(
+        "Left: a water tank drawn in 3-D, with water inside seen through the front; filling it is about the space inside, the volume. "
+        "Right: a closed box drawn in 3-D with its top and side shaded; painting it is about its outside faces, the surface area. Hidden edges are dashed.",
+        "بائیں: پانی کی ٹینکی تین رخی (3-D) شکل میں، اندر پانی سامنے سے نظر آتا ہے؛ اسے بھرنا اندر کی جگہ یعنی حجم کا سوال ہے۔ "
+        "دائیں: ایک بند ڈبہ تین رخی (3-D) شکل میں، اوپر اور پہلو پر رنگ؛ اسے رنگنا باہر کی سطحوں یعنی سطحی رقبے کا سوال ہے۔ چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔",
+        row([tank, box], gap=40))
+
+
+def open_box_fig(l, d, h, labels):
+    items, _ = box_items(l, d, h, labels=labels, open_top=True, max_w=200, max_h=130)
+    size_en = f", {l} cm long, {d} cm wide and {h} cm high (labelled on its edges)" if labels else ""
+    size_ur = f"، {l} سینٹی میٹر لمبا، {d} سینٹی میٹر چوڑا اور {h} سینٹی میٹر اونچا (کناروں پر لکھا ہے)" if labels else ""
+    return figure(
+        f"An open box with no lid, drawn in 3-D{size_en}. Its top is open, so you can see inside to the back corner. "
+        f"It has only 5 faces: the bottom, the front, the back and the two sides. The front and right side can be seen; the hidden edges along the bottom at the back are dashed.",
+        f"بغیر ڈھکن کا کھلا ڈبہ، تین رخی (3-D) شکل میں{size_ur}۔ اس کا اوپر کھلا ہے، تو اندر پیچھے کا کونا نظر آتا ہے۔ "
+        f"اس کی صرف 5 سطحیں ہیں: نیچے، سامنے، پیچھے اور دونوں پہلو۔ سامنے اور دایاں رخ نظر آتے ہیں؛ پیچھے نیچے کے چھپے ہوئے کنارے ڈیش والی لکیروں سے ہیں۔",
+        items)
+
+
+SMALL = 2  # the side of the small cubes in s7
+FIGS = {
+    "s1_hook": hook_fig(),
+    "s3_rule": open_box_fig(5, 4, 3, labels=False),
+    "s4_toy_box": box_fig(20, 10, 5, "A toy box", "کھلونوں کا ڈبہ"),
+    "s5_tank": tank_fig(80, 50, 50),
+    "s7_small_cubes": box_fig(10, 6, 4, grid=SMALL),
+    "s8_open_box": open_box_fig(30, 30, 30, labels=True),
+    "u2_volume": box_fig(7, 4, 3, max_s=32),
+    "u4_surface": box_fig(5, 4, 2, max_s=36),
+    "qb_apply": box_fig(30, 20, 10, "A box of rice", "چاولوں کا ڈبہ"),
+    "r_cubes": box_fig(4, 3, 2, grid=1, max_s=40),
+    "r_paint": cube_fig(3, "A wooden cube", "لکڑی کا مکعب", max_w=150, max_h=130),
+}
+
+
 lesson = {
  "id": "g6-maths-14-solids-word-problems",
  "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
@@ -274,4 +328,4 @@ lesson = {
  ],
  "review": REVIEW,
 }
-write(lesson)
+write(with_figures(lesson, FIGS))
