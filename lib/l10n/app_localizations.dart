@@ -2552,6 +2552,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You earn badges for effort: finishing a lesson, trying again, explaining your thinking and coming back each day.'**
   String get badgesIntro;
+
+  /// Lessons tab: heading of the course progress card.
+  ///
+  /// In en, this message translates to:
+  /// **'My course'**
+  String get courseTitle;
+
+  /// Lessons tab: share of the course's lessons finished.
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% done'**
+  String coursePercent(int percent);
+
+  /// Lessons tab: lessons finished out of all lessons in the course.
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} lessons done'**
+  String courseLessonsDone(int done, int total);
+
+  /// Lessons tab: why a finished lesson can still show Practising.
+  ///
+  /// In en, this message translates to:
+  /// **'Done means you finished the lesson. The skill dots fill up when you get review questions right on later days.'**
+  String get courseDoneMeans;
+
+  /// Course list: lesson not opened yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Not started'**
+  String get lessonNotStarted;
+
+  /// Course list: lesson started, next step.
+  ///
+  /// In en, this message translates to:
+  /// **'Step {step} of {total}'**
+  String lessonAtStep(int step, int total);
+
+  /// Lessons tab: lessons from other classes.
+  ///
+  /// In en, this message translates to:
+  /// **'Other lessons'**
+  String get otherLessons;
+
+  /// Lesson tile: the lesson's skill level, like Skill: Practising.
+  ///
+  /// In en, this message translates to:
+  /// **'Skill: {level}'**
+  String skillLevel(String level);
 }
 
 class _AppLocalizationsDelegate

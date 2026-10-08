@@ -1466,4 +1466,37 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get badgesIntro =>
       'You earn badges for effort: finishing a lesson, trying again, explaining your thinking and coming back each day.';
+
+  @override
+  String get courseTitle => 'My course';
+
+  @override
+  String coursePercent(int percent) {
+    return '$percent% done';
+  }
+
+  @override
+  String courseLessonsDone(int done, int total) {
+    return '$done of $total lessons done';
+  }
+
+  @override
+  String get courseDoneMeans =>
+      'Done means you finished the lesson. The skill dots fill up when you get review questions right on later days.';
+
+  @override
+  String get lessonNotStarted => 'Not started';
+
+  @override
+  String lessonAtStep(int step, int total) {
+    return 'Step $step of $total';
+  }
+
+  @override
+  String get otherLessons => 'Other lessons';
+
+  @override
+  String skillLevel(String level) {
+    return 'Skill: $level';
+  }
 }

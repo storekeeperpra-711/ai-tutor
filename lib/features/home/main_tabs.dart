@@ -6,6 +6,7 @@ import '../../app/theme/app_theme.dart';
 import '../../l10n/app_localizations.dart';
 import '../../services/local_db.dart';
 import '../effort/badge_shelf.dart';
+import 'course_progress.dart';
 import 'home_parts.dart';
 import 'home_style.dart';
 
@@ -75,7 +76,7 @@ class HomeBottomBar extends StatelessWidget {
   }
 }
 
-/// Every lesson, with the subject buttons.
+/// The course: how much is done, and every unit's lessons.
 class LessonsTab extends ConsumerWidget {
   const LessonsTab({super.key, required this.student});
 
@@ -90,7 +91,7 @@ class LessonsTab extends ConsumerWidget {
       children: [
         EnterAnimation(child: HomeHeader(student: student)),
         const SizedBox(height: 16),
-        LessonList(student: student, lessons: lessons),
+        CourseProgress(student: student, lessons: lessons),
       ],
     );
   }
