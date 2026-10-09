@@ -34,7 +34,8 @@ class CourseProgress extends ConsumerWidget {
         ? const <Lesson>[]
         : lessons.where((l) => l.grade != student.grade).toList();
     final done = course.where((l) => progress[l.id]?.completed == true).length;
-    final units = courseUnits(course);
+    final domains = courseDomains(course);
+    final units = [for (final d in domains) ...d.units];
     // Open the first unit that isn't finished, so the next lesson shows.
     final open = units
         .where((u) => u.lessons.any((l) => progress[l.id]?.completed != true))
@@ -45,8 +46,8 @@ class CourseProgress extends ConsumerWidget {
       children: [
         _CourseCard(done: done, total: course.length),
         const SizedBox(height: 16),
-        for (final unit in units)
-          _UnitCard(unit: unit, progress: progress, open: unit == open),
+        for (final domain in domains)
+          ..._domain(context, domain, progress, open),
         if (others.isNotEmpty) ...[
           const SizedBox(height: 8),
           Text(
@@ -54,12 +55,32 @@ class CourseProgress extends ConsumerWidget {
             style: Theme.of(context).textTheme.titleLarge,
           ),
           const SizedBox(height: 8),
-          for (final unit in courseUnits(others))
-            _UnitCard(unit: unit, progress: progress, open: false),
+          for (final domain in courseDomains(others))
+            ..._domain(context, domain, progress, null),
         ],
       ],
     );
   }
+
+  /// A domain's heading (like "Numbers and Operations"), then its units.
+  List<Widget> _domain(
+    BuildContext context,
+    CourseDomain domain,
+    Map<String, LessonProgress> progress,
+    CourseUnit? open,
+  ) => [
+    if (domain.title case final title?)
+      Padding(
+        padding: const EdgeInsets.only(top: 8, bottom: 8),
+        child: LessonText(
+          title,
+          key: Key('domain-${domain.units.first.id}'),
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+      ),
+    for (final unit in domain.units)
+      _UnitCard(unit: unit, progress: progress, open: unit == open),
+  ];
 }
 
 /// The share of the course done, as a big number and a bar.
