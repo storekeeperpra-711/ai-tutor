@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:ai_tutor/lessons/hidden_units.dart';
 import 'package:ai_tutor/lessons/units.dart';
 import 'package:ai_tutor/models/lesson.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -13,21 +14,64 @@ void main() {
           jsonDecode(f.readAsStringSync()) as Map<String, dynamic>,
         ),
   ];
-  final units = courseUnits(lessons);
+  final domains = courseDomains(lessons);
+  final units = [for (final d in domains) ...d.units];
 
   test('every lesson is in exactly one unit', () {
     final ids = [for (final u in units) ...u.lessons.map((l) => l.id)];
     expect(ids.length, lessons.length);
     expect(ids.toSet(), lessons.map((l) => l.id).toSet());
-    for (final u in units) {
-      expect(u.lessons.every((l) => unitIdOf(l.id) == u.id), isTrue);
+  });
+
+  test('the book lists real lessons, each once', () {
+    final ids = lessons.map((l) => l.id).toSet();
+    final listed = [
+      for (final d in grade6Book)
+        for (final c in d.chapters) ...c.lessons,
+    ];
+    expect(listed.toSet().length, listed.length);
+    for (final id in listed) {
+      expect(ids, contains(id), reason: id);
+      expect(isHiddenLesson(id), isFalse, reason: id);
     }
   });
 
-  test('every unit has a name in both languages', () {
-    for (final u in units) {
-      expect(unitTitles.containsKey(u.id), isTrue, reason: u.id);
+  test('every shown Grade 6 lesson is in a chapter of the book', () {
+    final listed = {
+      for (final d in grade6Book)
+        for (final c in d.chapters) ...c.lessons,
+    };
+    for (final l in lessons.where((l) => l.grade == 6)) {
+      if (isHiddenLesson(l.id)) continue;
+      expect(listed, contains(l.id), reason: l.id);
     }
+  });
+
+  test('Grade 6 follows the book contents', () {
+    expect(domains.take(5).map((d) => d.title!.en), [
+      '1. Numbers and Operations',
+      '2. Algebra',
+      '3. Measurement',
+      '4. Geometry',
+      '5. Statistics and Probability',
+    ]);
+    expect(domains.first.units.map((u) => u.title.en), [
+      'Factors and Multiples',
+      'Integers',
+      'Laws of Integers',
+      'Rate, Ratio and Percentage',
+      'Sets',
+    ]);
+    expect(units.where((u) => u.id.startsWith('g6-book-')).length, 12);
+    // The off-book units come after the book.
+    expect(domains[5].title, morePractice);
+    expect(domains[5].units.map((u) => u.id), [
+      'g6-maths-02',
+      'g6-maths-03',
+      'g6-maths-12',
+      'g6-maths-15',
+    ]);
+    expect(domains.last.title, isNull);
   });
 
   test('the lesson order lists real lessons, each once', () {
@@ -41,29 +85,14 @@ void main() {
     }
   });
 
-  test('Grade 6 follows the book, with each unit test last', () {
-    final g6 = units.where((u) => u.id.startsWith('g6-')).toList();
-    expect(g6.take(3).map((u) => u.id), [
-      'g6-maths-05',
-      'g6-maths-04',
-      'g6-maths-13',
-    ]);
-    final sets = g6.firstWhere((u) => u.id == 'g6-maths-01');
-    expect(sets.lessons.first.id, 'g6-maths-01-what-is-a-set');
-    expect(sets.lessons.last.id, 'g6-maths-01-set-word-problems');
-    final ratio = g6.firstWhere((u) => u.id == 'g6-maths-06');
-    expect(ratio.lessons.last.id, 'g6-maths-06-ratio-word-problems');
-  });
-
   test('a lesson comes after the lessons teaching what it needs', () {
     for (final unit in units) {
-      final ordered = teachingOrder(unit.lessons.reversed.toList());
       final taught = <String>{};
       final inUnit = {for (final l in unit.lessons) ...l.skills};
-      for (final l in ordered) {
+      for (final l in unit.lessons) {
         for (final p in l.prerequisites) {
           if (inUnit.contains(p.skill) && !l.skills.contains(p.skill)) {
-            expect(taught, contains(p.skill), reason: l.id);
+            expect(taught, contains(p.skill), reason: '${unit.id}: ${l.id}');
           }
         }
         taught.addAll(l.skills);

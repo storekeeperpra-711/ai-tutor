@@ -29,7 +29,7 @@ void main() {
     expect(find.byKey(const Key('lessons-tab')), findsOneWidget);
     expect(find.byKey(const Key('middle-home')), findsNothing);
     expect(find.byKey(const Key('course-card')), findsOneWidget);
-    expect(find.byKey(const Key('unit-g6-maths-05')), findsOneWidget);
+    expect(find.byKey(const Key('unit-g6-book-01')), findsOneWidget);
 
     await tapKey(tester, 'nav-badges');
     expect(find.byKey(const Key('badges-tab')), findsOneWidget);
