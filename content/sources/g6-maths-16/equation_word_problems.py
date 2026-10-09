@@ -273,4 +273,41 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import attach, step_says, balance, balance_eq, plus_bar, bracket_bar, rate_bar
+
+s2_fig, s2_eq = balance_eq(2, "x", 3, 15, S2)
+s3_fig, s3_eq = rate_bar(20, "k", 50, 210, S5, show=True,
+                         pre=("The rickshaw: Rs 50 to start plus Rs 20 for each km.", "رکشہ: شروع میں 50 روپے اور ہر کلومیٹر کے 20 روپے۔"))
+s4_fig, s4_eq = plus_bar(3, "x", 4, 40, S4, pre=("Father's age: 3 times Ahmed's age x, plus 4, is 40.", "والد کی عمر: احمد کی عمر x کا 3 گنا، جمع 4، برابر 40۔"))
+s5_fig, s5_eq = rate_bar(20, "k", 50, 210, S5, pre=("The rickshaw fare.", "رکشے کا کرایہ۔"))
+s7_fig, s7_eq = balance_eq(4, "x", 6, 54, S7, pre=("Hina's pencils: each box is a box of x pencils and each small circle is one loose pencil.",
+                                                   "حنا کی پنسلیں: ہر ڈبہ x پنسلوں کا ڈبہ ہے اور ہر چھوٹا دائرہ ایک کھلی پنسل ہے۔"))
+s8_fig, s8_eq = bracket_bar(5, "x", 3, 40, S8, pre=("5 children, each with x toffees and 3 lollipops.", "5 بچے، ہر ایک کے پاس x ٹافیاں اور 3 لولی پاپ۔"))
+s9_fig, s9_eq = plus_bar(2, "x", 10, 30, 10)
+u5_fig, u5_eq = rate_bar(25, "d", 100, 275, U5, pre=("The phone package: Rs 100 to start plus Rs 25 for each day.", "فون پیکج: شروع میں 100 روپے اور ہر دن کے 25 روپے۔"))
+qb_fig, qb_eq = plus_bar(3, "x", 150, 600, QB, pre=("3 books at Rs x each and a bag for Rs 150.", "3 کتابیں، ہر ایک x روپے کی، اور 150 روپے کا ایک بستہ۔"))
+r1_fig, r1_eq = plus_bar(2, "x", 5, 31, R1)
+r2_fig, r2_eq = balance_eq(6, "x", 4, 40, R2, pre=("Each box is a pack of x chalks and each small circle is one loose chalk.",
+                                                   "ہر ڈبہ x چاکوں کا پیکٹ ہے اور ہر چھوٹا دائرہ ایک کھلا چاک ہے۔"))
+for sid, eq in (("s2_foundation", s2_eq), ("s3_rule", s3_eq), ("s4_age", s4_eq), ("s5_rickshaw", s5_eq),
+                ("s7_pencils", s7_eq), ("s8_sweets", s8_eq), ("s9_find_error", s9_eq), ("u5_package", u5_eq),
+                ("qb_apply", qb_eq), ("r_twice", "5 more than twice a number is 31"), ("r_packs", r2_eq)):
+    step_says(lesson, sid, eq)
+assert r1_eq == "2x + 5 = 31"
+
+attach(lesson, {
+    "s2_foundation": s2_fig,
+    "s3_rule": s3_fig,
+    "s4_age": s4_fig,
+    "s5_rickshaw": s5_fig,
+    "s7_pencils": s7_fig,
+    "s8_sweets": s8_fig,
+    "s9_find_error": s9_fig,
+    "u5_package": u5_fig,
+    "qb_apply": qb_fig,
+    "r_twice": r1_fig,
+    "r_packs": r2_fig,
+})
 write(lesson)

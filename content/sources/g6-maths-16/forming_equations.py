@@ -205,4 +205,39 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import attach, step_says, balance, balance_eq, bars, Side, plus_bar, minus_bar, two_rows_alt
+
+s2_fig, s2_eq = balance_eq(1, "x", 5, 12, S2)
+S3 = 5 + 12            # the rule's example: 5 less than a number is 12
+assert solves("x − 5 = 12", x=S3)
+s3_fig, s3_eq = minus_bar(1, "x", 5, 12, S3,
+                          pre=("'5 less than a number is 12', x − 5 = 12.", "'ایک عدد سے 5 کم، 12 ہے'، x − 5 = 12۔"))
+s5_fig, s5_eq = plus_bar(1, "x", 9, 20, S5)
+s8_fig, s8_eq = balance_eq(1, "x", 7, 25, S8,
+                           pre=("Ayesha's marbles: the box is the marbles she had at first.", "عائشہ کے کنچے: ڈبہ وہ کنچے ہیں جو اس کے پاس پہلے تھے۔"))
+s11_fig, s11_eq = plus_bar(4, "x", 0, 120, S11, pre=("4 pens, each costing Rs x, together cost Rs 120.", "4 قلم، ہر ایک x روپے کا، مل کر 120 روپے کے ہیں۔"))
+r1_fig, r1_eq = minus_bar(1, "x", 8, 15, R1)
+r2_fig, r2_eq = plus_bar(6, "x", 0, 54, R2)
+for sid, texts in (("s2_foundation", [s2_eq]), ("s3_rule", ["5 less than a number"]), ("s5_solve", [s5_eq]),
+                   ("s8_marbles", [s8_eq]), ("s11_pens", [s11_eq]), ("qb_apply", ["divided by 3 is 6"]),
+                   ("r_minus", ["minus 8 is 15"]), ("r_times", ["6 times a number is 54"])):
+    step_says(lesson, sid, *texts)
+QB_PARTS = 3, 6        # a number divided by 3 is 6
+assert QB == QB_PARTS[0] * QB_PARTS[1]
+
+attach(lesson, {
+    "s2_foundation": s2_fig,
+    "s3_rule": s3_fig,
+    "s5_solve": s5_fig,
+    "s8_marbles": s8_fig,
+    "s11_pens": s11_fig,
+    "qb_apply": bars([[(QB, "x", "f")], [(QB_PARTS[1], QB_PARTS[1], "")] * QB_PARTS[0]],
+                     *two_rows_alt(["x"], [QB_PARTS[1]] * QB_PARTS[0],
+                                   pre=("A number x shared into 3 equal parts gives 6 in each part.",
+                                        "ایک عدد x کو 3 برابر حصوں میں بانٹیں تو ہر حصے میں 6 آتا ہے۔"))),
+    "r_minus": r1_fig,
+    "r_times": r2_fig,
+})
 write(lesson)

@@ -132,7 +132,217 @@
                 "ur": "5، 5 سے بڑا نہیں۔ E = {6, 7, 8}: 3 نتائج"
               }
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 160.0,
+            "alt": {
+              "en": "A spinner with 8 equal parts, marked 1, 2, 3, 4, 5, 6, 7 and 8. An arrow points out from the middle.",
+              "ur": "ایک گھومنے والا چکر جس کے 8 برابر حصے ہیں، جن پر 1، 2، 3، 4، 5، 6، 7 اور 8 لکھا ہے۔ درمیان سے ایک تیر باہر کی طرف ہے۔"
+            },
+            "items": [
+              {
+                "kind": "circle",
+                "center": [
+                  150.0,
+                  80.0
+                ],
+                "radius": 66.0
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  150.0,
+                  14.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  167.7,
+                  37.3
+                ],
+                "text": "1"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  196.7,
+                  33.3
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  192.7,
+                  62.3
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  216.0,
+                  80.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  192.7,
+                  97.7
+                ],
+                "text": "3"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  196.7,
+                  126.7
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  167.7,
+                  122.7
+                ],
+                "text": "4"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  150.0,
+                  146.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  132.3,
+                  122.7
+                ],
+                "text": "5"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  103.3,
+                  126.7
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  107.3,
+                  97.7
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  84.0,
+                  80.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  107.3,
+                  62.3
+                ],
+                "text": "7"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  103.3,
+                  33.3
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  132.3,
+                  37.3
+                ],
+                "text": "8"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  80.0
+                ],
+                "to": [
+                  175.6,
+                  69.4
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  175.6,
+                  69.4
+                ],
+                "to": [
+                  170.7,
+                  75.7
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  175.6,
+                  69.4
+                ],
+                "to": [
+                  167.7,
+                  68.3
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  150.0,
+                  80.0
+                ]
+              }
+            ]
+          }
         }
       },
       {
@@ -265,6 +475,50 @@
       "text": {
         "en": "Today we learn the words of probability: experiment, outcome, sample space and event. First, a quick question about sets.",
         "ur": "آج ہم احتمال کے الفاظ سیکھیں گے: تجربہ، نتیجہ، نمونی فضا اور واقعہ۔ پہلے سیٹ کا ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 88.0,
+        "alt": {
+          "en": "A coin spinning in the air, with a curved line above it. It shows H (heads).",
+          "ur": "ہوا میں گھومتا ایک سکہ، اوپر ایک خم دار لکیر۔ اس پر H (ہیڈ) نظر آ رہا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              52.0
+            ],
+            "radius": 22.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              52.0
+            ],
+            "radius": 18.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              52.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              150.0,
+              52.0
+            ],
+            "radius": 36.0,
+            "start": 200,
+            "sweep": 140
+          }
+        ]
       }
     },
     {
@@ -298,7 +552,57 @@
             "ur": "8 سب سے بڑا رکن ہے۔ ارکان گنیں: 2، 4، 6، 8 یعنی 4۔"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 124.0,
+        "alt": {
+          "en": "A big circle (the set) with the members 2, 4, 6, 8 inside it.",
+          "ur": "ایک بڑا دائرہ (سیٹ) جس کے اندر ارکان 2، 4، 6، 8 ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              62.0
+            ],
+            "radius": 50.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.0,
+              44.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              44.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.0,
+              80.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              80.0
+            ],
+            "text": "8"
+          }
+        ]
+      }
     },
     {
       "id": "s3_words",
@@ -313,6 +617,289 @@
       "text": {
         "en": "An experiment is something we do whose result we can't be sure of, like tossing a coin. Each possible result is an outcome: heads (H) or tails (T). The set of all outcomes is the sample space S. For a coin, S = {H, T}, so n(S) = 2. For a dice, S = {1, 2, 3, 4, 5, 6}. An event is some of the outcomes, like 'an even number' = {2, 4, 6}.",
         "ur": "تجربہ ایسا کام ہے جس کے نتیجے کا ہمیں یقین نہ ہو، جیسے سکہ اچھالنا۔ ہر ممکنہ نتیجہ ایک نتیجہ (outcome) ہے: ہیڈ (H) یا ٹیل (T)۔ تمام نتائج کا سیٹ نمونی فضا S ہے۔ سکے کے لیے S = {H, T}، تو n(S) = 2۔ ڈائس کے لیے S = {1, 2, 3, 4, 5, 6}۔ واقعہ کچھ نتائج ہوتا ہے، جیسے 'جفت عدد' = {2, 4, 6}۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 68.0,
+        "alt": {
+          "en": "The sample space of a dice, S = {1, 2, 3, 4, 5, 6}: 6 dice faces in a row, showing 1, 2, 3, 4, 5 and 6 dots.",
+          "ur": "پانسے کی نمونی فضا، S = {1, 2, 3, 4, 5, 6}: پانسے کے 6 رخ ایک قطار میں، جن پر 1، 2، 3، 4، 5 اور 6 نقطے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10.0,
+                14.0
+              ],
+              [
+                50.0,
+                14.0
+              ],
+              [
+                50.0,
+                54.0
+              ],
+              [
+                10.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.0,
+                14.0
+              ],
+              [
+                98.0,
+                14.0
+              ],
+              [
+                98.0,
+                54.0
+              ],
+              [
+                58.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              89.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                106.0,
+                14.0
+              ],
+              [
+                146.0,
+                14.0
+              ],
+              [
+                146.0,
+                54.0
+              ],
+              [
+                106.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              114.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              126.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              137.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                154.0,
+                14.0
+              ],
+              [
+                194.0,
+                14.0
+              ],
+              [
+                194.0,
+                54.0
+              ],
+              [
+                154.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              162.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              185.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              162.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              185.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                202.0,
+                14.0
+              ],
+              [
+                242.0,
+                14.0
+              ],
+              [
+                242.0,
+                54.0
+              ],
+              [
+                202.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              210.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              222.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              210.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                250.0,
+                14.0
+              ],
+              [
+                290.0,
+                14.0
+              ],
+              [
+                290.0,
+                54.0
+              ],
+              [
+                250.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              45.2
+            ]
+          }
+        ]
       }
     },
     {
@@ -346,7 +933,150 @@
           },
           "misconception_id": "missing_outcomes"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 106.0,
+        "alt": {
+          "en": "One dice drawn as a cube. The front shows 5 dots, the top 3 dots and the side 2 dots.",
+          "ur": "ایک پانسہ، مکعب کی شکل میں۔ سامنے 5 نقطے، اوپر 3 نقطے اور پہلو پر 2 نقطے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                107.0,
+                32.0
+              ],
+              [
+                171.0,
+                32.0
+              ],
+              [
+                171.0,
+                96.0
+              ],
+              [
+                107.0,
+                96.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              121.1,
+              46.1
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              156.9,
+              46.1
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              139.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              121.1,
+              81.9
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              156.9,
+              81.9
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                107.0,
+                32.0
+              ],
+              [
+                129.0,
+                10.0
+              ],
+              [
+                193.0,
+                10.0
+              ],
+              [
+                171.0,
+                32.0
+              ]
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                171.0,
+                32.0
+              ],
+              [
+                193.0,
+                10.0
+              ],
+              [
+                193.0,
+                74.0
+              ],
+              [
+                171.0,
+                96.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              128.5,
+              26.5
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              150.0,
+              21.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              171.5,
+              15.5
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              177.6,
+              70.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              186.4,
+              35.8
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "s5_coin_space",
@@ -434,7 +1164,65 @@
           },
           "misconception_id": "missing_outcomes"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 68.0,
+        "alt": {
+          "en": "Two coins side by side: a 5-rupee coin marked 5 and a 10-rupee coin marked 10.",
+          "ur": "دو سکے ساتھ ساتھ: 5 لکھا 5 روپے کا سکہ اور 10 لکھا 10 روپے کا سکہ۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              113.0,
+              32.0
+            ],
+            "radius": 22.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              113.0,
+              32.0
+            ],
+            "radius": 18.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              113.0,
+              32.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              187.0,
+              32.0
+            ],
+            "radius": 22.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              187.0,
+              32.0
+            ],
+            "radius": 18.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              187.0,
+              32.0
+            ],
+            "text": "10"
+          }
+        ]
+      }
     },
     {
       "id": "s7_balls",
@@ -467,7 +1255,217 @@
           },
           "misconception_id": "colours_not_objects"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 136.0,
+        "alt": {
+          "en": "A jar with 10 balls: 3 marked R (red), 2 marked B (blue) and 5 marked G (green). The red balls are shaded.",
+          "ur": "ایک مرتبان جس میں 10 گیندیں ہیں: R والی 3 (سرخ)، B والی 2 (نیلی) اور G والی 5 (سبز)۔ سرخ گیندیں رنگین ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                95.0,
+                14.0
+              ],
+              [
+                95.0,
+                26.0
+              ],
+              [
+                77.0,
+                36.0
+              ],
+              [
+                77.0,
+                124.0
+              ],
+              [
+                223.0,
+                124.0
+              ],
+              [
+                223.0,
+                36.0
+              ],
+              [
+                205.0,
+                26.0
+              ],
+              [
+                205.0,
+                14.0
+              ]
+            ]
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              105.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              105.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              105.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              79.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              79.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              79.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              79.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              53.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              53.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              53.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              176.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              176.0,
+              53.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              202.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              202.0,
+              53.0
+            ],
+            "text": "G"
+          }
+        ]
+      }
     },
     {
       "id": "s8_event",
@@ -507,7 +1505,290 @@
           },
           "misconception_id": "missing_outcomes"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 68.0,
+        "alt": {
+          "en": "6 dice faces in a row, showing 1, 2, 3, 4, 5 and 6 dots.",
+          "ur": "پانسے کے 6 رخ ایک قطار میں، جن پر 1، 2، 3، 4، 5 اور 6 نقطے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10.0,
+                14.0
+              ],
+              [
+                50.0,
+                14.0
+              ],
+              [
+                50.0,
+                54.0
+              ],
+              [
+                10.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.0,
+                14.0
+              ],
+              [
+                98.0,
+                14.0
+              ],
+              [
+                98.0,
+                54.0
+              ],
+              [
+                58.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              89.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                106.0,
+                14.0
+              ],
+              [
+                146.0,
+                14.0
+              ],
+              [
+                146.0,
+                54.0
+              ],
+              [
+                106.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              114.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              126.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              137.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                154.0,
+                14.0
+              ],
+              [
+                194.0,
+                14.0
+              ],
+              [
+                194.0,
+                54.0
+              ],
+              [
+                154.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              162.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              185.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              162.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              185.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                202.0,
+                14.0
+              ],
+              [
+                242.0,
+                14.0
+              ],
+              [
+                242.0,
+                54.0
+              ],
+              [
+                202.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              210.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              222.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              210.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                250.0,
+                14.0
+              ],
+              [
+                290.0,
+                14.0
+              ],
+              [
+                290.0,
+                54.0
+              ],
+              [
+                250.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              45.2
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -658,7 +1939,191 @@
             "ur": "6 تو سب کارڈ ہیں۔ صرف A، O اور E حروفِ علت ہیں: 3"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 62.0,
+        "alt": {
+          "en": "6 cards in a row: L, A, H, O, R and E.",
+          "ur": "6 کارڈ ایک قطار میں: L، A، H، O، R اور E۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.0,
+                12.0
+              ],
+              [
+                79.0,
+                12.0
+              ],
+              [
+                79.0,
+                50.0
+              ],
+              [
+                51.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.0,
+              31.0
+            ],
+            "text": "L"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                85.0,
+                12.0
+              ],
+              [
+                113.0,
+                12.0
+              ],
+              [
+                113.0,
+                50.0
+              ],
+              [
+                85.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              99.0,
+              31.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                119.0,
+                12.0
+              ],
+              [
+                147.0,
+                12.0
+              ],
+              [
+                147.0,
+                50.0
+              ],
+              [
+                119.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              133.0,
+              31.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                153.0,
+                12.0
+              ],
+              [
+                181.0,
+                12.0
+              ],
+              [
+                181.0,
+                50.0
+              ],
+              [
+                153.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              167.0,
+              31.0
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                187.0,
+                12.0
+              ],
+              [
+                215.0,
+                12.0
+              ],
+              [
+                215.0,
+                50.0
+              ],
+              [
+                187.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              201.0,
+              31.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                221.0,
+                12.0
+              ],
+              [
+                249.0,
+                12.0
+              ],
+              [
+                249.0,
+                50.0
+              ],
+              [
+                221.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              235.0,
+              31.0
+            ],
+            "text": "E"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -683,7 +2148,188 @@
           "en": "An event is part of S.",
           "ur": "واقعہ S کا حصہ ہے۔"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "A table for tossing two coins. Down the side: the first coin, H or T. Across the top: the second coin, H or T. The four cells hold HH, HT, TH and TT.",
+          "ur": "دو سکے اچھالنے کا جدول۔ بائیں طرف نیچے کو: پہلا سکہ، H یا T۔ اوپر: دوسرا سکہ، H یا T۔ چار خانوں میں HH، HT، TH اور TT ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              123.0,
+              26.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              123.0,
+              26.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              26.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              79.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              79.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              79.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              177.0,
+              26.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              177.0,
+              26.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              26.0
+            ],
+            "text": "T"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              133.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              133.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              133.0
+            ],
+            "text": "T"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                96.0,
+                52.0
+              ],
+              [
+                204.0,
+                52.0
+              ],
+              [
+                204.0,
+                160.0
+              ],
+              [
+                96.0,
+                160.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              52.0
+            ],
+            "to": [
+              150.0,
+              160.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              96.0,
+              106.0
+            ],
+            "to": [
+              204.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              79.0
+            ],
+            "text": "HH"
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              79.0
+            ],
+            "text": "HT"
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              133.0
+            ],
+            "text": "TH"
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              133.0
+            ],
+            "text": "TT"
+          }
+        ]
+      }
     }
   ],
   "review_questions": [
@@ -721,7 +2367,188 @@
             },
             "misconception_id": "order_ignored"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 172.0,
+          "alt": {
+            "en": "A table for tossing two coins. Down the side: the first coin, H or T. Across the top: the second coin, H or T. The four cells hold HH, HT, TH and TT.",
+            "ur": "دو سکے اچھالنے کا جدول۔ بائیں طرف نیچے کو: پہلا سکہ، H یا T۔ اوپر: دوسرا سکہ، H یا T۔ چار خانوں میں HH، HT، TH اور TT ہیں۔"
+          },
+          "items": [
+            {
+              "kind": "circle",
+              "center": [
+                123.0,
+                26.0
+              ],
+              "radius": 16.0
+            },
+            {
+              "kind": "circle",
+              "center": [
+                123.0,
+                26.0
+              ],
+              "radius": 12.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                123.0,
+                26.0
+              ],
+              "text": "H"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                70.0,
+                79.0
+              ],
+              "radius": 16.0
+            },
+            {
+              "kind": "circle",
+              "center": [
+                70.0,
+                79.0
+              ],
+              "radius": 12.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                70.0,
+                79.0
+              ],
+              "text": "H"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                177.0,
+                26.0
+              ],
+              "radius": 16.0
+            },
+            {
+              "kind": "circle",
+              "center": [
+                177.0,
+                26.0
+              ],
+              "radius": 12.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                177.0,
+                26.0
+              ],
+              "text": "T"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                70.0,
+                133.0
+              ],
+              "radius": 16.0
+            },
+            {
+              "kind": "circle",
+              "center": [
+                70.0,
+                133.0
+              ],
+              "radius": 12.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                70.0,
+                133.0
+              ],
+              "text": "T"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  96.0,
+                  52.0
+                ],
+                [
+                  204.0,
+                  52.0
+                ],
+                [
+                  204.0,
+                  160.0
+                ],
+                [
+                  96.0,
+                  160.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                150.0,
+                52.0
+              ],
+              "to": [
+                150.0,
+                160.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                96.0,
+                106.0
+              ],
+              "to": [
+                204.0,
+                106.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                123.0,
+                79.0
+              ],
+              "text": "HH"
+            },
+            {
+              "kind": "label",
+              "at": [
+                177.0,
+                79.0
+              ],
+              "text": "HT"
+            },
+            {
+              "kind": "label",
+              "at": [
+                123.0,
+                133.0
+              ],
+              "text": "TH"
+            },
+            {
+              "kind": "label",
+              "at": [
+                177.0,
+                133.0
+              ],
+              "text": "TT"
+            }
+          ]
+        }
       }
     },
     {
@@ -758,7 +2585,249 @@
             },
             "misconception_id": "colours_not_objects"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 62.0,
+          "alt": {
+            "en": "8 cards in a row: P, A, K, I, S, T, A and N.",
+            "ur": "8 کارڈ ایک قطار میں: P، A، K، I، S، T، A اور N۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  17.0,
+                  12.0
+                ],
+                [
+                  45.0,
+                  12.0
+                ],
+                [
+                  45.0,
+                  50.0
+                ],
+                [
+                  17.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                31.0,
+                31.0
+              ],
+              "text": "P"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  51.0,
+                  12.0
+                ],
+                [
+                  79.0,
+                  12.0
+                ],
+                [
+                  79.0,
+                  50.0
+                ],
+                [
+                  51.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                65.0,
+                31.0
+              ],
+              "text": "A"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  85.0,
+                  12.0
+                ],
+                [
+                  113.0,
+                  12.0
+                ],
+                [
+                  113.0,
+                  50.0
+                ],
+                [
+                  85.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                99.0,
+                31.0
+              ],
+              "text": "K"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  119.0,
+                  12.0
+                ],
+                [
+                  147.0,
+                  12.0
+                ],
+                [
+                  147.0,
+                  50.0
+                ],
+                [
+                  119.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                133.0,
+                31.0
+              ],
+              "text": "I"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  153.0,
+                  12.0
+                ],
+                [
+                  181.0,
+                  12.0
+                ],
+                [
+                  181.0,
+                  50.0
+                ],
+                [
+                  153.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                167.0,
+                31.0
+              ],
+              "text": "S"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  187.0,
+                  12.0
+                ],
+                [
+                  215.0,
+                  12.0
+                ],
+                [
+                  215.0,
+                  50.0
+                ],
+                [
+                  187.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                201.0,
+                31.0
+              ],
+              "text": "T"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  221.0,
+                  12.0
+                ],
+                [
+                  249.0,
+                  12.0
+                ],
+                [
+                  249.0,
+                  50.0
+                ],
+                [
+                  221.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                235.0,
+                31.0
+              ],
+              "text": "A"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  255.0,
+                  12.0
+                ],
+                [
+                  283.0,
+                  12.0
+                ],
+                [
+                  283.0,
+                  50.0
+                ],
+                [
+                  255.0,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                269.0,
+                31.0
+              ],
+              "text": "N"
+            }
+          ]
+        }
       }
     }
   ],

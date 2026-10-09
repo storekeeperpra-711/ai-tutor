@@ -11,6 +11,8 @@ Scripts that write the Grade 6 Maths lessons of the Probability unit (`content/l
 
 Sample spaces are built in `common.py` (`coins()`, `balls()`, `DICE`), and every probability is worked out with `P()`, which counts outcomes, so no answer is typed by hand. Each common wrong answer (dividing by the other outcomes, counting colours instead of balls, "win or lose is 1/2") is checked with `assert`.
 
+The pictures (dice faces, coins, bags of balls, spinners, cards, ticket and class grids, and the 0 to 1 likelihood line) are drawn by `figs.py` from the same sample spaces the steps use.
+
 Typed probabilities use the fraction checker without "simplest form", so 3/6, 1/2 and 0.5 are all right. Common wrong answers are written the way a child types them (2/4 stays 2/4), because they are matched as text.
 
 To change a lesson, edit its script and run it, then run the validator:

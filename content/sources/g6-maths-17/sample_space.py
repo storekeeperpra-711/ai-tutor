@@ -223,4 +223,55 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import (attach, step_says, figure, label, circle, coins_row, coin_table, dice_faces, dice_cube,
+                  bag, key, cards, spinner, W)
+
+SET = [2, 4, 6, 8]
+assert len(SET) == S2
+step_says(lesson, "s2_foundation", "{" + ", ".join(map(str, SET)) + "}")
+BAG = balls(red=3, blue=2, green=5)
+assert len(BAG) == S7
+step_says(lesson, "s7_balls", "3 red, 2 blue and 5 green")
+step_says(lesson, "s11_letters", "LAHORE")
+step_says(lesson, "r_vowels", "PAKISTAN")
+step_says(lesson, "qb_apply", "1 to 8")
+step_says(lesson, "s6_two_coins", "5-rupee coin and a 10-rupee coin")
+TWO = coins(2)
+assert len(TWO) == 4
+
+
+def set_figure(members):
+    """A set drawn as a big circle with its members inside."""
+    c, r = (W / 2, 62), 50
+    items = [circle(c, r)]
+    for i, m in enumerate(members):
+        x = c[0] + (i % 2 - 0.5) * 40
+        y = c[1] + (i // 2 - 0.5) * 36
+        items.append(label((x, y), m))
+    return figure(W, 124, f"A big circle (the set) with the members {', '.join(map(str, members))} inside it.",
+                  f"ایک بڑا دائرہ (سیٹ) جس کے اندر ارکان {'، '.join(map(str, members))} ہیں۔", items)
+
+
+attach(lesson, {
+    "s1_hook": coins_row(["H"], "A coin spinning in the air, with a curved line above it. It shows H (heads).",
+                         "ہوا میں گھومتا ایک سکہ، اوپر ایک خم دار لکیر۔ اس پر H (ہیڈ) نظر آ رہا ہے۔", toss=True),
+    "s2_foundation": set_figure(SET),
+    "s3_words": dice_faces(DICE, pre=("The sample space of a dice, S = {1, 2, 3, 4, 5, 6}:", "پانسے کی نمونی فضا، S = {1, 2, 3, 4, 5, 6}:")),
+    "s4_dice": dice_cube(),
+    "s6_two_coins": coins_row(["5", "10"], "Two coins side by side: a 5-rupee coin marked 5 and a 10-rupee coin marked 10.",
+                              "دو سکے ساتھ ساتھ: 5 لکھا 5 روپے کا سکہ اور 10 لکھا 10 روپے کا سکہ۔"),
+    "s7_balls": bag(BAG, key("red", "blue", "green")),
+    "s8_event": dice_faces(DICE),
+    "s11_letters": cards("LAHORE"),
+    "s12_summary": coin_table(
+        "A table for tossing two coins. Down the side: the first coin, H or T. Across the top: the second coin, H or T. The four cells hold HH, HT, TH and TT.",
+        "دو سکے اچھالنے کا جدول۔ بائیں طرف نیچے کو: پہلا سکہ، H یا T۔ اوپر: دوسرا سکہ، H یا T۔ چار خانوں میں HH، HT، TH اور TT ہیں۔"),
+    "qb_apply": spinner([str(n) for n in range(1, 9)]),
+    "r_one_head": coin_table(
+        "A table for tossing two coins. Down the side: the first coin, H or T. Across the top: the second coin, H or T. The four cells hold HH, HT, TH and TT.",
+        "دو سکے اچھالنے کا جدول۔ بائیں طرف نیچے کو: پہلا سکہ، H یا T۔ اوپر: دوسرا سکہ، H یا T۔ چار خانوں میں HH، HT، TH اور TT ہیں۔"),
+    "r_vowels": cards("PAKISTAN"),
+})
 write(lesson)

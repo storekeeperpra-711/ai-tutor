@@ -222,4 +222,61 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import attach, step_says, balance, balance_eq, bars, Side, plus_bar, minus_bar, two_rows_alt
+
+S3 = S4                # the rule uses the same equation as s4: 2x + 5 = 17
+S3_LEFT = 17 - 5       # what is left on the right after taking 5 from both sides
+assert 2 * S3 == S3_LEFT
+s2_fig, s2_eq = balance_eq(3, "x", 0, 18, S2)
+s4_fig, s4_eq = balance_eq(2, "x", 5, 17, S4)
+s5_fig, s5_eq = minus_bar(3, "y", 4, 11, S5)
+s6_fig, s6_eq = balance_eq(4, "m", 7, 31, 6)
+s8_fig, s8_eq = minus_bar(5, "n", 6, 29, S8)
+s9_fig, s9_eq = balance_eq(2, "x", 6, 20, 7)
+qa_fig, qa_eq = balance_eq(6, "k", 3, 45, QB)
+qe_fig, qe_eq = minus_bar(5, "x", 2, 18, 4)
+r1_fig, r1_eq = balance_eq(4, "a", 1, 21, R1)
+# x ÷ 3 + 2 = 7 and m ÷ 4 − 1 = 5 and x ÷ 2 − 3 = 4: one share of the number
+S7_EQ, S11_EQ, R2_EQ = "x ÷ 3 + 2 = 7", "m ÷ 4 − 1 = 5", "x ÷ 2 − 3 = 4"
+assert solves(S7_EQ, x=S7) and solves(S11_EQ, m=S11) and solves(R2_EQ, x=R2)
+for sid, eq in (("s2_foundation", s2_eq), ("s3_rule", s4_eq), ("s4_plus", s4_eq), ("s5_minus", s5_eq),
+                ("s6_first_step", s6_eq), ("s7_divide", S7_EQ), ("s8_minus_big", s8_eq), ("s9_find_error", s9_eq),
+                ("s11_quarter", S11_EQ), ("qb_apply", qa_eq), ("qb_find_error", qe_eq),
+                ("r_plus", r1_eq), ("r_half", R2_EQ)):
+    step_says(lesson, sid, eq)
+
+
+def share_plus(letter, n, b, c, sol):
+    """letter ÷ n + b = c: the top row is c, the bottom row one share of
+    the number (letter ÷ n) and b."""
+    return bars([[(c, c, "")], [(sol // n, f"{letter}÷{n}", "f"), (b, b, "")]],
+                *two_rows_alt([c], [f"{letter} ÷ {n}", b]))
+
+
+def share_minus(letter, n, b, c, sol):
+    """letter ÷ n − b = c: the top row is one share (letter ÷ n), the
+    bottom row c and a dashed b taken away."""
+    return bars([[(sol // n, f"{letter}÷{n}", "f")], [(c, c, ""), (b, b, "d")]],
+                *two_rows_alt([f"{letter} ÷ {n}"], [c, b], dashed=b))
+
+
+attach(lesson, {
+    "s2_foundation": s2_fig,
+    "s3_rule": balance(Side(2, "x", units=5, gone=5), Side(block=S3_LEFT, units=5, gone=5),
+                       f"2x + 5 = 17, with the 17 drawn as {S3_LEFT} and 5 small weights. Taking 5 from both sides keeps it level: 2x = {S3_LEFT}.",
+                       f"2x + 5 = 17، جس میں 17 کو {S3_LEFT} اور 5 چھوٹے وزن بنا کر دکھایا ہے۔ دونوں طرف سے 5 ہٹانے پر بھی ترازو برابر رہتا ہے: 2x = {S3_LEFT}۔"),
+    "s4_plus": s4_fig,
+    "s5_minus": s5_fig,
+    "s6_first_step": s6_fig,
+    "s7_divide": share_plus("x", 3, 2, 7, S7),
+    "s8_minus_big": s8_fig,
+    "s9_find_error": s9_fig,
+    "s11_quarter": share_minus("m", 4, 1, 5, S11),
+    "qb_apply": qa_fig,
+    "qb_find_error": qe_fig,
+    "r_plus": r1_fig,
+    "r_half": share_minus("x", 2, 3, 4, R2),
+})
 write(lesson)

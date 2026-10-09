@@ -262,4 +262,19 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- more pictures (the balances on s3_rule and s11_solve are above) ----------
+from figs import attach, step_says, loose, put_in
+
+for sid, text in (("s1_hook", "3x + 5"), ("s2_foundation", "2x + 5 when x = 4"), ("s6_evaluate", "4x − 2 when x = 3"),
+                  ("qb_apply", "5m + 1 when m = 3"), ("r_value", "6 + 2y when y = 5")):
+    step_says(lesson, sid, text)
+
+attach(lesson, {
+    "s1_hook": loose(3, "x", 5, pre=("Babar's runs, 3x + 5:", "بابر کے رنز، 3x + 5:")),
+    "s2_foundation": put_in("2x + 5", ["x", "x", "+5"], "x", 4),
+    "s6_evaluate": put_in("4x − 2", ["x"] * 4 + ["−2"], "x", 3),
+    "qb_apply": put_in("5m + 1", ["m"] * 5 + ["+1"], "m", 3),
+    "r_value": put_in("6 + 2y", ["6+", "y", "y"], "y", 5),
+})
 write(lesson)

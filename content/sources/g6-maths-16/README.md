@@ -13,6 +13,8 @@ Scripts that write the Grade 6 Maths lessons of the Linear Equations unit (`cont
 
 Every answer is checked with `solves()` in `common.py`, which puts the answer back into the equation, and every common wrong answer (like dividing before subtracting, or reading 3x as 36) is worked out and checked with `assert`. No number is typed by hand.
 
+The pictures (balance scales with boxes for the unknown, bar models, bags for brackets, and rows that put a number in place of a letter) are drawn by `figs.py` from the same numbers the steps use.
+
 To change a lesson, edit its script and run it, then run the validator:
 
     python content/sources/g6-maths-16/two_step_equations.py
