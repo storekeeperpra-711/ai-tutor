@@ -229,4 +229,63 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import (attach, oval_figure, two_ovals, set_boxes, doubling_chain, sweets_box,
+                  en_list, ur_list)
+
+SWEETS = 3                                   # the hook: a box of 3 sweets
+assert len(subsets(range(SWEETS))) == S6
+
+
+def brace(s):
+    """A small set as written in a box: {a, b}, or { } when empty."""
+    return "{" + ", ".join(str(x) for x in sorted(s)) + "}" if s else "{ }"
+
+
+AB = subsets("ab")
+AB_TEXT = [brace(s) for s in AB]
+assert len(AB_TEXT) == S5 and AB_TEXT == ["{ }", "{a}", "{b}", "{a, b}"]
+SANA = [{1}, {2}]
+assert all(s <= {1, 2} for s in SANA) and len(SANA) < len(subsets({1, 2}))
+COLOURS = ["R", "G", "B", "Y"]               # red, green, blue, yellow
+assert len(subsets(COLOURS)) == S11
+SIZES = [1, 2, 3, 4]
+assert [len(subsets(range(k))) for k in SIZES] == [2 ** k for k in SIZES] == [2, 4, 8, 16]
+QB_SET = [1, 2, 3]
+assert QB == len([s for s in subsets(QB_SET) if len(s) == 2])
+
+
+def one(elems, name=None, en_name="", ur_name="", **kw):
+    named_en = f"named {name} " if name else ""
+    named_ur = f"{name} نام کی " if name else ""
+    return oval_figure(list(elems),
+        f"An oval {named_en}holding {en_list(list(elems))}{en_name}.",
+        f"{named_ur}بیضوی شکل جس میں {ur_list(list(elems))} ہیں{ur_name}۔", name=name, **kw)
+
+
+attach(lesson, {
+    "s1_hook": sweets_box(SWEETS,
+        f"A box holding {SWEETS} sweets, numbered 1 to {SWEETS}.",
+        f"ایک ڈبہ جس میں {SWEETS} ٹافیاں ہیں، ان پر 1 سے {SWEETS} تک نمبر ہیں۔"),
+    "s3_subsets": set_boxes(AB_TEXT,
+        f"{len(AB_TEXT)} boxes, one for each subset of {{a, b}}: the empty set {{ }}, {{a}}, {{b}} and {{a, b}}.",
+        f"{len(AB_TEXT)} خانے، {{a, b}} کے ہر ذیلی سیٹ کا ایک: خالی سیٹ {{ }}، {{a}}، {{b}} اور {{a, b}}۔"),
+    "s4_which": one(sorted(B4), "B", cols=5),
+    "s5_two": one("ab"),
+    "s6_three": one("pqr"),
+    "s9_find_error": set_boxes([brace(s) for s in SANA],
+        "Sana's list: two boxes, one holding {1} and one holding {2}.",
+        "ثنا کی فہرست: دو خانے، ایک میں {1} اور ایک میں {2}۔"),
+    "s11_colours": one(COLOURS, en_name=": R for red, G for green, B for blue and Y for yellow",
+                       ur_name=": R سرخ، G سبز، B نیلا اور Y پیلا"),
+    "s12_summary": doubling_chain(SIZES,
+        "Four boxes in a row joined by arrows marked ×2. Above each box are dots for the elements of a set: 1, 2, 3 and 4 dots. Inside the boxes are the numbers of subsets: 2, 4, 8 and 16.",
+        "ایک قطار میں چار خانے، جنہیں ×2 والے تیر جوڑتے ہیں۔ ہر خانے کے اوپر سیٹ کے رکنوں کے نقطے ہیں: 1، 2، 3 اور 4 نقطے۔ خانوں کے اندر ذیلی سیٹوں کی تعداد ہے: 2، 4، 8 اور 16۔"),
+    "qb_apply": one(QB_SET),
+    "qb_find_error": two_ovals([3], [1, 2],
+        "Two ovals: the left one holds 3, and the right one holds 1 and 2.",
+        "دو بیضوی شکلیں: بائیں میں 3 ہے، اور دائیں میں 1 اور 2 ہیں۔", names=(None, None)),
+    "r_mn": one("mn"),
+    "r_proper": one("ab"),
+})
 write(lesson)

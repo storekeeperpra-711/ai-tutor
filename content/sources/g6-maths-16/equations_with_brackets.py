@@ -222,4 +222,52 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import attach, step_says, bags, bars, bracket_bar, two_rows_alt
+
+HOOK = 3, 2, 21        # 3 bags, each with x apples and 2 oranges: 21 fruits
+assert solves(f"{HOOK[0]}(x + {HOOK[1]}) = {HOOK[2]}", x=S4)
+s3_fig, s3_eq = bracket_bar(3, "x", 2, 21, S4, middle=True)
+s4_fig, s4_eq = bracket_bar(3, "x", 2, 21, S4)
+s5_fig, s5_eq = bracket_bar(2, "y", 3, 10, S5, minus=True)
+s7_fig, s7_eq = bracket_bar(5, "n", 4, 35, S7)
+s11_fig, s11_eq = bracket_bar(6, "k", 2, 30, S11, minus=True)
+qf_fig, qf_eq = bracket_bar(4, "x", 3, 20, 2)
+qa_fig, qa_eq = bracket_bar(7, "a", 1, 42, QB)
+r1_fig, r1_eq = bracket_bar(2, "x", 5, 18, R1)
+r2_fig, r2_eq = bracket_bar(3, "y", 1, 12, R2, minus=True)
+S2_PARTS = 4, 6, 2     # 4 × (6 + 2)
+assert S2 == S2_PARTS[0] * (S2_PARTS[1] + S2_PARTS[2])
+S8_PARTS = 6, 2, 9     # (x + 6) ÷ 2 = 9
+assert solves(f"(x + {S8_PARTS[0]}) ÷ {S8_PARTS[1]} = {S8_PARTS[2]}", x=S8)
+for sid, eq in (("s1_hook", s4_eq), ("s3_rule", s3_eq), ("s4_divide_first", s4_eq), ("s5_minus", s5_eq),
+                ("s7_plus", s7_eq), ("s11_minus_big", s11_eq), ("qb_first", qf_eq), ("qb_apply", qa_eq),
+                ("r_plus", r1_eq), ("r_minus", r2_eq), ("s2_foundation", "4 × (6 + 2)"),
+                ("s8_shared", "(x + 6) ÷ 2 = 9")):
+    step_says(lesson, sid, eq)
+n, a, b = S2_PARTS
+
+attach(lesson, {
+    "s1_hook": bags(HOOK[0], "x", HOOK[1],
+        f"{HOOK[0]} bags drawn as dashed boxes. Each bag holds a shaded box marked x (the apples) and {HOOK[1]} small circles (the oranges). After the last bag: ={HOOK[2]}, the fruits in all.",
+        f"{HOOK[0]} تھیلے، ڈیش والے ڈبوں کی شکل میں۔ ہر تھیلے میں x لکھا ایک رنگین ڈبہ (سیب) اور {HOOK[1]} چھوٹے دائرے (مالٹے) ہیں۔ آخری تھیلے کے بعد: ={HOOK[2]}، کل پھل۔",
+        total=HOOK[2]),
+    "s2_foundation": bars([[(a, a, "f"), (b, b, "")]] * n,
+        f"{n} rows, one under the other, all the same. Each row is a shaded part {a} and a part {b}: {n} lots of ({a} + {b}). The shaded parts make {n} × {a} and the white parts {n} × {b}.",
+        f"{n} قطاریں، ایک کے نیچے ایک، سب ایک جیسی۔ ہر قطار میں ایک رنگین حصہ {a} اور ایک حصہ {b} ہے: ({a} + {b}) کے {n} گنا۔ رنگین حصے {n} × {a} اور سفید حصے {n} × {b} بناتے ہیں۔"),
+    "s3_rule": s3_fig,
+    "s4_divide_first": s4_fig,
+    "s5_minus": s5_fig,
+    "s7_plus": s7_fig,
+    "s8_shared": bars([[(S8, "x", "f"), (S8_PARTS[0], S8_PARTS[0], "")], [(S8_PARTS[2], S8_PARTS[2], "")] * S8_PARTS[1]],
+        *two_rows_alt(["x", S8_PARTS[0]], [S8_PARTS[2]] * S8_PARTS[1],
+                      pre=(f"(x + {S8_PARTS[0]}) shared into {S8_PARTS[1]} equal parts gives {S8_PARTS[2]} in each.",
+                           f"(x + {S8_PARTS[0]}) کو {S8_PARTS[1]} برابر حصوں میں بانٹیں تو ہر حصے میں {S8_PARTS[2]} آتا ہے۔"))),
+    "s11_minus_big": s11_fig,
+    "qb_first": qf_fig,
+    "qb_apply": qa_fig,
+    "r_plus": r1_fig,
+    "r_minus": r2_fig,
+})
 write(lesson)

@@ -140,7 +140,134 @@
               },
               "misconception_id": "wrong_inverse"
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 92.0,
+            "alt": {
+              "en": "A number x shared into 3 equal parts gives 6 in each part. A bar model with two rows of the same length. Top row: x. Bottom row: 6, 6 and 6.",
+              "ur": "ایک عدد x کو 3 برابر حصوں میں بانٹیں تو ہر حصے میں 6 آتا ہے۔ دو برابر لمبی قطاروں والا پٹی ماڈل۔ اوپر کی قطار: x۔ نیچے کی قطار: 6، 6 اور 6۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    20.0,
+                    10.0
+                  ],
+                  [
+                    280.0,
+                    10.0
+                  ],
+                  [
+                    280.0,
+                    40.0
+                  ],
+                  [
+                    20.0,
+                    40.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  150.0,
+                  25.0
+                ],
+                "text": "x"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    20.0,
+                    52.0
+                  ],
+                  [
+                    106.7,
+                    52.0
+                  ],
+                  [
+                    106.7,
+                    82.0
+                  ],
+                  [
+                    20.0,
+                    82.0
+                  ]
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  63.3,
+                  67.0
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    106.7,
+                    52.0
+                  ],
+                  [
+                    193.3,
+                    52.0
+                  ],
+                  [
+                    193.3,
+                    82.0
+                  ],
+                  [
+                    106.7,
+                    82.0
+                  ]
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  150.0,
+                  67.0
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    193.3,
+                    52.0
+                  ],
+                  [
+                    280.0,
+                    52.0
+                  ],
+                  [
+                    280.0,
+                    82.0
+                  ],
+                  [
+                    193.3,
+                    82.0
+                  ]
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  236.7,
+                  67.0
+                ],
+                "text": "6"
+              }
+            ]
+          }
         }
       },
       {
@@ -279,7 +406,235 @@
           },
           "misconception_id": "wrong_inverse"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 126.0,
+        "alt": {
+          "en": "A level balance scale. On the left pan: 1 box marked x, each box is the unknown x; 5 small weights of 1. On the right pan: a big weight marked 12.",
+          "ur": "ایک برابر ترازو۔ بائیں پلڑے میں: x لکھے 1 ڈبے، ہر ڈبہ نامعلوم x ہے؛ 1 کے 5 چھوٹے وزن۔ دائیں پلڑے میں: 12 لکھا ایک بڑا وزن۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                62.0
+              ],
+              [
+                140.0,
+                62.0
+              ],
+              [
+                130.0,
+                70.0
+              ],
+              [
+                26.0,
+                70.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              70.0
+            ],
+            "to": [
+              78.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                66.0,
+                37.0
+              ],
+              [
+                90.0,
+                37.0
+              ],
+              [
+                90.0,
+                61.0
+              ],
+              [
+                66.0,
+                61.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.0,
+              49.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              40.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              59.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              78.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              97.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              116.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                160.0,
+                62.0
+              ],
+              [
+                284.0,
+                62.0
+              ],
+              [
+                274.0,
+                70.0
+              ],
+              [
+                170.0,
+                70.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              222.0,
+              70.0
+            ],
+            "to": [
+              222.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                204.4,
+                33.0
+              ],
+              [
+                239.6,
+                33.0
+              ],
+              [
+                239.6,
+                61.0
+              ],
+              [
+                204.4,
+                61.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              222.0,
+              47.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              86.0
+            ],
+            "to": [
+              222.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                150.0,
+                86.0
+              ],
+              [
+                130.0,
+                118.0
+              ],
+              [
+                170.0,
+                118.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              112.0,
+              118.0
+            ],
+            "to": [
+              188.0,
+              118.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              50.0
+            ],
+            "text": "="
+          }
+        ]
+      }
     },
     {
       "id": "s3_rule",
@@ -294,6 +649,105 @@
       "text": {
         "en": "Use a letter for the unknown number, like x. Then: 'plus', 'more than', 'added' → +. 'Minus', 'less than' → −. 'Times', 'twice' → ×. 'Divided by', 'shared' → ÷. 'Is', 'gives', 'makes' → =. Careful: '5 less than a number' is x − 5, not 5 − x.",
         "ur": "نامعلوم عدد کے لیے حرف استعمال کریں، جیسے x۔ پھر: 'جمع'، 'سے زیادہ' → +۔ 'تفریق'، 'سے کم' → −۔ 'گنا'، 'دگنا' → ×۔ 'تقسیم'، 'بانٹا' → ÷۔ 'ہے'، 'بنتا ہے' → =۔ دھیان دیں: 'ایک عدد سے 5 کم' یعنی x − 5، نہ کہ 5 − x۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 92.0,
+        "alt": {
+          "en": "'5 less than a number is 12', x − 5 = 12. A bar model with two rows of the same length. Top row: x. Bottom row: 12 and 5. The part 5 is dashed: it was taken away.",
+          "ur": "'ایک عدد سے 5 کم، 12 ہے'، x − 5 = 12۔ دو برابر لمبی قطاروں والا پٹی ماڈل۔ اوپر کی قطار: x۔ نیچے کی قطار: 12 اور 5۔ 5 والا حصہ ڈیش والا ہے: اسے نکالا گیا تھا۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                10.0
+              ],
+              [
+                280.0,
+                10.0
+              ],
+              [
+                280.0,
+                40.0
+              ],
+              [
+                20.0,
+                40.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              25.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                52.0
+              ],
+              [
+                203.5,
+                52.0
+              ],
+              [
+                203.5,
+                82.0
+              ],
+              [
+                20.0,
+                82.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              111.8,
+              67.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                203.5,
+                52.0
+              ],
+              [
+                280.0,
+                52.0
+              ],
+              [
+                280.0,
+                82.0
+              ],
+              [
+                203.5,
+                82.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              241.8,
+              67.0
+            ],
+            "text": "5"
+          }
+        ]
       }
     },
     {
@@ -374,7 +828,105 @@
           },
           "misconception_id": "wrong_inverse"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 92.0,
+        "alt": {
+          "en": "A bar model with two rows of the same length. Top row: 20. Bottom row: x and 9.",
+          "ur": "دو برابر لمبی قطاروں والا پٹی ماڈل۔ اوپر کی قطار: 20۔ نیچے کی قطار: x اور 9۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                10.0
+              ],
+              [
+                280.0,
+                10.0
+              ],
+              [
+                280.0,
+                40.0
+              ],
+              [
+                20.0,
+                40.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              25.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                52.0
+              ],
+              [
+                163.0,
+                52.0
+              ],
+              [
+                163.0,
+                82.0
+              ],
+              [
+                20.0,
+                82.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              91.5,
+              67.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                163.0,
+                52.0
+              ],
+              [
+                280.0,
+                52.0
+              ],
+              [
+                280.0,
+                82.0
+              ],
+              [
+                163.0,
+                82.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              221.5,
+              67.0
+            ],
+            "text": "9"
+          }
+        ]
+      }
     },
     {
       "id": "s6_twice",
@@ -501,7 +1053,253 @@
           },
           "misconception_id": "wrong_inverse"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 146.0,
+        "alt": {
+          "en": "Ayesha's marbles: the box is the marbles she had at first. A level balance scale. On the left pan: 1 box marked x, each box is the unknown x; 7 small weights of 1. On the right pan: a big weight marked 25.",
+          "ur": "عائشہ کے کنچے: ڈبہ وہ کنچے ہیں جو اس کے پاس پہلے تھے۔ ایک برابر ترازو۔ بائیں پلڑے میں: x لکھے 1 ڈبے، ہر ڈبہ نامعلوم x ہے؛ 1 کے 7 چھوٹے وزن۔ دائیں پلڑے میں: 25 لکھا ایک بڑا وزن۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                82.0
+              ],
+              [
+                140.0,
+                82.0
+              ],
+              [
+                130.0,
+                90.0
+              ],
+              [
+                26.0,
+                90.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              90.0
+            ],
+            "to": [
+              78.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                66.0,
+                57.0
+              ],
+              [
+                90.0,
+                57.0
+              ],
+              [
+                90.0,
+                81.0
+              ],
+              [
+                66.0,
+                81.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.0,
+              69.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              49.5,
+              43.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              68.5,
+              43.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              87.5,
+              43.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              106.5,
+              43.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              59.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              78.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              97.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                160.0,
+                82.0
+              ],
+              [
+                284.0,
+                82.0
+              ],
+              [
+                274.0,
+                90.0
+              ],
+              [
+                170.0,
+                90.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              222.0,
+              90.0
+            ],
+            "to": [
+              222.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                204.4,
+                53.0
+              ],
+              [
+                239.6,
+                53.0
+              ],
+              [
+                239.6,
+                81.0
+              ],
+              [
+                204.4,
+                81.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              222.0,
+              67.0
+            ],
+            "text": "25"
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              106.0
+            ],
+            "to": [
+              222.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                150.0,
+                106.0
+              ],
+              [
+                130.0,
+                138.0
+              ],
+              [
+                170.0,
+                138.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              112.0,
+              138.0
+            ],
+            "to": [
+              188.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              70.0
+            ],
+            "text": "="
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -648,7 +1446,166 @@
             "ur": "4x یعنی 4 × x، تو تقسیم کریں: 120 ÷ 4 = 30"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 92.0,
+        "alt": {
+          "en": "4 pens, each costing Rs x, together cost Rs 120. A bar model with two rows of the same length. Top row: 120. Bottom row: x, x, x and x.",
+          "ur": "4 قلم، ہر ایک x روپے کا، مل کر 120 روپے کے ہیں۔ دو برابر لمبی قطاروں والا پٹی ماڈل۔ اوپر کی قطار: 120۔ نیچے کی قطار: x، x، x اور x۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                10.0
+              ],
+              [
+                280.0,
+                10.0
+              ],
+              [
+                280.0,
+                40.0
+              ],
+              [
+                20.0,
+                40.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              25.0
+            ],
+            "text": "120"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                52.0
+              ],
+              [
+                85.0,
+                52.0
+              ],
+              [
+                85.0,
+                82.0
+              ],
+              [
+                20.0,
+                82.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.5,
+              67.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                85.0,
+                52.0
+              ],
+              [
+                150.0,
+                52.0
+              ],
+              [
+                150.0,
+                82.0
+              ],
+              [
+                85.0,
+                82.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              117.5,
+              67.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                150.0,
+                52.0
+              ],
+              [
+                215.0,
+                52.0
+              ],
+              [
+                215.0,
+                82.0
+              ],
+              [
+                150.0,
+                82.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              182.5,
+              67.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                215.0,
+                52.0
+              ],
+              [
+                280.0,
+                52.0
+              ],
+              [
+                280.0,
+                82.0
+              ],
+              [
+                215.0,
+                82.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              247.5,
+              67.0
+            ],
+            "text": "x"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -711,7 +1668,106 @@
             },
             "misconception_id": "wrong_inverse"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 92.0,
+          "alt": {
+            "en": "A bar model with two rows of the same length. Top row: x. Bottom row: 15 and 8. The part 8 is dashed: it was taken away.",
+            "ur": "دو برابر لمبی قطاروں والا پٹی ماڈل۔ اوپر کی قطار: x۔ نیچے کی قطار: 15 اور 8۔ 8 والا حصہ ڈیش والا ہے: اسے نکالا گیا تھا۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  20.0,
+                  10.0
+                ],
+                [
+                  280.0,
+                  10.0
+                ],
+                [
+                  280.0,
+                  40.0
+                ],
+                [
+                  20.0,
+                  40.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                150.0,
+                25.0
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  20.0,
+                  52.0
+                ],
+                [
+                  189.6,
+                  52.0
+                ],
+                [
+                  189.6,
+                  82.0
+                ],
+                [
+                  20.0,
+                  82.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                104.8,
+                67.0
+              ],
+              "text": "15"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  189.6,
+                  52.0
+                ],
+                [
+                  280.0,
+                  52.0
+                ],
+                [
+                  280.0,
+                  82.0
+                ],
+                [
+                  189.6,
+                  82.0
+                ]
+              ],
+              "style": "dashed"
+            },
+            {
+              "kind": "label",
+              "at": [
+                234.8,
+                67.0
+              ],
+              "text": "8"
+            }
+          ]
+        }
       }
     },
     {
@@ -748,7 +1804,226 @@
             },
             "misconception_id": "times_as_plus"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 92.0,
+          "alt": {
+            "en": "A bar model with two rows of the same length. Top row: 54. Bottom row: x, x, x, x, x and x.",
+            "ur": "دو برابر لمبی قطاروں والا پٹی ماڈل۔ اوپر کی قطار: 54۔ نیچے کی قطار: x، x، x، x، x اور x۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  20.0,
+                  10.0
+                ],
+                [
+                  280.0,
+                  10.0
+                ],
+                [
+                  280.0,
+                  40.0
+                ],
+                [
+                  20.0,
+                  40.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                150.0,
+                25.0
+              ],
+              "text": "54"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  20.0,
+                  52.0
+                ],
+                [
+                  63.3,
+                  52.0
+                ],
+                [
+                  63.3,
+                  82.0
+                ],
+                [
+                  20.0,
+                  82.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                41.7,
+                67.0
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  63.3,
+                  52.0
+                ],
+                [
+                  106.7,
+                  52.0
+                ],
+                [
+                  106.7,
+                  82.0
+                ],
+                [
+                  63.3,
+                  82.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                85.0,
+                67.0
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  106.7,
+                  52.0
+                ],
+                [
+                  150.0,
+                  52.0
+                ],
+                [
+                  150.0,
+                  82.0
+                ],
+                [
+                  106.7,
+                  82.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                128.3,
+                67.0
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  150.0,
+                  52.0
+                ],
+                [
+                  193.3,
+                  52.0
+                ],
+                [
+                  193.3,
+                  82.0
+                ],
+                [
+                  150.0,
+                  82.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                171.7,
+                67.0
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  193.3,
+                  52.0
+                ],
+                [
+                  236.7,
+                  52.0
+                ],
+                [
+                  236.7,
+                  82.0
+                ],
+                [
+                  193.3,
+                  82.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                215.0,
+                67.0
+              ],
+              "text": "x"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  236.7,
+                  52.0
+                ],
+                [
+                  280.0,
+                  52.0
+                ],
+                [
+                  280.0,
+                  82.0
+                ],
+                [
+                  236.7,
+                  82.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                258.3,
+                67.0
+              ],
+              "text": "x"
+            }
+          ]
+        }
       }
     }
   ],

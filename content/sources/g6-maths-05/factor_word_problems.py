@@ -2,6 +2,8 @@ from math import gcd, lcm
 
 from common import (T, opt, say, wrong, number_question, write, factors, is_prime, prime_factors,
                     REF, REVIEW, FM_FACTORS, FM_PRIMES, FM_HCF, FM_LCM, FM_WORD_PROBLEMS)
+from figs import (attach, dot_groups, multiples_rows, bars_figure, floor_figure, packs_figure,
+                  hcf_lcm_panels, figure, label, rect, dot_block, W)
 
 SKILL = FM_WORD_PROBLEMS
 
@@ -279,4 +281,68 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+BOYS, GIRLS = 24, 32
+assert gcd(BOYS, GIRLS) == S4
+BELL_A, BELL_B = 15, 20
+assert lcm(BELL_A, BELL_B) == S5
+ROOM_W, ROOM_L = 36, 48
+assert gcd(ROOM_W, ROOM_L) == S6
+ROTI, KEBAB = 6, 8
+assert lcm(ROTI, KEBAB) == S7 and S7 // ROTI == S8
+APPLES, ORANGES = 16, 24
+assert gcd(APPLES, ORANGES) == QB
+PENS, CAPS = 12, 16
+assert lcm(PENS, CAPS) == R1
+ROPE_A, ROPE_B = 40, 56
+assert gcd(ROPE_A, ROPE_B) == R2
+
+PANELS = (
+    "Two small pictures. Left, splitting (HCF): two bars cut by dashed lines into equal pieces, 2 pieces and 3 pieces, with nothing left over. Right, meeting again (LCM): two number lines with jumps of two sizes, small jumps on top and bigger jumps below; both land on the same point at the end, which is circled.",
+    "دو چھوٹی تصویریں۔ بائیں، بانٹنا (عاد اعظم): دو پٹیاں ڈیش والی لکیروں سے برابر ٹکڑوں میں کٹی ہیں، 2 ٹکڑے اور 3 ٹکڑے، کچھ نہیں بچتا۔ دائیں، دوبارہ ملنا (ذو اضعاف اقل): دو عددی لکیریں جن پر دو سائز کی چھلانگیں ہیں، اوپر چھوٹی اور نیچے بڑی؛ دونوں آخر میں ایک ہی نقطے پر اترتی ہیں جس کے گرد دائرہ ہے۔")
+
+
+def rotis_figure():
+    """S7 rotis in a row with the first pack of ROTI boxed (dashed)."""
+    gap = 10
+    x0 = (W - (S7 - 1) * gap) / 2 - 10
+    items = dot_block(x0, 46, S7, S7, gap=gap, r=3.5)
+    items.append(rect(x0 - 6, 38, x0 + (ROTI - 1) * gap + 6, 54, dashed=True))
+    items.append(label((x0 + (ROTI - 1) * gap / 2, 22), ROTI))
+    items.append(label((x0 + (S7 - 1) * gap + 26, 46), S7))
+    return figure(W, 66,
+        f"{S7} rotis drawn as small dots in a row, with {S7} written after them. The first {ROTI} are inside a dashed box, one pack, with {ROTI} written above it.",
+        f"{S7} روٹیاں ایک قطار میں چھوٹے نقطوں کی صورت میں، آخر میں {S7} لکھا ہے۔ پہلی {ROTI} ایک ڈیش والے ڈبے میں ہیں، یعنی ایک پیکٹ، اس کے اوپر {ROTI} لکھا ہے۔",
+        items)
+
+
+attach(lesson, {
+    "s3_which": hcf_lcm_panels(*PANELS),
+    "s4_rows": dot_groups([(BOYS, BOYS // 2, True, BOYS), (GIRLS, GIRLS // 2, False, GIRLS)],
+        f"{BOYS} boys as filled dots and {GIRLS} girls as empty dots, waiting to be put in rows. The boys stand in 2 lines of {BOYS // 2} and the girls in 2 lines of {GIRLS // 2}, with {BOYS} and {GIRLS} written on the left.",
+        f"{BOYS} لڑکے بھرے نقطے اور {GIRLS} لڑکیاں خالی نقطے، قطاروں میں لگنے کے انتظار میں۔ لڑکے {BOYS // 2} کی 2 لائنوں میں اور لڑکیاں {GIRLS // 2} کی 2 لائنوں میں کھڑی ہیں، بائیں طرف {BOYS} اور {GIRLS} لکھا ہے۔",
+        side=False),
+    "s5_bells": multiples_rows(BELL_A, BELL_B, 4 * BELL_A,
+        f"Two number lines from 0 for the two bells. Top: two jumps of {BELL_A} (+{BELL_A}), landing on {BELL_A} and {2 * BELL_A}. Bottom: two jumps of {BELL_B} (+{BELL_B}), landing on {BELL_B} and {2 * BELL_B}. The lines go on further with no more jumps drawn.",
+        f"دو گھنٹیوں کے لیے 0 سے دو عددی لکیریں۔ اوپر: {BELL_A} کی دو چھلانگیں (+{BELL_A})، {BELL_A} اور {2 * BELL_A} پر۔ نیچے: {BELL_B} کی دو چھلانگیں (+{BELL_B})، {BELL_B} اور {2 * BELL_B} پر۔ لکیریں آگے بھی جاتی ہیں مگر مزید چھلانگیں نہیں بنیں۔",
+        ring=False, count_a=2, count_b=2),
+    "s6_tiles": floor_figure(ROOM_W, ROOM_L,
+        f"The floor of the room as a rectangle, {ROOM_L} across the top and {ROOM_W} down the side.",
+        f"کمرے کا فرش ایک مستطیل کی صورت میں، اوپر {ROOM_L} اور پہلو میں {ROOM_W}۔"),
+    "s7_packs": packs_figure([(ROTI, 3, False), (KEBAB, 4, False)],
+        f"Two packs: a pack of {ROTI} rotis (dots in a box) with {ROTI} written above, and a pack of {KEBAB} kebabs with {KEBAB} written above.",
+        f"دو پیکٹ: {ROTI} روٹیوں کا پیکٹ (ڈبے میں نقطے) جس کے اوپر {ROTI} لکھا ہے، اور {KEBAB} کبابوں کا پیکٹ جس کے اوپر {KEBAB} لکھا ہے۔"),
+    "s8_how_many_packs": rotis_figure(),
+    "s12_summary": hcf_lcm_panels(*PANELS),
+    "qb_apply": dot_groups([(APPLES, APPLES, True, APPLES), (ORANGES, ORANGES, False, ORANGES)],
+        f"{APPLES} apples as filled dots in one line and {ORANGES} oranges as empty dots in another line, with {APPLES} and {ORANGES} written on the left.",
+        f"{APPLES} سیب ایک لائن میں بھرے نقطے اور {ORANGES} مالٹے دوسری لائن میں خالی نقطے، بائیں طرف {APPLES} اور {ORANGES} لکھا ہے۔",
+        side=False, gap=10, r=3.5),
+    "r_lcm_problem": packs_figure([(PENS, 6, True), (CAPS, 4, False)],
+        f"A box of {PENS} pens (short upright lines in a box) with {PENS} written above, and a bag of {CAPS} caps (dots in a box) with {CAPS} written above.",
+        f"{PENS} قلموں کا ڈبہ (ڈبے میں چھوٹی کھڑی لکیریں) جس کے اوپر {PENS} لکھا ہے، اور {CAPS} ڈھکنوں کا تھیلا (ڈبے میں نقطے) جس کے اوپر {CAPS} لکھا ہے۔"),
+    "r_hcf_problem": bars_figure([ROPE_A, ROPE_B],
+        f"Two ropes drawn as bars to scale: one {ROPE_A} m long and one {ROPE_B} m long, with the length written after each.",
+        f"دو رسیاں پٹیوں کی صورت میں، پیمانے کے مطابق: ایک {ROPE_A} میٹر لمبی اور ایک {ROPE_B} میٹر لمبی، ہر ایک کے آخر میں لمبائی لکھی ہے۔"),
+})
 write(lesson)

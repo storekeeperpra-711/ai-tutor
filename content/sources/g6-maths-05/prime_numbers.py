@@ -2,6 +2,7 @@ from math import prod
 
 from common import (T, opt, say, wrong, number_question, write, factors, is_prime, prime_factors,
                     REF, REVIEW, FM_FACTORS, FM_PRIMES)
+from figs import (attach, arrays_figure, number_grid, ladder, tree_fig, tree_figure, en_list, ur_list)
 
 SKILL = FM_PRIMES
 
@@ -213,4 +214,62 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+HOOK = 7
+PRIME_SHOW = 7
+COMPOSITE_SHOW = 12
+S5_GRID = (1, 20)
+R1_GRID = (20, 30)
+T60 = ladder(60)
+assert [n for n in prime_factors(60)] == [2, 2, 3, 5]
+T84 = ladder(84, stop=84 // (2 * 2))
+assert T84 == (84, (2,), (42, (2,), (21,)))
+T90 = ladder(90, stop=90 // (2 * 3))
+assert T90 == (90, (2,), (45, (3,), (15,)))
+T36_HALF = (36, (4, ("?",), ("?",)), (9, ("?",), ("?",)))
+assert 4 * 9 == 36
+T24_STOP = (24, (4,), (6,))
+assert 4 * 6 == 24
+R2_TREE = ("?", (2,), ("?", (3,), ("?", (3,), (5,))))
+assert prod([2, 3, 3, 5]) == R2
+
+
+def grid(lo, hi, ring, en_extra, ur_extra):
+    return number_grid(lo, hi,
+        f"A grid of the numbers {lo} to {hi}.{en_extra}",
+        f"{lo} سے {hi} تک کے اعداد کا جال۔{ur_extra}",
+        ring=ring, cols=10 if hi - lo + 1 == 20 else hi - lo + 1)
+
+
+attach(lesson, {
+    "s1_hook": arrays_figure(
+        [dict(rows=1, cols=HOOK, text=f"1×{HOOK}"), dict(rows=HOOK, cols=1, text=f"{HOOK}×1"),
+         dict(rows=2, cols=HOOK // 2, text="2×3+1", extra=HOOK % 2)],
+        f"{HOOK} laddoos as dots. Left: 1 row of {HOOK}. Middle: {HOOK} rows of 1. Right: 2 rows of 3 with 1 dot left over, drawn dashed, so 2 equal rows do not work.",
+        f"{HOOK} لڈو نقطوں کی صورت میں۔ بائیں: {HOOK} کی 1 قطار۔ درمیان: 1 کی {HOOK} قطاریں۔ دائیں: 3 کی 2 قطاریں اور 1 نقطہ بچ گیا جو ڈیش والا ہے، اس لیے 2 برابر قطاریں نہیں بنتیں۔"),
+    "s3_see_it": arrays_figure(
+        [dict(rows=1, cols=PRIME_SHOW, text=f"1×{PRIME_SHOW}"),
+         dict(rows=2, cols=COMPOSITE_SHOW // 2, text=f"2×{COMPOSITE_SHOW // 2}"),
+         dict(rows=3, cols=COMPOSITE_SHOW // 3, text=f"3×{COMPOSITE_SHOW // 3}")],
+        f"Top: {PRIME_SHOW} dots fit only in 1 row of {PRIME_SHOW} (prime). Below: {COMPOSITE_SHOW} dots fit in 2 rows of 6 and in 3 rows of 4 too (composite).",
+        f"اوپر: {PRIME_SHOW} نقطے صرف {PRIME_SHOW} کی 1 قطار میں آتے ہیں (مفرد)۔ نیچے: {COMPOSITE_SHOW} نقطے 6 کی 2 قطاروں اور 4 کی 3 قطاروں میں بھی آتے ہیں (مرکب)۔"),
+    "s5_count_primes": grid(*S5_GRID, ring=(), en_extra="", ur_extra=""),
+    "s6_tree": tree_fig(T60),
+    "s7_thirty_six": tree_figure(T36_HALF,
+        "A factor tree for 36 that splits into 4 and 9. Under 4 and under 9 are dashed branches to question marks: the tree is not finished.",
+        "36 کا اجزائے ضربی کا درخت جو 4 اور 9 میں ٹوٹتا ہے۔ 4 اور 9 کے نیچے ڈیش والی شاخیں سوالیہ نشانوں تک جاتی ہیں: درخت ابھی پورا نہیں ہوا۔"),
+    "s8_missing": tree_fig(T84, " 21 at the end is not split yet.", " آخر میں 21 ابھی توڑا نہیں گیا۔"),
+    "s12_summary": grid(*S5_GRID, ring=PRIMES_20,
+        en_extra=f" The primes are circled: {en_list(PRIMES_20)}.",
+        ur_extra=f" مفرد اعداد کے گرد دائرہ ہے: {ur_list(PRIMES_20)}۔"),
+    "qb_missing": tree_fig(T90, " 15 at the end is not split yet.", " آخر میں 15 ابھی توڑا نہیں گیا۔"),
+    "qb_find_error": tree_figure(T24_STOP,
+        "Zainab's factor tree: 24 splits into 4 and 6, and stops there.",
+        "زینب کا اجزائے ضربی کا درخت: 24 سے 4 اور 6، اور وہیں رک گیا۔",
+        ring_primes=False),
+    "r_count": grid(*R1_GRID, ring=(), en_extra="", ur_extra=""),
+    "r_product": tree_figure(R2_TREE,
+        "A factor tree drawn from the bottom up: 3 and 5 join to make a question mark; 3 and that number join to make another question mark; 2 and that number join to make the question mark at the top. 2, 3, 3 and 5 are circled.",
+        "نیچے سے اوپر بنایا گیا اجزائے ضربی کا درخت: 3 اور 5 مل کر ایک سوالیہ نشان بناتے ہیں؛ 3 اور وہ عدد مل کر ایک اور سوالیہ نشان؛ 2 اور وہ عدد مل کر سب سے اوپر والا سوالیہ نشان۔ 2، 3، 3 اور 5 کے گرد دائرہ ہے۔"),
+})
 write(lesson)

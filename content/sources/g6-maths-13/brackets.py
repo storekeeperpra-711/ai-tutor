@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, SM_ORDER, SM_BRACKETS)
+from figs import (attach, step_text, op, br, steps_fig, steps_alt, two_steps_figs, bar_model, text_of)
 
 SKILL = SM_BRACKETS
 
@@ -215,4 +216,50 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+E2 = op(8, "+", op(2, "×", 3))
+assert E2.value == S2
+E4 = op(br(op(8, "+", 2)), "×", 3)
+assert E4.value == S4
+E5 = op(24, "÷", br(op(2, "+", 4)))
+assert E5.value == S5
+E7 = op(50, "−", br(op(6, "×", br(op(3, "+", 2))), "{"))
+assert E7.value == S7
+E8 = op(br(op(20, "−", br(op(4, "+", 6))), "["), "×", 2)
+assert E8.value == S8
+E_QB = op(br(op(9, "−", 3)), "×", 4)
+assert E_QB.value == QB
+E_R1 = op(60, "÷", br(op(5, "+", 7)))
+assert E_R1.value == R1
+E_R2 = op(br(op(12, "−", br(op(2, "×", 3))), "{"), "+", 4)
+assert E_R2.value == R2
+SHARE_A, SHARE_B, FRIENDS = 150, 90, 3
+assert (SHARE_A + SHARE_B) // FRIENDS == S11
+
+
+def ask(sid, expr):
+    return steps_fig(expr, prompt=step_text(lesson, sid), results=False)
+
+
+(a1, u1), (a2, u2) = steps_alt(E2), steps_alt(E4)
+
+attach(lesson, {
+    "s1_hook": two_steps_figs(E2, E4,
+        f"Two pictures, one above the other. Top: {a1} Bottom: {a2}",
+        f"دو تصویریں، ایک دوسری کے اوپر۔ اوپر: {u1} نیچے: {u2}"),
+    "s2_foundation": ask("s2_foundation", E2),
+    "s3_bodmas": steps_fig(E4, prompt=step_text(lesson, "s3_bodmas")),
+    "s4_round": ask("s4_round", E4),
+    "s5_divide": ask("s5_divide", E5),
+    "s7_curly": ask("s7_curly", E7),
+    "s8_square": ask("s8_square", E8),
+    "s11_share": bar_model([(SHARE_A, SHARE_A, False), (SHARE_B, SHARE_B, False)],
+        f"A bar made of Rs {SHARE_A} and Rs {SHARE_B} joined together. Under it is a bar just as long, cut into {FRIENDS} equal dashed parts, one for each friend; the first part has a question mark.",
+        f"ایک پٹی جو {SHARE_A} روپے اور {SHARE_B} روپے کو جوڑ کر بنی ہے۔ اس کے نیچے اتنی ہی لمبی پٹی ہے جو {FRIENDS} برابر ڈیش والے حصوں میں کٹی ہے، ہر دوست کا ایک حصہ؛ پہلے حصے میں سوالیہ نشان ہے۔",
+        split=FRIENDS, parts=["?"] + [None] * (FRIENDS - 1)),
+    "s12_summary": steps_fig(E7),
+    "qb_apply": ask("qb_apply", E_QB),
+    "r_divide": ask("r_divide", E_R1),
+    "r_nested": ask("r_nested", E_R2),
+})
 write(lesson)

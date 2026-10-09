@@ -118,7 +118,171 @@
               },
               "misconception_id": "left_to_right_all"
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 108.0,
+            "alt": {
+              "en": "The expression 7 + 2 × 6 with numbered brackets under it showing the order of the steps: step 1 is under 2 × 6, with a question mark; step 2 is under 7 + 2 × 6, with a question mark.",
+              "ur": "عبارت 7 + 2 × 6، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 2 × 6 کے نیچے، سوالیہ نشان کے ساتھ؛ قدم 2، 7 + 2 × 6 کے نیچے، سوالیہ نشان کے ساتھ۔"
+            },
+            "items": [
+              {
+                "kind": "label",
+                "at": [
+                  110.4,
+                  16.0
+                ],
+                "text": "7"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  130.2,
+                  16.0
+                ],
+                "text": "+"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  150.0,
+                  16.0
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  169.8,
+                  16.0
+                ],
+                "text": "×"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  189.6,
+                  16.0
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  144.2,
+                  28.0
+                ],
+                "to": [
+                  144.2,
+                  34.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  144.2,
+                  34.0
+                ],
+                "to": [
+                  195.4,
+                  34.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  195.4,
+                  28.0
+                ],
+                "to": [
+                  195.4,
+                  34.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  169.8,
+                  52.0
+                ],
+                "text": "?"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  148.0,
+                  52.0
+                ],
+                "radius": 9.0
+              },
+              {
+                "kind": "label",
+                "at": [
+                  148.0,
+                  52.0
+                ],
+                "text": "1"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  104.6,
+                  68.0
+                ],
+                "to": [
+                  104.6,
+                  74.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  104.6,
+                  74.0
+                ],
+                "to": [
+                  195.4,
+                  74.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  195.4,
+                  68.0
+                ],
+                "to": [
+                  195.4,
+                  74.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  150.0,
+                  92.0
+                ],
+                "text": "?"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  128.2,
+                  92.0
+                ],
+                "radius": 9.0
+              },
+              {
+                "kind": "label",
+                "at": [
+                  128.2,
+                  92.0
+                ],
+                "text": "2"
+              }
+            ]
+          }
         }
       },
       {
@@ -223,6 +387,319 @@
       "text": {
         "en": "Today we learn the order to do + − × ÷ in. First, a quick check.",
         "ur": "آج ہم سیکھیں گے کہ + − × ÷ کس ترتیب سے کرتے ہیں۔ پہلے ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 63.0,
+        "alt": {
+          "en": "3 counters on their own, a plus sign, then 4 dashed boxes with 5 counters in each: 3 + 4 groups of 5.",
+          "ur": "3 اکیلی گوٹیاں، جمع کا نشان، پھر 4 ڈیش والے خانے جن میں ہر ایک میں 5 گوٹیاں ہیں: 3 + 5 کے 4 گروہ۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              9.0,
+              31.5
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              22.0,
+              31.5
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              35.0,
+              31.5
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.0,
+              31.5
+            ],
+            "text": "+"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                75.0,
+                14.0
+              ],
+              [
+                123.0,
+                14.0
+              ],
+              [
+                123.0,
+                49.0
+              ],
+              [
+                75.0,
+                49.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              86.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              99.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              112.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              86.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              99.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                131.0,
+                14.0
+              ],
+              [
+                179.0,
+                14.0
+              ],
+              [
+                179.0,
+                49.0
+              ],
+              [
+                131.0,
+                49.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              142.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              155.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              142.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              155.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                187.0,
+                14.0
+              ],
+              [
+                235.0,
+                14.0
+              ],
+              [
+                235.0,
+                49.0
+              ],
+              [
+                187.0,
+                49.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              198.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              211.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              224.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              198.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              211.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                243.0,
+                14.0
+              ],
+              [
+                291.0,
+                14.0
+              ],
+              [
+                291.0,
+                49.0
+              ],
+              [
+                243.0,
+                49.0
+              ]
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              254.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              267.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              280.0,
+              25.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              254.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              267.0,
+              38.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          }
+        ]
       }
     },
     {
@@ -256,7 +733,286 @@
             "ur": "علامت رکھیں: منفی × مثبت = منفی، −20"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 88.0,
+        "alt": {
+          "en": "A number line. From 0, 5 equal jumps of −4 go to the left. 0 and −4 are written under the line, and a question mark where the last jump lands.",
+          "ur": "ایک عددی لکیر۔ 0 سے −4 کی 5 برابر چھلانگیں بائیں طرف جاتی ہیں۔ لکیر کے نیچے 0 اور −4 لکھے ہیں، اور جہاں آخری چھلانگ اترتی ہے وہاں سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              56.0
+            ],
+            "to": [
+              284.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              276.0,
+              51.0
+            ],
+            "to": [
+              276.0,
+              61.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              225.6,
+              51.0
+            ],
+            "to": [
+              225.6,
+              61.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              175.2,
+              51.0
+            ],
+            "to": [
+              175.2,
+              61.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              124.8,
+              51.0
+            ],
+            "to": [
+              124.8,
+              61.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              74.4,
+              51.0
+            ],
+            "to": [
+              74.4,
+              61.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              24.0,
+              51.0
+            ],
+            "to": [
+              24.0,
+              61.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              250.8,
+              56.0
+            ],
+            "radius": 25.2,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              221.6,
+              48.0
+            ],
+            "to": [
+              225.6,
+              55.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              229.6,
+              48.0
+            ],
+            "to": [
+              225.6,
+              55.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              200.4,
+              56.0
+            ],
+            "radius": 25.2,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              171.2,
+              48.0
+            ],
+            "to": [
+              175.2,
+              55.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              179.2,
+              48.0
+            ],
+            "to": [
+              175.2,
+              55.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              150.0,
+              56.0
+            ],
+            "radius": 25.2,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              120.8,
+              48.0
+            ],
+            "to": [
+              124.8,
+              55.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              128.8,
+              48.0
+            ],
+            "to": [
+              124.8,
+              55.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              99.6,
+              56.0
+            ],
+            "radius": 25.2,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.4,
+              48.0
+            ],
+            "to": [
+              74.4,
+              55.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.4,
+              48.0
+            ],
+            "to": [
+              74.4,
+              55.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              49.2,
+              56.0
+            ],
+            "radius": 25.2,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              20.0,
+              48.0
+            ],
+            "to": [
+              24.0,
+              55.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              48.0
+            ],
+            "to": [
+              24.0,
+              55.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              73.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "label",
+            "at": [
+              225.6,
+              73.0
+            ],
+            "text": "−4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              73.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              250.8,
+              19.8
+            ],
+            "text": "−4"
+          }
+        ]
+      }
     },
     {
       "id": "s3_rule",
@@ -271,6 +1027,170 @@
       "text": {
         "en": "Everyone agrees on one order so that a sum has only one answer. 1) Do × and ÷, going from left to right. 2) Then do + and −, going from left to right. So 3 + 4 × 5 = 3 + 20 = 23. Bilal is right.",
         "ur": "سب ایک ہی ترتیب مانتے ہیں تاکہ سوال کا ایک ہی جواب ہو۔ 1) × اور ÷ کریں، بائیں سے دائیں۔ 2) پھر + اور − کریں، بائیں سے دائیں۔ تو 3 + 4 × 5 = 3 + 20 = 23۔ بلال درست ہے۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 108.0,
+        "alt": {
+          "en": "The expression 3 + 4 × 5 with numbered brackets under it showing the order of the steps: step 1, under 4 × 5, gives 20; step 2, under 3 + 4 × 5, gives 23.",
+          "ur": "عبارت 3 + 4 × 5، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 4 × 5 کے نیچے، جواب 20؛ قدم 2، 3 + 4 × 5 کے نیچے، جواب 23۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              110.4,
+              16.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.2,
+              16.0
+            ],
+            "text": "+"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              16.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              169.8,
+              16.0
+            ],
+            "text": "×"
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.6,
+              16.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              28.0
+            ],
+            "to": [
+              144.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              34.0
+            ],
+            "to": [
+              195.4,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              195.4,
+              28.0
+            ],
+            "to": [
+              195.4,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              169.8,
+              52.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              143.2,
+              52.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              143.2,
+              52.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              104.6,
+              68.0
+            ],
+            "to": [
+              104.6,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              104.6,
+              74.0
+            ],
+            "to": [
+              195.4,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              195.4,
+              68.0
+            ],
+            "to": [
+              195.4,
+              74.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              92.0
+            ],
+            "text": "23"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              123.4,
+              92.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.4,
+              92.0
+            ],
+            "text": "2"
+          }
+        ]
       }
     },
     {
@@ -304,7 +1224,171 @@
           },
           "misconception_id": "left_to_right_all"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 108.0,
+        "alt": {
+          "en": "The expression 3 + 4 × 5 with numbered brackets under it showing the order of the steps: step 1 is under 4 × 5, with a question mark; step 2 is under 3 + 4 × 5, with a question mark.",
+          "ur": "عبارت 3 + 4 × 5، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 4 × 5 کے نیچے، سوالیہ نشان کے ساتھ؛ قدم 2، 3 + 4 × 5 کے نیچے، سوالیہ نشان کے ساتھ۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              110.4,
+              16.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.2,
+              16.0
+            ],
+            "text": "+"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              16.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              169.8,
+              16.0
+            ],
+            "text": "×"
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.6,
+              16.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              28.0
+            ],
+            "to": [
+              144.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              34.0
+            ],
+            "to": [
+              195.4,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              195.4,
+              28.0
+            ],
+            "to": [
+              195.4,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              169.8,
+              52.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              148.0,
+              52.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              148.0,
+              52.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              104.6,
+              68.0
+            ],
+            "to": [
+              104.6,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              104.6,
+              74.0
+            ],
+            "to": [
+              195.4,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              195.4,
+              68.0
+            ],
+            "to": [
+              195.4,
+              74.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              92.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              128.2,
+              92.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.2,
+              92.0
+            ],
+            "text": "2"
+          }
+        ]
+      }
     },
     {
       "id": "s5_divide_first",
@@ -337,7 +1421,171 @@
           },
           "misconception_id": "left_to_right_all"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 108.0,
+        "alt": {
+          "en": "The expression 20 − 12 ÷ 4 with numbered brackets under it showing the order of the steps: step 1 is under 12 ÷ 4, with a question mark; step 2 is under 20 − 12 ÷ 4, with a question mark.",
+          "ur": "عبارت 20 − 12 ÷ 4، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 12 ÷ 4 کے نیچے، سوالیہ نشان کے ساتھ؛ قدم 2، 20 − 12 ÷ 4 کے نیچے، سوالیہ نشان کے ساتھ۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              105.6,
+              16.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.2,
+              16.0
+            ],
+            "text": "−"
+          },
+          {
+            "kind": "label",
+            "at": [
+              154.8,
+              16.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              179.4,
+              16.0
+            ],
+            "text": "÷"
+          },
+          {
+            "kind": "label",
+            "at": [
+              199.2,
+              16.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              28.0
+            ],
+            "to": [
+              144.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              34.0
+            ],
+            "to": [
+              205.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              205.0,
+              28.0
+            ],
+            "to": [
+              205.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              174.6,
+              52.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              152.8,
+              52.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              152.8,
+              52.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              68.0
+            ],
+            "to": [
+              95.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              74.0
+            ],
+            "to": [
+              205.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              205.0,
+              68.0
+            ],
+            "to": [
+              205.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              92.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              128.2,
+              92.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.2,
+              92.0
+            ],
+            "text": "2"
+          }
+        ]
+      }
     },
     {
       "id": "s6_which_first",
@@ -405,7 +1653,171 @@
           },
           "misconception_id": "add_before_subtract"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 108.0,
+        "alt": {
+          "en": "The expression 40 ÷ 8 × 2 with numbered brackets under it showing the order of the steps: step 1 is under 40 ÷ 8, with a question mark; step 2 is under 40 ÷ 8 × 2, with a question mark.",
+          "ur": "عبارت 40 ÷ 8 × 2، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 40 ÷ 8 کے نیچے، سوالیہ نشان کے ساتھ؛ قدم 2، 40 ÷ 8 × 2 کے نیچے، سوالیہ نشان کے ساتھ۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              110.4,
+              16.0
+            ],
+            "text": "40"
+          },
+          {
+            "kind": "label",
+            "at": [
+              135.0,
+              16.0
+            ],
+            "text": "÷"
+          },
+          {
+            "kind": "label",
+            "at": [
+              154.8,
+              16.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              174.6,
+              16.0
+            ],
+            "text": "×"
+          },
+          {
+            "kind": "label",
+            "at": [
+              194.4,
+              16.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.8,
+              28.0
+            ],
+            "to": [
+              99.8,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.8,
+              34.0
+            ],
+            "to": [
+              160.6,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              160.6,
+              28.0
+            ],
+            "to": [
+              160.6,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.2,
+              52.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              108.4,
+              52.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.4,
+              52.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.8,
+              68.0
+            ],
+            "to": [
+              99.8,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.8,
+              74.0
+            ],
+            "to": [
+              200.2,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              200.2,
+              68.0
+            ],
+            "to": [
+              200.2,
+              74.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              92.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              128.2,
+              92.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.2,
+              92.0
+            ],
+            "text": "2"
+          }
+        ]
+      }
     },
     {
       "id": "s8_minus_plus",
@@ -438,7 +1850,171 @@
           },
           "misconception_id": "add_before_subtract"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 108.0,
+        "alt": {
+          "en": "The expression 30 − 10 + 5 with numbered brackets under it showing the order of the steps: step 1 is under 30 − 10, with a question mark; step 2 is under 30 − 10 + 5, with a question mark.",
+          "ur": "عبارت 30 − 10 + 5، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 30 − 10 کے نیچے، سوالیہ نشان کے ساتھ؛ قدم 2، 30 − 10 + 5 کے نیچے، سوالیہ نشان کے ساتھ۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              105.6,
+              16.0
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.2,
+              16.0
+            ],
+            "text": "−"
+          },
+          {
+            "kind": "label",
+            "at": [
+              154.8,
+              16.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              179.4,
+              16.0
+            ],
+            "text": "+"
+          },
+          {
+            "kind": "label",
+            "at": [
+              199.2,
+              16.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              28.0
+            ],
+            "to": [
+              95.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              34.0
+            ],
+            "to": [
+              165.4,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              165.4,
+              28.0
+            ],
+            "to": [
+              165.4,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.2,
+              52.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              108.4,
+              52.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.4,
+              52.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              68.0
+            ],
+            "to": [
+              95.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              74.0
+            ],
+            "to": [
+              205.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              205.0,
+              68.0
+            ],
+            "to": [
+              205.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              92.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              128.2,
+              92.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.2,
+              92.0
+            ],
+            "text": "2"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -564,7 +2140,134 @@
           },
           "misconception_id": "left_to_right_all"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 88.0,
+        "alt": {
+          "en": "Ali's shopping: a pen with Rs 25 written above it, and 3 notebooks, each with Rs 40 written on it.",
+          "ur": "علی کی خریداری: ایک قلم جس کے اوپر 25 روپے لکھا ہے، اور 3 کاپیاں، ہر ایک پر 40 روپے لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                30.0,
+                40.0
+              ],
+              [
+                84.0,
+                40.0
+              ],
+              [
+                84.0,
+                56.0
+              ],
+              [
+                30.0,
+                56.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              57.0,
+              26.0
+            ],
+            "text": "25"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                114.0,
+                14.0
+              ],
+              [
+                158.0,
+                14.0
+              ],
+              [
+                158.0,
+                74.0
+              ],
+              [
+                114.0,
+                74.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              44.0
+            ],
+            "text": "40"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                168.0,
+                14.0
+              ],
+              [
+                212.0,
+                14.0
+              ],
+              [
+                212.0,
+                74.0
+              ],
+              [
+                168.0,
+                74.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              190.0,
+              44.0
+            ],
+            "text": "40"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                222.0,
+                14.0
+              ],
+              [
+                266.0,
+                14.0
+              ],
+              [
+                266.0,
+                74.0
+              ],
+              [
+                222.0,
+                74.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              244.0,
+              44.0
+            ],
+            "text": "40"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -589,7 +2292,171 @@
           "en": "Same level: left to right.",
           "ur": "ایک ہی درجہ: بائیں سے دائیں۔"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 108.0,
+        "alt": {
+          "en": "The expression 20 − 12 ÷ 4 with numbered brackets under it showing the order of the steps: step 1, under 12 ÷ 4, gives 3; step 2, under 20 − 12 ÷ 4, gives 17.",
+          "ur": "عبارت 20 − 12 ÷ 4، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 12 ÷ 4 کے نیچے، جواب 3؛ قدم 2، 20 − 12 ÷ 4 کے نیچے، جواب 17۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              105.6,
+              16.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.2,
+              16.0
+            ],
+            "text": "−"
+          },
+          {
+            "kind": "label",
+            "at": [
+              154.8,
+              16.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              179.4,
+              16.0
+            ],
+            "text": "÷"
+          },
+          {
+            "kind": "label",
+            "at": [
+              199.2,
+              16.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              28.0
+            ],
+            "to": [
+              144.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.2,
+              34.0
+            ],
+            "to": [
+              205.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              205.0,
+              28.0
+            ],
+            "to": [
+              205.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              174.6,
+              52.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              152.8,
+              52.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              152.8,
+              52.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              68.0
+            ],
+            "to": [
+              95.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.0,
+              74.0
+            ],
+            "to": [
+              205.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              205.0,
+              68.0
+            ],
+            "to": [
+              205.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              92.0
+            ],
+            "text": "17"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              123.4,
+              92.0
+            ],
+            "radius": 9.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.4,
+              92.0
+            ],
+            "text": "2"
+          }
+        ]
+      }
     }
   ],
   "review_questions": [
@@ -627,7 +2494,171 @@
             },
             "misconception_id": "left_to_right_all"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 108.0,
+          "alt": {
+            "en": "The expression 50 − 5 × 6 with numbered brackets under it showing the order of the steps: step 1 is under 5 × 6, with a question mark; step 2 is under 50 − 5 × 6, with a question mark.",
+            "ur": "عبارت 50 − 5 × 6، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 5 × 6 کے نیچے، سوالیہ نشان کے ساتھ؛ قدم 2، 50 − 5 × 6 کے نیچے، سوالیہ نشان کے ساتھ۔"
+          },
+          "items": [
+            {
+              "kind": "label",
+              "at": [
+                110.4,
+                16.0
+              ],
+              "text": "50"
+            },
+            {
+              "kind": "label",
+              "at": [
+                135.0,
+                16.0
+              ],
+              "text": "−"
+            },
+            {
+              "kind": "label",
+              "at": [
+                154.8,
+                16.0
+              ],
+              "text": "5"
+            },
+            {
+              "kind": "label",
+              "at": [
+                174.6,
+                16.0
+              ],
+              "text": "×"
+            },
+            {
+              "kind": "label",
+              "at": [
+                194.4,
+                16.0
+              ],
+              "text": "6"
+            },
+            {
+              "kind": "line",
+              "from": [
+                149.0,
+                28.0
+              ],
+              "to": [
+                149.0,
+                34.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                149.0,
+                34.0
+              ],
+              "to": [
+                200.2,
+                34.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                200.2,
+                28.0
+              ],
+              "to": [
+                200.2,
+                34.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                174.6,
+                52.0
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                152.8,
+                52.0
+              ],
+              "radius": 9.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                152.8,
+                52.0
+              ],
+              "text": "1"
+            },
+            {
+              "kind": "line",
+              "from": [
+                99.8,
+                68.0
+              ],
+              "to": [
+                99.8,
+                74.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                99.8,
+                74.0
+              ],
+              "to": [
+                200.2,
+                74.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                200.2,
+                68.0
+              ],
+              "to": [
+                200.2,
+                74.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                150.0,
+                92.0
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                128.2,
+                92.0
+              ],
+              "radius": 9.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                128.2,
+                92.0
+              ],
+              "text": "2"
+            }
+          ]
+        }
       }
     },
     {
@@ -664,7 +2695,171 @@
             },
             "misconception_id": "left_to_right_all"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 108.0,
+          "alt": {
+            "en": "The expression 5 + 36 ÷ 4 with numbered brackets under it showing the order of the steps: step 1 is under 36 ÷ 4, with a question mark; step 2 is under 5 + 36 ÷ 4, with a question mark.",
+            "ur": "عبارت 5 + 36 ÷ 4، اس کے نیچے نمبر والی بریکٹیں جو قدموں کی ترتیب دکھاتی ہیں: قدم 1، 36 ÷ 4 کے نیچے، سوالیہ نشان کے ساتھ؛ قدم 2، 5 + 36 ÷ 4 کے نیچے، سوالیہ نشان کے ساتھ۔"
+          },
+          "items": [
+            {
+              "kind": "label",
+              "at": [
+                105.6,
+                16.0
+              ],
+              "text": "5"
+            },
+            {
+              "kind": "label",
+              "at": [
+                125.4,
+                16.0
+              ],
+              "text": "+"
+            },
+            {
+              "kind": "label",
+              "at": [
+                150.0,
+                16.0
+              ],
+              "text": "36"
+            },
+            {
+              "kind": "label",
+              "at": [
+                174.6,
+                16.0
+              ],
+              "text": "÷"
+            },
+            {
+              "kind": "label",
+              "at": [
+                194.4,
+                16.0
+              ],
+              "text": "4"
+            },
+            {
+              "kind": "line",
+              "from": [
+                139.4,
+                28.0
+              ],
+              "to": [
+                139.4,
+                34.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                139.4,
+                34.0
+              ],
+              "to": [
+                200.2,
+                34.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                200.2,
+                28.0
+              ],
+              "to": [
+                200.2,
+                34.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                169.8,
+                52.0
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                148.0,
+                52.0
+              ],
+              "radius": 9.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                148.0,
+                52.0
+              ],
+              "text": "1"
+            },
+            {
+              "kind": "line",
+              "from": [
+                99.8,
+                68.0
+              ],
+              "to": [
+                99.8,
+                74.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                99.8,
+                74.0
+              ],
+              "to": [
+                200.2,
+                74.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                200.2,
+                68.0
+              ],
+              "to": [
+                200.2,
+                74.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                150.0,
+                92.0
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                128.2,
+                92.0
+              ],
+              "radius": 9.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                128.2,
+                92.0
+              ],
+              "text": "2"
+            }
+          ]
+        }
       }
     }
   ],

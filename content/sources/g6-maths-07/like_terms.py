@@ -233,4 +233,81 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from common import expr
+from figs import (attach, figure, tiles_figure, tiles_en, tiles_ur, strip_figure, mango, banana,
+                  label, expr_text, W)
+
+
+def shows(terms, written):
+    """The tiles drawn are the expression in the step."""
+    assert expr(*terms).replace(" ", "") == written.replace(" ", ""), (terms, written)
+    return terms
+
+
+def fruit():
+    """3 apples + 2 apples = 5 apples; 3 apples + 2 bananas = ?"""
+    items = []
+    y1, y2 = 26, 76
+    xs = [40 + i * 22 for i in range(3)]
+    items += [mango(x, y1) for x in xs] + [label((118, y1), "+")]
+    items += [mango(140 + i * 22, y1) for i in range(2)] + [label((190, y1), "=")]
+    items += [mango(214 + i * 18, y1) for i in range(5)]
+    items += [mango(x, y2) for x in xs] + [label((118, y2), "+")]
+    for i in range(2):
+        items += banana(148 + i * 30, y2 + 4)
+    items += [label((206, y2), "="), label((230, y2), "?")]
+    return figure(W, 100,
+        "Top row: 3 apples (shaded circles) plus 2 apples equals 5 apples. Bottom row: 3 apples plus 2 bananas (curved shapes) equals a question mark.",
+        "اوپر کی قطار: 3 سیب (رنگے دائرے) جمع 2 سیب برابر 5 سیب۔ نیچے کی قطار: 3 سیب جمع 2 کیلے (مڑی ہوئی شکلیں) برابر سوالیہ نشان۔",
+        items)
+
+
+def tiles(rows, letters, en, ur, **kw):
+    return tiles_figure(rows, letters, f"{en} {tiles_en(letters)}", f"{ur} {tiles_ur(letters)}", **kw)
+
+
+def one_row(terms, letters, written):
+    shows(terms, written)
+    return tiles([[("terms", terms)]], letters,
+        f"Algebra tiles for {expr_text(terms)}, each group named above it",
+        f"{expr_text(terms)} کی الجبرا ٹائلیں، ہر گروہ کا نام اس کے اوپر")
+
+
+def two_groups(a, op, b, letters, written):
+    shows([a, (b[0] if op == "+" else -b[0], b[1])], written)
+    return tiles([[("terms", [a]), ("op", op), ("terms", [b])]], letters,
+        f"Algebra tiles: a group for {expr_text([a])}, then {op}, then a group for {expr_text([b])}",
+        f"الجبرا ٹائلیں: {expr_text([a])} کا گروہ، پھر {op}، پھر {expr_text([b])} کا گروہ")
+
+
+A3, B3 = 3, 2                              # s3: 3a + 2a = 5a, 3a + 2b stays
+assert same(f"{A3}a + {B3}a", f"{A3 + B3}a", a=R)
+S7 = shows([(3, "x"), (4, ""), (4, "x")], "3x + 4 + 4x")
+S7_DONE = [(7, "x"), (4, "")]
+assert same(expr(*S7), expr(*S7_DONE), x=R)
+
+attach(lesson, {
+    "s1_hook": fruit(),
+    "s2_foundation": strip_figure([("bags", 2, "x"), ("text", "+"), ("marbles", 3), ("text", "x=5")],
+        "2 bags marked x, a plus sign and 3 marbles, which is 2x + 3. Beside them: x=5, each bag holds 5 marbles.",
+        "2 تھیلے جن پر x لکھا ہے، جمع کا نشان اور 3 کنچے، یعنی 2x + 3۔ ساتھ میں: x=5، ہر تھیلے میں 5 کنچے ہیں۔"),
+    "s3_like": tiles([[("terms", [(A3, "a")]), ("op", "+"), ("terms", [(B3, "a")]), ("op", "="), ("terms", [(A3 + B3, "a")])],
+                      [("terms", [(A3, "a")]), ("op", "+"), ("terms", [(B3, "b")])]], ("a", "b"),
+        "Top row: 3 a-tiles plus 2 a-tiles make 5 a-tiles, so 3a + 2a = 5a. Bottom row: 3 a-tiles and 2 b-tiles are different tiles, so 3a + 2b stays as it is.",
+        "اوپر کی قطار: 3 ٹائلیں a جمع 2 ٹائلیں a مل کر 5 ٹائلیں a، یعنی 3a + 2a = 5a۔ نیچے کی قطار: 3 ٹائلیں a اور 2 ٹائلیں b مختلف ہیں، اس لیے 3a + 2b ویسا ہی رہتا ہے۔"),
+    "s4_add": two_groups((4, "x"), "+", (3, "x"), ("x",), "4x + 3x"),
+    "s5_subtract": two_groups((9, "m"), "−", (4, "m"), ("m",), "9m - 4m"),
+    "s7_with_number": one_row(S7, ("x",), "3x + 4 + 4x"),
+    "s8_two_letters": one_row([(2, "a"), (3, "b"), (4, "a"), (1, "b")], ("a", "b"), "2a + 3b + 4a + b"),
+    "s9_find_error": one_row([(3, "a"), (2, "b")], ("a", "b"), "3a + 2b"),
+    "s12_summary": tiles([[("terms", S7)], [("terms", S7_DONE)]], ("x",),
+        "Top row: algebra tiles for 3x + 4 + 4x. An arrow points down. Bottom row: the x-tiles put together make 7x, and the 4 small squares stay apart: 7x + 4.",
+        "اوپر کی قطار: 3x + 4 + 4x کی الجبرا ٹائلیں۔ نیچے کی طرف تیر۔ نیچے کی قطار: x والی ٹائلیں اکٹھی ہو کر 7x، اور 4 چھوٹے مربعے الگ رہتے ہیں: 7x + 4۔",
+        between="arrow"),
+    "qb_apply": one_row([(5, "p"), (2, ""), (1, "p")], ("p",), "5p + 2 + p"),
+    "qb_find_error": one_row([(6, "n"), (-1, "n")], ("n",), "6n - n"),
+    "r_subtract": one_row([(8, "k"), (-3, "k")], ("k",), "8k - 3k"),
+    "r_repeat": one_row([(1, "a"), (1, "a"), (1, "a")], ("a",), "a + a + a"),
+})
 write(lesson)

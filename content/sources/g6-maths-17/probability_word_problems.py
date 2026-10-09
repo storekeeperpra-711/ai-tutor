@@ -295,4 +295,40 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import attach, step_says, dice_faces, bag, two_bags, key, cards, spinner, grid
+
+for sid, text in (("s4_draw", "40 tickets"), ("s4_draw", "Ali buys 3"), ("s5_toffees", "6 mango, 4 strawberry and 10 orange"),
+                  ("s7_class", "30 students: 18 girls and 12 boys"), ("s8_ludo", "5 or a 6"),
+                  ("s10_explain_why", "Bag A has 1 red and 3 blue balls. Bag B has 2 red and 8 blue balls."),
+                  ("u3_scale", "7 green balls"), ("u5_spinner", "10 equal parts. 3 parts win"),
+                  ("qb_find_error", "5 mango, 5 orange and 10 lemon"), ("r_tickets", "50 tickets"),
+                  ("r_tickets", "Usman buys 5"), ("r_glasses", "24 students. 9 of them wear glasses")):
+    step_says(lesson, sid, text)
+LUDO = [o for o in DICE if o in (5, 6)]
+SPIN = tickets(10, 3)              # the mela spinner: 3 prize parts of 10
+GLASSES = balls(yes=9, no=15)
+
+attach(lesson, {
+    "s2_foundation": dice_faces(DICE),
+    "s4_draw": grid(tickets(40, 3), "mine", pre=("The lucky draw:", "قرعہ اندازی:"),
+                    what_en=": they are Ali's tickets", what_ur=": یہ علی کے ٹکٹ ہیں"),
+    "s5_toffees": bag(JAR, key("mango", "strawberry", "orange"), pre=("Ayesha's toffee jar.", "عائشہ کا ٹافیوں والا مرتبان۔")),
+    "s6_day": cards([d[:2] for d in DAYS], pre=("The days of the week:", "ہفتے کے دن:")),
+    "s7_class": grid(CLASS, "boy", shape="person", pre=("The class, one circle for each student.", "جماعت، ہر طالب علم کے لیے ایک دائرہ۔"),
+                     what_en=": they are the boys, and the empty circles are the girls",
+                     what_ur=": یہ لڑکے ہیں، اور خالی دائرے لڑکیاں ہیں"),
+    "s8_ludo": dice_faces(DICE, ring=LUDO, pre=("Hamza's Ludo dice.", "حمزہ کا لُڈو کا پانسہ۔")),
+    "s10_explain_why": two_bags(balls(red=1, blue=3), balls(red=2, blue=8), key("red", "blue")),
+    "u3_scale": bag(balls(green=7), key("green")),
+    "u5_spinner": spinner([None] * len(SPIN), shade=[i for i, o in enumerate(SPIN) if o == "mine"],
+                          what_en=f"{SPIN.count('mine')} of them shaded (they win a prize) and {SPIN.count('other')} empty",
+                          what_ur=f"جن میں سے {SPIN.count('mine')} رنگین ہیں (ان پر انعام ملتا ہے) اور {SPIN.count('other')} خالی"),
+    "qb_find_error": bag(balls(mango=5, orange=5, lemon=10), key("mango", "orange", "lemon"), pre=("Bilal's box of sweets.", "بلال کا مٹھائیوں کا ڈبہ۔")),
+    "r_tickets": grid(tickets(50, 5), "mine", pre=("The lucky draw:", "قرعہ اندازی:"),
+                      what_en=": they are Usman's tickets", what_ur=": یہ عثمان کے ٹکٹ ہیں"),
+    "r_glasses": grid(GLASSES, "yes", cols=8, shape="person", pre=("The class, one circle for each student.", "جماعت، ہر طالب علم کے لیے ایک دائرہ۔"),
+                      what_en=": they are the students who wear glasses", what_ur=": یہ وہ طالب علم ہیں جو عینک لگاتے ہیں"),
+})
 write(lesson)

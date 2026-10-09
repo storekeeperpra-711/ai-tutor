@@ -3,6 +3,7 @@ from fractions import Fraction as F
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, SM_ORDER, SM_BRACKETS, SM_FRACTIONS_DECIMALS, SM_ESTIMATE, SM_WORD_PROBLEMS,
                     round_to)
+from figs import (attach, step_text, op, br, steps_fig, bar_model, round_fig, figure, rect, circle, label, W)
 
 SKILL = SM_WORD_PROBLEMS
 
@@ -270,4 +271,94 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+E2 = op(br(op(12, "+", 8)), "÷", 4)
+assert E2.value == S2
+MONEY, PENS, PEN_PRICE = 500, 3, 40
+assert MONEY - PENS * PEN_PRICE == S4
+BOXES, PER_BOX, LOOSE = 4, 12, 6
+assert BOXES * PER_BOX + LOOSE == S5
+STUDENTS, EACH, FOOD = 30, 50, 600
+assert STUDENTS * EACH - FOOD == S7
+UNCLE, AUNT, SAVE = 300, 100, F(1, 4)
+assert SAVE * (UNCLE + AUNT) == S8
+U4_ROW = (351, 300, 400)
+assert round_to(351, 100) == U4 and U4_ROW[1] < 351 < U4_ROW[2]
+NOTE, KG, APPLE_PRICE = 500, 2, 150
+assert NOTE - KG * APPLE_PRICE == U5
+ROWS, PER_ROW, FRONT = 6, 7, 5
+assert ROWS * PER_ROW + FRONT == QB
+FRIENDS, FOOD_EACH, DRINKS = 3, 90, 30
+assert FRIENDS * FOOD_EACH + DRINKS == R1
+GOAT, PAID, PARTS = 400, 100, 3
+assert (GOAT - PAID) // PARTS == R2
+
+
+def pens_bar(rest_text):
+    return bar_model([(PEN_PRICE, None, False)] * PENS + [(MONEY - PENS * PEN_PRICE, rest_text, True)],
+        f"A bar for Bilal's Rs {MONEY}, with {MONEY} written above it. It starts with {PENS} small parts, one for each pen, with {PENS}×{PEN_PRICE} written under them; the dashed part left over has {rest_text} in it.",
+        f"بلال کے {MONEY} روپے کی ایک پٹی، اوپر {MONEY} لکھا ہے۔ شروع میں {PENS} چھوٹے حصے ہیں، ہر قلم کا ایک، ان کے نیچے {PENS}×{PEN_PRICE} لکھا ہے؛ باقی بچا ڈیش والا حصہ، اس میں {rest_text} لکھا ہے۔",
+        total_text=MONEY, under=[(0, PENS * PEN_PRICE, f"{PENS}×{PEN_PRICE}")])
+
+
+def mangoes():
+    items = []
+    bw, gap = 46, 10
+    x = 10
+    for _ in range(BOXES):
+        items += [rect(x, 22, x + bw, 62), label((x + bw / 2, 42), PER_BOX)]
+        x += bw + gap
+    x += 8
+    for k in range(LOOSE):
+        items.append(circle((x + (k % 3) * 16, 34 + (k // 3) * 16), 6, fill=True))
+    return figure(W, 82,
+        f"{BOXES} boxes of mangoes, each with {PER_BOX} written on it, and {LOOSE} loose mangoes drawn as dots next to them.",
+        f"آموں کے {BOXES} ڈبے، ہر ایک پر {PER_BOX} لکھا ہے، اور ساتھ {LOOSE} کھلے آم نقطوں کی صورت میں۔",
+        items)
+
+
+def chairs():
+    gap = 15
+    x0 = (W - (PER_ROW - 1) * gap) / 2
+    fx = (W - (FRONT - 1) * gap) / 2
+    items = [label((x0 - 30, 34), FRONT)]
+    items += [circle((fx + k * gap, 34), 5, fill=True) for k in range(FRONT)]
+    for i in range(ROWS):
+        for j in range(PER_ROW):
+            items.append(circle((x0 + j * gap, 64 + i * gap), 5))
+    items += [label((x0 - 30, 64 + (ROWS - 1) * gap / 2), ROWS), label((W / 2, 64 + ROWS * gap + 6), PER_ROW)]
+    return figure(W, 64 + ROWS * gap + 22,
+        f"Chairs in a hall seen from above. Front: {FRONT} chairs as filled dots, with {FRONT} written on the left. Behind them: {ROWS} rows of {PER_ROW} chairs as empty dots, with {ROWS} written on the left and {PER_ROW} under the rows.",
+        f"ہال کی کرسیاں اوپر سے۔ آگے: {FRONT} کرسیاں بھرے نقطے، بائیں طرف {FRONT} لکھا ہے۔ ان کے پیچھے: {PER_ROW} کرسیوں کی {ROWS} قطاریں خالی نقطے، بائیں طرف {ROWS} اور قطاروں کے نیچے {PER_ROW} لکھا ہے۔",
+        items)
+
+
+attach(lesson, {
+    "s2_foundation": steps_fig(E2, prompt=step_text(lesson, "s2_foundation"), results=False),
+    "s4_pens": pens_bar("?"),
+    "s5_mangoes": mangoes(),
+    "s7_party": bar_model([(FOOD, FOOD, False), (STUDENTS * EACH - FOOD, "?", True)],
+        f"A bar for all the money collected, with 30×50 written above it. The first part, {FOOD}, is spent on food; the dashed part left over has a question mark.",
+        f"جمع ہونے والے سارے پیسوں کی پٹی، اوپر 30×50 لکھا ہے۔ پہلا حصہ، {FOOD}، کھانے پر خرچ ہوا؛ باقی بچے ڈیش والے حصے میں سوالیہ نشان ہے۔",
+        total_text=f"{STUDENTS}×{EACH}"),
+    "s8_savings": bar_model([(UNCLE, UNCLE, False), (AUNT, AUNT, False)],
+        f"A bar made of Rs {UNCLE} and Rs {AUNT} joined together. Under it is a bar just as long, cut into {SAVE.denominator} equal parts; the first part is shaded, with a question mark: the part Sana saves.",
+        f"ایک پٹی جو {UNCLE} روپے اور {AUNT} روپے کو جوڑ کر بنی ہے۔ اس کے نیچے اتنی ہی لمبی پٹی ہے جو {SAVE.denominator} برابر حصوں میں کٹی ہے؛ پہلا حصہ رنگا ہوا ہے اور اس میں سوالیہ نشان ہے: جو ثنا بچاتی ہے۔",
+        split=SAVE.denominator, shade=(0,), parts=["?"] + [None] * (SAVE.denominator - 1)),
+    "u4_round": round_fig([U4_ROW]),
+    "u5_apples": bar_model([(APPLE_PRICE, APPLE_PRICE, False)] * KG + [(NOTE - KG * APPLE_PRICE, "?", True)],
+        f"A bar for the Rs {NOTE} note, with {NOTE} written above it. It starts with {KG} parts of {APPLE_PRICE}, one for each kg of apples; the dashed part left over, the change, has a question mark.",
+        f"{NOTE} روپے کے نوٹ کی پٹی، اوپر {NOTE} لکھا ہے۔ شروع میں {APPLE_PRICE} کے {KG} حصے ہیں، ہر کلو سیب کا ایک؛ باقی بچے ڈیش والے حصے، یعنی بقایا، میں سوالیہ نشان ہے۔",
+        total_text=NOTE),
+    "s12_summary": pens_bar(str(S4)),
+    "qb_apply": chairs(),
+    "r_food": bar_model([(FOOD_EACH, FOOD_EACH, False)] * FRIENDS + [(DRINKS, DRINKS, False)],
+        f"A bar made of {FRIENDS} parts of {FOOD_EACH}, one for each friend's food, and one small part of {DRINKS} for the drinks, with a question mark above the whole bar.",
+        f"ایک پٹی جس میں {FOOD_EACH} کے {FRIENDS} حصے ہیں، ہر دوست کے کھانے کا ایک، اور مشروبات کا {DRINKS} کا ایک چھوٹا حصہ؛ پوری پٹی کے اوپر سوالیہ نشان ہے۔",
+        total_text="?"),
+    "r_rest": bar_model([(PAID, PAID, False), (GOAT - PAID, None, False)],
+        f"A bar for the goat's price, with {GOAT} written above it. The first part, {PAID}, is paid now. Under the rest is a bar cut into {PARTS} equal dashed parts; the first has a question mark.",
+        f"بکری کی قیمت کی پٹی، اوپر {GOAT} لکھا ہے۔ پہلا حصہ، {PAID}، ابھی ادا ہوا۔ باقی حصے کے نیچے ایک پٹی ہے جو {PARTS} برابر ڈیش والے حصوں میں کٹی ہے؛ پہلے میں سوالیہ نشان ہے۔",
+        total_text=GOAT, split=PARTS, split_from=PAID, parts=["?"] + [None] * (PARTS - 1)),
+})
 write(lesson)

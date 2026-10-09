@@ -216,4 +216,44 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import attach, step_says, coins_row, dice_faces, bag, key, spinner, likelihood_line
+
+TWO_EIGHT = balls(red=2, blue=8)
+step_says(lesson, "s5_unlikely", "9 blue balls and 1 red ball")
+step_says(lesson, "s9_find_error", "9 blue balls and 1 red ball")
+step_says(lesson, "s11_blue", "2 red and 8 blue balls")
+step_says(lesson, "s7_spinner", "4 equal parts: 3 red and 1 yellow")
+step_says(lesson, "qb_apply", "4 equal parts: 3 red and 1 yellow")
+SPIN_TEXT = ["R" if c == "red" else "Y" for c in SPINNER]
+SPIN_SHADE = [i for i, c in enumerate(SPINNER) if c == "red"]
+n_red, n_yellow = SPINNER.count("red"), SPINNER.count("yellow")
+SPIN_EN = f"{n_red} marked R (red) and shaded, {n_yellow} marked Y (yellow)"
+SPIN_UR = f"{n_red} پر R (سرخ) لکھا ہے اور وہ رنگین ہیں، {n_yellow} پر Y (پیلا)"
+LINE_EN = ("A line from 0 to 1. The 0 end is impossible and the 1 end is certain. "
+           "A taller tick in the middle is an even chance (one half); the left half is unlikely and the right half likely.")
+LINE_UR = ("0 سے 1 تک ایک لکیر۔ 0 والا سرا ناممکن اور 1 والا سرا یقینی ہے۔ "
+           "درمیان میں لمبا نشان برابر امکان (آدھا) ہے؛ بایاں آدھا حصہ کم امکان اور دایاں آدھا زیادہ امکان۔")
+SUMMARY_MARKS = [(F(0), "A"), (F(1, 2), "B"), (F(1), "C")]
+assert [word(v) for v, _ in SUMMARY_MARKS] == ["impossible", "even_chance", "certain"]
+
+attach(lesson, {
+    "s2_foundation": coins_row(COIN, "The two faces of a fair coin: H (heads) and T (tails).",
+                               "ایک منصفانہ سکے کے دو رخ: H (ہیڈ) اور T (ٹیل)۔"),
+    "s3_scale": likelihood_line(LINE_EN, LINE_UR),
+    "s4_certain": dice_faces(DICE),
+    "s5_unlikely": bag(FEW_RED, key("red", "blue")),
+    "s6_even": coins_row(COIN, "The two faces of a fair coin: H (heads) and T (tails).",
+                         "ایک منصفانہ سکے کے دو رخ: H (ہیڈ) اور T (ٹیل)۔"),
+    "s7_spinner": spinner(SPIN_TEXT, shade=SPIN_SHADE, what_en=SPIN_EN, what_ur=SPIN_UR),
+    "s9_find_error": bag(FEW_RED, key("red", "blue")),
+    "s11_blue": bag(TWO_EIGHT, key("blue", "red")),
+    "s12_summary": likelihood_line(
+        LINE_EN + " Three dots on the line: A at 0 (impossible), B in the middle (even chance) and C at 1 (certain).",
+        LINE_UR + " لکیر پر تین نقطے: A، 0 پر (ناممکن)، B درمیان میں (برابر امکان) اور C، 1 پر (یقینی)۔",
+        marks=SUMMARY_MARKS),
+    "qb_apply": spinner(SPIN_TEXT, shade=SPIN_SHADE, what_en=SPIN_EN, what_ur=SPIN_UR),
+    "r_odd": dice_faces(DICE),
+})
 write(lesson)

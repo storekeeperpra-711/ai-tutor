@@ -228,4 +228,49 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, oval_figure, letter_tiles, number_line, en_list, ur_list, ordered
+
+TEAM = list(range(1, 12))          # shirt numbers of a cricket team (the hook)
+VOWELS = list("aeiou")
+assert len(set(VOWELS)) == S4
+OUT8 = 4                           # s8: 4 is not in A
+assert OUT8 not in A8
+SUMMARY = [2, 4, 6]
+SUMMARY_OUT = 5
+assert SUMMARY_OUT not in SUMMARY
+
+
+def word_tiles(word):
+    return letter_tiles(word,
+        f"Tiles with the letters of the word {word}, one tile for each letter in order: {en_list(list(word))}.",
+        f"لفظ {word} کے حروف کی ٹائلیں، ہر حرف کی ایک ٹائل ترتیب سے: {ur_list(list(word))}۔")
+
+
+attach(lesson, {
+    "s1_hook": oval_figure(TEAM,
+        f"An oval holding the shirt numbers {TEAM[0]} to {TEAM[-1]} of the players in a cricket team.",
+        f"ایک بیضوی شکل جس میں کرکٹ ٹیم کے کھلاڑیوں کی قمیضوں کے نمبر {TEAM[0]} سے {TEAM[-1]} تک ہیں۔"),
+    "s3_set": oval_figure(VOWELS,
+        f"An oval named V holding the vowels {en_list(VOWELS)}, each written once. V stands for the set of vowels.",
+        f"V نام کی بیضوی شکل جس میں حروفِ علت {ur_list(VOWELS)} ہیں، ہر ایک ایک بار لکھا ہے۔ V حروفِ علت کا سیٹ ہے۔", name="V"),
+    "s6_evens": number_line(1, 11,
+        "A number line with the whole numbers from 1 to 11 written under it.",
+        "ایک عددی لکیر جس کے نیچے 1 سے 11 تک کے مکمل اعداد لکھے ہیں۔"),
+    "s7_pakistan": word_tiles("PAKISTAN"),
+    "s8_signs": oval_figure(ordered(A8),
+        f"An oval named A holding {en_list(ordered(A8))}. The number {OUT8} is written outside the oval.",
+        f"A نام کی بیضوی شکل جس میں {ur_list(ordered(A8))} ہیں۔ عدد {OUT8} بیضوی شکل سے باہر لکھا ہے۔",
+        name="A", outside=[OUT8]),
+    "s9_find_error": word_tiles("APPLE"),
+    "s12_summary": oval_figure(SUMMARY,
+        f"An oval named A holding {en_list(SUMMARY)}, each written once. The number {SUMMARY_OUT} is outside the oval, so it is not an element of A.",
+        f"A نام کی بیضوی شکل جس میں {ur_list(SUMMARY)} ہیں، ہر ایک ایک بار۔ عدد {SUMMARY_OUT} بیضوی شکل سے باہر ہے، اس لیے یہ A کا رکن نہیں۔",
+        name="A", outside=[SUMMARY_OUT]),
+    "qb_apply": word_tiles("LAHORE"),
+    "r_odds": number_line(1, 9,
+        "A number line with the whole numbers from 1 to 9 written under it.",
+        "ایک عددی لکیر جس کے نیچے 1 سے 9 تک کے مکمل اعداد لکھے ہیں۔"),
+    "r_ball": word_tiles("BALL"),
+})
 write(lesson)

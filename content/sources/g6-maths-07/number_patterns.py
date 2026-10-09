@@ -230,4 +230,74 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import (attach, matchsticks, number_cards, seq_table, dot_squares, strip_figure,
+                  en_list, ur_list)
+
+HOOK = seq("3n + 1", 4)                      # sticks for 1, 2, 3, 4 squares
+assert HOOK == [4, 7, 10, 13]
+N2 = 5
+assert value("3n + 1", n=N2) == S2
+S4_SEQ = seq("4n + 1", 4)
+S5_SEQ = [2, 4, 8, 16]
+assert S5_SEQ[-1] * 2 == S5
+S7_POS = [1, 2, 3, 4, 10]
+S7_SEQ = seq("2n + 3", 4)
+assert value("2n + 3", n=S7_POS[-1]) == S7
+S8_SEQ = seq("4n − 1", 3)
+TARGET8 = value("4n − 1", n=S8)
+S11_POS = [1, 2, 3, 4, 20]
+S11_SEQ = seq("4n + 3", 4)
+assert value("4n + 3", n=S11_POS[-1]) == S11
+BIG = 100                                    # summary: the 100th term
+SUM_SEQ = seq("3n + 1", 3)
+QB_RULE = seq("4n − 1", 4)
+assert QB_RULE == [3, 7, 11, 15]
+QB_SEQ = [50, 45, 40, 35]
+assert QB_SEQ[-1] - 5 == QB
+SQUARES = [1, 2, 3, 4]
+R_SEQ = [3, 6, 12, 24]
+assert R_SEQ[-1] * 2 == R2
+
+
+def cards(values, en_what, ur_what, jumps=None, en_extra="", ur_extra=""):
+    shown = [str(v) for v in values]
+    return number_cards(values,
+        f"Number cards in a row: {en_list(shown)}{en_what}, with a curved jump from each card to the next{en_extra}.",
+        f"ایک قطار میں اعداد کے کارڈ: {ur_list(shown)}{ur_what}، ہر کارڈ سے اگلے تک ایک خم دار چھلانگ{ur_extra}۔",
+        jumps=jumps)
+
+
+def table(positions, terms, en, ur):
+    return seq_table(positions, terms,
+        f"A table with two rows. The top row, n, is the position of each term: {en_list(positions)}. The bottom row, T, is the term: {en_list(terms)}. {en}",
+        f"دو قطاروں کی جدول۔ اوپر والی قطار n ہر رکن کا مقام ہے: {ur_list(positions)}۔ نیچے والی قطار T رکن ہے: {ur_list(terms)}۔ {ur}")
+
+
+attach(lesson, {
+    "s1_hook": matchsticks([1, 2, 3, 4],
+        f"Rows of matchstick squares: 1, 2, 3 and 4 squares in a row, made of {en_list(HOOK)} sticks, with the number of sticks under each.",
+        f"تیلیوں سے بنے مربعوں کی قطاریں: ایک قطار میں 1، 2، 3 اور 4 مربعے، جو {ur_list(HOOK)} تیلیوں سے بنے ہیں، ہر ایک کے نیچے تیلیوں کی تعداد۔",
+        texts=[str(v) for v in HOOK]),
+    "s2_foundation": strip_figure([("bags", 3, "n"), ("text", "+"), ("marbles", 1), ("text", f"n={N2}")],
+        f"3 bags marked n, a plus sign and 1 marble, which is 3n + 1. Beside them: n={N2}, each bag holds {N2} marbles.",
+        f"3 تھیلے جن پر n لکھا ہے، جمع کا نشان اور 1 کنچا، یعنی 3n + 1۔ ساتھ میں: n={N2}، ہر تھیلے میں {N2} کنچے ہیں۔"),
+    "s3_rule": cards(HOOK, "", "", jumps=["+3"] * 3, en_extra=", each jump marked +3",
+                     ur_extra="، ہر چھلانگ پر +3 لکھا ہے"),
+    "s4_next": cards(S4_SEQ + ["?"], ", and a last card with a question mark", "، اور آخری کارڈ پر سوالیہ نشان"),
+    "s5_double": cards(S5_SEQ + ["?"], ", and a last card with a question mark", "، اور آخری کارڈ پر سوالیہ نشان"),
+    "s7_tenth": table(S7_POS, S7_SEQ + ["?"], "The 10th term has a question mark.", "دسویں رکن پر سوالیہ نشان ہے۔"),
+    "s8_which_term": table([1, 2, 3, "?"], S8_SEQ + [TARGET8],
+        f"The position of {TARGET8} has a question mark.", f"{TARGET8} کے مقام پر سوالیہ نشان ہے۔"),
+    "s11_twentieth": table(S11_POS, S11_SEQ + ["?"], "The 20th term has a question mark.", "بیسویں رکن پر سوالیہ نشان ہے۔"),
+    "s12_summary": table([1, 2, 3, BIG], SUM_SEQ + [value("3n + 1", n=BIG)],
+        f"The rule 3n + 1 gives every term, even the {BIG}th: 3 × {BIG} + 1 = {value('3n + 1', n=BIG)}.",
+        f"قاعدہ 3n + 1 ہر رکن دیتا ہے، {BIG} واں بھی: 3 × {BIG} + 1 = {value('3n + 1', n=BIG)}۔"),
+    "qb_rule": cards(QB_RULE, "", ""),
+    "qb_apply": cards(QB_SEQ + ["?"], ", and a last card with a question mark", "، اور آخری کارڈ پر سوالیہ نشان"),
+    "qb_find_error": dot_squares(SQUARES,
+        f"Square patterns of dots: {en_list([f'{k} by {k}' for k in SQUARES])}, which have {en_list([k * k for k in SQUARES])} dots.",
+        f"نقطوں کے مربع نمونے: {ur_list([f'{k} ضرب {k}' for k in SQUARES])}، جن میں {ur_list([k * k for k in SQUARES])} نقطے ہیں۔"),
+    "r_next": cards(R_SEQ + ["?"], ", and a last card with a question mark", "، اور آخری کارڈ پر سوالیہ نشان"),
+})
 write(lesson)

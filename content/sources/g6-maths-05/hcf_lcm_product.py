@@ -2,6 +2,7 @@ from math import gcd, lcm
 
 from common import (T, opt, say, wrong, number_question, write, prime_factors,
                     BOOK, REVIEW, FM_LCM, FM_HCF_LCM)
+from figs import attach, area_rects, two_trees_fig, venn, en_list, ur_list
 
 SKILL = FM_HCF_LCM
 
@@ -264,4 +265,71 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+def same_area(h1, w1, h2, w2, area_text=None):
+    """Two rectangles drawn to one scale with the same area: h1 by w1 and
+    h2 by w2. area_text: written inside both (or None)."""
+    assert h1 * w1 == h2 * w2
+    return [dict(h=h1, w=w1, area=area_text), dict(h=h2, w=w2, area=area_text)]
+
+
+def missing_side(hcf, lcm_, known, other):
+    """HCF by LCM, and the known number by '?' (drawn to scale)."""
+    assert hcf * lcm_ == known * other
+    return area_rects([dict(h=hcf, w=lcm_), dict(h=known, w=other, w_text="?")],
+        f"Two rectangles drawn to the same scale with the same area. The first is {hcf} by {lcm_} (HCF by LCM). The second is {known} high (the number we know), and its length is a question mark (the other number).",
+        f"ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا {hcf} ضرب {lcm_} ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا {known} اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔")
+
+
+def one_rect(h, w, what_en, what_ur):
+    return area_rects([dict(h=h, w=w, area="?")],
+        f"A rectangle {h} by {w} ({what_en}), with a question mark inside for its area.",
+        f"{h} ضرب {w} کا ایک مستطیل ({what_ur})، اندر رقبے کی جگہ سوالیہ نشان۔", min_h=26)
+
+
+def split_primes(a, b):
+    pa, pb = prime_factors(a), prime_factors(b)
+    both, rest_b = [], list(pb)
+    for p in pa:
+        if p in rest_b:
+            both.append(p)
+            rest_b.remove(p)
+    rest_a = list(pa)
+    for p in both:
+        rest_a.remove(p)
+    return rest_a, both, rest_b
+
+
+RA, BOTH, RB = split_primes(12, 18)
+assert BOTH == [2, 3] and RA == [2] and RB == [3]
+assert 2 * 3 == gcd(12, 18) and 2 * 2 * 3 * 3 == lcm(12, 18)
+S3_AREA = 12 * 18
+assert S3_AREA == S4
+
+attach(lesson, {
+    "s2_foundation": two_trees_fig(6, 8),
+    "s3_see_it": area_rects(same_area(12, 18, gcd(12, 18), lcm(12, 18), S3_AREA),
+        f"Two rectangles drawn to the same scale. The first is 12 by 18 (the two numbers). The second is {gcd(12, 18)} by {lcm(12, 18)} (HCF by LCM). Both have area {S3_AREA}, written inside.",
+        f"ایک ہی پیمانے پر بنے دو مستطیل۔ پہلا 12 ضرب 18 ہے (دونوں اعداد)۔ دوسرا {gcd(12, 18)} ضرب {lcm(12, 18)} ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دونوں کا رقبہ {S3_AREA} ہے، جو اندر لکھا ہے۔"),
+    "s4_check": one_rect(gcd(12, 18), lcm(12, 18), "HCF by LCM", "عاد اعظم ضرب ذو اضعاف اقل"),
+    "s5_another": one_rect(gcd(4, 10), lcm(4, 10), "HCF by LCM", "عاد اعظم ضرب ذو اضعاف اقل"),
+    "s6_find_lcm": area_rects([dict(h=15, w=20, area=15 * 20), dict(h=gcd(15, 20), w=S6, w_text="?")],
+        f"Two rectangles drawn to the same scale with the same area. The first is 15 by 20, with its area {15 * 20} written inside. The second is {gcd(15, 20)} high (the HCF), and its length is a question mark (the LCM).",
+        f"ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 15 ضرب 20 ہے، اس کے اندر رقبہ {15 * 20} لکھا ہے۔ دوسرا {gcd(15, 20)} اونچا ہے (عاد اعظم)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (ذو اضعاف اقل)۔"),
+    "s7_missing": missing_side(4, 48, 12, S7),
+    "s8_missing_again": missing_side(3, 36, 9, S8),
+    "s10_explain_why": venn(RA, BOTH, RB, (12, 18),
+        "Two overlapping circles for the prime factors. Left circle, 12: 2 × 2 × 3. Right circle, 18: 2 × 3 × 3. The shared primes 2 and 3 are in the middle (their product is the HCF). Only in 12: 2. Only in 18: 3. All the primes in the picture together make the LCM.",
+        "مفرد اجزائے ضربی کے دو ایک دوسرے پر چڑھے دائرے۔ بائیں دائرہ، 12: 2 × 2 × 3۔ دائیں دائرہ، 18: 2 × 3 × 3۔ مشترک مفرد اعداد 2 اور 3 درمیان میں ہیں (ان کا حاصل ضرب عاد اعظم ہے)۔ صرف 12 میں: 2۔ صرف 18 میں: 3۔ تصویر کے سب مفرد اعداد مل کر ذو اضعاف اقل بناتے ہیں۔"),
+    "s11_bigger": missing_side(7, 84, 21, S11),
+    "s12_summary": area_rects(same_area(12, 18, gcd(12, 18), lcm(12, 18), S3_AREA),
+        f"Two rectangles drawn to the same scale: 12 by 18, and {gcd(12, 18)} by {lcm(12, 18)} (HCF by LCM). Both have area {S3_AREA}, written inside.",
+        f"ایک ہی پیمانے پر بنے دو مستطیل: 12 ضرب 18، اور {gcd(12, 18)} ضرب {lcm(12, 18)} (عاد اعظم ضرب ذو اضعاف اقل)۔ دونوں کا رقبہ {S3_AREA} ہے، جو اندر لکھا ہے۔"),
+    "qb_apply": area_rects([dict(h=6, w=10, area=6 * 10), dict(h=gcd(6, 10), w=QB, w_text="?")],
+        f"Two rectangles drawn to the same scale with the same area. The first is 6 by 10, with its area {6 * 10} written inside. The second is {gcd(6, 10)} high (the HCF), and its length is a question mark (the LCM).",
+        f"ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 6 ضرب 10 ہے، اس کے اندر رقبہ {6 * 10} لکھا ہے۔ دوسرا {gcd(6, 10)} اونچا ہے (عاد اعظم)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (ذو اضعاف اقل)۔"),
+    "qb_find_error": missing_side(5, 30, 10, QB_ERR),
+    "r_missing": missing_side(4, 24, 8, R1),
+    "r_rule": one_rect(gcd(9, 12), lcm(9, 12), "HCF by LCM", "عاد اعظم ضرب ذو اضعاف اقل"),
+})
 write(lesson)

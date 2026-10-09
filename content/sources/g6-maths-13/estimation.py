@@ -1,5 +1,6 @@
 from common import (T, opt, say, wrong, number_question, write,
                     REF, REVIEW, DEC_PLACE_VALUE, SM_ORDER, SM_ESTIMATE, round_to)
+from figs import attach, round_fig, figure, poly, circle, label, en_list, ur_list, W
 
 SKILL = SM_ESTIMATE
 
@@ -219,4 +220,67 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+def around(value, place):
+    """(value, the place below it, the place above it) for a rounding line."""
+    from decimal import Decimal as D
+    v = D(str(value))
+    lo = (v // place) * place
+    assert lo < v < lo + place
+    row = (value, lo, lo + place)
+    assert round_to(value, place) in (lo, lo + place)
+    return row
+
+
+PRICES = [198, 405, 99]
+assert sum(round_to(p, 100) for p in PRICES) == S11
+S3_ROW = around(487, 100)
+assert round_to(487, 100) == S4
+S5_ROWS = [around(298, 100), around(513, 100)]
+assert sum(round_to(v, 100) for v, _, _ in S5_ROWS) == S5
+S6_ROWS = [around(49, 10), around(21, 10)]
+S7_ROWS = [around("6.8", 1), around("4.1", 1)]
+assert round_to(S7_ROWS[0][0], 1) * round_to(S7_ROWS[1][0], 1) == S7
+S8_ROW = around(3462, 10)
+assert round_to(3462, 10) == S8
+QB_ROW = around(762, 100)
+assert round_to(762, 100) == QB
+R1_ROWS = [around(612, 100), around(289, 100)]
+assert round_to(612, 100) - round_to(289, 100) == R1
+R2_ROW = around(45, 10)
+assert round_to(45, 10) == R2
+
+
+def price_tags(prices):
+    """Price tags (a box with a pointed end and a hole) with the price on each."""
+    items = []
+    tw, th, gap = 70, 36, 20
+    x = (W - len(prices) * tw - (len(prices) - 1) * gap) / 2
+    y = 14
+    for p in prices:
+        items.append(poly([(x, y + th / 2), (x + 14, y), (x + tw, y), (x + tw, y + th), (x + 14, y + th)]))
+        items.append(circle((x + 10, y + th / 2), 3))
+        items.append(label((x + 14 + (tw - 14) / 2, y + th / 2), p))
+        x += tw + gap
+    return figure(W, y + th + 14,
+        f"Three price tags, one for each thing: Rs {en_list(prices)}.",
+        f"قیمت کے تین ٹیگ، ہر چیز کا ایک: {ur_list(prices)} روپے۔",
+        items)
+
+
+attach(lesson, {
+    "s1_hook": price_tags(PRICES),
+    "s3_round": round_fig([S3_ROW], arrows=True),
+    "s4_round_100": round_fig([S3_ROW]),
+    "s5_estimate_sum": round_fig(S5_ROWS),
+    "s6_about": round_fig(S6_ROWS),
+    "s7_decimals": round_fig(S7_ROWS),
+    "s8_round_10": round_fig([S8_ROW]),
+    "s11_bill": round_fig([around(p, 100) for p in PRICES]),
+    "s12_summary": round_fig([S3_ROW], arrows=True),
+    "qb_rule": round_fig([R2_ROW]),
+    "qb_apply": round_fig([QB_ROW]),
+    "r_estimate": round_fig(R1_ROWS),
+    "r_round": round_fig([R2_ROW]),
+})
 write(lesson)

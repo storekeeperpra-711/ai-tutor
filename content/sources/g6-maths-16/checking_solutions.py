@@ -220,4 +220,41 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from figs import attach, step_says, balance, balance_eq, Side, minus_bar, put_in
+
+S3 = 4      # the worked example: x = 4 in 2x + 3 = 11
+assert solves("2x + 3 = 11", x=S3)
+hook, hook_eq = balance_eq(2, "x", 3, 11, S3)
+s6_fig, s6_eq = balance_eq(4, "x", 0, 28, 7)
+s7_fig, s7_eq = balance_eq(3, "m", 1, 13, S7)
+s11_fig, s11_eq = balance_eq(4, "n", 3, 23, S11)
+s5_fig, s5_eq = minus_bar(5, "y", 2, 13, 3)
+qb_fig, qb_eq = minus_bar(6, "x", 5, 25, QB)
+r2_fig, r2_eq = minus_bar(5, "k", 10, 30, R2)
+for sid, eq in (("s1_hook", hook_eq), ("s3_rule", hook_eq), ("s6_which", s6_eq), ("s7_try", s7_eq),
+                ("s11_think", s11_eq), ("s5_is_solution", s5_eq), ("qb_apply", qb_eq), ("r_which", r2_eq)):
+    step_says(lesson, sid, eq)
+for sid, expr in (("s2_foundation", "3n + 2"), ("s4_left_side", "5y − 2"), ("s8_divide", "x ÷ 2 + 5"),
+                  ("r_value", "2a + 7")):
+    step_says(lesson, sid, expr)
+
+attach(lesson, {
+    "s1_hook": hook,
+    "s2_foundation": put_in("3n + 2", ["n"] * 3 + ["+2"], "n", 4),
+    "s3_rule": balance(Side(2, "x", units=3, box_text=S3), Side(block=11),
+                       f"Each side weighs 11, so the scale stays level: x = {S3} is the solution.",
+                       f"دونوں طرف وزن 11 ہے، اس لیے ترازو برابر رہتا ہے: x = {S3} حل ہے۔",
+                       pre=("2x + 3 = 11 with 4 put in place of x.", "2x + 3 = 11 میں x کی جگہ 4 رکھا گیا۔")),
+    "s4_left_side": put_in("5y − 2", ["y"] * 5 + ["−2"], "y", 3),
+    "s5_is_solution": s5_fig,
+    "s6_which": s6_fig,
+    "s7_try": s7_fig,
+    "s8_divide": put_in("x ÷ 2 + 5", ["x", "÷2", "+5"], "x", 6),
+    "s11_think": s11_fig,
+    "qb_apply": qb_fig,
+    "r_value": put_in("2a + 7", ["a", "a", "+7"], "a", 6),
+    "r_which": r2_fig,
+})
 write(lesson)

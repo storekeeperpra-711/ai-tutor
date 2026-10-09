@@ -12,6 +12,8 @@ Scripts that write the Grade 6 Maths lessons of the Simplification unit (`conten
 
 Every answer, and every common wrong answer (like working strictly left to right, ignoring the brackets, or multiplying only the first number in a bracket), is worked out in Python with exact decimals and fractions and checked with `assert`, so no number is typed by hand. Python follows the same order of operations as BODMAS, so each expression is written in the script just as it appears in the lesson. Rounding uses `round_to` in `common.py`, where a 5 rounds up as taught in school. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 
+Pictures (each expression with its numbered steps drawn under it, groups of counters, fraction bars for "of", bar models for word problems, and number lines for rounding) are drawn by `figs.py` and attached at the end of each script; the expression pictures are built from the same expressions as the steps and checked against the step text.
+
 To change a lesson, edit its script and run it, then run the validator:
 
     python content/sources/g6-maths-13/brackets.py

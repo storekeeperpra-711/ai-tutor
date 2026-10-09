@@ -141,7 +141,99 @@
               },
               "misconception_id": "wrong_division"
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 124.7,
+            "alt": {
+              "en": "Two rectangles drawn to the same scale with the same area. The first is 6 by 10, with its area 60 written inside. The second is 2 high (the HCF), and its length is a question mark (the LCM).",
+              "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 6 ضرب 10 ہے، اس کے اندر رقبہ 60 لکھا ہے۔ دوسرا 2 اونچا ہے (عاد اعظم)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (ذو اضعاف اقل)۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    52.0,
+                    26.0
+                  ],
+                  [
+                    115.3,
+                    26.0
+                  ],
+                  [
+                    115.3,
+                    64.0
+                  ],
+                  [
+                    52.0,
+                    64.0
+                  ]
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  83.7,
+                  15.0
+                ],
+                "text": "10"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  34.0,
+                  45.0
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  83.7,
+                  45.0
+                ],
+                "text": "60"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    52.0,
+                    98.0
+                  ],
+                  [
+                    242.0,
+                    98.0
+                  ],
+                  [
+                    242.0,
+                    110.7
+                  ],
+                  [
+                    52.0,
+                    110.7
+                  ]
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  147.0,
+                  87.0
+                ],
+                "text": "?"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  34.0,
+                  104.3
+                ],
+                "text": "2"
+              }
+            ]
+          }
         }
       },
       {
@@ -193,7 +285,91 @@
               },
               "misconception_id": "wrong_division"
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 166.0,
+            "alt": {
+              "en": "Two rectangles drawn to the same scale with the same area. The first is 5 by 30 (HCF by LCM). The second is 10 high (the number we know), and its length is a question mark (the other number).",
+              "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 5 ضرب 30 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا 10 اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    52.0,
+                    26.0
+                  ],
+                  [
+                    236.0,
+                    26.0
+                  ],
+                  [
+                    236.0,
+                    56.7
+                  ],
+                  [
+                    52.0,
+                    56.7
+                  ]
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  144.0,
+                  15.0
+                ],
+                "text": "30"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  34.0,
+                  41.3
+                ],
+                "text": "5"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    52.0,
+                    90.7
+                  ],
+                  [
+                    144.0,
+                    90.7
+                  ],
+                  [
+                    144.0,
+                    152.0
+                  ],
+                  [
+                    52.0,
+                    152.0
+                  ]
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  98.0,
+                  79.7
+                ],
+                "text": "?"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  34.0,
+                  121.3
+                ],
+                "text": "10"
+              }
+            ]
+          }
         }
       }
     ]
@@ -299,7 +475,187 @@
             "ur": "2 عاد اعظم ہے۔ ذو اضعاف اقل دونوں کا ضعف ہے: 24"
           }
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 116.0,
+        "alt": {
+          "en": "Two factor trees side by side. Left, 6: 6 into 2 and 3. Right, 8: 8 into 2 and 4; 4 into 2 and 2. The primes at the ends of the branches are circled.",
+          "ur": "دو اجزائے ضربی کے درخت ساتھ ساتھ۔ بائیں، 6: 6 سے 2 اور 3۔ دائیں، 8: 8 سے 2 اور 4؛ 4 سے 2 اور 2۔ شاخوں کے آخر میں مفرد اعداد کے گرد دائرہ ہے۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              53.3,
+              60.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              53.3,
+              60.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              93.3,
+              60.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              93.3,
+              60.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              73.3,
+              30.0
+            ],
+            "to": [
+              53.3,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              73.3,
+              30.0
+            ],
+            "to": [
+              93.3,
+              46.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              73.3,
+              20.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              166.7,
+              60.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              166.7,
+              60.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              206.7,
+              100.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              206.7,
+              100.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              246.7,
+              100.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              246.7,
+              100.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              226.7,
+              70.0
+            ],
+            "to": [
+              206.7,
+              86.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              226.7,
+              70.0
+            ],
+            "to": [
+              246.7,
+              86.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              226.7,
+              60.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              196.7,
+              30.0
+            ],
+            "to": [
+              166.7,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              196.7,
+              30.0
+            ],
+            "to": [
+              226.7,
+              46.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              196.7,
+              20.0
+            ],
+            "text": "8"
+          }
+        ]
+      }
     },
     {
       "id": "s3_see_it",
@@ -314,6 +670,106 @@
       "text": {
         "en": "For 12 and 18, the HCF is 6 and the LCM is 36. Now multiply: HCF × LCM = 6 × 36 = 216. And the two numbers multiplied: 12 × 18 = 216. The same! For any two numbers, HCF × LCM = the product of the two numbers.",
         "ur": "12 اور 18 کا عاد اعظم 6 اور ذو اضعاف اقل 36 ہے۔ اب ضرب دیں: عاد اعظم × ذو اضعاف اقل = 6 × 36 = 216۔ اور دونوں اعداد کا حاصل ضرب: 12 × 18 = 216۔ ایک جیسا! کسی بھی دو اعداد کے لیے عاد اعظم × ذو اضعاف اقل = دونوں اعداد کا حاصل ضرب۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 166.0,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale. The first is 12 by 18 (the two numbers). The second is 6 by 36 (HCF by LCM). Both have area 216, written inside.",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل۔ پہلا 12 ضرب 18 ہے (دونوں اعداد)۔ دوسرا 6 ضرب 36 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دونوں کا رقبہ 216 ہے، جو اندر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                144.0,
+                26.0
+              ],
+              [
+                144.0,
+                87.3
+              ],
+              [
+                52.0,
+                87.3
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              15.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              56.7
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              56.7
+            ],
+            "text": "216"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                121.3
+              ],
+              [
+                236.0,
+                121.3
+              ],
+              [
+                236.0,
+                152.0
+              ],
+              [
+                52.0,
+                152.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              110.3
+            ],
+            "text": "36"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              136.7
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              136.7
+            ],
+            "text": "216"
+          }
+        ]
       }
     },
     {
@@ -355,7 +811,62 @@
           },
           "misconception_id": "sum_not_product"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 71.7,
+        "alt": {
+          "en": "A rectangle 6 by 36 (HCF by LCM), with a question mark inside for its area.",
+          "ur": "6 ضرب 36 کا ایک مستطیل (عاد اعظم ضرب ذو اضعاف اقل)، اندر رقبے کی جگہ سوالیہ نشان۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                57.7
+              ],
+              [
+                52.0,
+                57.7
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "36"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              41.8
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              41.8
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s5_another",
@@ -396,7 +907,62 @@
           },
           "misconception_id": "sum_not_product"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 66.0,
+        "alt": {
+          "en": "A rectangle 2 by 20 (HCF by LCM), with a question mark inside for its area.",
+          "ur": "2 ضرب 20 کا ایک مستطیل (عاد اعظم ضرب ذو اضعاف اقل)، اندر رقبے کی جگہ سوالیہ نشان۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                52.0
+              ],
+              [
+                52.0,
+                52.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              39.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              39.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
     },
     {
       "id": "s6_find_lcm",
@@ -436,7 +1002,99 @@
           },
           "misconception_id": "wrong_division"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 137.3,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale with the same area. The first is 15 by 20, with its area 300 written inside. The second is 5 high (the HCF), and its length is a question mark (the LCM).",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 15 ضرب 20 ہے، اس کے اندر رقبہ 300 لکھا ہے۔ دوسرا 5 اونچا ہے (عاد اعظم)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (ذو اضعاف اقل)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                115.3,
+                26.0
+              ],
+              [
+                115.3,
+                73.5
+              ],
+              [
+                52.0,
+                73.5
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.7,
+              15.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              49.8
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.7,
+              49.8
+            ],
+            "text": "300"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                107.5
+              ],
+              [
+                242.0,
+                107.5
+              ],
+              [
+                242.0,
+                123.3
+              ],
+              [
+                52.0,
+                123.3
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              96.5
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              115.4
+            ],
+            "text": "5"
+          }
+        ]
+      }
     },
     {
       "id": "s7_missing",
@@ -477,7 +1135,91 @@
           },
           "misconception_id": "wrong_division"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 137.3,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale with the same area. The first is 4 by 48 (HCF by LCM). The second is 12 high (the number we know), and its length is a question mark (the other number).",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 4 ضرب 48 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا 12 اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                41.8
+              ],
+              [
+                52.0,
+                41.8
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "48"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              33.9
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                75.8
+              ],
+              [
+                115.3,
+                75.8
+              ],
+              [
+                115.3,
+                123.3
+              ],
+              [
+                52.0,
+                123.3
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.7,
+              64.8
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              99.6
+            ],
+            "text": "12"
+          }
+        ]
+      }
     },
     {
       "id": "s8_missing_again",
@@ -518,7 +1260,91 @@
           },
           "misconception_id": "wrong_division"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 137.3,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale with the same area. The first is 3 by 36 (HCF by LCM). The second is 9 high (the number we know), and its length is a question mark (the other number).",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 3 ضرب 36 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا 9 اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                41.8
+              ],
+              [
+                52.0,
+                41.8
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "36"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              33.9
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                75.8
+              ],
+              [
+                115.3,
+                75.8
+              ],
+              [
+                115.3,
+                123.3
+              ],
+              [
+                52.0,
+                123.3
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.7,
+              64.8
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              99.6
+            ],
+            "text": "9"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -629,7 +1455,81 @@
         }
       },
       "limit_per_day": 3,
-      "max_attempts": 2
+      "max_attempts": 2,
+      "figure": {
+        "width": 300.0,
+        "height": 176.0,
+        "alt": {
+          "en": "Two overlapping circles for the prime factors. Left circle, 12: 2 × 2 × 3. Right circle, 18: 2 × 3 × 3. The shared primes 2 and 3 are in the middle (their product is the HCF). Only in 12: 2. Only in 18: 3. All the primes in the picture together make the LCM.",
+          "ur": "مفرد اجزائے ضربی کے دو ایک دوسرے پر چڑھے دائرے۔ بائیں دائرہ، 12: 2 × 2 × 3۔ دائیں دائرہ، 18: 2 × 3 × 3۔ مشترک مفرد اعداد 2 اور 3 درمیان میں ہیں (ان کا حاصل ضرب عاد اعظم ہے)۔ صرف 12 میں: 2۔ صرف 18 میں: 3۔ تصویر کے سب مفرد اعداد مل کر ذو اضعاف اقل بناتے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              112.0,
+              100.0
+            ],
+            "radius": 70.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              188.0,
+              100.0
+            ],
+            "radius": 70.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              92.0,
+              18.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              208.0,
+              18.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.0,
+              100.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              87.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              113.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              222.0,
+              100.0
+            ],
+            "text": "3"
+          }
+        ]
+      }
     },
     {
       "id": "s11_bigger",
@@ -670,7 +1570,91 @@
           },
           "misconception_id": "sum_not_product"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 137.3,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale with the same area. The first is 7 by 84 (HCF by LCM). The second is 21 high (the number we know), and its length is a question mark (the other number).",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 7 ضرب 84 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا 21 اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                41.8
+              ],
+              [
+                52.0,
+                41.8
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "84"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              33.9
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                75.8
+              ],
+              [
+                115.3,
+                75.8
+              ],
+              [
+                115.3,
+                123.3
+              ],
+              [
+                52.0,
+                123.3
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.7,
+              64.8
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              99.6
+            ],
+            "text": "21"
+          }
+        ]
+      }
     },
     {
       "id": "s12_summary",
@@ -695,7 +1679,107 @@
           "en": "Multiply HCF and LCM; never add them.",
           "ur": "عاد اعظم اور ذو اضعاف اقل کو ضرب دیں؛ جمع نہ کریں۔"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 166.0,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale: 12 by 18, and 6 by 36 (HCF by LCM). Both have area 216, written inside.",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل: 12 ضرب 18، اور 6 ضرب 36 (عاد اعظم ضرب ذو اضعاف اقل)۔ دونوں کا رقبہ 216 ہے، جو اندر لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                144.0,
+                26.0
+              ],
+              [
+                144.0,
+                87.3
+              ],
+              [
+                52.0,
+                87.3
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              15.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              56.7
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              56.7
+            ],
+            "text": "216"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                121.3
+              ],
+              [
+                236.0,
+                121.3
+              ],
+              [
+                236.0,
+                152.0
+              ],
+              [
+                52.0,
+                152.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              110.3
+            ],
+            "text": "36"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              136.7
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              136.7
+            ],
+            "text": "216"
+          }
+        ]
+      }
     }
   ],
   "review_questions": [
@@ -741,7 +1825,91 @@
             },
             "misconception_id": "sum_not_product"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 166.0,
+          "alt": {
+            "en": "Two rectangles drawn to the same scale with the same area. The first is 4 by 24 (HCF by LCM). The second is 8 high (the number we know), and its length is a question mark (the other number).",
+            "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 4 ضرب 24 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا 8 اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  52.0,
+                  26.0
+                ],
+                [
+                  236.0,
+                  26.0
+                ],
+                [
+                  236.0,
+                  56.7
+                ],
+                [
+                  52.0,
+                  56.7
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                144.0,
+                15.0
+              ],
+              "text": "24"
+            },
+            {
+              "kind": "label",
+              "at": [
+                34.0,
+                41.3
+              ],
+              "text": "4"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  52.0,
+                  90.7
+                ],
+                [
+                  144.0,
+                  90.7
+                ],
+                [
+                  144.0,
+                  152.0
+                ],
+                [
+                  52.0,
+                  152.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                98.0,
+                79.7
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "label",
+              "at": [
+                34.0,
+                121.3
+              ],
+              "text": "8"
+            }
+          ]
+        }
       }
     },
     {
@@ -786,7 +1954,62 @@
             },
             "misconception_id": "sum_not_product"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 66.0,
+          "alt": {
+            "en": "A rectangle 3 by 36 (HCF by LCM), with a question mark inside for its area.",
+            "ur": "3 ضرب 36 کا ایک مستطیل (عاد اعظم ضرب ذو اضعاف اقل)، اندر رقبے کی جگہ سوالیہ نشان۔"
+          },
+          "items": [
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  52.0,
+                  26.0
+                ],
+                [
+                  242.0,
+                  26.0
+                ],
+                [
+                  242.0,
+                  52.0
+                ],
+                [
+                  52.0,
+                  52.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                147.0,
+                15.0
+              ],
+              "text": "36"
+            },
+            {
+              "kind": "label",
+              "at": [
+                34.0,
+                39.0
+              ],
+              "text": "3"
+            },
+            {
+              "kind": "label",
+              "at": [
+                147.0,
+                39.0
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     }
   ],

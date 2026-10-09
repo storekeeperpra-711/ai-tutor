@@ -2,6 +2,7 @@ from math import gcd, lcm
 
 from common import (T, opt, say, wrong, number_question, write, prime_factors,
                     REF, REVIEW, FM_FACTORS, FM_HCF, FM_LCM)
+from figs import attach, venn, two_trees_fig, multiples_rows, area_rects, en_list, ur_list
 
 SKILL = FM_LCM
 
@@ -231,4 +232,63 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+BUS_A, BUS_B, BUS_UPTO = 4, 6, 24
+assert multiples(BUS_A, BUS_UPTO) == [4, 8, 12, 16, 20, 24] and multiples(BUS_B, BUS_UPTO) == [6, 12, 18, 24]
+COMMON = [v for v in multiples(BUS_A, BUS_UPTO) if v % BUS_B == 0]
+assert COMMON == [12, 24] and COMMON[0] == S4
+
+
+def bus_rows(ring):
+    extra_en = f" The numbers both lines land on, {en_list(COMMON)}, are circled." if ring else ""
+    extra_ur = f" جن اعداد پر دونوں لکیریں اترتی ہیں، {ur_list(COMMON)}، ان کے گرد دائرہ ہے۔" if ring else ""
+    return multiples_rows(BUS_A, BUS_B, BUS_UPTO,
+        f"Two number lines from 0 to {BUS_UPTO}, one above the other. Top: jumps of {BUS_A} (+{BUS_A}) landing on {en_list(multiples(BUS_A, BUS_UPTO))}. Bottom: jumps of {BUS_B} (+{BUS_B}) landing on {en_list(multiples(BUS_B, BUS_UPTO))}.{extra_en}",
+        f"0 سے {BUS_UPTO} تک دو عددی لکیریں، ایک دوسرے کے نیچے۔ اوپر: {BUS_A} کی چھلانگیں (+{BUS_A}) جو {ur_list(multiples(BUS_A, BUS_UPTO))} پر اترتی ہیں۔ نیچے: {BUS_B} کی چھلانگیں (+{BUS_B}) جو {ur_list(multiples(BUS_B, BUS_UPTO))} پر اترتی ہیں۔{extra_ur}",
+        ring=ring)
+
+
+def split_primes(a, b):
+    """The primes of a and b as (only a, both, only b), repeats kept."""
+    pa, pb = prime_factors(a), prime_factors(b)
+    both, rest_b = [], list(pb)
+    for p in pa:
+        if p in rest_b:
+            both.append(p)
+            rest_b.remove(p)
+    rest_a = list(pa)
+    for p in both:
+        rest_a.remove(p)
+    return rest_a, both, rest_b
+
+
+def lcm_venn(a, b):
+    ra, both, rb = split_primes(a, b)
+    every = ra + both + rb
+    product = 1
+    for p in every:
+        product *= p
+    assert product == lcm(a, b)
+    return venn(ra, both, rb, (a, b),
+        f"Two overlapping circles for the prime factors. Left circle, {a}: {' × '.join(map(str, prime_factors(a)))}. Right circle, {b}: {' × '.join(map(str, prime_factors(b)))}. Shared primes in the middle: {en_list(both)}. Only in {a}: {en_list(ra)}. Only in {b}: {en_list(rb)}. Every prime in the picture, multiplied, gives the LCM: {' × '.join(map(str, every))}.",
+        f"مفرد اجزائے ضربی کے دو ایک دوسرے پر چڑھے دائرے۔ بائیں دائرہ، {a}: {' × '.join(map(str, prime_factors(a)))}۔ دائیں دائرہ، {b}: {' × '.join(map(str, prime_factors(b)))}۔ مشترک مفرد اعداد درمیان میں: {ur_list(both)}۔ صرف {a} میں: {ur_list(ra)}۔ صرف {b} میں: {ur_list(rb)}۔ تصویر کے سب مفرد اعداد کو ضرب دینے سے ذو اضعاف اقل ملتا ہے: {' × '.join(map(str, every))}۔")
+
+
+S8_A, S8_B, S8_H = 8, 12, gcd(8, 12)
+assert S8_H * S8 == S8_A * S8_B
+
+attach(lesson, {
+    "s1_hook": bus_rows(ring=False),
+    "s2_foundation": two_trees_fig(18, 24),
+    "s3_see_it": bus_rows(ring=True),
+    "s5_primes": lcm_venn(12, 18),
+    "s6_by_primes": two_trees_fig(12, 18),
+    "s8_rule": area_rects([dict(h=S8_A, w=S8_B, area=S8_A * S8_B), dict(h=S8_H, w=S8, w_text="?", area=S8_A * S8_B)],
+        f"Two rectangles with the same area, {S8_A * S8_B}. The first is {S8_A} by {S8_B}. The second is {S8_H} high, and its length is a question mark.",
+        f"ایک جیسے رقبے، {S8_A * S8_B}، والے دو مستطیل۔ پہلا {S8_A} ضرب {S8_B} ہے۔ دوسرا {S8_H} اونچا ہے، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے۔"),
+    "s12_summary": lcm_venn(12, 18),
+    "qb_apply": two_trees_fig(10, 15),
+    "r_lcm": two_trees_fig(9, 12),
+    "r_coprime": two_trees_fig(7, 8),
+})
 write(lesson)

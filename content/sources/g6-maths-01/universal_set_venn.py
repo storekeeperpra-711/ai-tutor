@@ -402,4 +402,33 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+import figs
+
+# s1: the bazaar basket (U) holds all the fruit; the mangoes sit in a bowl (M) inside it.
+MANGOES, OTHER_FRUIT = 3, 4
+
+
+def basket():
+    items = [figs.rect(30, 8, 270, 108), figs.label((44, 22), "U"),
+             figs.circle((182, 58), 38), figs.label((182 - 38 * 0.75 - 8, 58 - 38 * 0.75 - 8), "M")]
+    for i in range(MANGOES):
+        items.append(figs.circle((168 + (i % 2) * 28, 46 + (i // 2) * 26 + (13 if i == 2 else 0) - (0 if i < 2 else 13)), 9, fill=True))
+    for i in range(OTHER_FRUIT):
+        items.append(figs.circle((62 + (i % 2) * 34, 50 + (i // 2) * 32), 9))
+    return figs.figure(figs.W, 116,
+        f"A big rectangle U is the basket holding all the fruit. Inside it, a circle M is the bowl holding the {MANGOES} mangoes (filled circles). The other {OTHER_FRUIT} fruits (empty circles) are in the basket but outside the bowl.",
+        f"بڑا مستطیل U ٹوکری ہے جس میں سارے پھل ہیں۔ اس کے اندر دائرہ M پیالہ ہے جس میں {MANGOES} آم ہیں (بھرے ہوئے دائرے)۔ باقی {OTHER_FRUIT} پھل (خالی دائرے) ٹوکری میں ہیں لیکن پیالے سے باہر۔",
+        items)
+
+
+S2_A, S2_B = [2, 4], [1, 2, 3, 4]
+assert set(S2_A) <= set(S2_B)
+
+figs.attach(lesson, {
+    "s1_hook": basket(),
+    "s2_foundation": figs.two_ovals(S2_A, S2_B,
+        f"Two ovals: A holds {figs.en_list(S2_A)} and B holds {figs.en_list(S2_B)}.",
+        f"دو بیضوی شکلیں: A میں {figs.ur_list(S2_A)} اور B میں {figs.ur_list(S2_B)} ہیں۔", cols=2),
+})
 write(lesson)

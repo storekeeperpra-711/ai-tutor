@@ -2,6 +2,7 @@ from math import gcd, lcm
 
 from common import (T, opt, say, wrong, number_question, write, factors, prime_factors,
                     REF, REVIEW, FM_FACTORS, FM_PRIMES, FM_HCF)
+from figs import (attach, venn, two_trees_fig, dot_groups, dot_block, figure, circle, label, en_list, ur_list, W)
 
 SKILL = FM_HCF
 
@@ -231,4 +232,85 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+RED, GREEN = 12, 18
+assert gcd(RED, GREEN) == BUNCHES
+
+
+def only(a, b):
+    return [d for d in factors(a) if b % d]
+
+
+def shared_primes(a, b):
+    """The primes of a and b split into (only a, both, only b), repeats kept."""
+    pa, pb = prime_factors(a), prime_factors(b)
+    both = []
+    rest_b = list(pb)
+    for p in pa:
+        if p in rest_b:
+            both.append(p)
+            rest_b.remove(p)
+    rest_a = list(pa)
+    for p in both:
+        rest_a.remove(p)
+    return rest_a, both, rest_b
+
+
+def factor_venn(a, b, ring=True):
+    both = common_factors(a, b)
+    big = max(both)
+    extra_en = f" The biggest number in the middle, {big}, is circled." if ring else ""
+    extra_ur = f" درمیان کا سب سے بڑا عدد، {big}، دائرے میں ہے۔" if ring else ""
+    return venn(only(a, b), both, only(b, a), (a, b),
+        f"Two overlapping circles. The left circle, {a}, holds the factors of {a}; the right circle, {b}, holds the factors of {b}. Only in {a}: {en_list(only(a, b))}. In the middle, factors of both: {en_list(both)}. Only in {b}: {en_list(only(b, a))}.{extra_en}",
+        f"دو ایک دوسرے پر چڑھے دائرے۔ بائیں دائرہ، {a}، میں {a} کے اجزائے ضربی ہیں؛ دائیں دائرہ، {b}، میں {b} کے اجزائے ضربی۔ صرف {a} میں: {ur_list(only(a, b))}۔ درمیان میں، دونوں کے اجزائے ضربی: {ur_list(both)}۔ صرف {b} میں: {ur_list(only(b, a))}۔{extra_ur}",
+        ring=[big] if ring else ())
+
+
+def prime_venn(a, b):
+    ra, both, rb = shared_primes(a, b)
+    assert prod_(both) == gcd(a, b)
+    return venn(ra, both, rb, (a, b),
+        f"Two overlapping circles for the prime factors. Left circle, {a}: {' × '.join(map(str, prime_factors(a)))}. Right circle, {b}: {' × '.join(map(str, prime_factors(b)))}. The primes they share are in the middle: {en_list(both)}. Only in {a}: {en_list(ra)}. Only in {b}: {en_list(rb)}.",
+        f"مفرد اجزائے ضربی کے دو ایک دوسرے پر چڑھے دائرے۔ بائیں دائرہ، {a}: {' × '.join(map(str, prime_factors(a)))}۔ دائیں دائرہ، {b}: {' × '.join(map(str, prime_factors(b)))}۔ دونوں کے مشترک مفرد اعداد درمیان میں ہیں: {ur_list(both)}۔ صرف {a} میں: {ur_list(ra)}۔ صرف {b} میں: {ur_list(rb)}۔")
+
+
+def prod_(xs):
+    out = 1
+    for x in xs:
+        out *= x
+    return out
+
+
+def bunches_figure():
+    """The 12 red balloons in a row, and 6 empty bunches (dashed rings) under them."""
+    gap = 18
+    x0 = (W - (RED - 1) * gap) / 2 + 12
+    items = [label((x0 - 30, 22), RED)] + dot_block(x0, 22, RED, RED, gap=gap, r=6)
+    rg = 40
+    x1 = (W - (BUNCHES - 1) * rg) / 2 + 12
+    items.append(label((x1 - 34, 70), BUNCHES))
+    items += [circle((x1 + k * rg, 70), 15, dashed=True) for k in range(BUNCHES)]
+    return figure(W, 96,
+        f"Top: {RED} red balloons drawn as filled dots in a row, with {RED} written on the left. Below: {BUNCHES} empty bunches drawn as dashed circles, with {BUNCHES} written on the left.",
+        f"اوپر: {RED} سرخ غبارے، ایک قطار میں بھرے ہوئے نقطے، بائیں طرف {RED} لکھا ہے۔ نیچے: {BUNCHES} خالی گچھے، ڈیش والے دائرے، بائیں طرف {BUNCHES} لکھا ہے۔",
+        items)
+
+
+attach(lesson, {
+    "s1_hook": dot_groups([(RED, 4, True, RED), (GREEN, 6, False, GREEN)],
+        f"Balloons drawn as dots: {RED} red balloons as filled dots on the left, and {GREEN} green balloons as empty dots on the right. The number of each is written above.",
+        f"غبارے نقطوں کی صورت میں: بائیں طرف {RED} سرخ غبارے بھرے نقطے، اور دائیں طرف {GREEN} سبز غبارے خالی نقطے۔ ہر ایک کی تعداد اوپر لکھی ہے۔",
+        gap=16, r=6),
+    "s3_see_it": factor_venn(12, 18),
+    "s5_primes": prime_venn(24, 36),
+    "s6_by_primes": two_trees_fig(24, 36),
+    "s7_coprime": two_trees_fig(8, 15),
+    "s8_balloons": bunches_figure(),
+    "s11_bigger": two_trees_fig(42, 56),
+    "s12_summary": factor_venn(12, 18),
+    "qb_apply": two_trees_fig(16, 40),
+    "r_hcf": two_trees_fig(20, 30),
+    "r_coprime": two_trees_fig(9, 14),
+})
 write(lesson)

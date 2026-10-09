@@ -238,4 +238,33 @@ lesson = {
  ],
  "review": REVIEW,
 }
+
+# ---------- pictures ----------
+from common import COIN
+from figs import attach, step_says, coins_row, dice_faces, bag, key, cards, spinner
+
+FOUR_SIX = balls(red=4, blue=6)
+step_says(lesson, "s2_foundation", "Two coins")
+step_says(lesson, "s6_red", "3 red, 2 blue and 5 green")
+step_says(lesson, "s8_multan", "MULTAN")
+step_says(lesson, "s11_spinner", "8 equal parts numbered 1 to 8")
+step_says(lesson, "qb_find_error", "4 red and 6 blue")
+step_says(lesson, "r_blue", "4 red and 6 blue")
+assert len(coins(2)) == S2 and len(BAG) == 10
+
+attach(lesson, {
+    "s2_foundation": coins_row(["H", "T"], "Two coins side by side: one shows H (heads), the other T (tails).",
+                               "دو سکے ساتھ ساتھ: ایک پر H (ہیڈ) اور دوسرے پر T (ٹیل) ہے۔"),
+    "s3_rule": coins_row(COIN, "The two faces of a coin: H (heads) and T (tails). H has a dashed circle round it: 1 outcome we want out of 2.",
+                         "سکے کے دو رخ: H (ہیڈ) اور T (ٹیل)۔ H کے گرد ڈیش والا دائرہ ہے: 2 میں سے 1 مطلوبہ نتیجہ۔", ring=(0,)),
+    "s4_six": dice_faces(DICE),
+    "s5_even": dice_faces(DICE),
+    "s6_red": bag(BAG, key("red", "blue", "green")),
+    "s7_green": bag(BAG, key("green", "red", "blue")),
+    "s8_multan": cards("MULTAN"),
+    "s11_spinner": spinner([str(n) for n in range(1, 9)]),
+    "qb_apply": dice_faces(DICE),
+    "qb_find_error": bag(FOUR_SIX, key("red", "blue")),
+    "r_blue": bag(FOUR_SIX, key("blue", "red")),
+})
 write(lesson)

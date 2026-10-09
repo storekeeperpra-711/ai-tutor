@@ -227,4 +227,88 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import (attach, figure, strip, strip_figure, bar_model, square_sides, arrow_down,
+                  label, W)
+
+SIDE = 9                                     # s8: the square's side
+assert value("4s", s=SIDE) == S8
+TEN11, K11 = 10, 3                           # s11: 10 − 2k with k = 3
+assert value("10 - 2k", k=K11) == S11 == TEN11 - 2 * K11
+N3 = 4                                       # s3: 3n + 2 with n = 4
+assert value("3n + 2", n=N3) == S5
+
+
+def worked():
+    """3n + 2 as bags, then each bag opened to show n marbles."""
+    items = strip([("bags", 3, "n"), ("text", "+"), ("marbles", 2)], 46)
+    items += arrow_down(W / 2, 54, 74)
+    items.append(label((W / 2 + 30, 64), f"n={N3}"))
+    items += strip([("marbles", N3, 2), ("marbles", N3, 2), ("marbles", N3, 2), ("text", "+"),
+                    ("marbles", 2), ("text", "="), ("text", S5)], 116, gap=12)
+    return figure(W, 124,
+        f"Top: 3 bags marked n and 2 marbles, which is 3n + 2 (n is the number of marbles in each bag). An arrow down marked n={N3}. Bottom: each bag is opened and holds {N3} marbles, so 3 groups of {N3} marbles plus 2 marbles = {S5}.",
+        f"اوپر: 3 تھیلے جن پر n لکھا ہے اور 2 کنچے، یعنی 3n + 2 (n ہر تھیلے کے کنچوں کی تعداد ہے)۔ نیچے کی طرف تیر جس پر n={N3} لکھا ہے۔ نیچے: ہر تھیلا کھلا ہے اور اس میں {N3} کنچے ہیں، تو {N3} کنچوں کے 3 گروہ جمع 2 کنچے = {S5}۔",
+        items)
+
+
+def bags_story(tokens, given, en, ur, answer=None, expr=None):
+    """Bags and marbles for an expression, with the given values beside
+    them. The expression the picture shows (bags of a letter count as that
+    letter, marbles as 1, dashed marbles as −1) must give the step's answer."""
+    if answer is not None:
+        shown, sign = [], "+"
+        for tok in tokens:
+            if tok[0] == "text":
+                sign = tok[1]
+            elif tok[0] in ("bag", "bags"):
+                k, letter = (1, tok[1]) if tok[0] == "bag" else (tok[1], tok[2])
+                shown.append(f"{sign} {k}*{letter}")
+            else:
+                shown.append(f"{'-' if tok[0] == 'dmarbles' else sign} {tok[1]}")
+        values = {g.split("=")[0]: int(g.split("=")[1]) for g in given}
+        assert value(" ".join(shown).lstrip("+ "), **values) == answer, (shown, given)
+    return strip_figure(tokens + [("text", g) for g in given], en, ur)
+
+
+attach(lesson, {
+    "s1_hook": square_sides("s",
+        "A square with each of its four sides marked s, the length of a side.",
+        "ایک مربع جس کے چاروں اطراف پر s لکھا ہے، یعنی ایک ضلع کی لمبائی۔"),
+    "s3_how": worked(),
+    "s4_add": bags_story([("bag", "x"), ("text", "+"), ("marbles", 9)], ["x=6"],
+        "A bag marked x, a plus sign and 9 marbles, which is x + 9. Beside it: x=6, the bag holds 6 marbles.",
+        "ایک تھیلا جس پر x لکھا ہے، جمع کا نشان اور 9 کنچے، یعنی x + 9۔ ساتھ میں: x=6، تھیلے میں 6 کنچے ہیں۔", S4),
+    "s5_times_add": bags_story([("bags", 3, "n"), ("text", "+"), ("marbles", 2)], [f"n={N3}"],
+        f"3 bags marked n, a plus sign and 2 marbles, which is 3n + 2. Beside it: n={N3}, each bag holds {N3} marbles.",
+        f"3 تھیلے جن پر n لکھا ہے، جمع کا نشان اور 2 کنچے، یعنی 3n + 2۔ ساتھ میں: n={N3}، ہر تھیلے میں {N3} کنچے ہیں۔", S5),
+    "s6_times_subtract": bags_story([("bags", 5, "a"), ("text", "−"), ("dmarbles", 3)], ["a=2"],
+        "5 bags marked a, a minus sign and 3 dashed marbles to take away, which is 5a − 3. Beside it: a=2, each bag holds 2 marbles.",
+        "5 تھیلے جن پر a لکھا ہے، تفریق کا نشان اور نکالنے کے لیے 3 ڈیش والے کنچے، یعنی 5a − 3۔ ساتھ میں: a=2، ہر تھیلے میں 2 کنچے ہیں۔", S6),
+    "s7_two_letters": bags_story([("bags", 2, "a"), ("text", "+"), ("bag", "b")], ["a=3", "b=4"],
+        "2 bags marked a, a plus sign and 1 bag marked b, which is 2a + b. Beside it: a=3 and b=4, the marbles in each kind of bag.",
+        "2 تھیلے جن پر a لکھا ہے، جمع کا نشان اور 1 تھیلا جس پر b لکھا ہے، یعنی 2a + b۔ ساتھ میں: a=3 اور b=4، ہر قسم کے تھیلے کے کنچے۔", S7),
+    "s8_square": square_sides("s",
+        f"A square with each of its four sides marked s. Inside it: s={SIDE}, each side is {SIDE} cm.",
+        f"ایک مربع جس کے چاروں اطراف پر s لکھا ہے۔ اس کے اندر: s={SIDE}، ہر ضلع {SIDE} سینٹی میٹر ہے۔", inside=f"s={SIDE}"),
+    "s9_find_error": bags_story([("bags", 2, "y")], ["y=5"],
+        "2 bags marked y, which is 2y. Beside them: y=5, each bag holds 5 marbles.",
+        "2 تھیلے جن پر y لکھا ہے، یعنی 2y۔ ساتھ میں: y=5، ہر تھیلے میں 5 کنچے ہیں۔", value("2y", y=5)),
+    "s11_take_away": bar_model([[(TEN11, str(TEN11), False)], [(S11, None, False), (K11, "k", True), (K11, "k", True)]],
+        f"Two bars. The top bar is 10. The bottom bar is the same length, with two dashed pieces marked k taken away from its end: 10 − 2k. Here k is {K11}.",
+        f"دو پٹیاں۔ اوپر والی پٹی 10 ہے۔ نیچے والی پٹی اتنی ہی لمبی ہے، اس کے آخر سے k والے دو ڈیش ٹکڑے نکالے گئے ہیں: 10 − 2k۔ یہاں k کی قیمت {K11} ہے۔"),
+    "s12_summary": worked(),
+    "qb_recall": bags_story([("bags", 4, "m")], ["m=5"],
+        "4 bags marked m, which is 4m. Beside them: m=5, each bag holds 5 marbles.",
+        "4 تھیلے جن پر m لکھا ہے، یعنی 4m۔ ساتھ میں: m=5، ہر تھیلے میں 5 کنچے ہیں۔", value("4m", m=5)),
+    "qb_apply": bags_story([("marbles", 6, 3), ("text", "+"), ("bags", 2, "c")], ["c=7"],
+        "6 marbles, a plus sign and 2 bags marked c, which is 6 + 2c. Beside them: c=7, each bag holds 7 marbles.",
+        "6 کنچے، جمع کا نشان اور 2 تھیلے جن پر c لکھا ہے، یعنی 6 + 2c۔ ساتھ میں: c=7، ہر تھیلے میں 7 کنچے ہیں۔", QB),
+    "qb_find_error": bags_story([("bags", 2, "a"), ("text", "+"), ("marbles", 1)], ["a=3"],
+        "2 bags marked a, a plus sign and 1 marble, which is 2a + 1. Beside them: a=3, each bag holds 3 marbles.",
+        "2 تھیلے جن پر a لکھا ہے، جمع کا نشان اور 1 کنچا، یعنی 2a + 1۔ ساتھ میں: a=3، ہر تھیلے میں 3 کنچے ہیں۔", value("2a + 1", a=3)),
+    "r_value": bags_story([("bags", 4, "p"), ("text", "+"), ("marbles", 1)], ["p=5"],
+        "4 bags marked p, a plus sign and 1 marble, which is 4p + 1. Beside them: p=5, each bag holds 5 marbles.",
+        "4 تھیلے جن پر p لکھا ہے، جمع کا نشان اور 1 کنچا، یعنی 4p + 1۔ ساتھ میں: p=5، ہر تھیلے میں 5 کنچے ہیں۔", R1),
+})
 write(lesson)
