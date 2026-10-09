@@ -217,4 +217,94 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import (attach, figure, strip, strip_figure, dot_array, bar_model, egg_box, pen,
+                  point, line, label, W)
+
+ROWS2, COLS2 = 6, 7                      # s2: 6 × 7
+EXTRA4 = 4                               # s4: n + 4
+EGGS = 6                                 # s5: 6 eggs in each box
+N8, MORE8 = 7, 4                         # s8: n = 7, n + 4
+assert value("n + 4", n=N8) == S8 and MORE8 == EXTRA4
+AGE_A, YOUNGER = 12, 3                   # s6: a − 3 (drawn for a = 12)
+assert value("a - 3", a=AGE_A) == AGE_A - YOUNGER
+PENS = 5                                 # s11: 5p
+TEN = 10                                 # qb: k more than 10
+LOTS = 6                                 # qb_find_error: 6 lots of x
+M_R, LESS_R = 20, 8                      # review: m − 8 with m = 20
+assert value("m - 8", m=M_R) == R2
+
+MORE3, LESS3, TIMES3 = 5, 2, 3           # s3: n + 5, n − 2, 3n
+
+
+def three_ways():
+    rows = [
+        [("bag", "n"), ("text", "+"), ("marbles", MORE3), ("text", "="), ("text", f"n+{MORE3}")],
+        [("bag", "n"), ("text", "−"), ("dmarbles", LESS3), ("text", "="), ("text", f"n−{LESS3}")],
+        [("bags", TIMES3, "n"), ("text", "="), ("text", f"{TIMES3}n")],
+    ]
+    items = []
+    for i, row in enumerate(rows):
+        items += strip(row, 46 + i * 50, gap=12)
+    return figure(W, 160,
+        f"Three rows, each with a bag of marbles marked n (n is how many marbles are in a bag). Top: a bag plus {MORE3} marbles is n+{MORE3}. Middle: a bag with {LESS3} dashed marbles taken away is n−{LESS3}. Bottom: {TIMES3} bags is {TIMES3}n.",
+        f"تین قطاریں، ہر ایک میں کنچوں کا تھیلا جس پر n لکھا ہے (n ایک تھیلے کے کنچوں کی تعداد ہے)۔ اوپر: ایک تھیلا جمع {MORE3} کنچے n+{MORE3} ہے۔ درمیان: ایک تھیلا جس میں سے {LESS3} ڈیش والے کنچے نکالے گئے n−{LESS3} ہے۔ نیچے: {TIMES3} تھیلے {TIMES3}n ہیں۔",
+        items)
+
+
+def egg_boxes():
+    items = []
+    for i, x in enumerate((50, 116)):
+        items += egg_box(x, 14, EGGS)
+    items += [point((186, 32)), point((198, 32)), point((210, 32))]
+    items += egg_box(222, 14, EGGS)
+    items += [line((50, 60), (50, 66)), line((50, 66), (274, 66)), line((274, 66), (274, 60)),
+              label((162, 80), "b")]
+    return figure(W, 92,
+        f"Egg boxes in a row, each holding {EGGS} eggs; dots show that more boxes follow. A bracket under all the boxes is marked b: there are b boxes.",
+        f"ایک قطار میں انڈوں کے ڈبے، ہر ایک میں {EGGS} انڈے؛ نقطے بتاتے ہیں کہ اور ڈبے بھی ہیں۔ سب ڈبوں کے نیچے ایک قوس پر b لکھا ہے: کل b ڈبے ہیں۔",
+        items)
+
+
+def pens():
+    items = []
+    for i in range(PENS):
+        items += pen(70 + i * 40, 92, "p")
+    return figure(W, 100,
+        f"{PENS} pens in a row, each marked p: every pen costs p rupees.",
+        f"ایک قطار میں {PENS} قلم، ہر ایک پر p لکھا ہے: ہر قلم p روپے کا ہے۔",
+        items)
+
+
+attach(lesson, {
+    "s1_hook": strip_figure([("bag", "n"), ("text", "="), ("text", "?")],
+        "A closed bag of marbles marked n, then = ? : we don't know how many marbles are inside, so we call the number n.",
+        "کنچوں کا بند تھیلا جس پر n لکھا ہے، پھر = ? : ہمیں نہیں معلوم اندر کتنے کنچے ہیں، اس لیے اس عدد کو n کہتے ہیں۔"),
+    "s2_foundation": dot_array(ROWS2, COLS2,
+        f"Dots in {ROWS2} rows with {COLS2} dots in each row.",
+        f"نقطوں کی {ROWS2} قطاریں، ہر قطار میں {COLS2} نقطے۔"),
+    "s3_letters": three_ways(),
+    "s4_more": strip_figure([("bag", "n"), ("text", "+"), ("marbles", EXTRA4)],
+        f"Ali's bag marked n (the marbles he has), a plus sign and {EXTRA4} more marbles.",
+        f"علی کا تھیلا جس پر n لکھا ہے (اس کے کنچے)، جمع کا نشان اور {EXTRA4} مزید کنچے۔"),
+    "s5_times": egg_boxes(),
+    "s6_less": bar_model([[(AGE_A, "a", False)], [(AGE_A - YOUNGER, None, False), (YOUNGER, str(YOUNGER), True)]],
+        f"Two bars. The top bar, B, is the brother's age, a. The bottom bar, S, is Sara's age: it is shorter, and the dashed piece marked {YOUNGER} shows the {YOUNGER} years it is missing.",
+        f"دو پٹیاں۔ اوپر والی پٹی B بھائی کی عمر a ہے۔ نیچے والی پٹی S ثنا کی عمر ہے: یہ چھوٹی ہے، اور {YOUNGER} والا ڈیش ٹکڑا وہ {YOUNGER} سال دکھاتا ہے جو اس میں کم ہیں۔",
+        names=("B", "S")),
+    "s8_try": strip_figure([("text", "n"), ("text", "="), ("marbles", N8, 4), ("text", "+"), ("marbles", MORE8, 4)],
+        f"n = {N8}: Ali's {N8} marbles, a plus sign, and the {MORE8} marbles he won.",
+        f"n = {N8}: علی کے {N8} کنچے، جمع کا نشان، اور وہ {MORE8} کنچے جو اس نے جیتے۔"),
+    "s11_cost": pens(),
+    "s12_summary": three_ways(),
+    "qb_apply": strip_figure([("marbles", TEN), ("text", "+"), ("bag", "k")],
+        f"{TEN} marbles, a plus sign and a bag marked k (k more marbles).",
+        f"{TEN} کنچے، جمع کا نشان اور ایک تھیلا جس پر k لکھا ہے (k مزید کنچے)۔"),
+    "qb_find_error": strip_figure([("bags", LOTS, "x")],
+        f"{LOTS} bags in a row, each marked x: {LOTS} lots of x.",
+        f"ایک قطار میں {LOTS} تھیلے، ہر ایک پر x لکھا ہے: x کے {LOTS} گروہ۔"),
+    "r_less": bar_model([[(M_R, str(M_R), False)], [(M_R - LESS_R, None, False), (LESS_R, str(LESS_R), True)]],
+        f"Two bars. The top bar is m = {M_R}. The bottom bar is m − {LESS_R}: the same length with a dashed piece of {LESS_R} taken away from the end.",
+        f"دو پٹیاں۔ اوپر والی پٹی m = {M_R} ہے۔ نیچے والی پٹی m − {LESS_R} ہے: اتنی ہی لمبی، آخر سے {LESS_R} کا ڈیش ٹکڑا نکالا گیا ہے۔"),
+})
 write(lesson)

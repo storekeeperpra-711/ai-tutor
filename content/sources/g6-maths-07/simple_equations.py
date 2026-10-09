@@ -228,4 +228,97 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+import re
+
+from figs import attach, balance, bar_model, tiles_figure, tiles_en, tiles_ur
+
+BAL_EN = "(a bag stands for the unknown number, each small square for 1)"
+BAL_UR = "(تھیلا نامعلوم عدد ہے، ہر چھوٹا مربع 1 ہے)"
+
+
+def parts(equation):
+    """'2x + 1 = 9' -> (2, 'x', 1, 9)."""
+    m = re.fullmatch(r"(\d*)([a-z])(?: \+ (\d+))? = (\d+)", equation)
+    k, letter, b, right = m.groups()
+    return int(k or 1), letter, int(b or 0), int(right)
+
+
+def scale(equation, *, take=False, under=None, cols=5, en_extra="", ur_extra=""):
+    """A balance for an equation like 2x + 1 = 9: bags and squares on the
+    left, squares on the right. take: the left squares, and as many on the
+    right, are dashed (taken from both sides)."""
+    k, letter, b, right = parts(equation)
+    answer = solve(equation, letter)
+    assert k * answer + b == right
+    left = [("bags", k, letter)] + ([("units", b, min(cols, b), 0 if take else None)] if b else [])
+    right_side = [("units", right, cols, right - b if take else None)]
+    bags = f"{k} bags" if k > 1 else "a bag"
+    bags_ur = f"{k} تھیلے" if k > 1 else "ایک تھیلا"
+    squares = f" and {b} small squares" if b else ""
+    squares_ur = f" اور {b} چھوٹے مربعے" if b else ""
+    return balance(left, right_side,
+        f"A level balance for {equation}. Left pan: {bags} marked {letter}{squares}. Right pan: {right} small squares. {BAL_EN}{en_extra}",
+        f"{equation} کا برابر ترازو۔ بایاں پلڑا: {bags_ur} جن پر {letter} لکھا ہے{squares_ur}۔ دایاں پلڑا: {right} چھوٹے مربعے۔ {BAL_UR}{ur_extra}",
+        under=under, cols=cols), answer
+
+
+def boxes_bar(k, letter, total, en, ur, answer):
+    """k equal boxes marked with the letter, with the total over them."""
+    each = total // k
+    assert each * k == total and each == answer
+    return bar_model([[(each, letter, False)] * k], en, ur, total=str(total))
+
+
+_, _, B3, _ = parts("x + 5 = 12")
+S3_FIG, S3_X = scale("x + 5 = 12", take=True, under=f"x={S4}",
+    en_extra=f" The {B3} squares on the left and {B3} of the squares on the right are dashed: they are taken away from both sides, leaving x = {S4}.",
+    ur_extra=f" بائیں طرف کے {B3} مربعے اور دائیں طرف کے {B3} مربعے ڈیش والے ہیں: انہیں دونوں طرف سے نکالا گیا، باقی x = {S4} بچتا ہے۔")
+assert S3_X == S4
+K12, _, _, R12 = parts("3x = 18")
+S12_FIG, S12_X = scale("3x = 18", cols=S6, under=f"x={S6}",
+    en_extra=f" The {R12} squares are in {K12} rows of {S6}, one row for each bag, so x = {S6}.",
+    ur_extra=f" {R12} مربعے {S6} کی {K12} قطاروں میں ہیں، ہر تھیلے کے لیے ایک قطار، اس لیے x = {S6}۔")
+assert S12_X == S6
+
+Y5, TAKE5 = S5, 4                     # s5: y − 4 = 9
+assert Y5 - TAKE5 == 9
+M7, PARTS7 = S7, 4                    # s7: m ÷ 4 = 5
+assert M7 // PARTS7 == 5 and M7 % PARTS7 == 0
+N11, TAKE11 = S11, 3                  # s11: 4n − 3 = 25
+assert 4 * N11 - TAKE11 == 25
+N_QB, TAKE_QB = solve("n - 3 = 8", "n"), 3
+assert N_QB - TAKE_QB == 8
+
+attach(lesson, {
+    "s1_hook": scale("x + 5 = 12")[0],
+    "s2_foundation": tiles_figure([[("terms", [(5, "y")]), ("op", "+"), ("terms", [(2, "y")])]], ("y",),
+        f"Algebra tiles: a group of 5 y-tiles named 5y, a plus sign, and a group of 2 y-tiles named 2y. {tiles_en(('y',))}",
+        f"الجبرا ٹائلیں: 5 ٹائلیں y کا گروہ جس کا نام 5y، جمع کا نشان، اور 2 ٹائلیں y کا گروہ جس کا نام 2y۔ {tiles_ur(('y',))}"),
+    "s3_balance": S3_FIG,
+    "s5_subtract": bar_model([[(Y5, "y", False)], [(Y5 - TAKE5, str(Y5 - TAKE5), False), (TAKE5, str(TAKE5), True)]],
+        f"Two bars of the same length. The top bar is y. The bottom bar is split into {Y5 - TAKE5} and a dashed piece of {TAKE5}: taking {TAKE5} away from y leaves {Y5 - TAKE5}.",
+        f"ایک جتنی لمبی دو پٹیاں۔ اوپر والی پٹی y ہے۔ نیچے والی پٹی {Y5 - TAKE5} اور {TAKE5} کے ڈیش والے ٹکڑے میں بٹی ہے: y میں سے {TAKE5} نکالیں تو {Y5 - TAKE5} بچتا ہے۔"),
+    "s6_times": scale("3x = 18", cols=6)[0],
+    "s7_divide": bar_model([[(M7, "m", False)], [(M7 // PARTS7, str(M7 // PARTS7), False)] * PARTS7],
+        f"Two bars of the same length. The top bar is m. The bottom bar is m cut into {PARTS7} equal parts, each marked {M7 // PARTS7}: m ÷ {PARTS7} = {M7 // PARTS7}.",
+        f"ایک جتنی لمبی دو پٹیاں۔ اوپر والی پٹی m ہے۔ نیچے والی پٹی m کے {PARTS7} برابر حصے ہیں، ہر ایک پر {M7 // PARTS7} لکھا ہے: m ÷ {PARTS7} = {M7 // PARTS7}۔"),
+    "s8_two_step": scale("2x + 1 = 9")[0],
+    "s9_find_error": scale("x + 6 = 10")[0],
+    "s11_two_step": bar_model([[(N11, "n", False)] * 4, [(4 * N11 - TAKE11, str(4 * N11 - TAKE11), False), (TAKE11, str(TAKE11), True)]],
+        f"Two bars of the same length. The top bar is 4 equal boxes marked n, which is 4n. The bottom bar is split into {4 * N11 - TAKE11} and a dashed piece of {TAKE11}: taking {TAKE11} from 4n leaves {4 * N11 - TAKE11}.",
+        f"ایک جتنی لمبی دو پٹیاں۔ اوپر والی پٹی n والے 4 برابر خانے ہیں، یعنی 4n۔ نیچے والی پٹی {4 * N11 - TAKE11} اور {TAKE11} کے ڈیش والے ٹکڑے میں بٹی ہے: 4n میں سے {TAKE11} نکالیں تو {4 * N11 - TAKE11} بچتا ہے۔"),
+    "s12_summary": S12_FIG,
+    "qb_recall": scale("x + 3 = 10")[0],
+    "qb_apply": boxes_bar(5, "k", 35,
+        "A bar of 5 equal boxes, each marked k, with 35 over the whole bar: 5k = 35.",
+        "5 برابر خانوں کی پٹی، ہر خانے پر k لکھا ہے، اور پوری پٹی کے اوپر 35: یعنی 5k = 35۔", QB),
+    "qb_find_error": bar_model([[(N_QB, "n", False)], [(N_QB - TAKE_QB, str(N_QB - TAKE_QB), False), (TAKE_QB, str(TAKE_QB), True)]],
+        f"Two bars of the same length. The top bar is n. The bottom bar is split into {N_QB - TAKE_QB} and a dashed piece of {TAKE_QB}: taking {TAKE_QB} from n leaves {N_QB - TAKE_QB}.",
+        f"ایک جتنی لمبی دو پٹیاں۔ اوپر والی پٹی n ہے۔ نیچے والی پٹی {N_QB - TAKE_QB} اور {TAKE_QB} کے ڈیش والے ٹکڑے میں بٹی ہے: n میں سے {TAKE_QB} نکالیں تو {N_QB - TAKE_QB} بچتا ہے۔"),
+    "r_add": scale("a + 9 = 15")[0],
+    "r_times": boxes_bar(6, "y", 42,
+        "A bar of 6 equal boxes, each marked y, with 42 over the whole bar: 6y = 42.",
+        "6 برابر خانوں کی پٹی، ہر خانے پر y لکھا ہے، اور پوری پٹی کے اوپر 42: یعنی 6y = 42۔", R2),
+})
 write(lesson)

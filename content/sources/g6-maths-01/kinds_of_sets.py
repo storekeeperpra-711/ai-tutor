@@ -222,4 +222,77 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import (attach, figure, set_oval, two_ovals, oval_figure, number_line, number_grid,
+                  label, line, arrow_right, en_list, ur_list, W)
+
+EQ_A, EQ_B = [1, 2, 3], [3, 1, 2]            # s3, s6: equal sets
+assert set(EQ_A) == set(EQ_B)
+EV_A, EV_B = ["a", "b", "c"], [1, 2, 3]      # s3, s7: equivalent sets
+assert len(EV_A) == len(EV_B) and set(EV_A) != set(EV_B)
+QB_A, QB_B = [1, 2, 3], [4, 5, 6]            # qb_find_error
+assert len(QB_A) == len(QB_B) and set(QB_A) != set(QB_B)
+ZERO = [0]
+assert len(set(ZERO)) == 1
+
+
+def hook():
+    """An empty oval on the left; a number line 1, 2, 3, 4, 5 with an
+    arrow (it goes on forever) on the right."""
+    items, rx, ry = set_oval(56, 46, [], rx=36, ry=28)
+    items.append(label((56, 92), "{ }"))
+    x0, gap = 130, 30
+    for i in range(5):
+        items += [line((x0 + i * gap, 41), (x0 + i * gap, 51)), label((x0 + i * gap, 66), i + 1)]
+    items.append(line((x0 - 8, 46), (x0 + 4 * gap + 10, 46)))
+    items += arrow_right(x0 + 4 * gap + 10, W - 14, 46)
+    return figure(W, 106,
+        "Left: an empty oval with { } written under it, a set with nothing in it. Right: a number line with 1, 2, 3, 4 and 5 that goes on with an arrow, because the counting numbers never end.",
+        "بائیں: ایک خالی بیضوی شکل جس کے نیچے { } لکھا ہے، ایسا سیٹ جس میں کچھ نہیں۔ دائیں: ایک عددی لکیر جس پر 1، 2، 3، 4 اور 5 ہیں اور تیر کے ساتھ آگے چلتی جاتی ہے، کیونکہ گنتی کے اعداد کبھی ختم نہیں ہوتے۔",
+        items)
+
+
+def summary():
+    """An empty oval, then two equal sets with '=' between them."""
+    items, _, _ = set_oval(38, 52, [], rx=24, ry=24)
+    items.append(label((38, 94), "{ }"))
+    for cx, elems, name in ((128, EQ_A, "A"), (248, EQ_B, "B")):
+        part, _, _ = set_oval(cx, 52, elems, name=name, rx=40, ry=26, cols=3, dx=22)
+        items += part
+    items.append(label((188, 52), "="))
+    return figure(W, 108,
+        f"Left: an empty oval with {{ }} under it, the empty set. Right: oval A holding {en_list(EQ_A)} and oval B holding {en_list(EQ_B)}, with an equals sign between them: the same elements in a different order, so A and B are equal.",
+        f"بائیں: ایک خالی بیضوی شکل جس کے نیچے {{ }} ہے، یعنی خالی سیٹ۔ دائیں: بیضوی شکل A میں {ur_list(EQ_A)} اور بیضوی شکل B میں {ur_list(EQ_B)}، درمیان میں برابر کا نشان: رکن وہی ہیں، ترتیب مختلف، اس لیے A اور B برابر ہیں۔",
+        items)
+
+
+def pair(a, b, en_extra="", ur_extra="", **kw):
+    return two_ovals(a, b,
+        f"Two ovals: A holds {en_list(a)} and B holds {en_list(b)}.{en_extra}",
+        f"دو بیضوی شکلیں: A میں {ur_list(a)} اور B میں {ur_list(b)} ہیں۔{ur_extra}", **kw)
+
+
+attach(lesson, {
+    "s1_hook": hook(),
+    "s3_kinds": pair(EV_A, EV_B,
+        " A line joins a to 1, b to 2 and c to 3, so every element has exactly one partner: the sets are equivalent.",
+        " ایک لکیر a کو 1 سے، b کو 2 سے اور c کو 3 سے ملاتی ہے، یوں ہر رکن کا ٹھیک ایک ساتھی ہے: سیٹ ہم قوت ہیں۔",
+        match=True),
+    "s6_equal": pair(EQ_A, EQ_B, cols=3),
+    "s7_equivalent": pair(EV_A, EV_B, cols=3),
+    "s8_primes": number_grid(1, 19,
+        "The numbers 1 to 19 in boxes, 1 to 10 in the top row and 11 to 19 in the bottom row.",
+        "خانوں میں 1 سے 19 تک اعداد، اوپر والی قطار میں 1 سے 10 اور نیچے والی میں 11 سے 19۔"),
+    "s9_find_error": oval_figure(ZERO,
+        "An oval with the number 0 written inside it: the set {0}.",
+        "ایک بیضوی شکل جس کے اندر عدد 0 لکھا ہے: سیٹ {0}۔"),
+    "s12_summary": summary(),
+    "qb_find_error": pair(QB_A, QB_B, cols=3),
+    "r_zero": number_line(0, 6,
+        "A number line of whole numbers starting at 0: 0, 1, 2, 3, 4, 5, 6, going on with an arrow.",
+        "مکمل اعداد کی عددی لکیر جو 0 سے شروع ہوتی ہے: 0، 1، 2، 3، 4، 5، 6، اور تیر کے ساتھ آگے چلتی ہے۔", arrow=True),
+    "r_evens": number_line(10, 20,
+        "A number line with the whole numbers from 10 to 20 written under it.",
+        "ایک عددی لکیر جس کے نیچے 10 سے 20 تک کے مکمل اعداد لکھے ہیں۔"),
+})
 write(lesson)

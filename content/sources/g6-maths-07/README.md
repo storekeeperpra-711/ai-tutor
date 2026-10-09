@@ -17,6 +17,8 @@ Every answer, and every common wrong answer (like reading 3n as thirty-something
 
 `maths.algebra.expressions_basic` is also the warm-up skill of the Grade 9 linear equations lesson, so this unit now teaches it.
 
+Every lesson has drawn pictures (`figure` blocks): bags of marbles for a letter, algebra tiles, balance scales for equations, bar models for word problems, and number cards, tables and matchstick patterns for sequences; the helpers are in `figs.py`, and each script attaches its pictures at the end with `attach`.
+
 To change a lesson, edit its script and run it, then run the validator:
 
     python content/sources/g6-maths-07/like_terms.py

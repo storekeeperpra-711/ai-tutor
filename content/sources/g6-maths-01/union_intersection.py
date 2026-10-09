@@ -231,4 +231,52 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, venn, two_venns, two_ovals, number_line, en_list, ur_list, ordered
+
+# The hook: Ali's team and Sara's team share two players (drawn as numbers).
+ALI, SARA = {1, 2, 3, 4, 5}, {4, 5, 6, 7}
+assert len(ALI & SARA) == 2
+
+
+def regions(a, b):
+    return ordered(a - b), ordered(a & b), ordered(b - a)
+
+
+def pair(a, b, names=("A", "B")):
+    a, b = sorted(a), sorted(b)
+    return two_ovals(a, b,
+        f"Two ovals: {names[0]} holds {en_list(a)} and {names[1]} holds {en_list(b)}.",
+        f"دو بیضوی شکلیں: {names[0]} میں {ur_list(a)} اور {names[1]} میں {ur_list(b)} ہیں۔",
+        names=names, cols=max(len(a), len(b)) if max(len(a), len(b)) <= 3 else None)
+
+
+A_ONLY, BOTH, B_ONLY = regions(A, B)
+assert len(A_ONLY) + len(BOTH) + len(B_ONLY) == S4 and len(BOTH) == S5
+HA, HB, HS = regions(ALI, SARA)
+
+attach(lesson, {
+    "s1_hook": venn(
+        f"Two overlapping circles. Circle A is Ali's team, with players {en_list(HA + HB)}; circle S is Sara's team, with players {en_list(HB + HS)}. Players {en_list(HB)} are in the overlap, in both teams.",
+        f"دو ایک دوسرے پر چڑھے دائرے۔ دائرہ A علی کی ٹیم ہے، کھلاڑی {ur_list(HA + HB)}؛ دائرہ S ثنا کی ٹیم ہے، کھلاڑی {ur_list(HB + HS)}۔ کھلاڑی {ur_list(HB)} درمیانی حصے میں ہیں، یعنی دونوں ٹیموں میں۔",
+        a_only=HA, both=HB, b_only=HS, names=("A", "S")),
+    "s3_union": venn(
+        f"A Venn diagram: circle A and circle B overlap. {en_list(A_ONLY)} are only in A, {en_list(B_ONLY)} are only in B, and {en_list(BOTH)} are in the shaded overlap, which is A ∩ B. Everything inside the two circles together is A ∪ B.",
+        f"وین ڈایاگرام: دائرہ A اور دائرہ B ایک دوسرے پر چڑھے ہیں۔ {ur_list(A_ONLY)} صرف A میں، {ur_list(B_ONLY)} صرف B میں، اور {ur_list(BOTH)} رنگے ہوئے مشترک حصے میں ہیں، جو A ∩ B ہے۔ دونوں دائروں کے اندر سب کچھ مل کر A ∪ B ہے۔",
+        a_only=A_ONLY, both=BOTH, b_only=B_ONLY, shade="both"),
+    "s4_union": pair(A, B),
+    "s6_letters": pair({"a", "b", "c"}, {"c", "d"}, ("P", "Q")),
+    "s8_disjoint": pair({2, 4, 6}, {1, 3, 5}, ("X", "Y")),
+    "s9_find_error": pair({1, 2}, {2, 3}),
+    "s11_evens_threes": number_line(1, 9,
+        "A number line with the whole numbers from 1 to 9 written under it.",
+        "ایک عددی لکیر جس کے نیچے 1 سے 9 تک کے مکمل اعداد لکھے ہیں۔"),
+    "s12_summary": two_venns(
+        "Two small Venn diagrams of circles A and B. In the left one both circles are shaded: that is the union A ∪ B. In the right one only the overlap is shaded: that is the intersection A ∩ B.",
+        "دائروں A اور B کی دو چھوٹی وین ڈایاگرامیں۔ بائیں والی میں دونوں دائرے پورے رنگے ہیں: یہ اجتماع A ∪ B ہے۔ دائیں والی میں صرف مشترک حصہ رنگا ہے: یہ تقاطع A ∩ B ہے۔"),
+    "qb_apply": pair({1, 3, 5}, {1, 2, 3}),
+    "qb_find_error": pair({2, 4}, {1, 3}),
+    "r_union": pair({"a", "b", "c"}, {"c", "d"}),
+    "r_inter": pair({5, 10, 15}, {10, 20}),
+})
 write(lesson)

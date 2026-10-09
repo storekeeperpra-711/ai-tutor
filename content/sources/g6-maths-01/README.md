@@ -13,6 +13,8 @@ Scripts that write the Grade 6 Maths lessons of the Sets unit (`content/lessons/
 
 Every answer is worked out with Python sets and checked with `assert`: element counts, which sets are equal or equivalent, and subset counts (listed with `itertools.combinations`). So no number is typed by hand. Sets are written in braces with `show` in `common.py`. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 
+Every lesson has drawn pictures (`figure` blocks): ovals holding the elements of a set, letter tiles, number lines and grids, boxes for subsets, and Venn diagrams with the overlap or union shaded; the helpers are in `figs.py`, and each script attaches its pictures at the end with `attach` (the universal-set lesson keeps its own small Venn helper, which checks every element sits in the right circles).
+
 To change a lesson, edit its script and run it, then run the validator:
 
     python content/sources/g6-maths-01/subsets.py

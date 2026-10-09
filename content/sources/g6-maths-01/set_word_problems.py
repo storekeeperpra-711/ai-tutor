@@ -279,4 +279,100 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, venn, letter_tiles, en_list, ur_list
+
+# Each problem's numbers, checked against the answers worked out above.
+C4, H4, B4 = 20, 15, 8                 # s1, s4, s5, s12: cricket, hockey, both
+assert at_least_one(C4, H4, B4) == S4 and C4 - B4 == S5
+T6, C6, H6, B6 = 40, 25, 18, 10        # s6
+assert T6 - at_least_one(C6, H6, B6) == S6
+T7, P7, U7 = 50, 32, 28                # s7: Punjabi, Urdu, everyone speaks one
+assert at_least_one(P7, U7, S7) == T7
+M8, B8, BOTH8 = 12, 9, 5               # s8: only milk, only bread, both
+assert M8 + B8 + BOTH8 == S8
+M9, A9, B9 = 22, 15, 7                 # s9: mangoes, apples, both
+TEA, LASSI, TL = 18, 12, 5             # u5
+assert at_least_one(TEA, LASSI, TL) == U5
+K, MB, KM = 14, 10, 4                  # qb_apply: kites, marbles, both
+assert at_least_one(K, MB, KM) == QB
+LUDO, LC = 15, 6                       # qb_find_error
+URDU, UE = 15, 6                       # r_only
+assert URDU - UE == R1
+T_R, CAT, PARROT, CP = 35, 20, 12, 5   # r_neither
+assert T_R - at_least_one(CAT, PARROT, CP) == R2
+
+
+def named(letter, n=None):
+    return letter if n is None else f"{letter}={n}"
+
+
+def problem(en, ur, a, b, *, a_only=(), both=(), b_only=(), outside=(), universe=None):
+    return venn(en, ur, names=(named(*a), named(*b)), a_only=[str(x) for x in a_only],
+                both=[str(x) for x in both], b_only=[str(x) for x in b_only],
+                outside=[str(x) for x in outside],
+                universe=None if universe is None else str(universe), check=False)
+
+
+CH_EN = f"Two overlapping circles: C is the {C4} children who like cricket and H is the {H4} who like hockey, written C={C4} and H={H4}."
+CH_UR = f"دو ایک دوسرے پر چڑھے دائرے: C کرکٹ پسند کرنے والے {C4} بچے اور H ہاکی پسند کرنے والے {H4} بچے ہیں، لکھا ہے C={C4} اور H={H4}۔"
+
+attach(lesson, {
+    "s1_hook": problem(CH_EN + " A question mark is in the overlap: how many like both?",
+                       CH_UR + " درمیانی حصے میں سوالیہ نشان ہے: کتنے دونوں پسند کرتے ہیں؟",
+                       ("C", C4), ("H", H4), both=["?"]),
+    "s3_venn": venn(
+        "A Venn diagram: a rectangle U round two overlapping circles A and B. The overlap, shaded, is the people in both groups.",
+        "وین ڈایاگرام: دو ایک دوسرے پر چڑھے دائروں A اور B کے گرد مستطیل U۔ رنگا ہوا مشترک حصہ دونوں گروہوں والے لوگ ہیں۔",
+        shade="both", universe="U"),
+    "s4_at_least_one": problem(CH_EN + f" The overlap holds {B4}, the children who like both.",
+                               CH_UR + f" درمیانی حصے میں {B4} ہیں، جو دونوں پسند کرتے ہیں۔",
+                               ("C", C4), ("H", H4), both=[B4]),
+    "s5_only": problem(CH_EN + f" The overlap holds {B4}. The part of C outside the overlap has a question mark.",
+                       CH_UR + f" درمیانی حصے میں {B4} ہیں۔ C کا جو حصہ درمیان سے باہر ہے اس پر سوالیہ نشان ہے۔",
+                       ("C", C4), ("H", H4), a_only=["?"], both=[B4]),
+    "s6_neither": problem(
+        f"A rectangle for the whole class of {T6}, with {T6} in its corner. Inside it two overlapping circles: C={C6} for cricket and H={H6} for hockey, with {B6} in the overlap. A question mark outside both circles stands for the children who play neither.",
+        f"پوری جماعت کے {T6} بچوں کا مستطیل، کونے میں {T6} لکھا ہے۔ اس کے اندر دو ایک دوسرے پر چڑھے دائرے: کرکٹ کے لیے C={C6} اور ہاکی کے لیے H={H6}، درمیانی حصے میں {B6}۔ دونوں دائروں سے باہر سوالیہ نشان ان بچوں کے لیے ہے جو کوئی کھیل نہیں کھیلتے۔",
+        ("C", C6), ("H", H6), both=[B6], outside=["?"], universe=T6),
+    "s7_both": problem(
+        f"A rectangle for all {T7} people, with {T7} in its corner. Inside it two overlapping circles: Pb={P7} for the people who speak Punjabi and Ur={U7} for those who speak Urdu. The overlap has a question mark. Nobody is outside the circles.",
+        f"تمام {T7} لوگوں کا مستطیل، کونے میں {T7} لکھا ہے۔ اس کے اندر دو ایک دوسرے پر چڑھے دائرے: پنجابی بولنے والوں کے لیے Pb={P7} اور اردو بولنے والوں کے لیے Ur={U7}۔ درمیانی حصے پر سوالیہ نشان ہے۔ دائروں سے باہر کوئی نہیں۔",
+        ("Pb", P7), ("Ur", U7), both=["?"], universe=T7),
+    "s8_customers": problem(
+        f"Two overlapping circles: M for the customers who bought milk and B for those who bought bread. Only M holds {M8}, the overlap holds {BOTH8}, and only B holds {B8}.",
+        f"دو ایک دوسرے پر چڑھے دائرے: دودھ خریدنے والے گاہکوں کے لیے M اور ڈبل روٹی خریدنے والوں کے لیے B۔ صرف M والے حصے میں {M8}، درمیانی حصے میں {BOTH8} اور صرف B والے حصے میں {B8} ہیں۔",
+        ("M",), ("B",), a_only=[M8], both=[BOTH8], b_only=[B8]),
+    "s9_find_error": problem(
+        f"Two overlapping circles: M={M9} for the children who like mangoes and A={A9} for those who like apples, with {B9} in the overlap.",
+        f"دو ایک دوسرے پر چڑھے دائرے: آم پسند کرنے والے بچوں کے لیے M={M9} اور سیب پسند کرنے والوں کے لیے A={A9}، درمیانی حصے میں {B9}۔",
+        ("M", M9), ("A", A9), both=[B9]),
+    "u5_drinks": problem(
+        f"Two overlapping circles: T={TEA} for the people who like tea and L={LASSI} for those who like lassi, with {TL} in the overlap.",
+        f"دو ایک دوسرے پر چڑھے دائرے: چائے پسند کرنے والوں کے لیے T={TEA} اور لسی پسند کرنے والوں کے لیے L={LASSI}، درمیانی حصے میں {TL}۔",
+        ("T", TEA), ("L", LASSI), both=[TL]),
+    "s12_summary": problem(
+        CH_EN + f" The overlap holds {B4} who like both. Only cricket is {C4} − {B4} = {C4 - B4}, written in C, and only hockey is {H4} − {B4} = {H4 - B4}, written in H. Together {C4 - B4} + {B4} + {H4 - B4} = {S4} like at least one.",
+        CH_UR + f" درمیانی حصے میں {B4} ہیں جو دونوں پسند کرتے ہیں۔ صرف کرکٹ {C4} − {B4} = {C4 - B4} ہیں، جو C میں لکھے ہیں، اور صرف ہاکی {H4} − {B4} = {H4 - B4} ہیں، جو H میں لکھے ہیں۔ مل کر {C4 - B4} + {B4} + {H4 - B4} = {S4} کم از کم ایک پسند کرتے ہیں۔",
+        ("C", C4), ("H", H4), a_only=[C4 - B4], both=[B4], b_only=[H4 - B4]),
+    "qb_apply": problem(
+        f"Two overlapping circles: K={K} for the children who like kites and M={MB} for those who like marbles, with {KM} in the overlap.",
+        f"دو ایک دوسرے پر چڑھے دائرے: پتنگ پسند کرنے والے بچوں کے لیے K={K} اور کنچے پسند کرنے والوں کے لیے M={MB}، درمیانی حصے میں {KM}۔",
+        ("K", K), ("M", MB), both=[KM]),
+    "qb_find_error": problem(
+        f"Two overlapping circles: L={LUDO} for the children who play ludo and C for those who play carrom, with {LC} in the overlap.",
+        f"دو ایک دوسرے پر چڑھے دائرے: لڈو کھیلنے والے بچوں کے لیے L={LUDO} اور کیرم کھیلنے والوں کے لیے C، درمیانی حصے میں {LC}۔",
+        ("L", LUDO), ("C",), both=[LC]),
+    "r_only": problem(
+        f"Two overlapping circles: Ur={URDU} for the children who read Urdu stories and En for those who read English stories, with {UE} in the overlap. The part of Ur outside the overlap has a question mark.",
+        f"دو ایک دوسرے پر چڑھے دائرے: اردو کہانیاں پڑھنے والے بچوں کے لیے Ur={URDU} اور انگریزی کہانیاں پڑھنے والوں کے لیے En، درمیانی حصے میں {UE}۔ Ur کا جو حصہ درمیان سے باہر ہے اس پر سوالیہ نشان ہے۔",
+        ("Ur", URDU), ("En",), a_only=["?"], both=[UE]),
+    "r_neither": problem(
+        f"A rectangle for the whole class of {T_R}, with {T_R} in its corner. Inside it two overlapping circles: C={CAT} for the children with a cat and P={PARROT} for those with a parrot, with {CP} in the overlap. A question mark outside both circles stands for the children with neither.",
+        f"پوری جماعت کے {T_R} بچوں کا مستطیل، کونے میں {T_R} لکھا ہے۔ اس کے اندر دو ایک دوسرے پر چڑھے دائرے: بلی والے بچوں کے لیے C={CAT} اور طوطے والوں کے لیے P={PARROT}، درمیانی حصے میں {CP}۔ دونوں دائروں سے باہر سوالیہ نشان ان بچوں کے لیے ہے جن کے پاس دونوں میں سے کوئی نہیں۔",
+        ("C", CAT), ("P", PARROT), both=[CP], outside=["?"], universe=T_R),
+    "u1_karachi": letter_tiles("KARACHI",
+        f"Tiles with the letters of the word KARACHI, one tile for each letter in order: {en_list(list('KARACHI'))}.",
+        f"لفظ KARACHI کے حروف کی ٹائلیں، ہر حرف کی ایک ٹائل ترتیب سے: {ur_list(list('KARACHI'))}۔"),
+})
 write(lesson)

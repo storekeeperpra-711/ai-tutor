@@ -244,4 +244,83 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import (attach, figure, tiles_figure, tiles_en, tiles_ur, triangle_sides, mango, banana,
+                  rect, label, expr_text, W)
+
+# The hook: a basket with 6 mangoes and 5 bananas; 2 mangoes and 3 bananas are taken out.
+HOOK_IN, HOOK_OUT = [(6, "m"), (5, "b")], [(2, "m"), (3, "b")]
+assert sub(HOOK_IN, HOOK_OUT) == ((2, "b"), (4, "m"))
+
+
+def basket():
+    items = [rect(24, 10, 276, 92)]
+    (m, _), (b, _) = HOOK_IN
+    (mo, _), (bo, _) = HOOK_OUT
+    for i in range(m):
+        items.append(mango(50 + i * 26, 34, dashed=i >= m - mo))
+    for i in range(b):
+        items += banana(58 + i * 40, 74, dashed=i >= b - bo)
+    return figure(W, 102,
+        f"A basket with {m} mangoes (circles) in the top row and {b} bananas (curved shapes) in the bottom row. The last {mo} mangoes and the last {bo} bananas are dashed: they are taken out.",
+        f"ایک ٹوکری جس کی اوپر والی قطار میں {m} آم (دائرے) اور نیچے والی قطار میں {b} کیلے (مڑی ہوئی شکلیں) ہیں۔ آخری {mo} آم اور آخری {bo} کیلے ڈیش والے ہیں: انہیں نکالا گیا ہے۔",
+        items)
+
+
+def letters_of(*groups):
+    return tuple(sorted({v for g in groups for _, v in g if v}))
+
+
+def brackets(a, op, b, answer, *, en_extra="", ur_extra="", done=None):
+    """(a) op (b) as tiles in round brackets, on one row if they fit, else
+    two. The tiles must give the step's answer. done: a last row with the
+    answer, under an arrow."""
+    assert (add(a, b) if op == "+" else sub(a, b)) == answer, (a, op, b)
+    letters = letters_of(a, b)
+    one = [("bracket", list(a)), ("op", op), ("bracket", list(b))]
+    rows_try = [[one], [[("bracket", list(a))], [("op", op), ("bracket", list(b))]]]
+    if done:
+        rows_try = [r + [[("terms", list(answer))]] for r in rows_try]
+    en = f"Algebra tiles for ({expr_text(a)}) {op} ({expr_text(b)}), each bracket drawn round its tiles.{en_extra} {tiles_en(letters)}"
+    ur = f"({expr_text(a)}) {op} ({expr_text(b)}) کی الجبرا ٹائلیں، ہر قوس اپنی ٹائلوں کے گرد۔{ur_extra} {tiles_ur(letters)}"
+    for rows in rows_try:
+        try:
+            return tiles_figure(rows, letters, en, ur, between="arrow" if done else None) if done else tiles_figure(rows, letters, en, ur)
+        except AssertionError:
+            continue
+    raise AssertionError((a, op, b))
+
+
+S3_A, S3_B = [(5, "x"), (4, "")], [(2, "x"), (1, "")]
+S3_DONE = sub(S3_A, S3_B)
+S12_A, S12_B = [(3, "a"), (2, "b")], [(4, "a"), (1, "b")]
+S12_DONE = add(S12_A, S12_B)
+S11_SIDES = [[(1, "x"), (2, "")], [(2, "x"), (1, "")], [(3, "x")]]
+assert collect(*[t for side in S11_SIDES for t in side]) == S11
+
+attach(lesson, {
+    "s1_hook": basket(),
+    "s2_foundation": tiles_figure([[("terms", [(3, "a")]), ("op", "+"), ("terms", [(2, "a")])]], ("a",),
+        f"Algebra tiles: 3 a-tiles named 3a, a plus sign and 2 a-tiles named 2a. {tiles_en(('a',))}",
+        f"الجبرا ٹائلیں: 3 ٹائلیں a جن کا نام 3a، جمع کا نشان اور 2 ٹائلیں a جن کا نام 2a۔ {tiles_ur(('a',))}"),
+    "s3_rule": brackets(S3_A, "−", S3_B, S3_DONE, done=True,
+        en_extra=f" An arrow points down to the tiles left: {expr_text(S3_DONE)}.",
+        ur_extra=f" نیچے کی طرف تیر باقی ٹائلوں کی طرف: {expr_text(S3_DONE)}۔"),
+    "s4_add": brackets([(2, "x"), (5, "")], "+", [(3, "x"), (1, "")], S4),
+    "s5_add_two": brackets([(4, "a"), (3, "b")], "+", [(1, "a"), (-1, "b")], S5),
+    "s6_subtract": brackets([(6, "m"), (5, "")], "−", [(2, "m"), (3, "")], S6),
+    "s7_subtract": brackets([(7, "y"), (9, "")], "−", [(3, "y"), (4, "")], S7),
+    "s8_negative": brackets([(5, "p"), (-2, "")], "−", [(1, "p"), (-6, "")], S8),
+    "s9_find_error": brackets([(8, "n"), (3, "")], "−", [(5, "n"), (2, "")], sub([(8, "n"), (3, "")], [(5, "n"), (2, "")])),
+    "s11_perimeter": triangle_sides([expr_text(s).replace(" ", "") for s in S11_SIDES],
+        f"A triangle with its sides marked {', '.join(expr_text(s) for s in S11_SIDES)}.",
+        f"ایک مثلث جس کے اضلاع پر {'، '.join(expr_text(s) for s in S11_SIDES)} لکھا ہے۔"),
+    "s12_summary": brackets(S12_A, "+", S12_B, S12_DONE, done=True,
+        en_extra=f" An arrow points down to the like tiles put together: {expr_text(S12_DONE)}.",
+        ur_extra=f" نیچے کی طرف تیر، ایک جیسی ٹائلیں اکٹھی: {expr_text(S12_DONE)}۔"),
+    "qb_apply": brackets([(9, "k"), (7, "")], "−", [(4, "k"), (2, "")], QB),
+    "qb_find_error": brackets([(2, "a"), (1, "b")], "+", [(3, "a"), (4, "b")], add([(2, "a"), (1, "b")], [(3, "a"), (4, "b")])),
+    "r_add": brackets([(3, "x"), (2, "y")], "+", [(1, "x"), (5, "y")], R1),
+    "r_subtract": brackets([(10, "m"), (6, "")], "−", [(3, "m"), (4, "")], R2),
+})
 write(lesson)

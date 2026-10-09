@@ -279,4 +279,88 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from figs import attach, balance, bar_model, strip_figure
+
+BAL_EN = "(a bag stands for the unknown number, each small square for 1)"
+BAL_UR = "(تھیلا نامعلوم عدد ہے، ہر چھوٹا مربع 1 ہے)"
+
+
+def bar(parts, total, en, ur):
+    """One bar of boxes (value, text), with the total over it; the boxes
+    must add up to the total."""
+    assert sum(v for v, _ in parts) == total, (parts, total)
+    return bar_model([[(v, t, False) for v, t in parts]], en, ur, total=str(total))
+
+
+X2, ADD2, TOTAL2 = solve("x + 8 = 20", "x"), 8, 20
+assert X2 + ADD2 == TOTAL2
+MORE4, HAS4 = 6, 21                       # s4, s5: s + 6 = 21
+assert S5 + MORE4 == HAS4
+BOOKS, COST = 3, 135                      # s1, s6, s12: 3n = 135
+assert BOOKS * S6 == COST
+PLUS7, GOT7 = 4, 30                       # s7: 2a + 4 = 30
+assert 2 * S7 + PLUS7 == GOT7
+MORE8, TOGETHER8 = 5, 31                  # s8: o + o + 5 = 31
+assert 2 * S8 + MORE8 == TOGETHER8
+ADD_U4, TOTAL_U4 = 3, 15                  # u4: 2x + 3 = 15
+assert 2 * U4 + ADD_U4 == TOTAL_U4
+BASE5, PER_KM, FARE = 50, 20, 210         # u5: 50 + 20k = 210
+assert BASE5 + PER_KM * U5 == FARE
+PACKETS, LOOSE, BISCUITS = 5, 3, 43       # qb_apply: 5p + 3 = 43
+assert PACKETS * QB + LOOSE == BISCUITS
+N_QB = solve("2n + 5 = 25", "n")          # qb_find_error
+assert 2 * N_QB + 5 == 25
+PLUS_R1, TOTAL_R1 = 15, 40                # r_plus: n + 15 = 40
+assert R1 + PLUS_R1 == TOTAL_R1
+BAGS_R2, MANGOES = 7, 84                  # r_bags: 7b = 84
+assert BAGS_R2 * R2 == MANGOES
+
+NOTEBOOKS_EN = f"A bar of {BOOKS} equal boxes, one for each notebook, with {COST} rupees over the whole bar."
+NOTEBOOKS_UR = f"{BOOKS} برابر خانوں کی پٹی، ہر کاپی کا ایک خانہ، اور پوری پٹی کے اوپر {COST} روپے۔"
+
+attach(lesson, {
+    "s1_hook": bar([(S6, "?")] * BOOKS, COST,
+        NOTEBOOKS_EN + " Each box has a question mark: the price of one notebook.",
+        NOTEBOOKS_UR + " ہر خانے پر سوالیہ نشان ہے: ایک کاپی کی قیمت۔"),
+    "s2_foundation": balance([("bags", 1, "x"), ("units", ADD2, 4)], [("units", TOTAL2, 5)],
+        f"A level balance for x + {ADD2} = {TOTAL2}. Left pan: a bag marked x and {ADD2} small squares. Right pan: {TOTAL2} small squares. {BAL_EN}",
+        f"x + {ADD2} = {TOTAL2} کا برابر ترازو۔ بایاں پلڑا: ایک تھیلا جس پر x لکھا ہے اور {ADD2} چھوٹے مربعے۔ دایاں پلڑا: {TOTAL2} چھوٹے مربعے۔ {BAL_UR}"),
+    "s4_write": strip_figure([("bag", "s"), ("text", "+"), ("marbles", MORE4, 3), ("text", "="), ("text", HAS4)],
+        f"Ayesha's bag of stickers marked s, a plus sign, {MORE4} more stickers (circles), an equals sign and {HAS4}, how many she has now.",
+        f"عائشہ کا اسٹیکروں کا تھیلا جس پر s لکھا ہے، جمع کا نشان، {MORE4} مزید اسٹیکر (دائرے)، برابر کا نشان اور {HAS4}، جتنے اب اس کے پاس ہیں۔"),
+    "s5_stickers": bar([(S5, "s"), (MORE4, str(MORE4))], HAS4,
+        f"A bar split into s (the stickers at first) and {MORE4} (the new ones), with {HAS4} over the whole bar: s + {MORE4} = {HAS4}.",
+        f"ایک پٹی جو s (شروع کے اسٹیکر) اور {MORE4} (نئے) میں بٹی ہے، پوری پٹی کے اوپر {HAS4}: یعنی s + {MORE4} = {HAS4}۔"),
+    "s6_notebooks": bar([(S6, "n")] * BOOKS, COST,
+        NOTEBOOKS_EN + " Each box is marked n, the price of one notebook.",
+        NOTEBOOKS_UR + " ہر خانے پر n لکھا ہے، ایک کاپی کی قیمت۔"),
+    "s7_age": bar([(S7, "a"), (S7, "a"), (PLUS7, str(PLUS7))], GOT7,
+        f"A bar of two equal boxes marked a (Bilal's age, doubled) and a small box of {PLUS7}, with {GOT7} over the whole bar: 2a + {PLUS7} = {GOT7}.",
+        f"ایک پٹی جس میں a والے دو برابر خانے (بلال کی عمر کا دگنا) اور {PLUS7} کا چھوٹا خانہ ہے، پوری پٹی کے اوپر {GOT7}: یعنی 2a + {PLUS7} = {GOT7}۔"),
+    "s8_together": bar([(S8, "o"), (S8, "o"), (MORE8, str(MORE8))], TOGETHER8,
+        f"A bar for all the marbles: a box o for Omar's marbles, then a box o and a box {MORE8} for Ali's (he has {MORE8} more), with {TOGETHER8} over the whole bar: o + o + {MORE8} = {TOGETHER8}.",
+        f"تمام کنچوں کی پٹی: عمر کے کنچوں کا خانہ o، پھر علی کے لیے خانہ o اور خانہ {MORE8} (اس کے پاس {MORE8} زیادہ ہیں)، پوری پٹی کے اوپر {TOGETHER8}: یعنی o + o + {MORE8} = {TOGETHER8}۔"),
+    "u4_equation": balance([("bags", 2, "x"), ("units", ADD_U4, 3)], [("units", TOTAL_U4, 5)],
+        f"A level balance for 2x + {ADD_U4} = {TOTAL_U4}. Left pan: 2 bags marked x and {ADD_U4} small squares. Right pan: {TOTAL_U4} small squares. {BAL_EN}",
+        f"2x + {ADD_U4} = {TOTAL_U4} کا برابر ترازو۔ بایاں پلڑا: 2 تھیلے جن پر x لکھا ہے اور {ADD_U4} چھوٹے مربعے۔ دایاں پلڑا: {TOTAL_U4} چھوٹے مربعے۔ {BAL_UR}"),
+    "u5_taxi": bar([(BASE5, str(BASE5)), (PER_KM * U5, f"{PER_KM}k")], FARE,
+        f"A bar for the taxi fare: a box of {BASE5} rupees, then a box of {PER_KM}k rupees for the k km, with {FARE} over the whole bar: {BASE5} + {PER_KM}k = {FARE}.",
+        f"ٹیکسی کے کرائے کی پٹی: {BASE5} روپے کا خانہ، پھر k کلومیٹر کے {PER_KM}k روپے کا خانہ، پوری پٹی کے اوپر {FARE}: یعنی {BASE5} + {PER_KM}k = {FARE}۔"),
+    "s12_summary": bar([(S6, str(S6))] * BOOKS, COST,
+        NOTEBOOKS_EN + f" Each box is {S6}: one notebook costs {S6} rupees, and {BOOKS} × {S6} = {COST}.",
+        NOTEBOOKS_UR + f" ہر خانہ {S6} ہے: ایک کاپی {S6} روپے کی ہے، اور {BOOKS} × {S6} = {COST}۔"),
+    "qb_apply": bar([(QB, "p")] * PACKETS + [(LOOSE, str(LOOSE))], BISCUITS,
+        f"A bar of {PACKETS} equal boxes marked p (the biscuits in each packet) and a small box of {LOOSE} loose biscuits, with {BISCUITS} over the whole bar.",
+        f"p والے {PACKETS} برابر خانوں (ہر پیکٹ کے بسکٹ) اور {LOOSE} کھلے بسکٹوں کے چھوٹے خانے کی پٹی، پوری پٹی کے اوپر {BISCUITS}۔"),
+    "qb_find_error": bar([(N_QB, "n"), (N_QB, "n"), (5, "5")], 25,
+        "A bar of two equal boxes marked n and a small box of 5, with 25 over the whole bar: 2n + 5 = 25.",
+        "n والے دو برابر خانوں اور 5 کے چھوٹے خانے کی پٹی، پوری پٹی کے اوپر 25: یعنی 2n + 5 = 25۔"),
+    "r_plus": bar([(R1, "?"), (PLUS_R1, str(PLUS_R1))], TOTAL_R1,
+        f"A bar split into a box with a question mark (the number) and a box of {PLUS_R1}, with {TOTAL_R1} over the whole bar.",
+        f"ایک پٹی جو سوالیہ نشان والے خانے (عدد) اور {PLUS_R1} کے خانے میں بٹی ہے، پوری پٹی کے اوپر {TOTAL_R1}۔"),
+    "r_bags": bar([(R2, "?")] * BAGS_R2, MANGOES,
+        f"A bar of {BAGS_R2} equal boxes, one for each bag, each with a question mark, and {MANGOES} mangoes over the whole bar.",
+        f"{BAGS_R2} برابر خانوں کی پٹی، ہر تھیلے کا ایک خانہ، ہر ایک پر سوالیہ نشان، اور پوری پٹی کے اوپر {MANGOES} آم۔"),
+})
 write(lesson)

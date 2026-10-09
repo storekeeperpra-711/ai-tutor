@@ -233,4 +233,38 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+from common import expr
+from figs import (attach, term_boxes, tiles_figure, tiles_en, tiles_ur, strip_figure,
+                  term_text, expr_text)
+
+E3 = [(5, "x"), (3, "y"), (-7, "")]          # s1, s3: 5x + 3y − 7
+assert expr(*E3) == "5x + 3y - 7"
+SUMMARY = [(6, "a"), (-1, "b"), (2, "")]     # s12: 6a − b + 2
+QB_TERM = (8, "k")                           # qb_name: the term 8k
+assert S2[-1] == "x+3"
+
+
+def boxes(terms):
+    texts = [term_text(c, v, i == 0) for i, (c, v) in enumerate(terms)]
+    return texts
+
+
+attach(lesson, {
+    "s1_hook": term_boxes(boxes(E3),
+        f"The expression {expr_text(E3)} cut into pieces: each term is in its own box, {', '.join(boxes(E3))}.",
+        f"عبارت {expr_text(E3)} کے ٹکڑے: ہر رکن اپنے خانے میں ہے، {'، '.join(boxes(E3))}۔"),
+    "s2_foundation": strip_figure([("bag", "x"), ("text", "+"), ("marbles", 3)],
+        "A bag marked x (Ali's marbles) and a plus sign and 3 more marbles.",
+        "ایک تھیلا جس پر x لکھا ہے (علی کے کنچے)، جمع کا نشان اور 3 مزید کنچے۔"),
+    "s3_rule": tiles_figure([[("terms", E3)]], ("x", "y"),
+        f"Algebra tiles for {expr_text(E3)}: 5 x-tiles named 5x, 3 y-tiles named +3y, and 7 dashed small squares named −7. The number of tiles of a letter is its coefficient; the squares with no letter are the constant. {tiles_en(('x', 'y'))}",
+        f"{expr_text(E3)} کی الجبرا ٹائلیں: 5 ٹائلیں x جن کا نام 5x، 3 ٹائلیں y جن کا نام +3y، اور 7 ڈیش والے چھوٹے مربعے جن کا نام −7۔ کسی حرف کی ٹائلوں کی تعداد اس کا عددی سر ہے؛ بغیر حرف والے مربعے مستقل ہیں۔ {tiles_ur(('x', 'y'))}"),
+    "s12_summary": term_boxes(boxes(SUMMARY),
+        f"The expression {expr_text(SUMMARY)} cut into its terms, each in its own box: {', '.join(boxes(SUMMARY))}. Each sign stays with the term after it.",
+        f"عبارت {expr_text(SUMMARY)} اپنے ارکان میں کٹی ہوئی، ہر ایک اپنے خانے میں: {'، '.join(boxes(SUMMARY))}۔ ہر نشان اپنے بعد والے رکن کے ساتھ رہتا ہے۔"),
+    "qb_name": tiles_figure([[("terms", [QB_TERM])]], ("k",),
+        f"Algebra tiles for the term {term_text(*QB_TERM)}: {QB_TERM[0]} tiles, each standing for k, named {term_text(*QB_TERM)} above them.",
+        f"رکن {term_text(*QB_TERM)} کی الجبرا ٹائلیں: {QB_TERM[0]} ٹائلیں، ہر ایک k ہے، اوپر نام {term_text(*QB_TERM)}۔"),
+})
 write(lesson)
