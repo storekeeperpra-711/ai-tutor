@@ -1486,7 +1486,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get courseDoneMeans =>
-      'مکمل کا مطلب ہے کہ آپ نے سبق ختم کر لیا۔ مہارت کے نقطے تب بھرتے ہیں جب آپ اگلے دنوں میں دہرائی کے سوالوں کے صحیح جواب دیتے ہیں۔';
+      'مکمل کا مطلب ہے کہ آپ نے سبق ختم کر لیا۔ اگلے دنوں میں دہرائی کے سوال آپ کو اسے یاد رکھنے میں مدد دیتے ہیں۔';
 
   @override
   String get lessonNotStarted => 'ابھی شروع نہیں کیا';

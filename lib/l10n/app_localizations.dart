@@ -2571,10 +2571,10 @@ abstract class AppLocalizations {
   /// **'{done} of {total} lessons done'**
   String courseLessonsDone(int done, int total);
 
-  /// Lessons tab: why a finished lesson can still show Practising.
+  /// Lessons tab: what Done means, and that reviews come later.
   ///
   /// In en, this message translates to:
-  /// **'Done means you finished the lesson. The skill dots fill up when you get review questions right on later days.'**
+  /// **'Done means you finished the lesson. Review questions on later days help you remember it.'**
   String get courseDoneMeans;
 
   /// Course list: lesson not opened yet.

@@ -357,7 +357,9 @@ class _LessonListState extends ConsumerState<LessonList> {
             const SizedBox(height: 6),
           ],
           Text(status, key: Key('home-lesson-status-${lesson.id}')),
-          if (level != null)
+          // A finished lesson just says Done: the skill level ("Practising")
+          // read as if the lesson were not finished.
+          if (level != null && p?.completed != true)
             MasteryDots(key: Key('mastery-${lesson.id}'), level: level),
         ],
       ),
