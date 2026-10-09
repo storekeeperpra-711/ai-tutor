@@ -1,5 +1,7 @@
 from common import (T, opt, say, wrong, number_question, write, factors,
                     REF, REVIEW, TIMES_TABLES, FM_FACTORS)
+from figs import (attach, arrays_figure, side_array, rainbow, multiples_line, times, en_list, ur_list,
+                  W, figure, rect, label)
 
 SKILL = FM_FACTORS
 
@@ -211,4 +213,89 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+def pairs(n):
+    """The factor pairs of n, smaller factor first: 12 -> [(1, 12), (2, 6), (3, 4)]."""
+    return [(d, n // d) for d in factors(n) if d * d <= n]
+
+
+def pair_arrays(n, what_en="", what_ur=""):
+    ps = pairs(n)
+    return arrays_figure(
+        [dict(rows=a, cols=b, text=times(a, b)) for a, b in ps],
+        f"{n} dots{what_en} put in equal rows in {len(ps)} ways: " + ", ".join(f"{a} row{'s' if a > 1 else ''} of {b}" for a, b in ps)
+        + ". Under each array its rows and dots in a row are written, like " + times(*ps[-1]) + ".",
+        f"{n} نقطے{what_ur} برابر قطاروں میں {len(ps)} طریقوں سے: " + "، ".join(f"{b} کی {a} قطار" for a, b in ps)
+        + "۔ ہر ترتیب کے نیچے قطاریں اور ہر قطار کے نقطے لکھے ہیں، جیسے " + times(*ps[-1]) + "۔")
+
+
+def jumps_of(step, count, known):
+    """count jumps of step from 0; only the first `known` landings are
+    written and the last one is '?'."""
+    shown = [0] + [step * (k + 1) for k in range(known)]
+    return multiples_line(
+        step, count,
+        f"A number line from 0 with {count} equal jumps of {step}, numbered 1 to {count} above the arcs. Under the line: {en_list(shown)}, and a question mark where jump {count} lands.",
+        f"0 سے شروع ہونے والی عددی لکیر، {step} کی {count} برابر چھلانگیں، قوسوں کے اوپر 1 سے {count} تک گنتی۔ لکیر کے نیچے: {ur_list(shown)}، اور جہاں چھلانگ {count} اترتی ہے وہاں سوالیہ نشان۔",
+        shown=shown, hide=[step * count])
+
+
+HOOK_ROWS, HOOK_COLS = pairs(12)[-1]
+assert HOOK_ROWS * HOOK_COLS == 12
+S5_ROWS, S5_COLS = pairs(18)[2]
+assert (S5_ROWS, S5_COLS) == (3, 6)
+QB_ERR_PAIRS = [p for p in pairs(16) if 1 not in p]
+assert QB_ERR_PAIRS == [(2, 8), (4, 4)]
+S10_GROUPS, S10_EACH = 12 // 4, 4
+assert S10_GROUPS * S10_EACH == 12
+
+
+def digit_sum_figure(number):
+    """Digit cards for a number joined by + signs, then '= sum' and the sum as 3 × something."""
+    digits = [int(c) for c in str(number)]
+    total = sum(digits)
+    assert total % 3 == 0
+    card, gap = 34, 24
+    n = len(digits)
+    x = (W - (n * card + (n - 1) * gap + 40)) / 2
+    items = []
+    for k, d in enumerate(digits):
+        items += [rect(x, 12, x + card, 46), label((x + card / 2, 29), d)]
+        if k < n - 1:
+            items.append(label((x + card + gap / 2, 29), "+"))
+        x += card + gap
+    items.append(label((x - gap + 10 + len(f"={total}") * 4.8, 29), f"={total}"))
+    items.append(label((W / 2, 72), f"{total}={times(3, total // 3)}"))
+    return figure(W, 86,
+        f"Three digit cards, {en_list(digits)}, with plus signs between them and = {total} after them. Under them: {total} = 3×{total // 3}.",
+        f"ہندسوں کے تین کارڈ، {ur_list(digits)}، ان کے درمیان جمع کے نشان اور آخر میں = {total}۔ نیچے: {total} = 3×{total // 3}۔",
+        items)
+
+
+attach(lesson, {
+    "s1_hook": arrays_figure([dict(rows=HOOK_ROWS, cols=HOOK_COLS, text=12)],
+        f"12 laddoos drawn as dots in {HOOK_ROWS} rows of {HOOK_COLS}, with 12 written under them.",
+        f"12 لڈو نقطوں کی صورت میں، {HOOK_COLS} کی {HOOK_ROWS} قطاریں، نیچے 12 لکھا ہے۔"),
+    "s2_foundation": side_array(6, 7,
+        "6 rows of 7 dots. 7 is written above the rows and 6 on the left.",
+        "نقطوں کی 6 قطاریں، ہر قطار میں 7 نقطے۔ اوپر 7 اور بائیں طرف 6 لکھا ہے۔"),
+    "s3_see_it": pair_arrays(12, " (laddoos)", " (لڈو)"),
+    "s4_count": pair_arrays(12),
+    "s5_not_factor": side_array(S5_ROWS, S5_COLS,
+        f"18 dots in {S5_ROWS} rows of {S5_COLS}. {S5_COLS} is written above the rows and {S5_ROWS} on the left.",
+        f"18 نقطے، {S5_COLS} کی {S5_ROWS} قطاریں۔ اوپر {S5_COLS} اور بائیں طرف {S5_ROWS} لکھا ہے۔"),
+    "s6_multiple": jumps_of(7, 5, 2),
+    "s7_tests": digit_sum_figure(471),
+    "s10_explain_why": arrays_figure([dict(rows=1, cols=S10_EACH, text=S10_EACH)] * S10_GROUPS,
+        f"12 dots in {S10_GROUPS} equal groups of {S10_EACH}, with {S10_EACH} written under each group.",
+        f"12 نقطے، {S10_EACH} کے {S10_GROUPS} برابر گروہ، ہر گروہ کے نیچے {S10_EACH} لکھا ہے۔"),
+    "s12_summary": rainbow(12, pairs(12),
+        f"The factors of 12 in a row: {en_list(F12)}. Arcs join each pair that multiplies to 12: 1 and 12, 2 and 6, 3 and 4.",
+        f"12 کے اجزائے ضربی ایک قطار میں: {ur_list(F12)}۔ قوسیں ہر اس جوڑے کو ملاتی ہیں جس کا حاصل ضرب 12 ہے: 1 اور 12، 2 اور 6، 3 اور 4۔"),
+    "qb_find_error": arrays_figure([dict(rows=a, cols=b, text=times(a, b)) for a, b in QB_ERR_PAIRS],
+        "Maryam's two ways to put 16 dots in equal rows: 2 rows of 8, and 4 rows of 4, with 2×8 and 4×4 written under them.",
+        "مریم کے 16 نقطوں کو برابر قطاروں میں رکھنے کے دو طریقے: 8 کی 2 قطاریں، اور 4 کی 4 قطاریں، نیچے 2×8 اور 4×4 لکھا ہے۔"),
+    "r_multiple": jumps_of(9, R1 // 9, 2),
+    "r_count": pair_arrays(15),
+})
 write(lesson)

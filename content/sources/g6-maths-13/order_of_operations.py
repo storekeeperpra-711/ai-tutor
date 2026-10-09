@@ -1,5 +1,6 @@
 from common import (D, T, opt, say, wrong, number_question, write,
                     REF, REVIEW, INT_MULTIPLY_DIVIDE, SM_ORDER)
+from figs import (attach, step_text, op, steps_fig, groups_figure, figure, line, arc, label, rect, W)
 
 SKILL = SM_ORDER
 
@@ -209,4 +210,83 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+E_HOOK = op(3, "+", op(4, "×", 5))
+assert E_HOOK.value == S4
+E5 = op(20, "−", op(12, "÷", 4))
+assert E5.value == S5
+E7 = op(op(40, "÷", 8), "×", 2)
+assert E7.value == S7
+E8 = op(op(30, "−", 10), "+", 5)
+assert E8.value == S8
+E_QB = op(7, "+", op(2, "×", 6))
+assert E_QB.value == QB
+E_R1 = op(50, "−", op(5, "×", 6))
+assert E_R1.value == R1
+E_R2 = op(5, "+", op(36, "÷", 4))
+assert E_R2.value == R2
+PEN, BOOKS, BOOK_PRICE = 25, 3, 40
+assert PEN + BOOKS * BOOK_PRICE == S11
+
+
+def negative_jumps(size, count):
+    """count jumps of -size from 0 to the left; only 0 and -size are written."""
+    left, right = 24, W - 24
+    lo = -size * count
+    unit = (right - left) / (-lo)
+
+    def x(v):
+        return left + (v - lo) * unit
+
+    y = 56
+    items = [line((left - 6, y), (right + 8, y))]
+    for k in range(count + 1):
+        items.append(line((x(-size * k), y - 5), (x(-size * k), y + 5)))
+    for k in range(count):
+        a, b = x(-size * k), x(-size * (k + 1))
+        items.append(arc(((a + b) / 2, y), (a - b) / 2, 180, 180))
+        items += [line((b - 4, y - 8), (b, y - 1)), line((b + 4, y - 8), (b, y - 1))]
+    items += [label((x(0), y + 17), 0), label((x(-size), y + 17), f"−{size}"), label((x(lo), y + 17), "?")]
+    items.append(label(((x(0) + x(-size)) / 2, y - (x(0) - x(-size)) / 2 - 11), f"−{size}"))
+    return figure(W, y + 32,
+        f"A number line. From 0, {count} equal jumps of −{size} go to the left. 0 and −{size} are written under the line, and a question mark where the last jump lands.",
+        f"ایک عددی لکیر۔ 0 سے −{size} کی {count} برابر چھلانگیں بائیں طرف جاتی ہیں۔ لکیر کے نیچے 0 اور −{size} لکھے ہیں، اور جہاں آخری چھلانگ اترتی ہے وہاں سوالیہ نشان ہے۔",
+        items)
+
+
+def shopping():
+    """One pen and three notebooks, each with its price inside."""
+    items = []
+    x = 30
+    items += [rect(x, 40, x + 54, 56, fill=True), label((x + 27, 26), PEN)]
+    x += 84
+    for k in range(BOOKS):
+        items += [rect(x, 14, x + 44, 74), label((x + 22, 44), BOOK_PRICE)]
+        x += 54
+    return figure(W, 88,
+        f"Ali's shopping: a pen with Rs {PEN} written above it, and {BOOKS} notebooks, each with Rs {BOOK_PRICE} written on it.",
+        f"علی کی خریداری: ایک قلم جس کے اوپر {PEN} روپے لکھا ہے، اور {BOOKS} کاپیاں، ہر ایک پر {BOOK_PRICE} روپے لکھا ہے۔",
+        items)
+
+
+def ask(sid, expr):
+    return steps_fig(expr, prompt=step_text(lesson, sid), results=False)
+
+
+attach(lesson, {
+    "s1_hook": groups_figure(3, 4, 5,
+        "3 counters on their own, a plus sign, then 4 dashed boxes with 5 counters in each: 3 + 4 groups of 5.",
+        "3 اکیلی گوٹیاں، جمع کا نشان، پھر 4 ڈیش والے خانے جن میں ہر ایک میں 5 گوٹیاں ہیں: 3 + 5 کے 4 گروہ۔"),
+    "s2_foundation": negative_jumps(4, -S2 // 4),
+    "s3_rule": steps_fig(E_HOOK, prompt=step_text(lesson, "s3_rule")),
+    "s4_times_first": ask("s4_times_first", E_HOOK),
+    "s5_divide_first": ask("s5_divide_first", E5),
+    "s7_left_to_right": ask("s7_left_to_right", E7),
+    "s8_minus_plus": ask("s8_minus_plus", E8),
+    "s11_shopping": shopping(),
+    "s12_summary": steps_fig(E5),
+    "qb_apply": ask("qb_apply", E_QB),
+    "r_times": ask("r_times", E_R1),
+    "r_divide": ask("r_divide", E_R2),
+})
 write(lesson)

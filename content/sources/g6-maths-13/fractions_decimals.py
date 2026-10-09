@@ -2,6 +2,7 @@ from fractions import Fraction as F
 
 from common import (D, T, opt, say, wrong, number_question, write,
                     REF, REVIEW, DEC_MULTIPLY_DIVIDE, FRACTIONS_MULTIPLY, SM_BRACKETS, SM_FRACTIONS_DECIMALS)
+from figs import (attach, step_text, op, br, steps_fig, bar_model, frac_bar, frac_items, figure, rect, label, show, W)
 
 SKILL = SM_FRACTIONS_DECIMALS
 
@@ -219,4 +220,111 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+HALF = F(1, 2)
+assert D("0.5") == D(HALF.numerator) / HALF.denominator
+E4 = op(F(1, 2), "+", op(F(1, 4), "×", 2))
+assert E4.value == S4
+E5 = op(D("2.5"), "+", op(D("1.5"), "×", 4))
+assert E5.value == S5
+E6 = op(br(op(F(1, 2), "+", F(1, 3))), "×", 6)
+assert E6.value == 5
+E7 = op(br(op(D("0.6"), "+", D("0.4"))), "×", D("7.5"))
+assert E7.value == S7
+E_QB = op(D("4.5"), "−", op(D("0.5"), "×", 3))
+assert E_QB.value == QB
+E_R1 = op(br(op(D("1.5"), "+", D("2.5"))), "÷", 2)
+assert E_R1.value == R1
+E_R2 = op(op(F(1, 3), "×", 9), "+", 2)
+assert E_R2.value == R2
+OF_FRAC, OF_WHOLE = F(3, 4), 32
+assert OF_FRAC * OF_WHOLE == 24
+S8_A, S8_B, S8_FRAC = 20, 12, F(3, 4)
+assert S8_FRAC * (S8_A + S8_B) == S8
+S8_PART = (S8_A + S8_B) // S8_FRAC.denominator
+RICE_KG, RICE_PRICE, SUGAR_PRICE = D("2.5"), 200, 160
+assert RICE_KG * RICE_PRICE + HALF.numerator * SUGAR_PRICE // HALF.denominator == S11
+TIMES_8 = 8
+assert D("0.5") * TIMES_8 == S2
+
+
+def ask(sid, expr):
+    return steps_fig(expr, prompt=step_text(lesson, sid), results=False)
+
+
+def half_bar():
+    """One whole bar, cut in two, the left half shaded: 1/2 above it and 0.5 under it."""
+    x0, x1, y0 = 60, 240, 52
+    mid = (x0 + x1) / 2
+    items = [rect(x0, y0, mid, y0 + 32, fill=True), rect(x0, y0, x1, y0 + 32), ]
+    items += frac_items((x0 + mid) / 2, 26, HALF)
+    items.append(label(((x0 + mid) / 2, y0 + 48), "0.5"))
+    return figure(W, y0 + 62,
+        "One whole bar cut into 2 equal parts with the left part shaded. Above the shaded part is the fraction 1/2, and under it is 0.5: the same amount.",
+        "ایک پوری پٹی 2 برابر حصوں میں کٹی ہے اور بایاں حصہ رنگا ہوا ہے۔ رنگے حصے کے اوپر کسر 1/2 اور نیچے 0.5 لکھا ہے: دونوں ایک ہی مقدار ہیں۔",
+        items)
+
+
+def halves(count):
+    """count small squares, each with its left half shaded (0.5 each)."""
+    side, gap = 26, 8
+    x = (W - count * side - (count - 1) * gap) / 2
+    items = []
+    for _ in range(count):
+        items += [rect(x, 14, x + side / 2, 14 + side, fill=True), rect(x, 14, x + side, 14 + side)]
+        x += side + gap
+    return figure(W, 54,
+        f"{count} squares in a row, each one whole, with half of each square shaded: {count} halves, or 0.5 taken {count} times.",
+        f"ایک قطار میں {count} مربع، ہر ایک پورا، اور ہر مربع کا آدھا حصہ رنگا ہوا: {count} آدھے، یعنی 0.5 کو {count} بار لیا۔",
+        items)
+
+
+def shopping():
+    """Rice: 2 whole kg boxes and a half box, each whole box marked 200.
+    Sugar: one dashed kg box marked 160 with half of it filled."""
+    x0, kw = 84, 70
+    items = [label((40, 30), show(RICE_KG))]
+    whole = int(RICE_KG)
+    for k in range(whole):
+        items += [rect(x0 + k * kw, 14, x0 + (k + 1) * kw, 46, fill=True), label((x0 + (k + 0.5) * kw, 30), RICE_PRICE)]
+    items.append(rect(x0 + whole * kw, 14, x0 + whole * kw + kw * float(RICE_KG - whole), 46, fill=True))
+    items += frac_items(40, 96, HALF)
+    items += [rect(x0, 80, x0 + kw, 112, dashed=True), rect(x0, 80, x0 + kw / 2, 112, fill=True),
+              label((x0 + kw / 2, 66), SUGAR_PRICE)]
+    return figure(W, 124,
+        f"Top, rice: {show(RICE_KG)} written on the left, then 2 shaded boxes for 2 whole kilograms, each marked {RICE_PRICE} rupees, and half a box more. Bottom, sugar: 1/2 written on the left, then a dashed box for 1 kilogram with {SUGAR_PRICE} rupees written above it, and only its left half shaded.",
+        f"اوپر، چاول: بائیں طرف {show(RICE_KG)} لکھا ہے، پھر 2 پورے کلو کے 2 رنگے ڈبے، ہر ایک پر {RICE_PRICE} روپے، اور آدھا ڈبہ مزید۔ نیچے، چینی: بائیں طرف 1/2 لکھا ہے، پھر 1 کلو کا ڈیش والا ڈبہ جس کے اوپر {SUGAR_PRICE} روپے لکھا ہے، اور اس کا صرف بایاں آدھا رنگا ہوا ہے۔",
+        items)
+
+
+def of_bar(parts):
+    k = S8_FRAC.denominator
+    shade = tuple(range(S8_FRAC.numerator))
+    p_en = f" Each part has {S8_PART} written in it." if parts else ""
+    p_ur = f" ہر حصے میں {S8_PART} لکھا ہے۔" if parts else ""
+    return bar_model([(S8_A, S8_A, False), (S8_B, S8_B, False)],
+        f"A bar made of {S8_A} and {S8_B} joined together. Under it is a bar just as long, cut into {k} equal parts, with {S8_FRAC.numerator} of the {k} parts shaded: 3/4 of the whole bar.{p_en}",
+        f"ایک پٹی جو {S8_A} اور {S8_B} کو جوڑ کر بنی ہے۔ اس کے نیچے اتنی ہی لمبی پٹی ہے جو {k} برابر حصوں میں کٹی ہے، اور {k} میں سے {S8_FRAC.numerator} حصے رنگے ہوئے ہیں: پوری پٹی کا 3/4۔{p_ur}",
+        split=k, shade=shade, parts=[S8_PART] * k if parts else None)
+
+
+attach(lesson, {
+    "s1_hook": half_bar(),
+    "s2_foundation": halves(TIMES_8),
+    "s3_same_rules": frac_bar(OF_FRAC, OF_WHOLE,
+        f"A bar for {OF_WHOLE}, with {OF_WHOLE} written above it, cut into 4 equal parts with {OF_WHOLE // 4} written in each part. 3 parts are shaded, and under them is {OF_FRAC * OF_WHOLE}: 3/4 of {OF_WHOLE}.",
+        f"{OF_WHOLE} کی ایک پٹی، اوپر {OF_WHOLE} لکھا ہے، 4 برابر حصوں میں کٹی ہے اور ہر حصے میں {OF_WHOLE // 4} لکھا ہے۔ 3 حصے رنگے ہوئے ہیں، اور ان کے نیچے {OF_FRAC * OF_WHOLE} لکھا ہے: {OF_WHOLE} کا 3/4۔",
+        shaded_text=OF_FRAC * OF_WHOLE),
+    "s4_fraction": ask("s4_fraction", E4),
+    "s5_decimal": ask("s5_decimal", E5),
+    "s6_choose": ask("s6_choose", E6),
+    "s7_decimal_bracket": ask("s7_decimal_bracket", E7),
+    "s8_of": of_bar(parts=False),
+    "s10_explain_why": of_bar(parts=False),
+    "s11_shopping": shopping(),
+    "s12_summary": of_bar(parts=True),
+    "qb_apply": ask("qb_apply", E_QB),
+    "r_decimal": ask("r_decimal", E_R1),
+    "r_fraction": ask("r_fraction", E_R2),
+})
 write(lesson)

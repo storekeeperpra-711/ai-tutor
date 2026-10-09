@@ -2,6 +2,7 @@ from math import prod
 
 from common import (T, opt, say, wrong, number_question, write, prime_factors,
                     BOOK, REVIEW, FM_PRIMES, FM_INDEX)
+from figs import attach, arrays_figure, side_array, ladder, tree_fig
 
 SKILL = FM_INDEX
 
@@ -234,4 +235,46 @@ lesson = {
  ],
  "review": REVIEW,
 }
+# ---------- pictures ----------
+HOOK_SIDE = 4
+assert HOOK_SIDE ** 2 == 16 and HOOK_SIDE ** 2 - 1 == 15
+FIRST_SQUARES = SQUARES_100[:4]
+assert FIRST_SQUARES == [1, 4, 9, 16]
+T72_STOP = ladder(72, stop=72 // (2 * 2 * 2))
+assert T72_STOP == (72, (2,), (36, (2,), (18, (2,), (9,))))
+T72 = ladder(72)
+assert prime_factors(72) == [2, 2, 2, 3, 3]
+DOUBLING = [(1, 2), (2, 2), (2, 4)]
+assert [r * c for r, c in DOUBLING] == [2, 2 ** 2, 2 ** 3]
+
+
+def square_side(n, who_en="", who_ur=""):
+    return side_array(n, n,
+        f"{n} rows of {n} dots{who_en}, a square. {n} is written above the rows and {n} on the left.",
+        f"نقطوں کی {n} قطاریں، ہر قطار میں {n} نقطے{who_ur}، یعنی ایک مربع۔ اوپر {n} اور بائیں طرف {n} لکھا ہے۔")
+
+
+attach(lesson, {
+    "s1_hook": arrays_figure(
+        [dict(rows=HOOK_SIDE, cols=HOOK_SIDE, text=HOOK_SIDE ** 2),
+         dict(rows=HOOK_SIDE, cols=HOOK_SIDE, text=HOOK_SIDE ** 2 - 1, dashed_last=1)],
+        f"Left: {HOOK_SIDE ** 2} marbles in {HOOK_SIDE} rows of {HOOK_SIDE}, a full square, with {HOOK_SIDE ** 2} written under it. Right: {HOOK_SIDE ** 2 - 1} marbles in the same shape with the last corner marble missing (a dashed circle), with {HOOK_SIDE ** 2 - 1} written under it.",
+        f"بائیں: {HOOK_SIDE ** 2} کنچے، {HOOK_SIDE} کی {HOOK_SIDE} قطاریں، پورا مربع، نیچے {HOOK_SIDE ** 2} لکھا ہے۔ دائیں: {HOOK_SIDE ** 2 - 1} کنچے اسی شکل میں مگر آخری کونے کا کنچا غائب ہے (ڈیش والا دائرہ)، نیچے {HOOK_SIDE ** 2 - 1} لکھا ہے۔"),
+    "s2_foundation": tree_fig(T72_STOP, " 9 at the end is not split yet.", " آخر میں 9 ابھی توڑا نہیں گیا۔"),
+    "s3_see_it": arrays_figure(
+        [dict(rows=k, cols=k, text=f"{k}²") for k in range(1, len(FIRST_SQUARES) + 1)],
+        "The first four square numbers as squares of dots: 1 dot (1²), 2 rows of 2 (2²), 3 rows of 3 (3²) and 4 rows of 4 (4²), with 1², 2², 3², 4² written under them.",
+        "پہلے چار مربع اعداد نقطوں کے مربعوں کی صورت میں: 1 نقطہ (1²)، 2 کی 2 قطاریں (2²)، 3 کی 3 قطاریں (3²) اور 4 کی 4 قطاریں (4²)، نیچے 1²، 2²، 3²، 4² لکھا ہے۔"),
+    "s4_seven_squared": square_side(7),
+    "s8_seventy_two": tree_fig(T72),
+    "s11_product": arrays_figure(
+        [dict(rows=2, cols=2, text="2²"), dict(rows=5, cols=5, text="5²")],
+        "Two squares of dots: 2 rows of 2 with 2² under it, and 5 rows of 5 with 5² under it.",
+        "نقطوں کے دو مربع: 2 کی 2 قطاریں، نیچے 2² لکھا ہے، اور 5 کی 5 قطاریں، نیچے 5² لکھا ہے۔"),
+    "s12_summary": arrays_figure(
+        [dict(rows=r, cols=c, text="×".join(["2"] * k)) for k, (r, c) in enumerate(DOUBLING, start=1)],
+        "Dots that double each time: 2 dots with 2 under them, 2 rows of 2 (4 dots) with 2×2 under them, and 2 rows of 4 (8 dots) with 2×2×2 under them.",
+        "ہر بار دگنے ہونے والے نقطے: 2 نقطے، نیچے 2 لکھا ہے؛ 2 کی 2 قطاریں (4 نقطے)، نیچے 2×2؛ اور 4 کی 2 قطاریں (8 نقطے)، نیچے 2×2×2 لکھا ہے۔"),
+    "r_six_squared": square_side(6),
+})
 write(lesson)

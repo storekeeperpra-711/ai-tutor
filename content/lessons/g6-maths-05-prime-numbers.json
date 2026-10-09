@@ -134,7 +134,117 @@
               },
               "misconception_id": "stops_early"
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 116.0,
+            "alt": {
+              "en": "A factor tree for 90: 90 into 2 and 45; 45 into 3 and 15. The primes at the ends of the branches are circled. 15 at the end is not split yet.",
+              "ur": "90 کا اجزائے ضربی کا درخت: 90 سے 2 اور 45؛ 45 سے 3 اور 15۔ شاخوں کے آخر میں مفرد اعداد کے گرد دائرہ ہے۔ آخر میں 15 ابھی توڑا نہیں گیا۔"
+            },
+            "items": [
+              {
+                "kind": "label",
+                "at": [
+                  110.0,
+                  60.0
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  110.0,
+                  60.0
+                ],
+                "radius": 13.0
+              },
+              {
+                "kind": "label",
+                "at": [
+                  150.0,
+                  100.0
+                ],
+                "text": "3"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  150.0,
+                  100.0
+                ],
+                "radius": 13.0
+              },
+              {
+                "kind": "label",
+                "at": [
+                  190.0,
+                  100.0
+                ],
+                "text": "15"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  170.0,
+                  70.0
+                ],
+                "to": [
+                  150.0,
+                  86.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  170.0,
+                  70.0
+                ],
+                "to": [
+                  190.0,
+                  86.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  170.0,
+                  60.0
+                ],
+                "text": "45"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  140.0,
+                  30.0
+                ],
+                "to": [
+                  110.0,
+                  46.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  140.0,
+                  30.0
+                ],
+                "to": [
+                  170.0,
+                  46.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  140.0,
+                  20.0
+                ],
+                "text": "90"
+              }
+            ]
+          }
         }
       },
       {
@@ -173,7 +283,63 @@
               },
               "misconception_id": "stops_early"
             }
-          ]
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 76.0,
+            "alt": {
+              "en": "Zainab's factor tree: 24 splits into 4 and 6, and stops there.",
+              "ur": "زینب کا اجزائے ضربی کا درخت: 24 سے 4 اور 6، اور وہیں رک گیا۔"
+            },
+            "items": [
+              {
+                "kind": "label",
+                "at": [
+                  130.0,
+                  60.0
+                ],
+                "text": "4"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  170.0,
+                  60.0
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  30.0
+                ],
+                "to": [
+                  130.0,
+                  46.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  150.0,
+                  30.0
+                ],
+                "to": [
+                  170.0,
+                  46.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  150.0,
+                  20.0
+                ],
+                "text": "24"
+              }
+            ]
+          }
         }
       }
     ]
@@ -243,6 +409,229 @@
       "text": {
         "en": "Some numbers can't be split into equal rows. Today we meet them. First, a quick check on factors.",
         "ur": "کچھ اعداد برابر قطاروں میں نہیں بٹ سکتے۔ آج ہم ان سے ملیں گے۔ پہلے اجزائے ضربی کا ایک چھوٹا سا سوال۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 130.0,
+        "alt": {
+          "en": "7 laddoos as dots. Left: 1 row of 7. Middle: 7 rows of 1. Right: 2 rows of 3 with 1 dot left over, drawn dashed, so 2 equal rows do not work.",
+          "ur": "7 لڈو نقطوں کی صورت میں۔ بائیں: 7 کی 1 قطار۔ درمیان: 1 کی 7 قطاریں۔ دائیں: 3 کی 2 قطاریں اور 1 نقطہ بچ گیا جو ڈیش والا ہے، اس لیے 2 برابر قطاریں نہیں بنتیں۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              39.6,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              53.6,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              67.6,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              81.6,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              95.6,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              109.6,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              123.6,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              81.6,
+              118.0
+            ],
+            "text": "1×7"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              56.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              70.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              84.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              168.0,
+              98.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              168.0,
+              118.0
+            ],
+            "text": "7×1"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              222.4,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              236.4,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              250.4,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              222.4,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              236.4,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              250.4,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              222.4,
+              42.0
+            ],
+            "radius": 4.5,
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              236.4,
+              118.0
+            ],
+            "text": "2×3+1"
+          }
+        ]
       }
     },
     {
@@ -291,6 +680,319 @@
       "text": {
         "en": "A prime number has exactly two factors: 1 and itself. 2, 3, 5, 7, 11 and 13 are prime. A composite number has more than two factors, like 12. The number 1 has only one factor, so it is neither prime nor composite. 2 is the only even prime: every other even number divides by 2.",
         "ur": "مفرد عدد کے ٹھیک دو اجزائے ضربی ہوتے ہیں: 1 اور خود وہ عدد۔ 2، 3، 5، 7، 11 اور 13 مفرد ہیں۔ مرکب عدد کے دو سے زیادہ اجزائے ضربی ہوتے ہیں، جیسے 12۔ 1 کا صرف ایک جزو ضربی ہے، اس لیے یہ نہ مفرد ہے نہ مرکب۔ 2 واحد جفت مفرد عدد ہے: باقی ہر جفت عدد 2 سے تقسیم ہوتا ہے۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 74.0,
+        "alt": {
+          "en": "Top: 7 dots fit only in 1 row of 7 (prime). Below: 12 dots fit in 2 rows of 6 and in 3 rows of 4 too (composite).",
+          "ur": "اوپر: 7 نقطے صرف 7 کی 1 قطار میں آتے ہیں (مفرد)۔ نیچے: 12 نقطے 6 کی 2 قطاروں اور 4 کی 3 قطاروں میں بھی آتے ہیں (مرکب)۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              22.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              36.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              50.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              64.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              78.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              92.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              106.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.0,
+              62.0
+            ],
+            "text": "1×7"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              136.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              164.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              178.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              192.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              206.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              136.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              164.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              178.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              192.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              206.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              171.0,
+              62.0
+            ],
+            "text": "2×6"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              236.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              250.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              264.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              278.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              236.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              250.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              264.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              278.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              236.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              250.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              264.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              278.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              257.0,
+              62.0
+            ],
+            "text": "3×4"
+          }
+        ]
       }
     },
     {
@@ -401,7 +1103,331 @@
           },
           "misconception_id": "odd_is_prime"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 76.0,
+        "alt": {
+          "en": "A grid of the numbers 1 to 20.",
+          "ur": "1 سے 20 تک کے اعداد کا جال۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              38.0
+            ],
+            "to": [
+              290.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              68.0
+            ],
+            "to": [
+              290.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              10.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.0,
+              8.0
+            ],
+            "to": [
+              66.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              94.0,
+              8.0
+            ],
+            "to": [
+              94.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              122.0,
+              8.0
+            ],
+            "to": [
+              122.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              8.0
+            ],
+            "to": [
+              150.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              178.0,
+              8.0
+            ],
+            "to": [
+              178.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              206.0,
+              8.0
+            ],
+            "to": [
+              206.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              234.0,
+              8.0
+            ],
+            "to": [
+              234.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              262.0,
+              8.0
+            ],
+            "to": [
+              262.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              290.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              23.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              23.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              23.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              23.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              23.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              23.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              23.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              23.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              23.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              23.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              53.0
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              53.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              53.0
+            ],
+            "text": "13"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              53.0
+            ],
+            "text": "14"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              53.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              53.0
+            ],
+            "text": "16"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              53.0
+            ],
+            "text": "17"
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              53.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              53.0
+            ],
+            "text": "19"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              53.0
+            ],
+            "text": "20"
+          }
+        ]
+      }
     },
     {
       "id": "s6_tree",
@@ -416,6 +1442,170 @@
       "text": {
         "en": "Split 60 into two factors: 60 = 2 × 30. 2 is prime, so that branch stops. Split 30 = 2 × 15, and 15 = 3 × 5. Stop when every branch ends in a prime. So 60 = 2 × 2 × 3 × 5. This is called writing 60 as a product of prime factors. Any split works; you always get the same primes.",
         "ur": "60 کو دو اجزائے ضربی میں توڑیں: 60 = 2 × 30۔ 2 مفرد ہے، اس لیے وہ شاخ رک جاتی ہے۔ 30 = 2 × 15، اور 15 = 3 × 5۔ جب ہر شاخ مفرد عدد پر ختم ہو تو رک جائیں۔ اس لیے 60 = 2 × 2 × 3 × 5۔ اسے 60 کو مفرد اجزائے ضربی کے حاصل ضرب کی شکل میں لکھنا کہتے ہیں۔ کسی بھی طرح توڑیں؛ مفرد اعداد ہمیشہ وہی آتے ہیں۔"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 156.0,
+        "alt": {
+          "en": "A factor tree for 60: 60 into 2 and 30; 30 into 2 and 15; 15 into 3 and 5. The primes at the ends of the branches are circled.",
+          "ur": "60 کا اجزائے ضربی کا درخت: 60 سے 2 اور 30؛ 30 سے 2 اور 15؛ 15 سے 3 اور 5۔ شاخوں کے آخر میں مفرد اعداد کے گرد دائرہ ہے۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              90.0,
+              60.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              90.0,
+              60.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.0,
+              100.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              130.0,
+              100.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              140.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              170.0,
+              140.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              210.0,
+              140.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              210.0,
+              140.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              190.0,
+              110.0
+            ],
+            "to": [
+              170.0,
+              126.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              190.0,
+              110.0
+            ],
+            "to": [
+              210.0,
+              126.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              190.0,
+              100.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "line",
+            "from": [
+              160.0,
+              70.0
+            ],
+            "to": [
+              130.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              160.0,
+              70.0
+            ],
+            "to": [
+              190.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              60.0
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "line",
+            "from": [
+              125.0,
+              30.0
+            ],
+            "to": [
+              90.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              125.0,
+              30.0
+            ],
+            "to": [
+              160.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              125.0,
+              20.0
+            ],
+            "text": "60"
+          }
+        ]
       }
     },
     {
@@ -465,7 +1655,143 @@
           },
           "misconception_id": "stops_early"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 116.0,
+        "alt": {
+          "en": "A factor tree for 36 that splits into 4 and 9. Under 4 and under 9 are dashed branches to question marks: the tree is not finished.",
+          "ur": "36 کا اجزائے ضربی کا درخت جو 4 اور 9 میں ٹوٹتا ہے۔ 4 اور 9 کے نیچے ڈیش والی شاخیں سوالیہ نشانوں تک جاتی ہیں: درخت ابھی پورا نہیں ہوا۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              90.0,
+              100.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.0,
+              100.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "line",
+            "from": [
+              110.0,
+              70.0
+            ],
+            "to": [
+              90.0,
+              86.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              110.0,
+              70.0
+            ],
+            "to": [
+              130.0,
+              86.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              110.0,
+              60.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              100.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              210.0,
+              100.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "line",
+            "from": [
+              190.0,
+              70.0
+            ],
+            "to": [
+              170.0,
+              86.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              190.0,
+              70.0
+            ],
+            "to": [
+              210.0,
+              86.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              190.0,
+              60.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              30.0
+            ],
+            "to": [
+              110.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              30.0
+            ],
+            "to": [
+              190.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              20.0
+            ],
+            "text": "36"
+          }
+        ]
+      }
     },
     {
       "id": "s8_missing",
@@ -498,7 +1824,117 @@
           },
           "misconception_id": "stops_early"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 116.0,
+        "alt": {
+          "en": "A factor tree for 84: 84 into 2 and 42; 42 into 2 and 21. The primes at the ends of the branches are circled. 21 at the end is not split yet.",
+          "ur": "84 کا اجزائے ضربی کا درخت: 84 سے 2 اور 42؛ 42 سے 2 اور 21۔ شاخوں کے آخر میں مفرد اعداد کے گرد دائرہ ہے۔ آخر میں 21 ابھی توڑا نہیں گیا۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              110.0,
+              60.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              110.0,
+              60.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              100.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              100.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              190.0,
+              100.0
+            ],
+            "text": "21"
+          },
+          {
+            "kind": "line",
+            "from": [
+              170.0,
+              70.0
+            ],
+            "to": [
+              150.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              170.0,
+              70.0
+            ],
+            "to": [
+              190.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              60.0
+            ],
+            "text": "42"
+          },
+          {
+            "kind": "line",
+            "from": [
+              140.0,
+              30.0
+            ],
+            "to": [
+              110.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              140.0,
+              30.0
+            ],
+            "to": [
+              170.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              140.0,
+              20.0
+            ],
+            "text": "84"
+          }
+        ]
+      }
     },
     {
       "id": "s9_find_error",
@@ -660,7 +2096,395 @@
           "en": "Every branch of a factor tree ends in a prime.",
           "ur": "اجزائے ضربی کے درخت کی ہر شاخ مفرد عدد پر ختم ہوتی ہے۔"
         }
-      ]
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 76.0,
+        "alt": {
+          "en": "A grid of the numbers 1 to 20. The primes are circled: 2, 3, 5, 7, 11, 13, 17, 19.",
+          "ur": "1 سے 20 تک کے اعداد کا جال۔ مفرد اعداد کے گرد دائرہ ہے: 2، 3، 5، 7، 11، 13، 17، 19۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              38.0
+            ],
+            "to": [
+              290.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              68.0
+            ],
+            "to": [
+              290.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              10.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.0,
+              8.0
+            ],
+            "to": [
+              66.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              94.0,
+              8.0
+            ],
+            "to": [
+              94.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              122.0,
+              8.0
+            ],
+            "to": [
+              122.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              8.0
+            ],
+            "to": [
+              150.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              178.0,
+              8.0
+            ],
+            "to": [
+              178.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              206.0,
+              8.0
+            ],
+            "to": [
+              206.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              234.0,
+              8.0
+            ],
+            "to": [
+              234.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              262.0,
+              8.0
+            ],
+            "to": [
+              262.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              290.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              23.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              23.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              52.0,
+              23.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              23.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              80.0,
+              23.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              23.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              23.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              136.0,
+              23.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              23.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              23.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              192.0,
+              23.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              23.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              23.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              23.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              53.0
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              24.0,
+              53.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              53.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              53.0
+            ],
+            "text": "13"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              80.0,
+              53.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              53.0
+            ],
+            "text": "14"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              53.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              53.0
+            ],
+            "text": "16"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              53.0
+            ],
+            "text": "17"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              192.0,
+              53.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              53.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              53.0
+            ],
+            "text": "19"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              248.0,
+              53.0
+            ],
+            "radius": 11.5
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              53.0
+            ],
+            "text": "20"
+          }
+        ]
+      }
     }
   ],
   "review_questions": [
@@ -698,7 +2522,259 @@
             },
             "misconception_id": "odd_is_prime"
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 46.0,
+          "alt": {
+            "en": "A grid of the numbers 20 to 30.",
+            "ur": "20 سے 30 تک کے اعداد کا جال۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                7.0,
+                8.0
+              ],
+              "to": [
+                293.0,
+                8.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                7.0,
+                38.0
+              ],
+              "to": [
+                293.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                7.0,
+                8.0
+              ],
+              "to": [
+                7.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                33.0,
+                8.0
+              ],
+              "to": [
+                33.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                59.0,
+                8.0
+              ],
+              "to": [
+                59.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                85.0,
+                8.0
+              ],
+              "to": [
+                85.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                111.0,
+                8.0
+              ],
+              "to": [
+                111.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                137.0,
+                8.0
+              ],
+              "to": [
+                137.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                163.0,
+                8.0
+              ],
+              "to": [
+                163.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                189.0,
+                8.0
+              ],
+              "to": [
+                189.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                215.0,
+                8.0
+              ],
+              "to": [
+                215.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                241.0,
+                8.0
+              ],
+              "to": [
+                241.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                267.0,
+                8.0
+              ],
+              "to": [
+                267.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                293.0,
+                8.0
+              ],
+              "to": [
+                293.0,
+                38.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                20.0,
+                23.0
+              ],
+              "text": "20"
+            },
+            {
+              "kind": "label",
+              "at": [
+                46.0,
+                23.0
+              ],
+              "text": "21"
+            },
+            {
+              "kind": "label",
+              "at": [
+                72.0,
+                23.0
+              ],
+              "text": "22"
+            },
+            {
+              "kind": "label",
+              "at": [
+                98.0,
+                23.0
+              ],
+              "text": "23"
+            },
+            {
+              "kind": "label",
+              "at": [
+                124.0,
+                23.0
+              ],
+              "text": "24"
+            },
+            {
+              "kind": "label",
+              "at": [
+                150.0,
+                23.0
+              ],
+              "text": "25"
+            },
+            {
+              "kind": "label",
+              "at": [
+                176.0,
+                23.0
+              ],
+              "text": "26"
+            },
+            {
+              "kind": "label",
+              "at": [
+                202.0,
+                23.0
+              ],
+              "text": "27"
+            },
+            {
+              "kind": "label",
+              "at": [
+                228.0,
+                23.0
+              ],
+              "text": "28"
+            },
+            {
+              "kind": "label",
+              "at": [
+                254.0,
+                23.0
+              ],
+              "text": "29"
+            },
+            {
+              "kind": "label",
+              "at": [
+                280.0,
+                23.0
+              ],
+              "text": "30"
+            }
+          ]
+        }
       }
     },
     {
@@ -734,7 +2810,171 @@
               "ur": "یہ جمع ہے۔ ضرب دیں: 2 × 3 × 3 × 5 = 90"
             }
           }
-        ]
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 156.0,
+          "alt": {
+            "en": "A factor tree drawn from the bottom up: 3 and 5 join to make a question mark; 3 and that number join to make another question mark; 2 and that number join to make the question mark at the top. 2, 3, 3 and 5 are circled.",
+            "ur": "نیچے سے اوپر بنایا گیا اجزائے ضربی کا درخت: 3 اور 5 مل کر ایک سوالیہ نشان بناتے ہیں؛ 3 اور وہ عدد مل کر ایک اور سوالیہ نشان؛ 2 اور وہ عدد مل کر سب سے اوپر والا سوالیہ نشان۔ 2، 3، 3 اور 5 کے گرد دائرہ ہے۔"
+          },
+          "items": [
+            {
+              "kind": "label",
+              "at": [
+                90.0,
+                60.0
+              ],
+              "text": "2"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                90.0,
+                60.0
+              ],
+              "radius": 13.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                130.0,
+                100.0
+              ],
+              "text": "3"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                130.0,
+                100.0
+              ],
+              "radius": 13.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                170.0,
+                140.0
+              ],
+              "text": "3"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                170.0,
+                140.0
+              ],
+              "radius": 13.0
+            },
+            {
+              "kind": "label",
+              "at": [
+                210.0,
+                140.0
+              ],
+              "text": "5"
+            },
+            {
+              "kind": "circle",
+              "center": [
+                210.0,
+                140.0
+              ],
+              "radius": 13.0
+            },
+            {
+              "kind": "line",
+              "from": [
+                190.0,
+                110.0
+              ],
+              "to": [
+                170.0,
+                126.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                190.0,
+                110.0
+              ],
+              "to": [
+                210.0,
+                126.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                190.0,
+                100.0
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "line",
+              "from": [
+                160.0,
+                70.0
+              ],
+              "to": [
+                130.0,
+                86.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                160.0,
+                70.0
+              ],
+              "to": [
+                190.0,
+                86.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                160.0,
+                60.0
+              ],
+              "text": "?"
+            },
+            {
+              "kind": "line",
+              "from": [
+                125.0,
+                30.0
+              ],
+              "to": [
+                90.0,
+                46.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                125.0,
+                30.0
+              ],
+              "to": [
+                160.0,
+                46.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                125.0,
+                20.0
+              ],
+              "text": "?"
+            }
+          ]
+        }
       }
     }
   ],

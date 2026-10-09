@@ -14,6 +14,8 @@ Scripts that write the Grade 6 Maths lessons of the Factors and Multiples unit (
 
 Every answer, and every common wrong answer (like giving a multiple when a factor is asked), is worked out in Python and checked with `assert`, so no number is typed by hand. `common.py` has small helpers (`factors`, `is_prime`, `prime_factors`) the scripts check their numbers with.
 
+Pictures (dot arrays for factor pairs and square numbers, factor trees, jumps on number lines for multiples, Venn circles for common factors and shared primes, number grids for primes, and same-area rectangles for HCF × LCM) are drawn by `figs.py` and attached at the end of each script; their numbers come from the same Python values as the steps.
+
 To change a lesson, edit its script and run it, then run the validator:
 
     python content/sources/g6-maths-05/hcf.py
