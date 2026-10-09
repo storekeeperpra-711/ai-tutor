@@ -1482,7 +1482,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get courseDoneMeans =>
-      'Done means you finished the lesson. The skill dots fill up when you get review questions right on later days.';
+      'Done means you finished the lesson. Review questions on later days help you remember it.';
 
   @override
   String get lessonNotStarted => 'Not started';

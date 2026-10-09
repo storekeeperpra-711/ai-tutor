@@ -115,7 +115,14 @@ void main() {
 
     await tapKey(tester, 'student-ayesha');
     expect(find.byKey(const Key('today-plan')), findsOneWidget);
-    expect(find.byKey(Key('mastery-${lesson.id}')), findsOneWidget);
+    // The lesson is finished, so its tile says Done, not the skill level.
+    expect(find.byKey(Key('mastery-${lesson.id}')), findsNothing);
+    expect(
+      tester
+          .widget<Text>(find.byKey(Key('home-lesson-status-${lesson.id}')))
+          .data,
+      'Done',
+    );
 
     final prefs = await SharedPreferences.getInstance();
     final saved =
