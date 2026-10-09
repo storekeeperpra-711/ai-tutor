@@ -1,0 +1,997 @@
+{
+  "id": "g6-maths-05-exercise-1-6",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the squares of numbers up to 2 digits, including negative numbers, and tell whether a number is a perfect square.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples, Exercise 1.6"
+    }
+  ],
+  "skills": [
+    "maths.factors.ex_1_6"
+  ],
+  "title": {
+    "en": "Exercise 1.6 practice: square numbers",
+    "ur": "مشق 1.6 کی پریکٹس: مربع اعداد"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.index_notation"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "times_two",
+      "description": "Doubles the number instead of squaring it: 8² = 16."
+    },
+    {
+      "id": "negative_square",
+      "description": "Thinks the square of a negative number is negative: (−7)² = −49."
+    },
+    {
+      "id": "half_root",
+      "description": "Halves a number to find what was squared: 144 = 72²."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.ex_1_6": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.ex_1_6": [
+      {
+        "id": "qb_square",
+        "type": "recall",
+        "step": {
+          "id": "qb_square",
+          "type": "number",
+          "prompt": {
+            "en": "Find 11².",
+            "ur": "11² معلوم کریں۔"
+          },
+          "answer": 121,
+          "checker": "numeric",
+          "hint": {
+            "en": "11 × 11.",
+            "ur": "11 × 11"
+          },
+          "feedback_correct": {
+            "en": "Right! 11 × 11 = 121.",
+            "ur": "درست! 11 × 11 = 121"
+          },
+          "feedback_wrong": {
+            "en": "11² = 11 × 11 = 121.",
+            "ur": "11² = 11 × 11 = 121"
+          },
+          "common_wrong": [
+            {
+              "answer": 22,
+              "feedback": {
+                "en": "That is 11 × 2. Square means 11 × 11 = 121.",
+                "ur": "یہ 11 × 2 ہے۔ مربع کا مطلب 11 × 11 = 121"
+              },
+              "misconception_id": "times_two"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_negative",
+        "type": "apply",
+        "step": {
+          "id": "qb_negative",
+          "type": "number",
+          "prompt": {
+            "en": "Find (−12)².",
+            "ur": "(−12)² معلوم کریں۔"
+          },
+          "answer": 144,
+          "checker": "numeric",
+          "hint": {
+            "en": "(−12) × (−12). Negative times negative is positive.",
+            "ur": "(−12) × (−12)۔ منفی ضرب منفی مثبت ہوتا ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 144.",
+            "ur": "درست! 144"
+          },
+          "feedback_wrong": {
+            "en": "(−12) × (−12) = 144.",
+            "ur": "(−12) × (−12) = 144"
+          },
+          "common_wrong": [
+            {
+              "answer": -144,
+              "feedback": {
+                "en": "Two negatives multiplied make a positive: 144.",
+                "ur": "دو منفی اعداد کا حاصل ضرب مثبت ہوتا ہے: 144"
+              },
+              "misconception_id": "negative_square"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hassan says 6² = 12. What went wrong?",
+            "ur": "حسن کہتا ہے 6² = 12۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "times",
+              "text": {
+                "en": "He did 6 × 2. 6² means 6 × 6 = 36.",
+                "ur": "اس نے 6 × 2 کیا۔ 6² کا مطلب 6 × 6 = 36"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The 2 tells you how many 6s to multiply.",
+                "ur": "جی ہاں! 2 بتاتا ہے کہ کتنے 6 ضرب کرنے ہیں۔"
+              }
+            },
+            {
+              "id": "add",
+              "text": {
+                "en": "He should add 6 + 6.",
+                "ur": "اسے 6 + 6 جمع کرنا تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6 + 6 is also 12. Square means multiply: 6 × 6 = 36.",
+                "ur": "6 + 6 بھی 12 ہے۔ مربع کا مطلب ضرب: 6 × 6 = 36"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 6² = 12.",
+                "ur": "کوئی غلطی نہیں۔ 6² = 12"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6² = 6 × 6 = 36.",
+                "ur": "6² = 6 × 6 = 36"
+              },
+              "misconception_id": "times_two"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_negative",
+      "front": {
+        "en": "What is (−8)²?",
+        "ur": "(−8)² کیا ہے؟"
+      },
+      "back": {
+        "en": "64. (−8) × (−8): negative times negative is positive.",
+        "ur": "64۔ (−8) × (−8): منفی ضرب منفی مثبت ہے۔"
+      }
+    },
+    {
+      "id": "f_pairs",
+      "front": {
+        "en": "How can prime factors show a perfect square?",
+        "ur": "مفرد اجزائے ضربی سے مکمل مربع کیسے پہچانیں؟"
+      },
+      "back": {
+        "en": "Every prime comes in pairs. 36 = 2 × 2 × 3 × 3 is a square; 180 = 2 × 2 × 3 × 3 × 5 is not.",
+        "ur": "ہر مفرد عدد جوڑوں میں ہو۔ 36 = 2 × 2 × 3 × 3 مربع ہے؛ 180 = 2 × 2 × 3 × 3 × 5 نہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_tiles",
+      "text": {
+        "en": "Find a square floor tile, a chessboard or a square cloth at home. Count how many small squares are in one row, then work out how many there are altogether as a square number.",
+        "ur": "گھر میں فرش کی کوئی مربع ٹائل، شطرنج کی بساط یا مربع کپڑا ڈھونڈیں۔ ایک قطار کے چھوٹے مربع گنیں، پھر مربع عدد کی مدد سے معلوم کریں کہ کل کتنے ہیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Square number",
+      "ur": "مربع عدد"
+    },
+    {
+      "en": "Perfect square",
+      "ur": "مکمل مربع"
+    },
+    {
+      "en": "Negative number",
+      "ur": "منفی عدد"
+    },
+    {
+      "en": "Index (power)",
+      "ur": "قوت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 1.6 is about squares. A number times itself!",
+          "ur": "مشق 1.6 مربع کے بارے میں ہے۔ عدد کو خود سے ضرب!"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 1.6 of your maths book (PCTB Mathematics 6). Here you find squares of numbers, including negative numbers, and pick out perfect squares. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 1.6 کے ساتھ ہے۔ اس میں آپ اعداد کے مربع معلوم کریں گے، منفی اعداد کے بھی، اور مکمل مربع اعداد پہچانیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_square",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Find 8².",
+        "ur": "8² معلوم کریں۔"
+      },
+      "answer": 64,
+      "checker": "numeric",
+      "hint": {
+        "en": "8² means 8 × 8.",
+        "ur": "8² کا مطلب 8 × 8 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 × 8 = 64.",
+        "ur": "درست! 8 × 8 = 64"
+      },
+      "feedback_wrong": {
+        "en": "8² = 8 × 8 = 64.",
+        "ur": "8² = 8 × 8 = 64"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That is 8 × 2. Squaring means 8 × 8 = 64.",
+            "ur": "یہ 8 × 2 ہے۔ مربع کا مطلب 8 × 8 = 64"
+          },
+          "misconception_id": "times_two"
+        }
+      ]
+    },
+    {
+      "id": "q2_which_square",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a perfect square?",
+        "ur": "ان میں سے کون سا مکمل مربع عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "n50",
+          "text": {
+            "en": "50",
+            "ur": "50"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7² = 49 and 8² = 64, so 50 is between two squares.",
+            "ur": "7² = 49 اور 8² = 64، اس لیے 50 دو مربعوں کے بیچ میں ہے۔"
+          }
+        },
+        {
+          "id": "n63",
+          "text": {
+            "en": "63",
+            "ur": "63"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7² = 49 and 8² = 64. 63 is just under 64, but not a square.",
+            "ur": "7² = 49 اور 8² = 64۔ 63، 64 سے ذرا کم ہے، مگر مربع نہیں۔"
+          }
+        },
+        {
+          "id": "n121",
+          "text": {
+            "en": "121",
+            "ur": "121"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 11 × 11 = 121.",
+            "ur": "جی ہاں! 11 × 11 = 121"
+          }
+        },
+        {
+          "id": "n140",
+          "text": {
+            "en": "140",
+            "ur": "140"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "11² = 121 and 12² = 144, so 140 is not a square.",
+            "ur": "11² = 121 اور 12² = 144، اس لیے 140 مربع نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many perfect squares are there from 1 to 100?",
+        "ur": "1 سے 100 تک کتنے مکمل مربع اعداد ہیں؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "1² = 1, 2² = 4, 3² = 9 ... Which is the last square that is not more than 100?",
+        "ur": "1² = 1، 2² = 4، 3² = 9 ... آخری مربع کون سا ہے جو 100 سے زیادہ نہ ہو؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 1², 2², ... 10²: ten squares.",
+        "ur": "درست! 1²، 2²، ... 10²: دس مربع۔"
+      },
+      "feedback_wrong": {
+        "en": "1, 4, 9, 16, 25, 36, 49, 64, 81, 100: these are 1² to 10², so there are 10.",
+        "ur": "1، 4، 9، 16، 25، 36، 49، 64، 81، 100: یہ 1² سے 10² تک ہیں، اس لیے 10 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "Don't forget 100 = 10². There are 10.",
+            "ur": "100 = 10² کو نہ بھولیں۔ کل 10 ہیں۔"
+          }
+        },
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "Only a few numbers are squares. They are 1², 2², ... 10²: 10 of them.",
+            "ur": "صرف چند اعداد مربع ہوتے ہیں۔ یہ 1²، 2²، ... 10² ہیں: کل 10"
+          },
+          "misconception_id": "half_root"
+        }
+      ]
+    },
+    {
+      "id": "q4_fifteen",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 15².",
+        "ur": "15² معلوم کریں۔"
+      },
+      "answer": 225,
+      "checker": "numeric",
+      "hint": {
+        "en": "15 × 15 = 15 × 10 + 15 × 5.",
+        "ur": "15 × 15 = 15 × 10 + 15 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 150 + 75 = 225.",
+        "ur": "درست! 150 + 75 = 225"
+      },
+      "feedback_wrong": {
+        "en": "15 × 10 = 150 and 15 × 5 = 75, so 15² = 225.",
+        "ur": "15 × 10 = 150 اور 15 × 5 = 75، اس لیے 15² = 225"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "That is 15 × 2. Squaring means 15 × 15 = 225.",
+            "ur": "یہ 15 × 2 ہے۔ مربع کا مطلب 15 × 15 = 225"
+          },
+          "misconception_id": "times_two"
+        },
+        {
+          "answer": 125,
+          "feedback": {
+            "en": "That is 10² + 5². Multiply the whole number: 15 × 15 = 225.",
+            "ur": "یہ 10² + 5² ہے۔ پورے عدد کو ضرب دیں: 15 × 15 = 225"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_negative",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "What about a negative number times itself? Let's see.",
+          "ur": "منفی عدد کو خود سے ضرب دیں تو کیا ہوتا ہے؟ آئیں دیکھیں۔"
+        }
+      },
+      "text": {
+        "en": "(−5)² means (−5) × (−5). A negative times a negative is positive, so (−5)² = 25. The square of any number, positive or negative, is never negative. Be careful with brackets: (−5)² = 25, but −5² means −(5 × 5) = −25.",
+        "ur": "(−5)² کا مطلب (−5) × (−5) ہے۔ منفی ضرب منفی مثبت ہوتا ہے، اس لیے (−5)² = 25۔ کسی بھی عدد کا مربع، مثبت ہو یا منفی، کبھی منفی نہیں ہوتا۔ قوسین کا خیال رکھیں: (−5)² = 25، مگر −5² کا مطلب −(5 × 5) = −25"
+      }
+    },
+    {
+      "id": "q5_negative",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find (−6)².",
+        "ur": "(−6)² معلوم کریں۔"
+      },
+      "answer": 36,
+      "checker": "numeric",
+      "hint": {
+        "en": "(−6) × (−6). Negative times negative is positive.",
+        "ur": "(−6) × (−6)۔ منفی ضرب منفی مثبت ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−6) × (−6) = 36.",
+        "ur": "درست! (−6) × (−6) = 36"
+      },
+      "feedback_wrong": {
+        "en": "(−6)² = (−6) × (−6) = 36, a positive number.",
+        "ur": "(−6)² = (−6) × (−6) = 36، ایک مثبت عدد۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -36,
+          "feedback": {
+            "en": "A negative times a negative is positive: (−6) × (−6) = 36.",
+            "ur": "منفی ضرب منفی مثبت ہوتا ہے: (−6) × (−6) = 36"
+          },
+          "misconception_id": "negative_square"
+        },
+        {
+          "answer": -12,
+          "feedback": {
+            "en": "That is −6 × 2. Squaring means (−6) × (−6) = 36.",
+            "ur": "یہ −6 × 2 ہے۔ مربع کا مطلب (−6) × (−6) = 36"
+          },
+          "misconception_id": "times_two"
+        }
+      ]
+    },
+    {
+      "id": "q6_negative_choice",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is (−9)²?",
+        "ur": "(−9)² کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "p81",
+          "text": {
+            "en": "81",
+            "ur": "81"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! (−9) × (−9) = 81.",
+            "ur": "جی ہاں! (−9) × (−9) = 81"
+          }
+        },
+        {
+          "id": "m81",
+          "text": {
+            "en": "−81",
+            "ur": "−81"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Two negatives multiplied make a positive: (−9) × (−9) = 81.",
+            "ur": "دو منفی اعداد کا حاصل ضرب مثبت ہوتا ہے: (−9) × (−9) = 81"
+          },
+          "misconception_id": "negative_square"
+        },
+        {
+          "id": "m18",
+          "text": {
+            "en": "−18",
+            "ur": "−18"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is −9 × 2. Square means (−9) × (−9) = 81.",
+            "ur": "یہ −9 × 2 ہے۔ مربع کا مطلب (−9) × (−9) = 81"
+          },
+          "misconception_id": "times_two"
+        },
+        {
+          "id": "p18",
+          "text": {
+            "en": "18",
+            "ur": "18"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "18 is 9 × 2. Square means (−9) × (−9) = 81.",
+            "ur": "18، 9 × 2 ہے۔ مربع کا مطلب (−9) × (−9) = 81"
+          },
+          "misconception_id": "times_two"
+        }
+      ]
+    },
+    {
+      "id": "q7_twenty",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the square of 20.",
+        "ur": "20 کا مربع معلوم کریں۔"
+      },
+      "answer": 400,
+      "checker": "numeric",
+      "hint": {
+        "en": "20 × 20 = 2 × 2 × 10 × 10.",
+        "ur": "20 × 20 = 2 × 2 × 10 × 10"
+      },
+      "feedback_correct": {
+        "en": "Right! 20² = 400.",
+        "ur": "درست! 20² = 400"
+      },
+      "feedback_wrong": {
+        "en": "20 × 20 = 4 × 100 = 400.",
+        "ur": "20 × 20 = 4 × 100 = 400"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "That is 20 × 2. Square means 20 × 20 = 400.",
+            "ur": "یہ 20 × 2 ہے۔ مربع کا مطلب 20 × 20 = 400"
+          },
+          "misconception_id": "times_two"
+        }
+      ]
+    },
+    {
+      "id": "q8_root",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which positive number, multiplied by itself, gives 144?",
+        "ur": "کون سا مثبت عدد خود سے ضرب ہو کر 144 دیتا ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "10 × 10 = 100 is too small. Try a little bigger.",
+        "ur": "10 × 10 = 100 بہت کم ہے۔ تھوڑا بڑا آزمائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 × 12 = 144.",
+        "ur": "درست! 12 × 12 = 144"
+      },
+      "feedback_wrong": {
+        "en": "11 × 11 = 121 and 12 × 12 = 144, so the number is 12.",
+        "ur": "11 × 11 = 121 اور 12 × 12 = 144، اس لیے عدد 12 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "72 × 72 is much more than 144. 144 ÷ 2 = 72 halves it; we need 12 × 12 = 144.",
+            "ur": "72 × 72، 144 سے بہت زیادہ ہے۔ 144 ÷ 2 = 72 تو آدھا ہے؛ ہمیں 12 × 12 = 144 چاہیے۔"
+          },
+          "misconception_id": "half_root"
+        }
+      ]
+    },
+    {
+      "id": "q9_is_square",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "180 = 2 × 2 × 3 × 3 × 5. Is 180 a perfect square?",
+        "ur": "180 = 2 × 2 × 3 × 3 × 5۔ کیا 180 مکمل مربع عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "no",
+          "text": {
+            "en": "No, because the 5 has no partner to pair with.",
+            "ur": "نہیں، کیونکہ 5 کا کوئی جوڑا نہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! In a perfect square every prime comes in pairs. 13² = 169 and 14² = 196, so 180 is between them.",
+            "ur": "جی ہاں! مکمل مربع میں ہر مفرد عدد جوڑوں میں آتا ہے۔ 13² = 169 اور 14² = 196، اس لیے 180 ان کے بیچ میں ہے۔"
+          }
+        },
+        {
+          "id": "yes_even",
+          "text": {
+            "en": "Yes, because 180 is even.",
+            "ur": "ہاں، کیونکہ 180 جفت ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Being even doesn't make a square: 2, 8 and 180 are even but not squares. The 5 has no partner.",
+            "ur": "جفت ہونے سے مربع نہیں بنتا: 2، 8 اور 180 جفت ہیں مگر مربع نہیں۔ 5 کا کوئی جوڑا نہیں۔"
+          }
+        },
+        {
+          "id": "yes_pairs",
+          "text": {
+            "en": "Yes, because it has two 2s.",
+            "ur": "ہاں، کیونکہ اس میں دو 2 ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 2s and 3s pair up, but the 5 is alone, so 180 is not a square.",
+            "ur": "2 اور 3 کے جوڑے بن جاتے ہیں، مگر 5 اکیلا ہے، اس لیے 180 مربع نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10_from_primes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "324 = 2² × 3⁴, and 324 is a perfect square. Which number squared gives 324?",
+        "ur": "324 = 2² × 3⁴، اور 324 مکمل مربع عدد ہے۔ کس عدد کا مربع 324 ہے؟"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "Split the primes into two equal groups: 2 × 3 × 3 and 2 × 3 × 3.",
+        "ur": "مفرد اعداد کو دو برابر حصوں میں بانٹیں: 2 × 3 × 3 اور 2 × 3 × 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 3 × 3 = 18, and 18 × 18 = 324.",
+        "ur": "درست! 2 × 3 × 3 = 18، اور 18 × 18 = 324"
+      },
+      "feedback_wrong": {
+        "en": "324 = (2 × 3 × 3) × (2 × 3 × 3) = 18 × 18, so the number is 18.",
+        "ur": "324 = (2 × 3 × 3) × (2 × 3 × 3) = 18 × 18، اس لیے عدد 18 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 162,
+          "feedback": {
+            "en": "162 is half of 324. We need a number times itself: 18 × 18 = 324.",
+            "ur": "162، 324 کا آدھا ہے۔ ہمیں عدد ضرب خود چاہیے: 18 × 18 = 324"
+          },
+          "misconception_id": "half_root"
+        }
+      ]
+    },
+    {
+      "id": "q11_garden",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A square garden has sides of 13 m. What is its area in square metres?",
+        "ur": "ایک مربع باغ کا ہر ضلع 13 میٹر ہے۔ اس کا رقبہ کتنے مربع میٹر ہے؟"
+      },
+      "answer": 169,
+      "checker": "numeric",
+      "hint": {
+        "en": "Area of a square = side × side = 13².",
+        "ur": "مربع کا رقبہ = ضلع × ضلع = 13²"
+      },
+      "feedback_correct": {
+        "en": "Right! 13 × 13 = 169 square metres.",
+        "ur": "درست! 13 × 13 = 169 مربع میٹر"
+      },
+      "feedback_wrong": {
+        "en": "13² = 13 × 13 = 169.",
+        "ur": "13² = 13 × 13 = 169"
+      },
+      "common_wrong": [
+        {
+          "answer": 52,
+          "feedback": {
+            "en": "52 = 4 × 13 is the distance round the garden. The area is 13 × 13 = 169.",
+            "ur": "52 = 4 × 13 باغ کا گھیر ہے۔ رقبہ 13 × 13 = 169 ہے۔"
+          }
+        },
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "That is 13 × 2. The area is 13 × 13 = 169.",
+            "ur": "یہ 13 × 2 ہے۔ رقبہ 13 × 13 = 169 ہے۔"
+          },
+          "misconception_id": "times_two"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 182.0,
+        "alt": {
+          "en": "A square garden with each side 13, drawn to scale.",
+          "ur": "ایک مربع باغ جس کا ہر ضلع 13 ہے، پیمانے کے مطابق۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                90.0,
+                30.0
+              ],
+              [
+                230.0,
+                30.0
+              ],
+              [
+                230.0,
+                170.0
+              ],
+              [
+                90.0,
+                170.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              17.0
+            ],
+            "text": "13"
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              100.0
+            ],
+            "text": "13"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q12_sum_negatives",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out (−1)² + (−2)² + (−3)².",
+        "ur": "(−1)² + (−2)² + (−3)² معلوم کریں۔"
+      },
+      "answer": 14,
+      "checker": "numeric",
+      "hint": {
+        "en": "Square each one first. Each square is positive.",
+        "ur": "پہلے ہر ایک کا مربع نکالیں۔ ہر مربع مثبت ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1 + 4 + 9 = 14.",
+        "ur": "درست! 1 + 4 + 9 = 14"
+      },
+      "feedback_wrong": {
+        "en": "(−1)² = 1, (−2)² = 4, (−3)² = 9, and 1 + 4 + 9 = 14.",
+        "ur": "(−1)² = 1، (−2)² = 4، (−3)² = 9، اور 1 + 4 + 9 = 14"
+      },
+      "common_wrong": [
+        {
+          "answer": -14,
+          "feedback": {
+            "en": "Each square is positive: 1 + 4 + 9 = 14.",
+            "ur": "ہر مربع مثبت ہے: 1 + 4 + 9 = 14"
+          },
+          "misconception_id": "negative_square"
+        },
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "Square each number on its own, then add: 1 + 4 + 9 = 14.",
+            "ur": "ہر عدد کا الگ مربع نکالیں، پھر جمع کریں: 1 + 4 + 9 = 14"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Rabia says (−7)² = −49 because the number is negative. What went wrong?",
+        "ur": "رابعہ کہتی ہے (−7)² = −49 کیونکہ عدد منفی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "positive",
+          "text": {
+            "en": "(−7) × (−7) is negative times negative, which is positive: 49.",
+            "ur": "(−7) × (−7) منفی ضرب منفی ہے، جو مثبت ہوتا ہے: 49"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The square of any number is never negative.",
+            "ur": "جی ہاں! کسی بھی عدد کا مربع کبھی منفی نہیں ہوتا۔"
+          }
+        },
+        {
+          "id": "fourteen",
+          "text": {
+            "en": "It should be −14.",
+            "ur": "یہ −14 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−14 is −7 × 2. Squaring means (−7) × (−7) = 49.",
+            "ur": "−14، −7 × 2 ہے۔ مربع کا مطلب (−7) × (−7) = 49"
+          },
+          "misconception_id": "times_two"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. (−7)² = −49.",
+            "ur": "کوئی غلطی نہیں۔ (−7)² = −49"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "(−7) × (−7): two negatives make a positive, so 49.",
+            "ur": "(−7) × (−7): دو منفی مل کر مثبت بناتے ہیں، اس لیے 49"
+          },
+          "misconception_id": "negative_square"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You have squared big, small and negative numbers.",
+          "ur": "شاباش! آپ نے بڑے، چھوٹے اور منفی اعداد کے مربع نکال لیے۔"
+        }
+      },
+      "text": {
+        "en": "The square of a number is the number times itself: 15² = 15 × 15 = 225. A perfect square is the square of a whole number, like 1, 4, 9, 16 ... 100, 121, 144. The square of a negative number is positive: (−6)² = 36. In a perfect square, the prime factors come in pairs.",
+        "ur": "کسی عدد کا مربع وہ عدد ضرب خود ہے: 15² = 15 × 15 = 225۔ مکمل مربع کسی پورے عدد کا مربع ہوتا ہے، جیسے 1، 4، 9، 16 ... 100، 121، 144۔ منفی عدد کا مربع مثبت ہوتا ہے: (−6)² = 36۔ مکمل مربع میں مفرد اجزائے ضربی جوڑوں میں آتے ہیں۔"
+      },
+      "points": [
+        {
+          "en": "8² means 8 × 8, not 8 × 2.",
+          "ur": "8² کا مطلب 8 × 8 ہے، 8 × 2 نہیں۔"
+        },
+        {
+          "en": "(−5)² = 25, but −5² = −25.",
+          "ur": "(−5)² = 25، مگر −5² = −25"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_square",
+      "type": "recall",
+      "step": {
+        "id": "r_square",
+        "type": "number",
+        "prompt": {
+          "en": "Find 14².",
+          "ur": "14² معلوم کریں۔"
+        },
+        "answer": 196,
+        "checker": "numeric",
+        "hint": {
+          "en": "14 × 14 = 14 × 10 + 14 × 4.",
+          "ur": "14 × 14 = 14 × 10 + 14 × 4"
+        },
+        "feedback_correct": {
+          "en": "Right! 140 + 56 = 196.",
+          "ur": "درست! 140 + 56 = 196"
+        },
+        "feedback_wrong": {
+          "en": "14 × 10 = 140 and 14 × 4 = 56, so 14² = 196.",
+          "ur": "14 × 10 = 140 اور 14 × 4 = 56، اس لیے 14² = 196"
+        },
+        "common_wrong": [
+          {
+            "answer": 28,
+            "feedback": {
+              "en": "That is 14 × 2. Square means 14 × 14 = 196.",
+              "ur": "یہ 14 × 2 ہے۔ مربع کا مطلب 14 × 14 = 196"
+            },
+            "misconception_id": "times_two"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_6"
+    },
+    {
+      "id": "r_which",
+      "type": "apply",
+      "step": {
+        "id": "r_which",
+        "type": "choice",
+        "prompt": {
+          "en": "Which of these is a perfect square?",
+          "ur": "ان میں سے کون سا مکمل مربع عدد ہے؟"
+        },
+        "options": [
+          {
+            "id": "n48",
+            "text": {
+              "en": "48",
+              "ur": "48"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "6² = 36 and 7² = 49, so 48 is not a square.",
+              "ur": "6² = 36 اور 7² = 49، اس لیے 48 مربع نہیں۔"
+            }
+          },
+          {
+            "id": "n72",
+            "text": {
+              "en": "72",
+              "ur": "72"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "8² = 64 and 9² = 81, so 72 is not a square.",
+              "ur": "8² = 64 اور 9² = 81، اس لیے 72 مربع نہیں۔"
+            }
+          },
+          {
+            "id": "n81",
+            "text": {
+              "en": "81",
+              "ur": "81"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! 9 × 9 = 81.",
+              "ur": "جی ہاں! 9 × 9 = 81"
+            }
+          },
+          {
+            "id": "n90",
+            "text": {
+              "en": "90",
+              "ur": "90"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "9² = 81 and 10² = 100, so 90 is not a square.",
+              "ur": "9² = 81 اور 10² = 100، اس لیے 90 مربع نہیں۔"
+            }
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_6"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 1.6 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers squares of numbers (q1, q4, q7, q11), perfect squares (q2, q3, q8 to q10) and squares of negative numbers (s_negative, q5, q6, q12, q13).",
+    "Negative numbers come in the next chapter of the book (Integers); s_negative explains in one line why (−5)² is positive.",
+    "Urdu terms to check: مکمل مربع (perfect square), منفی عدد (negative number).",
+    "The numbers were worked out in content/sources/g6-maths-05/exercise_1_6.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

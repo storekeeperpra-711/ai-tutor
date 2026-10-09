@@ -1,0 +1,1775 @@
+{
+  "id": "g6-maths-05-exercise-1-4",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the LCM of two or three numbers by prime factorisation and by the division method, and use it to find when repeating events happen together again.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples, Exercise 1.4"
+    }
+  ],
+  "skills": [
+    "maths.factors.ex_1_4"
+  ],
+  "title": {
+    "en": "Exercise 1.4 practice: LCM",
+    "ur": "مشق 1.4 کی پریکٹس: ذو اضعاف اقل"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.lcm"
+    },
+    {
+      "skill": "maths.factors.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "lcm_hcf_swap",
+      "description": "Gives a common factor (often the HCF) instead of the LCM."
+    },
+    {
+      "id": "always_multiply",
+      "description": "Always multiplies the numbers: the LCM of 12 and 16 is 192, which is a common multiple but not the lowest."
+    },
+    {
+      "id": "shared_primes_only",
+      "description": "Multiplies only the shared prime factors, which gives the HCF."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds the LCM but does not answer the question asked (the time, or minutes instead of hours)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.ex_1_4": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.ex_1_4": [
+      {
+        "id": "qb_lcm",
+        "type": "recall",
+        "step": {
+          "id": "qb_lcm",
+          "type": "number",
+          "prompt": {
+            "en": "Find the LCM of 6 and 15.",
+            "ur": "6 اور 15 کا ذو اضعاف اقل معلوم کریں۔"
+          },
+          "answer": 30,
+          "checker": "numeric",
+          "hint": {
+            "en": "Multiples of 15: 15, 30, 45 ... Which does 6 divide?",
+            "ur": "15 کے اضعاف: 15، 30، 45 ... ان میں سے کسے 6 تقسیم کرتا ہے؟"
+          },
+          "feedback_correct": {
+            "en": "Right! LCM = 30.",
+            "ur": "درست! ذو اضعاف اقل = 30"
+          },
+          "feedback_wrong": {
+            "en": "15 ÷ 6 is not exact, but 30 ÷ 6 = 5. LCM = 30.",
+            "ur": "15 ÷ 6 پورا تقسیم نہیں ہوتا، مگر 30 ÷ 6 = 5۔ ذو اضعاف اقل = 30"
+          },
+          "common_wrong": [
+            {
+              "answer": 90,
+              "feedback": {
+                "en": "90 = 6 × 15 is a common multiple, but 30 is lower.",
+                "ur": "90 = 6 × 15 مشترک ضعف ہے، مگر 30 چھوٹا ہے۔"
+              },
+              "misconception_id": "always_multiply"
+            },
+            {
+              "answer": 3,
+              "feedback": {
+                "en": "3 is the HCF. The LCM is 30.",
+                "ur": "3 عاد اعظم ہے۔ ذو اضعاف اقل 30 ہے۔"
+              },
+              "misconception_id": "lcm_hcf_swap"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_meet",
+        "type": "apply",
+        "step": {
+          "id": "qb_meet",
+          "type": "number",
+          "prompt": {
+            "en": "Two runners go round a track. One takes 45 seconds a lap, the other 60 seconds. They start together. After how many seconds are they at the start together again?",
+            "ur": "دو دوڑنے والے ایک ٹریک کے چکر لگاتے ہیں۔ ایک کو ایک چکر میں 45 سیکنڈ لگتے ہیں، دوسرے کو 60 سیکنڈ۔ دونوں ساتھ شروع کرتے ہیں۔ کتنے سیکنڈ بعد دونوں دوبارہ ساتھ شروع کی جگہ پر ہوں گے؟"
+          },
+          "answer": 180,
+          "checker": "numeric",
+          "hint": {
+            "en": "45 = 3² × 5 and 60 = 2² × 3 × 5. Find the LCM.",
+            "ur": "45 = 3² × 5 اور 60 = 2² × 3 × 5۔ ذو اضعاف اقل معلوم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 2² × 3² × 5 = 180 seconds.",
+            "ur": "درست! 2² × 3² × 5 = 180 سیکنڈ"
+          },
+          "feedback_wrong": {
+            "en": "LCM = 2² × 3² × 5 = 180. The first runner has done 4 laps and the second 3.",
+            "ur": "ذو اضعاف اقل = 2² × 3² × 5 = 180۔ پہلے نے 4 چکر لگائے اور دوسرے نے 3"
+          },
+          "common_wrong": [
+            {
+              "answer": 15,
+              "feedback": {
+                "en": "15 is the HCF. After 15 seconds no one has finished a lap.",
+                "ur": "15 عاد اعظم ہے۔ 15 سیکنڈ بعد کسی کا چکر پورا نہیں ہوا۔"
+              },
+              "misconception_id": "lcm_hcf_swap"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "10 = 2 × 5 and 14 = 2 × 7. Nida says the LCM is 2, because 2 is the prime they share. What went wrong?",
+            "ur": "10 = 2 × 5 اور 14 = 2 × 7۔ ندا کہتی ہے ذو اضعاف اقل 2 ہے، کیونکہ 2 مشترک مفرد عدد ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "all_primes",
+              "text": {
+                "en": "The LCM uses every prime: 2 × 5 × 7 = 70. The shared prime gives the HCF.",
+                "ur": "ذو اضعاف اقل میں سب مفرد اعداد آتے ہیں: 2 × 5 × 7 = 70۔ مشترک مفرد عدد عاد اعظم دیتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 70 ÷ 10 = 7 and 70 ÷ 14 = 5.",
+                "ur": "جی ہاں! 70 ÷ 10 = 7 اور 70 ÷ 14 = 5"
+              }
+            },
+            {
+              "id": "multiply",
+              "text": {
+                "en": "The LCM is 10 × 14 = 140.",
+                "ur": "ذو اضعاف اقل 10 × 14 = 140 ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "140 is a common multiple, but 70 is lower.",
+                "ur": "140 مشترک ضعف ہے، مگر 70 چھوٹا ہے۔"
+              },
+              "misconception_id": "always_multiply"
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. The LCM is 2.",
+                "ur": "کوئی غلطی نہیں۔ ذو اضعاف اقل 2 ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The LCM can't be smaller than 14. Use every prime: 2 × 5 × 7 = 70.",
+                "ur": "ذو اضعاف اقل 14 سے چھوٹا نہیں ہو سکتا۔ سب مفرد اعداد لیں: 2 × 5 × 7 = 70"
+              },
+              "misconception_id": "shared_primes_only"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_division",
+      "front": {
+        "en": "How does the division method find the LCM?",
+        "ur": "تقسیم کا طریقہ ذو اضعاف اقل کیسے معلوم کرتا ہے؟"
+      },
+      "back": {
+        "en": "Divide the numbers by primes, copying down any number that doesn't divide, until all are 1. Multiply the divisors. 12 and 15: 2 × 2 × 3 × 5 = 60.",
+        "ur": "اعداد کو مفرد اعداد سے تقسیم کریں، جو تقسیم نہ ہو اسے ویسے ہی نیچے لکھیں، یہاں تک کہ سب 1 ہو جائیں۔ تقسیم کرنے والے اعداد ضرب دیں۔ 12 اور 15: 2 × 2 × 3 × 5 = 60"
+      }
+    },
+    {
+      "id": "f_meet",
+      "front": {
+        "en": "Two things repeat every 25 and 35 minutes. When do they happen together again?",
+        "ur": "دو چیزیں ہر 25 اور 35 منٹ بعد ہوتی ہیں۔ دوبارہ کب ساتھ ہوں گی؟"
+      },
+      "back": {
+        "en": "After the LCM: 175 minutes.",
+        "ur": "ذو اضعاف اقل کے بعد: 175 منٹ۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_timetable",
+      "text": {
+        "en": "Think of two things that repeat, like a wall clock that chimes every hour and a TV advert that comes every 20 minutes. Make up the times, then find when they happen together again.",
+        "ur": "دو ایسی چیزیں سوچیں جو بار بار ہوں، جیسے دیوار کی گھڑی کا ہر گھنٹے بجنا اور کسی ٹی وی اشتہار کا ہر 20 منٹ بعد آنا۔ وقت خود بنائیں، پھر معلوم کریں کہ وہ دوبارہ کب ساتھ ہوں گی۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Lowest common multiple (LCM)",
+      "ur": "ذو اضعاف اقل"
+    },
+    {
+      "en": "Common multiple",
+      "ur": "مشترک ضعف"
+    },
+    {
+      "en": "Division method",
+      "ur": "تقسیم کا طریقہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 1.4 is about the LCM: the lowest number that both numbers divide into.",
+          "ur": "مشق 1.4 ذو اضعاف اقل کے بارے میں ہے: سب سے چھوٹا عدد جسے دونوں اعداد تقسیم کریں۔"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 1.4 of your maths book (PCTB Mathematics 6). Here you find the LCM by prime factorisation and by the division method, then solve \"when do they meet again\" problems. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 1.4 کے ساتھ ہے۔ اس میں آپ مفرد اجزائے ضربی اور تقسیم کے طریقے سے ذو اضعاف اقل معلوم کریں گے، پھر \"دوبارہ کب ساتھ ہوں گے\" والے سوال حل کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_listing",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Find the LCM of 8 and 12.",
+        "ur": "8 اور 12 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiples of 12: 12, 24, 36 ... Which is the first one that 8 divides?",
+        "ur": "12 کے اضعاف: 12، 24، 36 ... پہلا کون سا ہے جسے 8 تقسیم کرے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! LCM = 24.",
+        "ur": "درست! ذو اضعاف اقل = 24"
+      },
+      "feedback_wrong": {
+        "en": "12 ÷ 8 is not exact, but 24 ÷ 8 = 3. So the LCM is 24.",
+        "ur": "12 ÷ 8 پورا تقسیم نہیں ہوتا، مگر 24 ÷ 8 = 3۔ اس لیے ذو اضعاف اقل 24 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 96,
+          "feedback": {
+            "en": "96 = 8 × 12 is a common multiple, but 24 is lower.",
+            "ur": "96 = 8 × 12 مشترک ضعف ہے، مگر 24 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is the HCF. The LCM is a multiple of both: 24.",
+            "ur": "4 عاد اعظم ہے۔ ذو اضعاف اقل دونوں کا ضعف ہے: 24"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ]
+    },
+    {
+      "id": "q2_index",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "24 = 2³ × 3 and 90 = 2 × 3² × 5. What is their LCM?",
+        "ur": "24 = 2³ × 3 اور 90 = 2 × 3² × 5۔ ان کا ذو اضعاف اقل کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "2³ × 3² × 5 = 360",
+            "ur": "2³ × 3² × 5 = 360"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Take each prime with its highest index: 2³, 3² and 5.",
+            "ur": "جی ہاں! ہر مفرد عدد کی سب سے بڑی قوت لیں: 2³، 3² اور 5"
+          }
+        },
+        {
+          "id": "hcf",
+          "text": {
+            "en": "2 × 3 = 6",
+            "ur": "2 × 3 = 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 × 3 uses only the shared primes: that is the HCF. Take every prime with its highest index.",
+            "ur": "2 × 3 میں صرف مشترک مفرد اعداد ہیں: یہ عاد اعظم ہے۔ ہر مفرد عدد کی سب سے بڑی قوت لیں۔"
+          },
+          "misconception_id": "shared_primes_only"
+        },
+        {
+          "id": "all",
+          "text": {
+            "en": "2⁴ × 3³ × 5 = 2160",
+            "ur": "2⁴ × 3³ × 5 = 2160"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That multiplies the two numbers together. The LCM takes each prime once, with its highest index: 2³ × 3² × 5.",
+            "ur": "یہ دونوں اعداد کا حاصل ضرب ہے۔ ذو اضعاف اقل میں ہر مفرد عدد ایک بار، سب سے بڑی قوت کے ساتھ: 2³ × 3² × 5"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "id": "low",
+          "text": {
+            "en": "2 × 3 × 5 = 30",
+            "ur": "2 × 3 × 5 = 30"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "24 does not divide 30. Use the highest index of each prime: 2³ × 3² × 5.",
+            "ur": "24، 30 کو تقسیم نہیں کرتا۔ ہر مفرد عدد کی سب سے بڑی قوت لیں: 2³ × 3² × 5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3_primes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the LCM of 18 and 30 by prime factorisation.",
+        "ur": "مفرد اجزائے ضربی سے 18 اور 30 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "18 = 2 × 3 × 3 and 30 = 2 × 3 × 5. Take each prime the most times it appears in either.",
+        "ur": "18 = 2 × 3 × 3 اور 30 = 2 × 3 × 5۔ ہر مفرد عدد اتنی بار لیں جتنی بار وہ کسی ایک میں سب سے زیادہ آئے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 3 × 3 × 5 = 90.",
+        "ur": "درست! 2 × 3 × 3 × 5 = 90"
+      },
+      "feedback_wrong": {
+        "en": "One 2, two 3s (from 18) and one 5: 2 × 3 × 3 × 5 = 90.",
+        "ur": "ایک 2، دو 3 (18 سے) اور ایک 5: 2 × 3 × 3 × 5 = 90"
+      },
+      "common_wrong": [
+        {
+          "answer": 540,
+          "feedback": {
+            "en": "540 = 18 × 30 is a common multiple, but 90 is lower.",
+            "ur": "540 = 18 × 30 مشترک ضعف ہے، مگر 90 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the HCF (only the shared primes). The LCM is 90.",
+            "ur": "6 عاد اعظم ہے (صرف مشترک مفرد اعداد)۔ ذو اضعاف اقل 90 ہے۔"
+          },
+          "misconception_id": "shared_primes_only"
+        }
+      ]
+    },
+    {
+      "id": "s_division",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "The book also finds the LCM by the division method. Here is how it works.",
+          "ur": "کتاب ذو اضعاف اقل تقسیم کے طریقے سے بھی معلوم کرتی ہے۔ یہ ایسے ہوتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "Division method: write the numbers in a row. Divide by a prime that goes into at least one of them; a number it doesn't divide is copied down as it is. Keep going until every number is 1. The LCM is all the divisors multiplied. For 12 and 15: divide by 2, 2, 3 and 5, so LCM = 2 × 2 × 3 × 5 = 60.",
+        "ur": "تقسیم کا طریقہ: اعداد ایک قطار میں لکھیں۔ ایسے مفرد عدد سے تقسیم کریں جو کم از کم ایک کو تقسیم کرے؛ جو عدد تقسیم نہ ہو اسے ویسے ہی نیچے لکھ دیں۔ یہ تب تک کریں جب تک ہر عدد 1 نہ ہو جائے۔ سب تقسیم کرنے والے اعداد کا حاصل ضرب ذو اضعاف اقل ہے۔ 12 اور 15 کے لیے: 2، 2، 3 اور 5 سے تقسیم، اس لیے ذو اضعاف اقل = 2 × 2 × 3 × 5 = 60"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "The division method for 12 and 15. On the left the primes 2, 2, 3, 5. The rows are 12 and 15; 6 and 15; 3 and 15; 1 and 5; and finally 1 and 1. A number that a prime does not divide is copied down.",
+          "ur": "12 اور 15 کے لیے تقسیم کا طریقہ۔ بائیں طرف مفرد اعداد 2، 2، 3، 5۔ قطاریں: 12 اور 15؛ 6 اور 15؛ 3 اور 15؛ 1 اور 5؛ اور آخر میں 1 اور 1۔ جو عدد تقسیم نہ ہو اسے ویسے ہی نیچے لکھا گیا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              22.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              9.0
+            ],
+            "to": [
+              118.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              36.0
+            ],
+            "to": [
+              222.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              22.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              196.0,
+              22.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              54.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              41.0
+            ],
+            "to": [
+              118.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              68.0
+            ],
+            "to": [
+              222.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              54.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              196.0,
+              54.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              86.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              73.0
+            ],
+            "to": [
+              118.0,
+              100.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              100.0
+            ],
+            "to": [
+              222.0,
+              100.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              86.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              196.0,
+              86.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              118.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              105.0
+            ],
+            "to": [
+              118.0,
+              132.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              132.0
+            ],
+            "to": [
+              222.0,
+              132.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              118.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              196.0,
+              118.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              144.0,
+              150.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              196.0,
+              150.0
+            ],
+            "text": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_division",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Use the division method to find the LCM of 16, 20 and 24.",
+        "ur": "تقسیم کے طریقے سے 16، 20 اور 24 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 240,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide by 2 while you can, then by 3 and 5. Multiply all the divisors.",
+        "ur": "جب تک ہو سکے 2 سے تقسیم کریں، پھر 3 اور 5 سے۔ سب تقسیم کرنے والے اعداد ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 2 × 2 × 2 × 3 × 5 = 240.",
+        "ur": "درست! 2 × 2 × 2 × 2 × 3 × 5 = 240"
+      },
+      "feedback_wrong": {
+        "en": "The divisors are 2, 2, 2, 2, 3 and 5. LCM = 2⁴ × 3 × 5 = 240.",
+        "ur": "تقسیم کرنے والے اعداد 2، 2، 2، 2، 3 اور 5 ہیں۔ ذو اضعاف اقل = 2⁴ × 3 × 5 = 240"
+      },
+      "common_wrong": [
+        {
+          "answer": 7680,
+          "feedback": {
+            "en": "7680 = 16 × 20 × 24 is a common multiple, but far from the lowest: 240.",
+            "ur": "7680 = 16 × 20 × 24 مشترک ضعف ہے، مگر سب سے چھوٹا نہیں: 240"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is the HCF. The LCM is the divisors multiplied: 240.",
+            "ur": "4 عاد اعظم ہے۔ ذو اضعاف اقل تقسیم کرنے والے اعداد کا حاصل ضرب ہے: 240"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 106.0,
+        "alt": {
+          "en": "The start of the division method for 16, 20 and 24. Divided by 2: 8, 10, 12. Divided by 2 again: 4, 5, 6.",
+          "ur": "16، 20 اور 24 کے لیے تقسیم کے طریقے کا آغاز۔ 2 سے تقسیم: 8، 10، 12۔ پھر 2 سے تقسیم: 4، 5، 6۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              72.0,
+              22.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              92.0,
+              9.0
+            ],
+            "to": [
+              92.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              92.0,
+              36.0
+            ],
+            "to": [
+              248.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              118.0,
+              22.0
+            ],
+            "text": "16"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              22.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              222.0,
+              22.0
+            ],
+            "text": "24"
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.0,
+              54.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              92.0,
+              41.0
+            ],
+            "to": [
+              92.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              92.0,
+              68.0
+            ],
+            "to": [
+              248.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              118.0,
+              54.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              54.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              222.0,
+              54.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              118.0,
+              86.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              86.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              222.0,
+              86.0
+            ],
+            "text": "6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_three",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the LCM of 9, 12 and 15.",
+        "ur": "9، 12 اور 15 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "9 = 3 × 3, 12 = 2 × 2 × 3, 15 = 3 × 5. Take two 2s, two 3s and one 5.",
+        "ur": "9 = 3 × 3، 12 = 2 × 2 × 3، 15 = 3 × 5۔ دو 2، دو 3 اور ایک 5 لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 2 × 3 × 3 × 5 = 180.",
+        "ur": "درست! 2 × 2 × 3 × 3 × 5 = 180"
+      },
+      "feedback_wrong": {
+        "en": "LCM = 2 × 2 × 3 × 3 × 5 = 180. Check: 180 ÷ 9 = 20, 180 ÷ 12 = 15, 180 ÷ 15 = 12.",
+        "ur": "ذو اضعاف اقل = 2 × 2 × 3 × 3 × 5 = 180۔ جانچ: 180 ÷ 9 = 20، 180 ÷ 12 = 15، 180 ÷ 15 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 1620,
+          "feedback": {
+            "en": "1620 = 9 × 12 × 15 is a common multiple, but 180 is lower.",
+            "ur": "1620 = 9 × 12 × 15 مشترک ضعف ہے، مگر 180 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the HCF. The LCM is 180.",
+            "ur": "3 عاد اعظم ہے۔ ذو اضعاف اقل 180 ہے۔"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ]
+    },
+    {
+      "id": "q6_hops",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ayan hops along a number line from 0 in jumps of 4. Bela starts at 0 too and jumps 10 at a time. What is the first number after 0 that both land on?",
+        "ur": "ایان عددی لکیر پر 0 سے 4، 4 کی چھلانگیں لگاتا ہے۔ بیلا بھی 0 سے شروع کرتی ہے اور 10، 10 کی چھلانگیں لگاتی ہے۔ 0 کے بعد پہلا عدد کون سا ہے جس پر دونوں پہنچیں؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Ayan lands on 4, 8, 12, 16, 20 ... Bela on 10, 20 ...",
+        "ur": "ایان 4، 8، 12، 16، 20 ... پر آتا ہے۔ بیلا 10، 20 ... پر"
+      },
+      "feedback_correct": {
+        "en": "Right! LCM of 4 and 10 = 20.",
+        "ur": "درست! 4 اور 10 کا ذو اضعاف اقل = 20"
+      },
+      "feedback_wrong": {
+        "en": "20 is the first number in both lists: the LCM of 4 and 10.",
+        "ur": "20 دونوں فہرستوں کا پہلا مشترک عدد ہے: 4 اور 10 کا ذو اضعاف اقل۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "Both land on 40, but they meet earlier, at 20.",
+            "ur": "دونوں 40 پر آتے ہیں، مگر پہلے 20 پر مل جاتے ہیں۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the HCF. Neither of them lands on 2.",
+            "ur": "2 عاد اعظم ہے۔ دونوں میں سے کوئی 2 پر نہیں آتا۔"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 154.6,
+        "alt": {
+          "en": "Two number lines from 0 to 40. Top: Ayan's jumps of 4 landing on 4, 8, 12 ... 40. Bottom: Bela's jumps of 10 landing on 10, 20, 30, 40.",
+          "ur": "0 سے 40 تک دو عددی لکیریں۔ اوپر: ایان کی 4 کی چھلانگیں جو 4، 8، 12 ... 40 پر آتی ہیں۔ نیچے: بیلا کی 10 کی چھلانگیں جو 10، 20، 30، 40 پر آتی ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              38.6
+            ],
+            "to": [
+              284.0,
+              38.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              24.0,
+              33.6
+            ],
+            "to": [
+              24.0,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              54.6
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              36.6,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              49.2,
+              33.6
+            ],
+            "to": [
+              49.2,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              36.6,
+              16.0
+            ],
+            "text": "+4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              49.2,
+              54.6
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              61.8,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              74.4,
+              33.6
+            ],
+            "to": [
+              74.4,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              74.4,
+              54.6
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              87.0,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.6,
+              33.6
+            ],
+            "to": [
+              99.6,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              99.6,
+              54.6
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              112.2,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              124.8,
+              33.6
+            ],
+            "to": [
+              124.8,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.8,
+              54.6
+            ],
+            "text": "16"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              137.4,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              33.6
+            ],
+            "to": [
+              150.0,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              54.6
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              162.6,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              175.2,
+              33.6
+            ],
+            "to": [
+              175.2,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              175.2,
+              54.6
+            ],
+            "text": "24"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              187.8,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              200.4,
+              33.6
+            ],
+            "to": [
+              200.4,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              200.4,
+              54.6
+            ],
+            "text": "28"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              213.0,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              225.6,
+              33.6
+            ],
+            "to": [
+              225.6,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              225.6,
+              54.6
+            ],
+            "text": "32"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              238.2,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              250.8,
+              33.6
+            ],
+            "to": [
+              250.8,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              250.8,
+              54.6
+            ],
+            "text": "36"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              263.4,
+              38.6
+            ],
+            "radius": 12.6,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              276.0,
+              33.6
+            ],
+            "to": [
+              276.0,
+              43.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              54.6
+            ],
+            "text": "40"
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              122.1
+            ],
+            "to": [
+              284.0,
+              122.1
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              24.0,
+              117.1
+            ],
+            "to": [
+              24.0,
+              127.1
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              138.1
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              55.5,
+              122.1
+            ],
+            "radius": 31.5,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              87.0,
+              117.1
+            ],
+            "to": [
+              87.0,
+              127.1
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.5,
+              100.6
+            ],
+            "text": "+10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              87.0,
+              138.1
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              118.5,
+              122.1
+            ],
+            "radius": 31.5,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              117.1
+            ],
+            "to": [
+              150.0,
+              127.1
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              138.1
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              181.5,
+              122.1
+            ],
+            "radius": 31.5,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              213.0,
+              117.1
+            ],
+            "to": [
+              213.0,
+              127.1
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              213.0,
+              138.1
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              244.5,
+              122.1
+            ],
+            "radius": 31.5,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              276.0,
+              117.1
+            ],
+            "to": [
+              276.0,
+              127.1
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              138.1
+            ],
+            "text": "40"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_buses",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bus A leaves the stop every 25 minutes and bus B every 35 minutes. Both leave together at 7:00 in the morning. After how many minutes do they leave together again?",
+        "ur": "بس A ہر 25 منٹ بعد اور بس B ہر 35 منٹ بعد اڈے سے چلتی ہے۔ صبح 7 بجے دونوں ساتھ چلیں۔ کتنے منٹ بعد دونوں دوبارہ ساتھ چلیں گی؟"
+      },
+      "answer": 175,
+      "checker": "numeric",
+      "hint": {
+        "en": "25 = 5 × 5 and 35 = 5 × 7. Find the LCM.",
+        "ur": "25 = 5 × 5 اور 35 = 5 × 7۔ ذو اضعاف اقل معلوم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 5 × 7 = 175 minutes.",
+        "ur": "درست! 5 × 5 × 7 = 175 منٹ"
+      },
+      "feedback_wrong": {
+        "en": "LCM = 5 × 5 × 7 = 175. They leave together again after 175 minutes.",
+        "ur": "ذو اضعاف اقل = 5 × 5 × 7 = 175۔ دونوں 175 منٹ بعد دوبارہ ساتھ چلیں گی۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is the HCF. After 5 minutes neither bus has left again.",
+            "ur": "5 عاد اعظم ہے۔ 5 منٹ بعد کوئی بس دوبارہ نہیں چلی۔"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        },
+        {
+          "answer": 875,
+          "feedback": {
+            "en": "875 = 25 × 35 is a common multiple, but they meet earlier, at 175.",
+            "ur": "875 = 25 × 35 مشترک ضعف ہے، مگر وہ پہلے، 175 پر مل جاتی ہیں۔"
+          },
+          "misconception_id": "always_multiply"
+        }
+      ]
+    },
+    {
+      "id": "q8_bus_time",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "So at what time do the two buses leave together again?",
+        "ur": "تو دونوں بسیں دوبارہ کس وقت ساتھ چلیں گی؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "9:55",
+            "ur": "9:55"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 175 minutes = 2 hours 55 minutes, and 7:00 + 2:55 = 9:55.",
+            "ur": "جی ہاں! 175 منٹ = 2 گھنٹے 55 منٹ، اور 7:00 + 2:55 = 9:55"
+          }
+        },
+        {
+          "id": "hcf",
+          "text": {
+            "en": "7:05",
+            "ur": "7:05"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 5 minutes later, the HCF. They meet after 175 minutes: 9:55.",
+            "ur": "یہ 5 منٹ بعد ہے، یعنی عاد اعظم۔ وہ 175 منٹ بعد ملیں گی: 9:55"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        },
+        {
+          "id": "hundred",
+          "text": {
+            "en": "9:15",
+            "ur": "9:15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "175 minutes is not 1 hour 75 minutes. 175 = 120 + 55, so 2 hours 55 minutes: 9:55.",
+            "ur": "175 منٹ، 1 گھنٹہ 75 منٹ نہیں۔ 175 = 120 + 55، یعنی 2 گھنٹے 55 منٹ: 9:55"
+          }
+        },
+        {
+          "id": "one_hour",
+          "text": {
+            "en": "8:00",
+            "ur": "8:00"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "At 8:00 neither bus leaves: bus A leaves at 7:25, 7:50, 8:15 and bus B at 7:35, 8:10. They meet at 9:55.",
+            "ur": "8 بجے کوئی بس نہیں چلتی: بس A 7:25، 7:50، 8:15 پر اور بس B 7:35، 8:10 پر چلتی ہے۔ وہ 9:55 پر ملیں گی۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9_lights",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Three traffic lights change every 40, 60 and 90 seconds. They change together now. After how many MINUTES will they change together again?",
+        "ur": "تین ٹریفک بتیاں ہر 40، 60 اور 90 سیکنڈ بعد بدلتی ہیں۔ ابھی تینوں ساتھ بدلی ہیں۔ کتنے منٹ بعد دوبارہ ساتھ بدلیں گی؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "First find the LCM of 40, 60 and 90 in seconds. Then divide by 60.",
+        "ur": "پہلے 40، 60 اور 90 کا ذو اضعاف اقل سیکنڈوں میں نکالیں۔ پھر 60 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 360 seconds = 6 minutes.",
+        "ur": "درست! 360 سیکنڈ = 6 منٹ"
+      },
+      "feedback_wrong": {
+        "en": "LCM of 40, 60 and 90 = 360 seconds, and 360 ÷ 60 = 6 minutes.",
+        "ur": "40، 60 اور 90 کا ذو اضعاف اقل = 360 سیکنڈ، اور 360 ÷ 60 = 6 منٹ"
+      },
+      "common_wrong": [
+        {
+          "answer": 360,
+          "feedback": {
+            "en": "360 is in seconds. The question asks for minutes: 360 ÷ 60 = 6.",
+            "ur": "360 سیکنڈ ہیں۔ سوال منٹ پوچھتا ہے: 360 ÷ 60 = 6"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 seconds is the HCF. The lights meet after 360 seconds, which is 6 minutes.",
+            "ur": "10 سیکنڈ عاد اعظم ہے۔ بتیاں 360 سیکنڈ بعد ملتی ہیں، یعنی 6 منٹ۔"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        }
+      ]
+    },
+    {
+      "id": "q10_bells",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Three bells ring every 12, 18 and 20 minutes. They ring together at 8:00. After how many HOURS will they ring together again?",
+        "ur": "تین گھنٹیاں ہر 12، 18 اور 20 منٹ بعد بجتی ہیں۔ 8 بجے تینوں ساتھ بجیں۔ کتنے گھنٹے بعد دوبارہ ساتھ بجیں گی؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "12 = 2² × 3, 18 = 2 × 3², 20 = 2² × 5. Find the LCM in minutes, then change to hours.",
+        "ur": "12 = 2² × 3، 18 = 2 × 3²، 20 = 2² × 5۔ ذو اضعاف اقل منٹوں میں نکالیں، پھر گھنٹوں میں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 minutes = 3 hours, so at 11:00.",
+        "ur": "درست! 180 منٹ = 3 گھنٹے، یعنی 11 بجے۔"
+      },
+      "feedback_wrong": {
+        "en": "LCM = 2² × 3² × 5 = 180 minutes = 3 hours. They ring together at 11:00.",
+        "ur": "ذو اضعاف اقل = 2² × 3² × 5 = 180 منٹ = 3 گھنٹے۔ وہ 11 بجے ساتھ بجیں گی۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "180 is in minutes. In hours: 180 ÷ 60 = 3.",
+            "ur": "180 منٹ ہیں۔ گھنٹوں میں: 180 ÷ 60 = 3"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "11:00 is the time they ring together. The question asks how many hours after 8:00: 3.",
+            "ur": "11 بجے وہ وقت ہے جب وہ ساتھ بجیں گی۔ سوال پوچھتا ہے 8 بجے کے کتنے گھنٹے بعد: 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11_sweets",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A box of sweets can be shared equally among 8 children, or among 12, or among 18, with none left over. What is the smallest number of sweets the box can hold?",
+        "ur": "مٹھائی کا ایک ڈبہ 8 بچوں میں، یا 12 میں، یا 18 میں برابر بانٹا جا سکتا ہے، کچھ نہیں بچتا۔ ڈبے میں کم از کم کتنی مٹھائیاں ہو سکتی ہیں؟"
+      },
+      "answer": 72,
+      "checker": "numeric",
+      "hint": {
+        "en": "The number must be a multiple of 8, 12 and 18. Find the LCM.",
+        "ur": "تعداد 8، 12 اور 18 تینوں کا ضعف ہو۔ ذو اضعاف اقل معلوم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 72 = 8 × 9 = 12 × 6 = 18 × 4.",
+        "ur": "درست! 72 = 8 × 9 = 12 × 6 = 18 × 4"
+      },
+      "feedback_wrong": {
+        "en": "8 = 2³, 12 = 2² × 3, 18 = 2 × 3². LCM = 2³ × 3² = 72.",
+        "ur": "8 = 2³، 12 = 2² × 3، 18 = 2 × 3²۔ ذو اضعاف اقل = 2³ × 3² = 72"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the HCF: 2 sweets can't be shared among 8 children. Use the LCM: 72.",
+            "ur": "2 عاد اعظم ہے: 2 مٹھائیاں 8 بچوں میں نہیں بٹ سکتیں۔ ذو اضعاف اقل لیں: 72"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        },
+        {
+          "answer": 144,
+          "feedback": {
+            "en": "144 works, but 72 is smaller and works too.",
+            "ur": "144 چل جاتا ہے، مگر 72 چھوٹا ہے اور وہ بھی چلتا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Kashif says the LCM of 12 and 16 is 12 × 16 = 192. What went wrong?",
+        "ur": "کاشف کہتا ہے 12 اور 16 کا ذو اضعاف اقل 12 × 16 = 192 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "not_lowest",
+          "text": {
+            "en": "192 is a common multiple but not the lowest. 48 is: 48 ÷ 12 = 4 and 48 ÷ 16 = 3.",
+            "ur": "192 مشترک ضعف ہے مگر سب سے چھوٹا نہیں۔ 48 ہے: 48 ÷ 12 = 4 اور 48 ÷ 16 = 3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Multiplying only gives the LCM when the HCF is 1. Here the HCF is 4, so 192 ÷ 4 = 48.",
+            "ur": "جی ہاں! ضرب سے ذو اضعاف اقل صرف تب ملتا ہے جب عاد اعظم 1 ہو۔ یہاں عاد اعظم 4 ہے، اس لیے 192 ÷ 4 = 48"
+          }
+        },
+        {
+          "id": "hcf",
+          "text": {
+            "en": "He should find the HCF, 4.",
+            "ur": "اسے عاد اعظم، 4، نکالنا تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question asks for the LCM. It is 48, not 192 and not 4.",
+            "ur": "سوال ذو اضعاف اقل پوچھتا ہے۔ یہ 48 ہے، نہ 192 نہ 4۔"
+          },
+          "misconception_id": "lcm_hcf_swap"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. The LCM is 192.",
+            "ur": "کوئی غلطی نہیں۔ ذو اضعاف اقل 192 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check 48: 48 ÷ 12 = 4 and 48 ÷ 16 = 3. 48 is a smaller common multiple.",
+            "ur": "48 جانچیں: 48 ÷ 12 = 4 اور 48 ÷ 16 = 3۔ 48 ایک چھوٹا مشترک ضعف ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Brilliant! Buses, bells and lights all meet at the LCM.",
+          "ur": "زبردست! بسیں، گھنٹیاں اور بتیاں سب ذو اضعاف اقل پر ملتی ہیں۔"
+        }
+      },
+      "text": {
+        "en": "LCM by prime factorisation: take every prime with its highest index. LCM by division: divide by primes until every number is 1, then multiply the divisors. When things repeat every so often, they happen together again after the LCM.",
+        "ur": "مفرد اجزائے ضربی سے ذو اضعاف اقل: ہر مفرد عدد اس کی سب سے بڑی قوت کے ساتھ لیں۔ تقسیم کے طریقے سے: مفرد اعداد سے تقسیم کریں یہاں تک کہ ہر عدد 1 ہو جائے، پھر تقسیم کرنے والے اعداد ضرب دیں۔ جب چیزیں وقفے وقفے سے ہوں، تو وہ ذو اضعاف اقل کے بعد دوبارہ ساتھ ہوتی ہیں۔"
+      },
+      "points": [
+        {
+          "en": "The LCM is never smaller than the biggest number.",
+          "ur": "ذو اضعاف اقل سب سے بڑے عدد سے چھوٹا نہیں ہوتا۔"
+        },
+        {
+          "en": "Check the units: change seconds to minutes or minutes to hours if the question asks.",
+          "ur": "اکائیاں دیکھیں: اگر سوال کہے تو سیکنڈ کو منٹ یا منٹ کو گھنٹے میں بدلیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_lcm",
+      "type": "recall",
+      "step": {
+        "id": "r_lcm",
+        "type": "number",
+        "prompt": {
+          "en": "Find the LCM of 14 and 21.",
+          "ur": "14 اور 21 کا ذو اضعاف اقل معلوم کریں۔"
+        },
+        "answer": 42,
+        "checker": "numeric",
+        "hint": {
+          "en": "14 = 2 × 7 and 21 = 3 × 7.",
+          "ur": "14 = 2 × 7 اور 21 = 3 × 7"
+        },
+        "feedback_correct": {
+          "en": "Right! 2 × 3 × 7 = 42.",
+          "ur": "درست! 2 × 3 × 7 = 42"
+        },
+        "feedback_wrong": {
+          "en": "LCM = 2 × 3 × 7 = 42.",
+          "ur": "ذو اضعاف اقل = 2 × 3 × 7 = 42"
+        },
+        "common_wrong": [
+          {
+            "answer": 294,
+            "feedback": {
+              "en": "294 = 14 × 21 is a common multiple, but 42 is lower.",
+              "ur": "294 = 14 × 21 مشترک ضعف ہے، مگر 42 چھوٹا ہے۔"
+            },
+            "misconception_id": "always_multiply"
+          },
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "7 is the HCF. The LCM is 42.",
+              "ur": "7 عاد اعظم ہے۔ ذو اضعاف اقل 42 ہے۔"
+            },
+            "misconception_id": "lcm_hcf_swap"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_4"
+    },
+    {
+      "id": "r_lamps",
+      "type": "apply",
+      "step": {
+        "id": "r_lamps",
+        "type": "number",
+        "prompt": {
+          "en": "Two lamps blink every 6 and every 8 seconds. They blink together now. After how many seconds will they blink together again?",
+          "ur": "دو چراغ ہر 6 اور ہر 8 سیکنڈ بعد جلتے ہیں۔ ابھی دونوں ساتھ جلے ہیں۔ کتنے سیکنڈ بعد دوبارہ ساتھ جلیں گے؟"
+        },
+        "answer": 24,
+        "checker": "numeric",
+        "hint": {
+          "en": "Find the LCM of 6 and 8.",
+          "ur": "6 اور 8 کا ذو اضعاف اقل معلوم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 24 seconds.",
+          "ur": "درست! 24 سیکنڈ"
+        },
+        "feedback_wrong": {
+          "en": "Multiples of 8: 8, 16, 24. 24 ÷ 6 = 4, so 24 seconds.",
+          "ur": "8 کے اضعاف: 8، 16، 24۔ 24 ÷ 6 = 4، اس لیے 24 سیکنڈ۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 48,
+            "feedback": {
+              "en": "48 = 6 × 8 works, but they meet earlier, at 24.",
+              "ur": "48 = 6 × 8 بھی چلتا ہے، مگر وہ پہلے، 24 پر مل جاتے ہیں۔"
+            },
+            "misconception_id": "always_multiply"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_4"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 1.4 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers LCM by listing and prime factorisation (q1 to q3, q5), the division method (s_division, q4), and when-do-they-meet-again problems with jumps (q6), buses (q7, q8), traffic lights (q9), bells (q10) and sharing (q11).",
+    "The division method for the LCM is not taught in the unit's LCM lesson, so s_division shows it once before q4.",
+    "Urdu terms to check: تقسیم کا طریقہ (division method), ٹریفک بتیاں (traffic lights).",
+    "The numbers were worked out in content/sources/g6-maths-05/exercise_1_4.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

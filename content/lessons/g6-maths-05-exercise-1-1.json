@@ -1,0 +1,2514 @@
+{
+  "id": "g6-maths-05-exercise-1-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "List the factors and multiples of a number, and pick out prime numbers, odd composite numbers and the even prime.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples, Exercise 1.1"
+    }
+  ],
+  "skills": [
+    "maths.factors.ex_1_1"
+  ],
+  "title": {
+    "en": "Exercise 1.1 practice: factors, multiples and primes",
+    "ur": "مشق 1.1 کی پریکٹس: اجزائے ضربی، اضعاف اور مفرد اعداد"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.factors_multiples"
+    },
+    {
+      "skill": "maths.factors.primes"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "factor_multiple_swap",
+      "description": "Gives multiples when factors are asked for, or factors when multiples are asked for."
+    },
+    {
+      "id": "missing_pairs",
+      "description": "Leaves out factors when listing them, especially 1 and the number itself, or one of a pair."
+    },
+    {
+      "id": "adds_for_multiple",
+      "description": "Adds instead of multiplying to find a multiple: the 6th multiple of 9 is 15."
+    },
+    {
+      "id": "odd_is_prime",
+      "description": "Thinks every odd number is prime: 39, 51 and 57 are prime."
+    },
+    {
+      "id": "one_is_prime",
+      "description": "Thinks 1 is a prime or a composite number; it is neither."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.ex_1_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.ex_1_1": [
+      {
+        "id": "qb_factors",
+        "type": "recall",
+        "step": {
+          "id": "qb_factors",
+          "type": "number",
+          "prompt": {
+            "en": "How many factors does 45 have?",
+            "ur": "45 کے کتنے اجزائے ضربی ہیں؟"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "Pairs: 1 × 45, 3 × 15, 5 × 9.",
+            "ur": "جوڑے: 1 × 45، 3 × 15، 5 × 9"
+          },
+          "feedback_correct": {
+            "en": "Right! 1, 3, 5, 9, 15, 45.",
+            "ur": "درست! 1، 3، 5، 9، 15، 45"
+          },
+          "feedback_wrong": {
+            "en": "The factors of 45 are 1, 3, 5, 9, 15, 45: 6 of them.",
+            "ur": "45 کے اجزائے ضربی 1، 3، 5، 9، 15، 45 ہیں: کل 6۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "Count 1 and 45 too.",
+                "ur": "1 اور 45 بھی گنیں۔"
+              },
+              "misconception_id": "missing_pairs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_primes",
+        "type": "apply",
+        "step": {
+          "id": "qb_primes",
+          "type": "number",
+          "prompt": {
+            "en": "How many prime numbers are there between 40 and 60?",
+            "ur": "40 اور 60 کے درمیان کتنے مفرد اعداد ہیں؟"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "Check only the odd numbers. Cross out those that 3, 5 or 7 divide.",
+            "ur": "صرف طاق اعداد دیکھیں۔ جنہیں 3، 5 یا 7 تقسیم کرے انہیں کاٹ دیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 41, 43, 47, 53 and 59.",
+            "ur": "درست! 41، 43، 47، 53 اور 59"
+          },
+          "feedback_wrong": {
+            "en": "The primes are 41, 43, 47, 53 and 59. 45, 51 and 57 have 3 as a factor, 49 = 7 × 7, 55 = 5 × 11.",
+            "ur": "مفرد اعداد 41، 43، 47، 53 اور 59 ہیں۔ 45، 51 اور 57 میں 3 جزو ضربی ہے، 49 = 7 × 7، 55 = 5 × 11"
+          },
+          "common_wrong": [
+            {
+              "answer": 10,
+              "feedback": {
+                "en": "That counts every odd number. 45, 49, 51, 55 and 57 are not prime.",
+                "ur": "یہ ہر طاق عدد گن لیا۔ 45، 49، 51، 55 اور 57 مفرد نہیں۔"
+              },
+              "misconception_id": "odd_is_prime"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Faraz says, \"1 is the smallest prime number.\" What went wrong?",
+            "ur": "فراز کہتا ہے، \"1 سب سے چھوٹا مفرد عدد ہے۔\" کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "one_factor",
+              "text": {
+                "en": "1 has only one factor, so it is not prime. The smallest prime is 2.",
+                "ur": "1 کا صرف ایک جزو ضربی ہے، اس لیے یہ مفرد نہیں۔ سب سے چھوٹا مفرد عدد 2 ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A prime needs exactly two factors. 1 is neither prime nor composite.",
+                "ur": "جی ہاں! مفرد عدد کے ٹھیک دو اجزائے ضربی ہونے چاہییں۔ 1 نہ مفرد ہے نہ مرکب۔"
+              }
+            },
+            {
+              "id": "three",
+              "text": {
+                "en": "The smallest prime is 3, because 2 is even.",
+                "ur": "سب سے چھوٹا مفرد عدد 3 ہے، کیونکہ 2 جفت ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "2 is even but still prime: its only factors are 1 and 2.",
+                "ur": "2 جفت ہے مگر پھر بھی مفرد ہے: اس کے اجزائے ضربی صرف 1 اور 2 ہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 1 is prime.",
+                "ur": "کوئی غلطی نہیں۔ 1 مفرد ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "1 has only one factor. A prime has exactly two.",
+                "ur": "1 کا صرف ایک جزو ضربی ہے۔ مفرد عدد کے ٹھیک دو ہوتے ہیں۔"
+              },
+              "misconception_id": "one_is_prime"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_odd_composite",
+      "front": {
+        "en": "What is an odd composite number?",
+        "ur": "طاق مرکب عدد کیا ہے؟"
+      },
+      "back": {
+        "en": "An odd number with more than two factors, like 9, 15, 21, 25 and 35.",
+        "ur": "ایسا طاق عدد جس کے دو سے زیادہ اجزائے ضربی ہوں، جیسے 9، 15، 21، 25 اور 35۔"
+      }
+    },
+    {
+      "id": "f_even_prime",
+      "front": {
+        "en": "Which is the only even prime?",
+        "ur": "واحد جفت مفرد عدد کون سا ہے؟"
+      },
+      "back": {
+        "en": "2. Every other even number has 2 as a factor, so it has more than two factors.",
+        "ur": "2۔ ہر دوسرے جفت عدد میں 2 جزو ضربی ہوتا ہے، اس لیے اس کے دو سے زیادہ اجزائے ضربی ہوتے ہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_house_numbers",
+      "text": {
+        "en": "Write down five numbers you see at home or on the street (a house number, a price, a page number). For each, say whether it is prime or composite, and write two of its multiples.",
+        "ur": "گھر یا گلی میں نظر آنے والے پانچ اعداد لکھیں (مکان نمبر، قیمت، صفحہ نمبر)۔ ہر ایک کے بارے میں بتائیں کہ وہ مفرد ہے یا مرکب، اور اس کے دو اضعاف لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Factor",
+      "ur": "جزو ضربی"
+    },
+    {
+      "en": "Multiple",
+      "ur": "ضعف"
+    },
+    {
+      "en": "Prime number",
+      "ur": "مفرد عدد"
+    },
+    {
+      "en": "Composite number",
+      "ur": "مرکب عدد"
+    },
+    {
+      "en": "Odd number",
+      "ur": "طاق عدد"
+    },
+    {
+      "en": "Even number",
+      "ur": "جفت عدد"
+    },
+    {
+      "en": "Twin primes",
+      "ur": "جڑواں مفرد اعداد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Let's practise Exercise 1.1 together. Take your time with each one!",
+          "ur": "آئیں مل کر مشق 1.1 کی پریکٹس کریں۔ ہر سوال آرام سے کریں!"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 1.1 of your maths book (PCTB Mathematics 6). Here you list factors and multiples, and pick out prime numbers, odd composite numbers and the even prime. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 1.1 کے ساتھ ہے۔ اس میں آپ اجزائے ضربی اور اضعاف لکھیں گے، اور مفرد اعداد، طاق مرکب اعداد اور جفت مفرد عدد چنیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_count_factors",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many factors does 20 have?",
+        "ur": "20 کے کتنے اجزائے ضربی ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find them in pairs: 1 × 20, 2 × 10, 4 × 5.",
+        "ur": "جوڑوں میں ڈھونڈیں: 1 × 20، 2 × 10، 4 × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! The factors of 20 are 1, 2, 4, 5, 10, 20.",
+        "ur": "درست! 20 کے اجزائے ضربی 1، 2، 4، 5، 10، 20 ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "The pairs 1 × 20, 2 × 10 and 4 × 5 give 6 factors: 1, 2, 4, 5, 10, 20.",
+        "ur": "جوڑے 1 × 20، 2 × 10 اور 4 × 5 سے 6 اجزائے ضربی ملتے ہیں: 1، 2، 4، 5، 10، 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't forget 1 and 20 themselves: 1 × 20 is a pair too.",
+            "ur": "1 اور خود 20 کو نہ بھولیں: 1 × 20 بھی ایک جوڑا ہے۔"
+          },
+          "misconception_id": "missing_pairs"
+        }
+      ]
+    },
+    {
+      "id": "q2_list_factors",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which list shows ALL the factors of 30?",
+        "ur": "کون سی فہرست 30 کے سارے اجزائے ضربی دکھاتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "all",
+          "text": {
+            "en": "1, 2, 3, 5, 6, 10, 15, 30",
+            "ur": "1، 2، 3، 5، 6، 10، 15، 30"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The pairs are 1 × 30, 2 × 15, 3 × 10 and 5 × 6.",
+            "ur": "جی ہاں! جوڑے 1 × 30، 2 × 15، 3 × 10 اور 5 × 6 ہیں۔"
+          }
+        },
+        {
+          "id": "no_ends",
+          "text": {
+            "en": "2, 3, 5, 6, 10, 15",
+            "ur": "2، 3، 5، 6، 10، 15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 and 30 are missing. Every number has 1 and itself as factors.",
+            "ur": "1 اور 30 غائب ہیں۔ ہر عدد کے اجزائے ضربی میں 1 اور خود وہ عدد ہوتا ہے۔"
+          },
+          "misconception_id": "missing_pairs"
+        },
+        {
+          "id": "no_pair",
+          "text": {
+            "en": "1, 2, 3, 10, 15, 30",
+            "ur": "1، 2، 3، 10، 15، 30"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The pair 5 × 6 is missing: 5 and 6 are factors of 30 too.",
+            "ur": "جوڑا 5 × 6 غائب ہے: 5 اور 6 بھی 30 کے اجزائے ضربی ہیں۔"
+          },
+          "misconception_id": "missing_pairs"
+        },
+        {
+          "id": "multiples",
+          "text": {
+            "en": "30, 60, 90, 120",
+            "ur": "30، 60، 90، 120"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These are multiples of 30. Factors divide 30 exactly, so none is bigger than 30.",
+            "ur": "یہ 30 کے اضعاف ہیں۔ اجزائے ضربی 30 کو پورا تقسیم کرتے ہیں، اس لیے کوئی 30 سے بڑا نہیں۔"
+          },
+          "misconception_id": "factor_multiple_swap"
+        }
+      ]
+    },
+    {
+      "id": "q3_sixth_multiple",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the 6th multiple of 9?",
+        "ur": "9 کا چھٹا ضعف کیا ہے؟"
+      },
+      "answer": 54,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count in 9s six times: 9, 18, 27 ... or work out 9 × 6.",
+        "ur": "9، 9 کر کے چھ بار گنیں: 9، 18، 27 ... یا 9 × 6 کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9 × 6 = 54.",
+        "ur": "درست! 9 × 6 = 54"
+      },
+      "feedback_wrong": {
+        "en": "9, 18, 27, 36, 45, 54. The 6th multiple is 9 × 6 = 54.",
+        "ur": "9، 18، 27، 36، 45، 54۔ چھٹا ضعف 9 × 6 = 54 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That is 9 + 6. A multiple comes from multiplying: 9 × 6 = 54.",
+            "ur": "یہ 9 + 6 ہے۔ ضعف ضرب سے ملتا ہے: 9 × 6 = 54"
+          },
+          "misconception_id": "adds_for_multiple"
+        },
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "45 is the 5th multiple. One more jump of 9: 54.",
+            "ur": "45 پانچواں ضعف ہے۔ 9 کی ایک اور چھلانگ: 54"
+          }
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 81.0,
+        "alt": {
+          "en": "A number line from 0 with 6 jumps of 9, numbered 1 to 6 above the jumps. Under the line: 0, 9, 18, 27, 36, 45, and a question mark where the 6th jump lands.",
+          "ur": "0 سے شروع ہونے والی عددی لکیر جس پر 9 کی 6 چھلانگیں ہیں، اوپر 1 سے 6 تک نمبر۔ لکیر کے نیچے: 0، 9، 18، 27، 36، 45، اور چھٹی چھلانگ کی جگہ سوالیہ نشان۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              51.0
+            ],
+            "to": [
+              284.0,
+              51.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              24.0,
+              46.0
+            ],
+            "to": [
+              24.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              45.0,
+              51.0
+            ],
+            "radius": 21.0,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.0,
+              46.0
+            ],
+            "to": [
+              66.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              62.0,
+              43.0
+            ],
+            "to": [
+              66.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              43.0
+            ],
+            "to": [
+              66.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              45.0,
+              20.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              87.0,
+              51.0
+            ],
+            "radius": 21.0,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              108.0,
+              46.0
+            ],
+            "to": [
+              108.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              104.0,
+              43.0
+            ],
+            "to": [
+              108.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              112.0,
+              43.0
+            ],
+            "to": [
+              108.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              87.0,
+              20.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              129.0,
+              51.0
+            ],
+            "radius": 21.0,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              46.0
+            ],
+            "to": [
+              150.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              146.0,
+              43.0
+            ],
+            "to": [
+              150.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              154.0,
+              43.0
+            ],
+            "to": [
+              150.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              129.0,
+              20.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              171.0,
+              51.0
+            ],
+            "radius": 21.0,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              192.0,
+              46.0
+            ],
+            "to": [
+              192.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              188.0,
+              43.0
+            ],
+            "to": [
+              192.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              196.0,
+              43.0
+            ],
+            "to": [
+              192.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              171.0,
+              20.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              213.0,
+              51.0
+            ],
+            "radius": 21.0,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              234.0,
+              46.0
+            ],
+            "to": [
+              234.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              230.0,
+              43.0
+            ],
+            "to": [
+              234.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              238.0,
+              43.0
+            ],
+            "to": [
+              234.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              213.0,
+              20.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              255.0,
+              51.0
+            ],
+            "radius": 21.0,
+            "start": 180,
+            "sweep": 180
+          },
+          {
+            "kind": "line",
+            "from": [
+              276.0,
+              46.0
+            ],
+            "to": [
+              276.0,
+              56.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              272.0,
+              43.0
+            ],
+            "to": [
+              276.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              280.0,
+              43.0
+            ],
+            "to": [
+              276.0,
+              50.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              255.0,
+              20.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              67.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.0,
+              67.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              67.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              67.0
+            ],
+            "text": "27"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              67.0
+            ],
+            "text": "36"
+          },
+          {
+            "kind": "label",
+            "at": [
+              234.0,
+              67.0
+            ],
+            "text": "45"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              67.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_first_multiples",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which list shows the first five multiples of 8?",
+        "ur": "کون سی فہرست 8 کے پہلے پانچ اضعاف دکھاتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "8, 16, 24, 32, 40",
+            "ur": "8، 16، 24، 32، 40"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 8 × 1, 8 × 2, 8 × 3, 8 × 4, 8 × 5.",
+            "ur": "جی ہاں! 8 × 1، 8 × 2، 8 × 3، 8 × 4، 8 × 5"
+          }
+        },
+        {
+          "id": "late",
+          "text": {
+            "en": "16, 24, 32, 40, 48",
+            "ur": "16، 24، 32، 40، 48"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The first multiple of 8 is 8 itself (8 × 1). This list starts one too late.",
+            "ur": "8 کا پہلا ضعف خود 8 ہے (8 × 1)۔ یہ فہرست ایک قدم دیر سے شروع ہوتی ہے۔"
+          }
+        },
+        {
+          "id": "slip",
+          "text": {
+            "en": "8, 16, 24, 30, 40",
+            "ur": "8، 16، 24، 30، 40"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "30 is not in the 8 times table: 8 × 4 = 32.",
+            "ur": "30، 8 کے پہاڑے میں نہیں: 8 × 4 = 32"
+          }
+        },
+        {
+          "id": "factors",
+          "text": {
+            "en": "1, 2, 4, 8",
+            "ur": "1، 2، 4، 8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These are the factors of 8. Multiples are in the 8 times table: 8, 16, 24 ...",
+            "ur": "یہ 8 کے اجزائے ضربی ہیں۔ اضعاف 8 کے پہاڑے میں ہوتے ہیں: 8، 16، 24 ..."
+          },
+          "misconception_id": "factor_multiple_swap"
+        }
+      ]
+    },
+    {
+      "id": "q5_multiples_between",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many multiples of 7 are there between 20 and 60?",
+        "ur": "20 اور 60 کے درمیان 7 کے کتنے اضعاف ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "The first one after 20 is 21 = 7 × 3. Keep adding 7 until you pass 60.",
+        "ur": "20 کے بعد پہلا 21 = 7 × 3 ہے۔ 60 سے آگے جانے تک 7 جمع کرتے رہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 21, 28, 35, 42, 49, 56.",
+        "ur": "درست! 21، 28، 35، 42، 49، 56"
+      },
+      "feedback_wrong": {
+        "en": "They are 21, 28, 35, 42, 49, 56: 6 multiples. The next one, 63, is past 60.",
+        "ur": "یہ 21، 28، 35، 42، 49، 56 ہیں: 6 اضعاف۔ اگلا، 63، 60 سے آگے ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "(60 − 20) ÷ 7 misses one. List them: 21, 28, 35, 42, 49, 56.",
+            "ur": "(60 − 20) ÷ 7 سے ایک رہ جاتا ہے۔ لکھ کر دیکھیں: 21، 28، 35، 42، 49، 56"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6_count_primes",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many prime numbers are there between 20 and 40?",
+        "ur": "20 اور 40 کے درمیان کتنے مفرد اعداد ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Only odd numbers can be prime here. Cross out those that 3, 5 or 7 divide.",
+        "ur": "یہاں صرف طاق اعداد مفرد ہو سکتے ہیں۔ جنہیں 3، 5 یا 7 تقسیم کرے انہیں کاٹ دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 23, 29, 31, 37.",
+        "ur": "درست! 23، 29، 31، 37"
+      },
+      "feedback_wrong": {
+        "en": "The primes are 23, 29, 31, 37. 21, 27, 33 and 39 have 3 as a factor, 25 and 35 have 5.",
+        "ur": "مفرد اعداد 23، 29، 31، 37 ہیں۔ 21، 27، 33 اور 39 میں 3 جزو ضربی ہے، 25 اور 35 میں 5۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "That counts every odd number. Odd numbers like 21 = 3 × 7 are not prime.",
+            "ur": "یہ ہر طاق عدد گن لیا۔ 21 = 3 × 7 جیسے طاق اعداد مفرد نہیں۔"
+          },
+          "misconception_id": "odd_is_prime"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 76.0,
+        "alt": {
+          "en": "The numbers 20 to 39 in a grid of 2 rows of 10.",
+          "ur": "20 سے 39 تک کے اعداد 10، 10 کی 2 قطاروں کے خانوں میں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              38.0
+            ],
+            "to": [
+              290.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              68.0
+            ],
+            "to": [
+              290.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              10.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.0,
+              8.0
+            ],
+            "to": [
+              66.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              94.0,
+              8.0
+            ],
+            "to": [
+              94.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              122.0,
+              8.0
+            ],
+            "to": [
+              122.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              8.0
+            ],
+            "to": [
+              150.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              178.0,
+              8.0
+            ],
+            "to": [
+              178.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              206.0,
+              8.0
+            ],
+            "to": [
+              206.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              234.0,
+              8.0
+            ],
+            "to": [
+              234.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              262.0,
+              8.0
+            ],
+            "to": [
+              262.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              290.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              23.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              23.0
+            ],
+            "text": "21"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              23.0
+            ],
+            "text": "22"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              23.0
+            ],
+            "text": "23"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              23.0
+            ],
+            "text": "24"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              23.0
+            ],
+            "text": "25"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              23.0
+            ],
+            "text": "26"
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              23.0
+            ],
+            "text": "27"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              23.0
+            ],
+            "text": "28"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              23.0
+            ],
+            "text": "29"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              53.0
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              53.0
+            ],
+            "text": "31"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              53.0
+            ],
+            "text": "32"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              53.0
+            ],
+            "text": "33"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              53.0
+            ],
+            "text": "34"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              53.0
+            ],
+            "text": "35"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              53.0
+            ],
+            "text": "36"
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              53.0
+            ],
+            "text": "37"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              53.0
+            ],
+            "text": "38"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              53.0
+            ],
+            "text": "39"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_which_prime",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these is a prime number?",
+        "ur": "ان میں سے کون سا مفرد عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "n51",
+          "text": {
+            "en": "51",
+            "ur": "51"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "51 = 3 × 17, so it is composite. Add its digits: 5 + 1 = 6, which 3 divides.",
+            "ur": "51 = 3 × 17، اس لیے یہ مرکب ہے۔ ہندسے جمع کریں: 5 + 1 = 6، جسے 3 تقسیم کرتا ہے۔"
+          },
+          "misconception_id": "odd_is_prime"
+        },
+        {
+          "id": "n57",
+          "text": {
+            "en": "57",
+            "ur": "57"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "57 = 3 × 19, so it is composite.",
+            "ur": "57 = 3 × 19، اس لیے یہ مرکب ہے۔"
+          },
+          "misconception_id": "odd_is_prime"
+        },
+        {
+          "id": "n53",
+          "text": {
+            "en": "53",
+            "ur": "53"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! No number from 2 to 7 divides 53, so its only factors are 1 and 53.",
+            "ur": "جی ہاں! 2 سے 7 تک کوئی عدد 53 کو تقسیم نہیں کرتا، اس لیے اس کے اجزائے ضربی صرف 1 اور 53 ہیں۔"
+          }
+        },
+        {
+          "id": "n49",
+          "text": {
+            "en": "49",
+            "ur": "49"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "49 = 7 × 7, so it is composite.",
+            "ur": "49 = 7 × 7، اس لیے یہ مرکب ہے۔"
+          },
+          "misconception_id": "odd_is_prime"
+        }
+      ]
+    },
+    {
+      "id": "q8_odd_composite",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these is an odd composite number?",
+        "ur": "ان میں سے کون سا طاق مرکب عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "n23",
+          "text": {
+            "en": "23",
+            "ur": "23"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "23 is odd, but it is prime: only 1 and 23 divide it.",
+            "ur": "23 طاق ہے، مگر مفرد ہے: اسے صرف 1 اور 23 تقسیم کرتے ہیں۔"
+          }
+        },
+        {
+          "id": "n35",
+          "text": {
+            "en": "35",
+            "ur": "35"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 35 is odd and 35 = 5 × 7, so it has more than two factors.",
+            "ur": "جی ہاں! 35 طاق ہے اور 35 = 5 × 7، اس لیے اس کے دو سے زیادہ اجزائے ضربی ہیں۔"
+          }
+        },
+        {
+          "id": "n31",
+          "text": {
+            "en": "31",
+            "ur": "31"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "31 is odd, but it is prime.",
+            "ur": "31 طاق ہے، مگر مفرد ہے۔"
+          }
+        },
+        {
+          "id": "n40",
+          "text": {
+            "en": "40",
+            "ur": "40"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "40 is composite, but it is even, not odd.",
+            "ur": "40 مرکب ہے، مگر جفت ہے، طاق نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9_count_odd_composites",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many odd composite numbers are there from 1 to 30?",
+        "ur": "1 سے 30 تک کتنے طاق مرکب اعداد ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Go through the odd numbers 1, 3, 5 ... 29. Which are not prime? Remember 1 is neither prime nor composite.",
+        "ur": "طاق اعداد 1، 3، 5 ... 29 دیکھیں۔ کون سے مفرد نہیں؟ یاد رکھیں 1 نہ مفرد ہے نہ مرکب۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9, 15, 21, 25, 27.",
+        "ur": "درست! 9، 15، 21، 25، 27"
+      },
+      "feedback_wrong": {
+        "en": "They are 9, 15, 21, 25, 27: 5 numbers. 1 does not count, because it is neither prime nor composite.",
+        "ur": "یہ 9، 15، 21، 25، 27 ہیں: 5 اعداد۔ 1 نہیں گنا جاتا، کیونکہ یہ نہ مفرد ہے نہ مرکب۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "1 is not composite: it has only one factor. Leave it out.",
+            "ur": "1 مرکب نہیں: اس کا صرف ایک جزو ضربی ہے۔ اسے نہ گنیں۔"
+          },
+          "misconception_id": "one_is_prime"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 106.0,
+        "alt": {
+          "en": "The numbers 1 to 30 in a grid of 3 rows of 10.",
+          "ur": "1 سے 30 تک کے اعداد 10، 10 کی 3 قطاروں کے خانوں میں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              38.0
+            ],
+            "to": [
+              290.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              68.0
+            ],
+            "to": [
+              290.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              98.0
+            ],
+            "to": [
+              290.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              10.0,
+              8.0
+            ],
+            "to": [
+              10.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.0,
+              8.0
+            ],
+            "to": [
+              66.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              94.0,
+              8.0
+            ],
+            "to": [
+              94.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              122.0,
+              8.0
+            ],
+            "to": [
+              122.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              8.0
+            ],
+            "to": [
+              150.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              178.0,
+              8.0
+            ],
+            "to": [
+              178.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              206.0,
+              8.0
+            ],
+            "to": [
+              206.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              234.0,
+              8.0
+            ],
+            "to": [
+              234.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              262.0,
+              8.0
+            ],
+            "to": [
+              262.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              290.0,
+              8.0
+            ],
+            "to": [
+              290.0,
+              98.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              23.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              23.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              23.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              23.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              23.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              23.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              23.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              23.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              23.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              23.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              53.0
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              53.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              53.0
+            ],
+            "text": "13"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              53.0
+            ],
+            "text": "14"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              53.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              53.0
+            ],
+            "text": "16"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              53.0
+            ],
+            "text": "17"
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              53.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              53.0
+            ],
+            "text": "19"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              53.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.0,
+              83.0
+            ],
+            "text": "21"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.0,
+              83.0
+            ],
+            "text": "22"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.0,
+              83.0
+            ],
+            "text": "23"
+          },
+          {
+            "kind": "label",
+            "at": [
+              108.0,
+              83.0
+            ],
+            "text": "24"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.0,
+              83.0
+            ],
+            "text": "25"
+          },
+          {
+            "kind": "label",
+            "at": [
+              164.0,
+              83.0
+            ],
+            "text": "26"
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.0,
+              83.0
+            ],
+            "text": "27"
+          },
+          {
+            "kind": "label",
+            "at": [
+              220.0,
+              83.0
+            ],
+            "text": "28"
+          },
+          {
+            "kind": "label",
+            "at": [
+              248.0,
+              83.0
+            ],
+            "text": "29"
+          },
+          {
+            "kind": "label",
+            "at": [
+              276.0,
+              83.0
+            ],
+            "text": "30"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10_even_prime",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is the only even prime number?",
+        "ur": "ان میں سے کون سا واحد جفت مفرد عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "two",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2 has only the factors 1 and 2. Every other even number has 2 as a factor too.",
+            "ur": "جی ہاں! 2 کے اجزائے ضربی صرف 1 اور 2 ہیں۔ ہر دوسرے جفت عدد میں 2 بھی جزو ضربی ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "one",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 is odd, and it is not prime: it has only one factor.",
+            "ur": "1 طاق ہے، اور مفرد نہیں: اس کا صرف ایک جزو ضربی ہے۔"
+          },
+          "misconception_id": "one_is_prime"
+        },
+        {
+          "id": "four",
+          "text": {
+            "en": "4",
+            "ur": "4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 = 2 × 2, so it is composite.",
+            "ur": "4 = 2 × 2، اس لیے یہ مرکب ہے۔"
+          }
+        },
+        {
+          "id": "ten",
+          "text": {
+            "en": "10",
+            "ur": "10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "10 = 2 × 5, so it is composite.",
+            "ur": "10 = 2 × 5، اس لیے یہ مرکب ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11_who_am_i",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "I am a factor of 48 and a multiple of 6. I am between 20 and 40. Who am I?",
+        "ur": "میں 48 کا جزو ضربی ہوں اور 6 کا ضعف بھی۔ میں 20 اور 40 کے درمیان ہوں۔ میں کون ہوں؟"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "List the factors of 48 between 20 and 40. Which one is in the 6 times table?",
+        "ur": "48 کے وہ اجزائے ضربی لکھیں جو 20 اور 40 کے درمیان ہیں۔ ان میں سے کون 6 کے پہاڑے میں ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 × 2 = 48 and 6 × 4 = 24.",
+        "ur": "درست! 24 × 2 = 48 اور 6 × 4 = 24"
+      },
+      "feedback_wrong": {
+        "en": "The only factor of 48 between 20 and 40 is 24, and 24 = 6 × 4.",
+        "ur": "48 کا 20 اور 40 کے درمیان واحد جزو ضربی 24 ہے، اور 24 = 6 × 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 48,
+          "feedback": {
+            "en": "48 is a factor of itself, but it is not between 20 and 40.",
+            "ur": "48 اپنا جزو ضربی ہے، مگر یہ 20 اور 40 کے درمیان نہیں۔"
+          }
+        },
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "36 is a multiple of 6, but 48 ÷ 36 is not exact.",
+            "ur": "36، 6 کا ضعف ہے، مگر 48 ÷ 36 پورا تقسیم نہیں ہوتا۔"
+          },
+          "misconception_id": "factor_multiple_swap"
+        }
+      ]
+    },
+    {
+      "id": "q12_twin_prime",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Twin primes are two prime numbers that differ by 2, like 17 and 19. 59 is prime. Which bigger prime makes a twin pair with it?",
+        "ur": "جڑواں مفرد اعداد وہ دو مفرد اعداد ہیں جن کا فرق 2 ہو، جیسے 17 اور 19۔ 59 مفرد ہے۔ کون سا بڑا مفرد عدد اس کے ساتھ جڑواں جوڑا بناتا ہے؟"
+      },
+      "answer": 61,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try 59 + 2. Is it prime? Check 2, 3, 5 and 7.",
+        "ur": "59 + 2 آزمائیں۔ کیا یہ مفرد ہے؟ 2، 3، 5 اور 7 سے جانچیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 61 is prime, so 59 and 61 are twin primes.",
+        "ur": "درست! 61 مفرد ہے، اس لیے 59 اور 61 جڑواں مفرد اعداد ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "59 + 2 = 61, and no number from 2 to 7 divides 61. So 61 is prime.",
+        "ur": "59 + 2 = 61، اور 2 سے 7 تک کوئی عدد 61 کو تقسیم نہیں کرتا۔ اس لیے 61 مفرد ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 57,
+          "feedback": {
+            "en": "57 is smaller than 59, and 57 = 3 × 19 is not prime. Try 59 + 2.",
+            "ur": "57، 59 سے چھوٹا ہے، اور 57 = 3 × 19 مفرد نہیں۔ 59 + 2 آزمائیں۔"
+          },
+          "misconception_id": "odd_is_prime"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Areeba says, \"39 is odd, so it must be a prime number.\" What went wrong?",
+        "ur": "اریبہ کہتی ہے، \"39 طاق ہے، اس لیے یہ لازماً مفرد عدد ہے۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "odd_not_prime",
+          "text": {
+            "en": "Odd numbers can be composite: 39 = 3 × 13.",
+            "ur": "طاق اعداد مرکب بھی ہو سکتے ہیں: 39 = 3 × 13"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 39 has the factors 1, 3, 13 and 39, so it is an odd composite number.",
+            "ur": "جی ہاں! 39 کے اجزائے ضربی 1، 3، 13 اور 39 ہیں، اس لیے یہ طاق مرکب عدد ہے۔"
+          }
+        },
+        {
+          "id": "even_prime",
+          "text": {
+            "en": "Only even numbers can be prime.",
+            "ur": "صرف جفت اعداد مفرد ہو سکتے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No: 3, 5, 7, 11 ... are odd primes. 2 is the only even prime. 39 = 3 × 13, so it is not prime.",
+            "ur": "نہیں: 3، 5، 7، 11 ... طاق مفرد اعداد ہیں۔ 2 واحد جفت مفرد عدد ہے۔ 39 = 3 × 13، اس لیے یہ مفرد نہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 39 is prime.",
+            "ur": "کوئی غلطی نہیں۔ 39 مفرد ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Try dividing by 3: 39 ÷ 3 = 13. So 39 has more than two factors.",
+            "ur": "3 سے تقسیم کر کے دیکھیں: 39 ÷ 3 = 13۔ اس لیے 39 کے دو سے زیادہ اجزائے ضربی ہیں۔"
+          },
+          "misconception_id": "odd_is_prime"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 74.0,
+        "alt": {
+          "en": "39 dots in 3 rows of 13, with 3×13 written under them.",
+          "ur": "39 نقطے، 13 کی 3 قطاریں، نیچے 3×13 لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              66.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              80.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              94.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              108.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              122.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              136.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              164.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              178.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              192.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              206.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              220.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              234.0,
+              14.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              66.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              80.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              94.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              108.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              122.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              136.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              164.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              178.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              192.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              206.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              220.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              234.0,
+              28.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              66.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              80.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              94.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              108.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              122.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              136.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              164.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              178.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              192.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              206.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              220.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              234.0,
+              42.0
+            ],
+            "radius": 4.5,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              62.0
+            ],
+            "text": "3×13"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You have practised all of Exercise 1.1.",
+          "ur": "شاباش! آپ نے مشق 1.1 کی پوری پریکٹس کر لی۔"
+        }
+      },
+      "text": {
+        "en": "Factors divide a number exactly; find them in pairs and don't forget 1 and the number itself. Multiples are the number times 1, 2, 3 ... A prime has exactly two factors. A composite number has more than two. 1 is neither, and 2 is the only even prime.",
+        "ur": "اجزائے ضربی عدد کو پورا تقسیم کرتے ہیں؛ انہیں جوڑوں میں ڈھونڈیں اور 1 اور خود عدد کو نہ بھولیں۔ اضعاف عدد کو 1، 2، 3 ... سے ضرب دینے سے ملتے ہیں۔ مفرد عدد کے ٹھیک دو اجزائے ضربی ہوتے ہیں۔ مرکب عدد کے دو سے زیادہ۔ 1 دونوں میں سے کوئی نہیں، اور 2 واحد جفت مفرد عدد ہے۔"
+      },
+      "points": [
+        {
+          "en": "Not every odd number is prime: 9, 15, 21, 25 and 27 are odd composites.",
+          "ur": "ہر طاق عدد مفرد نہیں: 9، 15، 21، 25 اور 27 طاق مرکب اعداد ہیں۔"
+        },
+        {
+          "en": "To test a number for prime, try dividing by 2, 3, 5 and 7.",
+          "ur": "عدد مفرد ہے یا نہیں، یہ جانچنے کے لیے 2، 3، 5 اور 7 سے تقسیم کر کے دیکھیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_multiple",
+      "type": "apply",
+      "step": {
+        "id": "r_multiple",
+        "type": "number",
+        "prompt": {
+          "en": "What is the 7th multiple of 12?",
+          "ur": "12 کا ساتواں ضعف کیا ہے؟"
+        },
+        "answer": 84,
+        "checker": "numeric",
+        "hint": {
+          "en": "Work out 12 × 7.",
+          "ur": "12 × 7 کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 12 × 7 = 84.",
+          "ur": "درست! 12 × 7 = 84"
+        },
+        "feedback_wrong": {
+          "en": "The 7th multiple is 12 × 7 = 84.",
+          "ur": "ساتواں ضعف 12 × 7 = 84 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 19,
+            "feedback": {
+              "en": "That is 12 + 7. Multiply: 12 × 7 = 84.",
+              "ur": "یہ 12 + 7 ہے۔ ضرب دیں: 12 × 7 = 84"
+            },
+            "misconception_id": "adds_for_multiple"
+          },
+          {
+            "answer": 72,
+            "feedback": {
+              "en": "72 is the 6th multiple. One more 12: 84.",
+              "ur": "72 چھٹا ضعف ہے۔ ایک اور 12: 84"
+            }
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_1"
+    },
+    {
+      "id": "r_prime",
+      "type": "recall",
+      "step": {
+        "id": "r_prime",
+        "type": "choice",
+        "prompt": {
+          "en": "Which of these is a prime number?",
+          "ur": "ان میں سے کون سا مفرد عدد ہے؟"
+        },
+        "options": [
+          {
+            "id": "n21",
+            "text": {
+              "en": "21",
+              "ur": "21"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "21 = 3 × 7.",
+              "ur": "21 = 3 × 7"
+            },
+            "misconception_id": "odd_is_prime"
+          },
+          {
+            "id": "n27",
+            "text": {
+              "en": "27",
+              "ur": "27"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "27 = 3 × 9.",
+              "ur": "27 = 3 × 9"
+            },
+            "misconception_id": "odd_is_prime"
+          },
+          {
+            "id": "n29",
+            "text": {
+              "en": "29",
+              "ur": "29"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! Only 1 and 29 divide 29.",
+              "ur": "جی ہاں! 29 کو صرف 1 اور 29 تقسیم کرتے ہیں۔"
+            }
+          },
+          {
+            "id": "n33",
+            "text": {
+              "en": "33",
+              "ur": "33"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "33 = 3 × 11.",
+              "ur": "33 = 3 × 11"
+            },
+            "misconception_id": "odd_is_prime"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 1.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers listing factors and multiples (q1 to q5), primes (q6, q7, q12), odd composites (q8, q9), the even prime (q10) and a who-am-I puzzle (q11).",
+    "Urdu terms to check: طاق مرکب عدد (odd composite number), جڑواں مفرد اعداد (twin primes).",
+    "The numbers were worked out in content/sources/g6-maths-05/exercise_1_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

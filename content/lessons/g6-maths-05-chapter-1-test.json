@@ -1,0 +1,1370 @@
+{
+  "id": "g6-maths-05-chapter-1-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 1: factors, multiples, primes, prime factorisation and index notation, HCF, LCM, HCF × LCM, and squares.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples, Review Exercise 1"
+    }
+  ],
+  "skills": [
+    "maths.factors.chapter_1_test"
+  ],
+  "title": {
+    "en": "Chapter 1 test: Factors and Multiples",
+    "ur": "باب 1 کا ٹیسٹ: اجزائے ضربی اور اضعاف"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.factors_multiples"
+    },
+    {
+      "skill": "maths.factors.primes"
+    },
+    {
+      "skill": "maths.factors.hcf"
+    },
+    {
+      "skill": "maths.factors.lcm"
+    },
+    {
+      "skill": "maths.factors.index_notation"
+    },
+    {
+      "skill": "maths.factors.hcf_lcm_product"
+    },
+    {
+      "skill": "maths.factors.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "odd_is_prime",
+      "description": "Thinks every odd number is prime."
+    },
+    {
+      "id": "one_is_prime",
+      "description": "Thinks 1 is prime or composite; it is neither."
+    },
+    {
+      "id": "hcf_lcm_swap",
+      "description": "Gives the LCM when the HCF is asked for, or the other way round."
+    },
+    {
+      "id": "always_multiply",
+      "description": "Multiplies the numbers to get the LCM, which is a common multiple but often not the lowest."
+    },
+    {
+      "id": "times_index",
+      "description": "Multiplies the base by the index: 2⁵ = 10."
+    },
+    {
+      "id": "negative_square",
+      "description": "Thinks the square of a negative number is negative."
+    },
+    {
+      "id": "wrong_division",
+      "description": "Divides the wrong numbers when using HCF × LCM = product."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds the HCF or LCM but does not answer the question asked."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.chapter_1_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.chapter_1_test": [
+      {
+        "id": "qb_exam_hcf",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_hcf",
+          "type": "number",
+          "prompt": {
+            "en": "Find the HCF of 126 and 210.",
+            "ur": "126 اور 210 کا عاد اعظم معلوم کریں۔"
+          },
+          "answer": 42,
+          "checker": "numeric",
+          "hint": {
+            "en": "210 ÷ 126 = 1 remainder 84. Carry on with 126 ÷ 84.",
+            "ur": "210 ÷ 126 = 1 باقی 84۔ آگے 126 ÷ 84 کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: HCF = 42.",
+            "ur": "درست: عاد اعظم = 42"
+          },
+          "feedback_wrong": {
+            "en": "210 ÷ 126 = 1 remainder 84; 126 ÷ 84 = 1 remainder 42; 84 ÷ 42 = 2 remainder 0. HCF = 42.",
+            "ur": "210 ÷ 126 = 1 باقی 84؛ 126 ÷ 84 = 1 باقی 42؛ 84 ÷ 42 = 2 باقی 0۔ عاد اعظم = 42"
+          },
+          "common_wrong": [
+            {
+              "answer": 630,
+              "feedback": {
+                "en": "630 is the LCM. The HCF is 42.",
+                "ur": "630 ذو اضعاف اقل ہے۔ عاد اعظم 42 ہے۔"
+              },
+              "misconception_id": "hcf_lcm_swap"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_lcm",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_lcm",
+          "type": "number",
+          "prompt": {
+            "en": "Three taps drip every 6, 9 and 15 seconds. They drip together now. After how many seconds will they drip together again?",
+            "ur": "تین نلکے ہر 6، 9 اور 15 سیکنڈ بعد ٹپکتے ہیں۔ ابھی تینوں ساتھ ٹپکے ہیں۔ کتنے سیکنڈ بعد دوبارہ ساتھ ٹپکیں گے؟"
+          },
+          "answer": 90,
+          "checker": "numeric",
+          "hint": {
+            "en": "Find the LCM of 6, 9 and 15.",
+            "ur": "6، 9 اور 15 کا ذو اضعاف اقل معلوم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 2 × 3² × 5 = 90 seconds.",
+            "ur": "درست: 2 × 3² × 5 = 90 سیکنڈ"
+          },
+          "feedback_wrong": {
+            "en": "6 = 2 × 3, 9 = 3², 15 = 3 × 5. LCM = 2 × 3² × 5 = 90 seconds.",
+            "ur": "6 = 2 × 3، 9 = 3²، 15 = 3 × 5۔ ذو اضعاف اقل = 2 × 3² × 5 = 90 سیکنڈ"
+          },
+          "common_wrong": [
+            {
+              "answer": 3,
+              "feedback": {
+                "en": "3 is the HCF. They drip together after the LCM: 90 seconds.",
+                "ur": "3 عاد اعظم ہے۔ وہ ذو اضعاف اقل کے بعد ساتھ ٹپکیں گے: 90 سیکنڈ"
+              },
+              "misconception_id": "hcf_lcm_swap"
+            },
+            {
+              "answer": 810,
+              "feedback": {
+                "en": "810 = 6 × 9 × 15 is a common multiple, but 90 is lower.",
+                "ur": "810 = 6 × 9 × 15 مشترک ضعف ہے، مگر 90 چھوٹا ہے۔"
+              },
+              "misconception_id": "always_multiply"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_index",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_index",
+          "type": "number",
+          "prompt": {
+            "en": "Which number is 2³ × 3²?",
+            "ur": "2³ × 3² کون سا عدد ہے؟"
+          },
+          "answer": 72,
+          "checker": "numeric",
+          "hint": {
+            "en": "2³ = 8 and 3² = 9.",
+            "ur": "2³ = 8 اور 3² = 9"
+          },
+          "feedback_correct": {
+            "en": "Correct: 8 × 9 = 72.",
+            "ur": "درست: 8 × 9 = 72"
+          },
+          "feedback_wrong": {
+            "en": "2³ × 3² = 2 × 2 × 2 × 3 × 3 = 8 × 9 = 72.",
+            "ur": "2³ × 3² = 2 × 2 × 2 × 3 × 3 = 8 × 9 = 72"
+          },
+          "common_wrong": [
+            {
+              "answer": 36,
+              "feedback": {
+                "en": "2³ is 8, not 2 × 3 = 6, and 3² is 9, not 6. 8 × 9 = 72.",
+                "ur": "2³ = 8 ہے، 2 × 3 = 6 نہیں، اور 3² = 9 ہے، 6 نہیں۔ 8 × 9 = 72"
+              },
+              "misconception_id": "times_index"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 1 in your maths book in your notebook, setting out the working the way this test's answers do. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 1 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Highest common factor (HCF)",
+      "ur": "عاد اعظم"
+    },
+    {
+      "en": "Lowest common multiple (LCM)",
+      "ur": "ذو اضعاف اقل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 1 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook). The questions are new, not the book's.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 1 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوال (پورا کام اپنی کاپی میں)۔ سوال نئے ہیں، کتاب والے نہیں۔"
+      }
+    },
+    {
+      "id": "m1_prime",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of these is a prime number?",
+        "ur": "کثیر انتخابی: ان میں سے کون سا مفرد عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "87",
+            "ur": "87"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "87 = 3 × 29 (8 + 7 = 15, which 3 divides).",
+            "ur": "87 = 3 × 29 (8 + 7 = 15، جسے 3 تقسیم کرتا ہے)۔"
+          },
+          "misconception_id": "odd_is_prime"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "89",
+            "ur": "89"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: no prime up to 9 divides 89.",
+            "ur": "درست: 9 تک کا کوئی مفرد عدد 89 کو تقسیم نہیں کرتا۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "91",
+            "ur": "91"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "91 = 7 × 13.",
+            "ur": "91 = 7 × 13"
+          },
+          "misconception_id": "odd_is_prime"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "93",
+            "ur": "93"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "93 = 3 × 31.",
+            "ur": "93 = 3 × 31"
+          },
+          "misconception_id": "odd_is_prime"
+        }
+      ]
+    },
+    {
+      "id": "m2_neither",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which number is neither prime nor composite?",
+        "ur": "کثیر انتخابی: کون سا عدد نہ مفرد ہے نہ مرکب؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 1 has only one factor.",
+            "ur": "درست: 1 کا صرف ایک جزو ضربی ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 is prime: its factors are 1 and 2.",
+            "ur": "2 مفرد ہے: اس کے اجزائے ضربی 1 اور 2 ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 = 3 × 3 is composite.",
+            "ur": "9 = 3 × 3 مرکب ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "15",
+            "ur": "15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "15 = 3 × 5 is composite.",
+            "ur": "15 = 3 × 5 مرکب ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m3_coprime",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The HCF of two co-prime numbers, like 8 and 15, is:",
+        "ur": "کثیر انتخابی: دو باہم مفرد اعداد کا عاد اعظم، جیسے 8 اور 15، ہوتا ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: co-prime numbers share no factor except 1.",
+            "ur": "درست: باہم مفرد اعداد میں 1 کے سوا کوئی جزو ضربی مشترک نہیں ہوتا۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is never a factor. The HCF is 1.",
+            "ur": "0 کبھی جزو ضربی نہیں ہوتا۔ عاد اعظم 1 ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "their product",
+            "ur": "ان کا حاصل ضرب"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Their product (120) is the LCM, not the HCF.",
+            "ur": "ان کا حاصل ضرب (120) ذو اضعاف اقل ہے، عاد اعظم نہیں۔"
+          },
+          "misconception_id": "hcf_lcm_swap"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "the smaller number",
+            "ur": "چھوٹا عدد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8 does not divide 15. The HCF is 1.",
+            "ur": "8، 15 کو تقسیم نہیں کرتا۔ عاد اعظم 1 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m4_lcm",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The LCM of 14 and 35 is:",
+        "ur": "کثیر انتخابی: 14 اور 35 کا ذو اضعاف اقل ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "70",
+            "ur": "70"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 2 × 5 × 7 = 70.",
+            "ur": "درست: 2 × 5 × 7 = 70"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "7",
+            "ur": "7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is the HCF.",
+            "ur": "7 عاد اعظم ہے۔"
+          },
+          "misconception_id": "hcf_lcm_swap"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "490",
+            "ur": "490"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "490 = 14 × 35 is a common multiple, but 70 is lower.",
+            "ur": "490 = 14 × 35 مشترک ضعف ہے، مگر 70 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "35",
+            "ur": "35"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "14 does not divide 35.",
+            "ur": "14، 35 کو تقسیم نہیں کرتا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_index",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: 2⁵ means:",
+        "ur": "کثیر انتخابی: 2⁵ کا مطلب ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "2 × 2 × 2 × 2 × 2",
+            "ur": "2 × 2 × 2 × 2 × 2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: five 2s multiplied, which is 32.",
+            "ur": "درست: پانچ 2 کا حاصل ضرب، یعنی 32"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "2 × 5",
+            "ur": "2 × 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 × 5 = 10. The index 5 means five 2s multiplied.",
+            "ur": "2 × 5 = 10۔ قوت 5 کا مطلب پانچ 2 کا حاصل ضرب۔"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "5 × 5",
+            "ur": "5 × 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 5². In 2⁵ the base is 2.",
+            "ur": "یہ 5² ہے۔ 2⁵ میں اساس 2 ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "2 + 2 + 2 + 2 + 2",
+            "ur": "2 + 2 + 2 + 2 + 2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 2s are multiplied, not added.",
+            "ur": "2 ضرب ہوتے ہیں، جمع نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m6_square",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of these is a perfect square?",
+        "ur": "کثیر انتخابی: ان میں سے کون سا مکمل مربع عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "196",
+            "ur": "196"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 14 × 14 = 196.",
+            "ur": "درست: 14 × 14 = 196"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "96",
+            "ur": "96"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9² = 81 and 10² = 100, so 96 is not a square.",
+            "ur": "9² = 81 اور 10² = 100، اس لیے 96 مربع نہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "160",
+            "ur": "160"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "12² = 144 and 13² = 169, so 160 is not a square.",
+            "ur": "12² = 144 اور 13² = 169، اس لیے 160 مربع نہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "216",
+            "ur": "216"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "216 = 6 × 6 × 6, but it is not a number times itself: 14² = 196 and 15² = 225.",
+            "ur": "216 = 6 × 6 × 6، مگر یہ کسی عدد ضرب خود نہیں: 14² = 196 اور 15² = 225"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m7_product",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: For two numbers, HCF × LCM = 864. One number is 24. The other number is:",
+        "ur": "کثیر انتخابی: دو اعداد کے لیے عاد اعظم × ذو اضعاف اقل = 864۔ ایک عدد 24 ہے۔ دوسرا عدد ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "36",
+            "ur": "36"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 864 ÷ 24 = 36.",
+            "ur": "درست: 864 ÷ 24 = 36"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "840",
+            "ur": "840"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 864 − 24. Divide: 864 ÷ 24 = 36.",
+            "ur": "یہ 864 − 24 ہے۔ تقسیم کریں: 864 ÷ 24 = 36"
+          },
+          "misconception_id": "wrong_division"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "888",
+            "ur": "888"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 864 + 24. Divide: 864 ÷ 24 = 36.",
+            "ur": "یہ 864 + 24 ہے۔ تقسیم کریں: 864 ÷ 24 = 36"
+          },
+          "misconception_id": "wrong_division"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "24",
+            "ur": "24"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "24 × 24 = 576, not 864. The other number is 36.",
+            "ur": "24 × 24 = 576، 864 نہیں۔ دوسرا عدد 36 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m8_negative",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: (−8)² is equal to:",
+        "ur": "کثیر انتخابی: (−8)² برابر ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "64",
+            "ur": "64"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: (−8) × (−8) = 64.",
+            "ur": "درست: (−8) × (−8) = 64"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "−64",
+            "ur": "−64"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Negative times negative is positive: 64.",
+            "ur": "منفی ضرب منفی مثبت ہوتا ہے: 64"
+          },
+          "misconception_id": "negative_square"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−16",
+            "ur": "−16"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is −8 × 2. Square means (−8) × (−8) = 64.",
+            "ur": "یہ −8 × 2 ہے۔ مربع کا مطلب (−8) × (−8) = 64"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "16",
+            "ur": "16"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "16 = 8 × 2. Square means (−8) × (−8) = 64.",
+            "ur": "16 = 8 × 2۔ مربع کا مطلب (−8) × (−8) = 64"
+          },
+          "misconception_id": "times_index"
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_factors",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Write all the factors of 52. How many factors are there?",
+        "ur": "مختصر سوال: 52 کے سارے اجزائے ضربی لکھیں۔ کل کتنے اجزائے ضربی ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find them in pairs: 1 × 52, 2 × 26, 4 × 13.",
+        "ur": "جوڑوں میں ڈھونڈیں: 1 × 52، 2 × 26، 4 × 13"
+      },
+      "feedback_correct": {
+        "en": "Correct: 1, 2, 4, 13, 26, 52.",
+        "ur": "درست: 1، 2، 4، 13، 26، 52"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 52 = 1 × 52 = 2 × 26 = 4 × 13. Factors: 1, 2, 4, 13, 26, 52, so 6 factors.",
+        "ur": "نمونہ جواب: 52 = 1 × 52 = 2 × 26 = 4 × 13۔ اجزائے ضربی: 1، 2، 4، 13، 26، 52، یعنی 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Count 1 and 52 as well.",
+            "ur": "1 اور 52 بھی گنیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2_prime_factors",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: 252 = 2² × 3² × p, where p is a prime. Find p.",
+        "ur": "مختصر سوال: 252 = 2² × 3² × p، جہاں p مفرد عدد ہے۔ p معلوم کریں۔"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "2² × 3² = 4 × 9 = 36. Divide 252 by 36.",
+        "ur": "2² × 3² = 4 × 9 = 36۔ 252 کو 36 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: p = 7.",
+        "ur": "درست: p = 7"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 252 ÷ 2 = 126, ÷ 2 = 63, ÷ 3 = 21, ÷ 3 = 7. So 252 = 2² × 3² × 7 and p = 7.",
+        "ur": "نمونہ جواب: 252 ÷ 2 = 126، ÷ 2 = 63، ÷ 3 = 21، ÷ 3 = 7۔ اس لیے 252 = 2² × 3² × 7 اور p = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "2² is 4 and 3² is 9, so 252 ÷ 36 = 7.",
+            "ur": "2² = 4 اور 3² = 9، اس لیے 252 ÷ 36 = 7"
+          },
+          "misconception_id": "times_index"
+        }
+      ]
+    },
+    {
+      "id": "q3_hcf",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find the HCF of 96 and 156.",
+        "ur": "مختصر سوال: 96 اور 156 کا عاد اعظم معلوم کریں۔"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "96 = 2⁵ × 3 and 156 = 2² × 3 × 13.",
+        "ur": "96 = 2⁵ × 3 اور 156 = 2² × 3 × 13"
+      },
+      "feedback_correct": {
+        "en": "Correct: HCF = 2² × 3 = 12.",
+        "ur": "درست: عاد اعظم = 2² × 3 = 12"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 96 = 2⁵ × 3, 156 = 2² × 3 × 13. Shared: 2² × 3 = 12.",
+        "ur": "نمونہ جواب: 96 = 2⁵ × 3، 156 = 2² × 3 × 13۔ مشترک: 2² × 3 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 1248,
+          "feedback": {
+            "en": "1248 is the LCM. The HCF is 12.",
+            "ur": "1248 ذو اضعاف اقل ہے۔ عاد اعظم 12 ہے۔"
+          },
+          "misconception_id": "hcf_lcm_swap"
+        }
+      ]
+    },
+    {
+      "id": "q4_lcm",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find the LCM of 15, 20 and 36.",
+        "ur": "مختصر سوال: 15، 20 اور 36 کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "15 = 3 × 5, 20 = 2² × 5, 36 = 2² × 3².",
+        "ur": "15 = 3 × 5، 20 = 2² × 5، 36 = 2² × 3²"
+      },
+      "feedback_correct": {
+        "en": "Correct: 2² × 3² × 5 = 180.",
+        "ur": "درست: 2² × 3² × 5 = 180"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: take each prime with its highest index: 2² × 3² × 5 = 180.",
+        "ur": "نمونہ جواب: ہر مفرد عدد اس کی سب سے بڑی قوت کے ساتھ: 2² × 3² × 5 = 180"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "1 is the HCF. The LCM is 180.",
+            "ur": "1 عاد اعظم ہے۔ ذو اضعاف اقل 180 ہے۔"
+          },
+          "misconception_id": "hcf_lcm_swap"
+        },
+        {
+          "answer": 10800,
+          "feedback": {
+            "en": "10800 = 15 × 20 × 36 is a common multiple, but 180 is lower.",
+            "ur": "10800 = 15 × 20 × 36 مشترک ضعف ہے، مگر 180 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        }
+      ]
+    },
+    {
+      "id": "q5_square",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find 17².",
+        "ur": "مختصر سوال: 17² معلوم کریں۔"
+      },
+      "answer": 289,
+      "checker": "numeric",
+      "hint": {
+        "en": "17 × 17 = 17 × 10 + 17 × 7.",
+        "ur": "17 × 17 = 17 × 10 + 17 × 7"
+      },
+      "feedback_correct": {
+        "en": "Correct: 289.",
+        "ur": "درست: 289"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 17 × 10 = 170 and 17 × 7 = 119, so 17² = 289.",
+        "ur": "نمونہ جواب: 17 × 10 = 170 اور 17 × 7 = 119، اس لیے 17² = 289"
+      },
+      "common_wrong": [
+        {
+          "answer": 34,
+          "feedback": {
+            "en": "That is 17 × 2. 17² = 17 × 17 = 289.",
+            "ur": "یہ 17 × 2 ہے۔ 17² = 17 × 17 = 289"
+          },
+          "misconception_id": "times_index"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "Longer problems now. Write every step: what you find, how, and the answer in a sentence.",
+          "ur": "اب تفصیلی سوال۔ ہر قدم لکھیں: کیا معلوم کر رہے ہیں، کیسے، اور آخر میں جواب ایک جملے میں۔"
+        }
+      },
+      "text": {
+        "en": "For each problem, first decide: HCF (sharing into the largest equal parts) or LCM (when things happen together again)? Show the prime factors or the division, then answer the question that was asked.",
+        "ur": "ہر سوال میں پہلے فیصلہ کریں: عاد اعظم (سب سے بڑے برابر حصوں میں بانٹنا) یا ذو اضعاف اقل (چیزیں دوبارہ کب ساتھ ہوں)؟ مفرد اجزائے ضربی یا تقسیم دکھائیں، پھر وہی جواب دیں جو پوچھا گیا ہے۔"
+      }
+    },
+    {
+      "id": "l1_ribbon",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Two ribbons are 132 cm and 198 cm long. Both are cut into pieces of the same length, as long as possible, with nothing left over. (a) How long is each piece, in cm?",
+        "ur": "تفصیلی سوال: دو فیتے 132 سینٹی میٹر اور 198 سینٹی میٹر لمبے ہیں۔ دونوں کو برابر لمبائی کے ٹکڑوں میں کاٹا جاتا ہے، جتنے لمبے ہو سکیں، اور کچھ نہیں بچتا۔ (الف) ہر ٹکڑا کتنے سینٹی میٹر کا ہے؟"
+      },
+      "answer": 66,
+      "checker": "numeric",
+      "hint": {
+        "en": "The piece length divides 132 and 198. Find the HCF.",
+        "ur": "ٹکڑے کی لمبائی 132 اور 198 دونوں کو تقسیم کرے۔ عاد اعظم معلوم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 66 cm.",
+        "ur": "درست: 66 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 132 = 2² × 3 × 11 and 198 = 2 × 3² × 11. HCF = 2 × 3 × 11 = 66. Each piece is 66 cm.",
+        "ur": "نمونہ جواب: 132 = 2² × 3 × 11 اور 198 = 2 × 3² × 11۔ عاد اعظم = 2 × 3 × 11 = 66۔ ہر ٹکڑا 66 سینٹی میٹر کا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 396,
+          "feedback": {
+            "en": "396 is the LCM, longer than both ribbons! Use the HCF: 66.",
+            "ur": "396 ذو اضعاف اقل ہے، دونوں فیتوں سے لمبا! عاد اعظم لیں: 66"
+          },
+          "misconception_id": "hcf_lcm_swap"
+        },
+        {
+          "answer": 33,
+          "feedback": {
+            "en": "33 cm pieces work, but 66 cm pieces are longer.",
+            "ur": "33 سینٹی میٹر کے ٹکڑے بن سکتے ہیں، مگر 66 سینٹی میٹر کے لمبے ہیں۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 84.0,
+        "alt": {
+          "en": "Two ribbons drawn as bars: one 132 long and a longer one 198 long, with the lengths written after them.",
+          "ur": "دو فیتے پٹیوں کی صورت میں: ایک 132 لمبا اور ایک لمبا 198، ساتھ لمبائیاں لکھی ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                14.0
+              ],
+              [
+                166.7,
+                14.0
+              ],
+              [
+                166.7,
+                34.0
+              ],
+              [
+                20.0,
+                34.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              191.1,
+              24.0
+            ],
+            "text": "132"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                20.0,
+                50.0
+              ],
+              [
+                240.0,
+                50.0
+              ],
+              [
+                240.0,
+                70.0
+              ],
+              [
+                20.0,
+                70.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              264.4,
+              60.0
+            ],
+            "text": "198"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l1_pieces",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "(b) How many pieces are there altogether?",
+        "ur": "(ب) کل کتنے ٹکڑے ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "132 ÷ 66 and 198 ÷ 66. Add them.",
+        "ur": "132 ÷ 66 اور 198 ÷ 66۔ دونوں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 2 + 3 = 5 pieces.",
+        "ur": "درست: 2 + 3 = 5 ٹکڑے"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 132 ÷ 66 = 2 and 198 ÷ 66 = 3, so there are 2 + 3 = 5 pieces.",
+        "ur": "نمونہ جواب: 132 ÷ 66 = 2 اور 198 ÷ 66 = 3، اس لیے کل 2 + 3 = 5 ٹکڑے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 66,
+          "feedback": {
+            "en": "66 cm is the length of a piece. Count the pieces: 2 + 3 = 5.",
+            "ur": "66 سینٹی میٹر ایک ٹکڑے کی لمبائی ہے۔ ٹکڑے گنیں: 2 + 3 = 5"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "l2_alarms",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Three alarms ring every 8, 12 and 20 minutes. They ring together at 9:00. (a) After how many minutes do they next ring together?",
+        "ur": "تفصیلی سوال: تین الارم ہر 8، 12 اور 20 منٹ بعد بجتے ہیں۔ 9 بجے تینوں ساتھ بجے۔ (الف) کتنے منٹ بعد اگلی بار ساتھ بجیں گے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "8 = 2³, 12 = 2² × 3, 20 = 2² × 5. Find the LCM.",
+        "ur": "8 = 2³، 12 = 2² × 3، 20 = 2² × 5۔ ذو اضعاف اقل معلوم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 120 minutes.",
+        "ur": "درست: 120 منٹ"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: LCM = 2³ × 3 × 5 = 120. They ring together after 120 minutes.",
+        "ur": "نمونہ جواب: ذو اضعاف اقل = 2³ × 3 × 5 = 120۔ وہ 120 منٹ بعد ساتھ بجیں گے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is the HCF. After 4 minutes no alarm has rung again.",
+            "ur": "4 عاد اعظم ہے۔ 4 منٹ بعد کوئی الارم دوبارہ نہیں بجا۔"
+          },
+          "misconception_id": "hcf_lcm_swap"
+        },
+        {
+          "answer": 1920,
+          "feedback": {
+            "en": "1920 = 8 × 12 × 20 is a common multiple, but 120 is lower.",
+            "ur": "1920 = 8 × 12 × 20 مشترک ضعف ہے، مگر 120 چھوٹا ہے۔"
+          },
+          "misconception_id": "always_multiply"
+        }
+      ]
+    },
+    {
+      "id": "l2_time",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "(b) At what time do they next ring together?",
+        "ur": "(ب) اگلی بار کس وقت ساتھ بجیں گے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "11:00",
+            "ur": "11:00"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 120 minutes = 2 hours after 9:00.",
+            "ur": "درست: 120 منٹ = 9 بجے کے 2 گھنٹے بعد۔"
+          }
+        },
+        {
+          "id": "hcf",
+          "text": {
+            "en": "9:04",
+            "ur": "9:04"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That adds the HCF, 4 minutes. Add 120 minutes: 11:00.",
+            "ur": "اس میں عاد اعظم، 4 منٹ، جمع کیا گیا۔ 120 منٹ جمع کریں: 11:00"
+          },
+          "misconception_id": "hcf_lcm_swap"
+        },
+        {
+          "id": "forty",
+          "text": {
+            "en": "9:40",
+            "ur": "9:40"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "40 is the LCM of 8 and 20 only. All three meet after 120 minutes: 11:00.",
+            "ur": "40 صرف 8 اور 20 کا ذو اضعاف اقل ہے۔ تینوں 120 منٹ بعد ملتے ہیں: 11:00"
+          }
+        },
+        {
+          "id": "ten",
+          "text": {
+            "en": "10:20",
+            "ur": "10:20"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "120 minutes is 2 hours, not 1 hour 20 minutes. 9:00 + 2 hours = 11:00.",
+            "ur": "120 منٹ، 2 گھنٹے ہیں، 1 گھنٹہ 20 منٹ نہیں۔ 9:00 + 2 گھنٹے = 11:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "l3_missing",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The HCF of two numbers is 8 and their LCM is 240. One number is 48. Find the other number.",
+        "ur": "تفصیلی سوال: دو اعداد کا عاد اعظم 8 اور ذو اضعاف اقل 240 ہے۔ ایک عدد 48 ہے۔ دوسرا عدد معلوم کریں۔"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "HCF × LCM = product of the two numbers. 8 × 240 = 1920.",
+        "ur": "عاد اعظم × ذو اضعاف اقل = دونوں اعداد کا حاصل ضرب۔ 8 × 240 = 1920"
+      },
+      "feedback_correct": {
+        "en": "Correct: 1920 ÷ 48 = 40.",
+        "ur": "درست: 1920 ÷ 48 = 40"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 48 × other = 8 × 240 = 1920, so other = 1920 ÷ 48 = 40. Check: HCF of 48 and 40 is 8, LCM is 240.",
+        "ur": "نمونہ جواب: 48 × دوسرا = 8 × 240 = 1920، اس لیے دوسرا = 1920 ÷ 48 = 40۔ جانچ: 48 اور 40 کا عاد اعظم 8 اور ذو اضعاف اقل 240 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is 240 ÷ 48. Find the product first: 1920 ÷ 48 = 40.",
+            "ur": "یہ 240 ÷ 48 ہے۔ پہلے حاصل ضرب: 1920 ÷ 48 = 40"
+          },
+          "misconception_id": "wrong_division"
+        },
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "That is 1920 ÷ 8, the LCM. Divide by the known number 48: 40.",
+            "ur": "یہ 1920 ÷ 8 ہے، یعنی ذو اضعاف اقل۔ معلوم عدد 48 سے تقسیم کریں: 40"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ]
+    },
+    {
+      "id": "l4_who_am_i",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Who am I? I am a perfect square between 50 and 100, and 3 is one of my factors.",
+        "ur": "تفصیلی سوال: میں کون ہوں؟ میں 50 اور 100 کے درمیان ایک مکمل مربع عدد ہوں، اور 3 میرا ایک جزو ضربی ہے۔"
+      },
+      "answer": 81,
+      "checker": "numeric",
+      "hint": {
+        "en": "List the perfect squares between 50 and 100. Which one does 3 divide?",
+        "ur": "50 اور 100 کے درمیان مکمل مربع اعداد لکھیں۔ ان میں سے کسے 3 تقسیم کرتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Correct: 81 = 9² and 81 ÷ 3 = 27.",
+        "ur": "درست: 81 = 9² اور 81 ÷ 3 = 27"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the perfect squares between 50 and 100 are 64 = 8² and 81 = 9². 64 ÷ 3 is not exact, but 81 ÷ 3 = 27. So I am 81.",
+        "ur": "نمونہ جواب: 50 اور 100 کے درمیان مکمل مربع اعداد 64 = 8² اور 81 = 9² ہیں۔ 64 ÷ 3 پورا تقسیم نہیں ہوتا، مگر 81 ÷ 3 = 27۔ اس لیے میں 81 ہوں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 64,
+          "feedback": {
+            "en": "64 is a perfect square, but 3 does not divide it.",
+            "ur": "64 مکمل مربع ہے، مگر 3 اسے تقسیم نہیں کرتا۔"
+          }
+        },
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 is not between 50 and 100. 9² = 81 is.",
+            "ur": "9، 50 اور 100 کے درمیان نہیں۔ 9² = 81 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 1 test. Well done!",
+          "ur": "آپ نے باب 1 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: break numbers into primes, use the shared primes for the HCF and every prime (highest index) for the LCM, use HCF × LCM = product for a missing number, and remember that the square of a negative number is positive. In word problems, write the answer as a sentence.",
+        "ur": "امتحان میں: اعداد کو مفرد اعداد میں توڑیں، عاد اعظم کے لیے مشترک مفرد اعداد اور ذو اضعاف اقل کے لیے ہر مفرد عدد (سب سے بڑی قوت) لیں، گمشدہ عدد کے لیے عاد اعظم × ذو اضعاف اقل = حاصل ضرب استعمال کریں، اور یاد رکھیں کہ منفی عدد کا مربع مثبت ہوتا ہے۔ سوالات میں جواب ایک جملے میں لکھیں۔"
+      },
+      "points": [
+        {
+          "en": "Check an HCF by dividing: it must go into every number exactly.",
+          "ur": "عاد اعظم کو تقسیم سے جانچیں: یہ ہر عدد کو پورا تقسیم کرے۔"
+        },
+        {
+          "en": "Check an LCM by dividing: every number must go into it exactly.",
+          "ur": "ذو اضعاف اقل کو تقسیم سے جانچیں: ہر عدد اسے پورا تقسیم کرے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_missing",
+      "type": "exam_style",
+      "skill": "maths.factors.chapter_1_test",
+      "step": {
+        "id": "r_exam_missing",
+        "type": "number",
+        "prompt": {
+          "en": "Two numbers have HCF 12 and LCM 360. One number is 36. Find the other.",
+          "ur": "دو اعداد کا عاد اعظم 12 اور ذو اضعاف اقل 360 ہے۔ ایک عدد 36 ہے۔ دوسرا معلوم کریں۔"
+        },
+        "answer": 120,
+        "checker": "numeric",
+        "hint": {
+          "en": "12 × 360 = 4320. Divide by 36.",
+          "ur": "12 × 360 = 4320۔ 36 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 4320 ÷ 36 = 120.",
+          "ur": "درست: 4320 ÷ 36 = 120"
+        },
+        "feedback_wrong": {
+          "en": "12 × 360 = 4320 and 4320 ÷ 36 = 120.",
+          "ur": "12 × 360 = 4320 اور 4320 ÷ 36 = 120"
+        },
+        "common_wrong": [
+          {
+            "answer": 10,
+            "feedback": {
+              "en": "That is 360 ÷ 36. Use the product: 4320 ÷ 36 = 120.",
+              "ur": "یہ 360 ÷ 36 ہے۔ حاصل ضرب استعمال کریں: 4320 ÷ 36 = 120"
+            },
+            "misconception_id": "wrong_division"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_pieces",
+      "type": "exam_style",
+      "skill": "maths.factors.chapter_1_test",
+      "step": {
+        "id": "r_exam_pieces",
+        "type": "number",
+        "prompt": {
+          "en": "64 apples and 80 oranges are packed in boxes, each box with one kind of fruit and the same number of fruits, as many as possible. How many boxes are needed?",
+          "ur": "64 سیب اور 80 مالٹے ڈبوں میں رکھے جاتے ہیں، ہر ڈبے میں ایک قسم کا پھل اور برابر تعداد، جتنی زیادہ ہو سکے۔ کتنے ڈبے چاہییں؟"
+        },
+        "answer": 9,
+        "checker": "numeric",
+        "hint": {
+          "en": "The number in each box is the HCF of 64 and 80. Then count the boxes.",
+          "ur": "ہر ڈبے کی تعداد 64 اور 80 کا عاد اعظم ہے۔ پھر ڈبے گنیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 16 in a box, 4 + 5 = 9 boxes.",
+          "ur": "درست: ہر ڈبے میں 16، کل 4 + 5 = 9 ڈبے۔"
+        },
+        "feedback_wrong": {
+          "en": "HCF of 64 and 80 = 16. 64 ÷ 16 = 4 and 80 ÷ 16 = 5, so 9 boxes.",
+          "ur": "64 اور 80 کا عاد اعظم = 16۔ 64 ÷ 16 = 4 اور 80 ÷ 16 = 5، اس لیے 9 ڈبے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 16,
+            "feedback": {
+              "en": "16 is the number of fruits in each box. Count the boxes: 4 + 5 = 9.",
+              "ur": "16 ہر ڈبے میں پھلوں کی تعداد ہے۔ ڈبے گنیں: 4 + 5 = 9"
+            },
+            "misconception_id": "stops_early"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 1 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.factors.chapter_1_test), with the unit's skills as prerequisites, and is mastered with exam_style questions, like g9-maths-05-board-exam-practice.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), باہم مفرد (co-prime).",
+    "The numbers were worked out in content/sources/g6-maths-05/chapter_1_test.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

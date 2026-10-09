@@ -1,0 +1,1815 @@
+{
+  "id": "g6-maths-05-exercise-1-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Complete factor trees, find prime factors by the division and factor tree methods, and move between expanded form and index notation.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples, Exercise 1.2"
+    }
+  ],
+  "skills": [
+    "maths.factors.ex_1_2"
+  ],
+  "title": {
+    "en": "Exercise 1.2 practice: prime factors and index notation",
+    "ur": "مشق 1.2 کی پریکٹس: مفرد اجزائے ضربی اور قوت کی شکل"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.primes"
+    },
+    {
+      "skill": "maths.factors.index_notation"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "stops_early",
+      "description": "Stops a factor tree or the division method before every factor is prime: 264 = 2 × 2 × 2 × 33."
+    },
+    {
+      "id": "not_prime_factors",
+      "description": "Writes a product with composite numbers as the prime factorisation: 120 = 4 × 5 × 6."
+    },
+    {
+      "id": "swap_base_index",
+      "description": "Swaps the base and the index: writes 3 × 3 × 3 × 3 as 4³."
+    },
+    {
+      "id": "times_index",
+      "description": "Multiplies the base by the index: 2⁴ = 2 × 4."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.ex_1_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.ex_1_2": [
+      {
+        "id": "qb_base",
+        "type": "recall",
+        "step": {
+          "id": "qb_base",
+          "type": "choice",
+          "prompt": {
+            "en": "In 6³, what is the 6 called?",
+            "ur": "6³ میں 6 کو کیا کہتے ہیں؟"
+          },
+          "options": [
+            {
+              "id": "base",
+              "text": {
+                "en": "The base",
+                "ur": "اساس"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The base is the number multiplied: 6³ = 6 × 6 × 6.",
+                "ur": "جی ہاں! اساس وہ عدد ہے جو ضرب ہوتا ہے: 6³ = 6 × 6 × 6"
+              }
+            },
+            {
+              "id": "index",
+              "text": {
+                "en": "The index",
+                "ur": "قوت"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The index is the small 3: how many 6s are multiplied.",
+                "ur": "قوت چھوٹا 3 ہے: کتنے 6 ضرب ہو رہے ہیں۔"
+              },
+              "misconception_id": "swap_base_index"
+            },
+            {
+              "id": "factor_tree",
+              "text": {
+                "en": "A factor tree",
+                "ur": "اجزائے ضربی کا درخت"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A factor tree is a way to find prime factors. In 6³, 6 is the base.",
+                "ur": "اجزائے ضربی کا درخت مفرد اجزائے ضربی معلوم کرنے کا طریقہ ہے۔ 6³ میں 6 اساس ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_apply",
+        "type": "apply",
+        "step": {
+          "id": "qb_apply",
+          "type": "number",
+          "prompt": {
+            "en": "98 = 2 × 7ⁿ. Break 98 into primes and find n.",
+            "ur": "98 = 2 × 7ⁿ۔ 98 کو مفرد اعداد میں توڑیں اور n معلوم کریں۔"
+          },
+          "answer": 2,
+          "checker": "numeric",
+          "hint": {
+            "en": "98 ÷ 2 = 49. How many 7s make 49?",
+            "ur": "98 ÷ 2 = 49۔ کتنے 7 مل کر 49 بناتے ہیں؟"
+          },
+          "feedback_correct": {
+            "en": "Right! 98 = 2 × 7 × 7 = 2 × 7².",
+            "ur": "درست! 98 = 2 × 7 × 7 = 2 × 7²"
+          },
+          "feedback_wrong": {
+            "en": "98 = 2 × 49 = 2 × 7 × 7, so n = 2.",
+            "ur": "98 = 2 × 49 = 2 × 7 × 7، اس لیے n = 2"
+          },
+          "common_wrong": [
+            {
+              "answer": 7,
+              "feedback": {
+                "en": "7 is the base. Count the 7s: 49 = 7 × 7, so n = 2.",
+                "ur": "7 اساس ہے۔ 7 گنیں: 49 = 7 × 7، اس لیے n = 2"
+              },
+              "misconception_id": "swap_base_index"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Kamran says the prime factorisation of 120 is 4 × 5 × 6. What went wrong?",
+            "ur": "کامران کہتا ہے 120 کے مفرد اجزائے ضربی 4 × 5 × 6 ہیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "not_prime",
+              "text": {
+                "en": "4 and 6 are not prime. Break them: 120 = 2³ × 3 × 5.",
+                "ur": "4 اور 6 مفرد نہیں۔ انہیں توڑیں: 120 = 2³ × 3 × 5"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 4 = 2 × 2 and 6 = 2 × 3, so 120 = 2 × 2 × 2 × 3 × 5.",
+                "ur": "جی ہاں! 4 = 2 × 2 اور 6 = 2 × 3، اس لیے 120 = 2 × 2 × 2 × 3 × 5"
+              }
+            },
+            {
+              "id": "wrong_product",
+              "text": {
+                "en": "4 × 5 × 6 is not 120.",
+                "ur": "4 × 5 × 6، 120 نہیں ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "4 × 5 × 6 is 120. The problem is that 4 and 6 are not prime.",
+                "ur": "4 × 5 × 6 = 120 ہی ہے۔ مسئلہ یہ ہے کہ 4 اور 6 مفرد نہیں۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing.",
+                "ur": "کوئی غلطی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Every factor must be prime. 4 = 2 × 2 and 6 = 2 × 3, so 120 = 2³ × 3 × 5.",
+                "ur": "ہر جزو ضربی مفرد ہونا چاہیے۔ 4 = 2 × 2 اور 6 = 2 × 3، اس لیے 120 = 2³ × 3 × 5"
+              },
+              "misconception_id": "not_prime_factors"
+            }
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 156.0,
+            "alt": {
+              "en": "A factor tree for 120: 120 splits into 4 and 30; 4 into 2 and 2; 30 into 5 and 6; 6 into 2 and 3. The primes at the ends of the branches are circled.",
+              "ur": "120 کا اجزائے ضربی کا درخت: 120 سے 4 اور 30؛ 4 سے 2 اور 2؛ 30 سے 5 اور 6؛ 6 سے 2 اور 3۔ شاخوں کے آخر میں مفرد اعداد کے گرد دائرہ ہے۔"
+            },
+            "items": [
+              {
+                "kind": "label",
+                "at": [
+                  70.0,
+                  100.0
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  70.0,
+                  100.0
+                ],
+                "radius": 13.0
+              },
+              {
+                "kind": "label",
+                "at": [
+                  110.0,
+                  100.0
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  110.0,
+                  100.0
+                ],
+                "radius": 13.0
+              },
+              {
+                "kind": "line",
+                "from": [
+                  90.0,
+                  70.0
+                ],
+                "to": [
+                  70.0,
+                  86.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  90.0,
+                  70.0
+                ],
+                "to": [
+                  110.0,
+                  86.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  90.0,
+                  60.0
+                ],
+                "text": "4"
+              },
+              {
+                "kind": "label",
+                "at": [
+                  150.0,
+                  100.0
+                ],
+                "text": "5"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  150.0,
+                  100.0
+                ],
+                "radius": 13.0
+              },
+              {
+                "kind": "label",
+                "at": [
+                  190.0,
+                  140.0
+                ],
+                "text": "2"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  190.0,
+                  140.0
+                ],
+                "radius": 13.0
+              },
+              {
+                "kind": "label",
+                "at": [
+                  230.0,
+                  140.0
+                ],
+                "text": "3"
+              },
+              {
+                "kind": "circle",
+                "center": [
+                  230.0,
+                  140.0
+                ],
+                "radius": 13.0
+              },
+              {
+                "kind": "line",
+                "from": [
+                  210.0,
+                  110.0
+                ],
+                "to": [
+                  190.0,
+                  126.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  210.0,
+                  110.0
+                ],
+                "to": [
+                  230.0,
+                  126.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  210.0,
+                  100.0
+                ],
+                "text": "6"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  180.0,
+                  70.0
+                ],
+                "to": [
+                  150.0,
+                  86.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  180.0,
+                  70.0
+                ],
+                "to": [
+                  210.0,
+                  86.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  180.0,
+                  60.0
+                ],
+                "text": "30"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  135.0,
+                  30.0
+                ],
+                "to": [
+                  90.0,
+                  46.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  135.0,
+                  30.0
+                ],
+                "to": [
+                  180.0,
+                  46.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  135.0,
+                  20.0
+                ],
+                "text": "120"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_division",
+      "front": {
+        "en": "How does the division method find prime factors?",
+        "ur": "تقسیم کا طریقہ مفرد اجزائے ضربی کیسے معلوم کرتا ہے؟"
+      },
+      "back": {
+        "en": "Keep dividing by the smallest prime that goes in exactly until you reach 1. 150: ÷ 2, ÷ 3, ÷ 5, ÷ 5, so 150 = 2 × 3 × 5².",
+        "ur": "1 تک پہنچنے تک سب سے چھوٹے مفرد عدد سے تقسیم کرتے رہیں جو پورا تقسیم کرے۔ 150: 2، 3، 5، 5 سے تقسیم، اس لیے 150 = 2 × 3 × 5²"
+      }
+    },
+    {
+      "id": "f_expanded",
+      "front": {
+        "en": "Expanded form and index notation of 72?",
+        "ur": "72 کی پھیلی ہوئی شکل اور قوت کی شکل؟"
+      },
+      "back": {
+        "en": "Expanded: 2 × 2 × 2 × 3 × 3. Index notation: 2³ × 3².",
+        "ur": "پھیلی ہوئی: 2 × 2 × 2 × 3 × 3۔ قوت کی شکل: 2³ × 3²"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_riddle",
+      "text": {
+        "en": "Make up your own \"Who am I?\" riddle using prime factors, like \"I am between 30 and 40 and my prime factors are 2 and 3.\" Ask a family member or friend to solve it.",
+        "ur": "مفرد اجزائے ضربی سے اپنی \"میں کون ہوں؟\" پہیلی بنائیں، جیسے \"میں 30 اور 40 کے درمیان ہوں اور میرے مفرد اجزائے ضربی 2 اور 3 ہیں۔\" گھر کے کسی فرد یا دوست سے حل کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Factor tree",
+      "ur": "اجزائے ضربی کا درخت"
+    },
+    {
+      "en": "Prime factor",
+      "ur": "مفرد جزو ضربی"
+    },
+    {
+      "en": "Division method",
+      "ur": "تقسیم کا طریقہ"
+    },
+    {
+      "en": "Index notation",
+      "ur": "قوت کی شکل"
+    },
+    {
+      "en": "Expanded form",
+      "ur": "پھیلی ہوئی شکل"
+    },
+    {
+      "en": "Base",
+      "ur": "اساس"
+    },
+    {
+      "en": "Index (power)",
+      "ur": "قوت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 1.2 is all about prime factors. Let's break some numbers into primes!",
+          "ur": "مشق 1.2 مفرد اجزائے ضربی کے بارے میں ہے۔ آئیں کچھ اعداد کو مفرد اعداد میں توڑیں!"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 1.2 of your maths book (PCTB Mathematics 6). Here you complete factor trees, write numbers as products of primes, and change between expanded form (2 × 2 × 3) and index notation (2² × 3). The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 1.2 کے ساتھ ہے۔ اس میں آپ اجزائے ضربی کے درخت مکمل کریں گے، اعداد کو مفرد اعداد کے حاصل ضرب کی شکل میں لکھیں گے، اور پھیلی ہوئی شکل (2 × 2 × 3) اور قوت کی شکل (2² × 3) میں بدلیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_tree_gap",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "In this factor tree, 126 = 2 × 63, and 63 splits into ? and 7. What is the missing number?",
+        "ur": "اس اجزائے ضربی کے درخت میں 126 = 2 × 63، اور 63 کے دو حصے ? اور 7 ہیں۔ غائب عدد کیا ہے؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "? × 7 = 63. Which number times 7 makes 63?",
+        "ur": "? × 7 = 63۔ کس عدد کو 7 سے ضرب دیں تو 63 بنتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 9 × 7 = 63, and 9 splits again into 3 × 3.",
+        "ur": "درست! 9 × 7 = 63، اور 9 پھر 3 × 3 میں ٹوٹتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "63 ÷ 7 = 9. The tree also shows 9 = 3 × 3.",
+        "ur": "63 ÷ 7 = 9۔ درخت یہ بھی دکھاتا ہے کہ 9 = 3 × 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 56,
+          "feedback": {
+            "en": "That is 63 − 7. In a factor tree the two parts multiply: ? × 7 = 63.",
+            "ur": "یہ 63 − 7 ہے۔ اجزائے ضربی کے درخت میں دونوں حصے ضرب ہوتے ہیں: ? × 7 = 63"
+          }
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 × 7 = 21, not 63. The missing number is 3 × 3 = 9.",
+            "ur": "3 × 7 = 21، نہ کہ 63۔ غائب عدد 3 × 3 = 9 ہے۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 156.0,
+        "alt": {
+          "en": "A factor tree for 126: 126 splits into 2 and 63; 63 splits into a question mark and 7; the question mark splits into 3 and 3. The primes at the ends of the branches are circled.",
+          "ur": "126 کا اجزائے ضربی کا درخت: 126 سے 2 اور 63؛ 63 سے سوالیہ نشان اور 7؛ سوالیہ نشان سے 3 اور 3۔ شاخوں کے آخر میں مفرد اعداد کے گرد دائرہ ہے۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              90.0,
+              60.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              90.0,
+              60.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.0,
+              140.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              130.0,
+              140.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              140.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              170.0,
+              140.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              110.0
+            ],
+            "to": [
+              130.0,
+              126.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              110.0
+            ],
+            "to": [
+              170.0,
+              126.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              100.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              210.0,
+              100.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              210.0,
+              100.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              180.0,
+              70.0
+            ],
+            "to": [
+              150.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              180.0,
+              70.0
+            ],
+            "to": [
+              210.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              180.0,
+              60.0
+            ],
+            "text": "63"
+          },
+          {
+            "kind": "line",
+            "from": [
+              135.0,
+              30.0
+            ],
+            "to": [
+              90.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              135.0,
+              30.0
+            ],
+            "to": [
+              180.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              135.0,
+              20.0
+            ],
+            "text": "126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q2_index",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Write 5 × 5 × 5 × 5 in index notation. 5 to the power of what?",
+        "ur": "5 × 5 × 5 × 5 کو قوت کی شکل میں لکھیں۔ 5 کی قوت کیا ہوگی؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "The index counts how many 5s are multiplied.",
+        "ur": "قوت گنتی ہے کہ کتنے 5 ضرب ہو رہے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 5 × 5 × 5 = 5⁴.",
+        "ur": "درست! 5 × 5 × 5 × 5 = 5⁴"
+      },
+      "feedback_wrong": {
+        "en": "There are four 5s, so it is 5⁴.",
+        "ur": "اس میں چار 5 ہیں، اس لیے یہ 5⁴ ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is the base, the number being multiplied. Count how many 5s: 4.",
+            "ur": "5 اساس ہے، یعنی جو عدد ضرب ہو رہا ہے۔ گنیں کتنے 5 ہیں: 4"
+          },
+          "misconception_id": "swap_base_index"
+        }
+      ]
+    },
+    {
+      "id": "q3_to_index",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which shows 2 × 2 × 2 × 5 × 5 in index notation?",
+        "ur": "کون سا 2 × 2 × 2 × 5 × 5 کو قوت کی شکل میں دکھاتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "2³ × 5²",
+            "ur": "2³ × 5²"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Three 2s and two 5s.",
+            "ur": "جی ہاں! تین 2 اور دو 5"
+          }
+        },
+        {
+          "id": "swap",
+          "text": {
+            "en": "3² × 2⁵",
+            "ur": "3² × 2⁵"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The base is the number multiplied and the index is how many times: three 2s is 2³.",
+            "ur": "اساس وہ عدد ہے جو ضرب ہو رہا ہے اور قوت بتاتی ہے کتنی بار: تین 2 یعنی 2³"
+          },
+          "misconception_id": "swap_base_index"
+        },
+        {
+          "id": "counts",
+          "text": {
+            "en": "2² × 5³",
+            "ur": "2² × 5³"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Count again: there are three 2s and two 5s, so 2³ × 5².",
+            "ur": "دوبارہ گنیں: تین 2 اور دو 5 ہیں، اس لیے 2³ × 5²"
+          }
+        },
+        {
+          "id": "plus",
+          "text": {
+            "en": "2³ + 5²",
+            "ur": "2³ + 5²"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The numbers are multiplied, so use ×, not +.",
+            "ur": "اعداد ضرب ہو رہے ہیں، اس لیے × لگائیں، + نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4_value",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 2⁴ × 3 in expanded form and find its value.",
+        "ur": "2⁴ × 3 کو پھیلی ہوئی شکل میں لکھیں اور اس کی قیمت معلوم کریں۔"
+      },
+      "answer": 48,
+      "checker": "numeric",
+      "hint": {
+        "en": "2⁴ = 2 × 2 × 2 × 2. Multiply that by 3.",
+        "ur": "2⁴ = 2 × 2 × 2 × 2۔ اسے 3 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 2 × 2 × 2 × 3 = 16 × 3 = 48.",
+        "ur": "درست! 2 × 2 × 2 × 2 × 3 = 16 × 3 = 48"
+      },
+      "feedback_wrong": {
+        "en": "2⁴ = 2 × 2 × 2 × 2 = 16, and 16 × 3 = 48.",
+        "ur": "2⁴ = 2 × 2 × 2 × 2 = 16، اور 16 × 3 = 48"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "2⁴ is not 2 × 4. It is 2 × 2 × 2 × 2 = 16, so 16 × 3 = 48.",
+            "ur": "2⁴ کا مطلب 2 × 4 نہیں۔ یہ 2 × 2 × 2 × 2 = 16 ہے، اس لیے 16 × 3 = 48"
+          },
+          "misconception_id": "times_index"
+        }
+      ]
+    },
+    {
+      "id": "q5_to_expanded",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which shows 7² × 11 in expanded form?",
+        "ur": "کون سا 7² × 11 کو پھیلی ہوئی شکل میں دکھاتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "7 × 7 × 11",
+            "ur": "7 × 7 × 11"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 7² means 7 × 7.",
+            "ur": "جی ہاں! 7² کا مطلب 7 × 7 ہے۔"
+          }
+        },
+        {
+          "id": "times",
+          "text": {
+            "en": "7 × 2 × 11",
+            "ur": "7 × 2 × 11"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7² is 7 × 7, not 7 × 2.",
+            "ur": "7²، 7 × 7 ہے، 7 × 2 نہیں۔"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "id": "eleven",
+          "text": {
+            "en": "7 × 11 × 11",
+            "ur": "7 × 11 × 11"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The index 2 belongs to the 7, so there are two 7s and one 11.",
+            "ur": "قوت 2، 7 کی ہے، اس لیے دو 7 اور ایک 11 ہے۔"
+          }
+        },
+        {
+          "id": "swap",
+          "text": {
+            "en": "2 × 2 × 11",
+            "ur": "2 × 2 × 11"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The base is 7, so multiply 7 by itself: 7 × 7 × 11.",
+            "ur": "اساس 7 ہے، اس لیے 7 کو خود سے ضرب دیں: 7 × 7 × 11"
+          },
+          "misconception_id": "swap_base_index"
+        }
+      ]
+    },
+    {
+      "id": "s_division",
+      "type": "explain",
+      "character": {
+        "emotion": "talking",
+        "say": {
+          "en": "The book shows two ways to find prime factors. Here is the division method.",
+          "ur": "کتاب مفرد اجزائے ضربی معلوم کرنے کے دو طریقے بتاتی ہے۔ یہ تقسیم کا طریقہ ہے۔"
+        }
+      },
+      "text": {
+        "en": "Division method: divide by the smallest prime that goes in exactly, write the answer underneath, and keep going until you reach 1. For 150: ÷ 2 gives 75, ÷ 3 gives 25, ÷ 5 gives 5, ÷ 5 gives 1. The primes on the left are the prime factors: 150 = 2 × 3 × 5 × 5 = 2 × 3 × 5².",
+        "ur": "تقسیم کا طریقہ: سب سے چھوٹے مفرد عدد سے تقسیم کریں جو پورا تقسیم کرے، جواب نیچے لکھیں، اور 1 تک پہنچنے تک یہی کرتے رہیں۔ 150 کے لیے: 2 سے تقسیم پر 75، 3 سے 25، 5 سے 5، اور 5 سے 1۔ بائیں طرف کے مفرد اعداد ہی مفرد اجزائے ضربی ہیں: 150 = 2 × 3 × 5 × 5 = 2 × 3 × 5²"
+      },
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "The division method for 150, set out in steps. On the left the primes 2, 3, 5, 5; on the right 150, then 75, 25, 5 and finally 1.",
+          "ur": "150 کے لیے تقسیم کا طریقہ قدم بہ قدم۔ بائیں طرف مفرد اعداد 2، 3، 5، 5؛ دائیں طرف 150، پھر 75، 25، 5 اور آخر میں 1۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              22.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              9.0
+            ],
+            "to": [
+              144.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              36.0
+            ],
+            "to": [
+              196.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              22.0
+            ],
+            "text": "150"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              54.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              41.0
+            ],
+            "to": [
+              144.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              68.0
+            ],
+            "to": [
+              196.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              54.0
+            ],
+            "text": "75"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              86.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              73.0
+            ],
+            "to": [
+              144.0,
+              100.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              100.0
+            ],
+            "to": [
+              196.0,
+              100.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              86.0
+            ],
+            "text": "25"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              118.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              105.0
+            ],
+            "to": [
+              144.0,
+              132.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              132.0
+            ],
+            "to": [
+              196.0,
+              132.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              118.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              150.0
+            ],
+            "text": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_division",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Finish the division method for 156: 156 ÷ 2 = 78, 78 ÷ 2 = 39, 39 ÷ 3 = ?. What number goes in the gap?",
+        "ur": "156 کے لیے تقسیم کا طریقہ مکمل کریں: 156 ÷ 2 = 78، 78 ÷ 2 = 39، 39 ÷ 3 = ?۔ خالی جگہ میں کون سا عدد آئے گا؟"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Work out 39 ÷ 3.",
+        "ur": "39 ÷ 3 کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 13 is prime, so the last step is ÷ 13. 156 = 2² × 3 × 13.",
+        "ur": "درست! 13 مفرد ہے، اس لیے آخری قدم 13 سے تقسیم ہے۔ 156 = 2² × 3 × 13"
+      },
+      "feedback_wrong": {
+        "en": "39 ÷ 3 = 13, and 13 ÷ 13 = 1. So 156 = 2 × 2 × 3 × 13 = 2² × 3 × 13.",
+        "ur": "39 ÷ 3 = 13، اور 13 ÷ 13 = 1۔ اس لیے 156 = 2 × 2 × 3 × 13 = 2² × 3 × 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "That is 39 − 3. Divide: 39 ÷ 3 = 13.",
+            "ur": "یہ 39 − 3 ہے۔ تقسیم کریں: 39 ÷ 3 = 13"
+          }
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 138.0,
+        "alt": {
+          "en": "The division method for 156. On the left the primes 2, 2, 3; on the right 156, then 78, 39, and a question mark under 39.",
+          "ur": "156 کے لیے تقسیم کا طریقہ۔ بائیں طرف مفرد اعداد 2، 2، 3؛ دائیں طرف 156، پھر 78، 39، اور 39 کے نیچے سوالیہ نشان۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              22.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              9.0
+            ],
+            "to": [
+              144.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              36.0
+            ],
+            "to": [
+              196.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              22.0
+            ],
+            "text": "156"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              54.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              41.0
+            ],
+            "to": [
+              144.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              68.0
+            ],
+            "to": [
+              196.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              54.0
+            ],
+            "text": "78"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              86.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              73.0
+            ],
+            "to": [
+              144.0,
+              100.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              144.0,
+              100.0
+            ],
+            "to": [
+              196.0,
+              100.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              86.0
+            ],
+            "text": "39"
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              118.0
+            ],
+            "text": "?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_index_180",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is the prime factorisation of 180 in index notation?",
+        "ur": "180 کے مفرد اجزائے ضربی قوت کی شکل میں کون سے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "right",
+          "text": {
+            "en": "2² × 3² × 5",
+            "ur": "2² × 3² × 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 180 = 2 × 2 × 3 × 3 × 5.",
+            "ur": "جی ہاں! 180 = 2 × 2 × 3 × 3 × 5"
+          }
+        },
+        {
+          "id": "sixty",
+          "text": {
+            "en": "2² × 3 × 5",
+            "ur": "2² × 3 × 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 4 × 3 × 5 = 60. One 3 is missing.",
+            "ur": "یہ 4 × 3 × 5 = 60 ہے۔ ایک 3 رہ گیا ہے۔"
+          }
+        },
+        {
+          "id": "ninety",
+          "text": {
+            "en": "2 × 3² × 5",
+            "ur": "2 × 3² × 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 2 × 9 × 5 = 90. One 2 is missing.",
+            "ur": "یہ 2 × 9 × 5 = 90 ہے۔ ایک 2 رہ گیا ہے۔"
+          }
+        },
+        {
+          "id": "composite",
+          "text": {
+            "en": "4 × 9 × 5",
+            "ur": "4 × 9 × 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4 × 9 × 5 is 180, but 4 and 9 are not prime. Break them: 2² × 3² × 5.",
+            "ur": "4 × 9 × 5 = 180 ہے، مگر 4 اور 9 مفرد نہیں۔ انہیں توڑیں: 2² × 3² × 5"
+          },
+          "misconception_id": "not_prime_factors"
+        }
+      ]
+    },
+    {
+      "id": "q8_missing_prime",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "360 = 2³ × 3² × p, where p is a prime. Find p.",
+        "ur": "360 = 2³ × 3² × p، جہاں p مفرد عدد ہے۔ p معلوم کریں۔"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "2³ × 3² = 8 × 9 = 72. Divide 360 by 72.",
+        "ur": "2³ × 3² = 8 × 9 = 72۔ 360 کو 72 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 360 ÷ 72 = 5, so 360 = 2³ × 3² × 5.",
+        "ur": "درست! 360 ÷ 72 = 5، اس لیے 360 = 2³ × 3² × 5"
+      },
+      "feedback_wrong": {
+        "en": "2³ = 8 and 3² = 9, so 8 × 9 = 72 and 360 ÷ 72 = 5.",
+        "ur": "2³ = 8 اور 3² = 9، اس لیے 8 × 9 = 72 اور 360 ÷ 72 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "2³ is 8 (not 6) and 3² is 9 (not 6). 360 ÷ 72 = 5.",
+            "ur": "2³ = 8 ہے (6 نہیں) اور 3² = 9 ہے (6 نہیں)۔ 360 ÷ 72 = 5"
+          },
+          "misconception_id": "times_index"
+        }
+      ]
+    },
+    {
+      "id": "q9_tree_264",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Mehwish starts a factor tree for 264: 264 = 2 × 132, 132 = 2 × 66, 66 = 2 × 33. Finish it. What is the biggest prime factor of 264?",
+        "ur": "مہوش 264 کا اجزائے ضربی کا درخت شروع کرتی ہے: 264 = 2 × 132، 132 = 2 × 66، 66 = 2 × 33۔ اسے مکمل کریں۔ 264 کا سب سے بڑا مفرد جزو ضربی کیا ہے؟"
+      },
+      "answer": 11,
+      "checker": "numeric",
+      "hint": {
+        "en": "33 is not prime yet. Split it into two factors.",
+        "ur": "33 ابھی مفرد نہیں۔ اسے دو اجزائے ضربی میں توڑیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 33 = 3 × 11, so 264 = 2³ × 3 × 11.",
+        "ur": "درست! 33 = 3 × 11، اس لیے 264 = 2³ × 3 × 11"
+      },
+      "feedback_wrong": {
+        "en": "33 = 3 × 11, and both are prime. So 264 = 2 × 2 × 2 × 3 × 11 = 2³ × 3 × 11, and the biggest prime factor is 11.",
+        "ur": "33 = 3 × 11، اور دونوں مفرد ہیں۔ اس لیے 264 = 2 × 2 × 2 × 3 × 11 = 2³ × 3 × 11، اور سب سے بڑا مفرد جزو ضربی 11 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 33,
+          "feedback": {
+            "en": "33 = 3 × 11, so it is not prime. Keep splitting.",
+            "ur": "33 = 3 × 11، اس لیے یہ مفرد نہیں۔ توڑتے رہیں۔"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 132,
+          "feedback": {
+            "en": "132 is a factor of 264, but it is not prime.",
+            "ur": "132، 264 کا جزو ضربی ہے، مگر مفرد نہیں۔"
+          },
+          "misconception_id": "stops_early"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 156.0,
+        "alt": {
+          "en": "A factor tree for 264: 264 into 2 and 132; 132 into 2 and 66; 66 into 2 and 33. The primes at the ends of the branches are circled. 33 at the end is not split yet.",
+          "ur": "264 کا اجزائے ضربی کا درخت: 264 سے 2 اور 132؛ 132 سے 2 اور 66؛ 66 سے 2 اور 33۔ شاخوں کے آخر میں مفرد اعداد کے گرد دائرہ ہے۔ آخر میں 33 ابھی توڑا نہیں گیا۔"
+        },
+        "items": [
+          {
+            "kind": "label",
+            "at": [
+              90.0,
+              60.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              90.0,
+              60.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.0,
+              100.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              130.0,
+              100.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              170.0,
+              140.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              170.0,
+              140.0
+            ],
+            "radius": 13.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              210.0,
+              140.0
+            ],
+            "text": "33"
+          },
+          {
+            "kind": "line",
+            "from": [
+              190.0,
+              110.0
+            ],
+            "to": [
+              170.0,
+              126.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              190.0,
+              110.0
+            ],
+            "to": [
+              210.0,
+              126.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              190.0,
+              100.0
+            ],
+            "text": "66"
+          },
+          {
+            "kind": "line",
+            "from": [
+              160.0,
+              70.0
+            ],
+            "to": [
+              130.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              160.0,
+              70.0
+            ],
+            "to": [
+              190.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              160.0,
+              60.0
+            ],
+            "text": "132"
+          },
+          {
+            "kind": "line",
+            "from": [
+              125.0,
+              30.0
+            ],
+            "to": [
+              90.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              125.0,
+              30.0
+            ],
+            "to": [
+              160.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              125.0,
+              20.0
+            ],
+            "text": "264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10_who_am_i",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Who am I? I am between 40 and 50. My only prime factors are 2 and 3, and I need both of them.",
+        "ur": "میں کون ہوں؟ میں 40 اور 50 کے درمیان ہوں۔ میرے مفرد اجزائے ضربی صرف 2 اور 3 ہیں، اور دونوں چاہییں۔"
+      },
+      "answer": 48,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try the numbers 41 to 49 one by one. Break each into primes.",
+        "ur": "41 سے 49 تک کے اعداد ایک ایک کر کے آزمائیں۔ ہر ایک کو مفرد اعداد میں توڑیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 48 = 2 × 2 × 2 × 2 × 3 = 2⁴ × 3.",
+        "ur": "درست! 48 = 2 × 2 × 2 × 2 × 3 = 2⁴ × 3"
+      },
+      "feedback_wrong": {
+        "en": "48 = 2⁴ × 3. The others don't work: 42 = 2 × 3 × 7 has a 7, 45 = 3² × 5 has a 5, 44 = 2² × 11 has an 11.",
+        "ur": "48 = 2⁴ × 3۔ باقی نہیں چلتے: 42 = 2 × 3 × 7 میں 7 ہے، 45 = 3² × 5 میں 5 ہے، 44 = 2² × 11 میں 11 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 42,
+          "feedback": {
+            "en": "42 = 2 × 3 × 7 also has the prime 7.",
+            "ur": "42 = 2 × 3 × 7 میں مفرد عدد 7 بھی ہے۔"
+          }
+        },
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "45 = 3 × 3 × 5 has a 5 and no 2.",
+            "ur": "45 = 3 × 3 × 5 میں 5 ہے اور 2 نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11_who_am_i_index",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Who am I? In index notation I am 2² × 7².",
+        "ur": "میں کون ہوں؟ قوت کی شکل میں میں 2² × 7² ہوں۔"
+      },
+      "answer": 196,
+      "checker": "numeric",
+      "hint": {
+        "en": "2² = 4 and 7² = 49. Multiply them.",
+        "ur": "2² = 4 اور 7² = 49۔ انہیں ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 49 = 196.",
+        "ur": "درست! 4 × 49 = 196"
+      },
+      "feedback_wrong": {
+        "en": "2 × 2 × 7 × 7 = 4 × 49 = 196.",
+        "ur": "2 × 2 × 7 × 7 = 4 × 49 = 196"
+      },
+      "common_wrong": [
+        {
+          "answer": 56,
+          "feedback": {
+            "en": "7² is 7 × 7 = 49, not 7 × 2. So 4 × 49 = 196.",
+            "ur": "7² کا مطلب 7 × 7 = 49 ہے، 7 × 2 نہیں۔ اس لیے 4 × 49 = 196"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "That is 2 × 2 × 7. There are two 7s: 2 × 2 × 7 × 7 = 196.",
+            "ur": "یہ 2 × 2 × 7 ہے۔ دو 7 ہیں: 2 × 2 × 7 × 7 = 196"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12_who_am_i_prime",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Who am I? I am a prime number, I am a factor of 91, and I am bigger than 10.",
+        "ur": "میں کون ہوں؟ میں مفرد عدد ہوں، 91 کا جزو ضربی ہوں، اور 10 سے بڑا ہوں۔"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Break 91 into primes. Try dividing by 7.",
+        "ur": "91 کو مفرد اعداد میں توڑیں۔ 7 سے تقسیم کر کے دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 91 = 7 × 13, and 13 is the prime bigger than 10.",
+        "ur": "درست! 91 = 7 × 13، اور 13 وہ مفرد عدد ہے جو 10 سے بڑا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "91 = 7 × 13. 7 is smaller than 10, so the answer is 13.",
+        "ur": "91 = 7 × 13۔ 7، 10 سے چھوٹا ہے، اس لیے جواب 13 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "7 is a prime factor of 91, but it is not bigger than 10.",
+            "ur": "7، 91 کا مفرد جزو ضربی ہے، مگر 10 سے بڑا نہیں۔"
+          }
+        },
+        {
+          "answer": 91,
+          "feedback": {
+            "en": "91 = 7 × 13, so 91 is not prime.",
+            "ur": "91 = 7 × 13، اس لیے 91 مفرد نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zoya writes 3 × 3 × 3 × 3 × 7 = 4³ × 7. What went wrong?",
+        "ur": "زویا لکھتی ہے 3 × 3 × 3 × 3 × 7 = 4³ × 7۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "swap",
+          "text": {
+            "en": "She swapped base and index. Four 3s is 3⁴, so it is 3⁴ × 7.",
+            "ur": "اس نے اساس اور قوت الٹ دیے۔ چار 3 یعنی 3⁴، اس لیے 3⁴ × 7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The base is the number multiplied (3) and the index is how many times (4).",
+            "ur": "جی ہاں! اساس وہ عدد ہے جو ضرب ہو رہا ہے (3) اور قوت بتاتی ہے کتنی بار (4)۔"
+          }
+        },
+        {
+          "id": "times",
+          "text": {
+            "en": "It should be 3 × 4 × 7.",
+            "ur": "یہ 3 × 4 × 7 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 × 4 means one 3 times 4. Four 3s multiplied is 3⁴, so 3⁴ × 7.",
+            "ur": "3 × 4 کا مطلب ایک 3 ضرب 4 ہے۔ چار 3 کا حاصل ضرب 3⁴ ہے، اس لیے 3⁴ × 7"
+          },
+          "misconception_id": "times_index"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. 4³ × 7 is right.",
+            "ur": "کوئی غلطی نہیں۔ 4³ × 7 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4³ = 4 × 4 × 4 = 64, but 3 × 3 × 3 × 3 = 81. The right form is 3⁴ × 7.",
+            "ur": "4³ = 4 × 4 × 4 = 64، مگر 3 × 3 × 3 × 3 = 81۔ درست شکل 3⁴ × 7 ہے۔"
+          },
+          "misconception_id": "swap_base_index"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Great work! You can break numbers into primes both ways now.",
+          "ur": "بہت خوب! اب آپ اعداد کو دونوں طریقوں سے مفرد اعداد میں توڑ سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Factor tree: split a number into two factors and keep splitting until every branch ends in a prime. Division method: keep dividing by primes until you reach 1. Then write the primes in index notation: 2 × 2 × 3 × 3 × 5 = 2² × 3² × 5.",
+        "ur": "اجزائے ضربی کا درخت: عدد کو دو اجزائے ضربی میں توڑیں اور توڑتے رہیں یہاں تک کہ ہر شاخ مفرد عدد پر ختم ہو۔ تقسیم کا طریقہ: 1 تک پہنچنے تک مفرد اعداد سے تقسیم کرتے رہیں۔ پھر مفرد اعداد کو قوت کی شکل میں لکھیں: 2 × 2 × 3 × 3 × 5 = 2² × 3² × 5"
+      },
+      "points": [
+        {
+          "en": "In 3⁴ the base is 3 and the index is 4: 3⁴ = 3 × 3 × 3 × 3.",
+          "ur": "3⁴ میں اساس 3 اور قوت 4 ہے: 3⁴ = 3 × 3 × 3 × 3"
+        },
+        {
+          "en": "Check your answer by multiplying the primes back together.",
+          "ur": "مفرد اعداد کو واپس ضرب دے کر اپنا جواب جانچیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_value",
+      "type": "apply",
+      "step": {
+        "id": "r_value",
+        "type": "number",
+        "prompt": {
+          "en": "Which number is 2³ × 3 × 5?",
+          "ur": "2³ × 3 × 5 کون سا عدد ہے؟"
+        },
+        "answer": 120,
+        "checker": "numeric",
+        "hint": {
+          "en": "2³ = 8. Then 8 × 3 × 5.",
+          "ur": "2³ = 8۔ پھر 8 × 3 × 5"
+        },
+        "feedback_correct": {
+          "en": "Right! 8 × 15 = 120.",
+          "ur": "درست! 8 × 15 = 120"
+        },
+        "feedback_wrong": {
+          "en": "2³ = 2 × 2 × 2 = 8, and 8 × 3 × 5 = 120.",
+          "ur": "2³ = 2 × 2 × 2 = 8، اور 8 × 3 × 5 = 120"
+        },
+        "common_wrong": [
+          {
+            "answer": 90,
+            "feedback": {
+              "en": "2³ is 8, not 2 × 3 = 6. 8 × 3 × 5 = 120.",
+              "ur": "2³ = 8 ہے، 2 × 3 = 6 نہیں۔ 8 × 3 × 5 = 120"
+            },
+            "misconception_id": "times_index"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_2"
+    },
+    {
+      "id": "r_index",
+      "type": "recall",
+      "step": {
+        "id": "r_index",
+        "type": "choice",
+        "prompt": {
+          "en": "Which is 5 × 5 × 5 in index notation?",
+          "ur": "5 × 5 × 5 قوت کی شکل میں کیا ہے؟"
+        },
+        "options": [
+          {
+            "id": "right",
+            "text": {
+              "en": "5³",
+              "ur": "5³"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! Three 5s.",
+              "ur": "جی ہاں! تین 5"
+            }
+          },
+          {
+            "id": "swap",
+            "text": {
+              "en": "3⁵",
+              "ur": "3⁵"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "The base is 5 and the index is 3: 5³.",
+              "ur": "اساس 5 اور قوت 3 ہے: 5³"
+            },
+            "misconception_id": "swap_base_index"
+          },
+          {
+            "id": "times",
+            "text": {
+              "en": "5 × 3",
+              "ur": "5 × 3"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "5 × 3 = 15, but 5 × 5 × 5 = 125. Write 5³.",
+              "ur": "5 × 3 = 15، مگر 5 × 5 × 5 = 125۔ 5³ لکھیں۔"
+            },
+            "misconception_id": "times_index"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 1.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers completing factor trees (q1, q9), index notation and expanded form (q2 to q5, q7, q8, q11), the division method (s_division, q6) and who-am-I riddles (q10 to q12).",
+    "The division method is not taught in the unit's lessons, so s_division shows it once before q6.",
+    "Urdu terms to check: پھیلی ہوئی شکل (expanded form), تقسیم کا طریقہ (division method).",
+    "The numbers were worked out in content/sources/g6-maths-05/exercise_1_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

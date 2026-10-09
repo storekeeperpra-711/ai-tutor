@@ -584,3 +584,41 @@ def hcf_lcm_panels(alt_en, alt_ur):
             items.append(arc(((a + b) / 2, y), (b - a) / 2, 180, 180))
         items.append(circle((x0 + 6 * unit, y), 6))
     return figure(W, 90 + 3 * unit / 2 + 1, alt_en, alt_ur, items)
+
+
+# ---------- division method ----------
+
+def division_ladder(divisors, rows, alt_en, alt_ur, *, hide=()):
+    """The division method set out as in a notebook: each divisor on the
+    left of a bar, the numbers on the right, and a line under them; the
+    next row holds what is left. rows[i + 1][j] is rows[i][j] divided by
+    divisors[i] when it divides, else carried down unchanged. hide: (row,
+    column) places written as '?'."""
+    assert len(rows) == len(divisors) + 1
+    for d, row, nxt in zip(divisors, rows, rows[1:]):
+        assert len(row) == len(nxt)
+        assert any(v % d == 0 for v in row), (d, row)
+        for v, w in zip(row, nxt):
+            assert w == (v // d if v % d == 0 else v), (d, row, nxt)
+    cols = len(rows[0])
+    cw = 52
+    xbar = (W - 40 - cols * cw) / 2 + 40
+    xd = xbar - 20
+    items, y = [], 22
+    for i, row in enumerate(rows):
+        if i < len(divisors):
+            items.append(label((xd, y), divisors[i]))
+            items.append(line((xbar, y - 13), (xbar, y + 14)))
+            items.append(line((xbar, y + 14), (xbar + cols * cw, y + 14)))
+        for j, v in enumerate(row):
+            items.append(label((xbar + cw * j + cw / 2, y), "?" if (i, j) in hide else v))
+        y += 32
+    return figure(W, y - 12, alt_en, alt_ur, items)
+
+
+def ladder_rows(numbers, divisors):
+    """The rows of the division method for these numbers and divisors."""
+    rows = [list(numbers)]
+    for d in divisors:
+        rows.append([v // d if v % d == 0 else v for v in rows[-1]])
+    return rows

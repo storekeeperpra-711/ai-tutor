@@ -11,6 +11,15 @@ Scripts that write the Grade 6 Maths lessons of the Factors and Multiples unit (
 | `factor_word_problems.py` | `g6-maths-05-factor-word-problems` | `maths.factors.word_problems` |
 | `squares_index_notation.py` | `g6-maths-05-squares-and-index-notation` | `maths.factors.index_notation` |
 | `hcf_lcm_product.py` | `g6-maths-05-hcf-times-lcm` | `maths.factors.hcf_lcm_product` |
+| `exercise_1_1.py` | `g6-maths-05-exercise-1-1` | `maths.factors.ex_1_1` |
+| `exercise_1_2.py` | `g6-maths-05-exercise-1-2` | `maths.factors.ex_1_2` |
+| `exercise_1_3.py` | `g6-maths-05-exercise-1-3` | `maths.factors.ex_1_3` |
+| `exercise_1_4.py` | `g6-maths-05-exercise-1-4` | `maths.factors.ex_1_4` |
+| `exercise_1_5.py` | `g6-maths-05-exercise-1-5` | `maths.factors.ex_1_5` |
+| `exercise_1_6.py` | `g6-maths-05-exercise-1-6` | `maths.factors.ex_1_6` |
+| `chapter_1_test.py` | `g6-maths-05-chapter-1-test` | `maths.factors.chapter_1_test` |
+
+The `exercise_1_*.py` scripts write practice sets to use next to Exercises 1.1 to 1.6 of the PCTB Mathematics 6 book, and `chapter_1_test.py` writes a chapter test in the style of Review Exercise 1 (multiple choice, short questions, longer problems). The book may not be copied, so only the exercise number and the kinds of question come from it; every question, number and story is new. Each has its own skill with the unit's skills as prerequisites, like the Grade 9 board-exam practice. The division methods for prime factors and the LCM, and the long division method for the HCF, are shown once in these sets, since the unit's lessons do not teach them. `figs.division_ladder` draws them.
 
 Every answer, and every common wrong answer (like giving a multiple when a factor is asked), is worked out in Python and checked with `assert`, so no number is typed by hand. `common.py` has small helpers (`factors`, `is_prime`, `prime_factors`) the scripts check their numbers with.
 
