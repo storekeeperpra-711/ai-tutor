@@ -10,6 +10,12 @@ Scripts that write the Grade 6 Maths lessons of the Sets unit (`content/lessons/
 | `union_intersection.py` | `g6-maths-01-union-and-intersection` | `maths.sets.union_intersection` |
 | `set_word_problems.py` | `g6-maths-01-set-word-problems` | `maths.sets.word_problems` |
 | `universal_set_venn.py` | `g6-maths-01-universal-set-and-venn-diagrams` | `maths.sets.universal_venn` (Venn pictures drawn by the app) |
+| `exercise_5_1.py` | `g6-maths-01-exercise-5-1` | `maths.sets.ex_5_1` |
+| `exercise_5_2.py` | `g6-maths-01-exercise-5-2` | `maths.sets.ex_5_2` |
+| `exercise_5_3.py` | `g6-maths-01-exercise-5-3` | `maths.sets.ex_5_3` |
+| `chapter_5_test.py` | `g6-maths-01-chapter-5-test` | `maths.sets.chapter_5_test` |
+
+The last four are practice sets for Exercises 5.1 to 5.3 of the book and a chapter test (Review Exercise 5). Only the exercise number and the kinds of question follow the book; every question is new, because the book may not be copied. Each has its own skill, with the chapter's skills it practises as prerequisites, and no `why.py` entry. The book has no union, intersection or set-builder form, so they test none of these. Typed set answers (`sq` in `common.py`) accept any order, with or without braces. Venn pictures of U with one circle, two separate circles or one circle inside another come from `figs.u_venn`.
 
 Every answer is worked out with Python sets and checked with `assert`: element counts, which sets are equal or equivalent, and subset counts (listed with `itertools.combinations`). So no number is typed by hand. Sets are written in braces with `show` in `common.py`. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 

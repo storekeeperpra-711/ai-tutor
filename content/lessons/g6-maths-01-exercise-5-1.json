@@ -1,0 +1,1646 @@
+{
+  "id": "g6-maths-01-exercise-5-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Decide whether a collection is a well-defined set, use the signs for belongs to and does not belong to, and write a set in tabular form and in descriptive form.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 5: Sets, Exercise 5.1"
+    }
+  ],
+  "skills": [
+    "maths.sets.ex_5_1"
+  ],
+  "title": {
+    "en": "Exercise 5.1 practice: writing sets",
+    "ur": "مشق 5.1 کی پریکٹس: سیٹ لکھنا"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.meaning"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "opinion_is_set",
+      "description": "Thinks a collection decided by opinion (tasty, best, tall) is a set."
+    },
+    {
+      "id": "sign_swapped",
+      "description": "Mixes up the signs for belongs to and does not belong to."
+    },
+    {
+      "id": "repeated_element",
+      "description": "Writes or counts a repeated letter or number more than once."
+    },
+    {
+      "id": "ends_included",
+      "description": "Includes the end numbers when the question says between."
+    },
+    {
+      "id": "wrong_list",
+      "description": "Lists the numbers that go with the rule (like the multipliers) instead of the numbers that fit the rule."
+    },
+    {
+      "id": "too_wide_rule",
+      "description": "Picks a description that fits more numbers than the set holds, or fewer."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.ex_5_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.ex_5_1": [
+      {
+        "id": "qb_well_defined",
+        "type": "recall",
+        "step": {
+          "id": "qb_well_defined",
+          "type": "choice",
+          "prompt": {
+            "en": "Which of these is a set (well defined)?",
+            "ur": "ان میں سے کون سا سیٹ ہے (واضح طور پر بیان کردہ)؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The days of the week",
+                "ur": "ہفتے کے دن"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! There are exactly seven, and everyone agrees.",
+                "ur": "جی ہاں! ٹھیک سات ہیں اور سب متفق ہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The nicest days of the week",
+                "ur": "ہفتے کے سب سے اچھے دن"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "\"Nicest\" is an opinion, so it is not a set.",
+                "ur": "\"سب سے اچھے\" رائے ہے، اس لیے یہ سیٹ نہیں۔"
+              },
+              "misconception_id": "opinion_is_set"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The clever girls of a school",
+                "ur": "اسکول کی ذہین لڑکیاں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "\"Clever\" has no fixed rule, so it is not a set.",
+                "ur": "\"ذہین\" کا کوئی مقررہ اصول نہیں، اس لیے یہ سیٹ نہیں۔"
+              },
+              "misconception_id": "opinion_is_set"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_count",
+        "type": "apply",
+        "step": {
+          "id": "qb_count",
+          "type": "number",
+          "prompt": {
+            "en": "How many elements are in the set of the letters of the word \"COOLER\"?",
+            "ur": "لفظ \"COOLER\" کے حروف کے سیٹ میں کتنے ارکان ہیں؟"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "O appears twice. Count it once.",
+            "ur": "O دو بار آتا ہے۔ اسے ایک ہی بار گنیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! {C, O, L, E, R}: 5.",
+            "ur": "درست! {C, O, L, E, R}: 5"
+          },
+          "feedback_wrong": {
+            "en": "The word has 6 letters but O repeats, so the set has 5 elements.",
+            "ur": "لفظ میں 6 حروف ہیں مگر O دہراتا ہے، اس لیے سیٹ کے 5 ارکان ہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 6,
+              "feedback": {
+                "en": "That counts O twice. Count it once: 5.",
+                "ur": "یہ O کو دو بار گنتا ہے۔ ایک ہی بار گنیں: 5"
+              },
+              "misconception_id": "repeated_element"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana reads 8 ∉ {2, 4, 6, 8} as \"8 is in the set\". What went wrong?",
+            "ur": "ثناء 8 ∉ {2, 4, 6, 8} کو \"8 سیٹ میں ہے\" پڑھتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Nothing. ∉ means belongs to.",
+                "ur": "کوئی غلطی نہیں۔ ∉ کا مطلب تعلق رکھتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "∈ is the sign for belongs to. ∉ has a line through it: does not belong.",
+                "ur": "تعلق رکھتا ہے کی علامت ∈ ہے۔ ∉ پر لکیر ہے: تعلق نہیں رکھتا۔"
+              },
+              "misconception_id": "sign_swapped"
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "∉ means does not belong. And the statement is false, because 8 is in the set.",
+                "ur": "∉ کا مطلب تعلق نہیں رکھتا۔ اور یہ بیان غلط ہے کیونکہ 8 سیٹ میں ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The sign ∉ says \"does not belong to\".",
+                "ur": "جی ہاں! علامت ∉ کہتی ہے \"تعلق نہیں رکھتا\"۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "She should say 8 is not a number.",
+                "ur": "اسے کہنا چاہیے 8 عدد نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "8 is a number. The mistake is in reading the sign.",
+                "ur": "8 عدد ہے۔ غلطی علامت پڑھنے میں ہے۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_signs",
+      "front": {
+        "en": "What do ∈ and ∉ mean?",
+        "ur": "∈ اور ∉ کا کیا مطلب ہے؟"
+      },
+      "back": {
+        "en": "∈ means belongs to (is an element of). ∉ means does not belong to.",
+        "ur": "∈ کا مطلب تعلق رکھتا ہے (رکن ہے)۔ ∉ کا مطلب تعلق نہیں رکھتا۔"
+      }
+    },
+    {
+      "id": "f_forms",
+      "front": {
+        "en": "What are tabular and descriptive form?",
+        "ur": "جدولی اور بیانیہ شکل کیا ہیں؟"
+      },
+      "back": {
+        "en": "Tabular form lists the elements in { }. Descriptive form says the rule in words.",
+        "ur": "جدولی شکل ارکان کو { } میں لکھتی ہے۔ بیانیہ شکل اصول کو الفاظ میں کہتی ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sets_at_home",
+      "text": {
+        "en": "Write three sets from your home in tabular form (for example, the members of your family whose names start with the same letter, or the spoons in a drawer). Then write each in descriptive form and tell a friend whether a given item belongs (∈) or not (∉).",
+        "ur": "اپنے گھر کے تین سیٹ جدولی شکل میں لکھیں (مثلاً گھر کے وہ افراد جن کے نام ایک ہی حرف سے شروع ہوتے ہیں، یا دراز کے چمچ)۔ پھر ہر ایک کو بیانیہ شکل میں لکھیں اور کسی دوست کو بتائیں کہ دی گئی چیز سیٹ سے تعلق رکھتی ہے (∈) یا نہیں (∉)۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Set",
+      "ur": "سیٹ"
+    },
+    {
+      "en": "Element",
+      "ur": "رکن"
+    },
+    {
+      "en": "Well defined",
+      "ur": "واضح طور پر بیان کردہ"
+    },
+    {
+      "en": "Tabular form",
+      "ur": "جدولی شکل"
+    },
+    {
+      "en": "Descriptive form",
+      "ur": "بیانیہ شکل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 5.1 is about writing sets. Ready?",
+          "ur": "مشق 5.1 سیٹ لکھنے کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 5.1 of your maths book (PCTB Mathematics 6). Here you decide whether a collection is a set, use the signs for belongs to and does not belong to, and write sets in tabular and descriptive form. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 5.1 کے ساتھ ہے۔ اس میں آپ فیصلہ کریں گے کہ کوئی مجموعہ سیٹ ہے یا نہیں، تعلق رکھتا ہے اور تعلق نہیں رکھتا کی علامتیں استعمال کریں گے، اور سیٹ کو جدولی اور بیانیہ شکل میں لکھیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_well_defined",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these collections is a set (well defined)?",
+        "ur": "ان مجموعوں میں سے کون سا سیٹ ہے (واضح طور پر بیان کردہ)؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The tastiest fruits",
+            "ur": "سب سے مزے دار پھل"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "\"Tastiest\" is an opinion. People will not agree on the members, so it is not a set.",
+            "ur": "\"مزے دار\" ایک رائے ہے۔ ارکان پر لوگ متفق نہیں ہوں گے، اس لیے یہ سیٹ نہیں۔"
+          },
+          "misconception_id": "opinion_is_set"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The letters of the word \"LAHORE\"",
+            "ur": "لفظ \"LAHORE\" کے حروف"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Anyone can say for sure which letters are in it.",
+            "ur": "جی ہاں! ہر کوئی یقین سے بتا سکتا ہے کہ اس میں کون سے حروف ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The tall boys of a class",
+            "ur": "جماعت کے لمبے لڑکے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "How tall is \"tall\"? There is no fixed rule, so it is not a set.",
+            "ur": "\"لمبا\" کتنا لمبا؟ کوئی مقررہ اصول نہیں، اس لیے یہ سیٹ نہیں۔"
+          },
+          "misconception_id": "opinion_is_set"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The most beautiful places in Pakistan",
+            "ur": "پاکستان کی سب سے خوبصورت جگہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Beauty is a matter of opinion, so the members are not well defined.",
+            "ur": "خوبصورتی رائے کی بات ہے، اس لیے ارکان واضح طور پر بیان کردہ نہیں۔"
+          },
+          "misconception_id": "opinion_is_set"
+        }
+      ]
+    },
+    {
+      "id": "q2_months",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many months of a year have exactly 31 days? This is the number of elements in the set of such months.",
+        "ur": "سال کے کتنے مہینوں میں پورے 31 دن ہوتے ہیں؟ یہ ایسے مہینوں کے سیٹ کے ارکان کی تعداد ہے۔"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Think: Jan, Mar, May ... Say the months and count the ones with 31 days.",
+        "ur": "سوچیں: جنوری، مارچ، مئی ... مہینے بولیں اور 31 دن والے گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! January, March, May, July, August, October and December: 7.",
+        "ur": "درست! جنوری، مارچ، مئی، جولائی، اگست، اکتوبر اور دسمبر: 7"
+      },
+      "feedback_wrong": {
+        "en": "The months are January, March, May, July, August, October, December. That is 7 elements.",
+        "ur": "مہینے جنوری، مارچ، مئی، جولائی، اگست، اکتوبر، دسمبر ہیں۔ یعنی 7 رکن۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 months have 30 days. Count the ones with 31: 7.",
+            "ur": "4 مہینوں میں 30 دن ہوتے ہیں۔ 31 دن والے گنیں: 7"
+          },
+          "misconception_id": "wrong_list"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "A set has clear members. Each member is written once, inside { }.",
+          "ur": "سیٹ کے ارکان واضح ہوتے ہیں۔ ہر رکن ایک ہی بار { } کے اندر لکھا جاتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "A set is a collection of well-defined, distinct things, so everyone can tell for sure what is in it. \"Tasty fruits\" is only an opinion, so it is not a set. We name a set with a capital letter and write its elements inside braces { }. In tabular form we list the elements: A = {3, 6, 9}. In descriptive form we describe them in words: A is the set of multiples of 3 less than 10. Each element is written once, and the order does not matter. The sign ∈ means belongs to, and ∉ means does not belong to: 6 ∈ A and 7 ∉ A.",
+        "ur": "سیٹ واضح طور پر بیان کردہ اور مختلف چیزوں کا مجموعہ ہے، اس لیے ہر کوئی یقین سے بتا سکتا ہے کہ اس میں کیا ہے۔ \"مزے دار پھل\" صرف رائے ہے، اس لیے سیٹ نہیں۔ سیٹ کا نام بڑے حرف سے رکھتے ہیں اور ارکان کو قوسین { } کے اندر لکھتے ہیں۔ جدولی شکل میں ارکان کی فہرست لکھتے ہیں: A = {3, 6, 9}۔ بیانیہ شکل میں انھیں الفاظ میں بیان کرتے ہیں: A، 10 سے چھوٹے 3 کے اضعاف کا سیٹ ہے۔ ہر رکن ایک ہی بار لکھا جاتا ہے اور ترتیب سے فرق نہیں پڑتا۔ علامت ∈ کا مطلب تعلق رکھتا ہے اور ∉ کا مطلب تعلق نہیں رکھتا: 6 ∈ A اور 7 ∉ A۔"
+      }
+    },
+    {
+      "id": "q3_belongs",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A = {3, 6, 9, 12, 15}. Which statement is true?",
+        "ur": "A = {3, 6, 9, 12, 15}۔ کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "12 ∈ A",
+            "ur": "12 ∈ A"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 12 is listed in A, so it belongs to A.",
+            "ur": "جی ہاں! 12 سیٹ A میں لکھا ہے، اس لیے A سے تعلق رکھتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5 ∈ A",
+            "ur": "5 ∈ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 is not listed in A, so 5 ∉ A.",
+            "ur": "5 سیٹ A میں نہیں ہے، اس لیے 5 ∉ A۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "9 ∉ A",
+            "ur": "9 ∉ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 is listed in A, so 9 ∈ A. The sign ∉ means does not belong.",
+            "ur": "9 سیٹ A میں لکھا ہے، اس لیے 9 ∈ A۔ علامت ∉ کا مطلب تعلق نہیں رکھتا۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "15 ∉ A",
+            "ur": "15 ∉ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "15 is the last element of A, so 15 ∈ A.",
+            "ur": "15، A کا آخری رکن ہے، اس لیے 15 ∈ A۔"
+          },
+          "misconception_id": "sign_swapped"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 118.0,
+        "alt": {
+          "en": "An oval named A holding 3, 6, 9, 12 and 15.",
+          "ur": "بیضوی شکل A جس میں 3، 6، 9، 12 اور 15 ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                208.8,
+                67.0
+              ],
+              [
+                207.7,
+                74.2
+              ],
+              [
+                204.3,
+                81.2
+              ],
+              [
+                198.9,
+                87.6
+              ],
+              [
+                191.6,
+                93.2
+              ],
+              [
+                182.7,
+                97.8
+              ],
+              [
+                172.5,
+                101.2
+              ],
+              [
+                161.5,
+                103.3
+              ],
+              [
+                150.0,
+                104.0
+              ],
+              [
+                138.5,
+                103.3
+              ],
+              [
+                127.5,
+                101.2
+              ],
+              [
+                117.3,
+                97.8
+              ],
+              [
+                108.4,
+                93.2
+              ],
+              [
+                101.1,
+                87.6
+              ],
+              [
+                95.7,
+                81.2
+              ],
+              [
+                92.3,
+                74.2
+              ],
+              [
+                91.2,
+                67.0
+              ],
+              [
+                92.3,
+                59.8
+              ],
+              [
+                95.7,
+                52.8
+              ],
+              [
+                101.1,
+                46.4
+              ],
+              [
+                108.4,
+                40.8
+              ],
+              [
+                117.3,
+                36.2
+              ],
+              [
+                127.5,
+                32.8
+              ],
+              [
+                138.5,
+                30.7
+              ],
+              [
+                150.0,
+                30.0
+              ],
+              [
+                161.5,
+                30.7
+              ],
+              [
+                172.5,
+                32.8
+              ],
+              [
+                182.7,
+                36.2
+              ],
+              [
+                191.6,
+                40.8
+              ],
+              [
+                198.9,
+                46.4
+              ],
+              [
+                204.3,
+                52.8
+              ],
+              [
+                207.7,
+                59.8
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              122.8,
+              56.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              56.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.2,
+              56.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              136.4,
+              78.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              163.6,
+              78.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "label",
+            "at": [
+              100.2,
+              34.6
+            ],
+            "text": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_belongs_letters",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "L is the set of the letters of the word \"LAHORE\". Which statement is true?",
+        "ur": "L لفظ \"LAHORE\" کے حروف کا سیٹ ہے۔ کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "P ∈ L",
+            "ur": "P ∈ L"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There is no P in LAHORE, so P ∉ L.",
+            "ur": "LAHORE میں P نہیں ہے، اس لیے P ∉ L۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "E ∉ L",
+            "ur": "E ∉ L"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "E is the last letter of LAHORE, so E ∈ L.",
+            "ur": "E لفظ LAHORE کا آخری حرف ہے، اس لیے E ∈ L۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "R ∈ L",
+            "ur": "R ∈ L"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! R is a letter of LAHORE.",
+            "ur": "جی ہاں! R لفظ LAHORE کا حرف ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "N ∈ L",
+            "ur": "N ∈ L"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There is no N in LAHORE, so N ∉ L.",
+            "ur": "LAHORE میں N نہیں ہے، اس لیے N ∉ L۔"
+          },
+          "misconception_id": "sign_swapped"
+        }
+      ]
+    },
+    {
+      "id": "q5_multiples",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write the set of the first five multiples of 4 in tabular form (like {1, 2, 3}).",
+        "ur": "4 کے پہلے پانچ اضعاف کا سیٹ جدولی شکل میں لکھیں (جیسے {1, 2, 3})۔"
+      },
+      "checker": "text",
+      "expected": "{4, 8, 12, 16, 20}",
+      "accept": [
+        "12, 16, 20, 4, 8",
+        "12, 16, 20, 8, 4",
+        "12, 16, 4, 20, 8",
+        "12, 16, 4, 8, 20",
+        "12, 16, 8, 20, 4",
+        "12, 16, 8, 4, 20",
+        "12, 20, 16, 4, 8",
+        "12, 20, 16, 8, 4",
+        "12, 20, 4, 16, 8",
+        "12, 20, 4, 8, 16",
+        "12, 20, 8, 16, 4",
+        "12, 20, 8, 4, 16",
+        "12, 4, 16, 20, 8",
+        "12, 4, 16, 8, 20",
+        "12, 4, 20, 16, 8",
+        "12, 4, 20, 8, 16",
+        "12, 4, 8, 16, 20",
+        "12, 4, 8, 20, 16",
+        "12, 8, 16, 20, 4",
+        "12, 8, 16, 4, 20",
+        "12, 8, 20, 16, 4",
+        "12, 8, 20, 4, 16",
+        "12, 8, 4, 16, 20",
+        "12, 8, 4, 20, 16",
+        "16, 12, 20, 4, 8",
+        "16, 12, 20, 8, 4",
+        "16, 12, 4, 20, 8",
+        "16, 12, 4, 8, 20",
+        "16, 12, 8, 20, 4",
+        "16, 12, 8, 4, 20",
+        "16, 20, 12, 4, 8",
+        "16, 20, 12, 8, 4",
+        "16, 20, 4, 12, 8",
+        "16, 20, 4, 8, 12",
+        "16, 20, 8, 12, 4",
+        "16, 20, 8, 4, 12",
+        "16, 4, 12, 20, 8",
+        "16, 4, 12, 8, 20",
+        "16, 4, 20, 12, 8",
+        "16, 4, 20, 8, 12",
+        "16, 4, 8, 12, 20",
+        "16, 4, 8, 20, 12",
+        "16, 8, 12, 20, 4",
+        "16, 8, 12, 4, 20",
+        "16, 8, 20, 12, 4",
+        "16, 8, 20, 4, 12",
+        "16, 8, 4, 12, 20",
+        "16, 8, 4, 20, 12",
+        "20, 12, 16, 4, 8",
+        "20, 12, 16, 8, 4",
+        "20, 12, 4, 16, 8",
+        "20, 12, 4, 8, 16",
+        "20, 12, 8, 16, 4",
+        "20, 12, 8, 4, 16",
+        "20, 16, 12, 4, 8",
+        "20, 16, 12, 8, 4",
+        "20, 16, 4, 12, 8",
+        "20, 16, 4, 8, 12",
+        "20, 16, 8, 12, 4",
+        "20, 16, 8, 4, 12",
+        "20, 4, 12, 16, 8",
+        "20, 4, 12, 8, 16",
+        "20, 4, 16, 12, 8",
+        "20, 4, 16, 8, 12",
+        "20, 4, 8, 12, 16",
+        "20, 4, 8, 16, 12",
+        "20, 8, 12, 16, 4",
+        "20, 8, 12, 4, 16",
+        "20, 8, 16, 12, 4",
+        "20, 8, 16, 4, 12",
+        "20, 8, 4, 12, 16",
+        "20, 8, 4, 16, 12",
+        "4, 12, 16, 20, 8",
+        "4, 12, 16, 8, 20",
+        "4, 12, 20, 16, 8",
+        "4, 12, 20, 8, 16",
+        "4, 12, 8, 16, 20",
+        "4, 12, 8, 20, 16",
+        "4, 16, 12, 20, 8",
+        "4, 16, 12, 8, 20",
+        "4, 16, 20, 12, 8",
+        "4, 16, 20, 8, 12",
+        "4, 16, 8, 12, 20",
+        "4, 16, 8, 20, 12",
+        "4, 20, 12, 16, 8",
+        "4, 20, 12, 8, 16",
+        "4, 20, 16, 12, 8",
+        "4, 20, 16, 8, 12",
+        "4, 20, 8, 12, 16",
+        "4, 20, 8, 16, 12",
+        "4, 8, 12, 16, 20",
+        "4, 8, 12, 20, 16",
+        "4, 8, 16, 12, 20",
+        "4, 8, 16, 20, 12",
+        "4, 8, 20, 12, 16",
+        "4, 8, 20, 16, 12",
+        "8, 12, 16, 20, 4",
+        "8, 12, 16, 4, 20",
+        "8, 12, 20, 16, 4",
+        "8, 12, 20, 4, 16",
+        "8, 12, 4, 16, 20",
+        "8, 12, 4, 20, 16",
+        "8, 16, 12, 20, 4",
+        "8, 16, 12, 4, 20",
+        "8, 16, 20, 12, 4",
+        "8, 16, 20, 4, 12",
+        "8, 16, 4, 12, 20",
+        "8, 16, 4, 20, 12",
+        "8, 20, 12, 16, 4",
+        "8, 20, 12, 4, 16",
+        "8, 20, 16, 12, 4",
+        "8, 20, 16, 4, 12",
+        "8, 20, 4, 12, 16",
+        "8, 20, 4, 16, 12",
+        "8, 4, 12, 16, 20",
+        "8, 4, 12, 20, 16",
+        "8, 4, 16, 12, 20",
+        "8, 4, 16, 20, 12",
+        "8, 4, 20, 12, 16",
+        "8, 4, 20, 16, 12",
+        "{12, 16, 20, 4, 8}",
+        "{12, 16, 20, 8, 4}",
+        "{12, 16, 4, 20, 8}",
+        "{12, 16, 4, 8, 20}",
+        "{12, 16, 8, 20, 4}",
+        "{12, 16, 8, 4, 20}",
+        "{12, 20, 16, 4, 8}",
+        "{12, 20, 16, 8, 4}",
+        "{12, 20, 4, 16, 8}",
+        "{12, 20, 4, 8, 16}",
+        "{12, 20, 8, 16, 4}",
+        "{12, 20, 8, 4, 16}",
+        "{12, 4, 16, 20, 8}",
+        "{12, 4, 16, 8, 20}",
+        "{12, 4, 20, 16, 8}",
+        "{12, 4, 20, 8, 16}",
+        "{12, 4, 8, 16, 20}",
+        "{12, 4, 8, 20, 16}",
+        "{12, 8, 16, 20, 4}",
+        "{12, 8, 16, 4, 20}",
+        "{12, 8, 20, 16, 4}",
+        "{12, 8, 20, 4, 16}",
+        "{12, 8, 4, 16, 20}",
+        "{12, 8, 4, 20, 16}",
+        "{16, 12, 20, 4, 8}",
+        "{16, 12, 20, 8, 4}",
+        "{16, 12, 4, 20, 8}",
+        "{16, 12, 4, 8, 20}",
+        "{16, 12, 8, 20, 4}",
+        "{16, 12, 8, 4, 20}",
+        "{16, 20, 12, 4, 8}",
+        "{16, 20, 12, 8, 4}",
+        "{16, 20, 4, 12, 8}",
+        "{16, 20, 4, 8, 12}",
+        "{16, 20, 8, 12, 4}",
+        "{16, 20, 8, 4, 12}",
+        "{16, 4, 12, 20, 8}",
+        "{16, 4, 12, 8, 20}",
+        "{16, 4, 20, 12, 8}",
+        "{16, 4, 20, 8, 12}",
+        "{16, 4, 8, 12, 20}",
+        "{16, 4, 8, 20, 12}",
+        "{16, 8, 12, 20, 4}",
+        "{16, 8, 12, 4, 20}",
+        "{16, 8, 20, 12, 4}",
+        "{16, 8, 20, 4, 12}",
+        "{16, 8, 4, 12, 20}",
+        "{16, 8, 4, 20, 12}",
+        "{20, 12, 16, 4, 8}",
+        "{20, 12, 16, 8, 4}",
+        "{20, 12, 4, 16, 8}",
+        "{20, 12, 4, 8, 16}",
+        "{20, 12, 8, 16, 4}",
+        "{20, 12, 8, 4, 16}",
+        "{20, 16, 12, 4, 8}",
+        "{20, 16, 12, 8, 4}",
+        "{20, 16, 4, 12, 8}",
+        "{20, 16, 4, 8, 12}",
+        "{20, 16, 8, 12, 4}",
+        "{20, 16, 8, 4, 12}",
+        "{20, 4, 12, 16, 8}",
+        "{20, 4, 12, 8, 16}",
+        "{20, 4, 16, 12, 8}",
+        "{20, 4, 16, 8, 12}",
+        "{20, 4, 8, 12, 16}",
+        "{20, 4, 8, 16, 12}",
+        "{20, 8, 12, 16, 4}",
+        "{20, 8, 12, 4, 16}",
+        "{20, 8, 16, 12, 4}",
+        "{20, 8, 16, 4, 12}",
+        "{20, 8, 4, 12, 16}",
+        "{20, 8, 4, 16, 12}",
+        "{4, 12, 16, 20, 8}",
+        "{4, 12, 16, 8, 20}",
+        "{4, 12, 20, 16, 8}",
+        "{4, 12, 20, 8, 16}",
+        "{4, 12, 8, 16, 20}",
+        "{4, 12, 8, 20, 16}",
+        "{4, 16, 12, 20, 8}",
+        "{4, 16, 12, 8, 20}",
+        "{4, 16, 20, 12, 8}",
+        "{4, 16, 20, 8, 12}",
+        "{4, 16, 8, 12, 20}",
+        "{4, 16, 8, 20, 12}",
+        "{4, 20, 12, 16, 8}",
+        "{4, 20, 12, 8, 16}",
+        "{4, 20, 16, 12, 8}",
+        "{4, 20, 16, 8, 12}",
+        "{4, 20, 8, 12, 16}",
+        "{4, 20, 8, 16, 12}",
+        "{4, 8, 12, 20, 16}",
+        "{4, 8, 16, 12, 20}",
+        "{4, 8, 16, 20, 12}",
+        "{4, 8, 20, 12, 16}",
+        "{4, 8, 20, 16, 12}",
+        "{8, 12, 16, 20, 4}",
+        "{8, 12, 16, 4, 20}",
+        "{8, 12, 20, 16, 4}",
+        "{8, 12, 20, 4, 16}",
+        "{8, 12, 4, 16, 20}",
+        "{8, 12, 4, 20, 16}",
+        "{8, 16, 12, 20, 4}",
+        "{8, 16, 12, 4, 20}",
+        "{8, 16, 20, 12, 4}",
+        "{8, 16, 20, 4, 12}",
+        "{8, 16, 4, 12, 20}",
+        "{8, 16, 4, 20, 12}",
+        "{8, 20, 12, 16, 4}",
+        "{8, 20, 12, 4, 16}",
+        "{8, 20, 16, 12, 4}",
+        "{8, 20, 16, 4, 12}",
+        "{8, 20, 4, 12, 16}",
+        "{8, 20, 4, 16, 12}",
+        "{8, 4, 12, 16, 20}",
+        "{8, 4, 12, 20, 16}",
+        "{8, 4, 16, 12, 20}",
+        "{8, 4, 16, 20, 12}",
+        "{8, 4, 20, 12, 16}",
+        "{8, 4, 20, 16, 12}"
+      ],
+      "hint": {
+        "en": "4 × 1, 4 × 2, 4 × 3 ... Write the answers, not the multipliers.",
+        "ur": "4 × 1، 4 × 2، 4 × 3 ... جوابات لکھیں، ضرب دینے والے اعداد نہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {4, 8, 12, 16, 20}.",
+        "ur": "درست! {4, 8, 12, 16, 20}"
+      },
+      "feedback_wrong": {
+        "en": "The multiples of 4 are 4, 8, 12, 16, 20. Write them inside { }.",
+        "ur": "4 کے اضعاف 4، 8، 12، 16، 20 ہیں۔ انھیں { } کے اندر لکھیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "{1, 2, 3, 4, 5}",
+          "feedback": {
+            "en": "Those are the numbers you multiply 4 by. The multiples are 4 × each of them: {4, 8, 12, 16, 20}.",
+            "ur": "یہ وہ اعداد ہیں جن سے 4 کو ضرب دیتے ہیں۔ اضعاف ان میں سے ہر ایک کے ساتھ 4 کا حاصل ضرب ہیں: {4, 8, 12, 16, 20}"
+          },
+          "misconception_id": "wrong_list"
+        },
+        {
+          "answer": "{4, 8, 12, 16}",
+          "feedback": {
+            "en": "That has only four multiples. The first five end with 20.",
+            "ur": "اس میں صرف چار اضعاف ہیں۔ پہلے پانچ 20 پر ختم ہوتے ہیں۔"
+          },
+          "misconception_id": "wrong_list"
+        }
+      ]
+    },
+    {
+      "id": "q6_distinct",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The set B holds the letters of the word \"BALLOON\". How many elements does B have?",
+        "ur": "سیٹ B میں لفظ \"BALLOON\" کے حروف ہیں۔ B کے کتنے ارکان ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "L and O each appear twice. A set lists each element once.",
+        "ur": "L اور O دو دو بار آتے ہیں۔ سیٹ ہر رکن ایک ہی بار لکھتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! B = {B, A, L, O, N}: 5 elements.",
+        "ur": "درست! B = {B, A, L, O, N}: 5 رکن"
+      },
+      "feedback_wrong": {
+        "en": "The word has 7 letters, but L and O repeat. The distinct letters are B, A, L, O, N: 5.",
+        "ur": "لفظ میں 7 حروف ہیں مگر L اور O دہراتے ہیں۔ مختلف حروف B، A، L، O، N ہیں: 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That counts every letter, including the repeats. A set lists each element once: 5.",
+            "ur": "یہ ہر حرف گنتا ہے، دہرائے ہوئے بھی۔ سیٹ ہر رکن ایک ہی بار لکھتا ہے: 5"
+          },
+          "misconception_id": "repeated_element"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 48.0,
+        "alt": {
+          "en": "The word BALLOON written one letter to a tile: B, A, L, L, O, O, N.",
+          "ur": "لفظ BALLOON ایک ٹائل پر ایک حرف: B، A، L، L، O، O، N۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                34.0,
+                10.0
+              ],
+              [
+                62.0,
+                10.0
+              ],
+              [
+                62.0,
+                38.0
+              ],
+              [
+                34.0,
+                38.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.0,
+              24.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                68.0,
+                10.0
+              ],
+              [
+                96.0,
+                10.0
+              ],
+              [
+                96.0,
+                38.0
+              ],
+              [
+                68.0,
+                38.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.0,
+              24.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                102.0,
+                10.0
+              ],
+              [
+                130.0,
+                10.0
+              ],
+              [
+                130.0,
+                38.0
+              ],
+              [
+                102.0,
+                38.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              116.0,
+              24.0
+            ],
+            "text": "L"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                136.0,
+                10.0
+              ],
+              [
+                164.0,
+                10.0
+              ],
+              [
+                164.0,
+                38.0
+              ],
+              [
+                136.0,
+                38.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              24.0
+            ],
+            "text": "L"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                170.0,
+                10.0
+              ],
+              [
+                198.0,
+                10.0
+              ],
+              [
+                198.0,
+                38.0
+              ],
+              [
+                170.0,
+                38.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              184.0,
+              24.0
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                204.0,
+                10.0
+              ],
+              [
+                232.0,
+                10.0
+              ],
+              [
+                232.0,
+                38.0
+              ],
+              [
+                204.0,
+                38.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              218.0,
+              24.0
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                238.0,
+                10.0
+              ],
+              [
+                266.0,
+                10.0
+              ],
+              [
+                266.0,
+                38.0
+              ],
+              [
+                238.0,
+                38.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              252.0,
+              24.0
+            ],
+            "text": "N"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_between",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is the tabular form of the set of natural numbers between 5 and 10?",
+        "ur": "5 اور 10 کے درمیان قدرتی اعداد کے سیٹ کی جدولی شکل کون سی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "{5, 6, 7, 8, 9, 10}",
+            "ur": "{5, 6, 7, 8, 9, 10}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That includes both 5 and 10. Between means they are left out.",
+            "ur": "اس میں 5 اور 10 دونوں شامل ہیں۔ درمیان کا مطلب ہے کہ انھیں چھوڑ دیں۔"
+          },
+          "misconception_id": "ends_included"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "{5, 6, 7, 8, 9}",
+            "ur": "{5, 6, 7, 8, 9}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That includes 5. Between means 5 is left out.",
+            "ur": "اس میں 5 شامل ہے۔ درمیان کا مطلب ہے کہ 5 کو چھوڑ دیں۔"
+          },
+          "misconception_id": "ends_included"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "{6, 7, 8, 9, 10}",
+            "ur": "{6, 7, 8, 9, 10}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That includes 10. Between means 10 is left out.",
+            "ur": "اس میں 10 شامل ہے۔ درمیان کا مطلب ہے کہ 10 کو چھوڑ دیں۔"
+          },
+          "misconception_id": "ends_included"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "{6, 7, 8, 9}",
+            "ur": "{6, 7, 8, 9}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! \"Between\" leaves out 5 and 10 themselves.",
+            "ur": "جی ہاں! \"درمیان\" میں خود 5 اور 10 شامل نہیں ہوتے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8_describe",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which description fits the set {2, 3, 5, 7}?",
+        "ur": "کون سی بیانیہ شکل سیٹ {2, 3, 5, 7} پر پوری اترتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The prime numbers less than 12",
+            "ur": "12 سے چھوٹے مفرد اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That also holds 11, which is not in the set.",
+            "ur": "اس میں 11 بھی آتا ہے جو سیٹ میں نہیں۔"
+          },
+          "misconception_id": "too_wide_rule"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The prime numbers less than 10",
+            "ur": "10 سے چھوٹے مفرد اعداد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The primes below 10 are exactly 2, 3, 5 and 7.",
+            "ur": "جی ہاں! 10 سے چھوٹے مفرد اعداد بالکل 2، 3، 5 اور 7 ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The odd numbers less than 8",
+            "ur": "8 سے چھوٹے طاق اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That holds 1, which is not in the set, and leaves out 2.",
+            "ur": "اس میں 1 آتا ہے جو سیٹ میں نہیں، اور 2 رہ جاتا ہے۔"
+          },
+          "misconception_id": "too_wide_rule"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The prime numbers less than 7",
+            "ur": "7 سے چھوٹے مفرد اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That leaves out 7. It gives {2, 3, 5}.",
+            "ur": "اس میں 7 رہ جاتا ہے۔ یہ {2, 3, 5} دیتا ہے۔"
+          },
+          "misconception_id": "too_wide_rule"
+        }
+      ]
+    },
+    {
+      "id": "q9_odd_tabular",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write in tabular form the set of odd numbers greater than 2 and less than 10 (like {1, 2, 3}).",
+        "ur": "2 سے بڑے اور 10 سے چھوٹے طاق اعداد کا سیٹ جدولی شکل میں لکھیں (جیسے {1, 2, 3})۔"
+      },
+      "checker": "text",
+      "expected": "{3, 5, 7, 9}",
+      "accept": [
+        "3, 5, 7, 9",
+        "3, 5, 9, 7",
+        "3, 7, 5, 9",
+        "3, 7, 9, 5",
+        "3, 9, 5, 7",
+        "3, 9, 7, 5",
+        "5, 3, 7, 9",
+        "5, 3, 9, 7",
+        "5, 7, 3, 9",
+        "5, 7, 9, 3",
+        "5, 9, 3, 7",
+        "5, 9, 7, 3",
+        "7, 3, 5, 9",
+        "7, 3, 9, 5",
+        "7, 5, 3, 9",
+        "7, 5, 9, 3",
+        "7, 9, 3, 5",
+        "7, 9, 5, 3",
+        "9, 3, 5, 7",
+        "9, 3, 7, 5",
+        "9, 5, 3, 7",
+        "9, 5, 7, 3",
+        "9, 7, 3, 5",
+        "9, 7, 5, 3",
+        "{3, 5, 9, 7}",
+        "{3, 7, 5, 9}",
+        "{3, 7, 9, 5}",
+        "{3, 9, 5, 7}",
+        "{3, 9, 7, 5}",
+        "{5, 3, 7, 9}",
+        "{5, 3, 9, 7}",
+        "{5, 7, 3, 9}",
+        "{5, 7, 9, 3}",
+        "{5, 9, 3, 7}",
+        "{5, 9, 7, 3}",
+        "{7, 3, 5, 9}",
+        "{7, 3, 9, 5}",
+        "{7, 5, 3, 9}",
+        "{7, 5, 9, 3}",
+        "{7, 9, 3, 5}",
+        "{7, 9, 5, 3}",
+        "{9, 3, 5, 7}",
+        "{9, 3, 7, 5}",
+        "{9, 5, 3, 7}",
+        "{9, 5, 7, 3}",
+        "{9, 7, 3, 5}",
+        "{9, 7, 5, 3}"
+      ],
+      "hint": {
+        "en": "List the odd numbers after 2 and stop before 10.",
+        "ur": "2 کے بعد کے طاق اعداد لکھیں اور 10 سے پہلے رک جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {3, 5, 7, 9}.",
+        "ur": "درست! {3, 5, 7, 9}"
+      },
+      "feedback_wrong": {
+        "en": "The odd numbers after 2 and before 10 are 3, 5, 7, 9.",
+        "ur": "2 کے بعد اور 10 سے پہلے طاق اعداد 3، 5، 7، 9 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "{1, 3, 5, 7, 9}",
+          "feedback": {
+            "en": "1 is not greater than 2. Start at 3: {3, 5, 7, 9}.",
+            "ur": "1، 2 سے بڑا نہیں۔ 3 سے شروع کریں: {3, 5, 7, 9}"
+          },
+          "misconception_id": "ends_included"
+        }
+      ]
+    },
+    {
+      "id": "q10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zara writes the set of the letters of the word \"SEEDS\" as {S, E, E, D, S}. What went wrong?",
+        "ur": "زارہ لفظ \"SEEDS\" کے حروف کا سیٹ {S, E, E, D, S} لکھتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. Every letter of the word should be written.",
+            "ur": "کوئی غلطی نہیں۔ لفظ کا ہر حرف لکھنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "In a set, an element is not repeated. The set is {S, E, D}.",
+            "ur": "سیٹ میں رکن دہرایا نہیں جاتا۔ سیٹ {S, E, D} ہے۔"
+          },
+          "misconception_id": "repeated_element"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "A set lists each element once, so it should be {S, E, D}.",
+            "ur": "سیٹ ہر رکن ایک ہی بار لکھتا ہے، اس لیے یہ {S, E, D} ہونا چاہیے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Repeated letters are written only once.",
+            "ur": "جی ہاں! دہرائے ہوئے حروف صرف ایک بار لکھے جاتے ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should use ( ) instead of { }.",
+            "ur": "اسے { } کی جگہ ( ) استعمال کرنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A set is written in braces { }. The mistake is the repeated letters.",
+            "ur": "سیٹ قوسین { } میں لکھا جاتا ہے۔ غلطی دہرائے ہوئے حروف ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error_sign",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Imran says 9 ∈ {1, 3, 5, 7} because 9 is odd like the others. What went wrong?",
+        "ur": "عمران کہتا ہے 9 ∈ {1, 3, 5, 7} کیونکہ 9 بھی دوسروں کی طرح طاق ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. 9 is odd, so it belongs.",
+            "ur": "کوئی غلطی نہیں۔ 9 طاق ہے، اس لیے تعلق رکھتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Being odd is not enough. The set lists 1, 3, 5, 7 only.",
+            "ur": "طاق ہونا کافی نہیں۔ سیٹ میں صرف 1، 3، 5، 7 لکھے ہیں۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "He should write 9 = {1, 3, 5, 7}.",
+            "ur": "اسے 9 = {1, 3, 5, 7} لکھنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "An equals sign compares things of the same kind. A number and a set are different.",
+            "ur": "برابر کی علامت ایک جیسی چیزوں کا موازنہ کرتی ہے۔ عدد اور سیٹ مختلف ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "9 is not listed in the set, so it is not an element: 9 ∉ {1, 3, 5, 7}.",
+            "ur": "9 سیٹ میں لکھا ہی نہیں، اس لیے یہ رکن نہیں: 9 ∉ {1, 3, 5, 7}۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only what is listed belongs to the set.",
+            "ur": "جی ہاں! سیٹ سے وہی تعلق رکھتا ہے جو اس میں لکھا ہو۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You wrote and read sets.",
+          "ur": "شاباش! آپ نے سیٹ لکھے اور پڑھے۔"
+        }
+      },
+      "text": {
+        "en": "A set must be well defined: opinions like tasty or beautiful do not make a set. Write its elements once each inside { }. Use ∈ for belongs to and ∉ for does not belong to. Tabular form lists the elements; descriptive form says the rule in words. Between leaves out the end numbers.",
+        "ur": "سیٹ واضح طور پر بیان کردہ ہونا چاہیے: مزے دار یا خوبصورت جیسی رائے سے سیٹ نہیں بنتا۔ اس کے ارکان ایک ایک بار { } میں لکھیں۔ ∈ تعلق رکھتا ہے اور ∉ تعلق نہیں رکھتا کے لیے استعمال کریں۔ جدولی شکل ارکان کی فہرست ہے؛ بیانیہ شکل اصول کو الفاظ میں کہتی ہے۔ درمیان میں آخری اعداد شامل نہیں ہوتے۔"
+      },
+      "points": [
+        {
+          "en": "Check a tabular form against the rule: nothing missing, nothing extra.",
+          "ur": "جدولی شکل کو اصول سے ملا کر دیکھیں: کچھ کم نہ ہو، کچھ زیادہ نہ ہو۔"
+        },
+        {
+          "en": "Repeated letters are written once.",
+          "ur": "دہرائے ہوئے حروف ایک ہی بار لکھے جاتے ہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_count",
+      "type": "recall",
+      "step": {
+        "id": "r_count",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in the set of the letters of the word \"PEPPER\"?",
+          "ur": "لفظ \"PEPPER\" کے حروف کے سیٹ میں کتنے ارکان ہیں؟"
+        },
+        "answer": 3,
+        "checker": "numeric",
+        "hint": {
+          "en": "Write each different letter once.",
+          "ur": "ہر مختلف حرف ایک بار لکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! {P, E, R}: 3.",
+          "ur": "درست! {P, E, R}: 3"
+        },
+        "feedback_wrong": {
+          "en": "The letters are P, E, R, each written once: 3.",
+          "ur": "حروف P، E، R ہیں، ہر ایک ایک بار: 3"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "That counts every letter. Write each different letter once: 3.",
+              "ur": "یہ ہر حرف گنتا ہے۔ ہر مختلف حرف ایک بار لکھیں: 3"
+            },
+            "misconception_id": "repeated_element"
+          }
+        ]
+      },
+      "skill": "maths.sets.ex_5_1"
+    },
+    {
+      "id": "r_days",
+      "type": "apply",
+      "step": {
+        "id": "r_days",
+        "type": "number",
+        "prompt": {
+          "en": "How many days of the week have a name that starts with S?",
+          "ur": "ہفتے کے کتنے دنوں کا نام S سے شروع ہوتا ہے؟ (انگریزی نام)"
+        },
+        "answer": 2,
+        "checker": "numeric",
+        "hint": {
+          "en": "Say the seven days and listen for S.",
+          "ur": "سات دن بولیں اور S سنیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! Saturday and Sunday: 2.",
+          "ur": "درست! Saturday اور Sunday: 2"
+        },
+        "feedback_wrong": {
+          "en": "Only Saturday and Sunday start with S: 2.",
+          "ur": "صرف Saturday اور Sunday S سے شروع ہوتے ہیں: 2"
+        },
+        "common_wrong": [
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "That is all the days. Only those starting with S count: 2.",
+              "ur": "یہ سارے دن ہیں۔ صرف S سے شروع ہونے والے گنیں: 2"
+            },
+            "misconception_id": "wrong_list"
+          }
+        ]
+      },
+      "skill": "maths.sets.ex_5_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 5.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers well-defined collections (q1), counting and writing the elements of a set (q2, q6), the signs for belongs to and does not belong to (q3, q4, q11), tabular form (q5, q7, q9), descriptive form (q8) and a find-the-error question (q10, q11).",
+    "Each wrong answer is a real mistake: an opinion taken as a set, the two signs swapped, a repeated letter counted twice, the end numbers included for between, and a rule that fits too many or too few numbers.",
+    "Urdu terms to check: واضح طور پر بیان کردہ (well defined), رکن (element), جدولی شکل / بیانیہ شکل (tabular / descriptive form), تعلق رکھتا ہے (belongs to), اضعاف (multiples).",
+    "The numbers were worked out in content/sources/g6-maths-01/exercise_5_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
