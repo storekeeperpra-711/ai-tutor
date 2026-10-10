@@ -29,6 +29,19 @@ BOOK_INTEGERS = "PCTB Mathematics 6 (SNC 2022), Sub-domain 2: Integers"
 BOOK_LAWS = "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers"
 
 
+# Practice sets that go with the book's exercises of chapter 2 (Integers), and
+# the chapter test. Each has its own skill, with the unit's skills it
+# practises as prerequisites.
+EXERCISES = ("2.1", "2.2")
+EX_SKILL = {ex: "maths.integers.ex_" + ex.replace(".", "_") for ex in EXERCISES}
+CHAPTER_TEST = "maths.integers.chapter_2_test"
+
+
+def book_ref(part):
+    """'Exercise 2.1' -> the textbook string for curriculum_refs."""
+    return f"{BOOK_INTEGERS}, {part}"
+
+
 def T(en, ur):
     return {"en": en, "ur": ur}
 
@@ -71,6 +84,57 @@ def number_question(id, prompt, answer: int, hint, good, bad, *, common_wrong=()
         step["common_wrong"] = list(common_wrong)
     return step
 
+
+
+def choice_question(id, prompt, options, *, qtype="apply", skill=None, character=None):
+    """A step where one of the options is right."""
+    step = {"id": id, "type": "choice"}
+    if qtype:
+        step["question_type"] = qtype
+    if skill:
+        step["skill"] = skill
+    if character:
+        step["character"] = character
+    step.update({"prompt": prompt, "options": options})
+    return step
+
+
+def practice_lesson(ex, *, script, title, outcome, prerequisites, misconceptions, steps,
+                    bank, review, glossary, flashcards, home_task, notes, minutes=18):
+    """A practice set to use next to Exercise `ex` of the book: its own
+    skill, mastered with recall, apply and find_error questions."""
+    skill = EX_SKILL[ex]
+    return {
+        "id": "g6-maths-04-exercise-" + ex.replace(".", "-"),
+        "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
+        "curriculum_refs": [{"outcome": outcome, "textbook": book_ref(f"Exercise {ex}")}],
+        "skills": [skill],
+        "title": title,
+        "estimated_minutes": minutes,
+        "prerequisites": [{"skill": s} for s in prerequisites],
+        "misconceptions": misconceptions,
+        "mastery_criteria": {skill: {"question_types": ["recall", "apply", "find_error"], "days": 2}},
+        "question_bank": {skill: bank},
+        "flashcards": flashcards,
+        "home_tasks": [home_task],
+        "glossary": glossary,
+        "steps": steps,
+        "review_questions": [dict(q, skill=skill) for q in review],
+        "teacher_notes": [
+            f"A practice set to use next to Exercise {ex} of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+            *notes,
+            f"The numbers were worked out in content/sources/g6-maths-04/{script}; edit that script, not this file.",
+        ],
+        "review": REVIEW,
+    }
+
+
+def practice_intro(ex, kinds_en, kinds_ur, line_en, line_ur):
+    """The first step: which exercise of the book this set goes with."""
+    return {"id": "s1_intro", "type": "explain",
+            "character": say("encouraging", line_en, line_ur),
+            "text": T(f"This practice set goes with Exercise {ex} of your maths book (PCTB Mathematics 6). {kinds_en} The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+                      f"یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق {ex} کے ساتھ ہے۔ {kinds_ur} سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔")}
 
 
 def check_lesson(lesson):

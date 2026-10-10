@@ -1,0 +1,1185 @@
+{
+  "id": "g6-maths-04-chapter-2-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 2: integers, opposites, the number line, ordering integers, and absolute value.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 2: Integers, Review Exercise 2"
+    }
+  ],
+  "skills": [
+    "maths.integers.chapter_2_test"
+  ],
+  "title": {
+    "en": "Chapter 2 test: Integers",
+    "ur": "باب 2 کا ٹیسٹ: صحیح اعداد"
+  },
+  "estimated_minutes": 22,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.meaning"
+    },
+    {
+      "skill": "maths.integers.absolute_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "sign_ignored",
+      "description": "Ignores the minus sign, writing a loss or a point left of 0 as a positive number."
+    },
+    {
+      "id": "opposite_same",
+      "description": "Thinks the opposite of a number is the number itself."
+    },
+    {
+      "id": "zero_sign",
+      "description": "Thinks 0 is positive or negative."
+    },
+    {
+      "id": "bigger_digits",
+      "description": "Thinks a negative number with bigger digits is greater: −9 > −2."
+    },
+    {
+      "id": "sign_kept",
+      "description": "Gives the absolute value with its minus sign: |−10| = −10."
+    },
+    {
+      "id": "abs_order_mixed",
+      "description": "Orders by value when absolute values are asked for, or the other way round."
+    },
+    {
+      "id": "gap_miscount",
+      "description": "Subtracts the numbers without their signs, or leaves out 0 when counting integers."
+    },
+    {
+      "id": "one_value",
+      "description": "Thinks only one integer has a given absolute value."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a middle result but does not answer the question asked."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.chapter_2_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.chapter_2_test": [
+      {
+        "id": "qb_exam_abs",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_abs",
+          "type": "number",
+          "prompt": {
+            "en": "Find |−19| + |−4|.",
+            "ur": "|−19| + |−4| معلوم کریں۔"
+          },
+          "answer": 23,
+          "checker": "numeric",
+          "hint": {
+            "en": "Take the absolute values first: 19 and 4.",
+            "ur": "پہلے مطلق قیمتیں لیں: 19 اور 4"
+          },
+          "feedback_correct": {
+            "en": "Correct: 19 + 4 = 23.",
+            "ur": "درست: 19 + 4 = 23"
+          },
+          "feedback_wrong": {
+            "en": "|−19| = 19 and |−4| = 4, so 19 + 4 = 23.",
+            "ur": "|−19| = 19 اور |−4| = 4، اس لیے 19 + 4 = 23"
+          },
+          "common_wrong": [
+            {
+              "answer": -23,
+              "feedback": {
+                "en": "Absolute values are not negative: 19 + 4 = 23.",
+                "ur": "مطلق قیمتیں منفی نہیں ہوتیں: 19 + 4 = 23"
+              },
+              "misconception_id": "sign_kept"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_opposite",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_opposite",
+          "type": "number",
+          "prompt": {
+            "en": "Write the opposite of −8.",
+            "ur": "−8 کا مخالف عدد لکھیں۔"
+          },
+          "answer": 8,
+          "checker": "numeric",
+          "hint": {
+            "en": "Same distance from 0, on the other side.",
+            "ur": "0 سے اتنا ہی فاصلہ، دوسری طرف۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 8.",
+            "ur": "درست: 8"
+          },
+          "feedback_wrong": {
+            "en": "The opposite of −8 is 8.",
+            "ur": "−8 کا مخالف عدد 8 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": -8,
+              "feedback": {
+                "en": "That is the same number. The opposite is 8.",
+                "ur": "یہ وہی عدد ہے۔ مخالف 8 ہے۔"
+              },
+              "misconception_id": "opposite_same"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_smallest",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_smallest",
+          "type": "number",
+          "prompt": {
+            "en": "Which is the smallest of −7, 2, −13 and 10?",
+            "ur": "−7، 2، −13 اور 10 میں سے سب سے چھوٹا کون سا ہے؟"
+          },
+          "answer": -13,
+          "checker": "numeric",
+          "hint": {
+            "en": "The smallest is furthest to the left on the number line.",
+            "ur": "سب سے چھوٹا عددی خط پر سب سے بائیں ہوتا ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: −13.",
+            "ur": "درست: −13"
+          },
+          "feedback_wrong": {
+            "en": "−13 is furthest left, so it is the smallest.",
+            "ur": "−13 سب سے بائیں ہے، اس لیے سب سے چھوٹا ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": -7,
+              "feedback": {
+                "en": "−7 is right of −13, so it is bigger. The smallest is −13.",
+                "ur": "−7، −13 کے دائیں ہے، اس لیے بڑا ہے۔ سب سے چھوٹا −13 ہے۔"
+              },
+              "misconception_id": "bigger_digits"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 2 in your maths book in your notebook, setting out the working the way this test's answers do. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 2 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Absolute value",
+      "ur": "مطلق قیمت"
+    },
+    {
+      "en": "Opposite",
+      "ur": "مخالف عدد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 2 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook). The questions are new, not the book's.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 2 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوال (پورا کام اپنی کاپی میں)۔ سوال نئے ہیں، کتاب والے نہیں۔"
+      }
+    },
+    {
+      "id": "m1_negative",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of these is a negative integer?",
+        "ur": "کثیر انتخابی: ان میں سے کون سا منفی صحیح عدد ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is neither positive nor negative.",
+            "ur": "0 نہ مثبت ہے نہ منفی۔"
+          },
+          "misconception_id": "zero_sign"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "−6",
+            "ur": "−6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: −6 is an integer less than 0.",
+            "ur": "درست: −6، 0 سے چھوٹا صحیح عدد ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 is a positive integer.",
+            "ur": "6 مثبت صحیح عدد ہے۔"
+          },
+          "misconception_id": "sign_ignored"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "−½",
+            "ur": "−½"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−½ is negative but it is not an integer.",
+            "ur": "−½ منفی ہے مگر صحیح عدد نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2_neutral",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which integer is neither positive nor negative?",
+        "ur": "کثیر انتخابی: کون سا صحیح عدد نہ مثبت ہے نہ منفی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 0 is the neutral integer.",
+            "ur": "درست: 0 غیر جانبدار صحیح عدد ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 is the smallest positive integer.",
+            "ur": "1 سب سے چھوٹا مثبت صحیح عدد ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−1",
+            "ur": "−1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−1 is the greatest negative integer.",
+            "ur": "−1 سب سے بڑا منفی صحیح عدد ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "There is none.",
+            "ur": "کوئی نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is neither positive nor negative.",
+            "ur": "0 نہ مثبت ہے نہ منفی۔"
+          },
+          "misconception_id": "zero_sign"
+        }
+      ]
+    },
+    {
+      "id": "m3_opposite",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The opposite of −17 is:",
+        "ur": "کثیر انتخابی: −17 کا مخالف عدد ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−17",
+            "ur": "−17"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the same number. The opposite is on the other side of 0.",
+            "ur": "یہ وہی عدد ہے۔ مخالف عدد 0 کی دوسری طرف ہوتا ہے۔"
+          },
+          "misconception_id": "opposite_same"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is the middle point, not the opposite.",
+            "ur": "0 درمیانی نقطہ ہے، مخالف نہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "71",
+            "ur": "71"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "71 only has the digits swapped. The opposite of −17 is 17.",
+            "ur": "71 میں صرف ہندسے الٹے ہیں۔ −17 کا مخالف 17 ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "17",
+            "ur": "17"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: −17 + 17 = 0.",
+            "ur": "درست: −17 + 17 = 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m4_abs",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: |−23| is equal to:",
+        "ur": "کثیر انتخابی: |−23| برابر ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−23",
+            "ur": "−23"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A distance is never negative.",
+            "ur": "فاصلہ کبھی منفی نہیں ہوتا۔"
+          },
+          "misconception_id": "sign_kept"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only |0| is 0.",
+            "ur": "صرف |0| صفر ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "23",
+            "ur": "23"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: −23 is 23 steps from 0.",
+            "ur": "درست: −23، 0 سے 23 قدم دور ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "32",
+            "ur": "32"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "32 only has the digits swapped. |−23| = 23.",
+            "ur": "32 میں صرف ہندسے الٹے ہیں۔ |−23| = 23"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_smallest",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The smallest of −2, −15, 0 and 9 is:",
+        "ur": "کثیر انتخابی: −2، −15، 0 اور 9 میں سب سے چھوٹا ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−2",
+            "ur": "−2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−2 is right of −15, so it is bigger.",
+            "ur": "−2، −15 کے دائیں ہے، اس لیے بڑا ہے۔"
+          },
+          "misconception_id": "bigger_digits"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "−15",
+            "ur": "−15"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: −15 is furthest to the left.",
+            "ur": "درست: −15 سب سے بائیں ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is bigger than every negative number.",
+            "ur": "0 ہر منفی عدد سے بڑا ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 is the biggest of the four.",
+            "ur": "9 ان چاروں میں سب سے بڑا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m6_ascending",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: 3, −8, −1, 5 in ascending order is:",
+        "ur": "کثیر انتخابی: 3، −8، −1، 5 صعودی ترتیب میں ہیں:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−8, −1, 3, 5",
+            "ur": "−8, −1, 3, 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: smallest to biggest, left to right.",
+            "ur": "درست: چھوٹے سے بڑے، بائیں سے دائیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5, 3, −1, −8",
+            "ur": "5, 3, −1, −8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is descending order.",
+            "ur": "یہ نزولی ترتیب ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−1, 3, 5, −8",
+            "ur": "−1, 3, 5, −8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That orders them by absolute value. Order them by value.",
+            "ur": "یہ مطلق قیمت کی ترتیب ہے۔ قیمت کی ترتیب بنائیں۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "−1, −8, 3, 5",
+            "ur": "−1، −8، 3، 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−8 is smaller than −1, so it comes first.",
+            "ur": "−8، −1 سے چھوٹا ہے، اس لیے پہلے آئے گا۔"
+          },
+          "misconception_id": "bigger_digits"
+        }
+      ]
+    },
+    {
+      "id": "m7_greatest_abs",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of 6, −11, 9 and −10 has the greatest absolute value?",
+        "ur": "کثیر انتخابی: 6، −11، 9 اور −10 میں سے کس کی مطلق قیمت سب سے زیادہ ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 is the greatest number, but |−11| = 11 and |−10| = 10 are bigger than 9.",
+            "ur": "9 سب سے بڑا عدد ہے، مگر |−11| = 11 اور |−10| = 10، 9 سے بڑی ہیں۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "−10",
+            "ur": "−10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "|−10| = 10, but |−11| = 11 is bigger.",
+            "ur": "|−10| = 10، مگر |−11| = 11 بڑی ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−11",
+            "ur": "−11"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: |−11| = 11 is the greatest.",
+            "ur": "درست: |−11| = 11 سب سے بڑی ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "|6| = 6 is the smallest absolute value.",
+            "ur": "|6| = 6 سب سے چھوٹی مطلق قیمت ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m8_true",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which statement is true?",
+        "ur": "کثیر انتخابی: کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−3 > 0",
+            "ur": "−3 > 0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every negative number is less than 0.",
+            "ur": "ہر منفی عدد 0 سے چھوٹا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "|−5| < |4|",
+            "ur": "|−5| < |4|"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "|−5| = 5, which is more than |4| = 4.",
+            "ur": "|−5| = 5، جو |4| = 4 سے زیادہ ہے۔"
+          },
+          "misconception_id": "sign_kept"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−1 > 1",
+            "ur": "−1 > 1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−1 is left of 1, so −1 < 1.",
+            "ur": "−1، 1 کے بائیں ہے، اس لیے −1 < 1"
+          },
+          "misconception_id": "bigger_digits"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "−9 < −2",
+            "ur": "−9 < −2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: −9 is further left than −2.",
+            "ur": "درست: −9، −2 سے زیادہ بائیں ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_abs_diff",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find |−15| − |9|.",
+        "ur": "مختصر سوال: |−15| − |9| معلوم کریں۔"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find each absolute value first: 15 and 9.",
+        "ur": "پہلے ہر مطلق قیمت معلوم کریں: 15 اور 9"
+      },
+      "feedback_correct": {
+        "en": "Correct: 15 − 9 = 6.",
+        "ur": "درست: 15 − 9 = 6"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: |−15| = 15 and |9| = 9, so 15 − 9 = 6.",
+        "ur": "نمونہ جواب: |−15| = 15 اور |9| = 9، اس لیے 15 − 9 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": -24,
+          "feedback": {
+            "en": "That uses −15 − 9. Take the absolute values first: 15 − 9 = 6.",
+            "ur": "یہ −15 − 9 ہے۔ پہلے مطلق قیمتیں لیں: 15 − 9 = 6"
+          },
+          "misconception_id": "sign_kept"
+        }
+      ]
+    },
+    {
+      "id": "q2_withdraw",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: A bank deposit is written as a positive integer. Write a withdrawal of Rs 800 as an integer.",
+        "ur": "مختصر سوال: بینک میں رقم جمع کروانا مثبت صحیح عدد لکھا جاتا ہے۔ 800 روپے نکلوانے کو صحیح عدد میں لکھیں۔"
+      },
+      "answer": -800,
+      "checker": "numeric",
+      "hint": {
+        "en": "A withdrawal is the opposite of a deposit.",
+        "ur": "رقم نکلوانا رقم جمع کروانے کا الٹ ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: −800.",
+        "ur": "درست: −800"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: deposit is positive, so withdrawal is negative: −800.",
+        "ur": "نمونہ جواب: جمع مثبت ہے، اس لیے نکلوانا منفی ہے: −800"
+      },
+      "common_wrong": [
+        {
+          "answer": 800,
+          "feedback": {
+            "en": "That would be a deposit. A withdrawal is negative: −800.",
+            "ur": "یہ جمع ہوتا۔ نکلوانا منفی ہے: −800"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ]
+    },
+    {
+      "id": "q3_steps",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: How many steps are there on the number line from −9 to 6?",
+        "ur": "مختصر سوال: عددی خط پر −9 سے 6 تک کتنے قدم ہیں؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Steps from −9 to 0, then from 0 to 6.",
+        "ur": "−9 سے 0 تک قدم، پھر 0 سے 6 تک۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 9 + 6 = 15.",
+        "ur": "درست: 9 + 6 = 15"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: −9 to 0 is 9 steps, 0 to 6 is 6 steps, so 15 steps.",
+        "ur": "نمونہ جواب: −9 سے 0 تک 9 قدم، 0 سے 6 تک 6 قدم، اس لیے 15 قدم۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "That is 9 − 6. The numbers are on opposite sides of 0, so add: 15.",
+            "ur": "یہ 9 − 6 ہے۔ اعداد 0 کے مخالف طرف ہیں، اس لیے جمع کریں: 15"
+          },
+          "misconception_id": "gap_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q4_count",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: How many integers x are there with −4 < x < 2?",
+        "ur": "مختصر سوال: کتنے صحیح اعداد x ایسے ہیں کہ −4 < x < 2؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "−4 and 2 are not included. List the integers between them, and include 0.",
+        "ur": "−4 اور 2 شامل نہیں۔ ان کے بیچ کے صحیح اعداد لکھیں، اور 0 بھی شامل کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: −3, −2, −1, 0, 1.",
+        "ur": "درست: −3، −2، −1، 0، 1"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the integers are −3, −2, −1, 0, 1, which is 5.",
+        "ur": "نمونہ جواب: صحیح اعداد −3، −2، −1، 0، 1 ہیں، یعنی 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That counts −4 and 2 as well. They are not included: 5.",
+            "ur": "اس میں −4 اور 2 بھی گنے گئے ہیں۔ وہ شامل نہیں: 5"
+          },
+          "misconception_id": "gap_miscount"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Don't forget 0. The integers are −3, −2, −1, 0, 1: 5.",
+            "ur": "0 کو نہ بھولیں۔ صحیح اعداد −3، −2، −1، 0، 1 ہیں: 5"
+          },
+          "misconception_id": "gap_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q5_left",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Start at 2 on the number line and move 7 steps to the left. Which integer do you reach?",
+        "ur": "مختصر سوال: عددی خط پر 2 سے شروع کریں اور 7 قدم بائیں جائیں۔ آپ کس صحیح عدد پر پہنچیں گے؟"
+      },
+      "answer": -5,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 steps get you to 0. How many are left?",
+        "ur": "2 قدم میں 0 پر پہنچتے ہیں۔ کتنے قدم باقی ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Correct: −5.",
+        "ur": "درست: −5"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 2 steps reach 0, and 5 more steps go past it to −5.",
+        "ur": "نمونہ جواب: 2 قدم سے 0 پر، اور 5 قدم مزید آگے −5 پر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is 7 − 2 with the sign lost. You go past 0, so the answer is negative: −5.",
+            "ur": "یہ علامت کھو کر 7 − 2 ہے۔ آپ 0 سے آگے جاتے ہیں، اس لیے جواب منفی ہے: −5"
+          },
+          "misconception_id": "sign_ignored"
+        },
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That moved to the right. Left of 0 is negative: −5.",
+            "ur": "یہ دائیں گیا۔ 0 کے بائیں منفی ہے: −5"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_floors",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A building has floors from −6 (basement) to 8. Ali is on floor 5. Sana is on the floor that is the opposite of Ali's floor. How many floors apart are they?",
+        "ur": "تفصیلی سوال: ایک عمارت کی منزلیں −6 (تہہ خانہ) سے 8 تک ہیں۔ علی منزل 5 پر ہے۔ ثنا اس منزل پر ہے جو علی کی منزل کی مخالف ہے۔ دونوں میں کتنی منزلوں کا فاصلہ ہے؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find Sana's floor first. Then count the floors from her floor to Ali's.",
+        "ur": "پہلے ثنا کی منزل معلوم کریں۔ پھر اس کی منزل سے علی کی منزل تک گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: Sana is on −5, and 5 + 5 = 10.",
+        "ur": "درست: ثنا −5 پر ہے، اور 5 + 5 = 10"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the opposite of 5 is −5. From −5 to 0 is 5 floors and from 0 to 5 is 5 floors, so 10 floors apart.",
+        "ur": "نمونہ جواب: 5 کا مخالف −5 ہے۔ −5 سے 0 تک 5 منزلیں اور 0 سے 5 تک 5 منزلیں، اس لیے 10 منزلوں کا فاصلہ۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "The opposite of 5 is −5, not 5. They are 10 floors apart.",
+            "ur": "5 کا مخالف −5 ہے، 5 نہیں۔ وہ 10 منزل دور ہیں۔"
+          },
+          "misconception_id": "opposite_same"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is Ali's distance from 0 only. Add Sana's 5 floors: 10.",
+            "ur": "یہ صرف علی کا 0 سے فاصلہ ہے۔ ثنا کی 5 منزلیں ملائیں: 10"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "l2_cities",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: On a winter morning the temperatures are Murree −6, Quetta −11, Lahore 4, Karachi 18 and Skardu −14 degrees. Write them in ascending order. What is the second temperature in your list?",
+        "ur": "تفصیلی سوال: سردیوں کی ایک صبح درجہ حرارت یہ ہیں: مری −6، کوئٹہ −11، لاہور 4، کراچی 18 اور سکردو −14 ڈگری۔ انہیں صعودی ترتیب میں لکھیں۔ آپ کی فہرست میں دوسرا درجہ حرارت کون سا ہے؟"
+      },
+      "answer": -11,
+      "checker": "numeric",
+      "hint": {
+        "en": "Ascending starts with the coldest, the smallest number.",
+        "ur": "صعودی ترتیب سب سے ٹھنڈے، یعنی سب سے چھوٹے عدد سے شروع ہوتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: −14, −11, −6, 4, 18; the second is −11.",
+        "ur": "درست: −14، −11، −6، 4، 18؛ دوسرا −11 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the smallest is −14 (Skardu), then −11 (Quetta), −6, 4, 18. The second is −11.",
+        "ur": "نمونہ جواب: سب سے چھوٹا −14 (سکردو) ہے، پھر −11 (کوئٹہ)، −6، 4، 18۔ دوسرا −11 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That is the second when listed from the biggest. Ascending starts with −14, so the second is −11.",
+            "ur": "یہ بڑے سے شروع کرنے پر دوسرا ہے۔ صعودی ترتیب −14 سے شروع ہوتی ہے، اس لیے دوسرا −11 ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "answer": -6,
+          "feedback": {
+            "en": "That is the second in order of absolute value (4, 6, 11 ...). By value the second is −11.",
+            "ur": "یہ مطلق قیمت کی ترتیب (4، 6، 11 ...) میں دوسرا ہے۔ قیمت میں دوسرا −11 ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        }
+      ]
+    },
+    {
+      "id": "l3_sum_abs",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Find the sum of the absolute values of all the integers from −4 to 4.",
+        "ur": "تفصیلی سوال: −4 سے 4 تک تمام صحیح اعداد کی مطلق قیمتوں کا مجموعہ معلوم کریں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "List the integers, take each absolute value, then add. Don't forget 0.",
+        "ur": "صحیح اعداد لکھیں، ہر مطلق قیمت لیں، پھر جمع کریں۔ 0 کو نہ بھولیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 2 × (1 + 2 + 3 + 4) = 20.",
+        "ur": "درست: 2 × (1 + 2 + 3 + 4) = 20"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 4+3+2+1+0+1+2+3+4 = 20, since −4 to −1 and 1 to 4 give the same absolute values.",
+        "ur": "نمونہ جواب: 4+3+2+1+0+1+2+3+4 = 20، کیونکہ −4 سے −1 اور 1 سے 4 کی مطلق قیمتیں برابر ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "That adds the integers with their signs. Absolute values are not negative: 20.",
+            "ur": "یہ علامتوں کے ساتھ جمع ہے۔ مطلق قیمتیں منفی نہیں ہوتیں: 20"
+          },
+          "misconception_id": "sign_kept"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "That is only one side, 1 + 2 + 3 + 4. The negative side gives another 10: 20.",
+            "ur": "یہ صرف ایک طرف 1 + 2 + 3 + 4 ہے۔ منفی طرف مزید 10 دیتی ہے: 20"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "l4_who_am_i",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Who am I? My absolute value is 12, and I am less than −5.",
+        "ur": "تفصیلی سوال: میں کون ہوں؟ میری مطلق قیمت 12 ہے، اور میں −5 سے چھوٹا ہوں۔"
+      },
+      "answer": -12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two integers have absolute value 12. Which one is less than −5?",
+        "ur": "دو صحیح اعداد کی مطلق قیمت 12 ہے۔ ان میں سے کون −5 سے چھوٹا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Correct: −12.",
+        "ur": "درست: −12"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the integers with absolute value 12 are 12 and −12. 12 is greater than −5, but −12 is less than −5. So I am −12.",
+        "ur": "نمونہ جواب: مطلق قیمت 12 والے صحیح اعداد 12 اور −12 ہیں۔ 12، −5 سے بڑا ہے، مگر −12، −5 سے چھوٹا ہے۔ اس لیے میں −12 ہوں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is greater than −5. The other integer with absolute value 12 is −12.",
+            "ur": "12، −5 سے بڑا ہے۔ مطلق قیمت 12 والا دوسرا صحیح عدد −12 ہے۔"
+          },
+          "misconception_id": "one_value"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 2 test. Well done!",
+          "ur": "آپ نے باب 2 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: a loss, a debt or a point below zero is negative; the opposite of a number is on the other side of 0; the smaller of two negative numbers has the bigger digits; and the absolute value is a distance, so it is never negative. When you order by absolute value, write the absolute values first.",
+        "ur": "امتحان میں: نقصان، قرض یا صفر سے نیچے کا نقطہ منفی ہوتا ہے؛ عدد کا مخالف 0 کی دوسری طرف ہوتا ہے؛ دو منفی اعداد میں بڑے ہندسوں والا چھوٹا ہوتا ہے؛ اور مطلق قیمت فاصلہ ہے، اس لیے کبھی منفی نہیں ہوتی۔ مطلق قیمت کی ترتیب میں پہلے مطلق قیمتیں لکھیں۔"
+      },
+      "points": [
+        {
+          "en": "Check an ordering by placing the numbers on a number line.",
+          "ur": "ترتیب کو عددی خط پر اعداد رکھ کر جانچیں۔"
+        },
+        {
+          "en": "Between a negative and a positive number, count the steps to 0 on each side and add.",
+          "ur": "منفی اور مثبت عدد کے بیچ، 0 تک ہر طرف کے قدم گن کر جمع کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_gap",
+      "type": "exam_style",
+      "skill": "maths.integers.chapter_2_test",
+      "step": {
+        "id": "r_exam_gap",
+        "type": "number",
+        "prompt": {
+          "en": "How many steps are there on the number line from −3 to 12?",
+          "ur": "عددی خط پر −3 سے 12 تک کتنے قدم ہیں؟"
+        },
+        "answer": 15,
+        "checker": "numeric",
+        "hint": {
+          "en": "Steps from −3 to 0, then from 0 to 12.",
+          "ur": "−3 سے 0 تک قدم، پھر 0 سے 12 تک۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 3 + 12 = 15.",
+          "ur": "درست: 3 + 12 = 15"
+        },
+        "feedback_wrong": {
+          "en": "−3 to 0 is 3 steps and 0 to 12 is 12 steps, so 15.",
+          "ur": "−3 سے 0 تک 3 قدم اور 0 سے 12 تک 12 قدم، اس لیے 15"
+        },
+        "common_wrong": [
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "That is 12 − 3. The numbers are on opposite sides of 0, so add: 15.",
+              "ur": "یہ 12 − 3 ہے۔ اعداد 0 کے مخالف طرف ہیں، اس لیے جمع کریں: 15"
+            },
+            "misconception_id": "gap_miscount"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_order",
+      "type": "exam_style",
+      "skill": "maths.integers.chapter_2_test",
+      "step": {
+        "id": "r_exam_order",
+        "type": "number",
+        "prompt": {
+          "en": "Arrange −5, 7, −1, 0 in descending order. Which number is the second?",
+          "ur": "−5، 7، −1، 0 کو نزولی ترتیب میں لکھیں۔ دوسرا عدد کون سا ہے؟"
+        },
+        "answer": 0,
+        "checker": "numeric",
+        "hint": {
+          "en": "Descending starts with the biggest.",
+          "ur": "نزولی ترتیب سب سے بڑے سے شروع ہوتی ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 7, 0, −1, −5; the second is 0.",
+          "ur": "درست: 7، 0، −1، −5؛ دوسرا 0 ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "Descending: 7, 0, −1, −5. The second is 0.",
+          "ur": "نزولی: 7، 0، −1، −5۔ دوسرا 0 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": -1,
+            "feedback": {
+              "en": "That is the second in ascending order. Descending: 7, 0, ...",
+              "ur": "یہ صعودی ترتیب میں دوسرا ہے۔ نزولی: 7، 0، ..."
+            },
+            "misconception_id": "abs_order_mixed"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 2 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.integers.chapter_2_test), with the unit's skills as prerequisites, and is mastered with exam_style questions, like g9-maths-05-board-exam-practice.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), غیر جانبدار صحیح عدد (neutral integer).",
+    "The numbers were worked out in content/sources/g6-maths-04/chapter_2_test.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
