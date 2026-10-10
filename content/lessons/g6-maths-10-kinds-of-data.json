@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-kinds-of-data",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Kinds of data",
     "ur": "مواد کی اقسام"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.data.tables"
@@ -699,6 +699,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do we sort data into kinds before we use it?",
+          "ur": "ہم مواد کو استعمال سے پہلے قسموں میں کیوں بانٹتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Counting children in a school and measuring their heights are different jobs. We can count children only in whole numbers, but a height can have any value in between. And a list of 500 marks is too long to read, so we put them in classes. Knowing the kind of data tells us how to collect it, how to group it and which graph will show it best.",
+        "ur": "اسکول کے بچے گننا اور ان کا قد ناپنا دو الگ کام ہیں۔ بچے ہم صرف پورے اعداد میں گن سکتے ہیں، مگر قد درمیان کی کوئی بھی قیمت ہو سکتا ہے۔ اور 500 نمبروں کی فہرست پڑھنے کے لیے بہت لمبی ہے، اس لیے ہم انہیں جماعتوں میں بانٹ لیتے ہیں۔ مواد کی قسم جان لیں تو پتا چلتا ہے کہ اسے کیسے جمع کریں، کیسے گروہ بنائیں اور کون سا گراف اسے بہتر دکھائے گا۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• School: marks of a whole class put into groups like 1–10, 11–20.\n• Health: weights and heights of children at a clinic.\n• Weather: daily rainfall in millimetres.\n• Shops: how many of each item sold in a week.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• اسکول: پوری جماعت کے نمبروں کو 1–10، 11–20 جیسے گروہوں میں بانٹنا۔\n• صحت: کلینک میں بچوں کا وزن اور قد۔\n• موسم: روزانہ بارش ملی میٹر میں۔\n• دکان: ہفتے میں ہر چیز کتنی بکی۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

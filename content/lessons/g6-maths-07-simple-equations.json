@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-simple-equations",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Simple equations",
     "ur": "سادہ مساوات"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.algebra.substitution"
@@ -982,6 +982,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I paid Rs 500 and got Rs 120 back. How do I find the price?",
+          "ur": "میں نے 500 روپے دیے اور 120 روپے واپس ملے۔ قیمت کیسے معلوم کروں؟"
+        }
+      },
+      "text": {
+        "en": "Traders and farmers always had questions with a missing number: what is the price, how many sacks are left? People needed a reliable way to find it, instead of guessing. The answer is to treat an equation like a balance: whatever we do to one side, we do to the other. About 1,200 years ago, al-Khwarizmi wrote a book in Baghdad on solving such problems. The word algebra comes from his word al-jabr.",
+        "ur": "تاجروں اور کسانوں کے سامنے ہمیشہ ایسے سوال ہوتے تھے جن میں کوئی عدد غائب ہو: قیمت کیا ہے، کتنی بوریاں بچی ہیں؟ لوگوں کو اندازے کی جگہ اسے نکالنے کا پکا طریقہ چاہیے تھا۔ جواب یہ ہے کہ مساوات کو ترازو سمجھیں: جو ایک طرف کریں وہی دوسری طرف کریں۔ تقریباً 1200 سال پہلے بغداد میں الخوارزمی نے ایسے مسئلے حل کرنے پر کتاب لکھی۔ لفظ الجبرا ان کے لفظ \"الجبر\" سے بنا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: finding the price when you know the money paid and the change.\n• Mobile load: how many days a balance will last.\n• Farming: how many sacks are left after a sale.\n• Later: science formulas and every part of higher maths.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: ادا کی ہوئی رقم اور بقایا معلوم ہو تو قیمت نکالنا۔\n• موبائل لوڈ: بیلنس کتنے دن چلے گا۔\n• کھیتی: فروخت کے بعد کتنی بوریاں بچیں۔\n• آگے چل کر: سائنس کے فارمولے اور اونچی ریاضی کا ہر حصہ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

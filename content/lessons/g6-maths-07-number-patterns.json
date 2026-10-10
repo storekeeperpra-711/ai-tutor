@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-number-patterns",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Number patterns and sequences",
     "ur": "اعداد کے نمونے اور سلسلے"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.algebra.substitution"
@@ -873,6 +873,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can I know the 100th number of a pattern without writing 100?",
+          "ur": "کیا میں نمونے کا 100واں عدد 100 اعداد لکھے بغیر جان سکتا ہوں؟"
+        }
+      },
+      "text": {
+        "en": "Many things in life follow a pattern: bus stops that are 3 km apart, savings that grow by Rs 50 a week, rows of seats in a hall. Writing out every number to reach the 100th is slow. People found that a rule with a letter, like 3n + 1, gives any term at once. Finding the rule means we can predict what comes next, far ahead.",
+        "ur": "زندگی میں بہت سی چیزیں ایک نمونے پر چلتی ہیں: ہر 3 کلومیٹر بعد بس اسٹاپ، ہر ہفتے 50 روپے بڑھتی بچت، ہال میں کرسیوں کی قطاریں۔ 100ویں عدد تک پہنچنے کے لیے ہر عدد لکھنا سست کام ہے۔ لوگوں نے دیکھا کہ 3n + 1 جیسا حرف والا اصول کوئی بھی رکن فوراً دے دیتا ہے۔ اصول مل جائے تو ہم بہت آگے کی بات پہلے سے بتا سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Savings: Rs 50 added every week, so how much after 20 weeks?\n• Buildings: seats in the rows of a hall, where each row has 2 more.\n• Calendars and timetables that repeat.\n• Later: computer programs and the study of growth.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بچت: ہر ہفتے 50 روپے بڑھیں تو 20 ہفتے بعد کتنے ہوں گے؟\n• عمارتیں: ہال کی قطاروں میں کرسیاں، جہاں ہر قطار میں 2 زیادہ ہوں۔\n• کیلنڈر اور ٹائم ٹیبل جو بار بار دہراتے ہیں۔\n• آگے چل کر: کمپیوٹر پروگرام اور بڑھوتری کا مطالعہ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

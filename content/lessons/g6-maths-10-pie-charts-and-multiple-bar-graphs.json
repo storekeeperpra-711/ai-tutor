@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-pie-charts-and-multiple-bar-graphs",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Pie charts and multiple bar graphs",
     "ur": "دائری نقشہ (پائی چارٹ) اور دوہرے بار گراف"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.data.bar_graphs"
@@ -656,6 +656,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How can one circle show how a whole is shared out?",
+          "ur": "ایک دائرہ یہ کیسے دکھا سکتا ہے کہ پورا کیسے بانٹا گیا؟"
+        }
+      },
+      "text": {
+        "en": "Sometimes the question is not how many, but what share of the whole: how a family spends its income, or what fraction of a class likes each sport. A circle cut into slices, like a roti or a pizza, shows shares naturally: a bigger share, a bigger slice. And a double bar graph puts two groups side by side, such as boys and girls, so they are easy to compare.",
+        "ur": "کبھی سوال یہ نہیں ہوتا کہ کتنے، بلکہ یہ کہ پورے کا کتنا حصہ ہے: ایک گھر اپنی آمدنی کیسے خرچ کرتا ہے، یا جماعت کا کتنا حصہ کون سا کھیل پسند کرتا ہے۔ روٹی یا پیزا کی طرح ٹکڑوں میں کٹا دائرہ حصے خود بخود دکھا دیتا ہے: بڑا حصہ، بڑا ٹکڑا۔ اور دوہرا بار گراف دو گروہوں کو، جیسے لڑکے اور لڑکیاں، ساتھ ساتھ رکھتا ہے تاکہ موازنہ آسان ہو۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Family budget: how much goes to food, rent, school and bills.\n• Class survey: what share of children like cricket, football or hockey.\n• News: how votes were shared between parties.\n• Business: where a company's money comes from.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• گھر کا بجٹ: کھانے، کرائے، اسکول اور بلوں پر کتنا خرچ ہوتا ہے۔\n• جماعت کا سروے: کتنے بچے کرکٹ، فٹ بال یا ہاکی پسند کرتے ہیں۔\n• خبریں: پارٹیوں میں ووٹ کیسے بٹے۔\n• کاروبار: کمپنی کی آمدنی کہاں سے آتی ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

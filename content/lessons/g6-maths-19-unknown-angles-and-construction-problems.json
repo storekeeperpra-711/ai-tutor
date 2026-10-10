@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-19-unknown-angles-and-construction-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Unknown angles and construction problems",
     "ur": "نامعلوم زاویے اور تعمیر کے سوالات"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.constructions.angles"
@@ -252,6 +252,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How can I find an angle I cannot measure?",
+          "ur": "جو زاویہ میں ناپ نہیں سکتا اسے کیسے معلوم کروں؟"
+        }
+      },
+      "text": {
+        "en": "Sometimes an angle is hard to reach or measure, like the corner of a roof high up, or a bend in a road on a map. But angles follow fixed rules: angles on a straight line add up to 180°, around a point to 360°, and in a triangle to 180°. With these facts we can work out the missing angle by sums alone. Real construction problems also need us to draw and then check our work.",
+        "ur": "کبھی کسی زاویے تک پہنچنا یا اسے ناپنا مشکل ہوتا ہے، جیسے اونچی چھت کا کونا، یا نقشے پر سڑک کا موڑ۔ مگر زاویے پکے اصولوں پر چلتے ہیں: سیدھی لکیر پر زاویوں کا مجموعہ 180°، ایک نقطے کے گرد 360°، اور مثلث میں 180°۔ ان حقیقتوں سے ہم گم زاویہ صرف حساب سے نکال لیتے ہیں۔ تعمیر کے اصل سوالوں میں ہمیں بنانا بھی پڑتا ہے اور اپنا کام جانچنا بھی۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Building: checking that a roof slope or a ramp is right.\n• Maps: finding directions and angles between roads.\n• Cricket and football: the angle of a shot or a pass.\n• Later: geometry, surveying and engineering.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• تعمیر: جانچنا کہ چھت کی ڈھلان یا ریمپ ٹھیک ہے۔\n• نقشے: سمتیں اور سڑکوں کے درمیان زاویے معلوم کرنا۔\n• کرکٹ اور فٹ بال: شاٹ یا پاس کا زاویہ۔\n• آگے چل کر: جیومیٹری، پیمائش زمین اور انجینئرنگ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

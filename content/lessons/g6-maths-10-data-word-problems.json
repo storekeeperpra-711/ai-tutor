@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-data-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Data word problems",
     "ur": "مواد کے عبارتی سوال"
   },
-  "estimated_minutes": 16,
+  "estimated_minutes": 17,
   "prerequisites": [
     {
       "skill": "maths.data.mean"
@@ -429,6 +429,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Which tool do I pick when a real question about data comes up?",
+          "ur": "مواد کا کوئی اصل سوال آئے تو میں کون سا اوزار چنوں؟"
+        }
+      },
+      "text": {
+        "en": "In real life nobody tells us \"find the mean\". We are asked: What is the usual score? Which size sells most? How different were the best and worst days? The skill that matters is reading the question, choosing the right tool (total, mean, median, mode, range or a graph), and explaining the answer in words. That is how data helps us decide.",
+        "ur": "اصل زندگی میں کوئی ہمیں نہیں کہتا کہ \"اوسط نکالو\"۔ ہم سے پوچھا جاتا ہے: عام اسکور کیا ہے؟ کون سا سائز زیادہ بکتا ہے؟ بہترین اور بدترین دن میں کتنا فرق تھا؟ اصل ہنر یہ ہے کہ سوال پڑھیں، صحیح اوزار چنیں (کل، اوسط، وسطانیہ، موڈ، رینج یا گراف)، اور جواب الفاظ میں سمجھائیں۔ اسی طرح مواد ہمیں فیصلہ کرنے میں مدد دیتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopkeeping: deciding what stock to buy next week.\n• Farming: comparing crops of different years.\n• Sport: choosing players by their scores.\n• News: understanding surveys and reports without being fooled.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان داری: اگلے ہفتے کون سا مال خریدنا ہے یہ طے کرنا۔\n• کھیتی: مختلف سالوں کی فصلوں کا موازنہ۔\n• کھیل: کھلاڑیوں کو ان کے اسکور سے چننا۔\n• خبریں: سروے اور رپورٹیں سمجھنا اور دھوکا نہ کھانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

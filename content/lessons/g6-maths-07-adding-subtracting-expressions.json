@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-adding-subtracting-expressions",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Adding and subtracting expressions",
     "ur": "عبارتوں کی جمع اور تفریق"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.algebra.expressions_basic"
@@ -1126,6 +1126,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two shopkeepers combine their stock. How do we add whole lists?",
+          "ur": "دو دکان دار اپنا مال ملاتے ہیں۔ پوری فہرستیں کیسے جمع کریں؟"
+        }
+      },
+      "text": {
+        "en": "Real problems rarely have a single term. A shop has (3 kg rice + 2 kg flour) and a second shop has (4 kg rice + 1 kg flour). To combine them, we add whole expressions. If one shop takes back some stock, we subtract a whole bracket, and every sign inside changes. These rules let us combine or compare whole lists of quantities without mistakes.",
+        "ur": "اصل مسئلوں میں شاید ہی کبھی ایک ہی رکن ہوتا ہے۔ ایک دکان میں (3 کلو چاول + 2 کلو آٹا) ہے اور دوسری میں (4 کلو چاول + 1 کلو آٹا)۔ انہیں ملانے کے لیے ہم پوری عبارتیں جمع کرتے ہیں۔ اگر ایک دکان کچھ مال واپس لے تو ہم پورا بریکٹ تفریق کرتے ہیں، اور اندر کی ہر علامت بدل جاتی ہے۔ ان اصولوں سے ہم مقداروں کی پوری فہرستیں غلطی کے بغیر ملا یا موازنہ کر سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shops: combine the stock of two shops, or take away what was sold.\n• Farming: total crops from two fields.\n• Budgets: income and spending written as expressions.\n• Later: solving harder equations and working with formulas.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکانیں: دو دکانوں کا مال ملانا، یا جو بک گیا اسے نکالنا۔\n• کھیتی: دو کھیتوں کی کل فصل۔\n• بجٹ: آمدنی اور خرچ کو عبارتوں کی شکل میں لکھنا۔\n• آگے چل کر: مشکل مساواتیں حل کرنا اور فارمولوں پر کام کرنا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

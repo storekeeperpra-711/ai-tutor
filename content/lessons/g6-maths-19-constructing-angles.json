@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-19-constructing-angles",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Bisecting and constructing angles",
     "ur": "زاویوں کی تنصیف اور زاویے بنانا"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.constructions.perpendicular_bisector"
@@ -401,6 +401,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A carpenter has no protractor. How can he still make a perfect 60° or 90° corner?",
+          "ur": "بڑھئی کے پاس پروٹریکٹر نہیں ہے۔ وہ پھر بھی ٹھیک 60° یا 90° کا کونا کیسے بنائے؟"
+        }
+      },
+      "text": {
+        "en": "Craftsmen need exact angles for roof beams, window frames and tiles. A measuring tool can be wrong or missing, but a compass and a ruler always work. With arcs of the same width we can make a 60° angle, and by halving it, 30°. We can also split any angle exactly in half with a bisector. This is a way to build angles with no numbers to read.",
+        "ur": "کاریگروں کو چھت کی کڑیوں، کھڑکی کے چوکھٹوں اور ٹائلوں کے لیے ٹھیک زاویے چاہیے ہوتے ہیں۔ ناپنے کا آلہ غلط یا غائب ہو سکتا ہے، مگر پرکار اور پیمانہ ہمیشہ کام کرتے ہیں۔ ایک ہی کھلاؤ کی قوسوں سے ہم 60° کا زاویہ بنا سکتے ہیں، اور اسے آدھا کر کے 30°۔ ناصف سے کسی بھی زاویے کو ٹھیک آدھا بھی کر سکتے ہیں۔ یہ زاویے بنانے کا ایسا طریقہ ہے جس میں کوئی عدد پڑھنا نہیں پڑتا۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Carpentry: roof frames, doors and window corners.\n• Tiling and floors: patterns with neat angles.\n• Art and design: stars, kites and geometric patterns.\n• Technical drawing: plans for engineers and architects.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بڑھئی کا کام: چھت کے ڈھانچے، دروازوں اور کھڑکیوں کے کونے۔\n• ٹائل اور فرش: صاف زاویوں والے نقش۔\n• آرٹ اور ڈیزائن: ستارے، پتنگیں اور جیومیٹری کے نقش۔\n• تکنیکی ڈرائنگ: انجینئروں اور نقشہ نویسوں کے نقشے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

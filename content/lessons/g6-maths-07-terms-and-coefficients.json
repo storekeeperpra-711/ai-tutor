@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-terms-and-coefficients",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Terms, coefficients and constants",
     "ur": "ارکان، عددی سر اور مستقل"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.algebra.variables"
@@ -448,6 +448,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do the parts of 5x + 3y − 7 have special names?",
+          "ur": "5x + 3y − 7 کے حصوں کے خاص نام کیوں ہیں؟"
+        }
+      },
+      "text": {
+        "en": "When people share a rule, they must point at its parts clearly. Saying \"the number in front\" or \"the part with no letter\" again and again is confusing. So each part got a name: terms, variables, coefficients and constants. With these names a teacher in Lahore and a student in Multan can talk about the same expression and understand each other at once.",
+        "ur": "جب لوگ کوئی اصول ایک دوسرے کو بتاتے ہیں تو اس کے حصوں کی طرف صاف اشارہ کرنا ضروری ہوتا ہے۔ بار بار \"آگے والا عدد\" یا \"بغیر حرف والا حصہ\" کہنا الجھن پیدا کرتا ہے۔ اس لیے ہر حصے کو نام دیا گیا: ارکان، متغیر، عددی سر اور مستقل۔ ان ناموں سے لاہور کا استاد اور ملتان کا طالب علم ایک ہی عبارت کی بات کریں تو دونوں فوراً سمجھ جاتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Bills: Rs 10 for each unit plus a fixed Rs 50 charge. The 10 is a coefficient and the 50 is a constant.\n• Taxi fares: a fixed start fee plus a price for each kilometre.\n• Reading formulas in science books.\n• Later: solving equations and drawing graphs.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بل: ہر یونٹ کے 10 روپے اور ایک مقررہ 50 روپے کا چارج۔ 10 عددی سر ہے اور 50 مستقل۔\n• ٹیکسی کا کرایہ: مقررہ ابتدائی کرایہ اور ہر کلومیٹر کی قیمت۔\n• سائنس کی کتابوں کے فارمولے پڑھنا۔\n• آگے چل کر: مساواتیں حل کرنا اور گراف بنانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

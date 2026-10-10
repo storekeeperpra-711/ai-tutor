@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-mode-and-range",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Mode and range",
     "ur": "عادہ (موڈ) اور وسعت (رینج)"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.data.mean"
@@ -839,6 +839,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shoe seller must order stock. Which size should he buy most of?",
+          "ur": "جوتے بیچنے والے کو مال منگوانا ہے۔ وہ کون سا سائز سب سے زیادہ منگوائے؟"
+        }
+      },
+      "text": {
+        "en": "A shoe seller does not need the average shoe size: no one wears size 7.3. He needs the size that people buy most. That is the mode, the value that appears most often. He also wants to know how spread out the data is, for example the biggest and smallest sizes sold. The range, the largest minus the smallest, tells him that in one number.",
+        "ur": "جوتے بیچنے والے کو اوسط سائز نہیں چاہیے: کوئی 7.3 سائز نہیں پہنتا۔ اسے وہ سائز چاہیے جو لوگ سب سے زیادہ خریدتے ہیں۔ یہی موڈ ہے، وہ قیمت جو سب سے زیادہ بار آئے۔ وہ یہ بھی جاننا چاہتا ہے کہ مواد کتنا پھیلا ہے، مثلاً بکنے والے سب سے بڑے اور سب سے چھوٹے سائز۔ رینج، یعنی سب سے بڑا منفی سب سے چھوٹا، یہ ایک عدد میں بتا دیتی ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shops: which size, colour or flavour sells most.\n• Cricket: the most common score, and the gap between best and worst innings.\n• Weather: how far the temperature moved in a week.\n• Buses: the most common waiting time.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکانیں: کون سا سائز، رنگ یا ذائقہ سب سے زیادہ بکتا ہے۔\n• کرکٹ: سب سے عام اسکور، اور بہترین اور بدترین اننگز کا فرق۔\n• موسم: ایک ہفتے میں درجہ حرارت کتنا بدلا۔\n• بسیں: سب سے عام انتظار کا وقت۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-algebra-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Algebra word problems",
     "ur": "الجبرا کے سوالات"
   },
-  "estimated_minutes": 16,
+  "estimated_minutes": 17,
   "prerequisites": [
     {
       "skill": "maths.algebra.simple_equations"
@@ -592,6 +592,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Problems come as stories. How do I turn a story into algebra?",
+          "ur": "مسئلے کہانی کی شکل میں آتے ہیں۔ کہانی کو الجبرا میں کیسے بدلوں؟"
+        }
+      },
+      "text": {
+        "en": "Nobody gives us a ready equation. People hand us a story: \"I bought 3 pens and paid Rs 60\". The skill that matters is turning the words into an equation, solving it, and checking the answer in the story. Algebra became useful because it lets us solve a whole kind of problems with one method, so we do not need a new trick for each story.",
+        "ur": "ہمیں کوئی تیار مساوات نہیں دیتا۔ لوگ ہمیں کہانی سناتے ہیں: \"میں نے 3 قلم خریدے اور 60 روپے دیے\"۔ اصل ہنر یہ ہے کہ الفاظ کو مساوات میں بدلیں، اسے حل کریں، اور جواب کو کہانی میں جانچیں۔ الجبرا اس لیے کام کا بنا کہ ایک ہی طریقے سے پوری قسم کے سوال حل ہو جاتے ہیں، ہر کہانی کے لیے نئی ترکیب نہیں چاہیے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: the price of one item from the total bill.\n• Sharing: how much each friend pays when a cost is shared.\n• Travel: how long a journey takes at a known speed.\n• Work: planning a budget or a farm's seed and water needs.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: کل بل سے ایک چیز کی قیمت نکالنا۔\n• بانٹنا: خرچ بانٹنے پر ہر دوست کتنا دے۔\n• سفر: معلوم رفتار پر سفر میں کتنا وقت لگے۔\n• کام: بجٹ بنانا، یا کھیت کے بیج اور پانی کی ضرورت کا اندازہ لگانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
