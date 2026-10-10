@@ -134,10 +134,10 @@ def tally_figure(n, alt_en, alt_ur, parts=False):
     return figure(W, height, alt_en, alt_ur, items)
 
 
-def table_figure(rows, alt_en, alt_ur, *, tallies=True, counts=True):
+def table_figure(rows, alt_en, alt_ur, *, tallies=True, counts=True, name_w=46):
     """A frequency table: a short name for each row, its tally marks and its
     count. rows = [(name, count)]."""
-    name_w, count_w, row_h = 46, 44, 32
+    count_w, row_h = 44, 32
     tally_w = max(tally_width(c) for _, c in rows) + 24 if tallies else 0
     width = name_w + tally_w + (count_w if counts else 0)
     x0, y0 = (W - width) / 2, 6
@@ -433,3 +433,30 @@ class Line:
                 placed.append((self.x(v), w, row))
                 self.items.append(label((self.x(v), self.y - 16 - row * 17), v))
         return max((r for _, _, r in placed), default=0)
+
+
+# ---------- practice sets ----------
+
+def with_fig(step, figure):
+    step["figure"] = figure
+    return step
+
+
+def hbar_graph(values, cats, alt_en, alt_ur, *, top, step, width=W):
+    """A horizontal bar graph: bars run to the right from the side axis, a
+    short name (one or two letters or a number) for each at the left, and
+    a number every `step` along the bottom."""
+    row, ax, right = 30, 44, width - 16
+    n = len(values)
+    y0 = 14 + n * row
+    unit = (right - ax) / top
+    items = [line((ax, y0), (right, y0)), line((ax, y0), (ax, 8))]
+    for v in range(0, top + 1, step):
+        x = ax + v * unit
+        items += [line((x, y0), (x, y0 + 4)), label((x, y0 + 16), v)]
+    for i, v in enumerate(values):
+        yc = 14 + i * row + row / 2
+        items.append(label((ax - 16, yc), cats[i]))
+        if v:
+            items.append(rect(ax, yc - 9, ax + v * unit, yc + 9, fill=True))
+    return figure(width, y0 + 28, alt_en, alt_ur, items)

@@ -1,0 +1,2071 @@
+{
+  "id": "g6-maths-10-chapter-11-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 11: grouped and ungrouped data, discrete and continuous data, reading bar graphs and pie charts, sector angles, and the mean, median and mode.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management, Review Exercise 11"
+    }
+  ],
+  "skills": [
+    "maths.data.chapter_11_test"
+  ],
+  "title": {
+    "en": "Chapter 11 test: Data Management",
+    "ur": "باب 11 کا ٹیسٹ: مواد کا انتظام"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.data.tables"
+    },
+    {
+      "skill": "maths.data.kinds"
+    },
+    {
+      "skill": "maths.data.bar_graphs"
+    },
+    {
+      "skill": "maths.data.pie_charts"
+    },
+    {
+      "skill": "maths.data.mean"
+    },
+    {
+      "skill": "maths.data.median"
+    },
+    {
+      "skill": "maths.data.mode_range"
+    },
+    {
+      "skill": "maths.data.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "grouped_ungrouped_mix",
+      "description": "Calls a list of single values grouped, or a table of classes ungrouped."
+    },
+    {
+      "id": "measured_is_counted",
+      "description": "Mixes up counted (discrete) and measured (continuous) data."
+    },
+    {
+      "id": "scale_misread",
+      "description": "Reads a bar that ends between two marks as the lower mark, or leaves out a bar when adding."
+    },
+    {
+      "id": "diff_as_total",
+      "description": "Adds two bars when asked how many more, or subtracts when asked for the total."
+    },
+    {
+      "id": "pie_total_wrong",
+      "description": "Uses 100 or 180 instead of 360 degrees for the whole pie, or gives the percentage as the angle."
+    },
+    {
+      "id": "median_unsorted",
+      "description": "Takes the middle value of the list as written, without putting the values in order first."
+    },
+    {
+      "id": "total_not_mean",
+      "description": "Gives the total as the mean, or gives the biggest value as the mode or the mean."
+    },
+    {
+      "id": "answer_is_other_quantity",
+      "description": "Stops at a middle step, such as the missing value, and gives it as the answer."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.chapter_11_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.chapter_11_test": [
+      {
+        "id": "qb_exam_mean",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_mean",
+          "type": "number",
+          "prompt": {
+            "en": "Find the mean of 6, 9 and 12.",
+            "ur": "6، 9 اور 12 کا اوسط نکالیں۔"
+          },
+          "answer": 9,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add them, then divide by 3.",
+            "ur": "جمع کریں، پھر 3 سے تقسیم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 27 ÷ 3 = 9.",
+            "ur": "درست: 27 ÷ 3 = 9"
+          },
+          "feedback_wrong": {
+            "en": "6 + 9 + 12 = 27, and 27 ÷ 3 = 9.",
+            "ur": "6 + 9 + 12 = 27، اور 27 ÷ 3 = 9"
+          },
+          "common_wrong": [
+            {
+              "answer": 27,
+              "feedback": {
+                "en": "27 is the total. Divide by 3: 9.",
+                "ur": "27 کل ہے۔ 3 سے تقسیم کریں: 9"
+              },
+              "misconception_id": "total_not_mean"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_angle",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_angle",
+          "type": "number",
+          "prompt": {
+            "en": "One third of the people in a pie chart like mangoes. What is the angle of the mango sector, in degrees?",
+            "ur": "دائری نقشے میں ایک تہائی لوگوں کو آم پسند ہیں۔ آم کے ٹکڑے کا زاویہ درجوں میں کتنا ہے؟"
+          },
+          "answer": 120,
+          "checker": "numeric",
+          "hint": {
+            "en": "One third of 360.",
+            "ur": "360 کا ایک تہائی۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 360 ÷ 3 = 120°.",
+            "ur": "درست: 360 ÷ 3 = 120°"
+          },
+          "feedback_wrong": {
+            "en": "360 ÷ 3 = 120.",
+            "ur": "360 ÷ 3 = 120"
+          },
+          "common_wrong": [
+            {
+              "answer": 33,
+              "feedback": {
+                "en": "33 is about the percentage. The angle is 360 ÷ 3 = 120.",
+                "ur": "33 تقریباً فیصد ہے۔ زاویہ 360 ÷ 3 = 120 ہے۔"
+              },
+              "misconception_id": "pie_total_wrong"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_median",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_median",
+          "type": "number",
+          "prompt": {
+            "en": "Find the median of 15, 3, 9, 21, 12.",
+            "ur": "15، 3، 9، 21، 12 کا وسطانیہ نکالیں۔"
+          },
+          "answer": 12,
+          "checker": "numeric",
+          "hint": {
+            "en": "Put them in order first.",
+            "ur": "پہلے ترتیب میں لکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 3, 9, 12, 15, 21. The middle one is 12.",
+            "ur": "درست: 3، 9، 12، 15، 21۔ درمیانی 12 ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "The 3rd of five in order is 12.",
+            "ur": "پانچ میں سے ترتیب میں تیسرا 12 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 9,
+              "feedback": {
+                "en": "9 is the middle of the list as written. In order it is 12.",
+                "ur": "9 لکھی ہوئی فہرست کا بیچ ہے۔ ترتیب میں 12 ہے۔"
+              },
+              "misconception_id": "median_unsorted"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_angle",
+      "front": {
+        "en": "Sector angle of a pie chart?",
+        "ur": "دائری نقشے کے ٹکڑے کا زاویہ؟"
+      },
+      "back": {
+        "en": "Value ÷ total × 360°.",
+        "ur": "قیمت ÷ کل × 360°"
+      }
+    },
+    {
+      "id": "f_avgs",
+      "front": {
+        "en": "Mean, median, mode?",
+        "ur": "اوسط، وسطانیہ، عادہ؟"
+      },
+      "back": {
+        "en": "Mean: total ÷ how many. Median: the middle value in order. Mode: the most common value.",
+        "ur": "اوسط: کل ÷ تعداد۔ وسطانیہ: ترتیب میں درمیانی قیمت۔ عادہ: سب سے عام قیمت۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 11 in your maths book in your notebook, setting out the working the way this test's answers do: write the rule you use, put in the numbers, work out the answer. Draw the graphs and pie charts with a ruler and protractor. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 11 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں: جو اصول استعمال کریں وہ لکھیں، اعداد رکھیں، جواب نکالیں۔ گراف اور دائری نقشے پیمانے اور زاویہ پیما سے بنائیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Review exercise",
+      "ur": "اعادی مشق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 11 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook, then the final answer). The questions are new, not the book's. Use your notebook for the working.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 11 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوالات (کاپی میں پورا کام، پھر آخری جواب)۔ سوال نئے ہیں، کتاب والے نہیں۔ کام کے لیے اپنی کاپی استعمال کریں۔"
+      }
+    },
+    {
+      "id": "m1_grouped",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A table shows the ages of children in classes 5-9, 10-14 and 15-19, with how many children are in each class. This is:",
+        "ur": "کثیر انتخابی: ایک جدول بچوں کی عمریں گروہوں 5-9، 10-14 اور 15-19 میں دکھاتا ہے، اور ہر گروہ میں بچوں کی تعداد بتاتا ہے۔ یہ ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "grouped data",
+            "ur": "گروہ بند مواد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: the values are put in classes.",
+            "ur": "درست: قیمتیں گروہوں میں رکھی گئی ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "ungrouped data",
+            "ur": "غیر گروہ بند مواد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Ungrouped data lists every value on its own.",
+            "ur": "غیر گروہ بند مواد ہر قیمت الگ لکھتا ہے۔"
+          },
+          "misconception_id": "grouped_ungrouped_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "continuous data",
+            "ur": "مسلسل مواد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Continuous is about measuring. This table is about classes.",
+            "ur": "مسلسل ناپنے کے بارے میں ہے۔ یہ جدول گروہوں کے بارے میں ہے۔"
+          },
+          "misconception_id": "grouped_ungrouped_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "a pie chart",
+            "ur": "دائری نقشہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A pie chart is a picture. This is a table.",
+            "ur": "دائری نقشہ تصویر ہے۔ یہ جدول ہے۔"
+          },
+          "misconception_id": "grouped_ungrouped_mix"
+        }
+      ]
+    },
+    {
+      "id": "m2_discrete",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which one of these is discrete data?",
+        "ur": "کثیر انتخابی: ان میں سے کون سا منفصل مواد ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "the length of a rope",
+            "ur": "رسی کی لمبائی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Length is measured, so continuous.",
+            "ur": "لمبائی ناپی جاتی ہے، تو مسلسل۔"
+          },
+          "misconception_id": "measured_is_counted"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "the weight of a mango",
+            "ur": "آم کا وزن"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Weight is measured, so continuous.",
+            "ur": "وزن ناپا جاتا ہے، تو مسلسل۔"
+          },
+          "misconception_id": "measured_is_counted"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "the number of eggs in a basket",
+            "ur": "ٹوکری میں انڈوں کی تعداد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: eggs are counted.",
+            "ur": "درست: انڈے گنے جاتے ہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "the time taken to run a race",
+            "ur": "دوڑ میں لگنے والا وقت"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Time is measured, so continuous.",
+            "ur": "وقت ناپا جاتا ہے، تو مسلسل۔"
+          },
+          "misconception_id": "measured_is_counted"
+        }
+      ]
+    },
+    {
+      "id": "m3_juice",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The bar graph shows cups of juice sold. How many cups were sold on Monday (Mo) and Tuesday (Tu) together?",
+        "ur": "کثیر انتخابی: بار گراف بکنے والے جوس کے کپ دکھاتا ہے۔ پیر (Mo) اور منگل (Tu) کو ملا کر کتنے کپ بکے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "60",
+            "ur": "60"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That reads Monday as 20. The bar is halfway between 20 and 30: 25.",
+            "ur": "اس میں پیر کو 20 پڑھا گیا۔ ستون 20 اور 30 کے بیچ میں ہے: 25"
+          },
+          "misconception_id": "scale_misread"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "65",
+            "ur": "65"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 25 + 40 = 65. Monday's bar is halfway between 20 and 30.",
+            "ur": "درست: 25 + 40 = 65۔ پیر کا ستون 20 اور 30 کے ٹھیک بیچ میں ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "40",
+            "ur": "40"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is Tuesday alone. Add Monday's 25.",
+            "ur": "یہ صرف منگل ہے۔ پیر کے 25 بھی جمع کریں۔"
+          },
+          "misconception_id": "scale_misread"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "15",
+            "ur": "15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 40 − 25, the difference. 'Together' means add.",
+            "ur": "یہ 40 − 25 ہے، فرق۔ 'ملا کر' کا مطلب جمع ہے۔"
+          },
+          "misconception_id": "diff_as_total"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "A bar graph of cups of juice sold on four days. The side scale goes up in tens from 0 to 40. Monday 25, Tuesday 40, Wednesday 15, Thursday 35.",
+          "ur": "چار دنوں میں بکنے والے جوس کے کپوں کا بار گراف۔ اطراف کا پیمانہ 0 سے 40 تک دس دس کے قدموں میں ہے۔ پیر 25، منگل 40، بدھ 15، جمعرات 35۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              286.0,
+              144.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              144.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              144.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              112.5
+            ],
+            "to": [
+              37.2,
+              112.5
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              112.5
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              81.0
+            ],
+            "to": [
+              37.2,
+              81.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              81.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              49.5
+            ],
+            "to": [
+              37.2,
+              49.5
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              49.5
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              18.0
+            ],
+            "to": [
+              37.2,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              18.0
+            ],
+            "text": "40"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                49.6,
+                65.2
+              ],
+              [
+                87.0,
+                65.2
+              ],
+              [
+                87.0,
+                144.0
+              ],
+              [
+                49.6,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              68.3,
+              158.0
+            ],
+            "text": "Mo"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                111.8,
+                18.0
+              ],
+              [
+                149.2,
+                18.0
+              ],
+              [
+                149.2,
+                144.0
+              ],
+              [
+                111.8,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.5,
+              158.0
+            ],
+            "text": "Tu"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                174.0,
+                96.8
+              ],
+              [
+                211.4,
+                96.8
+              ],
+              [
+                211.4,
+                144.0
+              ],
+              [
+                174.0,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.7,
+              158.0
+            ],
+            "text": "We"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                236.2,
+                33.8
+              ],
+              [
+                273.6,
+                33.8
+              ],
+              [
+                273.6,
+                144.0
+              ],
+              [
+                236.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              254.9,
+              158.0
+            ],
+            "text": "Th"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4_quarter",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A sector is 25% of a pie chart. Its angle is:",
+        "ur": "کثیر انتخابی: دائری نقشے کا ایک ٹکڑا 25٪ ہے۔ اس کا زاویہ ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "25°",
+            "ur": "25°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "25 is the percentage. A quarter of 360° is 90°.",
+            "ur": "25 فیصد ہے۔ 360° کا چوتھائی 90° ہے۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "180°",
+            "ur": "180°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "180° is half the circle.",
+            "ur": "180° آدھا دائرہ ہے۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "100°",
+            "ur": "100°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A pie chart is 360°, not 100°.",
+            "ur": "دائری نقشہ 360° کا ہے، 100° کا نہیں۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "90°",
+            "ur": "90°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 25 ÷ 100 × 360 = 90.",
+            "ur": "درست: 25 ÷ 100 × 360 = 90"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_median",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The median of 7, 2, 9, 4, 6 is:",
+        "ur": "کثیر انتخابی: 7، 2، 9، 4، 6 کا وسطانیہ ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: in order 2, 4, 6, 7, 9, the middle is 6.",
+            "ur": "درست: ترتیب میں 2، 4، 6، 7، 9 کا بیچ 6 ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 is the middle of the list as written. Put them in order first.",
+            "ur": "9 لکھی ہوئی فہرست کا بیچ ہے۔ پہلے ترتیب میں لکھیں۔"
+          },
+          "misconception_id": "median_unsorted"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "5.6",
+            "ur": "5.6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the mean (28 ÷ 5). The median is the middle value: 6.",
+            "ur": "یہ اوسط ہے (28 ÷ 5)۔ وسطانیہ درمیانی قیمت ہے: 6"
+          },
+          "misconception_id": "total_not_mean"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "7",
+            "ur": "7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is the second from the end in order. The middle is 6.",
+            "ur": "7 ترتیب میں آخر سے دوسرا ہے۔ درمیانی 6 ہے۔"
+          },
+          "misconception_id": "median_unsorted"
+        }
+      ]
+    },
+    {
+      "id": "m6_mode",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The mode of 5, 7, 5, 9, 7, 5 is:",
+        "ur": "کثیر انتخابی: 5، 7، 5، 9، 7، 5 کا عادہ ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "7",
+            "ur": "7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 appears two times; 5 appears three times.",
+            "ur": "7 دو بار آتا ہے؛ 5 تین بار۔"
+          },
+          "misconception_id": "total_not_mean"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5",
+            "ur": "5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 5 appears three times.",
+            "ur": "درست: 5 تین بار آتا ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 is the biggest number, not the most common.",
+            "ur": "9 سب سے بڑا عدد ہے، سب سے عام نہیں۔"
+          },
+          "misconception_id": "total_not_mean"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 is how many times 5 appears. The mode is 5.",
+            "ur": "3 یہ ہے کہ 5 کتنی بار آیا۔ عادہ 5 ہے۔"
+          },
+          "misconception_id": "total_not_mean"
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_mean",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find the mean of the marks 14, 18, 10, 16, 12.",
+        "ur": "مختصر سوال: نمبروں 14، 18، 10، 16، 12 کا اوسط نکالیں۔"
+      },
+      "answer": 14,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total ÷ number of values.",
+        "ur": "کل ÷ قیمتوں کی تعداد"
+      },
+      "feedback_correct": {
+        "en": "Correct: 70 ÷ 5 = 14.",
+        "ur": "درست: 70 ÷ 5 = 14"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: total = 14 + 18 + 10 + 16 + 12 = 70. Mean = 70 ÷ 5 = 14.",
+        "ur": "نمونہ جواب: کل = 14 + 18 + 10 + 16 + 12 = 70۔ اوسط = 70 ÷ 5 = 14"
+      },
+      "common_wrong": [
+        {
+          "answer": 70,
+          "feedback": {
+            "en": "70 is the total. Divide by 5: 14.",
+            "ur": "70 کل ہے۔ 5 سے تقسیم کریں: 14"
+          },
+          "misconception_id": "total_not_mean"
+        },
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "18 is the biggest mark. The mean uses all five: 14.",
+            "ur": "18 سب سے بڑا نمبر ہے۔ اوسط میں پانچوں آتے ہیں: 14"
+          },
+          "misconception_id": "total_not_mean"
+        }
+      ]
+    },
+    {
+      "id": "q2_median",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find the median of 8, 14, 6, 18, 10, 20.",
+        "ur": "مختصر سوال: 8، 14، 6، 18، 10، 20 کا وسطانیہ نکالیں۔"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Put them in order. With six numbers, go halfway between the middle two.",
+        "ur": "ترتیب میں لکھیں۔ چھ اعداد ہوں تو درمیانی دو کے ٹھیک بیچ میں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 6, 8, 10, 14, 18, 20. (10 + 14) ÷ 2 = 12.",
+        "ur": "درست: 6، 8، 10، 14، 18، 20۔ (10 + 14) ÷ 2 = 12"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: in order 6, 8, 10, 14, 18, 20. The middle two are 10 and 14. Median = (10 + 14) ÷ 2 = 12.",
+        "ur": "نمونہ جواب: ترتیب میں 6، 8، 10، 14، 18، 20۔ درمیانی دو 10 اور 14 ہیں۔ وسطانیہ = (10 + 14) ÷ 2 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 and 18 are the middle two of the list as written. Put them in order first: 12.",
+            "ur": "6 اور 18 لکھی ہوئی فہرست کے درمیانی دو ہیں۔ پہلے ترتیب میں لکھیں: 12"
+          },
+          "misconception_id": "median_unsorted"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is only one of the two middle numbers. Halfway between 10 and 14 is 12.",
+            "ur": "10 دو درمیانی اعداد میں سے صرف ایک ہے۔ 10 اور 14 کے ٹھیک بیچ میں 12 ہے۔"
+          },
+          "misconception_id": "median_unsorted"
+        }
+      ]
+    },
+    {
+      "id": "q3_angle",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: In a pie chart of 144 pupils, 24 like drawing best. Find the angle of the drawing sector, in degrees.",
+        "ur": "مختصر سوال: 144 طلبہ کے دائری نقشے میں 24 کو ڈرائنگ سب سے زیادہ پسند ہے۔ ڈرائنگ کے ٹکڑے کا زاویہ درجوں میں نکالیں۔"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Angle = value ÷ total × 360.",
+        "ur": "زاویہ = قیمت ÷ کل × 360"
+      },
+      "feedback_correct": {
+        "en": "Correct: 24 ÷ 144 × 360 = 60°.",
+        "ur": "درست: 24 ÷ 144 × 360 = 60°"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 24 ÷ 144 = 1/6, and 1/6 of 360 is 60°.",
+        "ur": "نمونہ جواب: 24 ÷ 144 = 1/6، اور 360 کا 1/6 یعنی 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24 is the number of pupils. The angle is 24 ÷ 144 × 360 = 60.",
+            "ur": "24 طلبہ کی تعداد ہے۔ زاویہ 24 ÷ 144 × 360 = 60 ہے۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "answer": 17,
+          "feedback": {
+            "en": "17 is about 24 ÷ 144 × 100, a percentage. Multiply by 360: 60.",
+            "ur": "17 تقریباً 24 ÷ 144 × 100 ہے، یعنی فیصد۔ 360 سے ضرب دیں: 60"
+          },
+          "misconception_id": "pie_total_wrong"
+        }
+      ]
+    },
+    {
+      "id": "q4_baskets",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: The bar graph shows baskets of fruit sold by four shops. How many more baskets did shop C sell than shop B?",
+        "ur": "مختصر سوال: بار گراف چار دکانوں کی بیچی گئی پھلوں کی ٹوکریاں دکھاتا ہے۔ دکان C نے دکان B سے کتنی ٹوکریاں زیادہ بیچیں؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Read both bars, then subtract.",
+        "ur": "دونوں ستون پڑھیں، پھر گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 45 − 20 = 25.",
+        "ur": "درست: 45 − 20 = 25"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: shop C sold 45 and shop B sold 20, so 45 − 20 = 25 more baskets.",
+        "ur": "نمونہ جواب: دکان C نے 45 اور دکان B نے 20 بیچیں، تو 45 − 20 = 25 ٹوکریاں زیادہ"
+      },
+      "common_wrong": [
+        {
+          "answer": 65,
+          "feedback": {
+            "en": "65 is 45 + 20. 'How many more' means subtract: 25.",
+            "ur": "65 یعنی 45 + 20۔ 'کتنی زیادہ' کا مطلب گھٹانا ہے: 25"
+          },
+          "misconception_id": "diff_as_total"
+        },
+        {
+          "answer": 45,
+          "feedback": {
+            "en": "45 is shop C alone. Take away shop B's 20: 25.",
+            "ur": "45 صرف دکان C ہے۔ دکان B کے 20 گھٹائیں: 25"
+          },
+          "misconception_id": "diff_as_total"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "A bar graph of baskets of fruit sold by four shops A, B, C and D. The side scale goes up in tens from 0 to 50. Shop A 35, shop B 20, shop C 45, shop D 30.",
+          "ur": "چار دکانوں A، B، C اور D کی بیچی گئی پھلوں کی ٹوکریوں کا بار گراف۔ اطراف کا پیمانہ 0 سے 50 تک دس دس کے قدموں میں ہے۔ دکان A کی 35، دکان B کی 20، دکان C کی 45، دکان D کی 30۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              286.0,
+              144.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              144.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              144.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              118.8
+            ],
+            "to": [
+              37.2,
+              118.8
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              118.8
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              93.6
+            ],
+            "to": [
+              37.2,
+              93.6
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              93.6
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              68.4
+            ],
+            "to": [
+              37.2,
+              68.4
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              68.4
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              43.2
+            ],
+            "to": [
+              37.2,
+              43.2
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              43.2
+            ],
+            "text": "40"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              18.0
+            ],
+            "to": [
+              37.2,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              18.0
+            ],
+            "text": "50"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                49.6,
+                55.8
+              ],
+              [
+                87.0,
+                55.8
+              ],
+              [
+                87.0,
+                144.0
+              ],
+              [
+                49.6,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              68.3,
+              158.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                111.8,
+                93.6
+              ],
+              [
+                149.2,
+                93.6
+              ],
+              [
+                149.2,
+                144.0
+              ],
+              [
+                111.8,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.5,
+              158.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                174.0,
+                30.6
+              ],
+              [
+                211.4,
+                30.6
+              ],
+              [
+                211.4,
+                144.0
+              ],
+              [
+                174.0,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.7,
+              158.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                236.2,
+                68.4
+              ],
+              [
+                273.6,
+                68.4
+              ],
+              [
+                273.6,
+                144.0
+              ],
+              [
+                236.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              254.9,
+              158.0
+            ],
+            "text": "D"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write the rule and full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں اصول اور پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_mean_median",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The mean of six numbers is 9. Five of them are 4, 12, 7, 10, 8. Find the sixth number, and then the median of all six numbers.",
+        "ur": "تفصیلی سوال: چھ اعداد کا اوسط 9 ہے۔ ان میں سے پانچ 4، 12، 7، 10، 8 ہیں۔ چھٹا عدد نکالیں، پھر چھ کے چھ اعداد کا وسطانیہ نکالیں۔"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total = 9 × 6. Take away the five known numbers. Then order all six and go halfway between the middle two.",
+        "ur": "کل = 9 × 6۔ پانچ معلوم اعداد گھٹائیں۔ پھر چھ کو ترتیب میں لکھیں اور درمیانی دو کے ٹھیک بیچ میں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: sixth number = 54 − 41 = 13. In order 4, 7, 8, 10, 12, 13: (8 + 10) ÷ 2 = 9.",
+        "ur": "درست: چھٹا عدد = 54 − 41 = 13۔ ترتیب میں 4، 7، 8، 10، 12، 13: (8 + 10) ÷ 2 = 9"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: total = 9 × 6 = 54. Known: 4 + 12 + 7 + 10 + 8 = 41. Sixth = 54 − 41 = 13. In order: 4, 7, 8, 10, 12, 13. The middle two are 8 and 10, so median = (8 + 10) ÷ 2 = 9.",
+        "ur": "نمونہ جواب: کل = 9 × 6 = 54۔ معلوم: 4 + 12 + 7 + 10 + 8 = 41۔ چھٹا = 54 − 41 = 13۔ ترتیب میں: 4، 7، 8، 10، 12، 13۔ درمیانی دو 8 اور 10 ہیں، تو وسطانیہ = (8 + 10) ÷ 2 = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "13 is the sixth number, the middle step. The question asks for the median: 9.",
+            "ur": "13 چھٹا عدد ہے، بیچ کا قدم۔ سوال وسطانیہ پوچھتا ہے: 9"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is only one of the two middle numbers. Halfway between 8 and 10 is 9.",
+            "ur": "8 دو درمیانی اعداد میں سے صرف ایک ہے۔ 8 اور 10 کے ٹھیک بیچ میں 9 ہے۔"
+          },
+          "misconception_id": "median_unsorted"
+        }
+      ]
+    },
+    {
+      "id": "l2_pie",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The pie chart shows what 240 pupils chose for sports day. Sector X is 35% and sector Y is 25%. How many pupils are in sector Z?",
+        "ur": "تفصیلی سوال: دائری نقشہ دکھاتا ہے کہ 240 طلبہ نے کھیلوں کے دن کے لیے کیا چنا۔ ٹکڑا X، 35٪ اور ٹکڑا Y، 25٪ ہے۔ ٹکڑے Z میں کتنے طلبہ ہیں؟"
+      },
+      "answer": 96,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find the percentage of Z first: 100 − 35 − 25. Then take that percentage of 240.",
+        "ur": "پہلے Z کا فیصد نکالیں: 100 − 35 − 25۔ پھر 240 کا وہ فیصد لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: Z = 40%, and 40 ÷ 100 × 240 = 96 pupils.",
+        "ur": "درست: Z = 40٪، اور 40 ÷ 100 × 240 = 96 طلبہ"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the sectors make 100%, so Z = 100 − 35 − 25 = 40%. Number of pupils = 40 ÷ 100 × 240 = 96.",
+        "ur": "نمونہ جواب: ٹکڑے مل کر 100٪ بنتے ہیں، تو Z = 100 − 35 − 25 = 40٪۔ طلبہ کی تعداد = 40 ÷ 100 × 240 = 96"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "40 is the percentage of Z. The question asks for pupils: 96.",
+            "ur": "40، Z کا فیصد ہے۔ سوال طلبہ پوچھتا ہے: 96"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 144,
+          "feedback": {
+            "en": "144 pupils are in X and Y together (60%). Z is 40% of 240: 96.",
+            "ur": "144 طلبہ X اور Y میں ملا کر ہیں (60٪)۔ Z، 240 کا 40٪ ہے: 96"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "A pie chart of 240 pupils with three sectors X, Y and Z. X is 35 percent and Y is 25 percent. The sector Z is marked with a question mark.",
+          "ur": "240 طلبہ کا دائری نقشہ جس کے تین ٹکڑے X، Y اور Z ہیں۔ X کا 35 فیصد اور Y کا 25 فیصد ہے۔ ٹکڑے Z پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              86.0
+            ],
+            "radius": 72.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              150.0,
+              14.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              187.2,
+              58.0
+            ],
+            "text": "X"
+          },
+          {
+            "kind": "label",
+            "at": [
+              187.2,
+              76.0
+            ],
+            "text": "35%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              208.2,
+              128.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              156.5,
+              118.2
+            ],
+            "text": "Y"
+          },
+          {
+            "kind": "label",
+            "at": [
+              156.5,
+              136.2
+            ],
+            "text": "25%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              107.7,
+              144.2
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              110.3,
+              64.1
+            ],
+            "text": "Z"
+          },
+          {
+            "kind": "label",
+            "at": [
+              110.3,
+              82.1
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "point",
+            "at": [
+              150.0,
+              86.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l3_double",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The double bar graph shows boys (filled bar) and girls (empty bar) in classes A, B and C. How many more girls than boys are there in the three classes together?",
+        "ur": "تفصیلی سوال: دوہرا بار گراف جماعتوں A، B اور C میں لڑکے (بھرا ستون) اور لڑکیاں (خالی ستون) دکھاتا ہے۔ تینوں جماعتوں میں مل کر لڑکوں سے لڑکیاں کتنی زیادہ ہیں؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add all the boys' bars, add all the girls' bars, then subtract.",
+        "ur": "لڑکوں کے سب ستون جمع کریں، لڑکیوں کے سب ستون جمع کریں، پھر گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: boys 20 + 10 + 15 = 45, girls 15 + 25 + 15 = 55, and 55 − 45 = 10.",
+        "ur": "درست: لڑکے 20 + 10 + 15 = 45، لڑکیاں 15 + 25 + 15 = 55، اور 55 − 45 = 10"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: boys = 20 + 10 + 15 = 45. Girls = 15 + 25 + 15 = 55. There are 55 − 45 = 10 more girls.",
+        "ur": "نمونہ جواب: لڑکے = 20 + 10 + 15 = 45۔ لڑکیاں = 15 + 25 + 15 = 55۔ لڑکیاں 55 − 45 = 10 زیادہ ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "100 is all the children added. 'How many more' means subtract: 10.",
+            "ur": "100 سب بچے جمع ہیں۔ 'کتنی زیادہ' کا مطلب گھٹانا ہے: 10"
+          },
+          "misconception_id": "diff_as_total"
+        },
+        {
+          "answer": 55,
+          "feedback": {
+            "en": "55 is the number of girls. Take away the 45 boys: 10.",
+            "ur": "55 لڑکیوں کی تعداد ہے۔ 45 لڑکے گھٹائیں: 10"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 180.0,
+        "alt": {
+          "en": "A double bar graph of boys (filled bar) and girls (empty bar) in three classes A, B and C. The scale goes up in fives. Class A: 20 boys and 15 girls. Class B: 10 boys and 25 girls. Class C: 15 boys and 15 girls.",
+          "ur": "تین جماعتوں A، B اور C میں لڑکوں (بھرا ستون) اور لڑکیوں (خالی ستون) کا دوہرا بار گراف۔ پیمانہ پانچ پانچ کے قدموں میں ہے۔ جماعت A: 20 لڑکے اور 15 لڑکیاں۔ جماعت B: 10 لڑکے اور 25 لڑکیاں۔ جماعت C: 15 لڑکے اور 15 لڑکیاں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              288.0,
+              154.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              154.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              154.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              130.0
+            ],
+            "to": [
+              37.2,
+              130.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              130.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              106.0
+            ],
+            "to": [
+              37.2,
+              106.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              106.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              82.0
+            ],
+            "to": [
+              37.2,
+              82.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              82.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              58.0
+            ],
+            "to": [
+              37.2,
+              58.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              58.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              34.0
+            ],
+            "to": [
+              37.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              34.0
+            ],
+            "text": "25"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.2,
+                58.0
+              ],
+              [
+                78.0,
+                58.0
+              ],
+              [
+                78.0,
+                154.0
+              ],
+              [
+                51.2,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                80.0,
+                82.0
+              ],
+              [
+                106.8,
+                82.0
+              ],
+              [
+                106.8,
+                154.0
+              ],
+              [
+                80.0,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.0,
+              168.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                134.8,
+                106.0
+              ],
+              [
+                161.6,
+                106.0
+              ],
+              [
+                161.6,
+                154.0
+              ],
+              [
+                134.8,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                163.6,
+                34.0
+              ],
+              [
+                190.4,
+                34.0
+              ],
+              [
+                190.4,
+                154.0
+              ],
+              [
+                163.6,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              162.6,
+              168.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                218.4,
+                82.0
+              ],
+              [
+                245.2,
+                82.0
+              ],
+              [
+                245.2,
+                154.0
+              ],
+              [
+                218.4,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                247.2,
+                82.0
+              ],
+              [
+                274.0,
+                82.0
+              ],
+              [
+                274.0,
+                154.0
+              ],
+              [
+                247.2,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              246.2,
+              168.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                188.0,
+                8.0
+              ],
+              [
+                200.0,
+                8.0
+              ],
+              [
+                200.0,
+                20.0
+              ],
+              [
+                188.0,
+                20.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              212.0,
+              14.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                238.0,
+                8.0
+              ],
+              [
+                250.0,
+                8.0
+              ],
+              [
+                250.0,
+                20.0
+              ],
+              [
+                238.0,
+                20.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              262.0,
+              14.0
+            ],
+            "text": "G"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l4_combined",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The mean of 4 numbers is 7. The mean of 6 other numbers is 12. Find the mean of all 10 numbers.",
+        "ur": "تفصیلی سوال: 4 اعداد کا اوسط 7 ہے۔ 6 دوسرے اعداد کا اوسط 12 ہے۔ سب 10 اعداد کا اوسط نکالیں۔"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find each total (mean × how many), add the totals, and divide by 10.",
+        "ur": "ہر کل نکالیں (اوسط × تعداد)، کل جمع کریں، اور 10 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: totals 28 and 72 make 100, and 100 ÷ 10 = 10.",
+        "ur": "درست: کل 28 اور 72 مل کر 100 بنتے ہیں، اور 100 ÷ 10 = 10"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: first total = 7 × 4 = 28. Second total = 12 × 6 = 72. All together: 28 + 72 = 100 over 10 numbers. Mean = 100 ÷ 10 = 10.",
+        "ur": "نمونہ جواب: پہلا کل = 7 × 4 = 28۔ دوسرا کل = 12 × 6 = 72۔ سب مل کر: 10 اعداد پر 28 + 72 = 100۔ اوسط = 100 ÷ 10 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "100 is the total of all ten. Divide by 10: 10.",
+            "ur": "100 سب دس کا کل ہے۔ 10 سے تقسیم کریں: 10"
+          },
+          "misconception_id": "total_not_mean"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 11 test. Well done!",
+          "ur": "آپ نے باب 11 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: ungrouped data lists every value, grouped data puts them in classes; counted data is discrete and measured data is continuous. Read the scale first on a bar graph; for 'how many more' subtract, for 'altogether' add. A pie chart is 100% and 360°: angle = value ÷ total × 360°. Mean = total ÷ how many; the median is the middle value in order (halfway between the middle two for an even count); the mode is the most common value. For a missing value, total = mean × how many. Answer what is asked, not a middle step.",
+        "ur": "امتحان میں: غیر گروہ بند مواد ہر قیمت لکھتا ہے، گروہ بند مواد انہیں گروہوں میں رکھتا ہے؛ گنا ہوا مواد منفصل اور ناپا ہوا مسلسل ہے۔ بار گراف میں پہلے پیمانہ پڑھیں؛ 'کتنے زیادہ' میں گھٹائیں، 'کل' میں جمع کریں۔ دائری نقشہ 100٪ اور 360° ہے: زاویہ = قیمت ÷ کل × 360°۔ اوسط = کل ÷ تعداد؛ وسطانیہ ترتیب میں درمیانی قیمت ہے (جفت تعداد میں درمیانی دو کے بیچ میں)؛ عادہ سب سے عام قیمت ہے۔ غائب قیمت کے لیے کل = اوسط × تعداد۔ وہ جواب دیں جو پوچھا گیا ہو، بیچ کا قدم نہیں۔"
+      },
+      "points": [
+        {
+          "en": "Rule, numbers, answer.",
+          "ur": "اصول، اعداد، جواب۔"
+        },
+        {
+          "en": "Answer what is asked, not a middle step.",
+          "ur": "وہ جواب دیں جو پوچھا گیا ہو، بیچ کا قدم نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_mode",
+      "type": "exam_style",
+      "skill": "maths.data.chapter_11_test",
+      "step": {
+        "id": "r_exam_mode",
+        "type": "number",
+        "prompt": {
+          "en": "Find the mode of 4, 8, 8, 5, 8, 4.",
+          "ur": "4، 8، 8، 5، 8، 4 کا عادہ نکالیں۔"
+        },
+        "answer": 8,
+        "checker": "numeric",
+        "hint": {
+          "en": "Which number appears most often?",
+          "ur": "کون سا عدد سب سے زیادہ بار آتا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Correct: 8 appears three times.",
+          "ur": "درست: 8 تین بار آتا ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "Count: 8 appears 3 times, 4 appears 2 times.",
+          "ur": "گنیں: 8 تین بار، 4 دو بار"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "3 is how many times 8 appears. The mode is 8.",
+              "ur": "3 یہ ہے کہ 8 کتنی بار آیا۔ عادہ 8 ہے۔"
+            },
+            "misconception_id": "total_not_mean"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_angle",
+      "type": "exam_style",
+      "skill": "maths.data.chapter_11_test",
+      "step": {
+        "id": "r_exam_angle",
+        "type": "number",
+        "prompt": {
+          "en": "3 of 12 children walk to school. What is the angle of the walking sector in a pie chart, in degrees?",
+          "ur": "12 میں سے 3 بچے پیدل سکول آتے ہیں۔ دائری نقشے میں پیدل والے ٹکڑے کا زاویہ درجوں میں کتنا ہے؟"
+        },
+        "answer": 90,
+        "checker": "numeric",
+        "hint": {
+          "en": "3 ÷ 12 × 360.",
+          "ur": "3 ÷ 12 × 360"
+        },
+        "feedback_correct": {
+          "en": "Correct: 3 ÷ 12 = 1/4, and 1/4 of 360 is 90°.",
+          "ur": "درست: 3 ÷ 12 = 1/4، اور 360 کا 1/4 یعنی 90°"
+        },
+        "feedback_wrong": {
+          "en": "360 ÷ 4 = 90.",
+          "ur": "360 ÷ 4 = 90"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "3 is the number of children. The angle is 3 ÷ 12 × 360 = 90.",
+              "ur": "3 بچوں کی تعداد ہے۔ زاویہ 3 ÷ 12 × 360 = 90 ہے۔"
+            },
+            "misconception_id": "pie_total_wrong"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 11 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.data.chapter_11_test), with the skills of the Data Handling unit as prerequisites, and is mastered with exam_style questions, like the earlier chapter tests. The app cannot check a drawing, so the questions are about reading graphs and tables and calculating; drawing the graphs and pie charts is a home task.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), all as in the earlier chapter tests; the data words come from the existing Data Handling lessons. No new Urdu terms were added.",
+    "The numbers were worked out in content/sources/g6-maths-10/chapter_11_test.py. Edit the script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

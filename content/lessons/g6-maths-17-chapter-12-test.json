@@ -1,0 +1,1477 @@
+{
+  "id": "g6-maths-17-chapter-12-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 12: experiments and sample spaces, equally likely events, and the probability of a single event with coins, dice, cards and balls.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 12: Probability, Review Exercise 12"
+    }
+  ],
+  "skills": [
+    "maths.probability.chapter_12_test"
+  ],
+  "title": {
+    "en": "Chapter 12 test: Probability",
+    "ur": "باب 12 کا ٹیسٹ: احتمال"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.probability.sample_space"
+    },
+    {
+      "skill": "maths.probability.single_event"
+    },
+    {
+      "skill": "maths.probability.likelihood"
+    },
+    {
+      "skill": "maths.probability.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "space_miscount",
+      "description": "Counts the outcomes of a coin and a dice, two coins or two dice wrongly, for example by adding instead of multiplying."
+    },
+    {
+      "id": "upside_down",
+      "description": "Writes n(S) / n(E) instead of n(E) / n(S), or gives a probability more than 1."
+    },
+    {
+      "id": "part_to_part",
+      "description": "Divides by the other outcomes (3 blue to 5 red) instead of by all the outcomes."
+    },
+    {
+      "id": "event_miscount",
+      "description": "Counts the favourable outcomes wrongly, for example including or leaving out the boundary value."
+    },
+    {
+      "id": "equally_likely_mix",
+      "description": "Thinks the outcomes of a bag with different numbers of each colour are equally likely."
+    },
+    {
+      "id": "one_way_only",
+      "description": "Counts only one way of getting an outcome of two coins or two dice."
+    },
+    {
+      "id": "answer_is_other_quantity",
+      "description": "Stops at a middle step, such as the number of one colour of ball, and gives it as the answer."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.probability.chapter_12_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.probability.chapter_12_test": [
+      {
+        "id": "qb_exam_dice",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_dice",
+          "type": "text_check",
+          "prompt": {
+            "en": "A fair dice is rolled once. What is the probability that the number is 3? Write it as a fraction.",
+            "ur": "ایک منصفانہ پانسہ ایک بار پھینکا جاتا ہے۔ عدد 3 آنے کا احتمال کیا ہے؟ کسر کی شکل میں لکھیں۔"
+          },
+          "checker": "fraction",
+          "expected": "1/6",
+          "hint": {
+            "en": "One face out of 6.",
+            "ur": "6 میں سے ایک رخ۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 1/6.",
+            "ur": "درست: 1/6"
+          },
+          "feedback_wrong": {
+            "en": "n(E) = 1 and n(S) = 6.",
+            "ur": "n(E) = 1 اور n(S) = 6"
+          },
+          "common_wrong": [
+            {
+              "answer": "6/1",
+              "feedback": {
+                "en": "6/1 is upside down. P = 1/6.",
+                "ur": "6/1 الٹا ہے۔ P = 1/6"
+              },
+              "misconception_id": "upside_down"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_coins",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_coins",
+          "type": "number",
+          "prompt": {
+            "en": "Two coins are tossed together. How many outcomes are in the sample space?",
+            "ur": "دو سکے ایک ساتھ اچھالے جاتے ہیں۔ نمونی فضا میں کتنے نتائج ہیں؟"
+          },
+          "answer": 4,
+          "checker": "numeric",
+          "hint": {
+            "en": "HH, HT, TH, TT.",
+            "ur": "HH، HT، TH، TT"
+          },
+          "feedback_correct": {
+            "en": "Correct: 2 × 2 = 4.",
+            "ur": "درست: 2 × 2 = 4"
+          },
+          "feedback_wrong": {
+            "en": "Four outcomes.",
+            "ur": "چار نتائج"
+          },
+          "common_wrong": [
+            {
+              "answer": 3,
+              "feedback": {
+                "en": "3 leaves out one of HT and TH. They are different: 4.",
+                "ur": "3 میں HT یا TH میں سے ایک چھوٹ گیا۔ یہ الگ ہیں: 4"
+              },
+              "misconception_id": "one_way_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_bag",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_bag",
+          "type": "text_check",
+          "prompt": {
+            "en": "A bag has 2 red and 8 blue balls. One ball is taken out at random. What is the probability that it is red?",
+            "ur": "ایک تھیلے میں 2 سرخ اور 8 نیلی گیندیں ہیں۔ ایک گیند بغیر دیکھے نکالی جاتی ہے۔ اس کے سرخ ہونے کا احتمال کیا ہے؟"
+          },
+          "checker": "fraction",
+          "expected": "1/5",
+          "hint": {
+            "en": "Red over all the balls.",
+            "ur": "سرخ تقسیم تمام گیندیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 2/10 = 1/5.",
+            "ur": "درست: 2/10 = 1/5"
+          },
+          "feedback_wrong": {
+            "en": "n(E) = 2 and n(S) = 10.",
+            "ur": "n(E) = 2 اور n(S) = 10"
+          },
+          "common_wrong": [
+            {
+              "answer": "2/8",
+              "feedback": {
+                "en": "2/8 divides by the 8 blue balls. Divide by all 10: 1/5.",
+                "ur": "2/8 میں 8 نیلی گیندوں سے تقسیم کیا گیا۔ تمام 10 سے تقسیم کریں: 1/5"
+              },
+              "misconception_id": "part_to_part"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_formula",
+      "front": {
+        "en": "Probability of an event?",
+        "ur": "واقعے کا احتمال؟"
+      },
+      "back": {
+        "en": "P(E) = n(E) ÷ n(S): the outcomes you want over all the outcomes. It is always from 0 to 1.",
+        "ur": "P(E) = n(E) ÷ n(S): مطلوبہ نتائج تقسیم تمام نتائج۔ یہ ہمیشہ 0 سے 1 کے درمیان ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "f_spaces",
+      "front": {
+        "en": "Outcomes of two coins, a coin and a dice, two dice?",
+        "ur": "دو سکوں، سکے اور پانسے، دو پانسوں کے نتائج؟"
+      },
+      "back": {
+        "en": "4, 12 and 36: multiply the outcomes of each.",
+        "ur": "4، 12 اور 36: ہر ایک کے نتائج کو ضرب دیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 12 in your maths book in your notebook, setting out the working the way this test's answers do: list the sample space, count n(E) and n(S), then write P(E) = n(E) ÷ n(S) in its simplest form. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 12 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں: نمونی فضا لکھیں، n(E) اور n(S) گنیں، پھر P(E) = n(E) ÷ n(S) کو سادہ ترین شکل میں لکھیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Review exercise",
+      "ur": "اعادی مشق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 12 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook, then the final answer). The questions are new, not the book's. Type probabilities as fractions, like 1/6.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 12 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوالات (کاپی میں پورا کام، پھر آخری جواب)۔ سوال نئے ہیں، کتاب والے نہیں۔ احتمال کو کسر کی شکل میں لکھیں، جیسے 1/6۔"
+      }
+    },
+    {
+      "id": "m1_coin_dice",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A coin is tossed and a dice is rolled together. How many outcomes are in the sample space?",
+        "ur": "کثیر انتخابی: ایک سکہ اچھالا جاتا ہے اور ایک پانسہ ساتھ پھینکا جاتا ہے۔ نمونی فضا میں کتنے نتائج ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "8",
+            "ur": "8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8 is 2 + 6. The outcomes multiply: 12.",
+            "ur": "8 یعنی 2 + 6۔ نتائج ضرب ہوتے ہیں: 12"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "12",
+            "ur": "12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 2 × 6 = 12.",
+            "ur": "درست: 2 × 6 = 12"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 is the outcomes of the dice alone. With the coin: 12.",
+            "ur": "6 صرف پانسے کے نتائج ہیں۔ سکے کے ساتھ: 12"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "36",
+            "ur": "36"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "36 is for two dice. A coin has 2 outcomes: 2 × 6 = 12.",
+            "ur": "36 دو پانسوں کا ہے۔ سکے کے 2 نتائج ہیں: 2 × 6 = 12"
+          },
+          "misconception_id": "space_miscount"
+        }
+      ]
+    },
+    {
+      "id": "m2_impossible",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The probability of an event that can never happen is:",
+        "ur": "کثیر انتخابی: ایسے واقعے کا احتمال جو کبھی نہیں ہو سکتا:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: an impossible event has n(E) = 0, so P = 0.",
+            "ur": "درست: ناممکن واقعے میں n(E) = 0 ہوتا ہے، تو P = 0"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P = 1 is a certain event, one that always happens.",
+            "ur": "P = 1 یقینی واقعہ ہے، جو ہمیشہ ہوتا ہے۔"
+          },
+          "misconception_id": "upside_down"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "1/2",
+            "ur": "1/2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1/2 is an even chance.",
+            "ur": "1/2 برابر امکان ہے۔"
+          },
+          "misconception_id": "upside_down"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "-1",
+            "ur": "−1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A probability is never below 0.",
+            "ur": "احتمال کبھی 0 سے کم نہیں ہوتا۔"
+          },
+          "misconception_id": "upside_down"
+        }
+      ]
+    },
+    {
+      "id": "m3_blue",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A bag has 5 red and 3 blue balls (R and B on the picture). One ball is taken out at random. The probability that it is blue is:",
+        "ur": "کثیر انتخابی: ایک تھیلے میں 5 سرخ اور 3 نیلی گیندیں ہیں (تصویر میں R اور B)۔ ایک گیند بغیر دیکھے نکالی جاتی ہے۔ اس کے نیلی ہونے کا احتمال ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "3/5",
+            "ur": "3/5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 is the number of red balls. Divide by all 8.",
+            "ur": "5 سرخ گیندوں کی تعداد ہے۔ تمام 8 سے تقسیم کریں۔"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5/8",
+            "ur": "5/8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5/8 is the probability of red.",
+            "ur": "5/8 سرخ کا احتمال ہے۔"
+          },
+          "misconception_id": "event_miscount"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "3/8",
+            "ur": "3/8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 3 blue out of 8 balls.",
+            "ur": "درست: 8 گیندوں میں سے 3 نیلی۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "8/3",
+            "ur": "8/3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is upside down, and bigger than 1.",
+            "ur": "یہ الٹا ہے، اور 1 سے بڑا ہے۔"
+          },
+          "misconception_id": "upside_down"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 110.0,
+        "alt": {
+          "en": "A jar with 8 balls: 3 marked B (blue) and 5 marked R (red). The blue balls are shaded.",
+          "ur": "ایک مرتبان جس میں 8 گیندیں ہیں: B والی 3 (نیلی) اور R والی 5 (سرخ)۔ نیلی گیندیں رنگین ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                95.0,
+                14.0
+              ],
+              [
+                95.0,
+                26.0
+              ],
+              [
+                77.0,
+                36.0
+              ],
+              [
+                77.0,
+                98.0
+              ],
+              [
+                223.0,
+                98.0
+              ],
+              [
+                223.0,
+                36.0
+              ],
+              [
+                205.0,
+                26.0
+              ],
+              [
+                205.0,
+                14.0
+              ]
+            ]
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              79.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              79.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              79.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              79.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              79.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              79.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              53.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              53.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              53.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              176.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              176.0,
+              53.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              202.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              202.0,
+              53.0
+            ],
+            "text": "R"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4_not_prob",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of these cannot be the probability of an event?",
+        "ur": "کثیر انتخابی: ان میں سے کون سا کسی واقعے کا احتمال نہیں ہو سکتا؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "3/4",
+            "ur": "3/4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3/4 is between 0 and 1, so it can be a probability.",
+            "ur": "3/4، 0 اور 1 کے بیچ میں ہے، تو یہ احتمال ہو سکتا ہے۔"
+          },
+          "misconception_id": "upside_down"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is the probability of an impossible event.",
+            "ur": "0 ناممکن واقعے کا احتمال ہے۔"
+          },
+          "misconception_id": "upside_down"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 is the probability of a certain event.",
+            "ur": "1 یقینی واقعے کا احتمال ہے۔"
+          },
+          "misconception_id": "upside_down"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "5/4",
+            "ur": "5/4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: it is more than 1, and a probability is never more than 1.",
+            "ur": "درست: یہ 1 سے بڑا ہے، اور احتمال کبھی 1 سے بڑا نہیں ہوتا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_not_equal",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: In which case are the outcomes NOT equally likely?",
+        "ur": "کثیر انتخابی: کس صورت میں نتائج یکساں امکان کے نہیں ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "taking a ball from a bag with 1 white and 7 black balls and noting the colour",
+            "ur": "1 سفید اور 7 کالی گیندوں والے تھیلے سے گیند نکال کر رنگ دیکھنا"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: black is seven times as likely as white.",
+            "ur": "درست: کالی سفید سے سات گنا زیادہ ممکن ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "tossing a fair coin",
+            "ur": "منصفانہ سکہ اچھالنا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Heads and tails are equally likely.",
+            "ur": "چت اور پٹ یکساں امکان کے ہیں۔"
+          },
+          "misconception_id": "equally_likely_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "rolling a fair dice",
+            "ur": "منصفانہ پانسہ پھینکنا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "All six faces are equally likely.",
+            "ur": "چھ کے چھ رخ یکساں امکان کے ہیں۔"
+          },
+          "misconception_id": "equally_likely_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "picking one of five different cards without looking",
+            "ur": "پانچ مختلف کارڈوں میں سے ایک بغیر دیکھے اٹھانا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each card is as likely as any other.",
+            "ur": "ہر کارڈ دوسرے جتنا ممکن ہے۔"
+          },
+          "misconception_id": "equally_likely_mix"
+        }
+      ]
+    },
+    {
+      "id": "m6_space",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The sample space of tossing two coins is:",
+        "ur": "کثیر انتخابی: دو سکے اچھالنے کی نمونی فضا ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "{HH, HT, TT}",
+            "ur": "{HH, HT, TT}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "TH is missing. HT and TH are different outcomes.",
+            "ur": "TH رہ گیا۔ HT اور TH الگ نتائج ہیں۔"
+          },
+          "misconception_id": "one_way_only"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "{HH, HT, TH, TT}",
+            "ur": "{HH, HT, TH, TT}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: four outcomes.",
+            "ur": "درست: چار نتائج۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "{H, T}",
+            "ur": "{H, T}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is for one coin.",
+            "ur": "یہ ایک سکے کی ہے۔"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "{HH, TT}",
+            "ur": "{HH, TT}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "HT and TH are missing.",
+            "ur": "HT اور TH رہ گئے ہیں۔"
+          },
+          "misconception_id": "one_way_only"
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer as a fraction.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب کسر کی شکل میں لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_prime",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: A fair dice is rolled once. Find the probability of a prime number.",
+        "ur": "مختصر سوال: ایک منصفانہ پانسہ ایک بار پھینکا جاتا ہے۔ مفرد عدد آنے کا احتمال نکالیں۔"
+      },
+      "checker": "fraction",
+      "expected": "1/2",
+      "hint": {
+        "en": "The prime numbers on a dice are 2, 3 and 5.",
+        "ur": "پانسے پر مفرد اعداد 2، 3 اور 5 ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 3/6 = 1/2.",
+        "ur": "درست: 3/6 = 1/2"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: S = {1, 2, 3, 4, 5, 6}, n(S) = 6. E = {2, 3, 5}, n(E) = 3. P(E) = 3/6 = 1/2.",
+        "ur": "نمونہ جواب: S = {1, 2, 3, 4, 5, 6}، n(S) = 6۔ E = {2, 3, 5}، n(E) = 3۔ P(E) = 3/6 = 1/2"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/3",
+          "feedback": {
+            "en": "3/3 divides by the 3 numbers that are not prime. Divide by all 6: 1/2.",
+            "ur": "3/3 میں 3 غیر مفرد اعداد سے تقسیم کیا گیا۔ تمام 6 سے تقسیم کریں: 1/2"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "answer": "4/6",
+          "feedback": {
+            "en": "4/6 counts 1 as prime too. 1 is not prime: 3/6 = 1/2.",
+            "ur": "4/6 میں 1 کو بھی مفرد گنا گیا۔ 1 مفرد نہیں: 3/6 = 1/2"
+          },
+          "misconception_id": "event_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q2_tails",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Three fair coins are tossed. Find the probability that all three show tails.",
+        "ur": "مختصر سوال: تین منصفانہ سکے اچھالے جاتے ہیں۔ تینوں پر پٹ آنے کا احتمال نکالیں۔"
+      },
+      "checker": "fraction",
+      "expected": "1/8",
+      "hint": {
+        "en": "How many outcomes are there for three coins? Only one of them is TTT.",
+        "ur": "تین سکوں کے کتنے نتائج ہیں؟ ان میں سے صرف ایک TTT ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 1 out of 8, so 1/8.",
+        "ur": "درست: 8 میں سے 1، تو 1/8"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: n(S) = 2 × 2 × 2 = 8. Only TTT has three tails, so n(E) = 1. P(E) = 1/8.",
+        "ur": "نمونہ جواب: n(S) = 2 × 2 × 2 = 8۔ صرف TTT میں تین پٹ ہیں، تو n(E) = 1۔ P(E) = 1/8"
+      },
+      "common_wrong": [
+        {
+          "answer": "1/3",
+          "feedback": {
+            "en": "1/3 uses 3 outcomes (one for each coin). Three coins have 8 outcomes: 1/8.",
+            "ur": "1/3 میں 3 نتائج (ہر سکے کا ایک) لیے گئے۔ تین سکوں کے 8 نتائج ہیں: 1/8"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "answer": "8/1",
+          "feedback": {
+            "en": "8/1 is upside down. P = 1/8.",
+            "ur": "8/1 الٹا ہے۔ P = 1/8"
+          },
+          "misconception_id": "upside_down"
+        }
+      ]
+    },
+    {
+      "id": "q3_cards",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: The letters of the word KARACHI are written on seven cards, one letter on each. One card is picked at random. Find the probability that it shows a vowel.",
+        "ur": "مختصر سوال: لفظ KARACHI کے حروف سات کارڈوں پر لکھے ہیں، ہر کارڈ پر ایک حرف۔ ایک کارڈ بغیر دیکھے اٹھایا جاتا ہے۔ اس پر حرفِ علت آنے کا احتمال نکالیں۔"
+      },
+      "checker": "fraction",
+      "expected": "3/7",
+      "hint": {
+        "en": "Count the vowels, including the letter that comes twice.",
+        "ur": "حروفِ علت گنیں، اس حرف سمیت جو دو بار آیا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: A, A and I make 3 vowels out of 7 cards: 3/7.",
+        "ur": "درست: A، A اور I مل کر 7 کارڈوں میں سے 3 حروفِ علت ہیں: 3/7"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: n(S) = 7. The vowels are A, A, I, so n(E) = 3. P(E) = 3/7.",
+        "ur": "نمونہ جواب: n(S) = 7۔ حروفِ علت A، A، I ہیں، تو n(E) = 3۔ P(E) = 3/7"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/4",
+          "feedback": {
+            "en": "3/4 divides by the 4 consonants. Divide by all 7 cards: 3/7.",
+            "ur": "3/4 میں 4 حروفِ صحیح سے تقسیم کیا گیا۔ تمام 7 کارڈوں سے تقسیم کریں: 3/7"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "answer": "2/7",
+          "feedback": {
+            "en": "2/7 counts the A once. Both cards with A are vowels: 3/7.",
+            "ur": "2/7 میں A ایک بار گنا گیا۔ A والے دونوں کارڈ حروفِ علت ہیں: 3/7"
+          },
+          "misconception_id": "event_miscount"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 62.0,
+        "alt": {
+          "en": "7 cards in a row: K, A, R, A, C, H and I.",
+          "ur": "7 کارڈ ایک قطار میں: K، A، R، A، C، H اور I۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                34.0,
+                12.0
+              ],
+              [
+                62.0,
+                12.0
+              ],
+              [
+                62.0,
+                50.0
+              ],
+              [
+                34.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.0,
+              31.0
+            ],
+            "text": "K"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                68.0,
+                12.0
+              ],
+              [
+                96.0,
+                12.0
+              ],
+              [
+                96.0,
+                50.0
+              ],
+              [
+                68.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.0,
+              31.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                102.0,
+                12.0
+              ],
+              [
+                130.0,
+                12.0
+              ],
+              [
+                130.0,
+                50.0
+              ],
+              [
+                102.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              116.0,
+              31.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                136.0,
+                12.0
+              ],
+              [
+                164.0,
+                12.0
+              ],
+              [
+                164.0,
+                50.0
+              ],
+              [
+                136.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              31.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                170.0,
+                12.0
+              ],
+              [
+                198.0,
+                12.0
+              ],
+              [
+                198.0,
+                50.0
+              ],
+              [
+                170.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              184.0,
+              31.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                204.0,
+                12.0
+              ],
+              [
+                232.0,
+                12.0
+              ],
+              [
+                232.0,
+                50.0
+              ],
+              [
+                204.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              218.0,
+              31.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                238.0,
+                12.0
+              ],
+              [
+                266.0,
+                12.0
+              ],
+              [
+                266.0,
+                50.0
+              ],
+              [
+                238.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              252.0,
+              31.0
+            ],
+            "text": "I"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_doubles",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Two fair dice are rolled. Find the probability that both show the same number.",
+        "ur": "مختصر سوال: دو منصفانہ پانسے پھینکے جاتے ہیں۔ دونوں پر ایک ہی عدد آنے کا احتمال نکالیں۔"
+      },
+      "checker": "fraction",
+      "expected": "1/6",
+      "hint": {
+        "en": "The pairs are (1,1), (2,2), ... Out of 36.",
+        "ur": "جوڑے (1,1)، (2,2)، ... ہیں۔ کل 36 میں سے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 6 pairs out of 36, so 6/36 = 1/6.",
+        "ur": "درست: 36 میں سے 6 جوڑے، تو 6/36 = 1/6"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: n(S) = 6 × 6 = 36. The pairs with the same number are (1,1), (2,2), (3,3), (4,4), (5,5), (6,6), so n(E) = 6. P(E) = 6/36 = 1/6.",
+        "ur": "نمونہ جواب: n(S) = 6 × 6 = 36۔ ایک جیسے اعداد والے جوڑے (1,1)، (2,2)، (3,3)، (4,4)، (5,5)، (6,6) ہیں، تو n(E) = 6۔ P(E) = 6/36 = 1/6"
+      },
+      "common_wrong": [
+        {
+          "answer": "1/36",
+          "feedback": {
+            "en": "1/36 counts only one pair. There are six: 6/36 = 1/6.",
+            "ur": "1/36 میں صرف ایک جوڑا گنا گیا۔ چھ ہیں: 6/36 = 1/6"
+          },
+          "misconception_id": "one_way_only"
+        },
+        {
+          "answer": "6/12",
+          "feedback": {
+            "en": "6/12 uses 12 outcomes (6 + 6). Two dice have 36: 6/36 = 1/6.",
+            "ur": "6/12 میں 12 نتائج (6 + 6) لیے گئے۔ دو پانسوں کے 36 ہیں: 6/36 = 1/6"
+          },
+          "misconception_id": "space_miscount"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write the sample space, n(E), n(S) and full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں نمونی فضا، n(E)، n(S) اور پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_not_blue",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A bag has 6 red, 9 blue and 5 green balls. One ball is taken out at random. Find the probability that it is not blue.",
+        "ur": "تفصیلی سوال: ایک تھیلے میں 6 سرخ، 9 نیلی اور 5 سبز گیندیں ہیں۔ ایک گیند بغیر دیکھے نکالی جاتی ہے۔ اس کے نیلی نہ ہونے کا احتمال نکالیں۔"
+      },
+      "checker": "fraction",
+      "expected": "11/20",
+      "hint": {
+        "en": "Not blue means red or green. Count them, and all the balls.",
+        "ur": "نیلی نہ ہونے کا مطلب سرخ یا سبز ہے۔ انہیں اور تمام گیندوں کو گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 6 + 5 = 11 balls are not blue, out of 20: 11/20.",
+        "ur": "درست: 6 + 5 = 11 گیندیں نیلی نہیں ہیں، 20 میں سے: 11/20"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: n(S) = 6 + 9 + 5 = 20. Not blue: 6 + 5 = 11, so n(E) = 11. P(E) = 11/20.",
+        "ur": "نمونہ جواب: n(S) = 6 + 9 + 5 = 20۔ نیلی نہیں: 6 + 5 = 11، تو n(E) = 11۔ P(E) = 11/20"
+      },
+      "common_wrong": [
+        {
+          "answer": "9/20",
+          "feedback": {
+            "en": "9/20 is the probability of blue. The question asks for not blue: 11/20.",
+            "ur": "9/20 نیلی کا احتمال ہے۔ سوال نیلی نہ ہونا پوچھتا ہے: 11/20"
+          },
+          "misconception_id": "event_miscount"
+        },
+        {
+          "answer": "11/9",
+          "feedback": {
+            "en": "11/9 divides by the 9 blue balls and is more than 1. Divide by all 20: 11/20.",
+            "ur": "11/9 میں 9 نیلی گیندوں سے تقسیم کیا گیا اور یہ 1 سے بڑا ہے۔ تمام 20 سے تقسیم کریں: 11/20"
+          },
+          "misconception_id": "part_to_part"
+        }
+      ]
+    },
+    {
+      "id": "l2_green",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A bag has 30 marbles. The probability of a red marble is 2/5 and the probability of a blue marble is 1/3. All the other marbles are green. How many green marbles are there?",
+        "ur": "تفصیلی سوال: ایک تھیلے میں 30 کنچے ہیں۔ سرخ کنچے کا احتمال 2/5 اور نیلے کنچے کا احتمال 1/3 ہے۔ باقی سب کنچے سبز ہیں۔ سبز کنچے کتنے ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find the number of red (2/5 of 30) and blue (1/3 of 30), then take them from 30.",
+        "ur": "سرخ کی تعداد (30 کا 2/5) اور نیلے کی (30 کا 1/3) نکالیں، پھر انہیں 30 میں سے گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: red 12, blue 10, and 30 − 12 − 10 = 8 green.",
+        "ur": "درست: سرخ 12، نیلے 10، اور 30 − 12 − 10 = 8 سبز"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: red = 2/5 of 30 = 12. Blue = 1/3 of 30 = 10. Green = 30 − 12 − 10 = 8.",
+        "ur": "نمونہ جواب: سرخ = 30 کا 2/5 = 12۔ نیلے = 30 کا 1/3 = 10۔ سبز = 30 − 12 − 10 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the number of red marbles. The question asks for green: 8.",
+            "ur": "12 سرخ کنچوں کی تعداد ہے۔ سوال سبز پوچھتا ہے: 8"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 22,
+          "feedback": {
+            "en": "22 is red and blue together. Take them from 30: 8.",
+            "ur": "22 سرخ اور نیلے ملا کر ہیں۔ انہیں 30 میں سے گھٹائیں: 8"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ]
+    },
+    {
+      "id": "l3_coin_dice",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A fair coin is tossed and a fair dice is rolled together. Find the probability of getting a head and an even number.",
+        "ur": "تفصیلی سوال: ایک منصفانہ سکہ اچھالا جاتا ہے اور ایک منصفانہ پانسہ ساتھ پھینکا جاتا ہے۔ چت اور جفت عدد آنے کا احتمال نکالیں۔"
+      },
+      "checker": "fraction",
+      "expected": "1/4",
+      "hint": {
+        "en": "List the outcomes as pairs: H1, H2, ..., T6. How many have H and an even number?",
+        "ur": "نتائج کو جوڑوں کی شکل میں لکھیں: H1، H2، ...، T6۔ ان میں سے کتنوں میں H اور جفت عدد ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Correct: H2, H4, H6 are 3 of the 12 outcomes: 3/12 = 1/4.",
+        "ur": "درست: H2، H4، H6، 12 نتائج میں سے 3: 3/12 = 1/4"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: n(S) = 2 × 6 = 12. The outcomes with a head and an even number are H2, H4, H6, so n(E) = 3. P(E) = 3/12 = 1/4.",
+        "ur": "نمونہ جواب: n(S) = 2 × 6 = 12۔ چت اور جفت عدد والے نتائج H2، H4، H6 ہیں، تو n(E) = 3۔ P(E) = 3/12 = 1/4"
+      },
+      "common_wrong": [
+        {
+          "answer": "1/2",
+          "feedback": {
+            "en": "1/2 only looks at the even number, or only at the head. Both must happen: 3/12 = 1/4.",
+            "ur": "1/2 میں صرف جفت عدد یا صرف چت دیکھا گیا۔ دونوں ہونے چاہییں: 3/12 = 1/4"
+          },
+          "misconception_id": "event_miscount"
+        },
+        {
+          "answer": "1/12",
+          "feedback": {
+            "en": "1/12 counts one outcome. Three outcomes fit: 3/12 = 1/4.",
+            "ur": "1/12 میں ایک نتیجہ گنا گیا۔ تین نتائج ٹھیک ہیں: 3/12 = 1/4"
+          },
+          "misconception_id": "one_way_only"
+        }
+      ]
+    },
+    {
+      "id": "l4_nine_or_more",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Two fair dice are rolled. Find the probability that the sum of the two numbers is 9 or more.",
+        "ur": "تفصیلی سوال: دو منصفانہ پانسے پھینکے جاتے ہیں۔ دونوں اعداد کا مجموعہ 9 یا اس سے زیادہ آنے کا احتمال نکالیں۔"
+      },
+      "checker": "fraction",
+      "expected": "5/18",
+      "hint": {
+        "en": "List the pairs for the sums 9, 10, 11 and 12, both ways round. Out of 36.",
+        "ur": "مجموعے 9، 10، 11 اور 12 کے جوڑے دونوں ترتیبوں میں لکھیں۔ کل 36 میں سے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: sum 9 has 4 pairs, sum 10 has 3, sum 11 has 2 and sum 12 has 1: 10 pairs, and 10/36 = 5/18.",
+        "ur": "درست: مجموعہ 9 کے 4 جوڑے، 10 کے 3، 11 کے 2 اور 12 کا 1: 10 جوڑے، اور 10/36 = 5/18"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: n(S) = 36. Sum 9: (3,6), (4,5), (5,4), (6,3). Sum 10: (4,6), (5,5), (6,4). Sum 11: (5,6), (6,5). Sum 12: (6,6). So n(E) = 4 + 3 + 2 + 1 = 10. P(E) = 10/36 = 5/18.",
+        "ur": "نمونہ جواب: n(S) = 36۔ مجموعہ 9: (3,6)، (4,5)، (5,4)، (6,3)۔ مجموعہ 10: (4,6)، (5,5)، (6,4)۔ مجموعہ 11: (5,6)، (6,5)۔ مجموعہ 12: (6,6)۔ تو n(E) = 4 + 3 + 2 + 1 = 10۔ P(E) = 10/36 = 5/18"
+      },
+      "common_wrong": [
+        {
+          "answer": "6/36",
+          "feedback": {
+            "en": "6/36 is for 'more than 9'. '9 or more' includes the sum 9 too: 10/36 = 5/18.",
+            "ur": "6/36 '9 سے زیادہ' کا ہے۔ '9 یا زیادہ' میں مجموعہ 9 بھی شامل ہے: 10/36 = 5/18"
+          },
+          "misconception_id": "event_miscount"
+        },
+        {
+          "answer": "10/12",
+          "feedback": {
+            "en": "10/12 uses 12 outcomes. Two dice have 36: 10/36 = 5/18.",
+            "ur": "10/12 میں 12 نتائج لیے گئے۔ دو پانسوں کے 36 ہیں: 10/36 = 5/18"
+          },
+          "misconception_id": "space_miscount"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 12 test. Well done!",
+          "ur": "آپ نے باب 12 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: write the sample space and count n(S): a coin has 2 outcomes, two coins 4, three coins 8, a dice 6, two dice 36, and a coin with a dice 12 (multiply). Count n(E) carefully, every way: HT and TH, (1,6) and (6,1). P(E) = n(E) ÷ n(S), in its simplest form, always from 0 to 1: 0 is impossible, 1 is certain. Divide by all the outcomes, not only the others. Equally likely outcomes need nothing favoured. Answer what is asked, not a middle step.",
+        "ur": "امتحان میں: نمونی فضا لکھیں اور n(S) گنیں: سکے کے 2 نتائج، دو سکوں کے 4، تین سکوں کے 8، پانسے کے 6، دو پانسوں کے 36، اور سکے اور پانسے کے 12 (ضرب دیں)۔ n(E) احتیاط سے گنیں، ہر طریقہ: HT اور TH، (1,6) اور (6,1)۔ P(E) = n(E) ÷ n(S)، سادہ ترین شکل میں، ہمیشہ 0 سے 1 کے بیچ: 0 ناممکن، 1 یقینی۔ تمام نتائج سے تقسیم کریں، صرف باقی سے نہیں۔ یکساں امکان کے نتائج میں کسی کو ترجیح نہیں ہوتی۔ وہ جواب دیں جو پوچھا گیا ہو، بیچ کا قدم نہیں۔"
+      },
+      "points": [
+        {
+          "en": "List S, count n(E), then n(E) ÷ n(S).",
+          "ur": "S لکھیں، n(E) گنیں، پھر n(E) ÷ n(S)۔"
+        },
+        {
+          "en": "A probability is never more than 1.",
+          "ur": "احتمال کبھی 1 سے زیادہ نہیں ہوتا۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_odd",
+      "type": "exam_style",
+      "skill": "maths.probability.chapter_12_test",
+      "step": {
+        "id": "r_exam_odd",
+        "type": "text_check",
+        "prompt": {
+          "en": "A fair dice is rolled once. What is the probability that the number is odd?",
+          "ur": "ایک منصفانہ پانسہ ایک بار پھینکا جاتا ہے۔ عدد طاق آنے کا احتمال کیا ہے؟"
+        },
+        "checker": "fraction",
+        "expected": "1/2",
+        "hint": {
+          "en": "The odd numbers are 1, 3, 5.",
+          "ur": "طاق اعداد 1، 3، 5 ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 3/6 = 1/2.",
+          "ur": "درست: 3/6 = 1/2"
+        },
+        "feedback_wrong": {
+          "en": "n(E) = 3 and n(S) = 6.",
+          "ur": "n(E) = 3 اور n(S) = 6"
+        },
+        "common_wrong": [
+          {
+            "answer": "3/3",
+            "feedback": {
+              "en": "3/3 divides by the even numbers only. Divide by all 6: 1/2.",
+              "ur": "3/3 میں صرف جفت اعداد سے تقسیم کیا گیا۔ تمام 6 سے تقسیم کریں: 1/2"
+            },
+            "misconception_id": "part_to_part"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_head",
+      "type": "exam_style",
+      "skill": "maths.probability.chapter_12_test",
+      "step": {
+        "id": "r_exam_head",
+        "type": "text_check",
+        "prompt": {
+          "en": "A fair coin is tossed once. What is the probability of a head?",
+          "ur": "ایک منصفانہ سکہ ایک بار اچھالا جاتا ہے۔ چت آنے کا احتمال کیا ہے؟"
+        },
+        "checker": "fraction",
+        "expected": "1/2",
+        "hint": {
+          "en": "S = {H, T}.",
+          "ur": "S = {H, T}"
+        },
+        "feedback_correct": {
+          "en": "Correct: 1 out of 2, so 1/2.",
+          "ur": "درست: 2 میں سے 1، تو 1/2"
+        },
+        "feedback_wrong": {
+          "en": "n(E) = 1 and n(S) = 2.",
+          "ur": "n(E) = 1 اور n(S) = 2"
+        },
+        "common_wrong": [
+          {
+            "answer": "2/1",
+            "feedback": {
+              "en": "2/1 is upside down. P = 1/2.",
+              "ur": "2/1 الٹا ہے۔ P = 1/2"
+            },
+            "misconception_id": "upside_down"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 12 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.probability.chapter_12_test), with the skills of the Probability unit as prerequisites, and is mastered with exam_style questions, like the earlier chapter tests. Typed probabilities are checked by value, so 3/6 and 1/2 are both right.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), all as in the earlier chapter tests; the probability words come from the existing Probability lessons. حرفِ علت (vowel), حرفِ صحیح (consonant), چت / پٹ (heads / tails), مفرد عدد (prime number), طاق / جفت (odd / even) and کنچے (marbles) are everyday words used here, and a teacher should confirm them.",
+    "The numbers were worked out in content/sources/g6-maths-17/chapter_12_test.py. Edit the script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
