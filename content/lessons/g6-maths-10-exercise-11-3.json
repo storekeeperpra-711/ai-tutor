@@ -1,0 +1,1508 @@
+{
+  "id": "g6-maths-10-exercise-11-3",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Read a pie chart given in percentages, work out quantities from it, and find a sector angle as value / total x 360.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management, Exercise 11.3"
+    }
+  ],
+  "skills": [
+    "maths.data.ex_11_3"
+  ],
+  "title": {
+    "en": "Exercise 11.3 practice: pie charts",
+    "ur": "مشق 11.3 کی پریکٹس: دائری نقشے"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.data.pie_charts"
+    },
+    {
+      "skill": "maths.data.tables"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "pie_total_wrong",
+      "description": "Thinks the whole pie is 100 degrees, or that the sectors add up to something other than 360 degrees (or 100 percent)."
+    },
+    {
+      "id": "percent_as_number",
+      "description": "Gives the percentage as the number of people, or the angle as the number of people."
+    },
+    {
+      "id": "angle_times_100",
+      "description": "Finds the sector angle as value / total x 100 instead of x 360."
+    },
+    {
+      "id": "angle_is_value",
+      "description": "Gives the value itself as the angle, without dividing by the total and multiplying by 360."
+    },
+    {
+      "id": "missing_not_taken",
+      "description": "Does not take the known sectors away from the whole to find the missing one."
+    },
+    {
+      "id": "pie_parts_not_added",
+      "description": "Gives only one sector when two sectors are asked for together."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.ex_11_3": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.ex_11_3": [
+      {
+        "id": "qb_recall",
+        "type": "recall",
+        "step": {
+          "id": "qb_recall",
+          "type": "choice",
+          "prompt": {
+            "en": "What do all the percentages of a pie chart add up to?",
+            "ur": "دائری نقشے کے تمام فیصد کا مجموعہ کتنا ہوتا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "360%",
+                "ur": "360٪"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "360 is for degrees. Percentages add up to 100.",
+                "ur": "360 درجوں کا ہے۔ فیصد کا مجموعہ 100 ہے۔"
+              },
+              "misconception_id": "pie_total_wrong"
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "100%",
+                "ur": "100٪"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The whole pie is 100%.",
+                "ur": "جی ہاں! پورا دائرہ 100٪ ہے۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "50%",
+                "ur": "50٪"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "50% is half. The whole is 100%.",
+                "ur": "50٪ آدھا ہے۔ پورا 100٪ ہے۔"
+              },
+              "misconception_id": "pie_total_wrong"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_angle",
+        "type": "apply",
+        "step": {
+          "id": "qb_angle",
+          "type": "number",
+          "prompt": {
+            "en": "10 of 40 pupils walk to school. What is the angle of the walking sector in a pie chart, in degrees?",
+            "ur": "40 میں سے 10 طلبہ پیدل سکول آتے ہیں۔ دائری نقشے میں پیدل والے ٹکڑے کا زاویہ درجوں میں کتنا ہے؟"
+          },
+          "answer": 90,
+          "checker": "numeric",
+          "hint": {
+            "en": "10 ÷ 40 × 360.",
+            "ur": "10 ÷ 40 × 360"
+          },
+          "feedback_correct": {
+            "en": "Right! 10 ÷ 40 = 1/4, and 1/4 of 360 is 90°.",
+            "ur": "درست! 10 ÷ 40 = 1/4، اور 360 کا 1/4 یعنی 90°"
+          },
+          "feedback_wrong": {
+            "en": "360 ÷ 4 = 90.",
+            "ur": "360 ÷ 4 = 90"
+          },
+          "common_wrong": [
+            {
+              "answer": 25,
+              "feedback": {
+                "en": "25 is the percentage. Multiply by 360 for the angle: 90.",
+                "ur": "25 فیصد ہے۔ زاویے کے لیے 360 سے ضرب دیں: 90"
+              },
+              "misconception_id": "angle_times_100"
+            },
+            {
+              "answer": 10,
+              "feedback": {
+                "en": "10 is the number of pupils. The angle is 10 ÷ 40 × 360 = 90.",
+                "ur": "10 طلبہ کی تعداد ہے۔ زاویہ 10 ÷ 40 × 360 = 90 ہے۔"
+              },
+              "misconception_id": "angle_is_value"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_half",
+        "type": "apply",
+        "step": {
+          "id": "qb_half",
+          "type": "number",
+          "prompt": {
+            "en": "Half of the people in a pie chart like tea. What is the angle of the tea sector, in degrees?",
+            "ur": "دائری نقشے میں آدھے لوگوں کو چائے پسند ہے۔ چائے کے ٹکڑے کا زاویہ درجوں میں کتنا ہے؟"
+          },
+          "answer": 180,
+          "checker": "numeric",
+          "hint": {
+            "en": "Half of 360.",
+            "ur": "360 کا آدھا۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 360 ÷ 2 = 180°.",
+            "ur": "درست! 360 ÷ 2 = 180°"
+          },
+          "feedback_wrong": {
+            "en": "Half the circle is a straight line, 180°.",
+            "ur": "آدھا دائرہ سیدھی لکیر ہے، 180°"
+          },
+          "common_wrong": [
+            {
+              "answer": 50,
+              "feedback": {
+                "en": "50 is the percentage. Half of 360 is 180.",
+                "ur": "50 فیصد ہے۔ 360 کا آدھا 180 ہے۔"
+              },
+              "misconception_id": "angle_times_100"
+            },
+            {
+              "answer": 90,
+              "feedback": {
+                "en": "90° is a quarter of the circle. Half is 180.",
+                "ur": "90° دائرے کا چوتھائی ہے۔ آدھا 180 ہے۔"
+              },
+              "misconception_id": "pie_total_wrong"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "A pie chart has the angles 90°, 120° and 100°. Mehr says the fourth sector is 40°. What went wrong?",
+            "ur": "ایک دائری نقشے میں زاویے 90°، 120° اور 100° ہیں۔ مہر کہتی ہے چوتھا ٹکڑا 40° ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "She should take the three angles from 360°: 360 − 310 = 50°, not 40°.",
+                "ur": "اسے تینوں زاویے 360° میں سے گھٹانے چاہییں: 360 − 310 = 50°، 40° نہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 90 + 120 + 100 = 310, and 360 − 310 = 50.",
+                "ur": "جی ہاں! 90 + 120 + 100 = 310، اور 360 − 310 = 50"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 40° is right.",
+                "ur": "کوئی غلطی نہیں۔ 40° ٹھیک ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "With 40° the angles add up to 350°, not 360°.",
+                "ur": "40° کے ساتھ زاویوں کا مجموعہ 350° ہوتا ہے، 360° نہیں۔"
+              },
+              "misconception_id": "missing_not_taken"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "She should take them from 180°.",
+                "ur": "اسے انہیں 180° میں سے گھٹانا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A pie chart is a full circle, 360°.",
+                "ur": "دائری نقشہ پورا دائرہ ہے، 360°۔"
+              },
+              "misconception_id": "pie_total_wrong"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_angle",
+      "front": {
+        "en": "How do you find a sector angle?",
+        "ur": "ٹکڑے کا زاویہ کیسے نکالتے ہیں؟"
+      },
+      "back": {
+        "en": "Angle = value ÷ total × 360°.",
+        "ur": "زاویہ = قیمت ÷ کل × 360°"
+      }
+    },
+    {
+      "id": "f_whole",
+      "front": {
+        "en": "What do the sectors of a pie chart add up to?",
+        "ur": "دائری نقشے کے ٹکڑوں کا مجموعہ کتنا ہے؟"
+      },
+      "back": {
+        "en": "360° and 100%.",
+        "ur": "360° اور 100٪"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_pie",
+      "text": {
+        "en": "Ask 20 classmates which fruit they like best (three or four fruits). Work out each sector angle with value ÷ total × 360°, check that the angles add up to 360°, and draw the pie chart in your notebook with a protractor.",
+        "ur": "اپنے 20 ہم جماعتوں سے پوچھیں کہ انہیں کون سا پھل سب سے زیادہ پسند ہے (تین یا چار پھل)۔ ہر ٹکڑے کا زاویہ قیمت ÷ کل × 360° سے نکالیں، جانچیں کہ زاویوں کا مجموعہ 360° ہے، اور کاپی میں زاویہ پیما سے دائری نقشہ بنائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Pie chart",
+      "ur": "دائری نقشہ (پائی چارٹ)"
+    },
+    {
+      "en": "Slice",
+      "ur": "ٹکڑا"
+    },
+    {
+      "en": "Angle",
+      "ur": "زاویہ"
+    },
+    {
+      "en": "Degree",
+      "ur": "درجہ"
+    },
+    {
+      "en": "Percentage",
+      "ur": "فیصد"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 11.3 is about pie charts. Ready?",
+          "ur": "مشق 11.3 دائری نقشوں کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 11.3 of your maths book (PCTB Mathematics 6). Here you practise reading a pie chart, finding quantities from percentages and angles, and working out sector angles. You only read and calculate; the drawing is for your notebook. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 11.3 کے ساتھ ہے۔ اس میں آپ دائری نقشہ پڑھنا، فیصد اور زاویوں سے مقداریں نکالنا اور ٹکڑوں کے زاویے نکالنا دہرائیں گے۔ آپ صرف پڑھیں گے اور حساب کریں گے؛ بنانا کاپی میں کریں۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_whole",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "All the sectors of a pie chart together make a whole circle. How many degrees is that?",
+        "ur": "دائری نقشے کے سب ٹکڑے مل کر پورا دائرہ بناتے ہیں۔ یہ کتنے درجے کا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "360°",
+            "ur": "360°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A full turn is 360°, and the percentages add up to 100.",
+            "ur": "جی ہاں! پورا چکر 360° ہے، اور فیصد کا مجموعہ 100 ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "100°",
+            "ur": "100°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "100 is the total of the percentages. The circle is 360°.",
+            "ur": "100 فیصد کا مجموعہ ہے۔ دائرہ 360° کا ہے۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "180°",
+            "ur": "180°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "180° is only half a circle, a straight line.",
+            "ur": "180° صرف آدھا دائرہ ہے، سیدھی لکیر۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "A sector is a share of 360°. Divide by the total, then multiply by 360.",
+          "ur": "ٹکڑا 360° کا ایک حصہ ہے۔ کل سے تقسیم کریں، پھر 360 سے ضرب دیں۔"
+        }
+      },
+      "text": {
+        "en": "The sectors of a pie chart make 100% and 360°. To find a quantity from a percentage: percentage ÷ 100 × total. To find a sector angle: value ÷ total × 360°. To find a percentage from an angle: angle ÷ 360 × 100. A missing sector is what is left of 100% (or 360°) after the known sectors are taken away.",
+        "ur": "دائری نقشے کے ٹکڑے مل کر 100 فیصد اور 360° بناتے ہیں۔ فیصد سے مقدار نکالنے کے لیے: فیصد ÷ 100 × کل۔ ٹکڑے کا زاویہ نکالنے کے لیے: قیمت ÷ کل × 360°۔ زاویے سے فیصد نکالنے کے لیے: زاویہ ÷ 360 × 100۔ غائب ٹکڑا وہ ہے جو معلوم ٹکڑے نکالنے کے بعد 100 فیصد (یا 360°) میں سے بچے۔"
+      }
+    },
+    {
+      "id": "q2_largest",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "The pie chart shows how 200 pupils come to school: W is walk, B is bus, C is cycle and V is van. Which way is the most common?",
+        "ur": "دائری نقشہ دکھاتا ہے کہ 200 طلبہ سکول کیسے آتے ہیں: W پیدل، B بس، C سائیکل اور V وین۔ کون سا طریقہ سب سے زیادہ ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "walking (W, 40%)",
+            "ur": "پیدل (W، 40٪)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The biggest sector is the biggest share.",
+            "ur": "جی ہاں! سب سے بڑا ٹکڑا سب سے بڑا حصہ ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "bus (B, 25%)",
+            "ur": "بس (B، 25٪)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The bus is 25%, less than 40%.",
+            "ur": "بس 25٪ ہے، 40٪ سے کم۔"
+          },
+          "misconception_id": "percent_as_number"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "cycle (C, 20%)",
+            "ur": "سائیکل (C، 20٪)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Cycle is 20%, less than 40%.",
+            "ur": "سائیکل 20٪ ہے، 40٪ سے کم۔"
+          },
+          "misconception_id": "percent_as_number"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "van (V, 15%)",
+            "ur": "وین (V، 15٪)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The van is the smallest sector.",
+            "ur": "وین سب سے چھوٹا ٹکڑا ہے۔"
+          },
+          "misconception_id": "percent_as_number"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "A pie chart of how 200 pupils come to school. W (walk) 40 percent, B (bus) 25 percent, C (cycle) 20 percent and V (van) 15 percent.",
+          "ur": "200 طلبہ کے سکول آنے کے طریقوں کا دائری نقشہ۔ W (پیدل) 40 فیصد، B (بس) 25 فیصد، C (سائیکل) 20 فیصد اور V (وین) 15 فیصد۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              86.0
+            ],
+            "radius": 72.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              150.0,
+              14.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.7,
+              64.1
+            ],
+            "text": "W"
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.7,
+              82.1
+            ],
+            "text": "40%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              192.3,
+              144.2
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              143.5,
+              118.2
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              143.5,
+              136.2
+            ],
+            "text": "25%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              91.8,
+              128.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              102.5,
+              77.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "label",
+            "at": [
+              102.5,
+              95.0
+            ],
+            "text": "20%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              91.8,
+              43.7
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.4,
+              34.7
+            ],
+            "text": "V"
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.4,
+              52.7
+            ],
+            "text": "15%"
+          },
+          {
+            "kind": "point",
+            "at": [
+              150.0,
+              86.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q3_quantity",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many of the 200 pupils walk to school?",
+        "ur": "200 میں سے کتنے طلبہ پیدل سکول آتے ہیں؟"
+      },
+      "answer": 80,
+      "checker": "numeric",
+      "hint": {
+        "en": "40% of 200: 40 ÷ 100 × 200.",
+        "ur": "200 کا 40٪: 40 ÷ 100 × 200"
+      },
+      "feedback_correct": {
+        "en": "Right! 40 ÷ 100 × 200 = 80 pupils.",
+        "ur": "درست! 40 ÷ 100 × 200 = 80 طلبہ"
+      },
+      "feedback_wrong": {
+        "en": "10% of 200 is 20, so 40% is 4 × 20 = 80.",
+        "ur": "200 کا 10٪ 20 ہے، تو 40٪ یعنی 4 × 20 = 80"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "40 is the percentage, not the number of pupils. Take 40% of 200: 80.",
+            "ur": "40 فیصد ہے، طلبہ کی تعداد نہیں۔ 200 کا 40٪ لیں: 80"
+          },
+          "misconception_id": "percent_as_number"
+        },
+        {
+          "answer": 144,
+          "feedback": {
+            "en": "144° is the sector's angle. The number of pupils is 40% of 200: 80.",
+            "ur": "144° ٹکڑے کا زاویہ ہے۔ طلبہ کی تعداد 200 کا 40٪ ہے: 80"
+          },
+          "misconception_id": "percent_as_number"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "A pie chart of how 200 pupils come to school. W (walk) 40 percent, B (bus) 25 percent, C (cycle) 20 percent and V (van) 15 percent.",
+          "ur": "200 طلبہ کے سکول آنے کے طریقوں کا دائری نقشہ۔ W (پیدل) 40 فیصد، B (بس) 25 فیصد، C (سائیکل) 20 فیصد اور V (وین) 15 فیصد۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              86.0
+            ],
+            "radius": 72.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              150.0,
+              14.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.7,
+              64.1
+            ],
+            "text": "W"
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.7,
+              82.1
+            ],
+            "text": "40%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              192.3,
+              144.2
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              143.5,
+              118.2
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              143.5,
+              136.2
+            ],
+            "text": "25%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              91.8,
+              128.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              102.5,
+              77.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "label",
+            "at": [
+              102.5,
+              95.0
+            ],
+            "text": "20%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              91.8,
+              43.7
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.4,
+              34.7
+            ],
+            "text": "V"
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.4,
+              52.7
+            ],
+            "text": "15%"
+          },
+          {
+            "kind": "point",
+            "at": [
+              150.0,
+              86.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_two",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What percentage of the pupils come by bus (B) or by cycle (C) together?",
+        "ur": "کتنے فیصد طلبہ بس (B) یا سائیکل (C) سے آتے ہیں، دونوں ملا کر؟"
+      },
+      "answer": 45,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the two sectors.",
+        "ur": "دونوں ٹکڑے جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 25% + 20% = 45%.",
+        "ur": "درست! 25٪ + 20٪ = 45٪"
+      },
+      "feedback_wrong": {
+        "en": "25 + 20 = 45.",
+        "ur": "25 + 20 = 45"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "25 is only the bus. Add the cycle too: 45.",
+            "ur": "25 صرف بس ہے۔ سائیکل بھی جمع کریں: 45"
+          },
+          "misconception_id": "pie_parts_not_added"
+        },
+        {
+          "answer": 55,
+          "feedback": {
+            "en": "55 is what is left over (walk and van). Bus and cycle together: 45.",
+            "ur": "55 بچا ہوا ہے (پیدل اور وین)۔ بس اور سائیکل ملا کر: 45"
+          },
+          "misconception_id": "pie_parts_not_added"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "A pie chart of how 200 pupils come to school. W (walk) 40 percent, B (bus) 25 percent, C (cycle) 20 percent and V (van) 15 percent.",
+          "ur": "200 طلبہ کے سکول آنے کے طریقوں کا دائری نقشہ۔ W (پیدل) 40 فیصد، B (بس) 25 فیصد، C (سائیکل) 20 فیصد اور V (وین) 15 فیصد۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              86.0
+            ],
+            "radius": 72.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              150.0,
+              14.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.7,
+              64.1
+            ],
+            "text": "W"
+          },
+          {
+            "kind": "label",
+            "at": [
+              189.7,
+              82.1
+            ],
+            "text": "40%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              192.3,
+              144.2
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              143.5,
+              118.2
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              143.5,
+              136.2
+            ],
+            "text": "25%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              91.8,
+              128.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              102.5,
+              77.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "label",
+            "at": [
+              102.5,
+              95.0
+            ],
+            "text": "20%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              91.8,
+              43.7
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.4,
+              34.7
+            ],
+            "text": "V"
+          },
+          {
+            "kind": "label",
+            "at": [
+              128.4,
+              52.7
+            ],
+            "text": "15%"
+          },
+          {
+            "kind": "point",
+            "at": [
+              150.0,
+              86.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The pie chart has four sectors R, G, B and Y. R is 35%, G is 30% and B is 10%. What percentage is the sector Y?",
+        "ur": "دائری نقشے میں چار ٹکڑے R، G، B اور Y ہیں۔ R کا 35٪، G کا 30٪ اور B کا 10٪ ہے۔ ٹکڑا Y کتنے فیصد ہے؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "The sectors make 100%. Take the known ones away.",
+        "ur": "ٹکڑے مل کر 100٪ بنتے ہیں۔ معلوم ٹکڑے گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 35 + 30 + 10 = 75, and 100 − 75 = 25%.",
+        "ur": "درست! 35 + 30 + 10 = 75، اور 100 − 75 = 25٪"
+      },
+      "feedback_wrong": {
+        "en": "100 − 35 − 30 − 10 = 25.",
+        "ur": "100 − 35 − 30 − 10 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 75,
+          "feedback": {
+            "en": "75 is the three known sectors added. Y is what is left of 100: 25.",
+            "ur": "75 تین معلوم ٹکڑوں کا مجموعہ ہے۔ Y وہ ہے جو 100 میں سے بچے: 25"
+          },
+          "misconception_id": "missing_not_taken"
+        },
+        {
+          "answer": 65,
+          "feedback": {
+            "en": "65 takes away only R from 100. Take away all three: 25.",
+            "ur": "65 میں 100 میں سے صرف R گھٹایا گیا ہے۔ تینوں گھٹائیں: 25"
+          },
+          "misconception_id": "missing_not_taken"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "A pie chart with four sectors R, G, B and Y. R is 35 percent, G is 30 percent and B is 10 percent. The sector Y is marked with a question mark.",
+          "ur": "چار ٹکڑوں R، G، B اور Y کا دائری نقشہ۔ R کے 35 فیصد، G کے 30 فیصد اور B کے 10 فیصد ہیں۔ ٹکڑے Y پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              86.0
+            ],
+            "radius": 72.0
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              150.0,
+              14.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              187.2,
+              58.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "label",
+            "at": [
+              187.2,
+              76.0
+            ],
+            "text": "35%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              208.2,
+              128.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              118.8
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              136.8
+            ],
+            "text": "30%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              91.8,
+              128.3
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              104.8,
+              91.7
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              104.8,
+              109.7
+            ],
+            "text": "10%"
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              86.0
+            ],
+            "to": [
+              78.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              120.5,
+              47.5
+            ],
+            "text": "Y"
+          },
+          {
+            "kind": "label",
+            "at": [
+              120.5,
+              65.5
+            ],
+            "text": "?%"
+          },
+          {
+            "kind": "point",
+            "at": [
+              150.0,
+              86.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_angle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a class of 120 pupils, 30 like cricket best. What is the angle of the cricket sector in a pie chart, in degrees?",
+        "ur": "120 طلبہ کی جماعت میں 30 کو کرکٹ سب سے زیادہ پسند ہے۔ دائری نقشے میں کرکٹ کے ٹکڑے کا زاویہ درجوں میں کتنا ہے؟"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "Angle = value ÷ total × 360.",
+        "ur": "زاویہ = قیمت ÷ کل × 360"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 ÷ 120 × 360 = 90°.",
+        "ur": "درست! 30 ÷ 120 × 360 = 90°"
+      },
+      "feedback_wrong": {
+        "en": "30 ÷ 120 = 1/4, and 1/4 of 360 is 90.",
+        "ur": "30 ÷ 120 = 1/4، اور 360 کا 1/4 یعنی 90"
+      },
+      "common_wrong": [
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "25 is the percentage (30 ÷ 120 × 100). For the angle multiply by 360: 90.",
+            "ur": "25 فیصد ہے (30 ÷ 120 × 100)۔ زاویے کے لیے 360 سے ضرب دیں: 90"
+          },
+          "misconception_id": "angle_times_100"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is the number of pupils. The angle is 30 ÷ 120 × 360 = 90.",
+            "ur": "30 طلبہ کی تعداد ہے۔ زاویہ 30 ÷ 120 × 360 = 90 ہے۔"
+          },
+          "misconception_id": "angle_is_value"
+        }
+      ]
+    },
+    {
+      "id": "q7_angle2",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A jar has 90 sweets, and 15 of them are mints. What is the angle of the mint sector in a pie chart, in degrees?",
+        "ur": "ایک مرتبان میں 90 ٹافیاں ہیں، اور ان میں سے 15 پودینے کی ہیں۔ دائری نقشے میں پودینے کے ٹکڑے کا زاویہ درجوں میں کتنا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "15 ÷ 90 × 360.",
+        "ur": "15 ÷ 90 × 360"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 ÷ 90 = 1/6, and 360 ÷ 6 = 60°.",
+        "ur": "درست! 15 ÷ 90 = 1/6، اور 360 ÷ 6 = 60°"
+      },
+      "feedback_wrong": {
+        "en": "15 ÷ 90 × 360 = 60.",
+        "ur": "15 ÷ 90 × 360 = 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15 is the number of mints. The angle is 15 ÷ 90 × 360 = 60.",
+            "ur": "15 پودینے کی ٹافیوں کی تعداد ہے۔ زاویہ 15 ÷ 90 × 360 = 60 ہے۔"
+          },
+          "misconception_id": "angle_is_value"
+        },
+        {
+          "answer": 17,
+          "feedback": {
+            "en": "17 is about 15 ÷ 90 × 100. Multiply by 360 instead: 60.",
+            "ur": "17 تقریباً 15 ÷ 90 × 100 ہے۔ اس کی جگہ 360 سے ضرب دیں: 60"
+          },
+          "misconception_id": "angle_times_100"
+        }
+      ]
+    },
+    {
+      "id": "q8_percent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A sector of a pie chart has an angle of 72°. What percentage of the whole is it?",
+        "ur": "دائری نقشے کے ایک ٹکڑے کا زاویہ 72° ہے۔ یہ پورے کا کتنے فیصد ہے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "72 ÷ 360 × 100.",
+        "ur": "72 ÷ 360 × 100"
+      },
+      "feedback_correct": {
+        "en": "Right! 72 ÷ 360 = 1/5, which is 20%.",
+        "ur": "درست! 72 ÷ 360 = 1/5، یعنی 20٪"
+      },
+      "feedback_wrong": {
+        "en": "72 ÷ 360 = 0.2, and 0.2 × 100 = 20.",
+        "ur": "72 ÷ 360 = 0.2، اور 0.2 × 100 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "72 is the angle itself. Divide by 360 and multiply by 100: 20.",
+            "ur": "72 خود زاویہ ہے۔ 360 سے تقسیم کریں اور 100 سے ضرب دیں: 20"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is 360 ÷ 72, the other way up. 72 ÷ 360 × 100 = 20.",
+            "ur": "5 یعنی 360 ÷ 72، الٹا۔ 72 ÷ 360 × 100 = 20"
+          },
+          "misconception_id": "pie_total_wrong"
+        }
+      ]
+    },
+    {
+      "id": "q9_from_angle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A pie chart shows 240 people. A sector has an angle of 90°. How many people does it stand for?",
+        "ur": "ایک دائری نقشہ 240 لوگ دکھاتا ہے۔ ایک ٹکڑے کا زاویہ 90° ہے۔ یہ کتنے لوگوں کو ظاہر کرتا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "90 ÷ 360 × 240.",
+        "ur": "90 ÷ 360 × 240"
+      },
+      "feedback_correct": {
+        "en": "Right! 90 ÷ 360 = 1/4, and 1/4 of 240 is 60.",
+        "ur": "درست! 90 ÷ 360 = 1/4، اور 240 کا 1/4 یعنی 60"
+      },
+      "feedback_wrong": {
+        "en": "240 ÷ 4 = 60.",
+        "ur": "240 ÷ 4 = 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90 is the angle. The number of people is 90 ÷ 360 × 240 = 60.",
+            "ur": "90 زاویہ ہے۔ لوگوں کی تعداد 90 ÷ 360 × 240 = 60 ہے۔"
+          },
+          "misconception_id": "percent_as_number"
+        },
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24 is 240 ÷ 10. A quarter of 240 is 60.",
+            "ur": "24 یعنی 240 ÷ 10۔ 240 کا چوتھائی 60 ہے۔"
+          },
+          "misconception_id": "percent_as_number"
+        }
+      ]
+    },
+    {
+      "id": "q10_which",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which set of sector angles can belong to one pie chart?",
+        "ur": "سیکٹر کے زاویوں کا کون سا مجموعہ ایک ہی دائری نقشے کا ہو سکتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "120°, 100°, 80°, 50°",
+            "ur": "120°، 100°، 80°، 50°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These add up to 350°, not 360°.",
+            "ur": "یہ 350° بنتے ہیں، 360° نہیں۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "150°, 100°, 80°, 40°",
+            "ur": "150°، 100°، 80°، 40°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These add up to 370°, too much.",
+            "ur": "یہ 370° بنتے ہیں، بہت زیادہ۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "120°, 100°, 80°, 60°",
+            "ur": "120°، 100°، 80°، 60°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 120 + 100 + 80 + 60 = 360.",
+            "ur": "جی ہاں! 120 + 100 + 80 + 60 = 360"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "100°, 100°, 100°, 100°",
+            "ur": "100°، 100°، 100°، 100°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "These add up to 400°.",
+            "ur": "یہ 400° بنتے ہیں۔"
+          },
+          "misconception_id": "pie_total_wrong"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Aziz says: 20 of 80 pupils like football, so its sector angle is 20 ÷ 80 × 100 = 25°. What went wrong?",
+        "ur": "عزیز کہتا ہے: 80 میں سے 20 طلبہ کو فٹ بال پسند ہے، تو اس ٹکڑے کا زاویہ 20 ÷ 80 × 100 = 25° ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. 25° is right.",
+            "ur": "کوئی غلطی نہیں۔ 25° ٹھیک ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "25 is the percentage. A quarter of the circle is 90°.",
+            "ur": "25 فیصد ہے۔ دائرے کا چوتھائی 90° ہے۔"
+          },
+          "misconception_id": "angle_times_100"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "He multiplied by 100. For an angle multiply by 360: 20 ÷ 80 × 360 = 90°.",
+            "ur": "اس نے 100 سے ضرب دی۔ زاویے کے لیے 360 سے ضرب دیں: 20 ÷ 80 × 360 = 90°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! × 100 gives a percentage (25%). × 360 gives the angle (90°).",
+            "ur": "جی ہاں! × 100 فیصد دیتا ہے (25٪)۔ × 360 زاویہ دیتا ہے (90°)۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should have divided 80 by 20 and multiplied by 360.",
+            "ur": "اسے 80 کو 20 سے تقسیم کر کے 360 سے ضرب دینی چاہیے تھی۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is upside down. It would give 1440°. Use 20 ÷ 80.",
+            "ur": "یہ الٹا ہے۔ اس سے 1440° آئے گا۔ 20 ÷ 80 لیں۔"
+          },
+          "misconception_id": "angle_times_100"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can work with pie charts.",
+          "ur": "شاباش! آپ دائری نقشوں کے ساتھ کام کر سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "A pie chart is 100% and 360°. Quantity = percentage ÷ 100 × total. Sector angle = value ÷ total × 360°. Percentage = angle ÷ 360 × 100. A missing sector is what is left after the known ones are taken away. Check: the angles must add up to 360°.",
+        "ur": "دائری نقشہ 100٪ اور 360° ہے۔ مقدار = فیصد ÷ 100 × کل۔ ٹکڑے کا زاویہ = قیمت ÷ کل × 360°۔ فیصد = زاویہ ÷ 360 × 100۔ غائب ٹکڑا وہ ہے جو معلوم ٹکڑے نکالنے کے بعد بچے۔ جانچ: زاویوں کا مجموعہ 360° ہونا چاہیے۔"
+      },
+      "points": [
+        {
+          "en": "Angle: ÷ total × 360. Percentage: × 100.",
+          "ur": "زاویہ: ÷ کل × 360۔ فیصد: × 100۔"
+        },
+        {
+          "en": "The angles add up to 360°.",
+          "ur": "زاویوں کا مجموعہ 360° ہوتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_angle",
+      "type": "apply",
+      "step": {
+        "id": "r_angle",
+        "type": "number",
+        "prompt": {
+          "en": "In a pie chart of 100 people, 25 chose rice. What is the angle of the rice sector, in degrees?",
+          "ur": "100 لوگوں کے دائری نقشے میں 25 نے چاول چنے۔ چاول کے ٹکڑے کا زاویہ درجوں میں کتنا ہے؟"
+        },
+        "answer": 90,
+        "checker": "numeric",
+        "hint": {
+          "en": "25 ÷ 100 × 360.",
+          "ur": "25 ÷ 100 × 360"
+        },
+        "feedback_correct": {
+          "en": "Right! 25 ÷ 100 = 1/4, and 1/4 of 360 is 90°.",
+          "ur": "درست! 25 ÷ 100 = 1/4، اور 360 کا 1/4 یعنی 90°"
+        },
+        "feedback_wrong": {
+          "en": "360 ÷ 4 = 90.",
+          "ur": "360 ÷ 4 = 90"
+        },
+        "common_wrong": [
+          {
+            "answer": 25,
+            "feedback": {
+              "en": "25 is the number of people. The angle is 25 ÷ 100 × 360 = 90.",
+              "ur": "25 لوگوں کی تعداد ہے۔ زاویہ 25 ÷ 100 × 360 = 90 ہے۔"
+            },
+            "misconception_id": "angle_is_value"
+          }
+        ]
+      },
+      "skill": "maths.data.ex_11_3"
+    },
+    {
+      "id": "r_quantity",
+      "type": "apply",
+      "step": {
+        "id": "r_quantity",
+        "type": "number",
+        "prompt": {
+          "en": "60 pupils are in a pie chart, and the reading sector is 30%. How many pupils is that?",
+          "ur": "دائری نقشے میں 60 طلبہ ہیں، اور مطالعے کا ٹکڑا 30٪ ہے۔ یہ کتنے طلبہ ہیں؟"
+        },
+        "answer": 18,
+        "checker": "numeric",
+        "hint": {
+          "en": "30 ÷ 100 × 60.",
+          "ur": "30 ÷ 100 × 60"
+        },
+        "feedback_correct": {
+          "en": "Right! 30 ÷ 100 × 60 = 18 pupils.",
+          "ur": "درست! 30 ÷ 100 × 60 = 18 طلبہ"
+        },
+        "feedback_wrong": {
+          "en": "10% of 60 is 6, so 30% is 18.",
+          "ur": "60 کا 10٪ یعنی 6، تو 30٪ یعنی 18"
+        },
+        "common_wrong": [
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "30 is the percentage, not the number of pupils: 18.",
+              "ur": "30 فیصد ہے، طلبہ کی تعداد نہیں: 18"
+            },
+            "misconception_id": "percent_as_number"
+          }
+        ]
+      },
+      "skill": "maths.data.ex_11_3"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 11.3 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the whole circle (q1, qb_recall, q10), reading a pie chart in percentages (q2 to q4), a missing sector (q5, qb_find_error), the sector angle value ÷ total × 360 (q6, q7, qb_angle, qb_half, r_angle, q11), and a percentage or a quantity from an angle (q8, q9, r_quantity).",
+    "Each wrong answer is a real mistake: multiplying by 100 instead of 360, giving the value as the angle, giving the percentage as the number of people, and not taking the known sectors from the whole.",
+    "The app cannot check a drawing, so these questions are about reading and calculating; drawing the chart with a protractor is the home task. Figure labels are letters and numbers; the step text says what each letter stands for.",
+    "Urdu terms to check: دائری نقشہ (پائی چارٹ), ٹکڑا, زاویہ, درجہ and کل, all as in the existing Data Handling lessons. فیصد (percentage, written ٪) is the term used in the existing percentage lessons. No new Urdu terms were added.",
+    "The numbers were worked out in content/sources/g6-maths-10/exercise_11_3.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

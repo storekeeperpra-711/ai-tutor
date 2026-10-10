@@ -1,0 +1,1188 @@
+{
+  "id": "g6-maths-10-exercise-11-4",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the mean of data (and a missing value when the mean is given), the median for an odd and an even number of values, and the mode.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management, Exercise 11.4"
+    }
+  ],
+  "skills": [
+    "maths.data.ex_11_4"
+  ],
+  "title": {
+    "en": "Exercise 11.4 practice: mean, median and mode",
+    "ur": "مشق 11.4 کی پریکٹس: اوسط، وسطانیہ اور عادہ"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.data.mean"
+    },
+    {
+      "skill": "maths.data.median"
+    },
+    {
+      "skill": "maths.data.mode_range"
+    },
+    {
+      "skill": "maths.data.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "total_not_mean",
+      "description": "Gives the total of the values as the mean, or divides by the wrong number of values."
+    },
+    {
+      "id": "median_unsorted",
+      "description": "Takes the middle value of the list as written, without putting the values in order first."
+    },
+    {
+      "id": "median_even_one",
+      "description": "With an even number of values, picks one of the two middle values instead of finding the number halfway between them."
+    },
+    {
+      "id": "mode_vs_mean",
+      "description": "Mixes up mode, median and mean, or gives the biggest value as the mode."
+    },
+    {
+      "id": "missing_not_total",
+      "description": "Gives the mean as the missing value, or forgets to multiply the mean by the number of values before taking the known ones away."
+    },
+    {
+      "id": "mean_of_means",
+      "description": "Finds the new mean by averaging the old mean and the new value, instead of using the total and the new number of values."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.ex_11_4": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.ex_11_4": [
+      {
+        "id": "qb_mode",
+        "type": "recall",
+        "step": {
+          "id": "qb_mode",
+          "type": "choice",
+          "prompt": {
+            "en": "The value that appears most often in a list is called the:",
+            "ur": "فہرست میں جو قیمت سب سے زیادہ بار آئے وہ کہلاتی ہے:"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "mode",
+                "ur": "عادہ"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The mode is the most common value.",
+                "ur": "جی ہاں! عادہ سب سے عام قیمت ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "median",
+                "ur": "وسطانیہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The median is the middle value in order.",
+                "ur": "وسطانیہ ترتیب میں درمیانی قیمت ہے۔"
+              },
+              "misconception_id": "mode_vs_mean"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "mean",
+                "ur": "اوسط"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The mean is the total divided by how many.",
+                "ur": "اوسط کل ÷ تعداد ہے۔"
+              },
+              "misconception_id": "mode_vs_mean"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_mean",
+        "type": "apply",
+        "step": {
+          "id": "qb_mean",
+          "type": "number",
+          "prompt": {
+            "en": "Find the mean of 9, 5, 11, 7.",
+            "ur": "9، 5، 11، 7 کا اوسط نکالیں۔"
+          },
+          "answer": 8,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add the four values, then divide by 4.",
+            "ur": "چاروں قیمتیں جمع کریں، پھر 4 سے تقسیم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 9 + 5 + 11 + 7 = 32, and 32 ÷ 4 = 8.",
+            "ur": "درست! 9 + 5 + 11 + 7 = 32، اور 32 ÷ 4 = 8"
+          },
+          "feedback_wrong": {
+            "en": "32 ÷ 4 = 8.",
+            "ur": "32 ÷ 4 = 8"
+          },
+          "common_wrong": [
+            {
+              "answer": 32,
+              "feedback": {
+                "en": "32 is the total. Divide by 4, the number of values: 8.",
+                "ur": "32 کل ہے۔ قیمتوں کی تعداد 4 سے تقسیم کریں: 8"
+              },
+              "misconception_id": "total_not_mean"
+            },
+            {
+              "answer": 11,
+              "feedback": {
+                "en": "11 is the biggest value. The mean uses all four: 8.",
+                "ur": "11 سب سے بڑی قیمت ہے۔ اوسط میں چاروں آتی ہیں: 8"
+              },
+              "misconception_id": "total_not_mean"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Yusuf finds the mean of 6, 8, 10, 12, 14 by adding them (50) and dividing by 4. What went wrong?",
+            "ur": "یوسف 6، 8، 10، 12، 14 کا اوسط انہیں جمع کر کے (50) اور 4 سے تقسیم کر کے نکالتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Nothing. 12.5 is right.",
+                "ur": "کوئی غلطی نہیں۔ 12.5 ٹھیک ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "There are five values, not four.",
+                "ur": "قیمتیں پانچ ہیں، چار نہیں۔"
+              },
+              "misconception_id": "total_not_mean"
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "There are 5 values, so divide by 5: 50 ÷ 5 = 10.",
+                "ur": "5 قیمتیں ہیں، تو 5 سے تقسیم کریں: 50 ÷ 5 = 10"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Divide by how many values there are.",
+                "ur": "جی ہاں! قیمتوں کی تعداد سے تقسیم کریں۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "He should not add them, but pick the middle one.",
+                "ur": "اسے جمع نہیں کرنا چاہیے، بلکہ درمیانی چننی چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is the median. The mean uses the total.",
+                "ur": "یہ وسطانیہ ہے۔ اوسط میں کل استعمال ہوتا ہے۔"
+              },
+              "misconception_id": "mode_vs_mean"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_median",
+      "front": {
+        "en": "How do you find the median when there are two middle values?",
+        "ur": "جب دو درمیانی قیمتیں ہوں تو وسطانیہ کیسے نکالتے ہیں؟"
+      },
+      "back": {
+        "en": "Put the values in order, add the two middle ones and halve.",
+        "ur": "قیمتیں ترتیب میں لکھیں، دو درمیانی جمع کریں اور آدھا کریں۔"
+      }
+    },
+    {
+      "id": "f_missing",
+      "front": {
+        "en": "The mean of 5 numbers is 8 and four are known. How do you find the fifth?",
+        "ur": "5 اعداد کا اوسط 8 ہے اور چار معلوم ہیں۔ پانچواں کیسے نکالیں؟"
+      },
+      "back": {
+        "en": "Total = 8 × 5 = 40. Take away the four known numbers.",
+        "ur": "کل = 8 × 5 = 40۔ چار معلوم اعداد گھٹائیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_average",
+      "text": {
+        "en": "Write down the number of letters in the first 11 words of a page of your book. Put them in order and find the median, find the mode, and find the mean (total ÷ 11). Say which one you think describes a typical word best.",
+        "ur": "اپنی کتاب کے ایک صفحے کے پہلے 11 الفاظ میں حروف کی تعداد لکھیں۔ انہیں ترتیب میں لکھیں اور وسطانیہ، عادہ اور اوسط (کل ÷ 11) نکالیں۔ بتائیں کہ آپ کے خیال میں کون سا ایک عام لفظ کو سب سے اچھا بیان کرتا ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Average (mean)",
+      "ur": "اوسط"
+    },
+    {
+      "en": "Median",
+      "ur": "وسطانیہ"
+    },
+    {
+      "en": "Mode",
+      "ur": "عادہ (موڈ)"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    },
+    {
+      "en": "In order",
+      "ur": "ترتیب میں"
+    },
+    {
+      "en": "Middle value",
+      "ur": "درمیانی قیمت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 11.4 is about mean, median and mode. Ready?",
+          "ur": "مشق 11.4 اوسط، وسطانیہ اور عادہ کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 11.4 of your maths book (PCTB Mathematics 6). Here you practise the mean, the median and the mode, a missing value when the mean is given, and when to use each. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 11.4 کے ساتھ ہے۔ اس میں آپ اوسط، وسطانیہ اور عادہ، اوسط دیا ہو تو غائب قیمت، اور ہر ایک کب استعمال کرنا ہے، دہرائیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_mean",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "The mean of a list of numbers is found by:",
+        "ur": "اعداد کی فہرست کا اوسط اس طرح نکلتا ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "adding all the values and dividing by how many values there are",
+            "ur": "سب قیمتیں جمع کر کے قیمتوں کی تعداد سے تقسیم کرنا"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Mean = total ÷ number of values.",
+            "ur": "جی ہاں! اوسط = کل ÷ قیمتوں کی تعداد"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "finding the middle value",
+            "ur": "درمیانی قیمت ڈھونڈنا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The middle value in order is the median.",
+            "ur": "ترتیب میں درمیانی قیمت وسطانیہ ہے۔"
+          },
+          "misconception_id": "mode_vs_mean"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "finding the value that appears most often",
+            "ur": "وہ قیمت ڈھونڈنا جو سب سے زیادہ بار آئے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the mode.",
+            "ur": "یہ عادہ ہے۔"
+          },
+          "misconception_id": "mode_vs_mean"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Mean shares out fairly, median is the middle, mode is the most common.",
+          "ur": "اوسط برابر بانٹتا ہے، وسطانیہ بیچ میں ہے، عادہ سب سے عام ہے۔"
+        }
+      },
+      "text": {
+        "en": "Mean = total ÷ number of values. If the mean is given, total = mean × number of values, so a missing value = total − the known values. Median: put the values in order first. With an odd number of values it is the middle one. With an even number it is halfway between the two middle ones: add them and halve. Mode: the value that appears most often.",
+        "ur": "اوسط = کل ÷ قیمتوں کی تعداد۔ اگر اوسط دیا ہو تو کل = اوسط × قیمتوں کی تعداد، اور غائب قیمت = کل − معلوم قیمتیں۔ وسطانیہ: پہلے قیمتیں ترتیب میں لکھیں۔ طاق تعداد ہو تو درمیانی قیمت ہے۔ جفت تعداد ہو تو دو درمیانی قیمتوں کے ٹھیک بیچ میں ہے: انہیں جمع کر کے آدھا کریں۔ عادہ: وہ قیمت جو سب سے زیادہ بار آئے۔"
+      }
+    },
+    {
+      "id": "q2_mean",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Find the mean of 12, 7, 9, 15, 7.",
+        "ur": "12، 7، 9، 15، 7 کا اوسط نکالیں۔"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the five values, then divide by 5.",
+        "ur": "پانچوں قیمتیں جمع کریں، پھر 5 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The total is 50, and 50 ÷ 5 = 10.",
+        "ur": "درست! کل 50 ہے، اور 50 ÷ 5 = 10"
+      },
+      "feedback_wrong": {
+        "en": "12 + 7 + 9 + 15 + 7 = 50, and 50 ÷ 5 = 10.",
+        "ur": "12 + 7 + 9 + 15 + 7 = 50، اور 50 ÷ 5 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "50 is the total. Divide by 5, the number of values: 10.",
+            "ur": "50 کل ہے۔ قیمتوں کی تعداد 5 سے تقسیم کریں: 10"
+          },
+          "misconception_id": "total_not_mean"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the first value. Add all five and divide by 5: 10.",
+            "ur": "12 پہلی قیمت ہے۔ پانچوں جمع کر کے 5 سے تقسیم کریں: 10"
+          },
+          "misconception_id": "total_not_mean"
+        }
+      ]
+    },
+    {
+      "id": "q3_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The mean of five numbers is 8. Four of them are 4, 10, 6, 9. What is the fifth number?",
+        "ur": "پانچ اعداد کا اوسط 8 ہے۔ ان میں سے چار 4، 10، 6، 9 ہیں۔ پانچواں عدد کیا ہے؟"
+      },
+      "answer": 11,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total = mean × 5. Then take away the four known numbers.",
+        "ur": "کل = اوسط × 5۔ پھر چار معلوم اعداد گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Total 8 × 5 = 40, known 4 + 10 + 6 + 9 = 29, and 40 − 29 = 11.",
+        "ur": "درست! کل 8 × 5 = 40، معلوم 4 + 10 + 6 + 9 = 29، اور 40 − 29 = 11"
+      },
+      "feedback_wrong": {
+        "en": "40 − 29 = 11.",
+        "ur": "40 − 29 = 11"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the mean. First find the total, 8 × 5 = 40, then take away 29: 11.",
+            "ur": "8 اوسط ہے۔ پہلے کل 8 × 5 = 40 نکالیں، پھر 29 گھٹائیں: 11"
+          },
+          "misconception_id": "missing_not_total"
+        },
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "40 is the total of all five. Take away the four known numbers: 11.",
+            "ur": "40 پانچوں کا کل ہے۔ چار معلوم اعداد گھٹائیں: 11"
+          },
+          "misconception_id": "missing_not_total"
+        }
+      ]
+    },
+    {
+      "id": "q4_median_odd",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the median of 14, 6, 11, 9, 20, 8, 17.",
+        "ur": "14، 6، 11، 9، 20، 8، 17 کا وسطانیہ نکالیں۔"
+      },
+      "answer": 11,
+      "checker": "numeric",
+      "hint": {
+        "en": "Put the numbers in order first, then take the middle one.",
+        "ur": "پہلے اعداد کو ترتیب میں لکھیں، پھر درمیانی لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! In order: 6, 8, 9, 11, 14, 17, 20. The middle one is 11.",
+        "ur": "درست! ترتیب میں: 6، 8، 9، 11، 14، 17، 20۔ درمیانی 11 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Seven numbers: the 4th one in order is 11.",
+        "ur": "سات اعداد: ترتیب میں چوتھا 11 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 is the middle of the list as written. Put them in order first: 11.",
+            "ur": "9 لکھی ہوئی فہرست کا بیچ ہے۔ پہلے ترتیب میں لکھیں: 11"
+          },
+          "misconception_id": "median_unsorted"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 is the biggest number, not the middle one. In order the middle is 11.",
+            "ur": "20 سب سے بڑا عدد ہے، درمیانی نہیں۔ ترتیب میں درمیانی 11 ہے۔"
+          },
+          "misconception_id": "mode_vs_mean"
+        }
+      ]
+    },
+    {
+      "id": "q5_median_even",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the median of 3, 9, 5, 12, 7, 10.",
+        "ur": "3، 9، 5، 12، 7، 10 کا وسطانیہ نکالیں۔"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "In order, there are two middle numbers. Go halfway between them.",
+        "ur": "ترتیب میں دو درمیانی اعداد ہیں۔ ان کے ٹھیک بیچ میں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! In order: 3, 5, 7, 9, 10, 12. The middle two are 7 and 9, and (7 + 9) ÷ 2 = 8.",
+        "ur": "درست! ترتیب میں: 3، 5، 7، 9، 10، 12۔ درمیانی دو 7 اور 9 ہیں، اور (7 + 9) ÷ 2 = 8"
+      },
+      "feedback_wrong": {
+        "en": "(7 + 9) ÷ 2 = 8.",
+        "ur": "(7 + 9) ÷ 2 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "7 is only one of the two middle numbers. Halfway between 7 and 9 is 8.",
+            "ur": "7 دو درمیانی اعداد میں سے صرف ایک ہے۔ 7 اور 9 کے ٹھیک بیچ میں 8 ہے۔"
+          },
+          "misconception_id": "median_even_one"
+        },
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 is only one of the two middle numbers. Halfway between 7 and 9 is 8.",
+            "ur": "9 دو درمیانی اعداد میں سے صرف ایک ہے۔ 7 اور 9 کے ٹھیک بیچ میں 8 ہے۔"
+          },
+          "misconception_id": "median_even_one"
+        }
+      ]
+    },
+    {
+      "id": "q6_mode",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the mode of 4, 6, 4, 9, 6, 4, 8.",
+        "ur": "4، 6، 4، 9، 6، 4، 8 کا عادہ نکالیں۔"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which number appears most often?",
+        "ur": "کون سا عدد سب سے زیادہ بار آتا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 appears three times, more than any other.",
+        "ur": "درست! 4 تین بار آتا ہے، کسی بھی دوسرے سے زیادہ۔"
+      },
+      "feedback_wrong": {
+        "en": "Count each: 4 appears 3 times, 6 appears 2 times.",
+        "ur": "ہر ایک گنیں: 4 تین بار، 6 دو بار"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 is the biggest number, not the most common. The mode is 4.",
+            "ur": "9 سب سے بڑا عدد ہے، سب سے عام نہیں۔ عادہ 4 ہے۔"
+          },
+          "misconception_id": "mode_vs_mean"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is how many times 4 appears. The mode is the number itself: 4.",
+            "ur": "3 یہ ہے کہ 4 کتنی بار آیا۔ عادہ خود عدد ہے: 4"
+          },
+          "misconception_id": "mode_vs_mean"
+        }
+      ]
+    },
+    {
+      "id": "q7_which",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shopkeeper wants to know which shoe size to order the most of. Which average helps most?",
+        "ur": "ایک دکاندار جاننا چاہتا ہے کہ کون سا ناپ سب سے زیادہ منگوائے۔ کون سا اوسط سب سے زیادہ مدد کرتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "the mean",
+            "ur": "اوسط"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A mean such as 7.4 may not be a real shoe size.",
+            "ur": "7.4 جیسا اوسط شاید اصل جوتے کا ناپ نہ ہو۔"
+          },
+          "misconception_id": "mode_vs_mean"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "the mode (the most common size)",
+            "ur": "عادہ (سب سے عام ناپ)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The most common size sells the most.",
+            "ur": "جی ہاں! سب سے عام ناپ سب سے زیادہ بکتا ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "the total",
+            "ur": "کل"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The total of the sizes tells nothing about which to order.",
+            "ur": "ناپوں کا کل نہیں بتاتا کون سا منگوانا ہے۔"
+          },
+          "misconception_id": "total_not_mean"
+        }
+      ]
+    },
+    {
+      "id": "q8_new",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The mean of five numbers is 10. A sixth number, 16, is added. What is the mean of the six numbers?",
+        "ur": "پانچ اعداد کا اوسط 10 ہے۔ چھٹا عدد 16 شامل کیا جاتا ہے۔ چھ اعداد کا اوسط کیا ہے؟"
+      },
+      "answer": 11,
+      "checker": "numeric",
+      "hint": {
+        "en": "Old total = 10 × 5. Add the new number, then divide by 6.",
+        "ur": "پرانا کل = 10 × 5۔ نیا عدد جمع کریں، پھر 6 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (50 + 16) ÷ 6 = 66 ÷ 6 = 11.",
+        "ur": "درست! (50 + 16) ÷ 6 = 66 ÷ 6 = 11"
+      },
+      "feedback_wrong": {
+        "en": "50 + 16 = 66, and 66 ÷ 6 = 11.",
+        "ur": "50 + 16 = 66، اور 66 ÷ 6 = 11"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "13 averages 10 and 16, but the 10 stands for five numbers. Use the totals: 11.",
+            "ur": "13، 10 اور 16 کا اوسط ہے، مگر 10 پانچ اعداد کا ہے۔ کل استعمال کریں: 11"
+          },
+          "misconception_id": "mean_of_means"
+        },
+        {
+          "answer": 66,
+          "feedback": {
+            "en": "66 is the new total. Divide by 6: 11.",
+            "ur": "66 نیا کل ہے۔ 6 سے تقسیم کریں: 11"
+          },
+          "misconception_id": "total_not_mean"
+        }
+      ]
+    },
+    {
+      "id": "q9_graph",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The bar graph shows the runs scored in four matches. What is the mean number of runs per match?",
+        "ur": "بار گراف چار میچوں میں بنائے گئے رنز دکھاتا ہے۔ فی میچ اوسط رنز کتنے ہیں؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Read the four bars, add them, divide by 4.",
+        "ur": "چاروں ستون پڑھیں، جمع کریں، 4 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 + 10 + 8 + 12 = 36, and 36 ÷ 4 = 9.",
+        "ur": "درست! 6 + 10 + 8 + 12 = 36، اور 36 ÷ 4 = 9"
+      },
+      "feedback_wrong": {
+        "en": "36 ÷ 4 = 9.",
+        "ur": "36 ÷ 4 = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "36 is the total runs. Divide by 4 matches: 9.",
+            "ur": "36 کل رنز ہیں۔ 4 میچوں سے تقسیم کریں: 9"
+          },
+          "misconception_id": "total_not_mean"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the highest bar. The mean uses all four bars: 9.",
+            "ur": "12 سب سے اونچا ستون ہے۔ اوسط میں چاروں ستون آتے ہیں: 9"
+          },
+          "misconception_id": "total_not_mean"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "A bar graph of the runs scored in four matches. The side scale goes up in two from 0 to 12. Match 1: 6 runs, match 2: 10 runs, match 3: 8 runs, match 4: 12 runs.",
+          "ur": "چار میچوں میں بنائے گئے رنز کا بار گراف۔ اطراف کا پیمانہ 0 سے 12 تک دو دو کے قدموں میں ہے۔ میچ 1: 6 رنز، میچ 2: 10 رنز، میچ 3: 8 رنز، میچ 4: 12 رنز۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              286.0,
+              144.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              144.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              144.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              123.0
+            ],
+            "to": [
+              37.2,
+              123.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              123.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              102.0
+            ],
+            "to": [
+              37.2,
+              102.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              102.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              81.0
+            ],
+            "to": [
+              37.2,
+              81.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              81.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              60.0
+            ],
+            "to": [
+              37.2,
+              60.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              60.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              39.0
+            ],
+            "to": [
+              37.2,
+              39.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              39.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              18.0
+            ],
+            "to": [
+              37.2,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              18.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                49.6,
+                81.0
+              ],
+              [
+                87.0,
+                81.0
+              ],
+              [
+                87.0,
+                144.0
+              ],
+              [
+                49.6,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              68.3,
+              158.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                111.8,
+                39.0
+              ],
+              [
+                149.2,
+                39.0
+              ],
+              [
+                149.2,
+                144.0
+              ],
+              [
+                111.8,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              130.5,
+              158.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                174.0,
+                60.0
+              ],
+              [
+                211.4,
+                60.0
+              ],
+              [
+                211.4,
+                144.0
+              ],
+              [
+                174.0,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              192.7,
+              158.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                236.2,
+                18.0
+              ],
+              [
+                273.6,
+                18.0
+              ],
+              [
+                273.6,
+                144.0
+              ],
+              [
+                236.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              254.9,
+              158.0
+            ],
+            "text": "4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Naila finds the median of 9, 3, 7, 5, 1. She says it is 7, the middle number of the list. What went wrong?",
+        "ur": "نائلہ 9، 3، 7، 5، 1 کا وسطانیہ نکالتی ہے۔ وہ کہتی ہے یہ 7 ہے، یعنی فہرست کا درمیانی عدد۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "She forgot to put the numbers in order first. In order, 1, 3, 5, 7, 9, the median is 5.",
+            "ur": "وہ پہلے اعداد کو ترتیب میں لکھنا بھول گئی۔ ترتیب میں 1، 3، 5، 7، 9 کا وسطانیہ 5 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The median is the middle of the ordered list.",
+            "ur": "جی ہاں! وسطانیہ ترتیب وار فہرست کا درمیانی عدد ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 7 is right.",
+            "ur": "کوئی غلطی نہیں۔ 7 ٹھیک ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is the middle of the list as written, but not in order.",
+            "ur": "7 لکھی ہوئی فہرست کا بیچ ہے، مگر ترتیب میں نہیں۔"
+          },
+          "misconception_id": "median_unsorted"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should have added them and divided by 5.",
+            "ur": "اسے سب جمع کر کے 5 سے تقسیم کرنا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the mean. The median needs the numbers in order.",
+            "ur": "یہ اوسط ہے۔ وسطانیہ کے لیے اعداد کو ترتیب میں لکھنا پڑتا ہے۔"
+          },
+          "misconception_id": "mode_vs_mean"
+        }
+      ]
+    },
+    {
+      "id": "q11_total",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The mean of 4 numbers is 12. What is their total?",
+        "ur": "4 اعداد کا اوسط 12 ہے۔ ان کا کل کیا ہے؟"
+      },
+      "answer": 48,
+      "checker": "numeric",
+      "hint": {
+        "en": "Total = mean × number of values.",
+        "ur": "کل = اوسط × قیمتوں کی تعداد"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 × 4 = 48.",
+        "ur": "درست! 12 × 4 = 48"
+      },
+      "feedback_wrong": {
+        "en": "Mean times the number of values: 12 × 4 = 48.",
+        "ur": "اوسط ضرب قیمتوں کی تعداد: 12 × 4 = 48"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is the mean. The total is 12 × 4 = 48.",
+            "ur": "12 اوسط ہے۔ کل 12 × 4 = 48 ہے۔"
+          },
+          "misconception_id": "missing_not_total"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is 12 ÷ 4, the wrong way round. Multiply: 48.",
+            "ur": "3 یعنی 12 ÷ 4، الٹا۔ ضرب دیں: 48"
+          },
+          "misconception_id": "missing_not_total"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! Mean, median and mode are all yours.",
+          "ur": "شاباش! اوسط، وسطانیہ اور عادہ سب آپ کے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Mean = total ÷ number of values, and total = mean × number of values. Median: order the values; the middle one for an odd count, halfway between the two middle ones for an even count. Mode: the most common value. A new value changes the total and the count, so use the totals.",
+        "ur": "اوسط = کل ÷ قیمتوں کی تعداد، اور کل = اوسط × قیمتوں کی تعداد۔ وسطانیہ: قیمتیں ترتیب میں لکھیں؛ طاق تعداد میں درمیانی، جفت تعداد میں دو درمیانی قیمتوں کے ٹھیک بیچ میں۔ عادہ: سب سے عام قیمت۔ نئی قیمت کل اور تعداد دونوں بدلتی ہے، اس لیے کل استعمال کریں۔"
+      },
+      "points": [
+        {
+          "en": "Median: put them in order first.",
+          "ur": "وسطانیہ: پہلے ترتیب میں لکھیں۔"
+        },
+        {
+          "en": "Total = mean × how many.",
+          "ur": "کل = اوسط × کتنے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_median",
+      "type": "apply",
+      "step": {
+        "id": "r_median",
+        "type": "number",
+        "prompt": {
+          "en": "Find the median of 13, 7, 21, 4, 10.",
+          "ur": "13، 7، 21، 4، 10 کا وسطانیہ نکالیں۔"
+        },
+        "answer": 10,
+        "checker": "numeric",
+        "hint": {
+          "en": "Put them in order first.",
+          "ur": "پہلے ترتیب میں لکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! In order: 4, 7, 10, 13, 21. The middle one is 10.",
+          "ur": "درست! ترتیب میں: 4، 7، 10، 13، 21۔ درمیانی 10 ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "The 3rd of five in order is 10.",
+          "ur": "پانچ میں سے ترتیب میں تیسرا 10 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 21,
+            "feedback": {
+              "en": "21 is the middle of the list as written. In order the middle is 10.",
+              "ur": "21 لکھی ہوئی فہرست کا بیچ ہے۔ ترتیب میں درمیانی 10 ہے۔"
+            },
+            "misconception_id": "median_unsorted"
+          }
+        ]
+      },
+      "skill": "maths.data.ex_11_4"
+    },
+    {
+      "id": "r_mode",
+      "type": "apply",
+      "step": {
+        "id": "r_mode",
+        "type": "number",
+        "prompt": {
+          "en": "Find the mode of 2, 5, 2, 9, 5, 2, 7.",
+          "ur": "2، 5، 2، 9، 5، 2، 7 کا عادہ نکالیں۔"
+        },
+        "answer": 2,
+        "checker": "numeric",
+        "hint": {
+          "en": "Which number appears most often?",
+          "ur": "کون سا عدد سب سے زیادہ بار آتا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 2 appears three times.",
+          "ur": "درست! 2 تین بار آتا ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "Count: 2 appears 3 times, 5 appears 2 times.",
+          "ur": "گنیں: 2 تین بار، 5 دو بار"
+        },
+        "common_wrong": [
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "9 is the biggest number, not the most common. The mode is 2.",
+              "ur": "9 سب سے بڑا عدد ہے، سب سے عام نہیں۔ عادہ 2 ہے۔"
+            },
+            "misconception_id": "mode_vs_mean"
+          }
+        ]
+      },
+      "skill": "maths.data.ex_11_4"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 11.4 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the mean (q2, q9, qb_mean, qb_find_error), a missing value or a total from the mean (q3, q11), the median for an odd and an even number of values (q4, q5, q10, r_median), the mode (q6, qb_mode, r_mode), choosing an average (q7) and a changed mean (q8).",
+    "Each wrong answer is a real mistake: giving the total as the mean, taking the middle of an unordered list, picking one of the two middle values, mixing up mean, median and mode, and averaging the old mean with the new value.",
+    "Urdu terms to check: اوسط, وسطانیہ, عادہ (موڈ), کل, ترتیب میں and درمیانی قیمت, all as in the existing Data Handling lessons. No new Urdu terms were added.",
+    "The numbers were worked out in content/sources/g6-maths-10/exercise_11_4.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

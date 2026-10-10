@@ -1,0 +1,5034 @@
+{
+  "id": "g6-maths-10-exercise-11-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Read vertical, horizontal and multiple (double) bar graphs, using the scale, and answer questions about the values, the biggest and smallest bars, totals and differences.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 11: Data Management, Exercise 11.2"
+    }
+  ],
+  "skills": [
+    "maths.data.ex_11_2"
+  ],
+  "title": {
+    "en": "Exercise 11.2 practice: reading bar graphs",
+    "ur": "مشق 11.2 کی پریکٹس: بار گراف پڑھنا"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.data.bar_graphs"
+    },
+    {
+      "skill": "maths.data.pie_charts"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "scale_misread",
+      "description": "Reads a bar that ends between two marks as the lower mark, or reads the scale step as 1."
+    },
+    {
+      "id": "bar_height_vs_name",
+      "description": "Gives the number of the bar's position or the name of the bar instead of its height."
+    },
+    {
+      "id": "diff_as_total",
+      "description": "Adds two bars when asked how many more, or subtracts when asked for the total."
+    },
+    {
+      "id": "one_bar_only",
+      "description": "Reads only one bar of a double bar graph and ignores the other, or mixes the two bars up."
+    },
+    {
+      "id": "bars_not_added",
+      "description": "Gives the biggest bar as the total, or leaves out a bar when adding."
+    },
+    {
+      "id": "key_ignored",
+      "description": "Forgets the key, so does not know which bar of a pair stands for which group."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.data.ex_11_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.data.ex_11_2": [
+      {
+        "id": "qb_key",
+        "type": "recall",
+        "step": {
+          "id": "qb_key",
+          "type": "choice",
+          "prompt": {
+            "en": "In a double bar graph, what tells you which bar of each pair is which group?",
+            "ur": "دوہرے بار گراف میں کون سی چیز بتاتی ہے کہ جوڑے کا کون سا ستون کس گروہ کا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "the tallest bar",
+                "ur": "سب سے اونچا ستون"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The height shows how many, not which group.",
+                "ur": "اونچائی بتاتی ہے کہ کتنے ہیں، کون سا گروہ نہیں۔"
+              },
+              "misconception_id": "key_ignored"
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "the scale",
+                "ur": "پیمانہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The scale gives the numbers, not the groups.",
+                "ur": "پیمانہ اعداد دیتا ہے، گروہ نہیں۔"
+              },
+              "misconception_id": "key_ignored"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "the key",
+                "ur": "کلید"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The key shows which bar is boys and which is girls.",
+                "ur": "جی ہاں! کلید دکھاتی ہے کہ کون سا ستون لڑکوں کا اور کون سا لڑکیوں کا ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_read",
+        "type": "apply",
+        "step": {
+          "id": "qb_read",
+          "type": "number",
+          "prompt": {
+            "en": "The graph's scale goes up in tens. Bar B ends halfway between 30 and 40. What does bar B show?",
+            "ur": "گراف کا پیمانہ دس دس کے قدموں میں ہے۔ ستون B، 30 اور 40 کے ٹھیک بیچ میں ختم ہوتا ہے۔ ستون B کتنا دکھاتا ہے؟"
+          },
+          "answer": 35,
+          "checker": "numeric",
+          "hint": {
+            "en": "Halfway between 30 and 40.",
+            "ur": "30 اور 40 کے ٹھیک بیچ میں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! (30 + 40) ÷ 2 = 35.",
+            "ur": "درست! (30 + 40) ÷ 2 = 35"
+          },
+          "feedback_wrong": {
+            "en": "30 + 5 = 35.",
+            "ur": "30 + 5 = 35"
+          },
+          "common_wrong": [
+            {
+              "answer": 30,
+              "feedback": {
+                "en": "30 is the mark below. The bar goes halfway to 40: 35.",
+                "ur": "30 نیچے والا نشان ہے۔ ستون 40 کی طرف آدھا جاتا ہے: 35"
+              },
+              "misconception_id": "scale_misread"
+            },
+            {
+              "answer": 40,
+              "feedback": {
+                "en": "40 is the mark above. The bar stops halfway: 35.",
+                "ur": "40 اوپر والا نشان ہے۔ ستون بیچ میں رکتا ہے: 35"
+              },
+              "misconception_id": "scale_misread"
+            }
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 170.0,
+            "alt": {
+              "en": "A bar graph with three bars A, B and C. The side scale goes up in tens from 0 to 40. Bar A reaches 10, bar B reaches 35 (halfway between 30 and 40) and bar C reaches 20.",
+              "ur": "تین ستونوں A، B اور C کا بار گراف۔ اطراف کا پیمانہ 0 سے 40 تک دس دس کے قدموں میں ہے۔ ستون A 10 تک، ستون B 35 تک (30 اور 40 کے ٹھیک بیچ میں) اور ستون C 20 تک پہنچتا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  37.2,
+                  144.0
+                ],
+                "to": [
+                  286.0,
+                  144.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  37.2,
+                  144.0
+                ],
+                "to": [
+                  37.2,
+                  10.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  144.0
+                ],
+                "to": [
+                  37.2,
+                  144.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  24.4,
+                  144.0
+                ],
+                "text": "0"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  112.5
+                ],
+                "to": [
+                  37.2,
+                  112.5
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  112.5
+                ],
+                "text": "10"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  81.0
+                ],
+                "to": [
+                  37.2,
+                  81.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  81.0
+                ],
+                "text": "20"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  49.5
+                ],
+                "to": [
+                  37.2,
+                  49.5
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  49.5
+                ],
+                "text": "30"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  18.0
+                ],
+                "to": [
+                  37.2,
+                  18.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  18.0
+                ],
+                "text": "40"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    58.7,
+                    112.5
+                  ],
+                  [
+                    98.7,
+                    112.5
+                  ],
+                  [
+                    98.7,
+                    144.0
+                  ],
+                  [
+                    58.7,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  78.7,
+                  158.0
+                ],
+                "text": "A"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    141.6,
+                    33.8
+                  ],
+                  [
+                    181.6,
+                    33.8
+                  ],
+                  [
+                    181.6,
+                    144.0
+                  ],
+                  [
+                    141.6,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  161.6,
+                  158.0
+                ],
+                "text": "B"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    224.5,
+                    81.0
+                  ],
+                  [
+                    264.5,
+                    81.0
+                  ],
+                  [
+                    264.5,
+                    144.0
+                  ],
+                  [
+                    224.5,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  244.5,
+                  158.0
+                ],
+                "text": "C"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "qb_diff",
+        "type": "apply",
+        "step": {
+          "id": "qb_diff",
+          "type": "number",
+          "prompt": {
+            "en": "How many more does bar B show than bar A?",
+            "ur": "ستون B، ستون A سے کتنا زیادہ دکھاتا ہے؟"
+          },
+          "answer": 25,
+          "checker": "numeric",
+          "hint": {
+            "en": "Bar B is 35 and bar A is 10.",
+            "ur": "ستون B کا 35 اور ستون A کا 10 ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 35 − 10 = 25.",
+            "ur": "درست! 35 − 10 = 25"
+          },
+          "feedback_wrong": {
+            "en": "Subtract: 35 − 10 = 25.",
+            "ur": "گھٹائیں: 35 − 10 = 25"
+          },
+          "common_wrong": [
+            {
+              "answer": 45,
+              "feedback": {
+                "en": "45 is 35 + 10. 'How many more' means subtract: 25.",
+                "ur": "45 یعنی 35 + 10۔ 'کتنے زیادہ' کا مطلب گھٹانا ہے: 25"
+              },
+              "misconception_id": "diff_as_total"
+            }
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 170.0,
+            "alt": {
+              "en": "A bar graph with three bars A, B and C. The side scale goes up in tens from 0 to 40. Bar A reaches 10, bar B reaches 35 (halfway between 30 and 40) and bar C reaches 20.",
+              "ur": "تین ستونوں A، B اور C کا بار گراف۔ اطراف کا پیمانہ 0 سے 40 تک دس دس کے قدموں میں ہے۔ ستون A 10 تک، ستون B 35 تک (30 اور 40 کے ٹھیک بیچ میں) اور ستون C 20 تک پہنچتا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  37.2,
+                  144.0
+                ],
+                "to": [
+                  286.0,
+                  144.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  37.2,
+                  144.0
+                ],
+                "to": [
+                  37.2,
+                  10.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  144.0
+                ],
+                "to": [
+                  37.2,
+                  144.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  24.4,
+                  144.0
+                ],
+                "text": "0"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  112.5
+                ],
+                "to": [
+                  37.2,
+                  112.5
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  112.5
+                ],
+                "text": "10"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  81.0
+                ],
+                "to": [
+                  37.2,
+                  81.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  81.0
+                ],
+                "text": "20"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  49.5
+                ],
+                "to": [
+                  37.2,
+                  49.5
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  49.5
+                ],
+                "text": "30"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  18.0
+                ],
+                "to": [
+                  37.2,
+                  18.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  18.0
+                ],
+                "text": "40"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    58.7,
+                    112.5
+                  ],
+                  [
+                    98.7,
+                    112.5
+                  ],
+                  [
+                    98.7,
+                    144.0
+                  ],
+                  [
+                    58.7,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  78.7,
+                  158.0
+                ],
+                "text": "A"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    141.6,
+                    33.8
+                  ],
+                  [
+                    181.6,
+                    33.8
+                  ],
+                  [
+                    181.6,
+                    144.0
+                  ],
+                  [
+                    141.6,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  161.6,
+                  158.0
+                ],
+                "text": "B"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    224.5,
+                    81.0
+                  ],
+                  [
+                    264.5,
+                    81.0
+                  ],
+                  [
+                    264.5,
+                    144.0
+                  ],
+                  [
+                    224.5,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  244.5,
+                  158.0
+                ],
+                "text": "C"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Rida reads bar B and says it shows 30, because the bar goes past the 30 mark. What went wrong?",
+            "ur": "ریدا ستون B پڑھ کر کہتی ہے کہ یہ 30 دکھاتا ہے، کیونکہ ستون 30 کے نشان سے آگے جاتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The bar is halfway between 30 and 40, so it shows 35, not 30.",
+                "ur": "ستون 30 اور 40 کے ٹھیک بیچ میں ہے، تو یہ 35 دکھاتا ہے، 30 نہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Read the top of the bar, not the mark below it.",
+                "ur": "جی ہاں! ستون کا اوپری سرا پڑھیں، نیچے والا نشان نہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. A bar always shows the mark below it.",
+                "ur": "کوئی غلطی نہیں۔ ستون ہمیشہ نیچے والا نشان دکھاتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A bar can end between marks. Then read halfway.",
+                "ur": "ستون نشانوں کے بیچ میں بھی ختم ہو سکتا ہے۔ تب بیچ کی قیمت پڑھیں۔"
+              },
+              "misconception_id": "scale_misread"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It shows 40, the mark above.",
+                "ur": "یہ 40 دکھاتا ہے، اوپر والا نشان۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The bar does not reach 40. It stops halfway.",
+                "ur": "ستون 40 تک نہیں پہنچتا۔ یہ بیچ میں رک جاتا ہے۔"
+              },
+              "misconception_id": "scale_misread"
+            }
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 170.0,
+            "alt": {
+              "en": "A bar graph with three bars A, B and C. The side scale goes up in tens from 0 to 40. Bar A reaches 10, bar B reaches 35 (halfway between 30 and 40) and bar C reaches 20.",
+              "ur": "تین ستونوں A، B اور C کا بار گراف۔ اطراف کا پیمانہ 0 سے 40 تک دس دس کے قدموں میں ہے۔ ستون A 10 تک، ستون B 35 تک (30 اور 40 کے ٹھیک بیچ میں) اور ستون C 20 تک پہنچتا ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  37.2,
+                  144.0
+                ],
+                "to": [
+                  286.0,
+                  144.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  37.2,
+                  144.0
+                ],
+                "to": [
+                  37.2,
+                  10.0
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  144.0
+                ],
+                "to": [
+                  37.2,
+                  144.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  24.4,
+                  144.0
+                ],
+                "text": "0"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  112.5
+                ],
+                "to": [
+                  37.2,
+                  112.5
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  112.5
+                ],
+                "text": "10"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  81.0
+                ],
+                "to": [
+                  37.2,
+                  81.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  81.0
+                ],
+                "text": "20"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  49.5
+                ],
+                "to": [
+                  37.2,
+                  49.5
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  49.5
+                ],
+                "text": "30"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  33.2,
+                  18.0
+                ],
+                "to": [
+                  37.2,
+                  18.0
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  19.6,
+                  18.0
+                ],
+                "text": "40"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    58.7,
+                    112.5
+                  ],
+                  [
+                    98.7,
+                    112.5
+                  ],
+                  [
+                    98.7,
+                    144.0
+                  ],
+                  [
+                    58.7,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  78.7,
+                  158.0
+                ],
+                "text": "A"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    141.6,
+                    33.8
+                  ],
+                  [
+                    181.6,
+                    33.8
+                  ],
+                  [
+                    181.6,
+                    144.0
+                  ],
+                  [
+                    141.6,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  161.6,
+                  158.0
+                ],
+                "text": "B"
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    224.5,
+                    81.0
+                  ],
+                  [
+                    264.5,
+                    81.0
+                  ],
+                  [
+                    264.5,
+                    144.0
+                  ],
+                  [
+                    224.5,
+                    144.0
+                  ]
+                ],
+                "fill": true
+              },
+              {
+                "kind": "label",
+                "at": [
+                  244.5,
+                  158.0
+                ],
+                "text": "C"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_halfway",
+      "front": {
+        "en": "A bar ends halfway between 20 and 30. What does it show?",
+        "ur": "ستون 20 اور 30 کے ٹھیک بیچ میں ختم ہوتا ہے۔ یہ کیا دکھاتا ہے؟"
+      },
+      "back": {
+        "en": "25: halfway between the two marks.",
+        "ur": "25: دونوں نشانوں کے ٹھیک بیچ میں۔"
+      }
+    },
+    {
+      "id": "f_double",
+      "front": {
+        "en": "How do you read a double bar graph?",
+        "ur": "دوہرا بار گراف کیسے پڑھتے ہیں؟"
+      },
+      "back": {
+        "en": "Use the key to see which bar is which, read the bar you need, and add both bars for a total.",
+        "ur": "کلید سے دیکھیں کون سا ستون کس کا ہے، مطلوبہ ستون پڑھیں، اور کل کے لیے دونوں جمع کریں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_bars",
+      "text": {
+        "en": "Count the vowels (a, e, i, o, u) in a paragraph of your textbook and draw a horizontal bar graph in your notebook with a scale and a title. Then draw a double bar graph of the number of boys and girls in each of three classes of your school, with a key.",
+        "ur": "اپنی کتاب کے ایک پیراگراف میں حروفِ علت (a, e, i, o, u) گنیں اور کاپی میں پیمانے اور عنوان کے ساتھ افقی بار گراف بنائیں۔ پھر اپنے سکول کی تین جماعتوں میں لڑکوں اور لڑکیوں کی تعداد کا دوہرا بار گراف کلید کے ساتھ بنائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Bar graph",
+      "ur": "بار گراف (ستونی گراف)"
+    },
+    {
+      "en": "Bar",
+      "ur": "ستون"
+    },
+    {
+      "en": "Scale",
+      "ur": "پیمانہ"
+    },
+    {
+      "en": "Axis",
+      "ur": "محور"
+    },
+    {
+      "en": "Multiple (double) bar graph",
+      "ur": "دوہرا بار گراف"
+    },
+    {
+      "en": "Total",
+      "ur": "کل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 11.2 is about bar graphs. Ready?",
+          "ur": "مشق 11.2 بار گراف کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 11.2 of your maths book (PCTB Mathematics 6). Here you practise reading vertical, horizontal and double bar graphs: the scale, the biggest bar, totals and differences. You only read; the drawing is for your notebook. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 11.2 کے ساتھ ہے۔ اس میں آپ عمودی، افقی اور دوہرے بار گراف پڑھنا دہرائیں گے: پیمانہ، سب سے بڑا ستون، کل اور فرق۔ آپ صرف پڑھیں گے؛ بنانا کاپی میں کریں۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_scale",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "The numbers up the side of a bar graph, in equal steps like 10, 20, 30, are called the:",
+        "ur": "بار گراف کے اطراف میں برابر قدموں والے اعداد، جیسے 10، 20، 30، کہلاتے ہیں:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "scale",
+            "ur": "پیمانہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The scale tells how much each step is worth.",
+            "ur": "جی ہاں! پیمانہ بتاتا ہے کہ ہر قدم کتنے کا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "key",
+            "ur": "کلید"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A key says what each bar or colour means. The scale is the numbers on the axis.",
+            "ur": "کلید بتاتی ہے کہ ہر ستون یا رنگ کا مطلب کیا ہے۔ پیمانہ محور کے اعداد ہیں۔"
+          },
+          "misconception_id": "key_ignored"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "frequency",
+            "ur": "تعدد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Frequency is the count a bar shows, not the numbers along the side.",
+            "ur": "تعدد وہ گنتی ہے جو ستون دکھاتا ہے، اطراف کے اعداد نہیں۔"
+          },
+          "misconception_id": "bar_height_vs_name"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "First the scale, then the bar. Find where the top of the bar meets the side.",
+          "ur": "پہلے پیمانہ، پھر ستون۔ دیکھیں ستون کا اوپری سرا اطراف سے کہاں ملتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "The height of a bar (or the length of a horizontal bar) shows how many. Read across to the scale. If the top is halfway between two marks, the value is halfway between them: halfway between 20 and 30 is 25. A double bar graph has two bars for each group; the key says which bar is which. For totals, add the bars you need; for how many more, subtract.",
+        "ur": "ستون کی اونچائی (یا افقی ستون کی لمبائی) بتاتی ہے کہ کتنے ہیں۔ پیمانے تک سیدھ میں پڑھیں۔ اگر اوپری سرا دو نشانوں کے ٹھیک بیچ میں ہو تو قیمت بھی ان کے ٹھیک بیچ میں ہے: 20 اور 30 کے بیچ 25 ہے۔ دوہرے بار گراف میں ہر گروہ کے دو ستون ہوتے ہیں؛ کلید بتاتی ہے کہ کون سا ستون کس کا ہے۔ کل کے لیے ضروری ستون جمع کریں؛ کتنے زیادہ کے لیے گھٹائیں۔"
+      }
+    },
+    {
+      "id": "q2_halfway",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "The graph shows library books borrowed on five days. How many books were borrowed on Tuesday (Tu)? The bar ends halfway between two marks.",
+        "ur": "گراف پانچ دنوں میں لی گئی کتابیں دکھاتا ہے۔ منگل (Tu) کو کتنی کتابیں لی گئیں؟ ستون دو نشانوں کے ٹھیک بیچ میں ختم ہوتا ہے۔"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "The marks are 20 and 30. Halfway between them?",
+        "ur": "نشان 20 اور 30 ہیں۔ ان کے ٹھیک بیچ میں کیا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! Halfway between 20 and 30 is 25.",
+        "ur": "درست! 20 اور 30 کے ٹھیک بیچ میں 25 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "(20 + 30) ÷ 2 = 25.",
+        "ur": "(20 + 30) ÷ 2 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 is the mark below. The bar goes past 20, halfway to 30: 25.",
+            "ur": "20 نیچے والا نشان ہے۔ ستون 20 سے آگے 30 کی طرف آدھا جاتا ہے: 25"
+          },
+          "misconception_id": "scale_misread"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is the mark above. The bar stops halfway: 25.",
+            "ur": "30 اوپر والا نشان ہے۔ ستون بیچ میں رکتا ہے: 25"
+          },
+          "misconception_id": "scale_misread"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "A bar graph of library books borrowed on five days. The side scale goes up in tens from 0 to 30. Monday 20, Tuesday 25 (halfway between 20 and 30), Wednesday 10, Thursday 30, Friday 15.",
+          "ur": "پانچ دنوں میں لائبریری سے لی گئی کتابوں کا بار گراف۔ اطراف کا پیمانہ 0 سے 30 تک دس دس کے قدموں میں ہے۔ پیر 20، منگل 25 (20 اور 30 کے ٹھیک بیچ میں)، بدھ 10، جمعرات 30، جمعہ 15۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              286.0,
+              144.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              144.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              144.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              102.0
+            ],
+            "to": [
+              37.2,
+              102.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              102.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              60.0
+            ],
+            "to": [
+              37.2,
+              60.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              60.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              18.0
+            ],
+            "to": [
+              37.2,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              18.0
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                47.2,
+                60.0
+              ],
+              [
+                77.0,
+                60.0
+              ],
+              [
+                77.0,
+                144.0
+              ],
+              [
+                47.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              62.1,
+              158.0
+            ],
+            "text": "Mo"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                96.9,
+                39.0
+              ],
+              [
+                126.8,
+                39.0
+              ],
+              [
+                126.8,
+                144.0
+              ],
+              [
+                96.9,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              111.8,
+              158.0
+            ],
+            "text": "Tu"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                146.7,
+                102.0
+              ],
+              [
+                176.5,
+                102.0
+              ],
+              [
+                176.5,
+                144.0
+              ],
+              [
+                146.7,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              161.6,
+              158.0
+            ],
+            "text": "We"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                196.4,
+                18.0
+              ],
+              [
+                226.3,
+                18.0
+              ],
+              [
+                226.3,
+                144.0
+              ],
+              [
+                196.4,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              211.4,
+              158.0
+            ],
+            "text": "Th"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                246.2,
+                81.0
+              ],
+              [
+                276.0,
+                81.0
+              ],
+              [
+                276.0,
+                144.0
+              ],
+              [
+                246.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              261.1,
+              158.0
+            ],
+            "text": "Fr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q3_most",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "On which day were the most books borrowed?",
+        "ur": "کس دن سب سے زیادہ کتابیں لی گئیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Thursday (Th)",
+            "ur": "جمعرات (Th)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Its bar is the tallest, reaching 30.",
+            "ur": "جی ہاں! اس کا ستون سب سے اونچا ہے، 30 تک۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Tuesday (Tu)",
+            "ur": "منگل (Tu)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Tuesday is 25. Thursday's bar is taller, 30.",
+            "ur": "منگل 25 ہے۔ جمعرات کا ستون اونچا ہے، 30"
+          },
+          "misconception_id": "scale_misread"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Friday (Fr)",
+            "ur": "جمعہ (Fr)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Friday is the last bar, but not the tallest. It is 15.",
+            "ur": "جمعہ آخری ستون ہے، لیکن سب سے اونچا نہیں۔ یہ 15 ہے۔"
+          },
+          "misconception_id": "bar_height_vs_name"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Monday (Mo)",
+            "ur": "پیر (Mo)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Monday is 20, less than Thursday's 30.",
+            "ur": "پیر 20 ہے، جمعرات کے 30 سے کم۔"
+          },
+          "misconception_id": "scale_misread"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "A bar graph of library books borrowed on five days. The side scale goes up in tens from 0 to 30. Monday 20, Tuesday 25 (halfway between 20 and 30), Wednesday 10, Thursday 30, Friday 15.",
+          "ur": "پانچ دنوں میں لائبریری سے لی گئی کتابوں کا بار گراف۔ اطراف کا پیمانہ 0 سے 30 تک دس دس کے قدموں میں ہے۔ پیر 20، منگل 25 (20 اور 30 کے ٹھیک بیچ میں)، بدھ 10، جمعرات 30، جمعہ 15۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              286.0,
+              144.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              144.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              144.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              102.0
+            ],
+            "to": [
+              37.2,
+              102.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              102.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              60.0
+            ],
+            "to": [
+              37.2,
+              60.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              60.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              18.0
+            ],
+            "to": [
+              37.2,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              18.0
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                47.2,
+                60.0
+              ],
+              [
+                77.0,
+                60.0
+              ],
+              [
+                77.0,
+                144.0
+              ],
+              [
+                47.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              62.1,
+              158.0
+            ],
+            "text": "Mo"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                96.9,
+                39.0
+              ],
+              [
+                126.8,
+                39.0
+              ],
+              [
+                126.8,
+                144.0
+              ],
+              [
+                96.9,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              111.8,
+              158.0
+            ],
+            "text": "Tu"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                146.7,
+                102.0
+              ],
+              [
+                176.5,
+                102.0
+              ],
+              [
+                176.5,
+                144.0
+              ],
+              [
+                146.7,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              161.6,
+              158.0
+            ],
+            "text": "We"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                196.4,
+                18.0
+              ],
+              [
+                226.3,
+                18.0
+              ],
+              [
+                226.3,
+                144.0
+              ],
+              [
+                196.4,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              211.4,
+              158.0
+            ],
+            "text": "Th"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                246.2,
+                81.0
+              ],
+              [
+                276.0,
+                81.0
+              ],
+              [
+                276.0,
+                144.0
+              ],
+              [
+                246.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              261.1,
+              158.0
+            ],
+            "text": "Fr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_diff",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many more books were borrowed on the busiest day than on the quietest day?",
+        "ur": "سب سے مصروف دن سب سے پُرسکون دن سے کتنی کتابیں زیادہ لی گئیں؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Biggest bar minus smallest bar.",
+        "ur": "سب سے بڑا ستون منفی سب سے چھوٹا ستون۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 − 10 = 20 books.",
+        "ur": "درست! 30 − 10 = 20 کتابیں"
+      },
+      "feedback_wrong": {
+        "en": "The tallest is 30 and the shortest is 10: 30 − 10 = 20.",
+        "ur": "سب سے اونچا 30 اور سب سے چھوٹا 10 ہے: 30 − 10 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "40 is 30 + 10, the two bars added. 'How many more' means subtract: 20.",
+            "ur": "40 یعنی 30 + 10، دونوں ستون جمع۔ 'کتنے زیادہ' کا مطلب گھٹانا ہے: 20"
+          },
+          "misconception_id": "diff_as_total"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is the shortest bar. Subtract it from 30: 20.",
+            "ur": "10 سب سے چھوٹا ستون ہے۔ اسے 30 میں سے گھٹائیں: 20"
+          },
+          "misconception_id": "bar_height_vs_name"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "A bar graph of library books borrowed on five days. The side scale goes up in tens from 0 to 30. Monday 20, Tuesday 25 (halfway between 20 and 30), Wednesday 10, Thursday 30, Friday 15.",
+          "ur": "پانچ دنوں میں لائبریری سے لی گئی کتابوں کا بار گراف۔ اطراف کا پیمانہ 0 سے 30 تک دس دس کے قدموں میں ہے۔ پیر 20، منگل 25 (20 اور 30 کے ٹھیک بیچ میں)، بدھ 10، جمعرات 30، جمعہ 15۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              286.0,
+              144.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              144.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              144.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              102.0
+            ],
+            "to": [
+              37.2,
+              102.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              102.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              60.0
+            ],
+            "to": [
+              37.2,
+              60.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              60.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              18.0
+            ],
+            "to": [
+              37.2,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              18.0
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                47.2,
+                60.0
+              ],
+              [
+                77.0,
+                60.0
+              ],
+              [
+                77.0,
+                144.0
+              ],
+              [
+                47.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              62.1,
+              158.0
+            ],
+            "text": "Mo"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                96.9,
+                39.0
+              ],
+              [
+                126.8,
+                39.0
+              ],
+              [
+                126.8,
+                144.0
+              ],
+              [
+                96.9,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              111.8,
+              158.0
+            ],
+            "text": "Tu"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                146.7,
+                102.0
+              ],
+              [
+                176.5,
+                102.0
+              ],
+              [
+                176.5,
+                144.0
+              ],
+              [
+                146.7,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              161.6,
+              158.0
+            ],
+            "text": "We"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                196.4,
+                18.0
+              ],
+              [
+                226.3,
+                18.0
+              ],
+              [
+                226.3,
+                144.0
+              ],
+              [
+                196.4,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              211.4,
+              158.0
+            ],
+            "text": "Th"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                246.2,
+                81.0
+              ],
+              [
+                276.0,
+                81.0
+              ],
+              [
+                276.0,
+                144.0
+              ],
+              [
+                246.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              261.1,
+              158.0
+            ],
+            "text": "Fr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_total",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many books were borrowed on the five days altogether?",
+        "ur": "پانچوں دنوں میں کل کتنی کتابیں لی گئیں؟"
+      },
+      "answer": 100,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add all five bars: 20, 25, 10, 30, 15.",
+        "ur": "پانچوں ستون جمع کریں: 20، 25، 10، 30، 15"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 + 25 + 10 + 30 + 15 = 100.",
+        "ur": "درست! 20 + 25 + 10 + 30 + 15 = 100"
+      },
+      "feedback_wrong": {
+        "en": "20 + 25 = 45, + 10 = 55, + 30 = 85, + 15 = 100.",
+        "ur": "20 + 25 = 45، + 10 = 55، + 30 = 85، + 15 = 100"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is only the tallest bar. Add all five: 100.",
+            "ur": "30 صرف سب سے اونچا ستون ہے۔ پانچوں جمع کریں: 100"
+          },
+          "misconception_id": "bars_not_added"
+        },
+        {
+          "answer": 75,
+          "feedback": {
+            "en": "75 leaves out one bar. Add all five: 100.",
+            "ur": "75 میں ایک ستون رہ گیا۔ پانچوں جمع کریں: 100"
+          },
+          "misconception_id": "bars_not_added"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 170.0,
+        "alt": {
+          "en": "A bar graph of library books borrowed on five days. The side scale goes up in tens from 0 to 30. Monday 20, Tuesday 25 (halfway between 20 and 30), Wednesday 10, Thursday 30, Friday 15.",
+          "ur": "پانچ دنوں میں لائبریری سے لی گئی کتابوں کا بار گراف۔ اطراف کا پیمانہ 0 سے 30 تک دس دس کے قدموں میں ہے۔ پیر 20، منگل 25 (20 اور 30 کے ٹھیک بیچ میں)، بدھ 10، جمعرات 30، جمعہ 15۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              286.0,
+              144.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              144.0
+            ],
+            "to": [
+              37.2,
+              144.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              144.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              102.0
+            ],
+            "to": [
+              37.2,
+              102.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              102.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              60.0
+            ],
+            "to": [
+              37.2,
+              60.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              60.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              18.0
+            ],
+            "to": [
+              37.2,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              18.0
+            ],
+            "text": "30"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                47.2,
+                60.0
+              ],
+              [
+                77.0,
+                60.0
+              ],
+              [
+                77.0,
+                144.0
+              ],
+              [
+                47.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              62.1,
+              158.0
+            ],
+            "text": "Mo"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                96.9,
+                39.0
+              ],
+              [
+                126.8,
+                39.0
+              ],
+              [
+                126.8,
+                144.0
+              ],
+              [
+                96.9,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              111.8,
+              158.0
+            ],
+            "text": "Tu"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                146.7,
+                102.0
+              ],
+              [
+                176.5,
+                102.0
+              ],
+              [
+                176.5,
+                144.0
+              ],
+              [
+                146.7,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              161.6,
+              158.0
+            ],
+            "text": "We"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                196.4,
+                18.0
+              ],
+              [
+                226.3,
+                18.0
+              ],
+              [
+                226.3,
+                144.0
+              ],
+              [
+                196.4,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              211.4,
+              158.0
+            ],
+            "text": "Th"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                246.2,
+                81.0
+              ],
+              [
+                276.0,
+                81.0
+              ],
+              [
+                276.0,
+                144.0
+              ],
+              [
+                246.2,
+                144.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              261.1,
+              158.0
+            ],
+            "text": "Fr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_hbar",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The horizontal bar graph shows the members of four clubs A, B, C and D. How many members does club B have?",
+        "ur": "افقی بار گراف چار کلبوں A، B، C اور D کے ارکان دکھاتا ہے۔ کلب B کے کتنے ارکان ہیں؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Read along the bar of B to the scale at the bottom.",
+        "ur": "B کے ستون کے ساتھ نیچے کے پیمانے تک پڑھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The bar of B reaches 20.",
+        "ur": "درست! B کا ستون 20 تک پہنچتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Follow the end of the bar down to the scale: 20.",
+        "ur": "ستون کے سرے کو نیچے پیمانے تک دیکھیں: 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the position of B in the list. Read its length: 20.",
+            "ur": "2 فہرست میں B کی جگہ ہے۔ اس کی لمبائی پڑھیں: 20"
+          },
+          "misconception_id": "bar_height_vs_name"
+        },
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "16 is club D. Club B is the longest bar: 20.",
+            "ur": "16 کلب D ہے۔ کلب B سب سے لمبا ستون ہے: 20"
+          },
+          "misconception_id": "bar_height_vs_name"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 162.0,
+        "alt": {
+          "en": "A horizontal bar graph of members in four clubs. The scale along the bottom goes up in fours from 0 to 20. Club A 12, club B 20, club C 8, club D 16.",
+          "ur": "چار کلبوں کے ارکان کا افقی بار گراف۔ نیچے کا پیمانہ 0 سے 20 تک چار چار کے قدموں میں ہے۔ کلب A میں 12، کلب B میں 20، کلب C میں 8، کلب D میں 16۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              44.0,
+              134.0
+            ],
+            "to": [
+              284.0,
+              134.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.0,
+              134.0
+            ],
+            "to": [
+              44.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.0,
+              134.0
+            ],
+            "to": [
+              44.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              44.0,
+              150.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              92.0,
+              134.0
+            ],
+            "to": [
+              92.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              92.0,
+              150.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              140.0,
+              134.0
+            ],
+            "to": [
+              140.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              140.0,
+              150.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "line",
+            "from": [
+              188.0,
+              134.0
+            ],
+            "to": [
+              188.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              188.0,
+              150.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "line",
+            "from": [
+              236.0,
+              134.0
+            ],
+            "to": [
+              236.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              236.0,
+              150.0
+            ],
+            "text": "16"
+          },
+          {
+            "kind": "line",
+            "from": [
+              284.0,
+              134.0
+            ],
+            "to": [
+              284.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              284.0,
+              150.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              29.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                20.0
+              ],
+              [
+                188.0,
+                20.0
+              ],
+              [
+                188.0,
+                38.0
+              ],
+              [
+                44.0,
+                38.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              59.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                50.0
+              ],
+              [
+                284.0,
+                50.0
+              ],
+              [
+                284.0,
+                68.0
+              ],
+              [
+                44.0,
+                68.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              89.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                80.0
+              ],
+              [
+                140.0,
+                80.0
+              ],
+              [
+                140.0,
+                98.0
+              ],
+              [
+                44.0,
+                98.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              119.0
+            ],
+            "text": "D"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                110.0
+              ],
+              [
+                236.0,
+                110.0
+              ],
+              [
+                236.0,
+                128.0
+              ],
+              [
+                44.0,
+                128.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_hdiff",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many more members does club B have than club C?",
+        "ur": "کلب B کے ارکان کلب C سے کتنے زیادہ ہیں؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Read both bars, then subtract.",
+        "ur": "دونوں ستون پڑھیں، پھر گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 − 8 = 12 more.",
+        "ur": "درست! 20 − 8 = 12 زیادہ"
+      },
+      "feedback_wrong": {
+        "en": "B has 20 and C has 8: 20 − 8 = 12.",
+        "ur": "B کے 20 اور C کے 8 ہیں: 20 − 8 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 28,
+          "feedback": {
+            "en": "28 is 20 + 8. 'How many more' means subtract: 12.",
+            "ur": "28 یعنی 20 + 8۔ 'کتنے زیادہ' کا مطلب گھٹانا ہے: 12"
+          },
+          "misconception_id": "diff_as_total"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 is club B alone. Subtract club C's 8: 12.",
+            "ur": "20 صرف کلب B ہے۔ کلب C کے 8 گھٹائیں: 12"
+          },
+          "misconception_id": "diff_as_total"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 162.0,
+        "alt": {
+          "en": "A horizontal bar graph of members in four clubs. The scale along the bottom goes up in fours from 0 to 20. Club A 12, club B 20, club C 8, club D 16.",
+          "ur": "چار کلبوں کے ارکان کا افقی بار گراف۔ نیچے کا پیمانہ 0 سے 20 تک چار چار کے قدموں میں ہے۔ کلب A میں 12، کلب B میں 20، کلب C میں 8، کلب D میں 16۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              44.0,
+              134.0
+            ],
+            "to": [
+              284.0,
+              134.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.0,
+              134.0
+            ],
+            "to": [
+              44.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.0,
+              134.0
+            ],
+            "to": [
+              44.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              44.0,
+              150.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              92.0,
+              134.0
+            ],
+            "to": [
+              92.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              92.0,
+              150.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              140.0,
+              134.0
+            ],
+            "to": [
+              140.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              140.0,
+              150.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "line",
+            "from": [
+              188.0,
+              134.0
+            ],
+            "to": [
+              188.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              188.0,
+              150.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "line",
+            "from": [
+              236.0,
+              134.0
+            ],
+            "to": [
+              236.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              236.0,
+              150.0
+            ],
+            "text": "16"
+          },
+          {
+            "kind": "line",
+            "from": [
+              284.0,
+              134.0
+            ],
+            "to": [
+              284.0,
+              138.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              284.0,
+              150.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              29.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                20.0
+              ],
+              [
+                188.0,
+                20.0
+              ],
+              [
+                188.0,
+                38.0
+              ],
+              [
+                44.0,
+                38.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              59.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                50.0
+              ],
+              [
+                284.0,
+                50.0
+              ],
+              [
+                284.0,
+                68.0
+              ],
+              [
+                44.0,
+                68.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              89.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                80.0
+              ],
+              [
+                140.0,
+                80.0
+              ],
+              [
+                140.0,
+                98.0
+              ],
+              [
+                44.0,
+                98.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              119.0
+            ],
+            "text": "D"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                44.0,
+                110.0
+              ],
+              [
+                236.0,
+                110.0
+              ],
+              [
+                236.0,
+                128.0
+              ],
+              [
+                44.0,
+                128.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_double",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The double bar graph shows boys (filled bar) and girls (empty bar) in classes A, B and C. How many girls are in class C?",
+        "ur": "دوہرا بار گراف جماعتوں A، B اور C میں لڑکے (بھرا ستون) اور لڑکیاں (خالی ستون) دکھاتا ہے۔ جماعت C میں کتنی لڑکیاں ہیں؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find class C, then take the empty bar.",
+        "ur": "جماعت C ڈھونڈیں، پھر خالی ستون لیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The empty bar of class C reaches 15.",
+        "ur": "درست! جماعت C کا خالی ستون 15 تک پہنچتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The filled bar is the boys (20). The empty bar is the girls: 15.",
+        "ur": "بھرا ستون لڑکوں کا ہے (20)۔ خالی ستون لڑکیوں کا ہے: 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 is the filled bar, the boys of class C. The girls' bar is 15.",
+            "ur": "20 بھرا ستون ہے، یعنی جماعت C کے لڑکے۔ لڑکیوں کا ستون 15 ہے۔"
+          },
+          "misconception_id": "one_bar_only"
+        },
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "35 is boys and girls together. The question asks for girls: 15.",
+            "ur": "35 لڑکے اور لڑکیاں ملا کر ہیں۔ سوال لڑکیاں پوچھتا ہے: 15"
+          },
+          "misconception_id": "one_bar_only"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 180.0,
+        "alt": {
+          "en": "A double bar graph of boys (filled bar) and girls (empty bar) in three classes. The scale goes up in fives. Class A: 15 boys and 20 girls. Class B: 10 boys and 5 girls. Class C: 20 boys and 15 girls.",
+          "ur": "تین جماعتوں میں لڑکوں (بھرا ستون) اور لڑکیوں (خالی ستون) کا دوہرا بار گراف۔ پیمانہ پانچ پانچ کے قدموں میں ہے۔ جماعت A: 15 لڑکے اور 20 لڑکیاں۔ جماعت B: 10 لڑکے اور 5 لڑکیاں۔ جماعت C: 20 لڑکے اور 15 لڑکیاں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              288.0,
+              154.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              154.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              154.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              124.0
+            ],
+            "to": [
+              37.2,
+              124.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              124.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              94.0
+            ],
+            "to": [
+              37.2,
+              94.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              94.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              64.0
+            ],
+            "to": [
+              37.2,
+              64.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              64.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              34.0
+            ],
+            "to": [
+              37.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              34.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.2,
+                64.0
+              ],
+              [
+                78.0,
+                64.0
+              ],
+              [
+                78.0,
+                154.0
+              ],
+              [
+                51.2,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                80.0,
+                34.0
+              ],
+              [
+                106.8,
+                34.0
+              ],
+              [
+                106.8,
+                154.0
+              ],
+              [
+                80.0,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.0,
+              168.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                134.8,
+                94.0
+              ],
+              [
+                161.6,
+                94.0
+              ],
+              [
+                161.6,
+                154.0
+              ],
+              [
+                134.8,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                163.6,
+                124.0
+              ],
+              [
+                190.4,
+                124.0
+              ],
+              [
+                190.4,
+                154.0
+              ],
+              [
+                163.6,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              162.6,
+              168.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                218.4,
+                34.0
+              ],
+              [
+                245.2,
+                34.0
+              ],
+              [
+                245.2,
+                154.0
+              ],
+              [
+                218.4,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                247.2,
+                64.0
+              ],
+              [
+                274.0,
+                64.0
+              ],
+              [
+                274.0,
+                154.0
+              ],
+              [
+                247.2,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              246.2,
+              168.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                188.0,
+                8.0
+              ],
+              [
+                200.0,
+                8.0
+              ],
+              [
+                200.0,
+                20.0
+              ],
+              [
+                188.0,
+                20.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              212.0,
+              14.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                238.0,
+                8.0
+              ],
+              [
+                250.0,
+                8.0
+              ],
+              [
+                250.0,
+                20.0
+              ],
+              [
+                238.0,
+                20.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              262.0,
+              14.0
+            ],
+            "text": "G"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q9_class_total",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many children are there in class A altogether?",
+        "ur": "جماعت A میں کل کتنے بچے ہیں؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the boys' bar and the girls' bar of class A.",
+        "ur": "جماعت A کا لڑکوں کا اور لڑکیوں کا ستون جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 + 20 = 35 children.",
+        "ur": "درست! 15 + 20 = 35 بچے"
+      },
+      "feedback_wrong": {
+        "en": "Boys 15 and girls 20: 15 + 20 = 35.",
+        "ur": "لڑکے 15 اور لڑکیاں 20: 15 + 20 = 35"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15 is only the boys. Add the girls too: 35.",
+            "ur": "15 صرف لڑکے ہیں۔ لڑکیاں بھی جمع کریں: 35"
+          },
+          "misconception_id": "one_bar_only"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 is only the girls. Add the boys too: 35.",
+            "ur": "20 صرف لڑکیاں ہیں۔ لڑکے بھی جمع کریں: 35"
+          },
+          "misconception_id": "one_bar_only"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 180.0,
+        "alt": {
+          "en": "A double bar graph of boys (filled bar) and girls (empty bar) in three classes. The scale goes up in fives. Class A: 15 boys and 20 girls. Class B: 10 boys and 5 girls. Class C: 20 boys and 15 girls.",
+          "ur": "تین جماعتوں میں لڑکوں (بھرا ستون) اور لڑکیوں (خالی ستون) کا دوہرا بار گراف۔ پیمانہ پانچ پانچ کے قدموں میں ہے۔ جماعت A: 15 لڑکے اور 20 لڑکیاں۔ جماعت B: 10 لڑکے اور 5 لڑکیاں۔ جماعت C: 20 لڑکے اور 15 لڑکیاں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              288.0,
+              154.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              154.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              154.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              124.0
+            ],
+            "to": [
+              37.2,
+              124.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              124.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              94.0
+            ],
+            "to": [
+              37.2,
+              94.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              94.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              64.0
+            ],
+            "to": [
+              37.2,
+              64.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              64.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              34.0
+            ],
+            "to": [
+              37.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              34.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.2,
+                64.0
+              ],
+              [
+                78.0,
+                64.0
+              ],
+              [
+                78.0,
+                154.0
+              ],
+              [
+                51.2,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                80.0,
+                34.0
+              ],
+              [
+                106.8,
+                34.0
+              ],
+              [
+                106.8,
+                154.0
+              ],
+              [
+                80.0,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.0,
+              168.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                134.8,
+                94.0
+              ],
+              [
+                161.6,
+                94.0
+              ],
+              [
+                161.6,
+                154.0
+              ],
+              [
+                134.8,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                163.6,
+                124.0
+              ],
+              [
+                190.4,
+                124.0
+              ],
+              [
+                190.4,
+                154.0
+              ],
+              [
+                163.6,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              162.6,
+              168.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                218.4,
+                34.0
+              ],
+              [
+                245.2,
+                34.0
+              ],
+              [
+                245.2,
+                154.0
+              ],
+              [
+                218.4,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                247.2,
+                64.0
+              ],
+              [
+                274.0,
+                64.0
+              ],
+              [
+                274.0,
+                154.0
+              ],
+              [
+                247.2,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              246.2,
+              168.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                188.0,
+                8.0
+              ],
+              [
+                200.0,
+                8.0
+              ],
+              [
+                200.0,
+                20.0
+              ],
+              [
+                188.0,
+                20.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              212.0,
+              14.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                238.0,
+                8.0
+              ],
+              [
+                250.0,
+                8.0
+              ],
+              [
+                250.0,
+                20.0
+              ],
+              [
+                238.0,
+                20.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              262.0,
+              14.0
+            ],
+            "text": "G"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10_more_girls",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many more girls than boys are in class A?",
+        "ur": "جماعت A میں لڑکوں سے لڑکیاں کتنی زیادہ ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Girls' bar minus boys' bar in class A.",
+        "ur": "جماعت A میں لڑکیوں کا ستون منفی لڑکوں کا ستون۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 − 15 = 5 more girls.",
+        "ur": "درست! 20 − 15 = 5 لڑکیاں زیادہ"
+      },
+      "feedback_wrong": {
+        "en": "The girls are 20 and the boys are 15: 20 − 15 = 5.",
+        "ur": "لڑکیاں 20 اور لڑکے 15 ہیں: 20 − 15 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "35 is both bars added. 'How many more' means subtract: 5.",
+            "ur": "35 دونوں ستون جمع ہیں۔ 'کتنے زیادہ' کا مطلب گھٹانا ہے: 5"
+          },
+          "misconception_id": "diff_as_total"
+        },
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "20 is the girls alone. Subtract the 15 boys: 5.",
+            "ur": "20 صرف لڑکیاں ہیں۔ 15 لڑکے گھٹائیں: 5"
+          },
+          "misconception_id": "diff_as_total"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 180.0,
+        "alt": {
+          "en": "A double bar graph of boys (filled bar) and girls (empty bar) in three classes. The scale goes up in fives. Class A: 15 boys and 20 girls. Class B: 10 boys and 5 girls. Class C: 20 boys and 15 girls.",
+          "ur": "تین جماعتوں میں لڑکوں (بھرا ستون) اور لڑکیوں (خالی ستون) کا دوہرا بار گراف۔ پیمانہ پانچ پانچ کے قدموں میں ہے۔ جماعت A: 15 لڑکے اور 20 لڑکیاں۔ جماعت B: 10 لڑکے اور 5 لڑکیاں۔ جماعت C: 20 لڑکے اور 15 لڑکیاں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              288.0,
+              154.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              154.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              154.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              124.0
+            ],
+            "to": [
+              37.2,
+              124.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              124.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              94.0
+            ],
+            "to": [
+              37.2,
+              94.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              94.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              64.0
+            ],
+            "to": [
+              37.2,
+              64.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              64.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              34.0
+            ],
+            "to": [
+              37.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              34.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.2,
+                64.0
+              ],
+              [
+                78.0,
+                64.0
+              ],
+              [
+                78.0,
+                154.0
+              ],
+              [
+                51.2,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                80.0,
+                34.0
+              ],
+              [
+                106.8,
+                34.0
+              ],
+              [
+                106.8,
+                154.0
+              ],
+              [
+                80.0,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.0,
+              168.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                134.8,
+                94.0
+              ],
+              [
+                161.6,
+                94.0
+              ],
+              [
+                161.6,
+                154.0
+              ],
+              [
+                134.8,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                163.6,
+                124.0
+              ],
+              [
+                190.4,
+                124.0
+              ],
+              [
+                190.4,
+                154.0
+              ],
+              [
+                163.6,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              162.6,
+              168.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                218.4,
+                34.0
+              ],
+              [
+                245.2,
+                34.0
+              ],
+              [
+                245.2,
+                154.0
+              ],
+              [
+                218.4,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                247.2,
+                64.0
+              ],
+              [
+                274.0,
+                64.0
+              ],
+              [
+                274.0,
+                154.0
+              ],
+              [
+                247.2,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              246.2,
+              168.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                188.0,
+                8.0
+              ],
+              [
+                200.0,
+                8.0
+              ],
+              [
+                200.0,
+                20.0
+              ],
+              [
+                188.0,
+                20.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              212.0,
+              14.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                238.0,
+                8.0
+              ],
+              [
+                250.0,
+                8.0
+              ],
+              [
+                250.0,
+                20.0
+              ],
+              [
+                238.0,
+                20.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              262.0,
+              14.0
+            ],
+            "text": "G"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q11_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Daud looks at class A in the double bar graph and says: there are 15 children in class A, because the first bar reaches 15. What went wrong?",
+        "ur": "داؤد دوہرے بار گراف میں جماعت A دیکھ کر کہتا ہے: جماعت A میں 15 بچے ہیں، کیونکہ پہلا ستون 15 تک پہنچتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. A class is shown by its first bar.",
+            "ur": "کوئی غلطی نہیں۔ جماعت کو اس کا پہلا ستون دکھاتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each class has two bars, one for each group.",
+            "ur": "ہر جماعت کے دو ستون ہیں، ہر گروہ کا ایک۔"
+          },
+          "misconception_id": "one_bar_only"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The first bar is only the boys. The girls' bar must be added too: 15 + 20 = 35.",
+            "ur": "پہلا ستون صرف لڑکوں کا ہے۔ لڑکیوں کا ستون بھی جمع کرنا ہوگا: 15 + 20 = 35"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each class has two bars, and both are needed for the number of children.",
+            "ur": "جی ہاں! ہر جماعت کے دو ستون ہیں، اور بچوں کی تعداد کے لیے دونوں چاہییں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should have used the taller bar, 20.",
+            "ur": "اسے اونچا ستون، 20، لینا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The taller bar is only the girls. The total needs both.",
+            "ur": "اونچا ستون صرف لڑکیوں کا ہے۔ کل کے لیے دونوں چاہییں۔"
+          },
+          "misconception_id": "one_bar_only"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 180.0,
+        "alt": {
+          "en": "A double bar graph of boys (filled bar) and girls (empty bar) in three classes. The scale goes up in fives. Class A: 15 boys and 20 girls. Class B: 10 boys and 5 girls. Class C: 20 boys and 15 girls.",
+          "ur": "تین جماعتوں میں لڑکوں (بھرا ستون) اور لڑکیوں (خالی ستون) کا دوہرا بار گراف۔ پیمانہ پانچ پانچ کے قدموں میں ہے۔ جماعت A: 15 لڑکے اور 20 لڑکیاں۔ جماعت B: 10 لڑکے اور 5 لڑکیاں۔ جماعت C: 20 لڑکے اور 15 لڑکیاں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              288.0,
+              154.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              37.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              26.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              154.0
+            ],
+            "to": [
+              37.2,
+              154.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              154.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              124.0
+            ],
+            "to": [
+              37.2,
+              124.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24.4,
+              124.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              94.0
+            ],
+            "to": [
+              37.2,
+              94.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              94.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              64.0
+            ],
+            "to": [
+              37.2,
+              64.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              64.0
+            ],
+            "text": "15"
+          },
+          {
+            "kind": "line",
+            "from": [
+              33.2,
+              34.0
+            ],
+            "to": [
+              37.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19.6,
+              34.0
+            ],
+            "text": "20"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.2,
+                64.0
+              ],
+              [
+                78.0,
+                64.0
+              ],
+              [
+                78.0,
+                154.0
+              ],
+              [
+                51.2,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                80.0,
+                34.0
+              ],
+              [
+                106.8,
+                34.0
+              ],
+              [
+                106.8,
+                154.0
+              ],
+              [
+                80.0,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              79.0,
+              168.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                134.8,
+                94.0
+              ],
+              [
+                161.6,
+                94.0
+              ],
+              [
+                161.6,
+                154.0
+              ],
+              [
+                134.8,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                163.6,
+                124.0
+              ],
+              [
+                190.4,
+                124.0
+              ],
+              [
+                190.4,
+                154.0
+              ],
+              [
+                163.6,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              162.6,
+              168.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                218.4,
+                34.0
+              ],
+              [
+                245.2,
+                34.0
+              ],
+              [
+                245.2,
+                154.0
+              ],
+              [
+                218.4,
+                154.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                247.2,
+                64.0
+              ],
+              [
+                274.0,
+                64.0
+              ],
+              [
+                274.0,
+                154.0
+              ],
+              [
+                247.2,
+                154.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              246.2,
+              168.0
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                188.0,
+                8.0
+              ],
+              [
+                200.0,
+                8.0
+              ],
+              [
+                200.0,
+                20.0
+              ],
+              [
+                188.0,
+                20.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              212.0,
+              14.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                238.0,
+                8.0
+              ],
+              [
+                250.0,
+                8.0
+              ],
+              [
+                250.0,
+                20.0
+              ],
+              [
+                238.0,
+                20.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              262.0,
+              14.0
+            ],
+            "text": "G"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can read any bar graph.",
+          "ur": "شاباش! آپ کوئی بھی بار گراف پڑھ سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Read the scale first, then the bar. A bar ending halfway between two marks is halfway between their values. For a double bar graph, use the key and read the right bar; add both bars for a class total. 'How many more' means subtract, 'altogether' means add.",
+        "ur": "پہلے پیمانہ پڑھیں، پھر ستون۔ جو ستون دو نشانوں کے ٹھیک بیچ میں ختم ہو وہ ان کی قیمتوں کے ٹھیک بیچ میں ہے۔ دوہرے بار گراف میں کلید دیکھیں اور صحیح ستون پڑھیں؛ جماعت کے کل کے لیے دونوں ستون جمع کریں۔ 'کتنے زیادہ' کا مطلب گھٹانا، 'کل' کا مطلب جمع کرنا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Scale first, then the bar.",
+          "ur": "پہلے پیمانہ، پھر ستون۔"
+        },
+        {
+          "en": "More than: subtract. Altogether: add.",
+          "ur": "کتنے زیادہ: گھٹائیں۔ کل: جمع کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_hbar",
+      "type": "apply",
+      "step": {
+        "id": "r_hbar",
+        "type": "number",
+        "prompt": {
+          "en": "The horizontal graph shows four bars A, B, C and D. How many more does bar D show than bar C?",
+          "ur": "افقی گراف میں چار ستون A، B، C اور D ہیں۔ ستون D، ستون C سے کتنا زیادہ دکھاتا ہے؟"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "Read D and C, then subtract.",
+          "ur": "D اور C پڑھیں، پھر گھٹائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 16 − 4 = 12.",
+          "ur": "درست! 16 − 4 = 12"
+        },
+        "feedback_wrong": {
+          "en": "D is 16 and C is 4: 16 − 4 = 12.",
+          "ur": "D کا 16 اور C کا 4 ہے: 16 − 4 = 12"
+        },
+        "common_wrong": [
+          {
+            "answer": 20,
+            "feedback": {
+              "en": "20 is 16 + 4. 'How many more' means subtract: 12.",
+              "ur": "20 یعنی 16 + 4۔ 'کتنے زیادہ' کا مطلب گھٹانا ہے: 12"
+            },
+            "misconception_id": "diff_as_total"
+          }
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 162.0,
+          "alt": {
+            "en": "A horizontal bar graph with four bars. The scale along the bottom goes up in fours from 0 to 16. Bar A 8, bar B 12, bar C 4, bar D 16.",
+            "ur": "چار ستونوں کا افقی بار گراف۔ نیچے کا پیمانہ 0 سے 16 تک چار چار کے قدموں میں ہے۔ ستون A 8، ستون B 12، ستون C 4، ستون D 16۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                44.0,
+                134.0
+              ],
+              "to": [
+                284.0,
+                134.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                44.0,
+                134.0
+              ],
+              "to": [
+                44.0,
+                8.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                44.0,
+                134.0
+              ],
+              "to": [
+                44.0,
+                138.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                44.0,
+                150.0
+              ],
+              "text": "0"
+            },
+            {
+              "kind": "line",
+              "from": [
+                104.0,
+                134.0
+              ],
+              "to": [
+                104.0,
+                138.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                104.0,
+                150.0
+              ],
+              "text": "4"
+            },
+            {
+              "kind": "line",
+              "from": [
+                164.0,
+                134.0
+              ],
+              "to": [
+                164.0,
+                138.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                164.0,
+                150.0
+              ],
+              "text": "8"
+            },
+            {
+              "kind": "line",
+              "from": [
+                224.0,
+                134.0
+              ],
+              "to": [
+                224.0,
+                138.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                224.0,
+                150.0
+              ],
+              "text": "12"
+            },
+            {
+              "kind": "line",
+              "from": [
+                284.0,
+                134.0
+              ],
+              "to": [
+                284.0,
+                138.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                284.0,
+                150.0
+              ],
+              "text": "16"
+            },
+            {
+              "kind": "label",
+              "at": [
+                28.0,
+                29.0
+              ],
+              "text": "A"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  44.0,
+                  20.0
+                ],
+                [
+                  164.0,
+                  20.0
+                ],
+                [
+                  164.0,
+                  38.0
+                ],
+                [
+                  44.0,
+                  38.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                28.0,
+                59.0
+              ],
+              "text": "B"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  44.0,
+                  50.0
+                ],
+                [
+                  224.0,
+                  50.0
+                ],
+                [
+                  224.0,
+                  68.0
+                ],
+                [
+                  44.0,
+                  68.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                28.0,
+                89.0
+              ],
+              "text": "C"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  44.0,
+                  80.0
+                ],
+                [
+                  104.0,
+                  80.0
+                ],
+                [
+                  104.0,
+                  98.0
+                ],
+                [
+                  44.0,
+                  98.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                28.0,
+                119.0
+              ],
+              "text": "D"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  44.0,
+                  110.0
+                ],
+                [
+                  284.0,
+                  110.0
+                ],
+                [
+                  284.0,
+                  128.0
+                ],
+                [
+                  44.0,
+                  128.0
+                ]
+              ],
+              "fill": true
+            }
+          ]
+        }
+      },
+      "skill": "maths.data.ex_11_2"
+    },
+    {
+      "id": "r_double",
+      "type": "apply",
+      "step": {
+        "id": "r_double",
+        "type": "number",
+        "prompt": {
+          "en": "In team B of the double bar graph, how many more girls (empty bar) than boys (filled bar) are there?",
+          "ur": "دوہرے بار گراف کی ٹیم B میں لڑکیاں (خالی ستون) لڑکوں (بھرا ستون) سے کتنی زیادہ ہیں؟"
+        },
+        "answer": 10,
+        "checker": "numeric",
+        "hint": {
+          "en": "Team B: girls' bar minus boys' bar.",
+          "ur": "ٹیم B: لڑکیوں کا ستون منفی لڑکوں کا ستون۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 20 − 10 = 10 more girls.",
+          "ur": "درست! 20 − 10 = 10 لڑکیاں زیادہ"
+        },
+        "feedback_wrong": {
+          "en": "The girls are 20 and the boys are 10: 20 − 10 = 10.",
+          "ur": "لڑکیاں 20 اور لڑکے 10 ہیں: 20 − 10 = 10"
+        },
+        "common_wrong": [
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "30 is boys and girls added. 'How many more' means subtract: 10.",
+              "ur": "30 لڑکے اور لڑکیاں جمع ہیں۔ 'کتنے زیادہ' کا مطلب گھٹانا ہے: 10"
+            },
+            "misconception_id": "diff_as_total"
+          }
+        ],
+        "figure": {
+          "width": 300.0,
+          "height": 180.0,
+          "alt": {
+            "en": "A double bar graph of boys (filled bar) and girls (empty bar) in two teams. The scale goes up in tens. Team A: 30 boys and 25 girls. Team B: 10 boys and 20 girls.",
+            "ur": "دو ٹیموں میں لڑکوں (بھرا ستون) اور لڑکیوں (خالی ستون) کا دوہرا بار گراف۔ پیمانہ دس دس کے قدموں میں ہے۔ ٹیم A: 30 لڑکے اور 25 لڑکیاں۔ ٹیم B: 10 لڑکے اور 20 لڑکیاں۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                37.2,
+                154.0
+              ],
+              "to": [
+                288.0,
+                154.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                37.2,
+                154.0
+              ],
+              "to": [
+                37.2,
+                26.0
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                33.2,
+                154.0
+              ],
+              "to": [
+                37.2,
+                154.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                24.4,
+                154.0
+              ],
+              "text": "0"
+            },
+            {
+              "kind": "line",
+              "from": [
+                33.2,
+                114.0
+              ],
+              "to": [
+                37.2,
+                114.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                19.6,
+                114.0
+              ],
+              "text": "10"
+            },
+            {
+              "kind": "line",
+              "from": [
+                33.2,
+                74.0
+              ],
+              "to": [
+                37.2,
+                74.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                19.6,
+                74.0
+              ],
+              "text": "20"
+            },
+            {
+              "kind": "line",
+              "from": [
+                33.2,
+                34.0
+              ],
+              "to": [
+                37.2,
+                34.0
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                19.6,
+                34.0
+              ],
+              "text": "30"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  68.9,
+                  34.0
+                ],
+                [
+                  98.9,
+                  34.0
+                ],
+                [
+                  98.9,
+                  154.0
+                ],
+                [
+                  68.9,
+                  154.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  100.9,
+                  54.0
+                ],
+                [
+                  130.9,
+                  54.0
+                ],
+                [
+                  130.9,
+                  154.0
+                ],
+                [
+                  100.9,
+                  154.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                99.9,
+                168.0
+              ],
+              "text": "A"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  194.3,
+                  114.0
+                ],
+                [
+                  224.3,
+                  114.0
+                ],
+                [
+                  224.3,
+                  154.0
+                ],
+                [
+                  194.3,
+                  154.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  226.3,
+                  74.0
+                ],
+                [
+                  256.3,
+                  74.0
+                ],
+                [
+                  256.3,
+                  154.0
+                ],
+                [
+                  226.3,
+                  154.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                225.3,
+                168.0
+              ],
+              "text": "B"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  188.0,
+                  8.0
+                ],
+                [
+                  200.0,
+                  8.0
+                ],
+                [
+                  200.0,
+                  20.0
+                ],
+                [
+                  188.0,
+                  20.0
+                ]
+              ],
+              "fill": true
+            },
+            {
+              "kind": "label",
+              "at": [
+                212.0,
+                14.0
+              ],
+              "text": "B"
+            },
+            {
+              "kind": "polygon",
+              "points": [
+                [
+                  238.0,
+                  8.0
+                ],
+                [
+                  250.0,
+                  8.0
+                ],
+                [
+                  250.0,
+                  20.0
+                ],
+                [
+                  238.0,
+                  20.0
+                ]
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                262.0,
+                14.0
+              ],
+              "text": "G"
+            }
+          ]
+        }
+      },
+      "skill": "maths.data.ex_11_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 11.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the meaning of the scale (q1), reading a bar that ends between two marks (q2, qb_read, qb_find_error), the tallest bar, a difference and a total from a vertical graph (q3 to q5), a horizontal graph (q6, q7) and a double bar graph with a key (q8 to q11).",
+    "Each wrong answer is a real mistake: reading the mark below, adding for 'how many more', reading only one bar of a pair, and answering with the position of a bar.",
+    "The app cannot check a drawing, so these questions are about reading the graphs; drawing them is the home task. Figure labels are single letters or numbers; the step text says what the letters stand for.",
+    "Urdu terms to check: بار گراف (ستونی گراف), ستون, پیمانہ, محور and دوہرا بار گراف, all as in the existing Data Handling lessons. New Urdu terms, which a teacher should confirm: کلید (key of a graph) and افقی بار گراف / عمودی بار گراف (horizontal / vertical bar graph).",
+    "The numbers were worked out in content/sources/g6-maths-10/exercise_11_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

@@ -271,6 +271,11 @@ const grade6Book = [
         'g6-maths-10-median',
         'g6-maths-10-mode-and-range',
         'g6-maths-10-data-word-problems',
+        'g6-maths-10-exercise-11-1',
+        'g6-maths-10-exercise-11-2',
+        'g6-maths-10-exercise-11-3',
+        'g6-maths-10-exercise-11-4',
+        'g6-maths-10-chapter-11-test',
       ]),
       BookChapter(LocalizedText(en: 'Probability', ur: 'احتمال'), [
         'g6-maths-17-sample-space',
