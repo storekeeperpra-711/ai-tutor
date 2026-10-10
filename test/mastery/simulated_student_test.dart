@@ -132,24 +132,21 @@ void main() {
       s.states[skill]?.level(curriculum.criteriaFor(skill)) ??
       MasteryLevel.notStarted;
 
-  test(
-    'a hundred and fifty-seven weeks of plans: every lesson done, skills secure',
-    () {
-      final s = SimulatedStudent(curriculum)..studyFor(1100, start);
+  test('a hundred and fifty-seven weeks of plans: every lesson done, skills secure', () {
+    final s = SimulatedStudent(curriculum)..studyFor(1100, start);
 
-      for (final lesson in curriculum.lessons) {
-        expect(s.lessons[lesson.id]?.completed, isTrue, reason: lesson.id);
-      }
-      for (final skill in [fractions, equations, balancing]) {
-        expect(
-          levelOf(s, skill).index,
-          greaterThanOrEqualTo(MasteryLevel.mastered.index),
-          reason: skill,
-        );
-      }
-      expect(levelOf(s, fractions), MasteryLevel.secure);
-    },
-  );
+    for (final lesson in curriculum.lessons) {
+      expect(s.lessons[lesson.id]?.completed, isTrue, reason: lesson.id);
+    }
+    for (final skill in [fractions, equations, balancing]) {
+      expect(
+        levelOf(s, skill).index,
+        greaterThanOrEqualTo(MasteryLevel.mastered.index),
+        reason: skill,
+      );
+    }
+    expect(levelOf(s, fractions), MasteryLevel.secure);
+  });
 
   test('with the hidden units left out, every shown lesson is still done', () {
     final shown = Curriculum([
