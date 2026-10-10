@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-volume-cube",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Volume of a cube, and litres",
     "ur": "مکعب کا حجم اور لیٹر"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.solids.volume_cuboid"
@@ -370,6 +370,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A tank holds 1000 litres. How big is it?",
+          "ur": "ایک ٹینکی میں 1000 لیٹر آتا ہے۔ وہ کتنی بڑی ہے؟"
+        }
+      },
+      "text": {
+        "en": "A cube has equal edges, so its volume is edge × edge × edge. Shops sell milk, oil and water in litres, while builders measure boxes in centimetres and metres. People needed to link the two. A box 10 cm on each side holds 1000 cubic centimetres, which is exactly 1 litre. Now space and liquid can be compared.",
+        "ur": "مکعب کے سب کنارے برابر ہوتے ہیں، اس لیے اس کا حجم کنارہ × کنارہ × کنارہ ہے۔ دکانوں پر دودھ، تیل اور پانی لیٹر میں بکتا ہے، جبکہ معمار ڈبوں کو سینٹی میٹر اور میٹر میں ناپتے ہیں۔ لوگوں کو دونوں کو جوڑنا تھا۔ ہر طرف 10 سینٹی میٹر والا ڈبہ 1000 مکعب سینٹی میٹر رکھتا ہے، جو ٹھیک 1 لیٹر ہے۔ اب جگہ اور پانی کا موازنہ ہو سکتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• How many litres of water a cube-shaped tank holds.\n• Reading the size of a milk, juice or oil container.\n• Ice cubes, dice, sugar cubes and building blocks.\n• Deciding if a gift or a toy fits in a box.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• مکعب نما ٹینکی میں کتنے لیٹر پانی آتا ہے۔\n• دودھ، جوس یا تیل کے ڈبے کا سائز پڑھنے میں۔\n• برف کے ٹکڑے، لوڈو کا پانسہ، چینی کے ڈلے اور بلاکس۔\n• یہ دیکھنے میں کہ تحفہ یا کھلونا ڈبے میں آئے گا یا نہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

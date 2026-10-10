@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-18-rotational-symmetry",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Rotational symmetry",
     "ur": "گردشی تشاکل"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.symmetry.line_symmetry"
@@ -406,6 +406,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why does a ceiling fan look the same after it turns?",
+          "ur": "چھت کا پنکھا گھوم کر بھی ویسا ہی کیوں لگتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Some shapes do not match when folded, but they look exactly the same after a turn around their centre: a fan, a wheel, a windmill, a flower. This is rotational symmetry. The order says how many times it looks the same in one full turn of 360°. People use it to make wheels and machines that spin evenly and look balanced.",
+        "ur": "کچھ شکلیں تہہ کرنے پر نہیں ملتیں، مگر اپنے مرکز کے گرد گھومنے کے بعد بالکل ویسی ہی لگتی ہیں: پنکھا، پہیہ، ہوا کی چکی، پھول۔ یہ گردشی تشاکل ہے۔ درجہ بتاتا ہے کہ ایک پورے چکر (360°) میں شکل کتنی بار ایک جیسی لگتی ہے۔ لوگ اسے ایسے پہیے اور مشینیں بنانے میں استعمال کرتے ہیں جو برابر گھومیں اور متوازن لگیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Ceiling fans, wheels, gears and windmills.\n• Flowers and star shapes in designs and logos.\n• A clock face and the cap of a bottle.\n• A spinning toy or a wheel of a bicycle.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• چھت کے پنکھے، پہیے، گراریاں اور ہوا کی چکیاں۔\n• ڈیزائنوں اور لوگو میں پھول اور ستارے کی شکلیں۔\n• گھڑی کا ڈائل اور بوتل کا ڈھکن۔\n• گھومنے والا کھلونا یا سائیکل کا پہیہ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

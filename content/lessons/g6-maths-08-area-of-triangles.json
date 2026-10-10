@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-area-of-triangles",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Area of triangles",
     "ur": "مثلث کا رقبہ"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.measurement.area_rectangle"
@@ -385,6 +385,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A field is shaped like a triangle. How do we measure it?",
+          "ur": "ایک کھیت مثلث کی شکل کا ہے۔ ہم اسے کیسے ناپیں؟"
+        }
+      },
+      "text": {
+        "en": "Not every plot is a rectangle. Many are cut at a slant by a road or a canal. People noticed that a triangle fits inside a rectangle with the same base and height, and fills exactly half of it. So we already know the answer: area of a triangle = ½ × base × height. A new shape was solved using a shape we knew.",
+        "ur": "ہر پلاٹ مستطیل نہیں ہوتا۔ بہت سے سڑک یا نہر کی وجہ سے ترچھے کٹے ہوتے ہیں۔ لوگوں نے دیکھا کہ مثلث اسی قاعدے اور اونچائی والی مستطیل کے اندر آ جاتی ہے اور اس کا ٹھیک آدھا حصہ بھرتی ہے۔ یوں جواب ہمیں پہلے سے معلوم ہے: مثلث کا رقبہ = ½ × قاعدہ × اونچائی۔ نئی شکل کو ایک جانی پہچانی شکل کی مدد سے حل کر لیا گیا۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• A corner plot or field cut by a road or a canal.\n• Triangular roof ends and the sails of a boat.\n• A flag, a kite or a triangular signboard.\n• Cutting a triangle of cloth or card for a project.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سڑک یا نہر سے کٹا ہوا کونے کا پلاٹ یا کھیت۔\n• چھت کے مثلث سرے اور کشتی کے بادبان۔\n• جھنڈا، پتنگ یا مثلث کا سائن بورڈ۔\n• کسی پراجیکٹ کے لیے کپڑے یا گتے کی مثلث کاٹنا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

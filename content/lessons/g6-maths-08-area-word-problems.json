@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-area-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Perimeter and area word problems",
     "ur": "احاطے اور رقبے کے سوالات"
   },
-  "estimated_minutes": 16,
+  "estimated_minutes": 17,
   "prerequisites": [
     {
       "skill": "maths.measurement.area_triangle"
@@ -308,6 +308,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shopkeeper asks: perimeter or area, which one do I pay for?",
+          "ur": "دکان دار پوچھتا ہے: احاطہ یا رقبہ، مجھے کس کے پیسے دینے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "In real life nobody says \"find the area\". They say: how much tile do I need, or how much fence? The skill that matters is to read the story and decide: is it the edge (perimeter, paid per metre) or the surface (area, paid per square metre)? Then use the right formula and add the cost. This saves money and avoids mistakes.",
+        "ur": "حقیقی زندگی میں کوئی نہیں کہتا \"رقبہ نکالیں\"۔ وہ کہتے ہیں: کتنی ٹائل چاہیے، یا کتنی باڑ؟ اصل ہنر یہ ہے کہ کہانی پڑھ کر فیصلہ کریں: کنارہ ہے (احاطہ، فی میٹر قیمت) یا سطح ہے (رقبہ، فی مربع میٹر قیمت)؟ پھر صحیح فارمولا لگائیں اور خرچ جمع کریں۔ اس سے پیسے بچتے ہیں اور غلطیاں نہیں ہوتیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Estimating the cost of tiles, paint or carpet.\n• Fencing a farm or a plot and paying per metre.\n• Planning a garden or a cricket pitch.\n• Understanding a builder's or a contractor's estimate.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• ٹائلوں، پینٹ یا قالین کا خرچ اندازہ کرنے میں۔\n• فارم یا پلاٹ کی باڑ لگانا اور فی میٹر ادائیگی کرنا۔\n• باغیچے یا کرکٹ پچ کی منصوبہ بندی۔\n• معمار یا ٹھیکے دار کا تخمینہ سمجھنے میں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

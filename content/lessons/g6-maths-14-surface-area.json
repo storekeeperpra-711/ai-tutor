@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-surface-area",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Surface area",
     "ur": "سطحی رقبہ"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.solids.volume_cube_capacity"
@@ -508,6 +508,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How much paper do we need to wrap a gift box?",
+          "ur": "تحفے کے ڈبے کو لپیٹنے کے لیے کتنا کاغذ چاہیے؟"
+        }
+      },
+      "text": {
+        "en": "To paint a tank, wrap a box or cover a room's walls, we must know how much surface there is outside. A solid has several faces, and no single flat area tells the whole story. People found that we just find each face's area and add them. For a cuboid: 2 × (lw + lh + wh). This is the surface area, in square units.",
+        "ur": "ٹینکی پر رنگ کرنے، ڈبہ لپیٹنے یا کمرے کی دیواریں ڈھانپنے کے لیے ہمیں باہر کی سطح کا اندازہ چاہیے۔ ٹھوس چیز کی کئی سطحیں ہوتی ہیں اور کوئی ایک چپٹا رقبہ پوری بات نہیں بتاتا۔ لوگوں نے دیکھا کہ بس ہر سطح کا رقبہ نکالیں اور جمع کر لیں۔ مکعب نما کے لیے: 2 × (ل×چ + ل×ا + چ×ا)۔ یہ سطحی رقبہ ہے، مربع اکائیوں میں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Paint for a water tank, a gate or a cupboard.\n• Wrapping paper or cloth for a gift box.\n• Tin sheet for a box, a cooler or a storage bin.\n• Tiles on all walls of a bathroom.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• پانی کی ٹینکی، گیٹ یا الماری پر رنگ کے لیے پینٹ۔\n• تحفے کے ڈبے کے لیے کاغذ یا کپڑا۔\n• ڈبے، کولر یا ڈرم کے لیے ٹین کی چادر۔\n• باتھ روم کی ساری دیواروں پر ٹائلیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

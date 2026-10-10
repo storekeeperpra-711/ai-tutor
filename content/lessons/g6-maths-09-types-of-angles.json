@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-09-types-of-angles",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Types of angles",
     "ur": "زاویوں کی اقسام"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.measurement.area_triangle"
@@ -420,6 +420,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do we say how much a door has opened?",
+          "ur": "ہم یہ کیسے بتائیں کہ دروازہ کتنا کھلا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Doors, scissors, clock hands and road turns all open or turn by some amount. Saying \"a little\" or \"a lot\" is not exact. So people split a full turn into 360 equal small steps called degrees. An angle tells how much something has turned, and we name the kinds: acute, right, obtuse, straight and reflex. Now everyone can describe a turn in the same way.",
+        "ur": "دروازے، قینچی، گھڑی کی سوئیاں اور سڑک کے موڑ سب کچھ نہ کچھ مقدار میں کھلتے یا گھومتے ہیں۔ \"تھوڑا\" یا \"بہت\" کہنا ٹھیک ناپ نہیں۔ اس لیے لوگوں نے پورے چکر کو 360 برابر چھوٹے حصوں میں بانٹا جنہیں درجے کہتے ہیں۔ زاویہ بتاتا ہے کہ کوئی چیز کتنا گھومی، اور ہم اس کی قسموں کے نام رکھتے ہیں: حادہ، قائمہ، منفرجہ، مستقیم اور منعکس۔ اب سب ایک ہی طرح موڑ بیان کر سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Clock hands: at 3 o'clock they make a right angle.\n• A door, a window or a laptop screen opened a little or a lot.\n• Turning a bicycle or a bus at a corner.\n• Cricket: the angle at which a batter hits the ball.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• گھڑی کی سوئیاں: 3 بجے وہ قائمہ زاویہ بناتی ہیں۔\n• دروازہ، کھڑکی یا لیپ ٹاپ کی اسکرین تھوڑی یا زیادہ کھولنا۔\n• موڑ پر سائیکل یا بس کو گھمانا۔\n• کرکٹ: جس زاویے سے بلے باز گیند کو مارتا ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

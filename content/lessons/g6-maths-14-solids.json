@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-solids",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Cubes and cuboids",
     "ur": "مکعب اور مکعب نما"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.measurement.area_rectangle"
@@ -601,6 +601,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A cricket ball and a brick are both solid. How are they different?",
+          "ur": "کرکٹ کی گیند اور اینٹ دونوں ٹھوس ہیں۔ ان میں کیا فرق ہے؟"
+        }
+      },
+      "text": {
+        "en": "Things in real life are not flat. Boxes, bricks, water tanks and balls take up space. To build, pack or order them, people needed to describe a solid exactly. So we count its parts: faces (the flat sides), edges (where two faces meet) and vertices (the corners). A cube has 6 faces, 12 edges and 8 vertices.",
+        "ur": "حقیقی زندگی میں چیزیں چپٹی نہیں ہوتیں۔ ڈبے، اینٹیں، پانی کی ٹینکیاں اور گیندیں جگہ گھیرتی ہیں۔ انہیں بنانے، پیک کرنے یا منگوانے کے لیے لوگوں کو ٹھوس چیز کو ٹھیک ٹھیک بیان کرنا تھا۔ اس لیے ہم اس کے حصے گنتے ہیں: سطحیں (چپٹے پہلو)، کنارے (جہاں دو سطحیں ملیں) اور راس (کونے)۔ مکعب کی 6 سطحیں، 12 کنارے اور 8 راس ہوتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Describing a box, a brick or a tank to a shopkeeper or a builder.\n• Making a cardboard model or a frame from sticks.\n• Packing: which shapes stack neatly in a van or a carton.\n• Later: science, drawing and design.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان دار یا معمار کو ڈبے، اینٹ یا ٹینکی کی شکل بتانے میں۔\n• گتے کا ماڈل یا تیلیوں کا ڈھانچا بنانے میں۔\n• پیکنگ: کون سی شکلیں گاڑی یا کارٹن میں ٹھیک سے جم جاتی ہیں۔\n• آگے چل کر: سائنس، ڈرائنگ اور ڈیزائن۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

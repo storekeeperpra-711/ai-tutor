@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-solids-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Solids word problems",
     "ur": "ٹھوس اشکال کے عملی سوال"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.solids.surface_area"
@@ -381,6 +381,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A tank needs paint outside and water inside. Which maths is which?",
+          "ur": "ٹینکی کو باہر سے رنگ اور اندر پانی چاہیے۔ کون سا حساب کون سا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Real jobs ask different questions about the same box. Paint, cloth and tin sheet cover the outside, so we need surface area. Water, grain and sand fill the inside, so we need volume. The skill that matters is to read the story and decide: covering, or filling? Then use the right formula and unit: square units for covering, cubic units or litres for filling.",
+        "ur": "اصل کام ایک ہی ڈبے کے بارے میں مختلف سوال پوچھتے ہیں۔ رنگ، کپڑا اور ٹین کی چادر باہر کو ڈھانپتے ہیں، اس لیے سطحی رقبہ چاہیے۔ پانی، اناج اور ریت اندر بھرتے ہیں، اس لیے حجم چاہیے۔ اصل ہنر یہ ہے کہ کہانی پڑھ کر فیصلہ کریں: ڈھانپنا ہے یا بھرنا؟ پھر صحیح فارمولا اور اکائی لگائیں: ڈھانپنے کے لیے مربع اکائیاں، بھرنے کے لیے مکعب اکائیاں یا لیٹر۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Buying paint for a tank and checking how much water it holds.\n• Packing and shipping: box size and wrapping.\n• Filling a swimming pool, a drum or a fish tank.\n• Understanding an estimate for building work.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• ٹینکی کے لیے رنگ خریدنا اور یہ دیکھنا کہ اس میں کتنا پانی آتا ہے۔\n• پیکنگ اور بھیجنے میں: ڈبے کا سائز اور لپیٹنا۔\n• سوئمنگ پول، ڈرم یا مچھلی کا ٹینک بھرنے میں۔\n• تعمیراتی کام کا تخمینہ سمجھنے میں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-09-complementary-supplementary",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Complementary and supplementary angles",
     "ur": "متمم اور مکمل زاویے"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.geometry.angles_on_line"
@@ -407,6 +407,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A ladder leans on a wall. How do we find the missing angle?",
+          "ur": "سیڑھی دیوار سے لگی ہے۔ ہم گمشدہ زاویہ کیسے نکالیں؟"
+        }
+      },
+      "text": {
+        "en": "Angles often come in pairs that share a total. Two angles that fill a square corner add to 90°; two that fill a straight line add to 180°. People gave these pairs names: complementary (متمم) and supplementary (مکمل). If one angle is known, the other needs no measuring: just subtract. A ladder at 70° to the ground leans at 20° to the wall.",
+        "ur": "زاویے اکثر جوڑوں میں آتے ہیں جن کا مجموعہ طے ہوتا ہے۔ جو دو زاویے چوکور کونا بھریں ان کا مجموعہ 90° ہوتا ہے؛ جو سیدھی لکیر بھریں ان کا مجموعہ 180° ہوتا ہے۔ لوگوں نے ان جوڑوں کے نام رکھے: متمم اور مکمل۔ ایک زاویہ معلوم ہو تو دوسرے کو ناپنے کی ضرورت نہیں: بس منفی کریں۔ زمین سے 70° پر لگی سیڑھی دیوار سے 20° پر جھکی ہوتی ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Leaning a ladder safely against a wall.\n• Cutting a corner joint in a wooden frame or a window.\n• Folding paper or cloth to get a square corner.\n• Setting the angle of a ramp or a signboard.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سیڑھی کو دیوار سے محفوظ طریقے سے لگانے میں۔\n• لکڑی کے فریم یا کھڑکی کا کونے کا جوڑ کاٹنے میں۔\n• کاغذ یا کپڑا موڑ کر چوکور کونا بنانے میں۔\n• ریمپ یا سائن بورڈ کا زاویہ طے کرنے میں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

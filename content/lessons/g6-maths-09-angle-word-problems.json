@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-09-angle-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Angle word problems",
     "ur": "زاویوں کے عبارتی سوال"
   },
-  "estimated_minutes": 16,
+  "estimated_minutes": 17,
   "prerequisites": [
     {
       "skill": "maths.geometry.triangle_angles"
@@ -344,6 +344,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A problem gives a picture and a story. Which angle rule do I use?",
+          "ur": "ایک سوال میں تصویر اور کہانی ہے۔ میں کون سا زاویے کا اصول لگاؤں؟"
+        }
+      },
+      "text": {
+        "en": "Real jobs never say \"use the rule for a straight line\". A carpenter just has a frame to cut, a builder just has a roof to fit. The skill that matters is to look at the picture, spot a straight line, a corner, a full turn or a triangle, pick the matching total (180°, 90°, 360°), and subtract. This turns the whole chapter into one tool for solving real problems.",
+        "ur": "اصل کام کبھی نہیں کہتے \"سیدھی لکیر کا اصول لگاؤ\"۔ بڑھئی کے سامنے بس کاٹنے کا فریم ہوتا ہے، معمار کے سامنے لگانے کی چھت۔ اصل ہنر یہ ہے کہ تصویر دیکھ کر سیدھی لکیر، کونا، پورا چکر یا مثلث پہچانیں، ملتا جلتا مجموعہ (180°، 90°، 360°) چنیں اور منفی کریں۔ یوں پورا باب اصل مسئلے حل کرنے کا ایک ہی اوزار بن جاتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Carpentry, tailoring and building work.\n• Road and junction plans.\n• Reading a diagram in a science or geography book.\n• Later: geometry, maps and technical drawing.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بڑھئی، درزی اور تعمیر کے کام میں۔\n• سڑکوں اور چوراہوں کے نقشے میں۔\n• سائنس یا جغرافیہ کی کتاب کا خاکہ پڑھنے میں۔\n• آگے چل کر: جیومیٹری، نقشے اور تکنیکی ڈرائنگ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

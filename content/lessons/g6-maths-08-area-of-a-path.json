@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-area-of-a-path",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Area of a path",
     "ur": "راستے کا رقبہ"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.measurement.compound_area"
@@ -424,6 +424,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A path runs around a park. How much ground does it cover?",
+          "ur": "پارک کے گرد ایک راستہ بنا ہے۔ وہ کتنی زمین گھیرتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Paths run around fields, ponds and gardens, and someone must pay for the bricks, cement or grass to cover them. A path is a ring-shaped space between an inner and an outer rectangle. People found the easy way: area of the outer rectangle minus area of the inner rectangle. The difference is just the path.",
+        "ur": "راستے کھیتوں، تالابوں اور باغیچوں کے گرد بنتے ہیں، اور کسی کو ان پر لگنے والی اینٹوں، سیمنٹ یا گھاس کا خرچ دینا ہوتا ہے۔ راستہ اندر اور باہر کی دو مستطیلوں کے درمیان چھلّے جیسی جگہ ہے۔ لوگوں نے آسان طریقہ نکالا: باہر کی مستطیل کا رقبہ منفی اندر کی مستطیل کا رقبہ۔ فرق ہی راستہ ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Bricks or tiles for a path around a lawn.\n• A border around a swimming pool or a pond.\n• A frame around a photo or a notice board.\n• The wall around a house plot: how much surface does it cover?",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• لان کے گرد راستے کے لیے اینٹیں یا ٹائلیں۔\n• سوئمنگ پول یا تالاب کے گرد کنارہ۔\n• تصویر یا نوٹس بورڈ کے گرد فریم۔\n• گھر کے پلاٹ کے گرد دیوار: وہ کتنی سطح گھیرتی ہے؟"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
