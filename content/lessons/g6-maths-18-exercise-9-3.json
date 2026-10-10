@@ -1,0 +1,2825 @@
+{
+  "id": "g6-maths-18-exercise-9-3",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find the lines of symmetry of shapes and letters, complete a shape across a mirror line on a grid, give the order of rotational symmetry and turn a point about a centre.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 9: Symmetry, Exercise 9.3"
+    }
+  ],
+  "skills": [
+    "maths.symmetry.ex_9_3"
+  ],
+  "title": {
+    "en": "Exercise 9.3 practice: symmetry",
+    "ur": "مشق 9.3 کی پریکٹس: تشاکل"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.symmetry.shapes_2d_3d"
+    },
+    {
+      "skill": "maths.symmetry.line_symmetry"
+    },
+    {
+      "skill": "maths.symmetry.rotational"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "counts_double",
+      "description": "Counts each line of symmetry twice, or counts both halves of the fold."
+    },
+    {
+      "id": "no_line_no_symmetry",
+      "description": "Thinks a shape with no line of symmetry has no symmetry at all and forgets rotational symmetry."
+    },
+    {
+      "id": "mirror_distance",
+      "description": "Gives the distance between a point and its image as the distance to the mirror line, or the other way round."
+    },
+    {
+      "id": "only_original",
+      "description": "Counts only the original shape and forgets its mirror image."
+    },
+    {
+      "id": "turn_direction",
+      "description": "Turns the wrong way (clockwise and anticlockwise swapped) or moves the point to the wrong side of the centre."
+    },
+    {
+      "id": "swaps_distances",
+      "description": "After a turn, keeps the sideways and up-down distances in the wrong places."
+    },
+    {
+      "id": "parallelogram_lines",
+      "description": "Gives a parallelogram 2 lines of symmetry, like a rectangle."
+    },
+    {
+      "id": "order_for_angle",
+      "description": "Gives the order of rotational symmetry when the smallest angle of turn is asked, or the other way round."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.symmetry.ex_9_3": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.symmetry.ex_9_3": [
+      {
+        "id": "qb_triangle_lines",
+        "type": "recall",
+        "step": {
+          "id": "qb_triangle_lines",
+          "type": "number",
+          "prompt": {
+            "en": "How many lines of symmetry does an equilateral triangle have?",
+            "ur": "مساوی الاضلاع مثلث کی تشاکل کی کتنی لکیریں ہیں؟"
+          },
+          "answer": 3,
+          "checker": "numeric",
+          "hint": {
+            "en": "One from each corner.",
+            "ur": "ہر کونے سے ایک۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 3 lines of symmetry.",
+            "ur": "درست! تشاکل کی 3 لکیریں۔"
+          },
+          "feedback_wrong": {
+            "en": "3 corners, 3 lines.",
+            "ur": "3 کونے، 3 لکیریں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 1,
+              "feedback": {
+                "en": "That is an isosceles triangle. An equilateral triangle has 3.",
+                "ur": "یہ مساوی الساقین مثلث ہے۔ مساوی الاضلاع مثلث کی 3 ہیں۔"
+              },
+              "misconception_id": "counts_double"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_hexagon_order",
+        "type": "recall",
+        "step": {
+          "id": "qb_hexagon_order",
+          "type": "number",
+          "prompt": {
+            "en": "What is the order of rotational symmetry of a regular hexagon?",
+            "ur": "باقاعدہ مسدس کے گردشی تشاکل کا درجہ کیا ہے؟"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "A regular shape has an order equal to its number of sides.",
+            "ur": "باقاعدہ شکل کا درجہ اس کے اضلاع کی تعداد کے برابر ہوتا ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! Order 6.",
+            "ur": "درست! درجہ 6"
+          },
+          "feedback_wrong": {
+            "en": "6 sides, order 6.",
+            "ur": "6 اضلاع، درجہ 6"
+          },
+          "common_wrong": [
+            {
+              "answer": 60,
+              "feedback": {
+                "en": "60° is the smallest turn. The order is 6.",
+                "ur": "60° سب سے چھوٹا چکر ہے۔ درجہ 6 ہے۔"
+              },
+              "misconception_id": "order_for_angle"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_five",
+        "type": "apply",
+        "step": {
+          "id": "qb_five",
+          "type": "number",
+          "prompt": {
+            "en": "A shape has rotational symmetry of order 5. What is the smallest angle, in degrees, it can be turned through to fit onto itself?",
+            "ur": "ایک شکل کے گردشی تشاکل کا درجہ 5 ہے۔ اسے کم از کم کتنے ڈگری گھمانے سے وہ اپنے اوپر بیٹھتی ہے؟"
+          },
+          "answer": 72,
+          "checker": "numeric",
+          "hint": {
+            "en": "360° ÷ 5.",
+            "ur": "360° ÷ 5"
+          },
+          "feedback_correct": {
+            "en": "Right! 360° ÷ 5 = 72°.",
+            "ur": "درست! 360° ÷ 5 = 72°"
+          },
+          "feedback_wrong": {
+            "en": "360 ÷ 5 = 72.",
+            "ur": "360 ÷ 5 = 72"
+          },
+          "common_wrong": [
+            {
+              "answer": 5,
+              "feedback": {
+                "en": "5 is the order. The angle is 360° ÷ 5 = 72°.",
+                "ur": "5 درجہ ہے۔ زاویہ 360° ÷ 5 = 72° ہے۔"
+              },
+              "misconception_id": "order_for_angle"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hina says a regular hexagon has rotational symmetry of order 60. What went wrong?",
+            "ur": "حنا کہتی ہے باقاعدہ مسدس کے گردشی تشاکل کا درجہ 60 ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "60° is the smallest turn. The order is how many times it fits in a full turn: 360° ÷ 60° = 6.",
+                "ur": "60° سب سے چھوٹا چکر ہے۔ درجہ یہ ہے کہ پورے چکر میں کتنی بار بیٹھتا ہے: 360° ÷ 60° = 6"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The order is 6.",
+                "ur": "جی ہاں! درجہ 6 ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. The order is 60.",
+                "ur": "کوئی غلطی نہیں۔ درجہ 60 ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "60 is the angle in degrees, not the order.",
+                "ur": "60 ڈگری میں زاویہ ہے، درجہ نہیں۔"
+              },
+              "misconception_id": "order_for_angle"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The order is 360.",
+                "ur": "درجہ 360 ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "360° is a full turn. The order is how many fits it has: 6.",
+                "ur": "360° پورا چکر ہے۔ درجہ یہ ہے کہ کتنی بار بیٹھتا ہے: 6"
+              },
+              "misconception_id": "order_for_angle"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_turn",
+      "front": {
+        "en": "How do you find the smallest turn from the order?",
+        "ur": "درجے سے سب سے چھوٹا چکر کیسے نکالتے ہیں؟"
+      },
+      "back": {
+        "en": "Divide 360° by the order. Order 4 gives 90°.",
+        "ur": "360° کو درجے سے تقسیم کریں۔ درجہ 4 سے 90° ملتا ہے۔"
+      }
+    },
+    {
+      "id": "f_mirror",
+      "front": {
+        "en": "Where is the image of a point in a mirror line?",
+        "ur": "آئینہ لکیر میں نقطے کا عکس کہاں ہوتا ہے؟"
+      },
+      "back": {
+        "en": "The same distance from the mirror line, on the other side.",
+        "ur": "آئینہ لکیر سے برابر فاصلے پر، دوسری طرف۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_symmetry",
+      "text": {
+        "en": "Cut out a paper pinwheel, a square and a rectangle. Fold each to find its lines of symmetry. Then turn each about its centre to find its order of rotational symmetry, and write down both numbers.",
+        "ur": "کاغذ کی ایک پھرکی، ایک مربع اور ایک مستطیل کاٹیں۔ ہر ایک کو تہہ کر کے تشاکل کی لکیریں ڈھونڈیں۔ پھر ہر ایک کو اس کے مرکز کے گرد گھما کر گردشی تشاکل کا درجہ ڈھونڈیں، اور دونوں عدد لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Line of symmetry",
+      "ur": "تشاکل کی لکیر"
+    },
+    {
+      "en": "Mirror line",
+      "ur": "آئینہ لکیر"
+    },
+    {
+      "en": "Reflection",
+      "ur": "عکس"
+    },
+    {
+      "en": "Rotational symmetry",
+      "ur": "گردشی تشاکل"
+    },
+    {
+      "en": "Order of rotational symmetry",
+      "ur": "گردشی تشاکل کا درجہ"
+    },
+    {
+      "en": "Centre of rotation",
+      "ur": "مرکزِ گردش"
+    },
+    {
+      "en": "Clockwise",
+      "ur": "گھڑی کی سوئیوں کی سمت"
+    },
+    {
+      "en": "Half turn",
+      "ur": "آدھا چکر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 9.3 is about symmetry. Ready?",
+          "ur": "مشق 9.3 تشاکل کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 9.3 of your maths book (PCTB Mathematics 6). Here you find lines of symmetry, complete shapes across a mirror line, give the order of rotational symmetry, and turn points about a centre. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 9.3 کے ساتھ ہے۔ اس میں آپ تشاکل کی لکیریں ڈھونڈیں گے، آئینہ لکیر کے پار شکلیں مکمل کریں گے، گردشی تشاکل کا درجہ بتائیں گے، اور ایک مرکز کے گرد نقطے گھمائیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_fold",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "When does a shape have a line of symmetry?",
+        "ur": "کسی شکل میں تشاکل کی لکیر کب ہوتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "When folding along the line makes the two halves match exactly.",
+            "ur": "جب لکیر پر تہہ کرنے سے دونوں حصے بالکل ایک دوسرے پر آ جائیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The line works like a mirror.",
+            "ur": "جی ہاں! لکیر آئینے کی طرح کام کرتی ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "When the line cuts the shape into two pieces.",
+            "ur": "جب لکیر شکل کو دو ٹکڑوں میں کاٹ دے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Any line can cut a shape in two. The halves must match.",
+            "ur": "کوئی بھی لکیر شکل کو دو ٹکڑوں میں کاٹ سکتی ہے۔ دونوں حصے برابر ہونے چاہییں۔"
+          },
+          "misconception_id": "counts_double"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "When the shape looks the same after it is turned.",
+            "ur": "جب شکل گھمانے کے بعد ویسی ہی لگے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is rotational symmetry. A line of symmetry is about folding.",
+            "ur": "یہ گردشی تشاکل ہے۔ تشاکل کی لکیر تہہ کرنے کے بارے میں ہے۔"
+          },
+          "misconception_id": "no_line_no_symmetry"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "When the line goes from corner to corner.",
+            "ur": "جب لکیر کونے سے کونے تک جائے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A corner-to-corner line is a diagonal. It is a line of symmetry only for some shapes, such as a square.",
+            "ur": "کونے سے کونے کی لکیر وتر ہے۔ وہ صرف کچھ شکلوں، جیسے مربع، کی تشاکل کی لکیر ہوتی ہے۔"
+          },
+          "misconception_id": "parallelogram_lines"
+        }
+      ]
+    },
+    {
+      "id": "q2_pentagon",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many lines of symmetry does the regular pentagon in the picture have?",
+        "ur": "تصویر والی باقاعدہ پانچ ضلعی شکل کی تشاکل کی کتنی لکیریں ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each line goes from a corner to the middle of the opposite side.",
+        "ur": "ہر لکیر ایک کونے سے سامنے والے ضلع کے درمیان تک جاتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One for each corner: 5 lines of symmetry.",
+        "ur": "درست! ہر کونے کے لیے ایک: تشاکل کی 5 لکیریں۔"
+      },
+      "feedback_wrong": {
+        "en": "A regular shape has as many lines as sides: 5.",
+        "ur": "باقاعدہ شکل میں اضلاع کے برابر لکیریں ہوتی ہیں: 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "That counts each line twice, once from each end. There are 5.",
+            "ur": "یہ ہر لکیر کو دو بار گنتا ہے، ہر سرے سے ایک بار۔ لکیریں 5 ہیں۔"
+          },
+          "misconception_id": "counts_double"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "There is more than one fold. A regular pentagon has 5.",
+            "ur": "ایک سے زیادہ تہیں ہیں۔ باقاعدہ پانچ ضلعی شکل کی 5 ہیں۔"
+          },
+          "misconception_id": "counts_double"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A regular pentagon: five equal sides and five equal corners. No lines are drawn on it.",
+          "ur": "ایک باقاعدہ پانچ ضلعی شکل: پانچ برابر اضلاع اور پانچ برابر کونے۔ اس پر کوئی لکیر نہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                6.0
+              ],
+              [
+                74.7,
+                24.0
+              ],
+              [
+                65.3,
+                53.0
+              ],
+              [
+                34.7,
+                53.0
+              ],
+              [
+                25.3,
+                24.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q3_letters",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many of the five letters in the picture have no line of symmetry?",
+        "ur": "تصویر کے پانچ حروف میں سے کتنے حروف میں تشاکل کی کوئی لکیر نہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Try folding each letter. Which ones never match?",
+        "ur": "ہر حرف کو تہہ کر کے دیکھیں۔ کون سے کبھی نہیں ملتے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! N and F have no line of symmetry. A and E have 1 and H has 2.",
+        "ur": "درست! N اور F میں تشاکل کی کوئی لکیر نہیں۔ A اور E میں 1 اور H میں 2 ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "A, E and H can be folded to match; N and F cannot: 2.",
+        "ur": "A، E اور H تہہ کرنے سے مل جاتے ہیں؛ N اور F نہیں: 2"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "Only one? Check N and F: neither folds to match, so 2.",
+            "ur": "صرف ایک؟ N اور F دیکھیں: دونوں تہہ کرنے سے نہیں ملتے، تو 2"
+          },
+          "misconception_id": "counts_double"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "A, E and H do fold to match. Only N and F do not: 2.",
+            "ur": "A، E اور H تہہ کرنے سے ملتے ہیں۔ صرف N اور F نہیں ملتے: 2"
+          },
+          "misconception_id": "counts_double"
+        }
+      ],
+      "figure": {
+        "width": 176,
+        "height": 56,
+        "alt": {
+          "en": "Five capital letters drawn with straight strokes, numbered 1 to 5: A, H, N, E and F. Each letter is taller than it is wide.",
+          "ur": "سیدھی لکیروں سے بنے پانچ بڑے انگریزی حروف، 1 سے 5 تک نمبر: A، H، N، E اور F۔ ہر حرف چوڑائی سے زیادہ اونچا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              12.0,
+              36.0
+            ],
+            "to": [
+              22.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22.0,
+              8.0
+            ],
+            "to": [
+              32.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              17.0,
+              24.0
+            ],
+            "to": [
+              27.0,
+              24.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              22.0,
+              48.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "line",
+            "from": [
+              46.0,
+              8.0
+            ],
+            "to": [
+              46.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.0,
+              8.0
+            ],
+            "to": [
+              66.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              46.0,
+              22.0
+            ],
+            "to": [
+              66.0,
+              22.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              56.0,
+              48.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "line",
+            "from": [
+              80.0,
+              36.0
+            ],
+            "to": [
+              80.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              80.0,
+              8.0
+            ],
+            "to": [
+              100.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              100.0,
+              36.0
+            ],
+            "to": [
+              100.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              90.0,
+              48.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "line",
+            "from": [
+              134.0,
+              8.0
+            ],
+            "to": [
+              114.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              114.0,
+              8.0
+            ],
+            "to": [
+              114.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              114.0,
+              36.0
+            ],
+            "to": [
+              134.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              114.0,
+              22.0
+            ],
+            "to": [
+              130.0,
+              22.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              48.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "line",
+            "from": [
+              168.0,
+              8.0
+            ],
+            "to": [
+              148.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              148.0,
+              8.0
+            ],
+            "to": [
+              148.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              148.0,
+              22.0
+            ],
+            "to": [
+              164.0,
+              22.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              158.0,
+              48.0
+            ],
+            "text": "5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "A reflection is a flip. A rotation is a turn about a centre.",
+          "ur": "عکس پلٹنا ہے۔ گردش مرکز کے گرد گھومنا ہے۔"
+        }
+      },
+      "text": {
+        "en": "Reflection: a point and its image are the same distance from the mirror line, on opposite sides. The distance between them is twice the distance to the mirror. Rotational symmetry: a shape fits onto itself when turned about its centre by less than a full turn. The order is how many times it fits in one full turn (360°), and the smallest turn is 360° ÷ order. A quarter turn is 90° and a half turn is 180°. Clockwise is the way a clock's hands go. A shape can have rotational symmetry and no line of symmetry, like a parallelogram.",
+        "ur": "عکس: نقطہ اور اس کا عکس آئینہ لکیر سے ایک جتنے فاصلے پر، مخالف رخوں پر ہوتے ہیں۔ ان کے درمیان فاصلہ آئینہ لکیر تک فاصلے کا دگنا ہوتا ہے۔ گردشی تشاکل: شکل اپنے مرکز کے گرد پورے چکر سے کم گھمانے پر اپنے اوپر بیٹھ جاتی ہے۔ درجہ یہ ہے کہ ایک پورے چکر (360°) میں وہ کتنی بار بیٹھتی ہے، اور سب سے چھوٹا چکر 360° ÷ درجہ ہوتا ہے۔ چوتھائی چکر 90° اور آدھا چکر 180° ہے۔ گھڑی کی سوئیوں کی سمت گھڑی کی سوئیاں چلتی ہیں۔ شکل میں گردشی تشاکل ہو سکتا ہے مگر تشاکل کی لکیر نہیں، جیسے متوازی الاضلاع۔"
+      }
+    },
+    {
+      "id": "q4_mirror_distance",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The triangle is reflected in the mirror line. Corner Q is 5 squares from the mirror line. How many squares from the mirror line is Q's image, on the other side?",
+        "ur": "مثلث کا آئینہ لکیر میں عکس لیا جاتا ہے۔ کونا Q آئینہ لکیر سے 5 خانے دور ہے۔ دوسری طرف Q کا عکس آئینہ لکیر سے کتنے خانے دور ہے؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "A point and its image are the same distance from the mirror.",
+        "ur": "نقطہ اور اس کا عکس آئینہ لکیر سے برابر فاصلے پر ہوتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The image is also 5 squares from the mirror line.",
+        "ur": "درست! عکس بھی آئینہ لکیر سے 5 خانے دور ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Same distance, other side: 5.",
+        "ur": "برابر فاصلہ، دوسری طرف: 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "10 is the distance between Q and its image. The question asks the distance from the mirror: 5.",
+            "ur": "10، Q اور اس کے عکس کے درمیان فاصلہ ہے۔ سوال آئینہ لکیر سے فاصلہ پوچھتا ہے: 5"
+          },
+          "misconception_id": "mirror_distance"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the column of the mirror line. The image is 5 squares from it.",
+            "ur": "6 آئینہ لکیر کا کالم ہے۔ عکس اس سے 5 خانے دور ہے۔"
+          },
+          "misconception_id": "mirror_distance"
+        }
+      ],
+      "figure": {
+        "width": 136,
+        "height": 76,
+        "alt": {
+          "en": "A squared grid 12 squares wide and 6 tall. A dashed mirror line goes down the middle. On the left is a triangle with a corner marked Q, the corner farthest from the mirror line, 5 squares away from it.",
+          "ur": "12 خانے چوڑا اور 6 خانے اونچا چوکور جال۔ بیچ میں اوپر سے نیچے ڈیش والی آئینہ لکیر ہے۔ بائیں طرف ایک مثلث ہے جس کا ایک کونا Q نشان زد ہے، جو آئینہ لکیر سے سب سے دور، 5 خانے کے فاصلے پر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              8.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              8.0
+            ],
+            "to": [
+              18.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              8.0
+            ],
+            "to": [
+              28.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.0,
+              8.0
+            ],
+            "to": [
+              48.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.0,
+              8.0
+            ],
+            "to": [
+              58.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              8.0
+            ],
+            "to": [
+              68.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              8.0
+            ],
+            "to": [
+              78.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              98.0,
+              8.0
+            ],
+            "to": [
+              98.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              108.0,
+              8.0
+            ],
+            "to": [
+              108.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              8.0
+            ],
+            "to": [
+              118.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              128.0,
+              8.0
+            ],
+            "to": [
+              128.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              128.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              18.0
+            ],
+            "to": [
+              128.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              28.0
+            ],
+            "to": [
+              128.0,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              38.0
+            ],
+            "to": [
+              128.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              48.0
+            ],
+            "to": [
+              128.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              58.0
+            ],
+            "to": [
+              128.0,
+              58.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              68.0
+            ],
+            "to": [
+              128.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              2.0
+            ],
+            "to": [
+              68.0,
+              74.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                48.0,
+                18.0
+              ],
+              [
+                18.0,
+                48.0
+              ],
+              [
+                48.0,
+                58.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              18.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              17.0,
+              41.0
+            ],
+            "text": "Q"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_between",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Point R is 2 squares above the mirror line. R' is its reflection. How many squares apart are R and R'?",
+        "ur": "نقطہ R آئینہ لکیر سے 2 خانے اوپر ہے۔ R' اس کا عکس ہے۔ R اور R' کے درمیان کتنے خانوں کا فاصلہ ہے؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "R' is 2 squares below the mirror line. Add the two distances.",
+        "ur": "R' آئینہ لکیر سے 2 خانے نیچے ہے۔ دونوں فاصلے جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 + 2 = 4 squares.",
+        "ur": "درست! 2 + 2 = 4 خانے"
+      },
+      "feedback_wrong": {
+        "en": "2 above the line and 2 below: 4 apart.",
+        "ur": "لکیر سے 2 اوپر اور 2 نیچے: درمیان 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the distance to the mirror only. R' is on the other side too: 4.",
+            "ur": "2 صرف آئینہ لکیر تک فاصلہ ہے۔ R' دوسری طرف بھی ہے: 4"
+          },
+          "misconception_id": "mirror_distance"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the row of the mirror line. Add the two distances, 2 + 2: 4.",
+            "ur": "3 آئینہ لکیر کی صف ہے۔ دونوں فاصلے جمع کریں، 2 + 2: 4"
+          },
+          "misconception_id": "mirror_distance"
+        }
+      ],
+      "figure": {
+        "width": 96,
+        "height": 76,
+        "alt": {
+          "en": "A squared grid 8 squares wide and 6 tall. A dashed mirror line goes across it, 3 squares from the top. Point R is 2 squares above the mirror line.",
+          "ur": "8 خانے چوڑا اور 6 خانے اونچا چوکور جال۔ اس پر افقی ڈیش والی آئینہ لکیر اوپر سے 3 خانے نیچے ہے۔ نقطہ R آئینہ لکیر سے 2 خانے اوپر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              8.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              8.0
+            ],
+            "to": [
+              18.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              8.0
+            ],
+            "to": [
+              28.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.0,
+              8.0
+            ],
+            "to": [
+              48.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.0,
+              8.0
+            ],
+            "to": [
+              58.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              8.0
+            ],
+            "to": [
+              68.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              8.0
+            ],
+            "to": [
+              78.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              18.0
+            ],
+            "to": [
+              88.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              28.0
+            ],
+            "to": [
+              88.0,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              38.0
+            ],
+            "to": [
+              88.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              48.0
+            ],
+            "to": [
+              88.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              58.0
+            ],
+            "to": [
+              88.0,
+              58.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              68.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              2.0,
+              38.0
+            ],
+            "to": [
+              94.0,
+              38.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              48.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.0,
+              13.0
+            ],
+            "text": "R"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_complete",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The shaded staircase is reflected in the mirror line to complete the shape. How many squares are shaded in the whole picture?",
+        "ur": "سیڑھی کے رنگے ہوئے خانوں کا آئینہ لکیر میں عکس لے کر شکل مکمل کی جاتی ہے۔ پوری تصویر میں کتنے خانے رنگے ہوں گے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "The image has the same number of squares. Count the original first.",
+        "ur": "عکس میں خانوں کی تعداد وہی ہوتی ہے۔ پہلے اصل کو گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 + 6 = 12 squares.",
+        "ur": "درست! 6 + 6 = 12 خانے"
+      },
+      "feedback_wrong": {
+        "en": "The staircase has 1 + 2 + 3 = 6 squares, and so does its image: 12.",
+        "ur": "سیڑھی میں 1 + 2 + 3 = 6 خانے ہیں، اور اس کے عکس میں بھی: 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That counts only the original. The mirror image has 6 more: 12.",
+            "ur": "یہ صرف اصل کو گنتا ہے۔ آئینے کے عکس میں 6 اور ہیں: 12"
+          },
+          "misconception_id": "only_original"
+        }
+      ],
+      "figure": {
+        "width": 136,
+        "height": 76,
+        "alt": {
+          "en": "A squared grid 12 squares wide and 6 tall. A dashed mirror line goes down the middle. On the left, 6 squares are shaded in a staircase: 1 square in the first column, 2 in the next and 3 in the one beside the mirror line. The right side is empty.",
+          "ur": "12 خانے چوڑا اور 6 خانے اونچا چوکور جال۔ بیچ میں اوپر سے نیچے ڈیش والی آئینہ لکیر ہے۔ بائیں طرف 6 خانے سیڑھی کی شکل میں رنگے ہیں: پہلے کالم میں 1، اگلے میں 2 اور آئینہ لکیر کے ساتھ والے میں 3۔ دائیں طرف خالی ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              8.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              8.0
+            ],
+            "to": [
+              18.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              8.0
+            ],
+            "to": [
+              28.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.0,
+              8.0
+            ],
+            "to": [
+              48.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.0,
+              8.0
+            ],
+            "to": [
+              58.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              8.0
+            ],
+            "to": [
+              68.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              8.0
+            ],
+            "to": [
+              78.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              98.0,
+              8.0
+            ],
+            "to": [
+              98.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              108.0,
+              8.0
+            ],
+            "to": [
+              108.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              8.0
+            ],
+            "to": [
+              118.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              128.0,
+              8.0
+            ],
+            "to": [
+              128.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              128.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              18.0
+            ],
+            "to": [
+              128.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              28.0
+            ],
+            "to": [
+              128.0,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              38.0
+            ],
+            "to": [
+              128.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              48.0
+            ],
+            "to": [
+              128.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              58.0
+            ],
+            "to": [
+              128.0,
+              58.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              68.0
+            ],
+            "to": [
+              128.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              2.0
+            ],
+            "to": [
+              68.0,
+              74.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                38.0,
+                48.0
+              ],
+              [
+                48.0,
+                48.0
+              ],
+              [
+                48.0,
+                58.0
+              ],
+              [
+                38.0,
+                58.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                48.0,
+                38.0
+              ],
+              [
+                58.0,
+                38.0
+              ],
+              [
+                58.0,
+                48.0
+              ],
+              [
+                48.0,
+                48.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                48.0,
+                48.0
+              ],
+              [
+                58.0,
+                48.0
+              ],
+              [
+                58.0,
+                58.0
+              ],
+              [
+                48.0,
+                58.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.0,
+                28.0
+              ],
+              [
+                68.0,
+                28.0
+              ],
+              [
+                68.0,
+                38.0
+              ],
+              [
+                58.0,
+                38.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.0,
+                38.0
+              ],
+              [
+                68.0,
+                38.0
+              ],
+              [
+                68.0,
+                48.0
+              ],
+              [
+                58.0,
+                48.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.0,
+                48.0
+              ],
+              [
+                68.0,
+                48.0
+              ],
+              [
+                68.0,
+                58.0
+              ],
+              [
+                58.0,
+                58.0
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_order",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many times does the pinwheel fit onto itself in one full turn about its centre dot (the order of rotational symmetry)?",
+        "ur": "پھرکی اپنے مرکز کے نقطے کے گرد ایک پورے چکر میں کتنی بار اپنے اوپر بیٹھتی ہے (گردشی تشاکل کا درجہ)؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Turn it a quarter at a time and see when it looks the same.",
+        "ur": "اسے چوتھائی چوتھائی گھمائیں اور دیکھیں کب ویسی ہی لگتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! It looks the same after every quarter turn: order 4.",
+        "ur": "درست! ہر چوتھائی چکر کے بعد ویسی ہی لگتی ہے: درجہ 4"
+      },
+      "feedback_wrong": {
+        "en": "4 blades, 4 matching positions: 4.",
+        "ur": "4 پر، 4 ملتی جلتی حالتیں: 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "A pinwheel has no line of symmetry, but it does fit when turned: order 4.",
+            "ur": "پھرکی میں تشاکل کی لکیر نہیں، لیکن گھمانے پر وہ بیٹھتی ہے: درجہ 4"
+          },
+          "misconception_id": "no_line_no_symmetry"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° is the smallest turn. The order is how many fit in 360°: 4.",
+            "ur": "90° سب سے چھوٹا چکر ہے۔ درجہ یہ ہے کہ 360° میں کتنے آتے ہیں: 4"
+          },
+          "misconception_id": "order_for_angle"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A paper pinwheel with four blades around a dot in the middle. Each blade is a triangle bent the same way round.",
+          "ur": "چار پروں والی کاغذ کی پھرکی، بیچ میں ایک نقطہ ہے۔ ہر پر ایک مثلث ہے جو ایک ہی طرف مڑا ہوا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                32.0
+              ],
+              [
+                50.0,
+                4.0
+              ],
+              [
+                61.8,
+                22.1
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                32.0
+              ],
+              [
+                78.0,
+                32.0
+              ],
+              [
+                59.9,
+                43.8
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                32.0
+              ],
+              [
+                50.0,
+                60.0
+              ],
+              [
+                38.2,
+                41.9
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                50.0,
+                32.0
+              ],
+              [
+                22.0,
+                32.0
+              ],
+              [
+                40.1,
+                20.2
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              32.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_angle",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A regular octagon has rotational symmetry of order 8. What is the smallest angle, in degrees, that it can be turned through to fit onto itself?",
+        "ur": "باقاعدہ آٹھ ضلعی شکل کا گردشی تشاکل کا درجہ 8 ہے۔ اسے کم از کم کتنے ڈگری گھمانے سے وہ اپنے اوپر بیٹھ جاتی ہے؟"
+      },
+      "answer": 45,
+      "checker": "numeric",
+      "hint": {
+        "en": "Smallest turn = 360° ÷ order.",
+        "ur": "سب سے چھوٹا چکر = 360° ÷ درجہ"
+      },
+      "feedback_correct": {
+        "en": "Right! 360° ÷ 8 = 45°.",
+        "ur": "درست! 360° ÷ 8 = 45°"
+      },
+      "feedback_wrong": {
+        "en": "360 ÷ 8 = 45.",
+        "ur": "360 ÷ 8 = 45"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the order. The angle is 360° ÷ 8 = 45°.",
+            "ur": "8 درجہ ہے۔ زاویہ 360° ÷ 8 = 45° ہے۔"
+          },
+          "misconception_id": "order_for_angle"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° would fit a square. Divide 360° by 8: 45°.",
+            "ur": "90° مربع کے لیے ہوتا۔ 360° کو 8 سے تقسیم کریں: 45°"
+          },
+          "misconception_id": "order_for_angle"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A regular octagon: eight equal sides and eight equal corners, like a stop sign, with a dot at its centre.",
+          "ur": "ایک باقاعدہ آٹھ ضلعی شکل: آٹھ برابر اضلاع اور آٹھ برابر کونے، رکنے کے نشان کی طرح، مرکز پر ایک نقطہ ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                74.0,
+                22.1
+              ],
+              [
+                74.0,
+                41.9
+              ],
+              [
+                59.9,
+                56.0
+              ],
+              [
+                40.1,
+                56.0
+              ],
+              [
+                26.0,
+                41.9
+              ],
+              [
+                26.0,
+                22.1
+              ],
+              [
+                40.1,
+                8.0
+              ],
+              [
+                59.9,
+                8.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              32.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q9_quarter",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Point A is turned a quarter turn (90°) clockwise about O. Where does it land?",
+        "ur": "نقطہ A کو O کے گرد چوتھائی چکر (90°) گھڑی کی سوئیوں کی سمت میں گھمایا جاتا ہے۔ وہ کہاں پہنچتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "3 squares below O",
+            "ur": "O سے 3 خانے نیچے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Like the hand of a clock going from 3 o'clock to 6 o'clock.",
+            "ur": "جی ہاں! جیسے گھڑی کی سوئی 3 بجے سے 6 بجے کی طرف جاتی ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "3 squares above O",
+            "ur": "O سے 3 خانے اوپر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a quarter turn anticlockwise.",
+            "ur": "یہ گھڑی کی سوئیوں کی مخالف سمت میں چوتھائی چکر ہے۔"
+          },
+          "misconception_id": "turn_direction"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "3 squares to the left of O",
+            "ur": "O سے 3 خانے بائیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a half turn, 180°.",
+            "ur": "یہ آدھا چکر، 180°، ہے۔"
+          },
+          "misconception_id": "turn_direction"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Where it is now, 3 squares to the right of O",
+            "ur": "جہاں ہے وہیں، O سے 3 خانے دائیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A quarter turn moves it.",
+            "ur": "چوتھائی چکر اسے ہلاتا ہے۔"
+          },
+          "misconception_id": "turn_direction"
+        }
+      ],
+      "figure": {
+        "width": 96,
+        "height": 76,
+        "alt": {
+          "en": "A squared grid 8 squares wide and 6 tall. The centre of turning O is a dot in the middle. Point A is a dot 3 squares to the right of O on the same row.",
+          "ur": "8 خانے چوڑا اور 6 خانے اونچا چوکور جال۔ گردش کا مرکز O درمیان میں ایک نقطہ ہے۔ نقطہ A اسی صف میں O سے 3 خانے دائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              8.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              8.0
+            ],
+            "to": [
+              18.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              8.0
+            ],
+            "to": [
+              28.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.0,
+              8.0
+            ],
+            "to": [
+              48.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.0,
+              8.0
+            ],
+            "to": [
+              58.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              8.0
+            ],
+            "to": [
+              68.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              8.0
+            ],
+            "to": [
+              78.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              18.0
+            ],
+            "to": [
+              88.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              28.0
+            ],
+            "to": [
+              88.0,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              38.0
+            ],
+            "to": [
+              88.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              48.0
+            ],
+            "to": [
+              88.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              58.0
+            ],
+            "to": [
+              88.0,
+              58.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              68.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              48.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              47.0,
+              31.0
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "point",
+            "at": [
+              78.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.0,
+              31.0
+            ],
+            "text": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10_half_turn",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Point A is 3 squares right of O and 2 squares above it. After a half turn (180°) about O, how many squares to the left of O is its image?",
+        "ur": "نقطہ A، O سے 3 خانے دائیں اور 2 خانے اوپر ہے۔ O کے گرد آدھے چکر (180°) کے بعد اس کا عکس O سے کتنے خانے بائیں ہے؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "A half turn sends a point to the opposite side of O, the same distances away.",
+        "ur": "آدھا چکر نقطے کو O کی مخالف طرف، اتنے ہی فاصلوں پر بھیجتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The image is 3 squares left of O and 2 squares below it.",
+        "ur": "درست! عکس O سے 3 خانے بائیں اور 2 خانے نیچے ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "3 right becomes 3 left, 2 up becomes 2 down.",
+        "ur": "3 دائیں، 3 بائیں بن جاتے ہیں، 2 اوپر، 2 نیچے بن جاتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the up-down distance. The sideways distance stays 3: 3 squares left.",
+            "ur": "2 اوپر نیچے کا فاصلہ ہے۔ دائیں بائیں کا فاصلہ 3 ہی رہتا ہے: 3 خانے بائیں"
+          },
+          "misconception_id": "swaps_distances"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the distance between A and its image, side to side. From O it is 3.",
+            "ur": "6، A اور اس کے عکس کے درمیان دائیں بائیں کا فاصلہ ہے۔ O سے وہ 3 ہے۔"
+          },
+          "misconception_id": "mirror_distance"
+        }
+      ],
+      "figure": {
+        "width": 96,
+        "height": 76,
+        "alt": {
+          "en": "A squared grid 8 squares wide and 6 tall. The centre of turning O is a dot in the middle. Point A is a dot 3 squares to the right of O and 2 squares above it.",
+          "ur": "8 خانے چوڑا اور 6 خانے اونچا چوکور جال۔ گردش کا مرکز O درمیان میں ایک نقطہ ہے۔ نقطہ A، O سے 3 خانے دائیں اور 2 خانے اوپر ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              8.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              8.0
+            ],
+            "to": [
+              18.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              8.0
+            ],
+            "to": [
+              28.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.0,
+              8.0
+            ],
+            "to": [
+              48.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.0,
+              8.0
+            ],
+            "to": [
+              58.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              8.0
+            ],
+            "to": [
+              68.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              8.0
+            ],
+            "to": [
+              78.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              18.0
+            ],
+            "to": [
+              88.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              28.0
+            ],
+            "to": [
+              88.0,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              38.0
+            ],
+            "to": [
+              88.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              48.0
+            ],
+            "to": [
+              88.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              58.0
+            ],
+            "to": [
+              88.0,
+              58.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              68.0
+            ],
+            "to": [
+              88.0,
+              68.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              48.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              47.0,
+              45.0
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "point",
+            "at": [
+              78.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.0,
+              11.0
+            ],
+            "text": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q11_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zara says a parallelogram has 2 lines of symmetry, like a rectangle. What went wrong?",
+        "ur": "زارا کہتی ہے متوازی الاضلاع کی تشاکل کی 2 لکیریں ہیں، مستطیل کی طرح۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A parallelogram has no line of symmetry. It only has rotational symmetry of order 2.",
+            "ur": "متوازی الاضلاع کی تشاکل کی کوئی لکیر نہیں۔ اس میں صرف درجہ 2 کا گردشی تشاکل ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Folding it never matches the halves, but a half turn fits it onto itself.",
+            "ur": "جی ہاں! تہہ کرنے سے حصے کبھی نہیں ملتے، لیکن آدھا چکر اسے اپنے اوپر بٹھا دیتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. A parallelogram has 2 lines of symmetry.",
+            "ur": "کوئی غلطی نہیں۔ متوازی الاضلاع کی تشاکل کی 2 لکیریں ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Fold it along a diagonal or through the middle: the halves do not match.",
+            "ur": "اسے وتر پر یا درمیان سے تہہ کریں: حصے نہیں ملتے۔"
+          },
+          "misconception_id": "parallelogram_lines"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A parallelogram has 4 lines of symmetry.",
+            "ur": "متوازی الاضلاع کی تشاکل کی 4 لکیریں ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only a square has 4. A parallelogram has none.",
+            "ur": "صرف مربع کی 4 ہوتی ہیں۔ متوازی الاضلاع کی کوئی نہیں۔"
+          },
+          "misconception_id": "parallelogram_lines"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A parallelogram, slanting to the right, with a dot at its centre. No lines are drawn on it.",
+          "ur": "ایک متوازی الاضلاع جو دائیں طرف جھکا ہوا ہے، مرکز پر ایک نقطہ ہے۔ اس پر کوئی لکیر نہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                16.0
+              ],
+              [
+                64.0,
+                16.0
+              ],
+              [
+                84.0,
+                48.0
+              ],
+              [
+                36.0,
+                48.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              32.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q12_find_error_n",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ali says the letter N has no symmetry at all, because no fold makes it match. What went wrong?",
+        "ur": "علی کہتا ہے حرف N میں کوئی تشاکل ہے ہی نہیں، کیونکہ کوئی تہہ اسے ملاتی نہیں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. A shape without a line of symmetry has no symmetry.",
+            "ur": "کوئی غلطی نہیں۔ جس شکل میں تشاکل کی لکیر نہ ہو اس میں تشاکل نہیں ہوتا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Turn N upside down: it looks the same. That is symmetry.",
+            "ur": "N کو الٹا کریں: وہ ویسا ہی لگتا ہے۔ یہ تشاکل ہے۔"
+          },
+          "misconception_id": "no_line_no_symmetry"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "N has no line of symmetry, but a half turn fits it onto itself: rotational symmetry of order 2.",
+            "ur": "N میں تشاکل کی لکیر نہیں، مگر آدھا چکر اسے اپنے اوپر بٹھا دیتا ہے: درجہ 2 کا گردشی تشاکل۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Symmetry can be turning as well as folding.",
+            "ur": "جی ہاں! تشاکل گھمانے سے بھی ہو سکتا ہے، تہہ کرنے سے ہی نہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "N has 2 lines of symmetry, like H.",
+            "ur": "N کی تشاکل کی 2 لکیریں ہیں، H کی طرح۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Folding N never matches the halves.",
+            "ur": "N کو تہہ کرنے سے حصے کبھی نہیں ملتے۔"
+          },
+          "misconception_id": "counts_double"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "The capital letter N drawn with straight strokes, with a dot at its middle.",
+          "ur": "سیدھی لکیروں سے بنا بڑا انگریزی حرف N، بیچ میں ایک نقطہ ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              46.0
+            ],
+            "to": [
+              40.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              18.0
+            ],
+            "to": [
+              60.0,
+              46.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              46.0
+            ],
+            "to": [
+              60.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              32.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q13_fan",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A ceiling fan has 3 identical blades, equally spaced. What is the smallest angle, in degrees, it can turn through so that it looks the same?",
+        "ur": "چھت کے پنکھے کے 3 ایک جیسے پر ہیں، برابر فاصلے پر۔ وہ کم از کم کتنے ڈگری گھومے تو ویسا ہی لگے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "The order is 3. Smallest turn = 360° ÷ 3.",
+        "ur": "درجہ 3 ہے۔ سب سے چھوٹا چکر = 360° ÷ 3"
+      },
+      "feedback_correct": {
+        "en": "Right! 360° ÷ 3 = 120°.",
+        "ur": "درست! 360° ÷ 3 = 120°"
+      },
+      "feedback_wrong": {
+        "en": "Three equal turns make 360°: 120° each.",
+        "ur": "تین برابر چکر مل کر 360° بناتے ہیں: ہر ایک 120°"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the order. The angle is 360° ÷ 3 = 120°.",
+            "ur": "3 درجہ ہے۔ زاویہ 360° ÷ 3 = 120° ہے۔"
+          },
+          "misconception_id": "order_for_angle"
+        },
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "60° would be for 6 blades. 360° ÷ 3 = 120°.",
+            "ur": "60° 6 پروں کے لیے ہوتا۔ 360° ÷ 3 = 120°"
+          },
+          "misconception_id": "order_for_angle"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can find both kinds of symmetry.",
+          "ur": "شاباش! آپ دونوں قسم کے تشاکل ڈھونڈ سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "A line of symmetry folds a shape so the halves match; a regular shape has as many lines as sides. A point and its image are the same distance from the mirror, on opposite sides. Rotational symmetry: the order is how many times a shape fits onto itself in one full turn, and the smallest turn is 360° ÷ order. A shape can have rotational symmetry without a line of symmetry.",
+        "ur": "تشاکل کی لکیر شکل کو یوں تہہ کرتی ہے کہ حصے مل جائیں؛ باقاعدہ شکل میں اضلاع کے برابر لکیریں ہوتی ہیں۔ نقطہ اور اس کا عکس آئینہ لکیر سے برابر فاصلے پر، مخالف رخوں پر ہوتے ہیں۔ گردشی تشاکل: درجہ یہ ہے کہ ایک پورے چکر میں شکل کتنی بار اپنے اوپر بیٹھتی ہے، اور سب سے چھوٹا چکر 360° ÷ درجہ ہے۔ شکل میں تشاکل کی لکیر کے بغیر بھی گردشی تشاکل ہو سکتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Image: same distance from the mirror, other side.",
+          "ur": "عکس: آئینہ لکیر سے برابر فاصلہ، دوسری طرف۔"
+        },
+        {
+          "en": "Smallest turn = 360° ÷ order.",
+          "ur": "سب سے چھوٹا چکر = 360° ÷ درجہ"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_h_lines",
+      "type": "recall",
+      "step": {
+        "id": "r_h_lines",
+        "type": "number",
+        "prompt": {
+          "en": "How many lines of symmetry does the capital letter H have?",
+          "ur": "بڑے انگریزی حرف H کی تشاکل کی کتنی لکیریں ہیں؟"
+        },
+        "answer": 2,
+        "checker": "numeric",
+        "hint": {
+          "en": "One up-down and one across.",
+          "ur": "ایک اوپر نیچے اور ایک آر پار۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 2 lines of symmetry.",
+          "ur": "درست! تشاکل کی 2 لکیریں۔"
+        },
+        "feedback_wrong": {
+          "en": "Fold H down the middle, and across the middle: 2.",
+          "ur": "H کو بیچ سے اوپر نیچے اور بیچ سے آر پار تہہ کریں: 2"
+        },
+        "common_wrong": [
+          {
+            "answer": 1,
+            "feedback": {
+              "en": "H folds both ways: 2.",
+              "ur": "H دونوں طرح تہہ ہوتا ہے: 2"
+            },
+            "misconception_id": "counts_double"
+          }
+        ]
+      },
+      "skill": "maths.symmetry.ex_9_3"
+    },
+    {
+      "id": "r_hexagon_turn",
+      "type": "apply",
+      "step": {
+        "id": "r_hexagon_turn",
+        "type": "number",
+        "prompt": {
+          "en": "What is the smallest angle, in degrees, a regular hexagon can be turned through to fit onto itself?",
+          "ur": "باقاعدہ مسدس کو کم از کم کتنے ڈگری گھمانے سے وہ اپنے اوپر بیٹھتا ہے؟"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "360° ÷ 6.",
+          "ur": "360° ÷ 6"
+        },
+        "feedback_correct": {
+          "en": "Right! 360° ÷ 6 = 60°.",
+          "ur": "درست! 360° ÷ 6 = 60°"
+        },
+        "feedback_wrong": {
+          "en": "360 ÷ 6 = 60.",
+          "ur": "360 ÷ 6 = 60"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "6 is the order. The angle is 360° ÷ 6 = 60°.",
+              "ur": "6 درجہ ہے۔ زاویہ 360° ÷ 6 = 60° ہے۔"
+            },
+            "misconception_id": "order_for_angle"
+          }
+        ]
+      },
+      "skill": "maths.symmetry.ex_9_3"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 9.3 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers lines of symmetry of a regular shape and of letters (q1 to q3, q11), reflecting a point and a shape on a grid (q4 to q6), the order of rotational symmetry and the smallest turn (q7, q8, q13), turning a point about a centre on a grid (q9, q10) and a letter with only rotational symmetry (q12).",
+    "Each wrong answer is a real mistake: each line counted twice, rotational symmetry forgotten when there is no line, the distance to the mirror mixed with the distance between point and image, the mirror image forgotten, the turn the wrong way, and the order mixed with the angle.",
+    "Counts and orders were checked in figs.py by really flipping and turning the drawn shapes. Urdu terms to check: تشاکل کی لکیر, آئینہ لکیر, عکس, گردشی تشاکل, گردشی تشاکل کا درجہ, آدھا چکر, گھڑی کی سوئیوں کی سمت, all as in the existing Symmetry lessons. پھرکی (pinwheel) is as in the rotational symmetry lesson; باقاعدہ پانچ ضلعی شکل and باقاعدہ آٹھ ضلعی شکل (regular pentagon, octagon) are new, so a teacher should confirm them.",
+    "The numbers were worked out in content/sources/g6-maths-18/exercise_9_3.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

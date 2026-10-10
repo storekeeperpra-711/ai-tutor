@@ -1,0 +1,1914 @@
+{
+  "id": "g6-maths-18-chapter-9-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 9: 2-D and 3-D shapes and their faces, edges and vertices, parallel, intersecting and perpendicular lines, the angles a transversal makes, and reflective and rotational symmetry.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 9: Symmetry, Review Exercise 9"
+    }
+  ],
+  "skills": [
+    "maths.symmetry.chapter_9_test"
+  ],
+  "title": {
+    "en": "Chapter 9 test: Symmetry",
+    "ur": "باب 9 کا ٹیسٹ: تشاکل"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.solids.faces_edges_vertices"
+    },
+    {
+      "skill": "maths.geometry.angle_types"
+    },
+    {
+      "skill": "maths.geometry.angles_on_line"
+    },
+    {
+      "skill": "maths.geometry.complementary_supplementary"
+    },
+    {
+      "skill": "maths.symmetry.shapes_2d_3d"
+    },
+    {
+      "skill": "maths.symmetry.parallel_transversal"
+    },
+    {
+      "skill": "maths.symmetry.line_symmetry"
+    },
+    {
+      "skill": "maths.symmetry.rotational"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "solid_parts_mix",
+      "description": "Mixes up faces, edges and vertices of a solid, or does not count a curved surface as a face."
+    },
+    {
+      "id": "edges_miscount",
+      "description": "Counts too few edges, such as only the visible ones, or only one of each length."
+    },
+    {
+      "id": "angle_rule_mix",
+      "description": "Uses 180° minus the angle where the angles are equal, or equal where they add to 180°."
+    },
+    {
+      "id": "lines_counted_wrong",
+      "description": "Gives a rectangle 4 lines of symmetry (its diagonals), or counts each line twice."
+    },
+    {
+      "id": "order_for_angle",
+      "description": "Mixes up the order of rotational symmetry and the smallest angle of turn."
+    },
+    {
+      "id": "mirror_distance",
+      "description": "Gives the distance to the mirror line when the distance between the point and its image is asked."
+    },
+    {
+      "id": "half_not_found",
+      "description": "Sets up or solves the equation from the angle rule wrongly, or gives x when the angle is asked."
+    },
+    {
+      "id": "answer_is_other_quantity",
+      "description": "Stops at a middle step, such as the length of ribbon, and gives it as the answer."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.symmetry.chapter_9_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.symmetry.chapter_9_test": [
+      {
+        "id": "qb_exam_cube_faces",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_cube_faces",
+          "type": "number",
+          "prompt": {
+            "en": "How many faces does a cube have?",
+            "ur": "مکعب کی کتنی سطحیں ہیں؟"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "Top, bottom, front, back, left, right.",
+            "ur": "اوپر، نیچے، سامنے، پیچھے، بائیں، دائیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 6 faces.",
+            "ur": "درست: 6 سطحیں"
+          },
+          "feedback_wrong": {
+            "en": "2 + 2 + 2 = 6.",
+            "ur": "2 + 2 + 2 = 6"
+          },
+          "common_wrong": [
+            {
+              "answer": 12,
+              "feedback": {
+                "en": "12 is the number of edges. Faces: 6.",
+                "ur": "12 کناروں کی تعداد ہے۔ سطحیں: 6"
+              },
+              "misconception_id": "solid_parts_mix"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_cointerior",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_cointerior",
+          "type": "number",
+          "prompt": {
+            "en": "Parallel lines are cut by a transversal. One co-interior angle is 115°. Find the other, in degrees.",
+            "ur": "متوازی لکیریں ایک قاطع سے کٹتی ہیں۔ ایک ہم اندرونی زاویہ 115° ہے۔ دوسرا ڈگری میں نکالیں۔"
+          },
+          "answer": 65,
+          "checker": "numeric",
+          "hint": {
+            "en": "Co-interior angles add up to 180°.",
+            "ur": "ہم اندرونی زاویوں کا مجموعہ 180° ہوتا ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 180° − 115° = 65°.",
+            "ur": "درست: 180° − 115° = 65°"
+          },
+          "feedback_wrong": {
+            "en": "115 + x = 180, so x = 65.",
+            "ur": "115 + x = 180، تو x = 65"
+          },
+          "common_wrong": [
+            {
+              "answer": 115,
+              "feedback": {
+                "en": "That makes them equal. They add up to 180°: 65°.",
+                "ur": "یہ انہیں برابر بناتا ہے۔ ان کا مجموعہ 180° ہے: 65°"
+              },
+              "misconception_id": "angle_rule_mix"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_square_lines",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_square_lines",
+          "type": "number",
+          "prompt": {
+            "en": "How many lines of symmetry does a square have?",
+            "ur": "مربع کی تشاکل کی کتنی لکیریں ہیں؟"
+          },
+          "answer": 4,
+          "checker": "numeric",
+          "hint": {
+            "en": "Two through the middles of the sides and two diagonals.",
+            "ur": "دو اضلاع کے درمیان سے اور دو وتر۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 4 lines of symmetry.",
+            "ur": "درست: تشاکل کی 4 لکیریں"
+          },
+          "feedback_wrong": {
+            "en": "2 across and down, 2 diagonals: 4.",
+            "ur": "2 آر پار اور اوپر نیچے، 2 وتر: 4"
+          },
+          "common_wrong": [
+            {
+              "answer": 2,
+              "feedback": {
+                "en": "A square folds along its diagonals too: 4.",
+                "ur": "مربع وتر پر بھی تہہ ہوتا ہے: 4"
+              },
+              "misconception_id": "lines_counted_wrong"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 9 in your maths book in your notebook, setting out the working the way this test's answers do: write the rule you use, put in the numbers, work out the answer with its unit or degrees. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 9 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں: جو اصول استعمال کریں وہ لکھیں، اعداد رکھیں، اور جواب اکائی یا ڈگری کے ساتھ نکالیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Review exercise",
+      "ur": "اعادی مشق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 9 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook, then the final answer). The questions are new, not the book's. Write the unit with every answer in your notebook: degrees, cm or rupees.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 9 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوالات (کاپی میں پورا کام، پھر آخری جواب)۔ سوال نئے ہیں، کتاب کے نہیں۔ اپنی کاپی میں ہر جواب کے ساتھ اکائی لکھیں: ڈگری، سینٹی میٹر یا روپے۔"
+      }
+    },
+    {
+      "id": "m1_no_edges",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which solid has no edge and no vertex?",
+        "ur": "کثیر انتخابی: کس ٹھوس شکل کا نہ کوئی کنارہ ہے نہ کوئی راس؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Cone",
+            "ur": "مخروط"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A cone has 1 edge and 1 vertex.",
+            "ur": "مخروط کا 1 کنارہ اور 1 راس ہے۔"
+          },
+          "misconception_id": "solid_parts_mix"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Sphere",
+            "ur": "کرہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: a sphere is one smooth curved surface.",
+            "ur": "درست: کرہ ایک ہموار خمدار سطح ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Cylinder",
+            "ur": "اسطوانہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A cylinder has 2 edges.",
+            "ur": "اسطوانے کے 2 کنارے ہیں۔"
+          },
+          "misconception_id": "solid_parts_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Hemisphere",
+            "ur": "نصف کرہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A hemisphere has 1 edge, where the flat circle meets the curved surface.",
+            "ur": "نصف کرہ کا 1 کنارہ ہے، جہاں چپٹا دائرہ خمدار سطح سے ملتا ہے۔"
+          },
+          "misconception_id": "solid_parts_mix"
+        }
+      ]
+    },
+    {
+      "id": "m2_cone",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A cone has:",
+        "ur": "کثیر انتخابی: مخروط میں ہوتے ہیں:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "2 faces, 1 edge, 1 vertex",
+            "ur": "2 سطحیں، 1 کنارہ، 1 راس"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: a flat base, a curved side, the rim of the base, and the tip.",
+            "ur": "درست: چپٹا قاعدہ، خمدار پہلو، قاعدے کا گھیرا، اور نوک۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "3 faces, 2 edges, 0 vertices",
+            "ur": "3 سطحیں، 2 کنارے، 0 راس"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a cylinder.",
+            "ur": "یہ اسطوانہ ہے۔"
+          },
+          "misconception_id": "solid_parts_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "1 face, 0 edges, 0 vertices",
+            "ur": "1 سطح، 0 کنارے، 0 راس"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a sphere.",
+            "ur": "یہ کرہ ہے۔"
+          },
+          "misconception_id": "solid_parts_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "2 faces, 1 edge, 0 vertices",
+            "ur": "2 سطحیں، 1 کنارہ، 0 راس"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a hemisphere. A cone has a tip, a vertex.",
+            "ur": "یہ نصف کرہ ہے۔ مخروط کی نوک ہے، یعنی راس۔"
+          },
+          "misconception_id": "solid_parts_mix"
+        }
+      ]
+    },
+    {
+      "id": "m3_corresponding",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Lines l and m are parallel. The angle on l is 65° and x is its corresponding angle on m. Then x is:",
+        "ur": "کثیر انتخابی: لکیریں l اور m متوازی ہیں۔ l پر زاویہ 65° ہے اور x، m پر اس کا متناظرہ زاویہ ہے۔ تو x ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "115°",
+            "ur": "115°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 180° − 65°. Corresponding angles are equal.",
+            "ur": "یہ 180° − 65° ہے۔ متناظرہ زاویے برابر ہوتے ہیں۔"
+          },
+          "misconception_id": "angle_rule_mix"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "25°",
+            "ur": "25°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 90° − 65°. The rule uses equal angles, not 90°.",
+            "ur": "یہ 90° − 65° ہے۔ اصول برابر زاویوں کا ہے، 90° کا نہیں۔"
+          },
+          "misconception_id": "angle_rule_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "65°",
+            "ur": "65°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: corresponding angles between parallel lines are equal.",
+            "ur": "درست: متوازی لکیروں کے درمیان متناظرہ زاویے برابر ہوتے ہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "295°",
+            "ur": "295°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 360° − 65°. Corresponding angles are equal.",
+            "ur": "یہ 360° − 65° ہے۔ متناظرہ زاویے برابر ہوتے ہیں۔"
+          },
+          "misconception_id": "angle_rule_mix"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 65° is above line l, right of the transversal; angle x is above line m, right of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 65° لکیر l کے اوپر، قاطع کے دائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے دائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.6,
+              72
+            ],
+            "to": [
+              75.4,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              67.9,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              52.1,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              67.9,
+              22
+            ],
+            "radius": 7,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              81.4,
+              13.4
+            ],
+            "text": "65°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              52.1,
+              56
+            ],
+            "radius": 7,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.6,
+              47.4
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4_perp_parallel",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Lines l and m are parallel. A line p is perpendicular to l. Then p is:",
+        "ur": "کثیر انتخابی: لکیریں l اور m متوازی ہیں۔ لکیر p، l پر عمودی ہے۔ تو p، m پر:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "perpendicular to m too",
+            "ur": "m پر بھی عمودی ہے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: corresponding angles are equal, so the 90° at l is 90° at m.",
+            "ur": "درست: متناظرہ زاویے برابر ہیں، تو l پر 90° کا زاویہ m پر بھی 90° ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "parallel to m",
+            "ur": "m کے متوازی ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "p crosses l, so it crosses m too. It cannot be parallel to m.",
+            "ur": "p، l کو کاٹتی ہے، تو m کو بھی کاٹے گی۔ وہ m کے متوازی نہیں ہو سکتی۔"
+          },
+          "misconception_id": "angle_rule_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "at 45° to m",
+            "ur": "m پر 45° پر ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The angle at m equals the 90° at l.",
+            "ur": "m پر زاویہ l کے 90° کے برابر ہے۔"
+          },
+          "misconception_id": "angle_rule_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "at 180° to m",
+            "ur": "m پر 180° پر ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "180° is a straight line. The angle is 90°.",
+            "ur": "180° سیدھی لکیر ہے۔ زاویہ 90° ہے۔"
+          },
+          "misconception_id": "angle_rule_mix"
+        }
+      ]
+    },
+    {
+      "id": "m5_rectangle",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A rectangle that is not a square has how many lines of symmetry?",
+        "ur": "کثیر انتخابی: جو مستطیل مربع نہ ہو اس کی تشاکل کی کتنی لکیریں ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "4",
+            "ur": "4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The diagonals are not lines of symmetry for a rectangle.",
+            "ur": "مستطیل کے لیے وتر تشاکل کی لکیریں نہیں ہوتے۔"
+          },
+          "misconception_id": "lines_counted_wrong"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It folds two ways, not one.",
+            "ur": "یہ دو طرح تہہ ہوتی ہے، ایک نہیں۔"
+          },
+          "misconception_id": "lines_counted_wrong"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A rectangle does fold to match, two ways.",
+            "ur": "مستطیل تہہ ہو کر مل جاتی ہے، دو طرح۔"
+          },
+          "misconception_id": "lines_counted_wrong"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: one up-down and one across through the middle.",
+            "ur": "درست: ایک اوپر نیچے اور ایک آر پار، بیچ سے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m6_order_angle",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A shape has rotational symmetry of order 6. The smallest angle it can be turned through to fit onto itself is:",
+        "ur": "کثیر انتخابی: ایک شکل کے گردشی تشاکل کا درجہ 6 ہے۔ اسے کم از کم جتنا گھمانے سے وہ اپنے اوپر بیٹھتی ہے وہ زاویہ ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "6°",
+            "ur": "6°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 is the order. The angle is 360° ÷ 6.",
+            "ur": "6 درجہ ہے۔ زاویہ 360° ÷ 6 ہے۔"
+          },
+          "misconception_id": "order_for_angle"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "60°",
+            "ur": "60°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 360° ÷ 6 = 60°.",
+            "ur": "درست: 360° ÷ 6 = 60°"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "30°",
+            "ur": "30°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "30° would be for order 12.",
+            "ur": "30° درجہ 12 کے لیے ہوتا۔"
+          },
+          "misconception_id": "order_for_angle"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "90°",
+            "ur": "90°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "90° would be for order 4.",
+            "ur": "90° درجہ 4 کے لیے ہوتا۔"
+          },
+          "misconception_id": "order_for_angle"
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_frame",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: A wire frame is made along all the edges of a cuboid that is 10 cm long, 7 cm wide and 5 cm high. Find the length of wire, in cm.",
+        "ur": "مختصر سوال: ایک تار کا ڈھانچہ مکعب نما کے سب کناروں پر بنایا جاتا ہے جو 10 سینٹی میٹر لمبا، 7 سینٹی میٹر چوڑا اور 5 سینٹی میٹر اونچا ہے۔ تار کی لمبائی سینٹی میٹر میں نکالیں۔"
+      },
+      "answer": 88,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 edges of each length: 4 × (10 + 7 + 5).",
+        "ur": "ہر لمبائی کے 4 کنارے: 4 × (10 + 7 + 5)"
+      },
+      "feedback_correct": {
+        "en": "Correct: 4 × 22 = 88 cm.",
+        "ur": "درست: 4 × 22 = 88 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: a cuboid has 4 edges of each length. Wire = 4 × (10 + 7 + 5) = 4 × 22 = 88 cm.",
+        "ur": "نمونہ جواب: مکعب نما کے ہر لمبائی کے 4 کنارے ہوتے ہیں۔ تار = 4 × (10 + 7 + 5) = 4 × 22 = 88 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 22,
+          "feedback": {
+            "en": "That is one of each length. There are 4 of each: 88.",
+            "ur": "یہ ہر لمبائی کا ایک ایک ہے۔ ہر ایک کے 4 ہیں: 88"
+          },
+          "misconception_id": "edges_miscount"
+        },
+        {
+          "answer": 350,
+          "feedback": {
+            "en": "That is the volume, 10 × 7 × 5. Wire goes along the edges: 88.",
+            "ur": "یہ حجم ہے، 10 × 7 × 5۔ تار کناروں پر لگتا ہے: 88"
+          },
+          "misconception_id": "edges_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q2_cointerior_x",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Lines l and m are parallel. Two co-interior angles are 2x° and (x + 60)°. Find x.",
+        "ur": "مختصر سوال: لکیریں l اور m متوازی ہیں۔ دو ہم اندرونی زاویے 2x° اور (x + 60)° ہیں۔ x نکالیں۔"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "2x + (x + 60) = 180.",
+        "ur": "2x + (x + 60) = 180"
+      },
+      "feedback_correct": {
+        "en": "Correct: 3x + 60 = 180, 3x = 120, x = 40.",
+        "ur": "درست: 3x + 60 = 180، 3x = 120، x = 40"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: co-interior angles add up to 180°, so 2x + x + 60 = 180, 3x = 120, x = 40. Check: 80° + 100° = 180°.",
+        "ur": "نمونہ جواب: ہم اندرونی زاویوں کا مجموعہ 180° ہے، تو 2x + x + 60 = 180، 3x = 120، x = 40۔ جانچ: 80° + 100° = 180°"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "80 is the angle 2x. The question asks for x: 40.",
+            "ur": "80 زاویہ 2x ہے۔ سوال x پوچھتا ہے: 40"
+          },
+          "misconception_id": "half_not_found"
+        },
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "That forgets the 2x. 3x = 180 − 60 = 120, so x = 40.",
+            "ur": "یہ 2x بھول جاتا ہے۔ 3x = 180 − 60 = 120، تو x = 40"
+          },
+          "misconception_id": "half_not_found"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 2x is below line l, left of the transversal; angle x+60 is above line m, left of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 2x لکیر l کے نیچے، قاطع کے بائیں ہے؛ زاویہ x+60 لکیر m کے اوپر، قاطع کے بائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              54.2,
+              72
+            ],
+            "to": [
+              65.8,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              63.0,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              57.0,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              63.0,
+              22
+            ],
+            "radius": 7,
+            "start": 100,
+            "sweep": 80
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.7,
+              32.3
+            ],
+            "text": "2x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              57.0,
+              56
+            ],
+            "radius": 7,
+            "start": 180,
+            "sweep": 100
+          },
+          {
+            "kind": "label",
+            "at": [
+              46.7,
+              43.7
+            ],
+            "text": "x+60"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q3_image",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Point P is 4 squares to the left of the vertical mirror line. How many squares apart are P and its image P'?",
+        "ur": "مختصر سوال: نقطہ P عمودی آئینہ لکیر سے 4 خانے بائیں ہے۔ P اور اس کے عکس P' کے درمیان کتنے خانوں کا فاصلہ ہے؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "P' is 4 squares on the other side. Add both distances.",
+        "ur": "P' دوسری طرف 4 خانے پر ہے۔ دونوں فاصلے جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 4 + 4 = 8 squares.",
+        "ur": "درست: 4 + 4 = 8 خانے"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: P' is also 4 squares from the mirror, on the other side. Distance PP' = 4 + 4 = 8 squares.",
+        "ur": "نمونہ جواب: P' بھی آئینہ لکیر سے 4 خانے دور، دوسری طرف ہے۔ فاصلہ PP' = 4 + 4 = 8 خانے"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "4 is the distance to the mirror only. Add the other side: 8.",
+            "ur": "4 صرف آئینہ لکیر تک فاصلہ ہے۔ دوسری طرف بھی جمع کریں: 8"
+          },
+          "misconception_id": "mirror_distance"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That adds 4 and 8. The mirror is 4 from P and P' is 4 from the mirror: 8.",
+            "ur": "یہ 4 اور 8 جمع کرتا ہے۔ آئینہ لکیر P سے 4 اور P' آئینہ لکیر سے 4 پر ہے: 8"
+          },
+          "misconception_id": "mirror_distance"
+        }
+      ],
+      "figure": {
+        "width": 136,
+        "height": 56,
+        "alt": {
+          "en": "A squared grid 12 squares wide and 4 tall. A dashed mirror line goes down the middle. Point P is 4 squares to the left of the mirror line.",
+          "ur": "12 خانے چوڑا اور 4 خانے اونچا چوکور جال۔ بیچ میں اوپر سے نیچے ڈیش والی آئینہ لکیر ہے۔ نقطہ P آئینہ لکیر سے 4 خانے بائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              8.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              8.0
+            ],
+            "to": [
+              18.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28.0,
+              8.0
+            ],
+            "to": [
+              28.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              38.0,
+              8.0
+            ],
+            "to": [
+              38.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.0,
+              8.0
+            ],
+            "to": [
+              48.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              58.0,
+              8.0
+            ],
+            "to": [
+              58.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              8.0
+            ],
+            "to": [
+              68.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              8.0
+            ],
+            "to": [
+              78.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.0,
+              8.0
+            ],
+            "to": [
+              88.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              98.0,
+              8.0
+            ],
+            "to": [
+              98.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              108.0,
+              8.0
+            ],
+            "to": [
+              108.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              118.0,
+              8.0
+            ],
+            "to": [
+              118.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              128.0,
+              8.0
+            ],
+            "to": [
+              128.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              8.0
+            ],
+            "to": [
+              128.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              18.0
+            ],
+            "to": [
+              128.0,
+              18.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              28.0
+            ],
+            "to": [
+              128.0,
+              28.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              38.0
+            ],
+            "to": [
+              128.0,
+              38.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              48.0
+            ],
+            "to": [
+              128.0,
+              48.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              68.0,
+              2.0
+            ],
+            "to": [
+              68.0,
+              54.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              28.0,
+              28.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              28.0,
+              21.0
+            ],
+            "text": "P"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_sides",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: A regular polygon has rotational symmetry. The smallest angle it can be turned through to fit onto itself is 24°. How many sides does it have?",
+        "ur": "مختصر سوال: ایک باقاعدہ کثیر الاضلاع میں گردشی تشاکل ہے۔ اسے کم از کم 24° گھمانے سے وہ اپنے اوپر بیٹھتا ہے۔ اس کے کتنے اضلاع ہیں؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Order = 360° ÷ smallest turn. A regular polygon's order is its number of sides.",
+        "ur": "درجہ = 360° ÷ سب سے چھوٹا چکر۔ باقاعدہ کثیر الاضلاع کا درجہ اس کے اضلاع کی تعداد ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 360 ÷ 24 = 15 sides.",
+        "ur": "درست: 360 ÷ 24 = 15 اضلاع"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: order = 360° ÷ 24° = 15. A regular polygon with order 15 has 15 sides.",
+        "ur": "نمونہ جواب: درجہ = 360° ÷ 24° = 15۔ درجہ 15 والے باقاعدہ کثیر الاضلاع کے 15 اضلاع ہوتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24° is the angle. The number of sides is 360 ÷ 24 = 15.",
+            "ur": "24° زاویہ ہے۔ اضلاع کی تعداد 360 ÷ 24 = 15 ہے۔"
+          },
+          "misconception_id": "order_for_angle"
+        },
+        {
+          "answer": 336,
+          "feedback": {
+            "en": "That is 360 − 24. Divide: 360 ÷ 24 = 15.",
+            "ur": "یہ 360 − 24 ہے۔ تقسیم کریں: 360 ÷ 24 = 15"
+          },
+          "misconception_id": "order_for_angle"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write the rule and full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں اصول اور پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_math",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Find the total number of lines of symmetry in all the letters of the word MATH, drawn in the picture.",
+        "ur": "تفصیلی سوال: تصویر میں دیے گئے لفظ MATH کے سب حروف کی تشاکل کی لکیریں کل کتنی ہیں؟"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Fold each letter: M, A, T, H. Add up the lines.",
+        "ur": "ہر حرف تہہ کر کے دیکھیں: M، A، T، H۔ لکیریں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 1 + 1 + 1 + 2 = 5 lines of symmetry.",
+        "ur": "درست: 1 + 1 + 1 + 2 = تشاکل کی 5 لکیریں"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: M has 1 (down the middle), A has 1, T has 1, H has 2 (down and across). Total = 1 + 1 + 1 + 2 = 5.",
+        "ur": "نمونہ جواب: M کی 1 (بیچ سے اوپر نیچے)، A کی 1، T کی 1، H کی 2 (اوپر نیچے اور آر پار)۔ کل = 1 + 1 + 1 + 2 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That gives H only 1 line. H folds down the middle and across the middle: 5.",
+            "ur": "یہ H کی صرف 1 لکیر گنتا ہے۔ H بیچ سے اوپر نیچے اور آر پار تہہ ہوتا ہے: 5"
+          },
+          "misconception_id": "lines_counted_wrong"
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "That gives every letter 2 lines. Only H has 2: 5.",
+            "ur": "یہ ہر حرف کی 2 لکیریں گنتا ہے۔ صرف H کی 2 ہیں: 5"
+          },
+          "misconception_id": "lines_counted_wrong"
+        }
+      ],
+      "figure": {
+        "width": 144,
+        "height": 44,
+        "alt": {
+          "en": "The four capital letters M, A, T and H in a row, drawn with straight strokes. Each letter is taller than it is wide.",
+          "ur": "چار بڑے انگریزی حروف M، A، T اور H ایک قطار میں، سیدھی لکیروں سے بنے ہوئے۔ ہر حرف چوڑائی سے زیادہ اونچا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              12.0,
+              36.0
+            ],
+            "to": [
+              12.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              12.0,
+              8.0
+            ],
+            "to": [
+              22.0,
+              24.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              22.0,
+              24.0
+            ],
+            "to": [
+              32.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.0,
+              8.0
+            ],
+            "to": [
+              32.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              46.0,
+              36.0
+            ],
+            "to": [
+              56.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              56.0,
+              8.0
+            ],
+            "to": [
+              66.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              51.0,
+              24.0
+            ],
+            "to": [
+              61.0,
+              24.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              80.0,
+              8.0
+            ],
+            "to": [
+              100.0,
+              8.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              90.0,
+              8.0
+            ],
+            "to": [
+              90.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              114.0,
+              8.0
+            ],
+            "to": [
+              114.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              134.0,
+              8.0
+            ],
+            "to": [
+              134.0,
+              36.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              114.0,
+              22.0
+            ],
+            "to": [
+              134.0,
+              22.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "l2_alternate",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Lines l and m are parallel. The alternate angles shown are (3x − 10)° and (x + 50)°. Find the size of each of these angles, in degrees.",
+        "ur": "تفصیلی سوال: لکیریں l اور m متوازی ہیں۔ دکھائے گئے متبادلہ زاویے (3x − 10)° اور (x + 50)° ہیں۔ ان میں سے ہر زاویے کی پیمائش ڈگری میں نکالیں۔"
+      },
+      "answer": 80,
+      "checker": "numeric",
+      "hint": {
+        "en": "Alternate angles are equal: 3x − 10 = x + 50. Find x, then the angle.",
+        "ur": "متبادلہ زاویے برابر ہیں: 3x − 10 = x + 50۔ x نکالیں، پھر زاویہ۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 2x = 60, x = 30, and the angle is 30 + 50 = 80°.",
+        "ur": "درست: 2x = 60، x = 30، اور زاویہ 30 + 50 = 80°"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: alternate angles are equal, so 3x − 10 = x + 50, 2x = 60, x = 30. Each angle = 30 + 50 = 80°. Check: 3 × 30 − 10 = 80.",
+        "ur": "نمونہ جواب: متبادلہ زاویے برابر ہیں، تو 3x − 10 = x + 50، 2x = 60، x = 30۔ ہر زاویہ = 30 + 50 = 80°۔ جانچ: 3 × 30 − 10 = 80"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is x. The question asks for the angle: 80°.",
+            "ur": "30، x ہے۔ سوال زاویہ پوچھتا ہے: 80°"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 100,
+          "feedback": {
+            "en": "That is 180° − 80°. Alternate angles are equal, so each is 80°.",
+            "ur": "یہ 180° − 80° ہے۔ متبادلہ زاویے برابر ہیں، تو ہر ایک 80° ہے۔"
+          },
+          "misconception_id": "angle_rule_mix"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 3x−10 is below line l, right of the transversal; angle x+50 is above line m, left of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 3x−10 لکیر l کے نیچے، قاطع کے دائیں ہے؛ زاویہ x+50 لکیر m کے اوپر، قاطع کے بائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.8,
+              72
+            ],
+            "to": [
+              54.2,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              57.0,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              63.0,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              57.0,
+              22
+            ],
+            "radius": 7,
+            "start": 0,
+            "sweep": 80
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.3,
+              32.3
+            ],
+            "text": "3x−10"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              63.0,
+              56
+            ],
+            "radius": 7,
+            "start": 180,
+            "sweep": 80
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.7,
+              45.7
+            ],
+            "text": "x+50"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l3_ribbon",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A gift box is a cube with a side of 9 cm. A ribbon is stuck along all its edges. The ribbon costs Rs 2 for each centimetre. Find the cost of the ribbon, in rupees.",
+        "ur": "تفصیلی سوال: تحفے کا ایک ڈبہ مکعب ہے جس کا ضلع 9 سینٹی میٹر ہے۔ ایک فیتہ اس کے سب کناروں پر چپکایا جاتا ہے۔ فیتے کی قیمت فی سینٹی میٹر 2 روپے ہے۔ فیتے کی لاگت روپوں میں نکالیں۔"
+      },
+      "answer": 216,
+      "checker": "numeric",
+      "hint": {
+        "en": "A cube has 12 edges. Length of ribbon first, then × 2.",
+        "ur": "مکعب کے 12 کنارے ہوتے ہیں۔ پہلے فیتے کی لمبائی، پھر × 2"
+      },
+      "feedback_correct": {
+        "en": "Correct: ribbon 12 × 9 = 108 cm, cost 108 × 2 = Rs 216.",
+        "ur": "درست: فیتہ 12 × 9 = 108 سینٹی میٹر، لاگت 108 × 2 = 216 روپے"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: a cube has 12 equal edges. Length = 12 × 9 = 108 cm. Cost = 108 × 2 = Rs 216.",
+        "ur": "نمونہ جواب: مکعب کے 12 برابر کنارے ہوتے ہیں۔ لمبائی = 12 × 9 = 108 سینٹی میٹر۔ لاگت = 108 × 2 = 216 روپے"
+      },
+      "common_wrong": [
+        {
+          "answer": 108,
+          "feedback": {
+            "en": "108 cm is the length of ribbon. Multiply by Rs 2: 216.",
+            "ur": "108 سینٹی میٹر فیتے کی لمبائی ہے۔ 2 روپے سے ضرب دیں: 216"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 144,
+          "feedback": {
+            "en": "That counts only 8 edges. A cube has 12: 216.",
+            "ur": "یہ صرف 8 کنارے گنتا ہے۔ مکعب کے 12 ہوتے ہیں: 216"
+          },
+          "misconception_id": "edges_miscount"
+        }
+      ]
+    },
+    {
+      "id": "l4_toy",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A star-shaped toy has rotational symmetry of order 5. It is turned about its centre through 216°. It then looks exactly as it did at the start. How many of its smallest matching turns is this?",
+        "ur": "تفصیلی سوال: ستارے کی شکل کے کھلونے کے گردشی تشاکل کا درجہ 5 ہے۔ اسے اس کے مرکز کے گرد 216° گھمایا جاتا ہے۔ اس کے بعد وہ بالکل پہلے جیسا لگتا ہے۔ یہ اس کے سب سے چھوٹے ملتے ہوئے چکروں میں سے کتنے ہیں؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Smallest turn = 360° ÷ 5. Then 216° ÷ that.",
+        "ur": "سب سے چھوٹا چکر = 360° ÷ 5۔ پھر 216° ÷ وہ"
+      },
+      "feedback_correct": {
+        "en": "Correct: smallest turn 72°, and 216 ÷ 72 = 3.",
+        "ur": "درست: سب سے چھوٹا چکر 72°، اور 216 ÷ 72 = 3"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: smallest turn = 360° ÷ 5 = 72°. Number of turns = 216° ÷ 72° = 3.",
+        "ur": "نمونہ جواب: سب سے چھوٹا چکر = 360° ÷ 5 = 72°۔ چکروں کی تعداد = 216° ÷ 72° = 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "72° is the smallest turn. The question asks how many of them make 216°: 3.",
+            "ur": "72° سب سے چھوٹا چکر ہے۔ سوال پوچھتا ہے کتنے مل کر 216° بنتے ہیں: 3"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 43,
+          "feedback": {
+            "en": "That divides 216 by 5. Divide by the smallest turn, 72: 3.",
+            "ur": "یہ 216 کو 5 سے تقسیم کرتا ہے۔ سب سے چھوٹے چکر، 72، سے تقسیم کریں: 3"
+          },
+          "misconception_id": "order_for_angle"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 9 test. Well done!",
+          "ur": "آپ نے باب 9 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: a cuboid or cube has 6 faces, 12 edges and 8 vertices; a cone 2, 1, 1; a cylinder 3, 2, 0; a sphere 1, 0, 0. Between parallel lines, corresponding and alternate angles are equal and co-interior angles add up to 180°; vertically opposite angles are always equal. A point and its image are the same distance from the mirror line. The smallest turn of rotational symmetry is 360° ÷ order.",
+        "ur": "امتحان میں: مکعب نما یا مکعب کی 6 سطحیں، 12 کنارے اور 8 راس ہوتے ہیں؛ مخروط کی 2، 1، 1؛ اسطوانے کی 3، 2، 0؛ کرہ کی 1، 0، 0۔ متوازی لکیروں کے درمیان متناظرہ اور متبادلہ زاویے برابر ہوتے ہیں اور ہم اندرونی زاویوں کا مجموعہ 180° ہوتا ہے؛ راسی زاویے ہمیشہ برابر ہوتے ہیں۔ نقطہ اور اس کا عکس آئینہ لکیر سے برابر فاصلے پر ہوتے ہیں۔ گردشی تشاکل کا سب سے چھوٹا چکر 360° ÷ درجہ ہے۔"
+      },
+      "points": [
+        {
+          "en": "Rule, numbers, answer with its unit.",
+          "ur": "اصول، اعداد، اکائی کے ساتھ جواب۔"
+        },
+        {
+          "en": "Equation for x: write it, solve it, then answer the question asked.",
+          "ur": "x کی مساوات: لکھیں، حل کریں، پھر پوچھا گیا جواب دیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_cyl_edges",
+      "type": "exam_style",
+      "skill": "maths.symmetry.chapter_9_test",
+      "step": {
+        "id": "r_exam_cyl_edges",
+        "type": "number",
+        "prompt": {
+          "en": "How many edges does a cylinder have?",
+          "ur": "اسطوانے کے کتنے کنارے ہیں؟"
+        },
+        "answer": 2,
+        "checker": "numeric",
+        "hint": {
+          "en": "The rim of the top and the rim of the bottom.",
+          "ur": "اوپر کا گھیرا اور نیچے کا گھیرا۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 2 edges.",
+          "ur": "درست: 2 کنارے"
+        },
+        "feedback_wrong": {
+          "en": "One circle on top and one at the bottom: 2.",
+          "ur": "ایک دائرہ اوپر اور ایک نیچے: 2"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "3 is the number of faces. Edges: 2.",
+              "ur": "3 سطحوں کی تعداد ہے۔ کنارے: 2"
+            },
+            "misconception_id": "solid_parts_mix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_pentagon_order",
+      "type": "exam_style",
+      "skill": "maths.symmetry.chapter_9_test",
+      "step": {
+        "id": "r_exam_pentagon_order",
+        "type": "number",
+        "prompt": {
+          "en": "What is the order of rotational symmetry of a regular pentagon?",
+          "ur": "باقاعدہ پانچ ضلعی شکل کے گردشی تشاکل کا درجہ کیا ہے؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "A regular shape's order equals its number of sides.",
+          "ur": "باقاعدہ شکل کا درجہ اس کے اضلاع کی تعداد کے برابر ہوتا ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: order 5.",
+          "ur": "درست: درجہ 5"
+        },
+        "feedback_wrong": {
+          "en": "5 sides, order 5.",
+          "ur": "5 اضلاع، درجہ 5"
+        },
+        "common_wrong": [
+          {
+            "answer": 72,
+            "feedback": {
+              "en": "72° is the smallest turn. The order is 5.",
+              "ur": "72° سب سے چھوٹا چکر ہے۔ درجہ 5 ہے۔"
+            },
+            "misconception_id": "order_for_angle"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 9 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.symmetry.chapter_9_test), with the skills of the Symmetry unit, the Solids unit and the Angles unit as prerequisites, and is mastered with exam_style questions, like the chapter 5 to 8 tests.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), all as in the earlier chapter tests; the solid, angle and symmetry words come from the existing lessons. باقاعدہ کثیر الاضلاع (regular polygon) is new, so a teacher should confirm it.",
+    "The numbers were worked out in content/sources/g6-maths-18/chapter_9_test.py; counts of lines and orders of symmetry were checked by flipping and turning the drawn shapes in figs.py. Edit the script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

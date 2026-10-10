@@ -1,0 +1,2924 @@
+{
+  "id": "g6-maths-18-exercise-9-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Tell parallel, intersecting and perpendicular lines apart, name the angles a transversal makes and find unknown angles.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 9: Symmetry, Exercise 9.2"
+    }
+  ],
+  "skills": [
+    "maths.symmetry.ex_9_2"
+  ],
+  "title": {
+    "en": "Exercise 9.2 practice: lines and transversals",
+    "ur": "مشق 9.2 کی پریکٹس: لکیریں اور قاطع"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.symmetry.parallel_transversal"
+    },
+    {
+      "skill": "maths.geometry.angles_on_line"
+    },
+    {
+      "skill": "maths.geometry.complementary_supplementary"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "parallel_perp_mix",
+      "description": "Mixes up parallel lines (never meet) and perpendicular lines (meet at 90°)."
+    },
+    {
+      "id": "cointerior_equal",
+      "description": "Thinks co-interior angles are equal instead of adding to 180°."
+    },
+    {
+      "id": "alternate_supplementary",
+      "description": "Thinks alternate or corresponding angles add to 180° instead of being equal."
+    },
+    {
+      "id": "stops_after_one_step",
+      "description": "Stops after the first step of a two-step angle problem and gives that angle."
+    },
+    {
+      "id": "opposite_supplementary",
+      "description": "Gives 180° minus the angle for a vertically opposite angle."
+    },
+    {
+      "id": "equal_without_parallel",
+      "description": "Thinks the angle rules hold for any two lines, even when they are not parallel."
+    },
+    {
+      "id": "half_not_found",
+      "description": "Does not use the 180° of a straight line to set up and solve the unknown."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.symmetry.ex_9_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.symmetry.ex_9_2": [
+      {
+        "id": "qb_cointerior_total",
+        "type": "recall",
+        "step": {
+          "id": "qb_cointerior_total",
+          "type": "number",
+          "prompt": {
+            "en": "Co-interior angles between parallel lines add up to how many degrees?",
+            "ur": "متوازی لکیروں کے درمیان ہم اندرونی زاویوں کا مجموعہ کتنے ڈگری ہوتا ہے؟"
+          },
+          "answer": 180,
+          "checker": "numeric",
+          "hint": {
+            "en": "They fill a straight line.",
+            "ur": "وہ سیدھی لکیر بھرتے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 180°.",
+            "ur": "درست! 180°"
+          },
+          "feedback_wrong": {
+            "en": "A straight line is 180°.",
+            "ur": "سیدھی لکیر 180° ہوتی ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 90,
+              "feedback": {
+                "en": "90° is a right angle. Co-interior angles add up to 180°.",
+                "ur": "90° قائمہ زاویہ ہے۔ ہم اندرونی زاویوں کا مجموعہ 180° ہے۔"
+              },
+              "misconception_id": "half_not_found"
+            },
+            {
+              "answer": 360,
+              "feedback": {
+                "en": "360° is a full turn. Co-interior angles add up to 180°.",
+                "ur": "360° پورا چکر ہے۔ ہم اندرونی زاویوں کا مجموعہ 180° ہے۔"
+              },
+              "misconception_id": "half_not_found"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_corresponding",
+        "type": "apply",
+        "step": {
+          "id": "qb_corresponding",
+          "type": "number",
+          "prompt": {
+            "en": "Lines l and m are parallel. The angle on l is 134°. Find its corresponding angle x on m.",
+            "ur": "لکیریں l اور m متوازی ہیں۔ l پر زاویہ 134° ہے۔ m پر اس کا متناظرہ زاویہ x نکالیں۔"
+          },
+          "answer": 134,
+          "checker": "numeric",
+          "hint": {
+            "en": "Corresponding angles are equal.",
+            "ur": "متناظرہ زاویے برابر ہوتے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! x = 134°.",
+            "ur": "درست! x = 134°"
+          },
+          "feedback_wrong": {
+            "en": "Same position, so equal: 134°.",
+            "ur": "ایک ہی جگہ، تو برابر: 134°"
+          },
+          "common_wrong": [
+            {
+              "answer": 46,
+              "feedback": {
+                "en": "46° is 180° − 134°. Corresponding angles are equal: 134°.",
+                "ur": "46° ہے 180° − 134°۔ متناظرہ زاویے برابر ہیں: 134°"
+              },
+              "misconception_id": "alternate_supplementary"
+            }
+          ],
+          "figure": {
+            "width": 120,
+            "height": 80,
+            "alt": {
+              "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 134° is above line l, left of the transversal; angle x is above line m, left of the transversal.",
+              "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 134° لکیر l کے اوپر، قاطع کے بائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے بائیں ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  4,
+                  22
+                ],
+                "to": [
+                  116,
+                  22
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  19
+                ],
+                "to": [
+                  20,
+                  22
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  25
+                ],
+                "to": [
+                  20,
+                  22
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  112,
+                  16
+                ],
+                "text": "l"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  4,
+                  56
+                ],
+                "to": [
+                  116,
+                  56
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  53
+                ],
+                "to": [
+                  20,
+                  56
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  59
+                ],
+                "to": [
+                  20,
+                  56
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  112,
+                  50
+                ],
+                "text": "m"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  28.1,
+                  72
+                ],
+                "to": [
+                  91.9,
+                  6
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  76.4,
+                  22
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  43.6,
+                  56
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  76.4,
+                  22
+                ],
+                "radius": 7,
+                "start": 180,
+                "sweep": 134
+              },
+              {
+                "kind": "label",
+                "at": [
+                  70.1,
+                  7.3
+                ],
+                "text": "134°"
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  43.6,
+                  56
+                ],
+                "radius": 7,
+                "start": 180,
+                "sweep": 134
+              },
+              {
+                "kind": "label",
+                "at": [
+                  37.3,
+                  41.3
+                ],
+                "text": "x"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "qb_alternate",
+        "type": "apply",
+        "step": {
+          "id": "qb_alternate",
+          "type": "number",
+          "prompt": {
+            "en": "Lines l and m are parallel. The angle on l is 47°. Find its alternate angle x on m.",
+            "ur": "لکیریں l اور m متوازی ہیں۔ l پر زاویہ 47° ہے۔ m پر اس کا متبادلہ زاویہ x نکالیں۔"
+          },
+          "answer": 47,
+          "checker": "numeric",
+          "hint": {
+            "en": "Alternate angles are equal.",
+            "ur": "متبادلہ زاویے برابر ہوتے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! x = 47°.",
+            "ur": "درست! x = 47°"
+          },
+          "feedback_wrong": {
+            "en": "A Z shape: the two angles are equal: 47°.",
+            "ur": "Z کی شکل: دونوں زاویے برابر ہیں: 47°"
+          },
+          "common_wrong": [
+            {
+              "answer": 133,
+              "feedback": {
+                "en": "133° is 180° − 47°. Alternate angles are equal: 47°.",
+                "ur": "133° ہے 180° − 47°۔ متبادلہ زاویے برابر ہیں: 47°"
+              },
+              "misconception_id": "alternate_supplementary"
+            }
+          ],
+          "figure": {
+            "width": 120,
+            "height": 80,
+            "alt": {
+              "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 47° is below line l, left of the transversal; angle x is above line m, right of the transversal.",
+              "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 47° لکیر l کے نیچے، قاطع کے بائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے دائیں ہے۔"
+            },
+            "items": [
+              {
+                "kind": "line",
+                "from": [
+                  4,
+                  22
+                ],
+                "to": [
+                  116,
+                  22
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  19
+                ],
+                "to": [
+                  20,
+                  22
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  25
+                ],
+                "to": [
+                  20,
+                  22
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  112,
+                  16
+                ],
+                "text": "l"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  4,
+                  56
+                ],
+                "to": [
+                  116,
+                  56
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  53
+                ],
+                "to": [
+                  20,
+                  56
+                ]
+              },
+              {
+                "kind": "line",
+                "from": [
+                  16,
+                  59
+                ],
+                "to": [
+                  20,
+                  56
+                ]
+              },
+              {
+                "kind": "label",
+                "at": [
+                  112,
+                  50
+                ],
+                "text": "m"
+              },
+              {
+                "kind": "line",
+                "from": [
+                  29.2,
+                  72
+                ],
+                "to": [
+                  90.8,
+                  6
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  75.9,
+                  22
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  44.1,
+                  56
+                ]
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  75.9,
+                  22
+                ],
+                "radius": 7,
+                "start": 133,
+                "sweep": 47
+              },
+              {
+                "kind": "label",
+                "at": [
+                  61.2,
+                  28.4
+                ],
+                "text": "47°"
+              },
+              {
+                "kind": "arc",
+                "center": [
+                  44.1,
+                  56
+                ],
+                "radius": 7,
+                "start": 313,
+                "sweep": 47
+              },
+              {
+                "kind": "label",
+                "at": [
+                  58.8,
+                  49.6
+                ],
+                "text": "x"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Omar says vertically opposite angles add up to 180°. What went wrong?",
+            "ur": "عمر کہتا ہے راسی زاویوں کا مجموعہ 180° ہوتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Vertically opposite angles are equal. It is the angles side by side on a straight line that add up to 180°.",
+                "ur": "راسی زاویے برابر ہوتے ہیں۔ سیدھی لکیر پر ساتھ ساتھ زاویوں کا مجموعہ 180° ہوتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Opposite means equal.",
+                "ur": "جی ہاں! سامنے والے برابر ہوتے ہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. Opposite angles add up to 180°.",
+                "ur": "کوئی غلطی نہیں۔ سامنے والے زاویوں کا مجموعہ 180° ہوتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Opposite angles are equal.",
+                "ur": "سامنے والے زاویے برابر ہوتے ہیں۔"
+              },
+              "misconception_id": "opposite_supplementary"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "They add up to 90°.",
+                "ur": "ان کا مجموعہ 90° ہوتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "They are equal, not a total of 90°.",
+                "ur": "وہ برابر ہوتے ہیں، ان کا مجموعہ 90° نہیں۔"
+              },
+              "misconception_id": "opposite_supplementary"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rules",
+      "front": {
+        "en": "Which angles are equal between parallel lines?",
+        "ur": "متوازی لکیروں کے درمیان کون سے زاویے برابر ہوتے ہیں؟"
+      },
+      "back": {
+        "en": "Corresponding and alternate angles (and vertically opposite angles always).",
+        "ur": "متناظرہ اور متبادلہ زاویے (اور راسی زاویے ہمیشہ)۔"
+      }
+    },
+    {
+      "id": "f_cointerior",
+      "front": {
+        "en": "What do co-interior angles add up to?",
+        "ur": "ہم اندرونی زاویوں کا مجموعہ کتنا ہوتا ہے؟"
+      },
+      "back": {
+        "en": "180°, when the lines are parallel.",
+        "ur": "180°، جب لکیریں متوازی ہوں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_lines",
+      "text": {
+        "en": "Look for parallel lines (rails, window bars) and perpendicular lines (corners of a door) at home. Draw two parallel lines and a transversal in your notebook. Measure one angle with a protractor and work out the other seven. Then measure them to check.",
+        "ur": "گھر میں متوازی لکیریں (پٹریاں، کھڑکی کی سلاخیں) اور عمودی لکیریں (دروازے کے کونے) ڈھونڈیں۔ اپنی کاپی میں دو متوازی لکیریں اور ایک قاطع کھینچیں۔ ایک زاویہ چاند کی مدد سے ناپیں اور باقی سات حساب سے نکالیں۔ پھر ناپ کر جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Parallel lines",
+      "ur": "متوازی لکیریں"
+    },
+    {
+      "en": "Perpendicular lines",
+      "ur": "عمودی لکیریں"
+    },
+    {
+      "en": "Intersecting lines",
+      "ur": "قطع کرنے والی لکیریں"
+    },
+    {
+      "en": "Transversal",
+      "ur": "قاطع"
+    },
+    {
+      "en": "Corresponding angles",
+      "ur": "متناظرہ زاویے"
+    },
+    {
+      "en": "Alternate angles",
+      "ur": "متبادلہ زاویے"
+    },
+    {
+      "en": "Co-interior angles",
+      "ur": "ہم اندرونی زاویے"
+    },
+    {
+      "en": "Vertically opposite angles",
+      "ur": "راسی زاویے"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 9.2 is about lines and angles. Ready?",
+          "ur": "مشق 9.2 لکیروں اور زاویوں کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 9.2 of your maths book (PCTB Mathematics 6). Here you tell parallel, intersecting and perpendicular lines apart, name the angles a transversal makes, and find unknown angles. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 9.2 کے ساتھ ہے۔ اس میں آپ متوازی، قطع کرنے والی اور عمودی لکیروں میں فرق کریں گے، قاطع سے بننے والے زاویوں کے نام بتائیں گے، اور نامعلوم زاویے نکالیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_parallel",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Two lines on a page never meet, however far they are drawn. What are they called?",
+        "ur": "کاغذ پر دو لکیریں کتنی ہی بڑھائی جائیں کبھی نہیں ملتیں۔ انہیں کیا کہتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Perpendicular lines",
+            "ur": "عمودی لکیریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Perpendicular lines do meet, at a right angle.",
+            "ur": "عمودی لکیریں ملتی ہیں، قائمہ زاویے پر۔"
+          },
+          "misconception_id": "parallel_perp_mix"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Intersecting lines",
+            "ur": "قطع کرنے والی لکیریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Intersecting lines cross each other at a point.",
+            "ur": "قطع کرنے والی لکیریں ایک نقطے پر ایک دوسرے کو کاٹتی ہیں۔"
+          },
+          "misconception_id": "parallel_perp_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Parallel lines",
+            "ur": "متوازی لکیریں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Parallel lines stay the same distance apart and never meet.",
+            "ur": "جی ہاں! متوازی لکیریں ہمیشہ ایک جتنے فاصلے پر رہتی ہیں اور کبھی نہیں ملتیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "A transversal",
+            "ur": "قاطع"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A transversal is a line that cuts across other lines.",
+            "ur": "قاطع وہ لکیر ہے جو دوسری لکیروں کو کاٹتی ہے۔"
+          },
+          "misconception_id": "parallel_perp_mix"
+        }
+      ]
+    },
+    {
+      "id": "q2_perp",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Two lines are perpendicular. At what angle do they meet?",
+        "ur": "دو لکیریں عمودی ہیں۔ وہ کس زاویے پر ملتی ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "90°",
+            "ur": "90°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Perpendicular lines meet at a right angle, 90°.",
+            "ur": "جی ہاں! عمودی لکیریں قائمہ زاویے، 90° پر ملتی ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "180°",
+            "ur": "180°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "180° is a straight line, not a corner.",
+            "ur": "180° سیدھی لکیر ہے، کونا نہیں۔"
+          },
+          "misconception_id": "parallel_perp_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "45°",
+            "ur": "45°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "45° is half a right angle.",
+            "ur": "45° قائمہ زاویے کا آدھا ہے۔"
+          },
+          "misconception_id": "parallel_perp_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "0°",
+            "ur": "0°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Lines that never meet are parallel. Perpendicular lines meet at 90°.",
+            "ur": "جو لکیریں نہیں ملتیں وہ متوازی ہیں۔ عمودی لکیریں 90° پر ملتی ہیں۔"
+          },
+          "misconception_id": "parallel_perp_mix"
+        }
+      ]
+    },
+    {
+      "id": "q3_right_angles",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Lines p and q are perpendicular. How many right angles do they make at the point where they cross?",
+        "ur": "لکیریں p اور q عمودی ہیں۔ جہاں وہ ملتی ہیں وہاں کتنے قائمہ زاویے بنتے ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the four corners round the crossing.",
+        "ur": "ملنے کی جگہ کے گرد چاروں کونے گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! All 4 angles are 90° (4 × 90° = 360°).",
+        "ur": "درست! چاروں زاویے 90° ہیں (4 × 90° = 360°)۔"
+      },
+      "feedback_wrong": {
+        "en": "If one angle is 90°, the others are 90° too: 4.",
+        "ur": "اگر ایک زاویہ 90° ہے تو باقی بھی 90° ہیں: 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "The square mark shows one, but each of the 4 corners is a right angle: 4.",
+            "ur": "مربع کا نشان ایک دکھاتا ہے، مگر چاروں کونے قائمہ زاویے ہیں: 4"
+          },
+          "misconception_id": "parallel_perp_mix"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "Count all four corners round the crossing: 4.",
+            "ur": "ملنے کی جگہ کے گرد چاروں کونے گنیں: 4"
+          },
+          "misconception_id": "parallel_perp_mix"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two straight lines p and q cross at one point. One goes across and one goes straight up and down. A small square in the corner where they meet marks a right angle.",
+          "ur": "دو سیدھی لکیریں p اور q ایک نقطے پر ملتی ہیں۔ ایک افقی ہے اور ایک سیدھی اوپر نیچے۔ ملنے کی جگہ کونے میں چھوٹا مربع قائمہ زاویہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              12.0,
+              40.0
+            ],
+            "to": [
+              108.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              6.0
+            ],
+            "to": [
+              60.0,
+              74.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                60.0,
+                40.0
+              ],
+              [
+                67.0,
+                40.0
+              ],
+              [
+                67.0,
+                33.0
+              ],
+              [
+                60.0,
+                33.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              60.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              104.0,
+              34.0
+            ],
+            "text": "p"
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.0,
+              10.0
+            ],
+            "text": "q"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_name",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Parallel lines l and m are cut by a transversal. Angles a and b are in the same place at each crossing. What are they called?",
+        "ur": "متوازی لکیریں l اور m ایک قاطع سے کٹتی ہیں۔ زاویے a اور b ہر ملاپ پر ایک ہی جگہ ہیں۔ انہیں کیا کہتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Alternate angles",
+            "ur": "متبادلہ زاویے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Alternate angles are on opposite sides of the transversal, between the lines.",
+            "ur": "متبادلہ زاویے قاطع کے مخالف رخوں پر، لکیروں کے درمیان ہوتے ہیں۔"
+          },
+          "misconception_id": "alternate_supplementary"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Co-interior angles",
+            "ur": "ہم اندرونی زاویے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Co-interior angles are between the lines, on the same side.",
+            "ur": "ہم اندرونی زاویے لکیروں کے درمیان، ایک ہی رخ پر ہوتے ہیں۔"
+          },
+          "misconception_id": "cointerior_equal"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Vertically opposite angles",
+            "ur": "راسی زاویے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Vertically opposite angles are across one crossing, not two.",
+            "ur": "راسی زاویے ایک ہی ملاپ پر آمنے سامنے ہوتے ہیں، دو پر نہیں۔"
+          },
+          "misconception_id": "opposite_supplementary"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Corresponding angles",
+            "ur": "متناظرہ زاویے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Same position at the two crossings: corresponding angles.",
+            "ur": "جی ہاں! دونوں ملاپ پر ایک ہی جگہ: متناظرہ زاویے۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle a is above line l, right of the transversal; angle b is above line m, right of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ a لکیر l کے اوپر، قاطع کے دائیں ہے؛ زاویہ b لکیر m کے اوپر، قاطع کے دائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.6,
+              72
+            ],
+            "to": [
+              75.4,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              67.9,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              52.1,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              67.9,
+              22
+            ],
+            "radius": 7,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              81.4,
+              13.4
+            ],
+            "text": "a"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              52.1,
+              56
+            ],
+            "radius": 7,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.6,
+              47.4
+            ],
+            "text": "b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_opposite",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Two lines cross. One of the angles is 138°. What is the angle opposite to it (x)?",
+        "ur": "دو لکیریں ایک دوسرے کو کاٹتی ہیں۔ ایک زاویہ 138° ہے۔ اس کے سامنے والا زاویہ (x) کتنا ہے؟"
+      },
+      "answer": 138,
+      "checker": "numeric",
+      "hint": {
+        "en": "Vertically opposite angles are equal.",
+        "ur": "راسی زاویے برابر ہوتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Opposite angles are equal: x = 138°.",
+        "ur": "درست! سامنے والے زاویے برابر ہیں: x = 138°"
+      },
+      "feedback_wrong": {
+        "en": "They are vertically opposite, so x = 138°.",
+        "ur": "یہ راسی زاویے ہیں، تو x = 138°"
+      },
+      "common_wrong": [
+        {
+          "answer": 42,
+          "feedback": {
+            "en": "42° is the angle next to it (180° − 138°). The opposite angle is equal: 138°.",
+            "ur": "42° اس کے ساتھ والا زاویہ ہے (180° − 138°)۔ سامنے والا برابر ہے: 138°"
+          },
+          "misconception_id": "opposite_supplementary"
+        },
+        {
+          "answer": 222,
+          "feedback": {
+            "en": "That is 360° − 138°. The opposite angle is equal: 138°.",
+            "ur": "یہ 360° − 138° ہے۔ سامنے والا زاویہ برابر ہے: 138°"
+          },
+          "misconception_id": "opposite_supplementary"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 138° is above line l, left of the transversal; angle x is below line l, right of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 138° لکیر l کے اوپر، قاطع کے بائیں ہے؛ زاویہ x لکیر l کے نیچے، قاطع کے دائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              23.3,
+              72
+            ],
+            "to": [
+              96.7,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              78.9,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              41.1,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              78.9,
+              22
+            ],
+            "radius": 7,
+            "start": 180,
+            "sweep": 138
+          },
+          {
+            "kind": "label",
+            "at": [
+              73.2,
+              7.1
+            ],
+            "text": "138°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              78.9,
+              22
+            ],
+            "radius": 7,
+            "start": 0,
+            "sweep": 138
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.6,
+              36.9
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Parallel lines make equal angles, or angles that add to 180°.",
+          "ur": "متوازی لکیریں برابر زاویے بناتی ہیں، یا ایسے زاویے جن کا مجموعہ 180° ہوتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "When a transversal cuts two PARALLEL lines: corresponding angles are equal; alternate angles are equal; co-interior angles add up to 180°. Vertically opposite angles are always equal, even for lines that are not parallel. Angles side by side on a straight line add up to 180°. Two lines that cross at 90° are perpendicular; all four angles there are 90°.",
+        "ur": "جب قاطع دو متوازی لکیروں کو کاٹے: متناظرہ زاویے برابر ہوتے ہیں؛ متبادلہ زاویے برابر ہوتے ہیں؛ ہم اندرونی زاویوں کا مجموعہ 180° ہوتا ہے۔ راسی زاویے ہمیشہ برابر ہوتے ہیں، چاہے لکیریں متوازی نہ ہوں۔ سیدھی لکیر پر ساتھ ساتھ زاویوں کا مجموعہ 180° ہوتا ہے۔ جو دو لکیریں 90° پر ملیں وہ عمودی ہیں؛ وہاں چاروں زاویے 90° ہوتے ہیں۔"
+      }
+    },
+    {
+      "id": "q6_corresponding",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Lines l and m are parallel. The angle marked 72° is on line l; angle x is its corresponding angle on line m. Find x.",
+        "ur": "لکیریں l اور m متوازی ہیں۔ 72° والا زاویہ لکیر l پر ہے؛ زاویہ x لکیر m پر اس کا متناظرہ زاویہ ہے۔ x نکالیں۔"
+      },
+      "answer": 72,
+      "checker": "numeric",
+      "hint": {
+        "en": "Corresponding angles between parallel lines are equal.",
+        "ur": "متوازی لکیروں کے درمیان متناظرہ زاویے برابر ہوتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 72°.",
+        "ur": "درست! x = 72°"
+      },
+      "feedback_wrong": {
+        "en": "Same position at the two crossings, so equal: 72°.",
+        "ur": "دونوں ملاپ پر ایک ہی جگہ، تو برابر: 72°"
+      },
+      "common_wrong": [
+        {
+          "answer": 108,
+          "feedback": {
+            "en": "108° is 180° − 72°. Corresponding angles are equal, not supplementary: 72°.",
+            "ur": "108° ہے 180° − 72°۔ متناظرہ زاویے برابر ہوتے ہیں، تکمیلی نہیں: 72°"
+          },
+          "misconception_id": "alternate_supplementary"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 72° is above line l, right of the transversal; angle x is above line m, right of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 72° لکیر l کے اوپر، قاطع کے دائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے دائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              49.3,
+              72
+            ],
+            "to": [
+              70.7,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.5,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              54.5,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.5,
+              22
+            ],
+            "radius": 7,
+            "start": 288,
+            "sweep": 72
+          },
+          {
+            "kind": "label",
+            "at": [
+              78.4,
+              12.6
+            ],
+            "text": "72°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              54.5,
+              56
+            ],
+            "radius": 7,
+            "start": 288,
+            "sweep": 72
+          },
+          {
+            "kind": "label",
+            "at": [
+              67.4,
+              46.6
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_alternate",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Lines l and m are parallel. The angle marked 118° and angle x are alternate angles. Find x.",
+        "ur": "لکیریں l اور m متوازی ہیں۔ 118° والا زاویہ اور زاویہ x متبادلہ زاویے ہیں۔ x نکالیں۔"
+      },
+      "answer": 118,
+      "checker": "numeric",
+      "hint": {
+        "en": "Alternate angles between parallel lines are equal.",
+        "ur": "متوازی لکیروں کے درمیان متبادلہ زاویے برابر ہوتے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 118°.",
+        "ur": "درست! x = 118°"
+      },
+      "feedback_wrong": {
+        "en": "They form a Z shape, so they are equal: 118°.",
+        "ur": "یہ Z کی شکل بناتے ہیں، تو برابر ہیں: 118°"
+      },
+      "common_wrong": [
+        {
+          "answer": 62,
+          "feedback": {
+            "en": "62° is 180° − 118°. Alternate angles are equal: 118°.",
+            "ur": "62° ہے 180° − 118°۔ متبادلہ زاویے برابر ہوتے ہیں: 118°"
+          },
+          "misconception_id": "alternate_supplementary"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 118° is below line l, right of the transversal; angle x is above line m, left of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 118° لکیر l کے نیچے، قاطع کے دائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے بائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              42.5,
+              72
+            ],
+            "to": [
+              77.5,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              69.0,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              51.0,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              69.0,
+              22
+            ],
+            "radius": 7,
+            "start": 0,
+            "sweep": 118
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.2,
+              35.7
+            ],
+            "text": "118°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              51.0,
+              56
+            ],
+            "radius": 7,
+            "start": 180,
+            "sweep": 118
+          },
+          {
+            "kind": "label",
+            "at": [
+              42.8,
+              42.3
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_cointerior",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Lines l and m are parallel. The angle marked 112° and angle x are co-interior angles. Find x.",
+        "ur": "لکیریں l اور m متوازی ہیں۔ 112° والا زاویہ اور زاویہ x ہم اندرونی زاویے ہیں۔ x نکالیں۔"
+      },
+      "answer": 68,
+      "checker": "numeric",
+      "hint": {
+        "en": "Co-interior angles between parallel lines add up to 180°.",
+        "ur": "متوازی لکیروں کے درمیان ہم اندرونی زاویوں کا مجموعہ 180° ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 180° − 112° = 68°.",
+        "ur": "درست! x = 180° − 112° = 68°"
+      },
+      "feedback_wrong": {
+        "en": "112° + x = 180°, so x = 68°.",
+        "ur": "112° + x = 180°، تو x = 68°"
+      },
+      "common_wrong": [
+        {
+          "answer": 112,
+          "feedback": {
+            "en": "That makes them equal. Co-interior angles add up to 180°: 68°.",
+            "ur": "یہ انہیں برابر بناتا ہے۔ ہم اندرونی زاویوں کا مجموعہ 180° ہے: 68°"
+          },
+          "misconception_id": "cointerior_equal"
+        },
+        {
+          "answer": 248,
+          "feedback": {
+            "en": "That is 360° − 112°. Co-interior angles add up to 180°: 68°.",
+            "ur": "یہ 360° − 112° ہے۔ ہم اندرونی زاویوں کا مجموعہ 180° ہے: 68°"
+          },
+          "misconception_id": "cointerior_equal"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 112° is below line l, left of the transversal; angle x is above line m, left of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 112° لکیر l کے نیچے، قاطع کے بائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے بائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              73.4,
+              72
+            ],
+            "to": [
+              46.6,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              53.1,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.9,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              53.1,
+              22
+            ],
+            "radius": 7,
+            "start": 68,
+            "sweep": 112
+          },
+          {
+            "kind": "label",
+            "at": [
+              44.2,
+              35.3
+            ],
+            "text": "112°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              66.9,
+              56
+            ],
+            "radius": 7,
+            "start": 180,
+            "sweep": 68
+          },
+          {
+            "kind": "label",
+            "at": [
+              53.6,
+              47.1
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q9_two_steps",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Lines l and m are parallel. The angle on l marked 64° has a corresponding angle on m. Angle x on m is next to that corresponding angle, on a straight line. Find x.",
+        "ur": "لکیریں l اور m متوازی ہیں۔ لکیر l پر 64° والے زاویے کا متناظرہ زاویہ m پر ہے۔ m پر زاویہ x اس متناظرہ زاویے کے ساتھ سیدھی لکیر پر ہے۔ x نکالیں۔"
+      },
+      "answer": 116,
+      "checker": "numeric",
+      "hint": {
+        "en": "First the corresponding angle (64°). Then the straight line: 180° − 64°.",
+        "ur": "پہلے متناظرہ زاویہ (64°)۔ پھر سیدھی لکیر: 180° − 64°"
+      },
+      "feedback_correct": {
+        "en": "Right! The corresponding angle is 64°, so x = 180° − 64° = 116°.",
+        "ur": "درست! متناظرہ زاویہ 64° ہے، تو x = 180° − 64° = 116°"
+      },
+      "feedback_wrong": {
+        "en": "Step 1: 64°. Step 2: 180° − 64° = 116°.",
+        "ur": "مرحلہ 1: 64°۔ مرحلہ 2: 180° − 64° = 116°"
+      },
+      "common_wrong": [
+        {
+          "answer": 64,
+          "feedback": {
+            "en": "That is only the first step. x is next to it on a straight line: 116°.",
+            "ur": "یہ صرف پہلا مرحلہ ہے۔ x اس کے ساتھ سیدھی لکیر پر ہے: 116°"
+          },
+          "misconception_id": "stops_after_one_step"
+        },
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "26° is 90° − 64°. Angles on a straight line add up to 180°: 116°.",
+            "ur": "26° ہے 90° − 64°۔ سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے: 116°"
+          },
+          "misconception_id": "half_not_found"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 64° is above line l, right of the transversal; angle x is below line m, right of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 64° لکیر l کے اوپر، قاطع کے دائیں ہے؛ زاویہ x لکیر m کے نیچے، قاطع کے دائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              43.9,
+              72
+            ],
+            "to": [
+              76.1,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              68.3,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              51.7,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              68.3,
+              22
+            ],
+            "radius": 7,
+            "start": 296,
+            "sweep": 64
+          },
+          {
+            "kind": "label",
+            "at": [
+              81.9,
+              13.5
+            ],
+            "text": "64°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              51.7,
+              56
+            ],
+            "radius": 7,
+            "start": 0,
+            "sweep": 116
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.2,
+              69.6
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10_equation",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The two angles x and (x + 30) in the picture are side by side on a straight line. Find x.",
+        "ur": "تصویر میں دو زاویے x اور (x + 30) سیدھی لکیر پر ساتھ ساتھ ہیں۔ x نکالیں۔"
+      },
+      "answer": 75,
+      "checker": "numeric",
+      "hint": {
+        "en": "x + (x + 30) = 180. So 2x + 30 = 180.",
+        "ur": "x + (x + 30) = 180۔ تو 2x + 30 = 180"
+      },
+      "feedback_correct": {
+        "en": "Right! 2x = 150, so x = 75°. Check: 75° + 105° = 180°.",
+        "ur": "درست! 2x = 150، تو x = 75°۔ جانچ: 75° + 105° = 180°"
+      },
+      "feedback_wrong": {
+        "en": "2x = 180 − 30 = 150, and 150 ÷ 2 = 75.",
+        "ur": "2x = 180 − 30 = 150، اور 150 ÷ 2 = 75"
+      },
+      "common_wrong": [
+        {
+          "answer": 105,
+          "feedback": {
+            "en": "105° is the other angle, x + 30. The question asks for x: 75°.",
+            "ur": "105° دوسرا زاویہ x + 30 ہے۔ سوال x پوچھتا ہے: 75°"
+          },
+          "misconception_id": "half_not_found"
+        },
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "150 is 2x. Divide by 2: x = 75°.",
+            "ur": "150، 2x ہے۔ 2 سے تقسیم کریں: x = 75°"
+          },
+          "misconception_id": "half_not_found"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle x is above line l, right of the transversal; angle x+30 is below line l, right of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ x لکیر l کے اوپر، قاطع کے دائیں ہے؛ زاویہ x+30 لکیر l کے نیچے، قاطع کے دائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              51.1,
+              72
+            ],
+            "to": [
+              68.9,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              64.6,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              55.4,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              64.6,
+              22
+            ],
+            "radius": 7,
+            "start": 285,
+            "sweep": 75
+          },
+          {
+            "kind": "label",
+            "at": [
+              77.3,
+              12.3
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              64.6,
+              22
+            ],
+            "radius": 7,
+            "start": 0,
+            "sweep": 105
+          },
+          {
+            "kind": "label",
+            "at": [
+              74.3,
+              34.7
+            ],
+            "text": "x+30"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q11_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sara says: \"Lines l and m are parallel. The angles 70° and x are co-interior, so x = 70°.\" What went wrong?",
+        "ur": "سارہ کہتی ہے: \"لکیریں l اور m متوازی ہیں۔ 70° اور x ہم اندرونی زاویے ہیں، تو x = 70°۔\" کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Co-interior angles add up to 180°, so x = 180° − 70° = 110°.",
+            "ur": "ہم اندرونی زاویوں کا مجموعہ 180° ہوتا ہے، تو x = 180° − 70° = 110°۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Co-interior angles are not equal; they are supplementary.",
+            "ur": "جی ہاں! ہم اندرونی زاویے برابر نہیں ہوتے؛ ان کا مجموعہ 180° ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. Co-interior angles are equal.",
+            "ur": "کوئی غلطی نہیں۔ ہم اندرونی زاویے برابر ہوتے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the rule for alternate and corresponding angles, not co-interior.",
+            "ur": "یہ متبادلہ اور متناظرہ زاویوں کا اصول ہے، ہم اندرونی کا نہیں۔"
+          },
+          "misconception_id": "cointerior_equal"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "x should be 20°, because 90° − 70° = 20°.",
+            "ur": "x کو 20° ہونا چاہیے، کیونکہ 90° − 70° = 20°۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The total is 180°, not 90°.",
+            "ur": "مجموعہ 180° ہے، 90° نہیں۔"
+          },
+          "misconception_id": "half_not_found"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 80,
+        "alt": {
+          "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 70° is below line l, left of the transversal; angle x is above line m, left of the transversal.",
+          "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 70° لکیر l کے نیچے، قاطع کے بائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے بائیں ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              4,
+              22
+            ],
+            "to": [
+              116,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              19
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              25
+            ],
+            "to": [
+              20,
+              22
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              16
+            ],
+            "text": "l"
+          },
+          {
+            "kind": "line",
+            "from": [
+              4,
+              56
+            ],
+            "to": [
+              116,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              53
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16,
+              59
+            ],
+            "to": [
+              20,
+              56
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              112,
+              50
+            ],
+            "text": "m"
+          },
+          {
+            "kind": "line",
+            "from": [
+              48.0,
+              72
+            ],
+            "to": [
+              72.0,
+              6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.2,
+              22
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              53.8,
+              56
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              66.2,
+              22
+            ],
+            "radius": 7,
+            "start": 110,
+            "sweep": 70
+          },
+          {
+            "kind": "label",
+            "at": [
+              53.1,
+              31.2
+            ],
+            "text": "70°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              53.8,
+              56
+            ],
+            "radius": 7,
+            "start": 180,
+            "sweep": 110
+          },
+          {
+            "kind": "label",
+            "at": [
+              44.6,
+              42.9
+            ],
+            "text": "x"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q12_find_error_parallel",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal draws a transversal across two lines and measures a pair of corresponding angles: 70° and 75°. He says the lines are parallel. What went wrong?",
+        "ur": "بلال دو لکیروں پر ایک قاطع کھینچتا ہے اور متناظرہ زاویوں کا ایک جوڑا ناپتا ہے: 70° اور 75°۔ وہ کہتا ہے لکیریں متوازی ہیں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. The angles are close enough, so the lines are parallel.",
+            "ur": "کوئی غلطی نہیں۔ زاویے کافی قریب ہیں، تو لکیریں متوازی ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5° is a real difference. Parallel lines need exactly equal angles.",
+            "ur": "5° کا فرق اصلی فرق ہے۔ متوازی لکیروں کے زاویے بالکل برابر ہوتے ہیں۔"
+          },
+          "misconception_id": "equal_without_parallel"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "For parallel lines, corresponding angles must be equal. 70° and 75° are not equal, so the lines are not parallel.",
+            "ur": "متوازی لکیروں کے متناظرہ زاویے برابر ہونے چاہییں۔ 70° اور 75° برابر نہیں، تو لکیریں متوازی نہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Equal corresponding angles show parallel lines; unequal ones show they are not.",
+            "ur": "جی ہاں! برابر متناظرہ زاویے متوازی لکیریں بتاتے ہیں؛ غیر برابر بتاتے ہیں کہ نہیں ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The angles should add up to 180°, so 70° + 75° = 145° is wrong.",
+            "ur": "زاویوں کا مجموعہ 180° ہونا چاہیے، تو 70° + 75° = 145° غلط ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Corresponding angles are equal, not supplementary.",
+            "ur": "متناظرہ زاویے برابر ہوتے ہیں، تکمیلی نہیں۔"
+          },
+          "misconception_id": "alternate_supplementary"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can find angles made by a transversal.",
+          "ur": "شاباش! آپ قاطع سے بننے والے زاویے نکال سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Parallel lines never meet. Perpendicular lines meet at 90°. A transversal cuts across other lines. Between PARALLEL lines: corresponding angles are equal, alternate angles are equal, co-interior angles add up to 180°. Vertically opposite angles are always equal. Angles on a straight line add up to 180°. For an unknown with x, write the equation and solve it.",
+        "ur": "متوازی لکیریں کبھی نہیں ملتیں۔ عمودی لکیریں 90° پر ملتی ہیں۔ قاطع دوسری لکیروں کو کاٹتا ہے۔ متوازی لکیروں کے درمیان: متناظرہ زاویے برابر، متبادلہ زاویے برابر، ہم اندرونی زاویوں کا مجموعہ 180°۔ راسی زاویے ہمیشہ برابر ہوتے ہیں۔ سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے۔ x والے نامعلوم کے لیے مساوات لکھیں اور حل کریں۔"
+      },
+      "points": [
+        {
+          "en": "Equal: corresponding, alternate, vertically opposite.",
+          "ur": "برابر: متناظرہ، متبادلہ، راسی۔"
+        },
+        {
+          "en": "Add to 180°: co-interior, and angles on a straight line.",
+          "ur": "مجموعہ 180°: ہم اندرونی، اور سیدھی لکیر پر زاویے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_opposite",
+      "type": "apply",
+      "step": {
+        "id": "r_opposite",
+        "type": "number",
+        "prompt": {
+          "en": "Two lines cross. One angle is 41°. Find the angle x opposite to it.",
+          "ur": "دو لکیریں ایک دوسرے کو کاٹتی ہیں۔ ایک زاویہ 41° ہے۔ اس کے سامنے والا زاویہ x نکالیں۔"
+        },
+        "answer": 41,
+        "checker": "numeric",
+        "hint": {
+          "en": "Vertically opposite angles are equal.",
+          "ur": "راسی زاویے برابر ہوتے ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! x = 41°.",
+          "ur": "درست! x = 41°"
+        },
+        "feedback_wrong": {
+          "en": "Opposite angles are equal: 41°.",
+          "ur": "سامنے والے زاویے برابر ہیں: 41°"
+        },
+        "common_wrong": [
+          {
+            "answer": 139,
+            "feedback": {
+              "en": "139° is 180° − 41°. The opposite angle is equal: 41°.",
+              "ur": "139° ہے 180° − 41°۔ سامنے والا زاویہ برابر ہے: 41°"
+            },
+            "misconception_id": "opposite_supplementary"
+          }
+        ],
+        "figure": {
+          "width": 120,
+          "height": 80,
+          "alt": {
+            "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 41° is above line l, left of the transversal; angle x is below line l, right of the transversal.",
+            "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 41° لکیر l کے اوپر، قاطع کے بائیں ہے؛ زاویہ x لکیر l کے نیچے، قاطع کے دائیں ہے۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                4,
+                22
+              ],
+              "to": [
+                116,
+                22
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                19
+              ],
+              "to": [
+                20,
+                22
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                25
+              ],
+              "to": [
+                20,
+                22
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                112,
+                16
+              ],
+              "text": "l"
+            },
+            {
+              "kind": "line",
+              "from": [
+                4,
+                56
+              ],
+              "to": [
+                116,
+                56
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                53
+              ],
+              "to": [
+                20,
+                56
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                59
+              ],
+              "to": [
+                20,
+                56
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                112,
+                50
+              ],
+              "text": "m"
+            },
+            {
+              "kind": "line",
+              "from": [
+                98.0,
+                72
+              ],
+              "to": [
+                22.0,
+                6
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                40.4,
+                22
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                79.6,
+                56
+              ]
+            },
+            {
+              "kind": "arc",
+              "center": [
+                40.4,
+                22
+              ],
+              "radius": 7,
+              "start": 180,
+              "sweep": 41
+            },
+            {
+              "kind": "label",
+              "at": [
+                25.4,
+                16.4
+              ],
+              "text": "41°"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                40.4,
+                22
+              ],
+              "radius": 7,
+              "start": 0,
+              "sweep": 41
+            },
+            {
+              "kind": "label",
+              "at": [
+                55.4,
+                27.6
+              ],
+              "text": "x"
+            }
+          ]
+        }
+      },
+      "skill": "maths.symmetry.ex_9_2"
+    },
+    {
+      "id": "r_cointerior",
+      "type": "apply",
+      "step": {
+        "id": "r_cointerior",
+        "type": "number",
+        "prompt": {
+          "en": "Lines l and m are parallel. Co-interior angles are 100° and x. Find x.",
+          "ur": "لکیریں l اور m متوازی ہیں۔ ہم اندرونی زاویے 100° اور x ہیں۔ x نکالیں۔"
+        },
+        "answer": 80,
+        "checker": "numeric",
+        "hint": {
+          "en": "100° + x = 180°.",
+          "ur": "100° + x = 180°"
+        },
+        "feedback_correct": {
+          "en": "Right! x = 80°.",
+          "ur": "درست! x = 80°"
+        },
+        "feedback_wrong": {
+          "en": "180° − 100° = 80°.",
+          "ur": "180° − 100° = 80°"
+        },
+        "common_wrong": [
+          {
+            "answer": 100,
+            "feedback": {
+              "en": "That makes them equal. Co-interior angles add up to 180°: 80°.",
+              "ur": "یہ انہیں برابر بناتا ہے۔ ہم اندرونی زاویوں کا مجموعہ 180° ہے: 80°"
+            },
+            "misconception_id": "cointerior_equal"
+          }
+        ],
+        "figure": {
+          "width": 120,
+          "height": 80,
+          "alt": {
+            "en": "Two parallel lines, l on top and m below, are crossed by a slanting line (the transversal). Marked: angle 100° is below line l, left of the transversal; angle x is above line m, left of the transversal.",
+            "ur": "دو متوازی لکیریں، اوپر l اور نیچے m، ایک ترچھی لکیر (قاطع) سے کٹتی ہیں۔ نشان لگے ہیں: زاویہ 100° لکیر l کے نیچے، قاطع کے بائیں ہے؛ زاویہ x لکیر m کے اوپر، قاطع کے بائیں ہے۔"
+          },
+          "items": [
+            {
+              "kind": "line",
+              "from": [
+                4,
+                22
+              ],
+              "to": [
+                116,
+                22
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                19
+              ],
+              "to": [
+                20,
+                22
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                25
+              ],
+              "to": [
+                20,
+                22
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                112,
+                16
+              ],
+              "text": "l"
+            },
+            {
+              "kind": "line",
+              "from": [
+                4,
+                56
+              ],
+              "to": [
+                116,
+                56
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                53
+              ],
+              "to": [
+                20,
+                56
+              ]
+            },
+            {
+              "kind": "line",
+              "from": [
+                16,
+                59
+              ],
+              "to": [
+                20,
+                56
+              ]
+            },
+            {
+              "kind": "label",
+              "at": [
+                112,
+                50
+              ],
+              "text": "m"
+            },
+            {
+              "kind": "line",
+              "from": [
+                65.8,
+                72
+              ],
+              "to": [
+                54.2,
+                6
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                57.0,
+                22
+              ]
+            },
+            {
+              "kind": "point",
+              "at": [
+                63.0,
+                56
+              ]
+            },
+            {
+              "kind": "arc",
+              "center": [
+                57.0,
+                22
+              ],
+              "radius": 7,
+              "start": 80,
+              "sweep": 100
+            },
+            {
+              "kind": "label",
+              "at": [
+                46.7,
+                34.3
+              ],
+              "text": "100°"
+            },
+            {
+              "kind": "arc",
+              "center": [
+                63.0,
+                56
+              ],
+              "radius": 7,
+              "start": 180,
+              "sweep": 80
+            },
+            {
+              "kind": "label",
+              "at": [
+                50.7,
+                45.7
+              ],
+              "text": "x"
+            }
+          ]
+        }
+      },
+      "skill": "maths.symmetry.ex_9_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 9.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers naming parallel, intersecting and perpendicular lines (q1 to q3), naming the pairs of angles a transversal makes (q4), finding vertically opposite, corresponding, alternate and co-interior angles (q5 to q8), a two-step problem (q9), an equation from a straight line (q10) and two find-the-error questions (q11, q12).",
+    "Each wrong answer is a real mistake: co-interior angles taken as equal, equal angles taken as adding to 180°, 180° minus the angle for a vertically opposite angle, stopping after the first step, and using the angle rules for lines that are not parallel.",
+    "Urdu terms to check: متوازی لکیریں, عمودی لکیریں, قطع کرنے والی لکیریں, قاطع, متناظرہ, متبادلہ, ہم اندرونی, راسی زاویے, all as in the existing lesson on parallel lines and the transversal. No new terms.",
+    "The numbers were worked out in content/sources/g6-maths-18/exercise_9_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
