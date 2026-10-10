@@ -1,0 +1,925 @@
+{
+  "id": "g6-maths-04-exercise-3-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Multiply and divide two-digit like and unlike integers, verify the commutative, associative and distributive laws, and solve word problems about integers.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers, Exercise 3.2"
+    }
+  ],
+  "skills": [
+    "maths.integers.ex_3_2"
+  ],
+  "title": {
+    "en": "Exercise 3.2 practice: multiplying and dividing integers",
+    "ur": "مشق 3.2 کی پریکٹس: صحیح اعداد کا ضرب اور تقسیم"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.multiply_divide"
+    },
+    {
+      "skill": "maths.integers.laws"
+    },
+    {
+      "skill": "maths.integers.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "neg_neg",
+      "description": "Thinks a negative times a negative is negative, or a negative divided by a negative is negative."
+    },
+    {
+      "id": "pos_only",
+      "description": "Thinks the product or quotient is always positive and drops the minus sign."
+    },
+    {
+      "id": "blank_sign",
+      "description": "Finds the missing integer's digits but not its sign, or uses the wrong operation to undo."
+    },
+    {
+      "id": "distribute_one",
+      "description": "Multiplies only the first term inside the bracket: a × (b + c) = a × b + c."
+    },
+    {
+      "id": "zero_division",
+      "description": "Thinks a number divided by zero is 0 or the number itself."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a middle result but does not finish the problem."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.ex_3_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.ex_3_2": [
+      {
+        "id": "qb_mul",
+        "type": "recall",
+        "step": {
+          "id": "qb_mul",
+          "type": "number",
+          "prompt": {
+            "en": "Find (−9) × (−6).",
+            "ur": "(−9) × (−6) معلوم کریں۔"
+          },
+          "answer": 54,
+          "checker": "numeric",
+          "hint": {
+            "en": "Same signs give a positive product.",
+            "ur": "ایک جیسی علامتوں کا حاصل ضرب مثبت ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 54.",
+            "ur": "درست! 54"
+          },
+          "feedback_wrong": {
+            "en": "9 × 6 = 54 and both are negative: 54.",
+            "ur": "9 × 6 = 54 اور دونوں منفی ہیں: 54"
+          },
+          "common_wrong": [
+            {
+              "answer": -54,
+              "feedback": {
+                "en": "Two negatives give a positive: 54.",
+                "ur": "دو منفی مل کر مثبت دیتے ہیں: 54"
+              },
+              "misconception_id": "neg_neg"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_div",
+        "type": "apply",
+        "step": {
+          "id": "qb_div",
+          "type": "number",
+          "prompt": {
+            "en": "Find (−96) ÷ 8.",
+            "ur": "(−96) ÷ 8 معلوم کریں۔"
+          },
+          "answer": -12,
+          "checker": "numeric",
+          "hint": {
+            "en": "96 ÷ 8 = 12. Are the signs the same?",
+            "ur": "96 ÷ 8 = 12۔ کیا علامتیں ایک جیسی ہیں؟"
+          },
+          "feedback_correct": {
+            "en": "Right! −12.",
+            "ur": "درست! −12"
+          },
+          "feedback_wrong": {
+            "en": "96 ÷ 8 = 12 and the signs differ: −12.",
+            "ur": "96 ÷ 8 = 12 اور علامتیں مختلف ہیں: −12"
+          },
+          "common_wrong": [
+            {
+              "answer": 12,
+              "feedback": {
+                "en": "A negative divided by a positive is negative: −12.",
+                "ur": "منفی کو مثبت پر تقسیم کریں تو منفی ملتا ہے: −12"
+              },
+              "misconception_id": "pos_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Imran works out 6 × (4 + (−3)) as 6 × 4 + (−3) = 21. What went wrong?",
+            "ur": "عمران 6 × (4 + (−3)) کو 6 × 4 + (−3) = 21 لکھ کر حل کرتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "He multiplied only 4. Both terms must be multiplied: 6 × 4 + 6 × (−3) = 24 − 18 = 6.",
+                "ur": "اس نے صرف 4 کو ضرب دی۔ دونوں اجزا کو ضرب دینا ہے: 6 × 4 + 6 × (−3) = 24 − 18 = 6"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Check: 4 + (−3) = 1 and 6 × 1 = 6.",
+                "ur": "جی ہاں! جانچ: 4 + (−3) = 1 اور 6 × 1 = 6"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 21 is correct.",
+                "ur": "کوئی غلطی نہیں۔ 21 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6 × 1 = 6, so 21 cannot be right.",
+                "ur": "6 × 1 = 6، اس لیے 21 درست نہیں ہو سکتا۔"
+              },
+              "misconception_id": "distribute_one"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "He should have added 6 to the bracket.",
+                "ur": "اسے بریکٹ میں 6 جمع کرنا چاہیے تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The distributive law multiplies; it does not add.",
+                "ur": "قانون تقسیم ضرب دیتا ہے، جمع نہیں کرتا۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_signs",
+      "front": {
+        "en": "What is (−8) × (−5)?",
+        "ur": "(−8) × (−5) کیا ہے؟"
+      },
+      "back": {
+        "en": "40. Like signs give a positive product.",
+        "ur": "40۔ ایک جیسی علامتوں کا حاصل ضرب مثبت ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "f_zero",
+      "front": {
+        "en": "What is 5 ÷ 0? And 0 ÷ 5?",
+        "ur": "5 ÷ 0 کیا ہے؟ اور 0 ÷ 5؟"
+      },
+      "back": {
+        "en": "5 ÷ 0 is undefined. 0 ÷ 5 = 0.",
+        "ur": "5 ÷ 0 غیر معین ہے۔ 0 ÷ 5 = 0"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_savings",
+      "text": {
+        "en": "Imagine you spend Rs 40 every day for 6 days from Rs 500. Write the change as 6 × (−40), find the money left, and check it by adding back. Then make up a similar problem about a temperature that falls every hour.",
+        "ur": "فرض کریں آپ 500 روپے میں سے 6 دن تک ہر روز 40 روپے خرچ کرتے ہیں۔ تبدیلی 6 × (−40) لکھیں، بچی ہوئی رقم معلوم کریں، اور واپس جمع کر کے جانچیں۔ پھر ہر گھنٹے گرتے درجہ حرارت کا ایسا ہی ایک سوال خود بنائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Product",
+      "ur": "حاصل ضرب"
+    },
+    {
+      "en": "Quotient",
+      "ur": "خارج قسمت"
+    },
+    {
+      "en": "Distributive law",
+      "ur": "قانون تقسیم"
+    },
+    {
+      "en": "Undefined",
+      "ur": "غیر معین"
+    },
+    {
+      "en": "Multiplicative identity",
+      "ur": "ضربی ذاتی عدد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 3.2 is about multiplying and dividing integers. Ready?",
+          "ur": "مشق 3.2 صحیح اعداد کے ضرب اور تقسیم کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 3.2 of your maths book (PCTB Mathematics 6). Here you multiply and divide integers with the sign rules, fill in missing integers, check the laws of multiplication, and solve savings and temperature problems. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 3.2 کے ساتھ ہے۔ اس میں آپ علامتوں کے اصول سے صحیح اعداد کا ضرب اور تقسیم کریں گے، گم شدہ صحیح اعداد بھریں گے، ضرب کے قوانین جانچیں گے، اور بچت اور درجہ حرارت کے سوال حل کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_unlike",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Find (−6) × 7.",
+        "ur": "(−6) × 7 معلوم کریں۔"
+      },
+      "answer": -42,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply 6 × 7. Unlike signs give a negative answer.",
+        "ur": "6 × 7 کریں۔ مخالف علامتوں کا جواب منفی ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 7 = 42 and the signs differ: −42.",
+        "ur": "درست! 6 × 7 = 42 اور علامتیں مختلف ہیں: −42"
+      },
+      "feedback_wrong": {
+        "en": "Unlike signs give a negative product: (−6) × 7 = −42.",
+        "ur": "مخالف علامتوں کا حاصل ضرب منفی ہوتا ہے: (−6) × 7 = −42"
+      },
+      "common_wrong": [
+        {
+          "answer": 42,
+          "feedback": {
+            "en": "One factor is negative and one positive, so the product is negative: −42.",
+            "ur": "ایک جز منفی اور ایک مثبت ہے، اس لیے حاصل ضرب منفی ہے: −42"
+          },
+          "misconception_id": "pos_only"
+        }
+      ]
+    },
+    {
+      "id": "q2_like",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Find (−8) × (−5).",
+        "ur": "(−8) × (−5) معلوم کریں۔"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "Like signs (both negative) give a positive answer.",
+        "ur": "ایک جیسی علامتوں (دونوں منفی) کا جواب مثبت ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 × 5 = 40, and two negatives make a positive.",
+        "ur": "درست! 8 × 5 = 40، اور دو منفی مل کر مثبت بنتے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "Like signs give a positive product: (−8) × (−5) = 40.",
+        "ur": "ایک جیسی علامتوں کا حاصل ضرب مثبت ہوتا ہے: (−8) × (−5) = 40"
+      },
+      "common_wrong": [
+        {
+          "answer": -40,
+          "feedback": {
+            "en": "Both numbers are negative, so the product is positive: 40.",
+            "ur": "دونوں اعداد منفی ہیں، اس لیے حاصل ضرب مثبت ہے: 40"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Same signs give plus. Different signs give minus.",
+          "ur": "ایک جیسی علامتیں پلس۔ مختلف علامتیں مائنس۔"
+        }
+      },
+      "text": {
+        "en": "The sign rules for multiplying and dividing are the same: (+) × (+) = +, (−) × (−) = +, (+) × (−) = −, (−) × (+) = −. So 48 ÷ (−6) = −8 and (−72) ÷ (−9) = 8. Division by 0 has no answer, it is undefined, but 0 divided by any other integer is 0. Multiplication is commutative, a × b = b × a, associative, (a × b) × c = a × (b × c), and distributive over addition, a × (b + c) = a × b + a × c. The distributive law multiplies every term inside the bracket.",
+        "ur": "ضرب اور تقسیم کے علامتی اصول ایک جیسے ہیں: (+) × (+) = +، (−) × (−) = +، (+) × (−) = −، (−) × (+) = −۔ اس لیے 48 ÷ (−6) = −8 اور (−72) ÷ (−9) = 8۔ صفر سے تقسیم کا کوئی جواب نہیں، یہ غیر معین ہے، مگر 0 کو کسی اور صحیح عدد پر تقسیم کریں تو 0 ملتا ہے۔ ضرب قانون تبدیلی a × b = b × a، قانون شراکت (a × b) × c = a × (b × c)، اور جمع پر قانون تقسیم a × (b + c) = a × b + a × c مانتا ہے۔ قانون تقسیم بریکٹ کے اندر ہر جز کو ضرب دیتا ہے۔"
+      }
+    },
+    {
+      "id": "q3_div",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 48 ÷ (−6).",
+        "ur": "48 ÷ (−6) معلوم کریں۔"
+      },
+      "answer": -8,
+      "checker": "numeric",
+      "hint": {
+        "en": "48 ÷ 6 = 8. Are the signs the same or different?",
+        "ur": "48 ÷ 6 = 8۔ علامتیں ایک جیسی ہیں یا مختلف؟"
+      },
+      "feedback_correct": {
+        "en": "Right! Unlike signs: −8. Check: (−8) × (−6) = 48.",
+        "ur": "درست! مخالف علامتیں: −8۔ جانچ: (−8) × (−6) = 48"
+      },
+      "feedback_wrong": {
+        "en": "48 ÷ 6 = 8 and the signs differ, so the answer is −8.",
+        "ur": "48 ÷ 6 = 8 اور علامتیں مختلف ہیں، اس لیے جواب −8 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "The divisor is negative, so the quotient is negative: −8.",
+            "ur": "مقسوم علیہ منفی ہے، اس لیے خارج قسمت منفی ہے: −8"
+          },
+          "misconception_id": "pos_only"
+        }
+      ]
+    },
+    {
+      "id": "q4_div_like",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find (−72) ÷ (−9).",
+        "ur": "(−72) ÷ (−9) معلوم کریں۔"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "72 ÷ 9 = 8. Both numbers are negative.",
+        "ur": "72 ÷ 9 = 8۔ دونوں اعداد منفی ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Like signs give a positive quotient: 8.",
+        "ur": "درست! ایک جیسی علامتوں کا خارج قسمت مثبت ہے: 8"
+      },
+      "feedback_wrong": {
+        "en": "72 ÷ 9 = 8 and both are negative, so the answer is 8.",
+        "ur": "72 ÷ 9 = 8 اور دونوں منفی ہیں، اس لیے جواب 8 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -8,
+          "feedback": {
+            "en": "Dividing a negative by a negative gives a positive: 8.",
+            "ur": "منفی کو منفی پر تقسیم کرنے سے مثبت ملتا ہے: 8"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "q5_blank",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Fill in the blank with an integer: (−7) × □ = 56.",
+        "ur": "خالی جگہ میں صحیح عدد لکھیں: (−7) × □ = 56"
+      },
+      "answer": -8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide: 56 ÷ (−7). The product is positive and −7 is negative, so the missing sign is negative.",
+        "ur": "تقسیم کریں: 56 ÷ (−7)۔ حاصل ضرب مثبت ہے اور −7 منفی ہے، اس لیے گم شدہ علامت منفی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−7) × (−8) = 56.",
+        "ur": "درست! (−7) × (−8) = 56"
+      },
+      "feedback_wrong": {
+        "en": "56 ÷ (−7) = −8. Check: (−7) × (−8) = 56.",
+        "ur": "56 ÷ (−7) = −8۔ جانچ: (−7) × (−8) = 56"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "(−7) × 8 = −56, not 56. The missing integer is −8.",
+            "ur": "(−7) × 8 = −56، 56 نہیں۔ گم شدہ صحیح عدد −8 ہے۔"
+          },
+          "misconception_id": "blank_sign"
+        }
+      ]
+    },
+    {
+      "id": "q6_blank_div",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Fill in the blank with an integer: □ ÷ 4 = −9.",
+        "ur": "خالی جگہ میں صحیح عدد لکھیں: □ ÷ 4 = −9"
+      },
+      "answer": -36,
+      "checker": "numeric",
+      "hint": {
+        "en": "To undo dividing by 4, multiply by 4.",
+        "ur": "4 سے تقسیم کو ختم کرنے کے لیے 4 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (−36) ÷ 4 = −9.",
+        "ur": "درست! (−36) ÷ 4 = −9"
+      },
+      "feedback_wrong": {
+        "en": "□ = (−9) × 4 = −36. Check: (−36) ÷ 4 = −9.",
+        "ur": "□ = (−9) × 4 = −36۔ جانچ: (−36) ÷ 4 = −9"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "36 ÷ 4 = 9, not −9. The blank must be negative: −36.",
+            "ur": "36 ÷ 4 = 9، −9 نہیں۔ خالی جگہ منفی ہونی چاہیے: −36"
+          },
+          "misconception_id": "blank_sign"
+        },
+        {
+          "answer": -5,
+          "feedback": {
+            "en": "That adds −9 and 4. To undo a division, multiply: −36.",
+            "ur": "یہ −9 اور 4 کو جمع کرتا ہے۔ تقسیم الٹنے کے لیے ضرب دیں: −36"
+          },
+          "misconception_id": "blank_sign"
+        }
+      ]
+    },
+    {
+      "id": "q7_commutative",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which equation shows the commutative law of multiplication?",
+        "ur": "کون سی مساوات ضرب کا قانون تبدیلی دکھاتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "(−3) × 8 = 8 × (−3)",
+            "ur": "(−3) × 8 = 8 × (−3)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Swapping the two numbers gives the same product, −24.",
+            "ur": "جی ہاں! دونوں اعداد بدلنے سے وہی حاصل ضرب −24 ملتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "((−3) × 8) × 2 = (−3) × (8 × 2)",
+            "ur": "((−3) × 8) × 2 = (−3) × (8 × 2)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The order stays and only the grouping changes. That is the associative law.",
+            "ur": "ترتیب وہی ہے اور صرف بریکٹ بدلے۔ یہ قانون شراکت ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "(−3) × (8 + 2) = (−3) × 8 + (−3) × 2",
+            "ur": "(−3) × (8 + 2) = (−3) × 8 + (−3) × 2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Here the multiplication is spread over an addition. That is the distributive law.",
+            "ur": "یہاں ضرب جمع پر پھیلائی گئی ہے۔ یہ قانون تقسیم ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "(−3) × 1 = −3",
+            "ur": "(−3) × 1 = −3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Multiplying by 1 changes nothing. That is the multiplicative identity.",
+            "ur": "1 سے ضرب دینے سے کچھ نہیں بدلتا۔ یہ ضربی ذاتی عدد ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8_associative",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Check the associative law for −2, 5 and −3. Work out ((−2) × 5) × (−3). It must equal (−2) × (5 × (−3)). What is the value?",
+        "ur": "−2، 5 اور −3 کے لیے قانون شراکت جانچیں۔ ((−2) × 5) × (−3) معلوم کریں۔ یہ (−2) × (5 × (−3)) کے برابر ہونا چاہیے۔ قیمت کیا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Left side: (−2) × 5 = −10, then (−10) × (−3).",
+        "ur": "بایاں طرف: (−2) × 5 = −10، پھر (−10) × (−3)"
+      },
+      "feedback_correct": {
+        "en": "Right! Both sides are 30: (−10) × (−3) = 30 and (−2) × (−15) = 30.",
+        "ur": "درست! دونوں طرف 30 ہے: (−10) × (−3) = 30 اور (−2) × (−15) = 30"
+      },
+      "feedback_wrong": {
+        "en": "L.H.S. = (−10) × (−3) = 30. R.H.S. = (−2) × (−15) = 30. They are equal.",
+        "ur": "L.H.S. = (−10) × (−3) = 30۔ R.H.S. = (−2) × (−15) = 30۔ دونوں برابر ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -30,
+          "feedback": {
+            "en": "Two negative factors (−10 and −3) give a positive product: 30.",
+            "ur": "دو منفی اجزا (−10 اور −3) کا حاصل ضرب مثبت ہے: 30"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "q9_distributive",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Use the distributive law to find (−4) × (6 + (−9)).",
+        "ur": "قانون تقسیم سے (−4) × (6 + (−9)) معلوم کریں۔"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "(−4) × 6 + (−4) × (−9). Multiply both terms.",
+        "ur": "(−4) × 6 + (−4) × (−9)۔ دونوں اجزا کو ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −24 + 36 = 12.",
+        "ur": "درست! −24 + 36 = 12"
+      },
+      "feedback_wrong": {
+        "en": "(−4) × 6 = −24 and (−4) × (−9) = 36, so −24 + 36 = 12. Check: 6 + (−9) = −3 and (−4) × (−3) = 12.",
+        "ur": "(−4) × 6 = −24 اور (−4) × (−9) = 36، اس لیے −24 + 36 = 12۔ جانچ: 6 + (−9) = −3 اور (−4) × (−3) = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": -33,
+          "feedback": {
+            "en": "That multiplies only 6 by −4. Multiply both terms: −24 + 36 = 12.",
+            "ur": "یہ صرف 6 کو −4 سے ضرب دیتا ہے۔ دونوں اجزا کو ضرب دیں: −24 + 36 = 12"
+          },
+          "misconception_id": "distribute_one"
+        },
+        {
+          "answer": -12,
+          "feedback": {
+            "en": "(−4) × (−9) is positive 36, so the total is 12.",
+            "ur": "(−4) × (−9) مثبت 36 ہے، اس لیے کل 12 ہے۔"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "q10_zero",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these is undefined (has no answer)?",
+        "ur": "ان میں سے کون غیر معین ہے (جواب نہیں رکھتا)؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "0 ÷ 5",
+            "ur": "0 ÷ 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 ÷ 5 = 0, because 0 × 5 = 0.",
+            "ur": "0 ÷ 5 = 0، کیونکہ 0 × 5 = 0"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5 ÷ 0",
+            "ur": "5 ÷ 0"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! No number times 0 gives 5, so 5 ÷ 0 is undefined.",
+            "ur": "جی ہاں! کوئی عدد 0 سے ضرب ہو کر 5 نہیں دیتا، اس لیے 5 ÷ 0 غیر معین ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "5 × 0",
+            "ur": "5 × 0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 × 0 = 0. Multiplying by 0 is fine.",
+            "ur": "5 × 0 = 0۔ صفر سے ضرب کوئی مسئلہ نہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "0 ÷ (−5)",
+            "ur": "0 ÷ (−5)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 ÷ (−5) = 0. Dividing 0 by any non-zero integer gives 0.",
+            "ur": "0 ÷ (−5) = 0۔ 0 کو کسی غیر صفر صحیح عدد پر تقسیم کرنے سے 0 ملتا ہے۔"
+          },
+          "misconception_id": "zero_division"
+        }
+      ]
+    },
+    {
+      "id": "q11_temperature",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "At 10 pm the temperature is 4 degrees. It falls 3 degrees every hour for 5 hours. What is the temperature then?",
+        "ur": "رات 10 بجے درجہ حرارت 4 ڈگری ہے۔ ہر گھنٹے میں 3 ڈگری گرتا ہے، 5 گھنٹے تک۔ تب درجہ حرارت کیا ہوگا؟"
+      },
+      "answer": -11,
+      "checker": "numeric",
+      "hint": {
+        "en": "The change is 5 × (−3). Then add it to 4.",
+        "ur": "تبدیلی 5 × (−3) ہے۔ پھر اسے 4 میں جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 + (−15) = −11 degrees.",
+        "ur": "درست! 4 + (−15) = −11 ڈگری"
+      },
+      "feedback_wrong": {
+        "en": "The total change is 5 × (−3) = −15, so 4 + (−15) = −11.",
+        "ur": "کل تبدیلی 5 × (−3) = −15 ہے، اس لیے 4 + (−15) = −11"
+      },
+      "common_wrong": [
+        {
+          "answer": -15,
+          "feedback": {
+            "en": "That is only the change. The temperature started at 4: 4 + (−15) = −11.",
+            "ur": "یہ صرف تبدیلی ہے۔ درجہ حرارت 4 سے شروع ہوا تھا: 4 + (−15) = −11"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 19,
+          "feedback": {
+            "en": "A fall is negative, so the change is −15 and not +15: −11.",
+            "ur": "گرنا منفی ہے، اس لیے تبدیلی +15 نہیں −15 ہے: −11"
+          },
+          "misconception_id": "pos_only"
+        }
+      ]
+    },
+    {
+      "id": "q12_savings",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hamza has Rs 1000 saved. He spends Rs 85 every day for 9 days. How many rupees does he have left?",
+        "ur": "حمزہ کے پاس 1000 روپے بچت ہے۔ وہ 9 دن تک ہر روز 85 روپے خرچ کرتا ہے۔ اس کے پاس کتنے روپے بچتے ہیں؟"
+      },
+      "answer": 235,
+      "checker": "numeric",
+      "hint": {
+        "en": "The spending is 9 × 85. Subtract it from 1000 (or add 9 × (−85)).",
+        "ur": "خرچ 9 × 85 ہے۔ اسے 1000 میں سے گھٹائیں (یا 9 × (−85) جمع کریں)۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1000 + 9 × (−85) = 1000 − 765 = 235.",
+        "ur": "درست! 1000 + 9 × (−85) = 1000 − 765 = 235"
+      },
+      "feedback_wrong": {
+        "en": "9 × 85 = 765 spent, so 1000 − 765 = Rs 235 are left.",
+        "ur": "9 × 85 = 765 خرچ ہوئے، اس لیے 1000 − 765 = 235 روپے بچتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 765,
+          "feedback": {
+            "en": "That is the amount spent. The money left is 1000 − 765 = 235.",
+            "ur": "یہ خرچ کی گئی رقم ہے۔ بچی ہوئی رقم 1000 − 765 = 235 ہے۔"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 1765,
+          "feedback": {
+            "en": "Spending takes money away, so subtract: 1000 − 765 = 235.",
+            "ur": "خرچ سے رقم کم ہوتی ہے، اس لیے گھٹائیں: 1000 − 765 = 235"
+          },
+          "misconception_id": "pos_only"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Aiman says (−12) ÷ (−3) = −4, because there are two minus signs and she keeps one. What went wrong?",
+        "ur": "ایمن کہتی ہے (−12) ÷ (−3) = −4، کیونکہ دو منفی علامتیں ہیں اور وہ ایک رکھتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. Her answer is correct.",
+            "ur": "کوئی غلطی نہیں۔ اس کا جواب ٹھیک ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: (−4) × (−3) = 12, not −12. So −4 is wrong.",
+            "ur": "جانچ: (−4) × (−3) = 12، −12 نہیں۔ اس لیے −4 غلط ہے۔"
+          },
+          "misconception_id": "neg_neg"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The digits are wrong: 12 ÷ 3 = 6.",
+            "ur": "ہندسے غلط ہیں: 12 ÷ 3 = 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "12 ÷ 3 is 4, so the digits are right. Only the sign is wrong.",
+            "ur": "12 ÷ 3 تو 4 ہے، اس لیے ہندسے درست ہیں۔ صرف علامت غلط ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Like signs give a positive quotient: (−12) ÷ (−3) = 4. Check: 4 × (−3) = −12.",
+            "ur": "ایک جیسی علامتوں کا خارج قسمت مثبت ہے: (−12) ÷ (−3) = 4۔ جانچ: 4 × (−3) = −12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A negative divided by a negative is positive.",
+            "ur": "جی ہاں! منفی کو منفی پر تقسیم کریں تو مثبت ملتا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You multiplied and divided integers.",
+          "ur": "شاباش! آپ نے صحیح اعداد کا ضرب اور تقسیم کیا۔"
+        }
+      },
+      "text": {
+        "en": "Same signs give a positive answer and different signs give a negative answer, for both multiplication and division. Multiplication is commutative, associative and distributive over addition, and in the distributive law every term in the bracket is multiplied. Dividing by 0 is undefined. Check a division by multiplying back.",
+        "ur": "ضرب اور تقسیم دونوں میں ایک جیسی علامتیں مثبت اور مختلف علامتیں منفی جواب دیتی ہیں۔ ضرب قانون تبدیلی، قانون شراکت اور جمع پر قانون تقسیم مانتا ہے، اور قانون تقسیم میں بریکٹ کے ہر جز کو ضرب دی جاتی ہے۔ صفر سے تقسیم غیر معین ہے۔ تقسیم کو واپس ضرب دے کر جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "(−) × (−) = + and (−) ÷ (−) = +.",
+          "ur": "(−) × (−) = + اور (−) ÷ (−) = +"
+        },
+        {
+          "en": "0 ÷ 5 = 0 but 5 ÷ 0 is undefined.",
+          "ur": "0 ÷ 5 = 0 مگر 5 ÷ 0 غیر معین ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_mul",
+      "type": "recall",
+      "step": {
+        "id": "r_mul",
+        "type": "number",
+        "prompt": {
+          "en": "Find (−11) × 4.",
+          "ur": "(−11) × 4 معلوم کریں۔"
+        },
+        "answer": -44,
+        "checker": "numeric",
+        "hint": {
+          "en": "Unlike signs give a negative product.",
+          "ur": "مخالف علامتوں کا حاصل ضرب منفی ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −44.",
+          "ur": "درست! −44"
+        },
+        "feedback_wrong": {
+          "en": "11 × 4 = 44, unlike signs: −44.",
+          "ur": "11 × 4 = 44، مخالف علامتیں: −44"
+        },
+        "common_wrong": [
+          {
+            "answer": 44,
+            "feedback": {
+              "en": "One factor is negative, so the product is negative: −44.",
+              "ur": "ایک جز منفی ہے، اس لیے حاصل ضرب منفی ہے: −44"
+            },
+            "misconception_id": "pos_only"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_3_2"
+    },
+    {
+      "id": "r_blank",
+      "type": "apply",
+      "step": {
+        "id": "r_blank",
+        "type": "number",
+        "prompt": {
+          "en": "Fill in the blank: □ ÷ (−5) = 7.",
+          "ur": "خالی جگہ بھریں: □ ÷ (−5) = 7"
+        },
+        "answer": -35,
+        "checker": "numeric",
+        "hint": {
+          "en": "Undo the division: multiply 7 by −5.",
+          "ur": "تقسیم الٹیں: 7 کو −5 سے ضرب دیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! (−35) ÷ (−5) = 7.",
+          "ur": "درست! (−35) ÷ (−5) = 7"
+        },
+        "feedback_wrong": {
+          "en": "□ = 7 × (−5) = −35. Check: (−35) ÷ (−5) = 7.",
+          "ur": "□ = 7 × (−5) = −35۔ جانچ: (−35) ÷ (−5) = 7"
+        },
+        "common_wrong": [
+          {
+            "answer": 35,
+            "feedback": {
+              "en": "35 ÷ (−5) = −7, not 7. The blank is −35.",
+              "ur": "35 ÷ (−5) = −7، 7 نہیں۔ خالی جگہ −35 ہے۔"
+            },
+            "misconception_id": "blank_sign"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_3_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 3.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the sign rules for multiplication (q1, q2) and division (q3, q4, q13), missing integers (q5, q6), the commutative, associative and distributive laws (q7, q8, q9), division by zero (q10) and savings and temperature word problems (q11, q12).",
+    "Each wrong answer is a real mistake: a negative times a negative taken as negative, dropping the minus sign, multiplying only the first term in the distributive law, or stopping before the last step.",
+    "Urdu terms to check: حاصل ضرب (product), خارج قسمت (quotient), قانون تقسیم (distributive law), غیر معین (undefined), ضربی ذاتی عدد (multiplicative identity).",
+    "The numbers were worked out in content/sources/g6-maths-04/exercise_3_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

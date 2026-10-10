@@ -36,10 +36,29 @@ EXERCISES = ("2.1", "2.2")
 EX_SKILL = {ex: "maths.integers.ex_" + ex.replace(".", "_") for ex in EXERCISES}
 CHAPTER_TEST = "maths.integers.chapter_2_test"
 
+# Chapter 3 (Laws of Integers): its lessons are in this unit and in the
+# Simplification unit (g6-maths-13). Exercise 3.3 is about BODMAS, so its
+# skill belongs with the simplification skills.
+SM_ORDER = "maths.simplify.order_of_operations"
+SM_BRACKETS = "maths.simplify.brackets"
+SM_FRACTIONS_DECIMALS = "maths.simplify.fractions_decimals"
+SM_WORD_PROBLEMS = "maths.simplify.word_problems"
+EX_SKILL.update({"3.1": "maths.integers.ex_3_1", "3.2": "maths.integers.ex_3_2",
+                 "3.3": "maths.simplify.ex_3_3"})
+CHAPTER_3_TEST = "maths.integers.chapter_3_test"
+
 
 def book_ref(part):
     """'Exercise 2.1' -> the textbook string for curriculum_refs."""
-    return f"{BOOK_INTEGERS}, {part}"
+    base = BOOK_LAWS if part.rstrip().split()[-1].startswith("3") else BOOK_INTEGERS
+    return f"{base}, {part}"
+
+
+def num(x):
+    """A Fraction or Decimal as a plain JSON number: Fraction(7, 2) -> 3.5, 4 -> 4."""
+    if isinstance(x, F):
+        return x.numerator if x.denominator == 1 else float(x)
+    return x
 
 
 def T(en, ur):
@@ -78,10 +97,10 @@ def number_question(id, prompt, answer: int, hint, good, bad, *, common_wrong=()
         step["skill"] = skill
     if character:
         step["character"] = character
-    step.update({"prompt": prompt, "answer": answer, "checker": "numeric",
+    step.update({"prompt": prompt, "answer": num(answer), "checker": "numeric",
                  "hint": hint, "feedback_correct": good, "feedback_wrong": bad})
     if common_wrong:
-        step["common_wrong"] = list(common_wrong)
+        step["common_wrong"] = [dict(w, answer=num(w["answer"])) for w in common_wrong]
     return step
 
 
@@ -135,6 +154,25 @@ def practice_intro(ex, kinds_en, kinds_ur, line_en, line_ur):
             "character": say("encouraging", line_en, line_ur),
             "text": T(f"This practice set goes with Exercise {ex} of your maths book (PCTB Mathematics 6). {kinds_en} The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
                       f"یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق {ex} کے ساتھ ہے۔ {kinds_ur} سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔")}
+
+
+def nq(id, prompt, answer, hint, good, bad, wrongs=(), qtype="apply"):
+    """number_question with (en, ur) tuples; wrongs are (answer, en, ur, misconception)."""
+    return number_question(id, T(*prompt), answer, T(*hint), T(*good), T(*bad),
+                           common_wrong=[wrong(a, en, ur, mis) for a, en, ur, mis in wrongs], qtype=qtype)
+
+
+def ch(id, prompt, right, wrongs, pos, qtype="apply"):
+    """choice_question with (en, ur) prompt. right is (en, ur, feedback_en,
+    feedback_ur); each wrong is the same plus an optional misconception. The
+    right option goes at index pos."""
+    options = [opt("x", right[0], right[1], True, right[2], right[3])]
+    for w in wrongs:
+        options.append(opt("x", w[0], w[1], False, w[2], w[3], w[4] if len(w) > 4 else None))
+    options.insert(pos, options.pop(0))
+    for k, o in enumerate(options):
+        o["id"] = "abcd"[k]
+    return choice_question(id, T(*prompt), options, qtype=qtype)
 
 
 def check_lesson(lesson):

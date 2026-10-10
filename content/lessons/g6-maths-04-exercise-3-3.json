@@ -1,0 +1,844 @@
+{
+  "id": "g6-maths-04-exercise-3-3",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Apply the BODMAS rule to simplify expressions with brackets, a bar, decimals and fractions, and solve multi-step word problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers, Exercise 3.3"
+    }
+  ],
+  "skills": [
+    "maths.simplify.ex_3_3"
+  ],
+  "title": {
+    "en": "Exercise 3.3 practice: BODMAS and brackets",
+    "ur": "مشق 3.3 کی پریکٹس: بوڈ ماس اور بریکٹ"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.simplify.order_of_operations"
+    },
+    {
+      "skill": "maths.simplify.brackets"
+    },
+    {
+      "skill": "maths.simplify.fractions_decimals"
+    },
+    {
+      "skill": "maths.simplify.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "left_to_right",
+      "description": "Works strictly left to right and ignores BODMAS: 8 + 6 × 3 = 42."
+    },
+    {
+      "id": "skips_brackets",
+      "description": "Ignores the brackets, or does the operation next to them before the brackets."
+    },
+    {
+      "id": "bracket_sign",
+      "description": "Removes a bracket after a minus sign without changing the signs inside."
+    },
+    {
+      "id": "bar_ignored",
+      "description": "Does not treat the terms under a bar as one bracket."
+    },
+    {
+      "id": "decimal_order",
+      "description": "Adds before multiplying in an expression with decimals or fractions."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a middle result but does not finish the problem."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.simplify.ex_3_3": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.simplify.ex_3_3": [
+      {
+        "id": "qb_order",
+        "type": "recall",
+        "step": {
+          "id": "qb_order",
+          "type": "number",
+          "prompt": {
+            "en": "Simplify 9 + 4 × 2.",
+            "ur": "9 + 4 × 2 سادہ کریں۔"
+          },
+          "answer": 17,
+          "checker": "numeric",
+          "hint": {
+            "en": "Multiply first.",
+            "ur": "پہلے ضرب۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 9 + 8 = 17.",
+            "ur": "درست! 9 + 8 = 17"
+          },
+          "feedback_wrong": {
+            "en": "4 × 2 = 8, then 9 + 8 = 17.",
+            "ur": "4 × 2 = 8، پھر 9 + 8 = 17"
+          },
+          "common_wrong": [
+            {
+              "answer": 26,
+              "feedback": {
+                "en": "That adds first: 13 × 2. Multiply first: 17.",
+                "ur": "یہ پہلے جمع کرتا ہے: 13 × 2۔ پہلے ضرب: 17"
+              },
+              "misconception_id": "left_to_right"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_bracket",
+        "type": "apply",
+        "step": {
+          "id": "qb_bracket",
+          "type": "number",
+          "prompt": {
+            "en": "Simplify 48 ÷ (4 + 2) − 3.",
+            "ur": "48 ÷ (4 + 2) − 3 سادہ کریں۔"
+          },
+          "answer": 5,
+          "checker": "numeric",
+          "hint": {
+            "en": "Bracket first: 4 + 2. Then divide. Subtract last.",
+            "ur": "پہلے بریکٹ: 4 + 2۔ پھر تقسیم۔ آخر میں تفریق۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 48 ÷ 6 = 8, and 8 − 3 = 5.",
+            "ur": "درست! 48 ÷ 6 = 8، اور 8 − 3 = 5"
+          },
+          "feedback_wrong": {
+            "en": "Bracket 6, divide 8, subtract 3: 5.",
+            "ur": "بریکٹ 6، تقسیم 8، تفریق 3: 5"
+          },
+          "common_wrong": [
+            {
+              "answer": 11,
+              "feedback": {
+                "en": "That divides by 4 only and ignores the bracket: 5 is the answer.",
+                "ur": "یہ صرف 4 سے تقسیم کرتا ہے اور بریکٹ نظر انداز کرتا ہے: جواب 5 ہے۔"
+              },
+              "misconception_id": "skips_brackets"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana simplifies 20 − (6 − 2) as 20 − 6 − 2 = 12. What went wrong?",
+            "ur": "ثنا 20 − (6 − 2) کو 20 − 6 − 2 = 12 لکھ کر حل کرتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "She did not work out the bracket first. (6 − 2) = 4, and 20 − 4 = 16.",
+                "ur": "اس نے پہلے بریکٹ حل نہیں کیا۔ (6 − 2) = 4، اور 20 − 4 = 16"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Bracket first: 16. (Removing the bracket instead gives 20 − 6 + 2 = 16.)",
+                "ur": "جی ہاں! پہلے بریکٹ: 16۔ (بریکٹ ہٹانے سے 20 − 6 + 2 = 16 ملتا ہے۔)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 12 is correct.",
+                "ur": "کوئی غلطی نہیں۔ 12 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A minus before a bracket changes the signs inside: the answer is 16.",
+                "ur": "بریکٹ سے پہلے منفی اندر کی علامتیں بدل دیتا ہے: جواب 16 ہے۔"
+              },
+              "misconception_id": "bracket_sign"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "She should have added 20 and 6.",
+                "ur": "اسے 20 اور 6 جمع کرنا چاہیے تھے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Nothing in the question says to add 20 and 6.",
+                "ur": "سوال میں 20 اور 6 جمع کرنے کا نہیں کہا۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_bodmas",
+      "front": {
+        "en": "What does BODMAS stand for?",
+        "ur": "بوڈ ماس کا کیا مطلب ہے؟"
+      },
+      "back": {
+        "en": "Brackets, Of, Division, Multiplication, Addition, Subtraction.",
+        "ur": "بریکٹ، of، تقسیم، ضرب، جمع، تفریق۔"
+      }
+    },
+    {
+      "id": "f_inside",
+      "front": {
+        "en": "In which order are brackets removed?",
+        "ur": "بریکٹ کس ترتیب سے ہٹاتے ہیں؟"
+      },
+      "back": {
+        "en": "Inside out: bar, then ( ), then { }, then [ ].",
+        "ur": "اندر سے باہر: بار، پھر ( )، پھر { }، پھر [ ]۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_shop",
+      "text": {
+        "en": "Pick three things from a shop and write their prices. Make up a purchase with different numbers of each, pay with a bigger note, and write the change as one expression with brackets. Simplify it with BODMAS.",
+        "ur": "دکان سے تین چیزیں چنیں اور ان کی قیمتیں لکھیں۔ ہر ایک کی مختلف تعداد کی خریداری بنائیں، بڑے نوٹ سے ادائیگی کریں، اور واپسی کو بریکٹ والی ایک عبارت کے طور پر لکھیں۔ بوڈ ماس سے سادہ کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "BODMAS",
+      "ur": "بوڈ ماس"
+    },
+    {
+      "en": "Bracket",
+      "ur": "بریکٹ"
+    },
+    {
+      "en": "Bar (vinculum)",
+      "ur": "بار (خط)"
+    },
+    {
+      "en": "Simplify",
+      "ur": "سادہ کرنا"
+    },
+    {
+      "en": "Mixed number",
+      "ur": "مخلوط عدد"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 3.3 is about BODMAS. Ready?",
+          "ur": "مشق 3.3 بوڈ ماس کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 3.3 of your maths book (PCTB Mathematics 6). Here you simplify expressions with brackets, a bar, decimals and fractions using the BODMAS rule, and solve word problems with several steps. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 3.3 کے ساتھ ہے۔ اس میں آپ بوڈ ماس اصول سے بریکٹ، بار، اعشاریہ اور کسر والی عبارتیں سادہ کریں گے، اور کئی مراحل والے سوال حل کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_order",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Simplify 8 + 6 × 3.",
+        "ur": "8 + 6 × 3 سادہ کریں۔"
+      },
+      "answer": 26,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiplication comes before addition.",
+        "ur": "ضرب جمع سے پہلے آتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 3 = 18, then 8 + 18 = 26.",
+        "ur": "درست! 6 × 3 = 18، پھر 8 + 18 = 26"
+      },
+      "feedback_wrong": {
+        "en": "Multiply first: 6 × 3 = 18. Then add: 8 + 18 = 26.",
+        "ur": "پہلے ضرب: 6 × 3 = 18۔ پھر جمع: 8 + 18 = 26"
+      },
+      "common_wrong": [
+        {
+          "answer": 42,
+          "feedback": {
+            "en": "That works left to right: 8 + 6 = 14, then × 3. BODMAS says multiply first: 26.",
+            "ur": "یہ بائیں سے دائیں چلتا ہے: 8 + 6 = 14، پھر × 3۔ بوڈ ماس کہتا ہے پہلے ضرب: 26"
+          },
+          "misconception_id": "left_to_right"
+        }
+      ]
+    },
+    {
+      "id": "q2_order",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Simplify 30 − 12 ÷ 3.",
+        "ur": "30 − 12 ÷ 3 سادہ کریں۔"
+      },
+      "answer": 26,
+      "checker": "numeric",
+      "hint": {
+        "en": "Division comes before subtraction.",
+        "ur": "تقسیم تفریق سے پہلے آتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 ÷ 3 = 4, then 30 − 4 = 26.",
+        "ur": "درست! 12 ÷ 3 = 4، پھر 30 − 4 = 26"
+      },
+      "feedback_wrong": {
+        "en": "Divide first: 12 ÷ 3 = 4. Then subtract: 30 − 4 = 26.",
+        "ur": "پہلے تقسیم: 12 ÷ 3 = 4۔ پھر تفریق: 30 − 4 = 26"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That subtracts first: 30 − 12 = 18, then ÷ 3. Divide first: 26.",
+            "ur": "یہ پہلے تفریق کرتا ہے: 30 − 12 = 18، پھر ÷ 3۔ پہلے تقسیم کریں: 26"
+          },
+          "misconception_id": "left_to_right"
+        }
+      ]
+    },
+    {
+      "id": "s_bodmas",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Brackets first, then of, division, multiplication, addition, subtraction.",
+          "ur": "پہلے بریکٹ، پھر of، تقسیم، ضرب، جمع، تفریق۔"
+        }
+      },
+      "text": {
+        "en": "BODMAS gives the order: Brackets, Of, Division, Multiplication, Addition, Subtraction. Brackets are removed from the inside out: the bar first, then ( ), then { }, then [ ]. A bar over some terms, like 3̅ +̅ 2̅, works as a bracket round them. A minus sign in front of a bracket changes every sign inside when the bracket is removed. With decimals and fractions the same order is used.",
+        "ur": "بوڈ ماس ترتیب بتاتا ہے: بریکٹ، of، تقسیم، ضرب، جمع، تفریق۔ بریکٹ اندر سے باہر کھولے جاتے ہیں: پہلے بار، پھر ( )، پھر { }، پھر [ ]۔ کچھ اجزا کے اوپر بار، جیسے 3̅ +̅ 2̅، ان کے گرد بریکٹ کی طرح کام کرتا ہے۔ بریکٹ کے سامنے منفی علامت ہو تو بریکٹ ہٹاتے وقت اندر کی ہر علامت بدل جاتی ہے۔ اعشاریہ اور کسر کے ساتھ بھی یہی ترتیب چلتی ہے۔"
+      }
+    },
+    {
+      "id": "q3_bracket",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 7 × (9 − 4) + 3.",
+        "ur": "7 × (9 − 4) + 3 سادہ کریں۔"
+      },
+      "answer": 38,
+      "checker": "numeric",
+      "hint": {
+        "en": "Work out the bracket first: 9 − 4.",
+        "ur": "پہلے بریکٹ نکالیں: 9 − 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 × 5 + 3 = 35 + 3 = 38.",
+        "ur": "درست! 7 × 5 + 3 = 35 + 3 = 38"
+      },
+      "feedback_wrong": {
+        "en": "Bracket: 9 − 4 = 5. Multiply: 7 × 5 = 35. Add: 35 + 3 = 38.",
+        "ur": "بریکٹ: 9 − 4 = 5۔ ضرب: 7 × 5 = 35۔ جمع: 35 + 3 = 38"
+      },
+      "common_wrong": [
+        {
+          "answer": 62,
+          "feedback": {
+            "en": "That multiplies 7 × 9 and ignores the bracket. Do 9 − 4 = 5 first: 38.",
+            "ur": "یہ 7 × 9 کرتا ہے اور بریکٹ نظر انداز کرتا ہے۔ پہلے 9 − 4 = 5 کریں: 38"
+          },
+          "misconception_id": "skips_brackets"
+        }
+      ]
+    },
+    {
+      "id": "q4_nested",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 50 − {12 + (8 − 3)}.",
+        "ur": "50 − {12 + (8 − 3)} سادہ کریں۔"
+      },
+      "answer": 33,
+      "checker": "numeric",
+      "hint": {
+        "en": "Start with the inner ( ): 8 − 3. Then the { }.",
+        "ur": "اندر کے ( ) سے شروع کریں: 8 − 3۔ پھر { }"
+      },
+      "feedback_correct": {
+        "en": "Right! (8 − 3) = 5, {12 + 5} = 17, and 50 − 17 = 33.",
+        "ur": "درست! (8 − 3) = 5، {12 + 5} = 17، اور 50 − 17 = 33"
+      },
+      "feedback_wrong": {
+        "en": "Inside out: 8 − 3 = 5, then 12 + 5 = 17, then 50 − 17 = 33.",
+        "ur": "اندر سے باہر: 8 − 3 = 5، پھر 12 + 5 = 17، پھر 50 − 17 = 33"
+      },
+      "common_wrong": [
+        {
+          "answer": 43,
+          "feedback": {
+            "en": "The curly bracket still has to be worked out as a whole: 12 + 5 = 17, and 50 − 17 = 33.",
+            "ur": "گھنگھریالے بریکٹ کو بھی پورا حل کرنا ہے: 12 + 5 = 17، اور 50 − 17 = 33"
+          },
+          "misconception_id": "skips_brackets"
+        }
+      ]
+    },
+    {
+      "id": "q5_bar",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 30 ÷ 3̅ +̅ 2̅ + 4. (The bar covers 3 + 2.)",
+        "ur": "30 ÷ 3̅ +̅ 2̅ + 4 سادہ کریں۔ (بار 3 + 2 کے اوپر ہے۔)"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "The bar works like a bracket: work out 3 + 2 first.",
+        "ur": "بار بریکٹ کی طرح کام کرتا ہے: پہلے 3 + 2 نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 ÷ 5 = 6, then 6 + 4 = 10.",
+        "ur": "درست! 30 ÷ 5 = 6، پھر 6 + 4 = 10"
+      },
+      "feedback_wrong": {
+        "en": "Bar: 3 + 2 = 5. Divide: 30 ÷ 5 = 6. Add: 6 + 4 = 10.",
+        "ur": "بار: 3 + 2 = 5۔ تقسیم: 30 ÷ 5 = 6۔ جمع: 6 + 4 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That divides 30 by 3 only. The bar groups 3 + 2, so divide by 5: 10.",
+            "ur": "یہ 30 کو صرف 3 سے تقسیم کرتا ہے۔ بار 3 + 2 کو اکٹھا کرتا ہے، اس لیے 5 سے تقسیم کریں: 10"
+          },
+          "misconception_id": "bar_ignored"
+        }
+      ]
+    },
+    {
+      "id": "q6_three_brackets",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 100 − [30 + {20 − (5 + 3)}].",
+        "ur": "100 − [30 + {20 − (5 + 3)}] سادہ کریں۔"
+      },
+      "answer": 58,
+      "checker": "numeric",
+      "hint": {
+        "en": "Innermost first: (5 + 3). Then { }, then [ ].",
+        "ur": "سب سے اندر پہلے: (5 + 3)۔ پھر { }، پھر [ ]"
+      },
+      "feedback_correct": {
+        "en": "Right! (5 + 3) = 8, {20 − 8} = 12, [30 + 12] = 42, and 100 − 42 = 58.",
+        "ur": "درست! (5 + 3) = 8، {20 − 8} = 12، [30 + 12] = 42، اور 100 − 42 = 58"
+      },
+      "feedback_wrong": {
+        "en": "Inside out: 8, then 12, then 42. Finally 100 − 42 = 58.",
+        "ur": "اندر سے باہر: 8، پھر 12، پھر 42۔ آخر میں 100 − 42 = 58"
+      },
+      "common_wrong": [
+        {
+          "answer": 82,
+          "feedback": {
+            "en": "A minus sign before [ ] applies to the whole bracket: 100 − 42, not 100 − 30 + 12. The answer is 58.",
+            "ur": "[ ] سے پہلے کی منفی علامت پورے بریکٹ پر لگتی ہے: 100 − 42، نہ کہ 100 − 30 + 12۔ جواب 58 ہے۔"
+          },
+          "misconception_id": "bracket_sign"
+        }
+      ]
+    },
+    {
+      "id": "q7_decimal",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 2.5 + 1.5 × 4.",
+        "ur": "2.5 + 1.5 × 4 سادہ کریں۔"
+      },
+      "answer": 8.5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply first: 1.5 × 4.",
+        "ur": "پہلے ضرب: 1.5 × 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 1.5 × 4 = 6, then 2.5 + 6 = 8.5.",
+        "ur": "درست! 1.5 × 4 = 6، پھر 2.5 + 6 = 8.5"
+      },
+      "feedback_wrong": {
+        "en": "1.5 × 4 = 6, and 2.5 + 6 = 8.5.",
+        "ur": "1.5 × 4 = 6، اور 2.5 + 6 = 8.5"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That adds 2.5 + 1.5 first. BODMAS says multiply first: 8.5.",
+            "ur": "یہ پہلے 2.5 + 1.5 کرتا ہے۔ بوڈ ماس کہتا ہے پہلے ضرب: 8.5"
+          },
+          "misconception_id": "decimal_order"
+        }
+      ]
+    },
+    {
+      "id": "q8_decimal_bracket",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify (7.2 − 3.6) ÷ 0.9.",
+        "ur": "(7.2 − 3.6) ÷ 0.9 سادہ کریں۔"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Bracket first: 7.2 − 3.6. Then divide by 0.9.",
+        "ur": "پہلے بریکٹ: 7.2 − 3.6۔ پھر 0.9 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3.6 ÷ 0.9 = 4.",
+        "ur": "درست! 3.6 ÷ 0.9 = 4"
+      },
+      "feedback_wrong": {
+        "en": "Bracket: 7.2 − 3.6 = 3.6. Divide: 3.6 ÷ 0.9 = 4.",
+        "ur": "بریکٹ: 7.2 − 3.6 = 3.6۔ تقسیم: 3.6 ÷ 0.9 = 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 3.2,
+          "feedback": {
+            "en": "That divides 3.6 by 0.9 first and ignores the bracket: 7.2 − 4 = 3.2. Bracket first: 4.",
+            "ur": "یہ بریکٹ نظر انداز کر کے پہلے 3.6 ÷ 0.9 کرتا ہے: 7.2 − 4 = 3.2۔ پہلے بریکٹ: 4"
+          },
+          "misconception_id": "skips_brackets"
+        }
+      ]
+    },
+    {
+      "id": "q9_fraction",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify ½ + ¼ × 2.",
+        "ur": "½ + ¼ × 2 سادہ کریں۔"
+      },
+      "answer": 1,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply first: ¼ × 2 = ½.",
+        "ur": "پہلے ضرب: ¼ × 2 = ½"
+      },
+      "feedback_correct": {
+        "en": "Right! ½ + ½ = 1.",
+        "ur": "درست! ½ + ½ = 1"
+      },
+      "feedback_wrong": {
+        "en": "¼ × 2 = ½, and ½ + ½ = 1.",
+        "ur": "¼ × 2 = ½، اور ½ + ½ = 1"
+      },
+      "common_wrong": [
+        {
+          "answer": 1.5,
+          "feedback": {
+            "en": "That adds ½ + ¼ = ¾ first and then doubles it. Multiply first: 1.",
+            "ur": "یہ پہلے ½ + ¼ = ¾ کر کے دگنا کرتا ہے۔ پہلے ضرب کریں: 1"
+          },
+          "misconception_id": "decimal_order"
+        }
+      ]
+    },
+    {
+      "id": "q10_mixed",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify 2½ × (1⅕ + ⅘).",
+        "ur": "2½ × (1⅕ + ⅘) سادہ کریں۔"
+      },
+      "answer": 5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Bracket first: 1⅕ + ⅘ = 6/5 + 4/5.",
+        "ur": "پہلے بریکٹ: 1⅕ + ⅘ = 6/5 + 4/5"
+      },
+      "feedback_correct": {
+        "en": "Right! The bracket is 2, and 2½ × 2 = 5.",
+        "ur": "درست! بریکٹ 2 ہے، اور 2½ × 2 = 5"
+      },
+      "feedback_wrong": {
+        "en": "Bracket: 6/5 + 4/5 = 10/5 = 2. Then 2½ × 2 = 5.",
+        "ur": "بریکٹ: 6/5 + 4/5 = 10/5 = 2۔ پھر 2½ × 2 = 5"
+      },
+      "common_wrong": [
+        {
+          "answer": 3.8,
+          "feedback": {
+            "en": "That multiplies 2½ × 1⅕ = 3 and then adds ⅘. The bracket comes first: 5.",
+            "ur": "یہ 2½ × 1⅕ = 3 کر کے پھر ⅘ جمع کرتا ہے۔ بریکٹ پہلے آتا ہے: 5"
+          },
+          "misconception_id": "skips_brackets"
+        }
+      ]
+    },
+    {
+      "id": "q11_shop",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal buys 3 notebooks at Rs 45 each and 2 pens at Rs 18 each. He pays with a Rs 200 note. How many rupees does he get back? (Write it as 200 − (3 × 45 + 2 × 18).)",
+        "ur": "بلال 45 روپے والی 3 کاپیاں اور 18 روپے والے 2 قلم خریدتا ہے۔ وہ 200 روپے کا نوٹ دیتا ہے۔ اسے کتنے روپے واپس ملتے ہیں؟ (200 − (3 × 45 + 2 × 18) لکھیں۔)"
+      },
+      "answer": 29,
+      "checker": "numeric",
+      "hint": {
+        "en": "Inside the bracket: multiply, then add. Subtract from 200 last.",
+        "ur": "بریکٹ کے اندر: ضرب، پھر جمع۔ آخر میں 200 سے گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 135 + 36 = 171, and 200 − 171 = 29.",
+        "ur": "درست! 135 + 36 = 171، اور 200 − 171 = 29"
+      },
+      "feedback_wrong": {
+        "en": "Notebooks 3 × 45 = 135, pens 2 × 18 = 36, total 171, change 200 − 171 = Rs 29.",
+        "ur": "کاپیاں 3 × 45 = 135، قلم 2 × 18 = 36، کل 171، واپسی 200 − 171 = 29 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 65,
+          "feedback": {
+            "en": "That takes away the notebooks only. The pens cost money too: 200 − 171 = 29.",
+            "ur": "یہ صرف کاپیاں گھٹاتا ہے۔ قلموں کی بھی قیمت ہے: 200 − 171 = 29"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "q12_rope",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A rope is 12.5 m long. Three pieces of 2.5 m each are cut from it, and the rest is shared equally by 2 children. How many metres does each child get? (Write it as (12.5 − 3 × 2.5) ÷ 2.)",
+        "ur": "ایک رسی 12.5 میٹر لمبی ہے۔ اس سے 2.5 میٹر کے تین ٹکڑے کاٹے جاتے ہیں، اور باقی 2 بچوں میں برابر بانٹی جاتی ہے۔ ہر بچے کو کتنے میٹر ملتے ہیں؟ ((12.5 − 3 × 2.5) ÷ 2 لکھیں۔)"
+      },
+      "answer": 2.5,
+      "checker": "numeric",
+      "hint": {
+        "en": "In the bracket multiply first: 3 × 2.5. Then subtract, then divide by 2.",
+        "ur": "بریکٹ میں پہلے ضرب: 3 × 2.5۔ پھر تفریق، پھر 2 سے تقسیم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12.5 − 7.5 = 5, and 5 ÷ 2 = 2.5 m.",
+        "ur": "درست! 12.5 − 7.5 = 5، اور 5 ÷ 2 = 2.5 میٹر"
+      },
+      "feedback_wrong": {
+        "en": "3 × 2.5 = 7.5, 12.5 − 7.5 = 5 m left, and 5 ÷ 2 = 2.5 m each.",
+        "ur": "3 × 2.5 = 7.5، 12.5 − 7.5 = 5 میٹر باقی، اور 5 ÷ 2 = 2.5 میٹر فی بچہ۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is the length left. It is shared by 2 children: 2.5 m each.",
+            "ur": "یہ باقی لمبائی ہے۔ یہ 2 بچوں میں بانٹی جاتی ہے: ہر ایک کو 2.5 میٹر"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ahmed simplifies 5 + 3 × 4 like this: 5 + 3 = 8, then 8 × 4 = 32. What went wrong?",
+        "ur": "احمد 5 + 3 × 4 یوں سادہ کرتا ہے: 5 + 3 = 8، پھر 8 × 4 = 32۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "He added before multiplying. By BODMAS 3 × 4 = 12 first, then 5 + 12 = 17.",
+            "ur": "اس نے ضرب سے پہلے جمع کر دی۔ بوڈ ماس کے مطابق پہلے 3 × 4 = 12، پھر 5 + 12 = 17"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Multiplication comes before addition.",
+            "ur": "جی ہاں! ضرب جمع سے پہلے آتی ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. Working left to right is correct.",
+            "ur": "کوئی غلطی نہیں۔ بائیں سے دائیں چلنا درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Not here: BODMAS puts multiplication before addition.",
+            "ur": "یہاں نہیں: بوڈ ماس ضرب کو جمع سے پہلے رکھتا ہے۔"
+          },
+          "misconception_id": "left_to_right"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should have put a bracket round 5 + 3.",
+            "ur": "اسے 5 + 3 کے گرد بریکٹ لگانا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question has no bracket. Without one, multiplication goes first.",
+            "ur": "سوال میں بریکٹ نہیں۔ اس کے بغیر ضرب پہلے ہوتی ہے۔"
+          },
+          "misconception_id": "skips_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You used BODMAS.",
+          "ur": "شاباش! آپ نے بوڈ ماس استعمال کیا۔"
+        }
+      },
+      "text": {
+        "en": "BODMAS: Brackets, Of, Division, Multiplication, Addition, Subtraction. Remove brackets from the inside out, and treat a bar as a bracket. The same order works for decimals, fractions and mixed numbers. In a word problem, write the whole calculation with brackets, then simplify it.",
+        "ur": "بوڈ ماس: بریکٹ، of، تقسیم، ضرب، جمع، تفریق۔ بریکٹ اندر سے باہر ہٹائیں، اور بار کو بریکٹ سمجھیں۔ یہی ترتیب اعشاریہ، کسر اور مخلوط اعداد کے ساتھ بھی چلتی ہے۔ لفظی سوال میں پورا حساب بریکٹ کے ساتھ لکھیں، پھر سادہ کریں۔"
+      },
+      "points": [
+        {
+          "en": "Multiplication and division come before addition and subtraction.",
+          "ur": "ضرب اور تقسیم جمع اور تفریق سے پہلے آتی ہیں۔"
+        },
+        {
+          "en": "A minus sign before a bracket applies to everything inside it.",
+          "ur": "بریکٹ سے پہلے کی منفی علامت اس کے اندر ہر چیز پر لگتی ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_order",
+      "type": "recall",
+      "step": {
+        "id": "r_order",
+        "type": "number",
+        "prompt": {
+          "en": "Simplify 18 − 6 ÷ 2.",
+          "ur": "18 − 6 ÷ 2 سادہ کریں۔"
+        },
+        "answer": 15,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide first.",
+          "ur": "پہلے تقسیم۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 18 − 3 = 15.",
+          "ur": "درست! 18 − 3 = 15"
+        },
+        "feedback_wrong": {
+          "en": "6 ÷ 2 = 3, then 18 − 3 = 15.",
+          "ur": "6 ÷ 2 = 3، پھر 18 − 3 = 15"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "That subtracts first. Divide first: 15.",
+              "ur": "یہ پہلے تفریق کرتا ہے۔ پہلے تقسیم: 15"
+            },
+            "misconception_id": "left_to_right"
+          }
+        ]
+      },
+      "skill": "maths.simplify.ex_3_3"
+    },
+    {
+      "id": "r_decimal",
+      "type": "apply",
+      "step": {
+        "id": "r_decimal",
+        "type": "number",
+        "prompt": {
+          "en": "Simplify 2.4 × (5 − 3.5).",
+          "ur": "2.4 × (5 − 3.5) سادہ کریں۔"
+        },
+        "answer": 3.6,
+        "checker": "numeric",
+        "hint": {
+          "en": "Bracket first: 5 − 3.5.",
+          "ur": "پہلے بریکٹ: 5 − 3.5"
+        },
+        "feedback_correct": {
+          "en": "Right! 2.4 × 1.5 = 3.6.",
+          "ur": "درست! 2.4 × 1.5 = 3.6"
+        },
+        "feedback_wrong": {
+          "en": "5 − 3.5 = 1.5 and 2.4 × 1.5 = 3.6.",
+          "ur": "5 − 3.5 = 1.5 اور 2.4 × 1.5 = 3.6"
+        },
+        "common_wrong": [
+          {
+            "answer": 8.5,
+            "feedback": {
+              "en": "That multiplies 2.4 × 5 first and ignores the bracket. Bracket first: 3.6.",
+              "ur": "یہ بریکٹ نظر انداز کر کے پہلے 2.4 × 5 کرتا ہے۔ پہلے بریکٹ: 3.6"
+            },
+            "misconception_id": "skips_brackets"
+          }
+        ]
+      },
+      "skill": "maths.simplify.ex_3_3"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 3.3 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers operation order (q1, q2, q13), single and nested brackets (q3, q4, q6), the bar or vinculum (q5), decimals (q7, q8), fractions and mixed numbers (q9, q10) and multi-step money and measurement problems (q11, q12).",
+    "The bar is drawn with a combining overline over each character. Each wrong answer is a real mistake: working left to right, skipping the brackets, ignoring the bar, or stopping before the last step.",
+    "Urdu terms to check: بوڈ ماس (BODMAS), بار / خط (bar, vinculum), سادہ کرنا (simplify), مخلوط عدد (mixed number).",
+    "The numbers were worked out in content/sources/g6-maths-04/exercise_3_3.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

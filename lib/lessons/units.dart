@@ -122,6 +122,10 @@ const grade6Book = [
           'g6-maths-13-fractions-decimals',
           'g6-maths-13-estimation',
           'g6-maths-13-simplification-word-problems',
+          'g6-maths-04-exercise-3-1',
+          'g6-maths-04-exercise-3-2',
+          'g6-maths-04-exercise-3-3',
+          'g6-maths-04-chapter-3-test',
         ],
       ),
       BookChapter(

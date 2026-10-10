@@ -1,0 +1,1205 @@
+{
+  "id": "g6-maths-04-chapter-3-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 3: adding, subtracting, multiplying and dividing integers, the commutative, associative and distributive laws, and the BODMAS rule.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers, Review Exercise 3"
+    }
+  ],
+  "skills": [
+    "maths.integers.chapter_3_test"
+  ],
+  "title": {
+    "en": "Chapter 3 test: Laws of Integers",
+    "ur": "باب 3 کا ٹیسٹ: صحیح اعداد کے قوانین"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.add"
+    },
+    {
+      "skill": "maths.integers.subtract"
+    },
+    {
+      "skill": "maths.integers.multiply_divide"
+    },
+    {
+      "skill": "maths.integers.laws"
+    },
+    {
+      "skill": "maths.simplify.order_of_operations"
+    },
+    {
+      "skill": "maths.simplify.brackets"
+    },
+    {
+      "skill": "maths.simplify.fractions_decimals"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "sign_lost",
+      "description": "Drops the minus sign from an answer, or adds the digits and forgets the sign."
+    },
+    {
+      "id": "double_neg",
+      "description": "Treats subtracting a negative number as subtracting a positive one."
+    },
+    {
+      "id": "neg_neg",
+      "description": "Thinks a negative times a negative is negative."
+    },
+    {
+      "id": "pos_only",
+      "description": "Gives a positive product or quotient for unlike signs."
+    },
+    {
+      "id": "law_mixed",
+      "description": "Mixes up the commutative, associative and distributive laws."
+    },
+    {
+      "id": "zero_division",
+      "description": "Thinks a number divided by zero is 0."
+    },
+    {
+      "id": "left_to_right",
+      "description": "Works strictly left to right and ignores BODMAS."
+    },
+    {
+      "id": "skips_brackets",
+      "description": "Ignores the brackets, or multiplies only the first term inside them."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a middle result but does not answer the question asked."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.chapter_3_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.chapter_3_test": [
+      {
+        "id": "qb_exam_add",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_add",
+          "type": "number",
+          "prompt": {
+            "en": "Find (−17) + (−26).",
+            "ur": "(−17) + (−26) معلوم کریں۔"
+          },
+          "answer": -43,
+          "checker": "numeric",
+          "hint": {
+            "en": "Same signs: add the digits and keep the minus sign.",
+            "ur": "ایک جیسی علامتیں: ہندسے جمع کریں اور منفی علامت رکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 17 + 26 = 43, so −43.",
+            "ur": "درست: 17 + 26 = 43، اس لیے −43"
+          },
+          "feedback_wrong": {
+            "en": "Both are negative, so the sum is negative: −43.",
+            "ur": "دونوں منفی ہیں، اس لیے مجموعہ منفی ہے: −43"
+          },
+          "common_wrong": [
+            {
+              "answer": 43,
+              "feedback": {
+                "en": "Like negative numbers add up to a negative number: −43.",
+                "ur": "منفی اعداد کا مجموعہ منفی ہوتا ہے: −43"
+              },
+              "misconception_id": "sign_lost"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_div",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_div",
+          "type": "number",
+          "prompt": {
+            "en": "Find (−144) ÷ 12.",
+            "ur": "(−144) ÷ 12 معلوم کریں۔"
+          },
+          "answer": -12,
+          "checker": "numeric",
+          "hint": {
+            "en": "144 ÷ 12 = 12. Are the signs the same?",
+            "ur": "144 ÷ 12 = 12۔ کیا علامتیں ایک جیسی ہیں؟"
+          },
+          "feedback_correct": {
+            "en": "Correct: unlike signs, −12.",
+            "ur": "درست: مخالف علامتیں، −12"
+          },
+          "feedback_wrong": {
+            "en": "144 ÷ 12 = 12 and the signs differ, so −12.",
+            "ur": "144 ÷ 12 = 12 اور علامتیں مختلف ہیں، اس لیے −12"
+          },
+          "common_wrong": [
+            {
+              "answer": 12,
+              "feedback": {
+                "en": "A negative divided by a positive is negative: −12.",
+                "ur": "منفی کو مثبت پر تقسیم کریں تو منفی ملتا ہے: −12"
+              },
+              "misconception_id": "pos_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_bodmas",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_bodmas",
+          "type": "number",
+          "prompt": {
+            "en": "Simplify 36 ÷ (2 + 4) + 5 × 2.",
+            "ur": "36 ÷ (2 + 4) + 5 × 2 سادہ کریں۔"
+          },
+          "answer": 16,
+          "checker": "numeric",
+          "hint": {
+            "en": "Bracket first, then divide and multiply, then add.",
+            "ur": "پہلے بریکٹ، پھر تقسیم اور ضرب، پھر جمع۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 6 + 10 = 16.",
+            "ur": "درست: 6 + 10 = 16"
+          },
+          "feedback_wrong": {
+            "en": "Bracket: 2 + 4 = 6. Then 36 ÷ 6 = 6 and 5 × 2 = 10. 6 + 10 = 16.",
+            "ur": "بریکٹ: 2 + 4 = 6۔ پھر 36 ÷ 6 = 6 اور 5 × 2 = 10۔ 6 + 10 = 16"
+          },
+          "common_wrong": [
+            {
+              "answer": 32,
+              "feedback": {
+                "en": "That ignores the bracket and divides 36 by 2 only. The answer is 16.",
+                "ur": "یہ بریکٹ نظر انداز کر کے 36 کو صرف 2 سے تقسیم کرتا ہے۔ جواب 16 ہے۔"
+              },
+              "misconception_id": "skips_brackets"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 3 in your maths book in your notebook, setting out the working the way this test's answers do. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 3 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Distributive law",
+      "ur": "قانون تقسیم"
+    },
+    {
+      "en": "BODMAS",
+      "ur": "بوڈ ماس"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 3 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook). The questions are new, not the book's.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 3 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوال (پورا کام اپنی کاپی میں)۔ سوال نئے ہیں، کتاب والے نہیں۔"
+      }
+    },
+    {
+      "id": "m1_add",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: (−9) + (−6) is equal to:",
+        "ur": "کثیر انتخابی: (−9) + (−6) برابر ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−15",
+            "ur": "−15"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 9 + 6 = 15 and both are negative.",
+            "ur": "درست: 9 + 6 = 15 اور دونوں منفی ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "15",
+            "ur": "15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Two negative numbers give a negative sum.",
+            "ur": "دو منفی اعداد کا مجموعہ منفی ہوتا ہے۔"
+          },
+          "misconception_id": "sign_lost"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−3",
+            "ur": "−3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is (−9) + 6. Here both numbers are negative, so add the digits.",
+            "ur": "یہ (−9) + 6 ہے۔ یہاں دونوں منفی ہیں، اس لیے ہندسے جمع کریں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 9 − 6. Add the digits instead and keep the minus sign.",
+            "ur": "یہ 9 − 6 ہے۔ ہندسے جمع کریں اور منفی علامت رکھیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2_sub",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: 7 − (−5) is equal to:",
+        "ur": "کثیر انتخابی: 7 − (−5) برابر ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 7 − 5. The bracket has a minus sign too, so it becomes + 5.",
+            "ur": "یہ 7 − 5 ہے۔ بریکٹ میں بھی منفی علامت ہے، اس لیے یہ + 5 بنتا ہے۔"
+          },
+          "misconception_id": "double_neg"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "−12",
+            "ur": "−12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 + 5 is positive.",
+            "ur": "7 + 5 مثبت ہے۔"
+          },
+          "misconception_id": "sign_lost"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "12",
+            "ur": "12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: subtracting −5 is adding 5.",
+            "ur": "درست: −5 کو گھٹانا 5 جمع کرنا ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "−2",
+            "ur": "−2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Subtracting −5 moves right, not left, so it cannot be −2.",
+            "ur": "−5 کو گھٹانا دائیں لے جاتا ہے، بائیں نہیں، اس لیے یہ −2 نہیں ہو سکتا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m3_mul",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: (−8) × (−7) is equal to:",
+        "ur": "کثیر انتخابی: (−8) × (−7) برابر ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−56",
+            "ur": "−56"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Two negative factors give a positive product.",
+            "ur": "دو منفی اجزا کا حاصل ضرب مثبت ہے۔"
+          },
+          "misconception_id": "neg_neg"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "56",
+            "ur": "56"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: like signs give a positive product.",
+            "ur": "درست: ایک جیسی علامتوں کا حاصل ضرب مثبت ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−15",
+            "ur": "−15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That adds the numbers. We multiply.",
+            "ur": "یہ اعداد جمع کرتا ہے۔ ہمیں ضرب کرنی ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "15",
+            "ur": "15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That adds the digits of 8 and 7. We multiply: 56.",
+            "ur": "یہ 8 اور 7 کے ہندسے جمع کرتا ہے۔ ہمیں ضرب کرنی ہے: 56"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m4_div",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: (−54) ÷ 9 is equal to:",
+        "ur": "کثیر انتخابی: (−54) ÷ 9 برابر ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Unlike signs give a negative quotient.",
+            "ur": "مخالف علامتوں کا خارج قسمت منفی ہوتا ہے۔"
+          },
+          "misconception_id": "pos_only"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "−45",
+            "ur": "−45"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That subtracts 9 from −54. We divide.",
+            "ur": "یہ −54 میں سے 9 گھٹاتا ہے۔ ہمیں تقسیم کرنی ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−486",
+            "ur": "−486"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That multiplies. We divide.",
+            "ur": "یہ ضرب کرتا ہے۔ ہمیں تقسیم کرنی ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "−6",
+            "ur": "−6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 54 ÷ 9 = 6 and the signs differ.",
+            "ur": "درست: 54 ÷ 9 = 6 اور علامتیں مختلف ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_law",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: 5 + (−3) = (−3) + 5 is an example of the:",
+        "ur": "کثیر انتخابی: 5 + (−3) = (−3) + 5 کس کی مثال ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "associative law of addition",
+            "ur": "جمع کا قانون شراکت"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The associative law changes the brackets, not the order of the numbers.",
+            "ur": "قانون شراکت بریکٹ بدلتا ہے، اعداد کی ترتیب نہیں۔"
+          },
+          "misconception_id": "law_mixed"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "distributive law",
+            "ur": "قانون تقسیم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The distributive law needs multiplication over a bracket with addition.",
+            "ur": "قانون تقسیم میں جمع والے بریکٹ پر ضرب ہوتی ہے۔"
+          },
+          "misconception_id": "law_mixed"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "commutative law of addition",
+            "ur": "جمع کا قانون تبدیلی"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: the two numbers swap places and the sum is the same.",
+            "ur": "درست: دونوں اعداد جگہ بدلتے ہیں اور مجموعہ وہی رہتا ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "additive identity",
+            "ur": "جمعی ذاتی عدد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The additive identity is about adding 0.",
+            "ur": "جمعی ذاتی عدد 0 جمع کرنے کے بارے میں ہے۔"
+          },
+          "misconception_id": "law_mixed"
+        }
+      ]
+    },
+    {
+      "id": "m6_zero",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which statement is true?",
+        "ur": "کثیر انتخابی: کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "0 ÷ (−9) = 0",
+            "ur": "0 ÷ (−9) = 0"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 0 divided by a non-zero integer is 0.",
+            "ur": "درست: 0 کو غیر صفر صحیح عدد پر تقسیم کریں تو 0 ملتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "(−9) ÷ 0 = 0",
+            "ur": "(−9) ÷ 0 = 0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Division by 0 is undefined; there is no answer.",
+            "ur": "صفر سے تقسیم غیر معین ہے؛ اس کا کوئی جواب نہیں۔"
+          },
+          "misconception_id": "zero_division"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "(−9) ÷ 0 = −9",
+            "ur": "(−9) ÷ 0 = −9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Division by 0 is undefined; the answer is not the number itself.",
+            "ur": "صفر سے تقسیم غیر معین ہے؛ جواب عدد خود نہیں ہوتا۔"
+          },
+          "misconception_id": "zero_division"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "(−9) × (−9) = −81",
+            "ur": "(−9) × (−9) = −81"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Two negatives give a positive: 81.",
+            "ur": "دو منفی مل کر مثبت دیتے ہیں: 81"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "m7_bodmas",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The value of 9 − 2 × 3 + 4 is:",
+        "ur": "کثیر انتخابی: 9 − 2 × 3 + 4 کی قیمت ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "25",
+            "ur": "25"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That works left to right: 9 − 2 = 7, then × 3, then + 4. BODMAS multiplies first.",
+            "ur": "یہ بائیں سے دائیں چلتا ہے: 9 − 2 = 7، پھر × 3، پھر + 4۔ بوڈ ماس پہلے ضرب کرتا ہے۔"
+          },
+          "misconception_id": "left_to_right"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "7",
+            "ur": "7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 2 × 3 = 6, then 9 − 6 + 4 = 7.",
+            "ur": "درست: 2 × 3 = 6، پھر 9 − 6 + 4 = 7"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "−5",
+            "ur": "−5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That treats 3 + 4 as a bracket. There is no bracket here.",
+            "ur": "یہ 3 + 4 کو بریکٹ سمجھتا ہے۔ یہاں بریکٹ نہیں ہے۔"
+          },
+          "misconception_id": "skips_brackets"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "49",
+            "ur": "49"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That adds before multiplying. Multiplication comes first.",
+            "ur": "یہ ضرب سے پہلے جمع کرتا ہے۔ ضرب پہلے آتی ہے۔"
+          },
+          "misconception_id": "left_to_right"
+        }
+      ]
+    },
+    {
+      "id": "m8_distributive",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: (−3) × (4 + 5) = (−3) × 4 + (−3) × 5 is an example of the:",
+        "ur": "کثیر انتخابی: (−3) × (4 + 5) = (−3) × 4 + (−3) × 5 کس کی مثال ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "commutative law of multiplication",
+            "ur": "ضرب کا قانون تبدیلی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The commutative law swaps two numbers; nothing is swapped here.",
+            "ur": "قانون تبدیلی دو اعداد کی جگہ بدلتا ہے؛ یہاں کچھ نہیں بدلا۔"
+          },
+          "misconception_id": "law_mixed"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "associative law of multiplication",
+            "ur": "ضرب کا قانون شراکت"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The associative law regroups three factors; here there is an addition.",
+            "ur": "قانون شراکت تین اجزا کی گروہ بندی بدلتا ہے؛ یہاں جمع ہے۔"
+          },
+          "misconception_id": "law_mixed"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "multiplicative identity",
+            "ur": "ضربی ذاتی عدد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The multiplicative identity is about multiplying by 1.",
+            "ur": "ضربی ذاتی عدد 1 سے ضرب کے بارے میں ہے۔"
+          },
+          "misconception_id": "law_mixed"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "distributive law",
+            "ur": "قانون تقسیم"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: −3 is multiplied by each term in the bracket. Both sides are −27.",
+            "ur": "درست: −3 بریکٹ کے ہر جز سے ضرب ہوا۔ دونوں طرف −27 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_unlike",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find (−23) + 9.",
+        "ur": "مختصر سوال: (−23) + 9 معلوم کریں۔"
+      },
+      "answer": -14,
+      "checker": "numeric",
+      "hint": {
+        "en": "Unlike signs: find 23 − 9 and use the sign of the bigger digits.",
+        "ur": "مخالف علامتیں: 23 − 9 نکالیں اور بڑے ہندسوں کی علامت لگائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: −14.",
+        "ur": "درست: −14"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 23 − 9 = 14, and 23 is the negative one, so −14.",
+        "ur": "نمونہ جواب: 23 − 9 = 14، اور 23 منفی ہے، اس لیے −14"
+      },
+      "common_wrong": [
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "The signs differ, so subtract the digits: 14, with a minus sign: −14.",
+            "ur": "علامتیں مختلف ہیں، اس لیے ہندسے گھٹائیں: 14، منفی علامت کے ساتھ: −14"
+          },
+          "misconception_id": "sign_lost"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "−23 is farther from 0 than 9, so the answer is negative: −14.",
+            "ur": "−23، 9 سے 0 سے زیادہ دور ہے، اس لیے جواب منفی ہے: −14"
+          },
+          "misconception_id": "sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q2_sub",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find (−18) − (−6).",
+        "ur": "مختصر سوال: (−18) − (−6) معلوم کریں۔"
+      },
+      "answer": -12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Subtracting −6 is adding 6.",
+        "ur": "−6 کو گھٹانا 6 جمع کرنا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: −18 + 6 = −12.",
+        "ur": "درست: −18 + 6 = −12"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: (−18) − (−6) = −18 + 6 = −12.",
+        "ur": "نمونہ جواب: (−18) − (−6) = −18 + 6 = −12"
+      },
+      "common_wrong": [
+        {
+          "answer": -24,
+          "feedback": {
+            "en": "That is (−18) − 6. Subtracting −6 means adding 6: −12.",
+            "ur": "یہ (−18) − 6 ہے۔ −6 کو گھٹانے کا مطلب 6 جمع کرنا ہے: −12"
+          },
+          "misconception_id": "double_neg"
+        }
+      ]
+    },
+    {
+      "id": "q3_mul",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find (−13) × (−4).",
+        "ur": "مختصر سوال: (−13) × (−4) معلوم کریں۔"
+      },
+      "answer": 52,
+      "checker": "numeric",
+      "hint": {
+        "en": "13 × 4 = 52. Are the signs the same?",
+        "ur": "13 × 4 = 52۔ کیا علامتیں ایک جیسی ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Correct: 52.",
+        "ur": "درست: 52"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 13 × 4 = 52, and like signs give a positive product: 52.",
+        "ur": "نمونہ جواب: 13 × 4 = 52، اور ایک جیسی علامتوں کا حاصل ضرب مثبت ہے: 52"
+      },
+      "common_wrong": [
+        {
+          "answer": -52,
+          "feedback": {
+            "en": "Two negative factors give a positive product: 52.",
+            "ur": "دو منفی اجزا کا حاصل ضرب مثبت ہے: 52"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "q4_blank",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Fill in the blank with an integer: (−7) × □ = −63.",
+        "ur": "مختصر سوال: خالی جگہ میں صحیح عدد لکھیں: (−7) × □ = −63"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide: (−63) ÷ (−7). The product is negative and −7 is negative, so the missing integer is positive.",
+        "ur": "تقسیم کریں: (−63) ÷ (−7)۔ حاصل ضرب منفی ہے اور −7 منفی ہے، اس لیے گم شدہ عدد مثبت ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 9.",
+        "ur": "درست: 9"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: (−63) ÷ (−7) = 9. Check: (−7) × 9 = −63.",
+        "ur": "نمونہ جواب: (−63) ÷ (−7) = 9۔ جانچ: (−7) × 9 = −63"
+      },
+      "common_wrong": [
+        {
+          "answer": -9,
+          "feedback": {
+            "en": "Check: (−7) × (−9) = 63, not −63. The missing integer is 9.",
+            "ur": "جانچ: (−7) × (−9) = 63، −63 نہیں۔ گم شدہ صحیح عدد 9 ہے۔"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "q5_bodmas",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Simplify 40 − 4 × (6 − 1).",
+        "ur": "مختصر سوال: 40 − 4 × (6 − 1) سادہ کریں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Bracket first, then multiply, then subtract.",
+        "ur": "پہلے بریکٹ، پھر ضرب، پھر تفریق۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 40 − 20 = 20.",
+        "ur": "درست: 40 − 20 = 20"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: (6 − 1) = 5, 4 × 5 = 20, and 40 − 20 = 20.",
+        "ur": "نمونہ جواب: (6 − 1) = 5، 4 × 5 = 20، اور 40 − 20 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "That subtracts 40 − 4 first. Multiplication comes before subtraction: 20.",
+            "ur": "یہ پہلے 40 − 4 کرتا ہے۔ ضرب تفریق سے پہلے آتی ہے: 20"
+          },
+          "misconception_id": "left_to_right"
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "The bracket (6 − 1) has to be worked out as a whole: 5. Then 4 × 5 = 20 and 40 − 20 = 20.",
+            "ur": "بریکٹ (6 − 1) کو پورا حل کرنا ہے: 5۔ پھر 4 × 5 = 20 اور 40 − 20 = 20"
+          },
+          "misconception_id": "skips_brackets"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_temperature",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: At 6 pm the temperature is 3 degrees. It falls 4 degrees every hour for 5 hours, and then rises 7 degrees. What is the temperature at the end?",
+        "ur": "تفصیلی سوال: شام 6 بجے درجہ حرارت 3 ڈگری ہے۔ یہ 5 گھنٹے تک ہر گھنٹے 4 ڈگری گرتا ہے، پھر 7 ڈگری بڑھتا ہے۔ آخر میں درجہ حرارت کیا ہے؟"
+      },
+      "answer": -10,
+      "checker": "numeric",
+      "hint": {
+        "en": "The fall is 5 × (−4). Then add the rise of 7 to 3 + that.",
+        "ur": "گرنا 5 × (−4) ہے۔ پھر 3 + اس میں 7 کا اضافہ جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 3 + (−20) + 7 = −10.",
+        "ur": "درست: 3 + (−20) + 7 = −10"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 5 × (−4) = −20. Then 3 + (−20) = −17, and −17 + 7 = −10 degrees.",
+        "ur": "نمونہ جواب: 5 × (−4) = −20۔ پھر 3 + (−20) = −17، اور −17 + 7 = −10 ڈگری۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -17,
+          "feedback": {
+            "en": "That stops before the rise of 7: −17 + 7 = −10.",
+            "ur": "یہ 7 کے اضافے سے پہلے رک گیا: −17 + 7 = −10"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "A fall is negative, so the change is −20, not +20: −10.",
+            "ur": "گرنا منفی ہے، اس لیے تبدیلی +20 نہیں −20 ہے: −10"
+          },
+          "misconception_id": "pos_only"
+        }
+      ]
+    },
+    {
+      "id": "l2_associative",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Verify the associative law of multiplication for −2, 7 and −5. Work out ((−2) × 7) × (−5). It must equal (−2) × (7 × (−5)). What is the value?",
+        "ur": "تفصیلی سوال: −2، 7 اور −5 کے لیے ضرب کا قانون شراکت جانچیں۔ ((−2) × 7) × (−5) معلوم کریں۔ یہ (−2) × (7 × (−5)) کے برابر ہونا چاہیے۔ قیمت کیا ہے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "L.H.S.: (−2) × 7 = −14, then (−14) × (−5). R.H.S.: 7 × (−5) = −35, then (−2) × (−35).",
+        "ur": "L.H.S.: (−2) × 7 = −14، پھر (−14) × (−5)۔ R.H.S.: 7 × (−5) = −35، پھر (−2) × (−35)"
+      },
+      "feedback_correct": {
+        "en": "Correct: both sides are 70.",
+        "ur": "درست: دونوں طرف 70 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: L.H.S. = (−14) × (−5) = 70. R.H.S. = (−2) × (−35) = 70. L.H.S. = R.H.S., so the law holds.",
+        "ur": "نمونہ جواب: L.H.S. = (−14) × (−5) = 70۔ R.H.S. = (−2) × (−35) = 70۔ L.H.S. = R.H.S.، اس لیے قانون ٹھیک ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -70,
+          "feedback": {
+            "en": "Each side multiplies two negative numbers at the end, so the product is positive: 70.",
+            "ur": "ہر طرف آخر میں دو منفی اعداد ضرب ہوتے ہیں، اس لیے حاصل ضرب مثبت ہے: 70"
+          },
+          "misconception_id": "neg_neg"
+        }
+      ]
+    },
+    {
+      "id": "l3_decimals",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Simplify 5.5 + 2 × {4.5 − (1.2 + 0.8)}.",
+        "ur": "تفصیلی سوال: 5.5 + 2 × {4.5 − (1.2 + 0.8)} سادہ کریں۔"
+      },
+      "answer": 10.5,
+      "checker": "numeric",
+      "hint": {
+        "en": "Innermost bracket first: 1.2 + 0.8. Then { }, then multiply, then add.",
+        "ur": "سب سے اندر کا بریکٹ پہلے: 1.2 + 0.8۔ پھر { }، پھر ضرب، پھر جمع۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: (1.2 + 0.8) = 2, {4.5 − 2} = 2.5, 2 × 2.5 = 5, 5.5 + 5 = 10.5.",
+        "ur": "درست: (1.2 + 0.8) = 2، {4.5 − 2} = 2.5، 2 × 2.5 = 5، 5.5 + 5 = 10.5"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 1.2 + 0.8 = 2; 4.5 − 2 = 2.5; 2 × 2.5 = 5; 5.5 + 5 = 10.5.",
+        "ur": "نمونہ جواب: 1.2 + 0.8 = 2؛ 4.5 − 2 = 2.5؛ 2 × 2.5 = 5؛ 5.5 + 5 = 10.5"
+      },
+      "common_wrong": [
+        {
+          "answer": 18.75,
+          "feedback": {
+            "en": "That adds 5.5 + 2 before multiplying. Multiplication comes first: 10.5.",
+            "ur": "یہ ضرب سے پہلے 5.5 + 2 کرتا ہے۔ ضرب پہلے آتی ہے: 10.5"
+          },
+          "misconception_id": "left_to_right"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is the value of 2 × {…} only. Add 5.5 at the end: 10.5.",
+            "ur": "یہ صرف 2 × {…} کی قیمت ہے۔ آخر میں 5.5 جمع کریں: 10.5"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "l4_pens",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A shopkeeper buys 12 pens at Rs 15 each. He sells 8 of them at Rs 18 each and the other 4 at Rs 5 each. Write his gain as a positive integer and his loss as a negative integer. What is the result?",
+        "ur": "تفصیلی سوال: ایک دکاندار 15 روپے فی قلم کے حساب سے 12 قلم خریدتا ہے۔ وہ ان میں سے 8 قلم 18 روپے فی قلم اور باقی 4 قلم 5 روپے فی قلم بیچتا ہے۔ نفع مثبت صحیح عدد اور نقصان منفی صحیح عدد لکھیں۔ نتیجہ کیا ہے؟"
+      },
+      "answer": -16,
+      "checker": "numeric",
+      "hint": {
+        "en": "Money in = 8 × 18 + 4 × 5. Money out = 12 × 15. Result = money in − money out.",
+        "ur": "آمدنی = 8 × 18 + 4 × 5۔ خرچ = 12 × 15۔ نتیجہ = آمدنی − خرچ"
+      },
+      "feedback_correct": {
+        "en": "Correct: 164 − 180 = −16, a loss of Rs 16.",
+        "ur": "درست: 164 − 180 = −16، یعنی 16 روپے کا نقصان۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: sold for 8 × 18 + 4 × 5 = 144 + 20 = 164. Cost 12 × 15 = 180. 164 − 180 = −16, a loss of Rs 16.",
+        "ur": "نمونہ جواب: فروخت 8 × 18 + 4 × 5 = 144 + 20 = 164۔ لاگت 12 × 15 = 180۔ 164 − 180 = −16، یعنی 16 روپے کا نقصان۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "He received less than he paid, so it is a loss, written as −16.",
+            "ur": "اسے ادا کردہ رقم سے کم ملی، اس لیے یہ نقصان ہے، یعنی −16"
+          },
+          "misconception_id": "sign_lost"
+        },
+        {
+          "answer": 164,
+          "feedback": {
+            "en": "That is only the money received. Subtract the cost of 180: −16.",
+            "ur": "یہ صرف وصول شدہ رقم ہے۔ لاگت 180 گھٹائیں: −16"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 3 test. Well done!",
+          "ur": "آپ نے باب 3 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: like signs add and unlike signs subtract; to subtract, add the opposite; in multiplying and dividing, like signs give plus and unlike signs give minus; addition and multiplication are commutative and associative, multiplication is distributive over addition, and nothing can be divided by 0. For mixed expressions use BODMAS: brackets from the inside out, then multiply and divide, then add and subtract.",
+        "ur": "امتحان میں: ایک جیسی علامتیں جمع اور مخالف علامتیں تفریق کرتی ہیں؛ تفریق کے لیے مخالف جمع کریں؛ ضرب اور تقسیم میں ایک جیسی علامتیں پلس اور مخالف علامتیں مائنس دیتی ہیں؛ جمع اور ضرب تبدیلی اور شراکت کے قوانین مانتے ہیں، ضرب جمع پر تقسیم کا قانون مانتی ہے، اور کسی عدد کو 0 سے تقسیم نہیں کر سکتے۔ ملی جلی عبارتوں کے لیے بوڈ ماس: بریکٹ اندر سے باہر، پھر ضرب اور تقسیم، پھر جمع اور تفریق۔"
+      },
+      "points": [
+        {
+          "en": "Check a division by multiplying back.",
+          "ur": "تقسیم کو واپس ضرب دے کر جانچیں۔"
+        },
+        {
+          "en": "In a word problem, write the whole calculation first, then simplify it.",
+          "ur": "لفظی سوال میں پہلے پورا حساب لکھیں، پھر سادہ کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_sub",
+      "type": "exam_style",
+      "skill": "maths.integers.chapter_3_test",
+      "step": {
+        "id": "r_exam_sub",
+        "type": "number",
+        "prompt": {
+          "en": "Find 14 − 30.",
+          "ur": "14 − 30 معلوم کریں۔"
+        },
+        "answer": -16,
+        "checker": "numeric",
+        "hint": {
+          "en": "Start at 14 and go 30 steps to the left.",
+          "ur": "14 سے شروع کریں اور 30 قدم بائیں جائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: −16.",
+          "ur": "درست: −16"
+        },
+        "feedback_wrong": {
+          "en": "14 − 30 = −(30 − 14) = −16.",
+          "ur": "14 − 30 = −(30 − 14) = −16"
+        },
+        "common_wrong": [
+          {
+            "answer": 16,
+            "feedback": {
+              "en": "30 − 14 is 16, but 14 − 30 is negative: −16.",
+              "ur": "30 − 14 تو 16 ہے، مگر 14 − 30 منفی ہے: −16"
+            },
+            "misconception_id": "sign_lost"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_dist",
+      "type": "exam_style",
+      "skill": "maths.integers.chapter_3_test",
+      "step": {
+        "id": "r_exam_dist",
+        "type": "number",
+        "prompt": {
+          "en": "Use the distributive law to find 4 × (6 + (−9)).",
+          "ur": "قانون تقسیم سے 4 × (6 + (−9)) معلوم کریں۔"
+        },
+        "answer": -12,
+        "checker": "numeric",
+        "hint": {
+          "en": "4 × 6 + 4 × (−9). Multiply both terms.",
+          "ur": "4 × 6 + 4 × (−9)۔ دونوں اجزا کو ضرب دیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 24 − 36 = −12.",
+          "ur": "درست: 24 − 36 = −12"
+        },
+        "feedback_wrong": {
+          "en": "4 × 6 = 24 and 4 × (−9) = −36, so 24 − 36 = −12.",
+          "ur": "4 × 6 = 24 اور 4 × (−9) = −36، اس لیے 24 − 36 = −12"
+        },
+        "common_wrong": [
+          {
+            "answer": 15,
+            "feedback": {
+              "en": "That multiplies only 6. Multiply both terms: −12.",
+              "ur": "یہ صرف 6 کو ضرب دیتا ہے۔ دونوں اجزا کو ضرب دیں: −12"
+            },
+            "misconception_id": "skips_brackets"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 3 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.integers.chapter_3_test), with the chapter's integer and simplification skills as prerequisites, and is mastered with exam_style questions, like g9-maths-05-board-exam-practice.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), قانون تبدیلی / قانون شراکت / قانون تقسیم (commutative / associative / distributive law), غیر معین (undefined), بوڈ ماس (BODMAS).",
+    "The numbers were worked out in content/sources/g6-maths-04/chapter_3_test.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

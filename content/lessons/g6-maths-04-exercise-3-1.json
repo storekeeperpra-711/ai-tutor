@@ -1,0 +1,959 @@
+{
+  "id": "g6-maths-04-exercise-3-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Add and subtract two-digit like and unlike integers, verify the commutative and associative laws of addition, and solve word problems about integers.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 3: Laws of Integers, Exercise 3.1"
+    }
+  ],
+  "skills": [
+    "maths.integers.ex_3_1"
+  ],
+  "title": {
+    "en": "Exercise 3.1 practice: adding and subtracting integers",
+    "ur": "مشق 3.1 کی پریکٹس: صحیح اعداد کا جمع اور تفریق"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.add"
+    },
+    {
+      "skill": "maths.integers.subtract"
+    },
+    {
+      "skill": "maths.integers.laws"
+    },
+    {
+      "skill": "maths.integers.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "sign_lost",
+      "description": "Drops the minus sign from an answer, or adds the digits and forgets the sign."
+    },
+    {
+      "id": "small_minus_big",
+      "description": "Turns 5 − 9 into 9 − 5, as if subtraction could be done in either order."
+    },
+    {
+      "id": "double_neg",
+      "description": "Treats subtracting a negative number as subtracting a positive one."
+    },
+    {
+      "id": "unlike_added",
+      "description": "Adds the digits of unlike integers instead of finding the difference."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Solves x + 9 = 4 or x − (−4) = −10 with the wrong operation or sign."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a middle result but does not finish the problem."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.ex_3_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.ex_3_1": [
+      {
+        "id": "qb_like",
+        "type": "recall",
+        "step": {
+          "id": "qb_like",
+          "type": "number",
+          "prompt": {
+            "en": "Find (−7) + (−9).",
+            "ur": "(−7) + (−9) معلوم کریں۔"
+          },
+          "answer": -16,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add the digits and keep the minus sign.",
+            "ur": "ہندسے جمع کریں اور منفی علامت رکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! −16.",
+            "ur": "درست! −16"
+          },
+          "feedback_wrong": {
+            "en": "7 + 9 = 16, both negative: −16.",
+            "ur": "7 + 9 = 16، دونوں منفی: −16"
+          },
+          "common_wrong": [
+            {
+              "answer": 16,
+              "feedback": {
+                "en": "Like negative numbers give a negative sum: −16.",
+                "ur": "منفی اعداد کا مجموعہ منفی ہوتا ہے: −16"
+              },
+              "misconception_id": "sign_lost"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_sub",
+        "type": "apply",
+        "step": {
+          "id": "qb_sub",
+          "type": "number",
+          "prompt": {
+            "en": "Find 15 − 23.",
+            "ur": "15 − 23 معلوم کریں۔"
+          },
+          "answer": -8,
+          "checker": "numeric",
+          "hint": {
+            "en": "Start at 15 and go 23 steps left. You pass 0.",
+            "ur": "15 سے شروع کریں اور 23 قدم بائیں جائیں۔ آپ 0 سے آگے نکل جائیں گے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! −8.",
+            "ur": "درست! −8"
+          },
+          "feedback_wrong": {
+            "en": "15 − 23 = 15 + (−23) = −8.",
+            "ur": "15 − 23 = 15 + (−23) = −8"
+          },
+          "common_wrong": [
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "23 − 15 is 8, but 15 − 23 is negative: −8.",
+                "ur": "23 − 15 تو 8 ہے، مگر 15 − 23 منفی ہے: −8"
+              },
+              "misconception_id": "small_minus_big"
+            },
+            {
+              "answer": 38,
+              "feedback": {
+                "en": "That adds. We subtract: −8.",
+                "ur": "یہ جمع ہے۔ ہمیں تفریق کرنی ہے: −8"
+              },
+              "misconception_id": "unlike_added"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Zain says 8 − (−3) = 5. What went wrong?",
+            "ur": "زین کہتا ہے 8 − (−3) = 5۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Subtracting −3 is adding 3, so 8 − (−3) = 8 + 3 = 11.",
+                "ur": "−3 کو گھٹانا 3 جمع کرنا ہے، اس لیے 8 − (−3) = 8 + 3 = 11"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Two minus signs make a plus.",
+                "ur": "جی ہاں! دو منفی علامتیں مل کر جمع بنتی ہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 8 − (−3) = 8 − 3 = 5.",
+                "ur": "کوئی غلطی نہیں۔ 8 − (−3) = 8 − 3 = 5"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "He ignored the minus sign inside the bracket.",
+                "ur": "اس نے بریکٹ کے اندر کی منفی علامت نظر انداز کر دی۔"
+              },
+              "misconception_id": "double_neg"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The answer should be −5.",
+                "ur": "جواب −5 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "8 + 3 is positive, so the answer is not −5.",
+                "ur": "8 + 3 مثبت ہے، اس لیے جواب −5 نہیں۔"
+              },
+              "misconception_id": "sign_lost"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_sub",
+      "front": {
+        "en": "How do you subtract an integer?",
+        "ur": "صحیح عدد کو کیسے گھٹاتے ہیں؟"
+      },
+      "back": {
+        "en": "Add its opposite: 7 − (−6) = 7 + 6 = 13.",
+        "ur": "اس کا مخالف جمع کریں: 7 − (−6) = 7 + 6 = 13"
+      }
+    },
+    {
+      "id": "f_unlike",
+      "front": {
+        "en": "What is 12 + (−20)?",
+        "ur": "12 + (−20) کیا ہے؟"
+      },
+      "back": {
+        "en": "−8. Subtract 20 − 12 and keep the sign of the bigger digits.",
+        "ur": "−8۔ 20 − 12 کریں اور بڑے ہندسوں کی علامت رکھیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_thermo",
+      "text": {
+        "en": "Write today's morning and night temperatures as integers (for a cold place use a negative number, such as −3). Work out the change from one to the other in two ways: with a number line and with subtraction.",
+        "ur": "آج صبح اور رات کے درجہ حرارت صحیح اعداد کے طور پر لکھیں (ٹھنڈی جگہ کے لیے منفی عدد، جیسے −3)۔ ایک سے دوسرے تک کی تبدیلی دو طریقوں سے معلوم کریں: عددی خط سے اور تفریق سے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Like integers",
+      "ur": "ملتے جلتے صحیح اعداد"
+    },
+    {
+      "en": "Unlike integers",
+      "ur": "مخالف صحیح اعداد"
+    },
+    {
+      "en": "Commutative law",
+      "ur": "قانون تبدیلی"
+    },
+    {
+      "en": "Associative law",
+      "ur": "قانون شراکت"
+    },
+    {
+      "en": "Additive inverse",
+      "ur": "جمعی معکوس"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 3.1 is about adding and subtracting integers. Ready?",
+          "ur": "مشق 3.1 صحیح اعداد کے جمع اور تفریق کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 3.1 of your maths book (PCTB Mathematics 6). Here you add and subtract integers on the number line and without it, check the laws of addition, find a missing integer, and solve distance problems. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 3.1 کے ساتھ ہے۔ اس میں آپ عددی خط پر اور اس کے بغیر صحیح اعداد جمع اور تفریق کریں گے، جمع کے قوانین جانچیں گے، گم شدہ صحیح عدد معلوم کریں گے، اور فاصلے کے سوال حل کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_like",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Find (−6) + (−5).",
+        "ur": "(−6) + (−5) معلوم کریں۔"
+      },
+      "answer": -11,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two negative numbers: add the digits and keep the minus sign.",
+        "ur": "دو منفی اعداد: ہندسے جمع کریں اور منفی علامت رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 + 5 = 11, so the sum is −11.",
+        "ur": "درست! 6 + 5 = 11، اس لیے مجموعہ −11 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Both numbers are negative, so the sum is negative: −11.",
+        "ur": "دونوں اعداد منفی ہیں، اس لیے مجموعہ منفی ہے: −11"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "Like negative numbers add up to a negative number: −11.",
+            "ur": "ملتے جلتے منفی اعداد کا مجموعہ منفی ہوتا ہے: −11"
+          },
+          "misconception_id": "sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q2_line",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Start at 3 on the number line and move 8 steps to the left. Which integer do you reach? (This is 3 + (−8).)",
+        "ur": "عددی خط پر 3 سے شروع کریں اور 8 قدم بائیں جائیں۔ آپ کس صحیح عدد پر پہنچتے ہیں؟ (یہ 3 + (−8) ہے۔)"
+      },
+      "answer": -5,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 steps reach 0. How many steps are left?",
+        "ur": "3 قدم میں 0 پر پہنچتے ہیں۔ کتنے قدم باقی ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 steps get to 0 and 5 more go past it: −5.",
+        "ur": "درست! 3 قدم سے 0 پر اور 5 قدم مزید آگے: −5"
+      },
+      "feedback_wrong": {
+        "en": "3 + (−8): 3 steps to 0, then 5 more to the left, so −5.",
+        "ur": "3 + (−8): 3 قدم 0 تک، پھر 5 قدم مزید بائیں، اس لیے −5"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "You went past 0, so the answer is negative: −5.",
+            "ur": "آپ 0 سے آگے گئے، اس لیے جواب منفی ہے: −5"
+          },
+          "misconception_id": "sign_lost"
+        },
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "Moving left subtracts. 3 and −8 are unlike, so find the difference, not the sum.",
+            "ur": "بائیں جانا گھٹانا ہے۔ 3 اور −8 مخالف علامت کے ہیں، اس لیے مجموعہ نہیں فرق نکالیں۔"
+          },
+          "misconception_id": "unlike_added"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Unlike signs? Subtract the digits and keep the sign of the bigger one.",
+          "ur": "مخالف علامتیں؟ ہندسے گھٹائیں اور بڑے ہندسوں والی علامت رکھیں۔"
+        }
+      },
+      "text": {
+        "en": "Like integers (same signs): add the digits and keep the sign: (−6) + (−5) = −11. Unlike integers (different signs): subtract the smaller digits from the bigger and keep the sign of the integer with the bigger digits: 12 + (−20) = −8. To subtract an integer, add its opposite: 7 − (−6) = 7 + 6 = 13. The commutative law says a + b = b + a. The associative law says (a + b) + c = a + (b + c). Subtraction obeys neither: 4 − 9 is not 9 − 4.",
+        "ur": "ملتی جلتی علامت والے صحیح اعداد: ہندسے جمع کریں اور علامت وہی رکھیں: (−6) + (−5) = −11۔ مخالف علامت والے صحیح اعداد: چھوٹے ہندسے بڑے ہندسوں سے گھٹائیں اور بڑے ہندسوں والے عدد کی علامت رکھیں: 12 + (−20) = −8۔ کسی صحیح عدد کو گھٹانے کے لیے اس کا مخالف جمع کریں: 7 − (−6) = 7 + 6 = 13۔ تبدیلی کا قانون کہتا ہے a + b = b + a۔ شراکت کا قانون کہتا ہے (a + b) + c = a + (b + c)۔ تفریق ان دونوں کو نہیں مانتی: 4 − 9، 9 − 4 کے برابر نہیں۔"
+      }
+    },
+    {
+      "id": "q3_unlike",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 12 + (−20).",
+        "ur": "12 + (−20) معلوم کریں۔"
+      },
+      "answer": -8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Unlike signs: find 20 − 12, then use the sign of the bigger digits.",
+        "ur": "مخالف علامتیں: 20 − 12 نکالیں، پھر بڑے ہندسوں والی علامت لگائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 − 12 = 8 and 20 is the negative one: −8.",
+        "ur": "درست! 20 − 12 = 8 اور 20 منفی ہے: −8"
+      },
+      "feedback_wrong": {
+        "en": "20 − 12 = 8, and the bigger digits belong to −20, so the answer is −8.",
+        "ur": "20 − 12 = 8، اور بڑے ہندسے −20 کے ہیں، اس لیے جواب −8 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "−20 is farther from 0 than 12, so the answer is negative: −8.",
+            "ur": "−20، 12 سے 0 سے زیادہ دور ہے، اس لیے جواب منفی ہے: −8"
+          },
+          "misconception_id": "sign_lost"
+        },
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "The signs are different, so subtract the digits: 20 − 12 = 8, with a minus sign.",
+            "ur": "علامتیں مختلف ہیں، اس لیے ہندسے گھٹائیں: 20 − 12 = 8، منفی علامت کے ساتھ۔"
+          },
+          "misconception_id": "unlike_added"
+        }
+      ]
+    },
+    {
+      "id": "q4_small_minus_big",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 5 − 9.",
+        "ur": "5 − 9 معلوم کریں۔"
+      },
+      "answer": -4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Start at 5 and move 9 steps to the left.",
+        "ur": "5 سے شروع کریں اور 9 قدم بائیں جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 steps reach 0 and 4 more go past it: −4.",
+        "ur": "درست! 5 قدم سے 0 پر اور 4 قدم مزید آگے: −4"
+      },
+      "feedback_wrong": {
+        "en": "5 − 9 = 5 + (−9) = −4.",
+        "ur": "5 − 9 = 5 + (−9) = −4"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "9 − 5 is 4, but we need 5 − 9. Going 9 steps left from 5 passes 0: −4.",
+            "ur": "9 − 5 تو 4 ہے، مگر ہمیں 5 − 9 چاہیے۔ 5 سے 9 قدم بائیں جانا 0 سے آگے لے جاتا ہے: −4"
+          },
+          "misconception_id": "small_minus_big"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "That adds. We subtract: 5 − 9 = −4.",
+            "ur": "یہ جمع ہے۔ ہمیں تفریق کرنی ہے: 5 − 9 = −4"
+          },
+          "misconception_id": "unlike_added"
+        }
+      ]
+    },
+    {
+      "id": "q5_sub_neg",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 7 − (−6).",
+        "ur": "7 − (−6) معلوم کریں۔"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Subtracting −6 is the same as adding its opposite, 6.",
+        "ur": "−6 کو گھٹانا اس کے مخالف 6 کو جمع کرنے کے برابر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 − (−6) = 7 + 6 = 13.",
+        "ur": "درست! 7 − (−6) = 7 + 6 = 13"
+      },
+      "feedback_wrong": {
+        "en": "Subtracting a negative number is adding the positive: 7 + 6 = 13.",
+        "ur": "منفی عدد کو گھٹانا مثبت جمع کرنا ہے: 7 + 6 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "That treats it as 7 − 6. Two minus signs together make a plus: 7 + 6 = 13.",
+            "ur": "یہ 7 − 6 کی طرح ہے۔ دو منفی علامتیں مل کر جمع بنتی ہیں: 7 + 6 = 13"
+          },
+          "misconception_id": "double_neg"
+        },
+        {
+          "answer": -13,
+          "feedback": {
+            "en": "7 + 6 is positive, so the answer is 13.",
+            "ur": "7 + 6 مثبت ہے، اس لیے جواب 13 ہے۔"
+          },
+          "misconception_id": "sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q6_sub_neg2",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find (−8) − (−15).",
+        "ur": "(−8) − (−15) معلوم کریں۔"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Change the subtraction to adding the opposite: −8 + 15.",
+        "ur": "تفریق کو مخالف کے جمع میں بدلیں: −8 + 15"
+      },
+      "feedback_correct": {
+        "en": "Right! −8 + 15 = 7.",
+        "ur": "درست! −8 + 15 = 7"
+      },
+      "feedback_wrong": {
+        "en": "(−8) − (−15) = −8 + 15. The bigger digits are positive, so 15 − 8 = 7.",
+        "ur": "(−8) − (−15) = −8 + 15۔ بڑے ہندسے مثبت ہیں، اس لیے 15 − 8 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": -23,
+          "feedback": {
+            "en": "That is (−8) − 15. Subtracting −15 means adding 15: 7.",
+            "ur": "یہ (−8) − 15 ہے۔ −15 کو گھٹانے کا مطلب 15 جمع کرنا ہے: 7"
+          },
+          "misconception_id": "double_neg"
+        },
+        {
+          "answer": -7,
+          "feedback": {
+            "en": "15 is bigger than 8 and positive, so the answer is positive: 7.",
+            "ur": "15، 8 سے بڑا اور مثبت ہے، اس لیے جواب مثبت ہے: 7"
+          },
+          "misconception_id": "sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q7_commutative",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which equation shows the commutative law of addition?",
+        "ur": "کون سی مساوات جمع کا قانون تبدیلی دکھاتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "((−4) + 9) + 2 = (−4) + (9 + 2)",
+            "ur": "((−4) + 9) + 2 = (−4) + (9 + 2)"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Here the numbers stay in order and only the grouping changes. That is the associative law.",
+            "ur": "یہاں اعداد کی ترتیب وہی ہے اور صرف بریکٹ بدلے۔ یہ شراکت کا قانون ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "(−4) + 0 = −4",
+            "ur": "(−4) + 0 = −4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding 0 changes nothing. That is the additive identity, not the commutative law.",
+            "ur": "0 جمع کرنے سے کچھ نہیں بدلتا۔ یہ جمعی ذاتی عدد ہے، قانون تبدیلی نہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "(−4) + 9 = 9 + (−4)",
+            "ur": "(−4) + 9 = 9 + (−4)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The order of the two numbers is swapped and the sum stays 5.",
+            "ur": "جی ہاں! دونوں اعداد کی ترتیب بدلی اور مجموعہ 5 ہی رہا۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "4 + (−4) = 0",
+            "ur": "4 + (−4) = 0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A number plus its opposite is 0. That is the additive inverse.",
+            "ur": "عدد اور اس کے مخالف کا مجموعہ 0 ہوتا ہے۔ یہ جمعی معکوس ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8_associative",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Check the associative law for −3, 8 and −6. Work out (−3 + 8) + (−6). It must equal −3 + (8 + (−6)). What is the value?",
+        "ur": "−3، 8 اور −6 کے لیے شراکت کا قانون جانچیں۔ (−3 + 8) + (−6) معلوم کریں۔ یہ −3 + (8 + (−6)) کے برابر ہونا چاہیے۔ قیمت کیا ہے؟"
+      },
+      "answer": -1,
+      "checker": "numeric",
+      "hint": {
+        "en": "Left side: −3 + 8 = 5, then 5 + (−6). Right side: 8 + (−6) = 2, then −3 + 2.",
+        "ur": "بایاں طرف: −3 + 8 = 5، پھر 5 + (−6)۔ دایاں طرف: 8 + (−6) = 2، پھر −3 + 2"
+      },
+      "feedback_correct": {
+        "en": "Right! Both sides are −1, so the law holds.",
+        "ur": "درست! دونوں طرف −1 ہے، اس لیے قانون ٹھیک ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "L.H.S. = 5 + (−6) = −1 and R.H.S. = −3 + 2 = −1. Both are −1.",
+        "ur": "L.H.S. = 5 + (−6) = −1 اور R.H.S. = −3 + 2 = −1۔ دونوں −1 ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "5 + (−6) goes one step past 0, so it is −1, not 1.",
+            "ur": "5 + (−6) 0 سے ایک قدم آگے جاتا ہے، اس لیے یہ −1 ہے، 1 نہیں۔"
+          },
+          "misconception_id": "sign_lost"
+        },
+        {
+          "answer": -17,
+          "feedback": {
+            "en": "That adds all the digits. The signs differ, so subtract: −1.",
+            "ur": "یہ سب ہندسے جمع کرتا ہے۔ علامتیں مختلف ہیں، اس لیے تفریق کریں: −1"
+          },
+          "misconception_id": "unlike_added"
+        }
+      ]
+    },
+    {
+      "id": "q9_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the integer x if x + 9 = 4.",
+        "ur": "وہ صحیح عدد x معلوم کریں جس کے لیے x + 9 = 4 ہو۔"
+      },
+      "answer": -5,
+      "checker": "numeric",
+      "hint": {
+        "en": "What must you add to 9 to get 4? Or: x = 4 − 9.",
+        "ur": "9 میں کیا جمع کریں تو 4 بنے؟ یا: x = 4 − 9"
+      },
+      "feedback_correct": {
+        "en": "Right! −5 + 9 = 4.",
+        "ur": "درست! −5 + 9 = 4"
+      },
+      "feedback_wrong": {
+        "en": "x = 4 − 9 = −5. Check: −5 + 9 = 4.",
+        "ur": "x = 4 − 9 = −5۔ جانچ: −5 + 9 = 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 + 9 is 14, not 4. x = 4 − 9 = −5.",
+            "ur": "5 + 9 تو 14 ہے، 4 نہیں۔ x = 4 − 9 = −5"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "That adds 4 and 9. To undo + 9 we subtract 9: −5.",
+            "ur": "یہ 4 اور 9 کو جمع کرتا ہے۔ + 9 کو ختم کرنے کے لیے 9 گھٹائیں: −5"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "q10_missing_sub",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the integer x if x − (−4) = −10.",
+        "ur": "وہ صحیح عدد x معلوم کریں جس کے لیے x − (−4) = −10 ہو۔"
+      },
+      "answer": -14,
+      "checker": "numeric",
+      "hint": {
+        "en": "x − (−4) is x + 4. So x + 4 = −10.",
+        "ur": "x − (−4) دراصل x + 4 ہے۔ اس لیے x + 4 = −10"
+      },
+      "feedback_correct": {
+        "en": "Right! −14 − (−4) = −14 + 4 = −10.",
+        "ur": "درست! −14 − (−4) = −14 + 4 = −10"
+      },
+      "feedback_wrong": {
+        "en": "x + 4 = −10, so x = −10 − 4 = −14.",
+        "ur": "x + 4 = −10، اس لیے x = −10 − 4 = −14"
+      },
+      "common_wrong": [
+        {
+          "answer": -6,
+          "feedback": {
+            "en": "That is −10 + 4. To undo + 4 we subtract 4: −14.",
+            "ur": "یہ −10 + 4 ہے۔ + 4 کو ختم کرنے کے لیے 4 گھٹائیں: −14"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "Check: 14 − (−4) = 18, not −10. The answer is −14.",
+            "ur": "جانچ: 14 − (−4) = 18، −10 نہیں۔ جواب −14 ہے۔"
+          },
+          "misconception_id": "sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q11_fall",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "At noon the temperature is 9 degrees. At midnight it is −12 degrees. By how many degrees did it fall?",
+        "ur": "دوپہر کو درجہ حرارت 9 ڈگری ہے۔ آدھی رات کو −12 ڈگری ہے۔ درجہ حرارت کتنے ڈگری گرا؟"
+      },
+      "answer": 21,
+      "checker": "numeric",
+      "hint": {
+        "en": "Fall = noon − midnight = 9 − (−12). Or count 9 steps down to 0, then 12 more.",
+        "ur": "گرنا = دوپہر − آدھی رات = 9 − (−12)۔ یا 0 تک 9 قدم نیچے، پھر 12 مزید گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9 + 12 = 21 degrees.",
+        "ur": "درست! 9 + 12 = 21 ڈگری"
+      },
+      "feedback_wrong": {
+        "en": "The numbers are on opposite sides of 0: 9 steps to 0 and 12 more, so 21 degrees.",
+        "ur": "اعداد 0 کی مخالف طرف ہیں: 0 تک 9 قدم اور 12 مزید، اس لیے 21 ڈگری۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "That is 12 − 9. The temperatures are on different sides of 0, so add: 21.",
+            "ur": "یہ 12 − 9 ہے۔ درجہ حرارت 0 کی مختلف طرف ہیں، اس لیے جمع کریں: 21"
+          },
+          "misconception_id": "unlike_added"
+        },
+        {
+          "answer": -21,
+          "feedback": {
+            "en": "A fall of 21 degrees is a distance, so the number of degrees is 21.",
+            "ur": "21 ڈگری کا گرنا فاصلہ ہے، اس لیے ڈگریوں کی تعداد 21 ہے۔"
+          },
+          "misconception_id": "sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q12_account",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Imran's shop account shows −450 rupees (he owes Rs 450). He deposits Rs 1200 and then withdraws Rs 300. What is the balance in rupees?",
+        "ur": "عمران کی دکان کے کھاتے میں −450 روپے ہیں (اس پر 450 روپے واجب ہیں)۔ وہ 1200 روپے جمع کرواتا ہے اور پھر 300 روپے نکلواتا ہے۔ بیلنس کتنے روپے ہے؟"
+      },
+      "answer": 450,
+      "checker": "numeric",
+      "hint": {
+        "en": "−450 + 1200 first, then take away 300.",
+        "ur": "پہلے −450 + 1200، پھر 300 گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −450 + 1200 = 750, and 750 − 300 = 450.",
+        "ur": "درست! −450 + 1200 = 750، اور 750 − 300 = 450"
+      },
+      "feedback_wrong": {
+        "en": "−450 + 1200 = 750, then 750 − 300 = 450 rupees.",
+        "ur": "−450 + 1200 = 750، پھر 750 − 300 = 450 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 750,
+          "feedback": {
+            "en": "That stops after the deposit. Take away the Rs 300 withdrawal too: 450.",
+            "ur": "یہ جمع کے بعد رک گیا۔ 300 روپے نکلوانا بھی گھٹائیں: 450"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 1350,
+          "feedback": {
+            "en": "That ignores the minus sign on 450. He owed that money, so subtract it: 450.",
+            "ur": "یہ 450 کی منفی علامت نظر انداز کرتا ہے۔ یہ رقم واجب تھی، اس لیے اسے گھٹائیں: 450"
+          },
+          "misconception_id": "sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hira works out 4 − 9 and writes 5, because 9 − 4 = 5. What went wrong?",
+        "ur": "ہیرا 4 − 9 معلوم کرتی ہے اور 5 لکھتی ہے، کیونکہ 9 − 4 = 5۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. Subtraction obeys the commutative law.",
+            "ur": "کوئی غلطی نہیں۔ تفریق قانون تبدیلی کو مانتی ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The commutative law works for addition only. 4 − 9 and 9 − 4 are different.",
+            "ur": "قانون تبدیلی صرف جمع کے لیے ہے۔ 4 − 9 اور 9 − 4 مختلف ہیں۔"
+          },
+          "misconception_id": "small_minus_big"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Subtraction cannot be swapped. 4 − 9 = −5, and 9 − 4 = 5 is a different question.",
+            "ur": "تفریق میں ترتیب نہیں بدل سکتے۔ 4 − 9 = −5، اور 9 − 4 = 5 الگ سوال ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 4 − 9 goes past 0 on the number line, so it is negative.",
+            "ur": "جی ہاں! 4 − 9 عددی خط پر 0 سے آگے جاتا ہے، اس لیے منفی ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should have added: 4 + 9 = 13.",
+            "ur": "اسے جمع کرنا چاہیے تھا: 4 + 9 = 13"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question asks for a subtraction, so adding is a different problem.",
+            "ur": "سوال تفریق کا ہے، جمع الگ مسئلہ ہے۔"
+          },
+          "misconception_id": "unlike_added"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You added and subtracted integers.",
+          "ur": "شاباش! آپ نے صحیح اعداد جمع اور تفریق کیے۔"
+        }
+      },
+      "text": {
+        "en": "Like signs: add and keep the sign. Unlike signs: subtract and keep the sign of the bigger digits. To subtract, add the opposite. Addition is commutative and associative, but subtraction is not: 4 − 9 = −5 while 9 − 4 = 5. To find a missing integer, undo the operation.",
+        "ur": "ایک جیسی علامتیں: جمع کریں اور علامت رکھیں۔ مخالف علامتیں: تفریق کریں اور بڑے ہندسوں والی علامت رکھیں۔ تفریق کے لیے مخالف جمع کریں۔ جمع تبدیلی اور شراکت کے قوانین مانتا ہے، تفریق نہیں: 4 − 9 = −5 جبکہ 9 − 4 = 5۔ گم شدہ صحیح عدد کے لیے عمل کو الٹ دیں۔"
+      },
+      "points": [
+        {
+          "en": "Subtracting a negative number is adding a positive one.",
+          "ur": "منفی عدد کو گھٹانا مثبت عدد کو جمع کرنا ہے۔"
+        },
+        {
+          "en": "A distance between points on opposite sides of 0 is found by adding.",
+          "ur": "0 کی مخالف طرف کے نقطوں کا فاصلہ جمع کر کے ملتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_like",
+      "type": "recall",
+      "step": {
+        "id": "r_like",
+        "type": "number",
+        "prompt": {
+          "en": "Find (−12) + (−8).",
+          "ur": "(−12) + (−8) معلوم کریں۔"
+        },
+        "answer": -20,
+        "checker": "numeric",
+        "hint": {
+          "en": "Same signs: add and keep the sign.",
+          "ur": "ایک جیسی علامتیں: جمع کریں اور علامت رکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −20.",
+          "ur": "درست! −20"
+        },
+        "feedback_wrong": {
+          "en": "12 + 8 = 20, negative: −20.",
+          "ur": "12 + 8 = 20، منفی: −20"
+        },
+        "common_wrong": [
+          {
+            "answer": 20,
+            "feedback": {
+              "en": "Both are negative, so the sum is negative: −20.",
+              "ur": "دونوں منفی ہیں، اس لیے مجموعہ منفی ہے: −20"
+            },
+            "misconception_id": "sign_lost"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_3_1"
+    },
+    {
+      "id": "r_sub",
+      "type": "apply",
+      "step": {
+        "id": "r_sub",
+        "type": "number",
+        "prompt": {
+          "en": "Find (−2) − 7.",
+          "ur": "(−2) − 7 معلوم کریں۔"
+        },
+        "answer": -9,
+        "checker": "numeric",
+        "hint": {
+          "en": "Both steps go left: −2 − 7.",
+          "ur": "دونوں قدم بائیں جاتے ہیں: −2 − 7"
+        },
+        "feedback_correct": {
+          "en": "Right! −9.",
+          "ur": "درست! −9"
+        },
+        "feedback_wrong": {
+          "en": "From −2, go 7 more to the left: −9.",
+          "ur": "−2 سے 7 قدم مزید بائیں: −9"
+        },
+        "common_wrong": [
+          {
+            "answer": 5,
+            "feedback": {
+              "en": "That is −2 + 7. We subtract 7, which moves left: −9.",
+              "ur": "یہ −2 + 7 ہے۔ ہم 7 گھٹا رہے ہیں، جو بائیں لے جاتا ہے: −9"
+            },
+            "misconception_id": "double_neg"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_3_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 3.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers adding like and unlike integers (q1, q2, q3), subtracting (q4, q5, q6), the commutative and associative laws of addition (q7, q8, q13), finding a missing integer (q9, q10) and distance word problems (q11, q12).",
+    "Each wrong answer is a real mistake: dropping the sign, swapping the order of a subtraction, treating − (−6) as − 6, or adding the digits of unlike integers.",
+    "Urdu terms to check: قانون تبدیلی / قانون شراکت (commutative / associative law), ملتے جلتے / مخالف صحیح اعداد (like / unlike integers), جمعی معکوس (additive inverse).",
+    "The numbers were worked out in content/sources/g6-maths-04/exercise_3_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
