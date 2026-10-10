@@ -72,7 +72,7 @@ F_Q9 = tri_fig(Q9, Q9, ["x", "x", f"{APEX}°"],
 F_Q10 = tri_fig(28, 62, ["28°", "x", "90°"],
     "A right-angled triangle ABC. The angle at A is marked 28 degrees, the angle at B is marked x, and the angle at C is marked 90 degrees.",
     "قائمہ الزاویہ مثلث ABC۔ A پر زاویہ 28° ہے، B پر زاویہ x ہے، اور C پر زاویہ 90° ہے۔")
-F_Q11 = line_fig([X11], [f"x", f"(x+30)°"],
+F_Q11 = line_fig([X11], ["x", "x+30°"],
     "A straight line with a point O on it and a ray from O. The angle on the right of the ray is marked x and the angle on the left is marked x plus 30 degrees.",
     "ایک سیدھی لکیر جس پر نقطہ O ہے اور O سے ایک شعاع۔ شعاع کے دائیں طرف کا زاویہ x اور بائیں طرف کا زاویہ x جمع 30° لکھا ہے۔")
 
