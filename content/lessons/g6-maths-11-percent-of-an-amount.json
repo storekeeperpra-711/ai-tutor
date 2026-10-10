@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-percent-of-an-amount",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Percent of an amount",
     "ur": "کسی مقدار کا فیصد"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.percent.convert"
@@ -627,6 +627,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shirt costs Rs 800 and is 25% off. How much do I save?",
+          "ur": "قمیص 800 روپے کی ہے اور 25% رعایت ہے۔ مجھے کتنی بچت ہوگی؟"
+        }
+      },
+      "text": {
+        "en": "Knowing that 25% means 25 out of every 100 is not enough. People need the actual amount: how many rupees off, how much tax to pay, how much interest to earn. The trick is to cut the amount into 100 equal parts and take that many parts. Easy percents like 50%, 25% and 10% are halves, quarters and tenths. So 25% of Rs 800 is Rs 200.",
+        "ur": "یہ جاننا کافی نہیں کہ 25% کا مطلب ہر 100 میں سے 25 ہے۔ لوگوں کو اصل رقم چاہیے: کتنے روپے کی رعایت، کتنا ٹیکس دینا ہے، کتنا منافع ملے گا۔ ترکیب یہ ہے کہ مقدار کے 100 برابر ٹکڑے کریں اور اتنے ٹکڑے لیں۔ آسان فیصد جیسے 50%، 25% اور 10% آدھا، چوتھائی اور دسواں حصہ ہیں۔ تو 800 روپے کا 25% ہے 200 روپے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Sales: how many rupees a discount takes off.\n• Bills: tax added to a bill.\n• Savings: profit on money kept in a bank.\n• Farming: 40% of 50 acres is sown with cotton.\n• Mobile load: tax taken from a recharge.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سیل: رعایت سے کتنے روپے کم ہوتے ہیں۔\n• بل: بل پر لگنے والا ٹیکس۔\n• بچت: بینک میں رکھی رقم پر منافع۔\n• کھیتی: 50 ایکڑ کا 40% کپاس کے لیے بویا گیا۔\n• موبائل لوڈ: ریچارج سے کٹنے والا ٹیکس۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

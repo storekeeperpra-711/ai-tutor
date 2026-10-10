@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-percents-fractions-decimals",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Percents, fractions and decimals",
     "ur": "فیصد، کسریں اور اعشاریہ"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.percent.meaning"
@@ -514,6 +514,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shop says half off, another says 0.5 off, another 50% off. Same?",
+          "ur": "ایک دکان کہتی ہے آدھی قیمت، دوسری 0.5 رعایت، تیسری 50% رعایت۔ کیا سب ایک ہیں؟"
+        }
+      },
+      "text": {
+        "en": "The same amount can be written in three ways: a fraction (1/2), a decimal (0.5) or a percent (50%). Each is handy in a different place. Fractions suit sharing, decimals suit money and measuring, percents suit comparing. People needed a way to move between them, so that 1/2, 0.5 and 50% are seen to be exactly the same amount.",
+        "ur": "ایک ہی مقدار تین طرح لکھی جا سکتی ہے: کسر (1/2)، اعشاریہ (0.5) یا فیصد (50%)۔ ہر ایک الگ جگہ کام آتی ہے۔ کسر بانٹنے کے لیے، اعشاریہ پیسوں اور ناپ کے لیے، اور فیصد موازنے کے لیے۔ لوگوں کو ان کے درمیان بدلنے کا طریقہ چاہیے تھا تاکہ پتا چلے کہ 1/2، 0.5 اور 50% بالکل ایک ہی مقدار ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: is 1/4 off better than 20% off?\n• Cricket: a batter's score shown as a decimal or a percent.\n• Marks: 17 out of 20 turned into a percent.\n• Cooking and farming: 0.5 kg is half a kilo, 1/2 a bag of seed.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: کیا 1/4 رعایت 20% رعایت سے بہتر ہے؟\n• کرکٹ: بلے باز کی کارکردگی اعشاریہ یا فیصد میں۔\n• نمبر: 20 میں سے 17 کو فیصد میں بدلنا۔\n• کھانا پکانا اور کھیتی: 0.5 کلو آدھا کلو ہے، اور 1/2 تھیلا بیج۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

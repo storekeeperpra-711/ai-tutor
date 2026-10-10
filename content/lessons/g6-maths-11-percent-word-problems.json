@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-percent-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Percentage word problems",
     "ur": "فیصد کے عملی سوال"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.percent.of_amount"
@@ -359,6 +359,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Real shops never ask \"find 25% of 800\". How do I use percents?",
+          "ur": "اصل دکان دار کبھی نہیں کہتا \"800 کا 25% نکالو\"۔ میں فیصد کہاں لگاؤں؟"
+        }
+      },
+      "text": {
+        "en": "Percents were made to settle real money matters: discounts, taxes, profit and loss, interest. These come as stories with several steps. The skill is to pick out the whole, find the percent of it, then decide whether to take it off or add it on. Then say the answer in words, like \"you pay Rs 600\". That is how you spot a good deal.",
+        "ur": "فیصد اصل پیسوں کے معاملات طے کرنے کے لیے بنے: رعایت، ٹیکس، نفع نقصان، منافع۔ یہ مسئلے کئی قدموں والی کہانیوں کی شکل میں آتے ہیں۔ ہنر یہ ہے کہ کل مقدار پہچانیں، اس کا فیصد نکالیں، پھر طے کریں کہ اسے گھٹانا ہے یا بڑھانا۔ پھر جواب الفاظ میں بتائیں، جیسے \"آپ 600 روپے دیں گے\"۔ اسی سے اچھا سودا پہچانا جاتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Buying: the price after a discount, or after tax.\n• Running a shop: profit and loss on what you sell.\n• Saving: how much a bank adds to your money.\n• Family: how much of the monthly income goes to rent and food.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: رعایت یا ٹیکس کے بعد قیمت۔\n• دکان چلانا: بیچے ہوئے مال پر نفع نقصان۔\n• بچت: بینک آپ کی رقم میں کتنا اضافہ کرتا ہے۔\n• گھر: ماہانہ آمدنی کا کتنا حصہ کرائے اور کھانے پر جاتا ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-13-order-of-operations",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Order of operations",
     "ur": "عملیات کی ترتیب"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.integers.multiply_divide"
@@ -374,6 +374,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Bilal says 3 + 4 × 5 is 35. Sana says 23. Who is right?",
+          "ur": "بلال کہتا ہے 3 + 4 × 5 کا جواب 35 ہے۔ ثنا کہتی ہے 23۔ کون درست ہے؟"
+        }
+      },
+      "text": {
+        "en": "If one sum can give two answers, nobody can trust a bill or a recipe. So everyone agreed on one order: multiplication and division first, then addition and subtraction, going from left to right. This is a rule that people made, not something found in nature. Because of it, a shopkeeper in Multan and a student in Karachi always get the same answer. Sana is right: 3 + 20 = 23.",
+        "ur": "اگر ایک ہی سوال کے دو جواب نکلیں تو بل یا نسخے پر کوئی بھروسا نہیں کر سکتا۔ اس لیے سب نے ایک ترتیب مان لی: پہلے ضرب اور تقسیم، پھر جمع اور تفریق، بائیں سے دائیں۔ یہ قاعدہ لوگوں نے بنایا ہے، قدرت میں نہیں ملتا۔ اسی کی وجہ سے ملتان کے دکان دار اور کراچی کے طالب علم کو ہمیشہ ایک ہی جواب ملتا ہے۔ ثنا درست ہے: 3 + 20 = 23۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shop bills: 3 packs at Rs 20 plus a Rs 15 bag is 3 × 20 + 15.\n• Calculators and phones follow this same order.\n• Computer programs and spreadsheets use it for every formula.\n• Later: algebra and science formulas.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان کے بل: 20 روپے کے 3 پیک اور 15 روپے کا تھیلا یعنی 3 × 20 + 15۔\n• کیلکولیٹر اور موبائل یہی ترتیب مانتے ہیں۔\n• کمپیوٹر پروگرام اور اسپریڈ شیٹ ہر فارمولے میں اسے استعمال کرتے ہیں۔\n• آگے چل کر: الجبرا اور سائنس کے فارمولے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

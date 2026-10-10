@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-finding-the-percentage",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Finding the percentage",
     "ur": "فیصد معلوم کرنا"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.percent.of_amount"
@@ -453,6 +453,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali got 18 out of 20. Is that good? What percent is it?",
+          "ur": "علی کے 20 میں سے 18 نمبر آئے۔ کیا یہ اچھے ہیں؟ یہ کتنے فیصد ہے؟"
+        }
+      },
+      "text": {
+        "en": "Two tests can have different totals: 18 out of 20 and 40 out of 50. Which is better? We cannot tell until we put both out of the same whole. Turning the score into a percent does exactly that: 18 out of 20 is 90%, 40 out of 50 is 80%. Part divided by whole, times 100, gives a fair comparison.",
+        "ur": "دو ٹیسٹوں کے کل نمبر الگ ہو سکتے ہیں: 20 میں سے 18 اور 50 میں سے 40۔ کون سا بہتر ہے؟ جب تک دونوں کو ایک ہی کل میں نہ لائیں، پتا نہیں چلتا۔ نمبر کو فیصد میں بدلنے سے یہی ہوتا ہے: 20 میں سے 18 یعنی 90%، 50 میں سے 40 یعنی 80%۔ حصہ تقسیم کل، ضرب 100، منصفانہ موازنہ دیتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• School: marks in different tests, compared fairly.\n• Cricket: 45 runs from 60 balls, as a percent of balls scored on.\n• Farming: what percent of seeds came up.\n• Shops: what percent of the stock is sold.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• اسکول: مختلف ٹیسٹوں کے نمبروں کا منصفانہ موازنہ۔\n• کرکٹ: 60 گیندوں پر 45 رنز۔\n• کھیتی: کتنے فیصد بیج اگے۔\n• دکان: مال کا کتنے فیصد بک چکا ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

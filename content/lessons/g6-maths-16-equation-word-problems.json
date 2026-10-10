@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-equation-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Equation word problems",
     "ur": "مساوات کے عملی سوال"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.equations.brackets"
@@ -388,6 +388,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Nobody asks me to \"solve 20k + 50 = 210\". How does it help?",
+          "ur": "کوئی مجھ سے نہیں کہتا \"20k + 50 = 210 حل کرو\"۔ یہ کیسے کام آتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Equations were not made to be sums on a page. They were made to answer questions from life: how many km, how many weeks, how many items. The skill is to pick a letter for what you do not know, write an equation from the story, solve it, then check the answer in the story and say it in words. That is how algebra helps with real decisions.",
+        "ur": "مساوات صفحے پر سوال حل کرنے کے لیے نہیں بنیں۔ یہ زندگی کے سوالوں کا جواب دینے کے لیے بنیں: کتنے کلومیٹر، کتنے ہفتے، کتنی چیزیں۔ ہنر یہ ہے کہ جو معلوم نہیں اس کے لیے حرف چنیں، کہانی سے مساوات لکھیں، حل کریں، پھر جواب کو کہانی میں جانچیں اور الفاظ میں بتائیں۔ یوں الجبرا اصل فیصلوں میں مدد دیتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Travel: how far can I go with Rs 300?\n• Shopping: how many items can I buy within my budget?\n• Saving: how many weeks to buy a cricket bat.\n• Later: engineers, shopkeepers and computer programmers use this daily.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سفر: 300 روپے میں میں کتنی دور جا سکتا ہوں؟\n• خریداری: اپنے بجٹ میں کتنی چیزیں خرید سکتا ہوں؟\n• بچت: کرکٹ کا بلا خریدنے میں کتنے ہفتے لگیں گے۔\n• آگے چل کر: انجینئر، دکان دار اور کمپیوٹر پروگرامر روزانہ یہ استعمال کرتے ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-two-step-equations",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Two-step equations",
     "ur": "دو قدمی مساوات"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.equations.forming"
@@ -812,6 +812,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A rickshaw costs Rs 50 plus Rs 20 per km. Fare Rs 210. How far?",
+          "ur": "رکشہ 50 روپے اور ہر کلومیٹر کے 20 روپے لیتا ہے۔ کرایہ 210 روپے۔ کتنی دور؟"
+        }
+      },
+      "text": {
+        "en": "Many real problems have two things happening: a fixed charge, then a charge for each unit. To find the unknown, people found a clever idea: undo what was done, in reverse order, and do the same thing to both sides to keep the balance. For 20k + 50 = 210, take away 50, then divide by 20, and k = 8 km. This works for any numbers.",
+        "ur": "بہت سے مسئلوں میں دو باتیں ہوتی ہیں: ایک طے شدہ چارج، پھر ہر اکائی کا چارج۔ نامعلوم عدد نکالنے کے لیے لوگوں کو ایک ہوشیار خیال ملا: جو کیا گیا اسے الٹی ترتیب سے ختم کرو، اور ترازو برابر رکھنے کے لیے دونوں طرف ایک ہی عمل کرو۔ 20k + 50 = 210 میں 50 نکالیں، پھر 20 سے تقسیم کریں، تو k = 8 کلومیٹر۔ یہ طریقہ کسی بھی اعداد کے لیے چلتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Travel: taxi, rickshaw or app fares with a starting charge.\n• Mobile load: a fixed fee plus a rate per minute.\n• Markets: a bill that includes a delivery charge.\n• Saving: how many weeks until you reach your target.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سفر: ٹیکسی، رکشہ یا ایپ کا کرایہ جس میں شروع کا چارج ہو۔\n• موبائل لوڈ: طے شدہ فیس اور فی منٹ ریٹ۔\n• بازار: ڈیلیوری چارج والا بل۔\n• بچت: ہدف تک پہنچنے میں کتنے ہفتے لگیں گے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
