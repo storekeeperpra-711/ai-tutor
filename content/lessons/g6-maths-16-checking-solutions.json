@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-checking-solutions",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Checking a solution",
     "ur": "حل کی جانچ"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.algebra.simple_equations"
@@ -475,6 +475,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I solved it and got x = 4. How can I be sure I am right?",
+          "ur": "میں نے حل کیا اور x = 4 آیا۔ مجھے کیسے یقین ہو کہ میں درست ہوں؟"
+        }
+      },
+      "text": {
+        "en": "Everyone makes mistakes when solving. A shopkeeper counts the change again before handing it over. In the same way, we put the answer back in place of the letter and see if both sides are equal. If they are, the answer is certainly right. If not, we have found a mistake before it costs us. This check always works.",
+        "ur": "حل کرتے ہوئے سب سے غلطی ہوتی ہے۔ دکان دار باقی پیسے دینے سے پہلے انہیں دوبارہ گنتا ہے۔ اسی طرح ہم جواب کو حرف کی جگہ رکھ کر دیکھتے ہیں کہ دونوں طرف برابر ہیں یا نہیں۔ اگر ہیں تو جواب یقیناً درست ہے۔ اگر نہیں، تو نقصان سے پہلے ہی غلطی پکڑ لی۔ یہ جانچ ہمیشہ کام کرتی ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Exams: confirm your answer before you move on.\n• Shops: re-check the bill and the change.\n• Trying values: does x = 6 fit this rule?\n• Computer programs: testing a formula with a known value.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• امتحان: آگے بڑھنے سے پہلے اپنا جواب پکا کریں۔\n• دکان: بل اور باقی پیسے دوبارہ جانچیں۔\n• قیمتیں آزمانا: کیا x = 6 اس اصول پر پورا اترتا ہے؟\n• کمپیوٹر پروگرام: معلوم قیمت سے فارمولا جانچنا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

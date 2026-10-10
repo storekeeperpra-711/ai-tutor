@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-forming-equations",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Writing equations from words",
     "ur": "الفاظ سے مساوات بنانا"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.equations.check_solution"
@@ -359,6 +359,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "\"5 less than a number is 12.\" How do I write that in maths?",
+          "ur": "\"ایک عدد سے 5 کم 12 ہے۔\" اسے ریاضی میں کیسے لکھوں؟"
+        }
+      },
+      "text": {
+        "en": "Problems are told in words, but equations are solved in symbols. Long ago, people wrote whole sentences for every problem, which was slow. A short way of writing is quicker and clearer. A letter stands for the unknown number, and key words turn into signs: \"more than\" is +, \"less than\" is −, \"is\" is =. Now \"5 less than a number is 12\" is x − 5 = 12.",
+        "ur": "مسئلے الفاظ میں بتائے جاتے ہیں، مگر مساوات علامتوں میں حل ہوتی ہے۔ ہر مسئلے کے لیے پورے جملے لکھنا سست تھا۔ لکھنے کا مختصر طریقہ تیز اور صاف ہے۔ نامعلوم عدد کے لیے ایک حرف، اور خاص الفاظ علامتوں میں: \"سے زیادہ\" یعنی +، \"سے کم\" یعنی −، \"ہے\" یعنی =۔ اب \"ایک عدد سے 5 کم 12 ہے\" بن جاتا ہے x − 5 = 12۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: \"I had some money, spent Rs 50, and have Rs 120 left\".\n• Cricket: \"runs needed after the first innings\".\n• Farming: \"how many bags in each row\".\n• Phones: writing a rule in a spreadsheet or program.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: \"میرے پاس کچھ پیسے تھے، 50 روپے خرچ کیے، اب 120 روپے بچے ہیں\"۔\n• کرکٹ: \"پہلی اننگز کے بعد کتنے رنز چاہئیں\"۔\n• کھیتی: \"ہر قطار میں کتنی بوریاں ہیں\"۔\n• موبائل: اسپریڈ شیٹ یا پروگرام میں اصول لکھنا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

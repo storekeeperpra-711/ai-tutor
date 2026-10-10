@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-equations-and-expressions",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Equations and expressions",
     "ur": "مساوات اور الجبری جملے"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.algebra.substitution"
@@ -739,6 +739,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "What is the difference between 3x + 5 and 3x + 5 = 20?",
+          "ur": "3x + 5 اور 3x + 5 = 20 میں کیا فرق ہے؟"
+        }
+      },
+      "text": {
+        "en": "People often know the total but not one of the parts: \"I paid Rs 20 in all. What did one cost?\" They used a letter for the thing they did not know. An expression like 3x + 5 is a rule that gives a number for each x. An equation says two things are equal, like a balance, and lets us ask: which x makes it true?",
+        "ur": "لوگوں کو اکثر کل معلوم ہوتا ہے مگر ایک حصہ نہیں: \"میں نے کل 20 روپے دیے۔ ایک چیز کی قیمت کیا تھی؟\" انہوں نے نامعلوم چیز کے لیے ایک حرف رکھ لیا۔ 3x + 5 جیسا الجبری جملہ ایک اصول ہے جو ہر x کے لیے ایک عدد دیتا ہے۔ مساوات کہتی ہے کہ دو چیزیں برابر ہیں، ترازو کی طرح، اور ہمیں پوچھنے دیتی ہے: کون سا x اسے سچ بناتا ہے؟"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: total bill = number of items × price + delivery.\n• Rickshaw fare: Rs 50 plus Rs 20 for every km.\n• Mobile packages: a fixed charge plus a charge per minute.\n• Later: science formulas and computer programs.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: کل بل = چیزوں کی تعداد × قیمت + ڈیلیوری۔\n• رکشے کا کرایہ: 50 روپے اور ہر کلومیٹر کے 20 روپے۔\n• موبائل پیکج: ایک طے شدہ چارج اور ہر منٹ کا چارج۔\n• آگے چل کر: سائنس کے فارمولے اور کمپیوٹر پروگرام۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

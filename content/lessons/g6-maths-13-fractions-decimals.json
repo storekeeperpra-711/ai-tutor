@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-13-fractions-decimals",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Simplifying with fractions and decimals",
     "ur": "کسور اور اعشاریہ کے ساتھ مختصر کرنا"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.simplify.brackets"
@@ -391,6 +391,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Is 3/4 of Rs 32 the same as 0.75 × 32? Do the same rules work?",
+          "ur": "کیا 32 روپے کا 3/4 اور 0.75 × 32 ایک ہی ہیں؟ کیا وہی اصول چلتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Real life mixes whole numbers, fractions and decimals in one sum: half a kilo at Rs 120.50 a kilo, or 3/4 of a field. If each kind of number had its own rules, nobody could keep track. The good news is that the order of operations stays the same. The word \"of\" means multiply, so 3/4 of 32 is 3/4 × 32 = 24. One set of rules does everything.",
+        "ur": "اصل زندگی میں ایک ہی سوال میں پورے اعداد، کسریں اور اعشاریہ ملے ہوتے ہیں: آدھا کلو، 120.50 روپے کلو کے حساب سے، یا کھیت کا 3/4۔ اگر ہر قسم کے عدد کے الگ اصول ہوتے تو کوئی حساب نہ رکھ پاتا۔ اچھی بات یہ ہے کہ عملیات کی ترتیب وہی رہتی ہے۔ لفظ \"کا\" کا مطلب ضرب ہے، تو 32 کا 3/4 یعنی 3/4 × 32 = 24۔ ایک ہی اصول ہر کام کر دیتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Markets: price per kilo times 1.5 kg of fruit.\n• Farming: 3/4 of a field planted, 1/2 of that with wheat.\n• Cooking: 1/2 cup of oil in a recipe made 3 times.\n• Money: bills with paisas, like Rs 45.50.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بازار: فی کلو قیمت ضرب ڈیڑھ کلو پھل۔\n• کھیتی: کھیت کے 3/4 میں فصل لگی، اس کے 1/2 میں گندم۔\n• کھانا پکانا: 1/2 کپ تیل والا نسخہ 3 بار بنانا۔\n• پیسے: پیسوں والے بل، جیسے 45.50 روپے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-percentage-change",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Percentage increase and decrease",
     "ur": "فیصد اضافہ اور کمی"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.percent.of_amount"
@@ -370,6 +370,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A bus fare goes from Rs 40 to Rs 50. Is that a big rise?",
+          "ur": "بس کا کرایہ 40 روپے سے 50 روپے ہو گیا۔ کیا یہ بڑا اضافہ ہے؟"
+        }
+      },
+      "text": {
+        "en": "A rise of Rs 10 sounds the same everywhere, but it hurts more on a Rs 40 fare than on a Rs 4,000 one. To judge how big a change is, we must compare it with where we started. Percentage change does this: change divided by the original amount, times 100. Rs 40 to Rs 50 is a rise of 25%. Prices, crops and populations are compared this way.",
+        "ur": "10 روپے کا اضافہ ہر جگہ ایک جیسا سنائی دیتا ہے، مگر 40 روپے کے کرائے پر یہ 4000 روپے والے سے زیادہ چبھتا ہے۔ تبدیلی کتنی بڑی ہے، یہ جاننے کے لیے اسے شروع کی مقدار سے ملانا پڑتا ہے۔ فیصد تبدیلی یہی کرتی ہے: تبدیلی تقسیم اصل مقدار، ضرب 100۔ 40 سے 50 روپے یعنی 25% اضافہ۔ قیمتوں، فصلوں اور آبادی کا موازنہ اسی طرح ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Prices: flour or petrol rising by some percent.\n• Sales: a price cut of 15% before Eid.\n• Farming: this year's wheat harvest against last year's.\n• Weather: rain this month compared with last month.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• قیمتیں: آٹا یا پیٹرول کتنے فیصد مہنگا ہوا۔\n• سیل: عید سے پہلے قیمت میں 15% کمی۔\n• کھیتی: اس سال کی گندم کی فصل پچھلے سال کے مقابلے میں۔\n• موسم: اس مہینے کی بارش پچھلے مہینے کے مقابلے میں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

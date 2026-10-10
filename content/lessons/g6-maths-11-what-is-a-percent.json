@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-what-is-a-percent",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "What is a percent?",
     "ur": "فیصد کیا ہے؟"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.fractions.equivalent"
@@ -238,6 +238,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shop says \"sale, 20% off\". What does 20% even mean?",
+          "ur": "دکان کہتی ہے \"سیل، 20% رعایت\"۔ 20% کا مطلب کیا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Fractions with different bottoms are hard to compare: is 3/5 more than 7/12? People who traded and collected taxes found it easier to always compare out of the same whole, 100. A percent is just a fraction whose bottom is 100. Now 60% and 58% can be compared at a glance. \"Per cent\" simply means \"for every hundred\".",
+        "ur": "مختلف نیچے والے عدد کی کسروں کا موازنہ مشکل ہے: کیا 3/5، 7/12 سے زیادہ ہے؟ تجارت کرنے والوں اور ٹیکس لینے والوں کو آسان لگا کہ ہمیشہ ایک ہی کل، یعنی 100 میں سے موازنہ کریں۔ فیصد ایسی کسر ہے جس کا نیچے والا عدد 100 ہو۔ اب 60% اور 58% کو ایک نظر میں پرکھا جا سکتا ہے۔ \"فیصد\" کا مطلب ہی ہے \"ہر سو میں سے\"۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shops: 20% off, or 10% extra on a pack.\n• Phones: battery at 75%.\n• School: marks, like 80% in a test.\n• Weather: 60% chance of rain.\n• Farming: 30% of the field is wheat.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکانیں: 20% رعایت، یا پیک پر 10% اضافی۔\n• موبائل: بیٹری 75% پر۔\n• اسکول: نمبر، جیسے ٹیسٹ میں 80%۔\n• موسم: بارش کا 60% امکان۔\n• کھیتی: کھیت کا 30% حصہ گندم ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

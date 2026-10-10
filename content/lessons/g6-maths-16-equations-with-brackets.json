@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-equations-with-brackets",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Equations with brackets",
     "ur": "قوسین والی مساوات"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.equations.two_step"
@@ -917,6 +917,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "3 friends each pay the same for a bill plus Rs 2 tip. Total Rs 21?",
+          "ur": "3 دوست بل کے ساتھ ہر ایک 2 روپے ٹپ دیتے ہیں۔ کل 21 روپے؟"
+        }
+      },
+      "text": {
+        "en": "When the same thing happens to a whole group, we put the group in brackets: 3(x + 2) = 21 means 3 people each pay x + 2. People needed to solve this without guessing. There are two ways: divide both sides by 3 first, or open the bracket and multiply every term inside. Both give x = 5, so you can check one way against the other.",
+        "ur": "جب ایک ہی بات پورے گروہ کے ساتھ ہو تو ہم گروہ کو قوسین میں رکھتے ہیں: 3(x + 2) = 21 کا مطلب ہے 3 لوگ ہر ایک x + 2 دیتا ہے۔ لوگوں کو اسے اندازے کے بغیر حل کرنا تھا۔ دو طریقے ہیں: پہلے دونوں طرف کو 3 سے تقسیم کریں، یا قوسین کھول کر اندر کے ہر حصے کو ضرب دیں۔ دونوں سے x = 5 آتا ہے، تو آپ ایک طریقے کو دوسرے سے جانچ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Groups: the same fee plus a small extra for each person.\n• Shops: 4 packs, each with the same price plus tax.\n• Farming: the same amount of seed and fertiliser for each field.\n• Planning: costs of a school trip for the whole class.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• گروہ: ہر فرد کی ایک جیسی فیس اور تھوڑا سا اضافہ۔\n• دکانیں: 4 پیک، ہر ایک کی وہی قیمت اور ٹیکس۔\n• کھیتی: ہر کھیت کے لیے برابر بیج اور کھاد۔\n• منصوبہ بندی: پوری جماعت کے اسکول ٹرپ کا خرچ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-13-brackets",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Brackets and BODMAS",
     "ur": "قوسین اور BODMAS"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.simplify.order_of_operations"
@@ -429,6 +429,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "I buy 2 notebooks and 3 pens, each Rs 10. How do I write it?",
+          "ur": "میں 2 کاپیاں اور 3 قلم خریدتا ہوں، ہر ایک 10 روپے کا۔ اسے کیسے لکھوں؟"
+        }
+      },
+      "text": {
+        "en": "The usual order does × before +. But sometimes we need to add first, then multiply: (2 + 3) × 10 = Rs 50. People needed a way to say \"do this part first\". Brackets do that. They are like a fence around a part of the sum. With brackets, the same numbers can be made to give the answer we really mean. BODMAS is a handy way to remember the order.",
+        "ur": "عام ترتیب میں × پہلے ہوتا ہے اور + بعد میں۔ مگر کبھی پہلے جمع کرنا ہوتا ہے، پھر ضرب: (2 + 3) × 10 = 50 روپے۔ لوگوں کو \"یہ حصہ پہلے کرو\" کہنے کا طریقہ چاہیے تھا۔ قوسین یہی کرتی ہیں۔ یہ سوال کے ایک حصے کے گرد باڑ جیسی ہیں۔ قوسین سے وہی اعداد وہ جواب دیتے ہیں جو ہم واقعی چاہتے ہیں۔ BODMAS ترتیب یاد رکھنے کا آسان طریقہ ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: total of many items, then times the price.\n• Spreadsheets and calculators: every formula uses brackets.\n• Sharing: (500 + 300) ÷ 4 for four friends.\n• Later: algebra, where brackets are everywhere.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: بہت سی چیزوں کا کل، پھر قیمت سے ضرب۔\n• اسپریڈ شیٹ اور کیلکولیٹر: ہر فارمولے میں قوسین ہوتی ہیں۔\n• بانٹنا: چار دوستوں کے لیے (500 + 300) ÷ 4۔\n• آگے چل کر: الجبرا، جہاں قوسین ہر جگہ ہوتی ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

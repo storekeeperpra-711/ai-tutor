@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-13-simplification-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Simplification word problems",
     "ur": "مختصر کرنے کے عملی سوال"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.simplify.estimation"
@@ -638,6 +638,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A story has many numbers. How do I turn it into one sum?",
+          "ur": "کہانی میں بہت سے اعداد ہیں۔ میں اسے ایک سوال میں کیسے بدلوں؟"
+        }
+      },
+      "text": {
+        "en": "Problems in life come as stories, with several amounts and several steps, not as a ready sum. People needed a way to write the whole story as one number sentence, with brackets where something must be done first, so that nothing is forgotten. Then BODMAS gives the answer, and an estimate checks it is sensible. This is how you solve a shopkeeper's bill or a trip's costs.",
+        "ur": "زندگی کے مسئلے کہانی کی شکل میں آتے ہیں، کئی مقداروں اور کئی قدموں کے ساتھ، تیار سوال کی شکل میں نہیں۔ لوگوں کو پوری کہانی کو ایک عددی جملے میں لکھنے کا طریقہ چاہیے تھا، جہاں کچھ پہلے کرنا ہو وہاں قوسین لگا کر، تاکہ کچھ بھولے نہیں۔ پھر BODMAS جواب دیتا ہے اور اندازہ جانچتا ہے کہ جواب مناسب ہے۔ یوں دکان دار کا بل یا سفر کا خرچ حل ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shop bills with many items and a discount.\n• Trip costs: bus fare for the family plus food.\n• Cricket: runs and overs in a match.\n• Planning: how much to save each week for something you want.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بہت سی چیزوں اور رعایت والے دکان کے بل۔\n• سفر کا خرچ: خاندان کا بس کرایہ اور کھانا۔\n• کرکٹ: میچ میں رنز اور اوورز۔\n• منصوبہ بندی: کسی پسندیدہ چیز کے لیے ہر ہفتے کتنی بچت کرنی ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
