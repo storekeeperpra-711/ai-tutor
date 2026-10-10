@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-letters-for-numbers",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Letters for numbers",
     "ur": "اعداد کی جگہ حروف"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.multiplication.facts"
@@ -847,6 +847,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do mathematicians write letters instead of numbers?",
+          "ur": "ریاضی دان اعداد کی جگہ حروف کیوں لکھتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Often we do not know a number yet: how many marbles Ali has, or what a bus ticket will cost next year. Writing a full sentence every time is slow. So people started using a letter for the unknown number. One short expression like n + 5 then works for every possible n. It is a short way of writing a rule that is true for many numbers at once.",
+        "ur": "اکثر ہمیں کوئی عدد ابھی معلوم نہیں ہوتا: علی کے پاس کتنے کنچے ہیں، یا اگلے سال بس کا ٹکٹ کتنے کا ہوگا۔ ہر بار پورا جملہ لکھنا سست کام ہے۔ اس لیے لوگوں نے نامعلوم عدد کے لیے حرف استعمال کرنا شروع کیا۔ پھر n + 5 جیسی ایک مختصر عبارت n کی ہر قیمت کے لیے کام کرتی ہے۔ یہ ایسے اصول کو مختصر لکھنے کا طریقہ ہے جو بہت سے اعداد کے لیے ایک ساتھ درست ہو۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shops: price × number of things, like p × n.\n• Phone: a mobile package that costs Rs 20 plus Rs 2 for each day.\n• Games: a cricket score that goes up by r runs every over.\n• Later: formulas in science, such as distance, area and speed.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان: قیمت × چیزوں کی تعداد، جیسے p × n۔\n• موبائل: ایسا پیکیج جس کی قیمت 20 روپے اور ہر دن کے 2 روپے ہو۔\n• کھیل: کرکٹ کا اسکور جو ہر اوور میں r رنز بڑھے۔\n• آگے چل کر: سائنس کے فارمولے، جیسے فاصلہ، رقبہ اور رفتار۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-tables-and-tallies",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Tables and tally marks",
     "ur": "جدول اور ٹیلی کے نشان"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.multiplication.facts"
@@ -847,6 +847,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Votes are being counted at a class election. How do we not lose count?",
+          "ur": "جماعت کے انتخاب میں ووٹ گنے جا رہے ہیں۔ گنتی کیسے نہ بھولیں؟"
+        }
+      },
+      "text": {
+        "en": "Imagine counting votes as they are called out. If you only keep numbers in your head, one distraction and you lose the count. So people made a mark for each vote on the spot, and every fifth mark crossed the first four. Counting in fives is quick and easy to check. The totals then go into a table, so anyone can read them.",
+        "ur": "سوچیں کہ ووٹ بلند آواز میں پڑھے جا رہے ہیں اور آپ گنتی صرف دماغ میں رکھ رہے ہیں۔ ذرا سا دھیان بٹا تو گنتی گئی۔ اس لیے لوگوں نے ہر ووٹ پر موقع پر ہی ایک نشان لگایا، اور ہر پانچواں نشان پہلے چار کو کاٹتا ہے۔ پانچ پانچ کر کے گننا تیز ہے اور جانچنا آسان۔ پھر کل تعداد جدول میں لکھی جاتی ہے تاکہ ہر کوئی اسے پڑھ سکے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Elections: monitor and class captain votes.\n• Traffic: counting buses and rickshaws that pass your street.\n• Shops: counting how many of each item are sold in a day.\n• Sports: counting wickets, goals or catches.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• انتخابات: مانیٹر اور کلاس کپتان کے ووٹ۔\n• ٹریفک: آپ کی گلی سے گزرنے والی بسیں اور رکشے گننا۔\n• دکان: دن میں ہر چیز کتنی بکی۔\n• کھیل: وکٹیں، گول یا کیچ گننا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

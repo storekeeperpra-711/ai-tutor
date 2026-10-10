@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-substitution",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Putting numbers in (substitution)",
     "ur": "قیمت رکھنا"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.algebra.variables"
@@ -935,6 +935,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A rule is written with a letter. How do I get a real answer?",
+          "ur": "اصول حرف کے ساتھ لکھا ہے۔ مجھے اصل جواب کیسے ملے گا؟"
+        }
+      },
+      "text": {
+        "en": "A rule with a letter is written once for all cases. But in real life we need one answer for one case. A phone package costs 20 + 2d rupees for d days. How much for 7 days? We put 7 in place of d: 20 + 2 × 7 = 34. This is substitution. One rule written once gives the answer for any number we choose.",
+        "ur": "حرف والا اصول سب صورتوں کے لیے ایک بار لکھا جاتا ہے۔ مگر اصل زندگی میں ہمیں ایک صورت کا ایک جواب چاہیے۔ موبائل پیکیج d دنوں کے لیے 20 + 2d روپے کا ہے۔ 7 دن کا کتنا ہوگا؟ ہم d کی جگہ 7 رکھتے ہیں: 20 + 2 × 7 = 34۔ اسے قیمت رکھنا کہتے ہیں۔ ایک بار لکھا ہوا اصول ہمارے چنے ہوئے ہر عدد کا جواب دے دیتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Phone packages and electricity bills: put in the days or units.\n• Taxi fare: put in the kilometres.\n• Formulas: area of a rectangle l × w, or perimeter of a square 4s.\n• Spreadsheets and computer programs work the same way.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• موبائل پیکیج اور بجلی کا بل: دن یا یونٹ رکھ دیں۔\n• ٹیکسی کا کرایہ: کلومیٹر رکھ دیں۔\n• فارمولے: مستطیل کا رقبہ l × w، یا مربع کا احاطہ 4s۔\n• اسپریڈ شیٹ اور کمپیوٹر پروگرام بھی اسی طرح کام کرتے ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-19-bisectors-and-perpendiculars",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Perpendicular bisectors and perpendiculars",
     "ur": "عمودی ناصف اور عمود"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.symmetry.parallel_transversal"
@@ -253,6 +253,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How does a builder find the exact middle of a wall or a straight corner?",
+          "ur": "معمار دیوار کا ٹھیک بیچ یا سیدھا کونا کیسے ڈھونڈتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Builders, tailors and farmers have always needed an exact middle point and a square corner. Guessing by eye gives crooked walls and uneven fields. A ruler and a pair of compasses solve this: two arcs from each end of a line cross at two points, and the line through them cuts it exactly in half and meets it at 90°. No guessing is needed, and anyone gets the same result.",
+        "ur": "معماروں، درزیوں اور کسانوں کو ہمیشہ ٹھیک بیچ کا نقطہ اور سیدھا کونا چاہیے رہا ہے۔ آنکھ سے اندازہ لگانے پر دیواریں ٹیڑھی اور کھیت اونچے نیچے بنتے ہیں۔ پیمانہ اور پرکار یہ مسئلہ حل کرتے ہیں: لکیر کے ہر سرے سے دو قوس ایک دوسرے کو دو نقطوں پر کاٹتے ہیں، اور ان سے گزرتی لکیر اسے ٹھیک آدھا کرتی ہے اور 90° پر ملتی ہے۔ اندازہ نہیں لگانا پڑتا اور ہر کسی کو ایک ہی نتیجہ ملتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Building: marking the centre of a wall, a door or a room.\n• Tailoring: folding cloth exactly in half, and a square corner.\n• Farming: marking out a square or rectangular field.\n• Design: making patterns and drawing maps.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• تعمیر: دیوار، دروازے یا کمرے کا بیچ نشان زد کرنا۔\n• درزی کا کام: کپڑے کو ٹھیک آدھا موڑنا، اور سیدھا کونا۔\n• کھیتی: مربع یا مستطیل کھیت کا نشان لگانا۔\n• ڈیزائن: نقش و نگار بنانا، اور نقشے کھینچنا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

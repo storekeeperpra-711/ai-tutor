@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-like-terms",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Collecting like terms",
     "ur": "یکساں رقوم جمع کرنا"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.algebra.substitution"
@@ -632,6 +632,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can I add 3 apples and 2 mangoes to get 5 of something?",
+          "ur": "کیا میں 3 سیب اور 2 آم جمع کر کے 5 کچھ بنا سکتا ہوں؟"
+        }
+      },
+      "text": {
+        "en": "Long expressions are hard to read and easy to get wrong. People wanted to make them shorter without changing their value. The idea: join only things of the same kind. 3 apples + 2 apples = 5 apples, but 3 apples + 2 mangoes stay separate. In algebra the same is true: 3a + 2a = 5a, while 3a + 2b cannot be joined.",
+        "ur": "لمبی عبارتیں پڑھنا مشکل اور ان میں غلطی کرنا آسان ہوتا ہے۔ لوگ چاہتے تھے کہ انہیں چھوٹا کیا جائے اور قیمت نہ بدلے۔ خیال یہ ہے: صرف ایک جیسی چیزیں ملائیں۔ 3 سیب + 2 سیب = 5 سیب، مگر 3 سیب + 2 آم الگ رہتے ہیں۔ الجبرا میں بھی یہی ہے: 3a + 2a = 5a، جبکہ 3a + 2b کو ملایا نہیں جا سکتا۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shop totals: add all the kilos of rice, then all the kilos of flour, separately.\n• Cricket: total fours and total sixes are counted apart.\n• Farm records: add the wheat sacks and the rice sacks in their own groups.\n• Later: making long algebra answers short and neat.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان کا حساب: چاول کے سارے کلو الگ جمع کریں، آٹے کے سارے کلو الگ۔\n• کرکٹ: کل چوکے اور کل چھکے الگ گنے جاتے ہیں۔\n• کھیت کا ریکارڈ: گندم کی بوریاں اور چاول کی بوریاں اپنے اپنے گروہ میں جمع کریں۔\n• آگے چل کر: الجبرا کے لمبے جواب کو مختصر اور صاف بنانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

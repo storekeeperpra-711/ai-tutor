@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-average-mean",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Average (mean)",
     "ur": "اوسط"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.data.tables"
@@ -631,6 +631,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Five friends have different sweets. How do we share them fairly?",
+          "ur": "پانچ دوستوں کے پاس مختلف تعداد میں مٹھائیاں ہیں۔ انہیں برابر کیسے بانٹیں؟"
+        }
+      },
+      "text": {
+        "en": "One number is often easier to talk about than a long list. If a cricket team scores 30, 50, 20 and 40 in four matches, what is its usual score? We share the total equally: (30 + 50 + 20 + 40) ÷ 4 = 35. This fair-share number is the mean, or average. It sums up a whole list in one number, and lets us compare two different lists.",
+        "ur": "ایک عدد کی بات کرنا اکثر لمبی فہرست سے آسان ہوتا ہے۔ اگر کرکٹ ٹیم چار میچوں میں 30، 50، 20 اور 40 بنائے تو اس کا عام اسکور کیا ہے؟ ہم کل کو برابر بانٹتے ہیں: (30 + 50 + 20 + 40) ÷ 4 = 35۔ برابر حصے کا یہ عدد اوسط ہے۔ یہ پوری فہرست کو ایک عدد میں بیان کرتا ہے اور دو مختلف فہرستوں کا موازنہ کرنے دیتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Cricket: batting average, or the average runs per over.\n• School: your average mark over all exams.\n• Weather: average temperature or rain of a month.\n• Home: average electricity or mobile spending each month.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کرکٹ: بیٹنگ اوسط، یا فی اوور اوسط رنز۔\n• اسکول: تمام امتحانوں میں آپ کے نمبروں کی اوسط۔\n• موسم: مہینے کا اوسط درجہ حرارت یا بارش۔\n• گھر: ہر مہینے بجلی یا موبائل کا اوسط خرچ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

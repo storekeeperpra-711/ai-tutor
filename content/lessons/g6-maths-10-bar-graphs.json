@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-bar-graphs",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Bar graphs",
     "ur": "بار گراف (ستونی گراف)"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.data.tables"
@@ -833,6 +833,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A page of numbers is boring. Can a picture show who has the most?",
+          "ur": "اعداد کا صفحہ بورنگ ہے۔ کیا تصویر دکھا سکتی ہے کہ کس کے پاس سب سے زیادہ ہے؟"
+        }
+      },
+      "text": {
+        "en": "A long list of numbers is hard to compare. Our eyes can compare heights instantly. So people drew data as bars: one bar for each group, and the taller the bar, the bigger the number. At a glance you can see which is most, which is least and how big the gaps are, without reading a single figure.",
+        "ur": "اعداد کی لمبی فہرست کا موازنہ مشکل ہے۔ ہماری آنکھ اونچائیوں کا موازنہ فوراً کر لیتی ہے۔ اس لیے لوگوں نے مواد کو ستونوں کی شکل میں بنایا: ہر گروہ کا ایک ستون، اور ستون جتنا اونچا اتنا بڑا عدد۔ ایک نظر میں نظر آ جاتا ہے کہ کون سب سے زیادہ ہے، کون سب سے کم، اور فرق کتنا بڑا ہے، ایک بھی عدد پڑھے بغیر۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Newspapers and TV: results of polls, prices and the weather.\n• School: marks of different subjects side by side.\n• Farming: crop yield of different seasons.\n• Business: sales for each month of the year.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• اخبار اور ٹی وی: رائے شماری، قیمتوں اور موسم کے نتائج۔\n• اسکول: مختلف مضامین کے نمبر ساتھ ساتھ۔\n• کھیتی: مختلف موسموں کی پیداوار۔\n• کاروبار: سال کے ہر مہینے کی فروخت۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
