@@ -143,3 +143,79 @@ def kind_question(id, degrees, prompt, *, qtype="apply", skill=None, mis=None):
         for k, en, ur, _ in KINDS
     ]
     return step
+
+# ---------------------------------------------------------------------------
+# Practice sets that go with the book's exercises of chapter 10 (Geometrical Constructions),
+# and the chapter test. Each
+# practice lesson has its own skill, with the chapter's skills it practises
+# as prerequisites.
+UNIT_ID = "g6-maths-09"
+EX_SKILL = {"10.3": "maths.geometry.ex_10_3"}
+
+
+def book_ref(part):
+    """'Exercise 10.1' -> the textbook string for curriculum_refs."""
+    return f"PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions, {part}"
+
+
+def nq(id, prompt, answer, hint, good, bad, wrongs=(), qtype="apply"):
+    """number_question with (en, ur) tuples; wrongs are (answer, en, ur, misconception)."""
+    for w in wrongs:
+        assert w[0] != answer, id
+    return number_question(id, T(*prompt), answer, T(*hint), T(*good), T(*bad),
+                           common_wrong=[wrong(a, en, ur, mis) for a, en, ur, mis in wrongs], qtype=qtype)
+
+
+def ch(id, prompt, right, wrongs, pos, qtype="apply"):
+    """A choice step with (en, ur) prompt. right is (en, ur, feedback_en,
+    feedback_ur); each wrong is the same plus an optional misconception. The
+    right option goes at index pos."""
+    options = [opt("x", right[0], right[1], True, right[2], right[3])]
+    for w in wrongs:
+        options.append(opt("x", w[0], w[1], False, w[2], w[3], w[4] if len(w) > 4 else None))
+    options.insert(pos, options.pop(0))
+    for k, o in enumerate(options):
+        o["id"] = "abcd"[k]
+    step = {"id": id, "type": "choice"}
+    if qtype:
+        step["question_type"] = qtype
+    step.update({"prompt": T(*prompt), "options": options})
+    return step
+
+
+def practice_lesson(ex, *, script, title, outcome, prerequisites, misconceptions, steps,
+                    bank, review, glossary, flashcards, home_task, notes, minutes=18):
+    """A practice set to use next to Exercise `ex` of the book: its own
+    skill, mastered with recall, apply and find_error questions."""
+    skill = EX_SKILL[ex]
+    return {
+        "id": UNIT_ID + "-exercise-" + ex.replace(".", "-"),
+        "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
+        "curriculum_refs": [{"outcome": outcome, "textbook": book_ref(f"Exercise {ex}")}],
+        "skills": [skill],
+        "title": title,
+        "estimated_minutes": minutes,
+        "prerequisites": [{"skill": s} for s in prerequisites],
+        "misconceptions": misconceptions,
+        "mastery_criteria": {skill: {"question_types": ["recall", "apply", "find_error"], "days": 2}},
+        "question_bank": {skill: bank},
+        "flashcards": flashcards,
+        "home_tasks": [home_task],
+        "glossary": glossary,
+        "steps": steps,
+        "review_questions": [dict(q, skill=skill) for q in review],
+        "teacher_notes": [
+            f"A practice set to use next to Exercise {ex} of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+            *notes,
+            f"The numbers were worked out in content/sources/{UNIT_ID}/{script}; edit that script, not this file.",
+        ],
+        "review": REVIEW,
+    }
+
+
+def practice_intro(ex, kinds_en, kinds_ur, line_en, line_ur):
+    """The first step: which exercise of the book this set goes with."""
+    return {"id": "s1_intro", "type": "explain",
+            "character": say("encouraging", line_en, line_ur),
+            "text": T(f"This practice set goes with Exercise {ex} of your maths book (PCTB Mathematics 6). {kinds_en} The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+                      f"یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق {ex} کے ساتھ ہے۔ {kinds_ur} سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔")}

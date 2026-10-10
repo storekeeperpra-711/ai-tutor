@@ -1,0 +1,1605 @@
+{
+  "id": "g6-maths-09-exercise-10-3",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find unknown angles on a straight line and in a triangle, check whether angles make a straight line, and use the angles of an equilateral, isosceles and right-angled triangle.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions, Exercise 10.3"
+    }
+  ],
+  "skills": [
+    "maths.geometry.ex_10_3"
+  ],
+  "title": {
+    "en": "Exercise 10.3 practice: finding unknown angles",
+    "ur": "مشق 10.3 کی پریکٹس: نامعلوم زاویے نکالنا"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.geometry.angle_types"
+    },
+    {
+      "skill": "maths.geometry.angles_on_line"
+    },
+    {
+      "skill": "maths.geometry.complementary_supplementary"
+    },
+    {
+      "skill": "maths.geometry.triangle_angles"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "use_360",
+      "description": "Uses 360° for angles on a straight line or in a triangle instead of 180°."
+    },
+    {
+      "id": "use_90",
+      "description": "Uses 90° as the total for angles on a straight line, or for the three angles of a triangle."
+    },
+    {
+      "id": "stops_at_sum",
+      "description": "Adds the known angles and gives that sum as the answer, without taking it away from 180°."
+    },
+    {
+      "id": "forgets_one",
+      "description": "Takes away only one of the known angles from 180° when there are two or more."
+    },
+    {
+      "id": "isosceles_halving",
+      "description": "Gives 180° minus the apex angle for each base angle of an isosceles triangle, without halving."
+    },
+    {
+      "id": "equation_value",
+      "description": "Gives x when the angle (x + 30)° is asked, or the other way round."
+    },
+    {
+      "id": "exterior_supp",
+      "description": "Gives 180° minus the exterior angle where the exterior angle minus the opposite angle is needed."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.geometry.ex_10_3": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.geometry.ex_10_3": [
+      {
+        "id": "qb_tri_total",
+        "type": "recall",
+        "step": {
+          "id": "qb_tri_total",
+          "type": "number",
+          "prompt": {
+            "en": "What do the three angles of a triangle add up to, in degrees?",
+            "ur": "مثلث کے تین زاویوں کا مجموعہ کتنے درجے ہے؟"
+          },
+          "answer": 180,
+          "checker": "numeric",
+          "hint": {
+            "en": "Same as a straight line.",
+            "ur": "سیدھی لکیر جتنا۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 180°.",
+            "ur": "درست! 180°"
+          },
+          "feedback_wrong": {
+            "en": "Any triangle: 180°.",
+            "ur": "کوئی بھی مثلث: 180°"
+          },
+          "common_wrong": [
+            {
+              "answer": 360,
+              "feedback": {
+                "en": "360° is a full turn. A triangle: 180°.",
+                "ur": "360° پورا چکر ہے۔ مثلث: 180°"
+              },
+              "misconception_id": "use_360"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_line",
+        "type": "apply",
+        "step": {
+          "id": "qb_line",
+          "type": "number",
+          "prompt": {
+            "en": "Two angles are on a straight line. One is 140°. Find the other, in degrees.",
+            "ur": "ایک سیدھی لکیر پر دو زاویے ہیں۔ ایک 140° کا ہے۔ دوسرا کتنے درجے کا ہے؟"
+          },
+          "answer": 40,
+          "checker": "numeric",
+          "hint": {
+            "en": "The two add up to 180°.",
+            "ur": "دونوں کا مجموعہ 180° ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 180 − 140 = 40°.",
+            "ur": "درست! 180 − 140 = 40°"
+          },
+          "feedback_wrong": {
+            "en": "140 + x = 180, so x = 40.",
+            "ur": "140 + x = 180، تو x = 40"
+          },
+          "common_wrong": [
+            {
+              "answer": 220,
+              "feedback": {
+                "en": "That is 360 − 140. A straight line is 180°: 40.",
+                "ur": "یہ 360 − 140 ہے۔ سیدھی لکیر 180° ہے: 40"
+              },
+              "misconception_id": "use_360"
+            },
+            {
+              "answer": 140,
+              "feedback": {
+                "en": "140° is the angle we already know. The other is 40.",
+                "ur": "140° معلوم زاویہ ہے۔ دوسرا 40° ہے۔"
+              },
+              "misconception_id": "stops_at_sum"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_right_tri",
+        "type": "apply",
+        "step": {
+          "id": "qb_right_tri",
+          "type": "number",
+          "prompt": {
+            "en": "A right-angled triangle has an angle of 35°. Find its third angle, in degrees.",
+            "ur": "ایک قائمہ الزاویہ مثلث میں ایک زاویہ 35° کا ہے۔ اس کا تیسرا زاویہ کتنے درجے کا ہے؟"
+          },
+          "answer": 55,
+          "checker": "numeric",
+          "hint": {
+            "en": "180 − 90 − 35.",
+            "ur": "180 − 90 − 35"
+          },
+          "feedback_correct": {
+            "en": "Right! 180 − 90 − 35 = 55°.",
+            "ur": "درست! 180 − 90 − 35 = 55°"
+          },
+          "feedback_wrong": {
+            "en": "The two acute angles add up to 90°: 35 + 55.",
+            "ur": "دونوں حادہ زاویوں کا مجموعہ 90° ہے: 35 + 55"
+          },
+          "common_wrong": [
+            {
+              "answer": 145,
+              "feedback": {
+                "en": "That is 180 − 35. Also take away the 90°: 55.",
+                "ur": "یہ 180 − 35 ہے۔ 90° بھی گھٹائیں: 55"
+              },
+              "misconception_id": "forgets_one"
+            },
+            {
+              "answer": 125,
+              "feedback": {
+                "en": "That is 90 + 35. The third angle is 90 − 35 = 55.",
+                "ur": "یہ 90 + 35 ہے۔ تیسرا زاویہ 90 − 35 = 55 ہے۔"
+              },
+              "misconception_id": "stops_at_sum"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Rida says the third angle of a triangle with angles 90° and 40° is 90 + 40 = 130°. What went wrong?",
+            "ur": "رِدا کہتی ہے ایک مثلث کا تیسرا زاویہ، جس کے دو زاویے 90° اور 40° ہیں، 90 + 40 = 130° ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "130° is the sum of the two known angles. The third angle is 180 − 130 = 50°.",
+                "ur": "130° دو معلوم زاویوں کا مجموعہ ہے۔ تیسرا زاویہ 180 − 130 = 50° ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 90 + 40 + 50 = 180.",
+                "ur": "جی ہاں! 90 + 40 + 50 = 180"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 130° is the third angle.",
+                "ur": "کوئی غلطی نہیں۔ 130° تیسرا زاویہ ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "She stopped before taking the sum away from 180°.",
+                "ur": "وہ مجموعے کو 180° سے گھٹانے سے پہلے رک گئی۔"
+              },
+              "misconception_id": "stops_at_sum"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The sum should be taken from 360°: 230°.",
+                "ur": "مجموعہ 360° میں سے گھٹانا چاہیے: 230°۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A triangle adds to 180°, not 360°.",
+                "ur": "مثلث کا مجموعہ 180° ہوتا ہے، 360° نہیں۔"
+              },
+              "misconception_id": "use_360"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_totals",
+      "front": {
+        "en": "What do angles on a straight line and angles in a triangle add up to?",
+        "ur": "سیدھی لکیر کے زاویوں اور مثلث کے زاویوں کا مجموعہ کتنا ہوتا ہے؟"
+      },
+      "back": {
+        "en": "Both add up to 180°.",
+        "ur": "دونوں کا مجموعہ 180° ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "f_iso",
+      "front": {
+        "en": "How do you find a base angle of an isosceles triangle from its top angle?",
+        "ur": "متساوی الساقین مثلث کے اوپر کے زاویے سے قاعدے کا زاویہ کیسے نکالتے ہیں؟"
+      },
+      "back": {
+        "en": "(180° − top angle) ÷ 2.",
+        "ur": "(180° − اوپر کا زاویہ) ÷ 2"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_angles",
+      "text": {
+        "en": "Draw any triangle, measure its three angles with a protractor and add them. Do this for two more triangles. Then draw a straight line with a ray from a point on it, measure both angles and add them. Write what you notice.",
+        "ur": "کوئی سا بھی مثلث بنائیں، اس کے تینوں زاویے زاویہ پیما سے ناپیں اور جمع کریں۔ دو اور مثلثوں کے ساتھ بھی کریں۔ پھر ایک سیدھی لکیر بنائیں اور اس کے ایک نقطے سے ایک شعاع نکالیں، دونوں زاویے ناپیں اور جمع کریں۔ جو بات نظر آئے لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Straight line",
+      "ur": "سیدھی لکیر"
+    },
+    {
+      "en": "Triangle",
+      "ur": "مثلث"
+    },
+    {
+      "en": "Equilateral triangle",
+      "ur": "مساوی الاضلاع مثلث"
+    },
+    {
+      "en": "Isosceles triangle",
+      "ur": "متساوی الساقین مثلث"
+    },
+    {
+      "en": "Right-angled triangle",
+      "ur": "قائمہ الزاویہ مثلث"
+    },
+    {
+      "en": "Exterior angle",
+      "ur": "بیرونی زاویہ"
+    },
+    {
+      "en": "Interior angle",
+      "ur": "اندرونی زاویہ"
+    },
+    {
+      "en": "Unknown angle",
+      "ur": "نامعلوم زاویہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 10.3 is about unknown angles. Ready?",
+          "ur": "مشق 10.3 نامعلوم زاویوں کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 10.3 of your maths book (PCTB Mathematics 6). Here you find unknown angles on a straight line and in a triangle, and check whether angles make a straight line. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 10.3 کے ساتھ ہے۔ اس میں آپ سیدھی لکیر پر اور مثلث میں نامعلوم زاویے نکالیں گے، اور جانچیں گے کہ زاویے سیدھی لکیر بناتے ہیں یا نہیں۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_line_total",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many degrees do all the angles on a straight line at one point add up to?",
+        "ur": "ایک نقطے پر سیدھی لکیر کے سب زاویوں کا مجموعہ کتنے درجے ہوتا ہے؟"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "A straight angle.",
+        "ur": "مستقیم زاویہ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180°.",
+        "ur": "درست! 180°"
+      },
+      "feedback_wrong": {
+        "en": "A straight line is a straight angle of 180°.",
+        "ur": "سیدھی لکیر 180° کا مستقیم زاویہ ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 360,
+          "feedback": {
+            "en": "360° is a full turn. A straight line is half of it: 180°.",
+            "ur": "360° پورا چکر ہے۔ سیدھی لکیر اس کا آدھا ہے: 180°"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° is a right angle, only half of a straight line: 180°.",
+            "ur": "90° قائمہ زاویہ ہے، سیدھی لکیر کا صرف آدھا: 180°"
+          },
+          "misconception_id": "use_90"
+        }
+      ]
+    },
+    {
+      "id": "q2_tri_total",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many degrees do the three angles of any triangle add up to?",
+        "ur": "کسی بھی مثلث کے تین زاویوں کا مجموعہ کتنے درجے ہوتا ہے؟"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "The same as a straight line.",
+        "ur": "سیدھی لکیر جتنا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180°.",
+        "ur": "درست! 180°"
+      },
+      "feedback_wrong": {
+        "en": "Any triangle: 180°.",
+        "ur": "کوئی بھی مثلث: 180°"
+      },
+      "common_wrong": [
+        {
+          "answer": 360,
+          "feedback": {
+            "en": "360° is for a four-sided shape. A triangle: 180°.",
+            "ur": "360° چار اضلاع والی شکل کا ہے۔ مثلث: 180°"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° is one right angle. Three angles of a triangle: 180°.",
+            "ur": "90° ایک قائمہ زاویہ ہے۔ مثلث کے تین زاویے: 180°"
+          },
+          "misconception_id": "use_90"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Add the angles you know, then take the sum away from 180°.",
+          "ur": "جو زاویے معلوم ہیں انہیں جمع کریں، پھر مجموعہ 180° میں سے گھٹائیں۔"
+        }
+      },
+      "text": {
+        "en": "Angles on a straight line add up to 180°. The three angles of a triangle add up to 180°. To find an unknown angle: add the angles you know, then 180° minus that sum. An equilateral triangle has three equal angles of 60°. An isosceles triangle has two equal angles. In a right-angled triangle the other two angles add up to 90°. An exterior angle of a triangle equals the sum of the two opposite interior angles.",
+        "ur": "سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے۔ مثلث کے تین زاویوں کا مجموعہ 180° ہوتا ہے۔ نامعلوم زاویہ نکالنے کے لیے: معلوم زاویے جمع کریں، پھر 180° میں سے وہ مجموعہ گھٹائیں۔ مساوی الاضلاع مثلث کے تینوں زاویے برابر، 60° کے، ہوتے ہیں۔ متساوی الساقین مثلث کے دو زاویے برابر ہوتے ہیں۔ قائمہ الزاویہ مثلث میں باقی دو زاویوں کا مجموعہ 90° ہوتا ہے۔ مثلث کا بیرونی زاویہ دو مخالف اندرونی زاویوں کے مجموعے کے برابر ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "q3_line",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "On the straight line in the picture one angle is 115°. Find x, in degrees.",
+        "ur": "تصویر کی سیدھی لکیر پر ایک زاویہ 115° ہے۔ x کتنے درجے کا ہے؟"
+      },
+      "answer": 65,
+      "checker": "numeric",
+      "hint": {
+        "en": "x + 115 = 180.",
+        "ur": "x + 115 = 180"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 − 115 = 65°.",
+        "ur": "درست! 180 − 115 = 65°"
+      },
+      "feedback_wrong": {
+        "en": "The two angles add up to 180°: 65.",
+        "ur": "دونوں زاویوں کا مجموعہ 180° ہے: 65"
+      },
+      "common_wrong": [
+        {
+          "answer": 245,
+          "feedback": {
+            "en": "That is 360 − 115. A straight line adds to 180°: 65.",
+            "ur": "یہ 360 − 115 ہے۔ سیدھی لکیر کا مجموعہ 180° ہے: 65"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "answer": 115,
+          "feedback": {
+            "en": "115° is the other angle. x = 180 − 115 = 65.",
+            "ur": "115° دوسرا زاویہ ہے۔ x = 180 − 115 = 65"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "answer": 25,
+          "feedback": {
+            "en": "That is 90 − 65. The total on a line is 180°: x = 65.",
+            "ur": "یہ 90 − 65 ہے۔ لکیر پر مجموعہ 180° ہے: x = 65"
+          },
+          "misconception_id": "use_90"
+        }
+      ],
+      "figure": {
+        "width": 130,
+        "height": 64,
+        "alt": {
+          "en": "A straight line with a point O on it and a ray from O. The angle on the right of the ray is marked x and the angle on the left, up to the end of the line, is marked 115 degrees.",
+          "ur": "ایک سیدھی لکیر جس پر نقطہ O ہے اور O سے ایک شعاع۔ شعاع کے دائیں طرف کا زاویہ x اور بائیں طرف کا، لکیر کے سرے تک، 115° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              54
+            ],
+            "to": [
+              122,
+              54
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.0,
+              54
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              82.7,
+              15.9
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 295,
+            "sweep": 65
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.7,
+              42.7
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 115
+          },
+          {
+            "kind": "label",
+            "at": [
+              53.7,
+              36.3
+            ],
+            "text": "115°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_three",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Three angles sit side by side on a straight line: 35°, x and 85°. Find x, in degrees.",
+        "ur": "ایک سیدھی لکیر پر تین زاویے ساتھ ساتھ ہیں: 35°، x اور 85°۔ x کتنے درجے کا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "35 + x + 85 = 180.",
+        "ur": "35 + x + 85 = 180"
+      },
+      "feedback_correct": {
+        "en": "Right! 35 + 85 = 120, and 180 − 120 = 60°.",
+        "ur": "درست! 35 + 85 = 120، اور 180 − 120 = 60°"
+      },
+      "feedback_wrong": {
+        "en": "Add the known angles, then take away from 180: 60.",
+        "ur": "معلوم زاویے جمع کریں، پھر 180 میں سے گھٹائیں: 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 145,
+          "feedback": {
+            "en": "That takes away only 35. Take away 35 and 85: 60.",
+            "ur": "اس میں صرف 35 گھٹایا۔ 35 اور 85 دونوں گھٹائیں: 60"
+          },
+          "misconception_id": "forgets_one"
+        },
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "120° is 35 + 85. x is what is left of 180: 60.",
+            "ur": "120° یعنی 35 + 85۔ x وہ ہے جو 180 میں سے بچے: 60"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "That uses 360. A straight line is 180°: 60.",
+            "ur": "اس میں 360 استعمال ہوا۔ سیدھی لکیر 180° ہے: 60"
+          },
+          "misconception_id": "use_360"
+        }
+      ],
+      "figure": {
+        "width": 130,
+        "height": 64,
+        "alt": {
+          "en": "A straight line with a point O on it and two rays from O that split the line into three angles. From the right they are marked 35 degrees, x and 85 degrees.",
+          "ur": "ایک سیدھی لکیر جس پر نقطہ O ہے اور O سے دو شعاعیں جو لکیر کو تین زاویوں میں بانٹتی ہیں۔ دائیں سے بائیں یہ 35°، x اور 85° ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              54
+            ],
+            "to": [
+              122,
+              54
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.0,
+              54
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              99.4,
+              29.9
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              61.3,
+              12.2
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 325,
+            "sweep": 35
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.0,
+              47.7
+            ],
+            "text": "35°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 265,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              73.9,
+              35.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 85
+          },
+          {
+            "kind": "label",
+            "at": [
+              49.5,
+              39.8
+            ],
+            "text": "85°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_triangle",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "In the triangle, two angles are 52° and 71°. Find the third angle x, in degrees.",
+        "ur": "مثلث میں دو زاویے 52° اور 71° ہیں۔ تیسرا زاویہ x کتنے درجے کا ہے؟"
+      },
+      "answer": 57,
+      "checker": "numeric",
+      "hint": {
+        "en": "52 + 71 + x = 180.",
+        "ur": "52 + 71 + x = 180"
+      },
+      "feedback_correct": {
+        "en": "Right! 52 + 71 = 123, and 180 − 123 = 57°.",
+        "ur": "درست! 52 + 71 = 123، اور 180 − 123 = 57°"
+      },
+      "feedback_wrong": {
+        "en": "The three angles add up to 180°: 57.",
+        "ur": "تین زاویوں کا مجموعہ 180° ہے: 57"
+      },
+      "common_wrong": [
+        {
+          "answer": 123,
+          "feedback": {
+            "en": "123° is 52 + 71. x is what is left of 180: 57.",
+            "ur": "123° یعنی 52 + 71۔ x وہ ہے جو 180 میں سے بچے: 57"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "answer": 237,
+          "feedback": {
+            "en": "That is 360 − 123. A triangle adds to 180°: 57.",
+            "ur": "یہ 360 − 123 ہے۔ مثلث کا مجموعہ 180° ہے: 57"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "answer": 128,
+          "feedback": {
+            "en": "That takes away only 52. Take away 52 and 71: 57.",
+            "ur": "اس میں صرف 52 گھٹایا۔ 52 اور 71 دونوں گھٹائیں: 57"
+          },
+          "misconception_id": "forgets_one"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 76,
+        "alt": {
+          "en": "A triangle ABC with the angle at A marked 52 degrees, the angle at B marked 71 degrees and the angle at C marked x.",
+          "ur": "مثلث ABC جس میں A پر زاویہ 52°، B پر زاویہ 71° اور C پر زاویہ x لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              31.9,
+              63.0
+            ],
+            "to": [
+              88.1,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              88.1,
+              63.0
+            ],
+            "to": [
+              70.9,
+              13.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.9,
+              13.0
+            ],
+            "to": [
+              31.9,
+              63.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              46.9,
+              55.1
+            ],
+            "text": "52°"
+          },
+          {
+            "kind": "label",
+            "at": [
+              25.7,
+              66.3
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              74.1,
+              53.4
+            ],
+            "text": "71°"
+          },
+          {
+            "kind": "label",
+            "at": [
+              93.9,
+              66.9
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              67.3,
+              29.6
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.4,
+              6.2
+            ],
+            "text": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_straight",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which pair of angles, placed side by side, makes a straight line?",
+        "ur": "کون سے دو زاویے، ساتھ ساتھ رکھنے پر، سیدھی لکیر بناتے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "100° and 70°",
+            "ur": "100° اور 70°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "100 + 70 = 170. That is 10° short of 180°.",
+            "ur": "100 + 70 = 170۔ یہ 180° سے 10° کم ہے۔"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "120° and 70°",
+            "ur": "120° اور 70°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "120 + 70 = 190. That is 10° more than 180°.",
+            "ur": "120 + 70 = 190۔ یہ 180° سے 10° زیادہ ہے۔"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "130°, 60° and 40°",
+            "ur": "130°، 60° اور 40°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "130 + 60 + 40 = 230, not 180.",
+            "ur": "130 + 60 + 40 = 230، 180 نہیں۔"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "95° and 85°",
+            "ur": "95° اور 85°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 95 + 85 = 180, so together they make a straight line.",
+            "ur": "جی ہاں! 95 + 85 = 180، تو مل کر سیدھی لکیر بناتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7_equilateral",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "All three angles of an equilateral triangle are equal. How big is each one, in degrees?",
+        "ur": "مساوی الاضلاع مثلث کے تینوں زاویے برابر ہیں۔ ہر ایک کتنے درجے کا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Share 180° equally among 3 angles.",
+        "ur": "180° کو 3 زاویوں میں برابر بانٹیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 ÷ 3 = 60°.",
+        "ur": "درست! 180 ÷ 3 = 60°"
+      },
+      "feedback_wrong": {
+        "en": "3 equal angles that add to 180°: 60 each.",
+        "ur": "180° مجموعے والے 3 برابر زاویے: ہر ایک 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90° is a right angle. Divide 180 by 3: 60.",
+            "ur": "90° قائمہ زاویہ ہے۔ 180 کو 3 سے تقسیم کریں: 60"
+          },
+          "misconception_id": "use_90"
+        },
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "That is 360 ÷ 3. A triangle adds to 180°: 60.",
+            "ur": "یہ 360 ÷ 3 ہے۔ مثلث کا مجموعہ 180° ہے: 60"
+          },
+          "misconception_id": "use_360"
+        }
+      ]
+    },
+    {
+      "id": "q8_bisect_tri",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The angle bisector from one corner of an equilateral triangle cuts that corner's angle into two equal parts. How big is each part, in degrees?",
+        "ur": "مساوی الاضلاع مثلث کے ایک کونے کا ناصف زاویہ اس کونے کے زاویے کو دو برابر حصوں میں کاٹتا ہے۔ ہر حصہ کتنے درجے کا ہے؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "The corner angle is 60°. Halve it.",
+        "ur": "کونے کا زاویہ 60° ہے۔ اسے آدھا کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60 ÷ 2 = 30°.",
+        "ur": "درست! 60 ÷ 2 = 30°"
+      },
+      "feedback_wrong": {
+        "en": "Each corner is 60°, and half of it is 30°.",
+        "ur": "ہر کونا 60° کا ہے، اور اس کا آدھا 30° ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "60° is the whole corner angle. Each part is half: 30.",
+            "ur": "60° پورے کونے کا زاویہ ہے۔ ہر حصہ آدھا ہے: 30"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "A corner of an equilateral triangle is 60°, not 90°. Half is 30.",
+            "ur": "مساوی الاضلاع مثلث کا کونا 60° کا ہوتا ہے، 90° کا نہیں۔ آدھا 30° ہے۔"
+          },
+          "misconception_id": "use_90"
+        }
+      ]
+    },
+    {
+      "id": "q9_isosceles",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "An isosceles triangle has the angle 40° at the top. The two equal angles at the base are each x. Find x, in degrees.",
+        "ur": "ایک متساوی الساقین مثلث کے اوپر کا زاویہ 40° ہے۔ قاعدے کے دو برابر زاویے ہر ایک x ہیں۔ x کتنے درجے کا ہے؟"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "The two base angles share what is left of 180°. 180 − 40 = 140.",
+        "ur": "قاعدے کے دونوں زاویے 180° میں سے بچا ہوا بانٹتے ہیں۔ 180 − 40 = 140"
+      },
+      "feedback_correct": {
+        "en": "Right! 140 ÷ 2 = 70°.",
+        "ur": "درست! 140 ÷ 2 = 70°"
+      },
+      "feedback_wrong": {
+        "en": "2x + 40 = 180, so 2x = 140 and x = 70.",
+        "ur": "2x + 40 = 180، تو 2x = 140 اور x = 70"
+      },
+      "common_wrong": [
+        {
+          "answer": 140,
+          "feedback": {
+            "en": "140° is both base angles together. Each one is half: 70.",
+            "ur": "140° قاعدے کے دونوں زاویے ملا کر ہیں۔ ہر ایک آدھا ہے: 70"
+          },
+          "misconception_id": "isosceles_halving"
+        },
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "40° is the top angle. The base angles are 70° each.",
+            "ur": "40° اوپر کا زاویہ ہے۔ قاعدے کے زاویے ہر ایک 70° ہیں۔"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "That is 90 − 40. The three angles add to 180°: x = 70.",
+            "ur": "یہ 90 − 40 ہے۔ تین زاویوں کا مجموعہ 180° ہے: x = 70"
+          },
+          "misconception_id": "use_90"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 76,
+        "alt": {
+          "en": "An isosceles triangle ABC with two equal sides. The angle at the top, C, is marked 40 degrees. The two equal angles at the base, A and B, are each marked x.",
+          "ur": "متساوی الساقین مثلث ABC جس کے دو ضلع برابر ہیں۔ اوپر C کا زاویہ 40° ہے۔ قاعدے کے دو برابر زاویوں، A اور B، پر x لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              41.8,
+              63.0
+            ],
+            "to": [
+              78.2,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.2,
+              63.0
+            ],
+            "to": [
+              60.0,
+              13.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              13.0
+            ],
+            "to": [
+              41.8,
+              63.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              54.3,
+              51.5
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "label",
+            "at": [
+              36.6,
+              67.7
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.7,
+              51.5
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.4,
+              67.7
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              30.0
+            ],
+            "text": "40°"
+          },
+          {
+            "kind": "label",
+            "at": [
+              60.0,
+              6.0
+            ],
+            "text": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10_right",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a right-angled triangle one angle is 90° and another is 28°. Find the third angle x, in degrees.",
+        "ur": "ایک قائمہ الزاویہ مثلث میں ایک زاویہ 90° اور دوسرا 28° ہے۔ تیسرا زاویہ x کتنے درجے کا ہے؟"
+      },
+      "answer": 62,
+      "checker": "numeric",
+      "hint": {
+        "en": "The other two angles add up to 90°.",
+        "ur": "باقی دو زاویوں کا مجموعہ 90° ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 − 90 − 28 = 62°.",
+        "ur": "درست! 180 − 90 − 28 = 62°"
+      },
+      "feedback_wrong": {
+        "en": "28 + x = 90, so x = 62.",
+        "ur": "28 + x = 90، تو x = 62"
+      },
+      "common_wrong": [
+        {
+          "answer": 152,
+          "feedback": {
+            "en": "That is 180 − 28. Also take away the 90°: 62.",
+            "ur": "یہ 180 − 28 ہے۔ 90° بھی گھٹائیں: 62"
+          },
+          "misconception_id": "forgets_one"
+        },
+        {
+          "answer": 118,
+          "feedback": {
+            "en": "That is 90 + 28. x is what is left of 180: 62.",
+            "ur": "یہ 90 + 28 ہے۔ x وہ ہے جو 180 میں سے بچے: 62"
+          },
+          "misconception_id": "stops_at_sum"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 76,
+        "alt": {
+          "en": "A right-angled triangle ABC. The angle at A is marked 28 degrees, the angle at B is marked x, and the angle at C is marked 90 degrees.",
+          "ur": "قائمہ الزاویہ مثلث ABC۔ A پر زاویہ 28° ہے، B پر زاویہ x ہے، اور C پر زاویہ 90° ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              20.0,
+              63.0
+            ],
+            "to": [
+              100.0,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              100.0,
+              63.0
+            ],
+            "to": [
+              82.4,
+              29.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              82.4,
+              29.8
+            ],
+            "to": [
+              20.0,
+              63.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              36.6,
+              59.1
+            ],
+            "text": "28°"
+          },
+          {
+            "kind": "label",
+            "at": [
+              13.2,
+              64.6
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.9,
+              57.5
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "label",
+            "at": [
+              106.6,
+              65.3
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.9,
+              43.9
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "label",
+            "at": [
+              86.3,
+              24.0
+            ],
+            "text": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q11_algebra",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The angles x° and (x + 30)° sit side by side on a straight line. Find the larger angle, in degrees.",
+        "ur": "x° اور (x + 30)° کے زاویے ایک سیدھی لکیر پر ساتھ ساتھ ہیں۔ بڑا زاویہ کتنے درجے کا ہے؟"
+      },
+      "answer": 105,
+      "checker": "numeric",
+      "hint": {
+        "en": "x + x + 30 = 180. Find x first, then the larger angle.",
+        "ur": "x + x + 30 = 180۔ پہلے x نکالیں، پھر بڑا زاویہ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2x = 150, x = 75, and the larger angle is 75 + 30 = 105°.",
+        "ur": "درست! 2x = 150، x = 75، اور بڑا زاویہ 75 + 30 = 105°"
+      },
+      "feedback_wrong": {
+        "en": "x = 75 is the smaller angle. The larger is x + 30 = 105.",
+        "ur": "x = 75 چھوٹا زاویہ ہے۔ بڑا x + 30 = 105 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 75,
+          "feedback": {
+            "en": "75 is x, the smaller angle. The larger one is x + 30: 105.",
+            "ur": "75، x ہے، یعنی چھوٹا زاویہ۔ بڑا x + 30 ہے: 105"
+          },
+          "misconception_id": "equation_value"
+        },
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "150 is 180 − 30. Solve 2x + 30 = 180 first: the larger angle is 105.",
+            "ur": "150 یعنی 180 − 30۔ پہلے 2x + 30 = 180 حل کریں: بڑا زاویہ 105 ہے۔"
+          },
+          "misconception_id": "stops_at_sum"
+        }
+      ],
+      "figure": {
+        "width": 130,
+        "height": 64,
+        "alt": {
+          "en": "A straight line with a point O on it and a ray from O. The angle on the right of the ray is marked x and the angle on the left is marked x plus 30 degrees.",
+          "ur": "ایک سیدھی لکیر جس پر نقطہ O ہے اور O سے ایک شعاع۔ شعاع کے دائیں طرف کا زاویہ x اور بائیں طرف کا زاویہ x جمع 30° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              54
+            ],
+            "to": [
+              122,
+              54
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.0,
+              54
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              75.9,
+              13.4
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 285,
+            "sweep": 75
+          },
+          {
+            "kind": "label",
+            "at": [
+              81.7,
+              41.2
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 105
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.2,
+              37.3
+            ],
+            "text": "(x+30)°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q12_exterior",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "One side of a triangle is extended. The exterior angle is 125°, and one of the two opposite interior angles is 50°. Find the other opposite interior angle, in degrees.",
+        "ur": "ایک مثلث کا ایک ضلع بڑھایا گیا ہے۔ بیرونی زاویہ 125° ہے، اور دو مخالف اندرونی زاویوں میں سے ایک 50° ہے۔ دوسرا مخالف اندرونی زاویہ کتنے درجے کا ہے؟"
+      },
+      "answer": 75,
+      "checker": "numeric",
+      "hint": {
+        "en": "Exterior angle = the sum of the two opposite interior angles.",
+        "ur": "بیرونی زاویہ = دو مخالف اندرونی زاویوں کا مجموعہ"
+      },
+      "feedback_correct": {
+        "en": "Right! 125 − 50 = 75°.",
+        "ur": "درست! 125 − 50 = 75°"
+      },
+      "feedback_wrong": {
+        "en": "50 + x = 125, so x = 75.",
+        "ur": "50 + x = 125، تو x = 75"
+      },
+      "common_wrong": [
+        {
+          "answer": 55,
+          "feedback": {
+            "en": "55° is 180 − 125, the interior angle next to the exterior one. The other opposite angle is 125 − 50 = 75.",
+            "ur": "55° یعنی 180 − 125، بیرونی زاویے کے ساتھ والا اندرونی زاویہ۔ دوسرا مخالف زاویہ 125 − 50 = 75 ہے۔"
+          },
+          "misconception_id": "exterior_supp"
+        },
+        {
+          "answer": 130,
+          "feedback": {
+            "en": "That is 180 − 50. Use exterior angle − 50: 75.",
+            "ur": "یہ 180 − 50 ہے۔ بیرونی زاویہ − 50 استعمال کریں: 75"
+          },
+          "misconception_id": "exterior_supp"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Imran finds the third angle of a triangle with angles 60° and 80°. He writes 360 − 140 = 220°. What went wrong?",
+        "ur": "عمران ایک مثلث کا تیسرا زاویہ نکالتا ہے جس کے دو زاویے 60° اور 80° ہیں۔ وہ لکھتا ہے 360 − 140 = 220°۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The angles of a triangle add up to 180°, not 360°. The third angle is 180 − 140 = 40°.",
+            "ur": "مثلث کے زاویوں کا مجموعہ 180° ہوتا ہے، 360° نہیں۔ تیسرا زاویہ 180 − 140 = 40° ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 60 + 80 + 40 = 180.",
+            "ur": "جی ہاں! 60 + 80 + 40 = 180"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 220° is correct.",
+            "ur": "کوئی غلطی نہیں۔ 220° درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A triangle angle cannot be bigger than 180°, and 220° would break the 180° total.",
+            "ur": "مثلث کا زاویہ 180° سے بڑا نہیں ہو سکتا، اور 220° سے 180° کا مجموعہ ٹوٹ جاتا ہے۔"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should add 60 and 80 and stop: 140°.",
+            "ur": "اسے 60 اور 80 جمع کر کے رک جانا چاہیے: 140°۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "140° is the two known angles together. The third angle is what is left of 180°: 40.",
+            "ur": "140° معلوم دو زاویے ملا کر ہیں۔ تیسرا زاویہ وہ ہے جو 180° میں سے بچے: 40"
+          },
+          "misconception_id": "stops_at_sum"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! Add what you know, take it from 180°.",
+          "ur": "شاباش! جو معلوم ہے جمع کریں اور 180° میں سے گھٹائیں۔"
+        }
+      },
+      "text": {
+        "en": "Angles on a straight line add up to 180°, and so do the three angles of a triangle. Unknown angle = 180° minus the sum of the known angles. Equilateral triangle: 60° each. Isosceles: two equal angles, so the base angles are (180° − apex) ÷ 2. Right-angled: the other two add up to 90°. Exterior angle = sum of the two opposite interior angles. Solve for x first when the angle is written with x, then give the angle asked.",
+        "ur": "سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے، اور مثلث کے تین زاویوں کا بھی۔ نامعلوم زاویہ = 180° منفی معلوم زاویوں کا مجموعہ۔ مساوی الاضلاع مثلث: ہر زاویہ 60°۔ متساوی الساقین: دو زاویے برابر، تو قاعدے کا زاویہ (180° − راسی زاویہ) ÷ 2۔ قائمہ الزاویہ: باقی دو کا مجموعہ 90°۔ بیرونی زاویہ = دو مخالف اندرونی زاویوں کا مجموعہ۔ جب زاویہ x کے ساتھ لکھا ہو تو پہلے x نکالیں، پھر پوچھا گیا زاویہ بتائیں۔"
+      },
+      "points": [
+        {
+          "en": "Add the known angles, then 180° minus the sum.",
+          "ur": "معلوم زاویے جمع کریں، پھر 180° منفی مجموعہ۔"
+        },
+        {
+          "en": "Straight line: 180°. Triangle: 180°.",
+          "ur": "سیدھی لکیر: 180°۔ مثلث: 180°۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_line_three",
+      "type": "apply",
+      "step": {
+        "id": "r_line_three",
+        "type": "number",
+        "prompt": {
+          "en": "Three angles on a straight line are 72°, 44° and x. Find x, in degrees.",
+          "ur": "ایک سیدھی لکیر پر تین زاویے 72°، 44° اور x ہیں۔ x کتنے درجے کا ہے؟"
+        },
+        "answer": 64,
+        "checker": "numeric",
+        "hint": {
+          "en": "72 + 44 + x = 180.",
+          "ur": "72 + 44 + x = 180"
+        },
+        "feedback_correct": {
+          "en": "Right! 72 + 44 = 116, and 180 − 116 = 64°.",
+          "ur": "درست! 72 + 44 = 116، اور 180 − 116 = 64°"
+        },
+        "feedback_wrong": {
+          "en": "Take 116 away from 180: 64.",
+          "ur": "180 میں سے 116 گھٹائیں: 64"
+        },
+        "common_wrong": [
+          {
+            "answer": 116,
+            "feedback": {
+              "en": "116° is 72 + 44. x is what is left of 180: 64.",
+              "ur": "116° یعنی 72 + 44۔ x وہ ہے جو 180 میں سے بچے: 64"
+            },
+            "misconception_id": "stops_at_sum"
+          },
+          {
+            "answer": 108,
+            "feedback": {
+              "en": "That takes away only 72. Take away 72 and 44: 64.",
+              "ur": "اس میں صرف 72 گھٹایا۔ 72 اور 44 دونوں گھٹائیں: 64"
+            },
+            "misconception_id": "forgets_one"
+          }
+        ]
+      },
+      "skill": "maths.geometry.ex_10_3"
+    },
+    {
+      "id": "r_iso",
+      "type": "apply",
+      "step": {
+        "id": "r_iso",
+        "type": "number",
+        "prompt": {
+          "en": "An isosceles triangle has two equal angles of 66°. Find the third angle, in degrees.",
+          "ur": "ایک متساوی الساقین مثلث کے دو برابر زاویے 66° کے ہیں۔ تیسرا زاویہ کتنے درجے کا ہے؟"
+        },
+        "answer": 48,
+        "checker": "numeric",
+        "hint": {
+          "en": "66 + 66 + x = 180.",
+          "ur": "66 + 66 + x = 180"
+        },
+        "feedback_correct": {
+          "en": "Right! 66 + 66 = 132, and 180 − 132 = 48°.",
+          "ur": "درست! 66 + 66 = 132، اور 180 − 132 = 48°"
+        },
+        "feedback_wrong": {
+          "en": "Take 132 away from 180: 48.",
+          "ur": "180 میں سے 132 گھٹائیں: 48"
+        },
+        "common_wrong": [
+          {
+            "answer": 132,
+            "feedback": {
+              "en": "132° is the two equal angles together. The third is 48.",
+              "ur": "132° دو برابر زاویے ملا کر ہیں۔ تیسرا 48° ہے۔"
+            },
+            "misconception_id": "stops_at_sum"
+          },
+          {
+            "answer": 114,
+            "feedback": {
+              "en": "That is 180 − 66. Take away both 66° angles: 48.",
+              "ur": "یہ 180 − 66 ہے۔ دونوں 66° کے زاویے گھٹائیں: 48"
+            },
+            "misconception_id": "forgets_one"
+          }
+        ]
+      },
+      "skill": "maths.geometry.ex_10_3"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 10.3 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the totals of 180° on a straight line and in a triangle (q1, q2), finding an unknown angle with one or two known angles (q3, q4, q5), checking whether angles make a straight line (q6), equilateral, isosceles and right-angled triangles (q7 to q10), an angle written with x (q11) and the exterior angle (q12).",
+    "Each wrong answer is a real mistake: using 360° or 90° for the total, stopping at the sum of the known angles, taking away only one known angle, not halving for the base angles of an isosceles triangle, and giving x when the angle (x + 30)° is asked.",
+    "Urdu terms to check: سیدھی لکیر, مثلث, مساوی الاضلاع مثلث, متساوی الساقین مثلث, قائمہ الزاویہ مثلث, بیرونی زاویہ, اندرونی زاویہ and نامعلوم زاویہ, all as in the existing Angles and Constructions lessons. راسی زاویہ (apex angle, in the summary) is new, so a teacher should confirm it.",
+    "The numbers were worked out in content/sources/g6-maths-09/exercise_10_3.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

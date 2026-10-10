@@ -9,6 +9,9 @@ Scripts that write the Grade 6 Maths lessons of the Angles unit (`content/lesson
 | `angle_pairs.py` | `g6-maths-09-complementary-supplementary` | `maths.geometry.complementary_supplementary` |
 | `triangle_angles.py` | `g6-maths-09-angles-in-a-triangle` | `maths.geometry.triangle_angles` |
 | `angle_word_problems.py` | `g6-maths-09-angle-word-problems` | `maths.geometry.word_problems` |
+| `exercise_10_3.py` | `g6-maths-09-exercise-10-3` | `maths.geometry.ex_10_3` |
+
+`exercise_10_3.py` is the practice set for Exercise 10.3 of the book (chapter 10, Geometrical Constructions): unknown angles on a straight line and in a triangle. Only the exercise number and the kinds of question follow the book; every question, number and story is new. It has no "why" steps. `figs.py` draws its angle figures with coordinates worked out in Python, and `common.py` holds the practice helpers (`nq`, `ch`, `practice_lesson`, `practice_intro`).
 
 Every answer, and every common wrong answer (like using 360° on a straight line), is worked out in Python and checked with `assert`, so no number is typed by hand. The "what kind of angle" questions are built by `kind_question` in `common.py`, which picks the right option from the angle's size. There are no pictures yet: each angle is given in degrees or as a clock or a door. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill.
 

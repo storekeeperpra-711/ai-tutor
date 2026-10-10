@@ -1,0 +1,1277 @@
+{
+  "id": "g6-maths-19-exercise-10-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Bisect an angle with a compass and build the angles 30°, 45°, 60°, 75°, 90°, 105°, 120° and 150° from the basic angle 60°, knowing which step gives which angle.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions, Exercise 10.2"
+    }
+  ],
+  "skills": [
+    "maths.constructions.ex_10_2"
+  ],
+  "title": {
+    "en": "Exercise 10.2 practice: bisecting and building angles",
+    "ur": "مشق 10.2 کی پریکٹس: زاویوں کی تنصیف اور تعمیر"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.constructions.angles"
+    },
+    {
+      "skill": "maths.geometry.angle_types"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "bisect_not_half",
+      "description": "Divides by 3 or doubles when asked for the angle after bisecting, instead of halving."
+    },
+    {
+      "id": "add_not_mid",
+      "description": "Adds the two angles instead of going halfway between them when a ray is made between two rays."
+    },
+    {
+      "id": "gap_not_angle",
+      "description": "Gives the half of the gap between two rays instead of the angle the new ray makes with the base arm."
+    },
+    {
+      "id": "wrong_start_angle",
+      "description": "Bisects the wrong angle, for example bisects 60° to get 45°, or 120° to get 75°."
+    },
+    {
+      "id": "steps_out_of_order",
+      "description": "Puts the steps of bisecting an angle in the wrong order."
+    },
+    {
+      "id": "basic_angle_mix",
+      "description": "Thinks the angle from three equal arcs is 90° or 30° rather than 60°."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.constructions.ex_10_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.constructions.ex_10_2": [
+      {
+        "id": "qb_basic",
+        "type": "recall",
+        "step": {
+          "id": "qb_basic",
+          "type": "number",
+          "prompt": {
+            "en": "How many degrees is each angle of an equilateral triangle, the basic angle of compass constructions?",
+            "ur": "مساوی الاضلاع مثلث کا ہر زاویہ کتنے درجے کا ہے، یعنی پرکار کی تعمیرات کا بنیادی زاویہ؟"
+          },
+          "answer": 60,
+          "checker": "numeric",
+          "hint": {
+            "en": "Three equal angles add up to 180°.",
+            "ur": "تین برابر زاویوں کا مجموعہ 180° ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 60°.",
+            "ur": "درست! 60°"
+          },
+          "feedback_wrong": {
+            "en": "180 ÷ 3 = 60.",
+            "ur": "180 ÷ 3 = 60"
+          },
+          "common_wrong": [
+            {
+              "answer": 90,
+              "feedback": {
+                "en": "90° is a right angle. The basic angle is 60°.",
+                "ur": "90° قائمہ زاویہ ہے۔ بنیادی زاویہ 60° ہے۔"
+              },
+              "misconception_id": "basic_angle_mix"
+            },
+            {
+              "answer": 30,
+              "feedback": {
+                "en": "30° is half of the basic angle.",
+                "ur": "30° بنیادی زاویے کا آدھا ہے۔"
+              },
+              "misconception_id": "basic_angle_mix"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_bisect_50",
+        "type": "apply",
+        "step": {
+          "id": "qb_bisect_50",
+          "type": "number",
+          "prompt": {
+            "en": "A 50° angle is bisected. How big is each part, in degrees?",
+            "ur": "50° کے زاویے کی تنصیف کی گئی۔ ہر حصہ کتنے درجے کا ہے؟"
+          },
+          "answer": 25,
+          "checker": "numeric",
+          "hint": {
+            "en": "Halve 50.",
+            "ur": "50 کو آدھا کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 50 ÷ 2 = 25°.",
+            "ur": "درست! 50 ÷ 2 = 25°"
+          },
+          "feedback_wrong": {
+            "en": "Two equal parts of 25°.",
+            "ur": "25° کے دو برابر حصے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 50,
+              "feedback": {
+                "en": "50° is the whole angle. Each part is half: 25.",
+                "ur": "50° پورا زاویہ ہے۔ ہر حصہ آدھا ہے: 25"
+              },
+              "misconception_id": "bisect_not_half"
+            },
+            {
+              "answer": 100,
+              "feedback": {
+                "en": "That doubles it. Halve it: 25.",
+                "ur": "یہ دگنا کرتا ہے۔ آدھا کریں: 25"
+              },
+              "misconception_id": "bisect_not_half"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_mid",
+        "type": "apply",
+        "step": {
+          "id": "qb_mid",
+          "type": "number",
+          "prompt": {
+            "en": "A ray is made halfway between the 60° ray and the 120° ray. What angle does it make with the base arm, in degrees?",
+            "ur": "60° کی شعاع اور 120° کی شعاع کے ٹھیک بیچ میں شعاع بنائی گئی۔ وہ بنیادی بازو کے ساتھ کتنے درجے کا زاویہ بناتی ہے؟"
+          },
+          "answer": 90,
+          "checker": "numeric",
+          "hint": {
+            "en": "Halfway between 60 and 120.",
+            "ur": "60 اور 120 کے ٹھیک بیچ میں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! (60 + 120) ÷ 2 = 90°.",
+            "ur": "درست! (60 + 120) ÷ 2 = 90°"
+          },
+          "feedback_wrong": {
+            "en": "The gap is 60°, half is 30°, and 60 + 30 = 90.",
+            "ur": "فاصلہ 60° ہے، آدھا 30° ہے، اور 60 + 30 = 90"
+          },
+          "common_wrong": [
+            {
+              "answer": 180,
+              "feedback": {
+                "en": "180 is 60 + 120. Halfway means half of that: 90.",
+                "ur": "180 یعنی 60 + 120۔ بیچ کا مطلب اس کا آدھا ہے: 90"
+              },
+              "misconception_id": "add_not_mid"
+            },
+            {
+              "answer": 30,
+              "feedback": {
+                "en": "30° is half the gap. From the base arm: 60 + 30 = 90.",
+                "ur": "30° فاصلے کا آدھا ہے۔ بنیادی بازو سے: 60 + 30 = 90"
+              },
+              "misconception_id": "gap_not_angle"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hina bisects a 40° angle and says one part is 20° and the other part is 40°. What went wrong?",
+            "ur": "حنا 40° کے زاویے کی تنصیف کرتی ہے اور کہتی ہے ایک حصہ 20° اور دوسرا حصہ 40° ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A bisector makes two equal parts. Both parts are 20°.",
+                "ur": "ناصف دو برابر حصے بناتا ہے۔ دونوں حصے 20° کے ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 20° + 20° = 40°.",
+                "ur": "جی ہاں! 20° + 20° = 40°"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. A bisector can make unequal parts.",
+                "ur": "کوئی غلطی نہیں۔ ناصف غیر برابر حصے بھی بنا سکتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Bisect means equal parts.",
+                "ur": "تنصیف کا مطلب برابر حصے ہے۔"
+              },
+              "misconception_id": "bisect_not_half"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Both parts should be 40°.",
+                "ur": "دونوں حصے 40° کے ہونے چاہییں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The two parts add up to the whole angle, 40°.",
+                "ur": "دونوں حصوں کا مجموعہ پورا زاویہ، 40°، ہوتا ہے۔"
+              },
+              "misconception_id": "bisect_not_half"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_75",
+      "front": {
+        "en": "How do you build 75° and 105°?",
+        "ur": "75° اور 105° کیسے بنتے ہیں؟"
+      },
+      "back": {
+        "en": "75° is halfway between 60° and 90°; 105° is halfway between 90° and 120°.",
+        "ur": "75°، 60° اور 90° کے بیچ ہے؛ 105°، 90° اور 120° کے بیچ۔"
+      }
+    },
+    {
+      "id": "f_150",
+      "front": {
+        "en": "How do you build 150°?",
+        "ur": "150° کیسے بنتا ہے؟"
+      },
+      "back": {
+        "en": "Halfway between 120° and the straight line, 180°.",
+        "ur": "120° اور سیدھی لکیر، 180°، کے بیچ۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_angles",
+      "text": {
+        "en": "With ruler and compass, construct 60° and then bisect it to get 30°. Then build 90°, 45° and 150°. Check each angle with a protractor and write how far off you were.",
+        "ur": "پیمانے اور پرکار سے 60° بنائیں اور اس کی تنصیف کر کے 30° بنائیں۔ پھر 90°، 45° اور 150° بنائیں۔ ہر زاویہ زاویہ پیما سے جانچیں اور لکھیں کہ کتنا فرق تھا۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Bisect",
+      "ur": "تنصیف کرنا"
+    },
+    {
+      "en": "Angle bisector",
+      "ur": "ناصف زاویہ"
+    },
+    {
+      "en": "Compass",
+      "ur": "پرکار"
+    },
+    {
+      "en": "Arc",
+      "ur": "قوس"
+    },
+    {
+      "en": "Vertex",
+      "ur": "راس"
+    },
+    {
+      "en": "Arm",
+      "ur": "بازو"
+    },
+    {
+      "en": "Equilateral triangle",
+      "ur": "مساوی الاضلاع مثلث"
+    },
+    {
+      "en": "Basic angle",
+      "ur": "بنیادی زاویہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 10.2 is about angles. Ready?",
+          "ur": "مشق 10.2 زاویوں کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 10.2 of your maths book (PCTB Mathematics 6). Here you practise bisecting angles and building 30°, 45°, 60°, 75°, 90°, 105°, 120° and 150°. You will work out which step gives which angle. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 10.2 کے ساتھ ہے۔ اس میں آپ زاویوں کی تنصیف اور 30°، 45°، 60°، 75°، 90°، 105°، 120° اور 150° کی تعمیر دہرائیں گے۔ آپ سوچیں گے کہ کون سا قدم کون سا زاویہ دیتا ہے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_basic",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Equal compass arcs make an equilateral triangle. What is the basic angle you build first?",
+        "ur": "برابر پرکار کی قوسیں مساوی الاضلاع مثلث بناتی ہیں۔ سب سے پہلے کون سا بنیادی زاویہ بنتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "30°",
+            "ur": "30°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "30° comes later, by bisecting the 60°.",
+            "ur": "30° بعد میں 60° کی تنصیف سے ملتا ہے۔"
+          },
+          "misconception_id": "basic_angle_mix"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "60°",
+            "ur": "60°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Every angle of an equilateral triangle is 60°.",
+            "ur": "جی ہاں! مساوی الاضلاع مثلث کا ہر زاویہ 60° ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "90°",
+            "ur": "90°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "90° comes by bisecting the angle between 60° and 120°.",
+            "ur": "90° 60° اور 120° کے بیچ کی تنصیف سے ملتا ہے۔"
+          },
+          "misconception_id": "basic_angle_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "45°",
+            "ur": "45°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "45° comes by bisecting 90°.",
+            "ur": "45° 90° کی تنصیف سے ملتا ہے۔"
+          },
+          "misconception_id": "basic_angle_mix"
+        }
+      ],
+      "figure": {
+        "width": 125,
+        "height": 80,
+        "alt": {
+          "en": "A base arm going right from O and a ray at 60 degrees to it, marked 60 degrees. This basic angle comes from an equilateral triangle of compass arcs.",
+          "ur": "O سے دائیں طرف ایک بنیادی بازو اور اس کے ساتھ 60° پر ایک شعاع جس پر 60° لکھا ہے۔ یہ بنیادی زاویہ پرکار کی قوسوں کے مساوی الاضلاع مثلث سے بنتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              30,
+              62
+            ],
+            "to": [
+              90,
+              62
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30,
+              62
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30,
+              62
+            ],
+            "to": [
+              54.0,
+              20.4
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              57.5,
+              14.4
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              62
+            ],
+            "radius": 14,
+            "start": 300,
+            "sweep": 60
+          }
+        ]
+      }
+    },
+    {
+      "id": "q2_bisect",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "To bisect an angle means to:",
+        "ur": "زاویے کی تنصیف کرنے کا مطلب ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "cut it into two equal parts",
+            "ur": "اسے دو برابر حصوں میں کاٹنا"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The bisector leaves two equal angles.",
+            "ur": "جی ہاں! ناصف دو برابر زاویے چھوڑتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "cut it into three equal parts",
+            "ur": "اسے تین برابر حصوں میں کاٹنا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Three parts is a trisection. Bisect means two.",
+            "ur": "تین حصے تثلیث ہے۔ تنصیف کا مطلب دو ہے۔"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "make it twice as big",
+            "ur": "اسے دگنا بڑا کرنا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Making it twice as big is the opposite of halving.",
+            "ur": "دگنا بڑا کرنا آدھا کرنے کا الٹ ہے۔"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "make it a right angle",
+            "ur": "اسے قائمہ زاویہ بنانا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Bisecting does not change it to 90°. It halves whatever angle you have.",
+            "ur": "تنصیف اسے 90° نہیں بناتی۔ جو بھی زاویہ ہو اسے آدھا کرتی ہے۔"
+          },
+          "misconception_id": "bisect_not_half"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Start with 60° and halve or add. Every other angle follows.",
+          "ur": "60° سے شروع کریں اور آدھا کریں یا جمع کریں۔ باقی سب زاویے اسی سے بنتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "To bisect an angle: draw an arc from the vertex that cuts both arms; from those two points draw equal arcs that cross; join the vertex to the crossing. Build from 60°: 30° = bisect 60°. 120° = two steps of 60°. 90° = bisect the angle between 60° and 120°. 45° = bisect 90°. 75° = halfway between 60° and 90°. 105° = halfway between 90° and 120°. 150° = halfway between 120° and the straight line, 180°.",
+        "ur": "زاویے کی تنصیف کے لیے: راس سے ایسی قوس لگائیں جو دونوں بازو کاٹے؛ ان دو نقطوں سے برابر قوسیں لگائیں جو ایک دوسرے کو کاٹیں؛ راس کو ملاپ سے ملائیں۔ 60° سے بنائیں: 30° = 60° کی تنصیف۔ 120° = 60° کے دو قدم۔ 90° = 60° اور 120° کے بیچ کی تنصیف۔ 45° = 90° کی تنصیف۔ 75° = 60° اور 90° کے بیچ۔ 105° = 90° اور 120° کے بیچ۔ 150° = 120° اور سیدھی لکیر 180° کے بیچ۔"
+      }
+    },
+    {
+      "id": "q3_half",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "The bisector of an 80° angle is drawn, as in the picture. How big is each of the two parts, in degrees?",
+        "ur": "تصویر کی طرح 80° کے زاویے کا ناصف کھینچا گیا ہے۔ دونوں حصوں میں سے ہر ایک کتنے درجے کا ہے؟"
+      },
+      "answer": 40,
+      "checker": "numeric",
+      "hint": {
+        "en": "Two equal parts: halve 80.",
+        "ur": "دو برابر حصے: 80 کو آدھا کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 80 ÷ 2 = 40°.",
+        "ur": "درست! 80 ÷ 2 = 40°"
+      },
+      "feedback_wrong": {
+        "en": "A bisector halves the angle: 40.",
+        "ur": "ناصف زاویے کو آدھا کرتا ہے: 40"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "80° is the whole angle. Each part is half: 40.",
+            "ur": "80° پورا زاویہ ہے۔ ہر حصہ آدھا ہے: 40"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "answer": 160,
+          "feedback": {
+            "en": "That doubles it. Halve it: 40.",
+            "ur": "یہ دگنا کرتا ہے۔ آدھا کریں: 40"
+          },
+          "misconception_id": "bisect_not_half"
+        }
+      ],
+      "figure": {
+        "width": 125,
+        "height": 80,
+        "alt": {
+          "en": "An angle of 80 degrees at point O, with a dashed line from O that splits it into two equal parts. The two parts are each marked with a question mark.",
+          "ur": "نقطہ O پر 80 درجے کا زاویہ، اور O سے ایک ڈیش لکیر جو اسے دو برابر حصوں میں بانٹتی ہے۔ دونوں حصوں پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              28,
+              64
+            ],
+            "to": [
+              76.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28,
+              64
+            ],
+            "to": [
+              36.3,
+              16.7
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              28,
+              64
+            ],
+            "to": [
+              64.8,
+              33.1
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              28,
+              64
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              28,
+              64
+            ],
+            "radius": 12,
+            "start": 280,
+            "sweep": 80
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.7,
+              56.5
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              39.0,
+              44.9
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              19,
+              72
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "label",
+            "at": [
+              37.4,
+              10.8
+            ],
+            "text": "80°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_twice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Mina builds 60°, bisects it, then bisects the new angle again. How big is the smallest angle now, in degrees?",
+        "ur": "مینا 60° بناتی ہے، اس کی تنصیف کرتی ہے، پھر نئے زاویے کی دوبارہ تنصیف کرتی ہے۔ اب سب سے چھوٹا زاویہ کتنے درجے کا ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "60 halved, then halved again.",
+        "ur": "60 کا آدھا، پھر دوبارہ آدھا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 60 → 30 → 15°.",
+        "ur": "درست! 60 ← 30 ← 15°"
+      },
+      "feedback_wrong": {
+        "en": "60 ÷ 2 = 30, and 30 ÷ 2 = 15.",
+        "ur": "60 ÷ 2 = 30، اور 30 ÷ 2 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30° is after one bisection. She bisected twice: 15.",
+            "ur": "30° ایک تنصیف کے بعد ہے۔ اس نے دو بار تنصیف کی: 15"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "That doubles 60. Bisecting halves: 15 after two bisections.",
+            "ur": "یہ 60 کو دگنا کرتا ہے۔ تنصیف آدھا کرتی ہے: دو تنصیفوں کے بعد 15"
+          },
+          "misconception_id": "bisect_not_half"
+        }
+      ]
+    },
+    {
+      "id": "q5_105",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A ray is made halfway between the 90° ray and the 120° ray, as in the picture. What angle does it make with the base arm, in degrees?",
+        "ur": "تصویر کی طرح 90° کی شعاع اور 120° کی شعاع کے ٹھیک بیچ میں ایک شعاع بنائی گئی ہے۔ وہ بنیادی بازو کے ساتھ کتنے درجے کا زاویہ بناتی ہے؟"
+      },
+      "answer": 105,
+      "checker": "numeric",
+      "hint": {
+        "en": "Halfway between 90 and 120. Find the middle number.",
+        "ur": "90 اور 120 کے ٹھیک بیچ میں۔ درمیانی عدد نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (90 + 120) ÷ 2 = 105°.",
+        "ur": "درست! (90 + 120) ÷ 2 = 105°"
+      },
+      "feedback_wrong": {
+        "en": "The gap is 30°, half is 15°, and 90 + 15 = 105.",
+        "ur": "فاصلہ 30° ہے، آدھا 15° ہے، اور 90 + 15 = 105"
+      },
+      "common_wrong": [
+        {
+          "answer": 210,
+          "feedback": {
+            "en": "210 is 90 + 120. Halfway means half of that: 105.",
+            "ur": "210 یعنی 90 + 120۔ بیچ کا مطلب اس کا آدھا ہے: 105"
+          },
+          "misconception_id": "add_not_mid"
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15° is half the gap. Measure from the base arm: 90 + 15 = 105.",
+            "ur": "15° فاصلے کا آدھا ہے۔ بنیادی بازو سے ناپیں: 90 + 15 = 105"
+          },
+          "misconception_id": "gap_not_angle"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30° is the whole gap between the rays. Halfway from the base: 105.",
+            "ur": "30° دونوں شعاعوں کے بیچ کا پورا فاصلہ ہے۔ بنیاد سے آدھے راستے پر: 105"
+          },
+          "misconception_id": "gap_not_angle"
+        }
+      ],
+      "figure": {
+        "width": 130,
+        "height": 80,
+        "alt": {
+          "en": "A base arm going right from a point O. Three rays leave O: one straight up marked 90 degrees, one at 120 degrees marked 120 degrees, and a dashed ray between them marked with a question mark.",
+          "ur": "نقطہ O سے دائیں طرف ایک بنیادی بازو۔ O سے تین شعاعیں نکلتی ہیں: ایک سیدھی اوپر جس پر 90° لکھا ہے، ایک 120° پر جس پر 120° لکھا ہے، اور دونوں کے بیچ ایک ڈیش شعاع جس پر سوالیہ نشان ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              117,
+              68
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65,
+              68
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              65.0,
+              26.4
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.0,
+              19.4
+            ],
+            "text": "90°"
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              54.2,
+              27.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "label",
+            "at": [
+              52.4,
+              21.1
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "line",
+            "from": [
+              65,
+              68
+            ],
+            "to": [
+              44.2,
+              32.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              40.7,
+              25.9
+            ],
+            "text": "120°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_which",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which step gives a 45° angle?",
+        "ur": "کون سا قدم 45° کا زاویہ دیتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Bisect a 60° angle",
+            "ur": "60° کے زاویے کی تنصیف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 30°.",
+            "ur": "اس سے 30° ملتا ہے۔"
+          },
+          "misconception_id": "wrong_start_angle"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Bisect a 120° angle",
+            "ur": "120° کے زاویے کی تنصیف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 60°.",
+            "ur": "اس سے 60° ملتا ہے۔"
+          },
+          "misconception_id": "wrong_start_angle"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Bisect a 90° angle",
+            "ur": "90° کے زاویے کی تنصیف"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 90 ÷ 2 = 45°.",
+            "ur": "جی ہاں! 90 ÷ 2 = 45°"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Make two 60° steps",
+            "ur": "60° کے دو قدم بنانا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 120°.",
+            "ur": "اس سے 120° ملتا ہے۔"
+          },
+          "misconception_id": "wrong_start_angle"
+        }
+      ]
+    },
+    {
+      "id": "q7_150",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Aziz makes a 120° ray, then bisects the angle between his 120° ray and the straight line (180°). What angle does the new ray make with the base arm, in degrees?",
+        "ur": "عزیز 120° کی شعاع بناتا ہے، پھر اپنی 120° کی شعاع اور سیدھی لکیر (180°) کے بیچ کے زاویے کی تنصیف کرتا ہے۔ نئی شعاع بنیادی بازو کے ساتھ کتنے درجے کا زاویہ بناتی ہے؟"
+      },
+      "answer": 150,
+      "checker": "numeric",
+      "hint": {
+        "en": "Halfway between 120 and 180.",
+        "ur": "120 اور 180 کے ٹھیک بیچ میں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (120 + 180) ÷ 2 = 150°.",
+        "ur": "درست! (120 + 180) ÷ 2 = 150°"
+      },
+      "feedback_wrong": {
+        "en": "The gap is 60°, half is 30°, and 120 + 30 = 150.",
+        "ur": "فاصلہ 60° ہے، آدھا 30° ہے، اور 120 + 30 = 150"
+      },
+      "common_wrong": [
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "60° is half of 120°, or the gap. The ray is 150° from the base arm.",
+            "ur": "60° 120° کا آدھا یا فاصلہ ہے۔ شعاع بنیادی بازو سے 150° پر ہے۔"
+          },
+          "misconception_id": "gap_not_angle"
+        },
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "300 is 120 + 180. Halfway means half of that: 150.",
+            "ur": "300 یعنی 120 + 180۔ بیچ کا مطلب اس کا آدھا ہے: 150"
+          },
+          "misconception_id": "add_not_mid"
+        },
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30° is half the gap. From the base arm: 120 + 30 = 150.",
+            "ur": "30° فاصلے کا آدھا ہے۔ بنیادی بازو سے: 120 + 30 = 150"
+          },
+          "misconception_id": "gap_not_angle"
+        }
+      ]
+    },
+    {
+      "id": "q8_order",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hamza bisects an angle. His steps are mixed up: X) join the vertex to where the arcs cross; Y) draw equal arcs from the two cut points so that they cross; Z) draw an arc from the vertex that cuts both arms. What is the right order?",
+        "ur": "حمزہ ایک زاویے کی تنصیف کرتا ہے۔ اس کے قدم الٹ پلٹ ہو گئے ہیں: X) راس کو قوسوں کے ملاپ سے ملائیں؛ Y) کٹے ہوئے دو نقطوں سے برابر قوسیں لگائیں جو ایک دوسرے کو کاٹیں؛ Z) راس سے قوس لگائیں جو دونوں بازو کاٹے۔ صحیح ترتیب کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Z, then Y, then X",
+            "ur": "Z، پھر Y، پھر X"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Cut the arms, cross the arcs, then join.",
+            "ur": "جی ہاں! بازو کاٹیں، قوسیں ملائیں، پھر جوڑیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "X, then Z, then Y",
+            "ur": "X، پھر Z، پھر Y"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "You cannot join to the crossing before it exists.",
+            "ur": "ملاپ بننے سے پہلے اس سے جوڑ نہیں سکتے۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Y, then Z, then X",
+            "ur": "Y، پھر Z، پھر X"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The equal arcs start from the points cut on the arms, so Z comes first.",
+            "ur": "برابر قوسیں بازوؤں پر کٹے نقطوں سے لگتی ہیں، تو Z پہلے آتا ہے۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Z, then X, then Y",
+            "ur": "Z، پھر X، پھر Y"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "X needs the crossing from Y.",
+            "ur": "X کو Y کا ملاپ چاہیے۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        }
+      ]
+    },
+    {
+      "id": "q9_bisector_ray",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The arc from O cuts the arms at P and Q, and angle POQ is 70°. The line from O through the crossing R of the equal arcs bisects the angle. How big is angle POR, in degrees?",
+        "ur": "O سے لگی قوس بازوؤں کو P اور Q پر کاٹتی ہے، اور زاویہ POQ 70° ہے۔ برابر قوسوں کے ملاپ R سے گزرنے والی O کی لکیر زاویے کی تنصیف کرتی ہے۔ زاویہ POR کتنے درجے کا ہے؟"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "OR bisects angle POQ.",
+        "ur": "OR زاویہ POQ کی تنصیف کرتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 70 ÷ 2 = 35°.",
+        "ur": "درست! 70 ÷ 2 = 35°"
+      },
+      "feedback_wrong": {
+        "en": "Half of 70 is 35.",
+        "ur": "70 کا آدھا 35 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 70,
+          "feedback": {
+            "en": "70° is the whole angle POQ. POR is half: 35.",
+            "ur": "70° پورا زاویہ POQ ہے۔ POR آدھا ہے: 35"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "answer": 140,
+          "feedback": {
+            "en": "That doubles 70. Halve it: 35.",
+            "ur": "یہ 70 کو دگنا کرتا ہے۔ آدھا کریں: 35"
+          },
+          "misconception_id": "bisect_not_half"
+        }
+      ]
+    },
+    {
+      "id": "q10_three_steps",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Kashif makes three 60° steps in a row from the base arm, one after the other. What angle does his last ray make with the base arm, in degrees?",
+        "ur": "کاشف بنیادی بازو سے لگاتار تین 60° کے قدم بناتا ہے۔ اس کی آخری شعاع بنیادی بازو کے ساتھ کتنے درجے کا زاویہ بناتی ہے؟"
+      },
+      "answer": 180,
+      "checker": "numeric",
+      "hint": {
+        "en": "Three steps of 60°.",
+        "ur": "60° کے تین قدم۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 60 = 180°. The last ray is in line with the base arm: a straight line.",
+        "ur": "درست! 3 × 60 = 180°۔ آخری شعاع بنیادی بازو کی سیدھ میں ہے: سیدھی لکیر۔"
+      },
+      "feedback_wrong": {
+        "en": "60 + 60 + 60 = 180.",
+        "ur": "60 + 60 + 60 = 180"
+      },
+      "common_wrong": [
+        {
+          "answer": 120,
+          "feedback": {
+            "en": "120° is two steps. He made three: 180.",
+            "ur": "120° دو قدم ہیں۔ اس نے تین بنائے: 180"
+          },
+          "misconception_id": "basic_angle_mix"
+        },
+        {
+          "answer": 360,
+          "feedback": {
+            "en": "360° would be six steps. Three steps: 180.",
+            "ur": "360° چھ قدم ہوں گے۔ تین قدم: 180"
+          },
+          "misconception_id": "basic_angle_mix"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zain says: to make a 75° angle, I bisect the 60° angle. What went wrong?",
+        "ur": "زین کہتا ہے: 75° کا زاویہ بنانے کے لیے میں 60° کے زاویے کی تنصیف کرتا ہوں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. Bisecting 60° gives 75°.",
+            "ur": "کوئی غلطی نہیں۔ 60° کی تنصیف سے 75° ملتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Half of 60° is 30°, not 75°.",
+            "ur": "60° کا آدھا 30° ہے، 75° نہیں۔"
+          },
+          "misconception_id": "wrong_start_angle"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Bisecting 60° gives 30°. For 75° you bisect the angle between the 60° and 90° rays.",
+            "ur": "60° کی تنصیف سے 30° ملتا ہے۔ 75° کے لیے 60° اور 90° کی شعاعوں کے بیچ کے زاویے کی تنصیف کرتے ہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! (60 + 90) ÷ 2 = 75.",
+            "ur": "جی ہاں! (60 + 90) ÷ 2 = 75"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should bisect the 120° angle.",
+            "ur": "اسے 120° کے زاویے کی تنصیف کرنی چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 60°.",
+            "ur": "اس سے 60° ملتا ہے۔"
+          },
+          "misconception_id": "wrong_start_angle"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! One basic angle makes a whole family.",
+          "ur": "شاباش! ایک بنیادی زاویے سے پورا خاندان بنتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "Bisecting halves an angle: 80° gives 40°. Basic angle 60°. 30° = bisect 60°; 120° = 60° twice; 90° = halfway between 60° and 120°; 45° = bisect 90°; 75° = halfway between 60° and 90°; 105° = halfway between 90° and 120°; 150° = halfway between 120° and 180°. Halfway means add the two angles and halve, measured from the base arm.",
+        "ur": "تنصیف زاویے کو آدھا کرتی ہے: 80° سے 40°۔ بنیادی زاویہ 60°۔ 30° = 60° کی تنصیف؛ 120° = 60° دو بار؛ 90° = 60° اور 120° کے بیچ؛ 45° = 90° کی تنصیف؛ 75° = 60° اور 90° کے بیچ؛ 105° = 90° اور 120° کے بیچ؛ 150° = 120° اور 180° کے بیچ۔ بیچ کا مطلب دونوں زاویے جمع کر کے آدھا کرنا ہے، بنیادی بازو سے ناپتے ہوئے۔"
+      },
+      "points": [
+        {
+          "en": "Bisect means halve: two equal parts.",
+          "ur": "تنصیف یعنی آدھا کرنا: دو برابر حصے۔"
+        },
+        {
+          "en": "Halfway: add the two angles, then halve.",
+          "ur": "بیچ میں: دونوں زاویے جمع کریں، پھر آدھا کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_bisect_150",
+      "type": "apply",
+      "step": {
+        "id": "r_bisect_150",
+        "type": "number",
+        "prompt": {
+          "en": "A 150° angle is bisected. How big is each part, in degrees?",
+          "ur": "150° کے زاویے کی تنصیف کی گئی۔ ہر حصہ کتنے درجے کا ہے؟"
+        },
+        "answer": 75,
+        "checker": "numeric",
+        "hint": {
+          "en": "Halve 150.",
+          "ur": "150 کو آدھا کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 150 ÷ 2 = 75°.",
+          "ur": "درست! 150 ÷ 2 = 75°"
+        },
+        "feedback_wrong": {
+          "en": "Two equal parts: 75.",
+          "ur": "دو برابر حصے: 75"
+        },
+        "common_wrong": [
+          {
+            "answer": 150,
+            "feedback": {
+              "en": "150° is the whole angle. Each part is half: 75.",
+              "ur": "150° پورا زاویہ ہے۔ ہر حصہ آدھا ہے: 75"
+            },
+            "misconception_id": "bisect_not_half"
+          },
+          {
+            "answer": 300,
+            "feedback": {
+              "en": "That doubles it. Halve it: 75.",
+              "ur": "یہ دگنا کرتا ہے۔ آدھا کریں: 75"
+            },
+            "misconception_id": "bisect_not_half"
+          }
+        ]
+      },
+      "skill": "maths.constructions.ex_10_2"
+    },
+    {
+      "id": "r_mid_45",
+      "type": "apply",
+      "step": {
+        "id": "r_mid_45",
+        "type": "number",
+        "prompt": {
+          "en": "A ray is made halfway between the 30° ray and the 60° ray. What angle does it make with the base arm, in degrees?",
+          "ur": "30° کی شعاع اور 60° کی شعاع کے ٹھیک بیچ میں شعاع بنائی گئی۔ وہ بنیادی بازو کے ساتھ کتنے درجے کا زاویہ بناتی ہے؟"
+        },
+        "answer": 45,
+        "checker": "numeric",
+        "hint": {
+          "en": "Halfway between 30 and 60.",
+          "ur": "30 اور 60 کے ٹھیک بیچ میں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! (30 + 60) ÷ 2 = 45°.",
+          "ur": "درست! (30 + 60) ÷ 2 = 45°"
+        },
+        "feedback_wrong": {
+          "en": "The gap is 30°, half is 15°, and 30 + 15 = 45.",
+          "ur": "فاصلہ 30° ہے، آدھا 15° ہے، اور 30 + 15 = 45"
+        },
+        "common_wrong": [
+          {
+            "answer": 90,
+            "feedback": {
+              "en": "90 is 30 + 60. Halfway means half of that: 45.",
+              "ur": "90 یعنی 30 + 60۔ بیچ کا مطلب اس کا آدھا ہے: 45"
+            },
+            "misconception_id": "add_not_mid"
+          },
+          {
+            "answer": 15,
+            "feedback": {
+              "en": "15° is half the gap. From the base arm: 30 + 15 = 45.",
+              "ur": "15° فاصلے کا آدھا ہے۔ بنیادی بازو سے: 30 + 15 = 45"
+            },
+            "misconception_id": "gap_not_angle"
+          }
+        ]
+      },
+      "skill": "maths.constructions.ex_10_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 10.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the basic angle 60° (q1), what bisect means (q2, q3, q9), bisecting twice (q4), going halfway between two rays for 75°, 105° and 150° (q5, q7, q11), which step gives 45° (q6), the order of steps (q8) and three 60° steps making a straight line (q10).",
+    "Each wrong answer is a real mistake: dividing by 3 or doubling instead of halving, adding the two angles instead of going halfway, giving half the gap instead of the angle from the base arm, and bisecting the wrong angle.",
+    "Urdu terms to check: تنصیف کرنا, ناصف زاویہ, پرکار, قوس, راس, بازو, مساوی الاضلاع مثلث and بنیادی زاویہ, all as in the existing Constructions lessons. تثلیث (trisection, in a wrong-answer feedback) is new, so a teacher should confirm it.",
+    "The numbers were worked out in content/sources/g6-maths-19/exercise_10_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
