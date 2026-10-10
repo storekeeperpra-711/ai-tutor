@@ -83,7 +83,7 @@ void main() {
 
     const name = 'g6-maths-02-dividing-fractions__s1_hook_ur.m4a';
     expect(find.text('No voice yet'), findsWidgets);
-    await tester.scrollUntilVisible(find.byKey(const Key('voice-$name')), 300);
+    await tester.scrollUntilVisible(find.byKey(const Key('voice-$name')), 600);
 
     await tapKey(tester, 'record-$name');
     await tester.pumpAndSettle();
