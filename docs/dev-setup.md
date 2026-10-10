@@ -53,7 +53,7 @@ Right-to-left: when the app is in Urdu, Flutter mirrors every screen. Use `EdgeI
    ```
 3. Run the app in debug mode → **Lessons (developer preview)** → tap the lesson. The English/اردو button in the top bar switches language while you play.
 
-`flutter test` also plays every lesson end to end in both languages (`test/lessons/lesson_playthrough_test.dart`), answering wrong first and then right, so a lesson that can't be completed fails CI.
+`flutter test` also plays every lesson end to end in both languages (`test/lessons/playthrough_shard.dart`, split over four test files), answering wrong first and then right, so a lesson that can't be completed fails CI.
 
 ## Checkers (Phase 2)
 
