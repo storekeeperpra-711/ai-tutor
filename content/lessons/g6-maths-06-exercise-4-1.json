@@ -1,0 +1,980 @@
+{
+  "id": "g6-maths-06-exercise-4-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Write a ratio in its simplest form, change between fractions and ratios, find a missing term of an equivalent ratio, share a quantity in a ratio and join two ratios into a continued ratio.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, Exercise 4.1"
+    }
+  ],
+  "skills": [
+    "maths.ratio.ex_4_1"
+  ],
+  "title": {
+    "en": "Exercise 4.1 practice: ratios",
+    "ur": "مشق 4.1 کی پریکٹس: نسبت"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.meaning"
+    },
+    {
+      "skill": "maths.ratio.equivalent"
+    },
+    {
+      "skill": "maths.ratio.share"
+    },
+    {
+      "skill": "maths.ratio.continued"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "order_swapped",
+      "description": "Writes the ratio the wrong way round, putting the second quantity first."
+    },
+    {
+      "id": "not_simplest",
+      "description": "Stops before the ratio is in its lowest terms."
+    },
+    {
+      "id": "one_term_divided",
+      "description": "Divides only one term of a ratio, or the two terms by different numbers."
+    },
+    {
+      "id": "units_mixed",
+      "description": "Compares quantities in different units without changing them to the same unit."
+    },
+    {
+      "id": "part_whole",
+      "description": "Treats a ratio of part to part as part to whole (3 : 7 as 3/7 of the total, or 3/8 as 3 : 8)."
+    },
+    {
+      "id": "equal_share",
+      "description": "Shares equally whatever the ratio is."
+    },
+    {
+      "id": "one_part",
+      "description": "Gives the value of one part instead of the share asked for."
+    },
+    {
+      "id": "added_not_scaled",
+      "description": "Adds the same number to both terms instead of multiplying them by the same number."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.ex_4_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.ex_4_1": [
+      {
+        "id": "qb_simplify",
+        "type": "recall",
+        "step": {
+          "id": "qb_simplify",
+          "type": "text_check",
+          "prompt": {
+            "en": "Write 20 : 35 in its simplest form.",
+            "ur": "20 : 35 کو سادہ ترین صورت میں لکھیں۔"
+          },
+          "checker": "text",
+          "expected": "4:7",
+          "accept": [
+            "4 to 7",
+            "4∶7"
+          ],
+          "hint": {
+            "en": "Both 20 and 35 divide by 5.",
+            "ur": "20 اور 35 دونوں 5 سے تقسیم ہوتے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 4 : 7.",
+            "ur": "درست! 4 : 7"
+          },
+          "feedback_wrong": {
+            "en": "20 ÷ 5 = 4 and 35 ÷ 5 = 7: 4 : 7.",
+            "ur": "20 ÷ 5 = 4 اور 35 ÷ 5 = 7: 4 : 7"
+          },
+          "common_wrong": [
+            {
+              "answer": "7:4",
+              "feedback": {
+                "en": "Keep the order: 20 first, so 4 : 7.",
+                "ur": "ترتیب وہی رکھیں: 20 پہلے، اس لیے 4 : 7"
+              },
+              "misconception_id": "order_swapped"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_share",
+        "type": "apply",
+        "step": {
+          "id": "qb_share",
+          "type": "number",
+          "prompt": {
+            "en": "Divide 280 sweets between two children in the ratio 3 : 4. How many does the second child get?",
+            "ur": "280 مٹھائیاں دو بچوں میں 3 : 4 کی نسبت سے تقسیم کریں۔ دوسرے بچے کو کتنی ملتی ہیں؟"
+          },
+          "answer": 160,
+          "checker": "numeric",
+          "hint": {
+            "en": "3 + 4 = 7 parts. The second child has 4 of them.",
+            "ur": "3 + 4 = 7 حصے۔ دوسرے بچے کے 4 حصے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! One part is 40, so 4 × 40 = 160.",
+            "ur": "درست! ایک حصہ 40 ہے، اس لیے 4 × 40 = 160"
+          },
+          "feedback_wrong": {
+            "en": "280 ÷ 7 = 40 and 4 × 40 = 160.",
+            "ur": "280 ÷ 7 = 40 اور 4 × 40 = 160"
+          },
+          "common_wrong": [
+            {
+              "answer": 120,
+              "feedback": {
+                "en": "That is the first child's share (3 parts). The second has 4 parts: 160.",
+                "ur": "یہ پہلے بچے کا حصہ ہے (3 حصے)۔ دوسرے کے 4 حصے ہیں: 160"
+              },
+              "misconception_id": "order_swapped"
+            },
+            {
+              "answer": 140,
+              "feedback": {
+                "en": "That shares equally. The ratio is 3 : 4: 160.",
+                "ur": "یہ برابر تقسیم ہے۔ نسبت 3 : 4 ہے: 160"
+              },
+              "misconception_id": "equal_share"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Rani says the ratio 3 : 5 means the first person gets 3/5 of the money. What went wrong?",
+            "ur": "رانی کہتی ہے نسبت 3 : 5 کا مطلب ہے پہلے شخص کو رقم کا 3/5 ملتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "There are 3 + 5 = 8 parts, so the first person gets 3/8 of the money.",
+                "ur": "کل 3 + 5 = 8 حصے ہیں، اس لیے پہلے شخص کو رقم کا 3/8 ملتا ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The total is the sum of the parts.",
+                "ur": "جی ہاں! کل حصوں کا مجموعہ ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 3/5 is right.",
+                "ur": "کوئی غلطی نہیں۔ 3/5 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "5 is only the second person's parts, not the total.",
+                "ur": "5 صرف دوسرے شخص کے حصے ہیں، کل نہیں۔"
+              },
+              "misconception_id": "part_whole"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It should be 5/3.",
+                "ur": "یہ 5/3 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "5/3 is more than 1 whole, which cannot be a share.",
+                "ur": "5/3 ایک پورے سے زیادہ ہے، یہ حصہ نہیں ہو سکتا۔"
+              },
+              "misconception_id": "order_swapped"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_share",
+      "front": {
+        "en": "How do you share an amount in a ratio?",
+        "ur": "رقم کو نسبت سے کیسے تقسیم کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Add the parts, divide the amount by the sum to get one part, then multiply by each term.",
+        "ur": "حصے جمع کریں، رقم کو مجموعے سے تقسیم کر کے ایک حصہ نکالیں، پھر ہر جز سے ضرب دیں۔"
+      }
+    },
+    {
+      "id": "f_continued",
+      "front": {
+        "en": "How do you join A : B and B : C?",
+        "ur": "A : B اور B : C کو کیسے جوڑتے ہیں؟"
+      },
+      "back": {
+        "en": "Make B the same number in both ratios first, then write A : B : C.",
+        "ur": "پہلے دونوں نسبتوں میں B کو ایک ہی عدد بنائیں، پھر A : B : C لکھیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_family",
+      "text": {
+        "en": "Count the boys and girls (or men and women) in your family and your neighbours' families. Write the ratio of boys to girls in its simplest form for each. Which family has the biggest ratio?",
+        "ur": "اپنے خاندان اور پڑوسیوں کے خاندانوں میں لڑکوں اور لڑکیوں (یا مردوں اور عورتوں) کو گنیں۔ ہر ایک کے لیے لڑکوں اور لڑکیوں کی نسبت سادہ ترین صورت میں لکھیں۔ کس خاندان میں نسبت سب سے بڑی ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Ratio",
+      "ur": "نسبت"
+    },
+    {
+      "en": "Antecedent",
+      "ur": "مقدم"
+    },
+    {
+      "en": "Consequent",
+      "ur": "تالی"
+    },
+    {
+      "en": "Equivalent ratio",
+      "ur": "مساوی نسبت"
+    },
+    {
+      "en": "Continued ratio",
+      "ur": "مسلسل نسبت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 4.1 is about ratios. Ready?",
+          "ur": "مشق 4.1 نسبت کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 4.1 of your maths book (PCTB Mathematics 6). Here you write ratios in the simplest form, change fractions into ratios, share money in a ratio and join two ratios into a continued ratio. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 4.1 کے ساتھ ہے۔ اس میں آپ نسبتیں سادہ ترین صورت میں لکھیں گے، کسر کو نسبت میں بدلیں گے، رقم کو نسبت سے تقسیم کریں گے اور دو نسبتوں سے مسلسل نسبت بنائیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_simplest",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A class has 12 boys and 18 girls. Write the ratio of boys to girls in its simplest form (like 2:3).",
+        "ur": "ایک جماعت میں 12 لڑکے اور 18 لڑکیاں ہیں۔ لڑکوں اور لڑکیوں کی نسبت سادہ ترین صورت میں لکھیں (جیسے 2:3)۔"
+      },
+      "checker": "text",
+      "expected": "2:3",
+      "accept": [
+        "2 to 3",
+        "2∶3"
+      ],
+      "hint": {
+        "en": "Write 12 : 18, then divide both terms by 6.",
+        "ur": "12 : 18 لکھیں، پھر دونوں اجزا کو 6 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 : 18 = 2 : 3.",
+        "ur": "درست! 12 : 18 = 2 : 3"
+      },
+      "feedback_wrong": {
+        "en": "Boys first: 12 : 18. Divide both by 6 to get 2 : 3.",
+        "ur": "پہلے لڑکے: 12 : 18۔ دونوں کو 6 سے تقسیم کریں تو 2 : 3 ملتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "3:2",
+          "feedback": {
+            "en": "The question asks boys to girls, so boys come first: 2 : 3.",
+            "ur": "سوال لڑکوں اور لڑکیوں کی نسبت مانگتا ہے، اس لیے لڑکے پہلے: 2 : 3"
+          },
+          "misconception_id": "order_swapped"
+        },
+        {
+          "answer": "12:18",
+          "feedback": {
+            "en": "That is the ratio, but not yet in its simplest form. Divide both terms by 6.",
+            "ur": "یہ نسبت ہے مگر ابھی سادہ ترین صورت میں نہیں۔ دونوں اجزا کو 6 سے تقسیم کریں۔"
+          },
+          "misconception_id": "not_simplest"
+        }
+      ]
+    },
+    {
+      "id": "q2_consequent",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "In the ratio 5 : 8, which number is the consequent (the second term)?",
+        "ur": "نسبت 5 : 8 میں تالی (دوسرا جز) کون سا عدد ہے؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "The antecedent is the first term. The consequent is the other one.",
+        "ur": "مقدم پہلا جز ہے۔ تالی دوسرا جز ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! In 5 : 8, 5 is the antecedent and 8 is the consequent.",
+        "ur": "درست! 5 : 8 میں 5 مقدم اور 8 تالی ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The first term (5) is the antecedent. The second term (8) is the consequent.",
+        "ur": "پہلا جز (5) مقدم ہے۔ دوسرا جز (8) تالی ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is the first term, the antecedent. The consequent is the second term: 8.",
+            "ur": "5 پہلا جز ہے، یعنی مقدم۔ تالی دوسرا جز ہے: 8"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Divide both terms by the same number. A ratio has no units.",
+          "ur": "دونوں اجزا کو ایک ہی عدد سے تقسیم کریں۔ نسبت کی کوئی اکائی نہیں ہوتی۔"
+        }
+      },
+      "text": {
+        "en": "A ratio compares two quantities of the same kind in the same unit: 12 boys to 18 girls is 12 : 18. To simplify it, divide both terms by the same number until no number divides both: 12 : 18 = 2 : 3. To change a fraction of a whole into a ratio, use the part and the rest: if 3/8 is read, 5/8 is not read, so the ratio is 3 : 5. To share in a ratio, add the parts, find the value of one part, and multiply: 3 : 5 has 8 parts. For a continued ratio, make the common quantity the same in both ratios first.",
+        "ur": "نسبت ایک ہی قسم اور ایک ہی اکائی کی دو مقداروں کا موازنہ ہے: 12 لڑکے اور 18 لڑکیاں یعنی 12 : 18۔ اسے سادہ کرنے کے لیے دونوں اجزا کو ایک ہی عدد سے تقسیم کریں جب تک کوئی عدد دونوں کو تقسیم نہ کر سکے: 12 : 18 = 2 : 3۔ کسی کل کی کسر کو نسبت بنانے کے لیے حصہ اور باقی لیں: اگر 3/8 پڑھا ہے تو 5/8 نہیں پڑھا، اس لیے نسبت 3 : 5 ہے۔ نسبت سے تقسیم کے لیے حصے جمع کریں، ایک حصے کی قیمت نکالیں اور ضرب دیں: 3 : 5 میں 8 حصے ہیں۔ مسلسل نسبت کے لیے پہلے دونوں نسبتوں میں مشترک مقدار کو برابر کریں۔"
+      }
+    },
+    {
+      "id": "q3_fraction",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A ratio is 3 : 7. Which fraction is the ratio written in fraction form?",
+        "ur": "نسبت 3 : 7 ہے۔ کسر کی صورت میں یہ نسبت کون سی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "3/10",
+            "ur": "3/10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3/10 compares 3 with the total of both parts. The fraction form of 3 : 7 is 3/7.",
+            "ur": "3/10 میں 3 کا موازنہ کل سے ہے۔ 3 : 7 کی کسری صورت 3/7 ہے۔"
+          },
+          "misconception_id": "part_whole"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "7/3",
+            "ur": "7/3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That puts the terms the wrong way round.",
+            "ur": "اس میں اجزا الٹے ہیں۔"
+          },
+          "misconception_id": "order_swapped"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "4/7",
+            "ur": "4/7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That subtracts the terms. The fraction form just writes 3 over 7.",
+            "ur": "یہ اجزا کو گھٹاتا ہے۔ کسری صورت میں بس 3 کو 7 پر لکھا جاتا ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "3/7",
+            "ur": "3/7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The ratio 3 : 7 in fraction form is 3/7.",
+            "ur": "جی ہاں! نسبت 3 : 7 کسر کی صورت میں 3/7 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4_simplify",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 36 : 48 in its simplest form.",
+        "ur": "36 : 48 کو سادہ ترین صورت میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "3:4",
+      "accept": [
+        "3 to 4",
+        "3∶4"
+      ],
+      "hint": {
+        "en": "The biggest number that divides 36 and 48 is 12.",
+        "ur": "36 اور 48 کو تقسیم کرنے والا سب سے بڑا عدد 12 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 36 ÷ 12 = 3 and 48 ÷ 12 = 4.",
+        "ur": "درست! 36 ÷ 12 = 3 اور 48 ÷ 12 = 4"
+      },
+      "feedback_wrong": {
+        "en": "Divide both terms by 12: 3 : 4.",
+        "ur": "دونوں اجزا کو 12 سے تقسیم کریں: 3 : 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "6:8",
+          "feedback": {
+            "en": "6 : 8 can still be divided by 2. Keep going: 3 : 4.",
+            "ur": "6 : 8 کو ابھی 2 سے تقسیم کیا جا سکتا ہے۔ جاری رکھیں: 3 : 4"
+          },
+          "misconception_id": "not_simplest"
+        },
+        {
+          "answer": "4:3",
+          "feedback": {
+            "en": "The order stays the same: 36 first, so 3 : 4.",
+            "ur": "ترتیب وہی رہتی ہے: 36 پہلے، اس لیے 3 : 4"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "q5_units",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the ratio of 2 metres to 50 centimetres in its simplest form.",
+        "ur": "2 میٹر اور 50 سینٹی میٹر کی نسبت سادہ ترین صورت میں معلوم کریں۔"
+      },
+      "checker": "text",
+      "expected": "4:1",
+      "accept": [
+        "4 to 1",
+        "4∶1"
+      ],
+      "hint": {
+        "en": "Change 2 m to centimetres first. 1 m = 100 cm.",
+        "ur": "پہلے 2 میٹر کو سینٹی میٹر میں بدلیں۔ 1 میٹر = 100 سینٹی میٹر"
+      },
+      "feedback_correct": {
+        "en": "Right! 200 cm : 50 cm = 4 : 1.",
+        "ur": "درست! 200 سینٹی میٹر : 50 سینٹی میٹر = 4 : 1"
+      },
+      "feedback_wrong": {
+        "en": "2 m = 200 cm, so the ratio is 200 : 50. Divide by 50 to get 4 : 1.",
+        "ur": "2 میٹر = 200 سینٹی میٹر، اس لیے نسبت 200 : 50 ہے۔ 50 سے تقسیم کریں تو 4 : 1 ملتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "1:25",
+          "feedback": {
+            "en": "That compares 2 with 50 in different units. Change both to centimetres: 4 : 1.",
+            "ur": "یہ 2 اور 50 کو مختلف اکائیوں میں موازنہ کرتا ہے۔ دونوں کو سینٹی میٹر میں بدلیں: 4 : 1"
+          },
+          "misconception_id": "units_mixed"
+        },
+        {
+          "answer": "200:50",
+          "feedback": {
+            "en": "That is right but not yet in its simplest form. Divide by 50: 4 : 1.",
+            "ur": "یہ درست ہے مگر ابھی سادہ ترین صورت میں نہیں۔ 50 سے تقسیم کریں: 4 : 1"
+          },
+          "misconception_id": "not_simplest"
+        }
+      ]
+    },
+    {
+      "id": "q6_read",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Aisha has read 3/8 of a story book. Write the ratio of the part she has read to the part she has not read.",
+        "ur": "عائشہ نے کہانی کی کتاب کا 3/8 حصہ پڑھ لیا ہے۔ پڑھے ہوئے حصے اور نہ پڑھے ہوئے حصے کی نسبت لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "3:5",
+      "accept": [
+        "3 to 5",
+        "3∶5"
+      ],
+      "hint": {
+        "en": "If 3 of 8 equal parts are read, how many of the 8 parts are not read?",
+        "ur": "اگر 8 برابر حصوں میں سے 3 پڑھ لیے ہیں تو 8 میں سے کتنے حصے نہیں پڑھے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 parts read and 5 parts not read: 3 : 5.",
+        "ur": "درست! 3 حصے پڑھے اور 5 نہیں پڑھے: 3 : 5"
+      },
+      "feedback_wrong": {
+        "en": "The book has 8 equal parts: 3 are read and 8 − 3 = 5 are not. The ratio is 3 : 5.",
+        "ur": "کتاب کے 8 برابر حصے ہیں: 3 پڑھے ہیں اور 8 − 3 = 5 نہیں پڑھے۔ نسبت 3 : 5 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "3:8",
+          "feedback": {
+            "en": "That compares the part read to the whole book. We need read to not read: 3 : 5.",
+            "ur": "یہ پڑھے ہوئے حصے کا پوری کتاب سے موازنہ ہے۔ ہمیں پڑھے اور نہ پڑھے کا چاہیے: 3 : 5"
+          },
+          "misconception_id": "part_whole"
+        },
+        {
+          "answer": "5:3",
+          "feedback": {
+            "en": "The question asks read first: 3 : 5.",
+            "ur": "سوال میں پڑھا ہوا پہلے ہے: 3 : 5"
+          },
+          "misconception_id": "order_swapped"
+        }
+      ]
+    },
+    {
+      "id": "q7_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the missing number: 5 : 9 = 35 : □",
+        "ur": "گم شدہ عدد معلوم کریں: 5 : 9 = 35 : □"
+      },
+      "answer": 63,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 became 35. What did you multiply by? Do the same to 9.",
+        "ur": "5 سے 35 بنا۔ آپ نے کس سے ضرب دی؟ 9 کے ساتھ بھی یہی کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 7 = 35 and 9 × 7 = 63.",
+        "ur": "درست! 5 × 7 = 35 اور 9 × 7 = 63"
+      },
+      "feedback_wrong": {
+        "en": "Both terms are multiplied by 7: 9 × 7 = 63.",
+        "ur": "دونوں اجزا کو 7 سے ضرب دی گئی: 9 × 7 = 63"
+      },
+      "common_wrong": [
+        {
+          "answer": 39,
+          "feedback": {
+            "en": "That adds 30 to both terms. A ratio stays the same when you multiply both terms by the same number: 63.",
+            "ur": "یہ دونوں اجزا میں 30 جمع کرتا ہے۔ نسبت تب برقرار رہتی ہے جب دونوں کو ایک ہی عدد سے ضرب دیں: 63"
+          },
+          "misconception_id": "added_not_scaled"
+        }
+      ]
+    },
+    {
+      "id": "q8_share2",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Rs 1,200 is shared between two friends in the ratio 3 : 5. How many rupees does the friend with the bigger share get?",
+        "ur": "1,200 روپے دو دوستوں میں 3 : 5 کی نسبت سے تقسیم ہوتے ہیں۔ بڑے حصے والے دوست کو کتنے روپے ملتے ہیں؟"
+      },
+      "answer": 750,
+      "checker": "numeric",
+      "hint": {
+        "en": "3 + 5 = 8 parts. Find one part, then multiply by 5.",
+        "ur": "3 + 5 = 8 حصے۔ ایک حصہ نکالیں، پھر 5 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 150 and 5 × 150 = 750.",
+        "ur": "درست! ایک حصہ 150 ہے اور 5 × 150 = 750"
+      },
+      "feedback_wrong": {
+        "en": "1200 ÷ 8 = 150 for one part. The bigger share is 5 parts: 750 rupees.",
+        "ur": "1200 ÷ 8 = 150 ایک حصہ ہے۔ بڑا حصہ 5 حصے ہیں: 750 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "That is the value of one part. The bigger share has 5 parts: 750.",
+            "ur": "یہ ایک حصے کی قیمت ہے۔ بڑے حصے میں 5 حصے ہیں: 750"
+          },
+          "misconception_id": "one_part"
+        },
+        {
+          "answer": 600,
+          "feedback": {
+            "en": "That shares equally. The ratio is 3 : 5, so the shares are not equal: 750.",
+            "ur": "یہ برابر تقسیم ہے۔ نسبت 3 : 5 ہے، اس لیے حصے برابر نہیں: 750"
+          },
+          "misconception_id": "equal_share"
+        }
+      ]
+    },
+    {
+      "id": "q9_share_sweets",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "There are 360 sweets to share between Ali and Sara in the ratio 4 : 5. How many sweets does Ali get?",
+        "ur": "360 مٹھائیاں علی اور سارہ میں 4 : 5 کی نسبت سے تقسیم کرنی ہیں۔ علی کو کتنی مٹھائیاں ملتی ہیں؟"
+      },
+      "answer": 160,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 + 5 = 9 parts. Ali has 4 of them.",
+        "ur": "4 + 5 = 9 حصے۔ علی کے پاس ان میں سے 4 ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 40, and 4 × 40 = 160.",
+        "ur": "درست! ایک حصہ 40 ہے اور 4 × 40 = 160"
+      },
+      "feedback_wrong": {
+        "en": "360 ÷ 9 = 40 for one part. Ali gets 4 parts: 160 sweets.",
+        "ur": "360 ÷ 9 = 40 ایک حصہ ہے۔ علی کو 4 حصے ملتے ہیں: 160 مٹھائیاں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 200,
+          "feedback": {
+            "en": "That is Sara's share (5 parts). Ali has 4 parts: 160.",
+            "ur": "یہ سارہ کا حصہ ہے (5 حصے)۔ علی کے 4 حصے ہیں: 160"
+          },
+          "misconception_id": "order_swapped"
+        },
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "That shares equally. The ratio is 4 : 5: 160.",
+            "ur": "یہ برابر تقسیم ہے۔ نسبت 4 : 5 ہے: 160"
+          },
+          "misconception_id": "equal_share"
+        }
+      ]
+    },
+    {
+      "id": "q10_ages",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two brothers' ages add up to 45 years and are in the ratio 4 : 5. How old is the older brother?",
+        "ur": "دو بھائیوں کی عمروں کا مجموعہ 45 سال ہے اور ان کی نسبت 4 : 5 ہے۔ بڑے بھائی کی عمر کتنی ہے؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 + 5 = 9 parts make 45 years. How much is one part?",
+        "ur": "4 + 5 = 9 حصے مل کر 45 سال بنتے ہیں۔ ایک حصہ کتنا ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 5 years, and the older brother has 5 parts: 25 years.",
+        "ur": "درست! ایک حصہ 5 سال ہے اور بڑے بھائی کے 5 حصے ہیں: 25 سال"
+      },
+      "feedback_wrong": {
+        "en": "45 ÷ 9 = 5 years a part. The older brother has the bigger ratio number: 5 × 5 = 25.",
+        "ur": "45 ÷ 9 = 5 سال فی حصہ۔ بڑے بھائی کا نسبتی عدد بڑا ہے: 5 × 5 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "That is the younger brother (4 parts). The older one has 5 parts: 25.",
+            "ur": "یہ چھوٹا بھائی ہے (4 حصے)۔ بڑے کے 5 حصے ہیں: 25"
+          },
+          "misconception_id": "order_swapped"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is one part. The older brother has 5 parts: 25.",
+            "ur": "یہ ایک حصہ ہے۔ بڑے بھائی کے 5 حصے ہیں: 25"
+          },
+          "misconception_id": "one_part"
+        }
+      ]
+    },
+    {
+      "id": "q11_continued",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hina : Zoya = 2 : 3 and Zoya : Maria = 6 : 7. Write Hina : Zoya : Maria as a continued ratio (like 2:3:4).",
+        "ur": "حنا : زویا = 2 : 3 اور زویا : ماریہ = 6 : 7۔ حنا : زویا : ماریہ مسلسل نسبت کی صورت میں لکھیں (جیسے 2:3:4)۔"
+      },
+      "checker": "text",
+      "expected": "4:6:7",
+      "accept": [
+        "4∶6∶7"
+      ],
+      "hint": {
+        "en": "Zoya is 3 in the first ratio and 6 in the second. Make both 6 first.",
+        "ur": "زویا پہلی نسبت میں 3 اور دوسری میں 6 ہے۔ پہلے دونوں کو 6 بنائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 : 3 = 4 : 6, so Hina : Zoya : Maria = 4 : 6 : 7.",
+        "ur": "درست! 2 : 3 = 4 : 6، اس لیے حنا : زویا : ماریہ = 4 : 6 : 7"
+      },
+      "feedback_wrong": {
+        "en": "Multiply 2 : 3 by 2 to get 4 : 6. Now Zoya is 6 in both, so the continued ratio is 4 : 6 : 7.",
+        "ur": "2 : 3 کو 2 سے ضرب دیں تو 4 : 6 ملتا ہے۔ اب زویا دونوں میں 6 ہے، اس لیے مسلسل نسبت 4 : 6 : 7 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "2:6:7",
+          "feedback": {
+            "en": "Zoya must have the same number in both ratios. Change 2 : 3 to 4 : 6 first: 4 : 6 : 7.",
+            "ur": "زویا کا عدد دونوں نسبتوں میں ایک جیسا ہونا چاہیے۔ پہلے 2 : 3 کو 4 : 6 بنائیں: 4 : 6 : 7"
+          },
+          "misconception_id": "one_term_divided"
+        }
+      ]
+    },
+    {
+      "id": "q12_share3",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Rs 2,400 is shared among three children in the ratio 2 : 3 : 5. How many rupees does the child with the biggest share get?",
+        "ur": "2,400 روپے تین بچوں میں 2 : 3 : 5 کی نسبت سے تقسیم ہوتے ہیں۔ سب سے بڑے حصے والے بچے کو کتنے روپے ملتے ہیں؟"
+      },
+      "answer": 1200,
+      "checker": "numeric",
+      "hint": {
+        "en": "2 + 3 + 5 = 10 parts. The biggest share is 5 parts.",
+        "ur": "2 + 3 + 5 = 10 حصے۔ سب سے بڑا حصہ 5 حصے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is 240 and 5 × 240 = 1200.",
+        "ur": "درست! ایک حصہ 240 ہے اور 5 × 240 = 1200"
+      },
+      "feedback_wrong": {
+        "en": "2400 ÷ 10 = 240 for one part. The biggest share is 5 parts: 1200 rupees.",
+        "ur": "2400 ÷ 10 = 240 ایک حصہ ہے۔ سب سے بڑا حصہ 5 حصے ہیں: 1200 روپے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 800,
+          "feedback": {
+            "en": "That shares equally among three. The ratio is 2 : 3 : 5: 1200.",
+            "ur": "یہ تین میں برابر تقسیم ہے۔ نسبت 2 : 3 : 5 ہے: 1200"
+          },
+          "misconception_id": "equal_share"
+        },
+        {
+          "answer": 240,
+          "feedback": {
+            "en": "That is one part. The biggest share has 5 parts: 1200.",
+            "ur": "یہ ایک حصہ ہے۔ سب سے بڑے حصے میں 5 حصے ہیں: 1200"
+          },
+          "misconception_id": "one_part"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal simplifies 12 : 18 by dividing 12 by 6 and 18 by 3. He gets 2 : 6. What went wrong?",
+        "ur": "بلال 12 : 18 کو سادہ کرتا ہے: 12 کو 6 سے اور 18 کو 3 سے تقسیم کرتا ہے۔ اسے 2 : 6 ملتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "He must divide both terms by the same number. Dividing both by 6 gives 2 : 3.",
+            "ur": "اسے دونوں اجزا کو ایک ہی عدد سے تقسیم کرنا چاہیے۔ دونوں کو 6 سے تقسیم کرنے پر 2 : 3 ملتا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 12 ÷ 6 = 2 and 18 ÷ 6 = 3.",
+            "ur": "جی ہاں! 12 ÷ 6 = 2 اور 18 ÷ 6 = 3"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 2 : 6 is the simplest form of 12 : 18.",
+            "ur": "کوئی غلطی نہیں۔ 2 : 6، 12 : 18 کی سادہ ترین صورت ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 : 6 is a different ratio. 12 : 18 is 2 to 3, but 2 : 6 is 1 to 3.",
+            "ur": "2 : 6 ایک اور نسبت ہے۔ 12 : 18 یعنی 2 : 3، مگر 2 : 6 یعنی 1 : 3"
+          },
+          "misconception_id": "one_term_divided"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should have added 6 to both terms.",
+            "ur": "اسے دونوں اجزا میں 6 جمع کرنا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding changes the ratio. Equivalent ratios come from multiplying or dividing both terms.",
+            "ur": "جمع کرنے سے نسبت بدل جاتی ہے۔ ہم نسبتیں دونوں اجزا کو ضرب یا تقسیم دے کر بناتے ہیں۔"
+          },
+          "misconception_id": "added_not_scaled"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You worked with ratios.",
+          "ur": "شاباش! آپ نے نسبتوں پر کام کیا۔"
+        }
+      },
+      "text": {
+        "en": "Write a ratio in the order asked, in the same unit, and divide both terms by the same number to simplify. A fraction of a whole gives a ratio of the part to the rest. To share in a ratio, add the parts, find one part, then multiply. For a continued ratio, make the common quantity equal first.",
+        "ur": "نسبت اسی ترتیب سے اور ایک ہی اکائی میں لکھیں، اور سادہ کرنے کے لیے دونوں اجزا کو ایک ہی عدد سے تقسیم کریں۔ کل کی کسر سے حصے اور باقی کی نسبت ملتی ہے۔ نسبت سے تقسیم کے لیے حصے جمع کریں، ایک حصہ نکالیں، پھر ضرب دیں۔ مسلسل نسبت کے لیے پہلے مشترک مقدار کو برابر کریں۔"
+      },
+      "points": [
+        {
+          "en": "Check a share: the parts must add up to the total.",
+          "ur": "حصے کو جانچیں: حصوں کا مجموعہ کل کے برابر ہونا چاہیے۔"
+        },
+        {
+          "en": "A ratio has no unit.",
+          "ur": "نسبت کی کوئی اکائی نہیں ہوتی۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_simplify",
+      "type": "recall",
+      "step": {
+        "id": "r_simplify",
+        "type": "text_check",
+        "prompt": {
+          "en": "Write 15 : 40 in its simplest form.",
+          "ur": "15 : 40 کو سادہ ترین صورت میں لکھیں۔"
+        },
+        "checker": "text",
+        "expected": "3:8",
+        "accept": [
+          "3 to 8",
+          "3∶8"
+        ],
+        "hint": {
+          "en": "Both 15 and 40 divide by 5.",
+          "ur": "15 اور 40 دونوں 5 سے تقسیم ہوتے ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 3 : 8.",
+          "ur": "درست! 3 : 8"
+        },
+        "feedback_wrong": {
+          "en": "15 ÷ 5 = 3 and 40 ÷ 5 = 8.",
+          "ur": "15 ÷ 5 = 3 اور 40 ÷ 5 = 8"
+        },
+        "common_wrong": [
+          {
+            "answer": "8:3",
+            "feedback": {
+              "en": "Keep the order: 3 : 8.",
+              "ur": "ترتیب وہی رکھیں: 3 : 8"
+            },
+            "misconception_id": "order_swapped"
+          }
+        ]
+      },
+      "skill": "maths.ratio.ex_4_1"
+    },
+    {
+      "id": "r_share",
+      "type": "apply",
+      "step": {
+        "id": "r_share",
+        "type": "number",
+        "prompt": {
+          "en": "Share Rs 900 in the ratio 1 : 2. How much is the smaller share?",
+          "ur": "900 روپے 1 : 2 کی نسبت سے تقسیم کریں۔ چھوٹا حصہ کتنا ہے؟"
+        },
+        "answer": 300,
+        "checker": "numeric",
+        "hint": {
+          "en": "1 + 2 = 3 parts.",
+          "ur": "1 + 2 = 3 حصے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 900 ÷ 3 = 300.",
+          "ur": "درست! 900 ÷ 3 = 300"
+        },
+        "feedback_wrong": {
+          "en": "One part is 300 and the smaller share is 1 part: 300.",
+          "ur": "ایک حصہ 300 ہے اور چھوٹا حصہ 1 حصہ ہے: 300"
+        },
+        "common_wrong": [
+          {
+            "answer": 450,
+            "feedback": {
+              "en": "That shares equally. The ratio is 1 : 2: 300.",
+              "ur": "یہ برابر تقسیم ہے۔ نسبت 1 : 2 ہے: 300"
+            },
+            "misconception_id": "equal_share"
+          }
+        ]
+      },
+      "skill": "maths.ratio.ex_4_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 4.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers writing and simplifying a ratio (q1, q4, q5), antecedent and consequent (q2), fraction form and fraction to ratio (q3, q6), a missing term of an equivalent ratio (q7), sharing in a ratio (q8, q9, q10, q12), a continued ratio (q11) and a find-the-error question (q13).",
+    "Each wrong answer is a real mistake: the ratio written backwards, an unfinished simplification, units mixed, a part-to-part ratio read as part-to-whole, an equal share, one part instead of a share, and adding instead of multiplying.",
+    "Urdu terms to check: مقدم / تالی (antecedent / consequent), مساوی نسبت (equivalent ratio), مسلسل نسبت (continued ratio).",
+    "The numbers were worked out in content/sources/g6-maths-06/exercise_4_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

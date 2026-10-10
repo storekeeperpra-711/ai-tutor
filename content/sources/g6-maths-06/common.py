@@ -191,3 +191,117 @@ def write(lesson):
     path = ROOT / "content" / "lessons" / f"{lesson['id']}.json"
     path.write_text(json.dumps(lesson, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("wrote", path.name)
+
+
+# ---------------------------------------------------------------------------
+# Practice sets that go with the book's exercises of chapter 4 (Rate, Ratio and
+# Percentage), and the chapter test. The chapter's lessons are in this unit and
+# in the Percentages unit (g6-maths-11), so Exercise 4.3 has a maths.percent
+# skill and Exercise 4.4 a maths.time skill. Each practice lesson has its own
+# skill, with the chapter's skills it practises as prerequisites.
+RATIO_SPEED = "maths.ratio.speed"
+TIME_CLOCK = "maths.time.clock_24"
+PC_MEANING = "maths.percent.meaning"
+PC_CONVERT = "maths.percent.convert"
+PC_OF_AMOUNT = "maths.percent.of_amount"
+PC_FIND = "maths.percent.find_percent"
+PC_CHANGE = "maths.percent.change"
+PC_WORD_PROBLEMS = "maths.percent.word_problems"
+EX_SKILL = {"4.1": "maths.ratio.ex_4_1", "4.2": "maths.ratio.ex_4_2", "4.3": "maths.percent.ex_4_3",
+            "4.4": "maths.time.ex_4_4", "4.5": "maths.ratio.ex_4_5"}
+CHAPTER_4_TEST = "maths.ratio.chapter_4_test"
+
+
+def book_ref(part):
+    """'Exercise 4.1' -> the textbook string for curriculum_refs."""
+    return f"{BOOK}, {part}"
+
+
+def nq(id, prompt, answer, hint, good, bad, wrongs=(), qtype="apply"):
+    """number_question with (en, ur) tuples; wrongs are (answer, en, ur, misconception)."""
+    return number_question(id, T(*prompt), answer, T(*hint), T(*good), T(*bad),
+                           common_wrong=[wrong(a, en, ur, mis) for a, en, ur, mis in wrongs], qtype=qtype)
+
+
+def rq(id, prompt, parts, hint, good, bad, wrongs=(), qtype="apply"):
+    """A typed ratio (two terms) or continued ratio (three); wrongs are (text, en, ur, misconception)."""
+    cw = [wrong(a, en, ur, mis) for a, en, ur, mis in wrongs]
+    if len(parts) == 2:
+        return ratio_question(id, T(*prompt), *parts, T(*hint), T(*good), T(*bad), common_wrong=cw, qtype=qtype)
+    return continued_question(id, T(*prompt), parts, T(*hint), T(*good), T(*bad), common_wrong=cw, qtype=qtype)
+
+
+def accepted_time(text):
+    """Other ways a child may type the same time: 9:10, 0910, 09.10."""
+    hour, m = text.split(":")
+    return sorted({f"{hour}{m}", f"{hour}.{m}", f"{int(hour)}:{m}", f"{int(hour)}.{m}"} - {text})
+
+
+def tq(id, prompt, expected, hint, good, bad, wrongs=(), qtype="apply"):
+    """A typed 24-hour time like 15:45 (1545 and 15.45 are accepted too)."""
+    step = {"id": id, "type": "text_check"}
+    if qtype:
+        step["question_type"] = qtype
+    acc = accepted_time(expected)
+    step.update({"prompt": T(*prompt), "checker": "text", "expected": expected, "accept": acc,
+                 "hint": T(*hint), "feedback_correct": T(*good), "feedback_wrong": T(*bad)})
+    if wrongs:
+        cw = [wrong(a, en, ur, mis) for a, en, ur, mis in wrongs]
+        assert all(w["answer"] not in {expected, *acc} for w in cw), id
+        step["common_wrong"] = cw
+    return step
+
+
+def ch(id, prompt, right, wrongs, pos, qtype="apply"):
+    """A choice step with (en, ur) prompt. right is (en, ur, feedback_en,
+    feedback_ur); each wrong is the same plus an optional misconception. The
+    right option goes at index pos."""
+    options = [opt("x", right[0], right[1], True, right[2], right[3])]
+    for w in wrongs:
+        options.append(opt("x", w[0], w[1], False, w[2], w[3], w[4] if len(w) > 4 else None))
+    options.insert(pos, options.pop(0))
+    for k, o in enumerate(options):
+        o["id"] = "abcd"[k]
+    step = {"id": id, "type": "choice"}
+    if qtype:
+        step["question_type"] = qtype
+    step.update({"prompt": T(*prompt), "options": options})
+    return step
+
+
+def practice_lesson(ex, *, script, title, outcome, prerequisites, misconceptions, steps,
+                    bank, review, glossary, flashcards, home_task, notes, minutes=18):
+    """A practice set to use next to Exercise `ex` of the book: its own
+    skill, mastered with recall, apply and find_error questions."""
+    skill = EX_SKILL[ex]
+    return {
+        "id": "g6-maths-06-exercise-" + ex.replace(".", "-"),
+        "version": 1, "schema": "0.2", "subject": "maths", "grade": 6, "tier": "middle",
+        "curriculum_refs": [{"outcome": outcome, "textbook": book_ref(f"Exercise {ex}")}],
+        "skills": [skill],
+        "title": title,
+        "estimated_minutes": minutes,
+        "prerequisites": [{"skill": s} for s in prerequisites],
+        "misconceptions": misconceptions,
+        "mastery_criteria": {skill: {"question_types": ["recall", "apply", "find_error"], "days": 2}},
+        "question_bank": {skill: bank},
+        "flashcards": flashcards,
+        "home_tasks": [home_task],
+        "glossary": glossary,
+        "steps": steps,
+        "review_questions": [dict(q, skill=skill) for q in review],
+        "teacher_notes": [
+            f"A practice set to use next to Exercise {ex} of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+            *notes,
+            f"The numbers were worked out in content/sources/g6-maths-06/{script}; edit that script, not this file.",
+        ],
+        "review": REVIEW,
+    }
+
+
+def practice_intro(ex, kinds_en, kinds_ur, line_en, line_ur):
+    """The first step: which exercise of the book this set goes with."""
+    return {"id": "s1_intro", "type": "explain",
+            "character": say("encouraging", line_en, line_ur),
+            "text": T(f"This practice set goes with Exercise {ex} of your maths book (PCTB Mathematics 6). {kinds_en} The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+                      f"یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق {ex} کے ساتھ ہے۔ {kinds_ur} سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔")}
