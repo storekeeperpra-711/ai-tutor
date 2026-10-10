@@ -1,0 +1,1445 @@
+{
+  "id": "g6-maths-19-exercise-10-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Draw a line segment, construct the perpendicular bisector of a segment, and construct a perpendicular to a line from a point on it and from a point outside it, knowing the steps and what they give.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions, Exercise 10.1"
+    }
+  ],
+  "skills": [
+    "maths.constructions.ex_10_1"
+  ],
+  "title": {
+    "en": "Exercise 10.1 practice: segments and perpendiculars",
+    "ur": "مشق 10.1 کی پریکٹس: قطعۂ خط اور عمود"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.constructions.perpendicular_bisector"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "bisector_is_perpendicular",
+      "description": "Thinks a bisector always meets the segment at 90°, or that a perpendicular always cuts the segment in half."
+    },
+    {
+      "id": "half_not_taken",
+      "description": "Gives the whole length of AB, or double it, when the length of half of AB is asked."
+    },
+    {
+      "id": "small_opening",
+      "description": "Opens the compass to half of AB or less, so the arcs touch or miss each other."
+    },
+    {
+      "id": "different_openings",
+      "description": "Uses a different compass opening for the arc from A and the arc from B."
+    },
+    {
+      "id": "steps_out_of_order",
+      "description": "Puts the steps of a construction in the wrong order, such as joining the crossing points before drawing the arcs."
+    },
+    {
+      "id": "same_side",
+      "description": "Cuts the line at two points on the same side of O when drawing a perpendicular at a point on the line."
+    },
+    {
+      "id": "tool_mix",
+      "description": "Uses the protractor or the compass for a job that belongs to the ruler, or the other way round."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.constructions.ex_10_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.constructions.ex_10_1": [
+      {
+        "id": "qb_right_angle",
+        "type": "recall",
+        "step": {
+          "id": "qb_right_angle",
+          "type": "number",
+          "prompt": {
+            "en": "At what angle, in degrees, does a perpendicular meet the line?",
+            "ur": "عمود لکیر سے کتنے درجے کے زاویے پر ملتا ہے؟"
+          },
+          "answer": 90,
+          "checker": "numeric",
+          "hint": {
+            "en": "Perpendicular lines make a right angle.",
+            "ur": "عمود لکیریں قائمہ زاویہ بناتی ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 90°.",
+            "ur": "درست! 90°"
+          },
+          "feedback_wrong": {
+            "en": "A right angle is 90°.",
+            "ur": "قائمہ زاویہ 90° کا ہوتا ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 180,
+              "feedback": {
+                "en": "180° is a straight line. A perpendicular makes 90°.",
+                "ur": "180° سیدھی لکیر ہے۔ عمود 90° بناتا ہے۔"
+              },
+              "misconception_id": "bisector_is_perpendicular"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_half_rope",
+        "type": "apply",
+        "step": {
+          "id": "qb_half_rope",
+          "type": "number",
+          "prompt": {
+            "en": "The perpendicular bisector of a segment 30 cm long meets it at M. How long is the part from one end to M, in cm?",
+            "ur": "30 سینٹی میٹر لمبے قطعۂ خط کا عمودی ناصف اسے M پر ملتا ہے۔ ایک سرے سے M تک حصہ کتنے سینٹی میٹر ہے؟"
+          },
+          "answer": 15,
+          "checker": "numeric",
+          "hint": {
+            "en": "M is in the middle: half of 30.",
+            "ur": "M بیچ میں ہے: 30 کا آدھا۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 30 ÷ 2 = 15 cm.",
+            "ur": "درست! 30 ÷ 2 = 15 سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "Two equal halves: 15.",
+            "ur": "دو برابر آدھے: 15"
+          },
+          "common_wrong": [
+            {
+              "answer": 30,
+              "feedback": {
+                "en": "30 cm is the whole segment. Half: 15.",
+                "ur": "30 سینٹی میٹر پورا قطعۂ خط ہے۔ آدھا: 15"
+              },
+              "misconception_id": "half_not_taken"
+            },
+            {
+              "answer": 60,
+              "feedback": {
+                "en": "That doubles it. Halve it: 15.",
+                "ur": "یہ دگنا کرتا ہے۔ آدھا کریں: 15"
+              },
+              "misconception_id": "half_not_taken"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_equal_dist",
+        "type": "apply",
+        "step": {
+          "id": "qb_equal_dist",
+          "type": "number",
+          "prompt": {
+            "en": "A point X is on the perpendicular bisector of AB. XB is 9 cm. How long is XA, in cm?",
+            "ur": "نقطہ X، AB کے عمودی ناصف پر ہے۔ XB 9 سینٹی میٹر ہے۔ XA کتنے سینٹی میٹر ہے؟"
+          },
+          "answer": 9,
+          "checker": "numeric",
+          "hint": {
+            "en": "X is equally far from A and from B.",
+            "ur": "X، A اور B سے برابر دور ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! XA = XB = 9 cm.",
+            "ur": "درست! XA = XB = 9 سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "Equal distances: 9.",
+            "ur": "برابر فاصلے: 9"
+          },
+          "common_wrong": [
+            {
+              "answer": 18,
+              "feedback": {
+                "en": "That doubles XB. XA is equal to XB: 9.",
+                "ur": "یہ XB کو دگنا کرتا ہے۔ XA، XB کے برابر ہے: 9"
+              },
+              "misconception_id": "different_openings"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sara draws a perpendicular at a point O on a line. She marks C and D on the line both on the right of O, then bisects CD. What went wrong?",
+            "ur": "سارہ لکیر پر نقطہ O سے عمود بناتی ہے۔ وہ لکیر پر C اور D دونوں O کے دائیں طرف لگاتی ہے، پھر CD کی تنصیف کرتی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "C and D must be on opposite sides of O, the same distance from it, so that O is the middle of CD.",
+                "ur": "C اور D، O کے الگ الگ طرف اور اس سے برابر فاصلے پر ہونے چاہییں، تاکہ O، CD کا بیچ ہو۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Then the bisector of CD passes through O.",
+                "ur": "جی ہاں! تب CD کا ناصف O سے گزرتا ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. Both points can be on the same side.",
+                "ur": "کوئی غلطی نہیں۔ دونوں نقطے ایک ہی طرف ہو سکتے ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Then the middle of CD is not O, so the line misses O.",
+                "ur": "تب CD کا بیچ O نہیں، تو لکیر O سے نہیں گزرتی۔"
+              },
+              "misconception_id": "same_side"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "She should bisect CD with a ruler only.",
+                "ur": "اسے CD کی تنصیف صرف پیمانے سے کرنی چاہیے تھی۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Bisecting needs the compass arcs.",
+                "ur": "تنصیف کے لیے پرکار کی قوسیں چاہییں۔"
+              },
+              "misconception_id": "tool_mix"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_pb",
+      "front": {
+        "en": "What is special about every point on the perpendicular bisector of AB?",
+        "ur": "AB کے عمودی ناصف کے ہر نقطے میں کیا خاص بات ہے؟"
+      },
+      "back": {
+        "en": "It is the same distance from A and from B.",
+        "ur": "وہ A اور B سے برابر فاصلے پر ہے۔"
+      }
+    },
+    {
+      "id": "f_opening",
+      "front": {
+        "en": "How far must the compass be opened to bisect AB?",
+        "ur": "AB کی تنصیف کے لیے پرکار کتنا کھولنا چاہیے؟"
+      },
+      "back": {
+        "en": "More than half of AB, the same for both arcs.",
+        "ur": "AB کے آدھے سے زیادہ، دونوں قوسوں کے لیے ایک جتنا۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_draw",
+      "text": {
+        "en": "With a ruler and compass (or a string and pencil) draw a segment 8 cm long and construct its perpendicular bisector. Measure the two halves and the angle. Then draw a line, mark a point on it and another off it, and construct a perpendicular from each.",
+        "ur": "پیمانے اور پرکار (یا دھاگے اور پنسل) سے 8 سینٹی میٹر لمبا قطعۂ خط بنائیں اور اس کا عمودی ناصف بنائیں۔ دونوں آدھے حصے اور زاویہ ناپیں۔ پھر ایک لکیر بنائیں، اس پر ایک نقطہ اور اس سے باہر ایک نقطہ لگائیں، اور ہر ایک سے عمود بنائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Line segment",
+      "ur": "قطعۂ خط"
+    },
+    {
+      "en": "Perpendicular bisector",
+      "ur": "عمودی ناصف"
+    },
+    {
+      "en": "Perpendicular",
+      "ur": "عمود"
+    },
+    {
+      "en": "Midpoint",
+      "ur": "درمیانی نقطہ"
+    },
+    {
+      "en": "Compass",
+      "ur": "پرکار"
+    },
+    {
+      "en": "Arc",
+      "ur": "قوس"
+    },
+    {
+      "en": "Ruler",
+      "ur": "پیمانہ"
+    },
+    {
+      "en": "Protractor",
+      "ur": "زاویہ پیما"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 10.1 is about drawing with ruler and compass. Ready?",
+          "ur": "مشق 10.1 پیمانے اور پرکار سے ڈرائنگ کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 10.1 of your maths book (PCTB Mathematics 6). Here you practise the steps for drawing a segment, a perpendicular bisector and a perpendicular, and what each one gives. You will not draw today; you will think like someone holding the compass. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 10.1 کے ساتھ ہے۔ اس میں آپ قطعۂ خط، عمودی ناصف اور عمود بنانے کے قدم اور ان کا نتیجہ دہرائیں گے۔ آج آپ ڈرائنگ نہیں کریں گے؛ پرکار ہاتھ میں پکڑنے والے کی طرح سوچیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_tool",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which tool do you use to draw a line segment exactly 7 cm long?",
+        "ur": "7 سینٹی میٹر لمبا قطعۂ خط ٹھیک ناپ کر بنانے کے لیے کون سا اوزار استعمال ہوتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A ruler and a sharp pencil",
+            "ur": "پیمانہ اور تیز پنسل"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The ruler measures the length and guides the pencil.",
+            "ur": "جی ہاں! پیمانہ لمبائی ناپتا ہے اور پنسل کو سیدھا رکھتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "A protractor",
+            "ur": "زاویہ پیما"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A protractor measures angles, not lengths.",
+            "ur": "زاویہ پیما زاویے ناپتا ہے، لمبائی نہیں۔"
+          },
+          "misconception_id": "tool_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A compass opened by guessing",
+            "ur": "اندازے سے کھولا ہوا پرکار"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A guess will not give exactly 7 cm. Set the opening on the ruler first.",
+            "ur": "اندازے سے ٹھیک 7 سینٹی میٹر نہیں بنے گا۔ پہلے پرکار کو پیمانے پر کھولیں۔"
+          },
+          "misconception_id": "tool_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Only your eyes",
+            "ur": "صرف آنکھوں کا اندازہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Estimating by eye is not exact. We measure.",
+            "ur": "آنکھ کے اندازے سے ٹھیک ناپ نہیں بنتی۔ ہم ناپتے ہیں۔"
+          },
+          "misconception_id": "tool_mix"
+        }
+      ]
+    },
+    {
+      "id": "q2_pb",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which sentence describes the perpendicular bisector of a segment AB?",
+        "ur": "کون سا جملہ قطعۂ خط AB کے عمودی ناصف کو بیان کرتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "It cuts AB into two equal parts, at any angle.",
+            "ur": "یہ AB کو دو برابر حصوں میں کاٹتا ہے، کسی بھی زاویے پر۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is only a bisector. A perpendicular bisector also meets AB at 90°.",
+            "ur": "یہ صرف ناصف ہے۔ عمودی ناصف AB سے 90° پر بھی ملتا ہے۔"
+          },
+          "misconception_id": "bisector_is_perpendicular"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "It meets AB at 90° at any point along it.",
+            "ur": "یہ AB سے 90° پر ملتا ہے، اس کے کسی بھی نقطے پر۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is only a perpendicular. A perpendicular bisector must pass through the middle of AB.",
+            "ur": "یہ صرف عمود ہے۔ عمودی ناصف AB کے بیچ سے گزرنا چاہیے۔"
+          },
+          "misconception_id": "bisector_is_perpendicular"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "It cuts AB into two equal parts and meets it at 90°.",
+            "ur": "یہ AB کو دو برابر حصوں میں کاٹتا ہے اور اس سے 90° پر ملتا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Two equal halves and a right angle: that is what makes it a perpendicular bisector.",
+            "ur": "جی ہاں! دو برابر آدھے اور قائمہ زاویہ: یہی اسے عمودی ناصف بناتا ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "It runs alongside AB and never meets it.",
+            "ur": "یہ AB کے ساتھ ساتھ چلتا ہے اور اسے کبھی نہیں کاٹتا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A perpendicular bisector crosses AB.",
+            "ur": "عمودی ناصف AB کو کاٹتا ہے۔"
+          },
+          "misconception_id": "bisector_is_perpendicular"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Same opening, from both ends. That is the secret.",
+          "ur": "دونوں سروں سے ایک ہی کھلاؤ۔ یہی راز ہے۔"
+        }
+      },
+      "text": {
+        "en": "To bisect AB at right angles: (1) draw AB with the ruler; (2) open the compass more than half of AB; (3) with the point on A, draw arcs above and below AB; (4) keep the same opening, point on B, draw arcs that cross the first ones at P and Q; (5) join P and Q. PQ cuts AB at its midpoint M and makes 90° with it. To draw a perpendicular from a point O on a line, first mark C and D on the line, the same distance from O on each side, then bisect CD. From a point P off the line, draw an arc from P that cuts the line at C and D, then bisect CD.",
+        "ur": "AB کو قائمہ زاویے پر دو برابر حصوں میں بانٹنے کے لیے: (1) پیمانے سے AB کھینچیں؛ (2) پرکار AB کے آدھے سے زیادہ کھولیں؛ (3) نوک A پر رکھ کر AB کے اوپر اور نیچے قوسیں لگائیں؛ (4) وہی کھلاؤ رکھ کر نوک B پر رکھیں اور قوسیں لگائیں جو پہلی قوسوں کو P اور Q پر کاٹیں؛ (5) P اور Q کو ملا دیں۔ PQ، AB کو اس کے درمیانی نقطے M پر کاٹتا ہے اور اس سے 90° بناتا ہے۔ لکیر پر دیے ہوئے نقطے O سے عمود بنانے کے لیے پہلے لکیر پر C اور D لگائیں جو O سے دونوں طرف برابر فاصلے پر ہوں، پھر CD کی تنصیف کریں۔ لکیر سے باہر نقطے P سے P سے قوس لگائیں جو لکیر کو C اور D پر کاٹے، پھر CD کی تنصیف کریں۔"
+      },
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "Line segment AB with its midpoint M. Dashed compass arcs from A and from B, both with the same opening, cross above AB at P and below AB at Q. A dashed line joins P and Q and cuts AB at M, with a small square showing a right angle.",
+          "ur": "قطعۂ خط AB اور اس کا درمیانی نقطہ M۔ A اور B سے پرکار کی ایک ہی کھلاؤ والی ڈیش قوسیں AB کے اوپر P پر اور نیچے Q پر ملتی ہیں۔ ڈیش والی لکیر P اور Q کو ملاتی ہے اور AB کو M پر کاٹتی ہے، اور ایک چھوٹا چوکور خانہ قائمہ زاویہ دکھاتا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              30,
+              35
+            ],
+            "to": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 300.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              30,
+              35
+            ],
+            "radius": 28,
+            "start": 29.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 209.4,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              70,
+              35
+            ],
+            "radius": 28,
+            "start": 120.6,
+            "sweep": 30,
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              8
+            ],
+            "to": [
+              50,
+              62
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50,
+              31
+            ],
+            "to": [
+              54,
+              31
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              54,
+              31
+            ],
+            "to": [
+              54,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              70,
+              35
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              15.4
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50.0,
+              54.6
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              35
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              24,
+              35
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76,
+              35
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              12
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              58
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "label",
+            "at": [
+              45,
+              41
+            ],
+            "text": "M"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q3_half",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "The perpendicular bisector of a segment AB, 18 cm long, meets AB at M. How long is AM, in cm?",
+        "ur": "18 سینٹی میٹر لمبے قطعۂ خط AB کا عمودی ناصف AB کو M پر ملتا ہے۔ AM کتنے سینٹی میٹر ہے؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "M is the midpoint, so AM is half of AB.",
+        "ur": "M درمیانی نقطہ ہے، تو AM، AB کا آدھا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 18 ÷ 2 = 9 cm.",
+        "ur": "درست! 18 ÷ 2 = 9 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "The bisector cuts AB into two equal parts: 18 ÷ 2 = 9.",
+        "ur": "ناصف AB کو دو برابر حصوں میں کاٹتا ہے: 18 ÷ 2 = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "18 cm is the whole of AB. AM is only half: 9.",
+            "ur": "18 سینٹی میٹر پورا AB ہے۔ AM صرف آدھا ہے: 9"
+          },
+          "misconception_id": "half_not_taken"
+        },
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "That doubles AB. Halve it: 9.",
+            "ur": "یہ AB کا دگنا ہے۔ آدھا کریں: 9"
+          },
+          "misconception_id": "half_not_taken"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90 is the angle, in degrees. The length AM is 9 cm.",
+            "ur": "90 زاویہ ہے، درجوں میں۔ AM کی لمبائی 9 سینٹی میٹر ہے۔"
+          },
+          "misconception_id": "bisector_is_perpendicular"
+        }
+      ]
+    },
+    {
+      "id": "q4_opening",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "To bisect AB, 12 cm long, the compass must be opened more than half of AB. What is the smallest whole number of cm you can open it to?",
+        "ur": "12 سینٹی میٹر لمبے AB کی تنصیف کے لیے پرکار AB کے آدھے سے زیادہ کھولنا ضروری ہے۔ آپ اسے کم از کم کتنے پورے سینٹی میٹر پر کھول سکتے ہیں؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Half of AB is 6 cm. The opening must be bigger than that.",
+        "ur": "AB کا آدھا 6 سینٹی میٹر ہے۔ کھلاؤ اس سے بڑا ہونا چاہیے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! More than 6 cm, so the smallest whole number is 7 cm.",
+        "ur": "درست! 6 سینٹی میٹر سے زیادہ، تو سب سے چھوٹا پورا عدد 7 سینٹی میٹر ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Half of 12 is 6, and the opening must be more than 6, so 7.",
+        "ur": "12 کا آدھا 6 ہے، اور کھلاؤ 6 سے زیادہ ہونا چاہیے، تو 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "With exactly half the arcs only touch at M. They must cross, so use more than 6: 7.",
+            "ur": "ٹھیک آدھے پر قوسیں صرف M پر چھوتی ہیں۔ انہیں کاٹنا چاہیے، تو 6 سے زیادہ لیں: 7"
+          },
+          "misconception_id": "small_opening"
+        },
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 cm would work, but it is not the smallest. More than 6: 7.",
+            "ur": "12 سینٹی میٹر بھی چلے گا، لیکن سب سے چھوٹا نہیں۔ 6 سے زیادہ: 7"
+          },
+          "misconception_id": "small_opening"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "Line segment AB. A short dashed arc is drawn from A and another from B, but the compass was opened less than half of AB, so the two arcs stop before the middle and do not cross.",
+          "ur": "قطعۂ خط AB۔ A سے ایک چھوٹی ڈیش قوس اور B سے دوسری قوس لگائی گئی، لیکن پرکار AB کے آدھے سے کم کھولا گیا، اس لیے دونوں قوسیں درمیان سے پہلے رک جاتی ہیں اور ایک دوسرے کو نہیں کاٹتیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              25,
+              30
+            ],
+            "to": [
+              75,
+              30
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              25,
+              30
+            ],
+            "radius": 15,
+            "start": 300,
+            "sweep": 120,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              75,
+              30
+            ],
+            "radius": 15,
+            "start": 120,
+            "sweep": 120,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              25,
+              30
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              75,
+              30
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              19,
+              30
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              81,
+              30
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              50,
+              22
+            ],
+            "text": "?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_order",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hira bisects AB. Her steps are mixed up: X) join P and Q; Y) draw arcs above and below AB from A, then from B, with the same opening; Z) draw AB with the ruler. What is the right order?",
+        "ur": "حرا AB کی تنصیف کرتی ہے۔ اس کے قدم الٹ پلٹ ہو گئے ہیں: X) P اور Q کو ملائیں؛ Y) A سے پھر B سے ایک ہی کھلاؤ کے ساتھ AB کے اوپر اور نیچے قوسیں لگائیں؛ Z) پیمانے سے AB کھینچیں۔ صحیح ترتیب کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "X, then Y, then Z",
+            "ur": "X، پھر Y، پھر Z"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "You cannot join P and Q before the arcs and AB exist.",
+            "ur": "قوسوں اور AB کے بنے بغیر P اور Q کو نہیں ملا سکتے۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Z, then Y, then X",
+            "ur": "Z، پھر Y، پھر X"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Segment first, then arcs from both ends, then join the crossings.",
+            "ur": "جی ہاں! پہلے قطعۂ خط، پھر دونوں سروں سے قوسیں، پھر قوسوں کے ملاپ کو ملائیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Y, then Z, then X",
+            "ur": "Y، پھر Z، پھر X"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The arcs are drawn from A and B, so AB must be drawn first.",
+            "ur": "قوسیں A اور B سے لگتی ہیں، تو پہلے AB کھینچنا ہوگا۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Z, then X, then Y",
+            "ur": "Z، پھر X، پھر Y"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "P and Q come from the arcs, so the arcs come before joining.",
+            "ur": "P اور Q قوسوں سے بنتے ہیں، تو ملانے سے پہلے قوسیں آتی ہیں۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        }
+      ]
+    },
+    {
+      "id": "q6_next",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "P is a point above the line l. An arc from P has cut l at C and D. What is the next step to draw the perpendicular from P to l?",
+        "ur": "P لکیر l کے اوپر ایک نقطہ ہے۔ P سے لگی قوس نے l کو C اور D پر کاٹ دیا ہے۔ P سے l پر عمود بنانے کا اگلا قدم کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Join C to D and stop.",
+            "ur": "C کو D سے ملائیں اور رک جائیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "CD lies along l. It is not the perpendicular.",
+            "ur": "CD تو l پر ہی ہے۔ یہ عمود نہیں۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Draw one more arc from P with a bigger opening.",
+            "ur": "P سے بڑے کھلاؤ کی ایک اور قوس لگائیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Another arc from P does not give a direction at 90° to l.",
+            "ur": "P سے ایک اور قوس l پر 90° کی سمت نہیں دیتی۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Join P to C.",
+            "ur": "P کو C سے ملائیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "PC is a slanted line, not a perpendicular.",
+            "ur": "PC ترچھی لکیر ہے، عمود نہیں۔"
+          },
+          "misconception_id": "bisector_is_perpendicular"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "From C and from D, with the same opening, draw arcs that cross below l; then join P to where they cross.",
+            "ur": "C سے اور D سے ایک ہی کھلاؤ کے ساتھ ایسی قوسیں لگائیں جو l کے نیچے ملیں؛ پھر P کو ان کے ملاپ سے ملائیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! That bisects CD, and the bisector of CD passes through P at 90° to l.",
+            "ur": "جی ہاں! اس سے CD کی تنصیف ہوتی ہے، اور CD کا ناصف P سے گزرتا ہے اور l سے 90° بناتا ہے۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 60,
+        "alt": {
+          "en": "A straight line l with a point P above it. Two dashed arcs drawn from P cut the line at C on the left and D on the right. PC and PD are equal.",
+          "ur": "سیدھی لکیر l اور اس کے اوپر نقطہ P۔ P سے لگی دو ڈیش قوسیں لکیر کو بائیں طرف C پر اور دائیں طرف D پر کاٹتی ہیں۔ PC اور PD برابر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              5,
+              42
+            ],
+            "to": [
+              95,
+              42
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              24
+            ],
+            "radius": 22,
+            "start": 113.1,
+            "sweep": 24,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              24
+            ],
+            "radius": 22,
+            "start": 42.9,
+            "sweep": 24,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              24
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              37.4,
+              42
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              62.6,
+              42
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              56,
+              20
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.4,
+              49
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.6,
+              49
+            ],
+            "text": "D"
+          },
+          {
+            "kind": "label",
+            "at": [
+              92,
+              36
+            ],
+            "text": "l"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_cd",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "O is a point on line l. Arcs from O cut the line at C and D, each 3 cm from O, one on each side. How long is CD, in cm?",
+        "ur": "O لکیر l پر ایک نقطہ ہے۔ O سے لگی قوسیں لکیر کو C اور D پر کاٹتی ہیں، دونوں O سے 3 سینٹی میٹر دور، ایک ایک طرف۔ CD کتنے سینٹی میٹر ہے؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "C is 3 cm on one side and D is 3 cm on the other.",
+        "ur": "C ایک طرف 3 سینٹی میٹر اور D دوسری طرف 3 سینٹی میٹر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 + 3 = 6 cm, and O is the middle of CD, so the perpendicular at O bisects CD.",
+        "ur": "درست! 3 + 3 = 6 سینٹی میٹر، اور O، CD کا بیچ ہے، تو O پر عمود CD کی تنصیف کرتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Add both sides: 3 + 3 = 6.",
+        "ur": "دونوں طرف جمع کریں: 3 + 3 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 cm is only OC. CD is OC plus OD: 6.",
+            "ur": "3 سینٹی میٹر صرف OC ہے۔ CD = OC + OD: 6"
+          },
+          "misconception_id": "half_not_taken"
+        },
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That adds 3 three times. CD = 3 + 3 = 6.",
+            "ur": "یہ 3 کو تین بار جمع کرتا ہے۔ CD = 3 + 3 = 6"
+          },
+          "misconception_id": "half_not_taken"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 66,
+        "alt": {
+          "en": "A straight line l with a point O on it. Two dashed arcs drawn from O cut the line at C on the left and D on the right, the same distance from O on each side.",
+          "ur": "سیدھی لکیر l اور اس پر نقطہ O۔ O سے لگی دو ڈیش قوسیں لکیر کو بائیں طرف C پر اور دائیں طرف D پر کاٹتی ہیں، O سے دونوں طرف ایک جتنے فاصلے پر۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              5,
+              40
+            ],
+            "to": [
+              95,
+              40
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              40
+            ],
+            "radius": 22,
+            "start": 145.0,
+            "sweep": 70,
+            "style": "dashed"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              50,
+              40
+            ],
+            "radius": 22,
+            "start": 325.0,
+            "sweep": 70,
+            "style": "dashed"
+          },
+          {
+            "kind": "point",
+            "at": [
+              50,
+              40
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              28,
+              40
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              72,
+              40
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              50,
+              47
+            ],
+            "text": "O"
+          },
+          {
+            "kind": "label",
+            "at": [
+              28,
+              47
+            ],
+            "text": "C"
+          },
+          {
+            "kind": "label",
+            "at": [
+              72,
+              47
+            ],
+            "text": "D"
+          },
+          {
+            "kind": "label",
+            "at": [
+              92,
+              34
+            ],
+            "text": "l"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_equal",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Point Q lies on the perpendicular bisector of AB. QA is 13 cm. How long is QB, in cm?",
+        "ur": "نقطہ Q، AB کے عمودی ناصف پر ہے۔ QA 13 سینٹی میٹر ہے۔ QB کتنے سینٹی میٹر ہے؟"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Every point on the perpendicular bisector is the same distance from A and from B.",
+        "ur": "عمودی ناصف کا ہر نقطہ A اور B سے برابر فاصلے پر ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! QB = QA = 13 cm.",
+        "ur": "درست! QB = QA = 13 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "The arcs from A and B had the same opening, so QA = QB = 13.",
+        "ur": "A اور B کی قوسوں کا کھلاؤ برابر تھا، تو QA = QB = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "That adds QA and QB. QB is just equal to QA: 13.",
+            "ur": "یہ QA اور QB کو جمع کرتا ہے۔ QB صرف QA کے برابر ہے: 13"
+          },
+          "misconception_id": "different_openings"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "90 is the angle in degrees. The distance QB is 13 cm.",
+            "ur": "90 زاویہ ہے، درجوں میں۔ فاصلہ QB 13 سینٹی میٹر ہے۔"
+          },
+          "misconception_id": "bisector_is_perpendicular"
+        }
+      ]
+    },
+    {
+      "id": "q9_cloth",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A tailor folds a strip of cloth 24 cm long so that its two ends meet, and presses the crease. How far is the crease from each end, in cm?",
+        "ur": "ایک درزی 24 سینٹی میٹر لمبی کپڑے کی پٹی کو اس طرح موڑتا ہے کہ اس کے دونوں سرے مل جائیں، اور تہہ دباتا ہے۔ تہہ ہر سرے سے کتنے سینٹی میٹر دور ہے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "The crease is at the middle of the strip: half of 24.",
+        "ur": "تہہ پٹی کے بیچ میں ہے: 24 کا آدھا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 24 ÷ 2 = 12 cm. The crease is like the perpendicular bisector of the strip.",
+        "ur": "درست! 24 ÷ 2 = 12 سینٹی میٹر۔ تہہ پٹی کے عمودی ناصف جیسی ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Both ends meet at the crease, so each is half the length away: 12.",
+        "ur": "دونوں سرے تہہ پر ملتے ہیں، تو ہر ایک آدھی لمبائی دور ہے: 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24 cm is the whole strip. Halve it: 12.",
+            "ur": "24 سینٹی میٹر پوری پٹی ہے۔ آدھا کریں: 12"
+          },
+          "misconception_id": "half_not_taken"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That halves twice. One halving: 12.",
+            "ur": "یہ دو بار آدھا کرتا ہے۔ ایک بار آدھا کریں: 12"
+          },
+          "misconception_id": "half_not_taken"
+        },
+        {
+          "answer": 48,
+          "feedback": {
+            "en": "That doubles the strip. Halve it: 12.",
+            "ur": "یہ پٹی کو دگنا کرتا ہے۔ آدھا کریں: 12"
+          },
+          "misconception_id": "half_not_taken"
+        }
+      ]
+    },
+    {
+      "id": "q10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Ali bisects AB. He draws the arc from A with an opening of 5 cm and the arc from B with an opening of 7 cm, both more than half of AB. Then he joins the crossings. What went wrong?",
+        "ur": "علی AB کی تنصیف کرتا ہے۔ وہ A سے قوس 5 سینٹی میٹر کھلاؤ سے اور B سے قوس 7 سینٹی میٹر کھلاؤ سے لگاتا ہے، دونوں AB کے آدھے سے زیادہ۔ پھر وہ ملاپ کے نقطوں کو ملاتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The two arcs must have the same opening. With different openings the line does not pass through the middle of AB.",
+            "ur": "دونوں قوسوں کا کھلاؤ ایک جیسا ہونا چاہیے۔ مختلف کھلاؤ سے لکیر AB کے بیچ سے نہیں گزرتی۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Equal openings make P and Q equally far from A and B.",
+            "ur": "جی ہاں! برابر کھلاؤ سے P اور Q، A اور B سے برابر دور ہوتے ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. Any opening more than half of AB works for each arc.",
+            "ur": "کوئی غلطی نہیں۔ ہر قوس کے لیے AB کے آدھے سے زیادہ کوئی بھی کھلاؤ چلتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Each opening must be more than half, but the two must also be equal.",
+            "ur": "ہر کھلاؤ آدھے سے زیادہ ہو، لیکن دونوں برابر بھی ہوں۔"
+          },
+          "misconception_id": "different_openings"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should have used a protractor for the arcs.",
+            "ur": "اسے قوسوں کے لیے زاویہ پیما استعمال کرنا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Arcs are drawn with the compass.",
+            "ur": "قوسیں پرکار سے لگتی ہیں۔"
+          },
+          "misconception_id": "tool_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "He should have joined A to B after the arcs.",
+            "ur": "اسے قوسوں کے بعد A کو B سے ملانا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "AB is already drawn first. The problem is the unequal openings.",
+            "ur": "AB پہلے ہی کھینچا جاتا ہے۔ مسئلہ غیر برابر کھلاؤ کا ہے۔"
+          },
+          "misconception_id": "steps_out_of_order"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You know the steps and what they give.",
+          "ur": "شاباش! آپ کو قدم اور ان کا نتیجہ آتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "Ruler: lengths and straight lines. Compass: arcs. Perpendicular bisector: open the compass more than half of AB, use the same opening from A and from B, and join the two crossings. It cuts AB into two equal halves at M and makes 90°, and every point on it is equally far from A and B. For a perpendicular from a point on or off a line, make C and D on the line, then bisect CD.",
+        "ur": "پیمانہ: لمبائی اور سیدھی لکیریں۔ پرکار: قوسیں۔ عمودی ناصف: پرکار AB کے آدھے سے زیادہ کھولیں، A اور B سے ایک ہی کھلاؤ رکھیں، اور دونوں ملاپ کے نقطے ملا دیں۔ یہ AB کو M پر دو برابر آدھوں میں کاٹتا ہے اور 90° بناتا ہے، اور اس کا ہر نقطہ A اور B سے برابر دور ہوتا ہے۔ لکیر پر یا لکیر سے باہر نقطے سے عمود کے لیے لکیر پر C اور D بنائیں، پھر CD کی تنصیف کریں۔"
+      },
+      "points": [
+        {
+          "en": "Same compass opening from both ends.",
+          "ur": "دونوں سروں سے پرکار کا ایک ہی کھلاؤ۔"
+        },
+        {
+          "en": "The opening must be more than half of AB.",
+          "ur": "کھلاؤ AB کے آدھے سے زیادہ ہو۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_half",
+      "type": "apply",
+      "step": {
+        "id": "r_half",
+        "type": "number",
+        "prompt": {
+          "en": "A segment is 26 cm long. Its perpendicular bisector meets it at M. How long is one half, in cm?",
+          "ur": "ایک قطعۂ خط 26 سینٹی میٹر لمبا ہے۔ اس کا عمودی ناصف اسے M پر ملتا ہے۔ ایک آدھا حصہ کتنے سینٹی میٹر ہے؟"
+        },
+        "answer": 13,
+        "checker": "numeric",
+        "hint": {
+          "en": "Half of 26.",
+          "ur": "26 کا آدھا۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 26 ÷ 2 = 13 cm.",
+          "ur": "درست! 26 ÷ 2 = 13 سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "Two equal parts: 13.",
+          "ur": "دو برابر حصے: 13"
+        },
+        "common_wrong": [
+          {
+            "answer": 26,
+            "feedback": {
+              "en": "26 cm is the whole segment. Half: 13.",
+              "ur": "26 سینٹی میٹر پورا قطعۂ خط ہے۔ آدھا: 13"
+            },
+            "misconception_id": "half_not_taken"
+          },
+          {
+            "answer": 52,
+            "feedback": {
+              "en": "That doubles it. Halve it: 13.",
+              "ur": "یہ دگنا کرتا ہے۔ آدھا کریں: 13"
+            },
+            "misconception_id": "half_not_taken"
+          }
+        ]
+      },
+      "skill": "maths.constructions.ex_10_1"
+    },
+    {
+      "id": "r_cd",
+      "type": "apply",
+      "step": {
+        "id": "r_cd",
+        "type": "number",
+        "prompt": {
+          "en": "O is on a line. C and D are on the line, 8 cm from O on each side. How long is CD, in cm?",
+          "ur": "O ایک لکیر پر ہے۔ C اور D لکیر پر O سے دونوں طرف 8 سینٹی میٹر دور ہیں۔ CD کتنے سینٹی میٹر ہے؟"
+        },
+        "answer": 16,
+        "checker": "numeric",
+        "hint": {
+          "en": "One side plus the other side.",
+          "ur": "ایک طرف جمع دوسری طرف۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 8 + 8 = 16 cm.",
+          "ur": "درست! 8 + 8 = 16 سینٹی میٹر"
+        },
+        "feedback_wrong": {
+          "en": "OC + OD = 8 + 8 = 16.",
+          "ur": "OC + OD = 8 + 8 = 16"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "8 cm is only OC. CD = 8 + 8: 16.",
+              "ur": "8 سینٹی میٹر صرف OC ہے۔ CD = 8 + 8: 16"
+            },
+            "misconception_id": "half_not_taken"
+          },
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That halves 8. CD is both sides added: 16.",
+              "ur": "یہ 8 کو آدھا کرتا ہے۔ CD دونوں طرف جمع کر کے: 16"
+            },
+            "misconception_id": "half_not_taken"
+          }
+        ]
+      },
+      "skill": "maths.constructions.ex_10_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 10.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the tool for a given length (q1), the meaning of a perpendicular bisector (q2, q8), the length of half a segment (q3, q9), the compass opening (q4), the order of steps (q5, q6) and the perpendicular at a point on a line (q7, q10).",
+    "Each wrong answer is a real mistake: a bisector taken to always meet at 90°, the whole length given for half, an opening of exactly half of AB, different openings for the two arcs, steps in the wrong order, and C and D on the same side of O.",
+    "Urdu terms to check: قطعۂ خط, عمودی ناصف, عمود, درمیانی نقطہ, پرکار, قوس, پیمانہ and زاویہ پیما, all as in the existing Constructions lessons. کھلاؤ (compass opening) is used in the existing lessons as well; کپڑے کی پٹی (strip of cloth) and تہہ (crease) are new, so a teacher should confirm them.",
+    "The numbers were worked out in content/sources/g6-maths-19/exercise_10_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

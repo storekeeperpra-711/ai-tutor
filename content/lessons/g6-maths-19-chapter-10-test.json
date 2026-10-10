@@ -1,0 +1,1449 @@
+{
+  "id": "g6-maths-19-chapter-10-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 10: drawing a segment, the perpendicular bisector, perpendiculars from a point, bisecting angles, building 30° to 150° with a compass, and finding unknown angles on a straight line and in a triangle.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 10: Geometrical Constructions, Review Exercise 10"
+    }
+  ],
+  "skills": [
+    "maths.constructions.chapter_10_test"
+  ],
+  "title": {
+    "en": "Chapter 10 test: Geometrical Constructions",
+    "ur": "باب 10 کا ٹیسٹ: ہندسی تعمیرات"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.constructions.perpendicular_bisector"
+    },
+    {
+      "skill": "maths.constructions.angles"
+    },
+    {
+      "skill": "maths.constructions.word_problems"
+    },
+    {
+      "skill": "maths.geometry.angle_types"
+    },
+    {
+      "skill": "maths.geometry.angles_on_line"
+    },
+    {
+      "skill": "maths.geometry.complementary_supplementary"
+    },
+    {
+      "skill": "maths.geometry.triangle_angles"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "bisector_mix",
+      "description": "Mixes up a bisector and a perpendicular bisector, or the half of a segment with the whole segment."
+    },
+    {
+      "id": "opening_wrong",
+      "description": "Thinks the compass can be opened to half of AB or less to bisect AB."
+    },
+    {
+      "id": "bisect_not_half",
+      "description": "Does not halve when bisecting, or halves only once when two bisections are made."
+    },
+    {
+      "id": "add_not_mid",
+      "description": "Adds the two angles instead of going halfway between them, or gives half the gap instead of the angle from the base arm."
+    },
+    {
+      "id": "use_360",
+      "description": "Uses 360° or 90° for angles on a straight line or in a triangle instead of 180°."
+    },
+    {
+      "id": "stops_at_sum",
+      "description": "Adds the known angles and gives that sum as the answer, or takes away only one of them from 180°."
+    },
+    {
+      "id": "equation_wrong",
+      "description": "Sets up or solves the equation for x wrongly, or gives x when the angle is asked."
+    },
+    {
+      "id": "answer_is_other_quantity",
+      "description": "Stops at a middle step, such as the value of x, and gives it as the answer."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.constructions.chapter_10_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.constructions.chapter_10_test": [
+      {
+        "id": "qb_exam_half",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_half",
+          "type": "number",
+          "prompt": {
+            "en": "The perpendicular bisector of a segment 20 cm long meets it at M. How long is one half, in cm?",
+            "ur": "20 سینٹی میٹر لمبے قطعۂ خط کا عمودی ناصف اسے M پر ملتا ہے۔ ایک آدھا حصہ کتنے سینٹی میٹر ہے؟"
+          },
+          "answer": 10,
+          "checker": "numeric",
+          "hint": {
+            "en": "M is the midpoint.",
+            "ur": "M درمیانی نقطہ ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 20 ÷ 2 = 10 cm.",
+            "ur": "درست: 20 ÷ 2 = 10 سینٹی میٹر"
+          },
+          "feedback_wrong": {
+            "en": "Two equal halves: 10.",
+            "ur": "دو برابر آدھے: 10"
+          },
+          "common_wrong": [
+            {
+              "answer": 20,
+              "feedback": {
+                "en": "20 cm is the whole segment. Half: 10.",
+                "ur": "20 سینٹی میٹر پورا قطعۂ خط ہے۔ آدھا: 10"
+              },
+              "misconception_id": "bisector_mix"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_line",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_line",
+          "type": "number",
+          "prompt": {
+            "en": "Two angles are on a straight line. One is 100°. Find the other, in degrees.",
+            "ur": "ایک سیدھی لکیر پر دو زاویے ہیں۔ ایک 100° کا ہے۔ دوسرا کتنے درجے کا ہے؟"
+          },
+          "answer": 80,
+          "checker": "numeric",
+          "hint": {
+            "en": "The two add up to 180°.",
+            "ur": "دونوں کا مجموعہ 180° ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 180° − 100° = 80°.",
+            "ur": "درست: 180° − 100° = 80°"
+          },
+          "feedback_wrong": {
+            "en": "100 + x = 180, so x = 80.",
+            "ur": "100 + x = 180، تو x = 80"
+          },
+          "common_wrong": [
+            {
+              "answer": 260,
+              "feedback": {
+                "en": "That is 360 − 100. A straight line is 180°: 80.",
+                "ur": "یہ 360 − 100 ہے۔ سیدھی لکیر 180° ہے: 80"
+              },
+              "misconception_id": "use_360"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_equilateral",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_equilateral",
+          "type": "number",
+          "prompt": {
+            "en": "How big is each angle of an equilateral triangle, in degrees?",
+            "ur": "مساوی الاضلاع مثلث کا ہر زاویہ کتنے درجے کا ہے؟"
+          },
+          "answer": 60,
+          "checker": "numeric",
+          "hint": {
+            "en": "Three equal angles that add up to 180°.",
+            "ur": "تین برابر زاویے جن کا مجموعہ 180° ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 180 ÷ 3 = 60°.",
+            "ur": "درست: 180 ÷ 3 = 60°"
+          },
+          "feedback_wrong": {
+            "en": "180 ÷ 3 = 60.",
+            "ur": "180 ÷ 3 = 60"
+          },
+          "common_wrong": [
+            {
+              "answer": 90,
+              "feedback": {
+                "en": "90° is a right angle. Divide 180 by 3: 60.",
+                "ur": "90° قائمہ زاویہ ہے۔ 180 کو 3 سے تقسیم کریں: 60"
+              },
+              "misconception_id": "use_360"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 10 in your maths book in your notebook, setting out the working the way this test's answers do: write the rule you use, put in the numbers, work out the answer with its unit or degrees. Draw the constructions with ruler and compass. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 10 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں: جو اصول استعمال کریں وہ لکھیں، اعداد رکھیں، اور جواب اکائی یا ڈگری کے ساتھ نکالیں۔ تعمیرات پیمانے اور پرکار سے بنائیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Review exercise",
+      "ur": "اعادی مشق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 10 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook, then the final answer). The questions are new, not the book's. Write the unit with every answer in your notebook: degrees or cm.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 10 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوالات (کاپی میں پورا کام، پھر آخری جواب)۔ سوال نئے ہیں، کتاب کے نہیں۔ اپنی کاپی میں ہر جواب کے ساتھ اکائی لکھیں: ڈگری یا سینٹی میٹر۔"
+      }
+    },
+    {
+      "id": "m1_pb",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Every point on the perpendicular bisector of AB is:",
+        "ur": "کثیر انتخابی: AB کے عمودی ناصف کا ہر نقطہ:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "the same distance from A and from B",
+            "ur": "A اور B سے برابر فاصلے پر ہے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: the arcs from A and B had the same opening.",
+            "ur": "درست: A اور B کی قوسوں کا کھلاؤ برابر تھا۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "closer to A than to B",
+            "ur": "A کے B سے زیادہ قریب ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The bisector sits exactly in the middle, so no point is closer to one end.",
+            "ur": "ناصف ٹھیک بیچ میں ہے، تو کوئی نقطہ کسی ایک سرے کے زیادہ قریب نہیں۔"
+          },
+          "misconception_id": "bisector_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "at 45° to AB",
+            "ur": "AB سے 45° پر ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A perpendicular bisector meets AB at 90°.",
+            "ur": "عمودی ناصف AB سے 90° پر ملتا ہے۔"
+          },
+          "misconception_id": "bisector_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "on the line AB",
+            "ur": "لکیر AB پر ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only M is on AB. The other points lie above and below it.",
+            "ur": "صرف M لکیر AB پر ہے۔ باقی نقطے اس کے اوپر اور نیچے ہیں۔"
+          },
+          "misconception_id": "bisector_mix"
+        }
+      ]
+    },
+    {
+      "id": "m2_opening",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: To bisect AB, 14 cm long, the compass is opened:",
+        "ur": "کثیر انتخابی: 14 سینٹی میٹر لمبے AB کی تنصیف کے لیے پرکار کھولا جاتا ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "exactly 7 cm",
+            "ur": "ٹھیک 7 سینٹی میٹر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "With exactly half the arcs only touch at M and do not cross.",
+            "ur": "ٹھیک آدھے پر قوسیں صرف M کو چھوتی ہیں، کاٹتی نہیں۔"
+          },
+          "misconception_id": "opening_wrong"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "less than 7 cm",
+            "ur": "7 سینٹی میٹر سے کم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The arcs would stop short and never meet.",
+            "ur": "قوسیں پہلے رک جائیں گی اور کبھی نہیں ملیں گی۔"
+          },
+          "misconception_id": "opening_wrong"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "more than 7 cm, the same for both arcs",
+            "ur": "7 سینٹی میٹر سے زیادہ، دونوں قوسوں کے لیے ایک جتنا"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: more than half of AB, and equal for both arcs.",
+            "ur": "درست: AB کے آدھے سے زیادہ، اور دونوں قوسوں کے لیے برابر۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "any opening, even 1 cm",
+            "ur": "کوئی بھی کھلاؤ، 1 سینٹی میٹر بھی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A small opening gives arcs that do not meet.",
+            "ur": "چھوٹے کھلاؤ سے قوسیں نہیں ملتیں۔"
+          },
+          "misconception_id": "opening_wrong"
+        }
+      ]
+    },
+    {
+      "id": "m3_75",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: An angle of 75° is built by making a ray:",
+        "ur": "کثیر انتخابی: 75° کا زاویہ بنانے کے لیے شعاع بنائی جاتی ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "halfway between the 90° ray and the 120° ray",
+            "ur": "90° اور 120° کی شعاعوں کے ٹھیک بیچ میں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 105°.",
+            "ur": "اس سے 105° ملتا ہے۔"
+          },
+          "misconception_id": "add_not_mid"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "halfway between the 60° ray and the 90° ray",
+            "ur": "60° اور 90° کی شعاعوں کے ٹھیک بیچ میں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: (60 + 90) ÷ 2 = 75.",
+            "ur": "درست: (60 + 90) ÷ 2 = 75"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "by bisecting the 60° angle",
+            "ur": "60° کے زاویے کی تنصیف سے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 30°.",
+            "ur": "اس سے 30° ملتا ہے۔"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "by bisecting the 120° angle",
+            "ur": "120° کے زاویے کی تنصیف سے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 60°.",
+            "ur": "اس سے 60° ملتا ہے۔"
+          },
+          "misconception_id": "bisect_not_half"
+        }
+      ]
+    },
+    {
+      "id": "m4_line",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Two angles on a straight line are 128° and x. Then x is:",
+        "ur": "کثیر انتخابی: ایک سیدھی لکیر پر دو زاویے 128° اور x ہیں۔ تو x ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "232°",
+            "ur": "232°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 360° − 128°. A straight line adds to 180°.",
+            "ur": "یہ 360° − 128° ہے۔ سیدھی لکیر کا مجموعہ 180° ہے۔"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "128°",
+            "ur": "128°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the angle we already know.",
+            "ur": "یہ وہ زاویہ ہے جو ہمیں پہلے سے معلوم ہے۔"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "38°",
+            "ur": "38°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 90° − 52°. The total on a line is 180°, so x = 52°.",
+            "ur": "یہ 90° − 52° ہے۔ لکیر پر مجموعہ 180° ہے، تو x = 52°"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "52°",
+            "ur": "52°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 180° − 128° = 52°.",
+            "ur": "درست: 180° − 128° = 52°"
+          }
+        }
+      ],
+      "figure": {
+        "width": 130,
+        "height": 64,
+        "alt": {
+          "en": "A straight line with a point O on it and a ray from O. The angle on the right of the ray is marked x and the angle on the left is marked 128 degrees.",
+          "ur": "ایک سیدھی لکیر جس پر نقطہ O ہے اور O سے ایک شعاع۔ شعاع کے دائیں طرف کا زاویہ x اور بائیں طرف کا زاویہ 128° لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              54
+            ],
+            "to": [
+              122,
+              54
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.0,
+              54
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              90.9,
+              20.9
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 308,
+            "sweep": 52
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.9,
+              44.8
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 128
+          },
+          {
+            "kind": "label",
+            "at": [
+              55.8,
+              35.1
+            ],
+            "text": "128°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5_triangle",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Two angles of a triangle are 50° and 60°. The third angle x is:",
+        "ur": "کثیر انتخابی: ایک مثلث کے دو زاویے 50° اور 60° ہیں۔ تیسرا زاویہ x ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "110°",
+            "ur": "110°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 50° + 60°. Take it away from 180°.",
+            "ur": "یہ 50° + 60° ہے۔ اسے 180° میں سے گھٹائیں۔"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "70°",
+            "ur": "70°"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 180° − 110° = 70°.",
+            "ur": "درست: 180° − 110° = 70°"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "250°",
+            "ur": "250°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 360° − 110°. A triangle adds to 180°.",
+            "ur": "یہ 360° − 110° ہے۔ مثلث کا مجموعہ 180° ہے۔"
+          },
+          "misconception_id": "use_360"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "130°",
+            "ur": "130°"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 180° − 50°. Take away both angles.",
+            "ur": "یہ 180° − 50° ہے۔ دونوں زاویے گھٹائیں۔"
+          },
+          "misconception_id": "stops_at_sum"
+        }
+      ],
+      "figure": {
+        "width": 120,
+        "height": 76,
+        "alt": {
+          "en": "A triangle ABC with the angle at A marked 50 degrees, the angle at B marked 60 degrees and the angle at C marked x.",
+          "ur": "مثلث ABC جس میں A پر زاویہ 50°، B پر زاویہ 60° اور C پر زاویہ x لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              24.6,
+              63.0
+            ],
+            "to": [
+              95.4,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              95.4,
+              63.0
+            ],
+            "to": [
+              66.5,
+              13.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.5,
+              13.0
+            ],
+            "to": [
+              24.6,
+              63.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              40.1,
+              56.1
+            ],
+            "text": "50°"
+          },
+          {
+            "kind": "label",
+            "at": [
+              18.2,
+              65.8
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              80.2,
+              55.4
+            ],
+            "text": "60°"
+          },
+          {
+            "kind": "label",
+            "at": [
+              101.7,
+              66.1
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              64.3,
+              29.9
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "label",
+            "at": [
+              67.5,
+              6.1
+            ],
+            "text": "C"
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6_105",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which construction gives 105°?",
+        "ur": "کثیر انتخابی: کون سی تعمیر 105° دیتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A ray halfway between the 90° ray and the 120° ray",
+            "ur": "90° اور 120° کی شعاعوں کے ٹھیک بیچ میں شعاع"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: (90 + 120) ÷ 2 = 105.",
+            "ur": "درست: (90 + 120) ÷ 2 = 105"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Bisect the 90° angle",
+            "ur": "90° کے زاویے کی تنصیف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 45°.",
+            "ur": "اس سے 45° ملتا ہے۔"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A ray halfway between the 60° ray and the 90° ray",
+            "ur": "60° اور 90° کی شعاعوں کے ٹھیک بیچ میں شعاع"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 75°.",
+            "ur": "اس سے 75° ملتا ہے۔"
+          },
+          "misconception_id": "add_not_mid"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Two steps of 60°",
+            "ur": "60° کے دو قدم"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That gives 120°.",
+            "ur": "اس سے 120° ملتا ہے۔"
+          },
+          "misconception_id": "add_not_mid"
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_half",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: The perpendicular bisector of a segment AB, 46 cm long, meets AB at M. Find AM, in cm.",
+        "ur": "مختصر سوال: 46 سینٹی میٹر لمبے قطعۂ خط AB کا عمودی ناصف AB کو M پر ملتا ہے۔ AM سینٹی میٹر میں نکالیں۔"
+      },
+      "answer": 23,
+      "checker": "numeric",
+      "hint": {
+        "en": "M is the midpoint of AB.",
+        "ur": "M، AB کا درمیانی نقطہ ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 46 ÷ 2 = 23 cm.",
+        "ur": "درست: 46 ÷ 2 = 23 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the perpendicular bisector cuts AB into two equal parts, so AM = 46 ÷ 2 = 23 cm.",
+        "ur": "نمونہ جواب: عمودی ناصف AB کو دو برابر حصوں میں کاٹتا ہے، تو AM = 46 ÷ 2 = 23 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 46,
+          "feedback": {
+            "en": "46 cm is the whole of AB. AM is half: 23.",
+            "ur": "46 سینٹی میٹر پورا AB ہے۔ AM آدھا ہے: 23"
+          },
+          "misconception_id": "bisector_mix"
+        },
+        {
+          "answer": 92,
+          "feedback": {
+            "en": "That doubles AB. Halve it: 23.",
+            "ur": "یہ AB کو دگنا کرتا ہے۔ آدھا کریں: 23"
+          },
+          "misconception_id": "bisector_mix"
+        }
+      ]
+    },
+    {
+      "id": "q2_twice",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: A 140° angle is bisected, and then one of the two parts is bisected again. Find the size of the smallest angle, in degrees.",
+        "ur": "مختصر سوال: 140° کے زاویے کی تنصیف کی جاتی ہے، پھر اس کے دو حصوں میں سے ایک کی دوبارہ تنصیف کی جاتی ہے۔ سب سے چھوٹے زاویے کا ناپ درجوں میں نکالیں۔"
+      },
+      "answer": 35,
+      "checker": "numeric",
+      "hint": {
+        "en": "Halve 140, then halve the answer.",
+        "ur": "140 کو آدھا کریں، پھر جواب کو آدھا کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 140 → 70 → 35°.",
+        "ur": "درست: 140 ← 70 ← 35°"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: first bisection 140° ÷ 2 = 70°. Second bisection 70° ÷ 2 = 35°.",
+        "ur": "نمونہ جواب: پہلی تنصیف 140° ÷ 2 = 70°۔ دوسری تنصیف 70° ÷ 2 = 35°"
+      },
+      "common_wrong": [
+        {
+          "answer": 70,
+          "feedback": {
+            "en": "70° is after one bisection. There was a second: 35.",
+            "ur": "70° ایک تنصیف کے بعد ہے۔ دوسری بھی ہوئی: 35"
+          },
+          "misconception_id": "bisect_not_half"
+        },
+        {
+          "answer": 280,
+          "feedback": {
+            "en": "That doubles 140. Bisecting halves: 35.",
+            "ur": "یہ 140 کو دگنا کرتا ہے۔ تنصیف آدھا کرتی ہے: 35"
+          },
+          "misconception_id": "bisect_not_half"
+        }
+      ]
+    },
+    {
+      "id": "q3_three_line",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Three angles sit side by side on a straight line: 48°, x and 77°. Find x, in degrees.",
+        "ur": "مختصر سوال: ایک سیدھی لکیر پر تین زاویے ساتھ ساتھ ہیں: 48°، x اور 77°۔ x درجوں میں نکالیں۔"
+      },
+      "answer": 55,
+      "checker": "numeric",
+      "hint": {
+        "en": "48 + x + 77 = 180.",
+        "ur": "48 + x + 77 = 180"
+      },
+      "feedback_correct": {
+        "en": "Correct: 48 + 77 = 125, and 180 − 125 = 55°.",
+        "ur": "درست: 48 + 77 = 125، اور 180 − 125 = 55°"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: angles on a straight line add up to 180°. 48 + x + 77 = 180, so x = 180 − 125 = 55°.",
+        "ur": "نمونہ جواب: سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے۔ 48 + x + 77 = 180، تو x = 180 − 125 = 55°"
+      },
+      "common_wrong": [
+        {
+          "answer": 125,
+          "feedback": {
+            "en": "125° is 48 + 77. x is what is left of 180: 55.",
+            "ur": "125° یعنی 48 + 77۔ x وہ ہے جو 180 میں سے بچے: 55"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "answer": 132,
+          "feedback": {
+            "en": "That takes away only 48. Take away 48 and 77: 55.",
+            "ur": "اس میں صرف 48 گھٹایا۔ 48 اور 77 دونوں گھٹائیں: 55"
+          },
+          "misconception_id": "stops_at_sum"
+        }
+      ],
+      "figure": {
+        "width": 130,
+        "height": 64,
+        "alt": {
+          "en": "A straight line with a point O on it and two rays from O that split the line into three angles. From the right they are marked 48 degrees, x and 77 degrees.",
+          "ur": "ایک سیدھی لکیر جس پر نقطہ O ہے اور O سے دو شعاعیں جو لکیر کو تین زاویوں میں بانٹتی ہیں۔ دائیں سے بائیں یہ 48°، x اور 77° ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              54
+            ],
+            "to": [
+              122,
+              54
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.0,
+              54
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              93.1,
+              22.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              55.6,
+              13.1
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 312,
+            "sweep": 48
+          },
+          {
+            "kind": "label",
+            "at": [
+              84.2,
+              45.5
+            ],
+            "text": "48°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 257,
+            "sweep": 55
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.3,
+              33.7
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 77
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.6,
+              40.9
+            ],
+            "text": "77°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_iso",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: An isosceles triangle has two equal angles of 55°. Find the third angle, in degrees.",
+        "ur": "مختصر سوال: ایک متساوی الساقین مثلث کے دو برابر زاویے 55° کے ہیں۔ تیسرا زاویہ درجوں میں نکالیں۔"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "55 + 55 + x = 180.",
+        "ur": "55 + 55 + x = 180"
+      },
+      "feedback_correct": {
+        "en": "Correct: 180 − 110 = 70°.",
+        "ur": "درست: 180 − 110 = 70°"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the angles of a triangle add up to 180°. 55 + 55 + x = 180, so x = 180 − 110 = 70°.",
+        "ur": "نمونہ جواب: مثلث کے زاویوں کا مجموعہ 180° ہوتا ہے۔ 55 + 55 + x = 180، تو x = 180 − 110 = 70°"
+      },
+      "common_wrong": [
+        {
+          "answer": 110,
+          "feedback": {
+            "en": "110° is the two equal angles together. The third is 70.",
+            "ur": "110° دو برابر زاویے ملا کر ہیں۔ تیسرا 70° ہے۔"
+          },
+          "misconception_id": "stops_at_sum"
+        },
+        {
+          "answer": 125,
+          "feedback": {
+            "en": "That is 180 − 55. Take away both 55° angles: 70.",
+            "ur": "یہ 180 − 55 ہے۔ دونوں 55° کے زاویے گھٹائیں: 70"
+          },
+          "misconception_id": "stops_at_sum"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write the rule and full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں اصول اور پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_pb_x",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The perpendicular bisector of AB meets AB at M. AM = (3x − 4) cm and MB = (x + 8) cm. Find the length of AB, in cm.",
+        "ur": "تفصیلی سوال: AB کا عمودی ناصف AB کو M پر ملتا ہے۔ AM = (3x − 4) سینٹی میٹر اور MB = (x + 8) سینٹی میٹر ہے۔ AB کی لمبائی سینٹی میٹر میں نکالیں۔"
+      },
+      "answer": 28,
+      "checker": "numeric",
+      "hint": {
+        "en": "M is the midpoint, so AM = MB. Find x, then AB = AM + MB.",
+        "ur": "M درمیانی نقطہ ہے، تو AM = MB۔ x نکالیں، پھر AB = AM + MB۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 2x = 12, x = 6, AM = 14, and AB = 28 cm.",
+        "ur": "درست: 2x = 12، x = 6، AM = 14، اور AB = 28 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: AM = MB, so 3x − 4 = x + 8, 2x = 12, x = 6. MB = 6 + 8 = 14 cm, AM = 14 cm. AB = 14 + 14 = 28 cm.",
+        "ur": "نمونہ جواب: AM = MB، تو 3x − 4 = x + 8، 2x = 12، x = 6۔ MB = 6 + 8 = 14 سینٹی میٹر، AM = 14 سینٹی میٹر۔ AB = 14 + 14 = 28 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is x. The question asks for AB: 28.",
+            "ur": "6، x ہے۔ سوال AB پوچھتا ہے: 28"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "14 cm is only one half. AB is both halves: 28.",
+            "ur": "14 سینٹی میٹر صرف ایک آدھا ہے۔ AB دونوں آدھے ہیں: 28"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ]
+    },
+    {
+      "id": "l2_between",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: On one base arm, Sara builds a ray at 45° by bisecting a right angle, and a ray at 105° by going halfway between the 90° and 120° rays. What angle is there between her two rays, in degrees?",
+        "ur": "تفصیلی سوال: ایک بنیادی بازو پر سارہ قائمہ زاویے کی تنصیف سے 45° کی شعاع بناتی ہے، اور 90° اور 120° کی شعاعوں کے ٹھیک بیچ میں جا کر 105° کی شعاع بناتی ہے۔ اس کی دونوں شعاعوں کے بیچ کتنے درجے کا زاویہ ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Both angles are measured from the base arm. Take the smaller from the larger.",
+        "ur": "دونوں زاویے بنیادی بازو سے ناپے گئے ہیں۔ بڑے میں سے چھوٹا گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 105° − 45° = 60°.",
+        "ur": "درست: 105° − 45° = 60°"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 90° ÷ 2 = 45°, and (90 + 120) ÷ 2 = 105°. Both are measured from the same base arm, so the angle between the rays = 105 − 45 = 60°.",
+        "ur": "نمونہ جواب: 90° ÷ 2 = 45°، اور (90 + 120) ÷ 2 = 105°۔ دونوں ایک ہی بنیادی بازو سے ناپے گئے ہیں، تو شعاعوں کے بیچ کا زاویہ = 105 − 45 = 60°"
+      },
+      "common_wrong": [
+        {
+          "answer": 150,
+          "feedback": {
+            "en": "150° is 45 + 105. The angle between them is the difference: 60.",
+            "ur": "150° یعنی 45 + 105۔ ان کے بیچ کا زاویہ فرق ہے: 60"
+          },
+          "misconception_id": "add_not_mid"
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "15° is 105 − 90. Both rays are measured from the base arm: 105 − 45 = 60.",
+            "ur": "15° یعنی 105 − 90۔ دونوں شعاعیں بنیادی بازو سے ناپی گئی ہیں: 105 − 45 = 60"
+          },
+          "misconception_id": "add_not_mid"
+        }
+      ]
+    },
+    {
+      "id": "l3_xyz",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Three angles on a straight line are x°, 2x° and 3x°. Find the largest angle, in degrees.",
+        "ur": "تفصیلی سوال: ایک سیدھی لکیر پر تین زاویے x°، 2x° اور 3x° ہیں۔ سب سے بڑا زاویہ درجوں میں نکالیں۔"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "x + 2x + 3x = 180. Find x, then 3x.",
+        "ur": "x + 2x + 3x = 180۔ x نکالیں، پھر 3x۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 6x = 180, x = 30, and the largest angle is 3 × 30 = 90°.",
+        "ur": "درست: 6x = 180، x = 30، اور سب سے بڑا زاویہ 3 × 30 = 90°"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: angles on a straight line add up to 180°, so x + 2x + 3x = 180, 6x = 180, x = 30. The largest angle is 3x = 3 × 30 = 90°.",
+        "ur": "نمونہ جواب: سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے، تو x + 2x + 3x = 180، 6x = 180، x = 30۔ سب سے بڑا زاویہ 3x = 3 × 30 = 90°"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is x, the smallest angle. The largest is 3x: 90.",
+            "ur": "30، x ہے، یعنی سب سے چھوٹا زاویہ۔ سب سے بڑا 3x ہے: 90"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "60° is 2x. The largest angle is 3x = 90.",
+            "ur": "60° یعنی 2x۔ سب سے بڑا زاویہ 3x = 90 ہے۔"
+          },
+          "misconception_id": "equation_wrong"
+        }
+      ],
+      "figure": {
+        "width": 130,
+        "height": 64,
+        "alt": {
+          "en": "A straight line with a point O on it and two rays from O that split the line into three angles. From the right they are marked x, 2x and 3x degrees.",
+          "ur": "ایک سیدھی لکیر جس پر نقطہ O ہے اور O سے دو شعاعیں جو لکیر کو تین زاویوں میں بانٹتی ہیں۔ دائیں سے بائیں یہ x°، 2x° اور 3x° ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8,
+              54
+            ],
+            "to": [
+              122,
+              54
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              65.0,
+              54
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              101.4,
+              33.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              65.0,
+              54
+            ],
+            "to": [
+              65.0,
+              12.0
+            ]
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 330,
+            "sweep": 30
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.3,
+              48.6
+            ],
+            "text": "x°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 270,
+            "sweep": 60
+          },
+          {
+            "kind": "label",
+            "at": [
+              75.5,
+              35.8
+            ],
+            "text": "2x°"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              65.0,
+              54
+            ],
+            "radius": 10,
+            "start": 180,
+            "sweep": 90
+          },
+          {
+            "kind": "label",
+            "at": [
+              50.2,
+              39.2
+            ],
+            "text": "3x°"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l4_exterior",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: One side of a triangle is extended. The exterior angle is 120°, and the two opposite interior angles are (2x + 10)° and (x + 20)°. Find the larger of these two interior angles, in degrees.",
+        "ur": "تفصیلی سوال: ایک مثلث کا ایک ضلع بڑھایا گیا ہے۔ بیرونی زاویہ 120° ہے، اور دو مخالف اندرونی زاویے (2x + 10)° اور (x + 20)° ہیں۔ ان دو اندرونی زاویوں میں سے بڑا درجوں میں نکالیں۔"
+      },
+      "answer": 70,
+      "checker": "numeric",
+      "hint": {
+        "en": "Exterior angle = sum of the two opposite interior angles. Solve for x first.",
+        "ur": "بیرونی زاویہ = دو مخالف اندرونی زاویوں کا مجموعہ۔ پہلے x نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 3x + 30 = 120, x = 30. The angles are 70° and 50°, so the larger is 70°.",
+        "ur": "درست: 3x + 30 = 120، x = 30۔ زاویے 70° اور 50° ہیں، تو بڑا 70° ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: exterior angle = sum of the opposite interior angles, so (2x + 10) + (x + 20) = 120, 3x + 30 = 120, 3x = 90, x = 30. The angles are 2 × 30 + 10 = 70° and 30 + 20 = 50°. The larger is 70°. Check: 70 + 50 = 120.",
+        "ur": "نمونہ جواب: بیرونی زاویہ = مخالف اندرونی زاویوں کا مجموعہ، تو (2x + 10) + (x + 20) = 120، 3x + 30 = 120، 3x = 90، x = 30۔ زاویے 2 × 30 + 10 = 70° اور 30 + 20 = 50° ہیں۔ بڑا 70° ہے۔ جانچ: 70 + 50 = 120"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "30 is x. The question asks for the larger angle: 70.",
+            "ur": "30، x ہے۔ سوال بڑا زاویہ پوچھتا ہے: 70"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 50,
+          "feedback": {
+            "en": "50° is the smaller angle. The larger is 2x + 10 = 70.",
+            "ur": "50° چھوٹا زاویہ ہے۔ بڑا 2x + 10 = 70 ہے۔"
+          },
+          "misconception_id": "equation_wrong"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 10 test. Well done!",
+          "ur": "آپ نے باب 10 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: the perpendicular bisector of AB cuts it into two equal halves at 90°, and its points are equally far from A and B; open the compass more than half of AB, the same for both arcs. Bisecting halves an angle. Build from 60°: 30° (bisect 60°), 90°, 45°, 75°, 105° and 150° by bisecting or going halfway between rays. Angles on a straight line and in a triangle add up to 180°. For x questions, write the equation, solve for x, then answer what is asked.",
+        "ur": "امتحان میں: AB کا عمودی ناصف اسے 90° پر دو برابر آدھوں میں کاٹتا ہے، اور اس کے نقطے A اور B سے برابر دور ہوتے ہیں؛ پرکار AB کے آدھے سے زیادہ کھولیں، دونوں قوسوں کے لیے ایک جتنا۔ تنصیف زاویے کو آدھا کرتی ہے۔ 60° سے بنائیں: 30° (60° کی تنصیف)، 90°، 45°، 75°، 105° اور 150° تنصیف سے یا شعاعوں کے بیچ میں جا کر۔ سیدھی لکیر پر اور مثلث میں زاویوں کا مجموعہ 180° ہوتا ہے۔ x والے سوالوں میں مساوات لکھیں، x نکالیں، پھر وہ جواب دیں جو پوچھا گیا ہو۔"
+      },
+      "points": [
+        {
+          "en": "Rule, numbers, answer with its unit.",
+          "ur": "اصول، اعداد، اکائی کے ساتھ جواب۔"
+        },
+        {
+          "en": "Equation for x: write it, solve it, then answer the question asked.",
+          "ur": "x کی مساوات: لکھیں، حل کریں، پھر پوچھا گیا جواب دیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_bisect",
+      "type": "exam_style",
+      "skill": "maths.constructions.chapter_10_test",
+      "step": {
+        "id": "r_exam_bisect",
+        "type": "number",
+        "prompt": {
+          "en": "A right angle is bisected. How big is each part, in degrees?",
+          "ur": "قائمہ زاویے کی تنصیف کی گئی۔ ہر حصہ کتنے درجے کا ہے؟"
+        },
+        "answer": 45,
+        "checker": "numeric",
+        "hint": {
+          "en": "Halve 90.",
+          "ur": "90 کو آدھا کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 90 ÷ 2 = 45°.",
+          "ur": "درست: 90 ÷ 2 = 45°"
+        },
+        "feedback_wrong": {
+          "en": "Two equal parts: 45.",
+          "ur": "دو برابر حصے: 45"
+        },
+        "common_wrong": [
+          {
+            "answer": 30,
+            "feedback": {
+              "en": "30° is for bisecting 60°. A right angle halved: 45.",
+              "ur": "30° 60° کی تنصیف کا ہے۔ قائمہ زاویے کا آدھا: 45"
+            },
+            "misconception_id": "bisect_not_half"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_right_tri",
+      "type": "exam_style",
+      "skill": "maths.constructions.chapter_10_test",
+      "step": {
+        "id": "r_exam_right_tri",
+        "type": "number",
+        "prompt": {
+          "en": "A right-angled triangle has an angle of 30°. Find its third angle, in degrees.",
+          "ur": "ایک قائمہ الزاویہ مثلث میں ایک زاویہ 30° کا ہے۔ اس کا تیسرا زاویہ کتنے درجے کا ہے؟"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "180 − 90 − 30.",
+          "ur": "180 − 90 − 30"
+        },
+        "feedback_correct": {
+          "en": "Correct: 180 − 90 − 30 = 60°.",
+          "ur": "درست: 180 − 90 − 30 = 60°"
+        },
+        "feedback_wrong": {
+          "en": "The two acute angles add up to 90°: 30 + 60.",
+          "ur": "دونوں حادہ زاویوں کا مجموعہ 90° ہے: 30 + 60"
+        },
+        "common_wrong": [
+          {
+            "answer": 150,
+            "feedback": {
+              "en": "That is 180 − 30. Also take away the 90°: 60.",
+              "ur": "یہ 180 − 30 ہے۔ 90° بھی گھٹائیں: 60"
+            },
+            "misconception_id": "stops_at_sum"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 10 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.constructions.chapter_10_test), with the skills of the Constructions unit and the Angles unit as prerequisites, and is mastered with exam_style questions, like the chapter 5 to 9 tests. The app cannot check a real drawing, so the questions are about the steps of the constructions and the angles they give; the drawing is a home task.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), all as in the earlier chapter tests; the construction and angle words come from the existing lessons. No new Urdu terms were added.",
+    "The numbers were worked out in content/sources/g6-maths-19/chapter_10_test.py. Edit the script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
