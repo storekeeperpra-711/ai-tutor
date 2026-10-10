@@ -24,17 +24,22 @@ Future<void> playLesson(
   }
 }
 
-void main() {
-  final lessons = Directory('content/lessons')
-      .listSync()
-      .whereType<File>()
-      .where((f) => f.path.endsWith('.json'))
-      .map(
-        (f) => Lesson.fromJson(
-          jsonDecode(f.readAsStringSync()) as Map<String, dynamic>,
-        ),
-      )
-      .toList();
+/// Plays the lessons of one shard. The lessons are split over several test
+/// files so each runs in its own process: one file playing every lesson ran
+/// out of memory on the CI machine as lessons were added.
+void runPlaythroughShard(int shard, int shards) {
+  final lessons =
+      Directory('content/lessons')
+          .listSync()
+          .whereType<File>()
+          .where((f) => f.path.endsWith('.json'))
+          .map(
+            (f) => Lesson.fromJson(
+              jsonDecode(f.readAsStringSync()) as Map<String, dynamic>,
+            ),
+          )
+          .toList()
+        ..sort((a, b) => a.id.compareTo(b.id));
 
   setUp(() {
     final view =
@@ -50,7 +55,8 @@ void main() {
       ..resetDevicePixelRatio();
   });
 
-  for (final lesson in lessons) {
+  for (var i = shard; i < lessons.length; i += shards) {
+    final lesson = lessons[i];
     for (final language in ['en', 'ur']) {
       testWidgets('${lesson.id} plays end to end in $language', (tester) async {
         await tester.pumpWidget(
@@ -70,6 +76,8 @@ void main() {
       });
     }
   }
+
+  if (shard != 0) return;
 
   testWidgets('number step shows the working after the last attempt', (
     tester,
