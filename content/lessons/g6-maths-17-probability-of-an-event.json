@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-17-probability-of-an-event",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Probability of an event",
     "ur": "کسی واقعے کا احتمال"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.probability.sample_space"
@@ -740,6 +740,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can we put a number on how likely something is?",
+          "ur": "کیا ہم کسی بات کے امکان کو عدد سے بتا سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Words like \"likely\" are not enough when two people disagree about a fair game. More than 350 years ago, French mathematicians Pascal and Fermat wrote to each other about how to share the prize of a game of chance that was stopped half way. This work helped start probability. The idea: count the outcomes you want, divide by all outcomes. P(E) = n(E) ÷ n(S), always between 0 and 1.",
+        "ur": "جب دو لوگ کسی کھیل کے منصفانہ ہونے پر اختلاف کریں تو \"زیادہ امکان\" جیسے الفاظ کافی نہیں ہوتے۔ 350 سال سے زیادہ پہلے فرانس کے ریاضی دانوں پاسکل اور فرما نے ایک دوسرے کو خط لکھے کہ آدھے میں رکے ہوئے اتفاقی کھیل کے انعام کیسے بانٹی جائے۔ اس کام نے احتمال کی ابتدا میں مدد دی۔ خیال یہ ہے: مطلوبہ نتائج گنیں، سب نتائج پر تقسیم کریں۔ P(E) = n(E) ÷ n(S)، جو ہمیشہ 0 اور 1 کے بیچ ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Weather: \"70% chance of rain\" is a probability.\n• Cricket: the chance of winning the toss is 1/2.\n• Games: the chance of rolling a 6 is 1/6.\n• Insurance and science: judging risk and testing medicines.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• موسم: \"بارش کا 70 فیصد امکان\" ایک احتمال ہے۔\n• کرکٹ: ٹاس جیتنے کا احتمال 1/2 ہے۔\n• کھیل: ڈائس پر 6 آنے کا احتمال 1/6 ہے۔\n• بیمہ اور سائنس: خطرے کا اندازہ اور دواؤں کی جانچ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

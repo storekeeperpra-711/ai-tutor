@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-proportion",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Proportion",
     "ur": "تناسب"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.ratio.equivalent"
@@ -512,6 +512,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A small flag and a big flag: why do they look the same shape?",
+          "ur": "چھوٹا جھنڈا اور بڑا جھنڈا: دونوں ایک ہی شکل کے کیوں لگتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "To draw a map, print a photo bigger, or make a flag in two sizes, every length must change by the same number of times. If not, the picture looks stretched. People needed a way to say that two ratios are equal, and a rule to find a missing number. That is a proportion: 2 : 3 = 20 : 30. In it, the outer numbers multiplied equal the inner numbers multiplied.",
+        "ur": "نقشہ بنانے، تصویر بڑی چھاپنے یا جھنڈا دو سائز میں بنانے کے لیے ہر لمبائی کو برابر گنا بدلنا ہوتا ہے، ورنہ تصویر کھنچی ہوئی لگتی ہے۔ لوگوں کو یہ کہنے کا طریقہ چاہیے تھا کہ دو نسبتیں برابر ہیں، اور گم عدد نکالنے کا اصول بھی۔ یہی تناسب ہے: 2 : 3 = 20 : 30۔ اس میں طرفین کا حاصل ضرب وسطین کے حاصل ضرب کے برابر ہوتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Maps: 1 cm on the map is 5 km on the ground.\n• Photos: making a picture bigger without stretching it.\n• Models: a toy bus built to the shape of a real bus.\n• Cooking: finding how much of one thing goes with the other.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• نقشے: نقشے پر 1 سینٹی میٹر زمین پر 5 کلومیٹر ہے۔\n• تصویریں: تصویر کو کھینچے بغیر بڑا کرنا۔\n• ماڈل: کھلونا بس جو اصل بس کی شکل پر بنی ہو۔\n• کھانا پکانا: یہ نکالنا کہ ایک چیز کے ساتھ دوسری کتنی لگے گی۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

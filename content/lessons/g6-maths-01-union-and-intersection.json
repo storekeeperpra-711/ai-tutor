@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-union-and-intersection",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Union and intersection",
     "ur": "اجتماع اور تقاطع"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.sets.subsets"
@@ -902,6 +902,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali likes cricket, Sara likes cricket and hockey. Who likes either game?",
+          "ur": "علی کو کرکٹ پسند ہے، سارہ کو کرکٹ اور ہاکی۔ کسی ایک کھیل کو کون پسند کرتا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Two groups often overlap. A teacher wants to invite everyone who plays cricket or hockey, but a child who plays both should be counted only once. She also needs those who play both. People needed clear names for these two jobs: the union A ∪ B puts the groups together, and the intersection A ∩ B keeps only what they share.",
+        "ur": "دو گروہ اکثر ایک دوسرے سے ملتے ہیں۔ استاد کرکٹ یا ہاکی کھیلنے والے سب کو بلانا چاہتی ہے، مگر جو بچہ دونوں کھیلتا ہے اسے ایک ہی بار گننا ہے۔ اسے دونوں کھیلنے والے بھی الگ چاہییں۔ لوگوں کو ان دو کاموں کے صاف نام چاہیے تھے: اجتماع A ∪ B دونوں گروہوں کو ملاتا ہے، اور تقاطع A ∩ B صرف وہ رکھتا ہے جو دونوں میں مشترک ہو۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• School: students in the cricket team or the hockey team, counted once.\n• Shop: customers who buy tea and also buy sugar.\n• Phone: contacts who are friends and also family.\n• Search: a website search for \"red\" and \"shirt\" shows only what matches both.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• اسکول: کرکٹ یا ہاکی ٹیم کے طلبہ، ہر ایک ایک بار گنا ہوا۔\n• دکان: وہ گاہک جو چائے بھی خریدتے ہیں اور چینی بھی۔\n• فون: وہ رابطے جو دوست بھی ہیں اور رشتہ دار بھی۔\n• تلاش: ویب سائٹ پر \"سرخ\" اور \"قمیص\" تلاش کریں تو صرف وہ آتا ہے جو دونوں سے ملتا ہو۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

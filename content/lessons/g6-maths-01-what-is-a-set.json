@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-what-is-a-set",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "What is a set?",
     "ur": "سیٹ کیا ہے؟"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.factors.factors_multiples"
@@ -413,6 +413,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do you describe a group so clearly that nobody argues about it?",
+          "ur": "کسی گروہ کو اتنا صاف کیسے بتائیں کہ کوئی بحث نہ کرے؟"
+        }
+      },
+      "text": {
+        "en": "\"Tall boys\" or \"good players\" is not clear: who decides? People needed a way to say exactly what is in a group, so that everyone agrees. A set is a well-defined collection: for any thing, you can say yes or no, it is in. About 150 years ago, a German mathematician, Georg Cantor, studied collections like this, and sets became one of the basic ideas of all maths.",
+        "ur": "\"لمبے لڑکے\" یا \"اچھے کھلاڑی\" صاف بات نہیں ہے: فیصلہ کون کرے؟ لوگوں کو ایسا طریقہ چاہیے تھا کہ گروہ میں بالکل کیا ہے یہ طے ہو جائے اور سب متفق ہوں۔ سیٹ ایسا واضح گروہ ہے کہ ہر چیز کے بارے میں ہاں یا نہ میں کہہ سکیں کہ وہ اس میں ہے یا نہیں۔ تقریباً 150 سال پہلے جرمنی کے ریاضی دان جارج کینٹر نے ایسے گروہوں کا مطالعہ کیا، اور سیٹ پوری ریاضی کے بنیادی خیالوں میں شامل ہو گئے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• School: the list of students in your class, or the subjects you study.\n• Shop: items in stock, kept apart from items sold out.\n• Phone: your contacts list; each name is in it once.\n• Computers: databases and websites sort things into sets.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• اسکول: آپ کی جماعت کے طلبہ کی فہرست، یا وہ مضامین جو آپ پڑھتے ہیں۔\n• دکان: موجود سامان، اور وہ سامان جو ختم ہو گیا۔\n• فون: آپ کے رابطوں کی فہرست؛ ہر نام ایک بار ہوتا ہے۔\n• کمپیوٹر: ڈیٹا بیس اور ویب سائٹیں چیزوں کو سیٹوں میں ترتیب دیتی ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

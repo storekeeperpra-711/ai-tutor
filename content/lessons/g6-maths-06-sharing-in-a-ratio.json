@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-sharing-in-a-ratio",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Sharing in a ratio",
     "ur": "نسبت میں تقسیم"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.ratio.meaning"
@@ -497,6 +497,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two partners put in Rs 2,000 and Rs 3,000. How do they share the profit?",
+          "ur": "دو ساجھے داروں نے 2000 اور 3000 روپے لگائے۔ منافع کیسے بانٹیں؟"
+        }
+      },
+      "text": {
+        "en": "Splitting in half is fair only when everyone gave the same. When one partner put in more, or one worker did more work, an equal split is unfair. People needed a fair way to divide a total in a given ratio. Add the parts (2 + 3 = 5), find the value of one part, then give each person their parts. Rs 5,000 profit becomes Rs 2,000 and Rs 3,000.",
+        "ur": "آدھا آدھا بانٹنا تب ہی انصاف ہے جب سب نے برابر دیا ہو۔ جب ایک ساجھے دار نے زیادہ لگایا ہو، یا ایک مزدور نے زیادہ کام کیا ہو، تو برابر بانٹنا ناانصافی ہے۔ لوگوں کو کل رقم کو دی گئی نسبت سے بانٹنے کا منصفانہ طریقہ چاہیے تھا۔ حصے جمع کریں (2 + 3 = 5)، ایک حصے کی قیمت نکالیں، پھر ہر شخص کو اس کے حصے دیں۔ 5000 روپے کا منافع 2000 اور 3000 روپے بن جاتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Business: partners sharing a profit by what each put in.\n• Family: dividing sweets or fruit among children by age or need.\n• Farming: sharing a crop between the farmer and the helper.\n• Mixing: making 10 litres of paint from two colours in a given ratio.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کاروبار: ساجھے دار اپنے لگائے ہوئے پیسوں کے مطابق منافع بانٹتے ہیں۔\n• گھر: مٹھائی یا پھل بچوں میں عمر یا ضرورت کے مطابق بانٹنا۔\n• کھیتی: فصل کا حصہ کسان اور مددگار میں بانٹنا۔\n• ملانا: دو رنگوں کو دی گئی نسبت سے ملا کر 10 لیٹر رنگ بنانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

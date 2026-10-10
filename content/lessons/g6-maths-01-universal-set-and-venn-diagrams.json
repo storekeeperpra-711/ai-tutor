@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-universal-set-and-venn-diagrams",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "The universal set and Venn diagrams",
     "ur": "عالمی سیٹ اور وین ڈایاگرام"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.sets.subsets"
@@ -380,6 +380,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can we draw a group so you can see who is in it?",
+          "ur": "کیا ہم کسی گروہ کی تصویر بنا سکتے ہیں کہ دیکھ کر پتا چل جائے اس میں کون ہے؟"
+        }
+      },
+      "text": {
+        "en": "When groups overlap, a list of names is hard to follow. People needed a picture that shows everything at one glance. An English mathematician, John Venn, made such circle pictures popular more than 140 years ago. All the things we talk about go in one big box, the universal set U. Each group is a circle inside it, and the overlap shows what they share.",
+        "ur": "جب گروہ آپس میں ملتے ہوں تو ناموں کی فہرست سے بات سمجھنا مشکل ہو جاتا ہے۔ لوگوں کو ایسی تصویر چاہیے تھی جو سب کچھ ایک نظر میں دکھا دے۔ انگلستان کے ریاضی دان جان وین نے 140 سال سے زیادہ پہلے ایسی دائروں والی تصویروں کو عام کیا۔ جن چیزوں کی ہم بات کر رہے ہیں وہ سب ایک بڑے ڈبے یعنی عالمی سیٹ U میں ہوتی ہیں۔ ہر گروہ اس کے اندر ایک دائرہ ہے، اور ملاپ کی جگہ مشترک چیزیں دکھاتی ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Surveys: how many children like mangoes, bananas, or both.\n• Class: who joined the quiz club, the art club, or both.\n• Explaining: a quick drawing makes a mixed-up problem clear.\n• Computers: charts that show what two lists have in common.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سروے: کتنے بچوں کو آم پسند ہیں، کتنوں کو کیلے، اور کتنوں کو دونوں۔\n• جماعت: کون کوئز کلب میں گیا، کون آرٹ کلب میں، اور کون دونوں میں۔\n• سمجھانا: ایک جلدی کی ڈرائنگ الجھا ہوا سوال صاف کر دیتی ہے۔\n• کمپیوٹر: ایسے چارٹ جو دکھاتے ہیں کہ دو فہرستوں میں کیا مشترک ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

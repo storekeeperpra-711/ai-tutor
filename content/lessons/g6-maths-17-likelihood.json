@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-17-likelihood",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Likely, unlikely and equally likely",
     "ur": "زیادہ امکان، کم امکان اور یکساں امکان"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.probability.single_event"
@@ -601,6 +601,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Will it rain today? Nobody can be sure, so what do we say?",
+          "ur": "کیا آج بارش ہوگی؟ کوئی یقین سے نہیں کہہ سکتا، تو ہم کیا کہیں؟"
+        }
+      },
+      "text": {
+        "en": "Many things in life are not certain: rain, a cricket match, the next bus. We cannot say \"yes\" or \"no\" for sure, but we can say how much to expect it. People needed words to compare chances, like certain, likely, unlikely and impossible. These words are the first step to measuring chance with numbers.",
+        "ur": "زندگی میں بہت سی باتیں یقینی نہیں ہوتیں: بارش، کرکٹ کا میچ، اگلی بس۔ ہم یقین سے \"ہاں\" یا \"نہیں\" نہیں کہہ سکتے، مگر یہ ضرور بتا سکتے ہیں کہ اس کی کتنی امید ہے۔ لوگوں کو امکانات کا موازنہ کرنے کے لیے الفاظ چاہیے تھے، جیسے یقینی، زیادہ امکان، کم امکان اور ناممکن۔ یہ الفاظ امکان کو اعداد سے ناپنے کی پہلی سیڑھی ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Weather: \"a high chance of rain\" in a forecast.\n• Cricket: a team that is likely to win a match.\n• Daily life: taking an umbrella or leaving early for school.\n• Games: knowing a coin toss is equally likely to be head or tail.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• موسم: پیش گوئی میں \"بارش کا زیادہ امکان\"۔\n• کرکٹ: وہ ٹیم جس کے میچ جیتنے کا امکان زیادہ ہے۔\n• روزمرہ: چھتری لے جانا یا اسکول کے لیے جلدی نکلنا۔\n• کھیل: یہ جاننا کہ سکہ اچھالنے پر ہیڈ اور ٹیل کا امکان یکساں ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

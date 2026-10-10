@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-continued-ratio",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Continued ratio",
     "ur": "مسلسل نسبت"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.ratio.equivalent"
@@ -428,6 +428,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Cement, sand and gravel: how do you compare three things together?",
+          "ur": "سیمنٹ، ریت اور بجری: تین چیزوں کا اکٹھا موازنہ کیسے کریں؟"
+        }
+      },
+      "text": {
+        "en": "Many mixes have three parts, not two. Concrete for a roof needs cement, sand and gravel in set amounts, like 1 : 2 : 4. A mason may only know cement to sand, and sand to gravel. People needed a way to join the two ratios into one that compares all three, and to share a total among three people. That is a continued ratio.",
+        "ur": "بہت سے ملاپ دو نہیں بلکہ تین حصوں کے ہوتے ہیں۔ چھت کے کنکریٹ میں سیمنٹ، ریت اور بجری مقررہ مقدار میں لگتی ہے، جیسے 1 : 2 : 4۔ راج مستری کو شاید صرف سیمنٹ اور ریت کی نسبت، اور ریت اور بجری کی نسبت معلوم ہو۔ لوگوں کو دونوں نسبتوں کو جوڑ کر ایک ایسی نسبت بنانے کا طریقہ چاہیے تھا جو تینوں کا موازنہ کرے، اور کل رقم تین لوگوں میں بانٹنے کا بھی۔ یہ مسلسل نسبت ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Building: mixing concrete for a floor or a roof.\n• Sharing: a prize among three friends by their effort.\n• Cooking: a recipe with three ingredients in set amounts.\n• Farming: mixing three fertilisers in the right amounts.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• تعمیر: فرش یا چھت کے لیے کنکریٹ بنانا۔\n• بانٹنا: انعام تین دوستوں میں ان کی محنت کے مطابق بانٹنا۔\n• کھانا پکانا: تین چیزوں کی مقررہ مقدار والی ترکیب۔\n• کھیتی: تین کھادوں کو صحیح مقدار میں ملانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

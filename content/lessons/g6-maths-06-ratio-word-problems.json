@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-ratio-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Ratio word problems",
     "ur": "نسبت کے عملی سوالات"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.ratio.meaning"
@@ -587,6 +587,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shop sells things in a ratio. How do we begin the question?",
+          "ur": "ایک دکان چیزیں ایک نسبت میں بیچتی ہے۔ سوال شروع کہاں سے کریں؟"
+        }
+      },
+      "text": {
+        "en": "Real ratio problems come as stories: sharing money, mixing, comparing prices, planning a journey. The numbers are hidden in words. The skill that matters is to find what is being compared, choose the right tool (ratio, sharing, rate, speed or proportion), solve it, and say the answer in words. This is how ratios help a cook, a builder or a shopkeeper decide.",
+        "ur": "نسبت کے حقیقی مسئلے کہانی کی شکل میں آتے ہیں: پیسے بانٹنا، ملاپ، قیمتوں کا موازنہ، سفر کی منصوبہ بندی۔ اعداد الفاظ میں چھپے ہوتے ہیں۔ اصل ہنر یہ ہے کہ دیکھیں کس چیز کا موازنہ ہو رہا ہے، صحیح طریقہ چنیں (نسبت، تقسیم، شرح، رفتار یا تناسب)، حل کریں، اور جواب الفاظ میں بتائیں۔ یوں نسبت باورچی، راج مستری یا دکان دار کو فیصلہ کرنے میں مدد دیتی ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: finding the better deal between two packs.\n• Business: sharing profit between partners.\n• Cooking and building: scaling a recipe or a mix.\n• Travel: planning time and cost of a journey.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: دو پیکوں میں سے بہتر سودا چننا۔\n• کاروبار: ساجھے داروں میں منافع بانٹنا۔\n• کھانا پکانا اور تعمیر: ترکیب یا ملاپ کو بڑھانا یا گھٹانا۔\n• سفر: سفر کے وقت اور خرچ کا حساب۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

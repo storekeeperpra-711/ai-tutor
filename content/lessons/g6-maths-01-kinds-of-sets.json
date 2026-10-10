@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-kinds-of-sets",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Kinds of sets",
     "ur": "سیٹوں کی اقسام"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.sets.meaning"
@@ -569,6 +569,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can a group have nothing in it? Can a group never end?",
+          "ur": "کیا کسی گروہ میں کچھ بھی نہ ہو سکتا ہے؟ کیا کوئی گروہ کبھی ختم نہ ہو؟"
+        }
+      },
+      "text": {
+        "en": "Real groups come in different kinds. A shop shelf may be empty today. The days of the week end at seven, but counting numbers never end. People needed names for these cases so that they could talk about them clearly: empty set, finite set, infinite set. They also needed to say when two sets are equal, or just have the same number of members.",
+        "ur": "حقیقی گروہ کئی طرح کے ہوتے ہیں۔ دکان کی الماری آج خالی ہو سکتی ہے۔ ہفتے کے دن سات پر ختم ہو جاتے ہیں، مگر گنتی کے اعداد کبھی ختم نہیں ہوتے۔ لوگوں کو ان صورتوں کے نام چاہیے تھے تاکہ ان کے بارے میں صاف بات ہو سکے: خالی سیٹ، محدود سیٹ، لامحدود سیٹ۔ انہیں یہ بتانے کا طریقہ بھی چاہیے تھا کہ دو سیٹ کب برابر ہیں، اور کب صرف ان کے رکنوں کی تعداد برابر ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shop: an empty shelf is the empty set; stock you can count is a finite set.\n• Class: the days of the week, or the months of the year.\n• Number games: even numbers go on forever, an infinite set.\n• Computers: a search that finds nothing gives an empty list.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان: خالی الماری خالی سیٹ ہے؛ گنا جا سکنے والا سامان محدود سیٹ ہے۔\n• جماعت: ہفتے کے دن، یا سال کے مہینے۔\n• اعداد کے کھیل: جفت اعداد ہمیشہ چلتے رہتے ہیں، یہ لامحدود سیٹ ہے۔\n• کمپیوٹر: جس تلاش میں کچھ نہ ملے وہ خالی فہرست دیتی ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

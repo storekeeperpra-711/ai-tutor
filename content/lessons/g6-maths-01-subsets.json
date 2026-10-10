@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-subsets",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Subsets",
     "ur": "ذیلی سیٹ"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.sets.kinds"
@@ -696,6 +696,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Girls in your class are also students of the school. Is that a rule?",
+          "ur": "آپ کی جماعت کی لڑکیاں اسکول کی طالبات بھی ہیں۔ کیا یہ کوئی اصول ہے؟"
+        }
+      },
+      "text": {
+        "en": "Some groups sit inside bigger groups: the cricket team is inside the class, and the class is inside the school. People needed an exact way to say \"every member of this group is also in that one\". That is a subset, written A ⊆ B. It also helps us count all the ways to pick some things from a group, for example which toppings to choose.",
+        "ur": "کچھ گروہ بڑے گروہوں کے اندر ہوتے ہیں: کرکٹ ٹیم جماعت کے اندر ہے، اور جماعت اسکول کے اندر۔ لوگوں کو یہ کہنے کا درست طریقہ چاہیے تھا کہ \"اس گروہ کا ہر رکن اس دوسرے گروہ میں بھی ہے\"۔ یہی ذیلی سیٹ ہے، جسے A ⊆ B لکھتے ہیں۔ اس سے ہم یہ بھی گن سکتے ہیں کہ کسی گروہ میں سے کچھ چیزیں چننے کے کتنے طریقے ہیں، مثلاً کون سی چیزیں ڈالیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• School: a class is a subset of the school, a team is a subset of the class.\n• Shop: the fruits are a subset of everything the shop sells.\n• Choosing: with 3 flavours, you can pick in 8 ways, including none.\n• Computers: filters pick a subset, like only the unread messages.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• اسکول: جماعت اسکول کا ذیلی سیٹ ہے، ٹیم جماعت کا ذیلی سیٹ۔\n• دکان: پھل دکان کے سارے سامان کا ذیلی سیٹ ہیں۔\n• انتخاب: 3 ذائقوں میں سے آپ 8 طریقوں سے چن سکتے ہیں، کچھ نہ چننا بھی شامل ہے۔\n• کمپیوٹر: فلٹر ایک ذیلی سیٹ چنتا ہے، جیسے صرف نہ پڑھے ہوئے پیغامات۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
