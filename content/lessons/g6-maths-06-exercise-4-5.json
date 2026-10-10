@@ -1,0 +1,879 @@
+{
+  "id": "g6-maths-06-exercise-4-5",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find speed, distance and time, change a speed between km/h and m/s, and solve speed-limit and average-speed problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, Exercise 4.5"
+    }
+  ],
+  "skills": [
+    "maths.ratio.ex_4_5"
+  ],
+  "title": {
+    "en": "Exercise 4.5 practice: speed, distance and time",
+    "ur": "مشق 4.5 کی پریکٹس: رفتار، فاصلہ اور وقت"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.rate"
+    },
+    {
+      "skill": "maths.ratio.speed"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "speed_times",
+      "description": "Multiplies the distance and the time to find a speed, or divides the speed and time to find a distance."
+    },
+    {
+      "id": "wrong_factor",
+      "description": "Multiplies by 18/5 when changing km/h to m/s, or by 5/18 when changing m/s to km/h."
+    },
+    {
+      "id": "half_conversion",
+      "description": "Multiplies by 18 or by 5 only, without dividing by the other number."
+    },
+    {
+      "id": "units_mixed",
+      "description": "Uses minutes with metres per second, or hours with metres, without changing the unit of time."
+    },
+    {
+      "id": "mean_of_speeds",
+      "description": "Finds an average speed by averaging the speeds instead of using total distance over total time."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a speed in m/s and does not change it to km/h as asked."
+    },
+    {
+      "id": "time_unit",
+      "description": "Gives the time in hours when minutes are asked for."
+    },
+    {
+      "id": "compare_units",
+      "description": "Compares a speed in m/s with a limit in km/h without changing units."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.ex_4_5": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.ex_4_5": [
+      {
+        "id": "qb_speed",
+        "type": "recall",
+        "step": {
+          "id": "qb_speed",
+          "type": "number",
+          "prompt": {
+            "en": "A cyclist rides 150 km in 2 hours. What is the speed in km/h?",
+            "ur": "ایک سائیکل سوار 2 گھنٹے میں 150 کلومیٹر چلتا ہے۔ رفتار کلومیٹر فی گھنٹہ میں کیا ہے؟"
+          },
+          "answer": 75,
+          "checker": "numeric",
+          "hint": {
+            "en": "Speed = distance ÷ time.",
+            "ur": "رفتار = فاصلہ ÷ وقت"
+          },
+          "feedback_correct": {
+            "en": "Right! 150 ÷ 2 = 75.",
+            "ur": "درست! 150 ÷ 2 = 75"
+          },
+          "feedback_wrong": {
+            "en": "150 km in 2 h is 75 km each hour.",
+            "ur": "2 گھنٹے میں 150 کلومیٹر یعنی ہر گھنٹے 75 کلومیٹر۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 300,
+              "feedback": {
+                "en": "That multiplies. Speed is distance divided by time: 75.",
+                "ur": "یہ ضرب ہے۔ رفتار فاصلے کو وقت سے تقسیم کرنے سے ملتی ہے: 75"
+              },
+              "misconception_id": "speed_times"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_convert",
+        "type": "apply",
+        "step": {
+          "id": "qb_convert",
+          "type": "number",
+          "prompt": {
+            "en": "Change 36 km/h to m/s.",
+            "ur": "36 کلومیٹر فی گھنٹہ کو میٹر فی سیکنڈ میں بدلیں۔"
+          },
+          "answer": 10,
+          "checker": "numeric",
+          "hint": {
+            "en": "Multiply by 5/18: 36 ÷ 18 = 2, then × 5.",
+            "ur": "5/18 سے ضرب دیں: 36 ÷ 18 = 2، پھر × 5"
+          },
+          "feedback_correct": {
+            "en": "Right! 10 m/s.",
+            "ur": "درست! 10 میٹر فی سیکنڈ"
+          },
+          "feedback_wrong": {
+            "en": "36 × 5 ÷ 18 = 10 m/s.",
+            "ur": "36 × 5 ÷ 18 = 10 میٹر فی سیکنڈ"
+          },
+          "common_wrong": [
+            {
+              "answer": 129.6,
+              "feedback": {
+                "en": "That multiplies by 18/5. For km/h to m/s multiply by 5/18: 10.",
+                "ur": "یہ 18/5 سے ضرب دیتا ہے۔ کلومیٹر فی گھنٹہ سے میٹر فی سیکنڈ کے لیے 5/18 سے ضرب دیں: 10"
+              },
+              "misconception_id": "wrong_factor"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Umer says a car going 40 m/s is slower than a car going 100 km/h because 40 is less than 100. What went wrong?",
+            "ur": "عمر کہتا ہے 40 میٹر فی سیکنڈ کی کار 100 کلومیٹر فی گھنٹہ کی کار سے سست ہے کیونکہ 40، 100 سے کم ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The speeds are in different units. 40 m/s is 144 km/h, which is faster.",
+                "ur": "رفتاریں مختلف اکائیوں میں ہیں۔ 40 میٹر فی سیکنڈ یعنی 144 کلومیٹر فی گھنٹہ، جو تیز ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Change to the same unit before comparing.",
+                "ur": "جی ہاں! موازنے سے پہلے ایک ہی اکائی میں بدلیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 40 is less than 100.",
+                "ur": "کوئی غلطی نہیں۔ 40، 100 سے کم ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "You cannot compare numbers in different units.",
+                "ur": "مختلف اکائیوں کے اعداد کا موازنہ نہیں ہو سکتا۔"
+              },
+              "misconception_id": "compare_units"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "They are equal speeds.",
+                "ur": "دونوں کی رفتار برابر ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "40 m/s is 144 km/h, not 100 km/h.",
+                "ur": "40 میٹر فی سیکنڈ یعنی 144 کلومیٹر فی گھنٹہ، 100 نہیں۔"
+              },
+              "misconception_id": "wrong_factor"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_convert",
+      "front": {
+        "en": "How do you change km/h to m/s, and m/s to km/h?",
+        "ur": "کلومیٹر فی گھنٹہ سے میٹر فی سیکنڈ اور اس کے الٹ کیسے بدلتے ہیں؟"
+      },
+      "back": {
+        "en": "km/h to m/s: × 5/18. m/s to km/h: × 18/5.",
+        "ur": "کلومیٹر فی گھنٹہ سے میٹر فی سیکنڈ: × 5/18۔ میٹر فی سیکنڈ سے کلومیٹر فی گھنٹہ: × 18/5۔"
+      }
+    },
+    {
+      "id": "f_average",
+      "front": {
+        "en": "How do you find an average speed?",
+        "ur": "اوسط رفتار کیسے نکالتے ہیں؟"
+      },
+      "back": {
+        "en": "Total distance ÷ total time.",
+        "ur": "کل فاصلہ ÷ کل وقت۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_walk",
+      "text": {
+        "en": "Walk 100 steps at your normal pace and time yourself with a clock or phone. Estimate the distance (a step is about 0.6 m) and work out your speed in m/s and in km/h.",
+        "ur": "اپنی عام رفتار سے 100 قدم چلیں اور گھڑی یا فون سے وقت نوٹ کریں۔ فاصلے کا اندازہ لگائیں (ایک قدم تقریباً 0.6 میٹر) اور اپنی رفتار میٹر فی سیکنڈ اور کلومیٹر فی گھنٹہ میں نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Speed",
+      "ur": "رفتار"
+    },
+    {
+      "en": "Distance",
+      "ur": "فاصلہ"
+    },
+    {
+      "en": "Kilometres per hour (km/h)",
+      "ur": "کلومیٹر فی گھنٹہ"
+    },
+    {
+      "en": "Metres per second (m/s)",
+      "ur": "میٹر فی سیکنڈ"
+    },
+    {
+      "en": "Average speed",
+      "ur": "اوسط رفتار"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 4.5 is about speed. Ready?",
+          "ur": "مشق 4.5 رفتار کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 4.5 of your maths book (PCTB Mathematics 6). Here you find speed, distance and time, change speeds between kilometres per hour and metres per second, and solve speed-limit and average-speed problems. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 4.5 کے ساتھ ہے۔ اس میں آپ رفتار، فاصلہ اور وقت معلوم کریں گے، رفتار کو کلومیٹر فی گھنٹہ اور میٹر فی سیکنڈ میں بدلیں گے اور رفتار کی حد اور اوسط رفتار کے سوال حل کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_speed",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A train covers 180 km in 3 hours. What is its speed in km per hour?",
+        "ur": "ایک ٹرین 3 گھنٹے میں 180 کلومیٹر طے کرتی ہے۔ اس کی رفتار کلومیٹر فی گھنٹہ میں کیا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Speed = distance travelled ÷ time taken.",
+        "ur": "رفتار = طے کیا گیا فاصلہ ÷ لگا ہوا وقت"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 ÷ 3 = 60 km/h.",
+        "ur": "درست! 180 ÷ 3 = 60 کلومیٹر فی گھنٹہ"
+      },
+      "feedback_wrong": {
+        "en": "Speed = 180 km ÷ 3 h = 60 km/h.",
+        "ur": "رفتار = 180 کلومیٹر ÷ 3 گھنٹے = 60 کلومیٹر فی گھنٹہ"
+      },
+      "common_wrong": [
+        {
+          "answer": 540,
+          "feedback": {
+            "en": "That multiplies. Speed is distance divided by time: 60.",
+            "ur": "یہ ضرب ہے۔ رفتار فاصلے کو وقت سے تقسیم کرنے سے ملتی ہے: 60"
+          },
+          "misconception_id": "speed_times"
+        }
+      ]
+    },
+    {
+      "id": "q2_kmh_to_ms",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Change 72 km/h to metres per second.",
+        "ur": "72 کلومیٹر فی گھنٹہ کو میٹر فی سیکنڈ میں بدلیں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "km/h to m/s: multiply by 5/18. 72 ÷ 18 = 4, then × 5.",
+        "ur": "کلومیٹر فی گھنٹہ سے میٹر فی سیکنڈ: 5/18 سے ضرب دیں۔ 72 ÷ 18 = 4، پھر × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 72 × 5/18 = 20 m/s.",
+        "ur": "درست! 72 × 5/18 = 20 میٹر فی سیکنڈ"
+      },
+      "feedback_wrong": {
+        "en": "1 km = 1000 m and 1 h = 3600 s, so multiply by 5/18: 72 × 5 ÷ 18 = 20 m/s.",
+        "ur": "1 کلومیٹر = 1000 میٹر اور 1 گھنٹہ = 3600 سیکنڈ، اس لیے 5/18 سے ضرب دیں: 72 × 5 ÷ 18 = 20 میٹر فی سیکنڈ"
+      },
+      "common_wrong": [
+        {
+          "answer": 259.2,
+          "feedback": {
+            "en": "That multiplies by 18/5, which changes m/s to km/h. For km/h to m/s multiply by 5/18: 20.",
+            "ur": "یہ 18/5 سے ضرب دیتا ہے، جو میٹر فی سیکنڈ کو کلومیٹر فی گھنٹہ بناتا ہے۔ کلومیٹر فی گھنٹہ سے میٹر فی سیکنڈ کے لیے 5/18 سے ضرب دیں: 20"
+          },
+          "misconception_id": "wrong_factor"
+        }
+      ]
+    },
+    {
+      "id": "q3_ms_to_kmh",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Change 15 m/s to kilometres per hour.",
+        "ur": "15 میٹر فی سیکنڈ کو کلومیٹر فی گھنٹہ میں بدلیں۔"
+      },
+      "answer": 54,
+      "checker": "numeric",
+      "hint": {
+        "en": "m/s to km/h: multiply by 18/5. 15 ÷ 5 = 3, then × 18.",
+        "ur": "میٹر فی سیکنڈ سے کلومیٹر فی گھنٹہ: 18/5 سے ضرب دیں۔ 15 ÷ 5 = 3، پھر × 18"
+      },
+      "feedback_correct": {
+        "en": "Right! 15 × 18/5 = 54 km/h.",
+        "ur": "درست! 15 × 18/5 = 54 کلومیٹر فی گھنٹہ"
+      },
+      "feedback_wrong": {
+        "en": "Multiply by 18/5: 15 ÷ 5 = 3 and 3 × 18 = 54 km/h.",
+        "ur": "18/5 سے ضرب دیں: 15 ÷ 5 = 3 اور 3 × 18 = 54 کلومیٹر فی گھنٹہ"
+      },
+      "common_wrong": [
+        {
+          "answer": 270,
+          "feedback": {
+            "en": "That multiplies by 18 but forgets to divide by 5: 54.",
+            "ur": "یہ 18 سے ضرب دیتا ہے مگر 5 سے تقسیم کرنا بھول جاتا ہے: 54"
+          },
+          "misconception_id": "half_conversion"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "km/h to m/s: × 5/18. m/s to km/h: × 18/5.",
+          "ur": "کلومیٹر فی گھنٹہ سے میٹر فی سیکنڈ: × 5/18۔ میٹر فی سیکنڈ سے کلومیٹر فی گھنٹہ: × 18/5"
+        }
+      },
+      "text": {
+        "en": "Speed = distance travelled ÷ time taken, so distance = speed × time and time = distance ÷ speed. Speed is measured in km/h or m/s. Since 1 km = 1000 m and 1 hour = 3600 seconds, 1 km/h = 1000/3600 = 5/18 m/s. To change km/h to m/s multiply by 5/18: 72 km/h = 72 × 5/18 = 20 m/s. To change m/s to km/h multiply by 18/5: 15 m/s = 54 km/h. For an average speed over a whole journey, use total distance ÷ total time.",
+        "ur": "رفتار = طے کیا گیا فاصلہ ÷ لگا ہوا وقت، اس لیے فاصلہ = رفتار × وقت اور وقت = فاصلہ ÷ رفتار۔ رفتار کلومیٹر فی گھنٹہ یا میٹر فی سیکنڈ میں ناپی جاتی ہے۔ چونکہ 1 کلومیٹر = 1000 میٹر اور 1 گھنٹہ = 3600 سیکنڈ، اس لیے 1 کلومیٹر فی گھنٹہ = 1000/3600 = 5/18 میٹر فی سیکنڈ۔ کلومیٹر فی گھنٹہ کو میٹر فی سیکنڈ بنانے کے لیے 5/18 سے ضرب دیں: 72 کلومیٹر فی گھنٹہ = 72 × 5/18 = 20 میٹر فی سیکنڈ۔ میٹر فی سیکنڈ کو کلومیٹر فی گھنٹہ بنانے کے لیے 18/5 سے ضرب دیں: 15 میٹر فی سیکنڈ = 54 کلومیٹر فی گھنٹہ۔ پورے سفر کی اوسط رفتار کے لیے کل فاصلہ ÷ کل وقت لیں۔"
+      }
+    },
+    {
+      "id": "q4_distance",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bus travels at 48 km/h for 5 hours. How far does it go, in km?",
+        "ur": "ایک بس 48 کلومیٹر فی گھنٹہ کی رفتار سے 5 گھنٹے چلتی ہے۔ وہ کتنے کلومیٹر جاتی ہے؟"
+      },
+      "answer": 240,
+      "checker": "numeric",
+      "hint": {
+        "en": "Distance = speed × time.",
+        "ur": "فاصلہ = رفتار × وقت"
+      },
+      "feedback_correct": {
+        "en": "Right! 48 × 5 = 240 km.",
+        "ur": "درست! 48 × 5 = 240 کلومیٹر"
+      },
+      "feedback_wrong": {
+        "en": "48 km each hour for 5 hours: 48 × 5 = 240 km.",
+        "ur": "5 گھنٹے تک ہر گھنٹے 48 کلومیٹر: 48 × 5 = 240 کلومیٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 9.6,
+          "feedback": {
+            "en": "That divides. To find a distance multiply speed by time: 240.",
+            "ur": "یہ تقسیم ہے۔ فاصلہ معلوم کرنے کے لیے رفتار کو وقت سے ضرب دیں: 240"
+          },
+          "misconception_id": "speed_times"
+        }
+      ]
+    },
+    {
+      "id": "q5_time",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A van drives 300 km at 75 km/h. How many hours does it take?",
+        "ur": "ایک وین 75 کلومیٹر فی گھنٹہ کی رفتار سے 300 کلومیٹر چلتی ہے۔ اس میں کتنے گھنٹے لگتے ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Time = distance ÷ speed.",
+        "ur": "وقت = فاصلہ ÷ رفتار"
+      },
+      "feedback_correct": {
+        "en": "Right! 300 ÷ 75 = 4 hours.",
+        "ur": "درست! 300 ÷ 75 = 4 گھنٹے"
+      },
+      "feedback_wrong": {
+        "en": "Time = 300 ÷ 75 = 4 hours.",
+        "ur": "وقت = 300 ÷ 75 = 4 گھنٹے"
+      },
+      "common_wrong": [
+        {
+          "answer": 22500,
+          "feedback": {
+            "en": "That multiplies 300 by 75. Time is distance divided by speed: 4.",
+            "ur": "یہ 300 کو 75 سے ضرب دیتا ہے۔ وقت فاصلے کو رفتار سے تقسیم کرنے سے ملتا ہے: 4"
+          },
+          "misconception_id": "speed_times"
+        }
+      ]
+    },
+    {
+      "id": "q6_kmh_to_ms2",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A motorbike goes at 90 km/h. What is its speed in m/s?",
+        "ur": "ایک موٹر بائیک 90 کلومیٹر فی گھنٹہ کی رفتار سے چلتی ہے۔ اس کی رفتار میٹر فی سیکنڈ میں کیا ہے؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply by 5/18: 90 ÷ 18 = 5, then × 5.",
+        "ur": "5/18 سے ضرب دیں: 90 ÷ 18 = 5، پھر × 5"
+      },
+      "feedback_correct": {
+        "en": "Right! 90 × 5/18 = 25 m/s.",
+        "ur": "درست! 90 × 5/18 = 25 میٹر فی سیکنڈ"
+      },
+      "feedback_wrong": {
+        "en": "90 × 5 ÷ 18 = 25 m/s.",
+        "ur": "90 × 5 ÷ 18 = 25 میٹر فی سیکنڈ"
+      },
+      "common_wrong": [
+        {
+          "answer": 324,
+          "feedback": {
+            "en": "That multiplies by 18/5. A speed in m/s is smaller than the same speed in km/h, so multiply by 5/18: 25.",
+            "ur": "یہ 18/5 سے ضرب دیتا ہے۔ میٹر فی سیکنڈ کی رفتار کلومیٹر فی گھنٹہ سے چھوٹی ہوتی ہے، اس لیے 5/18 سے ضرب دیں: 25"
+          },
+          "misconception_id": "wrong_factor"
+        }
+      ]
+    },
+    {
+      "id": "q7_ms_minutes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A cyclist rides at 8 m/s for 2 minutes. How many metres does the cyclist cover?",
+        "ur": "ایک سائیکل سوار 8 میٹر فی سیکنڈ کی رفتار سے 2 منٹ چلتا ہے۔ وہ کتنے میٹر طے کرتا ہے؟"
+      },
+      "answer": 960,
+      "checker": "numeric",
+      "hint": {
+        "en": "The speed is per second, so change 2 minutes to seconds first.",
+        "ur": "رفتار فی سیکنڈ ہے، اس لیے پہلے 2 منٹ کو سیکنڈ میں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 minutes = 120 seconds and 8 × 120 = 960 m.",
+        "ur": "درست! 2 منٹ = 120 سیکنڈ اور 8 × 120 = 960 میٹر"
+      },
+      "feedback_wrong": {
+        "en": "2 × 60 = 120 seconds. Distance = 8 × 120 = 960 m.",
+        "ur": "2 × 60 = 120 سیکنڈ۔ فاصلہ = 8 × 120 = 960 میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That multiplies 8 by 2 minutes, but the speed is in metres per second. Use 120 seconds: 960.",
+            "ur": "یہ 8 کو 2 منٹ سے ضرب دیتا ہے، مگر رفتار میٹر فی سیکنڈ میں ہے۔ 120 سیکنڈ لیں: 960"
+          },
+          "misconception_id": "units_mixed"
+        }
+      ]
+    },
+    {
+      "id": "q8_two_steps",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A runner covers 100 m in 20 seconds. What is the speed in km/h?",
+        "ur": "ایک دوڑنے والا 20 سیکنڈ میں 100 میٹر طے کرتا ہے۔ اس کی رفتار کلومیٹر فی گھنٹہ میں کیا ہے؟"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "First find the speed in m/s: 100 ÷ 20. Then multiply by 18/5.",
+        "ur": "پہلے میٹر فی سیکنڈ میں رفتار نکالیں: 100 ÷ 20۔ پھر 18/5 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 m/s × 18/5 = 18 km/h.",
+        "ur": "درست! 5 میٹر فی سیکنڈ × 18/5 = 18 کلومیٹر فی گھنٹہ"
+      },
+      "feedback_wrong": {
+        "en": "100 ÷ 20 = 5 m/s. Then 5 × 18 ÷ 5 = 18 km/h.",
+        "ur": "100 ÷ 20 = 5 میٹر فی سیکنڈ۔ پھر 5 × 18 ÷ 5 = 18 کلومیٹر فی گھنٹہ"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is the speed in m/s. The question asks for km/h: 18.",
+            "ur": "یہ میٹر فی سیکنڈ میں رفتار ہے۔ سوال کلومیٹر فی گھنٹہ مانگتا ہے: 18"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "That multiplies by 18 and forgets to divide by 5: 18.",
+            "ur": "یہ 18 سے ضرب دیتا ہے اور 5 سے تقسیم کرنا بھول جاتا ہے: 18"
+          },
+          "misconception_id": "half_conversion"
+        }
+      ]
+    },
+    {
+      "id": "q9_limit",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The speed limit on a road is 80 km/h. A car passes a camera at 25 m/s. Is the car over the limit?",
+        "ur": "ایک سڑک پر رفتار کی حد 80 کلومیٹر فی گھنٹہ ہے۔ ایک کار کیمرے کے پاس سے 25 میٹر فی سیکنڈ کی رفتار سے گزرتی ہے۔ کیا کار حد سے زیادہ تیز ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "No, because 25 is less than 80",
+            "ur": "نہیں، کیونکہ 25، 80 سے کم ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "25 is in m/s and 80 is in km/h. Change them to the same unit first.",
+            "ur": "25 میٹر فی سیکنڈ میں ہے اور 80 کلومیٹر فی گھنٹہ میں۔ پہلے دونوں کو ایک ہی اکائی میں بدلیں۔"
+          },
+          "misconception_id": "compare_units"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Yes, 25 m/s is 90 km/h",
+            "ur": "جی ہاں، 25 میٹر فی سیکنڈ یعنی 90 کلومیٹر فی گھنٹہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Right! 25 × 18/5 = 90 km/h, which is more than 80.",
+            "ur": "درست! 25 × 18/5 = 90 کلومیٹر فی گھنٹہ، جو 80 سے زیادہ ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "No, 25 m/s is 70 km/h",
+            "ur": "نہیں، 25 میٹر فی سیکنڈ یعنی 70 کلومیٹر فی گھنٹہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "25 × 18/5 = 90, not 70.",
+            "ur": "25 × 18/5 = 90، 70 نہیں۔"
+          },
+          "misconception_id": "wrong_factor"
+        }
+      ]
+    },
+    {
+      "id": "q10_average",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A car travels 90 km in the first 2 hours and 210 km in the next 3 hours. What is its average speed for the whole journey, in km/h?",
+        "ur": "ایک کار پہلے 2 گھنٹے میں 90 کلومیٹر اور اگلے 3 گھنٹے میں 210 کلومیٹر چلتی ہے۔ پورے سفر کی اوسط رفتار کلومیٹر فی گھنٹہ میں کیا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "Average speed = total distance ÷ total time.",
+        "ur": "اوسط رفتار = کل فاصلہ ÷ کل وقت"
+      },
+      "feedback_correct": {
+        "en": "Right! 300 km in 5 hours is 60 km/h.",
+        "ur": "درست! 5 گھنٹے میں 300 کلومیٹر یعنی 60 کلومیٹر فی گھنٹہ"
+      },
+      "feedback_wrong": {
+        "en": "Total distance 90 + 210 = 300 km and total time 2 + 3 = 5 h. 300 ÷ 5 = 60 km/h.",
+        "ur": "کل فاصلہ 90 + 210 = 300 کلومیٹر اور کل وقت 2 + 3 = 5 گھنٹے۔ 300 ÷ 5 = 60 کلومیٹر فی گھنٹہ"
+      },
+      "common_wrong": [
+        {
+          "answer": 57.5,
+          "feedback": {
+            "en": "That averages the two speeds (45 and 70). Use the total distance over the total time: 60.",
+            "ur": "یہ دونوں رفتاروں (45 اور 70) کا اوسط لیتا ہے۔ کل فاصلہ کل وقت پر تقسیم کریں: 60"
+          },
+          "misconception_id": "mean_of_speeds"
+        }
+      ]
+    },
+    {
+      "id": "q11_minutes",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A train runs at 90 km/h. How many minutes does it take to cover 45 km?",
+        "ur": "ایک ٹرین 90 کلومیٹر فی گھنٹہ کی رفتار سے چلتی ہے۔ 45 کلومیٹر طے کرنے میں کتنے منٹ لگتے ہیں؟"
+      },
+      "answer": 30,
+      "checker": "numeric",
+      "hint": {
+        "en": "Time = 45 ÷ 90 hours. Change the hours to minutes.",
+        "ur": "وقت = 45 ÷ 90 گھنٹے۔ گھنٹوں کو منٹ میں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Half an hour is 30 minutes.",
+        "ur": "درست! آدھا گھنٹہ 30 منٹ ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "45 ÷ 90 = 1/2 hour, and 1/2 × 60 = 30 minutes.",
+        "ur": "45 ÷ 90 = 1/2 گھنٹہ اور 1/2 × 60 = 30 منٹ"
+      },
+      "common_wrong": [
+        {
+          "answer": 0.5,
+          "feedback": {
+            "en": "That is the time in hours. The question asks for minutes: 30.",
+            "ur": "یہ گھنٹوں میں وقت ہے۔ سوال منٹ مانگتا ہے: 30"
+          },
+          "misconception_id": "time_unit"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That divides 90 by 45. Time is distance divided by speed: 30 minutes.",
+            "ur": "یہ 90 کو 45 سے تقسیم کرتا ہے۔ وقت فاصلہ تقسیم رفتار ہے: 30 منٹ"
+          },
+          "misconception_id": "speed_times"
+        }
+      ]
+    },
+    {
+      "id": "q12_sound",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Sound travels about 340 metres every second. How far does it travel in 3 seconds, in metres?",
+        "ur": "آواز تقریباً 340 میٹر فی سیکنڈ کی رفتار سے چلتی ہے۔ 3 سیکنڈ میں وہ کتنے میٹر چلتی ہے؟"
+      },
+      "answer": 1020,
+      "checker": "numeric",
+      "hint": {
+        "en": "Distance = speed × time.",
+        "ur": "فاصلہ = رفتار × وقت"
+      },
+      "feedback_correct": {
+        "en": "Right! 340 × 3 = 1,020 m.",
+        "ur": "درست! 340 × 3 = 1,020 میٹر"
+      },
+      "feedback_wrong": {
+        "en": "340 m each second for 3 seconds: 1,020 m.",
+        "ur": "3 سیکنڈ تک ہر سیکنڈ 340 میٹر: 1,020 میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 343,
+          "feedback": {
+            "en": "That adds. Multiply the speed by the time: 1,020.",
+            "ur": "یہ جمع ہے۔ رفتار کو وقت سے ضرب دیں: 1,020"
+          },
+          "misconception_id": "speed_times"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zara changes 54 km/h to m/s by multiplying by 18/5. What went wrong?",
+        "ur": "زارا 54 کلومیٹر فی گھنٹہ کو 18/5 سے ضرب دے کر میٹر فی سیکنڈ میں بدلتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "To change km/h to m/s, multiply by 5/18: 54 × 5/18 = 15 m/s.",
+            "ur": "کلومیٹر فی گھنٹہ سے میٹر فی سیکنڈ کے لیے 5/18 سے ضرب دیں: 54 × 5/18 = 15 میٹر فی سیکنڈ۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 18/5 changes m/s to km/h, the other way round.",
+            "ur": "جی ہاں! 18/5 میٹر فی سیکنڈ کو کلومیٹر فی گھنٹہ بناتا ہے، یعنی الٹ سمت میں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 18/5 is the right number.",
+            "ur": "کوئی غلطی نہیں۔ 18/5 درست عدد ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A car at 54 km/h does not go at 194 metres in a second. Multiply by 5/18: 15.",
+            "ur": "54 کلومیٹر فی گھنٹہ کی کار ایک سیکنڈ میں 194 میٹر نہیں چلتی۔ 5/18 سے ضرب دیں: 15"
+          },
+          "misconception_id": "wrong_factor"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should divide by 1000 only.",
+            "ur": "اسے صرف 1000 سے تقسیم کرنا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That changes metres to kilometres but ignores that hours become seconds: multiply by 5/18.",
+            "ur": "یہ میٹر کو کلومیٹر بناتا ہے مگر گھنٹوں کے سیکنڈ بننے کو نظر انداز کرتا ہے: 5/18 سے ضرب دیں۔"
+          },
+          "misconception_id": "half_conversion"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You worked with speed.",
+          "ur": "شاباش! آپ نے رفتار پر کام کیا۔"
+        }
+      },
+      "text": {
+        "en": "Speed = distance ÷ time, distance = speed × time, time = distance ÷ speed. To change km/h to m/s multiply by 5/18; to change m/s to km/h multiply by 18/5. Use the same unit before you compare speeds or combine distances with times. Average speed is total distance ÷ total time, not the average of the speeds.",
+        "ur": "رفتار = فاصلہ ÷ وقت، فاصلہ = رفتار × وقت، وقت = فاصلہ ÷ رفتار۔ کلومیٹر فی گھنٹہ کو میٹر فی سیکنڈ بنانے کے لیے 5/18 سے ضرب دیں؛ میٹر فی سیکنڈ کو کلومیٹر فی گھنٹہ بنانے کے لیے 18/5 سے ضرب دیں۔ رفتاروں کا موازنہ کرنے یا فاصلے اور وقت ملانے سے پہلے ایک ہی اکائی لیں۔ اوسط رفتار کل فاصلہ ÷ کل وقت ہے، رفتاروں کا اوسط نہیں۔"
+      },
+      "points": [
+        {
+          "en": "m/s numbers are smaller than km/h numbers for the same speed.",
+          "ur": "ایک ہی رفتار کے لیے میٹر فی سیکنڈ کا عدد کلومیٹر فی گھنٹہ سے چھوٹا ہوتا ہے۔"
+        },
+        {
+          "en": "Check the unit the question asks for.",
+          "ur": "دیکھیں سوال کس اکائی میں جواب مانگتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_speed",
+      "type": "recall",
+      "step": {
+        "id": "r_speed",
+        "type": "number",
+        "prompt": {
+          "en": "A car covers 240 km in 4 hours. What is its speed in km/h?",
+          "ur": "ایک کار 4 گھنٹے میں 240 کلومیٹر طے کرتی ہے۔ اس کی رفتار کلومیٹر فی گھنٹہ میں کیا ہے؟"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide the distance by the time.",
+          "ur": "فاصلے کو وقت سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 240 ÷ 4 = 60.",
+          "ur": "درست! 240 ÷ 4 = 60"
+        },
+        "feedback_wrong": {
+          "en": "240 ÷ 4 = 60 km/h.",
+          "ur": "240 ÷ 4 = 60 کلومیٹر فی گھنٹہ"
+        },
+        "common_wrong": [
+          {
+            "answer": 960,
+            "feedback": {
+              "en": "That multiplies. Divide: 60.",
+              "ur": "یہ ضرب ہے۔ تقسیم کریں: 60"
+            },
+            "misconception_id": "speed_times"
+          }
+        ]
+      },
+      "skill": "maths.ratio.ex_4_5"
+    },
+    {
+      "id": "r_convert",
+      "type": "apply",
+      "step": {
+        "id": "r_convert",
+        "type": "number",
+        "prompt": {
+          "en": "Change 10 m/s to km/h.",
+          "ur": "10 میٹر فی سیکنڈ کو کلومیٹر فی گھنٹہ میں بدلیں۔"
+        },
+        "answer": 36,
+        "checker": "numeric",
+        "hint": {
+          "en": "Multiply by 18/5: 10 ÷ 5 = 2, then × 18.",
+          "ur": "18/5 سے ضرب دیں: 10 ÷ 5 = 2، پھر × 18"
+        },
+        "feedback_correct": {
+          "en": "Right! 36 km/h.",
+          "ur": "درست! 36 کلومیٹر فی گھنٹہ"
+        },
+        "feedback_wrong": {
+          "en": "10 × 18 ÷ 5 = 36 km/h.",
+          "ur": "10 × 18 ÷ 5 = 36 کلومیٹر فی گھنٹہ"
+        },
+        "common_wrong": [
+          {
+            "answer": 180,
+            "feedback": {
+              "en": "That multiplies by 18 and forgets to divide by 5: 36.",
+              "ur": "یہ 18 سے ضرب دیتا ہے اور 5 سے تقسیم کرنا بھول جاتا ہے: 36"
+            },
+            "misconception_id": "half_conversion"
+          }
+        ]
+      },
+      "skill": "maths.ratio.ex_4_5"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 4.5 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers speed from distance and time (q1), changing between km/h and m/s (q2, q3, q6, q8), distance and time from speed (q4, q5, q7, q11, q12), a speed-limit problem (q9), average speed (q10) and a find-the-error question (q13).",
+    "Each wrong answer is a real mistake: multiplying instead of dividing, using 18/5 and 5/18 the wrong way round, half a conversion, minutes with metres per second, and averaging speeds instead of using total distance over total time.",
+    "Urdu terms to check: رفتار (speed), فاصلہ (distance), اوسط رفتار (average speed), کلومیٹر فی گھنٹہ / میٹر فی سیکنڈ (km/h / m/s).",
+    "The numbers were worked out in content/sources/g6-maths-06/exercise_4_5.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

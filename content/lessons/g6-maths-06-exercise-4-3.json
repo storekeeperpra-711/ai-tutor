@@ -1,0 +1,950 @@
+{
+  "id": "g6-maths-06-exercise-4-3",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Express a fraction as a percentage and back, find a percentage of a quantity and the whole from a part, compare two quantities by percentage, and increase or decrease a quantity by a percentage.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, Exercise 4.3"
+    }
+  ],
+  "skills": [
+    "maths.percent.ex_4_3"
+  ],
+  "title": {
+    "en": "Exercise 4.3 practice: percentage",
+    "ur": "مشق 4.3 کی پریکٹس: فیصد"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.percent.meaning"
+    },
+    {
+      "skill": "maths.percent.convert"
+    },
+    {
+      "skill": "maths.percent.of_amount"
+    },
+    {
+      "skill": "maths.percent.find_percent"
+    },
+    {
+      "skill": "maths.percent.change"
+    },
+    {
+      "skill": "maths.percent.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "pc_not_over_100",
+      "description": "Writes a percent over 10 or 1000 instead of over 100 when changing it to a fraction."
+    },
+    {
+      "id": "pc_not_simplified",
+      "description": "Leaves the fraction as 45/100 or stops before it is in lowest terms."
+    },
+    {
+      "id": "pc_of_whole",
+      "description": "Gives the amount itself, or the whole minus the amount, when the percentage of it is asked."
+    },
+    {
+      "id": "pc_times_whole",
+      "description": "Multiplies the part by 100 but forgets to divide by the whole."
+    },
+    {
+      "id": "pc_whole_as_part",
+      "description": "Finds a percentage of the part when the whole is wanted, instead of dividing by the percentage."
+    },
+    {
+      "id": "pc_compare_numbers",
+      "description": "Compares the raw marks of two different totals instead of the percentages."
+    },
+    {
+      "id": "pc_change_only",
+      "description": "Gives the amount of the change instead of the new price or salary."
+    },
+    {
+      "id": "pc_wrong_base",
+      "description": "Finds a percentage change by dividing by the new value instead of the original one."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds the 1% value but does not multiply by 100 to get the whole."
+    },
+    {
+      "id": "pc_wrong_way",
+      "description": "Adds a percentage decrease or subtracts a percentage increase."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.percent.ex_4_3": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.percent.ex_4_3": [
+      {
+        "id": "qb_to_percent",
+        "type": "recall",
+        "step": {
+          "id": "qb_to_percent",
+          "type": "number",
+          "prompt": {
+            "en": "Write 9/20 as a percentage.",
+            "ur": "9/20 کو فیصد کی صورت میں لکھیں۔"
+          },
+          "answer": 45,
+          "checker": "numeric",
+          "hint": {
+            "en": "20 × 5 = 100. Multiply the top by 5 too.",
+            "ur": "20 × 5 = 100۔ اوپر والے عدد کو بھی 5 سے ضرب دیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 9/20 = 45/100 = 45%.",
+            "ur": "درست! 9/20 = 45/100 = 45%"
+          },
+          "feedback_wrong": {
+            "en": "9 × 5 = 45 and 20 × 5 = 100, so 45%.",
+            "ur": "9 × 5 = 45 اور 20 × 5 = 100، اس لیے 45%"
+          },
+          "common_wrong": [
+            {
+              "answer": 9,
+              "feedback": {
+                "en": "9 out of 20 is not 9 out of 100. Multiply top and bottom by 5: 45%.",
+                "ur": "20 میں سے 9، 100 میں سے 9 نہیں ہوتا۔ اوپر اور نیچے کو 5 سے ضرب دیں: 45%"
+              },
+              "misconception_id": "pc_not_over_100"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_percent_of",
+        "type": "apply",
+        "step": {
+          "id": "qb_percent_of",
+          "type": "number",
+          "prompt": {
+            "en": "Find 15% of 360.",
+            "ur": "360 کا 15% معلوم کریں۔"
+          },
+          "answer": 54,
+          "checker": "numeric",
+          "hint": {
+            "en": "10% of 360 is 36. Half of that is 5%.",
+            "ur": "360 کا 10% یعنی 36۔ اس کا آدھا 5% ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 36 + 18 = 54.",
+            "ur": "درست! 36 + 18 = 54"
+          },
+          "feedback_wrong": {
+            "en": "15/100 × 360 = 54.",
+            "ur": "15/100 × 360 = 54"
+          },
+          "common_wrong": [
+            {
+              "answer": 306,
+              "feedback": {
+                "en": "That is 360 − 54, the rest. 15% of 360 is 54.",
+                "ur": "یہ 360 − 54 ہے، یعنی باقی۔ 360 کا 15% ہے 54"
+              },
+              "misconception_id": "pc_of_whole"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Mehwish says 30% of 50 is 30 × 50 = 1,500. What went wrong?",
+            "ur": "مہوش کہتی ہے 50 کا 30% ہے 30 × 50 = 1,500۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "She forgot to divide by 100. 30/100 × 50 = 15.",
+                "ur": "وہ 100 سے تقسیم کرنا بھول گئی۔ 30/100 × 50 = 15"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A percentage is out of 100.",
+                "ur": "جی ہاں! فیصد سو میں سے ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 1,500 is right.",
+                "ur": "کوئی غلطی نہیں۔ 1,500 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "30% of 50 cannot be more than 50.",
+                "ur": "50 کا 30% اس سے زیادہ نہیں ہو سکتا۔"
+              },
+              "misconception_id": "pc_times_whole"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "She should have added 30 and 50.",
+                "ur": "اسے 30 اور 50 جمع کرنا چاہیے تھا۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Adding does not give a percentage of an amount. Multiply by 30/100: 15.",
+                "ur": "جمع سے کسی رقم کا فیصد نہیں ملتا۔ 30/100 سے ضرب دیں: 15"
+              },
+              "misconception_id": "pc_of_whole"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_whole",
+      "front": {
+        "en": "How do you find the whole when a part is given as a percentage?",
+        "ur": "جب جزو فیصد میں دیا ہو تو کل کیسے معلوم کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Divide the part by the percentage, then multiply by 100: if 12 is 20%, the whole is 60.",
+        "ur": "جزو کو فیصد سے تقسیم کریں، پھر 100 سے ضرب دیں: اگر 12، 20% ہے تو کل 60 ہے۔"
+      }
+    },
+    {
+      "id": "f_change",
+      "front": {
+        "en": "How do you find a percentage increase?",
+        "ur": "فیصد اضافہ کیسے معلوم کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Increase ÷ original × 100. Always divide by the original value.",
+        "ur": "اضافہ ÷ اصل × 100۔ ہمیشہ اصل قیمت سے تقسیم کریں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_sale",
+      "text": {
+        "en": "Find a sale notice or advertisement that shows a percentage off (or ask a shopkeeper). Write the old price and the discount, then work out the amount of the discount and the new price in your notebook.",
+        "ur": "کوئی سیل کا اشتہار تلاش کریں جس میں فیصد رعایت ہو (یا دکاندار سے پوچھیں)۔ پرانی قیمت اور رعایت لکھیں، پھر رعایت کی رقم اور نئی قیمت اپنی کاپی میں نکالیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Per cent",
+      "ur": "فی صد"
+    },
+    {
+      "en": "Percentage",
+      "ur": "فیصد"
+    },
+    {
+      "en": "Percentage increase",
+      "ur": "فیصد اضافہ"
+    },
+    {
+      "en": "Percentage decrease",
+      "ur": "فیصد کمی"
+    },
+    {
+      "en": "Original value",
+      "ur": "اصل قیمت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 4.3 is about percentage. Ready?",
+          "ur": "مشق 4.3 فیصد کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 4.3 of your maths book (PCTB Mathematics 6). Here you read percentages from a 100-grid, change percentages and fractions, find a percentage of a quantity or the whole, compare by percentage and work out a percentage increase or decrease. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 4.3 کے ساتھ ہے۔ اس میں آپ 100 خانوں والے گرڈ سے فیصد پڑھیں گے، فیصد اور کسر بدلیں گے، کسی مقدار کا فیصد یا کل معلوم کریں گے، فیصد سے موازنہ کریں گے اور فیصد اضافہ یا کمی نکالیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_grid",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A grid has 100 equal squares and 37 of them are shaded. What percentage of the grid is shaded?",
+        "ur": "ایک گرڈ میں 100 برابر خانے ہیں اور ان میں سے 37 رنگین ہیں۔ گرڈ کا کتنا فیصد رنگین ہے؟"
+      },
+      "answer": 37,
+      "checker": "numeric",
+      "hint": {
+        "en": "Percent means out of 100.",
+        "ur": "فیصد کا مطلب ہے سو میں سے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 37 out of 100 is 37%.",
+        "ur": "درست! 100 میں سے 37، یعنی 37 فیصد۔"
+      },
+      "feedback_wrong": {
+        "en": "There are 100 squares, so 37 shaded squares is 37 per cent, or 37%.",
+        "ur": "کل 100 خانے ہیں، اس لیے 37 رنگین خانے 37 فی صد ہیں، یعنی 37%۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 63,
+          "feedback": {
+            "en": "That is the part not shaded. The shaded part is 37%.",
+            "ur": "یہ رنگین نہ ہونے والا حصہ ہے۔ رنگین حصہ 37% ہے۔"
+          },
+          "misconception_id": "pc_of_whole"
+        }
+      ]
+    },
+    {
+      "id": "q2_to_fraction",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Write 45% as a fraction in its simplest form.",
+        "ur": "45% کو سادہ ترین کسر کی صورت میں لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "9/20",
+            "ur": "9/20"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 45% = 45/100 and dividing the top and bottom by 5 gives 9/20.",
+            "ur": "جی ہاں! 45% = 45/100 اور اوپر نیچے کو 5 سے تقسیم کرنے پر 9/20 ملتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "45/100",
+            "ur": "45/100"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is correct but not in its simplest form. Divide both by 5.",
+            "ur": "یہ درست ہے مگر سادہ ترین صورت میں نہیں۔ دونوں کو 5 سے تقسیم کریں۔"
+          },
+          "misconception_id": "pc_not_simplified"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "45/10",
+            "ur": "45/10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Percent means out of 100, not out of 10.",
+            "ur": "فیصد کا مطلب سو میں سے ہے، دس میں سے نہیں۔"
+          },
+          "misconception_id": "pc_not_over_100"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "4/5",
+            "ur": "4/5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4/5 is 80%. Put 45 over 100 and simplify.",
+            "ur": "4/5 تو 80% ہے۔ 45 کو 100 پر لکھیں اور سادہ کریں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Per cent means out of 100. Put the number over 100.",
+          "ur": "فیصد کا مطلب ہے سو میں سے۔ عدد کو 100 پر لکھیں۔"
+        }
+      },
+      "text": {
+        "en": "Per cent means out of 100, written %. To change a percentage into a fraction, put it over 100 and simplify: 45% = 45/100 = 9/20. To change a fraction into a percentage, make the denominator 100: 7/25 = 28/100 = 28%. To find a percentage of a quantity, multiply: 35% of 240 = 35/100 × 240 = 84. To express one quantity as a percentage of another, divide and multiply by 100: 15 out of 60 is 15/60 × 100 = 25%. To find the whole, the total is the given quantity divided by the percentage: if 12 is 20%, the whole is 12 ÷ 20 × 100 = 60. To increase by a percentage, add the amount: new = old + percentage of old. To decrease, subtract it. A percentage change is the change divided by the original, times 100.",
+        "ur": "فیصد کا مطلب ہے سو میں سے، جسے % لکھتے ہیں۔ فیصد کو کسر بنانے کے لیے اسے 100 پر لکھیں اور سادہ کریں: 45% = 45/100 = 9/20۔ کسر کو فیصد بنانے کے لیے نسب نما 100 بنائیں: 7/25 = 28/100 = 28%۔ کسی مقدار کا فیصد نکالنے کے لیے ضرب دیں: 240 کا 35% = 35/100 × 240 = 84۔ ایک مقدار کو دوسری کے فیصد کے طور پر لکھنے کے لیے تقسیم کریں اور 100 سے ضرب دیں: 60 میں سے 15 یعنی 15/60 × 100 = 25%۔ کل معلوم کرنے کے لیے دی گئی مقدار کو فیصد سے تقسیم کریں: اگر 12، 20% ہے تو کل 12 ÷ 20 × 100 = 60۔ فیصد اضافے کے لیے رقم جمع کریں: نیا = پرانا + پرانے کا فیصد۔ کمی کے لیے گھٹائیں۔ فیصد تبدیلی تبدیلی کو اصل سے تقسیم کر کے 100 سے ضرب دینے سے ملتی ہے۔"
+      }
+    },
+    {
+      "id": "q3_fraction_to_percent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 7/25 as a percentage.",
+        "ur": "7/25 کو فیصد کی صورت میں لکھیں۔"
+      },
+      "answer": 28,
+      "checker": "numeric",
+      "hint": {
+        "en": "Make the denominator 100: what do you multiply 25 by?",
+        "ur": "نسب نما 100 بنائیں: 25 کو کس سے ضرب دیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 7/25 = 28/100 = 28%.",
+        "ur": "درست! 7/25 = 28/100 = 28%"
+      },
+      "feedback_wrong": {
+        "en": "25 × 4 = 100, so 7/25 = 28/100 = 28%.",
+        "ur": "25 × 4 = 100، اس لیے 7/25 = 28/100 = 28%"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "7 out of 25 is not 7 out of 100. Multiply the top and bottom by 4: 28%.",
+            "ur": "25 میں سے 7، 100 میں سے 7 نہیں ہوتا۔ اوپر اور نیچے کو 4 سے ضرب دیں: 28%"
+          },
+          "misconception_id": "pc_not_over_100"
+        }
+      ]
+    },
+    {
+      "id": "q4_percent_of",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find 35% of 240 students.",
+        "ur": "240 طلبہ کا 35% معلوم کریں۔"
+      },
+      "answer": 84,
+      "checker": "numeric",
+      "hint": {
+        "en": "35% = 35/100. Multiply it by 240.",
+        "ur": "35% = 35/100۔ اسے 240 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 35/100 × 240 = 84.",
+        "ur": "درست! 35/100 × 240 = 84"
+      },
+      "feedback_wrong": {
+        "en": "10% of 240 is 24, so 30% is 72 and 5% is 12. Together: 84.",
+        "ur": "240 کا 10% یعنی 24، اس لیے 30% یعنی 72 اور 5% یعنی 12۔ کل: 84"
+      },
+      "common_wrong": [
+        {
+          "answer": 156,
+          "feedback": {
+            "en": "That is the rest (240 − 84). 35% of 240 is 84.",
+            "ur": "یہ باقی ہے (240 − 84)۔ 240 کا 35% ہے 84"
+          },
+          "misconception_id": "pc_of_whole"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That divides 240 by 35. Multiply 240 by 35/100: 84.",
+            "ur": "یہ 240 کو 35 سے تقسیم کرتا ہے۔ 240 کو 35/100 سے ضرب دیں: 84"
+          },
+          "misconception_id": "pc_times_whole"
+        }
+      ]
+    },
+    {
+      "id": "q5_as_percent",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a test, Waqas answers 15 questions correctly out of 60. What percentage is correct?",
+        "ur": "ایک ٹیسٹ میں وقاص 60 میں سے 15 سوال درست حل کرتا ہے۔ کتنے فیصد درست ہیں؟"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write 15 over 60, then multiply by 100.",
+        "ur": "60 پر 15 لکھیں، پھر 100 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 15/60 × 100 = 25%.",
+        "ur": "درست! 15/60 × 100 = 25%"
+      },
+      "feedback_wrong": {
+        "en": "15/60 = 1/4, and 1/4 × 100 = 25%.",
+        "ur": "15/60 = 1/4 اور 1/4 × 100 = 25%"
+      },
+      "common_wrong": [
+        {
+          "answer": 900,
+          "feedback": {
+            "en": "That multiplies 15 by 60. Divide 15 by 60, then multiply by 100: 25.",
+            "ur": "یہ 15 کو 60 سے ضرب دیتا ہے۔ 15 کو 60 سے تقسیم کریں، پھر 100 سے ضرب دیں: 25"
+          },
+          "misconception_id": "pc_times_whole"
+        }
+      ]
+    },
+    {
+      "id": "q6_find_whole",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "12 is 20% of a number. What is the number?",
+        "ur": "12 کسی عدد کا 20% ہے۔ وہ عدد کیا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "20% means 20 out of 100. 12 ÷ 20 gives 1%.",
+        "ur": "20% کا مطلب 100 میں سے 20۔ 12 ÷ 20 سے 1% ملتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1% is 12 ÷ 20 = 0.6, and 100% is 60.",
+        "ur": "درست! 1% یعنی 12 ÷ 20 = 0.6، اور 100% یعنی 60۔"
+      },
+      "feedback_wrong": {
+        "en": "Total quantity = given quantity ÷ percentage × 100 = 12 ÷ 20 × 100 = 60.",
+        "ur": "کل مقدار = دی گئی مقدار ÷ فیصد × 100 = 12 ÷ 20 × 100 = 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 2.4,
+          "feedback": {
+            "en": "That is 20% of 12. The number is 12 ÷ 20 × 100 = 60.",
+            "ur": "یہ 12 کا 20% ہے۔ عدد 12 ÷ 20 × 100 = 60 ہے۔"
+          },
+          "misconception_id": "pc_whole_as_part"
+        }
+      ]
+    },
+    {
+      "id": "q7_compare",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Hamid scores 42 out of 60. Bina scores 36 out of 50. Who did better, by percentage?",
+        "ur": "حامد 60 میں سے 42 نمبر لیتا ہے۔ بینا 50 میں سے 36 نمبر لیتی ہے۔ فیصد کے لحاظ سے کس کا نتیجہ بہتر ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Hamid, because 42 is more than 36",
+            "ur": "حامد، کیونکہ 42، 36 سے زیادہ ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The totals are different (60 and 50), so compare the percentages, not the marks.",
+            "ur": "کل نمبر مختلف ہیں (60 اور 50)، اس لیے نمبروں کی بجائے فیصد کا موازنہ کریں۔"
+          },
+          "misconception_id": "pc_compare_numbers"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Bina: 72% against Hamid's 70%",
+            "ur": "بینا: 72%، جبکہ حامد کے 70%"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 42/60 × 100 = 70 and 36/50 × 100 = 72.",
+            "ur": "جی ہاں! 42/60 × 100 = 70 اور 36/50 × 100 = 72"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "They did equally well",
+            "ur": "دونوں کا نتیجہ برابر ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "42/60 is 70% and 36/50 is 72%. They are not equal.",
+            "ur": "42/60 یعنی 70% اور 36/50 یعنی 72%۔ یہ برابر نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8_salary",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A salary of Rs 40,000 is increased by 15%. What is the new salary in rupees?",
+        "ur": "40,000 روپے کی تنخواہ میں 15% اضافہ ہوتا ہے۔ نئی تنخواہ کتنے روپے ہے؟"
+      },
+      "answer": 46000,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find 15% of 40,000 first, then add it.",
+        "ur": "پہلے 40,000 کا 15% نکالیں، پھر اسے جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 15% of 40,000 is 6,000 and 40,000 + 6,000 = 46,000.",
+        "ur": "درست! 40,000 کا 15% یعنی 6,000 اور 40,000 + 6,000 = 46,000"
+      },
+      "feedback_wrong": {
+        "en": "The rise is 15/100 × 40,000 = 6,000. New salary: 40,000 + 6,000 = 46,000.",
+        "ur": "اضافہ 15/100 × 40,000 = 6,000 ہے۔ نئی تنخواہ: 40,000 + 6,000 = 46,000"
+      },
+      "common_wrong": [
+        {
+          "answer": 6000,
+          "feedback": {
+            "en": "That is only the rise. Add it to the old salary: 46,000.",
+            "ur": "یہ صرف اضافہ ہے۔ اسے پرانی تنخواہ میں جمع کریں: 46,000"
+          },
+          "misconception_id": "pc_change_only"
+        },
+        {
+          "answer": 34000,
+          "feedback": {
+            "en": "An increase is added, not subtracted: 46,000.",
+            "ur": "اضافہ جمع کیا جاتا ہے، گھٹایا نہیں جاتا: 46,000"
+          },
+          "misconception_id": "pc_wrong_way"
+        }
+      ]
+    },
+    {
+      "id": "q9_discount",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bag costs Rs 2,500. In a sale its price is reduced by 12%. What is the sale price in rupees?",
+        "ur": "ایک بیگ کی قیمت 2,500 روپے ہے۔ سیل میں اس کی قیمت 12% کم ہو جاتی ہے۔ سیل کی قیمت کتنے روپے ہے؟"
+      },
+      "answer": 2200,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find 12% of 2,500, then take it away.",
+        "ur": "2,500 کا 12% نکالیں، پھر اسے گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12% of 2,500 is 300 and 2,500 − 300 = 2,200.",
+        "ur": "درست! 2,500 کا 12% یعنی 300 اور 2,500 − 300 = 2,200"
+      },
+      "feedback_wrong": {
+        "en": "The reduction is 12/100 × 2,500 = 300. Sale price: 2,500 − 300 = 2,200.",
+        "ur": "کمی 12/100 × 2,500 = 300 ہے۔ سیل کی قیمت: 2,500 − 300 = 2,200"
+      },
+      "common_wrong": [
+        {
+          "answer": 300,
+          "feedback": {
+            "en": "That is only the reduction. Take it away from 2,500: 2,200.",
+            "ur": "یہ صرف کمی ہے۔ اسے 2,500 میں سے گھٹائیں: 2,200"
+          },
+          "misconception_id": "pc_change_only"
+        },
+        {
+          "answer": 2800,
+          "feedback": {
+            "en": "A decrease is subtracted, not added: 2,200.",
+            "ur": "کمی گھٹائی جاتی ہے، جمع نہیں کی جاتی: 2,200"
+          },
+          "misconception_id": "pc_wrong_way"
+        }
+      ]
+    },
+    {
+      "id": "q10_pop",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The population of a village grew from 8,000 to 9,200. What is the percentage increase?",
+        "ur": "ایک گاؤں کی آبادی 8,000 سے بڑھ کر 9,200 ہو گئی۔ فیصد اضافہ کتنا ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "The increase is 9,200 − 8,000. Divide it by the original population, 8,000.",
+        "ur": "اضافہ 9,200 − 8,000 ہے۔ اسے اصل آبادی 8,000 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1,200/8,000 × 100 = 15%.",
+        "ur": "درست! 1,200/8,000 × 100 = 15%"
+      },
+      "feedback_wrong": {
+        "en": "Increase = 1,200. As a percentage of the original: 1,200 ÷ 8,000 × 100 = 15%.",
+        "ur": "اضافہ = 1,200۔ اصل کے فیصد کے طور پر: 1,200 ÷ 8,000 × 100 = 15%"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "That divides by the new population, 9,200. Divide the increase by the original, 8,000: 15.",
+            "ur": "یہ نئی آبادی 9,200 سے تقسیم کرتا ہے۔ اضافے کو اصل آبادی 8,000 سے تقسیم کریں: 15"
+          },
+          "misconception_id": "pc_wrong_base"
+        },
+        {
+          "answer": 1200,
+          "feedback": {
+            "en": "That is the increase itself. Divide it by 8,000 and multiply by 100: 15.",
+            "ur": "یہ خود اضافہ ہے۔ اسے 8,000 سے تقسیم کریں اور 100 سے ضرب دیں: 15"
+          },
+          "misconception_id": "pc_change_only"
+        }
+      ]
+    },
+    {
+      "id": "q11_present",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a school of 250 students, 8% are absent on one day. How many students are present?",
+        "ur": "250 طلبہ کے ایک اسکول میں ایک دن 8% غیر حاضر ہیں۔ کتنے طلبہ حاضر ہیں؟"
+      },
+      "answer": 230,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find the number absent, then take it from 250.",
+        "ur": "غیر حاضر طلبہ کی تعداد نکالیں، پھر اسے 250 میں سے گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 are absent and 250 − 20 = 230.",
+        "ur": "درست! 20 غیر حاضر ہیں اور 250 − 20 = 230"
+      },
+      "feedback_wrong": {
+        "en": "8% of 250 = 20 absent. Present: 250 − 20 = 230.",
+        "ur": "250 کا 8% = 20 غیر حاضر۔ حاضر: 250 − 20 = 230"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "That is the number absent. The question asks how many are present: 230.",
+            "ur": "یہ غیر حاضر طلبہ کی تعداد ہے۔ سوال حاضر طلبہ کا ہے: 230"
+          },
+          "misconception_id": "pc_of_whole"
+        }
+      ]
+    },
+    {
+      "id": "q12_whole",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "18% of a number is 54. What is the number?",
+        "ur": "کسی عدد کا 18% ہے 54۔ وہ عدد کیا ہے؟"
+      },
+      "answer": 300,
+      "checker": "numeric",
+      "hint": {
+        "en": "1% is 54 ÷ 18. Then find 100%.",
+        "ur": "1% یعنی 54 ÷ 18۔ پھر 100% نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1% is 3, so 100% is 300.",
+        "ur": "درست! 1% یعنی 3، اس لیے 100% یعنی 300"
+      },
+      "feedback_wrong": {
+        "en": "54 ÷ 18 = 3 for 1%, and 3 × 100 = 300.",
+        "ur": "54 ÷ 18 = 3 یعنی 1%، اور 3 × 100 = 300"
+      },
+      "common_wrong": [
+        {
+          "answer": 9.72,
+          "feedback": {
+            "en": "That finds 18% of 54. 54 is already the 18%, so the number is 300.",
+            "ur": "یہ 54 کا 18% نکالتا ہے۔ 54 پہلے سے 18% ہے، اس لیے عدد 300 ہے۔"
+          },
+          "misconception_id": "pc_whole_as_part"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "That is 1%. Multiply by 100 to get the whole: 300.",
+            "ur": "یہ 1% ہے۔ پورا حاصل کرنے کے لیے 100 سے ضرب دیں: 300"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A price goes up from Rs 80 to Rs 100. Kamran says the increase is 20% because 20 ÷ 100 × 100 = 20. What went wrong?",
+        "ur": "ایک قیمت 80 روپے سے بڑھ کر 100 روپے ہو جاتی ہے۔ کامران کہتا ہے اضافہ 20% ہے کیونکہ 20 ÷ 100 × 100 = 20۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "He divided by the new price. The change must be divided by the original price: 20 ÷ 80 × 100 = 25%.",
+            "ur": "اس نے نئی قیمت سے تقسیم کیا۔ تبدیلی کو اصل قیمت سے تقسیم کرنا چاہیے: 20 ÷ 80 × 100 = 25%"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The rise of Rs 20 is 25% of the original Rs 80.",
+            "ur": "جی ہاں! 20 روپے کا اضافہ اصل 80 روپے کا 25% ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 20% is the right answer.",
+            "ur": "کوئی غلطی نہیں۔ 20% درست جواب ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "20% of 80 is only 16, not 20. The rise is 25%.",
+            "ur": "80 کا 20% صرف 16 ہے، 20 نہیں۔ اضافہ 25% ہے۔"
+          },
+          "misconception_id": "pc_wrong_base"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The rise is Rs 20, not a percentage.",
+            "ur": "اضافہ 20 روپے ہے، فیصد نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question asks for the percentage increase, so compare Rs 20 with the original Rs 80: 25%.",
+            "ur": "سوال فیصد اضافہ پوچھتا ہے، اس لیے 20 روپے کا اصل 80 روپے سے موازنہ کریں: 25%"
+          },
+          "misconception_id": "pc_change_only"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You worked with percentages.",
+          "ur": "شاباش! آپ نے فیصد پر کام کیا۔"
+        }
+      },
+      "text": {
+        "en": "A percentage is a fraction out of 100. To find a percentage of a quantity, multiply. To write one quantity as a percentage of another, divide and multiply by 100. To find the whole, divide the given quantity by the percentage and multiply by 100. To increase or decrease by a percentage, find the percentage of the original and add or subtract it. A percentage change always uses the original value.",
+        "ur": "فیصد 100 میں سے کسر ہے۔ کسی مقدار کا فیصد نکالنے کے لیے ضرب دیں۔ ایک مقدار کو دوسری کے فیصد کے طور پر لکھنے کے لیے تقسیم کریں اور 100 سے ضرب دیں۔ کل معلوم کرنے کے لیے دی گئی مقدار کو فیصد سے تقسیم کریں اور 100 سے ضرب دیں۔ فیصد اضافے یا کمی کے لیے اصل کا فیصد نکال کر جمع یا تفریق کریں۔ فیصد تبدیلی میں ہمیشہ اصل قیمت استعمال ہوتی ہے۔"
+      },
+      "points": [
+        {
+          "en": "To compare, change both to percentages.",
+          "ur": "موازنے کے لیے دونوں کو فیصد میں بدلیں۔"
+        },
+        {
+          "en": "Read the question: do you want the change or the new value?",
+          "ur": "سوال پڑھیں: آپ کو تبدیلی چاہیے یا نئی قیمت؟"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_percent",
+      "type": "recall",
+      "step": {
+        "id": "r_percent",
+        "type": "number",
+        "prompt": {
+          "en": "Write 3/5 as a percentage.",
+          "ur": "3/5 کو فیصد کی صورت میں لکھیں۔"
+        },
+        "answer": 60,
+        "checker": "numeric",
+        "hint": {
+          "en": "5 × 20 = 100.",
+          "ur": "5 × 20 = 100"
+        },
+        "feedback_correct": {
+          "en": "Right! 3/5 = 60/100 = 60%.",
+          "ur": "درست! 3/5 = 60/100 = 60%"
+        },
+        "feedback_wrong": {
+          "en": "3 × 20 = 60 and 5 × 20 = 100, so 60%.",
+          "ur": "3 × 20 = 60 اور 5 × 20 = 100، اس لیے 60%"
+        },
+        "common_wrong": [
+          {
+            "answer": 3,
+            "feedback": {
+              "en": "3 out of 5 is not 3 out of 100. Multiply top and bottom by 20: 60%.",
+              "ur": "5 میں سے 3، 100 میں سے 3 نہیں ہوتا۔ اوپر اور نیچے کو 20 سے ضرب دیں: 60%"
+            },
+            "misconception_id": "pc_not_over_100"
+          }
+        ]
+      },
+      "skill": "maths.percent.ex_4_3"
+    },
+    {
+      "id": "r_increase",
+      "type": "apply",
+      "step": {
+        "id": "r_increase",
+        "type": "number",
+        "prompt": {
+          "en": "A bill of Rs 600 goes up by 10%. What is the new bill in rupees?",
+          "ur": "600 روپے کا بل 10% بڑھ جاتا ہے۔ نیا بل کتنے روپے ہے؟"
+        },
+        "answer": 660,
+        "checker": "numeric",
+        "hint": {
+          "en": "10% of 600 is 60. Add it.",
+          "ur": "600 کا 10% یعنی 60۔ اسے جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 600 + 60 = 660.",
+          "ur": "درست! 600 + 60 = 660"
+        },
+        "feedback_wrong": {
+          "en": "The rise is 60, so the new bill is 660.",
+          "ur": "اضافہ 60 ہے، اس لیے نیا بل 660 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 60,
+            "feedback": {
+              "en": "That is only the rise. Add it to 600: 660.",
+              "ur": "یہ صرف اضافہ ہے۔ اسے 600 میں جمع کریں: 660"
+            },
+            "misconception_id": "pc_change_only"
+          }
+        ]
+      },
+      "skill": "maths.percent.ex_4_3"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 4.3 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers percentage from a 100-grid (q1), percentage to fraction and back (q2, q3), a percentage of a quantity (q4, q11), one quantity as a percentage of another (q5), finding the whole (q6, q12), comparing by percentage (q7), percentage increase and decrease (q8, q9, q10) and a find-the-error question (q13).",
+    "Each wrong answer is a real mistake: a percent over 10, a fraction left unsimplified, the rest instead of the part, forgetting to divide by 100, dividing by the new value, and giving the change instead of the new price.",
+    "Urdu terms to check: فی صد / فیصد (per cent / percentage), فیصد اضافہ / فیصد کمی (percentage increase / decrease), اصل قیمت (original value).",
+    "The numbers were worked out in content/sources/g6-maths-06/exercise_4_3.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

@@ -1,0 +1,973 @@
+{
+  "id": "g6-maths-06-exercise-4-4",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Change times between the 12-hour and 24-hour clock, and find elapsed times and arrival times, including across noon and midnight.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, Exercise 4.4"
+    }
+  ],
+  "skills": [
+    "maths.time.ex_4_4"
+  ],
+  "title": {
+    "en": "Exercise 4.4 practice: time and the 24-hour clock",
+    "ur": "مشق 4.4 کی پریکٹس: وقت اور 24 گھنٹے کی گھڑی"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.time.clock_24"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "noon_midnight",
+      "description": "Gets 12 a.m. and 12 p.m. wrong when changing to the 24-hour clock."
+    },
+    {
+      "id": "pm_not_added",
+      "description": "Forgets to add 12 to an afternoon or evening hour (or subtracts 12 from a morning hour)."
+    },
+    {
+      "id": "base_100",
+      "description": "Treats minutes as if there were 100 in an hour, so carries or borrows wrongly."
+    },
+    {
+      "id": "digit_subtract",
+      "description": "Subtracts the four digits of two clock times as ordinary numbers."
+    },
+    {
+      "id": "midnight_wrap",
+      "description": "Does not wrap past 24:00, writing 25:20 instead of 01:20."
+    },
+    {
+      "id": "wrong_operation",
+      "description": "Adds the journey time to the arrival time, or subtracts it from the start time."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.time.ex_4_4": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.time.ex_4_4": [
+      {
+        "id": "qb_to_24",
+        "type": "recall",
+        "step": {
+          "id": "qb_to_24",
+          "type": "text_check",
+          "prompt": {
+            "en": "Write 6:45 p.m. on the 24-hour clock.",
+            "ur": "6:45 p.m. کو 24 گھنٹے کی گھڑی میں لکھیں۔"
+          },
+          "checker": "text",
+          "expected": "18:45",
+          "accept": [
+            "18.45",
+            "1845"
+          ],
+          "hint": {
+            "en": "Add 12 to the hour.",
+            "ur": "گھنٹے میں 12 جمع کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 6 + 12 = 18, so 18:45.",
+            "ur": "درست! 6 + 12 = 18، اس لیے 18:45"
+          },
+          "feedback_wrong": {
+            "en": "p.m.: 6 + 12 = 18. The minutes stay: 18:45.",
+            "ur": "p.m.: 6 + 12 = 18۔ منٹ وہی رہتے ہیں: 18:45"
+          },
+          "common_wrong": [
+            {
+              "answer": "06:45",
+              "feedback": {
+                "en": "That is a morning time. For p.m. add 12: 18:45.",
+                "ur": "یہ صبح کا وقت ہے۔ p.m. کے لیے 12 جمع کریں: 18:45"
+              },
+              "misconception_id": "pm_not_added"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_elapsed",
+        "type": "apply",
+        "step": {
+          "id": "qb_elapsed",
+          "type": "number",
+          "prompt": {
+            "en": "A class starts at 08:20 and ends at 11:05. How many minutes is the class?",
+            "ur": "ایک جماعت 08:20 پر شروع ہوتی ہے اور 11:05 پر ختم ہوتی ہے۔ جماعت کتنے منٹ کی ہے؟"
+          },
+          "answer": 165,
+          "checker": "numeric",
+          "hint": {
+            "en": "08:20 to 10:20 is 2 hours. Then count to 11:05.",
+            "ur": "08:20 سے 10:20 تک 2 گھنٹے ہیں۔ پھر 11:05 تک گنیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 2 h 45 min = 165 minutes.",
+            "ur": "درست! 2 گھنٹے 45 منٹ = 165 منٹ"
+          },
+          "feedback_wrong": {
+            "en": "10:20 to 11:05 is 45 minutes, so 120 + 45 = 165.",
+            "ur": "10:20 سے 11:05 تک 45 منٹ ہیں، اس لیے 120 + 45 = 165"
+          },
+          "common_wrong": [
+            {
+              "answer": 285,
+              "feedback": {
+                "en": "That subtracts 820 from 1105 as ordinary numbers. Minutes go up to 60: 165.",
+                "ur": "یہ 1105 میں سے 820 کو عام اعداد کی طرح گھٹاتا ہے۔ منٹ 60 تک جاتے ہیں: 165"
+              },
+              "misconception_id": "digit_subtract"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Maha says 12:20 a.m. is 12:20 on the 24-hour clock. What went wrong?",
+            "ur": "مہا کہتی ہے 12:20 a.m. 24 گھنٹے کی گھڑی میں 12:20 ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "12 a.m. is midnight, so 12:20 a.m. is 00:20.",
+                "ur": "12 a.m. آدھی رات ہے، اس لیے 12:20 a.m. یعنی 00:20"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 12:20 on the 24-hour clock is 20 minutes after noon.",
+                "ur": "جی ہاں! 24 گھنٹے کی گھڑی میں 12:20 دوپہر کے 20 منٹ بعد ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. a.m. times do not change.",
+                "ur": "کوئی غلطی نہیں۔ a.m. کے اوقات نہیں بدلتے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "They do not change, except at 12: 12 a.m. is midnight, 00.",
+                "ur": "یہ نہیں بدلتے، سوائے 12 بجے کے: 12 a.m. آدھی رات ہے، یعنی 00۔"
+              },
+              "misconception_id": "noon_midnight"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It should be 24:20.",
+                "ur": "یہ 24:20 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The 24-hour clock goes 23:59 then 00:00. There is no 24:20.",
+                "ur": "24 گھنٹے کی گھڑی 23:59 کے بعد 00:00 پر آتی ہے۔ 24:20 نہیں ہوتا۔"
+              },
+              "misconception_id": "midnight_wrap"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_pm",
+      "front": {
+        "en": "How do you change a p.m. time to the 24-hour clock?",
+        "ur": "p.m. وقت کو 24 گھنٹے کی گھڑی میں کیسے بدلتے ہیں؟"
+      },
+      "back": {
+        "en": "Add 12 to the hour: 3:20 p.m. = 15:20. (12:15 p.m. stays 12:15.)",
+        "ur": "گھنٹے میں 12 جمع کریں: 3:20 p.m. = 15:20۔ (12:15 p.m. وہی 12:15 رہتا ہے۔)"
+      }
+    },
+    {
+      "id": "f_midnight",
+      "front": {
+        "en": "What is 12:30 a.m. on the 24-hour clock?",
+        "ur": "24 گھنٹے کی گھڑی میں 12:30 a.m. کیا ہے؟"
+      },
+      "back": {
+        "en": "00:30. Midnight is 00:00.",
+        "ur": "00:30۔ آدھی رات 00:00 ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_timetable",
+      "text": {
+        "en": "Write your own school day timetable (when you wake up, leave home, and each lesson starts) on the 24-hour clock. Then work out how long it is from leaving home until the last lesson ends.",
+        "ur": "اپنے اسکول کے دن کا ٹائم ٹیبل (جاگنا، گھر سے نکلنا، ہر سبق کا آغاز) 24 گھنٹے کی گھڑی میں لکھیں۔ پھر گھر سے نکلنے سے آخری سبق ختم ہونے تک کا وقت معلوم کریں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "a.m. (ante meridiem)",
+      "ur": "اے ایم (دوپہر سے پہلے)"
+    },
+    {
+      "en": "p.m. (post meridiem)",
+      "ur": "پی ایم (دوپہر کے بعد)"
+    },
+    {
+      "en": "24-hour clock",
+      "ur": "24 گھنٹے کی گھڑی"
+    },
+    {
+      "en": "Midnight",
+      "ur": "آدھی رات"
+    },
+    {
+      "en": "Noon",
+      "ur": "دوپہر"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 4.4 is about time. Ready?",
+          "ur": "مشق 4.4 وقت کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 4.4 of your maths book (PCTB Mathematics 6). Here you change times between the 12-hour and the 24-hour clock and work out how long things take and when they end. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 4.4 کے ساتھ ہے۔ اس میں آپ وقت کو 12 گھنٹے اور 24 گھنٹے کی گھڑی میں بدلیں گے اور معلوم کریں گے کہ چیزوں میں کتنا وقت لگتا ہے اور وہ کب ختم ہوتی ہیں۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_pm",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Write 3:20 p.m. on the 24-hour clock (like 15:20).",
+        "ur": "3:20 p.m. کو 24 گھنٹے کی گھڑی میں لکھیں (جیسے 15:20)۔"
+      },
+      "checker": "text",
+      "expected": "15:20",
+      "accept": [
+        "15.20",
+        "1520"
+      ],
+      "hint": {
+        "en": "For p.m. times add 12 to the hour.",
+        "ur": "p.m. کے اوقات میں گھنٹے میں 12 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 + 12 = 15, so 15:20.",
+        "ur": "درست! 3 + 12 = 15، اس لیے 15:20"
+      },
+      "feedback_wrong": {
+        "en": "p.m. means after noon: 3 + 12 = 15. The minutes stay the same: 15:20.",
+        "ur": "p.m. کا مطلب دوپہر کے بعد: 3 + 12 = 15۔ منٹ وہی رہتے ہیں: 15:20"
+      },
+      "common_wrong": [
+        {
+          "answer": "03:20",
+          "feedback": {
+            "en": "03:20 is in the early morning. For p.m. add 12 to the hour: 15:20.",
+            "ur": "03:20 صبح سویرے کا وقت ہے۔ p.m. کے لیے گھنٹے میں 12 جمع کریں: 15:20"
+          },
+          "misconception_id": "pm_not_added"
+        }
+      ]
+    },
+    {
+      "id": "q2_to_12",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "21:05 on the 24-hour clock is which time on the 12-hour clock?",
+        "ur": "24 گھنٹے کی گھڑی کا 21:05، 12 گھنٹے کی گھڑی میں کون سا وقت ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "9:05 a.m.",
+            "ur": "9:05 a.m."
+          },
+          "correct": false,
+          "feedback": {
+            "en": "21:00 is in the evening, so it is p.m., not a.m.",
+            "ur": "21:00 شام کا وقت ہے، اس لیے a.m. نہیں، p.m. ہے۔"
+          },
+          "misconception_id": "pm_not_added"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "1:05 p.m.",
+            "ur": "1:05 p.m."
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Take 12 away from 21: 21 − 12 = 9, not 1.",
+            "ur": "21 میں سے 12 گھٹائیں: 21 − 12 = 9، 1 نہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "9:05 p.m.",
+            "ur": "9:05 p.m."
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 21 − 12 = 9, and it is after noon, so p.m.",
+            "ur": "جی ہاں! 21 − 12 = 9 اور یہ دوپہر کے بعد ہے، اس لیے p.m."
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "12:05 p.m.",
+            "ur": "12:05 p.m."
+          },
+          "correct": false,
+          "feedback": {
+            "en": "12:05 p.m. is just after noon. Take 12 away from 21: 9:05 p.m.",
+            "ur": "12:05 p.m. دوپہر کے فوراً بعد کا وقت ہے۔ 21 میں سے 12 گھٹائیں: 9:05 p.m."
+          },
+          "misconception_id": "noon_midnight"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "a.m. is before noon. p.m. is after noon. Add or take away 12.",
+          "ur": "a.m. دوپہر سے پہلے، p.m. دوپہر کے بعد۔ 12 جمع یا کم کریں۔"
+        }
+      },
+      "text": {
+        "en": "The 12-hour clock uses a.m. (ante meridiem, before noon) and p.m. (post meridiem, after noon). The 24-hour clock counts the hours from 00:00 (midnight) to 23:59. For p.m. times add 12 to the hour: 3:20 p.m. = 15:20. For a.m. times keep the hour: 8:50 a.m. = 08:50. Take care at 12: 12:30 a.m. is 00:30, but 12:15 p.m. is 12:15. To change back, take away 12 from hours above 12. An hour has 60 minutes, so when you add or take away, carry or borrow 60, not 100. If a time goes past 24:00, take away 24 hours.",
+        "ur": "12 گھنٹے کی گھڑی میں a.m. (دوپہر سے پہلے) اور p.m. (دوپہر کے بعد) استعمال ہوتا ہے۔ 24 گھنٹے کی گھڑی گھنٹے 00:00 (آدھی رات) سے 23:59 تک گنتی ہے۔ p.m. کے اوقات میں گھنٹے میں 12 جمع کریں: 3:20 p.m. = 15:20۔ a.m. کے اوقات میں گھنٹہ وہی رکھیں: 8:50 a.m. = 08:50۔ 12 بجے احتیاط کریں: 12:30 a.m. یعنی 00:30، مگر 12:15 p.m. یعنی 12:15۔ واپس بدلنے کے لیے 12 سے بڑے گھنٹوں میں سے 12 گھٹائیں۔ ایک گھنٹے میں 60 منٹ ہیں، اس لیے جمع یا تفریق میں 60 کا حاصل یا ادھار لیں، 100 کا نہیں۔ اگر وقت 24:00 سے آگے نکلے تو 24 گھنٹے گھٹائیں۔"
+      }
+    },
+    {
+      "id": "q3_am",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 8:50 a.m. on the 24-hour clock.",
+        "ur": "8:50 a.m. کو 24 گھنٹے کی گھڑی میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "08:50",
+      "accept": [
+        "08.50",
+        "0850",
+        "8.50",
+        "8:50"
+      ],
+      "hint": {
+        "en": "a.m. times keep the same hour. Write the hour with two digits.",
+        "ur": "a.m. کے اوقات میں گھنٹہ وہی رہتا ہے۔ گھنٹہ دو ہندسوں میں لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 08:50.",
+        "ur": "درست! 08:50"
+      },
+      "feedback_wrong": {
+        "en": "It is before noon, so nothing is added: 08:50.",
+        "ur": "یہ دوپہر سے پہلے کا وقت ہے، اس لیے کچھ جمع نہیں ہوتا: 08:50"
+      },
+      "common_wrong": [
+        {
+          "answer": "20:50",
+          "feedback": {
+            "en": "That adds 12. 8:50 a.m. is a morning time, so it stays 08:50.",
+            "ur": "یہ 12 جمع کرتا ہے۔ 8:50 a.m. صبح کا وقت ہے، اس لیے 08:50 ہی رہتا ہے۔"
+          },
+          "misconception_id": "pm_not_added"
+        }
+      ]
+    },
+    {
+      "id": "q4_midnight",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 12:30 a.m. (half an hour after midnight) on the 24-hour clock.",
+        "ur": "12:30 a.m. (آدھی رات کے آدھے گھنٹے بعد) کو 24 گھنٹے کی گھڑی میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "00:30",
+      "accept": [
+        "0.30",
+        "00.30",
+        "0030",
+        "0:30"
+      ],
+      "hint": {
+        "en": "The 24-hour day starts at 00:00, midnight.",
+        "ur": "24 گھنٹے کا دن 00:00، یعنی آدھی رات سے شروع ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Midnight is 00:00, so half an hour later is 00:30.",
+        "ur": "درست! آدھی رات 00:00 ہے، اس لیے آدھے گھنٹے بعد 00:30 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "12 a.m. is midnight, which is 00 on the 24-hour clock: 00:30.",
+        "ur": "12 a.m. آدھی رات ہے، جو 24 گھنٹے کی گھڑی میں 00 ہے: 00:30"
+      },
+      "common_wrong": [
+        {
+          "answer": "12:30",
+          "feedback": {
+            "en": "12:30 is half an hour after noon. After midnight it is 00:30.",
+            "ur": "12:30 دوپہر کے آدھے گھنٹے بعد ہے۔ آدھی رات کے بعد یہ 00:30 ہے۔"
+          },
+          "misconception_id": "noon_midnight"
+        }
+      ]
+    },
+    {
+      "id": "q5_noon",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write 12:15 p.m. (a quarter of an hour after noon) on the 24-hour clock.",
+        "ur": "12:15 p.m. (دوپہر کے پندرہ منٹ بعد) کو 24 گھنٹے کی گھڑی میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "12:15",
+      "accept": [
+        "12.15",
+        "1215"
+      ],
+      "hint": {
+        "en": "Noon is 12:00 on both clocks.",
+        "ur": "دوپہر دونوں گھڑیوں میں 12:00 ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! Noon is 12:00, so 12:15 stays 12:15.",
+        "ur": "درست! دوپہر 12:00 ہے، اس لیے 12:15 وہی رہتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "After noon the hour is 12, so we do not add 12: 12:15.",
+        "ur": "دوپہر کے بعد گھنٹہ 12 ہی ہے، اس لیے 12 جمع نہیں کرتے: 12:15"
+      },
+      "common_wrong": [
+        {
+          "answer": "00:15",
+          "feedback": {
+            "en": "00:15 is just after midnight. A quarter of an hour after noon is 12:15.",
+            "ur": "00:15 آدھی رات کے فوراً بعد ہے۔ دوپہر کے پندرہ منٹ بعد 12:15 ہے۔"
+          },
+          "misconception_id": "noon_midnight"
+        },
+        {
+          "answer": "24:15",
+          "feedback": {
+            "en": "The 24-hour clock has no 24:15. After noon it is 12:15.",
+            "ur": "24 گھنٹے کی گھڑی میں 24:15 نہیں ہوتا۔ دوپہر کے بعد 12:15 ہے۔"
+          },
+          "misconception_id": "noon_midnight"
+        }
+      ]
+    },
+    {
+      "id": "q6_back",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A train leaves at 23:55. Which is the same time on the 12-hour clock?",
+        "ur": "ایک ٹرین 23:55 پر چلتی ہے۔ 12 گھنٹے کی گھڑی میں یہی وقت کون سا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "11:55 p.m.",
+            "ur": "11:55 p.m."
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 23 − 12 = 11, five minutes before midnight.",
+            "ur": "جی ہاں! 23 − 12 = 11، آدھی رات سے پانچ منٹ پہلے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "11:55 a.m.",
+            "ur": "11:55 a.m."
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is five minutes before noon. 23:55 is at night, so p.m.",
+            "ur": "یہ دوپہر سے پانچ منٹ پہلے ہے۔ 23:55 رات کا وقت ہے، اس لیے p.m."
+          },
+          "misconception_id": "pm_not_added"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "1:55 a.m.",
+            "ur": "1:55 a.m."
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is early morning. Take 12 away from 23: 11:55 p.m.",
+            "ur": "یہ صبح سویرے کا وقت ہے۔ 23 میں سے 12 گھٹائیں: 11:55 p.m."
+          },
+          "misconception_id": "noon_midnight"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "3:55 p.m.",
+            "ur": "3:55 p.m."
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Take 12 away from 23, not 20: 11:55 p.m.",
+            "ur": "23 میں سے 12 گھٹائیں، 20 نہیں: 11:55 p.m."
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7_elapsed",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bus leaves at 09:15 and arrives at 13:05. How many minutes does the journey take?",
+        "ur": "ایک بس 09:15 پر چلتی ہے اور 13:05 پر پہنچتی ہے۔ سفر میں کتنے منٹ لگتے ہیں؟"
+      },
+      "answer": 230,
+      "checker": "numeric",
+      "hint": {
+        "en": "From 09:15 to 12:15 is 3 hours. Then count to 13:05.",
+        "ur": "09:15 سے 12:15 تک 3 گھنٹے ہیں۔ پھر 13:05 تک گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 hours 50 minutes = 180 + 50 = 230 minutes.",
+        "ur": "درست! 3 گھنٹے 50 منٹ = 180 + 50 = 230 منٹ"
+      },
+      "feedback_wrong": {
+        "en": "09:15 to 13:15 is 4 hours, but we stop 10 minutes early at 13:05: 3 h 50 min = 230 minutes.",
+        "ur": "09:15 سے 13:15 تک 4 گھنٹے ہیں، مگر ہم 10 منٹ پہلے 13:05 پر رک جاتے ہیں: 3 گھنٹے 50 منٹ = 230 منٹ۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 390,
+          "feedback": {
+            "en": "That subtracts 915 from 1305 as ordinary numbers. Minutes go up to 60, not 100: 230.",
+            "ur": "یہ 1305 میں سے 915 کو عام اعداد کی طرح گھٹاتا ہے۔ منٹ 60 تک جاتے ہیں، 100 تک نہیں: 230"
+          },
+          "misconception_id": "digit_subtract"
+        }
+      ]
+    },
+    {
+      "id": "q8_arrival",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A coach leaves at 10:40 and the journey takes 2 hours 35 minutes. At what time does it arrive? (24-hour clock)",
+        "ur": "ایک کوچ 10:40 پر چلتی ہے اور سفر میں 2 گھنٹے 35 منٹ لگتے ہیں۔ یہ کس وقت پہنچتی ہے؟ (24 گھنٹے کی گھڑی)"
+      },
+      "checker": "text",
+      "expected": "13:15",
+      "accept": [
+        "13.15",
+        "1315"
+      ],
+      "hint": {
+        "en": "Add the hours first: 12:40. Then add 35 minutes.",
+        "ur": "پہلے گھنٹے جمع کریں: 12:40۔ پھر 35 منٹ جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 12:40 plus 35 minutes is 13:15.",
+        "ur": "درست! 12:40 میں 35 منٹ جمع کریں تو 13:15 بنتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "40 + 35 = 75 minutes = 1 hour 15 minutes. 12 + 1 = 13, so 13:15.",
+        "ur": "40 + 35 = 75 منٹ = 1 گھنٹہ 15 منٹ۔ 12 + 1 = 13، اس لیے 13:15"
+      },
+      "common_wrong": [
+        {
+          "answer": "12:75",
+          "feedback": {
+            "en": "There are only 60 minutes in an hour. 75 minutes is 1 hour 15 minutes: 13:15.",
+            "ur": "ایک گھنٹے میں صرف 60 منٹ ہوتے ہیں۔ 75 منٹ یعنی 1 گھنٹہ 15 منٹ: 13:15"
+          },
+          "misconception_id": "base_100"
+        },
+        {
+          "answer": "12:15",
+          "feedback": {
+            "en": "You forgot to carry the extra hour from 75 minutes: 13:15.",
+            "ur": "آپ 75 منٹ کا اضافی گھنٹہ جمع کرنا بھول گئے: 13:15"
+          },
+          "misconception_id": "base_100"
+        }
+      ]
+    },
+    {
+      "id": "q9_start",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A train arrives at 17:10 after a journey of 3 hours 45 minutes. At what time did it leave? (24-hour clock)",
+        "ur": "ایک ٹرین 3 گھنٹے 45 منٹ کے سفر کے بعد 17:10 پر پہنچتی ہے۔ وہ کس وقت چلی تھی؟ (24 گھنٹے کی گھڑی)"
+      },
+      "checker": "text",
+      "expected": "13:25",
+      "accept": [
+        "13.25",
+        "1325"
+      ],
+      "hint": {
+        "en": "Take away the hours first: 14:10. Then take away 45 minutes.",
+        "ur": "پہلے گھنٹے گھٹائیں: 14:10۔ پھر 45 منٹ گھٹائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 14:10 minus 45 minutes is 13:25.",
+        "ur": "درست! 14:10 میں سے 45 منٹ گھٹائیں تو 13:25 بنتا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "14:10 is the same as 13:70. Take away 45 minutes: 13:25.",
+        "ur": "14:10 دراصل 13:70 ہے۔ 45 منٹ گھٹائیں: 13:25"
+      },
+      "common_wrong": [
+        {
+          "answer": "13:35",
+          "feedback": {
+            "en": "That takes 10 minutes away from 45 and ignores the borrowed hour. 13:70 − 45 minutes is 13:25.",
+            "ur": "یہ 45 میں سے 10 گھٹاتا ہے اور ادھار کا گھنٹہ نظر انداز کرتا ہے۔ 13:70 − 45 منٹ یعنی 13:25"
+          },
+          "misconception_id": "base_100"
+        },
+        {
+          "answer": "20:55",
+          "feedback": {
+            "en": "That adds the journey time. The train left before it arrived: 13:25.",
+            "ur": "یہ سفر کا وقت جمع کرتا ہے۔ ٹرین پہنچنے سے پہلے چلی تھی: 13:25"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "q10_midnight",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A film starts at 22:30 and lasts 2 hours 50 minutes. At what time does it end? (24-hour clock)",
+        "ur": "ایک فلم 22:30 پر شروع ہوتی ہے اور 2 گھنٹے 50 منٹ چلتی ہے۔ یہ کس وقت ختم ہوتی ہے؟ (24 گھنٹے کی گھڑی)"
+      },
+      "checker": "text",
+      "expected": "01:20",
+      "accept": [
+        "01.20",
+        "0120",
+        "1.20",
+        "1:20"
+      ],
+      "hint": {
+        "en": "22:30 plus 2 hours is 24:30. A new day starts at 00:00.",
+        "ur": "22:30 میں 2 گھنٹے جمع کریں تو 24:30 بنتا ہے۔ نیا دن 00:00 سے شروع ہوتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 22:30 + 2 h 50 min = 25:20, which is 01:20 the next day.",
+        "ur": "درست! 22:30 + 2 گھنٹے 50 منٹ = 25:20، یعنی اگلے دن 01:20۔"
+      },
+      "feedback_wrong": {
+        "en": "22:30 + 2:50 = 25:20. Take away 24 hours: 01:20 the next morning.",
+        "ur": "22:30 + 2:50 = 25:20۔ 24 گھنٹے گھٹائیں: اگلی صبح 01:20"
+      },
+      "common_wrong": [
+        {
+          "answer": "25:20",
+          "feedback": {
+            "en": "The clock stops at 23:59. Take away 24 hours from 25:20: 01:20.",
+            "ur": "گھڑی 23:59 پر رک جاتی ہے۔ 25:20 میں سے 24 گھنٹے گھٹائیں: 01:20"
+          },
+          "misconception_id": "midnight_wrap"
+        }
+      ]
+    },
+    {
+      "id": "q11_overnight",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A night train leaves at 21:50 and arrives at 06:10 the next morning. How many minutes does the journey take?",
+        "ur": "ایک رات کی ٹرین 21:50 پر چلتی ہے اور اگلی صبح 06:10 پر پہنچتی ہے۔ سفر میں کتنے منٹ لگتے ہیں؟"
+      },
+      "answer": 500,
+      "checker": "numeric",
+      "hint": {
+        "en": "21:50 to midnight is 2 hours 10 minutes. Then midnight to 06:10.",
+        "ur": "21:50 سے آدھی رات تک 2 گھنٹے 10 منٹ ہیں۔ پھر آدھی رات سے 06:10 تک۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 h 10 min + 6 h 10 min = 8 h 20 min = 500 minutes.",
+        "ur": "درست! 2 گھنٹے 10 منٹ + 6 گھنٹے 10 منٹ = 8 گھنٹے 20 منٹ = 500 منٹ۔"
+      },
+      "feedback_wrong": {
+        "en": "21:50 to 24:00 is 130 minutes. 00:00 to 06:10 is 370 minutes. Total: 500 minutes.",
+        "ur": "21:50 سے 24:00 تک 130 منٹ ہیں۔ 00:00 سے 06:10 تک 370 منٹ ہیں۔ کل: 500 منٹ۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 940,
+          "feedback": {
+            "en": "That takes 21:50 from 06:10 without going through midnight. Count past midnight: 500.",
+            "ur": "یہ آدھی رات سے گزرے بغیر 06:10 اور 21:50 کا فرق لیتا ہے۔ آدھی رات سے آگے گنیں: 500"
+          },
+          "misconception_id": "midnight_wrap"
+        }
+      ]
+    },
+    {
+      "id": "q12_lesson",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A 40-minute lesson starts at 1:35 p.m. At what time does it end? (24-hour clock)",
+        "ur": "40 منٹ کا سبق 1:35 p.m. پر شروع ہوتا ہے۔ یہ کس وقت ختم ہوتا ہے؟ (24 گھنٹے کی گھڑی)"
+      },
+      "checker": "text",
+      "expected": "14:15",
+      "accept": [
+        "14.15",
+        "1415"
+      ],
+      "hint": {
+        "en": "1:35 p.m. is 13:35. Then add 40 minutes.",
+        "ur": "1:35 p.m. یعنی 13:35۔ پھر 40 منٹ جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 13:35 + 40 minutes = 14:15.",
+        "ur": "درست! 13:35 + 40 منٹ = 14:15"
+      },
+      "feedback_wrong": {
+        "en": "13:35 + 25 minutes = 14:00, and 15 more minutes: 14:15.",
+        "ur": "13:35 + 25 منٹ = 14:00 اور 15 منٹ مزید: 14:15"
+      },
+      "common_wrong": [
+        {
+          "answer": "13:75",
+          "feedback": {
+            "en": "There are only 60 minutes in an hour. 13:75 is 14:15.",
+            "ur": "ایک گھنٹے میں صرف 60 منٹ ہوتے ہیں۔ 13:75 یعنی 14:15"
+          },
+          "misconception_id": "base_100"
+        },
+        {
+          "answer": "02:15",
+          "feedback": {
+            "en": "That is 2:15 a.m. The lesson is in the afternoon: 14:15.",
+            "ur": "یہ 2:15 a.m. ہے۔ سبق دوپہر کو ہے: 14:15"
+          },
+          "misconception_id": "pm_not_added"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Rafay writes 5:30 p.m. as 05:30 on the 24-hour clock. What went wrong?",
+        "ur": "رافع 5:30 p.m. کو 24 گھنٹے کی گھڑی میں 05:30 لکھتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "It is p.m., so 12 must be added to the hour: 17:30.",
+            "ur": "یہ p.m. ہے، اس لیے گھنٹے میں 12 جمع کرنا ہے: 17:30"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 05:30 is half past five in the morning.",
+            "ur": "جی ہاں! 05:30 صبح ساڑھے پانچ بجے ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 05:30 is correct for 5:30 p.m.",
+            "ur": "کوئی غلطی نہیں۔ 5:30 p.m. کے لیے 05:30 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "05:30 is 5:30 a.m. The p.m. time needs 12 added: 17:30.",
+            "ur": "05:30 تو 5:30 a.m. ہے۔ p.m. وقت میں 12 جمع کرنا ہے: 17:30"
+          },
+          "misconception_id": "pm_not_added"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should have written 15:30.",
+            "ur": "اسے 15:30 لکھنا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "15:30 is 3:30 p.m. Add 12 to 5: 17:30.",
+            "ur": "15:30 تو 3:30 p.m. ہے۔ 5 میں 12 جمع کریں: 17:30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You worked with time.",
+          "ur": "شاباش! آپ نے وقت پر کام کیا۔"
+        }
+      },
+      "text": {
+        "en": "On the 24-hour clock add 12 to p.m. hours and keep a.m. hours, but 12:xx a.m. is 00:xx and 12:xx p.m. stays 12:xx. To find an elapsed time, count to the next hour first, then add the rest. To find an arrival time, add the journey time; to find a start time, take it away. An hour has 60 minutes, and past 24:00 the day starts again.",
+        "ur": "24 گھنٹے کی گھڑی میں p.m. کے گھنٹوں میں 12 جمع کریں اور a.m. کے گھنٹے وہی رکھیں، مگر 12:xx a.m. یعنی 00:xx اور 12:xx p.m. یعنی 12:xx رہتا ہے۔ گزرا ہوا وقت معلوم کرنے کے لیے پہلے اگلے گھنٹے تک گنیں، پھر باقی جمع کریں۔ پہنچنے کا وقت معلوم کرنے کے لیے سفر کا وقت جمع کریں؛ چلنے کا وقت معلوم کرنے کے لیے گھٹائیں۔ ایک گھنٹے میں 60 منٹ ہیں، اور 24:00 کے بعد دن دوبارہ شروع ہوتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Write minutes with two digits, like 08:05.",
+          "ur": "منٹ دو ہندسوں میں لکھیں، جیسے 08:05۔"
+        },
+        {
+          "en": "Check: does the answer make sense for morning or evening?",
+          "ur": "جانچیں: کیا جواب صبح یا شام کے لحاظ سے درست لگتا ہے؟"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_to_24",
+      "type": "recall",
+      "step": {
+        "id": "r_to_24",
+        "type": "text_check",
+        "prompt": {
+          "en": "Write 10:05 p.m. on the 24-hour clock.",
+          "ur": "10:05 p.m. کو 24 گھنٹے کی گھڑی میں لکھیں۔"
+        },
+        "checker": "text",
+        "expected": "22:05",
+        "accept": [
+          "22.05",
+          "2205"
+        ],
+        "hint": {
+          "en": "Add 12 to the hour.",
+          "ur": "گھنٹے میں 12 جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 22:05.",
+          "ur": "درست! 22:05"
+        },
+        "feedback_wrong": {
+          "en": "10 + 12 = 22, minutes stay: 22:05.",
+          "ur": "10 + 12 = 22، منٹ وہی رہتے ہیں: 22:05"
+        },
+        "common_wrong": [
+          {
+            "answer": "10:05",
+            "feedback": {
+              "en": "That is the morning time. For p.m. add 12: 22:05.",
+              "ur": "یہ صبح کا وقت ہے۔ p.m. کے لیے 12 جمع کریں: 22:05"
+            },
+            "misconception_id": "pm_not_added"
+          }
+        ]
+      },
+      "skill": "maths.time.ex_4_4"
+    },
+    {
+      "id": "r_arrive",
+      "type": "apply",
+      "step": {
+        "id": "r_arrive",
+        "type": "text_check",
+        "prompt": {
+          "en": "A bus leaves at 15:50 and the journey takes 45 minutes. At what time does it arrive?",
+          "ur": "ایک بس 15:50 پر چلتی ہے اور سفر میں 45 منٹ لگتے ہیں۔ یہ کس وقت پہنچتی ہے؟"
+        },
+        "checker": "text",
+        "expected": "16:35",
+        "accept": [
+          "16.35",
+          "1635"
+        ],
+        "hint": {
+          "en": "15:50 + 10 minutes = 16:00. How many minutes are left?",
+          "ur": "15:50 + 10 منٹ = 16:00۔ کتنے منٹ باقی ہیں؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 16:35.",
+          "ur": "درست! 16:35"
+        },
+        "feedback_wrong": {
+          "en": "15:50 + 10 min = 16:00, then 35 more minutes: 16:35.",
+          "ur": "15:50 + 10 منٹ = 16:00، پھر 35 منٹ مزید: 16:35"
+        },
+        "common_wrong": [
+          {
+            "answer": "15:95",
+            "feedback": {
+              "en": "There are only 60 minutes in an hour. 15:95 is 16:35.",
+              "ur": "ایک گھنٹے میں صرف 60 منٹ ہوتے ہیں۔ 15:95 یعنی 16:35"
+            },
+            "misconception_id": "base_100"
+          }
+        ]
+      },
+      "skill": "maths.time.ex_4_4"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 4.4 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers changing to the 24-hour clock (q1, q3, q4, q5), changing back (q2, q6), elapsed time (q7, q11), arrival and start times (q8, q9, q12), a time that passes midnight (q10, q11) and a find-the-error question (q13).",
+    "Each wrong answer is a real mistake: forgetting to add 12, mixing up 12 a.m. and 12 p.m., treating minutes as 100 to an hour, subtracting clock digits as ordinary numbers and not wrapping past 24:00.",
+    "Urdu terms to check: اے ایم / پی ایم (a.m. / p.m.), 24 گھنٹے کی گھڑی (24-hour clock), آدھی رات / دوپہر (midnight / noon).",
+    "The numbers were worked out in content/sources/g6-maths-06/exercise_4_4.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

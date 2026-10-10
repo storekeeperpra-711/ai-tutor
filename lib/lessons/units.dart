@@ -150,6 +150,12 @@ const grade6Book = [
           'g6-maths-06-24-hour-clock',
           'g6-maths-06-speed',
           'g6-maths-06-ratio-word-problems',
+          'g6-maths-06-exercise-4-1',
+          'g6-maths-06-exercise-4-2',
+          'g6-maths-06-exercise-4-3',
+          'g6-maths-06-exercise-4-4',
+          'g6-maths-06-exercise-4-5',
+          'g6-maths-06-chapter-4-test',
         ],
       ),
       BookChapter(LocalizedText(en: 'Sets', ur: 'سیٹ'), [

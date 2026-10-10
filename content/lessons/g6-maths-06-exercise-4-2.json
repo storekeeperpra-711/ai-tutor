@@ -1,0 +1,895 @@
+{
+  "id": "g6-maths-06-exercise-4-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Find a unit rate from two quantities in different units, use a rate to find the cost or the distance, compare two rates and solve rate problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage, Exercise 4.2"
+    }
+  ],
+  "skills": [
+    "maths.ratio.ex_4_2"
+  ],
+  "title": {
+    "en": "Exercise 4.2 practice: rate",
+    "ur": "مشق 4.2 کی پریکٹس: شرح"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.ratio.rate"
+    },
+    {
+      "skill": "maths.ratio.unitary_method"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "rate_times",
+      "description": "Multiplies the two quantities when finding a rate instead of dividing."
+    },
+    {
+      "id": "rate_divides",
+      "description": "Divides by the rate when the total is wanted, instead of multiplying."
+    },
+    {
+      "id": "rate_adds",
+      "description": "Adds the rate and the time instead of multiplying them."
+    },
+    {
+      "id": "wrong_way_round",
+      "description": "Divides the units the wrong way round, so the rate is for the other quantity."
+    },
+    {
+      "id": "compare_totals",
+      "description": "Compares the total prices without looking at how much each buys."
+    },
+    {
+      "id": "rate_unit",
+      "description": "Does not see that a rate compares two different units."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds the rate but does not use it to finish the problem."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.ratio.ex_4_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.ratio.ex_4_2": [
+      {
+        "id": "qb_rate",
+        "type": "recall",
+        "step": {
+          "id": "qb_rate",
+          "type": "number",
+          "prompt": {
+            "en": "7 kg of sugar cost Rs 840. What is the cost of 1 kg in rupees?",
+            "ur": "7 کلوگرام چینی کی قیمت 840 روپے ہے۔ 1 کلوگرام کی قیمت کتنے روپے ہے؟"
+          },
+          "answer": 120,
+          "checker": "numeric",
+          "hint": {
+            "en": "Divide the cost by the kilograms.",
+            "ur": "قیمت کو کلوگرام سے تقسیم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 840 ÷ 7 = 120.",
+            "ur": "درست! 840 ÷ 7 = 120"
+          },
+          "feedback_wrong": {
+            "en": "840 ÷ 7 = 120 rupees per kg.",
+            "ur": "840 ÷ 7 = 120 روپے فی کلوگرام"
+          },
+          "common_wrong": [
+            {
+              "answer": 5880,
+              "feedback": {
+                "en": "That multiplies. The cost of one kilogram comes from dividing: 120.",
+                "ur": "یہ ضرب ہے۔ ایک کلوگرام کی قیمت تقسیم سے ملتی ہے: 120"
+              },
+              "misconception_id": "rate_times"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_distance",
+        "type": "apply",
+        "step": {
+          "id": "qb_distance",
+          "type": "number",
+          "prompt": {
+            "en": "A bus travels at 55 km per hour for 3 hours. How many kilometres is that?",
+            "ur": "ایک بس 55 کلومیٹر فی گھنٹہ کی رفتار سے 3 گھنٹے چلتی ہے۔ یہ کتنے کلومیٹر ہوئے؟"
+          },
+          "answer": 165,
+          "checker": "numeric",
+          "hint": {
+            "en": "Distance = rate × time.",
+            "ur": "فاصلہ = شرح × وقت"
+          },
+          "feedback_correct": {
+            "en": "Right! 55 × 3 = 165 km.",
+            "ur": "درست! 55 × 3 = 165 کلومیٹر"
+          },
+          "feedback_wrong": {
+            "en": "55 km each hour for 3 hours: 165 km.",
+            "ur": "3 گھنٹے تک ہر گھنٹے 55 کلومیٹر: 165 کلومیٹر"
+          },
+          "common_wrong": [
+            {
+              "answer": 58,
+              "feedback": {
+                "en": "That adds 55 and 3. Multiply them: 165.",
+                "ur": "یہ 55 اور 3 کو جمع کرتا ہے۔ انہیں ضرب دیں: 165"
+              },
+              "misconception_id": "rate_adds"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Fatima says 4 : 5 and Rs 20 for 5 kg are both rates. What went wrong?",
+            "ur": "فاطمہ کہتی ہے 4 : 5 اور 5 کلوگرام کے 20 روپے دونوں شرحیں ہیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Only Rs 20 for 5 kg is a rate. 4 : 5 compares two numbers with no different units.",
+                "ur": "صرف 5 کلوگرام کے 20 روپے شرح ہے۔ 4 : 5 دو اعداد کا موازنہ ہے جن کی اکائیاں مختلف نہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! A rate needs two different units.",
+                "ur": "جی ہاں! شرح کے لیے دو مختلف اکائیاں چاہییں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. Both are rates.",
+                "ur": "کوئی غلطی نہیں۔ دونوں شرحیں ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A ratio like 4 : 5 has no different units, so it is not a rate.",
+                "ur": "4 : 5 جیسی نسبت میں مختلف اکائیاں نہیں ہوتیں، اس لیے یہ شرح نہیں۔"
+              },
+              "misconception_id": "rate_unit"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Neither is a rate.",
+                "ur": "کوئی بھی شرح نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Rs 20 for 5 kg compares rupees with kilograms, so it is a rate.",
+                "ur": "5 کلوگرام کے 20 روپے روپوں کا کلوگرام سے موازنہ ہے، اس لیے یہ شرح ہے۔"
+              },
+              "misconception_id": "rate_unit"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rate",
+      "front": {
+        "en": "What is a rate?",
+        "ur": "شرح کیا ہے؟"
+      },
+      "back": {
+        "en": "A ratio of two quantities in different units, like Rs 60 for 3 kg.",
+        "ur": "مختلف اکائیوں کی دو مقداروں کی نسبت، جیسے 3 کلوگرام کے 60 روپے۔"
+      }
+    },
+    {
+      "id": "f_dist",
+      "front": {
+        "en": "How do you find a distance from a rate?",
+        "ur": "شرح سے فاصلہ کیسے نکالتے ہیں؟"
+      },
+      "back": {
+        "en": "Distance = rate × time: 4 km/h for 3 hours is 12 km.",
+        "ur": "فاصلہ = شرح × وقت: 4 کلومیٹر فی گھنٹہ سے 3 گھنٹے میں 12 کلومیٹر۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_prices",
+      "text": {
+        "en": "Look at two sizes of the same product in a shop (for example 1 kg and 5 kg of rice). Write the price of each and work out the price of 1 kg in each. Which size is the better buy?",
+        "ur": "دکان میں ایک ہی چیز کی دو مقداریں دیکھیں (مثلاً 1 کلوگرام اور 5 کلوگرام چاول)۔ ہر ایک کی قیمت لکھیں اور دونوں میں 1 کلوگرام کی قیمت نکالیں۔ کون سی مقدار بہتر خریداری ہے؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Rate",
+      "ur": "شرح"
+    },
+    {
+      "en": "Unit rate",
+      "ur": "اکائی شرح"
+    },
+    {
+      "en": "Per",
+      "ur": "فی"
+    },
+    {
+      "en": "Kilometres per hour",
+      "ur": "کلومیٹر فی گھنٹہ"
+    },
+    {
+      "en": "Distance",
+      "ur": "فاصلہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 4.2 is about rate. Ready?",
+          "ur": "مشق 4.2 شرح کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 4.2 of your maths book (PCTB Mathematics 6). Here you find unit rates such as pay per hour or cost per kilogram, use a rate to find a total or a distance, and compare two rates. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 4.2 کے ساتھ ہے۔ اس میں آپ فی گھنٹہ اجرت یا فی کلوگرام قیمت جیسی اکائی شرح معلوم کریں گے، شرح سے کل رقم یا فاصلہ نکالیں گے اور دو شرحوں کا موازنہ کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_unit_rate",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "6 notebooks cost Rs 270. What is the rate in rupees per notebook?",
+        "ur": "6 کاپیوں کی قیمت 270 روپے ہے۔ فی کاپی شرح کتنے روپے ہے؟"
+      },
+      "answer": 45,
+      "checker": "numeric",
+      "hint": {
+        "en": "Rate per notebook = cost ÷ number of notebooks.",
+        "ur": "فی کاپی شرح = قیمت ÷ کاپیوں کی تعداد"
+      },
+      "feedback_correct": {
+        "en": "Right! 270 ÷ 6 = 45 rupees per notebook.",
+        "ur": "درست! 270 ÷ 6 = 45 روپے فی کاپی"
+      },
+      "feedback_wrong": {
+        "en": "Divide the cost by the number of notebooks: 270 ÷ 6 = 45.",
+        "ur": "قیمت کو کاپیوں کی تعداد سے تقسیم کریں: 270 ÷ 6 = 45"
+      },
+      "common_wrong": [
+        {
+          "answer": 1620,
+          "feedback": {
+            "en": "That multiplies. A rate per notebook comes from dividing: 45.",
+            "ur": "یہ ضرب ہے۔ فی کاپی شرح تقسیم سے ملتی ہے: 45"
+          },
+          "misconception_id": "rate_times"
+        }
+      ]
+    },
+    {
+      "id": "q2_which_rate",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a rate?",
+        "ur": "ان میں سے کون سی ایک شرح ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "4 boys to 5 girls",
+            "ur": "4 لڑکے اور 5 لڑکیاں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Boys and girls are counted in the same kind of unit (children), so this is a ratio.",
+            "ur": "لڑکے اور لڑکیاں ایک ہی طرح کی اکائی (بچے) میں گنے جاتے ہیں، اس لیے یہ نسبت ہے۔"
+          },
+          "misconception_id": "rate_unit"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Rs 60 for 3 kg of sugar",
+            "ur": "3 کلوگرام چینی کے 60 روپے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A rate compares two quantities in different units: rupees and kilograms.",
+            "ur": "جی ہاں! شرح دو مختلف اکائیوں کی مقداروں کا موازنہ ہے: روپے اور کلوگرام۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "8 cm to 12 cm",
+            "ur": "8 سینٹی میٹر اور 12 سینٹی میٹر"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Both are in centimetres, so this is a ratio.",
+            "ur": "دونوں سینٹی میٹر میں ہیں، اس لیے یہ نسبت ہے۔"
+          },
+          "misconception_id": "rate_unit"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "3 : 4",
+            "ur": "3 : 4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "This has no units. A rate compares different units, like rupees and kilograms.",
+            "ur": "اس میں اکائیاں نہیں ہیں۔ شرح مختلف اکائیوں کا موازنہ کرتی ہے، جیسے روپے اور کلوگرام۔"
+          },
+          "misconception_id": "rate_unit"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "A rate compares different units. Divide to find the rate for one.",
+          "ur": "شرح مختلف اکائیوں کا موازنہ ہے۔ ایک کی شرح کے لیے تقسیم کریں۔"
+        }
+      },
+      "text": {
+        "en": "A rate is a special kind of ratio in which the two terms are in different units, such as rupees and hours. The unit rate is the amount for one: Rs 2,400 for 8 hours is 2,400 ÷ 8 = Rs 300 per hour. To find a total, multiply the rate by the number of units: 5 kg at Rs 180 per kg costs 5 × 180 = Rs 900. Distance = rate × time: 4 km/h for 3 hours is 12 km. To compare, find the rate for one of each.",
+        "ur": "شرح ایک خاص طرح کی نسبت ہے جس کے دونوں اجزا مختلف اکائیوں میں ہوتے ہیں، جیسے روپے اور گھنٹے۔ اکائی شرح ایک کی مقدار ہے: 8 گھنٹے کے 2,400 روپے یعنی 2,400 ÷ 8 = 300 روپے فی گھنٹہ۔ کل معلوم کرنے کے لیے شرح کو اکائیوں کی تعداد سے ضرب دیں: 180 روپے فی کلوگرام کے حساب سے 5 کلوگرام کی قیمت 5 × 180 = 900 روپے۔ فاصلہ = شرح × وقت: 4 کلومیٹر فی گھنٹہ سے 3 گھنٹے میں 12 کلومیٹر۔ موازنے کے لیے دونوں کی ایک ایک کی شرح نکالیں۔"
+      }
+    },
+    {
+      "id": "q3_pay",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Nadeem earns Rs 2,400 for working 8 hours. How many rupees does he earn per hour?",
+        "ur": "ندیم 8 گھنٹے کام کرنے کے 2,400 روپے کماتا ہے۔ وہ فی گھنٹہ کتنے روپے کماتا ہے؟"
+      },
+      "answer": 300,
+      "checker": "numeric",
+      "hint": {
+        "en": "Pay per hour = total pay ÷ hours.",
+        "ur": "فی گھنٹہ اجرت = کل اجرت ÷ گھنٹے"
+      },
+      "feedback_correct": {
+        "en": "Right! 2400 ÷ 8 = 300.",
+        "ur": "درست! 2400 ÷ 8 = 300"
+      },
+      "feedback_wrong": {
+        "en": "2400 ÷ 8 = 300 rupees per hour.",
+        "ur": "2400 ÷ 8 = 300 روپے فی گھنٹہ"
+      },
+      "common_wrong": [
+        {
+          "answer": 19200,
+          "feedback": {
+            "en": "That multiplies 2400 by 8. To find the pay for one hour we divide: 300.",
+            "ur": "یہ 2400 کو 8 سے ضرب دیتا ہے۔ ایک گھنٹے کی اجرت کے لیے تقسیم کریں: 300"
+          },
+          "misconception_id": "rate_times"
+        }
+      ]
+    },
+    {
+      "id": "q4_flour",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "12 kg of flour cost Rs 1,440. What is the cost of 1 kg of flour in rupees?",
+        "ur": "12 کلوگرام آٹے کی قیمت 1,440 روپے ہے۔ 1 کلوگرام آٹے کی قیمت کتنے روپے ہے؟"
+      },
+      "answer": 120,
+      "checker": "numeric",
+      "hint": {
+        "en": "Cost of 1 kg = total cost ÷ kilograms.",
+        "ur": "1 کلوگرام کی قیمت = کل قیمت ÷ کلوگرام"
+      },
+      "feedback_correct": {
+        "en": "Right! 1440 ÷ 12 = 120.",
+        "ur": "درست! 1440 ÷ 12 = 120"
+      },
+      "feedback_wrong": {
+        "en": "1440 ÷ 12 = 120 rupees per kg.",
+        "ur": "1440 ÷ 12 = 120 روپے فی کلوگرام"
+      },
+      "common_wrong": [
+        {
+          "answer": 17280,
+          "feedback": {
+            "en": "That multiplies. For the cost of one kilogram, divide: 120.",
+            "ur": "یہ ضرب ہے۔ ایک کلوگرام کی قیمت کے لیے تقسیم کریں: 120"
+          },
+          "misconception_id": "rate_times"
+        }
+      ]
+    },
+    {
+      "id": "q5_total_cost",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Apples cost Rs 180 per kilogram. How much do 5 kilograms cost, in rupees?",
+        "ur": "سیب 180 روپے فی کلوگرام ہیں۔ 5 کلوگرام کی قیمت کتنے روپے ہے؟"
+      },
+      "answer": 900,
+      "checker": "numeric",
+      "hint": {
+        "en": "Cost = rate × number of kilograms.",
+        "ur": "قیمت = شرح × کلوگرام"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 × 5 = 900.",
+        "ur": "درست! 180 × 5 = 900"
+      },
+      "feedback_wrong": {
+        "en": "Each kilogram costs 180, so 5 kilograms cost 180 × 5 = 900 rupees.",
+        "ur": "ہر کلوگرام 180 روپے کا ہے، اس لیے 5 کلوگرام 180 × 5 = 900 روپے کے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 36,
+          "feedback": {
+            "en": "That divides. We know the price of one kilogram and want the price of 5, so multiply: 900.",
+            "ur": "یہ تقسیم ہے۔ ہمیں ایک کلوگرام کی قیمت معلوم ہے اور 5 کی چاہیے، اس لیے ضرب دیں: 900"
+          },
+          "misconception_id": "rate_divides"
+        }
+      ]
+    },
+    {
+      "id": "q6_call",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A phone call costs Rs 4 per minute. What is the charge for an 18-minute call, in rupees?",
+        "ur": "ایک فون کال 4 روپے فی منٹ ہے۔ 18 منٹ کی کال کا خرچ کتنے روپے ہے؟"
+      },
+      "answer": 72,
+      "checker": "numeric",
+      "hint": {
+        "en": "Charge = rate per minute × minutes.",
+        "ur": "خرچ = فی منٹ شرح × منٹ"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 18 = 72.",
+        "ur": "درست! 4 × 18 = 72"
+      },
+      "feedback_wrong": {
+        "en": "4 rupees for each of 18 minutes: 4 × 18 = 72.",
+        "ur": "18 منٹ میں سے ہر ایک کے 4 روپے: 4 × 18 = 72"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That divides 18 by 4. Multiply the rate by the minutes: 72.",
+            "ur": "یہ 18 کو 4 سے تقسیم کرتا ہے۔ شرح کو منٹ سے ضرب دیں: 72"
+          },
+          "misconception_id": "rate_divides"
+        }
+      ]
+    },
+    {
+      "id": "q7_speed",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A cyclist rides 45 km in 3 hours. What is the rate in km per hour?",
+        "ur": "ایک سائیکل سوار 3 گھنٹے میں 45 کلومیٹر چلتا ہے۔ کلومیٹر فی گھنٹہ شرح کیا ہے؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "Rate per hour = distance ÷ hours.",
+        "ur": "فی گھنٹہ شرح = فاصلہ ÷ گھنٹے"
+      },
+      "feedback_correct": {
+        "en": "Right! 45 ÷ 3 = 15 km per hour.",
+        "ur": "درست! 45 ÷ 3 = 15 کلومیٹر فی گھنٹہ"
+      },
+      "feedback_wrong": {
+        "en": "Distance for one hour: 45 ÷ 3 = 15 km.",
+        "ur": "ایک گھنٹے کا فاصلہ: 45 ÷ 3 = 15 کلومیٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 135,
+          "feedback": {
+            "en": "That multiplies. The distance for one hour comes from dividing: 15.",
+            "ur": "یہ ضرب ہے۔ ایک گھنٹے کا فاصلہ تقسیم سے ملتا ہے: 15"
+          },
+          "misconception_id": "rate_times"
+        }
+      ]
+    },
+    {
+      "id": "q8_walk",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Imran walks at 4 km per hour. How far does he walk in 3 hours? Answer in km.",
+        "ur": "عمران 4 کلومیٹر فی گھنٹہ کی رفتار سے چلتا ہے۔ وہ 3 گھنٹے میں کتنا فاصلہ طے کرتا ہے؟ جواب کلومیٹر میں دیں۔"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "Distance = rate × time.",
+        "ur": "فاصلہ = شرح × وقت"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 3 = 12 km.",
+        "ur": "درست! 4 × 3 = 12 کلومیٹر"
+      },
+      "feedback_wrong": {
+        "en": "He covers 4 km every hour for 3 hours: 4 × 3 = 12 km.",
+        "ur": "وہ 3 گھنٹے تک ہر گھنٹے 4 کلومیٹر چلتا ہے: 4 × 3 = 12 کلومیٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That adds the rate and the time. Multiply them: 12.",
+            "ur": "یہ شرح اور وقت کو جمع کرتا ہے۔ انہیں ضرب دیں: 12"
+          },
+          "misconception_id": "rate_adds"
+        }
+      ]
+    },
+    {
+      "id": "q9_car",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A car travels at 65 km per hour for 4 hours. How many kilometres does it cover?",
+        "ur": "ایک کار 65 کلومیٹر فی گھنٹہ کی رفتار سے 4 گھنٹے چلتی ہے۔ وہ کتنے کلومیٹر طے کرتی ہے؟"
+      },
+      "answer": 260,
+      "checker": "numeric",
+      "hint": {
+        "en": "Distance = rate × time.",
+        "ur": "فاصلہ = شرح × وقت"
+      },
+      "feedback_correct": {
+        "en": "Right! 65 × 4 = 260 km.",
+        "ur": "درست! 65 × 4 = 260 کلومیٹر"
+      },
+      "feedback_wrong": {
+        "en": "65 km in each of 4 hours: 65 × 4 = 260 km.",
+        "ur": "4 گھنٹوں میں سے ہر ایک میں 65 کلومیٹر: 65 × 4 = 260 کلومیٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 69,
+          "feedback": {
+            "en": "That adds 65 and 4. Multiply: 260.",
+            "ur": "یہ 65 اور 4 کو جمع کرتا ہے۔ ضرب دیں: 260"
+          },
+          "misconception_id": "rate_adds"
+        }
+      ]
+    },
+    {
+      "id": "q10_compare",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Shop A sells 5 kg of rice for Rs 600. Shop B sells 8 kg of the same rice for Rs 880. Which shop is cheaper per kilogram?",
+        "ur": "دکان A میں 5 کلوگرام چاول 600 روپے کے ہیں۔ دکان B میں وہی چاول 8 کلوگرام 880 روپے کے ہیں۔ فی کلوگرام کون سی دکان سستی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Shop B: Rs 110 per kg, against Rs 120 per kg in shop A",
+            "ur": "دکان B: 110 روپے فی کلوگرام، جبکہ دکان A میں 120 روپے فی کلوگرام"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 600 ÷ 5 = 120 and 880 ÷ 8 = 110, so B is cheaper per kilogram.",
+            "ur": "جی ہاں! 600 ÷ 5 = 120 اور 880 ÷ 8 = 110، اس لیے B فی کلوگرام سستی ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Shop A, because Rs 600 is less than Rs 880",
+            "ur": "دکان A، کیونکہ 600 روپے 880 سے کم ہیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The shops sell different amounts of rice, so compare the price of 1 kg in each.",
+            "ur": "دکانیں مختلف مقدار بیچ رہی ہیں، اس لیے دونوں میں 1 کلوگرام کی قیمت کا موازنہ کریں۔"
+          },
+          "misconception_id": "compare_totals"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "They cost the same per kilogram",
+            "ur": "فی کلوگرام دونوں کی قیمت برابر ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "600 ÷ 5 = 120 but 880 ÷ 8 = 110. They are not the same.",
+            "ur": "600 ÷ 5 = 120 مگر 880 ÷ 8 = 110۔ یہ برابر نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11_tank",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A tap fills a tank at 15 litres per minute. How many minutes does it take to put in 180 litres?",
+        "ur": "ایک نل ٹینکی کو 15 لیٹر فی منٹ کی شرح سے بھرتا ہے۔ 180 لیٹر بھرنے میں کتنے منٹ لگیں گے؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "How many 15-litre amounts are in 180 litres?",
+        "ur": "180 لیٹر میں 15 لیٹر کتنی بار آتے ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 180 ÷ 15 = 12 minutes.",
+        "ur": "درست! 180 ÷ 15 = 12 منٹ"
+      },
+      "feedback_wrong": {
+        "en": "Time = total ÷ rate = 180 ÷ 15 = 12 minutes.",
+        "ur": "وقت = کل ÷ شرح = 180 ÷ 15 = 12 منٹ"
+      },
+      "common_wrong": [
+        {
+          "answer": 2700,
+          "feedback": {
+            "en": "That multiplies 180 by 15. We want the number of minutes, so divide: 12.",
+            "ur": "یہ 180 کو 15 سے ضرب دیتا ہے۔ ہمیں منٹ چاہییں، اس لیے تقسیم کریں: 12"
+          },
+          "misconception_id": "rate_divides"
+        }
+      ]
+    },
+    {
+      "id": "q12_typist",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A typist types 120 words in 4 minutes. At the same rate, how many words can she type in 15 minutes?",
+        "ur": "ایک ٹائپسٹ 4 منٹ میں 120 الفاظ ٹائپ کرتی ہے۔ اسی شرح سے وہ 15 منٹ میں کتنے الفاظ ٹائپ کرے گی؟"
+      },
+      "answer": 450,
+      "checker": "numeric",
+      "hint": {
+        "en": "First find the words in 1 minute.",
+        "ur": "پہلے 1 منٹ میں الفاظ معلوم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 30 words a minute and 30 × 15 = 450.",
+        "ur": "درست! 30 الفاظ فی منٹ اور 30 × 15 = 450"
+      },
+      "feedback_wrong": {
+        "en": "120 ÷ 4 = 30 words per minute. In 15 minutes: 30 × 15 = 450.",
+        "ur": "120 ÷ 4 = 30 الفاظ فی منٹ۔ 15 منٹ میں: 30 × 15 = 450"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "That is only the rate for one minute. Multiply by 15 minutes: 450.",
+            "ur": "یہ صرف ایک منٹ کی شرح ہے۔ 15 منٹ سے ضرب دیں: 450"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 1800,
+          "feedback": {
+            "en": "That multiplies 120 by 15. The 120 words took 4 minutes, so use 30 words per minute: 450.",
+            "ur": "یہ 120 کو 15 سے ضرب دیتا ہے۔ 120 الفاظ 4 منٹ میں لکھے گئے، اس لیے 30 الفاظ فی منٹ لیں: 450"
+          },
+          "misconception_id": "wrong_way_round"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana drives 150 km in 3 hours and says her rate is 150 × 3 = 450 km per hour. What went wrong?",
+        "ur": "ثناء 3 گھنٹے میں 150 کلومیٹر چلتی ہے اور کہتی ہے اس کی شرح 150 × 3 = 450 کلومیٹر فی گھنٹہ ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A rate per hour is found by dividing: 150 ÷ 3 = 50 km per hour.",
+            "ur": "فی گھنٹہ شرح تقسیم سے ملتی ہے: 150 ÷ 3 = 50 کلومیٹر فی گھنٹہ۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! She cannot drive 450 km in 3 hours at 50 km per hour: 50 × 3 = 150.",
+            "ur": "جی ہاں! 50 کلومیٹر فی گھنٹہ سے 3 گھنٹے میں 150 کلومیٹر بنتے ہیں: 50 × 3 = 150"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. Multiplying gives the rate.",
+            "ur": "کوئی غلطی نہیں۔ ضرب سے شرح ملتی ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Multiplying gives the total distance for a given rate and time, not the rate.",
+            "ur": "ضرب سے دی گئی شرح اور وقت کا کل فاصلہ ملتا ہے، شرح نہیں۔"
+          },
+          "misconception_id": "rate_times"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should have added 150 + 3.",
+            "ur": "اسے 150 + 3 جمع کرنا چاہیے تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Adding kilometres and hours makes no sense. Divide the distance by the time.",
+            "ur": "کلومیٹر اور گھنٹے جمع کرنے کا کوئی مطلب نہیں۔ فاصلے کو وقت سے تقسیم کریں۔"
+          },
+          "misconception_id": "rate_adds"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You worked with rates.",
+          "ur": "شاباش! آپ نے شرحوں پر کام کیا۔"
+        }
+      },
+      "text": {
+        "en": "A rate compares quantities in different units. To find the rate for one unit, divide. To find a total (a cost or a distance), multiply the rate by the number of units or the time. To find the number of units or the time, divide the total by the rate. To compare two rates, find the price or the distance for one unit of each.",
+        "ur": "شرح مختلف اکائیوں کی مقداروں کا موازنہ ہے۔ ایک اکائی کی شرح کے لیے تقسیم کریں۔ کل (قیمت یا فاصلہ) کے لیے شرح کو اکائیوں کی تعداد یا وقت سے ضرب دیں۔ اکائیوں کی تعداد یا وقت کے لیے کل کو شرح سے تقسیم کریں۔ دو شرحوں کے موازنے کے لیے دونوں کی ایک اکائی کی قیمت یا فاصلہ نکالیں۔"
+      },
+      "points": [
+        {
+          "en": "Always write the unit of a rate: Rs per kg, km per hour.",
+          "ur": "شرح کی اکائی ہمیشہ لکھیں: روپے فی کلوگرام، کلومیٹر فی گھنٹہ۔"
+        },
+        {
+          "en": "Distance = rate × time.",
+          "ur": "فاصلہ = شرح × وقت"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_rate",
+      "type": "recall",
+      "step": {
+        "id": "r_rate",
+        "type": "number",
+        "prompt": {
+          "en": "A worker earns Rs 360 in 9 hours. What is the pay per hour in rupees?",
+          "ur": "ایک مزدور 9 گھنٹے میں 360 روپے کماتا ہے۔ فی گھنٹہ اجرت کتنے روپے ہے؟"
+        },
+        "answer": 40,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide the pay by the hours.",
+          "ur": "اجرت کو گھنٹوں سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 360 ÷ 9 = 40.",
+          "ur": "درست! 360 ÷ 9 = 40"
+        },
+        "feedback_wrong": {
+          "en": "360 ÷ 9 = 40 rupees an hour.",
+          "ur": "360 ÷ 9 = 40 روپے فی گھنٹہ"
+        },
+        "common_wrong": [
+          {
+            "answer": 3240,
+            "feedback": {
+              "en": "That multiplies. Divide to find the pay for one hour: 40.",
+              "ur": "یہ ضرب ہے۔ ایک گھنٹے کی اجرت کے لیے تقسیم کریں: 40"
+            },
+            "misconception_id": "rate_times"
+          }
+        ]
+      },
+      "skill": "maths.ratio.ex_4_2"
+    },
+    {
+      "id": "r_cost",
+      "type": "apply",
+      "step": {
+        "id": "r_cost",
+        "type": "number",
+        "prompt": {
+          "en": "Ribbon costs Rs 12 per metre. How much do 7 metres cost, in rupees?",
+          "ur": "فیتہ 12 روپے فی میٹر ہے۔ 7 میٹر کی قیمت کتنے روپے ہے؟"
+        },
+        "answer": 84,
+        "checker": "numeric",
+        "hint": {
+          "en": "Cost = rate × metres.",
+          "ur": "قیمت = شرح × میٹر"
+        },
+        "feedback_correct": {
+          "en": "Right! 12 × 7 = 84.",
+          "ur": "درست! 12 × 7 = 84"
+        },
+        "feedback_wrong": {
+          "en": "12 rupees for each of 7 metres: 84.",
+          "ur": "7 میٹر میں سے ہر ایک کے 12 روپے: 84"
+        },
+        "common_wrong": [
+          {
+            "answer": 19,
+            "feedback": {
+              "en": "That adds. Multiply the rate by the metres: 84.",
+              "ur": "یہ جمع ہے۔ شرح کو میٹر سے ضرب دیں: 84"
+            },
+            "misconception_id": "rate_adds"
+          }
+        ]
+      },
+      "skill": "maths.ratio.ex_4_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 4.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the unit rate (q1, q3, q4, q7), what a rate is (q2), total cost and distance from a rate (q5, q6, q8, q9), comparing two rates (q10), finding the time (q11), a two-step rate problem (q12) and a find-the-error question (q13).",
+    "Each wrong answer is a real mistake: multiplying when the rate is wanted, dividing when the total is wanted, adding a rate and a time, comparing totals instead of rates, and stopping after the rate.",
+    "Urdu terms to check: شرح (rate), اکائی شرح (unit rate), فی (per).",
+    "The numbers were worked out in content/sources/g6-maths-06/exercise_4_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
