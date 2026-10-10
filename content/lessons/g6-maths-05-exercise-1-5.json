@@ -1,0 +1,1050 @@
+{
+  "id": "g6-maths-05-exercise-1-5",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Use HCF × LCM = the product of two numbers to find the LCM, the HCF or a missing number.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 1: Factors and Multiples, Exercise 1.5"
+    }
+  ],
+  "skills": [
+    "maths.factors.ex_1_5"
+  ],
+  "title": {
+    "en": "Exercise 1.5 practice: HCF × LCM",
+    "ur": "مشق 1.5 کی پریکٹس: عاد اعظم × ذو اضعاف اقل"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.factors.hcf_lcm_product"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "sum_not_product",
+      "description": "Adds the HCF and LCM, or the two numbers, instead of multiplying."
+    },
+    {
+      "id": "wrong_division",
+      "description": "Divides the wrong numbers to find the missing number, e.g. LCM ÷ known number, or product ÷ HCF."
+    },
+    {
+      "id": "hcf_must_divide",
+      "description": "Does not see that the HCF always divides the LCM, so some pairs of HCF and LCM are impossible."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.factors.ex_1_5": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.factors.ex_1_5": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "number",
+          "prompt": {
+            "en": "The HCF of 10 and 25 is 5 and their LCM is 50. What is HCF × LCM?",
+            "ur": "10 اور 25 کا عاد اعظم 5 اور ذو اضعاف اقل 50 ہے۔ عاد اعظم × ذو اضعاف اقل کیا ہے؟"
+          },
+          "answer": 250,
+          "checker": "numeric",
+          "hint": {
+            "en": "It equals 10 × 25.",
+            "ur": "یہ 10 × 25 کے برابر ہے۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 5 × 50 = 250 = 10 × 25.",
+            "ur": "درست! 5 × 50 = 250 = 10 × 25"
+          },
+          "feedback_wrong": {
+            "en": "5 × 50 = 250, the same as 10 × 25.",
+            "ur": "5 × 50 = 250، جو 10 × 25 کے برابر ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 55,
+              "feedback": {
+                "en": "That is 5 + 50. Multiply: 250.",
+                "ur": "یہ 5 + 50 ہے۔ ضرب دیں: 250"
+              },
+              "misconception_id": "sum_not_product"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_missing",
+        "type": "apply",
+        "step": {
+          "id": "qb_missing",
+          "type": "number",
+          "prompt": {
+            "en": "Two numbers have HCF 8 and LCM 96. One number is 24. Find the other number.",
+            "ur": "دو اعداد کا عاد اعظم 8 اور ذو اضعاف اقل 96 ہے۔ ایک عدد 24 ہے۔ دوسرا عدد معلوم کریں۔"
+          },
+          "answer": 32,
+          "checker": "numeric",
+          "hint": {
+            "en": "8 × 96 = 768. Divide by 24.",
+            "ur": "8 × 96 = 768۔ 24 سے تقسیم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 768 ÷ 24 = 32.",
+            "ur": "درست! 768 ÷ 24 = 32"
+          },
+          "feedback_wrong": {
+            "en": "8 × 96 = 768, and 768 ÷ 24 = 32. Check: HCF of 24 and 32 is 8.",
+            "ur": "8 × 96 = 768، اور 768 ÷ 24 = 32۔ جانچ: 24 اور 32 کا عاد اعظم 8 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "That is 96 ÷ 24. Use the product: 768 ÷ 24 = 32.",
+                "ur": "یہ 96 ÷ 24 ہے۔ حاصل ضرب استعمال کریں: 768 ÷ 24 = 32"
+              },
+              "misconception_id": "wrong_division"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "18 and 30 have HCF 6 and LCM 90. Imran says HCF × LCM should equal 18 + 30 = 48. What went wrong?",
+            "ur": "18 اور 30 کا عاد اعظم 6 اور ذو اضعاف اقل 90 ہے۔ عمران کہتا ہے عاد اعظم × ذو اضعاف اقل کو 18 + 30 = 48 ہونا چاہیے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "product",
+              "text": {
+                "en": "It equals the product: 18 × 30 = 540 = 6 × 90.",
+                "ur": "یہ حاصل ضرب کے برابر ہے: 18 × 30 = 540 = 6 × 90"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The rule uses the two numbers multiplied, not added.",
+                "ur": "جی ہاں! اصول میں دونوں اعداد ضرب ہوتے ہیں، جمع نہیں۔"
+              }
+            },
+            {
+              "id": "lcm",
+              "text": {
+                "en": "It equals the LCM, 90.",
+                "ur": "یہ ذو اضعاف اقل، 90، کے برابر ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6 × 90 = 540, not 90. It equals 18 × 30.",
+                "ur": "6 × 90 = 540، 90 نہیں۔ یہ 18 × 30 کے برابر ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. It is 48.",
+                "ur": "کوئی غلطی نہیں۔ یہ 48 ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6 × 90 = 540, which is 18 × 30, not 18 + 30.",
+                "ur": "6 × 90 = 540، جو 18 × 30 ہے، 18 + 30 نہیں۔"
+              },
+              "misconception_id": "sum_not_product"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_missing",
+      "front": {
+        "en": "HCF 5, LCM 60, one number 15. How do you find the other?",
+        "ur": "عاد اعظم 5، ذو اضعاف اقل 60، ایک عدد 15۔ دوسرا کیسے معلوم کریں؟"
+      },
+      "back": {
+        "en": "5 × 60 = 300, then 300 ÷ 15 = 20.",
+        "ur": "5 × 60 = 300، پھر 300 ÷ 15 = 20"
+      }
+    },
+    {
+      "id": "f_possible",
+      "front": {
+        "en": "Can the HCF be 8 when the LCM is 60?",
+        "ur": "کیا ذو اضعاف اقل 60 ہو تو عاد اعظم 8 ہو سکتا ہے؟"
+      },
+      "back": {
+        "en": "No. The HCF always divides the LCM, and 8 does not divide 60.",
+        "ur": "نہیں۔ عاد اعظم ہمیشہ ذو اضعاف اقل کو تقسیم کرتا ہے، اور 8، 60 کو تقسیم نہیں کرتا۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_puzzle",
+      "text": {
+        "en": "Choose two numbers secretly and tell a family member their HCF, their LCM and one of the numbers. Can they find your other number with HCF × LCM?",
+        "ur": "چپکے سے دو اعداد چنیں اور گھر کے کسی فرد کو ان کا عاد اعظم، ذو اضعاف اقل اور ایک عدد بتائیں۔ کیا وہ عاد اعظم × ذو اضعاف اقل سے آپ کا دوسرا عدد معلوم کر سکتے ہیں؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Highest common factor (HCF)",
+      "ur": "عاد اعظم"
+    },
+    {
+      "en": "Lowest common multiple (LCM)",
+      "ur": "ذو اضعاف اقل"
+    },
+    {
+      "en": "Product",
+      "ur": "حاصل ضرب"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 1.5 uses one rule again and again. Let's make it easy!",
+          "ur": "مشق 1.5 میں ایک ہی اصول بار بار آتا ہے۔ آئیں اسے آسان بنائیں!"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 1.5 of your maths book (PCTB Mathematics 6). Here you use the rule HCF × LCM = the two numbers multiplied to find a missing LCM, HCF or number. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 1.5 کے ساتھ ہے۔ اس میں آپ اصول عاد اعظم × ذو اضعاف اقل = دونوں اعداد کا حاصل ضرب استعمال کر کے گمشدہ ذو اضعاف اقل، عاد اعظم یا عدد معلوم کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_rule",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "For any two numbers, HCF × LCM is equal to ...",
+        "ur": "کسی بھی دو اعداد کے لیے عاد اعظم × ذو اضعاف اقل برابر ہے ..."
+      },
+      "options": [
+        {
+          "id": "product",
+          "text": {
+            "en": "the product of the two numbers",
+            "ur": "دونوں اعداد کے حاصل ضرب کے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! For 4 and 6: 2 × 12 = 24 = 4 × 6.",
+            "ur": "جی ہاں! 4 اور 6 کے لیے: 2 × 12 = 24 = 4 × 6"
+          }
+        },
+        {
+          "id": "sum",
+          "text": {
+            "en": "the sum of the two numbers",
+            "ur": "دونوں اعداد کے مجموعے کے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "For 4 and 6: 2 × 12 = 24, but 4 + 6 = 10. It is the product.",
+            "ur": "4 اور 6 کے لیے: 2 × 12 = 24، مگر 4 + 6 = 10۔ یہ حاصل ضرب ہے۔"
+          },
+          "misconception_id": "sum_not_product"
+        },
+        {
+          "id": "bigger",
+          "text": {
+            "en": "the bigger number",
+            "ur": "بڑے عدد کے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "For 4 and 6 it is 24, not 6. It is the product of the two numbers.",
+            "ur": "4 اور 6 کے لیے یہ 24 ہے، 6 نہیں۔ یہ دونوں اعداد کا حاصل ضرب ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2_check",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "The HCF of 18 and 24 is 6 and their LCM is 72. Work out HCF × LCM.",
+        "ur": "18 اور 24 کا عاد اعظم 6 اور ذو اضعاف اقل 72 ہے۔ عاد اعظم × ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 432,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 × 72. It should be the same as 18 × 24.",
+        "ur": "6 × 72۔ یہ 18 × 24 کے برابر ہونا چاہیے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 72 = 432 = 18 × 24.",
+        "ur": "درست! 6 × 72 = 432 = 18 × 24"
+      },
+      "feedback_wrong": {
+        "en": "6 × 72 = 432, and 18 × 24 = 432 too.",
+        "ur": "6 × 72 = 432، اور 18 × 24 بھی 432 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 78,
+          "feedback": {
+            "en": "That is 6 + 72. Multiply: 6 × 72 = 432.",
+            "ur": "یہ 6 + 72 ہے۔ ضرب دیں: 6 × 72 = 432"
+          },
+          "misconception_id": "sum_not_product"
+        }
+      ]
+    },
+    {
+      "id": "q3_find_lcm",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The product of two numbers is 540 and their HCF is 6. Find their LCM.",
+        "ur": "دو اعداد کا حاصل ضرب 540 اور عاد اعظم 6 ہے۔ ان کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 90,
+      "checker": "numeric",
+      "hint": {
+        "en": "6 × LCM = 540. Divide 540 by 6.",
+        "ur": "6 × ذو اضعاف اقل = 540۔ 540 کو 6 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! LCM = 540 ÷ 6 = 90.",
+        "ur": "درست! ذو اضعاف اقل = 540 ÷ 6 = 90"
+      },
+      "feedback_wrong": {
+        "en": "HCF × LCM = product, so LCM = 540 ÷ 6 = 90.",
+        "ur": "عاد اعظم × ذو اضعاف اقل = حاصل ضرب، اس لیے ذو اضعاف اقل = 540 ÷ 6 = 90"
+      },
+      "common_wrong": [
+        {
+          "answer": 3240,
+          "feedback": {
+            "en": "Divide by the HCF, don't multiply: 540 ÷ 6 = 90.",
+            "ur": "عاد اعظم سے تقسیم کریں، ضرب نہیں: 540 ÷ 6 = 90"
+          },
+          "misconception_id": "wrong_division"
+        },
+        {
+          "answer": 540,
+          "feedback": {
+            "en": "540 is the product. LCM = 540 ÷ 6 = 90.",
+            "ur": "540 حاصل ضرب ہے۔ ذو اضعاف اقل = 540 ÷ 6 = 90"
+          }
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 80.0,
+        "alt": {
+          "en": "A rectangle with area 540 written inside. Its height is 6 (the HCF) and its length is a question mark (the LCM).",
+          "ur": "ایک مستطیل جس کے اندر رقبہ 540 لکھا ہے۔ اس کی اونچائی 6 ہے (عاد اعظم) اور لمبائی کی جگہ سوالیہ نشان ہے (ذو اضعاف اقل)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                66.0
+              ],
+              [
+                52.0,
+                66.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              46.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              46.0
+            ],
+            "text": "540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q4_find_hcf",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The LCM of 20 and 48 is 240. Use the rule to find their HCF.",
+        "ur": "20 اور 48 کا ذو اضعاف اقل 240 ہے۔ اصول سے ان کا عاد اعظم معلوم کریں۔"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "20 × 48 = 960. HCF × 240 = 960.",
+        "ur": "20 × 48 = 960۔ عاد اعظم × 240 = 960"
+      },
+      "feedback_correct": {
+        "en": "Right! HCF = 960 ÷ 240 = 4.",
+        "ur": "درست! عاد اعظم = 960 ÷ 240 = 4"
+      },
+      "feedback_wrong": {
+        "en": "20 × 48 = 960, so HCF = 960 ÷ 240 = 4. Check: 4 divides 20 and 48.",
+        "ur": "20 × 48 = 960، اس لیے عاد اعظم = 960 ÷ 240 = 4۔ جانچ: 4، 20 اور 48 کو تقسیم کرتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 720,
+          "feedback": {
+            "en": "That is 960 − 240. Divide: 960 ÷ 240 = 4.",
+            "ur": "یہ 960 − 240 ہے۔ تقسیم کریں: 960 ÷ 240 = 4"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ]
+    },
+    {
+      "id": "q5_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two numbers have HCF 5 and LCM 60. One number is 15. Find the other number.",
+        "ur": "دو اعداد کا عاد اعظم 5 اور ذو اضعاف اقل 60 ہے۔ ایک عدد 15 ہے۔ دوسرا عدد معلوم کریں۔"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "5 × 60 = 300 is the product of the two numbers. Divide by 15.",
+        "ur": "5 × 60 = 300 دونوں اعداد کا حاصل ضرب ہے۔ 15 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 300 ÷ 15 = 20.",
+        "ur": "درست! 300 ÷ 15 = 20"
+      },
+      "feedback_wrong": {
+        "en": "5 × 60 = 300, and 300 ÷ 15 = 20. Check: HCF of 15 and 20 is 5, LCM is 60.",
+        "ur": "5 × 60 = 300، اور 300 ÷ 15 = 20۔ جانچ: 15 اور 20 کا عاد اعظم 5 اور ذو اضعاف اقل 60 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That is 60 ÷ 15. Find the product first: 5 × 60 = 300, then 300 ÷ 15 = 20.",
+            "ur": "یہ 60 ÷ 15 ہے۔ پہلے حاصل ضرب: 5 × 60 = 300، پھر 300 ÷ 15 = 20"
+          },
+          "misconception_id": "wrong_division"
+        },
+        {
+          "answer": 60,
+          "feedback": {
+            "en": "That is 300 ÷ 5, the LCM. Divide by the known number 15: 20.",
+            "ur": "یہ 300 ÷ 5 ہے، یعنی ذو اضعاف اقل۔ معلوم عدد 15 سے تقسیم کریں: 20"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 137.3,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale with the same area. The first is 5 by 60 (HCF by LCM). The second is 15 high (the number we know), and its length is a question mark (the other number).",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 5 ضرب 60 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا 15 اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                41.8
+              ],
+              [
+                52.0,
+                41.8
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "60"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              33.9
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                75.8
+              ],
+              [
+                115.3,
+                75.8
+              ],
+              [
+                115.3,
+                123.3
+              ],
+              [
+                52.0,
+                123.3
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.7,
+              64.8
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              99.6
+            ],
+            "text": "15"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two numbers have HCF 9 and LCM 108. One number is 27. Find the other number.",
+        "ur": "دو اعداد کا عاد اعظم 9 اور ذو اضعاف اقل 108 ہے۔ ایک عدد 27 ہے۔ دوسرا عدد معلوم کریں۔"
+      },
+      "answer": 36,
+      "checker": "numeric",
+      "hint": {
+        "en": "9 × 108 = 972. Divide by 27.",
+        "ur": "9 × 108 = 972۔ 27 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 972 ÷ 27 = 36.",
+        "ur": "درست! 972 ÷ 27 = 36"
+      },
+      "feedback_wrong": {
+        "en": "9 × 108 = 972, and 972 ÷ 27 = 36. Check: HCF of 27 and 36 is 9.",
+        "ur": "9 × 108 = 972، اور 972 ÷ 27 = 36۔ جانچ: 27 اور 36 کا عاد اعظم 9 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That is 108 ÷ 27. Use the product: 972 ÷ 27 = 36.",
+            "ur": "یہ 108 ÷ 27 ہے۔ حاصل ضرب استعمال کریں: 972 ÷ 27 = 36"
+          },
+          "misconception_id": "wrong_division"
+        },
+        {
+          "answer": 108,
+          "feedback": {
+            "en": "That is 972 ÷ 9, the LCM. Divide by 27: 36.",
+            "ur": "یہ 972 ÷ 9 ہے، یعنی ذو اضعاف اقل۔ 27 سے تقسیم کریں: 36"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ]
+    },
+    {
+      "id": "q7_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The HCF of two numbers is 12 and their LCM is 180. One of the numbers is 36. What is the other?",
+        "ur": "دو اعداد کا عاد اعظم 12 اور ذو اضعاف اقل 180 ہے۔ ان میں سے ایک عدد 36 ہے۔ دوسرا کیا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "12 × 180 = 2160. Divide by 36.",
+        "ur": "12 × 180 = 2160۔ 36 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2160 ÷ 36 = 60.",
+        "ur": "درست! 2160 ÷ 36 = 60"
+      },
+      "feedback_wrong": {
+        "en": "12 × 180 = 2160, and 2160 ÷ 36 = 60. Check: LCM of 36 and 60 is 180.",
+        "ur": "12 × 180 = 2160، اور 2160 ÷ 36 = 60۔ جانچ: 36 اور 60 کا ذو اضعاف اقل 180 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is 180 ÷ 36. Find the product first: 2160 ÷ 36 = 60.",
+            "ur": "یہ 180 ÷ 36 ہے۔ پہلے حاصل ضرب: 2160 ÷ 36 = 60"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 124.7,
+        "alt": {
+          "en": "Two rectangles drawn to the same scale with the same area. The first is 12 by 180 (HCF by LCM). The second is 36 high (the number we know), and its length is a question mark (the other number).",
+          "ur": "ایک ہی پیمانے پر بنے دو مستطیل جن کا رقبہ برابر ہے۔ پہلا 12 ضرب 180 ہے (عاد اعظم ضرب ذو اضعاف اقل)۔ دوسرا 36 اونچا ہے (جو عدد معلوم ہے)، اور اس کی لمبائی کی جگہ سوالیہ نشان ہے (دوسرا عدد)۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                26.0
+              ],
+              [
+                242.0,
+                26.0
+              ],
+              [
+                242.0,
+                38.7
+              ],
+              [
+                52.0,
+                38.7
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              147.0,
+              15.0
+            ],
+            "text": "180"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              32.3
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                52.0,
+                72.7
+              ],
+              [
+                115.3,
+                72.7
+              ],
+              [
+                115.3,
+                110.7
+              ],
+              [
+                52.0,
+                110.7
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              83.7,
+              61.7
+            ],
+            "text": "?"
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.0,
+              91.7
+            ],
+            "text": "36"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two numbers have HCF 14 and LCM 168. One number is 42. Find the other number.",
+        "ur": "دو اعداد کا عاد اعظم 14 اور ذو اضعاف اقل 168 ہے۔ ایک عدد 42 ہے۔ دوسرا عدد معلوم کریں۔"
+      },
+      "answer": 56,
+      "checker": "numeric",
+      "hint": {
+        "en": "14 × 168 = 2352. Divide by 42.",
+        "ur": "14 × 168 = 2352۔ 42 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2352 ÷ 42 = 56.",
+        "ur": "درست! 2352 ÷ 42 = 56"
+      },
+      "feedback_wrong": {
+        "en": "14 × 168 = 2352, and 2352 ÷ 42 = 56. Check: HCF of 42 and 56 is 14.",
+        "ur": "14 × 168 = 2352، اور 2352 ÷ 42 = 56۔ جانچ: 42 اور 56 کا عاد اعظم 14 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That is 168 ÷ 42. Use the product: 2352 ÷ 42 = 56.",
+            "ur": "یہ 168 ÷ 42 ہے۔ حاصل ضرب استعمال کریں: 2352 ÷ 42 = 56"
+          },
+          "misconception_id": "wrong_division"
+        },
+        {
+          "answer": 182,
+          "feedback": {
+            "en": "That is 14 + 168. Multiply, then divide: 2352 ÷ 42 = 56.",
+            "ur": "یہ 14 + 168 ہے۔ ضرب دیں، پھر تقسیم کریں: 2352 ÷ 42 = 56"
+          },
+          "misconception_id": "sum_not_product"
+        }
+      ]
+    },
+    {
+      "id": "q9_missing_big",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two numbers have HCF 15 and LCM 450. One number is 90. Find the other number.",
+        "ur": "دو اعداد کا عاد اعظم 15 اور ذو اضعاف اقل 450 ہے۔ ایک عدد 90 ہے۔ دوسرا عدد معلوم کریں۔"
+      },
+      "answer": 75,
+      "checker": "numeric",
+      "hint": {
+        "en": "15 × 450 = 6750. Divide by 90.",
+        "ur": "15 × 450 = 6750۔ 90 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6750 ÷ 90 = 75.",
+        "ur": "درست! 6750 ÷ 90 = 75"
+      },
+      "feedback_wrong": {
+        "en": "15 × 450 = 6750, and 6750 ÷ 90 = 75. Check: HCF of 90 and 75 is 15, LCM is 450.",
+        "ur": "15 × 450 = 6750، اور 6750 ÷ 90 = 75۔ جانچ: 90 اور 75 کا عاد اعظم 15 اور ذو اضعاف اقل 450 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is 450 ÷ 90. Find the product first: 6750 ÷ 90 = 75.",
+            "ur": "یہ 450 ÷ 90 ہے۔ پہلے حاصل ضرب: 6750 ÷ 90 = 75"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ]
+    },
+    {
+      "id": "q10_possible",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Can two numbers have HCF 8 and LCM 60?",
+        "ur": "کیا دو اعداد کا عاد اعظم 8 اور ذو اضعاف اقل 60 ہو سکتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "no",
+          "text": {
+            "en": "No, because 8 does not divide 60.",
+            "ur": "نہیں، کیونکہ 8، 60 کو تقسیم نہیں کرتا۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The HCF divides both numbers, and both numbers divide the LCM, so the HCF must divide the LCM.",
+            "ur": "جی ہاں! عاد اعظم دونوں اعداد کو تقسیم کرتا ہے، اور دونوں اعداد ذو اضعاف اقل کو، اس لیے عاد اعظم کو ذو اضعاف اقل تقسیم کرنا چاہیے۔"
+          }
+        },
+        {
+          "id": "yes",
+          "text": {
+            "en": "Yes, 8 × 60 = 480, so the numbers multiply to 480.",
+            "ur": "ہاں، 8 × 60 = 480، اس لیے اعداد کا حاصل ضرب 480 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The product would be 480, but the HCF must divide the LCM, and 60 ÷ 8 is not exact. So it is impossible.",
+            "ur": "حاصل ضرب 480 ہوتا، مگر عاد اعظم کو ذو اضعاف اقل تقسیم کرنا چاہیے، اور 60 ÷ 8 پورا نہیں۔ اس لیے یہ ناممکن ہے۔"
+          },
+          "misconception_id": "hcf_must_divide"
+        },
+        {
+          "id": "bigger",
+          "text": {
+            "en": "No, because the HCF must be bigger than 10.",
+            "ur": "نہیں، کیونکہ عاد اعظم 10 سے بڑا ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "An HCF can be any size. The problem is that 8 does not divide 60.",
+            "ur": "عاد اعظم کسی بھی سائز کا ہو سکتا ہے۔ مسئلہ یہ ہے کہ 8، 60 کو تقسیم نہیں کرتا۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11_product_lcm",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The product of two numbers is 2028 and their HCF is 13. Find their LCM.",
+        "ur": "دو اعداد کا حاصل ضرب 2028 اور عاد اعظم 13 ہے۔ ان کا ذو اضعاف اقل معلوم کریں۔"
+      },
+      "answer": 156,
+      "checker": "numeric",
+      "hint": {
+        "en": "13 × LCM = 2028. Divide 2028 by 13.",
+        "ur": "13 × ذو اضعاف اقل = 2028۔ 2028 کو 13 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2028 ÷ 13 = 156.",
+        "ur": "درست! 2028 ÷ 13 = 156"
+      },
+      "feedback_wrong": {
+        "en": "LCM = 2028 ÷ 13 = 156. (The numbers could be 39 and 52.)",
+        "ur": "ذو اضعاف اقل = 2028 ÷ 13 = 156۔ (اعداد 39 اور 52 ہو سکتے ہیں۔)"
+      },
+      "common_wrong": [
+        {
+          "answer": 26364,
+          "feedback": {
+            "en": "Divide by the HCF, don't multiply: 2028 ÷ 13 = 156.",
+            "ur": "عاد اعظم سے تقسیم کریں، ضرب نہیں: 2028 ÷ 13 = 156"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ]
+    },
+    {
+      "id": "q12_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Two numbers have HCF 6 and LCM 84. One number is 12. Sadia works out 6 × 84 = 504, then 504 ÷ 6 = 84, and says the other number is 84. What went wrong?",
+        "ur": "دو اعداد کا عاد اعظم 6 اور ذو اضعاف اقل 84 ہے۔ ایک عدد 12 ہے۔ سعدیہ 6 × 84 = 504 نکالتی ہے، پھر 504 ÷ 6 = 84، اور کہتی ہے دوسرا عدد 84 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "known",
+          "text": {
+            "en": "She divided by the HCF. She should divide by the number she knows: 504 ÷ 12 = 42.",
+            "ur": "اس نے عاد اعظم سے تقسیم کیا۔ اسے معلوم عدد سے تقسیم کرنا تھا: 504 ÷ 12 = 42"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Check: HCF of 12 and 42 is 6, LCM is 84.",
+            "ur": "جی ہاں! جانچ: 12 اور 42 کا عاد اعظم 6 اور ذو اضعاف اقل 84 ہے۔"
+          }
+        },
+        {
+          "id": "add",
+          "text": {
+            "en": "She should add 6 + 84.",
+            "ur": "اسے 6 + 84 جمع کرنا تھا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Multiplying 6 × 84 = 504 was right. Then divide by 12, the known number: 42.",
+            "ur": "6 × 84 = 504 ضرب درست تھی۔ پھر معلوم عدد 12 سے تقسیم کریں: 42"
+          },
+          "misconception_id": "sum_not_product"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. The other number is 84.",
+            "ur": "کوئی غلطی نہیں۔ دوسرا عدد 84 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "12 × 84 = 1008, not 504. Divide the product by 12: 504 ÷ 12 = 42.",
+            "ur": "12 × 84 = 1008، 504 نہیں۔ حاصل ضرب کو 12 سے تقسیم کریں: 504 ÷ 12 = 42"
+          },
+          "misconception_id": "wrong_division"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Super! One rule, and you can find any missing number.",
+          "ur": "بہت اچھے! ایک اصول، اور آپ کوئی بھی گمشدہ عدد معلوم کر سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "For two numbers, HCF × LCM = the first number × the second number. To find a missing number, multiply HCF × LCM, then divide by the number you know. To find the LCM, divide the product by the HCF; to find the HCF, divide the product by the LCM.",
+        "ur": "دو اعداد کے لیے عاد اعظم × ذو اضعاف اقل = پہلا عدد × دوسرا عدد۔ گمشدہ عدد کے لیے عاد اعظم × ذو اضعاف اقل نکالیں، پھر معلوم عدد سے تقسیم کریں۔ ذو اضعاف اقل کے لیے حاصل ضرب کو عاد اعظم سے تقسیم کریں؛ عاد اعظم کے لیے حاصل ضرب کو ذو اضعاف اقل سے۔"
+      },
+      "points": [
+        {
+          "en": "Check your answer: find the HCF and LCM of the two numbers you got.",
+          "ur": "اپنا جواب جانچیں: جو دو اعداد ملے ان کا عاد اعظم اور ذو اضعاف اقل نکالیں۔"
+        },
+        {
+          "en": "The HCF always divides the LCM.",
+          "ur": "عاد اعظم ہمیشہ ذو اضعاف اقل کو تقسیم کرتا ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_missing",
+      "type": "apply",
+      "step": {
+        "id": "r_missing",
+        "type": "number",
+        "prompt": {
+          "en": "Two numbers have HCF 6 and LCM 90. One number is 18. Find the other number.",
+          "ur": "دو اعداد کا عاد اعظم 6 اور ذو اضعاف اقل 90 ہے۔ ایک عدد 18 ہے۔ دوسرا عدد معلوم کریں۔"
+        },
+        "answer": 30,
+        "checker": "numeric",
+        "hint": {
+          "en": "6 × 90 = 540. Divide by 18.",
+          "ur": "6 × 90 = 540۔ 18 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 540 ÷ 18 = 30.",
+          "ur": "درست! 540 ÷ 18 = 30"
+        },
+        "feedback_wrong": {
+          "en": "6 × 90 = 540, and 540 ÷ 18 = 30.",
+          "ur": "6 × 90 = 540، اور 540 ÷ 18 = 30"
+        },
+        "common_wrong": [
+          {
+            "answer": 5,
+            "feedback": {
+              "en": "That is 90 ÷ 18. Use the product: 540 ÷ 18 = 30.",
+              "ur": "یہ 90 ÷ 18 ہے۔ حاصل ضرب استعمال کریں: 540 ÷ 18 = 30"
+            },
+            "misconception_id": "wrong_division"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_5"
+    },
+    {
+      "id": "r_lcm",
+      "type": "recall",
+      "step": {
+        "id": "r_lcm",
+        "type": "number",
+        "prompt": {
+          "en": "The product of two numbers is 1440 and their HCF is 12. Find their LCM.",
+          "ur": "دو اعداد کا حاصل ضرب 1440 اور عاد اعظم 12 ہے۔ ان کا ذو اضعاف اقل معلوم کریں۔"
+        },
+        "answer": 120,
+        "checker": "numeric",
+        "hint": {
+          "en": "12 × LCM = 1440.",
+          "ur": "12 × ذو اضعاف اقل = 1440"
+        },
+        "feedback_correct": {
+          "en": "Right! 1440 ÷ 12 = 120.",
+          "ur": "درست! 1440 ÷ 12 = 120"
+        },
+        "feedback_wrong": {
+          "en": "LCM = 1440 ÷ 12 = 120.",
+          "ur": "ذو اضعاف اقل = 1440 ÷ 12 = 120"
+        },
+        "common_wrong": [
+          {
+            "answer": 17280,
+            "feedback": {
+              "en": "Divide by the HCF, don't multiply: 1440 ÷ 12 = 120.",
+              "ur": "عاد اعظم سے تقسیم کریں، ضرب نہیں: 1440 ÷ 12 = 120"
+            },
+            "misconception_id": "wrong_division"
+          }
+        ]
+      },
+      "skill": "maths.factors.ex_1_5"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 1.5 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the rule (q1, q2), finding the LCM or HCF from the product (q3, q4, q11), finding a missing number (q5 to q9) and why the HCF must divide the LCM (q10).",
+    "Urdu terms to check: حاصل ضرب (product), گمشدہ عدد (missing number).",
+    "The numbers were worked out in content/sources/g6-maths-05/exercise_1_5.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

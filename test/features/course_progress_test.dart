@@ -56,7 +56,7 @@ void main() {
       expect(find.text('Factors and Multiples'), findsOneWidget);
 
       // The first unfinished unit (Factors, first in the book) is open.
-      expect(find.text('1 / 7'), findsOneWidget);
+      expect(find.text('1 / 14'), findsOneWidget);
       expect(
         tester
             .widget<Text>(find.byKey(Key('course-lesson-status-${factors.id}')))

@@ -93,6 +93,13 @@ const grade6Book = [
           'g6-maths-05-hcf-times-lcm',
           'g6-maths-05-squares-and-index-notation',
           'g6-maths-05-factor-word-problems',
+          'g6-maths-05-exercise-1-1',
+          'g6-maths-05-exercise-1-2',
+          'g6-maths-05-exercise-1-3',
+          'g6-maths-05-exercise-1-4',
+          'g6-maths-05-exercise-1-5',
+          'g6-maths-05-exercise-1-6',
+          'g6-maths-05-chapter-1-test',
         ],
       ),
       BookChapter(LocalizedText(en: 'Integers', ur: 'صحیح اعداد'), [
