@@ -1,0 +1,1270 @@
+{
+  "id": "g6-maths-07-chapter-6-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 6: number patterns, letters for numbers, terms, coefficients and constants, like terms, adding and subtracting expressions, brackets, and finding the value of an expression.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Review Exercise 6"
+    }
+  ],
+  "skills": [
+    "maths.algebra.chapter_6_test"
+  ],
+  "title": {
+    "en": "Chapter 6 test: Algebraic expressions",
+    "ur": "باب 6 کا ٹیسٹ: الجبری عبارتیں"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.sequences"
+    },
+    {
+      "skill": "maths.algebra.variables"
+    },
+    {
+      "skill": "maths.algebra.terms"
+    },
+    {
+      "skill": "maths.algebra.expressions_basic"
+    },
+    {
+      "skill": "maths.algebra.add_subtract"
+    },
+    {
+      "skill": "maths.algebra.substitution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "always_add",
+      "description": "Assumes every pattern adds the same number, or adds a gap to a sequence that adds the last two terms."
+    },
+    {
+      "id": "times_for_plus",
+      "description": "Writes 'more than' or a price plus a cost as multiplication."
+    },
+    {
+      "id": "less_than_reversed",
+      "description": "Writes 5 less than x as 5 − x instead of x − 5."
+    },
+    {
+      "id": "counts_letters_only",
+      "description": "Leaves out the constant when counting the terms."
+    },
+    {
+      "id": "drops_sign",
+      "description": "Leaves out the minus sign that belongs to a term."
+    },
+    {
+      "id": "unlike_joined",
+      "description": "Joins terms with different letters, or a letter term and a number, into one term."
+    },
+    {
+      "id": "first_term_only",
+      "description": "Changes only the first sign when subtracting an expression or removing a bracket after a minus."
+    },
+    {
+      "id": "joins_digits",
+      "description": "Reads 3a with a = 4 as 34 instead of 3 × 4."
+    },
+    {
+      "id": "perimeter_missing_sides",
+      "description": "Adds only some of the sides when finding a perimeter."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a middle result (a term, an expression) but does not answer the question asked."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.chapter_6_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.chapter_6_test": [
+      {
+        "id": "qb_exam_write",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_write",
+          "type": "text_check",
+          "prompt": {
+            "en": "Write 9 less than a number x as an expression.",
+            "ur": "عدد x سے 9 کم کو عبارت کی صورت میں لکھیں۔"
+          },
+          "checker": "text",
+          "expected": "x - 9",
+          "accept": [
+            "-9+x"
+          ],
+          "hint": {
+            "en": "Start from x and take away 9.",
+            "ur": "x سے شروع کریں اور 9 تفریق کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: x − 9.",
+            "ur": "درست: x − 9"
+          },
+          "feedback_wrong": {
+            "en": "9 less than x is x − 9.",
+            "ur": "x سے 9 کم یعنی x − 9"
+          },
+          "common_wrong": [
+            {
+              "answer": "9 - x",
+              "feedback": {
+                "en": "9 − x starts from 9. Start from x: x − 9.",
+                "ur": "9 − x، 9 سے شروع ہوتا ہے۔ x سے شروع کریں: x − 9"
+              },
+              "misconception_id": "less_than_reversed"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_value",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_value",
+          "type": "number",
+          "prompt": {
+            "en": "The nth term of a pattern is 4n + 1. What is the 6th term?",
+            "ur": "ایک نمونے کے n ویں رکن کا اصول 4n + 1 ہے۔ چھٹا رکن کیا ہے؟"
+          },
+          "answer": 25,
+          "checker": "numeric",
+          "hint": {
+            "en": "Put n = 6. 4n means 4 × n.",
+            "ur": "n = 6 رکھیں۔ 4n یعنی 4 × n"
+          },
+          "feedback_correct": {
+            "en": "Correct: 4 × 6 + 1 = 25.",
+            "ur": "درست: 4 × 6 + 1 = 25"
+          },
+          "feedback_wrong": {
+            "en": "4 × 6 = 24, and 24 + 1 = 25.",
+            "ur": "4 × 6 = 24، اور 24 + 1 = 25"
+          },
+          "common_wrong": [
+            {
+              "answer": 47,
+              "feedback": {
+                "en": "4n with n = 6 is 4 × 6 = 24, not 46. Then 25.",
+                "ur": "n = 6 کے ساتھ 4n یعنی 4 × 6 = 24، 46 نہیں۔ پھر 25"
+              },
+              "misconception_id": "joins_digits"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_group",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_group",
+          "type": "text_check",
+          "prompt": {
+            "en": "Simplify: 6c + 4c − 2",
+            "ur": "مختصر کریں: 6c + 4c − 2"
+          },
+          "checker": "text",
+          "expected": "10c - 2",
+          "accept": [
+            "-2+10c"
+          ],
+          "hint": {
+            "en": "Add the c-terms. The −2 has no letter.",
+            "ur": "c والے ارکان جمع کریں۔ −2 میں حرف نہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 10c − 2.",
+            "ur": "درست: 10c − 2"
+          },
+          "feedback_wrong": {
+            "en": "6c + 4c = 10c, and the −2 stays: 10c − 2.",
+            "ur": "6c + 4c = 10c، اور −2 رہتا ہے: 10c − 2"
+          },
+          "common_wrong": [
+            {
+              "answer": "8c",
+              "feedback": {
+                "en": "10c and −2 are unlike terms, so they cannot join: 10c − 2.",
+                "ur": "10c اور −2 غیر یکساں ارکان ہیں، اس لیے نہیں مل سکتے: 10c − 2"
+              },
+              "misconception_id": "unlike_joined"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 6 in your maths book in your notebook, setting out the working the way this test's answers do. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 6 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Review exercise",
+      "ur": "اعادی مشق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 6 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook). The questions are new, not the book's.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 6 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوال (پورا کام اپنی کاپی میں)۔ سوال نئے ہیں، کتاب والے نہیں۔"
+      }
+    },
+    {
+      "id": "m1_write",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which expression means \"5 less than a number x\"?",
+        "ur": "کثیر انتخابی: کون سی عبارت \"عدد x سے 5 کم\" کو ظاہر کرتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "5 − x",
+            "ur": "5 − x"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That starts from 5. We start from x: x − 5.",
+            "ur": "یہ 5 سے شروع ہوتا ہے۔ ہم x سے شروع کرتے ہیں: x − 5"
+          },
+          "misconception_id": "less_than_reversed"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "x − 5",
+            "ur": "x − 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: start from x and take away 5.",
+            "ur": "درست: x سے شروع کریں اور 5 تفریق کریں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "5x",
+            "ur": "5x"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5x means 5 times x.",
+            "ur": "5x یعنی x کا 5 گنا۔"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "x + 5",
+            "ur": "x + 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 5 MORE than x.",
+            "ur": "یہ x سے 5 زیادہ ہے۔"
+          },
+          "misconception_id": "less_than_reversed"
+        }
+      ]
+    },
+    {
+      "id": "m2_price",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A pen costs Rs 10 and a notebook costs Rs n. The cost of 3 notebooks and a pen is:",
+        "ur": "کثیر انتخابی: ایک قلم 10 روپے کا اور ایک کاپی n روپے کی ہے۔ 3 کاپیوں اور ایک قلم کی قیمت ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "3n + 10",
+            "ur": "3n + 10"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 3 notebooks cost 3n, and the pen costs 10.",
+            "ur": "درست: 3 کاپیوں کی قیمت 3n اور قلم کی 10 ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "13n",
+            "ur": "13n"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3n and 10 are unlike terms. They cannot join.",
+            "ur": "3n اور 10 غیر یکساں ارکان ہیں۔ یہ نہیں مل سکتے۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "n + 30",
+            "ur": "n + 30"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The 3 multiplies n; it does not multiply the pen.",
+            "ur": "3، n کو ضرب دیتا ہے؛ قلم کو نہیں۔"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "3 + n + 10",
+            "ur": "3 + n + 10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 notebooks cost 3 × n, not 3 + n.",
+            "ur": "3 کاپیوں کی قیمت 3 × n ہے، 3 + n نہیں۔"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "m3_terms",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The number of terms in 4a − 3b + 2 is:",
+        "ur": "کثیر انتخابی: 4a − 3b + 2 میں ارکان کی تعداد ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The constant 2 is a term too.",
+            "ur": "مستقل 2 بھی ایک رکن ہے۔"
+          },
+          "misconception_id": "counts_letters_only"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5",
+            "ur": "5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4a is one term, not two. Count the groups between the signs.",
+            "ur": "4a ایک رکن ہے، دو نہیں۔ علامتوں کے درمیان کے گروہ گنیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 4a, −3b and 2.",
+            "ur": "درست: 4a، −3b اور 2"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "4",
+            "ur": "4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Do not count the letters and numbers separately. The terms are 4a, −3b and 2.",
+            "ur": "حروف اور اعداد الگ الگ نہ گنیں۔ ارکان 4a، −3b اور 2 ہیں۔"
+          },
+          "misconception_id": "counts_letters_only"
+        }
+      ]
+    },
+    {
+      "id": "m4_coefficient",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The coefficient of x in 2 − 6x is:",
+        "ur": "کثیر انتخابی: 2 − 6x میں x کا عددی سر ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "−6",
+            "ur": "−6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: the term is −6x.",
+            "ur": "درست: رکن −6x ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Keep the minus sign: −6.",
+            "ur": "منفی کی علامت رکھیں: −6"
+          },
+          "misconception_id": "drops_sign"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2 is the constant, with no letter.",
+            "ur": "2 مستقل ہے، بغیر حرف کے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "−4",
+            "ur": "−4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 2 − 6. The coefficient is the number with x: −6.",
+            "ur": "یہ 2 − 6 ہے۔ عددی سر وہ عدد ہے جو x کے ساتھ ہے: −6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_like",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which pair are like terms?",
+        "ur": "کثیر انتخابی: کون سا جوڑا یکساں ارکان کا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "4a and 4b",
+            "ur": "4a اور 4b"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The letters differ, so they are unlike terms.",
+            "ur": "حروف مختلف ہیں، اس لیے یہ غیر یکساں ارکان ہیں۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "3x and 3",
+            "ur": "3x اور 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 has no letter, so it is unlike 3x.",
+            "ur": "3 میں حرف نہیں، اس لیے یہ 3x کے غیر یکساں ہے۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "2m and 2n",
+            "ur": "2m اور 2n"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "m and n differ: unlike terms.",
+            "ur": "m اور n مختلف ہیں: غیر یکساں ارکان۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "7y and −y",
+            "ur": "7y اور −y"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: both have the letter y.",
+            "ur": "درست: دونوں میں حرف y ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m6_pattern",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The next term of the pattern 2, 5, 8, 11, … is:",
+        "ur": "کثیر انتخابی: نمونے 2, 5, 8, 11، … کا اگلا رکن ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "13",
+            "ur": "13"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The gap is 3, not 2: 14.",
+            "ur": "فرق 3 ہے، 2 نہیں: 14"
+          },
+          "misconception_id": "always_add"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "22",
+            "ur": "22"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The pattern adds 3; it does not double.",
+            "ur": "نمونہ 3 جمع کرتا ہے؛ دگنا نہیں کرتا۔"
+          },
+          "misconception_id": "always_add"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "14",
+            "ur": "14"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: the rule is add 3, so 11 + 3 = 14.",
+            "ur": "درست: اصول 3 جمع کرنا ہے، تو 11 + 3 = 14"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "15",
+            "ur": "15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The gap is 3, not 4: 14.",
+            "ur": "فرق 3 ہے، 4 نہیں: 14"
+          },
+          "misconception_id": "always_add"
+        }
+      ]
+    },
+    {
+      "id": "m7_add",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: (4x + 3) + (x + 2) =",
+        "ur": "کثیر انتخابی: (4x + 3) + (x + 2) ="
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "5x + 6",
+            "ur": "5x + 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 + 2 is 5, not 6.",
+            "ur": "3 + 2 برابر 5 ہے، 6 نہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5x + 5",
+            "ur": "5x + 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 4x + x = 5x and 3 + 2 = 5.",
+            "ur": "درست: 4x + x = 5x اور 3 + 2 = 5"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "10x",
+            "ur": "10x"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Letters and numbers cannot all join into 10x.",
+            "ur": "حروف اور اعداد سب مل کر 10x نہیں بن سکتے۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "4x + 5",
+            "ur": "4x + 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "x means 1x: 4x + 1x = 5x.",
+            "ur": "x یعنی 1x: 4x + 1x = 5x"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "m8_value",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The value of 3a − 2 when a = 4 is:",
+        "ur": "کثیر انتخابی: جب a = 4 ہو تو 3a − 2 کی قیمت ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "10",
+            "ur": "10"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 3 × 4 − 2 = 10.",
+            "ur": "درست: 3 × 4 − 2 = 10"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "32",
+            "ur": "32"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3a is 3 × 4 = 12, not 34.",
+            "ur": "3a یعنی 3 × 4 = 12، 34 نہیں۔"
+          },
+          "misconception_id": "joins_digits"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "5",
+            "ur": "5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3a is 3 times a, not 3 + a.",
+            "ur": "3a یعنی a کا 3 گنا، 3 + a نہیں۔"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "14",
+            "ur": "14"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The − 2 is taken away: 12 − 2 = 10.",
+            "ur": "− 2 تفریق ہوتا ہے: 12 − 2 = 10"
+          },
+          "misconception_id": "drops_sign"
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_simplify",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Simplify: 7a + 2b − 3a + b",
+        "ur": "مختصر سوال: مختصر کریں: 7a + 2b − 3a + b"
+      },
+      "checker": "text",
+      "expected": "4a + 3b",
+      "accept": [
+        "3b+4a"
+      ],
+      "hint": {
+        "en": "Group the a-terms and the b-terms separately. b means 1b.",
+        "ur": "a والے اور b والے ارکان الگ الگ اکٹھے کریں۔ b یعنی 1b"
+      },
+      "feedback_correct": {
+        "en": "Correct: 4a + 3b.",
+        "ur": "درست: 4a + 3b"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 7a − 3a = 4a and 2b + b = 3b. So 4a + 3b.",
+        "ur": "نمونہ جواب: 7a − 3a = 4a اور 2b + b = 3b۔ تو 4a + 3b"
+      },
+      "common_wrong": [
+        {
+          "answer": "7a",
+          "feedback": {
+            "en": "a-terms and b-terms are unlike. Do not add them all: 4a + 3b.",
+            "ur": "a والے اور b والے ارکان غیر یکساں ہیں۔ سب جمع نہ کریں: 4a + 3b"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "answer": "10a + 3b",
+          "feedback": {
+            "en": "The −3a is taken away: 7a − 3a = 4a.",
+            "ur": "−3a تفریق ہوتا ہے: 7a − 3a = 4a"
+          },
+          "misconception_id": "drops_sign"
+        }
+      ]
+    },
+    {
+      "id": "q2_subtract",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Subtract 2m + 3 from 9m + 8.",
+        "ur": "مختصر سوال: 9m + 8 میں سے 2m + 3 تفریق کریں۔"
+      },
+      "checker": "text",
+      "expected": "7m + 5",
+      "accept": [
+        "5+7m"
+      ],
+      "hint": {
+        "en": "Write (9m + 8) − (2m + 3) and change both signs in the second bracket.",
+        "ur": "(9m + 8) − (2m + 3) لکھیں اور دوسری بریکٹ کی دونوں علامتیں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 7m + 5.",
+        "ur": "درست: 7m + 5"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 9m + 8 − 2m − 3 = 7m + 5.",
+        "ur": "نمونہ جواب: 9m + 8 − 2m − 3 = 7m + 5"
+      },
+      "common_wrong": [
+        {
+          "answer": "7m + 11",
+          "feedback": {
+            "en": "The 3 is taken away too: 8 − 3 = 5, so 7m + 5.",
+            "ur": "3 بھی تفریق ہوتا ہے: 8 − 3 = 5، تو 7m + 5"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "q3_brackets",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Remove the brackets and simplify: 8x − (3x − 5)",
+        "ur": "مختصر سوال: بریکٹ ہٹا کر مختصر کریں: 8x − (3x − 5)"
+      },
+      "checker": "text",
+      "expected": "5x + 5",
+      "accept": [
+        "5+5x"
+      ],
+      "hint": {
+        "en": "A minus in front changes both signs inside: 3x becomes −3x and −5 becomes +5.",
+        "ur": "آگے منفی ہو تو اندر کی دونوں علامتیں بدلتی ہیں: 3x بنتا ہے −3x اور −5 بنتا ہے +5"
+      },
+      "feedback_correct": {
+        "en": "Correct: 5x + 5.",
+        "ur": "درست: 5x + 5"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 8x − 3x + 5 = 5x + 5.",
+        "ur": "نمونہ جواب: 8x − 3x + 5 = 5x + 5"
+      },
+      "common_wrong": [
+        {
+          "answer": "5x - 5",
+          "feedback": {
+            "en": "Taking away −5 gives +5: 5x + 5.",
+            "ur": "−5 کو تفریق کرنے سے +5 ملتا ہے: 5x + 5"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "q4_negative",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: What is the next term of 14, 9, 4, −1, … ?",
+        "ur": "مختصر سوال: 14, 9, 4, −1، … کا اگلا رکن کیا ہے؟"
+      },
+      "answer": -6,
+      "checker": "numeric",
+      "hint": {
+        "en": "The terms go down by 5, even below zero.",
+        "ur": "ارکان 5، 5 کم ہوتے ہیں، صفر سے نیچے بھی۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: −1 − 5 = −6.",
+        "ur": "درست: −1 − 5 = −6"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the rule is subtract 5: 14, 9, 4, −1, −6.",
+        "ur": "نمونہ جواب: اصول 5 تفریق کرنا ہے: 14، 9، 4، −1، −6"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That adds 5. The pattern goes down: −6.",
+            "ur": "یہ 5 جمع کرتا ہے۔ نمونہ نیچے جاتا ہے: −6"
+          },
+          "misconception_id": "always_add"
+        }
+      ]
+    },
+    {
+      "id": "q5_value",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Find the value of 6p − q + 5 when p = 3 and q = 7.",
+        "ur": "مختصر سوال: جب p = 3 اور q = 7 ہو تو 6p − q + 5 کی قیمت معلوم کریں۔"
+      },
+      "answer": 16,
+      "checker": "numeric",
+      "hint": {
+        "en": "6p = 18. The minus sign in front of q stays.",
+        "ur": "6p = 18۔ q کے آگے منفی کی علامت رہتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 18 − 7 + 5 = 16.",
+        "ur": "درست: 18 − 7 + 5 = 16"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 6 × 3 = 18, then 18 − 7 = 11, then 11 + 5 = 16.",
+        "ur": "نمونہ جواب: 6 × 3 = 18، پھر 18 − 7 = 11، پھر 11 + 5 = 16"
+      },
+      "common_wrong": [
+        {
+          "answer": 30,
+          "feedback": {
+            "en": "q is taken away, not added: 18 − 7 + 5 = 16.",
+            "ur": "q تفریق ہوتا ہے، جمع نہیں: 18 − 7 + 5 = 16"
+          },
+          "misconception_id": "drops_sign"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_fib",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The first two terms of a pattern are 4 and 7. Each next term is the sum of the two terms before it. What is the 7th term?",
+        "ur": "تفصیلی سوال: ایک نمونے کے پہلے دو ارکان 4 اور 7 ہیں۔ ہر اگلا رکن اپنے سے پہلے دو ارکان کا مجموعہ ہے۔ ساتواں رکن کیا ہے؟"
+      },
+      "answer": 76,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write the terms one by one: 4, 7, 11, ...",
+        "ur": "ارکان ایک ایک کر کے لکھیں: 4، 7، 11، ..."
+      },
+      "feedback_correct": {
+        "en": "Correct: 4, 7, 11, 18, 29, 47, 76.",
+        "ur": "درست: 4، 7، 11، 18، 29، 47، 76"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 4 + 7 = 11, 7 + 11 = 18, 11 + 18 = 29, 18 + 29 = 47, 29 + 47 = 76. The 7th term is 76.",
+        "ur": "نمونہ جواب: 4 + 7 = 11، 7 + 11 = 18، 11 + 18 = 29، 18 + 29 = 47، 29 + 47 = 76۔ ساتواں رکن 76 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 47,
+          "feedback": {
+            "en": "That is the 6th term. One more step: 29 + 47 = 76.",
+            "ur": "یہ چھٹا رکن ہے۔ ایک قدم اور: 29 + 47 = 76"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 22,
+          "feedback": {
+            "en": "That adds a gap of 3 each time. This pattern adds the last two terms: 76.",
+            "ur": "یہ ہر بار 3 جمع کرتا ہے۔ یہ نمونہ آخری دو ارکان جمع کرتا ہے: 76"
+          },
+          "misconception_id": "always_add"
+        }
+      ]
+    },
+    {
+      "id": "l2_perimeter",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The sides of a triangle are 3x + 2 cm, x + 5 cm and 2x + 1 cm. Write its perimeter as an expression, then find the perimeter in cm when x = 4.",
+        "ur": "تفصیلی سوال: ایک تکون کے اضلاع 3x + 2 سینٹی میٹر، x + 5 سینٹی میٹر اور 2x + 1 سینٹی میٹر ہیں۔ اس کا احاطہ عبارت میں لکھیں، پھر x = 4 ہو تو احاطہ سینٹی میٹر میں معلوم کریں۔"
+      },
+      "answer": 32,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the three sides: 3x + x + 2x and 2 + 5 + 1. Then put x = 4.",
+        "ur": "تینوں اضلاع جمع کریں: 3x + x + 2x اور 2 + 5 + 1۔ پھر x = 4 رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 6x + 8, and 6 × 4 + 8 = 32 cm.",
+        "ur": "درست: 6x + 8، اور 6 × 4 + 8 = 32 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: perimeter = 6x + 8. With x = 4: 6 × 4 = 24, and 24 + 8 = 32 cm.",
+        "ur": "نمونہ جواب: احاطہ = 6x + 8۔ x = 4 کے ساتھ: 6 × 4 = 24، اور 24 + 8 = 32 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "6x is 6 × 4 = 24, not 64. Then 24 + 8 = 32.",
+            "ur": "6x یعنی 6 × 4 = 24، 64 نہیں۔ پھر 24 + 8 = 32"
+          },
+          "misconception_id": "joins_digits"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is only the coefficient of x. Put x = 4 in: 32.",
+            "ur": "6 صرف x کا عددی سر ہے۔ x = 4 رکھیں: 32"
+          },
+          "misconception_id": "stops_early"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 144.0,
+        "alt": {
+          "en": "A triangle with sides 3x + 2 on the left, 2x + 1 on the right and x + 5 along the bottom.",
+          "ur": "ایک تکون جس کا بایاں ضلع 3x + 2، دایاں ضلع 2x + 1 اور نچلا ضلع x + 5 ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                150.0,
+                14.0
+              ],
+              [
+                70.0,
+                116.0
+              ],
+              [
+                230.0,
+                116.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.2,
+              65.0
+            ],
+            "text": "3x + 2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              230.8,
+              65.0
+            ],
+            "text": "2x + 1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              132.0
+            ],
+            "text": "x + 5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "l3_mixed",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Simplify: (5a + 2b) − (2a − 3b) + (a − b)",
+        "ur": "تفصیلی سوال: مختصر کریں: (5a + 2b) − (2a − 3b) + (a − b)"
+      },
+      "checker": "text",
+      "expected": "4a + 4b",
+      "accept": [
+        "4b+4a"
+      ],
+      "hint": {
+        "en": "Change both signs in the middle bracket; the last bracket opens as it is. Then group a-terms and b-terms.",
+        "ur": "درمیان کی بریکٹ کی دونوں علامتیں بدلیں؛ آخری بریکٹ جیسی ہے ویسی کھلتی ہے۔ پھر a اور b والے ارکان اکٹھے کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 4a + 4b.",
+        "ur": "درست: 4a + 4b"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 5a + 2b − 2a + 3b + a − b. The a-terms: 5 − 2 + 1 = 4. The b-terms: 2 + 3 − 1 = 4. So 4a + 4b.",
+        "ur": "نمونہ جواب: 5a + 2b − 2a + 3b + a − b۔ a والے: 5 − 2 + 1 = 4۔ b والے: 2 + 3 − 1 = 4۔ تو 4a + 4b"
+      },
+      "common_wrong": [
+        {
+          "answer": "4a - 2b",
+          "feedback": {
+            "en": "The −3b in the middle bracket becomes +3b: 2b + 3b − b = 4b.",
+            "ur": "درمیان کی بریکٹ کا −3b بن جاتا ہے +3b: 2b + 3b − b = 4b"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "l4_rectangle",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A rectangle has length 4n + 1 cm and breadth n + 3 cm. Write its perimeter as an expression in n, then find the perimeter in cm when n = 5.",
+        "ur": "تفصیلی سوال: ایک مستطیل کی لمبائی 4n + 1 سینٹی میٹر اور چوڑائی n + 3 سینٹی میٹر ہے۔ اس کا احاطہ n میں عبارت کی صورت میں لکھیں، پھر n = 5 ہو تو احاطہ سینٹی میٹر میں معلوم کریں۔"
+      },
+      "answer": 58,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add two lengths and two breadths: 10n + 8. Then put n = 5.",
+        "ur": "دو لمبائیاں اور دو چوڑائیاں جمع کریں: 10n + 8۔ پھر n = 5 رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 10n + 8, and 10 × 5 + 8 = 58 cm.",
+        "ur": "درست: 10n + 8، اور 10 × 5 + 8 = 58 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: perimeter = (4n + 1) + (n + 3) + (4n + 1) + (n + 3) = 10n + 8. With n = 5: 50 + 8 = 58 cm.",
+        "ur": "نمونہ جواب: احاطہ = (4n + 1) + (n + 3) + (4n + 1) + (n + 3) = 10n + 8۔ n = 5 کے ساتھ: 50 + 8 = 58 سینٹی میٹر"
+      },
+      "common_wrong": [
+        {
+          "answer": 29,
+          "feedback": {
+            "en": "That is only length + breadth. The perimeter has all four sides: 58.",
+            "ur": "یہ صرف لمبائی + چوڑائی ہے۔ احاطے میں چاروں اضلاع ہوتے ہیں: 58"
+          },
+          "misconception_id": "perimeter_missing_sides"
+        },
+        {
+          "answer": 113,
+          "feedback": {
+            "en": "10n is 10 × 5 = 50, not 105. Then 50 + 8 = 58.",
+            "ur": "10n یعنی 10 × 5 = 50، 105 نہیں۔ پھر 50 + 8 = 58"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 6 test. Well done!",
+          "ur": "آپ نے باب 6 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: find the rule of a pattern by checking every pair of neighbours. Write words as expressions (5 less than x is x − 5). Terms are separated by + and −; the coefficient is the number with the letter; the constant has no letter. Only like terms can be added together. To subtract, change every sign in the second expression, and the same for a bracket after a minus. A perimeter is all the sides added. To find a value, put the numbers in for the letters and multiply first.",
+        "ur": "امتحان میں: نمونے کا اصول ہر برابر کے جوڑے کو جانچ کر معلوم کریں۔ الفاظ کو عبارت میں لکھیں (x سے 5 کم یعنی x − 5)۔ ارکان + اور − سے الگ ہوتے ہیں؛ عددی سر حرف کے ساتھ والا عدد ہے؛ مستقل میں حرف نہیں ہوتا۔ صرف یکساں ارکان آپس میں جمع ہو سکتے ہیں۔ تفریق کے لیے دوسری عبارت کی ہر علامت بدلیں، اور منفی کے بعد والی بریکٹ کے لیے بھی یہی۔ احاطہ تمام اضلاع کا مجموعہ ہے۔ قیمت معلوم کرنے کے لیے حروف کی جگہ اعداد رکھیں اور پہلے ضرب دیں۔"
+      },
+      "points": [
+        {
+          "en": "Check an answer by putting in a small number.",
+          "ur": "جواب کو چھوٹا عدد رکھ کر جانچیں۔"
+        },
+        {
+          "en": "Write the working, then the final answer with its unit.",
+          "ur": "کام لکھیں، پھر آخری جواب اکائی کے ساتھ۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_value",
+      "type": "exam_style",
+      "skill": "maths.algebra.chapter_6_test",
+      "step": {
+        "id": "r_exam_value",
+        "type": "number",
+        "prompt": {
+          "en": "Find the value of 5k + 2 when k = 3.",
+          "ur": "جب k = 3 ہو تو 5k + 2 کی قیمت معلوم کریں۔"
+        },
+        "answer": 17,
+        "checker": "numeric",
+        "hint": {
+          "en": "5k means 5 × k.",
+          "ur": "5k یعنی 5 × k"
+        },
+        "feedback_correct": {
+          "en": "Correct: 5 × 3 + 2 = 17.",
+          "ur": "درست: 5 × 3 + 2 = 17"
+        },
+        "feedback_wrong": {
+          "en": "15 + 2 = 17.",
+          "ur": "15 + 2 = 17"
+        },
+        "common_wrong": [
+          {
+            "answer": 55,
+            "feedback": {
+              "en": "5k is 5 × 3 = 15, not 53. Then 15 + 2 = 17.",
+              "ur": "5k یعنی 5 × 3 = 15، 53 نہیں۔ پھر 15 + 2 = 17"
+            },
+            "misconception_id": "joins_digits"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_pattern",
+      "type": "exam_style",
+      "skill": "maths.algebra.chapter_6_test",
+      "step": {
+        "id": "r_exam_pattern",
+        "type": "number",
+        "prompt": {
+          "en": "What is the next term of 100, 85, 70, 55, … ?",
+          "ur": "100, 85, 70, 55، … کا اگلا رکن کیا ہے؟"
+        },
+        "answer": 40,
+        "checker": "numeric",
+        "hint": {
+          "en": "The terms go down by 15.",
+          "ur": "ارکان 15، 15 کم ہوتے ہیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 55 − 15 = 40.",
+          "ur": "درست: 55 − 15 = 40"
+        },
+        "feedback_wrong": {
+          "en": "The rule is subtract 15: 55 − 15 = 40.",
+          "ur": "اصول 15 تفریق کرنا ہے: 55 − 15 = 40"
+        },
+        "common_wrong": [
+          {
+            "answer": 70,
+            "feedback": {
+              "en": "The pattern goes down, not up: 40.",
+              "ur": "نمونہ نیچے جاتا ہے، اوپر نہیں: 40"
+            },
+            "misconception_id": "always_add"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 6 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.algebra.chapter_6_test), with the chapter's algebra skills as prerequisites, and is mastered with exam_style questions, like the chapter 5 test.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), عبارت (expression), رکن (term), عددی سر (coefficient), مستقل (constant), یکساں ارکان (like terms), احاطہ (perimeter). No new Urdu term was invented here.",
+    "The numbers were worked out in content/sources/g6-maths-07/chapter_6_test.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

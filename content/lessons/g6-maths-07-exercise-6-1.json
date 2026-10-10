@@ -1,0 +1,1207 @@
+{
+  "id": "g6-maths-07-exercise-6-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "State the rule of a number sequence and continue it, including sequences that go down, pass through zero or add the last two terms.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Exercise 6.1"
+    }
+  ],
+  "skills": [
+    "maths.algebra.ex_6_1"
+  ],
+  "title": {
+    "en": "Exercise 6.1 practice: number patterns",
+    "ur": "مشق 6.1 کی پریکٹس: اعداد کے نمونے"
+  },
+  "estimated_minutes": 15,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.sequences"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "always_add",
+      "description": "Assumes every pattern adds the same number, even when it multiplies or the gap grows."
+    },
+    {
+      "id": "wrong_direction",
+      "description": "Adds when the pattern goes down, or subtracts when it goes up."
+    },
+    {
+      "id": "first_gap_only",
+      "description": "Finds the rule from the first two terms only, without checking the rest."
+    },
+    {
+      "id": "fib_gap",
+      "description": "Continues a sequence that adds the last two terms by adding the same gap each time."
+    },
+    {
+      "id": "negative_step",
+      "description": "Slips when the terms pass through zero into negative numbers."
+    },
+    {
+      "id": "joins_digits",
+      "description": "Reads 4n with n = 6 as 46 instead of 4 × 6."
+    },
+    {
+      "id": "forgets_constant",
+      "description": "Leaves out the number added or taken away in a rule like 4n − 3."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.ex_6_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.ex_6_1": [
+      {
+        "id": "qb_rule",
+        "type": "recall",
+        "step": {
+          "id": "qb_rule",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the rule of the pattern 100, 90, 80, 70, …?",
+            "ur": "نمونے 100, 90, 80, 70، … کا اصول کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Subtract 10 each time",
+                "ur": "ہر بار 10 تفریق کریں"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The terms go down by 10.",
+                "ur": "جی ہاں! ارکان 10، 10 کم ہوتے ہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Add 10 each time",
+                "ur": "ہر بار 10 جمع کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The terms get smaller, so we subtract.",
+                "ur": "ارکان چھوٹے ہو رہے ہیں، اس لیے تفریق کرتے ہیں۔"
+              },
+              "misconception_id": "wrong_direction"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Divide by 10 each time",
+                "ur": "ہر بار 10 سے تقسیم کریں"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "100 ÷ 10 = 10, not 90. The terms go down by the same number: 10.",
+                "ur": "100 ÷ 10 = 10، 90 نہیں۔ ارکان ایک ہی عدد سے کم ہوتے ہیں: 10"
+              },
+              "misconception_id": "always_add"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_fib",
+        "type": "apply",
+        "step": {
+          "id": "qb_fib",
+          "type": "number",
+          "prompt": {
+            "en": "Each term of 3, 4, 7, 11, 18, … is the sum of the two terms before it. Write the next term.",
+            "ur": "3, 4, 7, 11, 18، … کا ہر رکن اپنے سے پہلے دو ارکان کا مجموعہ ہے۔ اگلا رکن لکھیں۔"
+          },
+          "answer": 29,
+          "checker": "numeric",
+          "hint": {
+            "en": "Add the last two terms.",
+            "ur": "آخری دو ارکان جمع کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 11 + 18 = 29.",
+            "ur": "درست! 11 + 18 = 29"
+          },
+          "feedback_wrong": {
+            "en": "The last two terms are 11 and 18: 11 + 18 = 29.",
+            "ur": "آخری دو ارکان 11 اور 18 ہیں: 11 + 18 = 29"
+          },
+          "common_wrong": [
+            {
+              "answer": 25,
+              "feedback": {
+                "en": "18 + 7 uses a gap. Add the last two terms, 11 + 18: 29.",
+                "ur": "18 + 7 فرق کا استعمال ہے۔ آخری دو ارکان 11 + 18 جمع کریں: 29"
+              },
+              "misconception_id": "fib_gap"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana continues 20, 17, 14, 11, … with 14, because the terms go 20, 17, 14. What went wrong?",
+            "ur": "ثناء 20، 17، 14، 11، … کو 14 سے آگے بڑھاتی ہے، کیونکہ ارکان 20، 17، 14 ہیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The terms keep going down by 3, so the next term is 11 − 3 = 8.",
+                "ur": "ارکان 3، 3 کم ہوتے جاتے ہیں، اس لیے اگلا رکن 11 − 3 = 8 ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The pattern does not go back up.",
+                "ur": "جی ہاں! نمونہ واپس اوپر نہیں جاتا۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. The pattern repeats.",
+                "ur": "کوئی غلطی نہیں۔ نمونہ دہراتا ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "There is no repeat: each term is 3 less than the one before.",
+                "ur": "کوئی دہراؤ نہیں: ہر رکن پچھلے سے 3 کم ہے۔"
+              },
+              "misconception_id": "wrong_direction"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "She should add 3: 14.",
+                "ur": "اسے 3 جمع کرنا چاہیے: 14"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The pattern goes down, so subtract 3: 8.",
+                "ur": "نمونہ نیچے جاتا ہے، اس لیے 3 تفریق کریں: 8"
+              },
+              "misconception_id": "wrong_direction"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_rule",
+      "front": {
+        "en": "How do you find the rule of a pattern?",
+        "ur": "نمونے کا اصول کیسے معلوم کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Look at the gap between neighbours, then check it on every pair.",
+        "ur": "برابر کے ارکان کا فرق دیکھیں، پھر ہر جوڑے پر جانچیں۔"
+      }
+    },
+    {
+      "id": "f_fib",
+      "front": {
+        "en": "What is a Fibonacci-type sequence?",
+        "ur": "فبوناچی قسم کا سلسلہ کیا ہے؟"
+      },
+      "back": {
+        "en": "Each term is the sum of the two terms before it: 1, 1, 2, 3, 5, 8.",
+        "ur": "ہر رکن اپنے سے پہلے دو ارکان کا مجموعہ ہوتا ہے: 1، 1، 2، 3، 5، 8"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_patterns_at_home",
+      "text": {
+        "en": "Make up three number patterns of your own: one that adds, one that goes down below zero, and one that doubles. Write the first five terms of each and ask someone at home to find the rule.",
+        "ur": "اپنے تین نمونے بنائیں: ایک جو جمع کرے، ایک جو صفر سے نیچے جائے، اور ایک جو دگنا کرے۔ ہر ایک کے پہلے پانچ ارکان لکھیں اور گھر میں کسی سے اصول ڈھونڈنے کو کہیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Pattern",
+      "ur": "نمونہ"
+    },
+    {
+      "en": "Sequence",
+      "ur": "سلسلہ"
+    },
+    {
+      "en": "Term",
+      "ur": "رکن"
+    },
+    {
+      "en": "Rule",
+      "ur": "اصول"
+    },
+    {
+      "en": "Fibonacci-type sequence",
+      "ur": "فبوناچی قسم کا سلسلہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 6.1 is about patterns. Ready?",
+          "ur": "مشق 6.1 نمونوں کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 6.1 of your maths book (PCTB Mathematics 6). Here you state the rule of a number sequence and continue it, including sequences that go down and sequences where each term is the sum of the two before. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 6.1 کے ساتھ ہے۔ اس میں آپ اعداد کے سلسلے کا اصول بتائیں گے اور اسے آگے بڑھائیں گے، ان سلسلوں کو بھی جو نیچے جاتے ہیں اور ان کو بھی جن میں ہر رکن پچھلے دو ارکان کا مجموعہ ہوتا ہے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_rule",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "What is the rule of the pattern 7, 12, 17, 22, …?",
+        "ur": "نمونے 7, 12, 17, 22، … کا اصول کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Add 5 each time",
+            "ur": "ہر بار 5 جمع کریں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 12 − 7 = 5, 17 − 12 = 5, 22 − 17 = 5.",
+            "ur": "جی ہاں! 12 − 7 = 5، 17 − 12 = 5، 22 − 17 = 5"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Add 7 each time",
+            "ur": "ہر بار 7 جمع کریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 is the first term. The gap between terms is 5.",
+            "ur": "7 پہلا رکن ہے۔ ارکان کے درمیان فرق 5 ہے۔"
+          },
+          "misconception_id": "first_gap_only"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Multiply by 2 each time",
+            "ur": "ہر بار 2 سے ضرب دیں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 × 2 = 14, not 12. The terms go up by the same number: 5.",
+            "ur": "7 × 2 = 14، 12 نہیں۔ ارکان ایک ہی عدد سے بڑھتے ہیں: 5"
+          },
+          "misconception_id": "always_add"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Subtract 5 each time",
+            "ur": "ہر بار 5 تفریق کریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The terms get bigger, so we add 5.",
+            "ur": "ارکان بڑے ہو رہے ہیں، اس لیے 5 جمع کرتے ہیں۔"
+          },
+          "misconception_id": "wrong_direction"
+        }
+      ]
+    },
+    {
+      "id": "q2_next",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Write the next term of the pattern 4, 11, 18, 25, …",
+        "ur": "نمونے 4, 11, 18, 25، … کا اگلا رکن لکھیں۔"
+      },
+      "answer": 32,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find the gap between two neighbours first.",
+        "ur": "پہلے دو برابر کے ارکان کا فرق معلوم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The rule is add 7: 25 + 7 = 32.",
+        "ur": "درست! اصول 7 جمع کرنا ہے: 25 + 7 = 32"
+      },
+      "feedback_wrong": {
+        "en": "The gap is 7 each time, so 25 + 7 = 32.",
+        "ur": "فرق ہر بار 7 ہے، تو 25 + 7 = 32"
+      },
+      "common_wrong": [
+        {
+          "answer": 29,
+          "feedback": {
+            "en": "4 is the first term, not the gap. The gap is 7: 32.",
+            "ur": "4 پہلا رکن ہے، فرق نہیں۔ فرق 7 ہے: 32"
+          },
+          "misconception_id": "first_gap_only"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 96.0,
+        "alt": {
+          "en": "Four number cards: 4, 11, 18, 25, with a jump of +7 between neighbours.",
+          "ur": "چار نمبر کارڈ: 4, 11, 18, 25، برابر کے کارڈوں کے درمیان +7 کی چھلانگ۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                55.0,
+                52.0
+              ],
+              [
+                89.0,
+                52.0
+              ],
+              [
+                89.0,
+                86.0
+              ],
+              [
+                55.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.0,
+              69.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              98.0,
+              54.0
+            ],
+            "radius": 26.0,
+            "start": 200,
+            "sweep": 140
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              16.0
+            ],
+            "text": "+7"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                107.0,
+                52.0
+              ],
+              [
+                141.0,
+                52.0
+              ],
+              [
+                141.0,
+                86.0
+              ],
+              [
+                107.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              69.0
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              150.0,
+              54.0
+            ],
+            "radius": 26.0,
+            "start": 200,
+            "sweep": 140
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              16.0
+            ],
+            "text": "+7"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                159.0,
+                52.0
+              ],
+              [
+                193.0,
+                52.0
+              ],
+              [
+                193.0,
+                86.0
+              ],
+              [
+                159.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              176.0,
+              69.0
+            ],
+            "text": "18"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              202.0,
+              54.0
+            ],
+            "radius": 26.0,
+            "start": 200,
+            "sweep": 140
+          },
+          {
+            "kind": "label",
+            "at": [
+              202.0,
+              16.0
+            ],
+            "text": "+7"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                211.0,
+                52.0
+              ],
+              [
+                245.0,
+                52.0
+              ],
+              [
+                245.0,
+                86.0
+              ],
+              [
+                211.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              228.0,
+              69.0
+            ],
+            "text": "25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Find how the terms change. Then check the rule on every pair!",
+          "ur": "دیکھیں ارکان کیسے بدلتے ہیں۔ پھر اصول ہر جوڑے پر جانچیں!"
+        }
+      },
+      "text": {
+        "en": "A pattern (sequence) follows a rule. Some rules add the same number each time. Some subtract, so the terms go down and may pass through zero into negative numbers. Some multiply, like doubling. Some use the terms before: in 1, 1, 2, 3, 5, 8 every term is the sum of the two terms before it (a Fibonacci-type sequence). To find the rule, look at the gaps. Then test the rule on every pair of neighbours, not only the first two.",
+        "ur": "نمونہ (سلسلہ) کسی اصول پر چلتا ہے۔ کچھ اصول ہر بار ایک ہی عدد جمع کرتے ہیں۔ کچھ تفریق کرتے ہیں، تو ارکان نیچے جاتے ہیں اور صفر سے گزر کر منفی اعداد میں پہنچ سکتے ہیں۔ کچھ ضرب دیتے ہیں، جیسے دگنا کرنا۔ کچھ پچھلے ارکان استعمال کرتے ہیں: 1، 1، 2، 3، 5، 8 میں ہر رکن اپنے سے پہلے دو ارکان کا مجموعہ ہے (فبوناچی قسم کا سلسلہ)۔ اصول معلوم کرنے کے لیے فرق دیکھیں۔ پھر اصول کو صرف پہلے دو پر نہیں بلکہ ہر جوڑے پر جانچیں۔"
+      }
+    },
+    {
+      "id": "q3_down",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write the next term of the pattern 90, 81, 72, 63, …",
+        "ur": "نمونے 90, 81, 72, 63، … کا اگلا رکن لکھیں۔"
+      },
+      "answer": 54,
+      "checker": "numeric",
+      "hint": {
+        "en": "The terms are getting smaller. By how much?",
+        "ur": "ارکان چھوٹے ہو رہے ہیں۔ کتنے سے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! The rule is subtract 9: 63 − 9 = 54.",
+        "ur": "درست! اصول 9 تفریق کرنا ہے: 63 − 9 = 54"
+      },
+      "feedback_wrong": {
+        "en": "The terms go down by 9 each time, so 63 − 9 = 54.",
+        "ur": "ارکان ہر بار 9 کم ہوتے ہیں، تو 63 − 9 = 54"
+      },
+      "common_wrong": [
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "The pattern goes down, not up: 63 − 9 = 54.",
+            "ur": "نمونہ نیچے جا رہا ہے، اوپر نہیں: 63 − 9 = 54"
+          },
+          "misconception_id": "wrong_direction"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 96.0,
+        "alt": {
+          "en": "Four number cards: 90, 81, 72, 63, with a jump of −9 between neighbours.",
+          "ur": "چار نمبر کارڈ: 90, 81, 72, 63، برابر کے کارڈوں کے درمیان −9 کی چھلانگ۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                55.0,
+                52.0
+              ],
+              [
+                89.0,
+                52.0
+              ],
+              [
+                89.0,
+                86.0
+              ],
+              [
+                55.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.0,
+              69.0
+            ],
+            "text": "90"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              98.0,
+              54.0
+            ],
+            "radius": 26.0,
+            "start": 200,
+            "sweep": 140
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              16.0
+            ],
+            "text": "−9"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                107.0,
+                52.0
+              ],
+              [
+                141.0,
+                52.0
+              ],
+              [
+                141.0,
+                86.0
+              ],
+              [
+                107.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              69.0
+            ],
+            "text": "81"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              150.0,
+              54.0
+            ],
+            "radius": 26.0,
+            "start": 200,
+            "sweep": 140
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              16.0
+            ],
+            "text": "−9"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                159.0,
+                52.0
+              ],
+              [
+                193.0,
+                52.0
+              ],
+              [
+                193.0,
+                86.0
+              ],
+              [
+                159.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              176.0,
+              69.0
+            ],
+            "text": "72"
+          },
+          {
+            "kind": "arc",
+            "center": [
+              202.0,
+              54.0
+            ],
+            "radius": 26.0,
+            "start": 200,
+            "sweep": 140
+          },
+          {
+            "kind": "label",
+            "at": [
+              202.0,
+              16.0
+            ],
+            "text": "−9"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                211.0,
+                52.0
+              ],
+              [
+                245.0,
+                52.0
+              ],
+              [
+                245.0,
+                86.0
+              ],
+              [
+                211.0,
+                86.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              228.0,
+              69.0
+            ],
+            "text": "63"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_double",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the rule of the pattern 3, 6, 12, 24, …?",
+        "ur": "نمونے 3, 6, 12, 24، … کا اصول کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Add 3 each time",
+            "ur": "ہر بار 3 جمع کریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 + 3 = 6 works, but 6 + 3 = 9, not 12. Test every pair.",
+            "ur": "3 + 3 = 6 درست ہے مگر 6 + 3 = 9، 12 نہیں۔ ہر جوڑے کو جانچیں۔"
+          },
+          "misconception_id": "first_gap_only"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Add 6 each time",
+            "ur": "ہر بار 6 جمع کریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 + 6 = 9, not 6. The gaps are 3, 6, 12: they are not equal.",
+            "ur": "3 + 6 = 9، 6 نہیں۔ فرق 3، 6، 12 ہیں: برابر نہیں۔"
+          },
+          "misconception_id": "always_add"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Multiply by 2 each time",
+            "ur": "ہر بار 2 سے ضرب دیں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24.",
+            "ur": "جی ہاں! 3 × 2 = 6، 6 × 2 = 12، 12 × 2 = 24"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Add the two terms before",
+            "ur": "پچھلے دو ارکان جمع کریں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 + 6 = 9, not 12. Each term is double the one before.",
+            "ur": "3 + 6 = 9، 12 نہیں۔ ہر رکن پچھلے کا دگنا ہے۔"
+          },
+          "misconception_id": "fib_gap"
+        }
+      ]
+    },
+    {
+      "id": "q6_fib",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In the pattern 2, 3, 5, 8, 13, … each term is the sum of the two terms before it. Write the next term.",
+        "ur": "نمونے 2, 3, 5, 8, 13، … میں ہر رکن اپنے سے پہلے دو ارکان کا مجموعہ ہے۔ اگلا رکن لکھیں۔"
+      },
+      "answer": 21,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add the last two terms.",
+        "ur": "آخری دو ارکان جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 + 13 = 21.",
+        "ur": "درست! 8 + 13 = 21"
+      },
+      "feedback_wrong": {
+        "en": "The last two terms are 8 and 13, and 8 + 13 = 21.",
+        "ur": "آخری دو ارکان 8 اور 13 ہیں، اور 8 + 13 = 21"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "13 + 5 uses a gap. This pattern adds the last two terms, 8 + 13: 21.",
+            "ur": "13 + 5 فرق کا استعمال ہے۔ یہ نمونہ آخری دو ارکان 8 + 13 جمع کرتا ہے: 21"
+          },
+          "misconception_id": "fib_gap"
+        },
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "That doubles 13. Add the last two terms, 8 + 13: 21.",
+            "ur": "یہ 13 کو دگنا کرتا ہے۔ آخری دو ارکان 8 + 13 جمع کریں: 21"
+          },
+          "misconception_id": "fib_gap"
+        }
+      ]
+    },
+    {
+      "id": "q7_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "One term is missing: 6, 10, __, 18, 22. Write the missing term.",
+        "ur": "ایک رکن غائب ہے: 6، 10، __، 18، 22۔ غائب رکن لکھیں۔"
+      },
+      "answer": 14,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find the gap from the terms you can see, then fill the middle.",
+        "ur": "نظر آنے والے ارکان سے فرق معلوم کریں، پھر درمیان کو بھریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The rule is add 4: 10 + 4 = 14, and 14 + 4 = 18.",
+        "ur": "درست! اصول 4 جمع کرنا ہے: 10 + 4 = 14، اور 14 + 4 = 18"
+      },
+      "feedback_wrong": {
+        "en": "The gap is 4: 10 + 4 = 14, and 14 + 4 = 18 fits.",
+        "ur": "فرق 4 ہے: 10 + 4 = 14، اور 14 + 4 = 18 ٹھیک بیٹھتا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "10 + 2 does not reach 18 in the next step. The gap is 4: 14.",
+            "ur": "10 + 2 اگلے قدم میں 18 تک نہیں پہنچتا۔ فرق 4 ہے: 14"
+          },
+          "misconception_id": "first_gap_only"
+        }
+      ]
+    },
+    {
+      "id": "q8_negative",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The terms of a pattern go 10, 6, 2, −2, −6, … Write the next term.",
+        "ur": "ایک نمونے کے ارکان 10, 6, 2, −2, −6، … ہیں۔ اگلا رکن لکھیں۔"
+      },
+      "answer": -10,
+      "checker": "numeric",
+      "hint": {
+        "en": "The terms go down by 4 each time, even below zero.",
+        "ur": "ارکان ہر بار 4 کم ہوتے ہیں، صفر سے نیچے بھی۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −6 − 4 = −10.",
+        "ur": "درست! −6 − 4 = −10"
+      },
+      "feedback_wrong": {
+        "en": "The rule is subtract 4: −6 − 4 = −10.",
+        "ur": "اصول 4 تفریق کرنا ہے: −6 − 4 = −10"
+      },
+      "common_wrong": [
+        {
+          "answer": -2,
+          "feedback": {
+            "en": "−2 comes before −6. The terms keep going down: −10.",
+            "ur": "−2، −6 سے پہلے آتا ہے۔ ارکان نیچے جاتے رہتے ہیں: −10"
+          },
+          "misconception_id": "negative_step"
+        }
+      ]
+    },
+    {
+      "id": "q9_nth",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The rule for the nth term of a pattern is 4n − 3. What is the 6th term (n = 6)?",
+        "ur": "ایک نمونے کے n ویں رکن کا اصول 4n − 3 ہے۔ چھٹا رکن (n = 6) کیا ہے؟"
+      },
+      "answer": 21,
+      "checker": "numeric",
+      "hint": {
+        "en": "4n means 4 × n. Put n = 6, then take away 3.",
+        "ur": "4n یعنی 4 × n۔ n = 6 رکھیں، پھر 3 تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 6 − 3 = 21.",
+        "ur": "درست! 4 × 6 − 3 = 21"
+      },
+      "feedback_wrong": {
+        "en": "4 × 6 = 24, and 24 − 3 = 21.",
+        "ur": "4 × 6 = 24، اور 24 − 3 = 21"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "That forgets to take away 3: 24 − 3 = 21.",
+            "ur": "اس میں 3 تفریق کرنا بھول گئے: 24 − 3 = 21"
+          },
+          "misconception_id": "forgets_constant"
+        },
+        {
+          "answer": 43,
+          "feedback": {
+            "en": "4n with n = 6 is 4 × 6 = 24, not 46. Then 24 − 3 = 21.",
+            "ur": "n = 6 کے ساتھ 4n یعنی 4 × 6 = 24، 46 نہیں۔ پھر 24 − 3 = 21"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "q10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Imran says the rule of 2, 6, 18, 54, … is \"add 4\", because 6 − 2 = 4. What went wrong?",
+        "ur": "عمران کہتا ہے کہ 2, 6, 18, 54، … کا اصول \"4 جمع کریں\" ہے، کیونکہ 6 − 2 = 4۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "He tested only the first pair. The gaps are 4, 12, 36; the rule is multiply by 3.",
+            "ur": "اس نے صرف پہلا جوڑا جانچا۔ فرق 4، 12، 36 ہیں؛ اصول 3 سے ضرب دینا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A rule must fit every pair of neighbours.",
+            "ur": "جی ہاں! اصول ہر برابر کے جوڑے پر پورا اترنا چاہیے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. The first gap is 4, so the rule is add 4.",
+            "ur": "کوئی غلطی نہیں۔ پہلا فرق 4 ہے، تو اصول 4 جمع کرنا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "6 + 4 = 10, not 18. The rule must fit every pair.",
+            "ur": "6 + 4 = 10، 18 نہیں۔ اصول ہر جوڑے پر پورا اترنا چاہیے۔"
+          },
+          "misconception_id": "first_gap_only"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should subtract 4, because the terms are even.",
+            "ur": "اسے 4 تفریق کرنا چاہیے، کیونکہ ارکان جفت ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The terms go up, so subtracting is wrong.",
+            "ur": "ارکان بڑھ رہے ہیں، اس لیے تفریق غلط ہے۔"
+          },
+          "misconception_id": "wrong_direction"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error_fib",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Amna continues 1, 1, 2, 3, 5, … (each term is the sum of the two before) with 7, because 3 + 2 = 5, so she adds 2. What went wrong?",
+        "ur": "آمنہ 1, 1, 2, 3, 5، … کو (ہر رکن پچھلے دو کا مجموعہ ہے) 7 سے آگے بڑھاتی ہے، کیونکہ 3 + 2 = 5، تو وہ 2 جمع کرتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. 5 + 2 = 7 is right.",
+            "ur": "کوئی غلطی نہیں۔ 5 + 2 = 7 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The rule is 'add the last two terms', so 3 + 5 = 8.",
+            "ur": "اصول 'آخری دو ارکان جمع کریں' ہے، تو 3 + 5 = 8"
+          },
+          "misconception_id": "fib_gap"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "She added a gap. The rule adds the last two terms: 3 + 5 = 8.",
+            "ur": "اس نے فرق جمع کیا۔ اصول آخری دو ارکان جمع کرتا ہے: 3 + 5 = 8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! In this kind of pattern the gap changes every time.",
+            "ur": "جی ہاں! اس قسم کے نمونے میں فرق ہر بار بدلتا ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should multiply 5 by 2: 10.",
+            "ur": "اسے 5 کو 2 سے ضرب دینا چاہیے: 10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Doubling does not fit 1, 1, 2, 3, 5. Add the last two: 8.",
+            "ur": "دگنا کرنا 1، 1، 2، 3، 5 پر پورا نہیں اترتا۔ آخری دو جمع کریں: 8"
+          },
+          "misconception_id": "fib_gap"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You found the rules of patterns.",
+          "ur": "شاباش! آپ نے نمونوں کے اصول ڈھونڈ لیے۔"
+        }
+      },
+      "text": {
+        "en": "To continue a pattern, find its rule from the gaps and check it on every pair. A pattern can add, subtract (and pass through zero), multiply, or add the last two terms. For a rule like 4n − 3, put in the position for n, multiply, then add or take away.",
+        "ur": "نمونے کو آگے بڑھانے کے لیے فرق سے اس کا اصول معلوم کریں اور ہر جوڑے پر جانچیں۔ نمونہ جمع، تفریق (اور صفر سے گزرنا)، ضرب، یا آخری دو ارکان کو جمع کر سکتا ہے۔ 4n − 3 جیسے اصول میں n کی جگہ مقام رکھیں، ضرب دیں، پھر جمع یا تفریق کریں۔"
+      },
+      "points": [
+        {
+          "en": "Check the rule on every pair of neighbours.",
+          "ur": "اصول کو ہر برابر کے جوڑے پر جانچیں۔"
+        },
+        {
+          "en": "If the terms go down, subtract; they may pass below zero.",
+          "ur": "اگر ارکان نیچے جائیں تو تفریق کریں؛ وہ صفر سے نیچے بھی جا سکتے ہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_add",
+      "type": "recall",
+      "step": {
+        "id": "r_add",
+        "type": "number",
+        "prompt": {
+          "en": "Write the 5th term of the pattern that starts at 25 and adds 6 each time: 25, 31, 37, …",
+          "ur": "اس نمونے کا پانچواں رکن لکھیں جو 25 سے شروع ہو کر ہر بار 6 جمع کرتا ہے: 25, 31, 37، …"
+        },
+        "answer": 49,
+        "checker": "numeric",
+        "hint": {
+          "en": "Keep adding 6: 37, 43, …",
+          "ur": "6 جمع کرتے جائیں: 37، 43، …"
+        },
+        "feedback_correct": {
+          "en": "Right! 25, 31, 37, 43, 49.",
+          "ur": "درست! 25، 31، 37، 43، 49"
+        },
+        "feedback_wrong": {
+          "en": "Add 6 twice more after 37: 43, then 49.",
+          "ur": "37 کے بعد دو بار مزید 6 جمع کریں: 43، پھر 49"
+        },
+        "common_wrong": [
+          {
+            "answer": 43,
+            "feedback": {
+              "en": "That is the 4th term. One more step: 49.",
+              "ur": "یہ چوتھا رکن ہے۔ ایک قدم اور: 49"
+            },
+            "misconception_id": "first_gap_only"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_1"
+    },
+    {
+      "id": "r_down",
+      "type": "apply",
+      "step": {
+        "id": "r_down",
+        "type": "number",
+        "prompt": {
+          "en": "The pattern 8, 5, 2, −1, … subtracts 3 each time. Write the 5th term.",
+          "ur": "نمونہ 8, 5, 2, −1، … ہر بار 3 تفریق کرتا ہے۔ پانچواں رکن لکھیں۔"
+        },
+        "answer": -4,
+        "checker": "numeric",
+        "hint": {
+          "en": "−1 minus 3 goes further below zero.",
+          "ur": "−1 منفی 3 صفر سے اور نیچے جاتا ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −1 − 3 = −4.",
+          "ur": "درست! −1 − 3 = −4"
+        },
+        "feedback_wrong": {
+          "en": "Subtract 3 from −1: −4.",
+          "ur": "−1 میں سے 3 تفریق کریں: −4"
+        },
+        "common_wrong": [
+          {
+            "answer": -2,
+            "feedback": {
+              "en": "−1 − 3 is −4, not −2. Count 3 steps down from −1.",
+              "ur": "−1 − 3 یعنی −4، −2 نہیں۔ −1 سے 3 قدم نیچے گنیں۔"
+            },
+            "misconception_id": "negative_step"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 6.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers stating the rule of a pattern (q1, q5, q10), continuing it by adding (q2, q7), subtracting and passing below zero (q3, q8), multiplying (q5), sequences that add the last two terms (q6, q11) and the rule of the nth term (q9).",
+    "Each wrong answer is a real mistake: the first term taken as the gap, adding when the pattern goes down, a gap used on a Fibonacci-type sequence, a slip below zero, 4n read as 46, and a forgotten constant.",
+    "Urdu terms to check: نمونہ / سلسلہ (pattern / sequence), رکن (term), اصول (rule). NEW Urdu term invented here: فبوناچی قسم کا سلسلہ (Fibonacci-type sequence); please check it.",
+    "The numbers were worked out in content/sources/g6-maths-07/exercise_6_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

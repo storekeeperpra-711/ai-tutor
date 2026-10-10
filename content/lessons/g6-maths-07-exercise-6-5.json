@@ -1,0 +1,852 @@
+{
+  "id": "g6-maths-07-exercise-6-5",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Remove brackets and simplify expressions, and find the value of an expression for given values of the letters.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Exercise 6.5"
+    }
+  ],
+  "skills": [
+    "maths.algebra.ex_6_5"
+  ],
+  "title": {
+    "en": "Exercise 6.5 practice: brackets and values",
+    "ur": "مشق 6.5 کی پریکٹس: بریکٹیں اور قیمتیں"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.expressions_basic"
+    },
+    {
+      "skill": "maths.algebra.add_subtract"
+    },
+    {
+      "skill": "maths.algebra.substitution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "sign_not_changed",
+      "description": "Opens a bracket after a minus sign without changing the signs inside it."
+    },
+    {
+      "id": "first_term_only",
+      "description": "Changes only the first sign inside a bracket that follows a minus."
+    },
+    {
+      "id": "brackets_ignored",
+      "description": "Ignores the brackets and works from left to right."
+    },
+    {
+      "id": "outer_first",
+      "description": "Works out the outside bracket before the inside one."
+    },
+    {
+      "id": "joins_digits",
+      "description": "Reads 5a with a = 4 as 54 instead of 5 × 4."
+    },
+    {
+      "id": "minus_sign_lost",
+      "description": "Treats a minus in front of a letter term as a plus when putting in values."
+    },
+    {
+      "id": "subtract_before_multiply",
+      "description": "Subtracts before multiplying, against BODMAS."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.ex_6_5": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.ex_6_5": [
+      {
+        "id": "qb_number",
+        "type": "recall",
+        "step": {
+          "id": "qb_number",
+          "type": "number",
+          "prompt": {
+            "en": "Work out: 30 − (12 + 5)",
+            "ur": "حل کریں: 30 − (12 + 5)"
+          },
+          "answer": 13,
+          "checker": "numeric",
+          "hint": {
+            "en": "Do the bracket first.",
+            "ur": "پہلے بریکٹ حل کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 30 − 17 = 13.",
+            "ur": "درست! 30 − 17 = 13"
+          },
+          "feedback_wrong": {
+            "en": "The bracket is 17. 30 − 17 = 13.",
+            "ur": "بریکٹ 17 ہے۔ 30 − 17 = 13"
+          },
+          "common_wrong": [
+            {
+              "answer": 23,
+              "feedback": {
+                "en": "The whole bracket is taken away: 30 − 17 = 13.",
+                "ur": "پوری بریکٹ تفریق ہوتی ہے: 30 − 17 = 13"
+              },
+              "misconception_id": "sign_not_changed"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_value",
+        "type": "apply",
+        "step": {
+          "id": "qb_value",
+          "type": "number",
+          "prompt": {
+            "en": "Find the value of 8c − 5 when c = 3.",
+            "ur": "جب c = 3 ہو تو 8c − 5 کی قیمت معلوم کریں۔"
+          },
+          "answer": 19,
+          "checker": "numeric",
+          "hint": {
+            "en": "8c means 8 × c.",
+            "ur": "8c یعنی 8 × c"
+          },
+          "feedback_correct": {
+            "en": "Right! 24 − 5 = 19.",
+            "ur": "درست! 24 − 5 = 19"
+          },
+          "feedback_wrong": {
+            "en": "8 × 3 = 24, and 24 − 5 = 19.",
+            "ur": "8 × 3 = 24، اور 24 − 5 = 19"
+          },
+          "common_wrong": [
+            {
+              "answer": 78,
+              "feedback": {
+                "en": "8c is 8 × 3 = 24, not 83. Then 24 − 5 = 19.",
+                "ur": "8c یعنی 8 × 3 = 24، 83 نہیں۔ پھر 24 − 5 = 19"
+              },
+              "misconception_id": "joins_digits"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Omar writes 8x − (x + 4) = 7x + 4. What went wrong?",
+            "ur": "عمر 8x − (x + 4) = 7x + 4 لکھتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The minus changes the 4 as well: 8x − x − 4 = 7x − 4.",
+                "ur": "منفی 4 کو بھی بدلتا ہے: 8x − x − 4 = 7x − 4"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Every sign inside the bracket changes.",
+                "ur": "جی ہاں! بریکٹ کے اندر کی ہر علامت بدلتی ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 7x + 4 is right.",
+                "ur": "کوئی غلطی نہیں۔ 7x + 4 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "With x = 1: 8 − 5 = 3 but 7 + 4 = 11. It is 7x − 4.",
+                "ur": "x = 1 کے ساتھ: 8 − 5 = 3 مگر 7 + 4 = 11۔ یہ 7x − 4 ہے۔"
+              },
+              "misconception_id": "first_term_only"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It should be 9x − 4.",
+                "ur": "یہ 9x − 4 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "8x − x is 7x, not 9x.",
+                "ur": "8x − x برابر 7x ہے، 9x نہیں۔"
+              },
+              "misconception_id": "first_term_only"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_minus_bracket",
+      "front": {
+        "en": "What does a minus before a bracket do?",
+        "ur": "بریکٹ کے آگے منفی کیا کرتا ہے؟"
+      },
+      "back": {
+        "en": "It changes every sign inside: 9 − (3 + k) = 9 − 3 − k.",
+        "ur": "یہ اندر کی ہر علامت بدل دیتا ہے: 9 − (3 + k) = 9 − 3 − k"
+      }
+    },
+    {
+      "id": "f_value",
+      "front": {
+        "en": "How do you find the value of 5a + 3 when a = 4?",
+        "ur": "جب a = 4 ہو تو 5a + 3 کی قیمت کیسے معلوم کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Put 4 for a: 5 × 4 + 3 = 23. Multiply first.",
+        "ur": "a کی جگہ 4 رکھیں: 5 × 4 + 3 = 23۔ پہلے ضرب دیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_brackets_at_home",
+      "text": {
+        "en": "You have Rs 100. You buy 3 things costing Rs 20, Rs 15 and Rs 10. Write what is left as 100 − (20 + 15 + 10) and also as 100 − 20 − 15 − 10. Check that both give the same answer.",
+        "ur": "آپ کے پاس 100 روپے ہیں۔ آپ 20، 15 اور 10 روپے کی تین چیزیں خریدتے ہیں۔ جو بچا اسے 100 − (20 + 15 + 10) اور 100 − 20 − 15 − 10 دونوں طرح لکھیں۔ جانچیں کہ دونوں کا جواب ایک ہی ہے۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Bracket",
+      "ur": "بریکٹ (قوسین)"
+    },
+    {
+      "en": "Simplify",
+      "ur": "مختصر کرنا"
+    },
+    {
+      "en": "Value of an expression",
+      "ur": "عبارت کی قیمت"
+    },
+    {
+      "en": "Substitute",
+      "ur": "قیمت رکھنا"
+    },
+    {
+      "en": "BODMAS",
+      "ur": "BODMAS"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 6.5 is about brackets and values. Ready?",
+          "ur": "مشق 6.5 بریکٹوں اور قیمتوں کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 6.5 of your maths book (PCTB Mathematics 6). Here you remove brackets and simplify, and find the value of an expression for given values of the letters. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 6.5 کے ساتھ ہے۔ اس میں آپ بریکٹیں ہٹا کر عبارت کو مختصر کریں گے، اور حروف کی دی گئی قیمتوں کے لیے عبارت کی قیمت معلوم کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_number",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Work out: 25 − (8 + 3)",
+        "ur": "حل کریں: 25 − (8 + 3)"
+      },
+      "answer": 14,
+      "checker": "numeric",
+      "hint": {
+        "en": "Do the bracket first.",
+        "ur": "پہلے بریکٹ حل کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (8 + 3) = 11, and 25 − 11 = 14.",
+        "ur": "درست! (8 + 3) = 11، اور 25 − 11 = 14"
+      },
+      "feedback_wrong": {
+        "en": "The bracket is 11. 25 − 11 = 14.",
+        "ur": "بریکٹ 11 ہے۔ 25 − 11 = 14"
+      },
+      "common_wrong": [
+        {
+          "answer": 20,
+          "feedback": {
+            "en": "25 − 8 + 3 takes away only 8 and adds 3. The whole bracket is taken away: 14.",
+            "ur": "25 − 8 + 3 صرف 8 تفریق کرتا ہے اور 3 جمع کرتا ہے۔ پوری بریکٹ تفریق ہوتی ہے: 14"
+          },
+          "misconception_id": "sign_not_changed"
+        }
+      ]
+    },
+    {
+      "id": "q2_plus_bracket",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Remove the brackets and simplify: 7x + (3x − 2)",
+        "ur": "بریکٹ ہٹا کر مختصر کریں: 7x + (3x − 2)"
+      },
+      "checker": "text",
+      "expected": "10x - 2",
+      "accept": [
+        "-2+10x"
+      ],
+      "hint": {
+        "en": "A plus in front of a bracket changes nothing inside.",
+        "ur": "بریکٹ کے آگے جمع ہو تو اندر کچھ نہیں بدلتا۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7x + 3x − 2 = 10x − 2.",
+        "ur": "درست! 7x + 3x − 2 = 10x − 2"
+      },
+      "feedback_wrong": {
+        "en": "The bracket opens as it is: 7x + 3x − 2 = 10x − 2.",
+        "ur": "بریکٹ جوں کی توں کھلتی ہے: 7x + 3x − 2 = 10x − 2"
+      },
+      "common_wrong": [
+        {
+          "answer": "10x + 2",
+          "feedback": {
+            "en": "The −2 keeps its minus sign: 10x − 2.",
+            "ur": "−2 اپنی منفی کی علامت رکھتا ہے: 10x − 2"
+          },
+          "misconception_id": "sign_not_changed"
+        }
+      ]
+    },
+    {
+      "id": "s_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "A plus before a bracket changes nothing. A minus changes EVERY sign inside!",
+          "ur": "بریکٹ کے آگے جمع ہو تو کچھ نہیں بدلتا۔ منفی ہو تو اندر کی ہر علامت بدلتی ہے!"
+        }
+      },
+      "text": {
+        "en": "To remove a bracket with + in front, write the terms as they are: 7x + (3x − 2) = 7x + 3x − 2. With − in front, change every sign inside: 9a − (2a + 5) = 9a − 2a − 5 = 7a − 5. With brackets inside brackets, work from the inside out, following BODMAS. To evaluate an expression, put the numbers in for the letters: 5a + 3 with a = 4 is 5 × 4 + 3 = 23. Multiply before you add or subtract, and keep the minus signs.",
+        "ur": "جس بریکٹ کے آگے + ہو اسے ہٹانے کے لیے ارکان جیسے ہیں ویسے لکھیں: 7x + (3x − 2) = 7x + 3x − 2۔ آگے − ہو تو اندر کی ہر علامت بدلیں: 9a − (2a + 5) = 9a − 2a − 5 = 7a − 5۔ بریکٹ کے اندر بریکٹ ہو تو اندر سے باہر کی طرف حل کریں، BODMAS کے مطابق۔ عبارت کی قیمت معلوم کرنے کے لیے حروف کی جگہ اعداد رکھیں: a = 4 کے ساتھ 5a + 3 برابر 5 × 4 + 3 = 23 ہے۔ جمع یا تفریق سے پہلے ضرب دیں، اور منفی کی علامتیں رکھیں۔"
+      }
+    },
+    {
+      "id": "q3_minus_bracket",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Remove the brackets and simplify: 9a − (2a + 5)",
+        "ur": "بریکٹ ہٹا کر مختصر کریں: 9a − (2a + 5)"
+      },
+      "checker": "text",
+      "expected": "7a - 5",
+      "accept": [
+        "-5+7a"
+      ],
+      "hint": {
+        "en": "A minus in front changes the sign of 2a AND of 5.",
+        "ur": "آگے منفی ہو تو 2a اور 5 دونوں کی علامت بدلتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9a − 2a − 5 = 7a − 5.",
+        "ur": "درست! 9a − 2a − 5 = 7a − 5"
+      },
+      "feedback_wrong": {
+        "en": "9a − 2a − 5 = 7a − 5.",
+        "ur": "9a − 2a − 5 = 7a − 5"
+      },
+      "common_wrong": [
+        {
+          "answer": "7a + 5",
+          "feedback": {
+            "en": "The 5 is taken away too, so it becomes −5: 7a − 5.",
+            "ur": "5 بھی تفریق ہوتا ہے، اس لیے یہ −5 بنتا ہے: 7a − 5"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "q4_minus_negative",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Remove the brackets and simplify: 5x − (x − 4)",
+        "ur": "بریکٹ ہٹا کر مختصر کریں: 5x − (x − 4)"
+      },
+      "checker": "text",
+      "expected": "4x + 4",
+      "accept": [
+        "4+4x"
+      ],
+      "hint": {
+        "en": "The signs inside are + for x and − for 4. Change both.",
+        "ur": "اندر x کی علامت + اور 4 کی − ہے۔ دونوں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5x − x + 4 = 4x + 4.",
+        "ur": "درست! 5x − x + 4 = 4x + 4"
+      },
+      "feedback_wrong": {
+        "en": "−(−4) becomes +4: 5x − x + 4 = 4x + 4.",
+        "ur": "−(−4) بن جاتا ہے +4: 5x − x + 4 = 4x + 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "4x - 4",
+          "feedback": {
+            "en": "Taking away −4 gives +4, not −4: 4x + 4.",
+            "ur": "−4 کو تفریق کرنے سے +4 ملتا ہے، −4 نہیں: 4x + 4"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "q5_nested",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Work out: 20 − {6 + (9 − 4)}",
+        "ur": "حل کریں: 20 − {6 + (9 − 4)}"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Start with the inside bracket ( ), then the { }.",
+        "ur": "اندر کی بریکٹ ( ) سے شروع کریں، پھر { }۔"
+      },
+      "feedback_correct": {
+        "en": "Right! (9 − 4) = 5, then {6 + 5} = 11, and 20 − 11 = 9.",
+        "ur": "درست! (9 − 4) = 5، پھر {6 + 5} = 11، اور 20 − 11 = 9"
+      },
+      "feedback_wrong": {
+        "en": "Inside first: 9 − 4 = 5. Then 6 + 5 = 11. Then 20 − 11 = 9.",
+        "ur": "پہلے اندر: 9 − 4 = 5۔ پھر 6 + 5 = 11۔ پھر 20 − 11 = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 19,
+          "feedback": {
+            "en": "That drops the brackets and the signs. Work from the inside: 20 − 11 = 9.",
+            "ur": "یہ بریکٹیں اور علامتیں چھوڑ دیتا ہے۔ اندر سے حل کریں: 20 − 11 = 9"
+          },
+          "misconception_id": "brackets_ignored"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "That does the outside bracket first: 20 − 15 − 4. Work from the inside out: 9.",
+            "ur": "یہ باہر کی بریکٹ پہلے حل کرتا ہے: 20 − 15 − 4۔ اندر سے باہر حل کریں: 9"
+          },
+          "misconception_id": "outer_first"
+        }
+      ]
+    },
+    {
+      "id": "q6_three_parts",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Remove the brackets and simplify: 6y − (y − 3) + 2y",
+        "ur": "بریکٹ ہٹا کر مختصر کریں: 6y − (y − 3) + 2y"
+      },
+      "checker": "text",
+      "expected": "7y + 3",
+      "accept": [
+        "3+7y"
+      ],
+      "hint": {
+        "en": "−(y − 3) becomes −y + 3. Then collect the y-terms.",
+        "ur": "−(y − 3) بن جاتا ہے −y + 3۔ پھر y والے ارکان اکٹھے کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6y − y + 3 + 2y = 7y + 3.",
+        "ur": "درست! 6y − y + 3 + 2y = 7y + 3"
+      },
+      "feedback_wrong": {
+        "en": "6y − y + 3 + 2y: the y-terms make 7y, plus 3. So 7y + 3.",
+        "ur": "6y − y + 3 + 2y: y والے ارکان 7y بنتے ہیں، جمع 3۔ تو 7y + 3"
+      },
+      "common_wrong": [
+        {
+          "answer": "9y - 3",
+          "feedback": {
+            "en": "The minus changes the signs inside: −y and +3. That gives 7y + 3.",
+            "ur": "منفی اندر کی علامتیں بدلتا ہے: −y اور +3۔ یوں 7y + 3 ملتا ہے۔"
+          },
+          "misconception_id": "sign_not_changed"
+        }
+      ]
+    },
+    {
+      "id": "q7_evaluate",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the value of 5a + 3 when a = 4.",
+        "ur": "جب a = 4 ہو تو 5a + 3 کی قیمت معلوم کریں۔"
+      },
+      "answer": 23,
+      "checker": "numeric",
+      "hint": {
+        "en": "5a means 5 × a.",
+        "ur": "5a یعنی 5 × a"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 × 4 + 3 = 23.",
+        "ur": "درست! 5 × 4 + 3 = 23"
+      },
+      "feedback_wrong": {
+        "en": "5 × 4 = 20, and 20 + 3 = 23.",
+        "ur": "5 × 4 = 20، اور 20 + 3 = 23"
+      },
+      "common_wrong": [
+        {
+          "answer": 57,
+          "feedback": {
+            "en": "5a is 5 × 4 = 20, not 54. Then 20 + 3 = 23.",
+            "ur": "5a یعنی 5 × 4 = 20، 54 نہیں۔ پھر 20 + 3 = 23"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "q8_evaluate_minus",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the value of 7 − 2b when b = 3.",
+        "ur": "جب b = 3 ہو تو 7 − 2b کی قیمت معلوم کریں۔"
+      },
+      "answer": 1,
+      "checker": "numeric",
+      "hint": {
+        "en": "Multiply first: 2b = 2 × 3. Then subtract.",
+        "ur": "پہلے ضرب دیں: 2b = 2 × 3۔ پھر تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7 − 6 = 1.",
+        "ur": "درست! 7 − 6 = 1"
+      },
+      "feedback_wrong": {
+        "en": "2 × 3 = 6, and 7 − 6 = 1.",
+        "ur": "2 × 3 = 6، اور 7 − 6 = 1"
+      },
+      "common_wrong": [
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That subtracts first: (7 − 2) × 3. Multiply first: 7 − 6 = 1.",
+            "ur": "یہ پہلے تفریق کرتا ہے: (7 − 2) × 3۔ پہلے ضرب دیں: 7 − 6 = 1"
+          },
+          "misconception_id": "subtract_before_multiply"
+        }
+      ]
+    },
+    {
+      "id": "q9_two_letters",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find the value of 4p − q + 6 when p = 5 and q = 8.",
+        "ur": "جب p = 5 اور q = 8 ہو تو 4p − q + 6 کی قیمت معلوم کریں۔"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "4p = 20. The minus sign in front of q stays.",
+        "ur": "4p = 20۔ q کے آگے منفی کی علامت رہتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 − 8 + 6 = 18.",
+        "ur": "درست! 20 − 8 + 6 = 18"
+      },
+      "feedback_wrong": {
+        "en": "4 × 5 = 20, then 20 − 8 = 12, then 12 + 6 = 18.",
+        "ur": "4 × 5 = 20، پھر 20 − 8 = 12، پھر 12 + 6 = 18"
+      },
+      "common_wrong": [
+        {
+          "answer": 34,
+          "feedback": {
+            "en": "q is taken away, not added: 20 − 8 + 6 = 18.",
+            "ur": "q تفریق ہوتا ہے، جمع نہیں: 20 − 8 + 6 = 18"
+          },
+          "misconception_id": "minus_sign_lost"
+        }
+      ]
+    },
+    {
+      "id": "q10_simplify_then_value",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Simplify (6m + 5) − (2m + 1), then find its value when m = 3.",
+        "ur": "(6m + 5) − (2m + 1) کو مختصر کریں، پھر m = 3 کے لیے اس کی قیمت معلوم کریں۔"
+      },
+      "answer": 16,
+      "checker": "numeric",
+      "hint": {
+        "en": "The simplified form is 4m + 4. Put m = 3 in.",
+        "ur": "مختصر شکل 4m + 4 ہے۔ m = 3 رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6m − 2m = 4m and 5 − 1 = 4, so 4m + 4. With m = 3: 12 + 4 = 16.",
+        "ur": "درست! 6m − 2m = 4m اور 5 − 1 = 4، تو 4m + 4۔ m = 3 کے ساتھ: 12 + 4 = 16"
+      },
+      "feedback_wrong": {
+        "en": "4m + 4 with m = 3 is 4 × 3 + 4 = 16.",
+        "ur": "m = 3 کے ساتھ 4m + 4 برابر 4 × 3 + 4 = 16 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "That keeps +1 inside the bracket: 4m + 6. Taking away 1 gives 5 − 1 = 4, so 4m + 4: 16.",
+            "ur": "یہ بریکٹ کے اندر +1 رکھتا ہے: 4m + 6۔ 1 کو تفریق کرنے سے 5 − 1 = 4 ملتا ہے، تو 4m + 4: 16"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hira writes 9 − (3 + k) = 9 − 3 + k. What went wrong?",
+        "ur": "ہیرا 9 − (3 + k) = 9 − 3 + k لکھتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. She opened it correctly.",
+            "ur": "کوئی غلطی نہیں۔ اس نے صحیح کھولا۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "With k = 1: 9 − (3 + 1) = 5 but 9 − 3 + 1 = 7. They differ.",
+            "ur": "k = 1 کے ساتھ: 9 − (3 + 1) = 5 مگر 9 − 3 + 1 = 7۔ یہ مختلف ہیں۔"
+          },
+          "misconception_id": "first_term_only"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The minus must change both signs: 9 − 3 − k = 6 − k.",
+            "ur": "منفی دونوں علامتیں بدلتا ہے: 9 − 3 − k = 6 − k"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Test k = 1: 9 − 4 = 5 and 6 − 1 = 5.",
+            "ur": "جی ہاں! k = 1 لیں: 9 − 4 = 5 اور 6 − 1 = 5"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should add 9 and 3 first.",
+            "ur": "اسے پہلے 9 اور 3 جمع کرنے چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "9 and 3 are not added: the bracket is taken away from 9.",
+            "ur": "9 اور 3 جمع نہیں ہوتے: بریکٹ 9 میں سے تفریق ہوتی ہے۔"
+          },
+          "misconception_id": "brackets_ignored"
+        }
+      ]
+    },
+    {
+      "id": "q12_find_error_value",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Faisal finds the value of 3x + 2 when x = 5 and writes 37. What went wrong?",
+        "ur": "فیصل x = 5 کے لیے 3x + 2 کی قیمت معلوم کر کے 37 لکھتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "He read 3x as 35. It is 3 × 5 = 15, so the value is 15 + 2 = 17.",
+            "ur": "اس نے 3x کو 35 پڑھا۔ یہ 3 × 5 = 15 ہے، تو قیمت 15 + 2 = 17 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A number next to a letter means multiply.",
+            "ur": "جی ہاں! حرف کے ساتھ لکھے عدد کا مطلب ضرب ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 37 is right.",
+            "ur": "کوئی غلطی نہیں۔ 37 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3x is 3 times x, not the digits 3 and 5. The value is 17.",
+            "ur": "3x یعنی x کا 3 گنا، ہندسے 3 اور 5 نہیں۔ قیمت 17 ہے۔"
+          },
+          "misconception_id": "joins_digits"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should subtract 2, not add it.",
+            "ur": "اسے 2 جمع نہیں بلکہ تفریق کرنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The expression has + 2. The mistake is in 3x.",
+            "ur": "عبارت میں + 2 ہے۔ غلطی 3x میں ہے۔"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You handled brackets and values.",
+          "ur": "شاباش! آپ نے بریکٹیں اور قیمتیں سنبھال لیں۔"
+        }
+      },
+      "text": {
+        "en": "A plus before a bracket changes nothing inside it. A minus before a bracket changes every sign inside. With brackets in brackets, work from the inside out. To find a value, put the numbers in for the letters, multiply first, and keep every minus sign.",
+        "ur": "بریکٹ کے آگے جمع ہو تو اس کے اندر کچھ نہیں بدلتا۔ آگے منفی ہو تو اندر کی ہر علامت بدلتی ہے۔ بریکٹ کے اندر بریکٹ ہو تو اندر سے باہر حل کریں۔ قیمت معلوم کرنے کے لیے حروف کی جگہ اعداد رکھیں، پہلے ضرب دیں، اور ہر منفی کی علامت رکھیں۔"
+      },
+      "points": [
+        {
+          "en": "Test an answer by putting in a small number.",
+          "ur": "جواب کو چھوٹا عدد رکھ کر جانچیں۔"
+        },
+        {
+          "en": "Multiply before you add or subtract.",
+          "ur": "جمع یا تفریق سے پہلے ضرب دیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_simplify",
+      "type": "recall",
+      "step": {
+        "id": "r_simplify",
+        "type": "text_check",
+        "prompt": {
+          "en": "Remove the brackets and simplify: 8b − (3b + 2)",
+          "ur": "بریکٹ ہٹا کر مختصر کریں: 8b − (3b + 2)"
+        },
+        "checker": "text",
+        "expected": "5b - 2",
+        "accept": [
+          "-2+5b"
+        ],
+        "hint": {
+          "en": "Change both signs inside the bracket.",
+          "ur": "بریکٹ کے اندر دونوں علامتیں بدلیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 8b − 3b − 2 = 5b − 2.",
+          "ur": "درست! 8b − 3b − 2 = 5b − 2"
+        },
+        "feedback_wrong": {
+          "en": "8b − 3b − 2 = 5b − 2.",
+          "ur": "8b − 3b − 2 = 5b − 2"
+        },
+        "common_wrong": [
+          {
+            "answer": "5b + 2",
+            "feedback": {
+              "en": "The 2 is taken away too: 5b − 2.",
+              "ur": "2 بھی تفریق ہوتا ہے: 5b − 2"
+            },
+            "misconception_id": "first_term_only"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_5"
+    },
+    {
+      "id": "r_value",
+      "type": "apply",
+      "step": {
+        "id": "r_value",
+        "type": "number",
+        "prompt": {
+          "en": "Find the value of 2u + 3v when u = 4 and v = 5.",
+          "ur": "جب u = 4 اور v = 5 ہو تو 2u + 3v کی قیمت معلوم کریں۔"
+        },
+        "answer": 23,
+        "checker": "numeric",
+        "hint": {
+          "en": "2 × 4 and 3 × 5.",
+          "ur": "2 × 4 اور 3 × 5"
+        },
+        "feedback_correct": {
+          "en": "Right! 8 + 15 = 23.",
+          "ur": "درست! 8 + 15 = 23"
+        },
+        "feedback_wrong": {
+          "en": "2 × 4 = 8, 3 × 5 = 15, and 8 + 15 = 23.",
+          "ur": "2 × 4 = 8، 3 × 5 = 15، اور 8 + 15 = 23"
+        },
+        "common_wrong": [
+          {
+            "answer": 59,
+            "feedback": {
+              "en": "2u is 2 × 4 = 8, not 24. 8 + 15 = 23.",
+              "ur": "2u یعنی 2 × 4 = 8، ہندسے ساتھ ساتھ نہیں۔ 8 + 15 = 23"
+            },
+            "misconception_id": "joins_digits"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_5"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 6.5 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers removing brackets after a plus and after a minus (q1 to q4, q6), brackets inside brackets with BODMAS (q5), and finding the value of an expression for given numbers (q7 to q10, q12) and a find-the-error question on each (q11, q12).",
+    "Each wrong answer is a real mistake: the signs inside a bracket left unchanged, only the first sign changed, brackets ignored or worked outside first, 5a read as 54, a minus lost when putting in values, and subtracting before multiplying.",
+    "Urdu terms to check: بریکٹ (قوسین) (bracket), مختصر کرنا (simplify), عبارت کی قیمت (value of an expression), قیمت رکھنا (substitute). No new Urdu term was invented here.",
+    "The numbers were worked out in content/sources/g6-maths-07/exercise_6_5.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

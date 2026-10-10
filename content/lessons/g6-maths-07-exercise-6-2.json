@@ -1,0 +1,896 @@
+{
+  "id": "g6-maths-07-exercise-6-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Write sentences in symbols with a letter for the unknown number, decide whether a statement is true or false, fill in missing values, and tell constants from variables.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Exercise 6.2"
+    }
+  ],
+  "skills": [
+    "maths.algebra.ex_6_2"
+  ],
+  "title": {
+    "en": "Exercise 6.2 practice: letters for numbers",
+    "ur": "مشق 6.2 کی پریکٹس: اعداد کی جگہ حروف"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.variables"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "constant_is_variable",
+      "description": "Takes a quantity that never changes (days in a week) for a variable, or a changing one for a constant."
+    },
+    {
+      "id": "times_for_plus",
+      "description": "Writes 'more than' as multiplication, like 5x for 5 more than x."
+    },
+    {
+      "id": "less_than_reversed",
+      "description": "Writes 5 less than k as 5 − k instead of k − 5."
+    },
+    {
+      "id": "joins_digits",
+      "description": "Reads 3y with y = 4 as 34 instead of 3 × 4."
+    },
+    {
+      "id": "wrong_operation",
+      "description": "Adds when a number was taken away, or the other way round, when finding a missing value."
+    },
+    {
+      "id": "letter_fixed",
+      "description": "Thinks a letter always stands for one fixed number."
+    },
+    {
+      "id": "one_value_true",
+      "description": "Calls a statement with a letter true because it works for one number, without testing the number given."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.ex_6_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.ex_6_2": [
+      {
+        "id": "qb_variable",
+        "type": "recall",
+        "step": {
+          "id": "qb_variable",
+          "type": "choice",
+          "prompt": {
+            "en": "Which of these is a variable?",
+            "ur": "ان میں سے کون سا متغیر ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The number of students present in a class each day",
+                "ur": "جماعت میں روزانہ حاضر طلبہ کی تعداد"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! It can be different every day.",
+                "ur": "جی ہاں! یہ ہر روز مختلف ہو سکتی ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The number of months in a year",
+                "ur": "سال کے مہینوں کی تعداد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A year always has 12 months: a constant.",
+                "ur": "سال میں ہمیشہ 12 مہینے ہوتے ہیں: مستقل۔"
+              },
+              "misconception_id": "constant_is_variable"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The number of sides of a triangle",
+                "ur": "تکون کے اضلاع کی تعداد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A triangle always has 3 sides: a constant.",
+                "ur": "تکون کے ہمیشہ 3 اضلاع ہوتے ہیں: مستقل۔"
+              },
+              "misconception_id": "constant_is_variable"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_value",
+        "type": "apply",
+        "step": {
+          "id": "qb_value",
+          "type": "number",
+          "prompt": {
+            "en": "Fill in the missing value: when y = 6, the value of y + 8 is __.",
+            "ur": "غائب قیمت بھریں: جب y = 6 ہو تو y + 8 کی قیمت __ ہے۔"
+          },
+          "answer": 14,
+          "checker": "numeric",
+          "hint": {
+            "en": "Put 6 in place of y.",
+            "ur": "y کی جگہ 6 رکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 6 + 8 = 14.",
+            "ur": "درست! 6 + 8 = 14"
+          },
+          "feedback_wrong": {
+            "en": "6 + 8 = 14.",
+            "ur": "6 + 8 = 14"
+          },
+          "common_wrong": [
+            {
+              "answer": 68,
+              "feedback": {
+                "en": "y + 8 means 6 plus 8, not the digits 6 and 8 together: 14.",
+                "ur": "y + 8 یعنی 6 جمع 8، ہندسے 6 اور 8 ساتھ ساتھ نہیں: 14"
+              },
+              "misconception_id": "joins_digits"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Ali writes \"3 less than a number p\" as 3 − p. What went wrong?",
+            "ur": "علی \"عدد p سے 3 کم\" کو 3 − p لکھتا ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It should be p − 3, because we start from p and take away 3.",
+                "ur": "یہ p − 3 ہونا چاہیے، کیونکہ ہم p سے شروع کر کے 3 تفریق کرتے ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 3 − p starts from 3.",
+                "ur": "جی ہاں! 3 − p، 3 سے شروع ہوتا ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 3 − p is correct.",
+                "ur": "کوئی غلطی نہیں۔ 3 − p درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "When p = 10, 3 less than p is 7, but 3 − 10 is −7.",
+                "ur": "جب p = 10 ہو تو p سے 3 کم 7 ہے مگر 3 − 10 برابر −7 ہے۔"
+              },
+              "misconception_id": "less_than_reversed"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It should be 3p.",
+                "ur": "یہ 3p ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "3p means 3 times p. Less than means take away: p − 3.",
+                "ur": "3p یعنی p کا 3 گنا۔ کم کا مطلب تفریق ہے: p − 3"
+              },
+              "misconception_id": "times_for_plus"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_const_var",
+      "front": {
+        "en": "Constant or variable?",
+        "ur": "مستقل یا متغیر؟"
+      },
+      "back": {
+        "en": "A constant never changes (7 days in a week). A variable can change (n, the number of pens).",
+        "ur": "مستقل کبھی نہیں بدلتا (ہفتے کے 7 دن)۔ متغیر بدل سکتا ہے (n، قلموں کی تعداد)۔"
+      }
+    },
+    {
+      "id": "f_less",
+      "front": {
+        "en": "How do you write 5 less than k?",
+        "ur": "k سے 5 کم کیسے لکھتے ہیں؟"
+      },
+      "back": {
+        "en": "k − 5. Start from k, then take away 5.",
+        "ur": "k − 5۔ k سے شروع کریں، پھر 5 تفریق کریں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_letters_at_home",
+      "text": {
+        "en": "Find two things at home that never change (a constant) and two that change (a variable). Then write one rule with a letter, like \"x oranges cost 20x rupees\", and test it for x = 3.",
+        "ur": "گھر میں دو چیزیں ڈھونڈیں جو کبھی نہیں بدلتیں (مستقل) اور دو جو بدلتی ہیں (متغیر)۔ پھر حرف کے ساتھ ایک اصول لکھیں، جیسے \"x سنگترے 20x روپے کے ہیں\"، اور اسے x = 3 کے لیے جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Variable",
+      "ur": "متغیر"
+    },
+    {
+      "en": "Constant",
+      "ur": "مستقل"
+    },
+    {
+      "en": "Expression",
+      "ur": "عبارت"
+    },
+    {
+      "en": "True and false",
+      "ur": "درست اور غلط"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 6.2 is about using letters for numbers. Ready?",
+          "ur": "مشق 6.2 اعداد کی جگہ حروف کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 6.2 of your maths book (PCTB Mathematics 6). Here you write sentences in symbols, decide whether a statement is true or false, fill in missing values, and pick out constants and variables. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 6.2 کے ساتھ ہے۔ اس میں آپ جملوں کو علامتوں میں لکھیں گے، فیصلہ کریں گے کہ بیان درست ہے یا غلط، غائب قیمتیں بھریں گے، اور مستقل اور متغیر پہچانیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_constant",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a constant (its value never changes)?",
+        "ur": "ان میں سے کون سا مستقل ہے (اس کی قیمت کبھی نہیں بدلتی)؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The number of days in a week",
+            "ur": "ہفتے کے دنوں کی تعداد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A week always has 7 days.",
+            "ur": "جی ہاں! ہفتے میں ہمیشہ 7 دن ہوتے ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The temperature of Murree each hour",
+            "ur": "مری کا ہر گھنٹے کا درجہ حرارت"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It changes through the day, so it is a variable.",
+            "ur": "یہ دن بھر بدلتا رہتا ہے، اس لیے یہ متغیر ہے۔"
+          },
+          "misconception_id": "constant_is_variable"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The price of tomatoes each week",
+            "ur": "ہر ہفتے ٹماٹر کی قیمت"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Prices go up and down, so this is a variable.",
+            "ur": "قیمتیں اوپر نیچے ہوتی ہیں، اس لیے یہ متغیر ہے۔"
+          },
+          "misconception_id": "constant_is_variable"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The age of a child each year",
+            "ur": "بچے کی عمر ہر سال"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Age grows every year, so it is a variable.",
+            "ur": "عمر ہر سال بڑھتی ہے، اس لیے یہ متغیر ہے۔"
+          },
+          "misconception_id": "constant_is_variable"
+        }
+      ]
+    },
+    {
+      "id": "q2_variable",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "In the rule \"a notebook costs Rs 30, so n notebooks cost 30n rupees\", which part is the variable?",
+        "ur": "اصول \"ایک کاپی 30 روپے کی ہے، تو n کاپیوں کی قیمت 30n روپے ہے\" میں متغیر کون سا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "30, the price of one notebook",
+            "ur": "30، ایک کاپی کی قیمت"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "30 stays the same for every n, so it is a constant.",
+            "ur": "30 ہر n کے لیے ایک جیسا رہتا ہے، اس لیے یہ مستقل ہے۔"
+          },
+          "misconception_id": "constant_is_variable"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Both 30 and n",
+            "ur": "30 اور n دونوں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only n changes. 30 is a constant.",
+            "ur": "صرف n بدلتا ہے۔ 30 مستقل ہے۔"
+          },
+          "misconception_id": "constant_is_variable"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "n, the number of notebooks",
+            "ur": "n، کاپیوں کی تعداد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! n can be 1, 2, 3 ... so it is the variable.",
+            "ur": "جی ہاں! n، 1، 2، 3 ... ہو سکتا ہے، اس لیے یہ متغیر ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "A letter stands for a number. A constant never changes; a variable can.",
+          "ur": "حرف ایک عدد کی جگہ آتا ہے۔ مستقل کبھی نہیں بدلتا؛ متغیر بدل سکتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "We use a letter for a number we do not know yet, or that can change. A letter whose value can change is a variable. A number that always stays the same is a constant. \"A number n increased by 9\" is n + 9. \"5 less than k\" is k − 5, because we start from k. \"7 times y, then 2 added\" is 7y + 2. A statement with a letter is true only for some values: n + 2 = 9 is true when n = 7.",
+        "ur": "جس عدد کو ہم نہیں جانتے یا جو بدل سکتا ہے اس کی جگہ حرف لکھتے ہیں۔ جس حرف کی قیمت بدل سکتی ہے وہ متغیر ہے۔ جو عدد ہمیشہ ایک جیسا رہے وہ مستقل ہے۔ \"عدد n میں 9 کا اضافہ\" n + 9 ہے۔ \"k سے 5 کم\" k − 5 ہے، کیونکہ ہم k سے شروع کرتے ہیں۔ \"y کا 7 گنا، پھر 2 جمع\" 7y + 2 ہے۔ حرف والا بیان صرف کچھ قیمتوں کے لیے درست ہوتا ہے: n + 2 = 9 اس وقت درست ہے جب n = 7 ہو۔"
+      }
+    },
+    {
+      "id": "q4_symbols",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Write in symbols: a number n increased by 9.",
+        "ur": "علامتوں میں لکھیں: عدد n میں 9 کا اضافہ۔"
+      },
+      "checker": "text",
+      "expected": "n + 9",
+      "accept": [
+        "9+n"
+      ],
+      "hint": {
+        "en": "Start with n and add 9.",
+        "ur": "n سے شروع کریں اور 9 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! n + 9.",
+        "ur": "درست! n + 9"
+      },
+      "feedback_wrong": {
+        "en": "Increased by 9 means plus 9: n + 9.",
+        "ur": "9 کا اضافہ یعنی 9 جمع: n + 9"
+      },
+      "common_wrong": [
+        {
+          "answer": "9n",
+          "feedback": {
+            "en": "9n means 9 times n. Increased by 9 is n + 9.",
+            "ur": "9n یعنی n کا 9 گنا۔ 9 کا اضافہ n + 9 ہے۔"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q5_less",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write in symbols: 5 less than a number k.",
+        "ur": "علامتوں میں لکھیں: عدد k سے 5 کم۔"
+      },
+      "checker": "text",
+      "expected": "k - 5",
+      "accept": [
+        "-5+k"
+      ],
+      "hint": {
+        "en": "Start from k, then take away 5.",
+        "ur": "k سے شروع کریں، پھر 5 تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! k − 5.",
+        "ur": "درست! k − 5"
+      },
+      "feedback_wrong": {
+        "en": "5 less than k is k − 5.",
+        "ur": "k سے 5 کم یعنی k − 5"
+      },
+      "common_wrong": [
+        {
+          "answer": "5 - k",
+          "feedback": {
+            "en": "5 − k starts from 5. We start from k: k − 5.",
+            "ur": "5 − k، 5 سے شروع ہوتا ہے۔ ہم k سے شروع کرتے ہیں: k − 5"
+          },
+          "misconception_id": "less_than_reversed"
+        },
+        {
+          "answer": "5k",
+          "feedback": {
+            "en": "5k means 5 times k. Less than means take away: k − 5.",
+            "ur": "5k یعنی k کا 5 گنا۔ کم کا مطلب تفریق ہے: k − 5"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q6_times_plus",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write in symbols: 7 times a number y, and then 2 added.",
+        "ur": "علامتوں میں لکھیں: عدد y کا 7 گنا، اور پھر 2 جمع۔"
+      },
+      "checker": "text",
+      "expected": "7y + 2",
+      "accept": [
+        "2+7y"
+      ],
+      "hint": {
+        "en": "7 times y is 7y. Then add 2.",
+        "ur": "y کا 7 گنا 7y ہے۔ پھر 2 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 7y + 2.",
+        "ur": "درست! 7y + 2"
+      },
+      "feedback_wrong": {
+        "en": "7 times y is 7y, and 2 more is 7y + 2.",
+        "ur": "y کا 7 گنا 7y ہے، اور 2 مزید 7y + 2 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "9y",
+          "feedback": {
+            "en": "7y and 2 are unlike terms (different kinds). They cannot join into 9y: 7y + 2.",
+            "ur": "7y اور 2 غیر یکساں ارکان ہیں۔ یہ 9y میں نہیں مل سکتے: 7y + 2"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "answer": "7 + 2y",
+          "feedback": {
+            "en": "The 7 multiplies y, not the 2: 7y + 2.",
+            "ur": "7، y کو ضرب دیتا ہے، 2 کو نہیں: 7y + 2"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q7_value",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Fill in the missing value: when y = 4, the value of 3y is __.",
+        "ur": "غائب قیمت بھریں: جب y = 4 ہو تو 3y کی قیمت __ ہے۔"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "3y means 3 × y.",
+        "ur": "3y یعنی 3 × y"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 × 4 = 12.",
+        "ur": "درست! 3 × 4 = 12"
+      },
+      "feedback_wrong": {
+        "en": "3y is 3 × 4 = 12.",
+        "ur": "3y یعنی 3 × 4 = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 34,
+          "feedback": {
+            "en": "3y is 3 times y, not the digits 3 and 4 side by side: 12.",
+            "ur": "3y یعنی y کا 3 گنا، 3 اور 4 کے ہندسے ساتھ ساتھ نہیں: 12"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "q8_true_false",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Is the statement \"3m = 15 when m = 12\" true or false?",
+        "ur": "کیا بیان \"3m = 15 جب m = 12\" درست ہے یا غلط؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "False. 3 × 12 = 36, not 15. (It is true when m = 5.)",
+            "ur": "غلط۔ 3 × 12 = 36، 15 نہیں۔ (یہ m = 5 کے لیے درست ہے۔)"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Put the value in and check both sides.",
+            "ur": "جی ہاں! قیمت رکھیں اور دونوں طرف جانچیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "True, because 3m = 15 is a true equation.",
+            "ur": "درست، کیونکہ 3m = 15 درست مساوات ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It is true only for one value, m = 5. For m = 12 the left side is 36.",
+            "ur": "یہ صرف ایک قیمت m = 5 کے لیے درست ہے۔ m = 12 کے لیے بایاں طرف 36 ہے۔"
+          },
+          "misconception_id": "one_value_true"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "True, because 3 + 12 = 15.",
+            "ur": "درست، کیونکہ 3 + 12 = 15۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3m means 3 times m, not 3 plus m. 3 × 12 = 36.",
+            "ur": "3m یعنی m کا 3 گنا، 3 جمع m نہیں۔ 3 × 12 = 36"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q9_cost",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A pencil costs Rs 12, so n pencils cost 12n rupees. What is the cost when n = 5?",
+        "ur": "ایک پنسل 12 روپے کی ہے، تو n پنسلوں کی قیمت 12n روپے ہے۔ n = 5 ہو تو قیمت کیا ہے؟"
+      },
+      "answer": 60,
+      "checker": "numeric",
+      "hint": {
+        "en": "12n means 12 × n.",
+        "ur": "12n یعنی 12 × n"
+      },
+      "feedback_correct": {
+        "en": "Right! 12 × 5 = 60 rupees.",
+        "ur": "درست! 12 × 5 = 60 روپے"
+      },
+      "feedback_wrong": {
+        "en": "12 × 5 = 60.",
+        "ur": "12 × 5 = 60"
+      },
+      "common_wrong": [
+        {
+          "answer": 17,
+          "feedback": {
+            "en": "12n is 12 times n, not 12 plus n: 60.",
+            "ur": "12n یعنی n کا 12 گنا، 12 جمع n نہیں: 60"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "answer": 125,
+          "feedback": {
+            "en": "12n with n = 5 is 12 × 5, not the digits 12 and 5 together: 60.",
+            "ur": "n = 5 کے ساتھ 12n یعنی 12 × 5، ہندسے 12 اور 5 ساتھ ساتھ نہیں: 60"
+          },
+          "misconception_id": "joins_digits"
+        }
+      ]
+    },
+    {
+      "id": "q10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zara writes \"5 more than a number x\" as 5x. What went wrong?",
+        "ur": "زارہ \"عدد x سے 5 زیادہ\" کو 5x لکھتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. 5x is the right way to write it.",
+            "ur": "کوئی غلطی نہیں۔ 5x اسے لکھنے کا صحیح طریقہ ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "When x = 2, 5x = 10 but 5 more than 2 is 7. So 5x is wrong.",
+            "ur": "جب x = 2 ہو تو 5x = 10 ہے مگر 2 سے 5 زیادہ 7 ہے۔ اس لیے 5x غلط ہے۔"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5x means 5 times x. 5 more than x is x + 5.",
+            "ur": "5x یعنی x کا 5 گنا۔ x سے 5 زیادہ x + 5 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! More than means add, not multiply.",
+            "ur": "جی ہاں! زیادہ کا مطلب جمع ہے، ضرب نہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "She should write x − 5.",
+            "ur": "اسے x − 5 لکھنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Minus means less than. 5 more than x is x + 5.",
+            "ur": "منفی کا مطلب کم ہے۔ x سے 5 زیادہ x + 5 ہے۔"
+          },
+          "misconception_id": "less_than_reversed"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error_letter",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza says the letter n must be 5 in every question, because n was 5 in the last one. What went wrong?",
+        "ur": "حمزہ کہتا ہے کہ ہر سوال میں حرف n کو 5 ہونا چاہیے، کیونکہ پچھلے سوال میں n برابر 5 تھا۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. n always means 5.",
+            "ur": "کوئی غلطی نہیں۔ n کا مطلب ہمیشہ 5 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "n is not fixed. In n + 2 it can be 1, 7, 20 ...",
+            "ur": "n مقرر نہیں ہے۔ n + 2 میں یہ 1، 7، 20 ... ہو سکتا ہے۔"
+          },
+          "misconception_id": "letter_fixed"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "He should use x instead, because x is always 5.",
+            "ur": "اسے x استعمال کرنا چاہیے، کیونکہ x ہمیشہ 5 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No letter is fixed. Any letter can stand for different numbers.",
+            "ur": "کوئی حرف مقرر نہیں۔ ہر حرف مختلف اعداد کی جگہ آ سکتا ہے۔"
+          },
+          "misconception_id": "letter_fixed"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A letter is a variable. It can stand for a different number in each question.",
+            "ur": "حرف متغیر ہے۔ یہ ہر سوال میں مختلف عدد کی جگہ آ سکتا ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The question tells you what the letter stands for.",
+            "ur": "جی ہاں! سوال بتاتا ہے کہ حرف کس عدد کی جگہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12_missing",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "20 minus a number is 13. Fill in the missing number: 20 − __ = 13.",
+        "ur": "20 منفی ایک عدد برابر 13 ہے۔ غائب عدد بھریں: 20 − __ = 13۔"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "What do you take away from 20 to leave 13?",
+        "ur": "20 میں سے کیا تفریق کریں کہ 13 بچے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! 20 − 7 = 13.",
+        "ur": "درست! 20 − 7 = 13"
+      },
+      "feedback_wrong": {
+        "en": "20 − 13 = 7, and 20 − 7 = 13.",
+        "ur": "20 − 13 = 7، اور 20 − 7 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 33,
+          "feedback": {
+            "en": "20 + 13 is 33, but we take away. 20 − 7 = 13.",
+            "ur": "20 + 13، 33 ہے مگر ہم تفریق کرتے ہیں۔ 20 − 7 = 13"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You used letters for numbers.",
+          "ur": "شاباش! آپ نے اعداد کی جگہ حروف استعمال کیے۔"
+        }
+      },
+      "text": {
+        "en": "A letter that can change is a variable; a number that stays the same is a constant. More than means add (x + 5), less than means take away from the number named (k − 5), and 3y means 3 times y. To test a statement, put the value in for the letter and check both sides.",
+        "ur": "جو حرف بدل سکتا ہے وہ متغیر ہے؛ جو عدد ایک جیسا رہے وہ مستقل ہے۔ زیادہ کا مطلب جمع (x + 5)، کم کا مطلب جس عدد کا نام لیا ہو اس میں سے تفریق (k − 5)، اور 3y کا مطلب y کا 3 گنا ہے۔ بیان کو جانچنے کے لیے حرف کی جگہ قیمت رکھیں اور دونوں طرف دیکھیں۔"
+      },
+      "points": [
+        {
+          "en": "Ask: can this value change? Then it is a variable.",
+          "ur": "پوچھیں: کیا یہ قیمت بدل سکتی ہے؟ تب یہ متغیر ہے۔"
+        },
+        {
+          "en": "Test a symbol sentence with a small number.",
+          "ur": "علامتوں والے جملے کو چھوٹے عدد سے جانچیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_value",
+      "type": "recall",
+      "step": {
+        "id": "r_value",
+        "type": "number",
+        "prompt": {
+          "en": "What is the value of 2a + 1 when a = 7?",
+          "ur": "جب a = 7 ہو تو 2a + 1 کی قیمت کیا ہے؟"
+        },
+        "answer": 15,
+        "checker": "numeric",
+        "hint": {
+          "en": "2a means 2 × a. Then add 1.",
+          "ur": "2a یعنی 2 × a۔ پھر 1 جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 2 × 7 + 1 = 15.",
+          "ur": "درست! 2 × 7 + 1 = 15"
+        },
+        "feedback_wrong": {
+          "en": "2 × 7 = 14, and 14 + 1 = 15.",
+          "ur": "2 × 7 = 14، اور 14 + 1 = 15"
+        },
+        "common_wrong": [
+          {
+            "answer": 28,
+            "feedback": {
+              "en": "2a with a = 7 is 14, not 27. Then add 1: 15.",
+              "ur": "a = 7 کے ساتھ 2a برابر 14 ہے، 27 نہیں۔ پھر 1 جمع کریں: 15"
+            },
+            "misconception_id": "joins_digits"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_2"
+    },
+    {
+      "id": "r_missing",
+      "type": "apply",
+      "step": {
+        "id": "r_missing",
+        "type": "number",
+        "prompt": {
+          "en": "Fill in the missing number: __ + 9 = 15.",
+          "ur": "غائب عدد بھریں: __ + 9 = 15۔"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "What must be added to 9 to make 15?",
+          "ur": "9 میں کیا جمع کریں کہ 15 بنے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! 6 + 9 = 15.",
+          "ur": "درست! 6 + 9 = 15"
+        },
+        "feedback_wrong": {
+          "en": "15 − 9 = 6, so 6 + 9 = 15.",
+          "ur": "15 − 9 = 6، تو 6 + 9 = 15"
+        },
+        "common_wrong": [
+          {
+            "answer": 24,
+            "feedback": {
+              "en": "15 + 9 is 24, but we need the number that makes 15: 6.",
+              "ur": "15 + 9، 24 ہے مگر ہمیں وہ عدد چاہیے جس سے 15 بنے: 6"
+            },
+            "misconception_id": "wrong_operation"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 6.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers constants and variables (q1, q2), writing sentences in symbols (q4, q5, q6, q10), true and false (q8), filling in missing values (q7, q9, q12) and find-the-error questions (q10, q11).",
+    "Each wrong answer is a real mistake: more than written as times, less than written the wrong way round, 3y read as 34, a plus where a minus is needed, and a letter taken as one fixed number.",
+    "Urdu terms to check: متغیر (variable), مستقل (constant), عبارت (expression), اضافہ (increase), مساوات (equation). No new Urdu term was invented here.",
+    "The numbers were worked out in content/sources/g6-maths-07/exercise_6_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

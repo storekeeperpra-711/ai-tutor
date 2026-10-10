@@ -1,0 +1,1026 @@
+{
+  "id": "g6-maths-07-exercise-6-3",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Write statements about ages and prices as expressions, count the terms of an expression, name coefficients and constants, and group like terms.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Exercise 6.3"
+    }
+  ],
+  "skills": [
+    "maths.algebra.ex_6_3"
+  ],
+  "title": {
+    "en": "Exercise 6.3 practice: terms and like terms",
+    "ur": "مشق 6.3 کی پریکٹس: ارکان اور یکساں ارکان"
+  },
+  "estimated_minutes": 17,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.variables"
+    },
+    {
+      "skill": "maths.algebra.terms"
+    },
+    {
+      "skill": "maths.algebra.expressions_basic"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "times_for_plus",
+      "description": "Writes 'older than' or 'more than' as multiplication, like 4x for x + 4."
+    },
+    {
+      "id": "wrong_sign_direction",
+      "description": "Writes 'older than' as taking away, like x − 4."
+    },
+    {
+      "id": "counts_letters_only",
+      "description": "Leaves out the constant when counting the terms."
+    },
+    {
+      "id": "drops_sign",
+      "description": "Leaves out the minus sign that belongs to a term (−4y has coefficient −4)."
+    },
+    {
+      "id": "coefficient_is_constant",
+      "description": "Mixes up the coefficient (the number with the letter) and the constant (the number on its own)."
+    },
+    {
+      "id": "lone_letter_zero",
+      "description": "Thinks a letter on its own (x) has coefficient 0 instead of 1, and so leaves it out."
+    },
+    {
+      "id": "unlike_joined",
+      "description": "Joins terms with different letters, like 2a and 2b, or adds every coefficient into one letter."
+    },
+    {
+      "id": "forgets_lone_letter",
+      "description": "Gives b one instead of two when adding 3b and b."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.ex_6_3": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.ex_6_3": [
+      {
+        "id": "qb_count",
+        "type": "recall",
+        "step": {
+          "id": "qb_count",
+          "type": "number",
+          "prompt": {
+            "en": "How many terms does 5m − 2n + 4 have?",
+            "ur": "5m − 2n + 4 کے کتنے ارکان ہیں؟"
+          },
+          "answer": 3,
+          "checker": "numeric",
+          "hint": {
+            "en": "Split at each + and − sign.",
+            "ur": "ہر + اور − کی علامت پر الگ کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 5m, −2n and 4: 3 terms.",
+            "ur": "درست! 5m، −2n اور 4: 3 ارکان"
+          },
+          "feedback_wrong": {
+            "en": "5m, −2n and 4 are 3 terms.",
+            "ur": "5m، −2n اور 4 یعنی 3 ارکان"
+          },
+          "common_wrong": [
+            {
+              "answer": 2,
+              "feedback": {
+                "en": "The constant 4 is a term too: 3.",
+                "ur": "مستقل 4 بھی رکن ہے: 3"
+              },
+              "misconception_id": "counts_letters_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_group",
+        "type": "apply",
+        "step": {
+          "id": "qb_group",
+          "type": "text_check",
+          "prompt": {
+            "en": "Group the like terms: 5t + 2s − 3t + 4s",
+            "ur": "یکساں ارکان کو اکٹھا کریں: 5t + 2s − 3t + 4s"
+          },
+          "checker": "text",
+          "expected": "6s + 2t",
+          "accept": [
+            "2t+6s"
+          ],
+          "hint": {
+            "en": "Collect the t-terms and the s-terms separately.",
+            "ur": "t والے اور s والے ارکان الگ الگ اکٹھے کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 5t − 3t = 2t and 2s + 4s = 6s, so 6s + 2t.",
+            "ur": "درست! 5t − 3t = 2t اور 2s + 4s = 6s، تو 6s + 2t"
+          },
+          "feedback_wrong": {
+            "en": "t-terms: 5 − 3 = 2. s-terms: 2 + 4 = 6.",
+            "ur": "t والے: 5 − 3 = 2۔ s والے: 2 + 4 = 6"
+          },
+          "common_wrong": [
+            {
+              "answer": "8t + 6s",
+              "feedback": {
+                "en": "The −3t is taken away: 5t − 3t = 2t.",
+                "ur": "−3t تفریق ہوتا ہے: 5t − 3t = 2t"
+              },
+              "misconception_id": "drops_sign"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Usman says 5x − 3 has three terms: 5, x and 3. What went wrong?",
+            "ur": "عثمان کہتا ہے 5x − 3 کے تین ارکان ہیں: 5، x اور 3۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "5x is one term. The terms are 5x and −3: two terms.",
+                "ur": "5x ایک رکن ہے۔ ارکان 5x اور −3 ہیں: دو ارکان۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Terms are split only by + and − signs.",
+                "ur": "جی ہاں! ارکان صرف + اور − سے الگ ہوتے ہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. Three terms is right.",
+                "ur": "کوئی غلطی نہیں۔ تین ارکان درست ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "5x means 5 × x: one term. 5x − 3 has two terms.",
+                "ur": "5x یعنی 5 × x: ایک رکن۔ 5x − 3 کے دو ارکان ہیں۔"
+              },
+              "misconception_id": "coefficient_is_constant"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It has one term, 5x − 3.",
+                "ur": "اس کا ایک رکن ہے، 5x − 3۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The − sign splits it into two terms: 5x and −3.",
+                "ur": "− کی علامت اسے دو ارکان میں بانٹتی ہے: 5x اور −3"
+              },
+              "misconception_id": "unlike_joined"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_terms",
+      "front": {
+        "en": "How do you count the terms?",
+        "ur": "ارکان کیسے گنتے ہیں؟"
+      },
+      "back": {
+        "en": "Split at each + and − sign. The sign stays with the term after it.",
+        "ur": "ہر + اور − کی علامت پر الگ کریں۔ علامت اپنے بعد والے رکن کے ساتھ رہتی ہے۔"
+      }
+    },
+    {
+      "id": "f_like",
+      "front": {
+        "en": "Which terms are like terms?",
+        "ur": "کون سے ارکان یکساں ہوتے ہیں؟"
+      },
+      "back": {
+        "en": "Terms with the same letter, like 4a and −2a. Add their coefficients.",
+        "ur": "ایک ہی حرف والے ارکان، جیسے 4a اور −2a۔ ان کے عددی سر جمع کریں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_terms_at_home",
+      "text": {
+        "en": "Pick two things you buy for the family, with a price for one of each. Write the cost of a few of each as an expression with letters (for example 20a + 15b). Name its terms, coefficients and like terms.",
+        "ur": "دو چیزیں چنیں جو گھر والوں کے لیے خریدی جاتی ہیں اور ہر ایک کی ایک کی قیمت لکھیں۔ ہر ایک کی چند عدد کی قیمت حروف والی عبارت میں لکھیں (مثلاً 20a + 15b)۔ اس کے ارکان، عددی سر اور یکساں ارکان بتائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Term",
+      "ur": "رکن"
+    },
+    {
+      "en": "Coefficient",
+      "ur": "عددی سر"
+    },
+    {
+      "en": "Constant",
+      "ur": "مستقل"
+    },
+    {
+      "en": "Like terms",
+      "ur": "یکساں ارکان"
+    },
+    {
+      "en": "Unlike terms",
+      "ur": "غیر یکساں ارکان"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 6.3 is about expressions and their terms. Ready?",
+          "ur": "مشق 6.3 عبارتوں اور ان کے ارکان کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 6.3 of your maths book (PCTB Mathematics 6). Here you turn statements about ages and prices into expressions, count terms, name coefficients and constants, and group like terms. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 6.3 کے ساتھ ہے۔ اس میں آپ عمروں اور قیمتوں کے بیانات کو عبارتوں میں بدلیں گے، ارکان گنیں گے، عددی سر اور مستقل کے نام بتائیں گے، اور یکساں ارکان کو اکٹھا کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_age",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Hina is x years old. Her brother is 4 years older than Hina. Write his age as an expression.",
+        "ur": "حنا x سال کی ہے۔ اس کا بھائی حنا سے 4 سال بڑا ہے۔ اس کی عمر کو عبارت میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "x + 4",
+      "accept": [
+        "4+x"
+      ],
+      "hint": {
+        "en": "Older means more. Start with Hina's age, x.",
+        "ur": "بڑا یعنی زیادہ۔ حنا کی عمر x سے شروع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x + 4.",
+        "ur": "درست! x + 4"
+      },
+      "feedback_wrong": {
+        "en": "4 years older than x is x + 4.",
+        "ur": "x سے 4 سال بڑا یعنی x + 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "4x",
+          "feedback": {
+            "en": "4x means 4 times x. Older by 4 means add 4: x + 4.",
+            "ur": "4x یعنی x کا 4 گنا۔ 4 سال بڑا یعنی 4 جمع: x + 4"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "answer": "x - 4",
+          "feedback": {
+            "en": "Older means more, so add 4: x + 4.",
+            "ur": "بڑا یعنی زیادہ، تو 4 جمع کریں: x + 4"
+          },
+          "misconception_id": "wrong_sign_direction"
+        }
+      ]
+    },
+    {
+      "id": "q2_price",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A pen costs Rs 15. A notebook costs Rs n. Write the cost of 3 notebooks and 1 pen as an expression.",
+        "ur": "ایک قلم 15 روپے کا ہے۔ ایک کاپی n روپے کی ہے۔ 3 کاپیوں اور 1 قلم کی قیمت کو عبارت میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "3n + 15",
+      "accept": [
+        "15+3n"
+      ],
+      "hint": {
+        "en": "3 notebooks cost 3 × n. Then add the pen.",
+        "ur": "3 کاپیوں کی قیمت 3 × n ہے۔ پھر قلم کی قیمت جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3n + 15.",
+        "ur": "درست! 3n + 15"
+      },
+      "feedback_wrong": {
+        "en": "3 notebooks cost 3n, and the pen costs 15: 3n + 15.",
+        "ur": "3 کاپیوں کی قیمت 3n ہے اور قلم کی 15: 3n + 15"
+      },
+      "common_wrong": [
+        {
+          "answer": "18n",
+          "feedback": {
+            "en": "3n and 15 are unlike terms. They cannot join into 18n: 3n + 15.",
+            "ur": "3n اور 15 غیر یکساں ارکان ہیں۔ یہ 18n میں نہیں مل سکتے: 3n + 15"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "answer": "n + 18",
+          "feedback": {
+            "en": "The 3 multiplies n; it is not added to 15: 3n + 15.",
+            "ur": "3، n کو ضرب دیتا ہے؛ یہ 15 میں جمع نہیں ہوتا: 3n + 15"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "s_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Terms are separated by + and −. Each sign belongs to the term after it.",
+          "ur": "ارکان + اور − سے الگ ہوتے ہیں۔ ہر علامت اپنے بعد والے رکن کی ہے۔"
+        }
+      },
+      "text": {
+        "en": "In 5a − 2b + 7 − c the terms are 5a, −2b, 7 and −c: four terms, because + and − signs separate them and each sign belongs to the term after it. The number with a letter is the coefficient: −2 is the coefficient of b. A letter alone has coefficient 1 (−c has coefficient −1). The number on its own, 7, is the constant. Like terms have the same letter, so 4a and 2a are like terms; 4a and 2b are not. We group like terms by adding their coefficients.",
+        "ur": "5a − 2b + 7 − c میں ارکان 5a، −2b، 7 اور −c ہیں: چار ارکان، کیونکہ + اور − کی علامتیں انھیں الگ کرتی ہیں اور ہر علامت اپنے بعد والے رکن کی ہوتی ہے۔ حرف کے ساتھ والا عدد عددی سر ہے: b کا عددی سر −2 ہے۔ اکیلے حرف کا عددی سر 1 ہوتا ہے (−c کا عددی سر −1 ہے)۔ اکیلا عدد 7 مستقل ہے۔ یکساں ارکان میں حرف ایک جیسا ہوتا ہے، تو 4a اور 2a یکساں ارکان ہیں؛ 4a اور 2b نہیں۔ یکساں ارکان کو ان کے عددی سر جمع کر کے اکٹھا کرتے ہیں۔"
+      }
+    },
+    {
+      "id": "q3_count",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many terms does the expression 5a − 2b + 7 − c have?",
+        "ur": "عبارت 5a − 2b + 7 − c کے کتنے ارکان ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Split it at each + and − sign.",
+        "ur": "ہر + اور − کی علامت پر اسے الگ کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5a, −2b, 7 and −c: 4 terms.",
+        "ur": "درست! 5a، −2b، 7 اور −c: 4 ارکان"
+      },
+      "feedback_wrong": {
+        "en": "The terms are 5a, −2b, 7 and −c. That is 4.",
+        "ur": "ارکان 5a، −2b، 7 اور −c ہیں۔ یعنی 4"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "The constant 7 is a term too. Count all four: 5a, −2b, 7, −c.",
+            "ur": "مستقل 7 بھی ایک رکن ہے۔ چاروں گنیں: 5a، −2b، 7، −c"
+          },
+          "misconception_id": "counts_letters_only"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 54.0,
+        "alt": {
+          "en": "The expression 5a minus 2b plus 7 minus c cut into four boxes: 5a, minus 2b, 7 and minus c.",
+          "ur": "عبارت 5a − 2b + 7 − c چار خانوں میں: 5a، −2b، 7 اور −c۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                64.6,
+                10.0
+              ],
+              [
+                99.8,
+                10.0
+              ],
+              [
+                99.8,
+                44.0
+              ],
+              [
+                64.6,
+                44.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              82.2,
+              27.0
+            ],
+            "text": "5a"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                109.8,
+                10.0
+              ],
+              [
+                154.6,
+                10.0
+              ],
+              [
+                154.6,
+                44.0
+              ],
+              [
+                109.8,
+                44.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              132.2,
+              27.0
+            ],
+            "text": "−2b"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                164.6,
+                10.0
+              ],
+              [
+                190.2,
+                10.0
+              ],
+              [
+                190.2,
+                44.0
+              ],
+              [
+                164.6,
+                44.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.4,
+              27.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                200.2,
+                10.0
+              ],
+              [
+                235.4,
+                10.0
+              ],
+              [
+                235.4,
+                44.0
+              ],
+              [
+                200.2,
+                44.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              217.8,
+              27.0
+            ],
+            "text": "−c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_coefficient",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the coefficient of y in 9x − 4y + 3?",
+        "ur": "9x − 4y + 3 میں y کا عددی سر کیا ہے؟"
+      },
+      "answer": -4,
+      "checker": "numeric",
+      "hint": {
+        "en": "The sign in front of the term belongs to it.",
+        "ur": "رکن کے آگے کی علامت اسی کی ہوتی ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The term is −4y, so the coefficient is −4.",
+        "ur": "درست! رکن −4y ہے، تو عددی سر −4 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The term is −4y, with its minus sign: coefficient −4.",
+        "ur": "رکن −4y ہے، منفی کی علامت کے ساتھ: عددی سر −4"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Keep the minus sign: the term is −4y, so the coefficient is −4.",
+            "ur": "منفی کی علامت رکھیں: رکن −4y ہے، تو عددی سر −4 ہے۔"
+          },
+          "misconception_id": "drops_sign"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is the constant, the number with no letter. The coefficient of y is −4.",
+            "ur": "3 مستقل ہے، بغیر حرف کا عدد۔ y کا عددی سر −4 ہے۔"
+          },
+          "misconception_id": "coefficient_is_constant"
+        }
+      ]
+    },
+    {
+      "id": "q6_constant",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is the constant term in 8p + 2q − 11?",
+        "ur": "8p + 2q − 11 میں مستقل رکن کون سا ہے؟"
+      },
+      "answer": -11,
+      "checker": "numeric",
+      "hint": {
+        "en": "The constant is the term with no letter. Keep its sign.",
+        "ur": "مستقل وہ رکن ہے جس میں حرف نہیں ہوتا۔ اس کی علامت رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The constant term is −11.",
+        "ur": "درست! مستقل رکن −11 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The term with no letter is −11, and its sign stays with it.",
+        "ur": "بغیر حرف کا رکن −11 ہے، اور اس کی علامت اس کے ساتھ رہتی ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "The minus sign belongs to the term: −11.",
+            "ur": "منفی کی علامت رکن کی ہے: −11"
+          },
+          "misconception_id": "drops_sign"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the coefficient of q. The constant has no letter: −11.",
+            "ur": "2، q کا عددی سر ہے۔ مستقل میں حرف نہیں ہوتا: −11"
+          },
+          "misconception_id": "coefficient_is_constant"
+        }
+      ]
+    },
+    {
+      "id": "q7_like",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which pair are like terms?",
+        "ur": "کون سا جوڑا یکساں ارکان کا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "3m and 3n",
+            "ur": "3m اور 3n"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The letters m and n differ, so they are unlike terms, even if the coefficients match.",
+            "ur": "حروف m اور n مختلف ہیں، اس لیے یہ غیر یکساں ارکان ہیں، چاہے عددی سر برابر ہوں۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "6m and −2m",
+            "ur": "6m اور −2m"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Both have the letter m. The coefficients can differ.",
+            "ur": "جی ہاں! دونوں میں حرف m ہے۔ عددی سر مختلف ہو سکتے ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "5a and 5",
+            "ur": "5a اور 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5a has a letter and 5 has none. They are unlike terms.",
+            "ur": "5a میں حرف ہے اور 5 میں نہیں۔ یہ غیر یکساں ارکان ہیں۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "2x and 2y",
+            "ur": "2x اور 2y"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "x and y are different letters: unlike terms.",
+            "ur": "x اور y مختلف حروف ہیں: غیر یکساں ارکان۔"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "q8_group",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Group the like terms and write the expression in its simplest form: 4a + 3b + 2a + b",
+        "ur": "یکساں ارکان کو اکٹھا کر کے عبارت کو سادہ ترین شکل میں لکھیں: 4a + 3b + 2a + b"
+      },
+      "checker": "text",
+      "expected": "6a + 4b",
+      "accept": [
+        "4b+6a"
+      ],
+      "hint": {
+        "en": "Add the a-terms together and the b-terms together. b means 1b.",
+        "ur": "a والے ارکان اکٹھے اور b والے ارکان اکٹھے جمع کریں۔ b یعنی 1b"
+      },
+      "feedback_correct": {
+        "en": "Right! 4a + 2a = 6a and 3b + b = 4b: 6a + 4b.",
+        "ur": "درست! 4a + 2a = 6a اور 3b + b = 4b: 6a + 4b"
+      },
+      "feedback_wrong": {
+        "en": "a-terms: 4a + 2a = 6a. b-terms: 3b + 1b = 4b. So 6a + 4b.",
+        "ur": "a والے: 4a + 2a = 6a۔ b والے: 3b + 1b = 4b۔ تو 6a + 4b"
+      },
+      "common_wrong": [
+        {
+          "answer": "6a + 3b",
+          "feedback": {
+            "en": "A lone b counts as 1b: 3b + 1b = 4b, so 6a + 4b.",
+            "ur": "اکیلا b یعنی 1b: 3b + 1b = 4b، تو 6a + 4b"
+          },
+          "misconception_id": "forgets_lone_letter"
+        },
+        {
+          "answer": "10a",
+          "feedback": {
+            "en": "a and b are different letters, so you cannot add them all into 10a. Keep 6a + 4b.",
+            "ur": "a اور b مختلف حروف ہیں، اس لیے سب کو 10a میں جمع نہیں کر سکتے۔ 6a + 4b رہنے دیں۔"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "q9_like_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many terms of 3x + 2y − x + 5 + 7x are like the term 3x?",
+        "ur": "3x + 2y − x + 5 + 7x کے کتنے ارکان رکن 3x کے یکساں ہیں؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Look for every term with the letter x. A lone x or −x counts too.",
+        "ur": "x والے ہر رکن کو دیکھیں۔ اکیلا x یا −x بھی گنا جاتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3x, −x and 7x: 3 terms.",
+        "ur": "درست! 3x، −x اور 7x: 3 ارکان"
+      },
+      "feedback_wrong": {
+        "en": "The terms with x are 3x, −x and 7x. That is 3.",
+        "ur": "x والے ارکان 3x، −x اور 7x ہیں۔ یعنی 3"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "−x is −1x. It is a like term too: 3.",
+            "ur": "−x یعنی −1x۔ یہ بھی یکساں رکن ہے: 3"
+          },
+          "misconception_id": "lone_letter_zero"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That counts every term. Only those with x are like 3x: 3.",
+            "ur": "یہ ہر رکن گنتا ہے۔ صرف x والے 3x کے یکساں ہیں: 3"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "q10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Bilal says the coefficient of b in a + b + 3 is 0, because no number is written. What went wrong?",
+        "ur": "بلال کہتا ہے a + b + 3 میں b کا عددی سر 0 ہے، کیونکہ کوئی عدد لکھا نہیں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A letter alone has coefficient 1, because b means 1 × b.",
+            "ur": "اکیلے حرف کا عددی سر 1 ہوتا ہے، کیونکہ b یعنی 1 × b۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The 1 is not written, but it is there.",
+            "ur": "جی ہاں! 1 لکھا نہیں جاتا مگر موجود ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 0 is right.",
+            "ur": "کوئی غلطی نہیں۔ 0 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "With coefficient 0 the term would vanish: 0 × b = 0. It is 1.",
+            "ur": "عددی سر 0 ہو تو رکن غائب ہو جاتا: 0 × b = 0۔ یہ 1 ہے۔"
+          },
+          "misconception_id": "lone_letter_zero"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The coefficient is 3, the number in the expression.",
+            "ur": "عددی سر 3 ہے، جو عبارت میں لکھا عدد ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 has no letter; it is the constant. The coefficient of b is 1.",
+            "ur": "3 کے ساتھ حرف نہیں؛ یہ مستقل ہے۔ b کا عددی سر 1 ہے۔"
+          },
+          "misconception_id": "coefficient_is_constant"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error_like",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana says 2a and 2b are like terms, because both have the coefficient 2. What went wrong?",
+        "ur": "ثناء کہتی ہے 2a اور 2b یکساں ارکان ہیں، کیونکہ دونوں کا عددی سر 2 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. Equal coefficients make them like terms.",
+            "ur": "کوئی غلطی نہیں۔ برابر عددی سر انھیں یکساں ارکان بناتے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Try a = 1 and b = 5: 2a = 2 but 2b = 10. They are different kinds.",
+            "ur": "a = 1 اور b = 5 لیں: 2a = 2 مگر 2b = 10۔ یہ مختلف قسم کے ہیں۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "They are like terms because both end in a letter.",
+            "ur": "یہ یکساں ارکان ہیں کیونکہ دونوں حرف پر ختم ہوتے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It must be the same letter. a and b are different.",
+            "ur": "حرف ایک ہی ہونا چاہیے۔ a اور b مختلف ہیں۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Like terms need the same letter. a and b differ, so these are unlike terms.",
+            "ur": "یکساں ارکان میں ایک ہی حرف ہونا چاہیے۔ a اور b مختلف ہیں، اس لیے یہ غیر یکساں ارکان ہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The letter must match, not the coefficient.",
+            "ur": "جی ہاں! حرف ملنا چاہیے، عددی سر نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12_sum",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In 3x + 2y − x + 5 + 7x, add the coefficients of all the terms with x. What is the total?",
+        "ur": "3x + 2y − x + 5 + 7x میں x والے تمام ارکان کے عددی سر جمع کریں۔ کل کیا ہے؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "The coefficients are 3, −1 and 7.",
+        "ur": "عددی سر 3، −1 اور 7 ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3 − 1 + 7 = 9, so the x-terms group into 9x.",
+        "ur": "درست! 3 − 1 + 7 = 9، تو x والے ارکان 9x بنتے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "3 + (−1) + 7 = 9.",
+        "ur": "3 + (−1) + 7 = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "The middle term is −x, so its coefficient is −1: 3 − 1 + 7 = 9.",
+            "ur": "درمیان کا رکن −x ہے، تو اس کا عددی سر −1 ہے: 3 − 1 + 7 = 9"
+          },
+          "misconception_id": "drops_sign"
+        },
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "The term −x counts as −1, not +1 or 0: 3 − 1 + 7 = 9.",
+            "ur": "رکن −x کا مطلب −1 ہے، +1 یا 0 نہیں: 3 − 1 + 7 = 9"
+          },
+          "misconception_id": "lone_letter_zero"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You know the parts of an expression.",
+          "ur": "شاباش! آپ عبارت کے حصے جانتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Write statements about ages and prices as expressions: older means add (x + 4), and 3 notebooks at n each cost 3n. Terms are separated by + and −, and each sign stays with the term after it. A coefficient goes with a letter (a letter alone has 1) and a constant is a number alone. Like terms have the same letter; group them by adding their coefficients.",
+        "ur": "عمروں اور قیمتوں کے بیانات کو عبارت میں لکھیں: بڑا یعنی جمع (x + 4)، اور n روپے کی 3 کاپیاں 3n ہیں۔ ارکان + اور − سے الگ ہوتے ہیں، اور ہر علامت اپنے بعد والے رکن کے ساتھ رہتی ہے۔ عددی سر حرف کے ساتھ ہوتا ہے (اکیلے حرف کا 1) اور مستقل اکیلا عدد ہے۔ یکساں ارکان میں حرف ایک جیسا ہوتا ہے؛ انھیں عددی سر جمع کر کے اکٹھا کریں۔"
+      },
+      "points": [
+        {
+          "en": "Count terms by looking at the + and − signs.",
+          "ur": "+ اور − کی علامتیں دیکھ کر ارکان گنیں۔"
+        },
+        {
+          "en": "Same letter means like terms.",
+          "ur": "ایک ہی حرف کا مطلب یکساں ارکان۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_coefficient",
+      "type": "recall",
+      "step": {
+        "id": "r_coefficient",
+        "type": "number",
+        "prompt": {
+          "en": "What is the coefficient of z in 2x − 7z + 1?",
+          "ur": "2x − 7z + 1 میں z کا عددی سر کیا ہے؟"
+        },
+        "answer": -7,
+        "checker": "numeric",
+        "hint": {
+          "en": "Keep the sign of the term.",
+          "ur": "رکن کی علامت رکھیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −7.",
+          "ur": "درست! −7"
+        },
+        "feedback_wrong": {
+          "en": "The term is −7z: coefficient −7.",
+          "ur": "رکن −7z ہے: عددی سر −7"
+        },
+        "common_wrong": [
+          {
+            "answer": 7,
+            "feedback": {
+              "en": "Keep the minus sign: −7.",
+              "ur": "منفی کی علامت رکھیں: −7"
+            },
+            "misconception_id": "drops_sign"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_3"
+    },
+    {
+      "id": "r_age",
+      "type": "apply",
+      "step": {
+        "id": "r_age",
+        "type": "text_check",
+        "prompt": {
+          "en": "Ali is y years old. His sister is 3 years younger. Write her age as an expression.",
+          "ur": "علی y سال کا ہے۔ اس کی بہن اس سے 3 سال چھوٹی ہے۔ اس کی عمر کو عبارت میں لکھیں۔"
+        },
+        "checker": "text",
+        "expected": "y - 3",
+        "accept": [
+          "-3+y"
+        ],
+        "hint": {
+          "en": "Younger means less. Start with y.",
+          "ur": "چھوٹی یعنی کم۔ y سے شروع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! y − 3.",
+          "ur": "درست! y − 3"
+        },
+        "feedback_wrong": {
+          "en": "3 years younger than y is y − 3.",
+          "ur": "y سے 3 سال چھوٹی یعنی y − 3"
+        },
+        "common_wrong": [
+          {
+            "answer": "y + 3",
+            "feedback": {
+              "en": "Younger means less, so take away 3: y − 3.",
+              "ur": "چھوٹی یعنی کم، تو 3 تفریق کریں: y − 3"
+            },
+            "misconception_id": "wrong_sign_direction"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_3"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 6.3 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers writing statements as expressions (q1, q2), counting terms (q3), coefficients and constants (q5, q6, q10, q12), like and unlike terms (q7, q9, q11) and grouping like terms (q8).",
+    "Each wrong answer is a real mistake: older written as times or minus, the constant left out of the count, the minus sign dropped, coefficient and constant mixed up, a lone letter taken as zero, and unlike terms joined.",
+    "Urdu terms to check: رکن / ارکان (term), عددی سر (coefficient), مستقل (constant), یکساں ارکان / غیر یکساں ارکان (like / unlike terms), عبارت (expression). No new Urdu term was invented here.",
+    "The numbers were worked out in content/sources/g6-maths-07/exercise_6_3.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
