@@ -48,7 +48,14 @@ class ValidateLessonsTest(unittest.TestCase):
         late = self.mutated()
         late["version"] = 2
         late["steps"] = [late["steps"][0], why, use] + late["steps"][1:]
-        self.assertProblem(self.check(late), "must be the first two steps")
+        self.assertProblem(self.check(late), "must be the first steps")
+        define = {"id": "s0_define", "type": "explain", "text": text}
+        with_define = copy.deepcopy(lesson)
+        with_define["steps"] = [define] + with_define["steps"]
+        self.assertEqual(self.check(with_define), [])
+        wrong_order = copy.deepcopy(lesson)
+        wrong_order["steps"] = [why, define, use] + lesson["steps"][2:]
+        self.assertProblem(self.check(wrong_order), "must be the first steps")
         speaking = copy.deepcopy(lesson)
         speaking["steps"][1]["character"] = {"emotion": "happy", "say": text}
         self.assertProblem(self.check(speaking), "s0_use is text only")

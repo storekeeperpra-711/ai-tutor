@@ -15,11 +15,16 @@ question), "need" (what the problem was and what the idea solved) and "use"
         "use": T("...", "..."),
     },
 
+An entry may also have "define" (a short textbook definition, T(en, ur)); it
+becomes a text-only s0_define step before s0_why, so the lesson reads:
+definition, why it was needed, where it is used, then practice and quiz.
+
 A lesson that has no entry is left as it is (practice sets and tests).
 """
 
 WHY_STEP = "s0_why"
 USE_STEP = "s0_use"
+DEFINE_STEP = "s0_define"
 MAX_SAY_WORDS = 20
 MAX_TEXT_WORDS = 90
 
@@ -28,10 +33,13 @@ def add_why(lesson: dict, why: dict) -> dict:
     entry = why.get(lesson["id"])
     if entry is None:
         return lesson
-    assert set(entry) == {"say", "need", "use"}, (lesson["id"], sorted(entry))
+    required = {"say", "need", "use"}
+    assert required <= set(entry) <= required | {"define"}, (lesson["id"], sorted(entry))
     ids = {s["id"] for s in lesson["steps"]}
-    assert WHY_STEP not in ids and USE_STEP not in ids, lesson["id"]
-    for key, limit in (("say", MAX_SAY_WORDS), ("need", MAX_TEXT_WORDS), ("use", MAX_TEXT_WORDS)):
+    assert not {WHY_STEP, USE_STEP, DEFINE_STEP} & ids, lesson["id"]
+    for key, limit in (("say", MAX_SAY_WORDS), ("need", MAX_TEXT_WORDS), ("use", MAX_TEXT_WORDS), ("define", MAX_TEXT_WORDS)):
+        if key not in entry:
+            continue
         for lang in ("en", "ur"):
             text = entry[key][lang].strip()
             assert text, (lesson["id"], key, lang)
@@ -45,6 +53,9 @@ def add_why(lesson: dict, why: dict) -> dict:
         },
         {"id": USE_STEP, "type": "explain", "text": entry["use"]},
     ]
+    if "define" in entry:
+        steps.insert(0, {"id": DEFINE_STEP, "type": "explain", "text": entry["define"]})
+        lesson["version"] += 1
     lesson["steps"] = steps + lesson["steps"]
     # A child part-way through the old lesson starts it again (resumeIndex),
     # rather than landing two steps early.

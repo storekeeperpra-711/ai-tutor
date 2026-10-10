@@ -326,21 +326,25 @@ MOUTH_PER_SECOND = 20
 
 
 def check_why_steps(lesson: dict) -> list[str]:
-    """A lesson that opens with the "why" steps has them in order, first:
-    s0_why (Mithu asks the question) then s0_use, both plain explain steps."""
+    """A lesson that opens with the reading steps has them in order, first:
+    an optional s0_define (text only), then s0_why (Mithu asks the question),
+    then s0_use, all plain explain steps."""
     ids = [s["id"] for s in lesson["steps"]]
-    if "s0_why" not in ids and "s0_use" not in ids:
+    if not {"s0_define", "s0_why", "s0_use"} & set(ids):
         return []
-    if ids[:2] != ["s0_why", "s0_use"]:
-        return ["s0_why and s0_use must be the first two steps, in that order"]
+    order = ["s0_define", "s0_why", "s0_use"] if ids[0] == "s0_define" else ["s0_why", "s0_use"]
+    if ids[: len(order)] != order:
+        return ["s0_define (if any), s0_why and s0_use must be the first steps, in that order"]
     problems = []
-    for step in lesson["steps"][:2]:
+    for step in lesson["steps"][: len(order)]:
         if step["type"] != "explain":
             problems.append(f"{step['id']} must be an explain step")
-    if "character" not in lesson["steps"][0]:
+    by_id = {s["id"]: s for s in lesson["steps"]}
+    if "character" not in by_id["s0_why"]:
         problems.append("s0_why needs Mithu's question (character)")
-    if "character" in lesson["steps"][1]:
-        problems.append("s0_use is text only (every Mithu line is a voice recording to make)")
+    for name in ("s0_define", "s0_use"):
+        if name in by_id and "character" in by_id[name]:
+            problems.append(f"{name} is text only (every Mithu line is a voice recording to make)")
     if lesson["version"] < 2:
         problems.append("a lesson that gained the why steps must be version 2 or more, so saved places restart")
     return problems
