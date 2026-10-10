@@ -22,6 +22,10 @@ WHY = {
         ),
     },
     "g6-maths-04-absolute-value": {
+        "define": T(
+            "Definition: the absolute value of a number is its distance from 0 on the number line, without its direction. We write it with two bars: |−5| = 5 and |5| = 5. It is never negative.",
+            "تعریف: کسی عدد کی مطلق قدر عددی خط پر 0 سے اس کا فاصلہ ہے، سمت کے بغیر۔ ہم اسے دو لکیروں کے بیچ لکھتے ہیں: |−5| = 5 اور |5| = 5۔ یہ کبھی منفی نہیں ہوتی۔",
+        ),
         "say": T(
             "Two buses go 5 km, one east and one west. Did one go less?",
             "دو بسیں 5 کلومیٹر چلیں، ایک مشرق، ایک مغرب۔ کیا کوئی کم چلی؟",

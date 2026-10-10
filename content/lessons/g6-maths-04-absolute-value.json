@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-absolute-value",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -234,6 +234,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the absolute value of a number is its distance from 0 on the number line, without its direction. We write it with two bars: |−5| = 5 and |5| = 5. It is never negative.",
+        "ur": "تعریف: کسی عدد کی مطلق قدر عددی خط پر 0 سے اس کا فاصلہ ہے، سمت کے بغیر۔ ہم اسے دو لکیروں کے بیچ لکھتے ہیں: |−5| = 5 اور |5| = 5۔ یہ کبھی منفی نہیں ہوتی۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
