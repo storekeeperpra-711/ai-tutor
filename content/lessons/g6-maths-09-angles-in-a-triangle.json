@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-09-angles-in-a-triangle",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Angles in a triangle",
     "ur": "مثلث کے زاویے"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.geometry.angles_on_line"
@@ -339,6 +339,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why is a triangle roof so strong, and what are its angles?",
+          "ur": "مثلث کی چھت اتنی مضبوط کیوں ہوتی ہے، اور اس کے زاویے کیا ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Builders use triangles in roofs, bridges and ladders because a triangle keeps its shape. To build one, they need its angles. People found a rule that is always true: the three angles of any triangle add up to 180°. Tear off the three corners of a paper triangle and put them side by side: they make a straight line. So two angles tell you the third.",
+        "ur": "معمار چھتوں، پلوں اور سیڑھیوں میں مثلث استعمال کرتے ہیں کیونکہ مثلث اپنی شکل برقرار رکھتی ہے۔ اسے بنانے کے لیے ان کو اس کے زاویے چاہییں۔ لوگوں نے ایک ایسا اصول پایا جو ہمیشہ سچ ہے: کسی بھی مثلث کے تینوں زاویوں کا مجموعہ 180° ہوتا ہے۔ کاغذ کی مثلث کے تینوں کونے پھاڑ کر ساتھ ساتھ رکھیں: وہ سیدھی لکیر بناتے ہیں۔ تو دو زاویے تیسرے کا پتا دے دیتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Roof frames, bridges and electricity pylons.\n• Cutting wood or iron pieces to fit a triangle.\n• A kite: the angles of its triangular parts.\n• Maps and surveying: finding an angle you cannot measure.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• چھت کے ڈھانچے، پل اور بجلی کے کھمبے۔\n• لکڑی یا لوہے کے ٹکڑے کاٹنا تاکہ مثلث میں پورے آئیں۔\n• پتنگ: اس کے مثلث حصوں کے زاویے۔\n• نقشے اور پیمائش: وہ زاویہ نکالنا جو ناپا نہ جا سکے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

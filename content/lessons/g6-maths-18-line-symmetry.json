@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-18-line-symmetry",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Line symmetry",
     "ur": "خطی تشاکل"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.symmetry.shapes_2d_3d"
@@ -519,6 +519,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do a butterfly's wings match so exactly?",
+          "ur": "تتلی کے پر اتنے ٹھیک ایک جیسے کیوں ہوتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Many things in nature and in our homes are balanced: a leaf, a butterfly, a face, a window. If you fold them along a line, the two halves match exactly. This is line symmetry (تشاکل), and the fold line is the line of symmetry. People use it to draw, design and build neatly, and to check whether something is made evenly.",
+        "ur": "فطرت اور ہمارے گھروں میں بہت سی چیزیں متوازن ہوتی ہیں: پتّا، تتلی، چہرہ، کھڑکی۔ انہیں کسی لکیر پر تہہ کریں تو دونوں حصے بالکل ملتے ہیں۔ یہ خطی تشاکل ہے اور تہہ کی لکیر خطِ تشاکل ہے۔ لوگ اسے صاف ستھرا ڈرائنگ، ڈیزائن اور تعمیر کرنے میں اور یہ جانچنے میں استعمال کرتے ہیں کہ چیز برابر بنی ہے یا نہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Designs on rugs, tiles, bangles and mehndi.\n• Letters of the alphabet and flags that have a mirror line.\n• A butterfly, a leaf or a face: nature is full of it.\n• Cutting paper decorations by folding once.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• قالینوں، ٹائلوں، چوڑیوں اور مہندی کے ڈیزائن میں۔\n• حروف اور جھنڈے جن میں آئینے والی لکیر ہوتی ہے۔\n• تتلی، پتّا یا چہرہ: فطرت اس سے بھری ہے۔\n• ایک بار تہہ کر کے کاغذ کی سجاوٹ کاٹنے میں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

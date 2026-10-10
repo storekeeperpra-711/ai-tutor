@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-18-1d-2d-3d-shapes",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "1-D, 2-D and 3-D shapes",
     "ur": "1-D، 2-D اور 3-D اشکال"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.solids.faces_edges_vertices"
@@ -266,6 +266,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A thread, a sheet of paper and a box: how are they different?",
+          "ur": "دھاگا، کاغذ کا ورق اور ڈبہ: ان میں کیا فرق ہے؟"
+        }
+      },
+      "text": {
+        "en": "To make or describe anything, we must say what kind of shape it is. A thread has only length (1-D). A sheet of paper has length and width (2-D). A box also has height, so it is solid (3-D). People sorted shapes this way and counted their sides, faces, edges and vertices. Now a drawing or a message can describe a shape exactly.",
+        "ur": "کوئی بھی چیز بنانے یا بیان کرنے کے لیے بتانا پڑتا ہے کہ وہ کس قسم کی شکل ہے۔ دھاگے میں صرف لمبائی ہے (1-D)۔ کاغذ کے ورق میں لمبائی اور چوڑائی ہے (2-D)۔ ڈبے میں اونچائی بھی ہے، اس لیے وہ ٹھوس ہے (3-D)۔ لوگوں نے اشکال کو اس طرح الگ کیا اور ان کے اضلاع، سطحیں، کنارے اور راس گنے۔ اب نقشہ یا پیغام کسی شکل کو ٹھیک ٹھیک بیان کر سکتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Telling a carpenter or a builder what shape you want.\n• Reading a plan: lines (1-D), floor plan (2-D), model (3-D).\n• Computer games and cartoons: flat pictures and solid models.\n• Choosing a box or a tin of the right shape for packing.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بڑھئی یا معمار کو بتانے میں کہ آپ کو کون سی شکل چاہیے۔\n• نقشہ پڑھنے میں: لکیریں (1-D)، فرش کا نقشہ (2-D)، ماڈل (3-D)۔\n• کمپیوٹر گیمز اور کارٹون: چپٹی تصویریں اور ٹھوس ماڈل۔\n• پیکنگ کے لیے صحیح شکل کا ڈبہ یا ٹین چننے میں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

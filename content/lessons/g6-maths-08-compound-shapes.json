@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-compound-shapes",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Area of compound shapes",
     "ur": "مرکب شکلوں کا رقبہ"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.measurement.area_rectangle"
@@ -395,6 +395,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A floor is shaped like the letter L. How do we find its area?",
+          "ur": "ایک فرش حرف L کی شکل کا ہے۔ اس کا رقبہ کیسے نکالیں؟"
+        }
+      },
+      "text": {
+        "en": "Rooms, houses and gardens are often joined from several rectangles, like an L-shaped hall. There is no single formula for them, and we do not need one. We use two ideas: split the shape into rectangles and add their areas, or put a big rectangle around it and take away the empty part. Both ways give the same answer.",
+        "ur": "کمرے، گھر اور باغیچے اکثر کئی مستطیلوں کو جوڑ کر بنتے ہیں، جیسے L شکل کا ہال۔ ان کے لیے کوئی ایک فارمولا نہیں اور اس کی ضرورت بھی نہیں۔ ہم دو خیال استعمال کرتے ہیں: شکل کو مستطیلوں میں بانٹ کر رقبے جمع کریں، یا اس کے گرد بڑی مستطیل بنا کر خالی حصہ گھٹا دیں۔ دونوں طریقوں سے ایک ہی جواب آتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Tiles for an L-shaped room or a house with a courtyard.\n• Paint for a wall with a door and a window cut out.\n• The area of a garden with a flower bed in the middle.\n• A plan of a school building drawn on paper.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• L شکل کے کمرے یا صحن والے گھر کے لیے ٹائلیں۔\n• دروازے اور کھڑکی کٹی ہوئی دیوار کے رنگ کے لیے پینٹ۔\n• ایسے باغیچے کا رقبہ جس کے بیچ میں پھولوں کی کیاری ہو۔\n• کاغذ پر بنا ہوا اسکول کی عمارت کا نقشہ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

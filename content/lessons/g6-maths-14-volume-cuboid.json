@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-volume-cuboid",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Volume of a cuboid",
     "ur": "مکعب نما کا حجم"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.solids.faces_edges_vertices"
@@ -706,6 +706,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How many cartons fit in a van, or how much water in a tank?",
+          "ur": "وین میں کتنے کارٹن آئیں گے، یا ٹینکی میں کتنا پانی؟"
+        }
+      },
+      "text": {
+        "en": "Tanks, boxes and rooms are for holding things, so people needed to measure the space inside, not just the outside. We count unit cubes: one layer is length × width, and we stack height layers. So volume = length × width × height, in cubic units. A tank 2 m by 1 m by 1 m holds 2 cubic metres.",
+        "ur": "ٹینکیاں، ڈبے اور کمرے چیزیں رکھنے کے لیے ہوتے ہیں، اس لیے لوگوں کو صرف باہر کی نہیں، اندر کی جگہ ناپنی تھی۔ ہم اکائی مکعب گنتے ہیں: ایک تہہ لمبائی × چوڑائی کی ہے، اور اونچائی جتنی تہیں اوپر رکھتے ہیں۔ تو حجم = لمبائی × چوڑائی × اونچائی، مکعب اکائیوں میں۔ 2 میٹر، 1 میٹر اور 1 میٹر کی ٹینکی میں 2 مکعب میٹر آتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• How much water a tank or a tub holds.\n• How many boxes fit in a truck or a van.\n• Sand, gravel or cement for a building site.\n• The size of a fish tank or a storage room.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• ٹینکی یا ٹب میں کتنا پانی آتا ہے۔\n• ٹرک یا وین میں کتنے ڈبے آتے ہیں۔\n• تعمیراتی جگہ کے لیے ریت، بجری یا سیمنٹ۔\n• مچھلی کے ٹینک یا گودام کا سائز۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

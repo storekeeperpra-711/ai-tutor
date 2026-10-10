@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-09-angles-on-a-line",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Angles on a line and around a point",
     "ur": "سیدھی لکیر پر اور نقطے کے گرد زاویے"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.geometry.angle_types"
@@ -437,6 +437,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can we find an angle without measuring it?",
+          "ur": "کیا ہم ناپے بغیر زاویہ نکال سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "An angle measurer is not always at hand, and a big angle on a field or a building cannot be measured with one. People noticed fixed totals: angles on a straight line add to 180°, and angles all around a point add to 360°. Then a missing angle is found by subtracting the known ones. Also, angles that sit opposite each other when two lines cross are equal.",
+        "ur": "زاویہ ناپنے کا اوزار ہر وقت ہاتھ میں نہیں ہوتا، اور کھیت یا عمارت کے بڑے زاویے اس سے ناپے نہیں جا سکتے۔ لوگوں نے طے شدہ مجموعے دیکھے: سیدھی لکیر پر زاویوں کا مجموعہ 180° اور نقطے کے گرد سب زاویوں کا مجموعہ 360° ہوتا ہے۔ پھر گمشدہ زاویہ معلوم زاویوں کو منفی کر کے نکل آتا ہے۔ یہ بھی کہ جب دو لکیریں کاٹتی ہیں تو آمنے سامنے کے زاویے برابر ہوتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Roads meeting at a roundabout or a crossing.\n• Slices of a pizza or a pie chart: all together make 360°.\n• Scissors and pliers: opposite angles are equal.\n• Planning where a fence or a wall will meet a road.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• چوک یا چوراہے پر ملنے والی سڑکیں۔\n• پیزا کے ٹکڑے یا پائی چارٹ: سب مل کر 360° بناتے ہیں۔\n• قینچی اور پلاس: آمنے سامنے کے زاویے برابر ہوتے ہیں۔\n• منصوبہ بنانا کہ باڑ یا دیوار سڑک سے کہاں ملے گی۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

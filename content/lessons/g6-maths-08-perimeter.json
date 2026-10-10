@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-perimeter",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Perimeter",
     "ur": "احاطہ"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.multiplication.facts"
@@ -346,6 +346,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How much wire do we need to fence a field?",
+          "ur": "کھیت کے گرد باڑ لگانے کے لیے کتنا تار چاہیے؟"
+        }
+      },
+      "text": {
+        "en": "A farmer who wants to fence his field must buy the right length of wire. Too little and the fence is not finished; too much and money is wasted. People needed a way to measure the distance all the way around a shape. We call it the perimeter: add up the lengths of all the sides. For a rectangle, 2 × (length + width).",
+        "ur": "جو کسان اپنے کھیت کے گرد باڑ لگانا چاہتا ہے اسے تار کی ٹھیک لمبائی خریدنی ہوتی ہے۔ کم ہو تو باڑ پوری نہیں ہوتی، زیادہ ہو تو پیسے ضائع ہوتے ہیں۔ لوگوں کو شکل کے گرد پورے فاصلے کو ناپنے کا طریقہ چاہیے تھا۔ اسے احاطہ کہتے ہیں: تمام اضلاع کی لمبائیاں جمع کریں۔ مستطیل کے لیے 2 × (لمبائی + چوڑائی)۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Fencing a field, a garden or a cricket ground.\n• Buying lace or a border for a dupatta or a tablecloth.\n• Putting a frame around a picture or a blackboard.\n• Running once round the school ground: how far is it?",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کھیت، باغیچے یا کرکٹ گراؤنڈ کے گرد باڑ لگانے میں۔\n• دوپٹے یا میز پوش کے لیے لیس یا کنارہ خریدنے میں۔\n• تصویر یا بلیک بورڈ کے گرد فریم لگانے میں۔\n• اسکول کے گراؤنڈ کا ایک چکر دوڑنے پر: کتنا فاصلہ بنا؟"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-area-of-rectangles",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Area of rectangles and squares",
     "ur": "مستطیل اور مربع کا رقبہ"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.measurement.perimeter"
@@ -404,6 +404,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two plots have the same fence. Do they have the same space?",
+          "ur": "دو پلاٹوں کی باڑ برابر ہے۔ کیا ان میں جگہ بھی برابر ہے؟"
+        }
+      },
+      "text": {
+        "en": "Land is bought, sold and farmed by how much surface it covers, not only how long its edge is. A long thin plot and a square plot can have the same fence but very different space inside. People needed a number for the surface itself. We count unit squares: for a rectangle, area = length × width, in square metres.",
+        "ur": "زمین اس لحاظ سے خریدی، بیچی اور کاشت کی جاتی ہے کہ وہ کتنی سطح گھیرتی ہے، صرف کنارے کی لمبائی سے نہیں۔ لمبا پتلا پلاٹ اور مربع پلاٹ ایک جیسی باڑ رکھ سکتے ہیں مگر اندر کی جگہ بہت مختلف ہوتی ہے۔ لوگوں کو خود سطح کے لیے ایک عدد چاہیے تھا۔ ہم اکائی مربعے گنتے ہیں: مستطیل کے لیے رقبہ = لمبائی × چوڑائی، مربع میٹر میں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• How many floor tiles cover a room.\n• How much paint a wall needs.\n• The size of a plot or a field before buying or sowing.\n• Cloth needed to cover a table or a charpai.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کمرے کے فرش پر کتنی ٹائلیں لگیں گی۔\n• دیوار کے رنگ کے لیے کتنا پینٹ چاہیے۔\n• خریدنے یا بیج بونے سے پہلے پلاٹ یا کھیت کا سائز۔\n• میز یا چارپائی ڈھانپنے کے لیے کتنا کپڑا چاہیے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

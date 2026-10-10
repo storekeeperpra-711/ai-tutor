@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-parallelogram-and-trapezium",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Area of a parallelogram and a trapezium",
     "ur": "متوازی الاضلاع اور ذوزنقہ کا رقبہ"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.measurement.area_triangle"
@@ -438,6 +438,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A plot has slanted sides. Can we still find its area?",
+          "ur": "ایک پلاٹ کے اضلاع ترچھے ہیں۔ کیا ہم پھر بھی اس کا رقبہ نکال سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Real plots, roofs and windows often have slanted sides, so they are not rectangles. The good news is that we can cut and move pieces. A parallelogram can be cut and moved into a rectangle: area = base × height. A trapezium is two triangles joined: area = ½ × (sum of the parallel sides) × height. Old tools solve the new shapes.",
+        "ur": "اصل پلاٹوں، چھتوں اور کھڑکیوں کے اضلاع اکثر ترچھے ہوتے ہیں، اس لیے وہ مستطیل نہیں ہوتے۔ اچھی بات یہ ہے کہ ہم ٹکڑے کاٹ کر ہٹا سکتے ہیں۔ متوازی الاضلاع کو کاٹ کر مستطیل بنایا جا سکتا ہے: رقبہ = قاعدہ × اونچائی۔ ذوزنقہ دو مثلثوں سے مل کر بنتا ہے: رقبہ = ½ × (متوازی اضلاع کا مجموعہ) × اونچائی۔ پرانے طریقے نئی شکلیں حل کر دیتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Land plots with slanted sides.\n• Sloping roofs and the side of a ramp.\n• Windows, tiles and bricks laid in slanted patterns.\n• A canal or a bucket whose sides lean outwards.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• ترچھے اضلاع والے زمین کے پلاٹ۔\n• ڈھلوان چھتیں اور ریمپ کا پہلو۔\n• کھڑکیاں، ٹائلیں اور ترچھے ڈیزائن میں لگی اینٹیں۔\n• نہر یا بالٹی جس کے پہلو باہر کو جھکے ہوں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

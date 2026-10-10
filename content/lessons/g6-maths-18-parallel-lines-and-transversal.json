@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-18-parallel-lines-and-transversal",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Parallel lines and transversals",
     "ur": "متوازی لکیریں اور قاطع"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.geometry.complementary_supplementary"
@@ -524,6 +524,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why do railway tracks never meet, even though they look like it?",
+          "ur": "ریل کی پٹڑیاں ملتی دکھائی دینے کے باوجود کبھی نہیں ملتیں، کیوں؟"
+        }
+      },
+      "text": {
+        "en": "Railway tracks, roads and the lines in a copybook stay the same distance apart: they are parallel. When another line cuts across them, like a road across two canals, it makes angles with a fixed pattern: some are equal and some add to 180°. So if you know one angle, you can find all the others without measuring. That makes building and drawing straight things much easier.",
+        "ur": "ریل کی پٹڑیاں، سڑکیں اور کاپی کی لکیریں ایک دوسرے سے برابر فاصلے پر رہتی ہیں: وہ متوازی ہیں۔ جب ان کو کوئی اور لکیر کاٹتی ہے، جیسے دو نہروں کو کاٹتی سڑک، تو ایسے زاویے بنتے ہیں جن کا پکا نمونہ ہے: کچھ برابر ہوتے ہیں اور کچھ کا مجموعہ 180° ہوتا ہے۔ تو ایک زاویہ معلوم ہو تو باقی سب ناپے بغیر مل جاتے ہیں۔ اس سے سیدھی چیزیں بنانا اور نقشہ بنانا آسان ہو جاتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Railway tracks, roads and canals crossed by a bridge.\n• Lines in a copybook and the strips of a window grill.\n• Setting out a field or a building site with straight rows.\n• Reading maps with streets that cut across each other.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• ریل کی پٹڑیاں، سڑکیں اور پل سے کٹنے والی نہریں۔\n• کاپی کی لکیریں اور کھڑکی کی گرل کی پٹیاں۔\n• کھیت یا تعمیراتی جگہ پر سیدھی قطاریں لگانے میں۔\n• ایسے نقشے پڑھنے میں جن میں گلیاں ایک دوسرے کو کاٹتی ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

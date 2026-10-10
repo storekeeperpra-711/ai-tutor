@@ -20,3 +20,5 @@ To change a lesson, edit its script and run it, then run the validator:
     python tools/validate_lessons.py
 
 Edit the script, not the JSON file, or the next run will undo the change. The last two lessons fill gaps found against the PCTB Grade 6 book (Sub-domain 8). The Urdu terms are still to be checked.
+
+Every lesson opens with two short "why" steps (`s0_why`: the need that led to the idea and what it solved, with Mithu's question; `s0_use`: where it helps in real life). Their texts are in `why.py`, and `write()` in `common.py` adds them through `content/sources/why_steps.py`. Edit `why.py`, then rerun the lesson script.
