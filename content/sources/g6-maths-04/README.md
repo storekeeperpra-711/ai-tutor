@@ -14,8 +14,12 @@ Scripts that write the Grade 6 Maths lessons of the Integers unit (`content/less
 | `exercise_2_1.py` | `g6-maths-04-exercise-2-1` | `maths.integers.ex_2_1` |
 | `exercise_2_2.py` | `g6-maths-04-exercise-2-2` | `maths.integers.ex_2_2` |
 | `chapter_2_test.py` | `g6-maths-04-chapter-2-test` | `maths.integers.chapter_2_test` |
+| `exercise_3_1.py` | `g6-maths-04-exercise-3-1` | `maths.integers.ex_3_1` |
+| `exercise_3_2.py` | `g6-maths-04-exercise-3-2` | `maths.integers.ex_3_2` |
+| `exercise_3_3.py` | `g6-maths-04-exercise-3-3` | `maths.simplify.ex_3_3` |
+| `chapter_3_test.py` | `g6-maths-04-chapter-3-test` | `maths.integers.chapter_3_test` |
 
-The `exercise_2_*.py` scripts write practice sets to use next to Exercises 2.1 and 2.2 of the PCTB Mathematics 6 book, and `chapter_2_test.py` writes a chapter test in the style of Review Exercise 2 (multiple choice, short questions, longer problems). The book may not be copied, so only the exercise number and the kinds of question come from it; every question, number and story is new. Each has its own skill with the unit's skills as prerequisites. These have no entry in `why.py`, so they get no why steps.
+The `exercise_2_*.py` scripts write practice sets to use next to Exercises 2.1 and 2.2 of the PCTB Mathematics 6 book, and `chapter_2_test.py` writes a chapter test in the style of Review Exercise 2 (multiple choice, short questions, longer problems). The book may not be copied, so only the exercise number and the kinds of question come from it; every question, number and story is new. Each has its own skill with the unit's skills as prerequisites. The same goes for chapter 3 (Laws of Integers): `exercise_3_1.py` to `exercise_3_3.py` go with Exercises 3.1 to 3.3 (adding and subtracting, multiplying and dividing, BODMAS) and `chapter_3_test.py` is the test for Review Exercise 3. Chapter 3 also holds the BODMAS lessons of g6-maths-13, so Exercise 3.3 has a `maths.simplify` skill. These have no entry in `why.py`, so they get no why steps.
 
 Every answer, and every common wrong answer (like ignoring the minus sign), is worked out in Python and checked with `assert`, so no number is typed by hand. Negative numbers are shown with a real minus sign (−3); the app accepts the keyboard minus too. The word-problems lesson ends with a five-question unit test, each question tagged with an earlier lesson's skill. Number-line steps use the native `number_line` sim from −10 to 10.
 
