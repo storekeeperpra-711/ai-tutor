@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-multiplying-and-dividing-integers",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Multiplying and dividing integers",
     "ur": "صحیح اعداد کی ضرب اور تقسیم"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.integers.add"
@@ -239,6 +239,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shop loses Rs 50 every day for 7 days. How much in all?",
+          "ur": "ایک دکان 7 دن تک روزانہ 50 روپے کا نقصان اٹھاتی ہے۔ کل کتنا؟"
+        }
+      },
+      "text": {
+        "en": "That is 7 groups of −50. People wanted multiplication and division to work for negative numbers too, with the same rules every time. The sign rules do this: same signs give a positive answer, different signs give a negative answer. So 7 × (−50) = −350, a loss of Rs 350. A shopkeeper and a scientist always get the same answer.",
+        "ur": "یہ −50 کے 7 گروہ ہیں۔ لوگ چاہتے تھے کہ ضرب اور تقسیم منفی اعداد کے لیے بھی کام کریں، ہر بار ایک ہی اصول سے۔ علامت کے اصول یہی کرتے ہیں: ایک جیسی علامتوں کا جواب مثبت، مختلف علامتوں کا جواب منفی۔ تو 7 × (−50) = −350، یعنی 350 روپے کا نقصان۔ دکان دار اور سائنس دان کو ہمیشہ ایک ہی جواب ملتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Money: a loss every day, or a monthly instalment you pay.\n• Temperature: it falls 3 degrees every hour for 4 hours.\n• Diving: a diver goes down 2 m every minute.\n• Sharing a debt: Rs 600 owed, shared equally by 3 friends.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• پیسے: روزانہ نقصان، یا ہر مہینے ادا کی جانے والی قسط۔\n• درجہ حرارت: ہر گھنٹے 3 ڈگری گرتا ہے، 4 گھنٹے تک۔\n• غوطہ خوری: غوطہ خور ہر منٹ 2 میٹر نیچے جاتا ہے۔\n• قرض بانٹنا: 600 روپے کا قرض، 3 دوست برابر بانٹتے ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

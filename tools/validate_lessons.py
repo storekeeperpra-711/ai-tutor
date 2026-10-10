@@ -132,6 +132,7 @@ def check_rules(lesson: dict, path: Path) -> list[str]:
             problems += [f"{where}/{step.get('id')}: figure {p}" for p in check_figure(step["figure"])]
 
     problems += check_voice(lesson)
+    problems += check_why_steps(lesson)
 
     # The AI server finds AI steps by id anywhere in the lesson.
     ai_ids = [s["id"] for _, s in all_steps(lesson) if s.get("type") in AI_STEPS]
@@ -322,6 +323,27 @@ LANGUAGES = ("en", "ur")
 MAX_LINE_SECONDS = 30
 WORDS_PER_SECOND = 2.5
 MOUTH_PER_SECOND = 20
+
+
+def check_why_steps(lesson: dict) -> list[str]:
+    """A lesson that opens with the "why" steps has them in order, first:
+    s0_why (Mithu asks the question) then s0_use, both plain explain steps."""
+    ids = [s["id"] for s in lesson["steps"]]
+    if "s0_why" not in ids and "s0_use" not in ids:
+        return []
+    if ids[:2] != ["s0_why", "s0_use"]:
+        return ["s0_why and s0_use must be the first two steps, in that order"]
+    problems = []
+    for step in lesson["steps"][:2]:
+        if step["type"] != "explain":
+            problems.append(f"{step['id']} must be an explain step")
+    if "character" not in lesson["steps"][0]:
+        problems.append("s0_why needs Mithu's question (character)")
+    if "character" in lesson["steps"][1]:
+        problems.append("s0_use is text only (every Mithu line is a voice recording to make)")
+    if lesson["version"] < 2:
+        problems.append("a lesson that gained the why steps must be version 2 or more, so saved places restart")
+    return problems
 
 
 def voice_file(lesson_id: str, step_id: str, lang: str) -> str:

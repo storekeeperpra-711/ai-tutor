@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-absolute-value",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Absolute value",
     "ur": "مطلق قیمت"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.integers.meaning"
@@ -234,6 +234,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two buses go 5 km, one east and one west. Did one go less?",
+          "ur": "دو بسیں 5 کلومیٹر چلیں، ایک مشرق، ایک مغرب۔ کیا کوئی کم چلی؟"
+        }
+      },
+      "text": {
+        "en": "Sometimes we care only about how far, not which way. A bus that goes 5 km east and a bus that goes 5 km west have travelled the same distance, but one is +5 and the other is −5. People needed a way to talk about the size of a number without its sign. That size is called the absolute value: |−5| = 5 and |5| = 5.",
+        "ur": "کبھی ہمیں صرف یہ جاننا ہوتا ہے کہ کتنا دور، یہ نہیں کہ کس طرف۔ 5 کلومیٹر مشرق جانے والی بس اور 5 کلومیٹر مغرب جانے والی بس نے برابر فاصلہ طے کیا، مگر ایک +5 ہے اور دوسری −5۔ لوگوں کو عدد کی مقدار بغیر اس کی علامت کے بیان کرنے کا طریقہ چاہیے تھا۔ اس مقدار کو مطلق قدر کہتے ہیں: |−5| = 5 اور |5| = 5۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Distance: your school is 300 m from home, whichever side you walk.\n• Measuring: a rope cut 2 cm too long or 2 cm too short has an error of 2 cm.\n• Temperature: how far a day is from freezing, hot or cold.\n• Money: the size of a profit or a loss.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• فاصلہ: آپ کا اسکول گھر سے 300 میٹر دور ہے، چاہے کسی بھی طرف چلیں۔\n• ناپ: رسی 2 سینٹی میٹر زیادہ کٹے یا 2 سینٹی میٹر کم، غلطی 2 سینٹی میٹر ہی ہے۔\n• درجہ حرارت: دن جمنے کے نقطے سے کتنا دور ہے، گرم ہو یا ٹھنڈا۔\n• پیسے: نفع یا نقصان کی مقدار۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

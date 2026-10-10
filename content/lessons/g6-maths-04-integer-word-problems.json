@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-integer-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Integer word problems",
     "ur": "صحیح اعداد کے عملی سوالات"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.integers.meaning"
@@ -486,6 +486,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Real problems come as stories, not as sums. How do we start?",
+          "ur": "اصل مسئلے کہانی کی شکل میں آتے ہیں، جمع تفریق کی شکل میں نہیں۔ ہم کہاں سے شروع کریں؟"
+        }
+      },
+      "text": {
+        "en": "Floors above and below the ground, hot and cold weather, money in and money out: integers were made to describe stories like these. The skill that matters is turning a story into a sum with + and − signs, solving it, and then saying the answer in words. That is how maths leaves the classroom and helps in real life.",
+        "ur": "زمین سے اوپر اور نیچے کی منزلیں، گرم اور ٹھنڈا موسم، آنے والے اور جانے والے پیسے: صحیح اعداد ایسی ہی کہانیاں بیان کرنے کے لیے بنے تھے۔ اصل ہنر یہ ہے کہ کہانی کو + اور − والی جمع تفریق میں بدلیں، اسے حل کریں، اور پھر جواب الفاظ میں بتائیں۔ یوں ریاضی کلاس سے نکل کر حقیقی زندگی میں کام آتی ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Bank statements and mobile wallet records.\n• Weather reports and travel to cold places.\n• Lift buttons in tall buildings, with floors below ground.\n• Shop accounts: what came in, what went out, what is left.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بینک اسٹیٹمنٹ اور موبائل والٹ کا ریکارڈ۔\n• موسم کی رپورٹ اور ٹھنڈی جگہوں کا سفر۔\n• اونچی عمارتوں کی لفٹ کے بٹن، جن میں زمین سے نیچے کی منزلیں بھی ہوتی ہیں۔\n• دکان کا حساب: کیا آیا، کیا گیا، کیا بچا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

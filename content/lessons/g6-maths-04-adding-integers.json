@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-adding-integers",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Adding integers",
     "ur": "صحیح اعداد کی جمع"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.integers.meaning"
@@ -547,6 +547,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A shopkeeper has Rs 300 and owes Rs 500. Is he rich or poor?",
+          "ur": "دکان دار کے پاس 300 روپے ہیں اور 500 روپے دینے ہیں۔ وہ امیر ہے یا غریب؟"
+        }
+      },
+      "text": {
+        "en": "To answer, he must add +300 and −500 together. People needed clear rules for adding numbers that go up and numbers that go down, so that everyone gets the same answer. These rules work every time, without counting every step: +300 + (−500) = −200. He still owes Rs 200.",
+        "ur": "جواب کے لیے اسے +300 اور −500 کو جمع کرنا ہوگا۔ لوگوں کو اوپر جانے والے اور نیچے جانے والے اعداد کو جمع کرنے کے صاف اصول چاہیے تھے تاکہ سب کو ایک ہی جواب ملے۔ یہ اصول ہر بار کام کرتے ہیں، ہر قدم گنے بغیر: +300 + (−500) = −200۔ اسے اب بھی 200 روپے دینے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Bank or mobile wallet: your balance after you put money in and take money out.\n• Temperature: it was −2 °C at night and rose by 9 degrees.\n• Lifts: you are in the basement at −1 and go up 4 floors.\n• Games: points won and points lost in a match.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بینک یا موبائل والٹ: رقم ڈالنے اور نکالنے کے بعد آپ کا بیلنس۔\n• درجہ حرارت: رات کو −2 ڈگری تھا اور 9 ڈگری بڑھ گیا۔\n• لفٹ: آپ تہہ خانے میں −1 پر ہیں اور 4 منزلیں اوپر جاتے ہیں۔\n• کھیل: میچ میں جیتے اور ہارے ہوئے پوائنٹس۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
