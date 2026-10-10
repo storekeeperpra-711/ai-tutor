@@ -1,0 +1,1657 @@
+{
+  "id": "g6-maths-01-exercise-5-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Tell empty, singleton, finite and infinite sets apart, give the cardinal number of a set, use the signs for subset, superset, proper subset, not a subset and equivalent, tell equal sets from equivalent sets, and list all the subsets of a set as proper or improper.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 5: Sets, Exercise 5.2"
+    }
+  ],
+  "skills": [
+    "maths.sets.ex_5_2"
+  ],
+  "title": {
+    "en": "Exercise 5.2 practice: kinds of sets and subsets",
+    "ur": "مشق 5.2 کی پریکٹس: سیٹ کی اقسام اور ذیلی سیٹ"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.meaning"
+    },
+    {
+      "skill": "maths.sets.kinds"
+    },
+    {
+      "skill": "maths.sets.subsets"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "zero_is_empty",
+      "description": "Thinks {0} is the empty set."
+    },
+    {
+      "id": "empty_or_one",
+      "description": "Mixes up the empty set (no elements) with a singleton set (one element)."
+    },
+    {
+      "id": "big_is_infinite",
+      "description": "Thinks a very large set that can still be counted is infinite."
+    },
+    {
+      "id": "count_off",
+      "description": "Counts the elements wrongly: includes 0, counts repeated letters twice, or gives the largest element instead of how many."
+    },
+    {
+      "id": "symbol_direction",
+      "description": "Uses a subset or proper subset sign the wrong way round."
+    },
+    {
+      "id": "equal_means_equivalent",
+      "description": "Thinks sets with the same number of elements are equal, or that equal sets must be written in the same order."
+    },
+    {
+      "id": "forgets_empty_self",
+      "description": "Leaves out the empty set or the set itself when listing or counting all the subsets."
+    },
+    {
+      "id": "proper_count",
+      "description": "Counts all the subsets as the proper subsets, or the empty set as the improper one."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.ex_5_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.ex_5_2": [
+      {
+        "id": "qb_infinite",
+        "type": "recall",
+        "step": {
+          "id": "qb_infinite",
+          "type": "choice",
+          "prompt": {
+            "en": "Which of these sets is infinite?",
+            "ur": "ان میں سے کون سا سیٹ لامحدود ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The odd numbers",
+                "ur": "طاق اعداد"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 1, 3, 5, 7, ... never ends.",
+                "ur": "جی ہاں! 1، 3، 5، 7، ... کبھی ختم نہیں ہوتے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The odd numbers less than 100",
+                "ur": "100 سے چھوٹے طاق اعداد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "It ends at 99, so it is finite.",
+                "ur": "یہ 99 پر ختم ہو جاتا ہے، اس لیے محدود ہے۔"
+              },
+              "misconception_id": "big_is_infinite"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The students of a big school",
+                "ur": "بڑے اسکول کے طلبہ"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Even a big school can be counted: finite.",
+                "ur": "بڑا اسکول بھی گنا جا سکتا ہے: محدود۔"
+              },
+              "misconception_id": "big_is_infinite"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_subsets",
+        "type": "apply",
+        "step": {
+          "id": "qb_subsets",
+          "type": "number",
+          "prompt": {
+            "en": "How many subsets does {m, n, p, q} have?",
+            "ur": "{m, n, p, q} کے کتنے ذیلی سیٹ ہیں؟"
+          },
+          "answer": 16,
+          "checker": "numeric",
+          "hint": {
+            "en": "Each element is in a subset or out of it: 2 × 2 × 2 × 2.",
+            "ur": "ہر رکن یا ذیلی سیٹ میں ہوتا ہے یا نہیں: 2 × 2 × 2 × 2"
+          },
+          "feedback_correct": {
+            "en": "Right! 2 × 2 × 2 × 2 = 16.",
+            "ur": "درست! 2 × 2 × 2 × 2 = 16"
+          },
+          "feedback_wrong": {
+            "en": "4 elements give 2⁴ = 16 subsets.",
+            "ur": "4 ارکان کے 2⁴ = 16 ذیلی سیٹ ہوتے ہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 15,
+              "feedback": {
+                "en": "That leaves out the set itself. All the subsets: 16.",
+                "ur": "اس میں خود سیٹ رہ گیا۔ تمام ذیلی سیٹ: 16"
+              },
+              "misconception_id": "proper_count"
+            },
+            {
+              "answer": 8,
+              "feedback": {
+                "en": "That is for 3 elements. With 4 elements double it: 16.",
+                "ur": "یہ 3 ارکان کے لیے ہے۔ 4 ارکان کے لیے دگنا کریں: 16"
+              },
+              "misconception_id": "forgets_empty_self"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Rafi says {a} and {b} are equal sets because each has one element. What went wrong?",
+            "ur": "رافع کہتا ہے {a} اور {b} برابر سیٹ ہیں کیونکہ ہر ایک کا ایک رکن ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "They are equivalent (same number of elements), but not equal, because a and b are different elements.",
+                "ur": "یہ ہم قوت ہیں (ارکان کی تعداد برابر)، مگر برابر نہیں کیونکہ a اور b مختلف ارکان ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Equal needs the same elements.",
+                "ur": "جی ہاں! برابر ہونے کے لیے ایک جیسے ارکان چاہییں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. Sets with one element each are equal.",
+                "ur": "کوئی غلطی نہیں۔ ایک ایک رکن والے سیٹ برابر ہوتے ہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The same number of elements only makes them equivalent.",
+                "ur": "ارکان کی تعداد برابر ہونے سے یہ صرف ہم قوت ہوتے ہیں۔"
+              },
+              "misconception_id": "equal_means_equivalent"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "They are not even equivalent.",
+                "ur": "یہ تو ہم قوت بھی نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Both have one element, so they are equivalent.",
+                "ur": "دونوں کا ایک ایک رکن ہے، اس لیے یہ ہم قوت ہیں۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_equal_equiv",
+      "front": {
+        "en": "Equal or equivalent sets?",
+        "ur": "برابر یا ہم قوت سیٹ؟"
+      },
+      "back": {
+        "en": "Equal: the same elements. Equivalent: the same number of elements.",
+        "ur": "برابر: ایک جیسے ارکان۔ ہم قوت: ارکان کی تعداد برابر۔"
+      }
+    },
+    {
+      "id": "f_subsets",
+      "front": {
+        "en": "How many subsets does a set with n elements have?",
+        "ur": "n ارکان والے سیٹ کے کتنے ذیلی سیٹ ہوتے ہیں؟"
+      },
+      "back": {
+        "en": "2ⁿ, counting { } and the set itself. The set itself is the only improper one.",
+        "ur": "2ⁿ، جن میں { } اور خود سیٹ شامل ہیں۔ خود سیٹ ہی واحد غیر حقیقی ہے۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_subsets_home",
+      "text": {
+        "en": "Take three different fruits (or coins) from your kitchen. Lay out every way of choosing some of them, including choosing none and choosing all. How many ways did you find? Check: it should be 8.",
+        "ur": "اپنے باورچی خانے سے تین مختلف پھل (یا سکے) لیں۔ ان میں سے کچھ چننے کے سب طریقے رکھ کر دکھائیں، جن میں کوئی نہ چننا اور سب چننا بھی شامل ہے۔ آپ کو کتنے طریقے ملے؟ جانچ: یہ 8 ہونے چاہییں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Empty set",
+      "ur": "خالی سیٹ"
+    },
+    {
+      "en": "Singleton set",
+      "ur": "اکائی سیٹ"
+    },
+    {
+      "en": "Finite set",
+      "ur": "محدود سیٹ"
+    },
+    {
+      "en": "Infinite set",
+      "ur": "لامحدود سیٹ"
+    },
+    {
+      "en": "Subset",
+      "ur": "ذیلی سیٹ"
+    },
+    {
+      "en": "Proper subset",
+      "ur": "حقیقی ذیلی سیٹ"
+    },
+    {
+      "en": "Improper subset",
+      "ur": "غیر حقیقی ذیلی سیٹ"
+    },
+    {
+      "en": "Equivalent sets",
+      "ur": "ہم قوت سیٹ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 5.2 is about kinds of sets and subsets. Ready?",
+          "ur": "مشق 5.2 سیٹ کی اقسام اور ذیلی سیٹ کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 5.2 of your maths book (PCTB Mathematics 6). Here you tell empty, singleton, finite and infinite sets apart, count elements, use the subset signs, compare sets, and list all the subsets of a set. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 5.2 کے ساتھ ہے۔ اس میں آپ خالی، اکائی، محدود اور لامحدود سیٹوں میں فرق کریں گے، ارکان گنیں گے، ذیلی سیٹ کی علامتیں استعمال کریں گے، سیٹوں کا موازنہ کریں گے اور کسی سیٹ کے تمام ذیلی سیٹ لکھیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_empty",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is the empty set?",
+        "ur": "ان میں سے کون سا خالی سیٹ ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The set {0}",
+            "ur": "سیٹ {0}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{0} has one element, the number 0. The empty set has none.",
+            "ur": "{0} کا ایک رکن ہے، عدد 0۔ خالی سیٹ کا کوئی رکن نہیں۔"
+          },
+          "misconception_id": "zero_is_empty"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The months of the year that have 28 or 29 days",
+            "ur": "سال کے وہ مہینے جن کے 28 یا 29 دن ہوں"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "February has 28 or 29 days. That is one element, so the set is {February}.",
+            "ur": "فروری کے 28 یا 29 دن ہوتے ہیں۔ یہ ایک رکن ہے، اس لیے سیٹ {فروری} ہے۔"
+          },
+          "misconception_id": "empty_or_one"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The months of the year that have 32 days",
+            "ur": "سال کے وہ مہینے جن کے 32 دن ہوں"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! No month has 32 days, so there are no elements.",
+            "ur": "جی ہاں! کسی مہینے کے 32 دن نہیں ہوتے، اس لیے کوئی رکن نہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The prime numbers between 20 and 30",
+            "ur": "20 اور 30 کے درمیان مفرد اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "23 and 29 are prime, so the set has two elements.",
+            "ur": "23 اور 29 مفرد ہیں، اس لیے سیٹ کے دو رکن ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2_singleton",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a singleton set (exactly one element)?",
+        "ur": "ان میں سے کون سا اکائی سیٹ ہے (بالکل ایک رکن)؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The prime numbers between 8 and 12",
+            "ur": "8 اور 12 کے درمیان مفرد اعداد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only 11 is prime between 8 and 12: {11}.",
+            "ur": "جی ہاں! 8 اور 12 کے درمیان صرف 11 مفرد ہے: {11}"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The prime numbers between 10 and 20",
+            "ur": "10 اور 20 کے درمیان مفرد اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "11, 13, 17 and 19 are all prime: four elements.",
+            "ur": "11، 13، 17 اور 19 سب مفرد ہیں: چار رکن۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The even numbers between 10 and 12",
+            "ur": "10 اور 12 کے درمیان جفت اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "11 is the only number between 10 and 12, and it is odd. The set is empty.",
+            "ur": "10 اور 12 کے درمیان صرف 11 ہے اور وہ طاق ہے۔ سیٹ خالی ہے۔"
+          },
+          "misconception_id": "empty_or_one"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The multiples of 7 less than 20",
+            "ur": "20 سے چھوٹے 7 کے اضعاف"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 and 14 are both multiples: two elements.",
+            "ur": "7 اور 14 دونوں اضعاف ہیں: دو رکن۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3_infinite",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these sets is infinite?",
+        "ur": "ان میں سے کون سا سیٹ لامحدود ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The days of a leap year",
+            "ur": "لیپ سال کے دن"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are 366 of them. That is many, but they can be counted: finite.",
+            "ur": "ان کی تعداد 366 ہے۔ یہ بہت ہیں مگر گنے جا سکتے ہیں: محدود۔"
+          },
+          "misconception_id": "big_is_infinite"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The multiples of 9",
+            "ur": "9 کے اضعاف"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 9, 18, 27, ... never ends.",
+            "ur": "جی ہاں! 9، 18، 27، ... کبھی ختم نہیں ہوتے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The whole numbers less than 1,000,000",
+            "ur": "1,000,000 سے چھوٹے مکمل اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It is a huge set, but it ends at 999,999, so it is finite.",
+            "ur": "یہ بہت بڑا سیٹ ہے مگر 999,999 پر ختم ہوتا ہے، اس لیے محدود ہے۔"
+          },
+          "misconception_id": "big_is_infinite"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The letters of the English alphabet",
+            "ur": "انگریزی حروفِ تہجی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are 26 letters: finite.",
+            "ur": "26 حروف ہیں: محدود۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4_cardinal",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Let A be the set of multiples of 6 less than 50. What is n(A), the number of elements?",
+        "ur": "فرض کریں A، 50 سے چھوٹے 6 کے اضعاف کا سیٹ ہے۔ n(A)، یعنی ارکان کی تعداد، کیا ہے؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "List them: 6, 12, 18 ... and stop before 50. Then count.",
+        "ur": "فہرست بنائیں: 6، 12، 18 ... اور 50 سے پہلے رک جائیں۔ پھر گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {6, 12, 18, 24, 30, 36, 42, 48}: n(A) = 8.",
+        "ur": "درست! {6, 12, 18, 24, 30, 36, 42, 48}: n(A) = 8"
+      },
+      "feedback_wrong": {
+        "en": "The multiples are 6, 12, 18, 24, 30, 36, 42, 48. Count them: 8.",
+        "ur": "اضعاف 6، 12، 18، 24، 30، 36، 42، 48 ہیں۔ انھیں گنیں: 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 48,
+          "feedback": {
+            "en": "48 is the biggest element. n(A) is how many elements there are: 8.",
+            "ur": "48 سب سے بڑا رکن ہے۔ n(A) ارکان کی تعداد ہے: 8"
+          },
+          "misconception_id": "count_off"
+        },
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That counts one too many. List them and count: 8.",
+            "ur": "یہ ایک زیادہ گنتا ہے۔ فہرست بنا کر گنیں: 8"
+          },
+          "misconception_id": "count_off"
+        }
+      ]
+    },
+    {
+      "id": "q5_letters",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "What is n(M), if M is the set of the letters of the word \"MATHEMATICS\"?",
+        "ur": "اگر M لفظ \"MATHEMATICS\" کے حروف کا سیٹ ہے تو n(M) کیا ہے؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "M, A and T each appear twice. A set writes each letter once.",
+        "ur": "M، A اور T دو دو بار آتے ہیں۔ سیٹ ہر حرف ایک بار لکھتا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! {M, A, T, H, E, I, C, S}: 8.",
+        "ur": "درست! {M, A, T, H, E, I, C, S}: 8"
+      },
+      "feedback_wrong": {
+        "en": "The word has 11 letters, but M, A, T repeat. The different letters are M, A, T, H, E, I, C, S: 8.",
+        "ur": "لفظ میں 11 حروف ہیں مگر M، A، T دہراتے ہیں۔ مختلف حروف M، A، T، H، E، I، C، S ہیں: 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "That counts every letter, repeats too. A set counts each letter once: 8.",
+            "ur": "یہ ہر حرف گنتا ہے، دہرائے ہوئے بھی۔ سیٹ ہر حرف ایک بار گنتا ہے: 8"
+          },
+          "misconception_id": "count_off"
+        }
+      ]
+    },
+    {
+      "id": "s_rules",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Compare sets by their elements. Subsets are sets inside a set.",
+          "ur": "سیٹوں کا موازنہ ان کے ارکان سے کریں۔ ذیلی سیٹ کسی سیٹ کے اندر کے سیٹ ہیں۔"
+        }
+      },
+      "text": {
+        "en": "The empty set { } has no elements, and a singleton set has exactly one. A finite set can be counted to the end; an infinite set never ends. n(A) is the number of elements of A. A ⊆ B means every element of A is in B, and B ⊇ A is the same thing read the other way. If A is a subset of B but not equal to B, A is a proper subset, written A ⊂ B. A ⊄ B means A is not a subset of B. Equal sets have exactly the same elements, in any order. Equivalent sets (A ↔ B) have the same number of elements. A set with n elements has 2 to the power n subsets: the empty set and the set itself are always among them. The set itself is the improper subset; all the others are proper.",
+        "ur": "خالی سیٹ { } کا کوئی رکن نہیں ہوتا اور اکائی سیٹ کا بالکل ایک رکن ہوتا ہے۔ محدود سیٹ آخر تک گنا جا سکتا ہے؛ لامحدود سیٹ کبھی ختم نہیں ہوتا۔ n(A) سیٹ A کے ارکان کی تعداد ہے۔ A ⊆ B کا مطلب ہے A کا ہر رکن B میں ہے، اور B ⊇ A وہی بات دوسری طرف سے پڑھی گئی ہے۔ اگر A، B کا ذیلی سیٹ ہو مگر B کے برابر نہ ہو تو A حقیقی ذیلی سیٹ ہے، جو A ⊂ B لکھا جاتا ہے۔ A ⊄ B کا مطلب ہے A، B کا ذیلی سیٹ نہیں۔ برابر سیٹوں کے ارکان بالکل ایک جیسے ہوتے ہیں، کسی بھی ترتیب میں۔ ہم قوت سیٹوں (A ↔ B) کے ارکان کی تعداد برابر ہوتی ہے۔ n ارکان والے سیٹ کے 2 کی طاقت n ذیلی سیٹ ہوتے ہیں: خالی سیٹ اور خود سیٹ ہمیشہ ان میں شامل ہوتے ہیں۔ خود سیٹ غیر حقیقی ذیلی سیٹ ہے؛ باقی سب حقیقی ہیں۔"
+      }
+    },
+    {
+      "id": "q6_proper",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A = {1, 3, 5} and B = {1, 2, 3, 4, 5}. Which statement is true?",
+        "ur": "A = {1, 3, 5} اور B = {1, 2, 3, 4, 5}۔ کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A ⊂ B",
+            "ur": "A ⊂ B"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Every element of A is in B, and B has more, so A is a proper subset of B.",
+            "ur": "جی ہاں! A کا ہر رکن B میں ہے اور B میں مزید ہیں، اس لیے A، B کا حقیقی ذیلی سیٹ ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "B ⊂ A",
+            "ur": "B ⊂ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "B has elements (2 and 4) that A does not have, so B is not inside A.",
+            "ur": "B کے رکن (2 اور 4) A میں نہیں، اس لیے B، A کے اندر نہیں۔"
+          },
+          "misconception_id": "symbol_direction"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A ⊄ B",
+            "ur": "A ⊄ B"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1, 3 and 5 are all in B, so A is a subset of B.",
+            "ur": "1، 3 اور 5 سب B میں ہیں، اس لیے A، B کا ذیلی سیٹ ہے۔"
+          },
+          "misconception_id": "symbol_direction"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "A ↔ B",
+            "ur": "A ↔ B"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A has 3 elements and B has 5, so they are not equivalent.",
+            "ur": "A کے 3 اور B کے 5 رکن ہیں، اس لیے یہ ہم قوت نہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 140.0,
+        "alt": {
+          "en": "Two ovals: A holds 1, 3 and 5; B holds 1, 2, 3, 4 and 5.",
+          "ur": "دو بیضوی شکلیں: A میں 1، 3 اور 5 ہیں؛ B میں 1، 2، 3، 4 اور 5 ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                125.0,
+                78.0
+              ],
+              [
+                124.2,
+                87.4
+              ],
+              [
+                122.0,
+                96.4
+              ],
+              [
+                118.3,
+                104.7
+              ],
+              [
+                113.3,
+                111.9
+              ],
+              [
+                107.3,
+                117.9
+              ],
+              [
+                100.4,
+                122.3
+              ],
+              [
+                93.0,
+                125.1
+              ],
+              [
+                85.2,
+                126.0
+              ],
+              [
+                77.4,
+                125.1
+              ],
+              [
+                70.0,
+                122.3
+              ],
+              [
+                63.1,
+                117.9
+              ],
+              [
+                57.1,
+                111.9
+              ],
+              [
+                52.1,
+                104.7
+              ],
+              [
+                48.4,
+                96.4
+              ],
+              [
+                46.2,
+                87.4
+              ],
+              [
+                45.4,
+                78.0
+              ],
+              [
+                46.2,
+                68.6
+              ],
+              [
+                48.4,
+                59.6
+              ],
+              [
+                52.1,
+                51.3
+              ],
+              [
+                57.1,
+                44.1
+              ],
+              [
+                63.1,
+                38.1
+              ],
+              [
+                70.0,
+                33.7
+              ],
+              [
+                77.4,
+                30.9
+              ],
+              [
+                85.2,
+                30.0
+              ],
+              [
+                93.0,
+                30.9
+              ],
+              [
+                100.4,
+                33.7
+              ],
+              [
+                107.3,
+                38.1
+              ],
+              [
+                113.3,
+                44.1
+              ],
+              [
+                118.3,
+                51.3
+              ],
+              [
+                122.0,
+                59.6
+              ],
+              [
+                124.2,
+                68.6
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              72.2,
+              67.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.2,
+              67.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              85.2,
+              89.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.8,
+              37.8
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                254.6,
+                78.0
+              ],
+              [
+                253.8,
+                87.4
+              ],
+              [
+                251.6,
+                96.4
+              ],
+              [
+                247.9,
+                104.7
+              ],
+              [
+                242.9,
+                111.9
+              ],
+              [
+                236.9,
+                117.9
+              ],
+              [
+                230.0,
+                122.3
+              ],
+              [
+                222.6,
+                125.1
+              ],
+              [
+                214.8,
+                126.0
+              ],
+              [
+                207.0,
+                125.1
+              ],
+              [
+                199.6,
+                122.3
+              ],
+              [
+                192.7,
+                117.9
+              ],
+              [
+                186.7,
+                111.9
+              ],
+              [
+                181.7,
+                104.7
+              ],
+              [
+                178.0,
+                96.4
+              ],
+              [
+                175.8,
+                87.4
+              ],
+              [
+                175.0,
+                78.0
+              ],
+              [
+                175.8,
+                68.6
+              ],
+              [
+                178.0,
+                59.6
+              ],
+              [
+                181.7,
+                51.3
+              ],
+              [
+                186.7,
+                44.1
+              ],
+              [
+                192.7,
+                38.1
+              ],
+              [
+                199.6,
+                33.7
+              ],
+              [
+                207.0,
+                30.9
+              ],
+              [
+                214.8,
+                30.0
+              ],
+              [
+                222.6,
+                30.9
+              ],
+              [
+                230.0,
+                33.7
+              ],
+              [
+                236.9,
+                38.1
+              ],
+              [
+                242.9,
+                44.1
+              ],
+              [
+                247.9,
+                51.3
+              ],
+              [
+                251.6,
+                59.6
+              ],
+              [
+                253.8,
+                68.6
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              201.8,
+              56.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              227.8,
+              56.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              201.8,
+              78.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              227.8,
+              78.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              214.8,
+              100.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              178.4,
+              37.8
+            ],
+            "text": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_superset",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which sign makes this true? {2, 4, 6, 8} __ {4, 8}",
+        "ur": "کون سی علامت اسے درست بناتی ہے؟ {2, 4, 6, 8} __ {4, 8}"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "⊆",
+            "ur": "⊆"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That says the left set is inside {4, 8}. 2 and 6 are not in {4, 8}.",
+            "ur": "یہ کہتا ہے بائیں سیٹ {4, 8} کے اندر ہے۔ 2 اور 6، {4, 8} میں نہیں۔"
+          },
+          "misconception_id": "symbol_direction"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "=",
+            "ur": "="
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The sets have different elements, so they are not equal.",
+            "ur": "سیٹوں کے ارکان مختلف ہیں، اس لیے یہ برابر نہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "↔",
+            "ur": "↔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The sets have 4 and 2 elements, so they are not equivalent.",
+            "ur": "سیٹوں کے 4 اور 2 رکن ہیں، اس لیے یہ ہم قوت نہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "⊇",
+            "ur": "⊇"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! {2, 4, 6, 8} contains every element of {4, 8}, so it is a superset.",
+            "ur": "جی ہاں! {2, 4, 6, 8} میں {4, 8} کا ہر رکن ہے، اس لیے یہ فوقی سیٹ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8_equal_equivalent",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "P = {a, b, c} and Q = {1, 2, 3}. Which statement is true?",
+        "ur": "P = {a, b, c} اور Q = {1, 2, 3}۔ کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "They are equivalent but not equal.",
+            "ur": "یہ ہم قوت ہیں مگر برابر نہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Both have 3 elements, but the elements are different.",
+            "ur": "جی ہاں! دونوں کے 3 رکن ہیں مگر ارکان مختلف ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "They are equal, because both have 3 elements.",
+            "ur": "یہ برابر ہیں، کیونکہ دونوں کے 3 رکن ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Equal sets need the same elements, not just the same number of them.",
+            "ur": "برابر سیٹوں کے ارکان ایک جیسے ہونا ضروری ہے، صرف تعداد نہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "They are neither equal nor equivalent.",
+            "ur": "یہ نہ برابر ہیں نہ ہم قوت۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "They have the same number of elements, so they are equivalent.",
+            "ur": "ان کے ارکان کی تعداد برابر ہے، اس لیے یہ ہم قوت ہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "They are equal and equivalent.",
+            "ur": "یہ برابر اور ہم قوت ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Their elements differ (letters and numbers), so they are not equal.",
+            "ur": "ان کے ارکان مختلف ہیں (حروف اور اعداد)، اس لیے یہ برابر نہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        }
+      ]
+    },
+    {
+      "id": "q9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hira says {1, 2, 3} and {3, 2, 1} are different sets because the order is different. What went wrong?",
+        "ur": "ہیرا کہتی ہے {1, 2, 3} اور {3, 2, 1} مختلف سیٹ ہیں کیونکہ ترتیب مختلف ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Order does not matter in a set. Both have the same elements, so they are equal.",
+            "ur": "سیٹ میں ترتیب سے فرق نہیں پڑتا۔ دونوں کے ارکان ایک جیسے ہیں، اس لیے یہ برابر ہیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Same elements means the same set.",
+            "ur": "جی ہاں! ایک جیسے ارکان کا مطلب ایک ہی سیٹ۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. Different order makes a different set.",
+            "ur": "کوئی غلطی نہیں۔ مختلف ترتیب سے مختلف سیٹ بنتا ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A set is only about which elements are in it, not the order.",
+            "ur": "سیٹ صرف اس بات سے ہے کہ اس میں کون سے ارکان ہیں، ترتیب سے نہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "They are equivalent but not equal.",
+            "ur": "یہ ہم قوت ہیں مگر برابر نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "They are equivalent, but they are also equal, because the elements are the same.",
+            "ur": "یہ ہم قوت ہیں، مگر برابر بھی ہیں کیونکہ ارکان ایک جیسے ہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        }
+      ]
+    },
+    {
+      "id": "q10_subsets_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many subsets does the set {a, b, c} have, counting the empty set and the set itself?",
+        "ur": "سیٹ {a, b, c} کے کتنے ذیلی سیٹ ہیں، خالی سیٹ اور خود سیٹ کو ملا کر؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "List them by size: none, one element, two elements, all three.",
+        "ur": "سائز کے لحاظ سے لکھیں: کوئی نہیں، ایک رکن، دو رکن، تینوں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! { }, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, {a, b, c}: 8.",
+        "ur": "درست! { }، {a}، {b}، {c}، {a, b}، {a, c}، {b, c}، {a, b, c}: 8"
+      },
+      "feedback_wrong": {
+        "en": "A set with 3 elements has 2 × 2 × 2 = 8 subsets.",
+        "ur": "3 ارکان والے سیٹ کے 2 × 2 × 2 = 8 ذیلی سیٹ ہوتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "Count the empty set and the set itself too: 8.",
+            "ur": "خالی سیٹ اور خود سیٹ کو بھی گنیں: 8"
+          },
+          "misconception_id": "forgets_empty_self"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "That is the number of proper subsets. All the subsets include the set itself: 8.",
+            "ur": "یہ حقیقی ذیلی سیٹ کی تعداد ہے۔ تمام ذیلی سیٹ میں خود سیٹ بھی شامل ہے: 8"
+          },
+          "misconception_id": "proper_count"
+        }
+      ]
+    },
+    {
+      "id": "q11_list_subsets",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which list shows all the subsets of {5, 7}?",
+        "ur": "کون سی فہرست {5, 7} کے تمام ذیلی سیٹ دکھاتی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "{5}, {7}, {5, 7}",
+            "ur": "{5}، {7}، {5, 7}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The empty set { } is a subset of every set. Add it: 4 subsets.",
+            "ur": "خالی سیٹ { } ہر سیٹ کا ذیلی سیٹ ہے۔ اسے شامل کریں: 4 ذیلی سیٹ۔"
+          },
+          "misconception_id": "forgets_empty_self"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "{ }, {5}, {7}, {5, 7}",
+            "ur": "{ }، {5}، {7}، {5, 7}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Four subsets: none, each one alone, and both.",
+            "ur": "جی ہاں! چار ذیلی سیٹ: کوئی نہیں، ہر ایک اکیلا، اور دونوں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "{ }, {5}, {7}",
+            "ur": "{ }، {5}، {7}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The set itself, {5, 7}, is also a subset. Add it.",
+            "ur": "خود سیٹ {5, 7} بھی ذیلی سیٹ ہے۔ اسے شامل کریں۔"
+          },
+          "misconception_id": "forgets_empty_self"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "{ }, {5}, {7}, {5, 7}, {7, 5}",
+            "ur": "{ }، {5}، {7}، {5, 7}، {7, 5}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{5, 7} and {7, 5} are the same set. List it once.",
+            "ur": "{5, 7} اور {7, 5} ایک ہی سیٹ ہیں۔ اسے ایک بار لکھیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 96.0,
+        "alt": {
+          "en": "An oval named S holding 5 and 7.",
+          "ur": "بیضوی شکل S جس میں 5 اور 7 ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                189.8,
+                56.0
+              ],
+              [
+                189.0,
+                61.1
+              ],
+              [
+                186.8,
+                65.9
+              ],
+              [
+                183.1,
+                70.4
+              ],
+              [
+                178.1,
+                74.4
+              ],
+              [
+                172.1,
+                77.6
+              ],
+              [
+                165.2,
+                80.0
+              ],
+              [
+                157.8,
+                81.5
+              ],
+              [
+                150.0,
+                82.0
+              ],
+              [
+                142.2,
+                81.5
+              ],
+              [
+                134.8,
+                80.0
+              ],
+              [
+                127.9,
+                77.6
+              ],
+              [
+                121.9,
+                74.4
+              ],
+              [
+                116.9,
+                70.4
+              ],
+              [
+                113.2,
+                65.9
+              ],
+              [
+                111.0,
+                61.1
+              ],
+              [
+                110.2,
+                56.0
+              ],
+              [
+                111.0,
+                50.9
+              ],
+              [
+                113.2,
+                46.1
+              ],
+              [
+                116.9,
+                41.6
+              ],
+              [
+                121.9,
+                37.6
+              ],
+              [
+                127.9,
+                34.4
+              ],
+              [
+                134.8,
+                32.0
+              ],
+              [
+                142.2,
+                30.5
+              ],
+              [
+                150.0,
+                30.0
+              ],
+              [
+                157.8,
+                30.5
+              ],
+              [
+                165.2,
+                32.0
+              ],
+              [
+                172.1,
+                34.4
+              ],
+              [
+                178.1,
+                37.6
+              ],
+              [
+                183.1,
+                41.6
+              ],
+              [
+                186.8,
+                46.1
+              ],
+              [
+                189.0,
+                50.9
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              137.0,
+              56.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              163.0,
+              56.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              113.6,
+              31.4
+            ],
+            "text": "S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q12_proper_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many proper subsets does {w, x, y, z} have?",
+        "ur": "{w, x, y, z} کے کتنے حقیقی ذیلی سیٹ ہیں؟"
+      },
+      "answer": 15,
+      "checker": "numeric",
+      "hint": {
+        "en": "All subsets: 2 × 2 × 2 × 2. A proper subset is any subset except the set itself.",
+        "ur": "تمام ذیلی سیٹ: 2 × 2 × 2 × 2۔ حقیقی ذیلی سیٹ خود سیٹ کے علاوہ ہر ذیلی سیٹ ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 16 subsets, minus the set itself: 15.",
+        "ur": "درست! 16 ذیلی سیٹ، منفی خود سیٹ: 15"
+      },
+      "feedback_wrong": {
+        "en": "4 elements give 2 × 2 × 2 × 2 = 16 subsets. Take away the improper one, the set itself: 15.",
+        "ur": "4 ارکان کے 2 × 2 × 2 × 2 = 16 ذیلی سیٹ ہوتے ہیں۔ غیر حقیقی یعنی خود سیٹ نکال دیں: 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That is all the subsets. The set itself is not a proper subset: 15.",
+            "ur": "یہ تمام ذیلی سیٹ ہیں۔ خود سیٹ حقیقی ذیلی سیٹ نہیں: 15"
+          },
+          "misconception_id": "proper_count"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "That also takes away the empty set. The empty set is a proper subset, so only remove the set itself: 15.",
+            "ur": "اس میں خالی سیٹ بھی نکل گیا۔ خالی سیٹ حقیقی ذیلی سیٹ ہے، اس لیے صرف خود سیٹ نکالیں: 15"
+          },
+          "misconception_id": "proper_count"
+        }
+      ]
+    },
+    {
+      "id": "q13_improper",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which subset of {1, 2, 3} is its improper subset?",
+        "ur": "{1, 2, 3} کا غیر حقیقی ذیلی سیٹ کون سا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "{ }",
+            "ur": "{ }"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The empty set is a proper subset. Only the set itself is improper.",
+            "ur": "خالی سیٹ حقیقی ذیلی سیٹ ہے۔ صرف خود سیٹ غیر حقیقی ہے۔"
+          },
+          "misconception_id": "proper_count"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "{1, 2}",
+            "ur": "{1, 2}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{1, 2} leaves out 3, so it is a proper subset.",
+            "ur": "{1, 2} میں 3 نہیں، اس لیے یہ حقیقی ذیلی سیٹ ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "{1, 2, 3}",
+            "ur": "{1, 2, 3}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The set itself is the only improper subset.",
+            "ur": "جی ہاں! خود سیٹ ہی واحد غیر حقیقی ذیلی سیٹ ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "{3}",
+            "ur": "{3}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{3} is smaller than the set, so it is a proper subset.",
+            "ur": "{3} سیٹ سے چھوٹا ہے، اس لیے یہ حقیقی ذیلی سیٹ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You know your kinds of sets and subsets.",
+          "ur": "شاباش! آپ سیٹ کی اقسام اور ذیلی سیٹ جانتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "The empty set has no elements ({0} has one). A singleton has one element. A finite set ends; an infinite set does not, and a big set that ends is still finite. A set with n elements has 2ⁿ subsets, including { } and the set itself; the set itself is the improper subset and all the others are proper. Equal sets have the same elements; equivalent sets only have the same number of them.",
+        "ur": "خالی سیٹ کا کوئی رکن نہیں ({0} کا ایک رکن ہے)۔ اکائی سیٹ کا ایک رکن ہوتا ہے۔ محدود سیٹ ختم ہو جاتا ہے؛ لامحدود نہیں ہوتا، اور بڑا سیٹ جو ختم ہو جائے پھر بھی محدود ہے۔ n ارکان والے سیٹ کے 2ⁿ ذیلی سیٹ ہوتے ہیں، جن میں { } اور خود سیٹ بھی ہیں؛ خود سیٹ غیر حقیقی ذیلی سیٹ ہے اور باقی سب حقیقی۔ برابر سیٹوں کے ارکان ایک جیسے ہوتے ہیں؛ ہم قوت سیٹوں کے ارکان کی صرف تعداد برابر ہوتی ہے۔"
+      },
+      "points": [
+        {
+          "en": "To list subsets, go by size: none, one, two, ... all.",
+          "ur": "ذیلی سیٹ لکھنے کے لیے سائز کے لحاظ سے چلیں: کوئی نہیں، ایک، دو، ... سب۔"
+        },
+        {
+          "en": "Proper subsets = all subsets − 1.",
+          "ur": "حقیقی ذیلی سیٹ = تمام ذیلی سیٹ − 1"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_cardinal",
+      "type": "recall",
+      "step": {
+        "id": "r_cardinal",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements does the set of the odd numbers less than 15 have?",
+          "ur": "15 سے چھوٹے طاق اعداد کے سیٹ کے کتنے ارکان ہیں؟"
+        },
+        "answer": 7,
+        "checker": "numeric",
+        "hint": {
+          "en": "List 1, 3, 5 ... and stop before 15.",
+          "ur": "1، 3، 5 ... لکھیں اور 15 سے پہلے رک جائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 1, 3, 5, 7, 9, 11, 13: 7.",
+          "ur": "درست! 1، 3، 5، 7، 9، 11، 13: 7"
+        },
+        "feedback_wrong": {
+          "en": "1, 3, 5, 7, 9, 11, 13 are 7 numbers.",
+          "ur": "1، 3، 5، 7، 9، 11، 13 یعنی 7 اعداد۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "15 is not less than 15. Count to 13: 7.",
+              "ur": "15، 15 سے چھوٹا نہیں۔ 13 تک گنیں: 7"
+            },
+            "misconception_id": "count_off"
+          }
+        ]
+      },
+      "skill": "maths.sets.ex_5_2"
+    },
+    {
+      "id": "r_proper",
+      "type": "apply",
+      "step": {
+        "id": "r_proper",
+        "type": "number",
+        "prompt": {
+          "en": "How many proper subsets does {1, 2} have?",
+          "ur": "{1, 2} کے کتنے حقیقی ذیلی سیٹ ہیں؟"
+        },
+        "answer": 3,
+        "checker": "numeric",
+        "hint": {
+          "en": "The subsets are { }, {1}, {2}, {1, 2}. Which is improper?",
+          "ur": "ذیلی سیٹ { }، {1}، {2}، {1, 2} ہیں۔ غیر حقیقی کون سا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! { }, {1} and {2}: 3.",
+          "ur": "درست! { }، {1} اور {2}: 3"
+        },
+        "feedback_wrong": {
+          "en": "4 subsets, minus the set itself: 3.",
+          "ur": "4 ذیلی سیٹ، منفی خود سیٹ: 3"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That is all the subsets. Take away the set itself: 3.",
+              "ur": "یہ تمام ذیلی سیٹ ہیں۔ خود سیٹ نکال دیں: 3"
+            },
+            "misconception_id": "proper_count"
+          }
+        ]
+      },
+      "skill": "maths.sets.ex_5_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 5.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the empty set and the singleton set (q1, q2), finite and infinite sets (q3), cardinal numbers (q4, q5), the signs ⊂, ⊇ and ↔ (q6, q7), equal and equivalent sets (q8, q9), listing and counting subsets (q10, q11, q12) and the improper subset (q13).",
+    "Each wrong answer is a real mistake: {0} taken as empty, an empty set mixed up with a singleton, a big set taken as infinite, 0 or repeated letters counted, a sign used the wrong way, equal mixed up with equivalent, and the empty set or the set itself left out.",
+    "Urdu terms to check: اکائی سیٹ (singleton set), فوقی سیٹ (superset), غیر حقیقی ذیلی سیٹ (improper subset), ہم قوت (equivalent), ارکان کی تعداد (cardinal number).",
+    "The numbers were worked out in content/sources/g6-maths-01/exercise_5_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

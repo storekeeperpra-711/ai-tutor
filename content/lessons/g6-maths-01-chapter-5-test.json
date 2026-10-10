@@ -1,0 +1,1665 @@
+{
+  "id": "g6-maths-01-chapter-5-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 5: well-defined sets, the signs for belongs to and does not belong to, tabular and descriptive form, empty, singleton, finite and infinite sets, cardinal numbers, subsets, equal and equivalent sets, and Venn diagrams.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 5: Sets, Review Exercise 5"
+    }
+  ],
+  "skills": [
+    "maths.sets.chapter_5_test"
+  ],
+  "title": {
+    "en": "Chapter 5 test: Sets",
+    "ur": "باب 5 کا ٹیسٹ: سیٹ"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.sets.meaning"
+    },
+    {
+      "skill": "maths.sets.kinds"
+    },
+    {
+      "skill": "maths.sets.subsets"
+    },
+    {
+      "skill": "maths.sets.union_intersection"
+    },
+    {
+      "skill": "maths.sets.word_problems"
+    },
+    {
+      "skill": "maths.sets.universal_venn"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "opinion_is_set",
+      "description": "Thinks a collection decided by opinion (tasty, famous, kind) is a set."
+    },
+    {
+      "id": "sign_swapped",
+      "description": "Mixes up the signs for belongs to and does not belong to, or reads them the wrong way round."
+    },
+    {
+      "id": "repeated_element",
+      "description": "Counts or writes a repeated letter more than once."
+    },
+    {
+      "id": "wrong_list",
+      "description": "Lists numbers that do not fit the rule, or leaves some out."
+    },
+    {
+      "id": "empty_or_one",
+      "description": "Mixes up the empty set with a singleton set, or takes {0} as empty."
+    },
+    {
+      "id": "forgets_empty_self",
+      "description": "Leaves out the empty set or the set itself when counting the subsets."
+    },
+    {
+      "id": "proper_count",
+      "description": "Counts all the subsets as the proper subsets."
+    },
+    {
+      "id": "equal_means_equivalent",
+      "description": "Thinks sets with the same number of elements are equal."
+    },
+    {
+      "id": "subset_apart",
+      "description": "Reads or draws a subset the wrong way round, or apart from its bigger set."
+    },
+    {
+      "id": "inside_count",
+      "description": "Gives the number inside the circles when the number outside is asked, or the other way round."
+    },
+    {
+      "id": "counts_universal",
+      "description": "Gives the number of elements of U instead of the number asked for."
+    },
+    {
+      "id": "stops_early",
+      "description": "Finds a middle result but does not answer the question asked."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.sets.chapter_5_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.sets.chapter_5_test": [
+      {
+        "id": "qb_exam_set",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_set",
+          "type": "choice",
+          "prompt": {
+            "en": "Which of these is a set (well defined)?",
+            "ur": "ان میں سے کون سا سیٹ ہے (واضح طور پر بیان کردہ)؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The best months of the year",
+                "ur": "سال کے سب سے اچھے مہینے"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "\"Best\" is an opinion, so it is not a set.",
+                "ur": "\"سب سے اچھے\" رائے ہے، اس لیے یہ سیٹ نہیں۔"
+              },
+              "misconception_id": "opinion_is_set"
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The months of the year",
+                "ur": "سال کے مہینے"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Correct: there are exactly twelve, and everyone agrees.",
+                "ur": "درست: ٹھیک بارہ ہیں اور سب متفق ہیں۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The warm days of a year",
+                "ur": "سال کے گرم دن"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "How warm is warm? There is no fixed rule, so it is not a set.",
+                "ur": "کتنا گرم گرم ہوتا ہے؟ کوئی مقررہ اصول نہیں، اس لیے یہ سیٹ نہیں۔"
+              },
+              "misconception_id": "opinion_is_set"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_count",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_count",
+          "type": "number",
+          "prompt": {
+            "en": "How many elements are in the set of the letters of the word \"BOOK\"?",
+            "ur": "لفظ \"BOOK\" کے حروف کے سیٹ میں کتنے ارکان ہیں؟"
+          },
+          "answer": 3,
+          "checker": "numeric",
+          "hint": {
+            "en": "O appears twice. Write it once.",
+            "ur": "O دو بار آتا ہے۔ اسے ایک بار لکھیں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: {B, O, K}: 3.",
+            "ur": "درست: {B, O, K}: 3"
+          },
+          "feedback_wrong": {
+            "en": "The word has 4 letters but O repeats, so the set has 3 elements.",
+            "ur": "لفظ میں 4 حروف ہیں مگر O دہراتا ہے، اس لیے سیٹ کے 3 ارکان ہیں۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "That counts O twice. Count it once: 3.",
+                "ur": "یہ O کو دو بار گنتا ہے۔ ایک بار گنیں: 3"
+              },
+              "misconception_id": "repeated_element"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_subsets",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_subsets",
+          "type": "number",
+          "prompt": {
+            "en": "How many subsets does a set with 5 elements have?",
+            "ur": "5 ارکان والے سیٹ کے کتنے ذیلی سیٹ ہوتے ہیں؟"
+          },
+          "answer": 32,
+          "checker": "numeric",
+          "hint": {
+            "en": "Each element doubles the number of subsets: 2 × 2 × 2 × 2 × 2.",
+            "ur": "ہر رکن ذیلی سیٹ کی تعداد دگنی کر دیتا ہے: 2 × 2 × 2 × 2 × 2"
+          },
+          "feedback_correct": {
+            "en": "Correct: 2⁵ = 32.",
+            "ur": "درست: 2⁵ = 32"
+          },
+          "feedback_wrong": {
+            "en": "2 × 2 × 2 × 2 × 2 = 32 subsets.",
+            "ur": "2 × 2 × 2 × 2 × 2 = 32 ذیلی سیٹ۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 16,
+              "feedback": {
+                "en": "That is for 4 elements. One more element doubles it: 32.",
+                "ur": "یہ 4 ارکان کے لیے ہے۔ ایک اور رکن اسے دگنا کر دیتا ہے: 32"
+              },
+              "misconception_id": "forgets_empty_self"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 5 in your maths book in your notebook, setting out the working the way this test's answers do. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 5 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Review exercise",
+      "ur": "اعادی مشق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 5 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook). The questions are new, not the book's.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 5 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوال (پورا کام اپنی کاپی میں)۔ سوال نئے ہیں، کتاب والے نہیں۔"
+      }
+    },
+    {
+      "id": "m1_set",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of these collections is a set?",
+        "ur": "کثیر انتخابی: ان مجموعوں میں سے کون سا سیٹ ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The famous cricketers of Pakistan",
+            "ur": "پاکستان کے مشہور کرکٹ کھلاڑی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "\"Famous\" is an opinion, so it is not a set.",
+            "ur": "\"مشہور\" رائے ہے، اس لیے یہ سیٹ نہیں۔"
+          },
+          "misconception_id": "opinion_is_set"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The tastiest dishes",
+            "ur": "سب سے مزے دار کھانے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "\"Tastiest\" is an opinion, so it is not a set.",
+            "ur": "\"سب سے مزے دار\" رائے ہے، اس لیے یہ سیٹ نہیں۔"
+          },
+          "misconception_id": "opinion_is_set"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The four provinces of Pakistan",
+            "ur": "پاکستان کے چار صوبے"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: it is well defined, and everyone agrees on the members.",
+            "ur": "درست: یہ واضح طور پر بیان کردہ ہے اور ارکان پر سب متفق ہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The kind teachers of a school",
+            "ur": "اسکول کے مہربان اساتذہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "\"Kind\" has no fixed rule, so it is not a set.",
+            "ur": "\"مہربان\" کا کوئی مقررہ اصول نہیں، اس لیے یہ سیٹ نہیں۔"
+          },
+          "misconception_id": "opinion_is_set"
+        }
+      ]
+    },
+    {
+      "id": "m2_belongs",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: S = {10, 20, 30, 40}. Which statement is true?",
+        "ur": "کثیر انتخابی: S = {10, 20, 30, 40}۔ کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "20 ∉ S",
+            "ur": "20 ∉ S"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "20 is listed in S, so 20 ∈ S.",
+            "ur": "20 سیٹ S میں لکھا ہے، اس لیے 20 ∈ S۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "25 ∉ S",
+            "ur": "25 ∉ S"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 25 is not listed in S.",
+            "ur": "درست: 25 سیٹ S میں نہیں لکھا۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "25 ∈ S",
+            "ur": "25 ∈ S"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "25 is not listed in S, so 25 ∉ S.",
+            "ur": "25 سیٹ S میں نہیں لکھا، اس لیے 25 ∉ S۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "40 ∉ S",
+            "ur": "40 ∉ S"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "40 is the last element of S, so 40 ∈ S.",
+            "ur": "40، S کا آخری رکن ہے، اس لیے 40 ∈ S۔"
+          },
+          "misconception_id": "sign_swapped"
+        }
+      ]
+    },
+    {
+      "id": "m3_tabular",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The tabular form of the set of prime numbers between 20 and 40 is:",
+        "ur": "کثیر انتخابی: 20 اور 40 کے درمیان مفرد اعداد کے سیٹ کی جدولی شکل ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "{23, 29, 31, 37}",
+            "ur": "{23, 29, 31, 37}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 23, 29, 31 and 37 are the primes between 20 and 40.",
+            "ur": "درست: 23، 29، 31 اور 37، 20 اور 40 کے درمیان مفرد اعداد ہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "{21, 23, 29, 31, 37}",
+            "ur": "{21, 23, 29, 31, 37}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "21 = 3 × 7 is not prime.",
+            "ur": "21 = 3 × 7 مفرد نہیں۔"
+          },
+          "misconception_id": "wrong_list"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "{23, 29, 31, 37, 41}",
+            "ur": "{23, 29, 31, 37, 41}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "41 is more than 40. Between 20 and 40 leaves it out.",
+            "ur": "41، 40 سے بڑا ہے۔ 20 اور 40 کے درمیان میں یہ شامل نہیں۔"
+          },
+          "misconception_id": "wrong_list"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "{23, 29, 31}",
+            "ur": "{23, 29, 31}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That leaves out 37, which is prime.",
+            "ur": "اس میں 37 رہ گیا جو مفرد ہے۔"
+          },
+          "misconception_id": "wrong_list"
+        }
+      ]
+    },
+    {
+      "id": "m4_cardinal",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: If A is the set of the letters of the word \"BANANA\", then n(A) is:",
+        "ur": "کثیر انتخابی: اگر A لفظ \"BANANA\" کے حروف کا سیٹ ہے تو n(A) ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That counts every letter. A set writes each letter once.",
+            "ur": "یہ ہر حرف گنتا ہے۔ سیٹ ہر حرف ایک بار لکھتا ہے۔"
+          },
+          "misconception_id": "repeated_element"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "2",
+            "ur": "2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A and N are two letters, but B is also in the word.",
+            "ur": "A اور N دو حروف ہیں مگر B بھی لفظ میں ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "4",
+            "ur": "4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are only three different letters: B, A, N.",
+            "ur": "صرف تین مختلف حروف ہیں: B، A، N"
+          },
+          "misconception_id": "repeated_element"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: A = {B, A, N}.",
+            "ur": "درست: A = {B, A, N}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_empty",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of these is the empty set?",
+        "ur": "کثیر انتخابی: ان میں سے کون سا خالی سیٹ ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "The set {0}",
+            "ur": "سیٹ {0}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{0} has one element, 0. The empty set has none.",
+            "ur": "{0} کا ایک رکن ہے، 0۔ خالی سیٹ کا کوئی رکن نہیں۔"
+          },
+          "misconception_id": "empty_or_one"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The even numbers between 7 and 9",
+            "ur": "7 اور 9 کے درمیان جفت اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "8 is even and between 7 and 9. That is one element: {8}.",
+            "ur": "8 جفت ہے اور 7 اور 9 کے درمیان ہے۔ یہ ایک رکن ہے: {8}"
+          },
+          "misconception_id": "empty_or_one"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "The natural numbers between 7 and 8",
+            "ur": "7 اور 8 کے درمیان قدرتی اعداد"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: there is no whole number between 7 and 8.",
+            "ur": "درست: 7 اور 8 کے درمیان کوئی مکمل عدد نہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "The prime numbers between 7 and 12",
+            "ur": "7 اور 12 کے درمیان مفرد اعداد"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "11 is prime. That is one element: {11}.",
+            "ur": "11 مفرد ہے۔ یہ ایک رکن ہے: {11}"
+          },
+          "misconception_id": "empty_or_one"
+        }
+      ]
+    },
+    {
+      "id": "m6_subsets",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: A set has 4 elements. The number of its subsets is:",
+        "ur": "کثیر انتخابی: ایک سیٹ کے 4 ارکان ہیں۔ اس کے ذیلی سیٹ کی تعداد ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "8",
+            "ur": "8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is for 3 elements. With 4 elements double it: 16.",
+            "ur": "یہ 3 ارکان کے لیے ہے۔ 4 ارکان کے لیے دگنا کریں: 16"
+          },
+          "misconception_id": "forgets_empty_self"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "16",
+            "ur": "16"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 2 × 2 × 2 × 2 = 16.",
+            "ur": "درست: 2 × 2 × 2 × 2 = 16"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "15",
+            "ur": "15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the number of proper subsets. The set itself counts too: 16.",
+            "ur": "یہ حقیقی ذیلی سیٹ کی تعداد ہے۔ خود سیٹ بھی گنا جاتا ہے: 16"
+          },
+          "misconception_id": "proper_count"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "4",
+            "ur": "4"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the number of elements, not the number of subsets.",
+            "ur": "یہ ارکان کی تعداد ہے، ذیلی سیٹ کی نہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m7_equal",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which pair is a pair of equal sets?",
+        "ur": "کثیر انتخابی: کون سا جوڑا برابر سیٹوں کا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "{a, b, c} and {c, b, a}",
+            "ur": "{a, b, c} اور {c, b, a}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: the same elements, only in a different order.",
+            "ur": "درست: ارکان وہی ہیں، صرف ترتیب مختلف ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "{a, b} and {a, b, c}",
+            "ur": "{a, b} اور {a, b, c}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The second set has c as well, so they are not equal.",
+            "ur": "دوسرے سیٹ میں c بھی ہے، اس لیے یہ برابر نہیں۔"
+          },
+          "misconception_id": "subset_apart"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "{1, 2, 3} and {4, 5, 6}",
+            "ur": "{1, 2, 3} اور {4, 5, 6}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "They have the same number of elements, but different ones: equivalent, not equal.",
+            "ur": "ان کے ارکان کی تعداد برابر ہے مگر ارکان مختلف: ہم قوت، برابر نہیں۔"
+          },
+          "misconception_id": "equal_means_equivalent"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "{ } and {0}",
+            "ur": "{ } اور {0}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "{ } has no element and {0} has one, so they are not equal.",
+            "ur": "{ } کا کوئی رکن نہیں اور {0} کا ایک ہے، اس لیے یہ برابر نہیں۔"
+          },
+          "misconception_id": "empty_or_one"
+        }
+      ]
+    },
+    {
+      "id": "m8_venn",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Look at the Venn diagram. Which statement is true?",
+        "ur": "کثیر انتخابی: وین ڈایاگرام دیکھیں۔ کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A ⊂ B",
+            "ur": "A ⊂ B"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: circle A is inside circle B, so A is a proper subset of B.",
+            "ur": "درست: دائرہ A، دائرہ B کے اندر ہے، اس لیے A، B کا حقیقی ذیلی سیٹ ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "B ⊂ A",
+            "ur": "B ⊂ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "B is the bigger circle. 3 and 9 are in B but not in A.",
+            "ur": "B بڑا دائرہ ہے۔ 3 اور 9، B میں ہیں مگر A میں نہیں۔"
+          },
+          "misconception_id": "subset_apart"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "3 ∈ A",
+            "ur": "3 ∈ A"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 is in circle B but outside circle A, so 3 ∉ A.",
+            "ur": "3 دائرہ B میں ہے مگر دائرہ A سے باہر، اس لیے 3 ∉ A۔"
+          },
+          "misconception_id": "sign_swapped"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "5 ∈ B",
+            "ur": "5 ∈ B"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5 is in the rectangle but outside circle B, so 5 ∉ B.",
+            "ur": "5 مستطیل میں ہے مگر دائرہ B سے باہر، اس لیے 5 ∉ B۔"
+          },
+          "misconception_id": "sign_swapped"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 168.0,
+        "alt": {
+          "en": "A rectangle U holds the numbers 1 to 12. Inside it a circle B holds 3, 6, 9 and 12, and a smaller circle A sits inside B holding 6 and 12. 3 and 9 are in B but outside A. 1, 2, 4, 5, 7, 8, 10 and 11 are in the rectangle but outside B.",
+          "ur": "ایک مستطیل U میں 1 سے 12 تک اعداد ہیں۔ اس کے اندر دائرہ B ہے جس میں 3، 6، 9 اور 12 ہیں، اور B کے اندر ایک چھوٹا دائرہ A ہے جس میں 6 اور 12 ہیں۔ 3 اور 9 دائرہ B میں ہیں مگر A سے باہر۔ 1، 2، 4، 5، 7، 8، 10 اور 11 مستطیل کے اندر مگر B سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10.0,
+                8.0
+              ],
+              [
+                290.0,
+                8.0
+              ],
+              [
+                290.0,
+                160.0
+              ],
+              [
+                10.0,
+                160.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              26.0,
+              22.0
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              224.0,
+              90.0
+            ],
+            "radius": 56.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              208.0,
+              90.0
+            ],
+            "radius": 32.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              194.4,
+              90.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              221.6,
+              90.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              264.0,
+              79.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              264.0,
+              101.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.0,
+              87.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.0,
+              87.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              104.0,
+              87.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              132.0,
+              87.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              48.0,
+              109.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              76.0,
+              109.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              104.0,
+              109.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              132.0,
+              109.0
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "label",
+            "at": [
+              178.0,
+              44.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "label",
+            "at": [
+              237.0,
+              61.0
+            ],
+            "text": "A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_tabular",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Write the set of the multiples of 5 greater than 12 and less than 32 in tabular form (like {1, 2, 3}).",
+        "ur": "مختصر سوال: 12 سے بڑے اور 32 سے چھوٹے 5 کے اضعاف کا سیٹ جدولی شکل میں لکھیں (جیسے {1, 2, 3})۔"
+      },
+      "checker": "text",
+      "expected": "{15, 20, 25, 30}",
+      "accept": [
+        "15, 20, 25, 30",
+        "15, 20, 30, 25",
+        "15, 25, 20, 30",
+        "15, 25, 30, 20",
+        "15, 30, 20, 25",
+        "15, 30, 25, 20",
+        "20, 15, 25, 30",
+        "20, 15, 30, 25",
+        "20, 25, 15, 30",
+        "20, 25, 30, 15",
+        "20, 30, 15, 25",
+        "20, 30, 25, 15",
+        "25, 15, 20, 30",
+        "25, 15, 30, 20",
+        "25, 20, 15, 30",
+        "25, 20, 30, 15",
+        "25, 30, 15, 20",
+        "25, 30, 20, 15",
+        "30, 15, 20, 25",
+        "30, 15, 25, 20",
+        "30, 20, 15, 25",
+        "30, 20, 25, 15",
+        "30, 25, 15, 20",
+        "30, 25, 20, 15",
+        "{15, 20, 30, 25}",
+        "{15, 25, 20, 30}",
+        "{15, 25, 30, 20}",
+        "{15, 30, 20, 25}",
+        "{15, 30, 25, 20}",
+        "{20, 15, 25, 30}",
+        "{20, 15, 30, 25}",
+        "{20, 25, 15, 30}",
+        "{20, 25, 30, 15}",
+        "{20, 30, 15, 25}",
+        "{20, 30, 25, 15}",
+        "{25, 15, 20, 30}",
+        "{25, 15, 30, 20}",
+        "{25, 20, 15, 30}",
+        "{25, 20, 30, 15}",
+        "{25, 30, 15, 20}",
+        "{25, 30, 20, 15}",
+        "{30, 15, 20, 25}",
+        "{30, 15, 25, 20}",
+        "{30, 20, 15, 25}",
+        "{30, 20, 25, 15}",
+        "{30, 25, 15, 20}",
+        "{30, 25, 20, 15}"
+      ],
+      "hint": {
+        "en": "List 15, 20, ... and stop before 32.",
+        "ur": "15، 20، ... لکھیں اور 32 سے پہلے رک جائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: {15, 20, 25, 30}.",
+        "ur": "درست: {15, 20, 25, 30}"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the multiples of 5 after 12 are 15, 20, 25, 30 (35 is more than 32). So the set is {15, 20, 25, 30}.",
+        "ur": "نمونہ جواب: 12 کے بعد 5 کے اضعاف 15، 20، 25، 30 ہیں (35، 32 سے بڑا ہے)۔ اس لیے سیٹ {15, 20, 25, 30} ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "{10, 15, 20, 25, 30}",
+          "feedback": {
+            "en": "10 is not greater than 12. Start at 15: {15, 20, 25, 30}.",
+            "ur": "10، 12 سے بڑا نہیں۔ 15 سے شروع کریں: {15, 20, 25, 30}"
+          },
+          "misconception_id": "wrong_list"
+        },
+        {
+          "answer": "{15, 20, 25}",
+          "feedback": {
+            "en": "That leaves out 30, which is less than 32: {15, 20, 25, 30}.",
+            "ur": "اس میں 30 رہ گیا جو 32 سے چھوٹا ہے: {15, 20, 25, 30}"
+          },
+          "misconception_id": "wrong_list"
+        }
+      ]
+    },
+    {
+      "id": "q2_outside",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: U = {1, 2, 3, ..., 15} and A is the set of the multiples of 3 in U. In a Venn diagram, how many numbers are written inside the rectangle but outside circle A?",
+        "ur": "مختصر سوال: U = {1, 2, 3, ..., 15} اور A، U کے 3 کے اضعاف کا سیٹ ہے۔ وین ڈایاگرام میں مستطیل کے اندر مگر دائرہ A کے باہر کتنے اعداد لکھے جائیں گے؟"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "A = {3, 6, 9, 12, 15}. Take its numbers away from all 15.",
+        "ur": "A = {3, 6, 9, 12, 15}۔ اس کے اعداد کل 15 میں سے نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 15 − 5 = 10.",
+        "ur": "درست: 15 − 5 = 10"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: A = {3, 6, 9, 12, 15} has 5 elements. 15 − 5 = 10 numbers are outside the circle.",
+        "ur": "نمونہ جواب: A = {3, 6, 9, 12, 15} کے 5 ارکان ہیں۔ 15 − 5 = 10 اعداد دائرے کے باہر ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is the number inside the circle. Outside: 10.",
+            "ur": "یہ دائرے کے اندر کی تعداد ہے۔ باہر: 10"
+          },
+          "misconception_id": "inside_count"
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That is all of U. Take away the 5 inside the circle: 10.",
+            "ur": "یہ سارا U ہے۔ دائرے کے اندر کے 5 نکالیں: 10"
+          },
+          "misconception_id": "counts_universal"
+        }
+      ]
+    },
+    {
+      "id": "q3_proper",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: How many proper subsets does the set {x, y, z} have?",
+        "ur": "مختصر سوال: سیٹ {x, y, z} کے کتنے حقیقی ذیلی سیٹ ہیں؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "All subsets: 2 × 2 × 2. Take away the set itself.",
+        "ur": "تمام ذیلی سیٹ: 2 × 2 × 2۔ خود سیٹ نکال دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 8 − 1 = 7.",
+        "ur": "درست: 8 − 1 = 7"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 2³ = 8 subsets. The set itself is improper, so 8 − 1 = 7 are proper.",
+        "ur": "نمونہ جواب: 2³ = 8 ذیلی سیٹ۔ خود سیٹ غیر حقیقی ہے، اس لیے 8 − 1 = 7 حقیقی ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "That is all the subsets. The set itself is not a proper subset: 7.",
+            "ur": "یہ تمام ذیلی سیٹ ہیں۔ خود سیٹ حقیقی ذیلی سیٹ نہیں: 7"
+          },
+          "misconception_id": "proper_count"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "That also leaves out the empty set, which is a proper subset: 7.",
+            "ur": "اس میں خالی سیٹ بھی نکل گیا جو حقیقی ذیلی سیٹ ہے: 7"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "q4_letters",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: How many elements has the set of the letters of the word \"MISSISSIPPI\"?",
+        "ur": "مختصر سوال: لفظ \"MISSISSIPPI\" کے حروف کے سیٹ کے کتنے ارکان ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write each different letter once.",
+        "ur": "ہر مختلف حرف ایک بار لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: {M, I, S, P}: 4.",
+        "ur": "درست: {M, I, S, P}: 4"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: the different letters are M, I, S, P, so the set has 4 elements.",
+        "ur": "نمونہ جواب: مختلف حروف M، I، S، P ہیں، اس لیے سیٹ کے 4 ارکان ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 11,
+          "feedback": {
+            "en": "That counts every letter. A set writes each letter once: 4.",
+            "ur": "یہ ہر حرف گنتا ہے۔ سیٹ ہر حرف ایک بار لکھتا ہے: 4"
+          },
+          "misconception_id": "repeated_element"
+        }
+      ]
+    },
+    {
+      "id": "q5_two_circles",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Look at the Venn diagram. How many numbers of U are outside both circles?",
+        "ur": "مختصر سوال: وین ڈایاگرام دیکھیں۔ U کے کتنے اعداد دونوں دائروں سے باہر ہیں؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the numbers in the rectangle that are not inside A or B.",
+        "ur": "مستطیل کے وہ اعداد گنیں جو A یا B کے اندر نہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 14 − 3 − 2 = 9.",
+        "ur": "درست: 14 − 3 − 2 = 9"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: A has 3 numbers and B has 2, so 14 − 3 − 2 = 9 numbers are outside both circles.",
+        "ur": "نمونہ جواب: A میں 3 اور B میں 2 اعداد ہیں، اس لیے 14 − 3 − 2 = 9 اعداد دونوں دائروں سے باہر ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is the number inside the circles. Outside both: 9.",
+            "ur": "یہ دائروں کے اندر کی تعداد ہے۔ دونوں سے باہر: 9"
+          },
+          "misconception_id": "inside_count"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "That is all of U. Take away those inside the circles: 9.",
+            "ur": "یہ سارا U ہے۔ دائروں کے اندر والے نکالیں: 9"
+          },
+          "misconception_id": "counts_universal"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 150.0,
+        "alt": {
+          "en": "A rectangle U holds the numbers 1 to 14. Inside it are two separate circles: A holds 4, 8 and 12, and B holds 7 and 14. 1, 2, 3, 5, 6, 9, 10, 11 and 13 are in the rectangle but outside both circles.",
+          "ur": "ایک مستطیل U میں 1 سے 14 تک اعداد ہیں۔ اس کے اندر دو الگ دائرے ہیں: A میں 4، 8 اور 12 اور B میں 7 اور 14 ہیں۔ 1، 2، 3، 5، 6، 9، 10، 11 اور 13 مستطیل کے اندر مگر دونوں دائروں سے باہر ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10.0,
+                8.0
+              ],
+              [
+                290.0,
+                8.0
+              ],
+              [
+                290.0,
+                142.0
+              ],
+              [
+                10.0,
+                142.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              26.0,
+              22.0
+            ],
+            "text": "U"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              56.0,
+              81.0
+            ],
+            "radius": 32.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              138.0,
+              81.0
+            ],
+            "radius": 32.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              42.4,
+              70.0
+            ],
+            "text": "4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.6,
+              70.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              56.0,
+              92.0
+            ],
+            "text": "12"
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.4,
+              81.0
+            ],
+            "text": "7"
+          },
+          {
+            "kind": "label",
+            "at": [
+              151.6,
+              81.0
+            ],
+            "text": "14"
+          },
+          {
+            "kind": "label",
+            "at": [
+              205.0,
+              67.0
+            ],
+            "text": "1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              233.0,
+              67.0
+            ],
+            "text": "2"
+          },
+          {
+            "kind": "label",
+            "at": [
+              261.0,
+              67.0
+            ],
+            "text": "3"
+          },
+          {
+            "kind": "label",
+            "at": [
+              205.0,
+              89.0
+            ],
+            "text": "5"
+          },
+          {
+            "kind": "label",
+            "at": [
+              233.0,
+              89.0
+            ],
+            "text": "6"
+          },
+          {
+            "kind": "label",
+            "at": [
+              261.0,
+              89.0
+            ],
+            "text": "9"
+          },
+          {
+            "kind": "label",
+            "at": [
+              205.0,
+              111.0
+            ],
+            "text": "10"
+          },
+          {
+            "kind": "label",
+            "at": [
+              233.0,
+              111.0
+            ],
+            "text": "11"
+          },
+          {
+            "kind": "label",
+            "at": [
+              261.0,
+              111.0
+            ],
+            "text": "13"
+          },
+          {
+            "kind": "label",
+            "at": [
+              27.0,
+              52.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "label",
+            "at": [
+              109.0,
+              52.0
+            ],
+            "text": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_pairs",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: How many subsets of {a, b, c, d} have exactly 2 elements?",
+        "ur": "تفصیلی سوال: {a, b, c, d} کے کتنے ذیلی سیٹ میں بالکل 2 ارکان ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "List them in order: {a, b}, {a, c}, {a, d}, then those starting with b, then c.",
+        "ur": "ترتیب سے لکھیں: {a, b}، {a, c}، {a, d}، پھر وہ جو b سے شروع ہوں، پھر c سے۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 3 + 2 + 1 = 6.",
+        "ur": "درست: 3 + 2 + 1 = 6"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: {a, b}, {a, c}, {a, d}, {b, c}, {b, d}, {c, d}. That is 6 subsets. (Do not count {b, a}: it is the same set as {a, b}.)",
+        "ur": "نمونہ جواب: {a, b}، {a, c}، {a, d}، {b, c}، {b, d}، {c, d}۔ یعنی 6 ذیلی سیٹ۔ ({b, a} نہ گنیں: یہ {a, b} ہی ہے۔)"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "That counts {a, b} and {b, a} as different. They are the same set: 6.",
+            "ur": "یہ {a, b} اور {b, a} کو مختلف گنتا ہے۔ یہ ایک ہی سیٹ ہے: 6"
+          },
+          "misconception_id": "equal_means_equivalent"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That is the number of elements of the set, not the number of 2-element subsets: 6.",
+            "ur": "یہ سیٹ کے ارکان کی تعداد ہے، 2 ارکان والے ذیلی سیٹ کی نہیں: 6"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "l2_reverse",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A set has 64 subsets. How many elements does it have?",
+        "ur": "تفصیلی سوال: ایک سیٹ کے 64 ذیلی سیٹ ہیں۔ اس کے کتنے ارکان ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Double 1 again and again: 2, 4, 8 ... until you reach 64. Count the doublings.",
+        "ur": "1 کو بار بار دگنا کریں: 2، 4، 8 ... جب تک 64 نہ آ جائے۔ دگنا کرنے کی تعداد گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 2⁶ = 64, so 6 elements.",
+        "ur": "درست: 2⁶ = 64، اس لیے 6 ارکان"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 2, 4, 8, 16, 32, 64 is six doublings, so 2⁶ = 64 and the set has 6 elements.",
+        "ur": "نمونہ جواب: 2، 4، 8، 16، 32، 64 چھ بار دگنا کرنا ہے، اس لیے 2⁶ = 64 اور سیٹ کے 6 ارکان ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "That is half of 64, not the number of elements. Count the doublings: 6.",
+            "ur": "یہ 64 کا نصف ہے، ارکان کی تعداد نہیں۔ دگنا کرنے کی تعداد گنیں: 6"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "2⁷ = 128, which is too big. 2⁶ = 64: 6 elements.",
+            "ur": "2⁷ = 128 بہت بڑا ہے۔ 2⁶ = 64: 6 ارکان"
+          },
+          "misconception_id": "forgets_empty_self"
+        }
+      ]
+    },
+    {
+      "id": "l3_cardinal",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: A is the set of the multiples of 3 less than 40, and B is the set of the letters of the word \"ABRACADABRA\". How many more elements does A have than B?",
+        "ur": "تفصیلی سوال: A، 40 سے چھوٹے 3 کے اضعاف کا سیٹ ہے، اور B لفظ \"ABRACADABRA\" کے حروف کا سیٹ ہے۔ A کے ارکان B سے کتنے زیادہ ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find n(A) and n(B) first, then subtract. Write the repeated letters once.",
+        "ur": "پہلے n(A) اور n(B) معلوم کریں، پھر گھٹائیں۔ دہرائے ہوئے حروف ایک بار لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 13 − 5 = 8.",
+        "ur": "درست: 13 − 5 = 8"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: A = {3, 6, ..., 39} has 13 elements. B = {A, B, R, C, D} has 5. 13 − 5 = 8.",
+        "ur": "نمونہ جواب: A = {3, 6, ..., 39} کے 13 ارکان ہیں۔ B = {A, B, R, C, D} کے 5 ہیں۔ 13 − 5 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "That is n(A) only. Subtract n(B), which is 5: 8.",
+            "ur": "یہ صرف n(A) ہے۔ n(B) یعنی 5 گھٹائیں: 8"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "That adds them. \"How many more\" means subtract: 8.",
+            "ur": "یہ انھیں جمع کرتا ہے۔ \"کتنے زیادہ\" کا مطلب ہے گھٹانا: 8"
+          }
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That counts all 11 letters of ABRACADABRA (13 − 11). B has 5 different letters: 8.",
+            "ur": "یہ ABRACADABRA کے سارے 11 حروف گنتا ہے (13 − 11)۔ B کے 5 مختلف حروف ہیں: 8"
+          },
+          "misconception_id": "repeated_element"
+        }
+      ]
+    },
+    {
+      "id": "l4_venn",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: U = {1, 2, 3, ..., 30}. P is the set of the multiples of 4 in U and Q is the set of the multiples of 9 in U. They have no number in common, so their circles are drawn apart. How many numbers are written outside both circles?",
+        "ur": "تفصیلی سوال: U = {1, 2, 3, ..., 30}۔ P، U کے 4 کے اضعاف کا سیٹ ہے اور Q، U کے 9 کے اضعاف کا سیٹ ہے۔ ان میں کوئی عدد مشترک نہیں، اس لیے ان کے دائرے الگ بنتے ہیں۔ دونوں دائروں سے باہر کتنے اعداد لکھے جائیں گے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find n(P) and n(Q), then take both away from 30.",
+        "ur": "n(P) اور n(Q) معلوم کریں، پھر دونوں کو 30 میں سے نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 30 − 7 − 3 = 20.",
+        "ur": "درست: 30 − 7 − 3 = 20"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: P = {4, 8, 12, 16, 20, 24, 28} has 7 numbers and Q = {9, 18, 27} has 3. Outside both: 30 − 7 − 3 = 20.",
+        "ur": "نمونہ جواب: P = {4, 8, 12, 16, 20, 24, 28} کے 7 اور Q = {9, 18, 27} کے 3 اعداد ہیں۔ دونوں سے باہر: 30 − 7 − 3 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 23,
+          "feedback": {
+            "en": "That takes away only P (7). Take away Q (3) too: 20.",
+            "ur": "یہ صرف P (7) نکالتا ہے۔ Q (3) بھی نکالیں: 20"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "That is the number inside the circles (7 + 3). Outside: 20.",
+            "ur": "یہ دائروں کے اندر کی تعداد ہے (7 + 3)۔ باہر: 20"
+          },
+          "misconception_id": "inside_count"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 5 test. Well done!",
+          "ur": "آپ نے باب 5 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: a set must be well defined, and each element is written once inside { }. Use ∈ and ∉ for belongs and does not belong. A set with n elements has 2ⁿ subsets, including { } and the set itself, and all of them but the set itself are proper. Equal sets have the same elements; equivalent sets have the same number. In a Venn diagram the rectangle is U, circles are subsets, a subset goes inside the bigger circle, and n(U) is the number inside the circles plus the number outside.",
+        "ur": "امتحان میں: سیٹ واضح طور پر بیان کردہ ہونا چاہیے اور ہر رکن ایک بار { } کے اندر لکھا جاتا ہے۔ ∈ اور ∉ تعلق رکھتا ہے اور تعلق نہیں رکھتا کے لیے استعمال کریں۔ n ارکان والے سیٹ کے 2ⁿ ذیلی سیٹ ہوتے ہیں، جن میں { } اور خود سیٹ شامل ہیں، اور خود سیٹ کے سوا سب حقیقی ہیں۔ برابر سیٹوں کے ارکان ایک جیسے ہوتے ہیں؛ ہم قوت سیٹوں کے ارکان کی تعداد برابر ہوتی ہے۔ وین ڈایاگرام میں مستطیل U ہے، دائرے ذیلی سیٹ ہیں، ذیلی سیٹ بڑے دائرے کے اندر جاتا ہے، اور n(U) دائروں کے اندر اور باہر کے ارکان کا مجموعہ ہے۔"
+      },
+      "points": [
+        {
+          "en": "Check a count by listing the elements.",
+          "ur": "گنتی کو ارکان لکھ کر جانچیں۔"
+        },
+        {
+          "en": "Write the unit or the set sign with each answer.",
+          "ur": "ہر جواب کے ساتھ اکائی یا سیٹ کی علامت لکھیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_count",
+      "type": "exam_style",
+      "skill": "maths.sets.chapter_5_test",
+      "step": {
+        "id": "r_exam_count",
+        "type": "number",
+        "prompt": {
+          "en": "How many elements are in the set of the odd numbers less than 10?",
+          "ur": "10 سے چھوٹے طاق اعداد کے سیٹ میں کتنے ارکان ہیں؟"
+        },
+        "answer": 5,
+        "checker": "numeric",
+        "hint": {
+          "en": "List 1, 3, 5 ... and stop before 10.",
+          "ur": "1، 3، 5 ... لکھیں اور 10 سے پہلے رک جائیں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 1, 3, 5, 7, 9: 5.",
+          "ur": "درست: 1، 3، 5، 7، 9: 5"
+        },
+        "feedback_wrong": {
+          "en": "1, 3, 5, 7, 9 are 5 numbers.",
+          "ur": "1، 3، 5، 7، 9 یعنی 5 اعداد۔"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That leaves out one odd number. List them all: 5.",
+              "ur": "اس میں ایک طاق عدد رہ گیا۔ سب لکھیں: 5"
+            },
+            "misconception_id": "wrong_list"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_proper",
+      "type": "exam_style",
+      "skill": "maths.sets.chapter_5_test",
+      "step": {
+        "id": "r_exam_proper",
+        "type": "number",
+        "prompt": {
+          "en": "How many proper subsets does {p, q} have?",
+          "ur": "{p, q} کے کتنے حقیقی ذیلی سیٹ ہیں؟"
+        },
+        "answer": 3,
+        "checker": "numeric",
+        "hint": {
+          "en": "The subsets are { }, {p}, {q}, {p, q}. Which one is improper?",
+          "ur": "ذیلی سیٹ { }، {p}، {q}، {p, q} ہیں۔ غیر حقیقی کون سا ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Correct: 3.",
+          "ur": "درست: 3"
+        },
+        "feedback_wrong": {
+          "en": "4 subsets minus the set itself: 3.",
+          "ur": "4 ذیلی سیٹ منفی خود سیٹ: 3"
+        },
+        "common_wrong": [
+          {
+            "answer": 4,
+            "feedback": {
+              "en": "That is all the subsets. Take away the set itself: 3.",
+              "ur": "یہ تمام ذیلی سیٹ ہیں۔ خود سیٹ نکال دیں: 3"
+            },
+            "misconception_id": "proper_count"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 5 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied. The book has no union, intersection or set-builder form, so none is tested.",
+    "It has its own skill (maths.sets.chapter_5_test), with the chapter's sets skills as prerequisites, and is mastered with exam_style questions, like g9-maths-05-board-exam-practice.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), ذیلی سیٹ / حقیقی ذیلی سیٹ (subset / proper subset), ہم قوت (equivalent), وین ڈایاگرام (Venn diagram).",
+    "The numbers were worked out in content/sources/g6-maths-01/chapter_5_test.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

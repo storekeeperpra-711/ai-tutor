@@ -404,3 +404,154 @@ def two_venns(alt_en, alt_ur):
             items += [circle(ca, r), circle(cb, r), lens(ca, cb, r)]
         items += [label((ca[0] - r * 0.75, cy - r - 6), "A"), label((cb[0] + r * 0.75, cy - r - 6), "B")]
     return figure(W, 108, alt_en, alt_ur, items)
+
+
+# ---------- Venn diagrams of a universal set U and its subsets (no overlaps) ----------
+
+def _box(at, text):
+    w = width_of(text)
+    return (at[0] - w / 2, at[1] - LABEL_H / 2, at[0] + w / 2, at[1] + LABEL_H / 2)
+
+
+def _apart(b, boxes):
+    return all(b[2] <= o[0] + 1 or o[2] <= b[0] + 1 or b[3] <= o[1] + 1 or o[3] <= b[1] + 1 for o in boxes)
+
+
+def _fit(elems):
+    """The smallest circle radius, and the number of columns, that hold the
+    elements written in a grid."""
+    elems = [str(e) for e in elems]
+    n = len(elems)
+    widest = max([width_of(e) for e in elems] + [CHAR])
+    dx = max(26, widest + 8)
+    for r in (32, 38, 44, 50, 56, 62):
+        for cols in (2, 3, 1, 4):
+            if cols > max(n, 1):
+                continue
+            if all(inside_oval(x, y, 0, 0, r, r, width_of(e))
+                   for e, (x, y) in zip(elems, grid_places(0, 0, n, cols, dx, 22))):
+                return r, cols, dx
+    raise AssertionError(("too many elements for a circle", elems))
+
+
+def u_venn(alt_en, alt_ur, universe, sets, layout, *, name_u="U"):
+    """A rectangle U holding circles for subsets (no overlaps).
+    sets: [(name, members)]. layout: 'one' (one circle), 'apart' (two
+    separate circles) or 'nested' (the first set sits inside the second).
+    Elements of U in no circle are written inside the rectangle, outside the
+    circles. The script checks every label sits in exactly the circles of
+    the sets it is drawn in (so a wrong drawing is made by giving the wrong
+    members on purpose)."""
+    universe = [str(e) for e in universe]
+    sets = [(n, [str(e) for e in m]) for n, m in sets]
+    assert len(set(universe)) == len(universe)
+    for _, m in sets:
+        assert set(m) <= set(universe), m
+    inside_any = {e for _, m in sets for e in m}
+    outside = [e for e in universe if e not in inside_any]
+    if layout == "apart":
+        assert not set(sets[0][1]) & set(sets[1][1])
+    if layout == "nested":
+        assert set(sets[0][1]) <= set(sets[1][1])
+    circles = []          # (name, cx, cy, r)
+    placed = []           # (text, (x, y), region) region: names of circles it is inside
+    left = 24             # the left end of the free space
+    if layout == "one":
+        (nm, mem), = sets
+        r, cols, dx = _fit(mem)
+        H = max(150, 2 * r + 56)
+        cy = H / 2 + 6
+        cx = 280 - r
+        circles.append((nm, cx, cy, r))
+        for e, (x, y) in zip(mem, grid_places(cx, cy, len(mem), cols, dx, 22)):
+            placed.append((e, (x, y), {nm}))
+        right = cx - r - 12
+    elif layout == "apart":
+        (na, ma), (nb, mb) = sets
+        ra, ca, dxa = _fit(ma)
+        rb, cb, dxb = _fit(mb)
+        H = max(150, 2 * max(ra, rb) + 56)
+        cy = H / 2 + 6
+        xa = left + ra
+        xb = xa + ra + 18 + rb
+        circles += [(na, xa, cy, ra), (nb, xb, cy, rb)]
+        for nm, mem, cx, r, cols, dx in ((na, ma, xa, ra, ca, dxa), (nb, mb, xb, rb, cb, dxb)):
+            for e, (x, y) in zip(mem, grid_places(cx, cy, len(mem), cols, dx, 22)):
+                placed.append((e, (x, y), {nm}))
+        left = xb + rb + 14
+        right = 282
+    elif layout == "nested":
+        (na, ma), (nb, mb) = sets
+        only_b = [e for e in mb if e not in ma]
+        ra, ca, dxa = _fit(ma)
+        H = None
+        for rb in range(ra + 24, 90, 4):
+            H = max(150, 2 * rb + 56)
+            cy = H / 2 + 6
+            cxb = 280 - rb
+            xa = cxb - (rb - ra - 8)
+            col_x = xa + ra + 24
+            ys = [cy + (i - (len(only_b) - 1) / 2) * 22 for i in range(len(only_b))]
+            ok = all(math.dist((col_x, y), (cxb, cy)) <= rb - 12 and math.dist((col_x, y), (xa, cy)) >= ra + 14 for y in ys)
+            if ok:
+                break
+        else:
+            raise AssertionError("nested sets do not fit")
+        circles += [(nb, cxb, cy, rb), (na, xa, cy, ra)]
+        for e, (x, y) in zip(ma, grid_places(xa, cy, len(ma), ca, dxa, 22)):
+            placed.append((e, (x, y), {na, nb}))
+        for e, y in zip(only_b, ys):
+            placed.append((e, (col_x, y), {nb}))
+        right = cxb - rb - 12
+    else:
+        raise AssertionError(layout)
+    # elements outside every circle: a grid in the free space
+    if outside:
+        width = right - left
+        cols = max(1, min(len(outside), int(width // 28)))
+        rows = math.ceil(len(outside) / cols)
+        cx0 = (left + right) / 2
+        cy0 = circles[0][2] + 8
+        assert rows * 22 <= H - 70, (outside, rows)
+        for e, (x, y) in zip(outside, grid_places(cx0, cy0, len(outside), cols, 28, 22)):
+            placed.append((e, (x, y), set()))
+    items = [rect(10, 8, 290, H - 8)]
+    boxes = []
+    ulab = label((26, 22), name_u)
+    items.append(ulab)
+    boxes.append(_box((26, 22), name_u))
+    for nm, cx, cy, r in circles:
+        items.append(circle((cx, cy), r))
+    for e, (x, y), region in placed:
+        for nm, cx, cy, r in circles:
+            d = math.dist((x, y), (cx, cy))
+            if nm in region:
+                assert d <= r - 9, (e, nm, d)
+            else:
+                assert d >= r + 8, (e, nm, d)
+        items.append(label((x, y), e))
+        boxes.append(_box((x, y), e))
+    # each circle's name just outside it, at the first free spot
+    for nm, cx, cy, r in circles:
+        outer = None
+        if layout == "nested" and nm == sets[0][0]:
+            outer = circles[0]
+        for ang in (-135, -45, -90, 135, 45, -160, -20, 180, 0):
+            a = math.radians(ang)
+            at = (cx + (r + 9) * math.cos(a), cy + (r + 9) * math.sin(a))
+            b = _box(at, nm)
+            if not (EDGE + 12 <= at[0] <= W - EDGE - 12 and 24 <= at[1] <= H - EDGE - 12):
+                continue
+            if outer and math.dist(at, (outer[1], outer[2])) > outer[3] - 10:
+                continue
+            if layout == "nested" and nm == sets[1][0]:
+                inner = circles[1]
+                if math.dist(at, (inner[1], inner[2])) < inner[3] + 6:
+                    continue
+            if _apart(b, boxes):
+                items.append(label(at, nm))
+                boxes.append(b)
+                break
+        else:
+            raise AssertionError(("no room for the name", nm))
+    return figure(W, H, alt_en, alt_ur, items)
