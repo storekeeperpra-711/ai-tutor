@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-highest-common-factor",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Highest common factor (HCF)",
     "ur": "عاد اعظم"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.factors.factors_multiples"
@@ -556,6 +556,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How can 12 roses and 18 marigolds make the most equal bunches?",
+          "ur": "12 گلاب اور 18 گیندے سے زیادہ سے زیادہ برابر گچھے کیسے بنیں؟"
+        }
+      },
+      "text": {
+        "en": "A flower seller has 12 roses and 18 marigolds. She wants the most bunches that are all the same, with nothing left over. The number of bunches must divide both 12 and 18. Listing the common factors shows the choices: 1, 2, 3 and 6. The biggest is 6, so she makes 6 bunches. This biggest shared factor is the highest common factor (HCF). It solves any problem of the largest equal groups.",
+        "ur": "ایک پھول والی کے پاس 12 گلاب اور 18 گیندے ہیں۔ وہ زیادہ سے زیادہ ایسے گچھے بنانا چاہتی ہے جو سب ایک جیسے ہوں اور کچھ نہ بچے۔ گچھوں کی تعداد 12 اور 18 دونوں کو تقسیم کرنی چاہیے۔ مشترک اجزائے ضربی لکھیں تو چناؤ نظر آتے ہیں: 1، 2، 3 اور 6۔ سب سے بڑا 6 ہے، تو وہ 6 گچھے بنائے گی۔ یہ سب سے بڑا مشترک جزو عاد اعظم ہے۔ یہ سب سے بڑے برابر گروہوں کا ہر سوال حل کرتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Tiles: the biggest square tile that covers a floor exactly.\n• School: the longest equal rows for boys and girls at assembly.\n• Shops: packing two kinds of goods into the most equal packets.\n• Fractions: cutting 12/18 down to 2/3.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• ٹائل: وہ سب سے بڑی مربع ٹائل جو فرش کو پورا ڈھانپ دے۔\n• اسکول: اسمبلی میں لڑکوں اور لڑکیوں کی سب سے لمبی برابر قطاریں۔\n• دکان: دو قسم کا سامان زیادہ سے زیادہ برابر پیکٹوں میں رکھنا۔\n• کسر: 12/18 کو کم کر کے 2/3 بنانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

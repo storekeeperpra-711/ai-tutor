@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-hcf-times-lcm",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "HCF × LCM",
     "ur": "عاد اعظم × ذو اضعاف اقل"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.factors.lcm"
@@ -422,6 +422,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Is there a shortcut that links the HCF, the LCM and the two numbers?",
+          "ur": "کیا عاد اعظم، ذو اضعاف اقل اور دونوں اعداد کا کوئی آسان تعلق ہے؟"
+        }
+      },
+      "text": {
+        "en": "Finding the HCF and the LCM both take time, especially for big numbers. People noticed a pattern. For 12 and 18, the HCF is 6 and the LCM is 36, and 6 × 36 = 216, which is the same as 12 × 18. This holds for any two numbers. So if you know the two numbers and one of the HCF or LCM, you can find the other with one multiplication and one division, without a long search.",
+        "ur": "دونوں نکالنے میں وقت لگتا ہے، خاص طور پر بڑے اعداد میں۔ لوگوں نے ایک ترتیب دیکھی۔ 12 اور 18 کا عاد اعظم 6 اور ذو اضعاف اقل 36 ہے، اور 6 × 36 = 216 ہے، جو 12 × 18 کے برابر ہے۔ یہ کسی بھی دو اعداد کے لیے سچ ہے۔ تو اگر آپ کو دونوں اعداد اور عاد اعظم یا ذو اضعاف اقل میں سے ایک معلوم ہو، تو دوسرا ایک ضرب اور ایک تقسیم سے مل جاتا ہے، لمبی تلاش کے بغیر۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Checking: after finding the HCF and LCM, multiply them to check your answer.\n• Saving time: find the LCM of 15 and 20 from their HCF 5, as 300 ÷ 5 = 60.\n• Exams: many problems give one of the two and ask for the other.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• جانچ: عاد اعظم اور ذو اضعاف اقل نکال کر انہیں ضرب دیں اور اپنا جواب جانچیں۔\n• وقت کی بچت: 15 اور 20 کے عاد اعظم 5 سے ذو اضعاف اقل نکالیں، 300 ÷ 5 = 60۔\n• امتحان: بہت سے سوالوں میں دونوں میں سے ایک دیا ہوتا ہے اور دوسرا پوچھا جاتا ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

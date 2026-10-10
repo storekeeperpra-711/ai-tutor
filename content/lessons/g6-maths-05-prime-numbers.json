@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-prime-numbers",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Prime numbers and prime factors",
     "ur": "مفرد اعداد اور مفرد اجزائے ضربی"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.factors.factors_multiples"
@@ -396,6 +396,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why can 13 laddoos never make equal rows, except one long row?",
+          "ur": "13 لڈو ایک لمبی قطار کے سوا برابر قطاروں میں کیوں نہیں بٹتے؟"
+        }
+      },
+      "text": {
+        "en": "Try to put 13 laddoos in equal rows. Only one row of 13 or 13 rows of 1 will work. Numbers like 2, 3, 5, 7, 11 and 13 cannot be split any further. They are called prime numbers. Every other number, like 12, can be built by multiplying primes: 12 = 2 × 2 × 3. So primes are like the basic building blocks of all numbers, and prime factors show what a number is made of.",
+        "ur": "13 لڈو برابر قطاروں میں رکھ کر دیکھیں۔ صرف 13 کی ایک قطار یا 1 کی 13 قطاریں بنتی ہیں۔ 2، 3، 5، 7، 11 اور 13 جیسے اعداد کو مزید نہیں توڑا جا سکتا۔ انہیں مفرد اعداد کہتے ہیں۔ باقی ہر عدد، جیسے 12، مفرد اعداد کو ضرب دے کر بنایا جا سکتا ہے: 12 = 2 × 2 × 3۔ یوں مفرد اعداد تمام اعداد کی بنیادی اینٹوں کی طرح ہیں، اور مفرد اجزائے ضربی بتاتے ہیں کہ عدد کس سے بنا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Sharing: knowing that 13 sweets cannot be shared equally among 2, 3 or 4 children.\n• Finding factors: breaking a big number into primes makes its factors easy to see.\n• HCF and LCM: prime factors give a quick way to find both.\n• Secret codes: phones and online shopping use very large primes to keep information safe.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بانٹنا: یہ جاننا کہ 13 مٹھائیاں 2، 3 یا 4 بچوں میں برابر نہیں بٹ سکتیں۔\n• اجزائے ضربی: بڑے عدد کو مفرد اعداد میں توڑنے سے اس کے اجزائے ضربی آسانی سے نظر آتے ہیں۔\n• عاد اعظم اور ذو اضعاف اقل: مفرد اجزائے ضربی سے دونوں جلدی نکلتے ہیں۔\n• خفیہ کوڈ: فون اور آن لائن خریداری معلومات کو محفوظ رکھنے کے لیے بہت بڑے مفرد اعداد استعمال کرتے ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
