@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-17-sample-space",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Outcomes and sample space",
     "ur": "نتائج اور نمونی فضا"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.sets.meaning"
@@ -462,6 +462,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Before the toss, what can happen? Can you list everything?",
+          "ur": "سکہ اچھالنے سے پہلے کیا کیا ہو سکتا ہے؟ کیا آپ سب لکھ سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "To talk about chance, we must first know everything that could happen. Toss a coin: head or tail. Roll a die: 1, 2, 3, 4, 5 or 6. If a result is missed, the chance is counted wrongly. So people made clear words: an experiment, its outcomes, the sample space (the set of all outcomes), and an event (some of the outcomes we care about).",
+        "ur": "امکان کی بات کرنے کے لیے پہلے یہ جاننا ضروری ہے کہ کیا کیا ہو سکتا ہے۔ سکہ اچھالیں: ہیڈ یا ٹیل۔ ڈائس پھینکیں: 1، 2، 3، 4، 5 یا 6۔ اگر کوئی نتیجہ رہ جائے تو امکان غلط گنا جاتا ہے۔ اس لیے لوگوں نے صاف الفاظ بنائے: تجربہ، اس کے نتائج، نمونی فضا (تمام نتائج کا سیٹ) اور واقعہ (وہ کچھ نتائج جن میں ہمیں دلچسپی ہے)۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Games: all the ways a die or two coins can land.\n• Cricket: the toss, and the ways a ball can end.\n• Planning: listing all the choices before you decide.\n• Computers: testing a program on every possible input.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کھیل: ڈائس یا دو سکے جتنی طرح گر سکتے ہیں ان سب کی فہرست۔\n• کرکٹ: ٹاس، اور گیند کے ختم ہونے کے طریقے۔\n• منصوبہ بندی: فیصلے سے پہلے سب انتخاب لکھنا۔\n• کمپیوٹر: پروگرام کو ہر ممکن ان پٹ پر آزمانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

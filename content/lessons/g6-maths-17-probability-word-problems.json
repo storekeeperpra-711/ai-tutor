@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-17-probability-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Probability word problems",
     "ur": "احتمال کے عملی سوالات"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.probability.likelihood"
@@ -621,6 +621,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A bag has 3 red and 5 blue balls. What is the chance of red?",
+          "ur": "تھیلے میں 3 سرخ اور 5 نیلی گیندیں ہیں۔ سرخ نکلنے کا احتمال کیا ہے؟"
+        }
+      },
+      "text": {
+        "en": "Real chance questions come as stories: a bag of balls, a spinner, a class, a deck of cards. The skill that matters is to list or count the outcomes, find the ones we want, and write the probability as a fraction. Here 3 of 8 balls are red, so the chance is 3/8. Then say in words what the answer means.",
+        "ur": "امکان کے حقیقی سوال کہانی کی شکل میں آتے ہیں: گیندوں کا تھیلا، گھومنے والی سوئی، جماعت، تاش کے پتے۔ اصل ہنر یہ ہے کہ نتائج کی فہرست بنائیں یا گنیں، مطلوبہ نتائج ڈھونڈیں، اور احتمال کو کسر کی صورت میں لکھیں۔ یہاں 8 میں سے 3 گیندیں سرخ ہیں، تو احتمال 3/8 ہے۔ پھر الفاظ میں بتائیں کہ جواب کا مطلب کیا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Games and fairs: judging whether a lucky draw is fair.\n• School: the chance that a child picked at random is a girl.\n• Weather and sports: reading forecasts and match chances.\n• Everyday choices: weighing a small risk against a reward.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کھیل اور میلے: یہ جانچنا کہ قرعہ اندازی منصفانہ ہے یا نہیں۔\n• اسکول: بے ترتیب چنے گئے بچے کے لڑکی ہونے کا احتمال۔\n• موسم اور کھیل: پیش گوئیاں اور میچ جیتنے کا امکان سمجھنا۔\n• روزمرہ فیصلے: چھوٹے خطرے کو فائدے کے مقابل تولنا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

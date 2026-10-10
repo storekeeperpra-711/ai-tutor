@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-set-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Set word problems",
     "ur": "سیٹ کے عملی سوال"
   },
-  "estimated_minutes": 18,
+  "estimated_minutes": 19,
   "prerequisites": [
     {
       "skill": "maths.sets.union_intersection"
@@ -339,6 +339,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "40 children, 25 like cricket, 20 like hockey. How many like both?",
+          "ur": "40 بچے ہیں، 25 کو کرکٹ پسند ہے، 20 کو ہاکی۔ کتنوں کو دونوں پسند ہیں؟"
+        }
+      },
+      "text": {
+        "en": "Real questions rarely say \"find the union\". They tell a story with numbers, and we must find what is missing. Here 25 + 20 = 45 is more than 40, so some children were counted twice: 5 like both. The skill is to turn the story into sets and a Venn diagram, so that nobody is counted twice and nobody is missed.",
+        "ur": "حقیقی سوال شاید ہی کہتے ہیں کہ \"اجتماع نکالو\"۔ وہ اعداد کے ساتھ ایک کہانی بتاتے ہیں اور ہمیں جو کم ہے وہ نکالنا ہوتا ہے۔ یہاں 25 + 20 = 45 ہے جو 40 سے زیادہ ہے، اس لیے کچھ بچے دو بار گنے گئے: 5 کو دونوں پسند ہیں۔ ہنر یہ ہے کہ کہانی کو سیٹوں اور وین ڈایاگرام میں بدلیں، تاکہ کوئی دو بار نہ گنا جائے اور کوئی رہ نہ جائے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Surveys: counting people who chose one answer, the other, or both.\n• School: planning clubs when some children join two.\n• Shops: customers who buy one item, another, or both.\n• Elections and polls: voters who fit more than one group.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سروے: ایک جواب، دوسرا جواب یا دونوں چننے والوں کی گنتی۔\n• اسکول: کلبوں کی منصوبہ بندی جب کچھ بچے دو کلبوں میں ہوں۔\n• دکانیں: وہ گاہک جو ایک چیز خریدیں، دوسری یا دونوں۔\n• انتخابات اور رائے شماری: وہ ووٹر جو ایک سے زیادہ گروہوں میں آتے ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

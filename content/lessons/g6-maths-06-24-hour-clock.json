@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-24-hour-clock",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "The 24-hour clock",
     "ur": "24 گھنٹے والی گھڑی"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.multiplication.facts"
@@ -595,6 +595,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A train leaves at 5:00. Is that morning or evening?",
+          "ur": "ٹرین 5:00 بجے چلتی ہے۔ صبح یا شام؟"
+        }
+      },
+      "text": {
+        "en": "On a normal clock the same hour comes twice a day, so \"5 o'clock\" can mean morning or evening. For a train, bus or flight, a mistake means a missed journey. People needed a time that cannot be mixed up. The 24-hour clock counts the hours from 00 to 23, so every moment of the day has its own number: 05:00 is morning and 17:00 is evening.",
+        "ur": "عام گھڑی میں ایک ہی گھنٹہ دن میں دو بار آتا ہے، اس لیے \"پانچ بجے\" کا مطلب صبح بھی ہو سکتا ہے اور شام بھی۔ ٹرین، بس یا جہاز کے لیے غلطی کا مطلب چھوٹا ہوا سفر ہے۔ لوگوں کو ایسا وقت چاہیے تھا جس میں الجھن نہ ہو۔ 24 گھنٹے والی گھڑی گھنٹے 00 سے 23 تک گنتی ہے، اس لیے دن کے ہر لمحے کا اپنا عدد ہے: 05:00 صبح ہے اور 17:00 شام۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Travel: train, bus and flight timetables.\n• Phone and digital watch: many show 24-hour time.\n• Hospitals: medicine times written without am or pm.\n• Planning: bell timings and exam schedules.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سفر: ٹرین، بس اور جہاز کے ٹائم ٹیبل۔\n• فون اور ڈیجیٹل گھڑی: بہت سی گھڑیاں 24 گھنٹے کا وقت دکھاتی ہیں۔\n• اسپتال: دوا کے اوقات جو صبح یا شام لکھے بغیر لکھے جاتے ہیں۔\n• منصوبہ بندی: گھنٹی کے اوقات اور امتحان کے شیڈول۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

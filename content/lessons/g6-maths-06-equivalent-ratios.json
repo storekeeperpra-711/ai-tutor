@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-equivalent-ratios",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Equivalent ratios",
     "ur": "مساوی نسبتیں"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.ratio.meaning"
@@ -242,6 +242,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A small pot needs 1 cup rice, 2 cups water. What about a big pot?",
+          "ur": "چھوٹی دیگچی میں 1 پیالہ چاول اور 2 پیالے پانی لگتا ہے۔ بڑی دیگ میں کتنا؟"
+        }
+      },
+      "text": {
+        "en": "A cook who makes rice for a wedding cannot use the small-pot amounts. But the taste must stay the same. So both amounts must grow by the same number of times: 1 : 2 becomes 5 : 10 or 50 : 100. People saw that ratios which look different can describe the same mix. These are equivalent ratios, made by multiplying or dividing both parts by the same number.",
+        "ur": "شادی کے لیے چاول پکانے والا باورچی چھوٹی دیگچی کی مقدار استعمال نہیں کر سکتا۔ مگر ذائقہ وہی رہنا چاہیے۔ اس لیے دونوں مقداریں برابر گنا بڑھنی چاہییں: 1 : 2 بن جاتا ہے 5 : 10 یا 50 : 100۔ لوگوں نے دیکھا کہ مختلف دکھنے والی نسبتیں ایک ہی ملاپ بتا سکتی ہیں۔ یہ مساوی نسبتیں ہیں، جو دونوں حصوں کو ایک ہی عدد سے ضرب یا تقسیم کر کے بنتی ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Cooking: make more or less of a recipe with the same taste.\n• Building: the same cement and sand mix for a small or a big wall.\n• Maps: 1 cm on a map stands for the same distance everywhere.\n• Shops: simplify \"6 for 18\" to \"1 for 3\".",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کھانا پکانا: ہم ذائقہ وہی رکھ کر کھانا کم یا زیادہ بناتے ہیں۔\n• تعمیر: چھوٹی یا بڑی دیوار کے لیے سیمنٹ اور ریت کا وہی ملاپ۔\n• نقشے: نقشے پر 1 سینٹی میٹر ہر جگہ ایک ہی فاصلہ بتاتا ہے۔\n• دکانیں: \"6 کے 18\" کو آسان کر کے \"1 کا 3\" بنانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

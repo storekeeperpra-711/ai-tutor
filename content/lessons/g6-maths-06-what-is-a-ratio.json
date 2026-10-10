@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-what-is-a-ratio",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "What is a ratio?",
     "ur": "نسبت کیا ہے؟"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [
     {
       "skill": "maths.fractions.unit_fraction_meaning"
@@ -377,6 +377,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Ali has 4 pencils, Sara has 8. How do we compare them?",
+          "ur": "علی کے پاس 4 پنسلیں ہیں، سارہ کے پاس 8۔ ہم ان کا موازنہ کیسے کریں؟"
+        }
+      },
+      "text": {
+        "en": "We can compare two amounts by their difference: Sara has 4 more. But often we need to ask \"how many times as much?\" Sara has twice as many pencils. People needed a way to compare amounts by size, not just by subtraction, and it must still work when the numbers change. That comparison is a ratio, written 4 : 8, which is the same as 1 : 2.",
+        "ur": "ہم دو مقداروں کا موازنہ فرق سے کر سکتے ہیں: سارہ کے پاس 4 زیادہ ہیں۔ مگر اکثر ہمیں پوچھنا ہوتا ہے کہ \"کتنے گنا؟\" سارہ کے پاس دگنی پنسلیں ہیں۔ لوگوں کو موازنے کا ایسا طریقہ چاہیے تھا جو صرف منفی کرنے سے آگے ہو اور اعداد بدلنے پر بھی کام کرے۔ یہ موازنہ نسبت ہے، جسے 4 : 8 لکھتے ہیں، جو 1 : 2 کے برابر ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Cooking: 1 cup of rice to 2 cups of water.\n• Cricket: runs scored to balls faced.\n• Mixing: 1 part cement to 4 parts sand.\n• Class: 2 teachers for every 40 children.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• کھانا پکانا: 1 پیالہ چاول کے ساتھ 2 پیالے پانی۔\n• کرکٹ: بنائے گئے رنز اور کھیلی گئی گیندیں۔\n• ملانا: 1 حصہ سیمنٹ اور 4 حصے ریت۔\n• جماعت: ہر 40 بچوں پر 2 استاد۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

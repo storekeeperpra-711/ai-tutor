@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-speed",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Speed, distance and time",
     "ur": "رفتار، فاصلہ اور وقت"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.ratio.rate"
@@ -244,6 +244,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "A van does 150 km in 3 hours. Will we reach before dark?",
+          "ur": "ایک وین 3 گھنٹے میں 150 کلومیٹر چلتی ہے۔ کیا ہم اندھیرے سے پہلے پہنچ جائیں گے؟"
+        }
+      },
+      "text": {
+        "en": "Travellers always want to know: how fast, how far, how long? These three are linked. If we know any two, we can find the third. Speed tells how far we go in one hour or one second: 150 km in 3 hours is 50 km per hour. People needed one simple rule to plan a journey and compare vehicles: speed = distance ÷ time.",
+        "ur": "مسافر ہمیشہ جاننا چاہتے ہیں: کتنی تیز، کتنا دور، کتنی دیر؟ یہ تینوں آپس میں جڑے ہیں۔ اگر ان میں سے دو معلوم ہوں تو تیسرا نکل آتا ہے۔ رفتار بتاتی ہے کہ ایک گھنٹے یا ایک سیکنڈ میں ہم کتنا دور جاتے ہیں: 3 گھنٹے میں 150 کلومیٹر یعنی 50 کلومیٹر فی گھنٹہ۔ لوگوں کو سفر کی منصوبہ بندی اور گاڑیوں کا موازنہ کرنے کے لیے ایک سیدھا اصول چاہیے تھا: رفتار = فاصلہ ÷ وقت۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Journeys: how long a bus from Lahore to Multan will take.\n• Cricket: how fast a bowler bowls, in km per hour.\n• Roads: speed limit signs and safe driving.\n• Running: your time in a school race.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• سفر: لاہور سے ملتان کی بس کتنی دیر میں پہنچے گی۔\n• کرکٹ: گیند باز کی گیند کتنے کلومیٹر فی گھنٹہ کی رفتار سے آتی ہے۔\n• سڑکیں: رفتار کی حد کے نشان اور محفوظ ڈرائیونگ۔\n• دوڑ: اسکول کی دوڑ میں آپ کا وقت۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

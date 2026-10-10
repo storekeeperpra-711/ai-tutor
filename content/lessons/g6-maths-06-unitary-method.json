@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-unitary-method",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "The unitary method",
     "ur": "اکائی کا طریقہ"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.ratio.proportion"
@@ -557,6 +557,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "4 pens cost Rs 120. How do you find the price of 7 pens?",
+          "ur": "4 قلم 120 روپے کے ہیں۔ 7 قلم کی قیمت کیسے نکالیں؟"
+        }
+      },
+      "text": {
+        "en": "Shopkeepers and buyers always meet questions like this: we know the price of some, and want the price of a different number. The simple idea is to first find the value of one unit, then multiply. Rs 120 for 4 pens is Rs 30 for 1 pen, so 7 pens cost 7 × 30 = Rs 210. This works for any \"if some cost this, what do others cost?\" question.",
+        "ur": "دکان دار اور خریدار کو ایسے سوال ہمیشہ ملتے ہیں: ہمیں کچھ چیزوں کی قیمت معلوم ہے اور کسی اور تعداد کی قیمت چاہیے۔ آسان خیال یہ ہے کہ پہلے ایک اکائی کی قیمت نکالیں، پھر ضرب دیں۔ 4 قلم کے 120 روپے ہیں تو 1 قلم کے 30 روپے، اس لیے 7 قلم کے 7 × 30 = 210 روپے۔ یہ ہر اس سوال میں کام کرتا ہے کہ \"اگر کچھ کی یہ قیمت ہے تو دوسروں کی کیا ہوگی؟\""
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: the price of a dozen eggs from the price of 3.\n• Wages: pay for 6 days from the pay for 2 days.\n• Cooking: how much flour for 10 people if 4 people need 800 g.\n• Travel: the fare for a longer ride at the same rate.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: 3 انڈوں کی قیمت سے درجن انڈوں کی قیمت۔\n• اجرت: 2 دن کی مزدوری سے 6 دن کی مزدوری۔\n• کھانا پکانا: اگر 4 لوگوں کو 800 گرام آٹا چاہیے تو 10 لوگوں کو کتنا۔\n• سفر: اسی شرح پر لمبے سفر کا کرایہ۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

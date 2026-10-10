@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-rate",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Rate",
     "ur": "شرح"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.ratio.unitary_method"
@@ -455,6 +455,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "5 pens cost Rs 75 and 8 pens cost Rs 112. Which is the better buy?",
+          "ur": "5 قلم 75 روپے کے ہیں اور 8 قلم 112 روپے کے۔ کون سا سودا بہتر ہے؟"
+        }
+      },
+      "text": {
+        "en": "To compare prices of different packs, we need a fair measure: the cost of one. Rs 75 for 5 pens is Rs 15 each, and Rs 112 for 8 pens is Rs 14 each. People needed a way to compare two different kinds of things, like money and pens, or distance and time. A rate does this by saying how much for one unit: Rs 15 per pen, 60 km per hour.",
+        "ur": "مختلف پیکوں کی قیمتوں کا موازنہ کرنے کے لیے ہمیں ایک منصفانہ پیمانہ چاہیے: ایک کی قیمت۔ 5 قلم کے 75 روپے یعنی 15 روپے کا ایک، اور 8 قلم کے 112 روپے یعنی 14 روپے کا ایک۔ لوگوں کو دو مختلف قسم کی چیزوں، جیسے پیسے اور قلم، یا فاصلہ اور وقت، کا موازنہ کرنے کا طریقہ چاہیے تھا۔ شرح یہ کام کرتی ہے: ایک اکائی کے لیے کتنا، جیسے 15 روپے فی قلم، 60 کلومیٹر فی گھنٹہ۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Bazaar: Rs 250 per kg of apples; which stall is cheaper?\n• Travel: a bus doing 60 km per hour.\n• Mobile: Rs 2 per minute of calls, or Rs per MB of data.\n• Work: a worker paid Rs 800 per day.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بازار: سیب 250 روپے فی کلو؛ کون سا ٹھیلا سستا ہے؟\n• سفر: بس جو 60 کلومیٹر فی گھنٹہ چلتی ہے۔\n• موبائل: کال کے 2 روپے فی منٹ، یا ڈیٹا کے روپے فی ایم بی۔\n• کام: مزدور کو 800 روپے فی دن ملتے ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

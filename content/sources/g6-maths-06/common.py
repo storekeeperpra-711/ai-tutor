@@ -1,9 +1,14 @@
 import json
+import sys
 from fractions import Fraction as F
 from math import gcd
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT / "content" / "sources"))
+
+from why import WHY  # noqa: E402
+from why_steps import add_why  # noqa: E402
 
 REF = "PCTB Mathematics 6 (SNC 2022), Sub-domain 4: Rate, Ratio and Percentage"
 REVIEW = {"status": "draft", "reviewed_by": None, "date": None}
@@ -181,6 +186,7 @@ def check_lesson(lesson):
 
 
 def write(lesson):
+    add_why(lesson, WHY)
     check_lesson(lesson)
     path = ROOT / "content" / "lessons" / f"{lesson['id']}.json"
     path.write_text(json.dumps(lesson, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
