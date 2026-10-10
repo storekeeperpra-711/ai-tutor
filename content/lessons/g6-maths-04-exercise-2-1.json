@@ -1,0 +1,1623 @@
+{
+  "id": "g6-maths-04-exercise-2-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Recognize and identify integers (positive integers, negative integers and the neutral integer), and show them on a number line.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 2: Integers, Exercise 2.1"
+    }
+  ],
+  "skills": [
+    "maths.integers.ex_2_1"
+  ],
+  "title": {
+    "en": "Exercise 2.1 practice: integers on the number line",
+    "ur": "مشق 2.1 کی پریکٹس: عددی خط پر صحیح اعداد"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.meaning"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "sign_ignored",
+      "description": "Ignores the minus sign: 12 m below sea level is written 12, and −6 is placed on the right of 0."
+    },
+    {
+      "id": "opposite_same",
+      "description": "Thinks the opposite of a number is the number itself, or that a negative number has no opposite."
+    },
+    {
+      "id": "zero_sign",
+      "description": "Thinks 0 is positive or negative, or not an integer."
+    },
+    {
+      "id": "zero_natural",
+      "description": "Thinks 0 is a natural number."
+    },
+    {
+      "id": "gap_miscount",
+      "description": "Subtracts the numbers without their signs, or leaves out 0 when counting."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.ex_2_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.ex_2_1": [
+      {
+        "id": "qb_opposite",
+        "type": "recall",
+        "step": {
+          "id": "qb_opposite",
+          "type": "number",
+          "prompt": {
+            "en": "Write the opposite of 14.",
+            "ur": "14 کا مخالف عدد لکھیں۔"
+          },
+          "answer": -14,
+          "checker": "numeric",
+          "hint": {
+            "en": "Same distance from 0, on the other side.",
+            "ur": "0 سے اتنا ہی فاصلہ، دوسری طرف۔"
+          },
+          "feedback_correct": {
+            "en": "Right! −14.",
+            "ur": "درست! −14"
+          },
+          "feedback_wrong": {
+            "en": "The opposite of 14 is −14.",
+            "ur": "14 کا مخالف عدد −14 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 14,
+              "feedback": {
+                "en": "That is the same number. The opposite is −14.",
+                "ur": "یہ وہی عدد ہے۔ مخالف −14 ہے۔"
+              },
+              "misconception_id": "opposite_same"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_gap",
+        "type": "apply",
+        "step": {
+          "id": "qb_gap",
+          "type": "number",
+          "prompt": {
+            "en": "How many steps are there on the number line from −6 to 2?",
+            "ur": "عددی خط پر −6 سے 2 تک کتنے قدم ہیں؟"
+          },
+          "answer": 8,
+          "checker": "numeric",
+          "hint": {
+            "en": "Steps from −6 to 0, then from 0 to 2.",
+            "ur": "−6 سے 0 تک قدم، پھر 0 سے 2 تک۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 6 + 2 = 8.",
+            "ur": "درست! 6 + 2 = 8"
+          },
+          "feedback_wrong": {
+            "en": "−6 to 0 is 6 steps and 0 to 2 is 2 steps, so 8.",
+            "ur": "−6 سے 0 تک 6 قدم اور 0 سے 2 تک 2 قدم، اس لیے 8"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "That is 6 − 2. They are on opposite sides of 0, so add: 8.",
+                "ur": "یہ 6 − 2 ہے۔ وہ 0 کے مخالف طرف ہیں، اس لیے جمع کریں: 8"
+              },
+              "misconception_id": "gap_miscount"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Imran says 0 is a natural number, because it is the first number we count from. What went wrong?",
+            "ur": "عمران کہتا ہے 0 قدرتی عدد ہے، کیونکہ ہم اسی سے گنتی شروع کرتے ہیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "starts_one",
+              "text": {
+                "en": "Natural numbers start at 1. 0 is a whole number.",
+                "ur": "قدرتی اعداد 1 سے شروع ہوتے ہیں۔ 0 مکمل عدد ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Natural numbers are 1, 2, 3 ...; add 0 to get the whole numbers.",
+                "ur": "جی ہاں! قدرتی اعداد 1، 2، 3 ... ہیں؛ ان میں 0 ملانے سے مکمل اعداد بنتے ہیں۔"
+              }
+            },
+            {
+              "id": "neg",
+              "text": {
+                "en": "0 is a negative number.",
+                "ur": "0 منفی عدد ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "0 is neither negative nor positive.",
+                "ur": "0 نہ منفی ہے نہ مثبت۔"
+              },
+              "misconception_id": "zero_sign"
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. 0 is a natural number.",
+                "ur": "کوئی غلطی نہیں۔ 0 قدرتی عدد ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Natural numbers start at 1.",
+                "ur": "قدرتی اعداد 1 سے شروع ہوتے ہیں۔"
+              },
+              "misconception_id": "zero_natural"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_opposite",
+      "front": {
+        "en": "What is the opposite of −20?",
+        "ur": "−20 کا مخالف عدد کیا ہے؟"
+      },
+      "back": {
+        "en": "20. Opposites are the same distance from 0 on different sides.",
+        "ur": "20۔ مخالف اعداد 0 سے برابر فاصلے پر مختلف طرف ہوتے ہیں۔"
+      }
+    },
+    {
+      "id": "f_zero",
+      "front": {
+        "en": "Is 0 positive, negative or neither?",
+        "ur": "کیا 0 مثبت ہے، منفی ہے یا کچھ نہیں؟"
+      },
+      "back": {
+        "en": "Neither. 0 is the neutral integer, in the middle of the number line.",
+        "ur": "نہ مثبت نہ منفی۔ 0 غیر جانبدار صحیح عدد ہے، عددی خط کے بیچ میں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_thermometer",
+      "text": {
+        "en": "Look at the weather forecast for a cold city, or draw a thermometer. Write three temperatures as integers, some above and some below zero, and mark them on a number line in your notebook.",
+        "ur": "کسی ٹھنڈے شہر کی موسمی پیشگوئی دیکھیں یا تھرمامیٹر بنائیں۔ تین درجہ حرارت صحیح اعداد میں لکھیں، کچھ صفر سے اوپر اور کچھ نیچے، اور انہیں اپنی کاپی میں عددی خط پر لگائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Integer",
+      "ur": "صحیح عدد"
+    },
+    {
+      "en": "Natural number",
+      "ur": "قدرتی عدد"
+    },
+    {
+      "en": "Whole number",
+      "ur": "مکمل عدد"
+    },
+    {
+      "en": "Opposite",
+      "ur": "مخالف عدد"
+    },
+    {
+      "en": "Number line",
+      "ur": "عددی خط"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 2.1 is about integers on the number line. Let's go!",
+          "ur": "مشق 2.1 عددی خط پر صحیح اعداد کے بارے میں ہے۔ چلیں!"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 2.1 of your maths book (PCTB Mathematics 6). Here you work with natural and whole numbers, read and plot integers on a number line, write situations as integers, and find opposites. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 2.1 کے ساتھ ہے۔ اس میں آپ قدرتی اور مکمل اعداد کے ساتھ کام کریں گے، عددی خط پر صحیح اعداد پڑھیں گے اور لگائیں گے، صورتحال کو صحیح عدد میں لکھیں گے، اور مخالف اعداد معلوم کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_whole",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a whole number but not a natural number?",
+        "ur": "ان میں سے کون سا مکمل عدد ہے مگر قدرتی عدد نہیں؟"
+      },
+      "options": [
+        {
+          "id": "one",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "1 is both a natural number and a whole number.",
+            "ur": "1 قدرتی عدد بھی ہے اور مکمل عدد بھی۔"
+          }
+        },
+        {
+          "id": "minus_one",
+          "text": {
+            "en": "−1",
+            "ur": "−1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−1 is negative, so it is neither natural nor whole. It is an integer.",
+            "ur": "−1 منفی ہے، اس لیے نہ قدرتی ہے نہ مکمل۔ یہ صحیح عدد ہے۔"
+          }
+        },
+        {
+          "id": "zero",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Natural numbers start at 1. Whole numbers are 0, 1, 2, 3 ...",
+            "ur": "جی ہاں! قدرتی اعداد 1 سے شروع ہوتے ہیں۔ مکمل اعداد 0، 1، 2، 3 ... ہیں۔"
+          }
+        },
+        {
+          "id": "ten",
+          "text": {
+            "en": "10",
+            "ur": "10"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "10 is both a natural number and a whole number.",
+            "ur": "10 قدرتی عدد بھی ہے اور مکمل عدد بھی۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_opposite",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Every number has an opposite on the other side of 0.",
+          "ur": "ہر عدد کا 0 کی دوسری طرف ایک مخالف عدد ہوتا ہے۔"
+        }
+      },
+      "text": {
+        "en": "The opposite of 4 is −4, and the opposite of −4 is 4. Opposites are the same distance from 0 but on different sides. A number and its opposite add up to 0. The integers are ... −3, −2, −1, 0, 1, 2, 3 ...; 0 is neither positive nor negative.",
+        "ur": "4 کا مخالف عدد −4 ہے، اور −4 کا مخالف عدد 4 ہے۔ مخالف اعداد 0 سے برابر فاصلے پر ہوتے ہیں مگر مختلف طرف۔ عدد اور اس کا مخالف جمع ہو کر 0 بنتے ہیں۔ صحیح اعداد ... −3، −2، −1، 0، 1، 2، 3 ... ہیں؛ 0 نہ مثبت ہے نہ منفی۔"
+      }
+    },
+    {
+      "id": "q2_opposite",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Write the opposite of 9.",
+        "ur": "9 کا مخالف عدد لکھیں۔"
+      },
+      "answer": -9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Same distance from 0, but on the other side.",
+        "ur": "0 سے اتنا ہی فاصلہ، مگر دوسری طرف۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The opposite of 9 is −9.",
+        "ur": "درست! 9 کا مخالف عدد −9 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "9 is 9 steps right of 0, so its opposite is 9 steps left: −9.",
+        "ur": "9، 0 سے 9 قدم دائیں ہے، اس لیے اس کا مخالف 9 قدم بائیں ہے: −9"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That is the same number. The opposite is on the other side of 0: −9.",
+            "ur": "یہ وہی عدد ہے۔ مخالف عدد 0 کی دوسری طرف ہوتا ہے: −9"
+          },
+          "misconception_id": "opposite_same"
+        }
+      ]
+    },
+    {
+      "id": "q3_sea",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A diver is 12 m below sea level. Which integer shows her position, if sea level is 0?",
+        "ur": "ایک غوطہ خور سطح سمندر سے 12 میٹر نیچے ہے۔ سطح سمندر 0 ہو تو اس کی جگہ کون سا صحیح عدد ظاہر کرتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "p12",
+          "text": {
+            "en": "12",
+            "ur": "12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "12 would be 12 m above sea level.",
+            "ur": "12 کا مطلب سطح سمندر سے 12 میٹر اوپر ہوتا۔"
+          },
+          "misconception_id": "sign_ignored"
+        },
+        {
+          "id": "m12",
+          "text": {
+            "en": "−12",
+            "ur": "−12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Below sea level is negative.",
+            "ur": "جی ہاں! سطح سمندر سے نیچے منفی ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "zero",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is sea level itself, and she is 12 m below it.",
+            "ur": "0 تو سطح سمندر ہی ہے، اور وہ اس سے 12 میٹر نیچے ہے۔"
+          },
+          "misconception_id": "zero_sign"
+        }
+      ]
+    },
+    {
+      "id": "q4_loss",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shopkeeper has a loss of Rs 250. Write the loss as an integer, where profit is positive.",
+        "ur": "ایک دکاندار کو 250 روپے کا نقصان ہوا۔ نقصان کو صحیح عدد میں لکھیں، جہاں منافع مثبت ہے۔"
+      },
+      "answer": -250,
+      "checker": "numeric",
+      "hint": {
+        "en": "A profit is positive, so a loss is the opposite.",
+        "ur": "منافع مثبت ہے، اس لیے نقصان اس کا الٹ ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! A loss of Rs 250 is −250.",
+        "ur": "درست! 250 روپے کا نقصان −250 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Profit is positive, so a loss is negative: −250.",
+        "ur": "منافع مثبت ہے، اس لیے نقصان منفی ہے: −250"
+      },
+      "common_wrong": [
+        {
+          "answer": 250,
+          "feedback": {
+            "en": "That would be a profit of Rs 250. A loss is negative: −250.",
+            "ur": "یہ 250 روپے کا منافع ہوتا۔ نقصان منفی ہے: −250"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ]
+    },
+    {
+      "id": "q5_not_integer",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these numbers is not an integer?",
+        "ur": "ان میں سے کون سا عدد صحیح عدد نہیں؟"
+      },
+      "options": [
+        {
+          "id": "m7",
+          "text": {
+            "en": "−7",
+            "ur": "−7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−7 is a negative integer.",
+            "ur": "−7 منفی صحیح عدد ہے۔"
+          }
+        },
+        {
+          "id": "zero",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is an integer, the neutral one.",
+            "ur": "0 صحیح عدد ہے، غیر جانبدار صحیح عدد۔"
+          },
+          "misconception_id": "zero_sign"
+        },
+        {
+          "id": "half",
+          "text": {
+            "en": "2½",
+            "ur": "2½"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 2½ is between 2 and 3, so it is not a whole step on the number line.",
+            "ur": "جی ہاں! 2½، 2 اور 3 کے بیچ میں ہے، اس لیے عددی خط پر پورا قدم نہیں۔"
+          }
+        },
+        {
+          "id": "p15",
+          "text": {
+            "en": "+15",
+            "ur": "+15"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "+15 is the same as 15, a positive integer.",
+            "ur": "+15 وہی 15 ہے، مثبت صحیح عدد۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6_plot",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "Put the marker on −8. Press Check.",
+        "ur": "نشان کو −8 پر رکھیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": 0
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "-8"
+      },
+      "hint": {
+        "en": "Start at 0 and count 8 steps to the left.",
+        "ur": "0 سے شروع کریں اور 8 قدم بائیں گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −8 is 8 steps to the left of 0.",
+        "ur": "درست! −8، 0 سے 8 قدم بائیں ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "−8 is 8 steps to the LEFT of 0.",
+        "ur": "−8، 0 سے 8 قدم بائیں طرف ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "8",
+          "feedback": {
+            "en": "That is 8, to the right of 0. A minus sign means go LEFT.",
+            "ur": "یہ 8 ہے، 0 کے دائیں طرف۔ منفی کا مطلب بائیں جائیں۔"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ]
+    },
+    {
+      "id": "q7_read",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which integer does point P show on the number line?",
+        "ur": "عددی خط پر نقطہ P کون سا صحیح عدد ظاہر کرتا ہے؟"
+      },
+      "answer": -5,
+      "checker": "numeric",
+      "hint": {
+        "en": "P is left of 0. Count the steps from 0 to P.",
+        "ur": "P، 0 کے بائیں ہے۔ 0 سے P تک قدم گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! P is 5 steps left of 0: −5.",
+        "ur": "درست! P، 0 سے 5 قدم بائیں ہے: −5"
+      },
+      "feedback_wrong": {
+        "en": "P is 5 steps to the left of 0, so it shows −5.",
+        "ur": "P، 0 سے 5 قدم بائیں ہے، اس لیے یہ −5 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "5 is where R is, on the right. P is on the left: −5.",
+            "ur": "5 پر R ہے، دائیں طرف۔ P بائیں طرف ہے: −5"
+          },
+          "misconception_id": "sign_ignored"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 70.0,
+        "alt": {
+          "en": "A number line from −8 to 8 with four dots: P at −5, S at −2, Q at 2 and R at 5. The dots are marked with their letters, not their numbers.",
+          "ur": "−8 سے 8 تک عددی خط جس پر چار نقطے ہیں: P پر −5، S پر −2، Q پر 2 اور R پر 5۔ نقطوں پر عدد نہیں، حرف لکھے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              40.0
+            ],
+            "to": [
+              292.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              35.0
+            ],
+            "to": [
+              16.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.8,
+              35.0
+            ],
+            "to": [
+              32.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              49.5,
+              35.0
+            ],
+            "to": [
+              49.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.2,
+              35.0
+            ],
+            "to": [
+              66.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.0,
+              35.0
+            ],
+            "to": [
+              83.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.8,
+              35.0
+            ],
+            "to": [
+              99.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              116.5,
+              35.0
+            ],
+            "to": [
+              116.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              133.2,
+              35.0
+            ],
+            "to": [
+              133.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              35.0
+            ],
+            "to": [
+              150.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              166.8,
+              35.0
+            ],
+            "to": [
+              166.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              183.5,
+              35.0
+            ],
+            "to": [
+              183.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              200.2,
+              35.0
+            ],
+            "to": [
+              200.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              217.0,
+              35.0
+            ],
+            "to": [
+              217.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              233.8,
+              35.0
+            ],
+            "to": [
+              233.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              250.5,
+              35.0
+            ],
+            "to": [
+              250.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              267.2,
+              35.0
+            ],
+            "to": [
+              267.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              284.0,
+              35.0
+            ],
+            "to": [
+              284.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              16.0,
+              57.0
+            ],
+            "text": "−8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              57.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "label",
+            "at": [
+              284.0,
+              57.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              66.2,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.2,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.2,
+              57.0
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              183.5,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              183.5,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              183.5,
+              57.0
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              233.8,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.8,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              233.8,
+              57.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              116.5,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              116.5,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              116.5,
+              57.0
+            ],
+            "text": "S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_opposite_point",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which point is the opposite of R?",
+        "ur": "کون سا نقطہ R کا مخالف ہے؟"
+      },
+      "options": [
+        {
+          "id": "pt_q",
+          "text": {
+            "en": "Q",
+            "ur": "Q"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Q is 2. The opposite of R (5) must be 5 steps from 0.",
+            "ur": "Q، 2 ہے۔ R (5) کا مخالف 0 سے 5 قدم پر ہونا چاہیے۔"
+          },
+          "misconception_id": "opposite_same"
+        },
+        {
+          "id": "pt_s",
+          "text": {
+            "en": "S",
+            "ur": "S"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "S is −2. It is the opposite of Q, not of R.",
+            "ur": "S، −2 ہے۔ یہ Q کا مخالف ہے، R کا نہیں۔"
+          },
+          "misconception_id": "opposite_same"
+        },
+        {
+          "id": "pt_p",
+          "text": {
+            "en": "P",
+            "ur": "P"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! R is 5 and P is −5, the same distance from 0 on opposite sides.",
+            "ur": "جی ہاں! R، 5 ہے اور P، −5، 0 سے برابر فاصلے پر مخالف طرف۔"
+          }
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 70.0,
+        "alt": {
+          "en": "A number line from −8 to 8 with four dots: P at −5, S at −2, Q at 2 and R at 5. The dots are marked with their letters, not their numbers.",
+          "ur": "−8 سے 8 تک عددی خط جس پر چار نقطے ہیں: P پر −5، S پر −2، Q پر 2 اور R پر 5۔ نقطوں پر عدد نہیں، حرف لکھے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              8.0,
+              40.0
+            ],
+            "to": [
+              292.0,
+              40.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              16.0,
+              35.0
+            ],
+            "to": [
+              16.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.8,
+              35.0
+            ],
+            "to": [
+              32.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              49.5,
+              35.0
+            ],
+            "to": [
+              49.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              66.2,
+              35.0
+            ],
+            "to": [
+              66.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              83.0,
+              35.0
+            ],
+            "to": [
+              83.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              99.8,
+              35.0
+            ],
+            "to": [
+              99.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              116.5,
+              35.0
+            ],
+            "to": [
+              116.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              133.2,
+              35.0
+            ],
+            "to": [
+              133.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              35.0
+            ],
+            "to": [
+              150.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              166.8,
+              35.0
+            ],
+            "to": [
+              166.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              183.5,
+              35.0
+            ],
+            "to": [
+              183.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              200.2,
+              35.0
+            ],
+            "to": [
+              200.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              217.0,
+              35.0
+            ],
+            "to": [
+              217.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              233.8,
+              35.0
+            ],
+            "to": [
+              233.8,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              250.5,
+              35.0
+            ],
+            "to": [
+              250.5,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              267.2,
+              35.0
+            ],
+            "to": [
+              267.2,
+              45.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              284.0,
+              35.0
+            ],
+            "to": [
+              284.0,
+              45.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              16.0,
+              57.0
+            ],
+            "text": "−8"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              57.0
+            ],
+            "text": "0"
+          },
+          {
+            "kind": "label",
+            "at": [
+              284.0,
+              57.0
+            ],
+            "text": "8"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              66.2,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.2,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              66.2,
+              57.0
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              183.5,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              183.5,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              183.5,
+              57.0
+            ],
+            "text": "Q"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              233.8,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.8,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              233.8,
+              57.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              116.5,
+              40.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "point",
+            "at": [
+              116.5,
+              40.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              116.5,
+              57.0
+            ],
+            "text": "S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q9_gap",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many steps are there on the number line from −4 to 5?",
+        "ur": "عددی خط پر −4 سے 5 تک کتنے قدم ہیں؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the steps from −4 to 0, then from 0 to 5.",
+        "ur": "−4 سے 0 تک قدم گنیں، پھر 0 سے 5 تک۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 + 5 = 9 steps.",
+        "ur": "درست! 4 + 5 = 9 قدم"
+      },
+      "feedback_wrong": {
+        "en": "−4 to 0 is 4 steps and 0 to 5 is 5 steps. 4 + 5 = 9.",
+        "ur": "−4 سے 0 تک 4 قدم اور 0 سے 5 تک 5 قدم۔ 4 + 5 = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "That is 5 − 4. The two numbers are on opposite sides of 0, so add the steps: 9.",
+            "ur": "یہ 5 − 4 ہے۔ دونوں اعداد 0 کے مخالف طرف ہیں، اس لیے قدم جمع کریں: 9"
+          },
+          "misconception_id": "gap_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q10_plot_opposite",
+      "type": "sim",
+      "question_type": "apply",
+      "renderer": "native",
+      "sim_id": "number_line",
+      "prompt": {
+        "en": "Put the marker on the opposite of −6. Press Check.",
+        "ur": "نشان کو −6 کے مخالف عدد پر رکھیں۔ \"جانچیں\" دبائیں۔"
+      },
+      "params": {
+        "min": -10,
+        "max": 10,
+        "step": 1,
+        "start": 0
+      },
+      "expected": {
+        "result": "value",
+        "checker": "numeric",
+        "answer": "6"
+      },
+      "hint": {
+        "en": "−6 is 6 steps left of 0. Its opposite is 6 steps on the other side.",
+        "ur": "−6، 0 سے 6 قدم بائیں ہے۔ اس کا مخالف دوسری طرف 6 قدم پر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The opposite of −6 is 6.",
+        "ur": "درست! −6 کا مخالف عدد 6 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "−6 is 6 steps left of 0, so its opposite is 6 steps right: 6.",
+        "ur": "−6، 0 سے 6 قدم بائیں ہے، اس لیے اس کا مخالف 6 قدم دائیں ہے: 6"
+      },
+      "common_wrong": [
+        {
+          "answer": "-6",
+          "feedback": {
+            "en": "That is −6 itself. The opposite is on the other side of 0.",
+            "ur": "یہ تو −6 ہی ہے۔ مخالف عدد 0 کی دوسری طرف ہوتا ہے۔"
+          },
+          "misconception_id": "opposite_same"
+        }
+      ]
+    },
+    {
+      "id": "q11_zero",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which statement about 0 is true?",
+        "ur": "0 کے بارے میں کون سا بیان درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "positive",
+          "text": {
+            "en": "0 is a positive integer.",
+            "ur": "0 مثبت صحیح عدد ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Positive integers are 1, 2, 3 ... and start after 0.",
+            "ur": "مثبت صحیح اعداد 1، 2، 3 ... ہیں اور 0 کے بعد شروع ہوتے ہیں۔"
+          },
+          "misconception_id": "zero_sign"
+        },
+        {
+          "id": "negative",
+          "text": {
+            "en": "0 is a negative integer.",
+            "ur": "0 منفی صحیح عدد ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Negative integers are −1, −2, −3 ... and are less than 0.",
+            "ur": "منفی صحیح اعداد −1، −2، −3 ... ہیں اور 0 سے چھوٹے ہیں۔"
+          },
+          "misconception_id": "zero_sign"
+        },
+        {
+          "id": "not_int",
+          "text": {
+            "en": "0 is not an integer.",
+            "ur": "0 صحیح عدد نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is an integer. It sits in the middle of the number line.",
+            "ur": "0 صحیح عدد ہے۔ یہ عددی خط کے بیچ میں ہے۔"
+          },
+          "misconception_id": "zero_sign"
+        },
+        {
+          "id": "neither",
+          "text": {
+            "en": "0 is an integer that is neither positive nor negative.",
+            "ur": "0 ایسا صحیح عدد ہے جو نہ مثبت ہے نہ منفی۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! That is why 0 is called the neutral integer.",
+            "ur": "جی ہاں! اسی لیے 0 کو غیر جانبدار صحیح عدد کہتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12_count",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many integers are there from −3 to 3, counting both ends?",
+        "ur": "−3 سے 3 تک، دونوں سرے ملا کر، کتنے صحیح اعداد ہیں؟"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write them all: −3, −2, ... Don't forget 0.",
+        "ur": "سب لکھیں: −3، −2، ... 0 کو نہ بھولیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −3, −2, −1, 0, 1, 2, 3: seven integers.",
+        "ur": "درست! −3، −2، −1، 0، 1، 2، 3: سات صحیح اعداد۔"
+      },
+      "feedback_wrong": {
+        "en": "Three negative, 0, and three positive: 3 + 1 + 3 = 7.",
+        "ur": "تین منفی، 0، اور تین مثبت: 3 + 1 + 3 = 7"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "You left out 0. There are 3 + 1 + 3 = 7.",
+            "ur": "آپ نے 0 چھوڑ دیا۔ کل 3 + 1 + 3 = 7 ہیں۔"
+          },
+          "misconception_id": "gap_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza says the opposite of −6 is −6, because it already has a minus sign. What went wrong?",
+        "ur": "حمزہ کہتا ہے −6 کا مخالف −6 ہے، کیونکہ اس پر پہلے ہی منفی کا نشان ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "zero",
+          "text": {
+            "en": "The opposite of −6 is 0.",
+            "ur": "−6 کا مخالف 0 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is the middle, not the opposite. −6 + 6 = 0 shows the opposite is 6.",
+            "ur": "0 درمیان ہے، مخالف نہیں۔ −6 + 6 = 0 بتاتا ہے کہ مخالف 6 ہے۔"
+          }
+        },
+        {
+          "id": "other_side",
+          "text": {
+            "en": "The opposite is on the other side of 0, so it is 6.",
+            "ur": "مخالف عدد 0 کی دوسری طرف ہوتا ہے، اس لیے یہ 6 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Opposites are the same distance from 0 on different sides.",
+            "ur": "جی ہاں! مخالف اعداد 0 سے برابر فاصلے پر مختلف طرف ہوتے ہیں۔"
+          }
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. −6 has no other opposite.",
+            "ur": "کوئی غلطی نہیں۔ −6 کا اور کوئی مخالف نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Every integer has an opposite. For −6 it is 6.",
+            "ur": "ہر صحیح عدد کا ایک مخالف ہوتا ہے۔ −6 کا مخالف 6 ہے۔"
+          },
+          "misconception_id": "opposite_same"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You read, plotted and wrote integers.",
+          "ur": "شاباش! آپ نے صحیح اعداد پڑھے، لگائے اور لکھے۔"
+        }
+      },
+      "text": {
+        "en": "Natural numbers are 1, 2, 3 ...; whole numbers are 0, 1, 2, 3 ...; integers are ... −2, −1, 0, 1, 2 ... Below 0 is negative, above 0 is positive, and 0 is neither. Opposites are the same distance from 0 on different sides: the opposite of −6 is 6.",
+        "ur": "قدرتی اعداد 1، 2، 3 ... ہیں؛ مکمل اعداد 0، 1، 2، 3 ... ہیں؛ صحیح اعداد ... −2، −1، 0، 1، 2 ... ہیں۔ 0 سے نیچے منفی، 0 سے اوپر مثبت، اور 0 نہ مثبت نہ منفی۔ مخالف اعداد 0 سے برابر فاصلے پر مختلف طرف ہوتے ہیں: −6 کا مخالف 6 ہے۔"
+      },
+      "points": [
+        {
+          "en": "A loss, a debt or a temperature below zero is negative.",
+          "ur": "نقصان، قرض یا صفر سے کم درجہ حرارت منفی ہے۔"
+        },
+        {
+          "en": "Between −4 and 5 there are 4 + 5 = 9 steps.",
+          "ur": "−4 اور 5 کے بیچ 4 + 5 = 9 قدم ہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_opposite",
+      "type": "recall",
+      "step": {
+        "id": "r_opposite",
+        "type": "number",
+        "prompt": {
+          "en": "Write the opposite of −13.",
+          "ur": "−13 کا مخالف عدد لکھیں۔"
+        },
+        "answer": 13,
+        "checker": "numeric",
+        "hint": {
+          "en": "−13 is left of 0. Its opposite is on the right.",
+          "ur": "−13، 0 کے بائیں ہے۔ اس کا مخالف دائیں ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 13.",
+          "ur": "درست! 13"
+        },
+        "feedback_wrong": {
+          "en": "The opposite of −13 is 13.",
+          "ur": "−13 کا مخالف عدد 13 ہے۔"
+        },
+        "common_wrong": [
+          {
+            "answer": -13,
+            "feedback": {
+              "en": "That is the same number. The opposite is 13.",
+              "ur": "یہ وہی عدد ہے۔ مخالف 13 ہے۔"
+            },
+            "misconception_id": "opposite_same"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_2_1"
+    },
+    {
+      "id": "r_temperature",
+      "type": "apply",
+      "step": {
+        "id": "r_temperature",
+        "type": "number",
+        "prompt": {
+          "en": "The temperature is 9 degrees below freezing (0). Write it as an integer.",
+          "ur": "درجہ حرارت نقطہ انجماد (0) سے 9 درجے نیچے ہے۔ اسے صحیح عدد میں لکھیں۔"
+        },
+        "answer": -9,
+        "checker": "numeric",
+        "hint": {
+          "en": "Below zero is negative.",
+          "ur": "صفر سے نیچے منفی ہے۔"
+        },
+        "feedback_correct": {
+          "en": "Right! −9.",
+          "ur": "درست! −9"
+        },
+        "feedback_wrong": {
+          "en": "Below 0 is negative, so −9.",
+          "ur": "0 سے نیچے منفی ہے، اس لیے −9"
+        },
+        "common_wrong": [
+          {
+            "answer": 9,
+            "feedback": {
+              "en": "9 would be 9 degrees above freezing. Below is −9.",
+              "ur": "9 کا مطلب انجماد سے 9 درجے اوپر ہوتا۔ نیچے ہو تو −9"
+            },
+            "misconception_id": "sign_ignored"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_2_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 2.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers natural and whole numbers (q1, qb_find_error), writing situations as integers (q3, q4), reading and plotting on a number line (q6 to q8, q10), opposites (q2, q8, q10, q13), picking integers from a list (q5, q11) and short number-line problems (q9, q12).",
+    "The figure for q7 and q8 is drawn with the dots named by letters, so the child reads the number from the line.",
+    "Urdu terms to check: قدرتی عدد (natural number), مکمل عدد (whole number), مخالف عدد (opposite), غیر جانبدار صحیح عدد (neutral integer), عددی خط (number line).",
+    "The numbers were worked out in content/sources/g6-maths-04/exercise_2_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

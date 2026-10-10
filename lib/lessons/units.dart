@@ -105,6 +105,9 @@ const grade6Book = [
       BookChapter(LocalizedText(en: 'Integers', ur: 'صحیح اعداد'), [
         'g6-maths-04-what-are-integers',
         'g6-maths-04-absolute-value',
+        'g6-maths-04-exercise-2-1',
+        'g6-maths-04-exercise-2-2',
+        'g6-maths-04-chapter-2-test',
       ]),
       BookChapter(
         LocalizedText(en: 'Laws of Integers', ur: 'صحیح اعداد کے قوانین'),

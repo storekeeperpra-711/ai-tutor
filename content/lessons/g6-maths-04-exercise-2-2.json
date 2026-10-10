@@ -1,0 +1,1011 @@
+{
+  "id": "g6-maths-04-exercise-2-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Calculate the absolute (numerical) value of an integer, and arrange integers and their absolute values in ascending and descending order using a number line.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 2: Integers, Exercise 2.2"
+    }
+  ],
+  "skills": [
+    "maths.integers.ex_2_2"
+  ],
+  "title": {
+    "en": "Exercise 2.2 practice: ordering and absolute value",
+    "ur": "مشق 2.2 کی پریکٹس: ترتیب اور مطلق قیمت"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.integers.meaning"
+    },
+    {
+      "skill": "maths.integers.absolute_value"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "bigger_digits",
+      "description": "Thinks a negative number with bigger digits is greater: −9 > −2."
+    },
+    {
+      "id": "sign_kept",
+      "description": "Gives the absolute value with its minus sign: |−10| = −10."
+    },
+    {
+      "id": "abs_added_signed",
+      "description": "Adds the numbers with their signs when asked for the sum of absolute values."
+    },
+    {
+      "id": "abs_order_mixed",
+      "description": "Orders by value when the question asks for absolute values, or the other way round."
+    },
+    {
+      "id": "one_value",
+      "description": "Thinks only one integer has a given absolute value."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.integers.ex_2_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.integers.ex_2_2": [
+      {
+        "id": "qb_abs",
+        "type": "recall",
+        "step": {
+          "id": "qb_abs",
+          "type": "number",
+          "prompt": {
+            "en": "Find |−25|.",
+            "ur": "|−25| معلوم کریں۔"
+          },
+          "answer": 25,
+          "checker": "numeric",
+          "hint": {
+            "en": "The distance of −25 from 0.",
+            "ur": "−25 کا 0 سے فاصلہ۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 25.",
+            "ur": "درست! 25"
+          },
+          "feedback_wrong": {
+            "en": "|−25| = 25.",
+            "ur": "|−25| = 25"
+          },
+          "common_wrong": [
+            {
+              "answer": -25,
+              "feedback": {
+                "en": "A distance is never negative: 25.",
+                "ur": "فاصلہ کبھی منفی نہیں ہوتا: 25"
+              },
+              "misconception_id": "sign_kept"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_order",
+        "type": "apply",
+        "step": {
+          "id": "qb_order",
+          "type": "number",
+          "prompt": {
+            "en": "Write −6, 4, −1, 0, 3 in ascending order. Which number is the second one?",
+            "ur": "−6، 4، −1، 0، 3 کو صعودی ترتیب میں لکھیں۔ دوسرا عدد کون سا ہے؟"
+          },
+          "answer": -1,
+          "checker": "numeric",
+          "hint": {
+            "en": "The smallest is first, then the next smallest.",
+            "ur": "سب سے چھوٹا پہلے، پھر اس سے اگلا۔"
+          },
+          "feedback_correct": {
+            "en": "Right! −6, −1, 0, 3, 4: the second is −1.",
+            "ur": "درست! −6، −1، 0، 3، 4: دوسرا −1 ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "Ascending: −6, −1, 0, 3, 4. The second is −1.",
+            "ur": "صعودی: −6، −1، 0، 3، 4۔ دوسرا −1 ہے۔"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "That is the biggest. Ascending starts with the smallest, −6, and the second is −1.",
+                "ur": "یہ سب سے بڑا ہے۔ صعودی ترتیب سب سے چھوٹے −6 سے شروع ہوتی ہے اور دوسرا −1 ہے۔"
+              },
+              "misconception_id": "abs_order_mixed"
+            },
+            {
+              "answer": -6,
+              "feedback": {
+                "en": "−6 is the first one. The second is −1.",
+                "ur": "−6 پہلا ہے۔ دوسرا −1 ہے۔"
+              },
+              "misconception_id": "bigger_digits"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Bilal says |−7| = −7 because the number is negative. What went wrong?",
+            "ur": "بلال کہتا ہے |−7| = −7 کیونکہ عدد منفی ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "distance",
+              "text": {
+                "en": "Absolute value is a distance from 0, which is never negative: |−7| = 7.",
+                "ur": "مطلق قیمت 0 سے فاصلہ ہے، جو کبھی منفی نہیں ہوتا: |−7| = 7"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! −7 is 7 steps from 0.",
+                "ur": "جی ہاں! −7، 0 سے 7 قدم دور ہے۔"
+              }
+            },
+            {
+              "id": "zero",
+              "text": {
+                "en": "|−7| = 0.",
+                "ur": "|−7| = 0"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Only |0| is 0. −7 is 7 steps from 0.",
+                "ur": "صرف |0| صفر ہے۔ −7، 0 سے 7 قدم دور ہے۔"
+              }
+            },
+            {
+              "id": "nothing",
+              "text": {
+                "en": "Nothing. |−7| = −7.",
+                "ur": "کوئی غلطی نہیں۔ |−7| = −7"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The bars remove the sign: |−7| = 7.",
+                "ur": "یہ لکیریں علامت ہٹا دیتی ہیں: |−7| = 7"
+              },
+              "misconception_id": "sign_kept"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_order",
+      "front": {
+        "en": "Which is greater, −3 or −9?",
+        "ur": "−3 اور −9 میں سے کون بڑا ہے؟"
+      },
+      "back": {
+        "en": "−3. It is further right on the number line, nearer to 0.",
+        "ur": "−3۔ یہ عددی خط پر زیادہ دائیں اور 0 کے قریب ہے۔"
+      }
+    },
+    {
+      "id": "f_abs",
+      "front": {
+        "en": "What is |−15|?",
+        "ur": "|−15| کیا ہے؟"
+      },
+      "back": {
+        "en": "15. Absolute value is the distance from 0, so it is never negative.",
+        "ur": "15۔ مطلق قیمت 0 سے فاصلہ ہے، اس لیے کبھی منفی نہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_cards",
+      "text": {
+        "en": "Write the integers from −9 to 9 on separate pieces of paper. Shuffle them, pick five, and put them in ascending order, then in order of their absolute values. Check with the number line.",
+        "ur": "کاغذ کے الگ ٹکڑوں پر −9 سے 9 تک صحیح اعداد لکھیں۔ انہیں ملائیں، پانچ اٹھائیں، اور صعودی ترتیب میں رکھیں، پھر مطلق قیمت کی ترتیب میں۔ عددی خط سے جانچیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Ascending order",
+      "ur": "صعودی ترتیب"
+    },
+    {
+      "en": "Descending order",
+      "ur": "نزولی ترتیب"
+    },
+    {
+      "en": "Absolute value",
+      "ur": "مطلق قیمت"
+    },
+    {
+      "en": "Integer",
+      "ur": "صحیح عدد"
+    },
+    {
+      "en": "Number line",
+      "ur": "عددی خط"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 2.2 is about order and absolute value. Ready?",
+          "ur": "مشق 2.2 ترتیب اور مطلق قیمت کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 2.2 of your maths book (PCTB Mathematics 6). Here you put integers in order, find absolute values, and put integers in order of their absolute values. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 2.2 کے ساتھ ہے۔ اس میں آپ صحیح اعداد کو ترتیب میں رکھیں گے، مطلق قیمتیں معلوم کریں گے، اور صحیح اعداد کو ان کی مطلق قیمت کی ترتیب میں رکھیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_abs",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Find |−10|.",
+        "ur": "|−10| معلوم کریں۔"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Absolute value is the distance from 0. How far is −10 from 0?",
+        "ur": "مطلق قیمت 0 سے فاصلہ ہے۔ −10، 0 سے کتنی دور ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! |−10| = 10.",
+        "ur": "درست! |−10| = 10"
+      },
+      "feedback_wrong": {
+        "en": "−10 is 10 steps from 0, and a distance is never negative: |−10| = 10.",
+        "ur": "−10، 0 سے 10 قدم دور ہے، اور فاصلہ کبھی منفی نہیں ہوتا: |−10| = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": -10,
+          "feedback": {
+            "en": "A distance is never negative. |−10| = 10.",
+            "ur": "فاصلہ کبھی منفی نہیں ہوتا۔ |−10| = 10"
+          },
+          "misconception_id": "sign_kept"
+        }
+      ]
+    },
+    {
+      "id": "q2_smallest",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which is the smallest of 3, −5, 0 and −8?",
+        "ur": "3، −5، 0 اور −8 میں سے سب سے چھوٹا کون سا ہے؟"
+      },
+      "options": [
+        {
+          "id": "m8",
+          "text": {
+            "en": "−8",
+            "ur": "−8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! −8 is farthest to the left, so it is the smallest.",
+            "ur": "جی ہاں! −8 سب سے بائیں ہے، اس لیے سب سے چھوٹا ہے۔"
+          }
+        },
+        {
+          "id": "m5",
+          "text": {
+            "en": "−5",
+            "ur": "−5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−5 is to the right of −8, so it is bigger than −8.",
+            "ur": "−5، −8 کے دائیں ہے، اس لیے −8 سے بڑا ہے۔"
+          }
+        },
+        {
+          "id": "zero",
+          "text": {
+            "en": "0",
+            "ur": "0"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "0 is bigger than every negative number.",
+            "ur": "0 ہر منفی عدد سے بڑا ہے۔"
+          }
+        },
+        {
+          "id": "three",
+          "text": {
+            "en": "3",
+            "ur": "3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3 is the biggest of the four.",
+            "ur": "3 ان چاروں میں سب سے بڑا ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_order",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "On the number line, bigger numbers are further right.",
+          "ur": "عددی خط پر بڑے اعداد زیادہ دائیں ہوتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "Ascending order goes from the smallest to the biggest, left to right on the number line: −7, −2, 0, 4. Descending order goes from the biggest to the smallest. A negative number with bigger digits is smaller: −9 is less than −2. The absolute value |n| is the distance of n from 0, so |−9| = 9 and |4| = 4. To order by absolute value, first write each absolute value, then order those.",
+        "ur": "صعودی ترتیب سب سے چھوٹے سے سب سے بڑے کی طرف ہوتی ہے، عددی خط پر بائیں سے دائیں: −7، −2، 0، 4۔ نزولی ترتیب سب سے بڑے سے سب سے چھوٹے کی طرف ہوتی ہے۔ بڑے ہندسوں والا منفی عدد چھوٹا ہوتا ہے: −9، −2 سے چھوٹا ہے۔ مطلق قیمت |n|، n کا 0 سے فاصلہ ہے، اس لیے |−9| = 9 اور |4| = 4۔ مطلق قیمت کی ترتیب کے لیے پہلے ہر مطلق قیمت لکھیں، پھر انہیں ترتیب دیں۔"
+      }
+    },
+    {
+      "id": "q3_ascending",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Arrange 4, −2, 0, −7 in ascending order.",
+        "ur": "4، −2، 0، −7 کو صعودی ترتیب میں لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "o1",
+          "text": {
+            "en": "4, 0, −2, −7",
+            "ur": "4, 0, −2, −7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is descending order (biggest first). Ascending starts with the smallest.",
+            "ur": "یہ نزولی ترتیب ہے (بڑے سے شروع)۔ صعودی ترتیب سب سے چھوٹے سے شروع ہوتی ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o2",
+          "text": {
+            "en": "0, −2, 4, −7",
+            "ur": "0, −2, 4, −7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That orders them by distance from 0. Order them by value: the smallest is −7.",
+            "ur": "یہ 0 سے فاصلے کی ترتیب ہے۔ قیمت کی ترتیب بنائیں: سب سے چھوٹا −7 ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o0",
+          "text": {
+            "en": "−7, −2, 0, 4",
+            "ur": "−7, −2, 0, 4"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! −7 < −2 < 0 < 4, left to right on the number line.",
+            "ur": "جی ہاں! −7 < −2 < 0 < 4، عددی خط پر بائیں سے دائیں۔"
+          }
+        },
+        {
+          "id": "o3",
+          "text": {
+            "en": "4, −2, 0, −7",
+            "ur": "4, −2, 0, −7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is the order they were given in. Put the smallest first: −7.",
+            "ur": "یہ تو دی گئی ترتیب ہے۔ سب سے چھوٹا پہلے رکھیں: −7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4_abs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write the absolute value of −18.",
+        "ur": "−18 کی مطلق قیمت لکھیں۔"
+      },
+      "answer": 18,
+      "checker": "numeric",
+      "hint": {
+        "en": "How many steps is −18 from 0?",
+        "ur": "−18، 0 سے کتنے قدم دور ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! |−18| = 18.",
+        "ur": "درست! |−18| = 18"
+      },
+      "feedback_wrong": {
+        "en": "−18 is 18 steps from 0, so |−18| = 18.",
+        "ur": "−18، 0 سے 18 قدم دور ہے، اس لیے |−18| = 18"
+      },
+      "common_wrong": [
+        {
+          "answer": -18,
+          "feedback": {
+            "en": "The absolute value is a distance, so it is not negative: 18.",
+            "ur": "مطلق قیمت فاصلہ ہے، اس لیے منفی نہیں: 18"
+          },
+          "misconception_id": "sign_kept"
+        }
+      ]
+    },
+    {
+      "id": "q5_greatest",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which is the greatest of −15, −3, −9 and −21?",
+        "ur": "−15، −3، −9 اور −21 میں سے سب سے بڑا کون سا ہے؟"
+      },
+      "answer": -3,
+      "checker": "numeric",
+      "hint": {
+        "en": "The one closest to 0 is the greatest of the negatives.",
+        "ur": "منفی اعداد میں جو 0 کے سب سے قریب ہو وہ سب سے بڑا ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! −3 is nearest to 0, so it is the greatest.",
+        "ur": "درست! −3، 0 کے سب سے قریب ہے، اس لیے سب سے بڑا ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "On the number line −3 is furthest to the right, so −3 is the greatest.",
+        "ur": "عددی خط پر −3 سب سے دائیں ہے، اس لیے −3 سب سے بڑا ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": -21,
+          "feedback": {
+            "en": "−21 has the biggest digits but is the smallest, furthest left. The greatest is −3.",
+            "ur": "−21 کے ہندسے بڑے ہیں مگر یہ سب سے چھوٹا ہے، سب سے بائیں۔ سب سے بڑا −3 ہے۔"
+          },
+          "misconception_id": "bigger_digits"
+        }
+      ]
+    },
+    {
+      "id": "q6_descending",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Arrange 6, −9, −1, 2 in descending order.",
+        "ur": "6، −9، −1، 2 کو نزولی ترتیب میں لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "o1",
+          "text": {
+            "en": "−9, −1, 2, 6",
+            "ur": "−9, −1, 2, 6"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is ascending order (smallest first). Descending starts with the biggest.",
+            "ur": "یہ صعودی ترتیب ہے (چھوٹے سے شروع)۔ نزولی ترتیب سب سے بڑے سے شروع ہوتی ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o0",
+          "text": {
+            "en": "6, 2, −1, −9",
+            "ur": "6, 2, −1, −9"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 6 > 2 > −1 > −9.",
+            "ur": "جی ہاں! 6 > 2 > −1 > −9"
+          }
+        },
+        {
+          "id": "o2",
+          "text": {
+            "en": "−9, 6, 2, −1",
+            "ur": "−9, 6, 2, −1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That orders them by distance from 0. By value, 6 is the biggest and −9 the smallest.",
+            "ur": "یہ 0 سے فاصلے کی ترتیب ہے۔ قیمت میں 6 سب سے بڑا اور −9 سب سے چھوٹا ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o3",
+          "text": {
+            "en": "6, 2, −9, −1",
+            "ur": "6, 2, −9, −1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−9 is smaller than −1, so −1 comes before −9: 6, 2, −1, −9.",
+            "ur": "−9، −1 سے چھوٹا ہے، اس لیے −1 پہلے آئے گا: 6، 2، −1، −9"
+          },
+          "misconception_id": "bigger_digits"
+        }
+      ]
+    },
+    {
+      "id": "q7_sum_abs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Find |−4| + |9|.",
+        "ur": "|−4| + |9| معلوم کریں۔"
+      },
+      "answer": 13,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find each absolute value first: |−4| = 4.",
+        "ur": "پہلے ہر مطلق قیمت معلوم کریں: |−4| = 4"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 + 9 = 13.",
+        "ur": "درست! 4 + 9 = 13"
+      },
+      "feedback_wrong": {
+        "en": "|−4| = 4 and |9| = 9, so 4 + 9 = 13.",
+        "ur": "|−4| = 4 اور |9| = 9، اس لیے 4 + 9 = 13"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That is −4 + 9. Take the absolute values first: 4 + 9 = 13.",
+            "ur": "یہ −4 + 9 ہے۔ پہلے مطلق قیمتیں لیں: 4 + 9 = 13"
+          },
+          "misconception_id": "abs_added_signed"
+        }
+      ]
+    },
+    {
+      "id": "q8_abs_ascending",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Arrange −9, 3, −5, 7 in ascending order of their absolute values.",
+        "ur": "−9، 3، −5، 7 کو ان کی مطلق قیمتوں کی صعودی ترتیب میں لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "o1",
+          "text": {
+            "en": "−9, −5, 3, 7",
+            "ur": "−9, −5, 3, 7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That orders them by value. The absolute values are 9, 3, 5, 7, so start with 3.",
+            "ur": "یہ قیمت کی ترتیب ہے۔ مطلق قیمتیں 9، 3، 5، 7 ہیں، اس لیے 3 سے شروع کریں۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o2",
+          "text": {
+            "en": "−9, 7, −5, 3",
+            "ur": "−9, 7, −5, 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is descending (9, 7, 5, 3). Ascending starts with the smallest absolute value, 3.",
+            "ur": "یہ نزولی (9، 7، 5، 3) ہے۔ صعودی ترتیب سب سے چھوٹی مطلق قیمت 3 سے شروع ہوتی ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o3",
+          "text": {
+            "en": "3, 7, −5, −9",
+            "ur": "3, 7, −5, −9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "|−5| = 5 is smaller than |7| = 7, so −5 comes before 7.",
+            "ur": "|−5| = 5، |7| = 7 سے چھوٹی ہے، اس لیے −5، 7 سے پہلے آئے گا۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o0",
+          "text": {
+            "en": "3, −5, 7, −9",
+            "ur": "3, −5, 7, −9"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The absolute values are 3, 5, 7, 9.",
+            "ur": "جی ہاں! مطلق قیمتیں 3، 5، 7، 9 ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9_two_values",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many integers have an absolute value of 8?",
+        "ur": "کتنے صحیح اعداد کی مطلق قیمت 8 ہے؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which numbers are 8 steps from 0? Look on both sides.",
+        "ur": "کون سے اعداد 0 سے 8 قدم دور ہیں؟ دونوں طرف دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8 and −8.",
+        "ur": "درست! 8 اور −8"
+      },
+      "feedback_wrong": {
+        "en": "8 is 8 steps right of 0 and −8 is 8 steps left, so two integers.",
+        "ur": "8، 0 سے 8 قدم دائیں اور −8، 8 قدم بائیں ہے، اس لیے دو صحیح اعداد۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "−8 is also 8 steps from 0. There are two: 8 and −8.",
+            "ur": "−8 بھی 0 سے 8 قدم دور ہے۔ دو ہیں: 8 اور −8"
+          },
+          "misconception_id": "one_value"
+        }
+      ]
+    },
+    {
+      "id": "q10_abs_descending",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Arrange −12, 5, −20, 9 in descending order of their absolute values.",
+        "ur": "−12، 5، −20، 9 کو ان کی مطلق قیمتوں کی نزولی ترتیب میں لکھیں۔"
+      },
+      "options": [
+        {
+          "id": "o1",
+          "text": {
+            "en": "9, 5, −12, −20",
+            "ur": "9, 5, −12, −20"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That orders them by value. The absolute values are 12, 5, 20, 9, so start with 20.",
+            "ur": "یہ قیمت کی ترتیب ہے۔ مطلق قیمتیں 12، 5، 20، 9 ہیں، اس لیے 20 سے شروع کریں۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o2",
+          "text": {
+            "en": "5, 9, −12, −20",
+            "ur": "5, 9, −12, −20"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is ascending (5, 9, 12, 20). Descending starts with the biggest absolute value, 20.",
+            "ur": "یہ صعودی (5، 9، 12، 20) ہے۔ نزولی ترتیب سب سے بڑی مطلق قیمت 20 سے شروع ہوتی ہے۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "o0",
+          "text": {
+            "en": "−20, −12, 9, 5",
+            "ur": "−20, −12, 9, 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The absolute values are 20, 12, 9, 5.",
+            "ur": "جی ہاں! مطلق قیمتیں 20، 12، 9، 5 ہیں۔"
+          }
+        },
+        {
+          "id": "o3",
+          "text": {
+            "en": "−20, 9, −12, 5",
+            "ur": "−20, 9, −12, 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "|−12| = 12 is bigger than |9| = 9, so −12 comes before 9.",
+            "ur": "|−12| = 12، |9| = 9 سے بڑی ہے، اس لیے −12، 9 سے پہلے آئے گا۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        }
+      ]
+    },
+    {
+      "id": "q11_warmer",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Four towns have temperatures −3, 5, −9 and 0 degrees. How many are warmer than −4 degrees?",
+        "ur": "چار شہروں کا درجہ حرارت −3، 5، −9 اور 0 ڈگری ہے۔ کتنے شہر −4 ڈگری سے گرم ہیں؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Warmer means greater. Which of the four are to the right of −4?",
+        "ur": "گرم کا مطلب بڑا۔ ان چاروں میں سے کون −4 کے دائیں ہیں؟"
+      },
+      "feedback_correct": {
+        "en": "Right! −3, 0 and 5 are greater than −4: three towns.",
+        "ur": "درست! −3، 0 اور 5، −4 سے بڑے ہیں: تین شہر۔"
+      },
+      "feedback_wrong": {
+        "en": "−3 > −4, 0 > −4 and 5 > −4, but −9 < −4. So 3 towns.",
+        "ur": "−3 > −4، 0 > −4 اور 5 > −4، مگر −9 < −4۔ اس لیے 3 شہر۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "Negative numbers can be warmer than −4 too. −3 and 0 are greater than −4. Answer 3.",
+            "ur": "منفی اعداد بھی −4 سے بڑے ہو سکتے ہیں۔ −3 اور 0، −4 سے بڑے ہیں۔ جواب 3"
+          },
+          "misconception_id": "bigger_digits"
+        }
+      ]
+    },
+    {
+      "id": "q12_greatest_abs",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of −14, 9, −21 and 18 has the greatest absolute value?",
+        "ur": "−14، 9، −21 اور 18 میں سے کس کی مطلق قیمت سب سے زیادہ ہے؟"
+      },
+      "answer": -21,
+      "checker": "numeric",
+      "hint": {
+        "en": "Write the four absolute values: 14, 9, ... Then find the biggest.",
+        "ur": "چاروں مطلق قیمتیں لکھیں: 14، 9، ... پھر سب سے بڑی ڈھونڈیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! |−21| = 21 is the greatest.",
+        "ur": "درست! |−21| = 21 سب سے بڑی ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The absolute values are 14, 9, 21 and 18. The greatest is 21, which belongs to −21.",
+        "ur": "مطلق قیمتیں 14، 9، 21 اور 18 ہیں۔ سب سے بڑی 21 ہے، جو −21 کی ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "18 is the greatest number, but |−21| = 21 is bigger than 18. The answer is −21.",
+            "ur": "18 سب سے بڑا عدد ہے، مگر |−21| = 21، 18 سے بڑی ہے۔ جواب −21"
+          },
+          "misconception_id": "abs_order_mixed"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sara arranges −8, −3, −1 in ascending order and writes −1, −3, −8, because 8 is the biggest digit. What went wrong?",
+        "ur": "سارہ −8، −3، −1 کو صعودی ترتیب میں −1، −3، −8 لکھتی ہے، کیونکہ 8 سب سے بڑا ہندسہ ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "left",
+          "text": {
+            "en": "On the number line −8 is furthest left, so it is the smallest and comes first: −8, −3, −1.",
+            "ur": "عددی خط پر −8 سب سے بائیں ہے، اس لیے سب سے چھوٹا ہے اور پہلے آتا ہے: −8، −3، −1"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! For negative numbers, bigger digits mean smaller.",
+            "ur": "جی ہاں! منفی اعداد میں بڑے ہندسوں کا مطلب چھوٹا عدد ہے۔"
+          }
+        },
+        {
+          "id": "abs",
+          "text": {
+            "en": "She should have used absolute values: 1, 3, 8.",
+            "ur": "اسے مطلق قیمتیں لینی چاہییں تھیں: 1، 3، 8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question asks for the order of the numbers themselves, not their absolute values.",
+            "ur": "سوال خود اعداد کی ترتیب پوچھتا ہے، ان کی مطلق قیمتوں کی نہیں۔"
+          },
+          "misconception_id": "abs_order_mixed"
+        },
+        {
+          "id": "nothing",
+          "text": {
+            "en": "Nothing. −1, −3, −8 is ascending.",
+            "ur": "کوئی غلطی نہیں۔ −1، −3، −8 صعودی ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "−1, −3, −8 goes from biggest to smallest, which is descending.",
+            "ur": "−1، −3، −8 بڑے سے چھوٹے کی طرف ہے، یعنی نزولی۔"
+          },
+          "misconception_id": "bigger_digits"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You ordered integers and used absolute values.",
+          "ur": "شاباش! آپ نے صحیح اعداد کو ترتیب دی اور مطلق قیمتیں استعمال کیں۔"
+        }
+      },
+      "text": {
+        "en": "On the number line the numbers grow to the right. Ascending goes smallest to biggest, descending goes biggest to smallest, and a negative number with bigger digits is smaller. The absolute value |n| is the distance from 0: |−10| = 10. To order by absolute value, write the absolute values first.",
+        "ur": "عددی خط پر اعداد دائیں طرف بڑھتے ہیں۔ صعودی ترتیب چھوٹے سے بڑے، نزولی ترتیب بڑے سے چھوٹے کی طرف ہے، اور بڑے ہندسوں والا منفی عدد چھوٹا ہوتا ہے۔ مطلق قیمت |n|، 0 سے فاصلہ ہے: |−10| = 10۔ مطلق قیمت کی ترتیب کے لیے پہلے مطلق قیمتیں لکھیں۔"
+      },
+      "points": [
+        {
+          "en": "−9 is less than −2, even though 9 is more than 2.",
+          "ur": "−9، −2 سے چھوٹا ہے، چاہے 9، 2 سے بڑا ہے۔"
+        },
+        {
+          "en": "Both 8 and −8 have absolute value 8.",
+          "ur": "8 اور −8 دونوں کی مطلق قیمت 8 ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_abs",
+      "type": "recall",
+      "step": {
+        "id": "r_abs",
+        "type": "number",
+        "prompt": {
+          "en": "Find |−31|.",
+          "ur": "|−31| معلوم کریں۔"
+        },
+        "answer": 31,
+        "checker": "numeric",
+        "hint": {
+          "en": "Distance from 0.",
+          "ur": "0 سے فاصلہ۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 31.",
+          "ur": "درست! 31"
+        },
+        "feedback_wrong": {
+          "en": "|−31| = 31.",
+          "ur": "|−31| = 31"
+        },
+        "common_wrong": [
+          {
+            "answer": -31,
+            "feedback": {
+              "en": "A distance is not negative: 31.",
+              "ur": "فاصلہ منفی نہیں ہوتا: 31"
+            },
+            "misconception_id": "sign_kept"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_2_2"
+    },
+    {
+      "id": "r_order",
+      "type": "apply",
+      "step": {
+        "id": "r_order",
+        "type": "choice",
+        "prompt": {
+          "en": "Arrange −2, 8, −11, 6 in ascending order of their absolute values.",
+          "ur": "−2، 8، −11، 6 کو ان کی مطلق قیمتوں کی صعودی ترتیب میں لکھیں۔"
+        },
+        "options": [
+          {
+            "id": "o1",
+            "text": {
+              "en": "−11, −2, 6, 8",
+              "ur": "−11, −2, 6, 8"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "That orders them by value. The absolute values are 2, 8, 11, 6, so start with 2.",
+              "ur": "یہ قیمت کی ترتیب ہے۔ مطلق قیمتیں 2، 8، 11، 6 ہیں، اس لیے 2 سے شروع کریں۔"
+            },
+            "misconception_id": "abs_order_mixed"
+          },
+          {
+            "id": "o0",
+            "text": {
+              "en": "−2, 6, 8, −11",
+              "ur": "−2, 6, 8, −11"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! The absolute values go 2, 6, 8, 11.",
+              "ur": "جی ہاں! مطلق قیمتیں 2، 6، 8، 11 ہیں۔"
+            }
+          },
+          {
+            "id": "o2",
+            "text": {
+              "en": "8, 6, −2, −11",
+              "ur": "8, 6, −2, −11"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "That is not in order of any kind. The absolute values should go 2, 6, 8, 11.",
+              "ur": "یہ کسی بھی ترتیب میں نہیں۔ مطلق قیمتیں 2، 6، 8، 11 ہونی چاہییں۔"
+            }
+          },
+          {
+            "id": "o3",
+            "text": {
+              "en": "−11, 8, 6, −2",
+              "ur": "−11, 8, 6, −2"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "That is descending. Ascending starts with the smallest absolute value, 2.",
+              "ur": "یہ نزولی ہے۔ صعودی ترتیب سب سے چھوٹی مطلق قیمت 2 سے شروع ہوتی ہے۔"
+            },
+            "misconception_id": "abs_order_mixed"
+          }
+        ]
+      },
+      "skill": "maths.integers.ex_2_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 2.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers ordering integers (q2, q3, q5, q6, q11, q13), absolute values (q1, q4, q7, q9, q12) and ordering by absolute value (q8, q10).",
+    "Each ordering question has wrong options that are real mistakes: the opposite direction, ordering by absolute value instead of value, or treating bigger digits as bigger for negative numbers.",
+    "Urdu terms to check: صعودی ترتیب / نزولی ترتیب (ascending / descending order), مطلق قیمت (absolute value).",
+    "The numbers were worked out in content/sources/g6-maths-04/exercise_2_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
