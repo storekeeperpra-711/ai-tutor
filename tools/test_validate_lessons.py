@@ -37,6 +37,25 @@ class ValidateLessonsTest(unittest.TestCase):
     def first_spoken(self, lesson):
         return next(s for s in lesson["steps"] if "character" in s)
 
+    def test_why_steps_open_the_lesson(self):
+        lesson = self.mutated()
+        text = {"en": "Why?", "ur": "کیوں؟"}
+        why = {"id": "s0_why", "type": "explain", "text": text, "character": {"emotion": "curious", "say": text}}
+        use = {"id": "s0_use", "type": "explain", "text": text}
+        lesson["version"] = 2
+        lesson["steps"] = [why, use] + lesson["steps"]
+        self.assertEqual(self.check(lesson), [])
+        late = self.mutated()
+        late["version"] = 2
+        late["steps"] = [late["steps"][0], why, use] + late["steps"][1:]
+        self.assertProblem(self.check(late), "must be the first two steps")
+        speaking = copy.deepcopy(lesson)
+        speaking["steps"][1]["character"] = {"emotion": "happy", "say": text}
+        self.assertProblem(self.check(speaking), "s0_use is text only")
+        old = copy.deepcopy(lesson)
+        old["version"] = 1
+        self.assertProblem(self.check(old), "version 2 or more")
+
     def test_mithu_line_must_fit_in_30_seconds(self):
         lesson = self.mutated()
         self.first_spoken(lesson)["character"]["say"]["en"] = "word " * 80

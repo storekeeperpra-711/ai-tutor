@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-laws-of-integers",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Laws of integers",
     "ur": "صحیح اعداد کے قوانین"
   },
-  "estimated_minutes": 15,
+  "estimated_minutes": 16,
   "prerequisites": [
     {
       "skill": "maths.integers.multiply_divide"
@@ -342,6 +342,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Can you add 25 + 37 + 75 in any order you like?",
+          "ur": "کیا آپ 25 + 37 + 75 کو اپنی مرضی کی ترتیب سے جمع کر سکتے ہیں؟"
+        }
+      },
+      "text": {
+        "en": "When we add or multiply many numbers, we want to swap them or regroup them to make the work easy. But is that always allowed? Mathematicians gave the safe moves names: commutative (swap the order), associative (regroup), and distributive (spread a multiplication over a sum). They are true for integers too, so we can calculate quickly and still be sure of the answer.",
+        "ur": "جب ہم بہت سے اعداد کو جمع یا ضرب کرتے ہیں تو چاہتے ہیں کہ انہیں بدل کر یا نئے گروہ بنا کر کام آسان کریں۔ مگر کیا یہ ہمیشہ جائز ہے؟ ریاضی دانوں نے ان محفوظ چالوں کے نام رکھے: تبادلی (ترتیب بدلنا)، تلازمی (نئے گروہ بنانا) اور توزیعی (ضرب کو جمع پر پھیلانا)۔ یہ صحیح اعداد کے لیے بھی درست ہیں، اس لیے ہم تیزی سے حساب کر سکتے ہیں اور جواب کے بارے میں پکے رہتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shopping: add a bill in any order, like 25 + 75 first to make 100.\n• Mental maths: 7 × 102 = 7 × 100 + 7 × 2 = 714.\n• Checking: add numbers upwards and downwards to see if you get the same answer.\n• Later: algebra and computer programs use these same rules.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• خریداری: بل کو کسی بھی ترتیب سے جمع کریں، جیسے پہلے 25 + 75 کر کے 100 بنا لیں۔\n• ذہنی حساب: 7 × 102 = 7 × 100 + 7 × 2 = 714۔\n• جانچ: اعداد کو اوپر سے نیچے اور نیچے سے اوپر جمع کر کے دیکھیں کہ جواب ایک ہی آتا ہے۔\n• آگے چل کر: الجبرا اور کمپیوٹر پروگرام یہی اصول استعمال کرتے ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
