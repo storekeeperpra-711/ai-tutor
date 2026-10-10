@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-factor-word-problems",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "HCF and LCM word problems",
     "ur": "عاد اعظم اور ذو اضعاف اقل کے سوالات"
   },
-  "estimated_minutes": 16,
+  "estimated_minutes": 17,
   "prerequisites": [
     {
       "skill": "maths.factors.hcf"
@@ -573,6 +573,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Real problems do not say HCF or LCM. How do we know which to use?",
+          "ur": "اصل سوال میں عاد اعظم یا ذو اضعاف اقل نہیں لکھا ہوتا۔ ہم کیسے جانیں کون سا استعمال کریں؟"
+        }
+      },
+      "text": {
+        "en": "In real life nobody tells you to find an HCF or an LCM. A shopkeeper just asks how many equal packets he can make, or when two things happen together again. The skill is to read the story and pick the right tool. Splitting into the largest equal groups needs the HCF. Things that repeat and meet again need the LCM. Choosing correctly saves wasted work and wrong answers.",
+        "ur": "اصل زندگی میں کوئی نہیں کہتا کہ عاد اعظم یا ذو اضعاف اقل نکالو۔ دکان دار بس پوچھتا ہے کہ کتنے برابر پیکٹ بن سکتے ہیں، یا دو چیزیں دوبارہ ساتھ کب ہوں گی۔ ہنر یہ ہے کہ کہانی پڑھ کر صحیح طریقہ چنا جائے۔ سب سے بڑے برابر گروہوں کے لیے عاد اعظم چاہیے۔ دہرائی جانے والی چیزیں جو دوبارہ ملتی ہیں ان کے لیے ذو اضعاف اقل۔ صحیح چناؤ وقت اور غلط جوابوں سے بچاتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shops: packing goods into the most equal packets.\n• Tiling: choosing the largest square tile for a room.\n• Timetables: when two buses or two bells match again.\n• Farming: planting rows of two crops in equal plots.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان: سامان کو زیادہ سے زیادہ برابر پیکٹوں میں رکھنا۔\n• ٹائل: کمرے کے لیے سب سے بڑی مربع ٹائل چننا۔\n• اوقات: دو بسیں یا دو گھنٹیاں دوبارہ کب ایک ساتھ ہوں گی۔\n• کھیتی: دو فصلوں کی قطاریں برابر قطعوں میں لگانا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

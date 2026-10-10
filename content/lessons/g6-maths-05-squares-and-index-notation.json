@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-squares-and-index-notation",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Squares and index notation",
     "ur": "مربع اور قوت کی شکل"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.factors.primes"
@@ -238,6 +238,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How do we write 2 × 2 × 2 × 2 × 2 × 2 without writing it all out?",
+          "ur": "2 × 2 × 2 × 2 × 2 × 2 کو پورا لکھے بغیر کیسے لکھیں؟"
+        }
+      },
+      "text": {
+        "en": "Some numbers of dots make a perfect square, like 49 dots in 7 rows of 7. People measuring square fields and floors met such numbers again and again. Also, writing the same number many times is slow and easy to get wrong. So they made a short way: 7 × 7 = 7² and 2 × 2 × 2 × 2 × 2 × 2 = 2⁶. The small raised number says how many times to multiply. It is called the index.",
+        "ur": "کچھ تعداد کے نقطے پورا مربع بناتے ہیں، جیسے 7 قطاروں میں 7 نقطے، یعنی 49۔ مربع کھیت اور فرش ناپنے والوں کو ایسے اعداد بار بار ملتے تھے۔ اور ایک ہی عدد بہت بار لکھنا سست ہے اور غلطی کا امکان بھی رہتا ہے۔ تو مختصر طریقہ بنا: 7 × 7 = 7² اور 2 × 2 × 2 × 2 × 2 × 2 = 2⁶۔ اوپر چھوٹا عدد بتاتا ہے کہ کتنی بار ضرب دینی ہے۔ اسے قوت کہتے ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Area: a square field with 20 m sides has area 20² = 400 m².\n• Tiles: a square of 8 by 8 tiles has 8² = 64 tiles.\n• Big numbers: 10³ = 1,000 and 10⁶ = 1,000,000 are quick to write.\n• Prime factors: 72 = 2³ × 3² is much shorter than 2 × 2 × 2 × 3 × 3.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• رقبہ: 20 میٹر کے ضلع والے مربع کھیت کا رقبہ 20² = 400 مربع میٹر ہے۔\n• ٹائل: 8 ضرب 8 ٹائلوں کے مربع میں 8² = 64 ٹائلیں ہوتی ہیں۔\n• بڑے اعداد: 10³ = 1000 اور 10⁶ = 1000000 جلدی لکھے جاتے ہیں۔\n• مفرد اجزائے ضربی: 72 = 2³ × 3² کو 2 × 2 × 2 × 3 × 3 سے بہت چھوٹا لکھا جاتا ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

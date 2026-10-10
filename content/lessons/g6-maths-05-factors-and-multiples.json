@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-factors-and-multiples",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Factors and multiples",
     "ur": "اجزائے ضربی اور اضعاف"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.multiplication.facts"
@@ -565,6 +565,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How can 12 laddoos be shared into equal rows with none left?",
+          "ur": "12 لڈو برابر قطاروں میں کیسے بانٹیں کہ کوئی نہ بچے؟"
+        }
+      },
+      "text": {
+        "en": "People often share things equally: sweets among children, eggs in trays, chairs in rows. Some amounts split evenly and some do not. 12 laddoos make 2 rows of 6 or 3 rows of 4, but 13 will not split that way. People needed a clear way to know which numbers fit into which. Factors are the numbers that divide exactly. Multiples are what you get by repeating a number, like a times table.",
+        "ur": "لوگ اکثر چیزیں برابر بانٹتے ہیں: بچوں میں مٹھائی، ٹرے میں انڈے، قطاروں میں کرسیاں۔ کچھ تعداد برابر بٹ جاتی ہے اور کچھ نہیں۔ 12 لڈو 2 قطاروں میں 6 یا 3 قطاروں میں 4 بن جاتے ہیں، مگر 13 اس طرح نہیں بٹتے۔ لوگوں کو جاننا تھا کہ کون سا عدد کس میں پورا آتا ہے۔ اجزائے ضربی وہ اعداد ہیں جو پورا تقسیم کرتے ہیں۔ اضعاف وہ ہیں جو کسی عدد کو بار بار دہرانے سے ملتے ہیں، جیسے پہاڑا۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Shops: packing 24 eggs in equal trays or 36 pencils in equal boxes.\n• School: seating children in equal rows.\n• Buses: a bus every 15 minutes comes at 15, 30, 45 ... minutes.\n• Times tables: they are just multiples.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• دکان: 24 انڈے برابر ٹرے میں یا 36 پنسلیں برابر ڈبوں میں رکھنا۔\n• اسکول: بچوں کو برابر قطاروں میں بٹھانا۔\n• بسیں: ہر 15 منٹ بعد آنے والی بس 15، 30، 45 ... منٹ پر آتی ہے۔\n• پہاڑے: یہ دراصل اضعاف ہی ہیں۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

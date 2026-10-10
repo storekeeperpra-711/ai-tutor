@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-lowest-common-multiple",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Lowest common multiple (LCM)",
     "ur": "ذو اضعاف اقل"
   },
-  "estimated_minutes": 14,
+  "estimated_minutes": 15,
   "prerequisites": [
     {
       "skill": "maths.factors.factors_multiples"
@@ -368,6 +368,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Two buses leave together. When will they leave together again?",
+          "ur": "دو بسیں ساتھ روانہ ہوئیں۔ وہ دوبارہ ساتھ کب روانہ ہوں گی؟"
+        }
+      },
+      "text": {
+        "en": "One bus leaves a stop every 4 minutes and another every 6 minutes. They leave together now. When will they leave together again? The first bus leaves at 4, 8, 12 ... and the second at 6, 12, 18 ... The first time in both lists is 12. This smallest shared multiple is the lowest common multiple (LCM). People needed it to find when things that repeat at different speeds meet again.",
+        "ur": "ایک بس اڈے سے ہر 4 منٹ بعد اور دوسری ہر 6 منٹ بعد روانہ ہوتی ہے۔ دونوں ابھی ساتھ گئیں۔ دوبارہ ساتھ کب جائیں گی؟ پہلی بس 4، 8، 12 ... پر اور دوسری 6، 12، 18 ... پر جاتی ہے۔ دونوں فہرستوں میں پہلا مشترک وقت 12 ہے۔ یہ سب سے چھوٹا مشترک ضعف ذو اضعاف اقل ہے۔ لوگوں کو اس کی ضرورت تھی کہ مختلف رفتار سے دہرائی جانے والی چیزیں دوبارہ کب ملتی ہیں۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Buses and trains: when two routes leave together again.\n• School: two bells that ring at different gaps.\n• Chores: a tap that is checked every 3 days and a tank every 4 days are both checked on day 12.\n• Fractions: finding a common denominator to add 1/4 and 1/6.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• بسیں اور ریل گاڑیاں: دو راستوں کی گاڑیاں دوبارہ ساتھ کب چلیں گی۔\n• اسکول: مختلف وقفوں سے بجنے والی دو گھنٹیاں۔\n• کام: نلکا ہر 3 دن اور ٹنکی ہر 4 دن بعد دیکھی جائے تو دونوں 12ویں دن ساتھ دیکھی جاتی ہیں۔\n• کسر: 1/4 اور 1/6 جمع کرنے کے لیے مشترک مخرج نکالنا۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
