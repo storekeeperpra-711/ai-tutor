@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-what-are-integers",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "What are integers?",
     "ur": "صحیح اعداد کیا ہیں؟"
   },
-  "estimated_minutes": 12,
+  "estimated_minutes": 13,
   "prerequisites": [],
   "misconceptions": [
     {
@@ -489,6 +489,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "Why did people ever need numbers below zero?",
+          "ur": "لوگوں کو صفر سے کم اعداد کی ضرورت کیوں پڑی؟"
+        }
+      },
+      "text": {
+        "en": "Counting numbers start at 1, and 0 means \"nothing\". But a shopkeeper sometimes owes money, and some places are colder than zero or lower than the sea. Plain numbers could not show this. So people made negative numbers: +500 for Rs 500 you have, −500 for Rs 500 you owe. About 1,400 years ago, Brahmagupta, a mathematician in India, wrote clear rules for using them.",
+        "ur": "گنتی کے اعداد 1 سے شروع ہوتے ہیں اور 0 کا مطلب \"کچھ نہیں\" ہے۔ مگر دکان دار پر کبھی ادھار بھی ہوتا ہے، اور کچھ جگہیں صفر سے زیادہ ٹھنڈی یا سطح سمندر سے نیچی ہوتی ہیں۔ عام اعداد یہ سب نہیں دکھا سکتے تھے۔ اس لیے لوگوں نے منفی اعداد بنائے: +500 یعنی 500 روپے آپ کے پاس ہیں، −500 یعنی 500 روپے آپ کو دینے ہیں۔ تقریباً 1400 سال پہلے ہندوستان کے ریاضی دان برہم گپت نے انہیں استعمال کرنے کے صاف اصول لکھے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use integers:\n• Weather: Murree at −3 °C, Lahore at 12 °C.\n• Money: your savings, or a loan you must pay back.\n• Heights: a mountain 4,000 m above the sea, a mine 200 m below it.\n• Games: a team 2 goals ahead is +2; behind by 3 is −3.",
+        "ur": "صحیح اعداد آپ کہاں استعمال کریں گے:\n• موسم: مری میں −3 ڈگری، لاہور میں 12 ڈگری۔\n• پیسے: آپ کی بچت، یا وہ قرض جو واپس کرنا ہے۔\n• اونچائی: سطح سمندر سے 4000 میٹر اونچا پہاڑ، 200 میٹر نیچی کان۔\n• کھیل: جو ٹیم 2 گول آگے ہو وہ +2، 3 گول پیچھے ہو تو −3۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",

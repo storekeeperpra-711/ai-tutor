@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-subtracting-integers",
-  "version": 1,
+  "version": 2,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -18,7 +18,7 @@
     "en": "Subtracting integers",
     "ur": "صحیح اعداد کی تفریق"
   },
-  "estimated_minutes": 13,
+  "estimated_minutes": 14,
   "prerequisites": [
     {
       "skill": "maths.integers.add"
@@ -550,6 +550,29 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_why",
+      "type": "explain",
+      "character": {
+        "emotion": "curious",
+        "say": {
+          "en": "How much warmer is Lahore at 12 °C than Murree at −3 °C?",
+          "ur": "لاہور 12 ڈگری پر مری سے، جو −3 ڈگری پر ہے، کتنا گرم ہے؟"
+        }
+      },
+      "text": {
+        "en": "To find a difference we subtract: 12 − (−3). But taking away a negative number looked strange, and many people got stuck. The big idea that fixed it: subtracting a number is the same as adding its opposite. So 12 − (−3) = 12 + 3 = 15. Every hard subtraction turns into an addition we already know.",
+        "ur": "فرق نکالنے کے لیے ہم منفی کرتے ہیں: 12 − (−3)۔ مگر منفی عدد کو نکالنا عجیب لگتا تھا اور بہت سے لوگ اٹک جاتے تھے۔ جس بڑے خیال نے یہ مسئلہ حل کیا وہ یہ ہے: کسی عدد کو منفی کرنا اس کے الٹ کو جمع کرنے کے برابر ہے۔ تو 12 − (−3) = 12 + 3 = 15۔ ہر مشکل منفی ایک ایسا جمع بن جاتا ہے جو ہمیں پہلے سے آتا ہے۔"
+      }
+    },
+    {
+      "id": "s0_use",
+      "type": "explain",
+      "text": {
+        "en": "Where you will use it:\n• Weather: how much hotter or colder one city is than another.\n• Heights: the gap between a mountain top and the floor of a mine.\n• Money: how much your savings changed from last month.\n• Sports: how far one team is ahead of another on the table.",
+        "ur": "آپ اسے کہاں استعمال کریں گے:\n• موسم: ایک شہر دوسرے سے کتنا گرم یا ٹھنڈا ہے۔\n• اونچائی: پہاڑ کی چوٹی اور کان کی تہہ کے درمیان فاصلہ۔\n• پیسے: پچھلے مہینے کے مقابلے میں آپ کی بچت کتنی بدلی۔\n• کھیل: ٹیبل پر ایک ٹیم دوسری سے کتنی آگے ہے۔"
+      }
+    },
     {
       "id": "s1_hook",
       "type": "explain",
