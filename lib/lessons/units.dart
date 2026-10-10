@@ -182,6 +182,12 @@ const grade6Book = [
       'g6-maths-07-adding-subtracting-expressions',
       'g6-maths-07-simple-equations',
       'g6-maths-07-algebra-word-problems',
+      'g6-maths-07-exercise-6-1',
+      'g6-maths-07-exercise-6-2',
+      'g6-maths-07-exercise-6-3',
+      'g6-maths-07-exercise-6-4',
+      'g6-maths-07-exercise-6-5',
+      'g6-maths-07-chapter-6-test',
     ]),
     BookChapter(
       LocalizedText(

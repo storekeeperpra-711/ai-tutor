@@ -1,0 +1,897 @@
+{
+  "id": "g6-maths-07-exercise-6-4",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Add and subtract algebraic expressions by the horizontal and the vertical method, and write the perimeter of a shape as an expression.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 6: Algebraic Expressions, Exercise 6.4"
+    }
+  ],
+  "skills": [
+    "maths.algebra.ex_6_4"
+  ],
+  "title": {
+    "en": "Exercise 6.4 practice: adding and subtracting",
+    "ur": "مشق 6.4 کی پریکٹس: جمع اور تفریق"
+  },
+  "estimated_minutes": 18,
+  "prerequisites": [
+    {
+      "skill": "maths.algebra.expressions_basic"
+    },
+    {
+      "skill": "maths.algebra.add_subtract"
+    },
+    {
+      "skill": "maths.algebra.substitution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "first_term_only",
+      "description": "When subtracting a bracket, changes the sign of only the first term inside it."
+    },
+    {
+      "id": "unlike_joined",
+      "description": "Adds terms with different letters, or all the numbers, into one term."
+    },
+    {
+      "id": "subtract_reversed",
+      "description": "Subtracts in the wrong order when asked to take one expression from another."
+    },
+    {
+      "id": "perimeter_missing_sides",
+      "description": "Adds only some of the sides when finding a perimeter."
+    },
+    {
+      "id": "joins_digits",
+      "description": "Reads 6x with x = 3 as 63 instead of 6 × 3."
+    },
+    {
+      "id": "adds_letter",
+      "description": "Adds the value of the letter instead of multiplying by the coefficient."
+    },
+    {
+      "id": "half_perimeter",
+      "description": "Gives the length plus the breadth as the perimeter of a rectangle."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.algebra.ex_6_4": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.algebra.ex_6_4": [
+      {
+        "id": "qb_add",
+        "type": "recall",
+        "step": {
+          "id": "qb_add",
+          "type": "text_check",
+          "prompt": {
+            "en": "Add: (2k + 6) + (5k + 1)",
+            "ur": "جمع کریں: (2k + 6) + (5k + 1)"
+          },
+          "checker": "text",
+          "expected": "7k + 7",
+          "accept": [
+            "7+7k"
+          ],
+          "hint": {
+            "en": "Add the k-terms and the numbers separately.",
+            "ur": "k والے ارکان اور اعداد الگ الگ جمع کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 7k + 7.",
+            "ur": "درست! 7k + 7"
+          },
+          "feedback_wrong": {
+            "en": "2k + 5k = 7k and 6 + 1 = 7.",
+            "ur": "2k + 5k = 7k اور 6 + 1 = 7"
+          },
+          "common_wrong": [
+            {
+              "answer": "14k",
+              "feedback": {
+                "en": "k-terms and numbers are unlike terms: 7k + 7.",
+                "ur": "k والے ارکان اور اعداد غیر یکساں ارکان ہیں: 7k + 7"
+              },
+              "misconception_id": "unlike_joined"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_subtract",
+        "type": "apply",
+        "step": {
+          "id": "qb_subtract",
+          "type": "text_check",
+          "prompt": {
+            "en": "Subtract: (9d + 8) − (4d + 3)",
+            "ur": "تفریق کریں: (9d + 8) − (4d + 3)"
+          },
+          "checker": "text",
+          "expected": "5d + 5",
+          "accept": [
+            "5+5d"
+          ],
+          "hint": {
+            "en": "Change both signs in the second bracket.",
+            "ur": "دوسری بریکٹ کی دونوں علامتیں بدلیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 5d + 5.",
+            "ur": "درست! 5d + 5"
+          },
+          "feedback_wrong": {
+            "en": "9d + 8 − 4d − 3 = 5d + 5.",
+            "ur": "9d + 8 − 4d − 3 = 5d + 5"
+          },
+          "common_wrong": [
+            {
+              "answer": "5d + 11",
+              "feedback": {
+                "en": "The 3 is taken away too: 8 − 3 = 5.",
+                "ur": "3 بھی تفریق ہوتا ہے: 8 − 3 = 5"
+              },
+              "misconception_id": "first_term_only"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Mina says the perimeter of a square with side 3s is 3s + 3s = 6s. What went wrong?",
+            "ur": "مینا کہتی ہے کہ ضلع 3s والے مربع کا احاطہ 3s + 3s = 6s ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A square has four sides, so the perimeter is 3s + 3s + 3s + 3s = 12s.",
+                "ur": "مربع کے چار اضلاع ہوتے ہیں، اس لیے احاطہ 3s + 3s + 3s + 3s = 12s ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Add all four sides.",
+                "ur": "جی ہاں! چاروں اضلاع جمع کریں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 6s is right.",
+                "ur": "کوئی غلطی نہیں۔ 6s درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "6s is only two sides. A square has four.",
+                "ur": "6s صرف دو اضلاع ہیں۔ مربع کے چار ہوتے ہیں۔"
+              },
+              "misconception_id": "perimeter_missing_sides"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It should be 3s × 3s.",
+                "ur": "یہ 3s × 3s ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Perimeter is the sum of the sides, not a product.",
+                "ur": "احاطہ اضلاع کا مجموعہ ہے، حاصل ضرب نہیں۔"
+              },
+              "misconception_id": "perimeter_missing_sides"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_subtract",
+      "front": {
+        "en": "How do you subtract an expression?",
+        "ur": "عبارت کو تفریق کیسے کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Change the sign of every term in it, then collect like terms.",
+        "ur": "اس کے ہر رکن کی علامت بدلیں، پھر یکساں ارکان اکٹھے کریں۔"
+      }
+    },
+    {
+      "id": "f_perimeter",
+      "front": {
+        "en": "Perimeter as an expression?",
+        "ur": "احاطہ بطور عبارت؟"
+      },
+      "back": {
+        "en": "Add all the sides, then group the like terms.",
+        "ur": "تمام اضلاع جمع کریں، پھر یکساں ارکان اکٹھے کریں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_perimeter_at_home",
+      "text": {
+        "en": "Measure the sides of a book cover or a table in hand spans. Call the length of one span s and write each side as a multiple of s. Then write the perimeter as an expression.",
+        "ur": "کسی کتاب کے سرورق یا میز کے اضلاع بالشت سے ناپیں۔ ایک بالشت کی لمبائی کو s کہیں اور ہر ضلع کو s کے ضرب کی صورت میں لکھیں۔ پھر احاطہ عبارت کی صورت میں لکھیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Add",
+      "ur": "جمع کرنا"
+    },
+    {
+      "en": "Subtract",
+      "ur": "تفریق کرنا"
+    },
+    {
+      "en": "Like terms",
+      "ur": "یکساں ارکان"
+    },
+    {
+      "en": "Perimeter",
+      "ur": "احاطہ"
+    },
+    {
+      "en": "Vertical method",
+      "ur": "عمودی طریقہ"
+    },
+    {
+      "en": "Horizontal method",
+      "ur": "افقی طریقہ"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 6.4 is about adding and subtracting expressions. Ready?",
+          "ur": "مشق 6.4 عبارتوں کو جمع اور تفریق کرنے کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 6.4 of your maths book (PCTB Mathematics 6). Here you add and subtract expressions, by the horizontal and the vertical method, and write the perimeter of a shape as an expression. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 6.4 کے ساتھ ہے۔ اس میں آپ عبارتوں کو جمع اور تفریق کریں گے، افقی اور عمودی طریقے سے، اور کسی شکل کا احاطہ عبارت کی صورت میں لکھیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_add",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Add: (3x + 5) + (2x + 4)",
+        "ur": "جمع کریں: (3x + 5) + (2x + 4)"
+      },
+      "checker": "text",
+      "expected": "5x + 9",
+      "accept": [
+        "9+5x"
+      ],
+      "hint": {
+        "en": "Add the x-terms together and the numbers together.",
+        "ur": "x والے ارکان اکٹھے اور اعداد اکٹھے جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3x + 2x = 5x and 5 + 4 = 9: 5x + 9.",
+        "ur": "درست! 3x + 2x = 5x اور 5 + 4 = 9: 5x + 9"
+      },
+      "feedback_wrong": {
+        "en": "x-terms: 3x + 2x = 5x. Numbers: 5 + 4 = 9. So 5x + 9.",
+        "ur": "x والے: 3x + 2x = 5x۔ اعداد: 5 + 4 = 9۔ تو 5x + 9"
+      },
+      "common_wrong": [
+        {
+          "answer": "14x",
+          "feedback": {
+            "en": "x-terms and numbers are unlike terms, so they stay apart: 5x + 9.",
+            "ur": "x والے ارکان اور اعداد غیر یکساں ارکان ہیں، اس لیے الگ رہتے ہیں: 5x + 9"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "q2_add_two",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Add: (6a − 2b) + (a + 5b)",
+        "ur": "جمع کریں: (6a − 2b) + (a + 5b)"
+      },
+      "checker": "text",
+      "expected": "7a + 3b",
+      "accept": [
+        "3b+7a"
+      ],
+      "hint": {
+        "en": "Group the a-terms, then the b-terms. a means 1a.",
+        "ur": "a والے ارکان، پھر b والے ارکان اکٹھے کریں۔ a یعنی 1a"
+      },
+      "feedback_correct": {
+        "en": "Right! 6a + a = 7a and −2b + 5b = 3b: 7a + 3b.",
+        "ur": "درست! 6a + a = 7a اور −2b + 5b = 3b: 7a + 3b"
+      },
+      "feedback_wrong": {
+        "en": "a-terms: 6a + 1a = 7a. b-terms: −2b + 5b = 3b. So 7a + 3b.",
+        "ur": "a والے: 6a + 1a = 7a۔ b والے: −2b + 5b = 3b۔ تو 7a + 3b"
+      },
+      "common_wrong": [
+        {
+          "answer": "7a - 7b",
+          "feedback": {
+            "en": "−2b + 5b is 3b, not −7b. Add a minus and a plus by finding the difference: 3b.",
+            "ur": "−2b + 5b برابر 3b ہے، −7b نہیں۔ منفی اور مثبت جمع کرنے کے لیے فرق نکالیں: 3b"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ]
+    },
+    {
+      "id": "s_rule",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Adding: collect like terms. Subtracting: change every sign in the second bracket first!",
+          "ur": "جمع: یکساں ارکان اکٹھے کریں۔ تفریق: پہلے دوسری بریکٹ کی ہر علامت بدلیں!"
+        }
+      },
+      "text": {
+        "en": "To add expressions, group the like terms and add their coefficients: (3x + 5) + (2x + 4) = 5x + 9. In the vertical method we write the expressions under each other with like terms in the same column; in the horizontal method we write them on one line. To subtract an expression, change the sign of EVERY term in it, then add: (9m + 7) − (4m + 2) = 9m + 7 − 4m − 2 = 5m + 5. The perimeter of a shape is the sum of all its sides, so it is an expression too.",
+        "ur": "عبارتیں جمع کرنے کے لیے یکساں ارکان اکٹھے کریں اور ان کے عددی سر جمع کریں: (3x + 5) + (2x + 4) = 5x + 9۔ عمودی طریقے میں عبارتیں ایک کے نیچے ایک لکھتے ہیں اور یکساں ارکان ایک ہی ستون میں رکھتے ہیں؛ افقی طریقے میں انھیں ایک ہی سطر میں لکھتے ہیں۔ کسی عبارت کو تفریق کرنے کے لیے اس کے ہر رکن کی علامت بدلیں، پھر جمع کریں: (9m + 7) − (4m + 2) = 9m + 7 − 4m − 2 = 5m + 5۔ شکل کا احاطہ اس کے تمام اضلاع کا مجموعہ ہے، اس لیے یہ بھی عبارت ہے۔"
+      }
+    },
+    {
+      "id": "q3_subtract",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Subtract: (9m + 7) − (4m + 2)",
+        "ur": "تفریق کریں: (9m + 7) − (4m + 2)"
+      },
+      "checker": "text",
+      "expected": "5m + 5",
+      "accept": [
+        "5+5m"
+      ],
+      "hint": {
+        "en": "Change the sign of both terms in the second bracket, then collect.",
+        "ur": "دوسری بریکٹ کے دونوں ارکان کی علامت بدلیں، پھر اکٹھا کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9m − 4m = 5m and 7 − 2 = 5: 5m + 5.",
+        "ur": "درست! 9m − 4m = 5m اور 7 − 2 = 5: 5m + 5"
+      },
+      "feedback_wrong": {
+        "en": "9m + 7 − 4m − 2 = 5m + 5.",
+        "ur": "9m + 7 − 4m − 2 = 5m + 5"
+      },
+      "common_wrong": [
+        {
+          "answer": "5m + 9",
+          "feedback": {
+            "en": "The 2 is taken away too: 7 − 2 = 5, so 5m + 5.",
+            "ur": "2 بھی تفریق ہوتا ہے: 7 − 2 = 5، تو 5m + 5"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "q4_subtract_from",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Subtract 5p − 3 from 8p + 1.",
+        "ur": "8p + 1 میں سے 5p − 3 تفریق کریں۔"
+      },
+      "checker": "text",
+      "expected": "3p + 4",
+      "accept": [
+        "4+3p"
+      ],
+      "hint": {
+        "en": "Write the one you start from first: (8p + 1) − (5p − 3). Change both signs in the second bracket.",
+        "ur": "جس سے شروع کر رہے ہیں اسے پہلے لکھیں: (8p + 1) − (5p − 3)۔ دوسری بریکٹ کی دونوں علامتیں بدلیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 8p + 1 − 5p + 3 = 3p + 4.",
+        "ur": "درست! 8p + 1 − 5p + 3 = 3p + 4"
+      },
+      "feedback_wrong": {
+        "en": "(8p + 1) − (5p − 3) = 8p + 1 − 5p + 3 = 3p + 4.",
+        "ur": "(8p + 1) − (5p − 3) = 8p + 1 − 5p + 3 = 3p + 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "3p - 2",
+          "feedback": {
+            "en": "Taking away −3 gives +3, not −3: 3p + 4.",
+            "ur": "−3 تفریق کرنے سے +3 ملتا ہے، −3 نہیں: 3p + 4"
+          },
+          "misconception_id": "first_term_only"
+        },
+        {
+          "answer": "-3p - 4",
+          "feedback": {
+            "en": "That subtracts the other way round. Start from 8p + 1: 3p + 4.",
+            "ur": "یہ الٹی طرف سے تفریق ہے۔ 8p + 1 سے شروع کریں: 3p + 4"
+          },
+          "misconception_id": "subtract_reversed"
+        }
+      ]
+    },
+    {
+      "id": "q5_take_away",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Take away 6a + b from 10a + 4b.",
+        "ur": "10a + 4b میں سے 6a + b نکالیں۔"
+      },
+      "checker": "text",
+      "expected": "4a + 3b",
+      "accept": [
+        "3b+4a"
+      ],
+      "hint": {
+        "en": "Both terms of 6a + b are taken away. b means 1b.",
+        "ur": "6a + b کے دونوں ارکان نکالے جاتے ہیں۔ b یعنی 1b"
+      },
+      "feedback_correct": {
+        "en": "Right! 10a − 6a = 4a and 4b − b = 3b: 4a + 3b.",
+        "ur": "درست! 10a − 6a = 4a اور 4b − b = 3b: 4a + 3b"
+      },
+      "feedback_wrong": {
+        "en": "10a + 4b − 6a − b = 4a + 3b.",
+        "ur": "10a + 4b − 6a − b = 4a + 3b"
+      },
+      "common_wrong": [
+        {
+          "answer": "4a + 5b",
+          "feedback": {
+            "en": "The b is taken away too: 4b − b = 3b, so 4a + 3b.",
+            "ur": "b بھی نکالا جاتا ہے: 4b − b = 3b، تو 4a + 3b"
+          },
+          "misconception_id": "first_term_only"
+        }
+      ]
+    },
+    {
+      "id": "q6_perimeter",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The sides of a triangle are 2x + 1, 3x + 2 and x + 4 (in cm). Write its perimeter as an expression.",
+        "ur": "ایک تکون کے اضلاع 2x + 1، 3x + 2 اور x + 4 (سینٹی میٹر میں) ہیں۔ اس کا احاطہ عبارت کی صورت میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "6x + 7",
+      "accept": [
+        "7+6x"
+      ],
+      "hint": {
+        "en": "Add all three sides, then collect the like terms.",
+        "ur": "تینوں اضلاع جمع کریں، پھر یکساں ارکان اکٹھے کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 6x + 7.",
+        "ur": "درست! 6x + 7"
+      },
+      "feedback_wrong": {
+        "en": "2x + 3x + x = 6x and 1 + 2 + 4 = 7. So 6x + 7.",
+        "ur": "2x + 3x + x = 6x اور 1 + 2 + 4 = 7۔ تو 6x + 7"
+      },
+      "common_wrong": [
+        {
+          "answer": "9x",
+          "feedback": {
+            "en": "Only the x-terms can be added together: 6x. The numbers add to 7: 6x + 7.",
+            "ur": "صرف x والے ارکان آپس میں جمع ہوتے ہیں: 6x۔ اعداد کا مجموعہ 7 ہے: 6x + 7"
+          },
+          "misconception_id": "unlike_joined"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 144.0,
+        "alt": {
+          "en": "A triangle with sides 2x + 1 on the left, x + 4 on the right and 3x + 2 along the bottom.",
+          "ur": "ایک تکون جس کا بایاں ضلع 2x + 1، دایاں ضلع x + 4 اور نچلا ضلع 3x + 2 ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                150.0,
+                14.0
+              ],
+              [
+                70.0,
+                116.0
+              ],
+              [
+                230.0,
+                116.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              69.2,
+              65.0
+            ],
+            "text": "2x + 1"
+          },
+          {
+            "kind": "label",
+            "at": [
+              226.0,
+              65.0
+            ],
+            "text": "x + 4"
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              132.0
+            ],
+            "text": "3x + 2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_perimeter_value",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Using 6x + 7 for the perimeter, find it when x = 3.",
+        "ur": "احاطے کے لیے 6x + 7 استعمال کریں اور x = 3 ہو تو اس کی قیمت معلوم کریں۔"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "6x means 6 × x.",
+        "ur": "6x یعنی 6 × x"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 3 + 7 = 25 cm.",
+        "ur": "درست! 6 × 3 + 7 = 25 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "6 × 3 = 18, and 18 + 7 = 25.",
+        "ur": "6 × 3 = 18، اور 18 + 7 = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 70,
+          "feedback": {
+            "en": "6x is 6 × 3, not 63. Then 18 + 7 = 25.",
+            "ur": "6x یعنی 6 × 3، 63 نہیں۔ پھر 18 + 7 = 25"
+          },
+          "misconception_id": "joins_digits"
+        },
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "6x means 6 times x, not 6 + x. 18 + 7 = 25.",
+            "ur": "6x یعنی x کا 6 گنا، 6 + x نہیں۔ 18 + 7 = 25"
+          },
+          "misconception_id": "adds_letter"
+        }
+      ]
+    },
+    {
+      "id": "q8_rectangle",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A rectangle has length 5n + 3 and breadth 2n + 1 (in cm). Write its perimeter by adding all four sides.",
+        "ur": "ایک مستطیل کی لمبائی 5n + 3 اور چوڑائی 2n + 1 (سینٹی میٹر میں) ہے۔ چاروں اضلاع جمع کر کے اس کا احاطہ لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "14n + 8",
+      "accept": [
+        "8+14n"
+      ],
+      "hint": {
+        "en": "A rectangle has two lengths and two breadths.",
+        "ur": "مستطیل کی دو لمبائیاں اور دو چوڑائیاں ہوتی ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 14n + 8.",
+        "ur": "درست! 14n + 8"
+      },
+      "feedback_wrong": {
+        "en": "(5n + 3) + (2n + 1) + (5n + 3) + (2n + 1) = 14n + 8.",
+        "ur": "(5n + 3) + (2n + 1) + (5n + 3) + (2n + 1) = 14n + 8"
+      },
+      "common_wrong": [
+        {
+          "answer": "7n + 4",
+          "feedback": {
+            "en": "That is only length + breadth. The perimeter has all four sides: 14n + 8.",
+            "ur": "یہ صرف لمبائی + چوڑائی ہے۔ احاطے میں چاروں اضلاع ہوتے ہیں: 14n + 8"
+          },
+          "misconception_id": "perimeter_missing_sides"
+        }
+      ]
+    },
+    {
+      "id": "q9_rect_value",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Using 14n + 8 for the perimeter, find it when n = 2.",
+        "ur": "احاطے کے لیے 14n + 8 استعمال کریں اور n = 2 ہو تو اس کی قیمت معلوم کریں۔"
+      },
+      "answer": 36,
+      "checker": "numeric",
+      "hint": {
+        "en": "Put n = 2 in.",
+        "ur": "n = 2 رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 14 × 2 + 8 = 36 cm.",
+        "ur": "درست! 14 × 2 + 8 = 36 سینٹی میٹر"
+      },
+      "feedback_wrong": {
+        "en": "14 × 2 = 28, and 28 + 8 = 36.",
+        "ur": "14 × 2 = 28، اور 28 + 8 = 36"
+      },
+      "common_wrong": [
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "That is half: length + breadth. The perimeter is 36.",
+            "ur": "یہ آدھا ہے: لمبائی + چوڑائی۔ احاطہ 36 ہے۔"
+          },
+          "misconception_id": "half_perimeter"
+        }
+      ]
+    },
+    {
+      "id": "q10_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamid works out (7y + 9) − (3y + 4) as 7y + 9 − 3y + 4 = 4y + 13. What went wrong?",
+        "ur": "حامد (7y + 9) − (3y + 4) کو 7y + 9 − 3y + 4 = 4y + 13 حل کرتا ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "He changed only the first sign. The 4 is taken away too: 7y + 9 − 3y − 4 = 4y + 5.",
+            "ur": "اس نے صرف پہلی علامت بدلی۔ 4 بھی تفریق ہوتا ہے: 7y + 9 − 3y − 4 = 4y + 5"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Change every sign in the second bracket.",
+            "ur": "جی ہاں! دوسری بریکٹ کی ہر علامت بدلیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. 4y + 13 is right.",
+            "ur": "کوئی غلطی نہیں۔ 4y + 13 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Test y = 1: (7 + 9) − (3 + 4) = 9, but 4 + 13 = 17.",
+            "ur": "y = 1 لیں: (7 + 9) − (3 + 4) = 9، مگر 4 + 13 = 17"
+          },
+          "misconception_id": "first_term_only"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should add the brackets instead.",
+            "ur": "اسے بریکٹیں جمع کرنی چاہییں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question says subtract. The mistake is the sign of the 4.",
+            "ur": "سوال میں تفریق کہی گئی ہے۔ غلطی 4 کی علامت میں ہے۔"
+          },
+          "misconception_id": "subtract_reversed"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error_add",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Saad adds (5m + 2) and (3m + 4) and gets 14m, because 5 + 2 + 3 + 4 = 14. What went wrong?",
+        "ur": "سعد (5m + 2) اور (3m + 4) کو جمع کر کے 14m لکھتا ہے، کیونکہ 5 + 2 + 3 + 4 = 14۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. All the numbers can be added.",
+            "ur": "کوئی غلطی نہیں۔ تمام اعداد جمع ہو سکتے ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Test m = 2: the sum is (10 + 2) + (6 + 4) = 22, but 14m = 28. The answer is 8m + 6.",
+            "ur": "m = 2 لیں: مجموعہ (10 + 2) + (6 + 4) = 22 ہے، مگر 14m = 28۔ جواب 8m + 6 ہے۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "He should multiply instead of adding.",
+            "ur": "اسے جمع کی جگہ ضرب دینی چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The question says add. The mistake is joining unlike terms.",
+            "ur": "سوال میں جمع کہا گیا ہے۔ غلطی غیر یکساں ارکان کو ملانا ہے۔"
+          },
+          "misconception_id": "unlike_joined"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He added numbers and m-terms together. The answer is 8m + 6.",
+            "ur": "اس نے اعداد اور m والے ارکان کو ملا دیا۔ جواب 8m + 6 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Only like terms can be added together.",
+            "ur": "جی ہاں! صرف یکساں ارکان آپس میں جمع ہو سکتے ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You added and subtracted expressions.",
+          "ur": "شاباش! آپ نے عبارتیں جمع اور تفریق کیں۔"
+        }
+      },
+      "text": {
+        "en": "Add expressions by grouping like terms. To subtract, change every sign in the second expression, then group. Take one expression from another by starting with the one you take from. A perimeter is all the sides added; a rectangle has two lengths and two breadths. Check an answer by putting in a small number.",
+        "ur": "عبارتیں جمع کرنے کے لیے یکساں ارکان اکٹھے کریں۔ تفریق کے لیے دوسری عبارت کی ہر علامت بدلیں، پھر اکٹھا کریں۔ ایک عبارت میں سے دوسری نکالتے وقت اس سے شروع کریں جس میں سے نکال رہے ہیں۔ احاطہ تمام اضلاع کا مجموعہ ہے؛ مستطیل کی دو لمبائیاں اور دو چوڑائیاں ہوتی ہیں۔ جواب کو چھوٹا عدد رکھ کر جانچیں۔"
+      },
+      "points": [
+        {
+          "en": "Change every sign in the bracket you subtract.",
+          "ur": "جس بریکٹ کو تفریق کر رہے ہیں اس کی ہر علامت بدلیں۔"
+        },
+        {
+          "en": "Only like terms join together.",
+          "ur": "صرف یکساں ارکان آپس میں ملتے ہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_add",
+      "type": "recall",
+      "step": {
+        "id": "r_add",
+        "type": "text_check",
+        "prompt": {
+          "en": "Add: (3x + 4y) + (2x − y)",
+          "ur": "جمع کریں: (3x + 4y) + (2x − y)"
+        },
+        "checker": "text",
+        "expected": "5x + 3y",
+        "accept": [
+          "3y+5x"
+        ],
+        "hint": {
+          "en": "Add the x-terms and the y-terms. −y means −1y.",
+          "ur": "x والے اور y والے ارکان جمع کریں۔ −y یعنی −1y"
+        },
+        "feedback_correct": {
+          "en": "Right! 5x + 3y.",
+          "ur": "درست! 5x + 3y"
+        },
+        "feedback_wrong": {
+          "en": "3x + 2x = 5x and 4y − y = 3y.",
+          "ur": "3x + 2x = 5x اور 4y − y = 3y"
+        },
+        "common_wrong": [
+          {
+            "answer": "5x + 5y",
+            "feedback": {
+              "en": "−y takes one y away: 4y − y = 3y.",
+              "ur": "−y ایک y کم کرتا ہے: 4y − y = 3y"
+            },
+            "misconception_id": "unlike_joined"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_4"
+    },
+    {
+      "id": "r_square",
+      "type": "apply",
+      "step": {
+        "id": "r_square",
+        "type": "text_check",
+        "prompt": {
+          "en": "Each side of a square is 3s. Write its perimeter as an expression.",
+          "ur": "ایک مربع کا ہر ضلع 3s ہے۔ اس کا احاطہ عبارت کی صورت میں لکھیں۔"
+        },
+        "checker": "text",
+        "expected": "12s",
+        "hint": {
+          "en": "Add the four equal sides.",
+          "ur": "چار برابر اضلاع جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 12s.",
+          "ur": "درست! 12s"
+        },
+        "feedback_wrong": {
+          "en": "3s + 3s + 3s + 3s = 12s.",
+          "ur": "3s + 3s + 3s + 3s = 12s"
+        },
+        "common_wrong": [
+          {
+            "answer": "6s",
+            "feedback": {
+              "en": "A square has four sides, not two: 12s.",
+              "ur": "مربع کے چار اضلاع ہوتے ہیں، دو نہیں: 12s"
+            },
+            "misconception_id": "perimeter_missing_sides"
+          }
+        ]
+      },
+      "skill": "maths.algebra.ex_6_4"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 6.4 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers adding expressions (q1, q2, q11), subtracting them, also with 'from' and 'take away' (q3, q4, q5, q10), and the perimeter of a triangle and a rectangle as an expression and its value (q6 to q9). The vertical method is described in the explanation; answers are typed on one line.",
+    "Each wrong answer is a real mistake: only the first sign changed, unlike terms joined, subtracting the wrong way round, sides left out of a perimeter, 6x read as 63, and the length plus breadth given as the perimeter.",
+    "Urdu terms to check: جمع کرنا / تفریق کرنا (add / subtract), یکساں ارکان / غیر یکساں ارکان (like / unlike terms), احاطہ (perimeter), عمودی طریقہ / افقی طریقہ (vertical / horizontal method), بریکٹ (bracket). The vertical and horizontal method names are NEW Urdu terms invented here; please check them.",
+    "The numbers were worked out in content/sources/g6-maths-07/exercise_6_4.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
