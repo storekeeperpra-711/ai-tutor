@@ -1,0 +1,2298 @@
+{
+  "id": "g6-maths-18-exercise-9-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Name the 3-D shape of everyday objects, tell 1-D, 2-D and 3-D figures apart, and count the faces, edges and vertices of solids.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 9: Symmetry, Exercise 9.1"
+    }
+  ],
+  "skills": [
+    "maths.symmetry.ex_9_1"
+  ],
+  "title": {
+    "en": "Exercise 9.1 practice: 2-D and 3-D shapes",
+    "ur": "مشق 9.1 کی پریکٹس: 2-D اور 3-D اشکال"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.solids.faces_edges_vertices"
+    },
+    {
+      "skill": "maths.symmetry.shapes_2d_3d"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "flat_is_3d",
+      "description": "Calls a flat figure drawn on paper a 3-D shape, or a round flat figure a sphere."
+    },
+    {
+      "id": "curved_not_a_face",
+      "description": "Does not count a curved surface as a face, so gives a cylinder 2 faces and a cone 1."
+    },
+    {
+      "id": "edge_vertex_mix",
+      "description": "Mixes up edges and vertices, for example counts the edge of a cone's base as a vertex."
+    },
+    {
+      "id": "hidden_edges",
+      "description": "Counts only the edges that can be seen in the picture and skips the hidden ones."
+    },
+    {
+      "id": "shape_by_roundness",
+      "description": "Names a solid from one feature, such as being round, and mixes up cylinder, cone and sphere."
+    },
+    {
+      "id": "wrong_count_unit",
+      "description": "Counts faces when vertices are asked, or the other way round, or multiplies by the wrong number."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.symmetry.ex_9_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.symmetry.ex_9_1": [
+      {
+        "id": "qb_sphere_faces",
+        "type": "recall",
+        "step": {
+          "id": "qb_sphere_faces",
+          "type": "number",
+          "prompt": {
+            "en": "How many faces does a sphere have?",
+            "ur": "کرہ کی کتنی سطحیں ہیں؟"
+          },
+          "answer": 1,
+          "checker": "numeric",
+          "hint": {
+            "en": "One curved surface all round.",
+            "ur": "ہر طرف ایک خمدار سطح۔"
+          },
+          "feedback_correct": {
+            "en": "Right! A sphere has 1 curved face.",
+            "ur": "درست! کرہ کی 1 خمدار سطح ہے۔"
+          },
+          "feedback_wrong": {
+            "en": "It is one smooth surface: 1.",
+            "ur": "یہ ایک ہموار سطح ہے: 1"
+          },
+          "common_wrong": [
+            {
+              "answer": 0,
+              "feedback": {
+                "en": "A curved surface counts as a face: 1.",
+                "ur": "خمدار سطح بھی سطح گنی جاتی ہے: 1"
+              },
+              "misconception_id": "curved_not_a_face"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_cyl_edges",
+        "type": "recall",
+        "step": {
+          "id": "qb_cyl_edges",
+          "type": "number",
+          "prompt": {
+            "en": "How many edges does a cylinder have?",
+            "ur": "اسطوانے کے کتنے کنارے ہیں؟"
+          },
+          "answer": 2,
+          "checker": "numeric",
+          "hint": {
+            "en": "Where the flat circles meet the curved side.",
+            "ur": "جہاں چپٹے دائرے خمدار پہلو سے ملتے ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! The top rim and the bottom rim: 2 edges.",
+            "ur": "درست! اوپر کا گھیرا اور نیچے کا گھیرا: 2 کنارے"
+          },
+          "feedback_wrong": {
+            "en": "One circle on top and one at the bottom: 2.",
+            "ur": "ایک دائرہ اوپر اور ایک نیچے: 2"
+          },
+          "common_wrong": [
+            {
+              "answer": 3,
+              "feedback": {
+                "en": "3 is the number of faces. The edges are the 2 circles: 2.",
+                "ur": "3 سطحوں کی تعداد ہے۔ کنارے 2 دائرے ہیں: 2"
+              },
+              "misconception_id": "wrong_count_unit"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_cube_faces",
+        "type": "apply",
+        "step": {
+          "id": "qb_cube_faces",
+          "type": "number",
+          "prompt": {
+            "en": "Two dice (cubes) are on a table, not touching. How many faces do they have altogether?",
+            "ur": "میز پر دو پانسے (مکعب) الگ الگ رکھے ہیں۔ ان کی کل کتنی سطحیں ہیں؟"
+          },
+          "answer": 12,
+          "checker": "numeric",
+          "hint": {
+            "en": "One cube has 6 faces. Two cubes: 2 × 6.",
+            "ur": "ایک مکعب کی 6 سطحیں ہیں۔ دو مکعب: 2 × 6"
+          },
+          "feedback_correct": {
+            "en": "Right! 2 × 6 = 12 faces.",
+            "ur": "درست! 2 × 6 = 12 سطحیں"
+          },
+          "feedback_wrong": {
+            "en": "6 faces on each die: 12.",
+            "ur": "ہر پانسے کی 6 سطحیں: 12"
+          },
+          "common_wrong": [
+            {
+              "answer": 6,
+              "feedback": {
+                "en": "That is one die. There are 2: 12.",
+                "ur": "یہ ایک پانسہ ہے۔ پانسے 2 ہیں: 12"
+              },
+              "misconception_id": "wrong_count_unit"
+            },
+            {
+              "answer": 16,
+              "feedback": {
+                "en": "16 is the vertices of 2 dice. Faces: 12.",
+                "ur": "16، دو پانسوں کے راس ہیں۔ سطحیں: 12"
+              },
+              "misconception_id": "wrong_count_unit"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Sana says a sphere has 1 edge, because it is round all over. What went wrong?",
+            "ur": "ثنا کہتی ہے کرہ کا 1 کنارہ ہے، کیونکہ وہ ہر طرف سے گول ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A sphere is one smooth surface with no line where two faces meet, so it has 0 edges.",
+                "ur": "کرہ ایک ہموار سطح ہے جس میں دو سطحوں کے ملنے کی کوئی لکیر نہیں، تو اس کے 0 کنارے ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! An edge needs two faces to meet.",
+                "ur": "جی ہاں! کنارے کے لیے دو سطحوں کا ملنا ضروری ہے۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. A sphere has 1 edge all round the middle.",
+                "ur": "کوئی غلطی نہیں۔ کرہ کے بیچ میں گرد 1 کنارہ ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The middle is not an edge: nothing meets there.",
+                "ur": "بیچ کا حصہ کنارہ نہیں: وہاں کچھ نہیں ملتا۔"
+              },
+              "misconception_id": "edge_vertex_mix"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A sphere has 2 edges, one on top and one at the bottom.",
+                "ur": "کرہ کے 2 کنارے ہیں، ایک اوپر ایک نیچے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "A sphere has no top or bottom edge.",
+                "ur": "کرہ کا اوپر یا نیچے کوئی کنارہ نہیں۔"
+              },
+              "misconception_id": "edge_vertex_mix"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_cone",
+      "front": {
+        "en": "Faces, edges and vertices of a cone?",
+        "ur": "مخروط کی سطحیں، کنارے اور راس؟"
+      },
+      "back": {
+        "en": "2 faces (1 flat, 1 curved), 1 edge, 1 vertex.",
+        "ur": "2 سطحیں (1 چپٹی، 1 خمدار)، 1 کنارہ، 1 راس۔"
+      }
+    },
+    {
+      "id": "f_cuboid",
+      "front": {
+        "en": "Faces, edges and vertices of a cuboid?",
+        "ur": "مکعب نما کی سطحیں، کنارے اور راس؟"
+      },
+      "back": {
+        "en": "6 faces, 12 edges, 8 vertices.",
+        "ur": "6 سطحیں، 12 کنارے، 8 راس۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_objects",
+      "text": {
+        "en": "Find six things at home, such as a tin, a ball, a brick, a cap or a dice. Write the name of each one's 3-D shape. For two of them, count the faces, edges and vertices.",
+        "ur": "گھر میں چھ چیزیں ڈھونڈیں، جیسے ڈبہ، گیند، اینٹ، ٹوپی یا پانسہ۔ ہر ایک کی 3-D شکل کا نام لکھیں۔ دو چیزوں کی سطحیں، کنارے اور راس گنیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Face",
+      "ur": "سطح"
+    },
+    {
+      "en": "Edge",
+      "ur": "کنارہ"
+    },
+    {
+      "en": "Vertex",
+      "ur": "راس"
+    },
+    {
+      "en": "Cylinder",
+      "ur": "اسطوانہ"
+    },
+    {
+      "en": "Cone",
+      "ur": "مخروط"
+    },
+    {
+      "en": "Sphere",
+      "ur": "کرہ"
+    },
+    {
+      "en": "Hemisphere",
+      "ur": "نصف کرہ"
+    },
+    {
+      "en": "Cuboid",
+      "ur": "مکعب نما"
+    },
+    {
+      "en": "Curved surface",
+      "ur": "خمدار سطح"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 9.1 is about shapes. Ready?",
+          "ur": "مشق 9.1 اشکال کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 9.1 of your maths book (PCTB Mathematics 6). Here you name the 3-D shape of everyday objects, tell flat figures from solids, and count faces, edges and vertices. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 9.1 کے ساتھ ہے۔ اس میں آپ روزمرہ چیزوں کی 3-D شکل کا نام بتائیں گے، چپٹی اشکال اور ٹھوس اشکال میں فرق کریں گے، اور سطحیں، کنارے اور راس گنیں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_tin",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A tin of ghee has a flat round top, a flat round bottom and a curved side. Which solid is it shaped like?",
+        "ur": "گھی کے ڈبے کا اوپر اور نیچے چپٹا گول ہے اور پہلو خمدار ہے۔ یہ کس ٹھوس شکل جیسا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Cone",
+            "ur": "مخروط"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A cone comes to a point at the top. This tin has a flat top.",
+            "ur": "مخروط اوپر سے نوک دار ہوتا ہے۔ اس ڈبے کا اوپر چپٹا ہے۔"
+          },
+          "misconception_id": "shape_by_roundness"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Cylinder",
+            "ur": "اسطوانہ"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Two flat circles joined by one curved surface make a cylinder.",
+            "ur": "جی ہاں! دو چپٹے دائرے اور ایک خمدار سطح مل کر اسطوانہ بناتے ہیں۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Sphere",
+            "ur": "کرہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A sphere is round all over, with no flat part.",
+            "ur": "کرہ ہر طرف سے گول ہوتا ہے، اس میں کوئی چپٹا حصہ نہیں۔"
+          },
+          "misconception_id": "shape_by_roundness"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Cuboid",
+            "ur": "مکعب نما"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A cuboid has only flat faces. This tin has a curved side.",
+            "ur": "مکعب نما کی سب سطحیں چپٹی ہوتی ہیں۔ اس ڈبے کا پہلو خمدار ہے۔"
+          },
+          "misconception_id": "shape_by_roundness"
+        }
+      ]
+    },
+    {
+      "id": "q2_sphere",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these things is shaped like a sphere?",
+        "ur": "ان میں سے کون سی چیز کرہ جیسی ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A brick",
+            "ur": "اینٹ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A brick has flat faces and corners: it is a cuboid.",
+            "ur": "اینٹ کی سطحیں چپٹی اور کونے ہوتے ہیں: یہ مکعب نما ہے۔"
+          },
+          "misconception_id": "shape_by_roundness"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "A road safety cone",
+            "ur": "سڑک کا حفاظتی مخروط"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is a cone: pointed at the top, flat at the bottom.",
+            "ur": "یہ مخروط ہے: اوپر سے نوک دار، نیچے سے چپٹا۔"
+          },
+          "misconception_id": "shape_by_roundness"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A marble",
+            "ur": "کانچ کی گولی"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A marble is round all over, like a sphere.",
+            "ur": "جی ہاں! کانچ کی گولی ہر طرف سے گول ہے، کرہ کی طرح۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "A sheet of paper",
+            "ur": "کاغذ کا ورق"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A sheet of paper is a flat 2-D figure.",
+            "ur": "کاغذ کا ورق چپٹی 2-D شکل ہے۔"
+          },
+          "misconception_id": "flat_is_3d"
+        }
+      ]
+    },
+    {
+      "id": "q3_dimensions",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a 1-D figure?",
+        "ur": "ان میں سے کون سی 1-D شکل ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "A line segment",
+            "ur": "قطعہ خط"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A line segment has only length.",
+            "ur": "جی ہاں! قطعہ خط کی صرف لمبائی ہوتی ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "A square",
+            "ur": "مربع"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A square is flat with length and width: 2-D.",
+            "ur": "مربع چپٹا ہوتا ہے، لمبائی اور چوڑائی کے ساتھ: 2-D۔"
+          },
+          "misconception_id": "flat_is_3d"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A cube",
+            "ur": "مکعب"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A cube is solid: length, width and height: 3-D.",
+            "ur": "مکعب ٹھوس ہے: لمبائی، چوڑائی اور اونچائی: 3-D۔"
+          },
+          "misconception_id": "flat_is_3d"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "A circle",
+            "ur": "دائرہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A circle drawn on paper is flat: 2-D.",
+            "ur": "کاغذ پر بنا دائرہ چپٹا ہے: 2-D۔"
+          },
+          "misconception_id": "flat_is_3d"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "Count the faces, edges and vertices of a solid one kind at a time.",
+          "ur": "ٹھوس شکل کی سطحیں، کنارے اور راس ایک ایک قسم کر کے گنیں۔"
+        }
+      },
+      "text": {
+        "en": "A face is a flat or curved surface. An edge is a line where two faces meet (a circle counts too). A vertex is a corner point. Cube and cuboid: 6 faces, 12 edges, 8 vertices. Cylinder: 3 faces (2 flat, 1 curved), 2 edges, 0 vertices. Cone: 2 faces, 1 edge, 1 vertex. Sphere: 1 face, 0 edges, 0 vertices. Hemisphere: 2 faces, 1 edge, 0 vertices. Hidden edges at the back count too.",
+        "ur": "سطح چپٹی یا خمدار ہو سکتی ہے۔ کنارہ وہ لکیر ہے جہاں دو سطحیں ملتی ہیں (دائرہ بھی کنارہ گنا جاتا ہے)۔ راس کونے کا نقطہ ہے۔ مکعب اور مکعب نما: 6 سطحیں، 12 کنارے، 8 راس۔ اسطوانہ: 3 سطحیں (2 چپٹی، 1 خمدار)، 2 کنارے، 0 راس۔ مخروط: 2 سطحیں، 1 کنارہ، 1 راس۔ کرہ: 1 سطح، 0 کنارے، 0 راس۔ نصف کرہ: 2 سطحیں، 1 کنارہ، 0 راس۔ پیچھے کے چھپے ہوئے کنارے بھی گنے جاتے ہیں۔"
+      }
+    },
+    {
+      "id": "q4_cyl_flat",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many flat faces does the cylinder in the picture have?",
+        "ur": "تصویر والے اسطوانے کی کتنی چپٹی سطحیں ہیں؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Look at the top and the bottom.",
+        "ur": "اوپر اور نیچے دیکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The top and the bottom: 2 flat faces (and 1 curved face).",
+        "ur": "درست! اوپر اور نیچے: 2 چپٹی سطحیں (اور 1 خمدار سطح)۔"
+      },
+      "feedback_wrong": {
+        "en": "The two flat circles are the top and the bottom.",
+        "ur": "دو چپٹے دائرے اوپر اور نیچے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 is all the faces. The curved side is not flat, so 2 are flat.",
+            "ur": "3 کل سطحیں ہیں۔ خمدار پہلو چپٹا نہیں، تو 2 چپٹی ہیں۔"
+          },
+          "misconception_id": "wrong_count_unit"
+        },
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "That counts only the curved side. The top and bottom are flat faces too: 2.",
+            "ur": "یہ صرف خمدار پہلو گنتا ہے۔ اوپر اور نیچے بھی چپٹی سطحیں ہیں: 2"
+          },
+          "misconception_id": "curved_not_a_face"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "A tin shaped like a cylinder: a flat circle on top, a curved side, and a flat circle at the bottom. The hidden back half of the bottom edge is dashed.",
+          "ur": "اسطوانے کی شکل کا ایک ڈبہ: اوپر چپٹا دائرہ، خمدار پہلو، اور نیچے چپٹا دائرہ۔ نیچے کے کنارے کا چھپا ہوا پچھلا نصف ڈیش والی لکیر سے دکھایا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                70.0,
+                14.0
+              ],
+              [
+                69.3,
+                15.6
+              ],
+              [
+                67.3,
+                17.0
+              ],
+              [
+                64.1,
+                18.2
+              ],
+              [
+                60.0,
+                19.2
+              ],
+              [
+                55.2,
+                19.8
+              ],
+              [
+                50.0,
+                20.0
+              ],
+              [
+                44.8,
+                19.8
+              ],
+              [
+                40.0,
+                19.2
+              ],
+              [
+                35.9,
+                18.2
+              ],
+              [
+                32.7,
+                17.0
+              ],
+              [
+                30.7,
+                15.6
+              ],
+              [
+                30.0,
+                14.0
+              ],
+              [
+                30.7,
+                12.4
+              ],
+              [
+                32.7,
+                11.0
+              ],
+              [
+                35.9,
+                9.8
+              ],
+              [
+                40.0,
+                8.8
+              ],
+              [
+                44.8,
+                8.2
+              ],
+              [
+                50.0,
+                8.0
+              ],
+              [
+                55.2,
+                8.2
+              ],
+              [
+                60.0,
+                8.8
+              ],
+              [
+                64.1,
+                9.8
+              ],
+              [
+                67.3,
+                11.0
+              ],
+              [
+                69.3,
+                12.4
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              58.0
+            ],
+            "to": [
+              69.3,
+              59.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.3,
+              59.6
+            ],
+            "to": [
+              67.3,
+              61.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              67.3,
+              61.0
+            ],
+            "to": [
+              64.1,
+              62.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.1,
+              62.2
+            ],
+            "to": [
+              60.0,
+              63.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              63.2
+            ],
+            "to": [
+              55.2,
+              63.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              63.8
+            ],
+            "to": [
+              50.0,
+              64.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              64.0
+            ],
+            "to": [
+              44.8,
+              63.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.8,
+              63.8
+            ],
+            "to": [
+              40.0,
+              63.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              63.2
+            ],
+            "to": [
+              35.9,
+              62.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.9,
+              62.2
+            ],
+            "to": [
+              32.7,
+              61.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.7,
+              61.0
+            ],
+            "to": [
+              30.7,
+              59.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.7,
+              59.6
+            ],
+            "to": [
+              30.0,
+              58.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.0,
+              58.0
+            ],
+            "to": [
+              30.7,
+              56.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.7,
+              56.4
+            ],
+            "to": [
+              32.7,
+              55.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.7,
+              55.0
+            ],
+            "to": [
+              35.9,
+              53.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.9,
+              53.8
+            ],
+            "to": [
+              40.0,
+              52.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              52.8
+            ],
+            "to": [
+              44.8,
+              52.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.8,
+              52.2
+            ],
+            "to": [
+              50.0,
+              52.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              52.0
+            ],
+            "to": [
+              55.2,
+              52.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              52.2
+            ],
+            "to": [
+              60.0,
+              52.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              52.8
+            ],
+            "to": [
+              64.1,
+              53.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.1,
+              53.8
+            ],
+            "to": [
+              67.3,
+              55.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              67.3,
+              55.0
+            ],
+            "to": [
+              69.3,
+              56.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.3,
+              56.4
+            ],
+            "to": [
+              70.0,
+              58.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.0,
+              14.0
+            ],
+            "to": [
+              30.0,
+              58.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              14.0
+            ],
+            "to": [
+              70.0,
+              58.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_cone_vertex",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many vertices (corners) does the cone in the picture have?",
+        "ur": "تصویر والے مخروط کے کتنے راس (کونے) ہیں؟"
+      },
+      "answer": 1,
+      "checker": "numeric",
+      "hint": {
+        "en": "A vertex is a sharp point. Where is the cone sharp?",
+        "ur": "راس نوک دار نقطہ ہوتا ہے۔ مخروط کہاں نوک دار ہے؟"
+      },
+      "feedback_correct": {
+        "en": "Right! Only the tip at the top is a vertex.",
+        "ur": "درست! صرف اوپر کی نوک راس ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "The round edge of the base is smooth, with no sharp point. Only the tip counts.",
+        "ur": "قاعدے کا گول کنارہ ہموار ہے، اس میں نوک دار نقطہ نہیں۔ صرف اوپر کی نوک گنی جاتی ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "The edge of the base is a curved edge, not a vertex. Only the tip is a vertex: 1.",
+            "ur": "قاعدے کا کنارہ خمدار کنارہ ہے، راس نہیں۔ صرف نوک راس ہے: 1"
+          },
+          "misconception_id": "edge_vertex_mix"
+        },
+        {
+          "answer": 0,
+          "feedback": {
+            "en": "The tip at the top is a vertex: 1.",
+            "ur": "اوپر کی نوک راس ہے: 1"
+          },
+          "misconception_id": "edge_vertex_mix"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "An ice-cream cone shape: a sharp tip at the top, a curved side, and a flat round base at the bottom. The hidden back half of the base edge is dashed.",
+          "ur": "آئس کریم کون جیسی شکل: اوپر نوک دار سرا، خمدار پہلو، اور نیچے چپٹا گول قاعدہ۔ قاعدے کے کنارے کا چھپا ہوا پچھلا نصف ڈیش والی لکیر سے دکھایا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              60.0
+            ],
+            "to": [
+              69.3,
+              61.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.3,
+              61.6
+            ],
+            "to": [
+              67.3,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              67.3,
+              63.0
+            ],
+            "to": [
+              64.1,
+              64.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.1,
+              64.2
+            ],
+            "to": [
+              60.0,
+              65.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              65.2
+            ],
+            "to": [
+              55.2,
+              65.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              65.8
+            ],
+            "to": [
+              50.0,
+              66.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              66.0
+            ],
+            "to": [
+              44.8,
+              65.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.8,
+              65.8
+            ],
+            "to": [
+              40.0,
+              65.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              65.2
+            ],
+            "to": [
+              35.9,
+              64.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.9,
+              64.2
+            ],
+            "to": [
+              32.7,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.7,
+              63.0
+            ],
+            "to": [
+              30.7,
+              61.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.7,
+              61.6
+            ],
+            "to": [
+              30.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.0,
+              60.0
+            ],
+            "to": [
+              30.7,
+              58.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.7,
+              58.4
+            ],
+            "to": [
+              32.7,
+              57.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.7,
+              57.0
+            ],
+            "to": [
+              35.9,
+              55.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.9,
+              55.8
+            ],
+            "to": [
+              40.0,
+              54.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              54.8
+            ],
+            "to": [
+              44.8,
+              54.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.8,
+              54.2
+            ],
+            "to": [
+              50.0,
+              54.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              54.0
+            ],
+            "to": [
+              55.2,
+              54.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              54.2
+            ],
+            "to": [
+              60.0,
+              54.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              54.8
+            ],
+            "to": [
+              64.1,
+              55.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.1,
+              55.8
+            ],
+            "to": [
+              67.3,
+              57.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              67.3,
+              57.0
+            ],
+            "to": [
+              69.3,
+              58.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.3,
+              58.4
+            ],
+            "to": [
+              70.0,
+              60.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              12.0
+            ],
+            "to": [
+              30.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              12.0
+            ],
+            "to": [
+              70.0,
+              60.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_cone_faces",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many faces does the same cone have, counting the curved side?",
+        "ur": "اسی مخروط کی کتنی سطحیں ہیں، خمدار پہلو سمیت؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "One flat base and one curved side.",
+        "ur": "ایک چپٹا قاعدہ اور ایک خمدار پہلو۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 1 flat base + 1 curved surface = 2 faces.",
+        "ur": "درست! 1 چپٹا قاعدہ + 1 خمدار سطح = 2 سطحیں"
+      },
+      "feedback_wrong": {
+        "en": "The base is 1 face and the curved side is 1 face: 2.",
+        "ur": "قاعدہ 1 سطح ہے اور خمدار پہلو 1 سطح: 2"
+      },
+      "common_wrong": [
+        {
+          "answer": 1,
+          "feedback": {
+            "en": "That counts only the flat base. A curved surface is a face too: 2.",
+            "ur": "یہ صرف چپٹا قاعدہ گنتا ہے۔ خمدار سطح بھی سطح ہے: 2"
+          },
+          "misconception_id": "curved_not_a_face"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "A cone has just one flat base and one curved side: 2.",
+            "ur": "مخروط کا صرف ایک چپٹا قاعدہ اور ایک خمدار پہلو ہوتا ہے: 2"
+          },
+          "misconception_id": "wrong_count_unit"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "An ice-cream cone shape: a sharp tip at the top, a curved side, and a flat round base at the bottom. The hidden back half of the base edge is dashed.",
+          "ur": "آئس کریم کون جیسی شکل: اوپر نوک دار سرا، خمدار پہلو، اور نیچے چپٹا گول قاعدہ۔ قاعدے کے کنارے کا چھپا ہوا پچھلا نصف ڈیش والی لکیر سے دکھایا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "line",
+            "from": [
+              70.0,
+              60.0
+            ],
+            "to": [
+              69.3,
+              61.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.3,
+              61.6
+            ],
+            "to": [
+              67.3,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              67.3,
+              63.0
+            ],
+            "to": [
+              64.1,
+              64.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.1,
+              64.2
+            ],
+            "to": [
+              60.0,
+              65.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              65.2
+            ],
+            "to": [
+              55.2,
+              65.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              65.8
+            ],
+            "to": [
+              50.0,
+              66.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              66.0
+            ],
+            "to": [
+              44.8,
+              65.8
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.8,
+              65.8
+            ],
+            "to": [
+              40.0,
+              65.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              65.2
+            ],
+            "to": [
+              35.9,
+              64.2
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.9,
+              64.2
+            ],
+            "to": [
+              32.7,
+              63.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.7,
+              63.0
+            ],
+            "to": [
+              30.7,
+              61.6
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.7,
+              61.6
+            ],
+            "to": [
+              30.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.0,
+              60.0
+            ],
+            "to": [
+              30.7,
+              58.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              30.7,
+              58.4
+            ],
+            "to": [
+              32.7,
+              57.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              32.7,
+              57.0
+            ],
+            "to": [
+              35.9,
+              55.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              35.9,
+              55.8
+            ],
+            "to": [
+              40.0,
+              54.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              54.8
+            ],
+            "to": [
+              44.8,
+              54.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              44.8,
+              54.2
+            ],
+            "to": [
+              50.0,
+              54.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              54.0
+            ],
+            "to": [
+              55.2,
+              54.2
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              55.2,
+              54.2
+            ],
+            "to": [
+              60.0,
+              54.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              60.0,
+              54.8
+            ],
+            "to": [
+              64.1,
+              55.8
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              64.1,
+              55.8
+            ],
+            "to": [
+              67.3,
+              57.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              67.3,
+              57.0
+            ],
+            "to": [
+              69.3,
+              58.4
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              69.3,
+              58.4
+            ],
+            "to": [
+              70.0,
+              60.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              12.0
+            ],
+            "to": [
+              30.0,
+              60.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              50.0,
+              12.0
+            ],
+            "to": [
+              70.0,
+              60.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_matchbox_edges",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many edges does a matchbox have in all, counting the hidden ones?",
+        "ur": "ماچس کی ڈبیا کے کل کتنے کنارے ہیں، چھپے ہوئے بھی گن کر؟"
+      },
+      "answer": 12,
+      "checker": "numeric",
+      "hint": {
+        "en": "4 round the top, 4 round the bottom, 4 standing up.",
+        "ur": "4 اوپر کے گرد، 4 نیچے کے گرد، 4 کھڑے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 + 4 + 4 = 12 edges.",
+        "ur": "درست! 4 + 4 + 4 = 12 کنارے"
+      },
+      "feedback_wrong": {
+        "en": "Top 4, bottom 4, and 4 going up: 12.",
+        "ur": "اوپر 4، نیچے 4، اور 4 اوپر جاتے ہوئے: 12"
+      },
+      "common_wrong": [
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "That counts only the 9 edges you can see. The 3 dashed ones count too: 12.",
+            "ur": "یہ صرف 9 نظر آنے والے کنارے گنتا ہے۔ 3 ڈیش والے بھی گنے جاتے ہیں: 12"
+          },
+          "misconception_id": "hidden_edges"
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "8 is the number of vertices (corners). Edges are the lines: 12.",
+            "ur": "8 راس (کونوں) کی تعداد ہے۔ کنارے لکیریں ہیں: 12"
+          },
+          "misconception_id": "edge_vertex_mix"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the number of faces. Edges are the lines: 12.",
+            "ur": "6 سطحوں کی تعداد ہے۔ کنارے لکیریں ہیں: 12"
+          },
+          "misconception_id": "wrong_count_unit"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 70,
+        "alt": {
+          "en": "A matchbox shape, a cuboid, drawn in 3-D: a front rectangle, a top and a right side. The three hidden edges at the back are dashed.",
+          "ur": "ماچس کی ڈبیا جیسی شکل، یعنی مکعب نما، تین رخی (3-D) انداز میں: سامنے مستطیل، اوپر اور دائیں پہلو۔ پیچھے کے تین چھپے کنارے ڈیش والی لکیروں سے دکھائے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                18.0,
+                26.0
+              ],
+              [
+                74.0,
+                26.0
+              ],
+              [
+                74.0,
+                60.0
+              ],
+              [
+                18.0,
+                60.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              26.0
+            ],
+            "to": [
+              40.0,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              74.0,
+              26.0
+            ],
+            "to": [
+              96.0,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              74.0,
+              60.0
+            ],
+            "to": [
+              96.0,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              10.0
+            ],
+            "to": [
+              96.0,
+              10.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              96.0,
+              10.0
+            ],
+            "to": [
+              96.0,
+              44.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              18.0,
+              60.0
+            ],
+            "to": [
+              40.0,
+              44.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              44.0
+            ],
+            "to": [
+              96.0,
+              44.0
+            ],
+            "style": "dashed"
+          },
+          {
+            "kind": "line",
+            "from": [
+              40.0,
+              10.0
+            ],
+            "to": [
+              40.0,
+              44.0
+            ],
+            "style": "dashed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_hexagon",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many sides does the flat figure in the picture have?",
+        "ur": "تصویر والی چپٹی شکل کے کتنے اضلاع ہیں؟"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "Go round the shape and count the straight sides.",
+        "ur": "شکل کے گرد چل کر سیدھے اضلاع گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! It is a hexagon, with 6 sides.",
+        "ur": "درست! یہ مسدس ہے، اس کے 6 اضلاع ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "Count each straight side once: 6.",
+        "ur": "ہر سیدھے ضلع کو ایک بار گنیں: 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That misses one side. Count again: 6.",
+            "ur": "ایک ضلع رہ گیا۔ دوبارہ گنیں: 6"
+          },
+          "misconception_id": "wrong_count_unit"
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "Too many. A hexagon has 6 sides.",
+            "ur": "بہت زیادہ۔ مسدس کے 6 اضلاع ہوتے ہیں۔"
+          },
+          "misconception_id": "wrong_count_unit"
+        }
+      ],
+      "figure": {
+        "width": 100,
+        "height": 64,
+        "alt": {
+          "en": "A flat hexagon drawn on paper: a closed figure with straight sides, like a floor tile.",
+          "ur": "کاغذ پر بنا ہوا چپٹا مسدس: سیدھے اضلاع والی بند شکل، فرش کی ٹائل کی طرح۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                76.0,
+                32.0
+              ],
+              [
+                63.0,
+                54.5
+              ],
+              [
+                37.0,
+                54.5
+              ],
+              [
+                24.0,
+                32.0
+              ],
+              [
+                37.0,
+                9.5
+              ],
+              [
+                63.0,
+                9.5
+              ]
+            ],
+            "fill": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "q9_dice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A shop has 4 dice (cubes) on a shelf, not touching. How many vertices (corners) do they have altogether?",
+        "ur": "ایک دکان میں شیلف پر 4 پانسے (مکعب) الگ الگ رکھے ہیں۔ ان کے کل کتنے راس (کونے) ہیں؟"
+      },
+      "answer": 32,
+      "checker": "numeric",
+      "hint": {
+        "en": "One cube has 8 vertices. Multiply by 4.",
+        "ur": "ایک مکعب کے 8 راس ہوتے ہیں۔ 4 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 8 = 32 vertices.",
+        "ur": "درست! 4 × 8 = 32 راس"
+      },
+      "feedback_wrong": {
+        "en": "Each die has 8 corners, and 4 × 8 = 32.",
+        "ur": "ہر پانسے کے 8 کونے ہیں، اور 4 × 8 = 32"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "That is the faces, 4 × 6. Vertices: 4 × 8 = 32.",
+            "ur": "یہ سطحیں ہیں، 4 × 6۔ راس: 4 × 8 = 32"
+          },
+          "misconception_id": "wrong_count_unit"
+        },
+        {
+          "answer": 8,
+          "feedback": {
+            "en": "That is the vertices of one die. There are 4 dice: 32.",
+            "ur": "یہ ایک پانسے کے راس ہیں۔ پانسے 4 ہیں: 32"
+          },
+          "misconception_id": "wrong_count_unit"
+        }
+      ]
+    },
+    {
+      "id": "q10_wire",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A wire frame of a cuboid is made along all its 12 edges. The cuboid is 6 cm long, 4 cm wide and 3 cm high. What length of wire is needed, in cm?",
+        "ur": "مکعب نما کا تار کا ڈھانچہ اس کے سب 12 کناروں پر بنایا جاتا ہے۔ مکعب نما 6 سینٹی میٹر لمبا، 4 سینٹی میٹر چوڑا اور 3 سینٹی میٹر اونچا ہے۔ کتنے سینٹی میٹر تار چاہیے؟"
+      },
+      "answer": 52,
+      "checker": "numeric",
+      "hint": {
+        "en": "There are 4 edges of each length: 4 × (6 + 4 + 3).",
+        "ur": "ہر لمبائی کے 4 کنارے ہیں: 4 × (6 + 4 + 3)"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 × 13 = 52 cm of wire.",
+        "ur": "درست! 4 × 13 = 52 سینٹی میٹر تار"
+      },
+      "feedback_wrong": {
+        "en": "6 + 4 + 3 = 13, and there are 4 of each: 4 × 13 = 52.",
+        "ur": "6 + 4 + 3 = 13، اور ہر ایک کے 4 ہیں: 4 × 13 = 52"
+      },
+      "common_wrong": [
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "That counts each length only twice. There are 4 edges of each length: 52.",
+            "ur": "یہ ہر لمبائی صرف دو بار گنتا ہے۔ ہر لمبائی کے 4 کنارے ہیں: 52"
+          },
+          "misconception_id": "hidden_edges"
+        },
+        {
+          "answer": 13,
+          "feedback": {
+            "en": "That is one of each. Multiply by 4: 52.",
+            "ur": "یہ ہر ایک کا ایک ایک ہے۔ 4 سے ضرب دیں: 52"
+          },
+          "misconception_id": "hidden_edges"
+        },
+        {
+          "answer": 72,
+          "feedback": {
+            "en": "That is the volume, 6 × 4 × 3. Wire goes along the edges: 52.",
+            "ur": "یہ حجم ہے، 6 × 4 × 3۔ تار کناروں پر لگتا ہے: 52"
+          },
+          "misconception_id": "wrong_count_unit"
+        }
+      ]
+    },
+    {
+      "id": "q11_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Hamza says a hemisphere (half a ball) has no flat face, because a ball is round. What went wrong?",
+        "ur": "حمزہ کہتا ہے نصف کرہ (آدھی گیند) کی کوئی چپٹی سطح نہیں، کیونکہ گیند گول ہوتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Cutting the ball makes a flat circle, so a hemisphere has 1 flat and 1 curved face: 2 faces.",
+            "ur": "گیند کاٹنے سے چپٹا دائرہ بنتا ہے، تو نصف کرہ کی 1 چپٹی اور 1 خمدار سطح ہے: کل 2 سطحیں۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The cut makes a flat circle.",
+            "ur": "جی ہاں! کاٹنے سے چپٹا دائرہ بنتا ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. A hemisphere has only 1 curved face.",
+            "ur": "کوئی غلطی نہیں۔ نصف کرہ کی صرف 1 خمدار سطح ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The cut side is flat, so there is a second face.",
+            "ur": "کٹا ہوا رخ چپٹا ہے، تو ایک اور سطح ہے۔"
+          },
+          "misconception_id": "curved_not_a_face"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A hemisphere has 3 flat faces.",
+            "ur": "نصف کرہ کی 3 چپٹی سطحیں ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It has just one flat circle.",
+            "ur": "اس کا صرف ایک چپٹا دائرہ ہے۔"
+          },
+          "misconception_id": "shape_by_roundness"
+        }
+      ]
+    },
+    {
+      "id": "q12_find_error_cone",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Mina says a cone has 2 vertices: the tip, and the round edge of its base. What went wrong?",
+        "ur": "مینا کہتی ہے مخروط کے 2 راس ہیں: نوک، اور قاعدے کا گول کنارہ۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. A cone has 2 vertices.",
+            "ur": "کوئی غلطی نہیں۔ مخروط کے 2 راس ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A smooth round edge has no sharp point to count.",
+            "ur": "ہموار گول کنارے میں گننے کے لیے نوک دار نقطہ نہیں ہوتا۔"
+          },
+          "misconception_id": "edge_vertex_mix"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "The round edge of the base is an edge, not a vertex. A cone has 1 vertex, the tip.",
+            "ur": "قاعدے کا گول کنارہ کنارہ ہے، راس نہیں۔ مخروط کا 1 راس ہے، یعنی نوک۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A vertex is a sharp corner point.",
+            "ur": "جی ہاں! راس نوک دار کونے کا نقطہ ہوتا ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A cone has no vertices.",
+            "ur": "مخروط کا کوئی راس نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The tip is a vertex.",
+            "ur": "نوک راس ہے۔"
+          },
+          "misconception_id": "edge_vertex_mix"
+        }
+      ]
+    },
+    {
+      "id": "q13_which_solid",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which solid has exactly 1 edge and 1 vertex?",
+        "ur": "کس ٹھوس شکل کا بالکل 1 کنارہ اور 1 راس ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Cylinder",
+            "ur": "اسطوانہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A cylinder has 2 edges and no vertex.",
+            "ur": "اسطوانے کے 2 کنارے ہیں اور کوئی راس نہیں۔"
+          },
+          "misconception_id": "edge_vertex_mix"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Hemisphere",
+            "ur": "نصف کرہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A hemisphere has 1 edge but no vertex.",
+            "ur": "نصف کرہ کا 1 کنارہ ہے مگر کوئی راس نہیں۔"
+          },
+          "misconception_id": "edge_vertex_mix"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Cone",
+            "ur": "مخروط"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The base circle is its 1 edge and the tip is its 1 vertex.",
+            "ur": "جی ہاں! قاعدے کا دائرہ اس کا 1 کنارہ اور نوک اس کا 1 راس ہے۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Sphere",
+            "ur": "کرہ"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A sphere has no edges and no vertices.",
+            "ur": "کرہ کے نہ کنارے ہیں نہ راس۔"
+          },
+          "misconception_id": "edge_vertex_mix"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can name solids and count their parts.",
+          "ur": "شاباش! آپ ٹھوس اشکال کے نام بتا سکتے ہیں اور ان کے حصے گن سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "1-D: only length (a line segment). 2-D: flat, with length and width (square, circle, hexagon). 3-D: solid, with length, width and height. Cube and cuboid: 6 faces, 12 edges, 8 vertices. Cylinder: 3 faces, 2 edges, 0 vertices. Cone: 2 faces, 1 edge, 1 vertex. Sphere: 1 face, 0 edges, 0 vertices. Hemisphere: 2 faces, 1 edge, 0 vertices. Count the hidden edges too.",
+        "ur": "1-D: صرف لمبائی (قطعہ خط)۔ 2-D: چپٹی، لمبائی اور چوڑائی کے ساتھ (مربع، دائرہ، مسدس)۔ 3-D: ٹھوس، لمبائی، چوڑائی اور اونچائی کے ساتھ۔ مکعب اور مکعب نما: 6 سطحیں، 12 کنارے، 8 راس۔ اسطوانہ: 3 سطحیں، 2 کنارے، 0 راس۔ مخروط: 2 سطحیں، 1 کنارہ، 1 راس۔ کرہ: 1 سطح، 0 کنارے، 0 راس۔ نصف کرہ: 2 سطحیں، 1 کنارہ، 0 راس۔ چھپے ہوئے کنارے بھی گنیں۔"
+      },
+      "points": [
+        {
+          "en": "Curved surfaces are faces too.",
+          "ur": "خمدار سطحیں بھی سطحیں ہیں۔"
+        },
+        {
+          "en": "A vertex is a sharp point; a round rim is an edge.",
+          "ur": "راس نوک دار نقطہ ہے؛ گول کنارہ کنارہ ہے۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_cuboid_vertices",
+      "type": "apply",
+      "step": {
+        "id": "r_cuboid_vertices",
+        "type": "number",
+        "prompt": {
+          "en": "Two matchboxes (cuboids) lie apart on a shelf. How many vertices (corners) do they have altogether?",
+          "ur": "الماری میں دو ماچس کی ڈبیاں (مکعب نما) الگ الگ رکھی ہیں۔ ان کے کل کتنے راس (کونے) ہیں؟"
+        },
+        "answer": 16,
+        "checker": "numeric",
+        "hint": {
+          "en": "One cuboid has 8 vertices. Two cuboids: 2 × 8.",
+          "ur": "ایک مکعب نما کے 8 راس ہیں۔ دو مکعب نما: 2 × 8"
+        },
+        "feedback_correct": {
+          "en": "Right! 2 × 8 = 16 vertices.",
+          "ur": "درست! 2 × 8 = 16 راس"
+        },
+        "feedback_wrong": {
+          "en": "Each matchbox has 8 corners: 16.",
+          "ur": "ہر ڈبیا کے 8 کونے ہیں: 16"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "That is one matchbox. There are 2: 16.",
+              "ur": "یہ ایک ڈبیا ہے۔ ڈبیاں 2 ہیں: 16"
+            },
+            "misconception_id": "wrong_count_unit"
+          },
+          {
+            "answer": 24,
+            "feedback": {
+              "en": "24 is the edges of 2 matchboxes. Vertices: 16.",
+              "ur": "24، دو ڈبیوں کے کنارے ہیں۔ راس: 16"
+            },
+            "misconception_id": "edge_vertex_mix"
+          }
+        ]
+      },
+      "skill": "maths.symmetry.ex_9_1"
+    },
+    {
+      "id": "r_hemisphere_faces",
+      "type": "recall",
+      "step": {
+        "id": "r_hemisphere_faces",
+        "type": "number",
+        "prompt": {
+          "en": "How many faces does a hemisphere have?",
+          "ur": "نصف کرہ کی کتنی سطحیں ہیں؟"
+        },
+        "answer": 2,
+        "checker": "numeric",
+        "hint": {
+          "en": "One flat circle and one curved surface.",
+          "ur": "ایک چپٹا دائرہ اور ایک خمدار سطح۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 1 flat + 1 curved = 2 faces.",
+          "ur": "درست! 1 چپٹی + 1 خمدار = 2 سطحیں"
+        },
+        "feedback_wrong": {
+          "en": "The flat circle and the curved bowl: 2.",
+          "ur": "چپٹا دائرہ اور خمدار پیالہ: 2"
+        },
+        "common_wrong": [
+          {
+            "answer": 1,
+            "feedback": {
+              "en": "That misses the flat circle. A hemisphere has 2 faces.",
+              "ur": "یہ چپٹا دائرہ چھوڑ دیتا ہے۔ نصف کرہ کی 2 سطحیں ہیں۔"
+            },
+            "misconception_id": "curved_not_a_face"
+          }
+        ]
+      },
+      "skill": "maths.symmetry.ex_9_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 9.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers naming the 3-D shape of objects (q1, q2), 1-D, 2-D and 3-D figures (q3, q8), faces, edges and vertices of a cylinder, cone, cuboid, cube and hemisphere (q4 to q7, q11 to q13) and two word problems built on them (q9, q10).",
+    "Each wrong answer is a real mistake: a curved surface not counted as a face, the base rim of a cone counted as a vertex, hidden edges skipped, faces counted for vertices, and a solid named from one feature such as roundness.",
+    "Urdu terms to check: سطح (face), کنارہ (edge), راس (vertex), اسطوانہ, مخروط, کرہ, نصف کرہ, مکعب نما, خمدار سطح and مسدس (hexagon), all as in the existing Symmetry and Solids lessons. کانچ کی گولی (marble) and سڑک کا حفاظتی مخروط (road safety cone) are new, so a teacher should confirm them.",
+    "The numbers were worked out in content/sources/g6-maths-18/exercise_9_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

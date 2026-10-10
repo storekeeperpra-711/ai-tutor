@@ -236,6 +236,10 @@ const grade6Book = [
       'g6-maths-18-parallel-lines-and-transversal',
       'g6-maths-18-line-symmetry',
       'g6-maths-18-rotational-symmetry',
+      'g6-maths-18-exercise-9-1',
+      'g6-maths-18-exercise-9-2',
+      'g6-maths-18-exercise-9-3',
+      'g6-maths-18-chapter-9-test',
     ]),
     BookChapter(
       LocalizedText(en: 'Geometrical Constructions', ur: 'ہندسی تعمیرات'),
