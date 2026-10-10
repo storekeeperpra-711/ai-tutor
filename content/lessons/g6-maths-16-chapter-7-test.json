@@ -1,0 +1,1086 @@
+{
+  "id": "g6-maths-16-chapter-7-test",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Answer exam-style questions on the whole of chapter 7: equations and expressions, linear equations in one variable, forming equations from words, solving and checking them, and word problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 7: Linear Equations, Review Exercise 7"
+    }
+  ],
+  "skills": [
+    "maths.equations.chapter_7_test"
+  ],
+  "title": {
+    "en": "Chapter 7 test: Linear equations",
+    "ur": "باب 7 کا ٹیسٹ: خطی مساوات"
+  },
+  "estimated_minutes": 25,
+  "prerequisites": [
+    {
+      "skill": "maths.equations.equation_or_expression"
+    },
+    {
+      "skill": "maths.equations.check_solution"
+    },
+    {
+      "skill": "maths.equations.forming"
+    },
+    {
+      "skill": "maths.equations.two_step"
+    },
+    {
+      "skill": "maths.equations.brackets"
+    },
+    {
+      "skill": "maths.equations.word_problems"
+    },
+    {
+      "skill": "maths.algebra.substitution"
+    },
+    {
+      "skill": "maths.algebra.simple_equations"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "letter_means_equation",
+      "description": "Thinks anything with a letter is an equation, even with no = sign."
+    },
+    {
+      "id": "power_is_linear",
+      "description": "Counts x² = 9 or an equation with two letters as a linear equation in one variable."
+    },
+    {
+      "id": "wrong_operation",
+      "description": "Writes 'more than' or 'increased by' as the wrong operation, or times as plus."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Undoes an operation by repeating it or doing the wrong one."
+    },
+    {
+      "id": "stops_early",
+      "description": "Stops after the first step and gives that as the answer."
+    },
+    {
+      "id": "order_of_steps",
+      "description": "Divides or multiplies before dealing with the number added or subtracted."
+    },
+    {
+      "id": "brackets_wrong",
+      "description": "Puts brackets where the words don't need them, or forgets to multiply the whole bracket."
+    },
+    {
+      "id": "answer_is_other_quantity",
+      "description": "Finds the unknown but gives another quantity from the story."
+    },
+    {
+      "id": "decimal_slip",
+      "description": "Multiplies instead of dividing, or subtracts instead of dividing, with decimals."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.chapter_7_test": {
+      "question_types": [
+        "exam_style"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.chapter_7_test": [
+      {
+        "id": "qb_exam_one",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_one",
+          "type": "number",
+          "prompt": {
+            "en": "Solve x + 15 = 40.",
+            "ur": "حل کریں x + 15 = 40"
+          },
+          "answer": 25,
+          "checker": "numeric",
+          "hint": {
+            "en": "Take 15 away from 40.",
+            "ur": "40 میں سے 15 تفریق کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: x = 25.",
+            "ur": "درست: x = 25"
+          },
+          "feedback_wrong": {
+            "en": "40 − 15 = 25.",
+            "ur": "40 − 15 = 25"
+          },
+          "common_wrong": [
+            {
+              "answer": 55,
+              "feedback": {
+                "en": "That adds 15. Undo + 15 by taking 15 away: 25.",
+                "ur": "یہ 15 جمع کرتا ہے۔ + 15 کو 15 تفریق کر کے ختم کریں: 25"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_two",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_two",
+          "type": "number",
+          "prompt": {
+            "en": "Solve 4x + 2 = 26.",
+            "ur": "حل کریں 4x + 2 = 26"
+          },
+          "answer": 6,
+          "checker": "numeric",
+          "hint": {
+            "en": "Take 2 away first, then divide by 4.",
+            "ur": "پہلے 2 تفریق کریں، پھر 4 سے تقسیم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: 4x = 24, so x = 6.",
+            "ur": "درست: 4x = 24، تو x = 6"
+          },
+          "feedback_wrong": {
+            "en": "26 − 2 = 24, then 24 ÷ 4 = 6.",
+            "ur": "26 − 2 = 24، پھر 24 ÷ 4 = 6"
+          },
+          "common_wrong": [
+            {
+              "answer": 24,
+              "feedback": {
+                "en": "4x = 24 is only the first step. Divide by 4: 6.",
+                "ur": "4x = 24 صرف پہلا قدم ہے۔ 4 سے تقسیم کریں: 6"
+              },
+              "misconception_id": "stops_early"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_exam_div",
+        "type": "exam_style",
+        "step": {
+          "id": "qb_exam_div",
+          "type": "number",
+          "prompt": {
+            "en": "Solve x ÷ 3 = 7.",
+            "ur": "حل کریں x ÷ 3 = 7"
+          },
+          "answer": 21,
+          "checker": "numeric",
+          "hint": {
+            "en": "Undo ÷ 3 with × 3.",
+            "ur": "÷ 3 کو × 3 سے ختم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Correct: x = 7 × 3 = 21.",
+            "ur": "درست: x = 7 × 3 = 21"
+          },
+          "feedback_wrong": {
+            "en": "7 × 3 = 21, and 21 ÷ 3 = 7.",
+            "ur": "7 × 3 = 21، اور 21 ÷ 3 = 7"
+          },
+          "common_wrong": [
+            {
+              "answer": 4,
+              "feedback": {
+                "en": "That takes 3 away. Undo ÷ 3 with × 3: 21.",
+                "ur": "یہ 3 تفریق کرتا ہے۔ ÷ 3 کو × 3 سے ختم کریں: 21"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "home_tasks": [
+    {
+      "id": "h_paper",
+      "text": {
+        "en": "Do Review Exercise 7 in your maths book in your notebook, setting out the working the way this test's answers do: write the equation, solve it step by step, and check. Ask your teacher to check it.",
+        "ur": "اپنی ریاضی کی کتاب کی اعادی مشق 7 اپنی کاپی میں حل کریں، اور کام اس ٹیسٹ کے جوابات کی طرح لکھیں: مساوات لکھیں، قدم بہ قدم حل کریں، اور جانچیں۔ اپنے استاد سے جانچ کروائیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Multiple choice",
+      "ur": "کثیر انتخابی"
+    },
+    {
+      "en": "Short question",
+      "ur": "مختصر سوال"
+    },
+    {
+      "en": "Long question",
+      "ur": "تفصیلی سوال"
+    },
+    {
+      "en": "Model answer",
+      "ur": "نمونہ جواب"
+    },
+    {
+      "en": "Review exercise",
+      "ur": "اعادی مشق"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_paper",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "This is a test of the whole chapter, like the book's review exercise. Read each question carefully!",
+          "ur": "یہ پورے باب کا ٹیسٹ ہے، کتاب کی اعادی مشق کی طرح۔ ہر سوال غور سے پڑھیں!"
+        }
+      },
+      "text": {
+        "en": "This test goes with Review Exercise 7 of your maths book (PCTB Mathematics 6). It has three parts, like an exam paper: multiple choice questions (choose one answer), short questions (a few lines of working), and longer problems (full working in your notebook, then the answer). The questions are new, not the book's. Check every solution by putting it back into the equation.",
+        "ur": "یہ ٹیسٹ آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی اعادی مشق 7 کے ساتھ ہے۔ اس کے تین حصے ہیں، امتحانی پرچے کی طرح: کثیر انتخابی سوال (ایک جواب چنیں)، مختصر سوال (چند سطروں کا کام)، اور تفصیلی سوال (اپنی کاپی میں پورا کام، پھر جواب)۔ سوال نئے ہیں، کتاب والے نہیں۔ ہر حل کو مساوات میں واپس رکھ کر جانچیں۔"
+      }
+    },
+    {
+      "id": "m1_which",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which of these is an equation?",
+        "ur": "کثیر انتخابی: ان میں سے کون سی مساوات ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "4a + 1 = 13",
+            "ur": "4a + 1 = 13"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: it has an = sign.",
+            "ur": "درست: اس میں = کا نشان ہے۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "4a + 1",
+            "ur": "4a + 1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No = sign: an expression.",
+            "ur": "= کا نشان نہیں: الجبری جملہ۔"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "4a",
+            "ur": "4a"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A letter with a number is an expression.",
+            "ur": "حرف اور عدد الجبری جملہ ہے۔"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "a + 1 + 13",
+            "ur": "a + 1 + 13"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Still no = sign: an expression.",
+            "ur": "پھر بھی = کا نشان نہیں: الجبری جملہ۔"
+          },
+          "misconception_id": "letter_means_equation"
+        }
+      ]
+    },
+    {
+      "id": "m2_words",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which equation says '7 more than a number y is 19'?",
+        "ur": "کثیر انتخابی: کون سی مساوات کہتی ہے 'عدد y سے 7 زیادہ 19 ہے'؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "7y = 19",
+            "ur": "7y = 19"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7y means 7 times y.",
+            "ur": "7y یعنی y کا 7 گنا۔"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "y − 7 = 19",
+            "ur": "y − 7 = 19"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 7 LESS than y.",
+            "ur": "یہ y سے 7 کم ہے۔"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "y + 7 = 19",
+            "ur": "y + 7 = 19"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: more than means add.",
+            "ur": "درست: زیادہ یعنی جمع۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "7 − y = 19",
+            "ur": "7 − y = 19"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That takes y away from 7.",
+            "ur": "یہ 7 میں سے y تفریق کرتا ہے۔"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "m3_linear",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: Which is a linear equation in one variable?",
+        "ur": "کثیر انتخابی: ان میں سے کون سی ایک متغیر والی خطی مساوات ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "m² − 5 = 9",
+            "ur": "m² − 5 = 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "m² has power 2.",
+            "ur": "m² کی طاقت 2 ہے۔"
+          },
+          "misconception_id": "power_is_linear"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "2m − 5 = 9",
+            "ur": "2m − 5 = 9"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: one letter, power 1.",
+            "ur": "درست: ایک حرف، طاقت 1۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "2m − n = 9",
+            "ur": "2m − n = 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Two letters, m and n.",
+            "ur": "دو حرف m اور n۔"
+          },
+          "misconception_id": "power_is_linear"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "2m − 5",
+            "ur": "2m − 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No = sign.",
+            "ur": "= کا نشان نہیں۔"
+          },
+          "misconception_id": "letter_means_equation"
+        }
+      ]
+    },
+    {
+      "id": "m4_solution",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: The solution of 2x + 3 = 15 is:",
+        "ur": "کثیر انتخابی: 2x + 3 = 15 کا حل ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That adds 3: (15 + 3) ÷ 2. Take 3 away: 6.",
+            "ur": "یہ 3 جمع کرتا ہے: (15 + 3) ÷ 2۔ 3 تفریق کریں: 6"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "12",
+            "ur": "12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "2x = 12 is only the first step. Divide by 2: 6.",
+            "ur": "2x = 12 صرف پہلا قدم ہے۔ 2 سے تقسیم کریں: 6"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "18",
+            "ur": "18"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: 2 × 18 + 3 = 39, not 15.",
+            "ur": "جانچ: 2 × 18 + 3 = 39، 15 نہیں۔"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "6",
+            "ur": "6"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 2 × 6 + 3 = 15.",
+            "ur": "درست: 2 × 6 + 3 = 15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5_one_step",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: If x − 7 = 12, then x is:",
+        "ur": "کثیر انتخابی: اگر x − 7 = 12 ہو تو x ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "5",
+            "ur": "5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That takes 7 from 12. Undo − 7 by adding 7: 19.",
+            "ur": "یہ 12 میں سے 7 تفریق کرتا ہے۔ − 7 کو 7 جمع کر کے ختم کریں: 19"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "19",
+            "ur": "19"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 19 − 7 = 12.",
+            "ur": "درست: 19 − 7 = 12"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "84",
+            "ur": "84"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Do not multiply. Add 7: 19.",
+            "ur": "ضرب نہ دیں۔ 7 جمع کریں: 19"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "−5",
+            "ur": "−5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check: −5 − 7 = −12, not 12.",
+            "ur": "جانچ: −5 − 7 = −12، 12 نہیں۔"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "m6_divide",
+      "type": "choice",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "MCQ: If x ÷ 5 = 4, then x is:",
+        "ur": "کثیر انتخابی: اگر x ÷ 5 = 4 ہو تو x ہے:"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "20",
+            "ur": "20"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Correct: 20 ÷ 5 = 4.",
+            "ur": "درست: 20 ÷ 5 = 4"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "9",
+            "ur": "9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That adds 5. Undo ÷ 5 with × 5: 20.",
+            "ur": "یہ 5 جمع کرتا ہے۔ ÷ 5 کو × 5 سے ختم کریں: 20"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "1",
+            "ur": "1"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That takes 4 from 5. Multiply: 4 × 5 = 20.",
+            "ur": "یہ 5 میں سے 4 تفریق کرتا ہے۔ ضرب دیں: 4 × 5 = 20"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "0.8",
+            "ur": "0.8"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That divides 4 by 5. Undo ÷ 5 with × 5: 20.",
+            "ur": "یہ 4 کو 5 سے تقسیم کرتا ہے۔ ÷ 5 کو × 5 سے ختم کریں: 20"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s_short",
+      "type": "explain",
+      "text": {
+        "en": "Short questions. Work each one out in your notebook, then type the answer.",
+        "ur": "مختصر سوال۔ ہر ایک اپنی کاپی میں حل کریں، پھر جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "q1_two_step",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Solve 5x − 8 = 27.",
+        "ur": "مختصر سوال: حل کریں 5x − 8 = 27"
+      },
+      "answer": 7,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add 8 to both sides first, then divide by 5.",
+        "ur": "پہلے دونوں طرف 8 جمع کریں، پھر 5 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 5x = 35, so x = 7.",
+        "ur": "درست: 5x = 35، تو x = 7"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 5x − 8 = 27, so 5x = 27 + 8 = 35 and x = 35 ÷ 5 = 7. Check: 5 × 7 − 8 = 27.",
+        "ur": "نمونہ جواب: 5x − 8 = 27، تو 5x = 27 + 8 = 35 اور x = 35 ÷ 5 = 7۔ جانچ: 5 × 7 − 8 = 27"
+      },
+      "common_wrong": [
+        {
+          "answer": 35,
+          "feedback": {
+            "en": "5x = 35 is only the first step. Divide by 5: 7.",
+            "ur": "5x = 35 صرف پہلا قدم ہے۔ 5 سے تقسیم کریں: 7"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "That takes 8 away, but − 8 is undone by adding 8: x = 7.",
+            "ur": "یہ 8 تفریق کرتا ہے، مگر − 8 کو 8 جمع کر کے ختم کرتے ہیں: x = 7"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "q2_build",
+      "type": "text_check",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Write an equation: twice a number p, increased by 9, is 31.",
+        "ur": "مختصر سوال: مساوات لکھیں: عدد p کا دگنا، 9 زیادہ، 31 ہے۔"
+      },
+      "checker": "text",
+      "expected": "2p + 9 = 31",
+      "accept": [
+        "2 × p + 9 = 31",
+        "31 = 2p + 9"
+      ],
+      "hint": {
+        "en": "Twice p is 2p. Then add 9.",
+        "ur": "p کا دگنا 2p ہے۔ پھر 9 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 2p + 9 = 31.",
+        "ur": "درست: 2p + 9 = 31"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: twice p is 2p, increased by 9 is 2p + 9, and 'is 31' gives 2p + 9 = 31.",
+        "ur": "نمونہ جواب: p کا دگنا 2p، 9 زیادہ 2p + 9، اور '31 ہے' سے 2p + 9 = 31"
+      },
+      "common_wrong": [
+        {
+          "answer": "2(p + 9) = 31",
+          "feedback": {
+            "en": "Only 2p is increased by 9. Brackets would double the 9 too: 2p + 9 = 31.",
+            "ur": "9 صرف 2p میں جمع ہوتا ہے۔ قوسین 9 کو بھی دگنا کرتی: 2p + 9 = 31"
+          },
+          "misconception_id": "brackets_wrong"
+        },
+        {
+          "answer": "2p − 9 = 31",
+          "feedback": {
+            "en": "'Increased' means add: 2p + 9 = 31.",
+            "ur": "'زیادہ' یعنی جمع: 2p + 9 = 31"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "q3_decimal",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Solve 4x = 9.2.",
+        "ur": "مختصر سوال: حل کریں 4x = 9.2"
+      },
+      "answer": 2.3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide 9.2 by 4.",
+        "ur": "9.2 کو 4 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: x = 9.2 ÷ 4 = 2.3.",
+        "ur": "درست: x = 9.2 ÷ 4 = 2.3"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: x = 9.2 ÷ 4 = 2.3. Check: 4 × 2.3 = 9.2.",
+        "ur": "نمونہ جواب: x = 9.2 ÷ 4 = 2.3۔ جانچ: 4 × 2.3 = 9.2"
+      },
+      "common_wrong": [
+        {
+          "answer": 36.8,
+          "feedback": {
+            "en": "That multiplies. Undo × 4 by dividing by 4: 2.3.",
+            "ur": "یہ ضرب دیتا ہے۔ × 4 کو 4 سے تقسیم کر کے ختم کریں: 2.3"
+          },
+          "misconception_id": "decimal_slip"
+        },
+        {
+          "answer": 5.2,
+          "feedback": {
+            "en": "That takes 4 away. Undo × 4 by dividing: 2.3.",
+            "ur": "یہ 4 تفریق کرتا ہے۔ × 4 کو تقسیم سے ختم کریں: 2.3"
+          },
+          "misconception_id": "decimal_slip"
+        }
+      ]
+    },
+    {
+      "id": "q4_brackets",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Short question: Solve 3(x − 2) = 21.",
+        "ur": "مختصر سوال: حل کریں 3(x − 2) = 21"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Divide both sides by 3 first: x − 2 = 7.",
+        "ur": "پہلے دونوں طرف 3 سے تقسیم کریں: x − 2 = 7"
+      },
+      "feedback_correct": {
+        "en": "Correct: x − 2 = 7, so x = 9. Check: 3 × (9 − 2) = 21.",
+        "ur": "درست: x − 2 = 7، تو x = 9۔ جانچ: 3 × (9 − 2) = 21"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 3(x − 2) = 21, so x − 2 = 7 and x = 9.",
+        "ur": "نمونہ جواب: 3(x − 2) = 21، تو x − 2 = 7 اور x = 9"
+      },
+      "common_wrong": [
+        {
+          "answer": 7,
+          "feedback": {
+            "en": "x − 2 = 7 is only the first step. Add 2: 9.",
+            "ur": "x − 2 = 7 صرف پہلا قدم ہے۔ 2 جمع کریں: 9"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "That takes 2 from 7, but − 2 is undone by adding 2: 9.",
+            "ur": "یہ 7 میں سے 2 تفریق کرتا ہے، مگر − 2 کو 2 جمع کر کے ختم کرتے ہیں: 9"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s_long",
+      "type": "explain",
+      "text": {
+        "en": "Longer problems. Write the equation and full working in your notebook, then type the final answer.",
+        "ur": "تفصیلی سوالات۔ اپنی کاپی میں مساوات اور پورا کام لکھیں، پھر آخری جواب لکھیں۔"
+      }
+    },
+    {
+      "id": "l1_ages",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Rida is 3 years younger than Zain. The sum of their ages is 41. If Zain is x years old, then x + (x − 3) = 41. How old is Rida?",
+        "ur": "تفصیلی سوال: ریدا زین سے 3 سال چھوٹی ہے۔ دونوں کی عمروں کا مجموعہ 41 ہے۔ اگر زین x سال کا ہے تو x + (x − 3) = 41۔ ریدا کتنے سال کی ہے؟"
+      },
+      "answer": 19,
+      "checker": "numeric",
+      "hint": {
+        "en": "2x − 3 = 41. Solve for x (Zain), then find Rida.",
+        "ur": "2x − 3 = 41۔ x (زین) معلوم کریں، پھر ریدا کی عمر نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: Zain is 22, so Rida is 22 − 3 = 19.",
+        "ur": "درست: زین 22 کا ہے، تو ریدا 22 − 3 = 19 کی ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 2x − 3 = 41, 2x = 44, x = 22. Rida is 22 − 3 = 19. Check: 22 + 19 = 41.",
+        "ur": "نمونہ جواب: 2x − 3 = 41، 2x = 44، x = 22۔ ریدا 22 − 3 = 19 کی ہے۔ جانچ: 22 + 19 = 41"
+      },
+      "common_wrong": [
+        {
+          "answer": 22,
+          "feedback": {
+            "en": "22 is Zain's age. The question asks for Rida: 19.",
+            "ur": "22 زین کی عمر ہے۔ سوال ریدا کی عمر پوچھتا ہے: 19"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 44,
+          "feedback": {
+            "en": "That is 41 + 3. To undo − 3, add 3 to get 2x = 44, then divide by 2 and take 3 for Rida: 19.",
+            "ur": "یہ 41 + 3 ہے۔ − 3 کو ختم کرنے کے لیے 3 جمع کر کے 2x = 44 ملتا ہے، پھر 2 سے تقسیم کریں اور ریدا کے لیے 3 تفریق کریں: 19"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "l2_consecutive",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: The sum of four consecutive numbers is 102. If the smallest is x, the numbers are x, x + 1, x + 2 and x + 3. What is the largest number?",
+        "ur": "تفصیلی سوال: چار لگاتار اعداد کا مجموعہ 102 ہے۔ اگر سب سے چھوٹا x ہو تو اعداد x، x + 1، x + 2 اور x + 3 ہیں۔ سب سے بڑا عدد کیا ہے؟"
+      },
+      "answer": 27,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add them: 4x + 6 = 102. Solve for x, then find the largest.",
+        "ur": "جمع کریں: 4x + 6 = 102۔ x معلوم کریں، پھر سب سے بڑا عدد نکالیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: x = 24, so the numbers are 24, 25, 26, 27 and the largest is 27.",
+        "ur": "درست: x = 24، تو اعداد 24، 25، 26، 27 ہیں اور سب سے بڑا 27 ہے۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 4x + 6 = 102, 4x = 96, x = 24. The largest is x + 3 = 27. Check: 24 + 25 + 26 + 27 = 102.",
+        "ur": "نمونہ جواب: 4x + 6 = 102، 4x = 96، x = 24۔ سب سے بڑا x + 3 = 27 ہے۔ جانچ: 24 + 25 + 26 + 27 = 102"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "24 is the smallest number (x). The largest is x + 3 = 27.",
+            "ur": "24 سب سے چھوٹا عدد (x) ہے۔ سب سے بڑا x + 3 = 27 ہے۔"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "26 is the third number, x + 2. The largest is x + 3 = 27.",
+            "ur": "26 تیسرا عدد x + 2 ہے۔ سب سے بڑا x + 3 = 27 ہے۔"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ]
+    },
+    {
+      "id": "l3_ratio",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Rs 960 is shared among Amna, Bushra and Chand in the ratio 3 : 4 : 5. There are 3 + 4 + 5 = 12 equal parts, so 12x = 960. How many rupees does Chand, with the largest share (5 parts), get?",
+        "ur": "تفصیلی سوال: 960 روپے آمنہ، بشریٰ اور چاند میں نسبت 3 : 4 : 5 سے تقسیم ہوتے ہیں۔ 3 + 4 + 5 = 12 برابر حصے ہیں، تو 12x = 960۔ چاند کو، جس کا حصہ سب سے بڑا (5 حصے) ہے، کتنے روپے ملتے ہیں؟"
+      },
+      "answer": 400,
+      "checker": "numeric",
+      "hint": {
+        "en": "Find one part, 960 ÷ 12, then multiply by 5.",
+        "ur": "ایک حصہ معلوم کریں، 960 ÷ 12، پھر 5 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: one part is Rs 80, so Chand gets 5 × 80 = Rs 400.",
+        "ur": "درست: ایک حصہ 80 روپے ہے، تو چاند کو 5 × 80 = 400 روپے ملتے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 12x = 960, x = 80. Chand gets 5 × 80 = Rs 400. Check: 240 + 320 + 400 = 960.",
+        "ur": "نمونہ جواب: 12x = 960، x = 80۔ چاند کو 5 × 80 = 400 روپے ملتے ہیں۔ جانچ: 240 + 320 + 400 = 960"
+      },
+      "common_wrong": [
+        {
+          "answer": 80,
+          "feedback": {
+            "en": "Rs 80 is one part. Chand has 5 parts: 400.",
+            "ur": "80 روپے ایک حصہ ہے۔ چاند کے 5 حصے ہیں: 400"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 320,
+          "feedback": {
+            "en": "Rs 320 is Bushra's share (4 parts). Chand has 5 parts: 400.",
+            "ur": "320 روپے بشریٰ کا حصہ ہے (4 حصے)۔ چاند کے 5 حصے ہیں: 400"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ]
+    },
+    {
+      "id": "l4_cricket",
+      "type": "number",
+      "question_type": "exam_style",
+      "prompt": {
+        "en": "Long question: Babar scored 18 runs less than three times the runs of Fawad. Babar scored 63. If Fawad scored x runs, then 3x − 18 = 63. How many runs did Fawad score?",
+        "ur": "تفصیلی سوال: بابر نے فواد کے رنز کے تین گنا سے 18 رنز کم بنائے۔ بابر نے 63 رنز بنائے۔ اگر فواد نے x رنز بنائے تو 3x − 18 = 63۔ فواد نے کتنے رنز بنائے؟"
+      },
+      "answer": 27,
+      "checker": "numeric",
+      "hint": {
+        "en": "Add 18 to both sides first, then divide by 3.",
+        "ur": "پہلے دونوں طرف 18 جمع کریں، پھر 3 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Correct: 3x = 81, so x = 27. Check: 3 × 27 − 18 = 63.",
+        "ur": "درست: 3x = 81، تو x = 27۔ جانچ: 3 × 27 − 18 = 63"
+      },
+      "feedback_wrong": {
+        "en": "Model answer: 3x − 18 = 63, 3x = 63 + 18 = 81, x = 27.",
+        "ur": "نمونہ جواب: 3x − 18 = 63، 3x = 63 + 18 = 81، x = 27"
+      },
+      "common_wrong": [
+        {
+          "answer": 81,
+          "feedback": {
+            "en": "3x = 81 is only the first step. Divide by 3: 27.",
+            "ur": "3x = 81 صرف پہلا قدم ہے۔ 3 سے تقسیم کریں: 27"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 15,
+          "feedback": {
+            "en": "That takes 18 away. To undo − 18, add 18: 81, then 27.",
+            "ur": "یہ 18 تفریق کرتا ہے۔ − 18 کو ختم کرنے کے لیے 18 جمع کریں: 81، پھر 27"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "s_end_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "You finished the chapter 7 test. Well done!",
+          "ur": "آپ نے باب 7 کا ٹیسٹ مکمل کر لیا۔ شاباش!"
+        }
+      },
+      "text": {
+        "en": "In the exam: an equation has an = sign and an expression does not. A linear equation in one variable has one letter with power 1. Write words as an equation, call the unknown x, and undo the operations in reverse order: add or take away first, then divide or multiply. Check by putting the answer back, and answer what the question asks.",
+        "ur": "امتحان میں: مساوات میں = کا نشان ہوتا ہے اور الجبری جملے میں نہیں۔ ایک متغیر والی خطی مساوات میں ایک حرف ہوتا ہے جس کی طاقت 1 ہو۔ الفاظ کو مساوات میں لکھیں، نامعلوم کو x کہیں، اور عملوں کو الٹی ترتیب سے ختم کریں: پہلے جمع یا تفریق، پھر تقسیم یا ضرب۔ جواب کو واپس رکھ کر جانچیں، اور وہی بتائیں جو سوال پوچھتا ہے۔"
+      },
+      "points": [
+        {
+          "en": "Check an answer by putting it in the equation.",
+          "ur": "جواب کو مساوات میں رکھ کر جانچیں۔"
+        },
+        {
+          "en": "Write the equation, the working, then the final answer.",
+          "ur": "مساوات لکھیں، کام لکھیں، پھر آخری جواب۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_exam_two",
+      "type": "exam_style",
+      "skill": "maths.equations.chapter_7_test",
+      "step": {
+        "id": "r_exam_two",
+        "type": "number",
+        "prompt": {
+          "en": "Solve 3x − 4 = 14.",
+          "ur": "حل کریں 3x − 4 = 14"
+        },
+        "answer": 6,
+        "checker": "numeric",
+        "hint": {
+          "en": "Add 4 to both sides, then divide by 3.",
+          "ur": "دونوں طرف 4 جمع کریں، پھر 3 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: 3x = 18, so x = 6.",
+          "ur": "درست: 3x = 18، تو x = 6"
+        },
+        "feedback_wrong": {
+          "en": "14 + 4 = 18, then 18 ÷ 3 = 6.",
+          "ur": "14 + 4 = 18، پھر 18 ÷ 3 = 6"
+        },
+        "common_wrong": [
+          {
+            "answer": 10,
+            "feedback": {
+              "en": "That takes 4 away, but − 4 is undone by adding 4: 6.",
+              "ur": "یہ 4 تفریق کرتا ہے، مگر − 4 کو 4 جمع کر کے ختم کرتے ہیں: 6"
+            },
+            "misconception_id": "wrong_inverse"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r_exam_one",
+      "type": "exam_style",
+      "skill": "maths.equations.chapter_7_test",
+      "step": {
+        "id": "r_exam_one",
+        "type": "number",
+        "prompt": {
+          "en": "Solve 6x = 72.",
+          "ur": "حل کریں 6x = 72"
+        },
+        "answer": 12,
+        "checker": "numeric",
+        "hint": {
+          "en": "Divide both sides by 6.",
+          "ur": "دونوں طرف 6 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Correct: x = 12.",
+          "ur": "درست: x = 12"
+        },
+        "feedback_wrong": {
+          "en": "72 ÷ 6 = 12.",
+          "ur": "72 ÷ 6 = 12"
+        },
+        "common_wrong": [
+          {
+            "answer": 66,
+            "feedback": {
+              "en": "That takes 6 away. Undo × 6 by dividing by 6: 12.",
+              "ur": "یہ 6 تفریق کرتا ہے۔ × 6 کو 6 سے تقسیم کر کے ختم کریں: 12"
+            },
+            "misconception_id": "wrong_inverse"
+          }
+        ]
+      }
+    }
+  ],
+  "teacher_notes": [
+    "A chapter test to use with Review Exercise 7 of the PCTB Mathematics 6 book, in the style of a paper: multiple choice, short questions, then longer problems. Only the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "It has its own skill (maths.equations.chapter_7_test), with the chapter's equations skills as prerequisites, and is mastered with exam_style questions, like the chapter 5 and 6 tests.",
+    "Urdu terms to check: کثیر انتخابی (multiple choice), مختصر سوال / تفصیلی سوال (short / long question), نمونہ جواب (model answer), اعادی مشق (review exercise), مساوات (equation), خطی مساوات (linear equation), حل (solution), نسبت (ratio). لگاتار اعداد (consecutive numbers) is new and should be confirmed by a teacher.",
+    "The numbers were worked out in content/sources/g6-maths-16/chapter_7_test.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

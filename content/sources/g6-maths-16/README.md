@@ -10,6 +10,11 @@ Scripts that write the Grade 6 Maths lessons of the Linear Equations unit (`cont
 | `equations_with_brackets.py` | `g6-maths-16-equations-with-brackets` | `maths.equations.brackets` |
 | `equation_word_problems.py` | `g6-maths-16-equation-word-problems` | `maths.equations.word_problems` (with a 5-question unit test) |
 | `equations_and_expressions.py` | `g6-maths-16-equations-and-expressions` | `maths.equations.equation_or_expression` |
+| `exercise_7_1.py` | `g6-maths-16-exercise-7-1` | `maths.equations.ex_7_1` |
+| `exercise_7_2.py` | `g6-maths-16-exercise-7-2` | `maths.equations.ex_7_2` |
+| `chapter_7_test.py` | `g6-maths-16-chapter-7-test` | `maths.equations.chapter_7_test` |
+
+The last three are practice sets for Exercises 7.1 and 7.2 of the book and a chapter test (Review Exercise 7). Only the exercise number and the kinds of question follow the book; every question is new, because the book may not be copied. Each has its own skill, with the chapter's skills it practises as prerequisites, and no `why.py` entry. Typed equations (`eq_q` in `common.py`) accept the other right ways to write them, and each right and wrong equation is checked with `solves()`.
 
 Every answer is checked with `solves()` in `common.py`, which puts the answer back into the equation, and every common wrong answer (like dividing before subtracting, or reading 3x as 36) is worked out and checked with `assert`. No number is typed by hand.
 

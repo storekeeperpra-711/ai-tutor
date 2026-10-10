@@ -5,7 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('a PIN is stored only as a salted hash', () {
     final stored = hashPin('1234');
-    expect(stored, isNot(contains('1234')));
+    // salt:hash. The random hex can contain "1234" by chance, so check the
+    // shape, not a substring.
+    expect(stored, matches(RegExp(r'^[A-Za-z0-9]+:[0-9a-f]{64}$')));
     expect(checkPin('1234', stored), isTrue);
     expect(checkPin('4321', stored), isFalse);
     // The same PIN for two children gives different hashes.
