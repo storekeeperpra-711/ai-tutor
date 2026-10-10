@@ -1,16 +1,34 @@
-/// Keeps short maths like `3 × 2 = 6` or `1/2` left-to-right inside Urdu
-/// (right-to-left) text. Without this, Urdu text can show `6 = 2 × 3`.
+/// Keeps maths like `3 × 2 = 6`, `x + 3 = 7` or `-8` in one piece.
 ///
-/// It wraps each maths run in Unicode "left-to-right isolate" marks
-/// (U+2066 ... U+2069), which are invisible.
+/// In Urdu (right-to-left) text, the maths is wrapped in invisible
+/// "left-to-right isolate" marks (U+2066 ... U+2069). Without this Urdu text
+/// can show `6 = 2 × 3`, or `-8` as `8-`.
+///
+/// In both languages the spaces inside the maths become no-break spaces and
+/// the minus becomes a real minus sign (U+2212), so an equation never splits
+/// across two lines: it fits on one line or moves down whole.
 library;
 
-final _mathRun = RegExp(
-  r'[0-9۰-۹A-Za-z(][0-9۰-۹A-Za-z×÷=+\-−/.() ]*[0-9۰-۹A-Za-z)]',
-);
-final _operator = RegExp(r'[×÷=+\-−/]');
+const _digit = r'[0-9۰-۹]';
+const _number = '$_digit+(?:[.,]$_digit+)*';
+// A number (with an optional letter or two, like 2x), or one letter.
+const _operand =
+    '\\(*[-−]?(?:$_number[A-Za-z]{0,2}|[A-Za-z][²³]?(?![A-Za-z]))\\)*';
+const _operator = r'[×÷=+\-−/<>≤≥]';
 
-String isolateMath(String text) => text.replaceAllMapped(_mathRun, (m) {
-  final run = m[0]!;
-  return _operator.hasMatch(run) ? '\u2066$run\u2069' : run;
-});
+// An equation: operands joined by operators. Or a lone negative number.
+final _math = RegExp(
+  '(?:$_operand(?:[  ]*$_operator[  ]*$_operand)+)'
+  '|(?<![0-9۰-۹A-Za-z)])[-−]$_number',
+);
+
+String _glue(String run) =>
+    run.replaceAll(' ', ' ').replaceAll('-', '−').replaceAll('/', '/⁠');
+
+/// Returns [text] with maths kept together. [rtl] also adds the
+/// left-to-right isolate marks needed inside Urdu text.
+String isolateMath(String text, {bool rtl = true}) =>
+    text.replaceAllMapped(_math, (m) {
+      final run = _glue(m[0]!);
+      return rtl ? '\u2066$run\u2069' : run;
+    });

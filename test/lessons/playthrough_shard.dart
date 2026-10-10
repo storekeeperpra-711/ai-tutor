@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:ai_tutor/app/bidi.dart';
 import 'package:ai_tutor/models/lesson.dart';
 import 'package:ai_tutor/models/lesson_step.dart';
 import 'package:flutter/material.dart';
@@ -106,7 +107,10 @@ void runPlaythroughShard(int shard, int shards) {
       await tester.enterText(input, '999');
       await tapKey(tester, 'step-check');
     }
-    expect(find.text(step.feedbackWrong.en), findsOneWidget);
+    expect(
+      find.text(isolateMath(step.feedbackWrong.en, rtl: false)),
+      findsOneWidget,
+    );
     expect(find.byKey(const Key('step-continue')), findsOneWidget);
   });
 }

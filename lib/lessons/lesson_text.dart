@@ -4,7 +4,8 @@ import '../app/bidi.dart';
 import '../models/localized_text.dart';
 
 /// Shows lesson text in the app's language. In Urdu, maths inside the
-/// sentence is kept left-to-right.
+/// sentence is kept left-to-right, and in both languages an equation is
+/// never split across two lines.
 class LessonText extends StatelessWidget {
   const LessonText(this.text, {super.key, this.style, this.textAlign});
 
@@ -17,7 +18,7 @@ class LessonText extends StatelessWidget {
     final value = text.of(context);
     final rtl = Directionality.of(context) == TextDirection.rtl;
     return Text(
-      rtl ? isolateMath(value) : value,
+      isolateMath(value, rtl: rtl),
       style: style,
       textAlign: textAlign,
     );
