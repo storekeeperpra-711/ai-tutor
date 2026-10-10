@@ -1,0 +1,1300 @@
+{
+  "id": "g6-maths-16-exercise-7-2",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Identify linear equations in one variable, build equations from statements, solve them (with fractions and decimals), check the solution, and solve word problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 7: Linear Equations, Exercise 7.2"
+    }
+  ],
+  "skills": [
+    "maths.equations.ex_7_2"
+  ],
+  "title": {
+    "en": "Exercise 7.2 practice: solving linear equations",
+    "ur": "مشق 7.2 کی پریکٹس: خطی مساوات حل کرنا"
+  },
+  "estimated_minutes": 22,
+  "prerequisites": [
+    {
+      "skill": "maths.equations.equation_or_expression"
+    },
+    {
+      "skill": "maths.equations.check_solution"
+    },
+    {
+      "skill": "maths.equations.forming"
+    },
+    {
+      "skill": "maths.equations.two_step"
+    },
+    {
+      "skill": "maths.equations.brackets"
+    },
+    {
+      "skill": "maths.equations.word_problems"
+    },
+    {
+      "skill": "maths.algebra.simple_equations"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "power_is_linear",
+      "description": "Counts x² = 9 or an equation with two letters as a linear equation in one variable."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Undoes an operation by repeating it or doing the wrong one, like adding 4 when the equation divides by 4."
+    },
+    {
+      "id": "stops_early",
+      "description": "Stops after the first step, like 4x = 24, and gives that as the answer."
+    },
+    {
+      "id": "order_of_steps",
+      "description": "Divides or multiplies before dealing with the number added or subtracted, so the answer is wrong."
+    },
+    {
+      "id": "brackets_wrong",
+      "description": "Puts brackets where the words don't need them, like 3(k − 4) for 'three times k, decreased by 4'."
+    },
+    {
+      "id": "answer_is_other_quantity",
+      "description": "Finds the unknown but gives another quantity from the story (Ali's age instead of Sara's, the middle number instead of the smallest)."
+    },
+    {
+      "id": "check_wrong_side",
+      "description": "Checks a solution with the wrong operation, or only compares it with a number in the equation."
+    },
+    {
+      "id": "ratio_as_amount",
+      "description": "Treats a ratio number (2 or 3) as the amount, or finds one part and stops."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.ex_7_2": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.ex_7_2": [
+      {
+        "id": "qb_both_sides",
+        "type": "recall",
+        "step": {
+          "id": "qb_both_sides",
+          "type": "choice",
+          "prompt": {
+            "en": "When you solve an equation, what must you do to keep it balanced?",
+            "ur": "مساوات حل کرتے وقت اسے برابر رکھنے کے لیے کیا کرنا چاہیے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Change only the side with the letter.",
+                "ur": "صرف حرف والی طرف بدلیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Then the two sides would no longer be equal.",
+                "ur": "تب دونوں طرف برابر نہیں رہیں گی۔"
+              },
+              "misconception_id": "wrong_inverse"
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Do the same to both sides.",
+                "ur": "دونوں طرف ایک ہی کام کریں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! Like a balance scale, both sides must change in the same way.",
+                "ur": "جی ہاں! ترازو کی طرح دونوں طرف ایک ہی طرح تبدیلی ہونی چاہیے۔"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Add to one side and take away from the other.",
+                "ur": "ایک طرف جمع کریں اور دوسری طرف سے تفریق۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That unbalances it. Do the same to both sides.",
+                "ur": "اس سے توازن بگڑ جاتا ہے۔ دونوں طرف ایک ہی کام کریں۔"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_solve",
+        "type": "apply",
+        "step": {
+          "id": "qb_solve",
+          "type": "number",
+          "prompt": {
+            "en": "Solve 5x = 45.",
+            "ur": "حل کریں 5x = 45"
+          },
+          "answer": 9,
+          "checker": "numeric",
+          "hint": {
+            "en": "Undo × 5 by dividing by 5.",
+            "ur": "× 5 کو 5 سے تقسیم کر کے ختم کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! x = 9.",
+            "ur": "درست! x = 9"
+          },
+          "feedback_wrong": {
+            "en": "45 ÷ 5 = 9.",
+            "ur": "45 ÷ 5 = 9"
+          },
+          "common_wrong": [
+            {
+              "answer": 40,
+              "feedback": {
+                "en": "That takes 5 away. Undo × 5 by ÷ 5: 9.",
+                "ur": "یہ 5 تفریق کرتا ہے۔ × 5 کو ÷ 5 سے ختم کریں: 9"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Hira says x² = 16 is a linear equation in one variable. What went wrong?",
+            "ur": "ہیرا کہتی ہے x² = 16 ایک متغیر والی خطی مساوات ہے۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "x has power 2. A linear equation has power 1 only.",
+                "ur": "x کی طاقت 2 ہے۔ خطی مساوات میں صرف طاقت 1 ہوتی ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! x² is x × x, so it is not linear.",
+                "ur": "جی ہاں! x² یعنی x × x، اس لیے یہ خطی نہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. It has one letter and an = sign.",
+                "ur": "کوئی غلطی نہیں۔ اس میں ایک حرف اور = کا نشان ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "The power matters too: linear means power 1.",
+                "ur": "طاقت بھی اہم ہے: خطی کا مطلب طاقت 1۔"
+              },
+              "misconception_id": "power_is_linear"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It has no = sign.",
+                "ur": "اس میں = کا نشان نہیں۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "It does have =. The problem is the power 2.",
+                "ur": "اس میں = ہے۔ مسئلہ طاقت 2 کا ہے۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_solve",
+      "front": {
+        "en": "How do you solve 3x + 4 = 19?",
+        "ur": "3x + 4 = 19 کیسے حل کرتے ہیں؟"
+      },
+      "back": {
+        "en": "Take 4 away: 3x = 15. Divide by 3: x = 5. Check: 3 × 5 + 4 = 19.",
+        "ur": "4 تفریق کریں: 3x = 15۔ 3 سے تقسیم کریں: x = 5۔ جانچ: 3 × 5 + 4 = 19"
+      }
+    },
+    {
+      "id": "f_linear",
+      "front": {
+        "en": "What makes an equation linear in one variable?",
+        "ur": "ایک متغیر والی مساوات خطی کب ہوتی ہے؟"
+      },
+      "back": {
+        "en": "One letter with power 1, like 2x − 3 = 7. Not x² = 9 and not x + y = 5.",
+        "ur": "ایک حرف جس کی طاقت 1 ہو، جیسے 2x − 3 = 7۔ x² = 9 نہیں اور x + y = 5 بھی نہیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_solve_at_home",
+      "text": {
+        "en": "Make up a number puzzle for someone at home: 'I think of a number, double it and add 5, and get 17.' Write it as an equation, solve it, and check by putting the number back. Then ask them to solve it without the equation.",
+        "ur": "گھر میں کسی کے لیے عدد کی پہیلی بنائیں: 'میں ایک عدد سوچتا ہوں، اسے دگنا کر کے 5 جمع کرتا ہوں تو 17 آتا ہے۔' اسے مساوات میں لکھیں، حل کریں، اور عدد واپس رکھ کر جانچیں۔ پھر انھیں مساوات کے بغیر حل کرنے کو کہیں۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Linear equation",
+      "ur": "خطی مساوات"
+    },
+    {
+      "en": "Solution",
+      "ur": "حل"
+    },
+    {
+      "en": "Check",
+      "ur": "جانچ"
+    },
+    {
+      "en": "Consecutive numbers",
+      "ur": "لگاتار اعداد"
+    },
+    {
+      "en": "Ratio",
+      "ur": "نسبت"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 7.2 is about solving equations. Ready?",
+          "ur": "مشق 7.2 مساوات حل کرنے کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 7.2 of your maths book (PCTB Mathematics 6). Here you pick out linear equations, build equations from statements, solve them (with fractions and decimals) and check them, and solve word problems about ages, consecutive numbers, sharing and cricket scores. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 7.2 کے ساتھ ہے۔ اس میں آپ خطی مساواتیں پہچانیں گے، بیانات سے مساواتیں بنائیں گے، انھیں (کسروں اور اعشاریہ کے ساتھ) حل کر کے جانچیں گے، اور عمروں، لگاتار اعداد، تقسیم اور کرکٹ کے رنز کے سوال حل کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_linear",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is a linear equation in one variable?",
+        "ur": "ان میں سے کون سی ایک متغیر والی خطی مساوات ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "x² = 9",
+            "ur": "x² = 9"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "x² has power 2, so it is not linear.",
+            "ur": "x² کی طاقت 2 ہے، اس لیے یہ خطی نہیں۔"
+          },
+          "misconception_id": "power_is_linear"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "3x + 1 = 10",
+            "ur": "3x + 1 = 10"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! One letter, with power 1, and an = sign.",
+            "ur": "جی ہاں! ایک حرف، طاقت 1، اور = کا نشان۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "2x + y = 7",
+            "ur": "2x + y = 7"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It has two letters, x and y. Linear in one variable has only one letter.",
+            "ur": "اس میں دو حرف x اور y ہیں۔ ایک متغیر والی خطی مساوات میں صرف ایک حرف ہوتا ہے۔"
+          },
+          "misconception_id": "power_is_linear"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "5x + 3",
+            "ur": "5x + 3"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No = sign, so it is an expression, not an equation.",
+            "ur": "= کا نشان نہیں، اس لیے یہ الجبری جملہ ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2_count",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "How many of these are linear equations in one variable: x + 4 = 9, y² = 16, 2a − 3 = 7, m + n = 5, 5k = 40?",
+        "ur": "ان میں سے کتنی ایک متغیر والی خطی مساواتیں ہیں: x + 4 = 9, y² = 16, 2a − 3 = 7, m + n = 5, 5k = 40؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each needs one letter only, with power 1.",
+        "ur": "ہر ایک میں صرف ایک حرف اور طاقت 1 ہونی چاہیے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x + 4 = 9, 2a − 3 = 7 and 5k = 40: 3.",
+        "ur": "درست! x + 4 = 9، 2a − 3 = 7 اور 5k = 40: 3"
+      },
+      "feedback_wrong": {
+        "en": "y² = 16 has a power 2 and m + n = 5 has two letters. The other 3 are linear.",
+        "ur": "y² = 16 میں طاقت 2 ہے اور m + n = 5 میں دو حرف ہیں۔ باقی 3 خطی ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "All five have = signs, but y² has power 2 and m + n has two letters: 3.",
+            "ur": "پانچوں میں = ہے، مگر y² کی طاقت 2 ہے اور m + n میں دو حرف ہیں: 3"
+          },
+          "misconception_id": "power_is_linear"
+        },
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "y² = 16 is not linear, and neither is m + n = 5: 3.",
+            "ur": "y² = 16 خطی نہیں، اور m + n = 5 بھی نہیں: 3"
+          },
+          "misconception_id": "power_is_linear"
+        }
+      ]
+    },
+    {
+      "id": "q3_divide",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Solve the equation x ÷ 4 = 6.",
+        "ur": "مساوات x ÷ 4 = 6 حل کریں۔"
+      },
+      "answer": 24,
+      "checker": "numeric",
+      "hint": {
+        "en": "x is divided by 4. Undo it by multiplying by 4.",
+        "ur": "x کو 4 سے تقسیم کیا گیا ہے۔ اسے 4 سے ضرب دے کر ختم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 6 × 4 = 24.",
+        "ur": "درست! x = 6 × 4 = 24"
+      },
+      "feedback_wrong": {
+        "en": "Undo ÷ 4 with × 4: 6 × 4 = 24, and 24 ÷ 4 = 6.",
+        "ur": "÷ 4 کو × 4 سے ختم کریں: 6 × 4 = 24، اور 24 ÷ 4 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 10,
+          "feedback": {
+            "en": "That adds 4. Dividing is undone by multiplying: 24.",
+            "ur": "یہ 4 جمع کرتا ہے۔ تقسیم کو ضرب سے ختم کرتے ہیں: 24"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "That takes 4 away. Undo ÷ 4 with × 4: 24.",
+            "ur": "یہ 4 تفریق کرتا ہے۔ ÷ 4 کو × 4 سے ختم کریں: 24"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "q4_two_step",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve 4x + 5 = 29. Take away the 5 first, then divide.",
+        "ur": "حل کریں 4x + 5 = 29۔ پہلے 5 تفریق کریں، پھر تقسیم کریں۔"
+      },
+      "answer": 6,
+      "checker": "numeric",
+      "hint": {
+        "en": "29 − 5 = 24, so 4x = 24.",
+        "ur": "29 − 5 = 24، تو 4x = 24"
+      },
+      "feedback_correct": {
+        "en": "Right! 4x = 24, so x = 6. Check: 4 × 6 + 5 = 29.",
+        "ur": "درست! 4x = 24، تو x = 6۔ جانچ: 4 × 6 + 5 = 29"
+      },
+      "feedback_wrong": {
+        "en": "29 − 5 = 24, then 24 ÷ 4 = 6.",
+        "ur": "29 − 5 = 24، پھر 24 ÷ 4 = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": 24,
+          "feedback": {
+            "en": "4x = 24 is only the first step. Divide by 4 too: 6.",
+            "ur": "4x = 24 صرف پہلا قدم ہے۔ 4 سے تقسیم بھی کریں: 6"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 34,
+          "feedback": {
+            "en": "To undo + 5, take 5 away, not add: 24, then 6.",
+            "ur": "+ 5 کو ختم کرنے کے لیے 5 تفریق کریں، جمع نہیں: 24، پھر 6"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 126.0,
+        "alt": {
+          "en": "A level balance scale. On the left pan: 4 boxes marked x, each box is the unknown x; 5 small weights of 1. On the right pan: a big weight marked 29.",
+          "ur": "ایک برابر ترازو۔ بائیں پلڑے میں: x لکھے 4 ڈبے، ہر ڈبہ نامعلوم x ہے؛ 1 کے 5 چھوٹے وزن۔ دائیں پلڑے میں: 29 لکھا ایک بڑا وزن۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                16.0,
+                62.0
+              ],
+              [
+                140.0,
+                62.0
+              ],
+              [
+                130.0,
+                70.0
+              ],
+              [
+                26.0,
+                70.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              70.0
+            ],
+            "to": [
+              78.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                22.5,
+                37.0
+              ],
+              [
+                46.5,
+                37.0
+              ],
+              [
+                46.5,
+                61.0
+              ],
+              [
+                22.5,
+                61.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              34.5,
+              49.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.5,
+                37.0
+              ],
+              [
+                75.5,
+                37.0
+              ],
+              [
+                75.5,
+                61.0
+              ],
+              [
+                51.5,
+                61.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              63.5,
+              49.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                80.5,
+                37.0
+              ],
+              [
+                104.5,
+                37.0
+              ],
+              [
+                104.5,
+                61.0
+              ],
+              [
+                80.5,
+                61.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              92.5,
+              49.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                109.5,
+                37.0
+              ],
+              [
+                133.5,
+                37.0
+              ],
+              [
+                133.5,
+                61.0
+              ],
+              [
+                109.5,
+                61.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              121.5,
+              49.0
+            ],
+            "text": "x"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              40.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              59.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              78.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              97.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "circle",
+            "center": [
+              116.0,
+              23.0
+            ],
+            "radius": 7.0,
+            "fill": true
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                160.0,
+                62.0
+              ],
+              [
+                284.0,
+                62.0
+              ],
+              [
+                274.0,
+                70.0
+              ],
+              [
+                170.0,
+                70.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              222.0,
+              70.0
+            ],
+            "to": [
+              222.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                204.4,
+                33.0
+              ],
+              [
+                239.6,
+                33.0
+              ],
+              [
+                239.6,
+                61.0
+              ],
+              [
+                204.4,
+                61.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              222.0,
+              47.0
+            ],
+            "text": "29"
+          },
+          {
+            "kind": "line",
+            "from": [
+              78.0,
+              86.0
+            ],
+            "to": [
+              222.0,
+              86.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                150.0,
+                86.0
+              ],
+              [
+                130.0,
+                118.0
+              ],
+              [
+                170.0,
+                118.0
+              ]
+            ],
+            "fill": true
+          },
+          {
+            "kind": "line",
+            "from": [
+              112.0,
+              118.0
+            ],
+            "to": [
+              188.0,
+              118.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              50.0
+            ],
+            "text": "="
+          }
+        ]
+      }
+    },
+    {
+      "id": "q5_check",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Mohsin solved 3x − 5 = 16 and got x = 7. Which check shows he is right?",
+        "ur": "محسن نے 3x − 5 = 16 حل کر کے x = 7 پایا۔ کون سی جانچ دکھاتی ہے کہ وہ درست ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "7 − 5 = 2, which is not 16.",
+            "ur": "7 − 5 = 2، جو 16 نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Put 7 into the whole left side, 3x − 5, not just x − 5.",
+            "ur": "پوری بائیں طرف 3x − 5 میں 7 رکھیں، صرف x − 5 میں نہیں۔"
+          },
+          "misconception_id": "check_wrong_side"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "3 × 7 + 5 = 26, which is not 16.",
+            "ur": "3 × 7 + 5 = 26، جو 16 نہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The equation has − 5, so the check uses − 5 too: 21 − 5 = 16.",
+            "ur": "مساوات میں − 5 ہے، تو جانچ میں بھی − 5: 21 − 5 = 16"
+          },
+          "misconception_id": "check_wrong_side"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "3 × 7 − 5 = 21 − 5 = 16, which matches the right side.",
+            "ur": "3 × 7 − 5 = 21 − 5 = 16، جو دائیں طرف کے برابر ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Put 7 in place of x and both sides are 16.",
+            "ur": "جی ہاں! x کی جگہ 7 رکھیں تو دونوں طرف 16 ہے۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6_decimal",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Solve x + 2.5 = 7.8.",
+        "ur": "حل کریں x + 2.5 = 7.8"
+      },
+      "answer": 5.3,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take 2.5 away from 7.8. Line up the decimal points.",
+        "ur": "7.8 میں سے 2.5 تفریق کریں۔ اعشاریہ نقطے ایک سیدھ میں رکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x = 7.8 − 2.5 = 5.3.",
+        "ur": "درست! x = 7.8 − 2.5 = 5.3"
+      },
+      "feedback_wrong": {
+        "en": "7.8 − 2.5 = 5.3, and 5.3 + 2.5 = 7.8.",
+        "ur": "7.8 − 2.5 = 5.3، اور 5.3 + 2.5 = 7.8"
+      },
+      "common_wrong": [
+        {
+          "answer": 10.3,
+          "feedback": {
+            "en": "That adds 2.5. Undo + 2.5 by taking 2.5 away: 5.3.",
+            "ur": "یہ 2.5 جمع کرتا ہے۔ + 2.5 کو 2.5 تفریق کر کے ختم کریں: 5.3"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "q7_fraction",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Half of a number, plus 3, is 8. This is x ÷ 2 + 3 = 8. Find x.",
+        "ur": "ایک عدد کا آدھا، جمع 3، 8 ہے۔ یہ x ÷ 2 + 3 = 8 ہے۔ x معلوم کریں۔"
+      },
+      "answer": 10,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take away 3 first: x ÷ 2 = 5. Then multiply by 2.",
+        "ur": "پہلے 3 تفریق کریں: x ÷ 2 = 5۔ پھر 2 سے ضرب دیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! x ÷ 2 = 5, so x = 10. Check: 10 ÷ 2 + 3 = 8.",
+        "ur": "درست! x ÷ 2 = 5، تو x = 10۔ جانچ: 10 ÷ 2 + 3 = 8"
+      },
+      "feedback_wrong": {
+        "en": "8 − 3 = 5, then 5 × 2 = 10.",
+        "ur": "8 − 3 = 5، پھر 5 × 2 = 10"
+      },
+      "common_wrong": [
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "x ÷ 2 = 5 is only the first step. Multiply by 2: 10.",
+            "ur": "x ÷ 2 = 5 صرف پہلا قدم ہے۔ 2 سے ضرب دیں: 10"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 16,
+          "feedback": {
+            "en": "That multiplies 8 by 2 before taking away the 3. Take 3 away first: 10.",
+            "ur": "یہ 3 تفریق کرنے سے پہلے 8 کو 2 سے ضرب دیتا ہے۔ پہلے 3 تفریق کریں: 10"
+          },
+          "misconception_id": "order_of_steps"
+        }
+      ]
+    },
+    {
+      "id": "q8_build",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Write an equation: 3 times a number k, decreased by 4, is 20.",
+        "ur": "مساوات لکھیں: عدد k کا 3 گنا، 4 کم، 20 ہے۔"
+      },
+      "checker": "text",
+      "expected": "3k − 4 = 20",
+      "accept": [
+        "3 × k − 4 = 20",
+        "20 = 3k − 4",
+        "3k - 4 = 20",
+        "3 × k - 4 = 20",
+        "20 = 3k - 4"
+      ],
+      "hint": {
+        "en": "3 times k is 3k. Then take away 4.",
+        "ur": "k کا 3 گنا 3k ہے۔ پھر 4 تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 3k − 4 = 20.",
+        "ur": "درست! 3k − 4 = 20"
+      },
+      "feedback_wrong": {
+        "en": "3k, decreased by 4, is 3k − 4, and it equals 20.",
+        "ur": "3k میں سے 4 کم یعنی 3k − 4، اور یہ 20 کے برابر ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "3(k − 4) = 20",
+          "feedback": {
+            "en": "Only 3k is decreased by 4. Brackets would multiply the 4 as well: 3k − 4 = 20.",
+            "ur": "4 صرف 3k میں سے کم ہوتا ہے۔ قوسین 4 کو بھی ضرب دیتی: 3k − 4 = 20"
+          },
+          "misconception_id": "brackets_wrong"
+        },
+        {
+          "answer": "3k + 4 = 20",
+          "feedback": {
+            "en": "'Decreased' means take away: 3k − 4 = 20.",
+            "ur": "'کم' کا مطلب تفریق: 3k − 4 = 20"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "q9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Imran solves 2x + 6 = 20 like this: x = (20 + 6) ÷ 2 = 13. What went wrong?",
+        "ur": "عمران 2x + 6 = 20 کو یوں حل کرتا ہے: x = (20 + 6) ÷ 2 = 13۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "He added 6. To undo + 6, take 6 away: 20 − 6 = 14, then 14 ÷ 2 = 7.",
+            "ur": "اس نے 6 جمع کیا۔ + 6 کو ختم کرنے کے لیے 6 تفریق کریں: 20 − 6 = 14، پھر 14 ÷ 2 = 7"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Check: 2 × 13 + 6 = 32, not 20, but 2 × 7 + 6 = 20.",
+            "ur": "جی ہاں! جانچ: 2 × 13 + 6 = 32، 20 نہیں، مگر 2 × 7 + 6 = 20"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. x = 13 is right.",
+            "ur": "کوئی غلطی نہیں۔ x = 13 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Check it: 2 × 13 + 6 = 32, not 20.",
+            "ur": "جانچیں: 2 × 13 + 6 = 32، 20 نہیں۔"
+          },
+          "misconception_id": "wrong_inverse"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should not divide by 2.",
+            "ur": "اسے 2 سے تقسیم نہیں کرنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Dividing by 2 is right. The mistake is adding 6 instead of taking it away.",
+            "ur": "2 سے تقسیم درست ہے۔ غلطی 6 تفریق کرنے کی جگہ جمع کرنا ہے۔"
+          },
+          "misconception_id": "order_of_steps"
+        }
+      ]
+    },
+    {
+      "id": "q10_ages",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Ali is 5 years older than Sara. Together their ages add up to 37. If Sara is x years old, then x + (x + 5) = 37. How old is Sara?",
+        "ur": "علی سارہ سے 5 سال بڑا ہے۔ دونوں کی عمروں کا مجموعہ 37 ہے۔ اگر سارہ x سال کی ہے تو x + (x + 5) = 37۔ سارہ کتنے سال کی ہے؟"
+      },
+      "answer": 16,
+      "checker": "numeric",
+      "hint": {
+        "en": "x + x + 5 = 2x + 5 = 37. Solve for x.",
+        "ur": "x + x + 5 = 2x + 5 = 37۔ x معلوم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2x = 32, so Sara is 16 (and Ali is 21).",
+        "ur": "درست! 2x = 32، تو سارہ 16 سال کی ہے (اور علی 21 کا)۔"
+      },
+      "feedback_wrong": {
+        "en": "2x + 5 = 37, so 2x = 32 and x = 16.",
+        "ur": "2x + 5 = 37، تو 2x = 32 اور x = 16"
+      },
+      "common_wrong": [
+        {
+          "answer": 21,
+          "feedback": {
+            "en": "21 is Ali's age. The question asks for Sara: 16.",
+            "ur": "21 علی کی عمر ہے۔ سوال سارہ کی عمر پوچھتا ہے: 16"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 32,
+          "feedback": {
+            "en": "That is 37 − 5, only the first step. Divide by 2: 16.",
+            "ur": "یہ 37 − 5 ہے، صرف پہلا قدم۔ 2 سے تقسیم کریں: 16"
+          },
+          "misconception_id": "stops_early"
+        }
+      ]
+    },
+    {
+      "id": "q11_consecutive",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The sum of three consecutive numbers is 78. If the smallest is x, the numbers are x, x + 1 and x + 2. Find the smallest.",
+        "ur": "تین لگاتار اعداد کا مجموعہ 78 ہے۔ اگر سب سے چھوٹا x ہو تو اعداد x، x + 1 اور x + 2 ہیں۔ سب سے چھوٹا عدد معلوم کریں۔"
+      },
+      "answer": 25,
+      "checker": "numeric",
+      "hint": {
+        "en": "x + (x + 1) + (x + 2) = 3x + 3 = 78.",
+        "ur": "x + (x + 1) + (x + 2) = 3x + 3 = 78"
+      },
+      "feedback_correct": {
+        "en": "Right! 3x = 75, so x = 25. The numbers are 25, 26, 27.",
+        "ur": "درست! 3x = 75، تو x = 25۔ اعداد 25، 26، 27 ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "3x + 3 = 78, so 3x = 75 and x = 25.",
+        "ur": "3x + 3 = 78، تو 3x = 75 اور x = 25"
+      },
+      "common_wrong": [
+        {
+          "answer": 26,
+          "feedback": {
+            "en": "26 is the middle number. The question asks for the smallest: 25.",
+            "ur": "26 درمیانی عدد ہے۔ سوال سب سے چھوٹا پوچھتا ہے: 25"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        },
+        {
+          "answer": 27,
+          "feedback": {
+            "en": "27 is the largest number. The smallest is x = 25.",
+            "ur": "27 سب سے بڑا عدد ہے۔ سب سے چھوٹا x = 25 ہے۔"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ]
+    },
+    {
+      "id": "q12_ratio",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Rs 450 is shared between Hina and Sana in the ratio 2 : 3. There are 2 + 3 = 5 equal parts, so 5x = 450. How many rupees does Sana get (3 parts)?",
+        "ur": "450 روپے حنا اور ثناء میں نسبت 2 : 3 سے تقسیم ہوتے ہیں۔ 2 + 3 = 5 برابر حصے ہیں، تو 5x = 450۔ ثناء کو (3 حصے) کتنے روپے ملتے ہیں؟"
+      },
+      "answer": 270,
+      "checker": "numeric",
+      "hint": {
+        "en": "First find one part: 450 ÷ 5.",
+        "ur": "پہلے ایک حصہ معلوم کریں: 450 ÷ 5"
+      },
+      "feedback_correct": {
+        "en": "Right! One part is Rs 90, so Sana gets 3 × 90 = Rs 270.",
+        "ur": "درست! ایک حصہ 90 روپے ہے، تو ثناء کو 3 × 90 = 270 روپے ملتے ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "x = 450 ÷ 5 = 90. Sana gets 3 × 90 = 270.",
+        "ur": "x = 450 ÷ 5 = 90۔ ثناء کو 3 × 90 = 270 ملتے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 90,
+          "feedback": {
+            "en": "Rs 90 is one part. Sana has 3 parts: 270.",
+            "ur": "90 روپے ایک حصہ ہے۔ ثناء کے 3 حصے ہیں: 270"
+          },
+          "misconception_id": "ratio_as_amount"
+        },
+        {
+          "answer": 180,
+          "feedback": {
+            "en": "Rs 180 is Hina's share (2 parts). Sana's is 3 parts: 270.",
+            "ur": "180 روپے حنا کا حصہ ہے (2 حصے)۔ ثناء کے 3 حصے ہیں: 270"
+          },
+          "misconception_id": "answer_is_other_quantity"
+        }
+      ]
+    },
+    {
+      "id": "q13_cricket",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A batter scored 12 more than twice the runs of his partner. He scored 52 runs. If his partner scored x runs, then 2x + 12 = 52. How many runs did the partner score?",
+        "ur": "ایک بلے باز نے اپنے ساتھی کے رنز کے دگنے سے 12 زیادہ رنز بنائے۔ اس نے 52 رنز بنائے۔ اگر اس کے ساتھی نے x رنز بنائے تو 2x + 12 = 52۔ ساتھی نے کتنے رنز بنائے؟"
+      },
+      "answer": 20,
+      "checker": "numeric",
+      "hint": {
+        "en": "Take away 12 first, then divide by 2.",
+        "ur": "پہلے 12 تفریق کریں، پھر 2 سے تقسیم کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2x = 40, so x = 20. Check: 2 × 20 + 12 = 52.",
+        "ur": "درست! 2x = 40، تو x = 20۔ جانچ: 2 × 20 + 12 = 52"
+      },
+      "feedback_wrong": {
+        "en": "52 − 12 = 40, then 40 ÷ 2 = 20.",
+        "ur": "52 − 12 = 40، پھر 40 ÷ 2 = 20"
+      },
+      "common_wrong": [
+        {
+          "answer": 40,
+          "feedback": {
+            "en": "2x = 40 is only the first step. Divide by 2: 20.",
+            "ur": "2x = 40 صرف پہلا قدم ہے۔ 2 سے تقسیم کریں: 20"
+          },
+          "misconception_id": "stops_early"
+        },
+        {
+          "answer": 14,
+          "feedback": {
+            "en": "That divides 52 by 2 before taking away 12. Take 12 away first: 20.",
+            "ur": "یہ 12 تفریق کرنے سے پہلے 52 کو 2 سے تقسیم کرتا ہے۔ پہلے 12 تفریق کریں: 20"
+          },
+          "misconception_id": "order_of_steps"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can solve and check equations.",
+          "ur": "شاباش! آپ مساواتیں حل کر کے جانچ سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "A linear equation in one variable has one letter with power 1 and an = sign. Solve it by undoing the operations in reverse order, doing the same to both sides: take away or add first, then divide or multiply. Check by putting the answer back. For a word problem, call the unknown x, write the equation, solve it, and answer what the question asks (Sara's age, the smallest number, Sana's share).",
+        "ur": "ایک متغیر والی خطی مساوات میں ایک حرف ہوتا ہے جس کی طاقت 1 ہو اور = کا نشان۔ اسے حل کرنے کے لیے عملوں کو الٹی ترتیب سے ختم کریں، دونوں طرف ایک ہی کام کریں: پہلے جمع یا تفریق، پھر تقسیم یا ضرب۔ جواب واپس رکھ کر جانچیں۔ لفظی سوال میں نامعلوم کو x کہیں، مساوات لکھیں، حل کریں، اور وہی بتائیں جو سوال پوچھتا ہے (سارہ کی عمر، سب سے چھوٹا عدد، ثناء کا حصہ)۔"
+      },
+      "points": [
+        {
+          "en": "Undo the adding or taking away first.",
+          "ur": "پہلے جمع یا تفریق کو ختم کریں۔"
+        },
+        {
+          "en": "Check by putting the answer in the equation.",
+          "ur": "جواب کو مساوات میں رکھ کر جانچیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_two_step",
+      "type": "apply",
+      "step": {
+        "id": "r_two_step",
+        "type": "number",
+        "prompt": {
+          "en": "Solve 2x + 3 = 11.",
+          "ur": "حل کریں 2x + 3 = 11"
+        },
+        "answer": 4,
+        "checker": "numeric",
+        "hint": {
+          "en": "Take 3 away first, then divide by 2.",
+          "ur": "پہلے 3 تفریق کریں، پھر 2 سے تقسیم کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 2x = 8, so x = 4.",
+          "ur": "درست! 2x = 8، تو x = 4"
+        },
+        "feedback_wrong": {
+          "en": "11 − 3 = 8, then 8 ÷ 2 = 4.",
+          "ur": "11 − 3 = 8، پھر 8 ÷ 2 = 4"
+        },
+        "common_wrong": [
+          {
+            "answer": 8,
+            "feedback": {
+              "en": "2x = 8 is only the first step. Divide by 2: 4.",
+              "ur": "2x = 8 صرف پہلا قدم ہے۔ 2 سے تقسیم کریں: 4"
+            },
+            "misconception_id": "stops_early"
+          }
+        ]
+      },
+      "skill": "maths.equations.ex_7_2"
+    },
+    {
+      "id": "r_one_step",
+      "type": "apply",
+      "step": {
+        "id": "r_one_step",
+        "type": "number",
+        "prompt": {
+          "en": "Solve x + 9 = 31.",
+          "ur": "حل کریں x + 9 = 31"
+        },
+        "answer": 22,
+        "checker": "numeric",
+        "hint": {
+          "en": "Take 9 away from 31.",
+          "ur": "31 میں سے 9 تفریق کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! x = 22.",
+          "ur": "درست! x = 22"
+        },
+        "feedback_wrong": {
+          "en": "31 − 9 = 22.",
+          "ur": "31 − 9 = 22"
+        },
+        "common_wrong": [
+          {
+            "answer": 40,
+            "feedback": {
+              "en": "That adds 9. Undo + 9 by taking 9 away: 22.",
+              "ur": "یہ 9 جمع کرتا ہے۔ + 9 کو 9 تفریق کر کے ختم کریں: 22"
+            },
+            "misconception_id": "wrong_inverse"
+          }
+        ]
+      },
+      "skill": "maths.equations.ex_7_2"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 7.2 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers picking out linear equations (q1, q2), solving one- and two-step equations with whole numbers, decimals and fractions (q3, q4, q6, q7), checking a solution (q5), building an equation (q8), finding a mistake (q9), and word problems about ages, consecutive numbers, sharing in a ratio and cricket scores (q10 to q13).",
+    "Each wrong answer is a real mistake: the wrong inverse, stopping after the first step, dividing before taking away, brackets added by habit, and giving another quantity from the story (Ali's age, the middle number, Hina's share).",
+    "Urdu terms to check: خطی مساوات (linear equation), حل (solution), جانچ (check), نسبت (ratio), رنز (runs). لگاتار اعداد (consecutive numbers) is new and should be confirmed by a teacher; the lesson also writes the sum as مجموعہ.",
+    "The numbers were worked out in content/sources/g6-maths-16/exercise_7_2.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}

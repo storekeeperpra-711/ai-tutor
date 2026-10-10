@@ -1,0 +1,1031 @@
+{
+  "id": "g6-maths-16-exercise-7-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "Turn sentences into algebraic equations and back, and sort items into equations and expressions.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 7: Linear Equations, Exercise 7.1"
+    }
+  ],
+  "skills": [
+    "maths.equations.ex_7_1"
+  ],
+  "title": {
+    "en": "Exercise 7.1 practice: equations and expressions",
+    "ur": "مشق 7.1 کی پریکٹس: مساوات اور الجبری جملے"
+  },
+  "estimated_minutes": 16,
+  "prerequisites": [
+    {
+      "skill": "maths.equations.equation_or_expression"
+    },
+    {
+      "skill": "maths.equations.forming"
+    },
+    {
+      "skill": "maths.algebra.variables"
+    },
+    {
+      "skill": "maths.algebra.substitution"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "letter_means_equation",
+      "description": "Thinks anything with a letter is an equation, even with no = sign."
+    },
+    {
+      "id": "times_for_plus",
+      "description": "Writes 'more than' or 'increased by' as multiplication, like 6m = 21 for m + 6 = 21."
+    },
+    {
+      "id": "wrong_operation",
+      "description": "Writes 'increased by' as taking away, or 'times' as adding."
+    },
+    {
+      "id": "less_than_reversed",
+      "description": "Writes '5 less than x' as 5 − x instead of x − 5."
+    },
+    {
+      "id": "brackets_wrong",
+      "description": "Puts brackets where the words don't need them, like 3(n + 2) for 'three times a number, plus 2'."
+    },
+    {
+      "id": "arithmetic_is_algebraic",
+      "description": "Calls 7 + 5 = 12 an algebraic equation, although it has no letter."
+    },
+    {
+      "id": "wrong_inverse",
+      "description": "Finds the unknown by adding when the equation takes away, or the other way round."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.equations.ex_7_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.equations.ex_7_1": [
+      {
+        "id": "qb_sign",
+        "type": "recall",
+        "step": {
+          "id": "qb_sign",
+          "type": "choice",
+          "prompt": {
+            "en": "What does an equation have that an expression does not?",
+            "ur": "مساوات میں ایسا کیا ہوتا ہے جو الجبری جملے میں نہیں ہوتا؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "An = sign",
+                "ur": "= کا نشان"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! It says the two sides are equal.",
+                "ur": "جی ہاں! یہ بتاتا ہے کہ دونوں طرف برابر ہیں۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A letter",
+                "ur": "ایک حرف"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Expressions have letters too, like 3x + 5.",
+                "ur": "الجبری جملوں میں بھی حرف ہوتے ہیں، جیسے 3x + 5۔"
+              },
+              "misconception_id": "letter_means_equation"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A number",
+                "ur": "ایک عدد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Both have numbers. The = sign makes an equation.",
+                "ur": "دونوں میں اعداد ہوتے ہیں۔ = کا نشان مساوات بناتا ہے۔"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_value",
+        "type": "apply",
+        "step": {
+          "id": "qb_value",
+          "type": "number",
+          "prompt": {
+            "en": "For which value of x is x + 8 = 20 true?",
+            "ur": "x کی کس قیمت کے لیے x + 8 = 20 درست ہے؟"
+          },
+          "answer": 12,
+          "checker": "numeric",
+          "hint": {
+            "en": "Take 8 away from 20.",
+            "ur": "20 میں سے 8 تفریق کریں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 12 + 8 = 20.",
+            "ur": "درست! 12 + 8 = 20"
+          },
+          "feedback_wrong": {
+            "en": "20 − 8 = 12.",
+            "ur": "20 − 8 = 12"
+          },
+          "common_wrong": [
+            {
+              "answer": 28,
+              "feedback": {
+                "en": "That adds 8 to 20. Undo + 8 by taking 8 away: 12.",
+                "ur": "یہ 20 میں 8 جمع کرتا ہے۔ + 8 کو 8 تفریق کر کے ختم کریں: 12"
+              },
+              "misconception_id": "wrong_inverse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Usman says 'a number times 3 is 21' is n + 3 = 21. What went wrong?",
+            "ur": "عثمان کہتا ہے 'ایک عدد کا 3 گنا 21 ہے' کو n + 3 = 21 لکھتے ہیں۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Nothing. n + 3 = 21 is right.",
+                "ur": "کوئی غلطی نہیں۔ n + 3 = 21 درست ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "n + 3 means 3 MORE than n. Times is multiply: 3n.",
+                "ur": "n + 3 یعنی n سے 3 زیادہ۔ گنا ضرب ہے: 3n"
+              },
+              "misconception_id": "wrong_operation"
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It should be n − 3 = 21.",
+                "ur": "یہ n − 3 = 21 ہونا چاہیے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "'Times' is not taking away. It is 3n = 21.",
+                "ur": "'گنا' تفریق نہیں۔ یہ 3n = 21 ہے۔"
+              },
+              "misconception_id": "wrong_operation"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "'Times' means multiply. It is 3n = 21.",
+                "ur": "'گنا' یعنی ضرب۔ یہ 3n = 21 ہے۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! 3 times a number is 3n.",
+                "ur": "جی ہاں! عدد کا 3 گنا 3n ہے۔"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_sign",
+      "front": {
+        "en": "Equation or expression?",
+        "ur": "مساوات یا الجبری جملہ؟"
+      },
+      "back": {
+        "en": "An equation has an = sign: 3x + 2 = 14. An expression does not: 3x + 2.",
+        "ur": "مساوات میں = کا نشان ہوتا ہے: 3x + 2 = 14۔ الجبری جملے میں نہیں: 3x + 2"
+      }
+    },
+    {
+      "id": "f_words",
+      "front": {
+        "en": "How do you write '5 less than x is 12'?",
+        "ur": "'x سے 5 کم 12 ہے' کیسے لکھتے ہیں؟"
+      },
+      "back": {
+        "en": "x − 5 = 12. Start from x, take away 5, and 'is' becomes =.",
+        "ur": "x − 5 = 12۔ x سے شروع کریں، 5 تفریق کریں، اور 'ہے' کو = بنائیں۔"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_eq_at_home",
+      "text": {
+        "en": "Write three sentences about things at home that use a number, like 'my brother is 3 years older than me and is 14'. Turn each into an equation with a letter. Then write one expression that is NOT an equation.",
+        "ur": "گھر کی باتوں کے بارے میں تین جملے لکھیں جن میں ایک عدد ہو، جیسے 'میرا بھائی مجھ سے 3 سال بڑا ہے اور 14 سال کا ہے'۔ ہر ایک کو حرف والی مساوات میں بدلیں۔ پھر ایک ایسا الجبری جملہ لکھیں جو مساوات نہ ہو۔"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Equation",
+      "ur": "مساوات"
+    },
+    {
+      "en": "Expression",
+      "ur": "الجبری جملہ"
+    },
+    {
+      "en": "Arithmetic equation",
+      "ur": "حسابی مساوات"
+    },
+    {
+      "en": "Algebraic equation",
+      "ur": "الجبری مساوات"
+    },
+    {
+      "en": "Solution",
+      "ur": "حل"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 7.1 is about equations. Ready?",
+          "ur": "مشق 7.1 مساوات کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 7.1 of your maths book (PCTB Mathematics 6). Here you turn sentences into equations and equations back into sentences, and sort things into equations and expressions. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 7.1 کے ساتھ ہے۔ اس میں آپ جملوں کو مساوات میں اور مساوات کو جملوں میں بدلیں گے، اور چیزوں کو مساوات اور الجبری جملوں میں الگ کریں گے۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_which",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which of these is an equation?",
+        "ur": "ان میں سے کون سی مساوات ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "5y − 2",
+            "ur": "5y − 2"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No = sign, so this is an expression, not an equation.",
+            "ur": "= کا نشان نہیں، اس لیے یہ الجبری جملہ ہے، مساوات نہیں۔"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5y",
+            "ur": "5y"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A letter with a number is an expression. An equation needs the = sign.",
+            "ur": "حرف اور عدد الجبری جملہ ہیں۔ مساوات کے لیے = کا نشان چاہیے۔"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "5y − 2 = 13",
+            "ur": "5y − 2 = 13"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! It has an = sign: it says two sides are equal.",
+            "ur": "جی ہاں! اس میں = کا نشان ہے: یہ بتاتی ہے کہ دونوں طرف برابر ہیں۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "y − 2 + 13",
+            "ur": "y − 2 + 13"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Still no = sign: an expression.",
+            "ur": "پھر بھی = کا نشان نہیں: الجبری جملہ۔"
+          },
+          "misconception_id": "letter_means_equation"
+        }
+      ]
+    },
+    {
+      "id": "q2_marbles",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Mariam has m marbles. She wins 6 more and now has 21. Write this as an equation.",
+        "ur": "مریم کے پاس m کنچے ہیں۔ وہ 6 اور جیت لیتی ہے اور اب اس کے پاس 21 ہیں۔ اسے مساوات کی صورت میں لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "m + 6 = 21",
+      "accept": [
+        "6 + m = 21",
+        "21 = m + 6",
+        "21 = 6 + m"
+      ],
+      "hint": {
+        "en": "Winning more means adding. Start with m, add 6, and say it equals 21.",
+        "ur": "مزید جیتنا یعنی جمع۔ m سے شروع کریں، 6 جمع کریں، اور لکھیں کہ یہ 21 کے برابر ہے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! m + 6 = 21.",
+        "ur": "درست! m + 6 = 21"
+      },
+      "feedback_wrong": {
+        "en": "She had m, got 6 more, and has 21: m + 6 = 21.",
+        "ur": "اس کے پاس m تھے، 6 اور ملے، اب 21 ہیں: m + 6 = 21"
+      },
+      "common_wrong": [
+        {
+          "answer": "m − 6 = 21",
+          "feedback": {
+            "en": "Winning marbles is adding, not taking away: m + 6 = 21.",
+            "ur": "کنچے جیتنا جمع ہے، تفریق نہیں: m + 6 = 21"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "answer": "6m = 21",
+          "feedback": {
+            "en": "6m means 6 times m. She gets 6 more: m + 6 = 21.",
+            "ur": "6m یعنی m کا 6 گنا۔ اسے 6 اور ملے: m + 6 = 21"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q3_times",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Write as an equation: 4 times a number n is 36.",
+        "ur": "مساوات لکھیں: عدد n کا 4 گنا 36 ہے۔"
+      },
+      "checker": "text",
+      "expected": "4n = 36",
+      "accept": [
+        "4 × n = 36",
+        "36 = 4n"
+      ],
+      "hint": {
+        "en": "4 times n is 4n. 'Is' becomes =.",
+        "ur": "n کا 4 گنا یعنی 4n۔ 'ہے' کی جگہ = لکھیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4n = 36.",
+        "ur": "درست! 4n = 36"
+      },
+      "feedback_wrong": {
+        "en": "4 times n is 4n, and 'is' is =: 4n = 36.",
+        "ur": "n کا 4 گنا 4n ہے اور 'ہے' کا مطلب =: 4n = 36"
+      },
+      "common_wrong": [
+        {
+          "answer": "n + 4 = 36",
+          "feedback": {
+            "en": "'Times' means multiply: 4n, not n + 4.",
+            "ur": "'گنا' یعنی ضرب: 4n، n + 4 نہیں۔"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "answer": "n ÷ 4 = 36",
+          "feedback": {
+            "en": "4 times n is 4 × n, not n ÷ 4: 4n = 36.",
+            "ur": "n کا 4 گنا 4 × n ہے، n ÷ 4 نہیں: 4n = 36"
+          },
+          "misconception_id": "wrong_operation"
+        }
+      ]
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "An equation has an = sign. An expression does not. That is the whole difference!",
+          "ur": "مساوات میں = کا نشان ہوتا ہے۔ الجبری جملے میں نہیں۔ بس یہی فرق ہے!"
+        }
+      },
+      "text": {
+        "en": "An expression like 3x + 2 is only a way of writing a number. An equation like 3x + 2 = 14 says that two sides are equal. We can ask 'which x makes it true?' and the answer is the solution (x = 4). When an equation has only numbers, like 7 + 5 = 12, it is an arithmetic equation; with a letter it is an algebraic equation. To turn words into an equation, write each part in symbols and let 'is' become =.",
+        "ur": "3x + 2 جیسا الجبری جملہ صرف ایک عدد لکھنے کا طریقہ ہے۔ 3x + 2 = 14 جیسی مساوات بتاتی ہے کہ دونوں طرف برابر ہیں۔ ہم پوچھ سکتے ہیں 'کون سا x اسے درست بناتا ہے؟' اور جواب حل ہے (x = 4)۔ جب مساوات میں صرف اعداد ہوں، جیسے 7 + 5 = 12، تو وہ حسابی مساوات ہے؛ حرف ہو تو الجبری مساوات۔ الفاظ کو مساوات بنانے کے لیے ہر حصہ علامتوں میں لکھیں اور 'ہے' کو = بنا دیں۔"
+      }
+    },
+    {
+      "id": "q4_less",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which equation says '5 less than a number x is 12'?",
+        "ur": "کون سی مساوات کہتی ہے 'عدد x سے 5 کم 12 ہے'؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "x − 5 = 12",
+            "ur": "x − 5 = 12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Start from x and take away 5.",
+            "ur": "جی ہاں! x سے شروع کریں اور 5 تفریق کریں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "5 − x = 12",
+            "ur": "5 − x = 12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That starts from 5. '5 less than x' starts from x: x − 5.",
+            "ur": "یہ 5 سے شروع ہوتا ہے۔ 'x سے 5 کم' x سے شروع ہوتا ہے: x − 5"
+          },
+          "misconception_id": "less_than_reversed"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "x + 5 = 12",
+            "ur": "x + 5 = 12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is 5 MORE than x.",
+            "ur": "یہ x سے 5 زیادہ ہے۔"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "5x = 12",
+            "ur": "5x = 12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5x means 5 times x.",
+            "ur": "5x یعنی x کا 5 گنا۔"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q5_back",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which sentence matches the equation 3n + 2 = 14?",
+        "ur": "کون سا جملہ مساوات 3n + 2 = 14 سے ملتا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Three times (a number plus 2) is 14.",
+            "ur": "تین گنا (عدد جمع 2) 14 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That would need brackets: 3(n + 2). Here only the 3n is multiplied.",
+            "ur": "اس کے لیے قوسین چاہیے: 3(n + 2)۔ یہاں صرف 3n ضرب ہوتا ہے۔"
+          },
+          "misconception_id": "brackets_wrong"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Three times a number, plus 2, is 14.",
+            "ur": "ایک عدد کا تین گنا، جمع 2، 14 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! 3n is three times n, then add 2.",
+            "ur": "جی ہاں! 3n یعنی n کا تین گنا، پھر 2 جمع۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "A number plus 3 plus 2 is 14.",
+            "ur": "عدد جمع 3 جمع 2، 14 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3n is 3 times n, not n + 3.",
+            "ur": "3n یعنی n کا 3 گنا، n + 3 نہیں۔"
+          },
+          "misconception_id": "times_for_plus"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "Three more than a number is 14.",
+            "ur": "عدد سے تین زیادہ 14 ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is n + 3 = 14. We have 3n + 2.",
+            "ur": "یہ n + 3 = 14 ہے۔ ہمارے پاس 3n + 2 ہے۔"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q6_sort",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Sort these into equations and expressions: 2x + 1, 5a = 20, 7 − y, 3m + 4 = 19, 9b. How many of them are expressions?",
+        "ur": "ان کو مساوات اور الجبری جملوں میں الگ کریں: 2x + 1, 5a = 20, 7 − y, 3m + 4 = 19, 9b۔ ان میں سے کتنے الجبری جملے ہیں؟"
+      },
+      "answer": 3,
+      "checker": "numeric",
+      "hint": {
+        "en": "An item with an = sign is an equation. The others are expressions.",
+        "ur": "جس میں = کا نشان ہو وہ مساوات ہے۔ باقی الجبری جملے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2x + 1, 7 − y and 9b have no = sign: 3 expressions.",
+        "ur": "درست! 2x + 1، 7 − y اور 9b میں = کا نشان نہیں: 3 الجبری جملے"
+      },
+      "feedback_wrong": {
+        "en": "5a = 20 and 3m + 4 = 19 are equations. The other 3 are expressions.",
+        "ur": "5a = 20 اور 3m + 4 = 19 مساواتیں ہیں۔ باقی 3 الجبری جملے ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the number of equations (the ones with =). Count the others: 3.",
+            "ur": "2 مساواتوں کی تعداد ہے (جن میں = ہے)۔ باقی گنیں: 3"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "answer": 5,
+          "feedback": {
+            "en": "Only the items with no = sign are expressions: 3.",
+            "ur": "صرف وہ جن میں = کا نشان نہیں الجبری جملے ہیں: 3"
+          },
+          "misconception_id": "letter_means_equation"
+        }
+      ]
+    },
+    {
+      "id": "q7_true",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "For which value of x is the equation x + 6 = 15 true?",
+        "ur": "x کی کس قیمت کے لیے مساوات x + 6 = 15 درست ہے؟"
+      },
+      "answer": 9,
+      "checker": "numeric",
+      "hint": {
+        "en": "Which number plus 6 makes 15? Take 6 away from 15.",
+        "ur": "کون سا عدد جمع 6، 15 بناتا ہے؟ 15 میں سے 6 تفریق کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 9 + 6 = 15, so x = 9.",
+        "ur": "درست! 9 + 6 = 15، تو x = 9"
+      },
+      "feedback_wrong": {
+        "en": "15 − 6 = 9, and 9 + 6 = 15.",
+        "ur": "15 − 6 = 9، اور 9 + 6 = 15"
+      },
+      "common_wrong": [
+        {
+          "answer": 21,
+          "feedback": {
+            "en": "That adds 6 to 15. To undo + 6, take 6 away: 9.",
+            "ur": "یہ 15 میں 6 جمع کرتا ہے۔ + 6 کو ختم کرنے کے لیے 6 تفریق کریں: 9"
+          },
+          "misconception_id": "wrong_inverse"
+        }
+      ]
+    },
+    {
+      "id": "q8_kind",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Which one is an algebraic equation (not an arithmetic equation)?",
+        "ur": "ان میں سے کون سی الجبری مساوات ہے (حسابی مساوات نہیں)؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "7 + 5 = 12",
+            "ur": "7 + 5 = 12"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "It has only numbers: an arithmetic equation.",
+            "ur": "اس میں صرف اعداد ہیں: حسابی مساوات۔"
+          },
+          "misconception_id": "arithmetic_is_algebraic"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "x + 5",
+            "ur": "x + 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "No = sign: an expression.",
+            "ur": "= کا نشان نہیں: الجبری جملہ۔"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "7 + 5",
+            "ur": "7 + 5"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Only numbers and no = sign: just a sum.",
+            "ur": "صرف اعداد اور = نہیں: صرف ایک جمع۔"
+          }
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "x + 5 = 12",
+            "ur": "x + 5 = 12"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! It has a letter and an = sign.",
+            "ur": "جی ہاں! اس میں حرف بھی ہے اور = کا نشان بھی۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Zara says 4a + 3 is an equation, because it has a letter and numbers. What went wrong?",
+        "ur": "ثناء کہتی ہے 4a + 3 مساوات ہے، کیونکہ اس میں حرف اور اعداد ہیں۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "An equation needs an = sign. 4a + 3 has none, so it is an expression.",
+            "ur": "مساوات کے لیے = کا نشان چاہیے۔ 4a + 3 میں نہیں، اس لیے یہ الجبری جملہ ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A letter alone does not make an equation.",
+            "ur": "جی ہاں! صرف حرف مساوات نہیں بناتا۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Nothing. A letter with numbers is an equation.",
+            "ur": "کوئی غلطی نہیں۔ حرف اور اعداد مساوات ہیں۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "An expression like 4a + 3 is just a number written with a letter. It says nothing is equal to anything.",
+            "ur": "4a + 3 جیسا الجبری جملہ ایک عدد کو حرف سے لکھنا ہے۔ یہ کسی چیز کے برابر ہونے کا نہیں کہتا۔"
+          },
+          "misconception_id": "letter_means_equation"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "It is an equation, but 4a should be 4 + a.",
+            "ur": "یہ مساوات ہے، مگر 4a کو 4 + a ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "4a means 4 times a, and the sentence still has no = sign.",
+            "ur": "4a یعنی a کا 4 گنا، اور جملے میں پھر بھی = نہیں۔"
+          },
+          "misconception_id": "letter_means_equation"
+        }
+      ]
+    },
+    {
+      "id": "q10_find_error_less",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "Sana writes '7 less than a number x equals 15' as 7 − x = 15. What went wrong?",
+        "ur": "ثناء '7 کم عدد x برابر 15' کو 7 − x = 15 لکھتی ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. 7 − x = 15 is right.",
+            "ur": "کوئی غلطی نہیں۔ 7 − x = 15 درست ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7 − x starts from 7. 'Less than x' means we start from x.",
+            "ur": "7 − x، 7 سے شروع ہوتا ہے۔ 'x سے کم' کا مطلب ہے x سے شروع کرنا۔"
+          },
+          "misconception_id": "less_than_reversed"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "'7 less than x' starts from x. It is x − 7 = 15.",
+            "ur": "'x سے 7 کم' x سے شروع ہوتا ہے۔ یہ x − 7 = 15 ہے۔"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! With x − 7 = 15, x = 22. With 7 − x = 15 you would get x = −8.",
+            "ur": "جی ہاں! x − 7 = 15 سے x = 22 ہے۔ 7 − x = 15 سے x = −8 آتا۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "It should be 7x = 15.",
+            "ur": "یہ 7x = 15 ہونا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "7x means 7 times x. 'Less than' means take away.",
+            "ur": "7x یعنی x کا 7 گنا۔ 'کم' کا مطلب تفریق ہے۔"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "q11_true_false",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "How many of these arithmetic sentences are true: 5 + 3 = 8; 6 + 2 = 9; 10 − 4 = 6; 7 × 2 = 15?",
+        "ur": "ان میں سے کتنے حسابی جملے درست ہیں: 5 + 3 = 8؛ 6 + 2 = 9؛ 10 − 4 = 6؛ 7 × 2 = 15؟"
+      },
+      "answer": 2,
+      "checker": "numeric",
+      "hint": {
+        "en": "Work out the left side of each one and compare it with the right.",
+        "ur": "ہر ایک کی بائیں طرف نکالیں اور دائیں سے ملائیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 + 3 = 8 and 10 − 4 = 6 are true.",
+        "ur": "درست! 5 + 3 = 8 اور 10 − 4 = 6 درست ہیں۔"
+      },
+      "feedback_wrong": {
+        "en": "6 + 2 is 8, not 9, and 7 × 2 is 14, not 15. Only 2 are true.",
+        "ur": "6 + 2 برابر 8 ہے، 9 نہیں، اور 7 × 2 برابر 14 ہے، 15 نہیں۔ صرف 2 درست ہیں۔"
+      },
+      "common_wrong": [
+        {
+          "answer": 4,
+          "feedback": {
+            "en": "Check each one: 6 + 2 = 8 and 7 × 2 = 14 are not true.",
+            "ur": "ہر ایک جانچیں: 6 + 2 = 8 اور 7 × 2 = 14 ہیں، یعنی یہ درست نہیں۔"
+          },
+          "misconception_id": "arithmetic_is_algebraic"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "7 × 2 = 14, so '7 × 2 = 15' is false. Also 6 + 2 = 8, not 9.",
+            "ur": "7 × 2 = 14، تو '7 × 2 = 15' غلط ہے۔ نیز 6 + 2 = 8، 9 نہیں۔"
+          },
+          "misconception_id": "arithmetic_is_algebraic"
+        }
+      ]
+    },
+    {
+      "id": "q12_age",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Bilal is b years old now. In 5 years' time he will be 17. Write an equation.",
+        "ur": "بلال اب b سال کا ہے۔ 5 سال بعد وہ 17 سال کا ہو گا۔ مساوات لکھیں۔"
+      },
+      "checker": "text",
+      "expected": "b + 5 = 17",
+      "accept": [
+        "5 + b = 17",
+        "17 = b + 5"
+      ],
+      "hint": {
+        "en": "In 5 years means add 5 to his age now.",
+        "ur": "5 سال بعد یعنی اس کی اب کی عمر میں 5 جمع کریں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! b + 5 = 17.",
+        "ur": "درست! b + 5 = 17"
+      },
+      "feedback_wrong": {
+        "en": "His age in 5 years is b + 5, and that is 17.",
+        "ur": "5 سال بعد اس کی عمر b + 5 ہے، اور وہ 17 ہے۔"
+      },
+      "common_wrong": [
+        {
+          "answer": "b − 5 = 17",
+          "feedback": {
+            "en": "Later means older: add 5, not take away: b + 5 = 17.",
+            "ur": "بعد کا مطلب بڑا: 5 جمع کریں، تفریق نہیں: b + 5 = 17"
+          },
+          "misconception_id": "wrong_operation"
+        },
+        {
+          "answer": "5b = 17",
+          "feedback": {
+            "en": "5b means 5 times b. We add 5 years: b + 5 = 17.",
+            "ur": "5b یعنی b کا 5 گنا۔ ہم 5 سال جمع کرتے ہیں: b + 5 = 17"
+          },
+          "misconception_id": "times_for_plus"
+        }
+      ]
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can tell and write equations.",
+          "ur": "شاباش! آپ مساوات پہچان اور لکھ سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "An equation has an = sign and says two sides are equal; an expression has none. With only numbers it is an arithmetic equation; with a letter it is an algebraic equation. To write one from words, put each part in symbols and let 'is' become =: 'm and 6 more is 21' is m + 6 = 21, and '5 less than x is 12' is x − 5 = 12.",
+        "ur": "مساوات میں = کا نشان ہوتا ہے اور وہ بتاتی ہے کہ دونوں طرف برابر ہیں؛ الجبری جملے میں نہیں۔ صرف اعداد ہوں تو حسابی مساوات، حرف ہو تو الجبری مساوات۔ الفاظ سے مساوات لکھنے کے لیے ہر حصہ علامتوں میں لکھیں اور 'ہے' کو = بنائیں: 'm اور 6 زیادہ 21 ہے' یعنی m + 6 = 21، اور 'x سے 5 کم 12 ہے' یعنی x − 5 = 12۔"
+      },
+      "points": [
+        {
+          "en": "Look for the = sign first.",
+          "ur": "پہلے = کا نشان دیکھیں۔"
+        },
+        {
+          "en": "'Less than' starts from the number named last.",
+          "ur": "'سے کم' میں آخر میں آنے والے عدد سے شروع کریں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_value",
+      "type": "apply",
+      "step": {
+        "id": "r_value",
+        "type": "number",
+        "prompt": {
+          "en": "For which value of x is x − 4 = 10 true?",
+          "ur": "x کی کس قیمت کے لیے x − 4 = 10 درست ہے؟"
+        },
+        "answer": 14,
+        "checker": "numeric",
+        "hint": {
+          "en": "Add 4 to 10.",
+          "ur": "10 میں 4 جمع کریں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 14 − 4 = 10.",
+          "ur": "درست! 14 − 4 = 10"
+        },
+        "feedback_wrong": {
+          "en": "10 + 4 = 14.",
+          "ur": "10 + 4 = 14"
+        },
+        "common_wrong": [
+          {
+            "answer": 6,
+            "feedback": {
+              "en": "That takes 4 from 10. To undo − 4, add 4: 14.",
+              "ur": "یہ 10 میں سے 4 تفریق کرتا ہے۔ − 4 کو ختم کرنے کے لیے 4 جمع کریں: 14"
+            },
+            "misconception_id": "wrong_inverse"
+          }
+        ]
+      },
+      "skill": "maths.equations.ex_7_1"
+    },
+    {
+      "id": "r_kind",
+      "type": "recall",
+      "step": {
+        "id": "r_kind",
+        "type": "choice",
+        "prompt": {
+          "en": "Is 7a + 2 an equation or an expression?",
+          "ur": "کیا 7a + 2 مساوات ہے یا الجبری جملہ؟"
+        },
+        "options": [
+          {
+            "id": "a",
+            "text": {
+              "en": "An equation, because it has a letter.",
+              "ur": "مساوات، کیونکہ اس میں حرف ہے۔"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "A letter does not make an equation. You need =.",
+              "ur": "حرف سے مساوات نہیں بنتی۔ = چاہیے۔"
+            },
+            "misconception_id": "letter_means_equation"
+          },
+          {
+            "id": "b",
+            "text": {
+              "en": "An expression, because it has no = sign.",
+              "ur": "الجبری جملہ، کیونکہ اس میں = کا نشان نہیں۔"
+            },
+            "correct": true,
+            "feedback": {
+              "en": "Yes! No = sign.",
+              "ur": "جی ہاں! = کا نشان نہیں۔"
+            }
+          },
+          {
+            "id": "c",
+            "text": {
+              "en": "An equation, because it has a + sign.",
+              "ur": "مساوات، کیونکہ اس میں + کا نشان ہے۔"
+            },
+            "correct": false,
+            "feedback": {
+              "en": "+ is for adding. Only = makes an equation.",
+              "ur": "+ جمع کے لیے ہے۔ مساوات صرف = سے بنتی ہے۔"
+            },
+            "misconception_id": "letter_means_equation"
+          }
+        ]
+      },
+      "skill": "maths.equations.ex_7_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 7.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers telling equations from expressions (q1, q6, q8, q9), turning sentences into equations (q2, q3, q4, q12), turning an equation back into a sentence (q5), and checking which value makes an equation true (q7, q11).",
+    "Each wrong answer is a real mistake: more written as times, a word problem turned the wrong way (5 − x), brackets added by habit, a letter taken to make an equation, and the unknown found by the wrong inverse.",
+    "Urdu terms to check: مساوات (equation), الجبری جملہ (expression), حسابی مساوات (arithmetic equation), حل (solution). الجبری مساوات (algebraic equation) is new: it joins the existing words الجبری and مساوات, so a teacher should confirm it.",
+    "The numbers were worked out in content/sources/g6-maths-16/exercise_7_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
