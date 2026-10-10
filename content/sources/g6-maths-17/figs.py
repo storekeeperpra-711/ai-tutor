@@ -387,3 +387,8 @@ def key(*names):
     """The key for bag(): the letter and colour words of each name, in
     this order (the first is shaded)."""
     return {n: NAMES[n] for n in names}
+
+
+def with_fig(step, figure):
+    step["figure"] = figure
+    return step

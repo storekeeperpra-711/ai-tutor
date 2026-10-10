@@ -282,6 +282,8 @@ const grade6Book = [
         'g6-maths-17-probability-of-an-event',
         'g6-maths-17-likelihood',
         'g6-maths-17-probability-word-problems',
+        'g6-maths-17-exercise-12-1',
+        'g6-maths-17-chapter-12-test',
       ]),
     ],
   ),

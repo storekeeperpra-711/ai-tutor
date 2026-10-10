@@ -8,6 +8,10 @@ Scripts that write the Grade 6 Maths lessons of the Probability unit (`content/l
 | `probability_of_an_event.py` | `g6-maths-17-probability-of-an-event` | `maths.probability.single_event` |
 | `likelihood.py` | `g6-maths-17-likelihood` | `maths.probability.likelihood` |
 | `probability_word_problems.py` | `g6-maths-17-probability-word-problems` | `maths.probability.word_problems` (with a 5-question unit test) |
+| `exercise_12_1.py` | `g6-maths-17-exercise-12-1` | `maths.probability.ex_12_1` |
+| `chapter_12_test.py` | `g6-maths-17-chapter-12-test` | `maths.probability.chapter_12_test` |
+
+The last two are the practice set for Exercise 12.1 of the book (chapter 12, Probability) and a chapter test (Review Exercise 12) for the whole chapter. Only the exercise number and the kinds of question follow the book; every question, number and story is new. They have no "why" steps. `common.py` holds the practice helpers (`nq`, `pq`, `ch`, `practice_lesson`, `practice_intro`) and `figs.py` gained `with_fig`.
 
 Sample spaces are built in `common.py` (`coins()`, `balls()`, `DICE`), and every probability is worked out with `P()`, which counts outcomes, so no answer is typed by hand. Each common wrong answer (dividing by the other outcomes, counting colours instead of balls, "win or lose is 1/2") is checked with `assert`.
 

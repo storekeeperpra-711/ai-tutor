@@ -1,0 +1,2635 @@
+{
+  "id": "g6-maths-17-exercise-12-1",
+  "version": 1,
+  "schema": "0.2",
+  "subject": "maths",
+  "grade": 6,
+  "tier": "middle",
+  "curriculum_refs": [
+    {
+      "outcome": "List and count the outcomes of coins, dice, cards and balls, find the probability of a single event as n(E) / n(S), tell equally likely from not equally likely outcomes, and solve short word problems.",
+      "textbook": "PCTB Mathematics 6 (SNC 2022), Sub-domain 12: Probability, Exercise 12.1"
+    }
+  ],
+  "skills": [
+    "maths.probability.ex_12_1"
+  ],
+  "title": {
+    "en": "Exercise 12.1 practice: sample spaces and probability",
+    "ur": "مشق 12.1 کی پریکٹس: نمونی فضا اور احتمال"
+  },
+  "estimated_minutes": 20,
+  "prerequisites": [
+    {
+      "skill": "maths.probability.sample_space"
+    },
+    {
+      "skill": "maths.probability.single_event"
+    },
+    {
+      "skill": "maths.probability.likelihood"
+    },
+    {
+      "skill": "maths.probability.word_problems"
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "space_miscount",
+      "description": "Counts the outcomes of two or three coins or two dice wrongly, for example adding instead of multiplying, or counting HT and TH as one."
+    },
+    {
+      "id": "upside_down",
+      "description": "Writes n(S) / n(E) instead of n(E) / n(S)."
+    },
+    {
+      "id": "part_to_part",
+      "description": "Divides by the other outcomes (3 red to 5 blue) instead of by all the outcomes."
+    },
+    {
+      "id": "event_miscount",
+      "description": "Counts the favourable outcomes wrongly, for example including the boundary number in 'more than 4'."
+    },
+    {
+      "id": "equally_likely_mix",
+      "description": "Thinks the outcomes of a bag with different numbers of each colour are equally likely."
+    },
+    {
+      "id": "one_way_only",
+      "description": "Counts only one way of getting an outcome of two coins or two dice (HT but not TH, 1 and 6 but not 6 and 1)."
+    }
+  ],
+  "mastery_criteria": {
+    "maths.probability.ex_12_1": {
+      "question_types": [
+        "recall",
+        "apply",
+        "find_error"
+      ],
+      "days": 2
+    }
+  },
+  "question_bank": {
+    "maths.probability.ex_12_1": [
+      {
+        "id": "qb_recall",
+        "type": "recall",
+        "step": {
+          "id": "qb_recall",
+          "type": "choice",
+          "prompt": {
+            "en": "What is the formula for the probability of an event E?",
+            "ur": "واقعہ E کے احتمال کا کلیہ کیا ہے؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "P(E) = n(E) ÷ n(S)",
+                "ur": "P(E) = n(E) ÷ n(S)"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The outcomes you want over all the outcomes.",
+                "ur": "جی ہاں! مطلوبہ نتائج تقسیم تمام نتائج۔"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "P(E) = n(S) ÷ n(E)",
+                "ur": "P(E) = n(S) ÷ n(E)"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is upside down.",
+                "ur": "یہ الٹا ہے۔"
+              },
+              "misconception_id": "upside_down"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "P(E) = n(E) ÷ the number of other outcomes",
+                "ur": "P(E) = n(E) ÷ باقی نتائج کی تعداد"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "Divide by all the outcomes, not only the others.",
+                "ur": "تمام نتائج سے تقسیم کریں، صرف باقی سے نہیں۔"
+              },
+              "misconception_id": "part_to_part"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_dice",
+        "type": "apply",
+        "step": {
+          "id": "qb_dice",
+          "type": "text_check",
+          "prompt": {
+            "en": "A fair dice is rolled once. What is the probability that the number is 1, 2 or 3? Write it as a fraction.",
+            "ur": "ایک منصفانہ پانسہ ایک بار پھینکا جاتا ہے۔ عدد 1، 2 یا 3 آنے کا احتمال کیا ہے؟ کسر کی شکل میں لکھیں۔"
+          },
+          "checker": "fraction",
+          "expected": "1/2",
+          "hint": {
+            "en": "Three favourable numbers out of 6.",
+            "ur": "6 میں سے تین مطلوبہ اعداد۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 3/6 = 1/2.",
+            "ur": "درست! 3/6 = 1/2"
+          },
+          "feedback_wrong": {
+            "en": "n(E) = 3 and n(S) = 6.",
+            "ur": "n(E) = 3 اور n(S) = 6"
+          },
+          "common_wrong": [
+            {
+              "answer": "3/3",
+              "feedback": {
+                "en": "3/3 divides by the 3 numbers not wanted. Divide by all 6: 3/6 = 1/2.",
+                "ur": "3/3 میں غیر مطلوبہ 3 اعداد سے تقسیم کیا گیا۔ تمام 6 سے تقسیم کریں: 3/6 = 1/2"
+              },
+              "misconception_id": "part_to_part"
+            },
+            {
+              "answer": "6/3",
+              "feedback": {
+                "en": "6/3 is upside down. P = 3/6 = 1/2.",
+                "ur": "6/3 الٹا ہے۔ P = 3/6 = 1/2"
+              },
+              "misconception_id": "upside_down"
+            }
+          ],
+          "figure": {
+            "width": 300.0,
+            "height": 68.0,
+            "alt": {
+              "en": "6 dice faces in a row, showing 1, 2, 3, 4, 5 and 6 dots.",
+              "ur": "پانسے کے 6 رخ ایک قطار میں، جن پر 1، 2، 3، 4، 5 اور 6 نقطے ہیں۔"
+            },
+            "items": [
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    10.0,
+                    14.0
+                  ],
+                  [
+                    50.0,
+                    14.0
+                  ],
+                  [
+                    50.0,
+                    54.0
+                  ],
+                  [
+                    10.0,
+                    54.0
+                  ]
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  30.0,
+                  34.0
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    58.0,
+                    14.0
+                  ],
+                  [
+                    98.0,
+                    14.0
+                  ],
+                  [
+                    98.0,
+                    54.0
+                  ],
+                  [
+                    58.0,
+                    54.0
+                  ]
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  66.8,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  89.2,
+                  45.2
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    106.0,
+                    14.0
+                  ],
+                  [
+                    146.0,
+                    14.0
+                  ],
+                  [
+                    146.0,
+                    54.0
+                  ],
+                  [
+                    106.0,
+                    54.0
+                  ]
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  114.8,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  126.0,
+                  34.0
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  137.2,
+                  45.2
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    154.0,
+                    14.0
+                  ],
+                  [
+                    194.0,
+                    14.0
+                  ],
+                  [
+                    194.0,
+                    54.0
+                  ],
+                  [
+                    154.0,
+                    54.0
+                  ]
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  162.8,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  185.2,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  162.8,
+                  45.2
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  185.2,
+                  45.2
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    202.0,
+                    14.0
+                  ],
+                  [
+                    242.0,
+                    14.0
+                  ],
+                  [
+                    242.0,
+                    54.0
+                  ],
+                  [
+                    202.0,
+                    54.0
+                  ]
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  210.8,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  233.2,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  222.0,
+                  34.0
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  210.8,
+                  45.2
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  233.2,
+                  45.2
+                ]
+              },
+              {
+                "kind": "polygon",
+                "points": [
+                  [
+                    250.0,
+                    14.0
+                  ],
+                  [
+                    290.0,
+                    14.0
+                  ],
+                  [
+                    290.0,
+                    54.0
+                  ],
+                  [
+                    250.0,
+                    54.0
+                  ]
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  258.8,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  281.2,
+                  22.8
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  258.8,
+                  34.0
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  281.2,
+                  34.0
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  258.8,
+                  45.2
+                ]
+              },
+              {
+                "kind": "point",
+                "at": [
+                  281.2,
+                  45.2
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "qb_cards",
+        "type": "apply",
+        "step": {
+          "id": "qb_cards",
+          "type": "text_check",
+          "prompt": {
+            "en": "The letters of the word RIVER are on five cards. One card is picked at random. What is the probability that it is a vowel?",
+            "ur": "لفظ RIVER کے حروف پانچ کارڈوں پر ہیں۔ ایک کارڈ بغیر دیکھے اٹھایا جاتا ہے۔ اس کے حرفِ علت ہونے کا احتمال کیا ہے؟"
+          },
+          "checker": "fraction",
+          "expected": "2/5",
+          "hint": {
+            "en": "The vowels are I and E.",
+            "ur": "حروفِ علت I اور E ہیں۔"
+          },
+          "feedback_correct": {
+            "en": "Right! 2 vowels out of 5 cards: 2/5.",
+            "ur": "درست! 5 کارڈوں میں سے 2 حروفِ علت: 2/5"
+          },
+          "feedback_wrong": {
+            "en": "n(E) = 2 and n(S) = 5.",
+            "ur": "n(E) = 2 اور n(S) = 5"
+          },
+          "common_wrong": [
+            {
+              "answer": "2/3",
+              "feedback": {
+                "en": "2/3 divides by the 3 consonants. Divide by all 5 cards: 2/5.",
+                "ur": "2/3 میں 3 حروفِ صحیح سے تقسیم کیا گیا۔ تمام 5 کارڈوں سے تقسیم کریں: 2/5"
+              },
+              "misconception_id": "part_to_part"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qb_find_error",
+        "type": "find_error",
+        "step": {
+          "id": "qb_find_error",
+          "type": "choice",
+          "prompt": {
+            "en": "Rabia says: when two coins are tossed there are 3 outcomes, HH, HT and TT. What went wrong?",
+            "ur": "ربیعہ کہتی ہے: دو سکے اچھالنے پر 3 نتائج ہوتے ہیں، HH، HT اور TT۔ کیا غلطی ہوئی؟"
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": {
+                "en": "She left out TH. HT and TH are different outcomes, so there are 4.",
+                "ur": "اس نے TH چھوڑ دیا۔ HT اور TH الگ نتائج ہیں، تو 4 ہیں۔"
+              },
+              "correct": true,
+              "feedback": {
+                "en": "Yes! The first coin can be H or T, and so can the second: 2 × 2 = 4.",
+                "ur": "جی ہاں! پہلا سکہ H یا T ہو سکتا ہے، اور دوسرا بھی: 2 × 2 = 4"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nothing. 3 is right.",
+                "ur": "کوئی غلطی نہیں۔ 3 ٹھیک ہے۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "HT (head then tail) and TH (tail then head) are not the same.",
+                "ur": "HT (پہلے چت پھر پٹ) اور TH (پہلے پٹ پھر چت) ایک جیسے نہیں۔"
+              },
+              "misconception_id": "one_way_only"
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "There are 2 outcomes, H and T.",
+                "ur": "2 نتائج ہیں، H اور T۔"
+              },
+              "correct": false,
+              "feedback": {
+                "en": "That is for one coin. Two coins give 4.",
+                "ur": "یہ ایک سکے کے لیے ہے۔ دو سکوں کے 4 ہیں۔"
+              },
+              "misconception_id": "space_miscount"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "f_formula",
+      "front": {
+        "en": "How do you find the probability of an event?",
+        "ur": "کسی واقعے کا احتمال کیسے نکالتے ہیں؟"
+      },
+      "back": {
+        "en": "P(E) = n(E) ÷ n(S): the outcomes you want over all the outcomes.",
+        "ur": "P(E) = n(E) ÷ n(S): مطلوبہ نتائج تقسیم تمام نتائج۔"
+      }
+    },
+    {
+      "id": "f_spaces",
+      "front": {
+        "en": "How many outcomes do two coins, three coins and two dice have?",
+        "ur": "دو سکوں، تین سکوں اور دو پانسوں کے کتنے نتائج ہوتے ہیں؟"
+      },
+      "back": {
+        "en": "Two coins 4, three coins 8, two dice 36.",
+        "ur": "دو سکوں کے 4، تین سکوں کے 8، دو پانسوں کے 36"
+      }
+    }
+  ],
+  "home_tasks": [
+    {
+      "id": "h_probability",
+      "text": {
+        "en": "Toss two coins 40 times and write down HH, HT, TH or TT each time. Count how many times you got exactly one head. Compare the fraction you got with 1/2, the probability you worked out. Are they close?",
+        "ur": "دو سکے 40 بار اچھالیں اور ہر بار HH، HT، TH یا TT لکھیں۔ گنیں کہ کتنی بار ٹھیک ایک چت آئی۔ اپنی کسر کا موازنہ 1/2 سے کریں، جو احتمال آپ نے نکالا تھا۔ کیا یہ قریب ہیں؟"
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "en": "Experiment",
+      "ur": "تجربہ"
+    },
+    {
+      "en": "Outcome",
+      "ur": "نتیجہ"
+    },
+    {
+      "en": "Sample space",
+      "ur": "نمونی فضا"
+    },
+    {
+      "en": "Event",
+      "ur": "واقعہ"
+    },
+    {
+      "en": "Probability",
+      "ur": "احتمال"
+    },
+    {
+      "en": "Equally likely",
+      "ur": "یکساں امکان"
+    },
+    {
+      "en": "Fair coin",
+      "ur": "منصفانہ سکہ"
+    },
+    {
+      "en": "At random",
+      "ur": "بغیر دیکھے / اتفاقاً"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1_intro",
+      "type": "explain",
+      "character": {
+        "emotion": "encouraging",
+        "say": {
+          "en": "Exercise 12.1 is about probability. Ready?",
+          "ur": "مشق 12.1 احتمال کے بارے میں ہے۔ تیار؟"
+        }
+      },
+      "text": {
+        "en": "This practice set goes with Exercise 12.1 of your maths book (PCTB Mathematics 6). Here you practise listing sample spaces for coins, dice, cards and balls, finding the probability of an event, and deciding whether outcomes are equally likely. The questions are new, not the book's, and go from easy to harder. You can keep your book open beside you.",
+        "ur": "یہ پریکٹس آپ کی ریاضی کی کتاب (پنجاب ٹیکسٹ بک بورڈ، ریاضی 6) کی مشق 12.1 کے ساتھ ہے۔ اس میں آپ سکوں، پانسوں، کارڈوں اور گیندوں کی نمونی فضا لکھنا، واقعے کا احتمال نکالنا، اور یہ فیصلہ کرنا دہرائیں گے کہ نتائج یکساں امکان کے ہیں یا نہیں۔ سوال نئے ہیں، کتاب والے نہیں، اور آسان سے مشکل کی طرف جاتے ہیں۔ آپ اپنی کتاب ساتھ کھول کر رکھ سکتے ہیں۔"
+      }
+    },
+    {
+      "id": "q1_space",
+      "type": "choice",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A fair coin is tossed once. What is the sample space?",
+        "ur": "ایک منصفانہ سکہ ایک بار اچھالا جاتا ہے۔ نمونی فضا کیا ہے؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "S = {H, T}",
+            "ur": "S = {H, T}"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! A coin can land heads (H) or tails (T), and nothing else.",
+            "ur": "جی ہاں! سکہ چت (H) یا پٹ (T) گر سکتا ہے، اور کچھ نہیں۔"
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "S = {H}",
+            "ur": "S = {H}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "A coin can also land tails.",
+            "ur": "سکہ پٹ بھی گر سکتا ہے۔"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "S = {HH, TT}",
+            "ur": "S = {HH, TT}"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "That is for two coins, and even then it leaves out HT and TH.",
+            "ur": "یہ دو سکوں کے لیے ہے، اور تب بھی اس میں HT اور TH رہ گئے ہیں۔"
+          },
+          "misconception_id": "space_miscount"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 68.0,
+        "alt": {
+          "en": "Two coins side by side, one showing H (heads) and one showing T (tails). They stand for the two outcomes of one toss.",
+          "ur": "دو سکے ساتھ ساتھ، ایک پر H (چت) اور ایک پر T (پٹ)۔ یہ ایک اچھال کے دو نتائج کو ظاہر کرتے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              113.0,
+              32.0
+            ],
+            "radius": 22.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              113.0,
+              32.0
+            ],
+            "radius": 18.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              113.0,
+              32.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              187.0,
+              32.0
+            ],
+            "radius": 22.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              187.0,
+              32.0
+            ],
+            "radius": 18.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              187.0,
+              32.0
+            ],
+            "text": "T"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q2_two_coins",
+      "type": "number",
+      "question_type": "recall",
+      "prompt": {
+        "en": "Two coins are tossed together. How many outcomes are in the sample space? The table shows the first coin down the side and the second across the top.",
+        "ur": "دو سکے ایک ساتھ اچھالے جاتے ہیں۔ نمونی فضا میں کتنے نتائج ہیں؟ جدول میں پہلا سکہ اطراف میں اور دوسرا اوپر ہے۔"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "Count the cells: HH, HT, TH, TT.",
+        "ur": "خانے گنیں: HH، HT، TH، TT"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 2 = 4 outcomes.",
+        "ur": "درست! 2 × 2 = 4 نتائج"
+      },
+      "feedback_wrong": {
+        "en": "HH, HT, TH, TT: four.",
+        "ur": "HH، HT، TH، TT: چار"
+      },
+      "common_wrong": [
+        {
+          "answer": 2,
+          "feedback": {
+            "en": "2 is the outcomes of one coin. Two coins: 2 × 2 = 4.",
+            "ur": "2 ایک سکے کے نتائج ہیں۔ دو سکے: 2 × 2 = 4"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "answer": 3,
+          "feedback": {
+            "en": "3 counts HT and TH as one. They are different outcomes: 4.",
+            "ur": "3 میں HT اور TH کو ایک گنا گیا۔ یہ الگ نتائج ہیں: 4"
+          },
+          "misconception_id": "one_way_only"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "The table for tossing two coins. The first coin is down the side and the second coin is across the top. The four cells show HH, HT, TH and TT.",
+          "ur": "دو سکے اچھالنے کا جدول۔ پہلا سکہ اطراف میں اور دوسرا سکہ اوپر ہے۔ چار خانوں میں HH، HT، TH اور TT لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              123.0,
+              26.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              123.0,
+              26.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              26.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              79.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              79.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              79.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              177.0,
+              26.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              177.0,
+              26.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              26.0
+            ],
+            "text": "T"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              133.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              133.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              133.0
+            ],
+            "text": "T"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                96.0,
+                52.0
+              ],
+              [
+                204.0,
+                52.0
+              ],
+              [
+                204.0,
+                160.0
+              ],
+              [
+                96.0,
+                160.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              52.0
+            ],
+            "to": [
+              150.0,
+              160.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              96.0,
+              106.0
+            ],
+            "to": [
+              204.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              79.0
+            ],
+            "text": "HH"
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              79.0
+            ],
+            "text": "HT"
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              133.0
+            ],
+            "text": "TH"
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              133.0
+            ],
+            "text": "TT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_idea",
+      "type": "explain",
+      "character": {
+        "emotion": "thinking",
+        "say": {
+          "en": "List every outcome once, count them, then count the ones you want.",
+          "ur": "ہر نتیجہ ایک بار لکھیں، گنیں، پھر مطلوبہ نتائج گنیں۔"
+        }
+      },
+      "text": {
+        "en": "The sample space S lists every possible outcome of an experiment: a coin gives {H, T}, a dice gives {1, 2, 3, 4, 5, 6}. Two coins give 2 × 2 = 4 outcomes, three coins 2 × 2 × 2 = 8, and two dice 6 × 6 = 36. The probability of an event E is P(E) = n(E) ÷ n(S): the outcomes you want, over all the outcomes. Outcomes are equally likely when none is favoured, like a fair coin or a fair dice. P = 0 is impossible and P = 1 is certain.",
+        "ur": "نمونی فضا S کسی تجربے کے تمام ممکنہ نتائج لکھتی ہے: سکے کی {H, T}، پانسے کی {1, 2, 3, 4, 5, 6}۔ دو سکوں کے 2 × 2 = 4 نتائج، تین سکوں کے 2 × 2 × 2 = 8، اور دو پانسوں کے 6 × 6 = 36 ہوتے ہیں۔ واقعے E کا احتمال P(E) = n(E) ÷ n(S) ہے: مطلوبہ نتائج تقسیم تمام نتائج۔ نتائج یکساں امکان کے ہوتے ہیں جب کسی کو ترجیح نہ ہو، جیسے منصفانہ سکہ یا منصفانہ پانسہ۔ P = 0 ناممکن اور P = 1 یقینی ہے۔"
+      }
+    },
+    {
+      "id": "q3_three_coins",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Three coins are tossed together. How many outcomes are in the sample space?",
+        "ur": "تین سکے ایک ساتھ اچھالے جاتے ہیں۔ نمونی فضا میں کتنے نتائج ہیں؟"
+      },
+      "answer": 8,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each coin has 2 outcomes: 2 × 2 × 2.",
+        "ur": "ہر سکے کے 2 نتائج ہیں: 2 × 2 × 2"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 × 2 × 2 = 8 outcomes.",
+        "ur": "درست! 2 × 2 × 2 = 8 نتائج"
+      },
+      "feedback_wrong": {
+        "en": "HHH, HHT, HTH, HTT, THH, THT, TTH, TTT: eight.",
+        "ur": "HHH، HHT، HTH، HTT، THH، THT، TTH، TTT: آٹھ"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is 2 + 2 + 2. The coins multiply: 2 × 2 × 2 = 8.",
+            "ur": "6 یعنی 2 + 2 + 2۔ سکوں کے نتائج ضرب ہوتے ہیں: 2 × 2 × 2 = 8"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "answer": 9,
+          "feedback": {
+            "en": "9 is 3 × 3. Each coin has 2 outcomes: 2 × 2 × 2 = 8.",
+            "ur": "9 یعنی 3 × 3۔ ہر سکے کے 2 نتائج ہیں: 2 × 2 × 2 = 8"
+          },
+          "misconception_id": "space_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q4_two_dice",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two fair dice are rolled together. How many outcomes are in the sample space?",
+        "ur": "دو منصفانہ پانسے ایک ساتھ پھینکے جاتے ہیں۔ نمونی فضا میں کتنے نتائج ہیں؟"
+      },
+      "answer": 36,
+      "checker": "numeric",
+      "hint": {
+        "en": "Each dice has 6 outcomes: 6 × 6.",
+        "ur": "ہر پانسے کے 6 نتائج ہیں: 6 × 6"
+      },
+      "feedback_correct": {
+        "en": "Right! 6 × 6 = 36 outcomes.",
+        "ur": "درست! 6 × 6 = 36 نتائج"
+      },
+      "feedback_wrong": {
+        "en": "For each of the 6 faces of the first dice there are 6 faces of the second: 36.",
+        "ur": "پہلے پانسے کے ہر رخ کے لیے دوسرے کے 6 رخ ہیں: 36"
+      },
+      "common_wrong": [
+        {
+          "answer": 12,
+          "feedback": {
+            "en": "12 is 6 + 6. The dice multiply: 6 × 6 = 36.",
+            "ur": "12 یعنی 6 + 6۔ پانسوں کے نتائج ضرب ہوتے ہیں: 6 × 6 = 36"
+          },
+          "misconception_id": "space_miscount"
+        },
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the outcomes of one dice. Two dice: 36.",
+            "ur": "6 ایک پانسے کے نتائج ہیں۔ دو پانسے: 36"
+          },
+          "misconception_id": "space_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q5_dice",
+      "type": "text_check",
+      "question_type": "recall",
+      "prompt": {
+        "en": "A fair dice is rolled once. What is the probability that the number is more than 4? Write it as a fraction.",
+        "ur": "ایک منصفانہ پانسہ ایک بار پھینکا جاتا ہے۔ عدد 4 سے بڑا آنے کا احتمال کیا ہے؟ کسر کی شکل میں لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "1/3",
+      "hint": {
+        "en": "The numbers more than 4 are 5 and 6. Out of 6.",
+        "ur": "4 سے بڑے اعداد 5 اور 6 ہیں۔ کل 6 میں سے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! n(E) = 2 (the numbers 5 and 6), n(S) = 6, so P = 2/6 = 1/3.",
+        "ur": "درست! n(E) = 2 (اعداد 5 اور 6)، n(S) = 6، تو P = 2/6 = 1/3"
+      },
+      "feedback_wrong": {
+        "en": "2 favourable outcomes out of 6: 2/6 = 1/3.",
+        "ur": "6 میں سے 2 مطلوبہ نتائج: 2/6 = 1/3"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/6",
+          "feedback": {
+            "en": "3/6 counts the 4 as well. 'More than 4' starts at 5: 2/6 = 1/3.",
+            "ur": "3/6 میں 4 بھی گنا گیا۔ '4 سے بڑا' 5 سے شروع ہوتا ہے: 2/6 = 1/3"
+          },
+          "misconception_id": "event_miscount"
+        },
+        {
+          "answer": "6/2",
+          "feedback": {
+            "en": "6/2 is upside down. P = n(E) ÷ n(S) = 2/6 = 1/3.",
+            "ur": "6/2 الٹا ہے۔ P = n(E) ÷ n(S) = 2/6 = 1/3"
+          },
+          "misconception_id": "upside_down"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 68.0,
+        "alt": {
+          "en": "6 dice faces in a row, showing 1, 2, 3, 4, 5 and 6 dots.",
+          "ur": "پانسے کے 6 رخ ایک قطار میں، جن پر 1، 2، 3، 4، 5 اور 6 نقطے ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                10.0,
+                14.0
+              ],
+              [
+                50.0,
+                14.0
+              ],
+              [
+                50.0,
+                54.0
+              ],
+              [
+                10.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              30.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                58.0,
+                14.0
+              ],
+              [
+                98.0,
+                14.0
+              ],
+              [
+                98.0,
+                54.0
+              ],
+              [
+                58.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              66.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              89.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                106.0,
+                14.0
+              ],
+              [
+                146.0,
+                14.0
+              ],
+              [
+                146.0,
+                54.0
+              ],
+              [
+                106.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              114.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              126.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              137.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                154.0,
+                14.0
+              ],
+              [
+                194.0,
+                14.0
+              ],
+              [
+                194.0,
+                54.0
+              ],
+              [
+                154.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              162.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              185.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              162.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              185.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                202.0,
+                14.0
+              ],
+              [
+                242.0,
+                14.0
+              ],
+              [
+                242.0,
+                54.0
+              ],
+              [
+                202.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              210.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              222.0,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              210.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              233.2,
+              45.2
+            ]
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                250.0,
+                14.0
+              ],
+              [
+                290.0,
+                14.0
+              ],
+              [
+                290.0,
+                54.0
+              ],
+              [
+                250.0,
+                54.0
+              ]
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              22.8
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              34.0
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              258.8,
+              45.2
+            ]
+          },
+          {
+            "kind": "point",
+            "at": [
+              281.2,
+              45.2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "q6_bag",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bag has 4 red, 3 blue and 5 green balls (R, B, G on the picture). One ball is taken out at random. What is the probability that it is green?",
+        "ur": "ایک تھیلے میں 4 سرخ، 3 نیلی اور 5 سبز گیندیں ہیں (تصویر میں R، B، G)۔ ایک گیند بغیر دیکھے نکالی جاتی ہے۔ اس کے سبز ہونے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "5/12",
+      "hint": {
+        "en": "Green balls over all balls in the bag.",
+        "ur": "سبز گیندیں تقسیم تھیلے کی تمام گیندیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 4 + 3 + 5 = 12 balls, 5 are green: P = 5/12.",
+        "ur": "درست! 4 + 3 + 5 = 12 گیندیں، 5 سبز ہیں: P = 5/12"
+      },
+      "feedback_wrong": {
+        "en": "n(E) = 5 and n(S) = 12.",
+        "ur": "n(E) = 5 اور n(S) = 12"
+      },
+      "common_wrong": [
+        {
+          "answer": "5/7",
+          "feedback": {
+            "en": "5/7 divides by the 7 balls that are not green. Divide by all 12: 5/12.",
+            "ur": "5/7 میں 7 غیر سبز گیندوں سے تقسیم کیا گیا۔ تمام 12 سے تقسیم کریں: 5/12"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "answer": "12/5",
+          "feedback": {
+            "en": "12/5 is upside down. P = 5/12.",
+            "ur": "12/5 الٹا ہے۔ P = 5/12"
+          },
+          "misconception_id": "upside_down"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 136.0,
+        "alt": {
+          "en": "A jar with 12 balls: 5 marked G (green), 4 marked R (red) and 3 marked B (blue). The green balls are shaded.",
+          "ur": "ایک مرتبان جس میں 12 گیندیں ہیں: G والی 5 (سبز)، R والی 4 (سرخ) اور B والی 3 (نیلی)۔ سبز گیندیں رنگین ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                95.0,
+                14.0
+              ],
+              [
+                95.0,
+                26.0
+              ],
+              [
+                77.0,
+                36.0
+              ],
+              [
+                77.0,
+                124.0
+              ],
+              [
+                223.0,
+                124.0
+              ],
+              [
+                223.0,
+                36.0
+              ],
+              [
+                205.0,
+                26.0
+              ],
+              [
+                205.0,
+                14.0
+              ]
+            ]
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              105.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              105.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              105.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              176.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              176.0,
+              105.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              202.0,
+              105.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              202.0,
+              105.0
+            ],
+            "text": "G"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              79.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              79.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              79.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              79.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              79.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              79.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              176.0,
+              79.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              176.0,
+              79.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              53.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              53.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              53.0
+            ],
+            "text": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q7_cards",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "The letters of the word PLANET are written on six cards, one letter on each. One card is picked at random. What is the probability that it is a vowel?",
+        "ur": "لفظ PLANET کے حروف چھ کارڈوں پر لکھے ہیں، ہر کارڈ پر ایک حرف۔ ایک کارڈ بغیر دیکھے اٹھایا جاتا ہے۔ اس کے حرفِ علت ہونے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "1/3",
+      "hint": {
+        "en": "The vowels are A and E. Count all the cards.",
+        "ur": "حروفِ علت A اور E ہیں۔ تمام کارڈ گنیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 2 vowels out of 6 cards: 2/6 = 1/3.",
+        "ur": "درست! 6 کارڈوں میں سے 2 حروفِ علت: 2/6 = 1/3"
+      },
+      "feedback_wrong": {
+        "en": "n(E) = 2 and n(S) = 6.",
+        "ur": "n(E) = 2 اور n(S) = 6"
+      },
+      "common_wrong": [
+        {
+          "answer": "2/4",
+          "feedback": {
+            "en": "2/4 divides by the 4 consonants. Divide by all 6 cards: 2/6 = 1/3.",
+            "ur": "2/4 میں 4 حروفِ صحیح سے تقسیم کیا گیا۔ تمام 6 کارڈوں سے تقسیم کریں: 2/6 = 1/3"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "answer": "4/6",
+          "feedback": {
+            "en": "4/6 counts the consonants. The vowels are A and E: 2/6 = 1/3.",
+            "ur": "4/6 میں حروفِ صحیح گنے گئے۔ حروفِ علت A اور E ہیں: 2/6 = 1/3"
+          },
+          "misconception_id": "event_miscount"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 62.0,
+        "alt": {
+          "en": "6 cards in a row: P, L, A, N, E and T.",
+          "ur": "6 کارڈ ایک قطار میں: P، L، A، N، E اور T۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                51.0,
+                12.0
+              ],
+              [
+                79.0,
+                12.0
+              ],
+              [
+                79.0,
+                50.0
+              ],
+              [
+                51.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              65.0,
+              31.0
+            ],
+            "text": "P"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                85.0,
+                12.0
+              ],
+              [
+                113.0,
+                12.0
+              ],
+              [
+                113.0,
+                50.0
+              ],
+              [
+                85.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              99.0,
+              31.0
+            ],
+            "text": "L"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                119.0,
+                12.0
+              ],
+              [
+                147.0,
+                12.0
+              ],
+              [
+                147.0,
+                50.0
+              ],
+              [
+                119.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              133.0,
+              31.0
+            ],
+            "text": "A"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                153.0,
+                12.0
+              ],
+              [
+                181.0,
+                12.0
+              ],
+              [
+                181.0,
+                50.0
+              ],
+              [
+                153.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              167.0,
+              31.0
+            ],
+            "text": "N"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                187.0,
+                12.0
+              ],
+              [
+                215.0,
+                12.0
+              ],
+              [
+                215.0,
+                50.0
+              ],
+              [
+                187.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              201.0,
+              31.0
+            ],
+            "text": "E"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                221.0,
+                12.0
+              ],
+              [
+                249.0,
+                12.0
+              ],
+              [
+                249.0,
+                50.0
+              ],
+              [
+                221.0,
+                50.0
+              ]
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              235.0,
+              31.0
+            ],
+            "text": "T"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q8_one_head",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two fair coins are tossed. What is the probability of getting exactly one head?",
+        "ur": "دو منصفانہ سکے اچھالے جاتے ہیں۔ ٹھیک ایک چت آنے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "1/2",
+      "hint": {
+        "en": "List the outcomes with exactly one H. There are two ways.",
+        "ur": "ٹھیک ایک H والے نتائج لکھیں۔ دو طریقے ہیں۔"
+      },
+      "feedback_correct": {
+        "en": "Right! HT and TH are two of the four outcomes: 2/4 = 1/2.",
+        "ur": "درست! HT اور TH چار میں سے دو نتائج ہیں: 2/4 = 1/2"
+      },
+      "feedback_wrong": {
+        "en": "n(E) = 2 and n(S) = 4.",
+        "ur": "n(E) = 2 اور n(S) = 4"
+      },
+      "common_wrong": [
+        {
+          "answer": "1/4",
+          "feedback": {
+            "en": "1/4 counts only HT. TH also has exactly one head: 2/4 = 1/2.",
+            "ur": "1/4 میں صرف HT گنا گیا۔ TH میں بھی ٹھیک ایک چت ہے: 2/4 = 1/2"
+          },
+          "misconception_id": "one_way_only"
+        },
+        {
+          "answer": "1/3",
+          "feedback": {
+            "en": "1/3 treats HT and TH as one outcome out of three. There are 4 outcomes: 2/4 = 1/2.",
+            "ur": "1/3 میں HT اور TH کو ایک نتیجہ مان کر تین میں سے لیا گیا۔ نتائج 4 ہیں: 2/4 = 1/2"
+          },
+          "misconception_id": "one_way_only"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 172.0,
+        "alt": {
+          "en": "The table for tossing two coins. The first coin is down the side and the second coin is across the top. The four cells show HH, HT, TH and TT.",
+          "ur": "دو سکے اچھالنے کا جدول۔ پہلا سکہ اطراف میں اور دوسرا سکہ اوپر ہے۔ چار خانوں میں HH، HT، TH اور TT لکھا ہے۔"
+        },
+        "items": [
+          {
+            "kind": "circle",
+            "center": [
+              123.0,
+              26.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              123.0,
+              26.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              26.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              79.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              79.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              79.0
+            ],
+            "text": "H"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              177.0,
+              26.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              177.0,
+              26.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              26.0
+            ],
+            "text": "T"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              133.0
+            ],
+            "radius": 16.0
+          },
+          {
+            "kind": "circle",
+            "center": [
+              70.0,
+              133.0
+            ],
+            "radius": 12.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              70.0,
+              133.0
+            ],
+            "text": "T"
+          },
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                96.0,
+                52.0
+              ],
+              [
+                204.0,
+                52.0
+              ],
+              [
+                204.0,
+                160.0
+              ],
+              [
+                96.0,
+                160.0
+              ]
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              150.0,
+              52.0
+            ],
+            "to": [
+              150.0,
+              160.0
+            ]
+          },
+          {
+            "kind": "line",
+            "from": [
+              96.0,
+              106.0
+            ],
+            "to": [
+              204.0,
+              106.0
+            ]
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              79.0
+            ],
+            "text": "HH"
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              79.0
+            ],
+            "text": "HT"
+          },
+          {
+            "kind": "label",
+            "at": [
+              123.0,
+              133.0
+            ],
+            "text": "TH"
+          },
+          {
+            "kind": "label",
+            "at": [
+              177.0,
+              133.0
+            ],
+            "text": "TT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q9_equal",
+      "type": "choice",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Which of these has equally likely outcomes?",
+        "ur": "ان میں سے کس کے نتائج یکساں امکان کے ہیں؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "taking a ball from a bag with 1 red ball and 9 blue balls and looking at the colour",
+            "ur": "1 سرخ اور 9 نیلی گیندوں والے تھیلے سے ایک گیند نکال کر رنگ دیکھنا"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "Blue is far more likely than red, so the colours are not equally likely.",
+            "ur": "نیلی سرخ سے کہیں زیادہ ممکن ہے، تو رنگ یکساں امکان کے نہیں۔"
+          },
+          "misconception_id": "equally_likely_mix"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "rolling a fair dice and looking at the number",
+            "ur": "منصفانہ پانسہ پھینک کر عدد دیکھنا"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! Each face is as likely as any other.",
+            "ur": "جی ہاں! ہر رخ دوسرے رخ جتنا ممکن ہے۔"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "a bag with 2 red and 6 blue balls: red or blue",
+            "ur": "2 سرخ اور 6 نیلی گیندوں والا تھیلا: سرخ یا نیلی"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "There are three times as many blue balls, so the colours are not equally likely.",
+            "ur": "نیلی گیندیں تین گنا ہیں، تو رنگ یکساں امکان کے نہیں۔"
+          },
+          "misconception_id": "equally_likely_mix"
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "a spinner where one part takes up half the circle",
+            "ur": "ایک چکر جس میں ایک حصہ آدھا دائرہ گھیرتا ہے"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "The big part is more likely, so the parts are not equally likely.",
+            "ur": "بڑا حصہ زیادہ ممکن ہے، تو حصے یکساں امکان کے نہیں۔"
+          },
+          "misconception_id": "equally_likely_mix"
+        }
+      ]
+    },
+    {
+      "id": "q10_sum7",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "Two fair dice are rolled. What is the probability that the sum of the two numbers is 7? Write it as a fraction.",
+        "ur": "دو منصفانہ پانسے پھینکے جاتے ہیں۔ دونوں اعداد کا مجموعہ 7 آنے کا احتمال کیا ہے؟ کسر کی شکل میں لکھیں۔"
+      },
+      "checker": "fraction",
+      "expected": "1/6",
+      "hint": {
+        "en": "List the pairs that add to 7: (1,6), (2,5), ... Out of 36.",
+        "ur": "7 بنانے والے جوڑے لکھیں: (1,6)، (2,5)، ... کل 36 میں سے۔"
+      },
+      "feedback_correct": {
+        "en": "Right! The pairs are (1,6), (2,5), (3,4), (4,3), (5,2), (6,1): 6 of 36, so 6/36 = 1/6.",
+        "ur": "درست! جوڑے (1,6)، (2,5)، (3,4)، (4,3)، (5,2)، (6,1) ہیں: 36 میں سے 6، تو 6/36 = 1/6"
+      },
+      "feedback_wrong": {
+        "en": "n(E) = 6 and n(S) = 36.",
+        "ur": "n(E) = 6 اور n(S) = 36"
+      },
+      "common_wrong": [
+        {
+          "answer": "3/36",
+          "feedback": {
+            "en": "3/36 counts only (1,6), (2,5), (3,4). (6,1), (5,2) and (4,3) are different outcomes too: 6/36 = 1/6.",
+            "ur": "3/36 میں صرف (1,6)، (2,5)، (3,4) گنے گئے۔ (6,1)، (5,2) اور (4,3) بھی الگ نتائج ہیں: 6/36 = 1/6"
+          },
+          "misconception_id": "one_way_only"
+        },
+        {
+          "answer": "1/12",
+          "feedback": {
+            "en": "1/12 uses 12 outcomes (6 + 6). Two dice have 36 outcomes: 6/36 = 1/6.",
+            "ur": "1/12 میں 12 نتائج (6 + 6) لیے گئے۔ دو پانسوں کے 36 نتائج ہیں: 6/36 = 1/6"
+          },
+          "misconception_id": "space_miscount"
+        }
+      ]
+    },
+    {
+      "id": "q11_raffle",
+      "type": "text_check",
+      "question_type": "apply",
+      "prompt": {
+        "en": "In a raffle 40 tickets are sold, and Sana bought 5 of them. One ticket is drawn at random. What is the probability that Sana wins?",
+        "ur": "ایک لکی ڈرا میں 40 ٹکٹ بکتے ہیں، اور ثناء نے ان میں سے 5 خریدے۔ ایک ٹکٹ بغیر دیکھے نکالا جاتا ہے۔ ثناء کے جیتنے کا احتمال کیا ہے؟"
+      },
+      "checker": "fraction",
+      "expected": "1/8",
+      "hint": {
+        "en": "Her tickets over all the tickets.",
+        "ur": "اس کے ٹکٹ تقسیم تمام ٹکٹ۔"
+      },
+      "feedback_correct": {
+        "en": "Right! 5 of the 40 tickets: 5/40 = 1/8.",
+        "ur": "درست! 40 ٹکٹوں میں سے 5: 5/40 = 1/8"
+      },
+      "feedback_wrong": {
+        "en": "5 ÷ 5 = 1 and 40 ÷ 5 = 8.",
+        "ur": "5 ÷ 5 = 1 اور 40 ÷ 5 = 8"
+      },
+      "common_wrong": [
+        {
+          "answer": "5/35",
+          "feedback": {
+            "en": "5/35 compares her tickets with the 35 other tickets. Divide by all 40: 5/40 = 1/8.",
+            "ur": "5/35 میں اس کے ٹکٹوں کا باقی 35 سے موازنہ کیا گیا۔ تمام 40 سے تقسیم کریں: 5/40 = 1/8"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "answer": "40/5",
+          "feedback": {
+            "en": "40/5 is upside down. P = 5/40 = 1/8.",
+            "ur": "40/5 الٹا ہے۔ P = 5/40 = 1/8"
+          },
+          "misconception_id": "upside_down"
+        }
+      ]
+    },
+    {
+      "id": "q12_how_many",
+      "type": "number",
+      "question_type": "apply",
+      "prompt": {
+        "en": "A bag has 24 marbles. The probability of taking out a green marble at random is 1/6. How many green marbles are in the bag?",
+        "ur": "ایک تھیلے میں 24 کنچے ہیں۔ بغیر دیکھے سبز کنچہ نکلنے کا احتمال 1/6 ہے۔ تھیلے میں کتنے سبز کنچے ہیں؟"
+      },
+      "answer": 4,
+      "checker": "numeric",
+      "hint": {
+        "en": "P = green ÷ 24, so green = 1/6 of 24.",
+        "ur": "P = سبز ÷ 24، تو سبز = 24 کا 1/6"
+      },
+      "feedback_correct": {
+        "en": "Right! 1/6 of 24 is 24 ÷ 6 = 4 green marbles.",
+        "ur": "درست! 24 کا 1/6 یعنی 24 ÷ 6 = 4 سبز کنچے"
+      },
+      "feedback_wrong": {
+        "en": "24 ÷ 6 = 4, and 4/24 = 1/6.",
+        "ur": "24 ÷ 6 = 4، اور 4/24 = 1/6"
+      },
+      "common_wrong": [
+        {
+          "answer": 6,
+          "feedback": {
+            "en": "6 is the bottom of the fraction. Green is 1/6 of 24: 4.",
+            "ur": "6 کسر کا نچلا عدد ہے۔ سبز 24 کا 1/6 ہے: 4"
+          },
+          "misconception_id": "upside_down"
+        },
+        {
+          "answer": 18,
+          "feedback": {
+            "en": "18 is 24 − 6. Green is 1/6 of 24: 24 ÷ 6 = 4.",
+            "ur": "18 یعنی 24 − 6۔ سبز 24 کا 1/6 ہے: 24 ÷ 6 = 4"
+          },
+          "misconception_id": "part_to_part"
+        }
+      ]
+    },
+    {
+      "id": "q13_find_error",
+      "type": "choice",
+      "question_type": "find_error",
+      "prompt": {
+        "en": "A bag has 3 red and 5 blue balls. Faisal says: the probability of red is 3/5. What went wrong?",
+        "ur": "ایک تھیلے میں 3 سرخ اور 5 نیلی گیندیں ہیں۔ فیصل کہتا ہے: سرخ کا احتمال 3/5 ہے۔ کیا غلطی ہوئی؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "Nothing. 3/5 is right.",
+            "ur": "کوئی غلطی نہیں۔ 3/5 ٹھیک ہے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "3/5 compares red with blue. Probability compares red with all the balls.",
+            "ur": "3/5 سرخ کا نیلی سے موازنہ ہے۔ احتمال سرخ کا تمام گیندوں سے موازنہ ہے۔"
+          },
+          "misconception_id": "part_to_part"
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "He divided by the 5 blue balls. He should divide by all 8 balls: P(red) = 3/8.",
+            "ur": "اس نے 5 نیلی گیندوں سے تقسیم کیا۔ اسے تمام 8 گیندوں سے تقسیم کرنا چاہیے: P(سرخ) = 3/8"
+          },
+          "correct": true,
+          "feedback": {
+            "en": "Yes! The bottom number is all the outcomes: 3 + 5 = 8.",
+            "ur": "جی ہاں! نچلا عدد تمام نتائج ہیں: 3 + 5 = 8"
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "He should write 5/3.",
+            "ur": "اسے 5/3 لکھنا چاہیے۔"
+          },
+          "correct": false,
+          "feedback": {
+            "en": "5/3 is more than 1, and no probability is more than 1.",
+            "ur": "5/3، 1 سے بڑا ہے، اور کوئی احتمال 1 سے بڑا نہیں ہوتا۔"
+          },
+          "misconception_id": "upside_down"
+        }
+      ],
+      "figure": {
+        "width": 300.0,
+        "height": 110.0,
+        "alt": {
+          "en": "A jar with 8 balls: 3 marked R (red) and 5 marked B (blue). The red balls are shaded.",
+          "ur": "ایک مرتبان جس میں 8 گیندیں ہیں: R والی 3 (سرخ) اور B والی 5 (نیلی)۔ سرخ گیندیں رنگین ہیں۔"
+        },
+        "items": [
+          {
+            "kind": "polygon",
+            "points": [
+              [
+                95.0,
+                14.0
+              ],
+              [
+                95.0,
+                26.0
+              ],
+              [
+                77.0,
+                36.0
+              ],
+              [
+                77.0,
+                98.0
+              ],
+              [
+                223.0,
+                98.0
+              ],
+              [
+                223.0,
+                36.0
+              ],
+              [
+                205.0,
+                26.0
+              ],
+              [
+                205.0,
+                14.0
+              ]
+            ]
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              79.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              79.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              79.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              79.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              79.0
+            ],
+            "radius": 11.0,
+            "fill": true
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              79.0
+            ],
+            "text": "R"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              98.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              98.0,
+              53.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              124.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              124.0,
+              53.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              150.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              150.0,
+              53.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              176.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              176.0,
+              53.0
+            ],
+            "text": "B"
+          },
+          {
+            "kind": "circle",
+            "center": [
+              202.0,
+              53.0
+            ],
+            "radius": 11.0
+          },
+          {
+            "kind": "label",
+            "at": [
+              202.0,
+              53.0
+            ],
+            "text": "B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_summary",
+      "type": "summary",
+      "character": {
+        "emotion": "celebrating",
+        "say": {
+          "en": "Well done! You can find the chance of an event.",
+          "ur": "شاباش! آپ کسی واقعے کا امکان نکال سکتے ہیں۔"
+        }
+      },
+      "text": {
+        "en": "List the sample space first: one coin 2 outcomes, two coins 4, three coins 8, one dice 6, two dice 36. P(E) = n(E) ÷ n(S), the outcomes you want over all the outcomes, never over the other outcomes. Count every way: HT and TH are different. A fair coin or dice has equally likely outcomes; a bag with unequal numbers of colours does not. P = 0 is impossible, P = 1 is certain.",
+        "ur": "پہلے نمونی فضا لکھیں: ایک سکے کے 2 نتائج، دو سکوں کے 4، تین سکوں کے 8، ایک پانسے کے 6، دو پانسوں کے 36۔ P(E) = n(E) ÷ n(S)، یعنی مطلوبہ نتائج تقسیم تمام نتائج، کبھی باقی نتائج سے نہیں۔ ہر طریقہ گنیں: HT اور TH الگ ہیں۔ منصفانہ سکے یا پانسے کے نتائج یکساں امکان کے ہوتے ہیں؛ مختلف تعداد کے رنگوں والے تھیلے کے نہیں۔ P = 0 ناممکن، P = 1 یقینی ہے۔"
+      },
+      "points": [
+        {
+          "en": "P(E) = n(E) ÷ n(S).",
+          "ur": "P(E) = n(E) ÷ n(S)"
+        },
+        {
+          "en": "Divide by all the outcomes, not the others.",
+          "ur": "تمام نتائج سے تقسیم کریں، باقی سے نہیں۔"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "r_impossible",
+      "type": "apply",
+      "step": {
+        "id": "r_impossible",
+        "type": "text_check",
+        "prompt": {
+          "en": "A fair dice is rolled once. What is the probability that the number is 7? Write it as a fraction or a number.",
+          "ur": "ایک منصفانہ پانسہ ایک بار پھینکا جاتا ہے۔ عدد 7 آنے کا احتمال کیا ہے؟ کسر یا عدد کی شکل میں لکھیں۔"
+        },
+        "checker": "fraction",
+        "expected": "0",
+        "hint": {
+          "en": "Is there any face with 7?",
+          "ur": "کیا کسی رخ پر 7 ہے؟"
+        },
+        "feedback_correct": {
+          "en": "Right! No face shows 7, so n(E) = 0 and P = 0/6 = 0. It is impossible.",
+          "ur": "درست! کسی رخ پر 7 نہیں، تو n(E) = 0 اور P = 0/6 = 0۔ یہ ناممکن ہے۔"
+        },
+        "feedback_wrong": {
+          "en": "0 favourable outcomes: P = 0.",
+          "ur": "0 مطلوبہ نتائج: P = 0"
+        },
+        "common_wrong": [
+          {
+            "answer": "1/6",
+            "feedback": {
+              "en": "1/6 would be for one face, like 6. There is no face with 7: 0.",
+              "ur": "1/6 ایک رخ کا ہوتا، جیسے 6 کا۔ 7 والا کوئی رخ نہیں: 0"
+            },
+            "misconception_id": "event_miscount"
+          }
+        ]
+      },
+      "skill": "maths.probability.ex_12_1"
+    },
+    {
+      "id": "r_blue",
+      "type": "apply",
+      "step": {
+        "id": "r_blue",
+        "type": "text_check",
+        "prompt": {
+          "en": "A bag has 5 red, 3 blue and 2 green balls. One ball is taken out at random. What is the probability that it is blue?",
+          "ur": "ایک تھیلے میں 5 سرخ، 3 نیلی اور 2 سبز گیندیں ہیں۔ ایک گیند بغیر دیکھے نکالی جاتی ہے۔ اس کے نیلی ہونے کا احتمال کیا ہے؟"
+        },
+        "checker": "fraction",
+        "expected": "3/10",
+        "hint": {
+          "en": "Blue balls over all balls.",
+          "ur": "نیلی گیندیں تقسیم تمام گیندیں۔"
+        },
+        "feedback_correct": {
+          "en": "Right! 5 + 3 + 2 = 10 balls, 3 are blue: 3/10.",
+          "ur": "درست! 5 + 3 + 2 = 10 گیندیں، 3 نیلی ہیں: 3/10"
+        },
+        "feedback_wrong": {
+          "en": "n(E) = 3 and n(S) = 10.",
+          "ur": "n(E) = 3 اور n(S) = 10"
+        },
+        "common_wrong": [
+          {
+            "answer": "3/7",
+            "feedback": {
+              "en": "3/7 divides by the 7 balls that are not blue. Divide by all 10: 3/10.",
+              "ur": "3/7 میں 7 غیر نیلی گیندوں سے تقسیم کیا گیا۔ تمام 10 سے تقسیم کریں: 3/10"
+            },
+            "misconception_id": "part_to_part"
+          }
+        ]
+      },
+      "skill": "maths.probability.ex_12_1"
+    }
+  ],
+  "teacher_notes": [
+    "A practice set to use next to Exercise 12.1 of the PCTB Mathematics 6 book. Only the exercise number and the kinds of question come from the book; every question, number and story here is new, because the book may not be copied.",
+    "Covers the sample space of one, two and three coins and of two dice (q1 to q4, qb_find_error), the probability of an event with a dice, a bag of balls and letter cards (q5 to q7, qb_dice, qb_cards, r_blue), two coins and two dice (q8, q10), equally likely outcomes (q9), a raffle word problem and working back from a probability (q11, q12), P = 0 (r_impossible) and the common mistake of dividing by the other outcomes (q13).",
+    "Each wrong answer is a real mistake: adding instead of multiplying for two coins or two dice, writing the fraction upside down, dividing by the other outcomes, counting only one way (HT but not TH), and including the boundary number in 'more than 4'.",
+    "Typed probabilities use the fraction checker without 'simplest form', as in the existing probability lessons, so 2/6, 1/3 and 0.5-style decimals of the same value are all right. Figure labels are single letters or numbers; the step text says what they stand for.",
+    "Urdu terms to check: تجربہ, نتیجہ, نمونی فضا, واقعہ, احتمال, یکساں امکان, منصفانہ سکہ and لکی ڈرا, all as in the existing Probability lessons. حرفِ علت (vowel) and حرفِ صحیح (consonant), چت / پٹ (heads / tails) and کنچے (marbles) are everyday words used here, and a teacher should confirm them.",
+    "The numbers were worked out in content/sources/g6-maths-17/exercise_12_1.py; edit that script, not this file."
+  ],
+  "review": {
+    "status": "draft",
+    "reviewed_by": null,
+    "date": null
+  }
+}
