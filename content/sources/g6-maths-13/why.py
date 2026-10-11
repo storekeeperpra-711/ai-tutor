@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-13-order-of-operations": {
+        "define": T(
+            "Definition: the order of operations is the rule for which part of a sum to do first: multiplication and division first, then addition and subtraction, each from left to right. So 3 + 4 × 5 = 3 + 20 = 23.",
+            "تعریف: عملیات کی ترتیب وہ قاعدہ ہے جو بتاتا ہے کہ سوال کا کون سا حصہ پہلے کرنا ہے: پہلے ضرب اور تقسیم، پھر جمع اور تفریق، ہر ایک بائیں سے دائیں۔ یوں 3 + 4 × 5 = 3 + 20 = 23۔",
+        ),
         "say": T(
             "Bilal says 3 + 4 × 5 is 35. Sana says 23. Who is right?",
             "بلال کہتا ہے 3 + 4 × 5 کا جواب 35 ہے۔ ثنا کہتی ہے 23۔ کون درست ہے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-13-brackets": {
+        "define": T(
+            "Definition: brackets ( ) show the part of a sum to do first. BODMAS reminds us the order: brackets first, then division and multiplication, then addition and subtraction. So (2 + 3) × 10 = 5 × 10 = 50.",
+            "تعریف: قوسین ( ) سوال کا وہ حصہ بتاتی ہیں جو پہلے کرنا ہے۔ BODMAS ترتیب یاد دلاتا ہے: پہلے قوسین، پھر تقسیم اور ضرب، پھر جمع اور تفریق۔ یوں (2 + 3) × 10 = 5 × 10 = 50۔",
+        ),
         "say": T(
             "I buy 2 notebooks and 3 pens, each Rs 10. How do I write it?",
             "میں 2 کاپیاں اور 3 قلم خریدتا ہوں، ہر ایک 10 روپے کا۔ اسے کیسے لکھوں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-13-fractions-decimals": {
+        "define": T(
+            "Definition: whole numbers, fractions and decimals can all be used in one sum, with the same order of operations. The word \"of\" means multiply: 1/2 of 0.8 = 1/2 × 0.8 = 0.4.",
+            "تعریف: پورے اعداد، کسریں اور اعشاریہ ایک ہی سوال میں آ سکتے ہیں، اور عملیات کی ترتیب وہی رہتی ہے۔ لفظ \"کا\" کا مطلب ضرب ہے: 0.8 کا 1/2 = 1/2 × 0.8 = 0.4۔",
+        ),
         "say": T(
             "Is 3/4 of Rs 32 the same as 0.75 × 32? Do the same rules work?",
             "کیا 32 روپے کا 3/4 اور 0.75 × 32 ایک ہی ہیں؟ کیا وہی اصول چلتے ہیں؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-13-estimation": {
+        "define": T(
+            "Definition: to estimate is to find an answer close to the exact one by rounding the numbers to easy ones first. For example, 298 + 52 is about 300 + 50 = 350.",
+            "تعریف: اندازہ لگانا یعنی اعداد کو پہلے آسان اعداد کے قریب لا کر ایسا جواب نکالنا جو ٹھیک جواب کے قریب ہو۔ مثلاً 298 + 52 تقریباً 300 + 50 = 350 ہے۔",
+        ),
         "say": T(
             "Do I always need the exact answer, or is \"about\" enough?",
             "کیا مجھے ہمیشہ بالکل ٹھیک جواب چاہیے، یا \"تقریباً\" کافی ہے؟",

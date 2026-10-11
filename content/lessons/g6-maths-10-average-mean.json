@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-average-mean",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -631,6 +631,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the mean, or average, is the total of the values divided by how many values there are. Mean = total ÷ number of values. For 2, 4 and 9: (2 + 4 + 9) ÷ 3 = 5.",
+        "ur": "تعریف: اوسط تمام قیمتوں کے کل کو قیمتوں کی تعداد سے تقسیم کرنے سے ملتی ہے۔ اوسط = کل ÷ قیمتوں کی تعداد۔ مثلاً 2، 4 اور 9 کے لیے: (2 + 4 + 9) ÷ 3 = 5۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

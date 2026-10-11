@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-percentage-change",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -370,6 +370,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: percentage change is the change divided by the original amount, times 100. If the new amount is bigger it is an increase, if smaller a decrease. From 50 to 60: (60 − 50) ÷ 50 × 100 = 20% increase.",
+        "ur": "تعریف: فیصد تبدیلی وہ تبدیلی ہے جسے اصل مقدار سے تقسیم کر کے 100 سے ضرب دیں۔ نئی مقدار بڑی ہو تو اضافہ ہے، چھوٹی ہو تو کمی۔ 50 سے 60: (60 − 50) ÷ 50 × 100 = 20% اضافہ۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

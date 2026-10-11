@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-mode-and-range",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -839,6 +839,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the mode is the value that appears most often. The range is the largest value minus the smallest. For 2, 3, 3, 7 the mode is 3 and the range is 7 − 2 = 5.",
+        "ur": "تعریف: موڈ وہ قیمت ہے جو سب سے زیادہ بار آئے۔ رینج سب سے بڑی قیمت منفی سب سے چھوٹی قیمت ہے۔ 2، 3، 3، 7 میں موڈ 3 ہے اور رینج 7 − 2 = 5 ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

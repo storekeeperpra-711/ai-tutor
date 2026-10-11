@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-11-what-is-a-percent": {
+        "define": T(
+            "Definition: a percent is a fraction whose bottom number is 100. The sign % means \"out of 100\". So 25% = 25/100 = 1/4.",
+            "تعریف: فیصد ایسی کسر ہے جس کا نیچے والا عدد 100 ہو۔ نشان % کا مطلب ہے \"100 میں سے\"۔ یوں 25% = 25/100 = 1/4۔",
+        ),
         "say": T(
             "A shop says \"sale, 20% off\". What does 20% even mean?",
             "دکان کہتی ہے \"سیل، 20% رعایت\"۔ 20% کا مطلب کیا ہے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-11-percents-fractions-decimals": {
+        "define": T(
+            "Definition: a fraction, a decimal and a percent can be three names for the same amount. To get the percent, make the bottom 100, or multiply the decimal by 100: 1/2 = 50/100 = 0.5 = 50%.",
+            "تعریف: کسر، اعشاریہ اور فیصد ایک ہی مقدار کے تین نام ہو سکتے ہیں۔ فیصد بنانے کے لیے نیچے والا عدد 100 کریں، یا اعشاریہ کو 100 سے ضرب دیں: 1/2 = 50/100 = 0.5 = 50%۔",
+        ),
         "say": T(
             "A shop says half off, another says 0.5 off, another 50% off. Same?",
             "ایک دکان کہتی ہے آدھی قیمت، دوسری 0.5 رعایت، تیسری 50% رعایت۔ کیا سب ایک ہیں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-11-percent-of-an-amount": {
+        "define": T(
+            "Definition: to find a percent of an amount, multiply the amount by the percent and divide by 100. So 25% of 80 = 80 × 25 ÷ 100 = 20.",
+            "تعریف: کسی مقدار کا فیصد نکالنے کے لیے مقدار کو فیصد سے ضرب دیں اور 100 سے تقسیم کریں۔ یوں 80 کا 25% = 80 × 25 ÷ 100 = 20۔",
+        ),
         "say": T(
             "A shirt costs Rs 800 and is 25% off. How much do I save?",
             "قمیص 800 روپے کی ہے اور 25% رعایت ہے۔ مجھے کتنی بچت ہوگی؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-11-finding-the-percentage": {
+        "define": T(
+            "Definition: to write a part as a percent of the whole, divide the part by the whole and multiply by 100. Percent = part ÷ whole × 100. So 9 out of 20 is 9 ÷ 20 × 100 = 45%.",
+            "تعریف: حصے کو کل کے فیصد کے طور پر لکھنے کے لیے حصے کو کل سے تقسیم کریں اور 100 سے ضرب دیں۔ فیصد = حصہ ÷ کل × 100۔ یوں 20 میں سے 9 یعنی 9 ÷ 20 × 100 = 45%۔",
+        ),
         "say": T(
             "Ali got 18 out of 20. Is that good? What percent is it?",
             "علی کے 20 میں سے 18 نمبر آئے۔ کیا یہ اچھے ہیں؟ یہ کتنے فیصد ہے؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-11-percentage-change": {
+        "define": T(
+            "Definition: percentage change is the change divided by the original amount, times 100. If the new amount is bigger it is an increase, if smaller a decrease. From 50 to 60: (60 − 50) ÷ 50 × 100 = 20% increase.",
+            "تعریف: فیصد تبدیلی وہ تبدیلی ہے جسے اصل مقدار سے تقسیم کر کے 100 سے ضرب دیں۔ نئی مقدار بڑی ہو تو اضافہ ہے، چھوٹی ہو تو کمی۔ 50 سے 60: (60 − 50) ÷ 50 × 100 = 20% اضافہ۔",
+        ),
         "say": T(
             "A bus fare goes from Rs 40 to Rs 50. Is that a big rise?",
             "بس کا کرایہ 40 روپے سے 50 روپے ہو گیا۔ کیا یہ بڑا اضافہ ہے؟",

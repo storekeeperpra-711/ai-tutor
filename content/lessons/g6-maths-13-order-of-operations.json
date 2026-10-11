@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-13-order-of-operations",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -374,6 +374,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the order of operations is the rule for which part of a sum to do first: multiplication and division first, then addition and subtraction, each from left to right. So 3 + 4 × 5 = 3 + 20 = 23.",
+        "ur": "تعریف: عملیات کی ترتیب وہ قاعدہ ہے جو بتاتا ہے کہ سوال کا کون سا حصہ پہلے کرنا ہے: پہلے ضرب اور تقسیم، پھر جمع اور تفریق، ہر ایک بائیں سے دائیں۔ یوں 3 + 4 × 5 = 3 + 20 = 23۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-13-estimation",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -607,6 +607,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: to estimate is to find an answer close to the exact one by rounding the numbers to easy ones first. For example, 298 + 52 is about 300 + 50 = 350.",
+        "ur": "تعریف: اندازہ لگانا یعنی اعداد کو پہلے آسان اعداد کے قریب لا کر ایسا جواب نکالنا جو ٹھیک جواب کے قریب ہو۔ مثلاً 298 + 52 تقریباً 300 + 50 = 350 ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

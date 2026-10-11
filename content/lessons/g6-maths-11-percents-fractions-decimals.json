@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-percents-fractions-decimals",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -514,6 +514,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a fraction, a decimal and a percent can be three names for the same amount. To get the percent, make the bottom 100, or multiply the decimal by 100: 1/2 = 50/100 = 0.5 = 50%.",
+        "ur": "تعریف: کسر، اعشاریہ اور فیصد ایک ہی مقدار کے تین نام ہو سکتے ہیں۔ فیصد بنانے کے لیے نیچے والا عدد 100 کریں، یا اعشاریہ کو 100 سے ضرب دیں: 1/2 = 50/100 = 0.5 = 50%۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-percent-of-an-amount",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -627,6 +627,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: to find a percent of an amount, multiply the amount by the percent and divide by 100. So 25% of 80 = 80 × 25 ÷ 100 = 20.",
+        "ur": "تعریف: کسی مقدار کا فیصد نکالنے کے لیے مقدار کو فیصد سے ضرب دیں اور 100 سے تقسیم کریں۔ یوں 80 کا 25% = 80 × 25 ÷ 100 = 20۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
