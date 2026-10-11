@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-subtracting-integers",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -550,6 +550,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: subtracting an integer means adding its opposite: a − b = a + (−b). For example, 5 − (−2) = 5 + 2 = 7, and 5 − 8 = 5 + (−8) = −3.",
+        "ur": "تعریف: کسی صحیح عدد کو منفی کرنا اس کے الٹ کو جمع کرنا ہے: a − b = a + (−b)۔ مثلاً 5 − (−2) = 5 + 2 = 7، اور 5 − 8 = 5 + (−8) = −3۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
