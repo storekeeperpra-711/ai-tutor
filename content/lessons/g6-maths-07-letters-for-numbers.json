@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-letters-for-numbers",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -847,6 +847,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a variable is a letter that stands for a number that can change or is not known yet. A constant is a number that never changes. In n + 5, n is the variable and 5 is the constant.",
+        "ur": "تعریف: متغیر وہ حرف ہے جو کسی ایسے عدد کی جگہ لکھا جاتا ہے جو بدل سکتا ہو یا ابھی معلوم نہ ہو۔ مستقل وہ عدد ہے جو کبھی نہیں بدلتا۔ n + 5 میں n متغیر ہے اور 5 مستقل۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-09-types-of-angles": {
+        "define": T(
+            "Definition: an angle is the amount of turn between two arms that meet at a point, measured in degrees (°). Acute is less than 90°, right is exactly 90°, obtuse is between 90° and 180°, straight is 180°, and reflex is between 180° and 360°.",
+            "تعریف: زاویہ ایک نقطے پر ملنے والے دو بازوؤں کے بیچ گھماؤ کی مقدار ہے، جسے درجوں (°) میں ناپتے ہیں۔ حادہ زاویہ 90° سے کم، قائمہ زاویہ ٹھیک 90°، منفرجہ زاویہ 90° اور 180° کے بیچ، مستقیم زاویہ 180°، اور منعکس زاویہ 180° اور 360° کے بیچ ہوتا ہے۔",
+        ),
         "say": T(
             "How do we say how much a door has opened?",
             "ہم یہ کیسے بتائیں کہ دروازہ کتنا کھلا ہے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-09-complementary-supplementary": {
+        "define": T(
+            "Definition: two angles are complementary if they add up to 90°, and supplementary if they add up to 180°. For example, 70° and 20° are complementary, and 110° and 70° are supplementary.",
+            "تعریف: دو زاویے متمم ہیں اگر ان کا مجموعہ 90° ہو، اور مکمل ہیں اگر ان کا مجموعہ 180° ہو۔ مثلاً 70° اور 20° متمم زاویے ہیں، اور 110° اور 70° مکمل زاویے ہیں۔",
+        ),
         "say": T(
             "A ladder leans on a wall. How do we find the missing angle?",
             "سیڑھی دیوار سے لگی ہے۔ ہم گمشدہ زاویہ کیسے نکالیں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-09-angles-on-a-line": {
+        "define": T(
+            "Definition: angles on a straight line add up to 180°, and angles all around a point add up to 360°. If one angle on a line is 110°, the other is 180° − 110° = 70°.",
+            "تعریف: سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے، اور ایک نقطے کے گرد پورے چکر کے زاویوں کا مجموعہ 360°۔ لکیر پر ایک زاویہ 110° ہو تو دوسرا 180° − 110° = 70° ہے۔",
+        ),
         "say": T(
             "Can we find an angle without measuring it?",
             "کیا ہم ناپے بغیر زاویہ نکال سکتے ہیں؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-09-angles-in-a-triangle": {
+        "define": T(
+            "Definition: the three angles of any triangle add up to 180°. If two angles are 50° and 60°, the third is 180° − 50° − 60° = 70°.",
+            "تعریف: کسی بھی مثلث کے تینوں زاویوں کا مجموعہ 180° ہوتا ہے۔ اگر دو زاویے 50° اور 60° ہوں تو تیسرا 180° − 50° − 60° = 70° ہے۔",
+        ),
         "say": T(
             "Why is a triangle roof so strong, and what are its angles?",
             "مثلث کی چھت اتنی مضبوط کیوں ہوتی ہے، اور اس کے زاویے کیا ہیں؟",

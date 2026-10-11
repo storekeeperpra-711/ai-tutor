@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-07-letters-for-numbers": {
+        "define": T(
+            "Definition: a variable is a letter that stands for a number that can change or is not known yet. A constant is a number that never changes. In n + 5, n is the variable and 5 is the constant.",
+            "تعریف: متغیر وہ حرف ہے جو کسی ایسے عدد کی جگہ لکھا جاتا ہے جو بدل سکتا ہو یا ابھی معلوم نہ ہو۔ مستقل وہ عدد ہے جو کبھی نہیں بدلتا۔ n + 5 میں n متغیر ہے اور 5 مستقل۔",
+        ),
         "say": T(
             "Why do mathematicians write letters instead of numbers?",
             "ریاضی دان اعداد کی جگہ حروف کیوں لکھتے ہیں؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-07-terms-and-coefficients": {
+        "define": T(
+            "Definition: an expression is made of terms joined by + or −. In 5x + 3y − 7 the terms are 5x, 3y and −7. The number multiplying a letter is its coefficient (5 in 5x), and a term with no letter is a constant (−7).",
+            "تعریف: عبارت ارکان سے بنتی ہے جو + یا − سے جڑے ہوتے ہیں۔ 5x + 3y − 7 میں ارکان 5x، 3y اور −7 ہیں۔ حرف کو ضرب دینے والا عدد اس کا عددی سر ہے (5x میں 5)، اور بغیر حرف والا رکن مستقل ہے (−7)۔",
+        ),
         "say": T(
             "Why do the parts of 5x + 3y − 7 have special names?",
             "5x + 3y − 7 کے حصوں کے خاص نام کیوں ہیں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-07-like-terms": {
+        "define": T(
+            "Definition: like terms have exactly the same letter part. 3a and 2a are like terms, so 3a + 2a = 5a. 3a and 2b are unlike terms, and they cannot be joined.",
+            "تعریف: یکساں ارکان کا حرف والا حصہ بالکل ایک جیسا ہوتا ہے۔ 3a اور 2a یکساں ارکان ہیں، اس لیے 3a + 2a = 5a۔ 3a اور 2b غیر یکساں ارکان ہیں اور انہیں ملایا نہیں جا سکتا۔",
+        ),
         "say": T(
             "Can I add 3 apples and 2 mangoes to get 5 of something?",
             "کیا میں 3 سیب اور 2 آم جمع کر کے 5 کچھ بنا سکتا ہوں؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-07-adding-subtracting-expressions": {
+        "define": T(
+            "Definition: to add expressions, join their like terms: (3r + 2f) + (4r + f) = 7r + 3f. To subtract a bracket, change the sign of every term inside it: 5a − (2a − 3) = 5a − 2a + 3 = 3a + 3.",
+            "تعریف: عبارتیں جمع کرنے کے لیے ان کے یکساں ارکان ملائیں: (3r + 2f) + (4r + f) = 7r + 3f۔ بریکٹ تفریق کرنے کے لیے اس کے اندر ہر رکن کی علامت بدل دیں: 5a − (2a − 3) = 5a − 2a + 3 = 3a + 3۔",
+        ),
         "say": T(
             "Two shopkeepers combine their stock. How do we add whole lists?",
             "دو دکان دار اپنا مال ملاتے ہیں۔ پوری فہرستیں کیسے جمع کریں؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-07-substitution": {
+        "define": T(
+            "Definition: to substitute means to put a number in place of a letter and then work out the answer. If d = 7, then 20 + 2d = 20 + 2 × 7 = 34. The answer is the value of the expression.",
+            "تعریف: قیمت رکھنے کا مطلب ہے حرف کی جگہ کوئی عدد لکھ کر جواب نکالنا۔ اگر d = 7 ہو تو 20 + 2d = 20 + 2 × 7 = 34۔ یہ جواب عبارت کی قیمت ہے۔",
+        ),
         "say": T(
             "A rule is written with a letter. How do I get a real answer?",
             "اصول حرف کے ساتھ لکھا ہے۔ مجھے اصل جواب کیسے ملے گا؟",
@@ -78,6 +98,10 @@ WHY = {
         ),
     },
     "g6-maths-07-simple-equations": {
+        "define": T(
+            "Definition: an equation says that two things are equal, and it has an unknown letter. To solve it, find the number that makes it true by doing the same to both sides. In 5k = 35, divide both sides by 5, so k = 7.",
+            "تعریف: مساوات بتاتی ہے کہ دو چیزیں برابر ہیں، اور اس میں ایک نامعلوم حرف ہوتا ہے۔ اسے حل کرنے کے لیے دونوں طرف ایک ہی کام کر کے وہ عدد ڈھونڈیں جس سے یہ درست ہو جائے۔ 5k = 35 میں دونوں طرف 5 سے تقسیم کریں تو k = 7۔",
+        ),
         "say": T(
             "I paid Rs 500 and got Rs 120 back. How do I find the price?",
             "میں نے 500 روپے دیے اور 120 روپے واپس ملے۔ قیمت کیسے معلوم کروں؟",
@@ -92,6 +116,10 @@ WHY = {
         ),
     },
     "g6-maths-07-number-patterns": {
+        "define": T(
+            "Definition: a sequence is a list of numbers that follows a rule, and each number in it is a term. In 4, 7, 10, 13, … the rule is \"add 3\". The rule 3n + 1 gives every term: n = 1 gives 4, n = 2 gives 7.",
+            "تعریف: سلسلہ اعداد کی وہ فہرست ہے جو کسی اصول پر چلتی ہے، اور اس کا ہر عدد ایک رکن ہے۔ 4، 7، 10، 13، … میں اصول \"3 جمع کریں\" ہے۔ اصول 3n + 1 ہر رکن دیتا ہے: n = 1 پر 4 اور n = 2 پر 7 ملتا ہے۔",
+        ),
         "say": T(
             "Can I know the 100th number of a pattern without writing 100?",
             "کیا میں نمونے کا 100واں عدد 100 اعداد لکھے بغیر جان سکتا ہوں؟",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-area-of-triangles",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -385,6 +385,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: area of a triangle = ½ × base × height, where the height is the straight-down distance from the top point to the base. A triangle with base 8 cm and height 5 cm has area ½ × 8 × 5 = 20 cm².",
+        "ur": "تعریف: مثلث کا رقبہ = ½ × قاعدہ × اونچائی، جہاں اونچائی اوپر کے نقطے سے قاعدے تک سیدھا عمودی فاصلہ ہے۔ قاعدہ 8 سینٹی میٹر اور اونچائی 5 سینٹی میٹر والے مثلث کا رقبہ ½ × 8 × 5 = 20 مربع سینٹی میٹر ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
