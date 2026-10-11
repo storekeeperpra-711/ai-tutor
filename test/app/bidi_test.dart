@@ -53,4 +53,20 @@ void main() {
       'Solve 2x$nb+${nb}3$nb=${nb}7 now',
     );
   });
+
+  test('keeps set membership and sets in left-to-right order', () {
+    expect(isolateMath('یعنی 4 ∈ A ہے'), 'یعنی ${lri}4$nb\u2208${nb}A$pdi ہے');
+    expect(isolateMath('5 ∉ A۔'), '${lri}5$nb\u2209${nb}A$pdi۔');
+    expect(isolateMath('A = {2, 4, 6} ہے'), '${lri}A$nb=$nb{2, 4, 6}$pdi ہے');
+    expect(isolateMath('سیٹ {a, e} ہے'), 'سیٹ $lri{a, e}$pdi ہے');
+  });
+
+  test('keeps unions, intersections, subsets and n(A) together', () {
+    expect(
+      isolateMath('A ∩ B = {3, 4} اور n(A) = 5'),
+      '${lri}A$nb\u2229${nb}B$nb=$nb{3, 4}$pdi اور ${lri}n(A)$nb=${nb}5$pdi',
+    );
+    expect(isolateMath('B ⊇ A ہے'), '${lri}B$nb\u2287${nb}A$pdi ہے');
+    expect(isolateMath('A ∪ B', rtl: false), 'A$nb\u222a${nb}B');
+  });
 }
