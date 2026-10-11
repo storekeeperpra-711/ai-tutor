@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-area-of-rectangles",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -404,6 +404,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: area is the amount of flat surface a shape covers, counted in unit squares. For a rectangle, area = length × width. A 6 m by 4 m rectangle has area 6 × 4 = 24 square metres (m²).",
+        "ur": "تعریف: رقبہ وہ سطح ہے جسے کوئی شکل گھیرتی ہے، اسے اکائی مربعوں میں گنتے ہیں۔ مستطیل کا رقبہ = لمبائی × چوڑائی۔ 6 میٹر × 4 میٹر کی مستطیل کا رقبہ 6 × 4 = 24 مربع میٹر (m²) ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

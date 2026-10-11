@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-08-perimeter": {
+        "define": T(
+            "Definition: the perimeter of a shape is the total distance around its edge: add the lengths of all its sides. For a rectangle, perimeter = 2 × (length + width), so a 6 m by 4 m rectangle has perimeter 2 × (6 + 4) = 20 m.",
+            "تعریف: کسی شکل کا احاطہ اس کے کنارے کے گرد کل فاصلہ ہے: اس کے سب اضلاع کی لمبائیاں جمع کریں۔ مستطیل کا احاطہ = 2 × (لمبائی + چوڑائی)، اس لیے 6 میٹر × 4 میٹر کی مستطیل کا احاطہ 2 × (6 + 4) = 20 میٹر ہے۔",
+        ),
         "say": T(
             "How much wire do we need to fence a field?",
             "کھیت کے گرد باڑ لگانے کے لیے کتنا تار چاہیے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-08-area-of-rectangles": {
+        "define": T(
+            "Definition: area is the amount of flat surface a shape covers, counted in unit squares. For a rectangle, area = length × width. A 6 m by 4 m rectangle has area 6 × 4 = 24 square metres (m²).",
+            "تعریف: رقبہ وہ سطح ہے جسے کوئی شکل گھیرتی ہے، اسے اکائی مربعوں میں گنتے ہیں۔ مستطیل کا رقبہ = لمبائی × چوڑائی۔ 6 میٹر × 4 میٹر کی مستطیل کا رقبہ 6 × 4 = 24 مربع میٹر (m²) ہے۔",
+        ),
         "say": T(
             "Two plots have the same fence. Do they have the same space?",
             "دو پلاٹوں کی باڑ برابر ہے۔ کیا ان میں جگہ بھی برابر ہے؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-08-area-of-triangles": {
+        "define": T(
+            "Definition: area of a triangle = ½ × base × height, where the height is the straight-down distance from the top point to the base. A triangle with base 8 cm and height 5 cm has area ½ × 8 × 5 = 20 cm².",
+            "تعریف: مثلث کا رقبہ = ½ × قاعدہ × اونچائی، جہاں اونچائی اوپر کے نقطے سے قاعدے تک سیدھا عمودی فاصلہ ہے۔ قاعدہ 8 سینٹی میٹر اور اونچائی 5 سینٹی میٹر والے مثلث کا رقبہ ½ × 8 × 5 = 20 مربع سینٹی میٹر ہے۔",
+        ),
         "say": T(
             "A field is shaped like a triangle. How do we measure it?",
             "ایک کھیت مثلث کی شکل کا ہے۔ ہم اسے کیسے ناپیں؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-08-parallelogram-and-trapezium": {
+        "define": T(
+            "Definition: a parallelogram has two pairs of parallel sides; its area = base × height. A trapezium has one pair of parallel sides; its area = ½ × (sum of the parallel sides) × height. With parallel sides 5 cm and 9 cm and height 4 cm: ½ × (5 + 9) × 4 = 28 cm².",
+            "تعریف: متوازی الاضلاع کے متوازی اضلاع کے دو جوڑے ہوتے ہیں؛ رقبہ = قاعدہ × اونچائی۔ ذوزنقہ میں ایک جوڑا متوازی ہوتا ہے؛ رقبہ = ½ × (متوازی اضلاع کا مجموعہ) × اونچائی۔ 5 اور 9 سینٹی میٹر کے متوازی اضلاع اور 4 سینٹی میٹر اونچائی پر ½ × (5 + 9) × 4 = 28 مربع سینٹی میٹر۔",
+        ),
         "say": T(
             "A plot has slanted sides. Can we still find its area?",
             "ایک پلاٹ کے اضلاع ترچھے ہیں۔ کیا ہم پھر بھی اس کا رقبہ نکال سکتے ہیں؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-08-compound-shapes": {
+        "define": T(
+            "Definition: a compound shape is made by joining simple shapes, such as rectangles. To find its area, split it into simple pieces and add, or take the empty part away from a big rectangle. Pieces of 12 m² and 8 m² make 12 + 8 = 20 m².",
+            "تعریف: مرکب شکل سادہ شکلوں، جیسے مستطیلوں، کو جوڑ کر بنتی ہے۔ اس کا رقبہ نکالنے کے لیے اسے سادہ ٹکڑوں میں بانٹ کر جمع کریں، یا بڑی مستطیل میں سے خالی حصہ تفریق کریں۔ 12 مربع میٹر اور 8 مربع میٹر کے ٹکڑے مل کر 12 + 8 = 20 مربع میٹر بناتے ہیں۔",
+        ),
         "say": T(
             "A floor is shaped like the letter L. How do we find its area?",
             "ایک فرش حرف L کی شکل کا ہے۔ اس کا رقبہ کیسے نکالیں؟",
@@ -78,6 +98,10 @@ WHY = {
         ),
     },
     "g6-maths-08-area-of-a-path": {
+        "define": T(
+            "Definition: a path is a strip of equal width around a shape. Its area = area of the outer rectangle − area of the inner rectangle. A 10 m by 8 m garden with a 1 m wide path makes an outer rectangle 12 m by 10 m: 12 × 10 − 10 × 8 = 40 m².",
+            "تعریف: راستہ شکل کے گرد برابر چوڑائی کی پٹی ہے۔ راستے کا رقبہ = باہر کی مستطیل کا رقبہ − اندر کی مستطیل کا رقبہ۔ 10 × 8 میٹر کے باغ کے گرد 1 میٹر چوڑا راستہ ہو تو باہر کی مستطیل 12 × 10 میٹر بنتی ہے: 12 × 10 − 10 × 8 = 40 مربع میٹر۔",
+        ),
         "say": T(
             "A path runs around a park. How much ground does it cover?",
             "پارک کے گرد ایک راستہ بنا ہے۔ وہ کتنی زمین گھیرتا ہے؟",

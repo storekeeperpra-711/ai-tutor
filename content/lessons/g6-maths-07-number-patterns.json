@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-number-patterns",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -873,6 +873,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a sequence is a list of numbers that follows a rule, and each number in it is a term. In 4, 7, 10, 13, … the rule is \"add 3\". The rule 3n + 1 gives every term: n = 1 gives 4, n = 2 gives 7.",
+        "ur": "تعریف: سلسلہ اعداد کی وہ فہرست ہے جو کسی اصول پر چلتی ہے، اور اس کا ہر عدد ایک رکن ہے۔ 4، 7، 10، 13، … میں اصول \"3 جمع کریں\" ہے۔ اصول 3n + 1 ہر رکن دیتا ہے: n = 1 پر 4 اور n = 2 پر 7 ملتا ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

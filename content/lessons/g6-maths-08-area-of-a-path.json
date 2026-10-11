@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-area-of-a-path",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -424,6 +424,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a path is a strip of equal width around a shape. Its area = area of the outer rectangle − area of the inner rectangle. A 10 m by 8 m garden with a 1 m wide path makes an outer rectangle 12 m by 10 m: 12 × 10 − 10 × 8 = 40 m².",
+        "ur": "تعریف: راستہ شکل کے گرد برابر چوڑائی کی پٹی ہے۔ راستے کا رقبہ = باہر کی مستطیل کا رقبہ − اندر کی مستطیل کا رقبہ۔ 10 × 8 میٹر کے باغ کے گرد 1 میٹر چوڑا راستہ ہو تو باہر کی مستطیل 12 × 10 میٹر بنتی ہے: 12 × 10 − 10 × 8 = 40 مربع میٹر۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

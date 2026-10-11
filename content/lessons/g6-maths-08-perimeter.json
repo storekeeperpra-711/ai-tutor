@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-08-perimeter",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -346,6 +346,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the perimeter of a shape is the total distance around its edge: add the lengths of all its sides. For a rectangle, perimeter = 2 × (length + width), so a 6 m by 4 m rectangle has perimeter 2 × (6 + 4) = 20 m.",
+        "ur": "تعریف: کسی شکل کا احاطہ اس کے کنارے کے گرد کل فاصلہ ہے: اس کے سب اضلاع کی لمبائیاں جمع کریں۔ مستطیل کا احاطہ = 2 × (لمبائی + چوڑائی)، اس لیے 6 میٹر × 4 میٹر کی مستطیل کا احاطہ 2 × (6 + 4) = 20 میٹر ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

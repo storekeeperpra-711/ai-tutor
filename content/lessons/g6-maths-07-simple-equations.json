@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-07-simple-equations",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -982,6 +982,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: an equation says that two things are equal, and it has an unknown letter. To solve it, find the number that makes it true by doing the same to both sides. In 5k = 35, divide both sides by 5, so k = 7.",
+        "ur": "تعریف: مساوات بتاتی ہے کہ دو چیزیں برابر ہیں، اور اس میں ایک نامعلوم حرف ہوتا ہے۔ اسے حل کرنے کے لیے دونوں طرف ایک ہی کام کر کے وہ عدد ڈھونڈیں جس سے یہ درست ہو جائے۔ 5k = 35 میں دونوں طرف 5 سے تقسیم کریں تو k = 7۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

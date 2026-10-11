@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-09-complementary-supplementary",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -407,6 +407,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: two angles are complementary if they add up to 90°, and supplementary if they add up to 180°. For example, 70° and 20° are complementary, and 110° and 70° are supplementary.",
+        "ur": "تعریف: دو زاویے متمم ہیں اگر ان کا مجموعہ 90° ہو، اور مکمل ہیں اگر ان کا مجموعہ 180° ہو۔ مثلاً 70° اور 20° متمم زاویے ہیں، اور 110° اور 70° مکمل زاویے ہیں۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
