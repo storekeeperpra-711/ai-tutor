@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-04-what-are-integers": {
+        "define": T(
+            "Definition: integers are the whole numbers and their opposites: …, −3, −2, −1, 0, 1, 2, 3, …. Positive integers are to the right of 0 on the number line and negative integers are to the left. 0 is neither positive nor negative.",
+            "تعریف: صحیح اعداد مکمل اعداد اور ان کے الٹ ہیں: …، −3، −2، −1، 0، 1، 2، 3، …۔ مثبت صحیح اعداد عددی خط پر 0 کے دائیں طرف اور منفی صحیح اعداد بائیں طرف ہوتے ہیں۔ 0 نہ مثبت ہے نہ منفی۔",
+        ),
         "say": T(
             "Why did people ever need numbers below zero?",
             "لوگوں کو صفر سے کم اعداد کی ضرورت کیوں پڑی؟",
@@ -40,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-04-adding-integers": {
+        "define": T(
+            "Definition: to add integers with the same sign, add their sizes and keep the sign: (−3) + (−4) = −7. With different signs, subtract the smaller size from the larger and keep the sign of the larger: (−7) + 4 = −3.",
+            "تعریف: ایک جیسی علامت والے صحیح اعداد جمع کرنے کے لیے ان کی مقداریں جمع کریں اور علامت وہی رکھیں: (−3) + (−4) = −7۔ مختلف علامتوں میں بڑی مقدار میں سے چھوٹی مقدار نفی کریں اور بڑی مقدار والی علامت رکھیں: (−7) + 4 = −3۔",
+        ),
         "say": T(
             "A shopkeeper has Rs 300 and owes Rs 500. Is he rich or poor?",
             "دکان دار کے پاس 300 روپے ہیں اور 500 روپے دینے ہیں۔ وہ امیر ہے یا غریب؟",
@@ -54,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-04-subtracting-integers": {
+        "define": T(
+            "Definition: subtracting an integer means adding its opposite: a − b = a + (−b). For example, 5 − (−2) = 5 + 2 = 7, and 5 − 8 = 5 + (−8) = −3.",
+            "تعریف: کسی صحیح عدد کو منفی کرنا اس کے الٹ کو جمع کرنا ہے: a − b = a + (−b)۔ مثلاً 5 − (−2) = 5 + 2 = 7، اور 5 − 8 = 5 + (−8) = −3۔",
+        ),
         "say": T(
             "How much warmer is Lahore at 12 °C than Murree at −3 °C?",
             "لاہور 12 ڈگری پر مری سے، جو −3 ڈگری پر ہے، کتنا گرم ہے؟",
@@ -68,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-04-multiplying-and-dividing-integers": {
+        "define": T(
+            "Definition: when we multiply or divide two integers with the same sign, the answer is positive. With different signs, the answer is negative. For example, (−3) × (−4) = 12, (−3) × 4 = −12 and (−12) ÷ 4 = −3.",
+            "تعریف: ایک جیسی علامت والے دو صحیح اعداد کو ضرب یا تقسیم کریں تو جواب مثبت آتا ہے۔ مختلف علامتوں کا جواب منفی آتا ہے۔ مثلاً (−3) × (−4) = 12، (−3) × 4 = −12 اور (−12) ÷ 4 = −3۔",
+        ),
         "say": T(
             "A shop loses Rs 50 every day for 7 days. How much in all?",
             "ایک دکان 7 دن تک روزانہ 50 روپے کا نقصان اٹھاتی ہے۔ کل کتنا؟",
@@ -82,6 +98,10 @@ WHY = {
         ),
     },
     "g6-maths-04-laws-of-integers": {
+        "define": T(
+            "Definition: three laws help us calculate. Commutative: a + b = b + a. Associative: (a + b) + c = a + (b + c). Distributive: a × (b + c) = a × b + a × c. Example: 2 × (3 + 4) = 2 × 3 + 2 × 4 = 14.",
+            "تعریف: تین قوانین حساب آسان کرتے ہیں۔ خاصیت مبادلہ: a + b = b + a۔ خاصیت تلازم: (a + b) + c = a + (b + c)۔ خاصیت تقسیم: a × (b + c) = a × b + a × c۔ مثال: 2 × (3 + 4) = 2 × 3 + 2 × 4 = 14۔",
+        ),
         "say": T(
             "Can you add 25 + 37 + 75 in any order you like?",
             "کیا آپ 25 + 37 + 75 کو اپنی مرضی کی ترتیب سے جمع کر سکتے ہیں؟",

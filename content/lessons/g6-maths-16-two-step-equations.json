@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-two-step-equations",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -812,6 +812,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a two-step equation needs two operations to find the unknown, like 2x + 3 = 11. Undo them in reverse order and do the same to both sides: subtract 3 to get 2x = 8, then divide by 2 to get x = 4.",
+        "ur": "تعریف: دو قدمی مساوات میں نامعلوم عدد نکالنے کے لیے دو عمل کرنے پڑتے ہیں، جیسے 2x + 3 = 11۔ انہیں الٹی ترتیب سے ختم کریں اور دونوں طرف ایک ہی عمل کریں: 3 نفی کریں تو 2x = 8، پھر 2 سے تقسیم کریں تو x = 4۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
