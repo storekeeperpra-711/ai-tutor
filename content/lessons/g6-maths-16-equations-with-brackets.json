@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-equations-with-brackets",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -917,6 +917,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: in 2(x + 3), the number outside the bracket multiplies everything inside. To solve 2(x + 3) = 14, divide both sides by 2 to get x + 3 = 7, so x = 4. Or open the bracket: 2x + 6 = 14, so x = 4.",
+        "ur": "تعریف: 2(x + 3) میں قوسین کے باہر کا عدد اندر کے ہر حصے کو ضرب دیتا ہے۔ 2(x + 3) = 14 حل کرنے کے لیے دونوں طرف کو 2 سے تقسیم کریں تو x + 3 = 7، یعنی x = 4۔ یا قوسین کھولیں: 2x + 6 = 14، تو x = 4۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

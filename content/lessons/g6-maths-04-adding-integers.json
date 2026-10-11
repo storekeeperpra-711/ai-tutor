@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-adding-integers",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -547,6 +547,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: to add integers with the same sign, add their sizes and keep the sign: (−3) + (−4) = −7. With different signs, subtract the smaller size from the larger and keep the sign of the larger: (−7) + 4 = −3.",
+        "ur": "تعریف: ایک جیسی علامت والے صحیح اعداد جمع کرنے کے لیے ان کی مقداریں جمع کریں اور علامت وہی رکھیں: (−3) + (−4) = −7۔ مختلف علامتوں میں بڑی مقدار میں سے چھوٹی مقدار نفی کریں اور بڑی مقدار والی علامت رکھیں: (−7) + 4 = −3۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

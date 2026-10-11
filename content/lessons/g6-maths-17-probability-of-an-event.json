@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-17-probability-of-an-event",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -740,6 +740,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: when all outcomes are equally likely, the probability of an event E is P(E) = n(E) ÷ n(S), the number of outcomes in E over the number of all outcomes. It is always from 0 (impossible) to 1 (certain). For a die, P(even) = 3 ÷ 6 = 1/2.",
+        "ur": "تعریف: جب تمام نتائج کا امکان برابر ہو تو واقعہ E کا احتمال P(E) = n(E) ÷ n(S) ہے، یعنی E کے نتائج کی تعداد تقسیم تمام نتائج کی تعداد۔ یہ ہمیشہ 0 (ناممکن) سے 1 (یقینی) کے بیچ ہوتا ہے۔ ڈائس پر P(جفت) = 3 ÷ 6 = 1/2۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

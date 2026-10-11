@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-16-checking-solutions",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -475,6 +475,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a solution is the value of the letter that makes both sides equal. To check it, put the value in place of the letter. For 2x + 3 = 11 and x = 4: the left side is 2(4) + 3 = 11, the same as the right side, so x = 4 is correct.",
+        "ur": "تعریف: مساوات کا حل حرف کی وہ قیمت ہے جو دونوں طرف کو برابر کر دے۔ جانچنے کے لیے یہ قیمت حرف کی جگہ رکھیں۔ 2x + 3 = 11 اور x = 4 کے لیے: بایاں طرف 2(4) + 3 = 11 ہے، جو دائیں طرف کے برابر ہے، تو x = 4 درست ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
