@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-17-likelihood",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -601,6 +601,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: likelihood tells how possible it is that something happens. It runs from impossible (it cannot happen), through unlikely, equally likely and likely, to certain (it must happen). A coin landing head or tail is equally likely; the sun rising tomorrow is certain.",
+        "ur": "تعریف: امکان بتاتا ہے کہ کوئی بات ہونا کتنا ممکن ہے۔ یہ ناممکن (ہو ہی نہیں سکتی) سے شروع ہو کر کم امکان، برابر امکان اور زیادہ امکان سے ہوتا ہوا یقینی (ضرور ہوگی) تک جاتا ہے۔ سکے کا ہیڈ یا ٹیل آنا برابر امکان ہے؛ کل سورج کا نکلنا یقینی ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
