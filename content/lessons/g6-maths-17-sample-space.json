@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-17-sample-space",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -462,6 +462,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: an experiment is an action whose result we cannot be sure of. Each result is an outcome. The sample space is the set of all outcomes, and an event is some of them. Rolling a die: sample space {1, 2, 3, 4, 5, 6}; the event \"even number\" is {2, 4, 6}.",
+        "ur": "تعریف: تجربہ ایسا عمل ہے جس کے نتیجے کا ہمیں یقین نہیں ہوتا۔ ہر ممکنہ نتیجہ ایک نتیجہ کہلاتا ہے۔ نمونی فضا تمام نتائج کا سیٹ ہے، اور واقعہ ان میں سے کچھ نتائج ہیں۔ ڈائس پھینکنا: نمونی فضا {1, 2, 3, 4, 5, 6}؛ واقعہ \"جفت عدد\" ہے {2, 4, 6}۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

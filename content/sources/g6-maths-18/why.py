@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-18-1d-2d-3d-shapes": {
+        "define": T(
+            "Definition: a 1-D shape has only length, like a line. A 2-D shape has length and width and is flat, like a square. A 3-D shape also has height and is solid, like a cube. A cube has 6 faces, 12 edges and 8 vertices.",
+            "تعریف: 1-D شکل میں صرف لمبائی ہوتی ہے، جیسے لکیر۔ 2-D شکل میں لمبائی اور چوڑائی ہوتی ہے اور وہ چپٹی ہوتی ہے، جیسے مربع۔ 3-D شکل میں اونچائی بھی ہوتی ہے اور وہ ٹھوس ہوتی ہے، جیسے مکعب۔ مکعب کی 6 سطحیں، 12 کنارے اور 8 راس ہیں۔",
+        ),
         "say": T(
             "A thread, a sheet of paper and a box: how are they different?",
             "دھاگا، کاغذ کا ورق اور ڈبہ: ان میں کیا فرق ہے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-18-line-symmetry": {
+        "define": T(
+            "Definition: a shape has line symmetry if a line splits it into two halves that fit exactly on each other when folded. That line is called the line of symmetry. A rectangle has 2 lines of symmetry and a square has 4.",
+            "تعریف: کسی شکل میں خطی تشاکل ہوتا ہے اگر کوئی لکیر اسے ایسے دو حصوں میں بانٹے جو تہہ کرنے پر بالکل ایک دوسرے پر بیٹھ جائیں۔ اس لکیر کو خطِ تشاکل کہتے ہیں۔ مستطیل کے 2 خطِ تشاکل ہیں اور مربع کے 4۔",
+        ),
         "say": T(
             "Why do a butterfly's wings match so exactly?",
             "تتلی کے پر اتنے ٹھیک ایک جیسے کیوں ہوتے ہیں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-18-rotational-symmetry": {
+        "define": T(
+            "Definition: a shape has rotational symmetry if it looks exactly the same after a turn of less than 360° about its centre. The order is how many times it looks the same in one full turn. A square has order 4: it matches itself every 90°.",
+            "تعریف: کسی شکل میں گردشی تشاکل ہوتا ہے اگر وہ اپنے مرکز کے گرد 360° سے کم گھوم کر بھی بالکل ویسی ہی لگے۔ درجہ یہ ہے کہ ایک پورے چکر میں وہ کتنی بار ایک جیسی لگتی ہے۔ مربع کا درجہ 4 ہے: وہ ہر 90° پر خود سے مل جاتا ہے۔",
+        ),
         "say": T(
             "Why does a ceiling fan look the same after it turns?",
             "چھت کا پنکھا گھوم کر بھی ویسا ہی کیوں لگتا ہے؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-18-parallel-lines-and-transversal": {
+        "define": T(
+            "Definition: parallel lines are lines that are always the same distance apart and never meet. A transversal is a line that crosses them. Corresponding angles are equal, alternate angles are equal, and the two co-interior angles add up to 180°.",
+            "تعریف: متوازی لکیریں وہ لکیریں ہیں جن کے درمیان فاصلہ ہمیشہ برابر رہتا ہے اور جو کبھی نہیں ملتیں۔ انہیں کاٹنے والی لکیر قاطع کہلاتی ہے۔ متناظرہ زاویے برابر ہوتے ہیں، متبادلہ زاویے برابر ہوتے ہیں، اور دو ہم اندرونی زاویوں کا مجموعہ 180° ہوتا ہے۔",
+        ),
         "say": T(
             "Why do railway tracks never meet, even though they look like it?",
             "ریل کی پٹڑیاں ملتی دکھائی دینے کے باوجود کبھی نہیں ملتیں، کیوں؟",

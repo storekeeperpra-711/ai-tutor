@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-16-equations-and-expressions": {
+        "define": T(
+            "Definition: an expression is numbers, letters and signs together, like 3x + 5. An equation has an equals sign and says two expressions are equal, like 3x + 5 = 20. To solve it, find the value of x that makes it true; here x = 5.",
+            "تعریف: الجبری جملہ اعداد، حروف اور علامتوں کا مجموعہ ہے، جیسے 3x + 5۔ مساوات میں برابر کا نشان ہوتا ہے اور یہ بتاتی ہے کہ دو جملے برابر ہیں، جیسے 3x + 5 = 20۔ اسے حل کرنے کا مطلب x کی وہ قیمت ڈھونڈنا ہے جو اسے سچ بنائے؛ یہاں x = 5۔",
+        ),
         "say": T(
             "What is the difference between 3x + 5 and 3x + 5 = 20?",
             "3x + 5 اور 3x + 5 = 20 میں کیا فرق ہے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-16-forming-equations": {
+        "define": T(
+            "Definition: to form an equation, choose a letter for the unknown number and change the words into signs. \"More than\" is +, \"less than\" is −, \"times\" is ×, \"is\" is =. So \"3 more than a number is 10\" becomes x + 3 = 10.",
+            "تعریف: مساوات بنانے کے لیے نامعلوم عدد کے لیے ایک حرف چنیں اور الفاظ کو علامتوں میں بدلیں۔ \"سے زیادہ\" یعنی +، \"سے کم\" یعنی −، \"گنا\" یعنی ×، \"ہے\" یعنی =۔ تو \"ایک عدد سے 3 زیادہ 10 ہے\" بن جاتا ہے x + 3 = 10۔",
+        ),
         "say": T(
             "\"5 less than a number is 12.\" How do I write that in maths?",
             "\"ایک عدد سے 5 کم 12 ہے۔\" اسے ریاضی میں کیسے لکھوں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-16-two-step-equations": {
+        "define": T(
+            "Definition: a two-step equation needs two operations to find the unknown, like 2x + 3 = 11. Undo them in reverse order and do the same to both sides: subtract 3 to get 2x = 8, then divide by 2 to get x = 4.",
+            "تعریف: دو قدمی مساوات میں نامعلوم عدد نکالنے کے لیے دو عمل کرنے پڑتے ہیں، جیسے 2x + 3 = 11۔ انہیں الٹی ترتیب سے ختم کریں اور دونوں طرف ایک ہی عمل کریں: 3 نفی کریں تو 2x = 8، پھر 2 سے تقسیم کریں تو x = 4۔",
+        ),
         "say": T(
             "A rickshaw costs Rs 50 plus Rs 20 per km. Fare Rs 210. How far?",
             "رکشہ 50 روپے اور ہر کلومیٹر کے 20 روپے لیتا ہے۔ کرایہ 210 روپے۔ کتنی دور؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-16-equations-with-brackets": {
+        "define": T(
+            "Definition: in 2(x + 3), the number outside the bracket multiplies everything inside. To solve 2(x + 3) = 14, divide both sides by 2 to get x + 3 = 7, so x = 4. Or open the bracket: 2x + 6 = 14, so x = 4.",
+            "تعریف: 2(x + 3) میں قوسین کے باہر کا عدد اندر کے ہر حصے کو ضرب دیتا ہے۔ 2(x + 3) = 14 حل کرنے کے لیے دونوں طرف کو 2 سے تقسیم کریں تو x + 3 = 7، یعنی x = 4۔ یا قوسین کھولیں: 2x + 6 = 14، تو x = 4۔",
+        ),
         "say": T(
             "3 friends each pay the same for a bill plus Rs 2 tip. Total Rs 21?",
             "3 دوست بل کے ساتھ ہر ایک 2 روپے ٹپ دیتے ہیں۔ کل 21 روپے؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-16-checking-solutions": {
+        "define": T(
+            "Definition: a solution is the value of the letter that makes both sides equal. To check it, put the value in place of the letter. For 2x + 3 = 11 and x = 4: the left side is 2(4) + 3 = 11, the same as the right side, so x = 4 is correct.",
+            "تعریف: مساوات کا حل حرف کی وہ قیمت ہے جو دونوں طرف کو برابر کر دے۔ جانچنے کے لیے یہ قیمت حرف کی جگہ رکھیں۔ 2x + 3 = 11 اور x = 4 کے لیے: بایاں طرف 2(4) + 3 = 11 ہے، جو دائیں طرف کے برابر ہے، تو x = 4 درست ہے۔",
+        ),
         "say": T(
             "I solved it and got x = 4. How can I be sure I am right?",
             "میں نے حل کیا اور x = 4 آیا۔ مجھے کیسے یقین ہو کہ میں درست ہوں؟",

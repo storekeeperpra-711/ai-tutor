@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-04-laws-of-integers",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -342,6 +342,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: three laws help us calculate. Commutative: a + b = b + a. Associative: (a + b) + c = a + (b + c). Distributive: a × (b + c) = a × b + a × c. Example: 2 × (3 + 4) = 2 × 3 + 2 × 4 = 14.",
+        "ur": "تعریف: تین قوانین حساب آسان کرتے ہیں۔ خاصیت مبادلہ: a + b = b + a۔ خاصیت تلازم: (a + b) + c = a + (b + c)۔ خاصیت تقسیم: a × (b + c) = a × b + a × c۔ مثال: 2 × (3 + 4) = 2 × 3 + 2 × 4 = 14۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

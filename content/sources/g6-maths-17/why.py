@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-17-likelihood": {
+        "define": T(
+            "Definition: likelihood tells how possible it is that something happens. It runs from impossible (it cannot happen), through unlikely, equally likely and likely, to certain (it must happen). A coin landing head or tail is equally likely; the sun rising tomorrow is certain.",
+            "تعریف: امکان بتاتا ہے کہ کوئی بات ہونا کتنا ممکن ہے۔ یہ ناممکن (ہو ہی نہیں سکتی) سے شروع ہو کر کم امکان، برابر امکان اور زیادہ امکان سے ہوتا ہوا یقینی (ضرور ہوگی) تک جاتا ہے۔ سکے کا ہیڈ یا ٹیل آنا برابر امکان ہے؛ کل سورج کا نکلنا یقینی ہے۔",
+        ),
         "say": T(
             "Will it rain today? Nobody can be sure, so what do we say?",
             "کیا آج بارش ہوگی؟ کوئی یقین سے نہیں کہہ سکتا، تو ہم کیا کہیں؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-17-sample-space": {
+        "define": T(
+            "Definition: an experiment is an action whose result we cannot be sure of. Each result is an outcome. The sample space is the set of all outcomes, and an event is some of them. Rolling a die: sample space {1, 2, 3, 4, 5, 6}; the event \"even number\" is {2, 4, 6}.",
+            "تعریف: تجربہ ایسا عمل ہے جس کے نتیجے کا ہمیں یقین نہیں ہوتا۔ ہر ممکنہ نتیجہ ایک نتیجہ کہلاتا ہے۔ نمونی فضا تمام نتائج کا سیٹ ہے، اور واقعہ ان میں سے کچھ نتائج ہیں۔ ڈائس پھینکنا: نمونی فضا {1, 2, 3, 4, 5, 6}؛ واقعہ \"جفت عدد\" ہے {2, 4, 6}۔",
+        ),
         "say": T(
             "Before the toss, what can happen? Can you list everything?",
             "سکہ اچھالنے سے پہلے کیا کیا ہو سکتا ہے؟ کیا آپ سب لکھ سکتے ہیں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-17-probability-of-an-event": {
+        "define": T(
+            "Definition: when all outcomes are equally likely, the probability of an event E is P(E) = n(E) ÷ n(S), the number of outcomes in E over the number of all outcomes. It is always from 0 (impossible) to 1 (certain). For a die, P(even) = 3 ÷ 6 = 1/2.",
+            "تعریف: جب تمام نتائج کا امکان برابر ہو تو واقعہ E کا احتمال P(E) = n(E) ÷ n(S) ہے، یعنی E کے نتائج کی تعداد تقسیم تمام نتائج کی تعداد۔ یہ ہمیشہ 0 (ناممکن) سے 1 (یقینی) کے بیچ ہوتا ہے۔ ڈائس پر P(جفت) = 3 ÷ 6 = 1/2۔",
+        ),
         "say": T(
             "Can we put a number on how likely something is?",
             "کیا ہم کسی بات کے امکان کو عدد سے بتا سکتے ہیں؟",

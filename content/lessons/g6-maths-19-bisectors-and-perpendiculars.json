@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-19-bisectors-and-perpendiculars",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -253,6 +253,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a bisector cuts something into two equal parts. The perpendicular bisector of a line AB passes through its midpoint M and meets AB at 90°. Every point on it is the same distance from A and from B.",
+        "ur": "تعریف: ناصف کسی چیز کو دو برابر حصوں میں بانٹتا ہے۔ لکیر AB کا عمودی ناصف اس کے درمیانی نقطہ M سے گزرتا ہے اور AB سے 90° پر ملتا ہے۔ اس کا ہر نقطہ A اور B سے برابر فاصلے پر ہوتا ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

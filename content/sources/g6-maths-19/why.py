@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-19-bisectors-and-perpendiculars": {
+        "define": T(
+            "Definition: a bisector cuts something into two equal parts. The perpendicular bisector of a line AB passes through its midpoint M and meets AB at 90°. Every point on it is the same distance from A and from B.",
+            "تعریف: ناصف کسی چیز کو دو برابر حصوں میں بانٹتا ہے۔ لکیر AB کا عمودی ناصف اس کے درمیانی نقطہ M سے گزرتا ہے اور AB سے 90° پر ملتا ہے۔ اس کا ہر نقطہ A اور B سے برابر فاصلے پر ہوتا ہے۔",
+        ),
         "say": T(
             "How does a builder find the exact middle of a wall or a straight corner?",
             "معمار دیوار کا ٹھیک بیچ یا سیدھا کونا کیسے ڈھونڈتا ہے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-19-constructing-angles": {
+        "define": T(
+            "Definition: constructing means drawing exactly with only a ruler and a pair of compasses. An angle bisector is the ray that splits an angle into two equal angles. We can construct 60° and 90°, and bisecting them gives 30° and 45°.",
+            "تعریف: تعمیر کا مطلب صرف پیمانے اور پرکار سے ٹھیک ٹھیک بنانا ہے۔ زاویے کا ناصف وہ شعاع ہے جو زاویے کو دو برابر زاویوں میں بانٹے۔ ہم 60° اور 90° بنا سکتے ہیں، اور انہیں آدھا کرنے سے 30° اور 45° ملتے ہیں۔",
+        ),
         "say": T(
             "A carpenter has no protractor. How can he still make a perfect 60° or 90° corner?",
             "بڑھئی کے پاس پروٹریکٹر نہیں ہے۔ وہ پھر بھی ٹھیک 60° یا 90° کا کونا کیسے بنائے؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-19-unknown-angles-and-construction-problems": {
+        "define": T(
+            "Definition: angles on a straight line add up to 180°, angles around a point add up to 360°, and the angles of a triangle add up to 180°. For example, if one angle on a straight line is 65°, the other is 180° − 65° = 115°.",
+            "تعریف: سیدھی لکیر پر زاویوں کا مجموعہ 180° ہوتا ہے، ایک نقطے کے گرد 360°، اور مثلث کے زاویوں کا مجموعہ 180°۔ مثلاً سیدھی لکیر پر ایک زاویہ 65° ہو تو دوسرا 180° − 65° = 115° ہے۔",
+        ),
         "say": T(
             "How can I find an angle I cannot measure?",
             "جو زاویہ میں ناپ نہیں سکتا اسے کیسے معلوم کروں؟",
