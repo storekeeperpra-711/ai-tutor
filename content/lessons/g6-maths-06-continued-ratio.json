@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-continued-ratio",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -428,6 +428,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a continued ratio compares three amounts, written a : b : c. To join a : b and b : c, make the middle terms equal. Example: 1 : 2 = 2 : 4, so 1 : 2 and 4 : 5 join as 2 : 4 : 5.",
+        "ur": "تعریف: مسلسل نسبت تین مقداروں کا موازنہ ہے، جسے a : b : c لکھتے ہیں۔ a : b اور b : c کو جوڑنے کے لیے درمیانے رکن برابر کریں۔ مثال: 1 : 2 = 2 : 4، اس لیے 1 : 2 اور 4 : 5 مل کر 2 : 4 : 5 بنتی ہیں۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

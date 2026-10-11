@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-union-and-intersection",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -902,6 +902,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the union A ∪ B has all elements in A or B or both. The intersection A ∩ B has only elements in both. If A = {1, 2, 3} and B = {3, 4}, then A ∪ B = {1, 2, 3, 4} and A ∩ B = {3}.",
+        "ur": "تعریف: اجتماع A ∪ B میں A یا B یا دونوں کے سب ارکان ہوتے ہیں۔ تقاطع A ∩ B میں صرف وہ ارکان ہوتے ہیں جو دونوں میں ہوں۔ اگر A = {1, 2, 3} اور B = {3, 4} ہو تو A ∪ B = {1, 2, 3, 4} اور A ∩ B = {3}۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

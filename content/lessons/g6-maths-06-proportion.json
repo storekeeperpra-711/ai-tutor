@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-proportion",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -512,6 +512,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a proportion says that two ratios are equal: a : b = c : d. The outer terms a and d are the extremes; the inner terms b and c are the means. Then a × d = b × c. Example: 3 : 4 = 6 : 8 and 3 × 8 = 4 × 6 = 24.",
+        "ur": "تعریف: تناسب کہتا ہے کہ دو نسبتیں برابر ہیں: a : b = c : d۔ باہر کے ارکان a اور d طرفین، اور اندر کے ارکان b اور c وسطین ہیں۔ تب a × d = b × c۔ مثال: 3 : 4 = 6 : 8 اور 3 × 8 = 4 × 6 = 24۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

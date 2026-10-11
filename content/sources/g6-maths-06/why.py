@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-06-what-is-a-ratio": {
+        "define": T(
+            "Definition: a ratio compares two amounts of the same kind. 3 boys and 5 girls are in the ratio 3 : 5. The two numbers are the terms of the ratio. Dividing both terms by the same number gives the simplest form: 6 : 9 = 2 : 3.",
+            "تعریف: نسبت ایک ہی قسم کی دو مقداروں کا موازنہ ہے۔ 3 لڑکوں اور 5 لڑکیوں کی نسبت 3 : 5 ہے۔ یہ دونوں اعداد نسبت کے رکن ہیں۔ دونوں ارکان کو ایک ہی عدد سے تقسیم کریں تو سادہ ترین صورت ملتی ہے: 6 : 9 = 2 : 3۔",
+        ),
         "say": T(
             "Ali has 4 pencils, Sara has 8. How do we compare them?",
             "علی کے پاس 4 پنسلیں ہیں، سارہ کے پاس 8۔ ہم ان کا موازنہ کیسے کریں؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-06-equivalent-ratios": {
+        "define": T(
+            "Definition: equivalent ratios are ratios that have the same value. We get them by multiplying or dividing both terms by the same number (not 0): 2 : 3 = 4 : 6 = 6 : 9.",
+            "تعریف: مساوی نسبتیں وہ نسبتیں ہیں جن کی قدر ایک ہی ہو۔ یہ دونوں ارکان کو ایک ہی عدد (جو 0 نہ ہو) سے ضرب یا تقسیم کرنے سے ملتی ہیں: 2 : 3 = 4 : 6 = 6 : 9۔",
+        ),
         "say": T(
             "A small pot needs 1 cup rice, 2 cups water. What about a big pot?",
             "چھوٹی دیگچی میں 1 پیالہ چاول اور 2 پیالے پانی لگتا ہے۔ بڑی دیگ میں کتنا؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-06-sharing-in-a-ratio": {
+        "define": T(
+            "Rule: to share a total in the ratio a : b, add the parts (a + b). Divide the total by this sum to get one part, then multiply by a and b. Example: Rs 60 in the ratio 1 : 2 has 3 parts of Rs 20, so the shares are Rs 20 and Rs 40.",
+            "اصول: کل مقدار کو نسبت a : b میں بانٹنے کے لیے حصے جمع کریں (a + b)۔ کل کو اس مجموعے سے تقسیم کر کے ایک حصہ نکالیں، پھر a اور b سے ضرب دیں۔ مثال: 60 روپے کو 1 : 2 میں بانٹیں تو 3 حصے، ہر حصہ 20 روپے، اس لیے حصے 20 اور 40 روپے ہیں۔",
+        ),
         "say": T(
             "Two partners put in Rs 2,000 and Rs 3,000. How do they share the profit?",
             "دو ساجھے داروں نے 2000 اور 3000 روپے لگائے۔ منافع کیسے بانٹیں؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-06-continued-ratio": {
+        "define": T(
+            "Definition: a continued ratio compares three amounts, written a : b : c. To join a : b and b : c, make the middle terms equal. Example: 1 : 2 = 2 : 4, so 1 : 2 and 4 : 5 join as 2 : 4 : 5.",
+            "تعریف: مسلسل نسبت تین مقداروں کا موازنہ ہے، جسے a : b : c لکھتے ہیں۔ a : b اور b : c کو جوڑنے کے لیے درمیانے رکن برابر کریں۔ مثال: 1 : 2 = 2 : 4، اس لیے 1 : 2 اور 4 : 5 مل کر 2 : 4 : 5 بنتی ہیں۔",
+        ),
         "say": T(
             "Cement, sand and gravel: how do you compare three things together?",
             "سیمنٹ، ریت اور بجری: تین چیزوں کا اکٹھا موازنہ کیسے کریں؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-06-proportion": {
+        "define": T(
+            "Definition: a proportion says that two ratios are equal: a : b = c : d. The outer terms a and d are the extremes; the inner terms b and c are the means. Then a × d = b × c. Example: 3 : 4 = 6 : 8 and 3 × 8 = 4 × 6 = 24.",
+            "تعریف: تناسب کہتا ہے کہ دو نسبتیں برابر ہیں: a : b = c : d۔ باہر کے ارکان a اور d طرفین، اور اندر کے ارکان b اور c وسطین ہیں۔ تب a × d = b × c۔ مثال: 3 : 4 = 6 : 8 اور 3 × 8 = 4 × 6 = 24۔",
+        ),
         "say": T(
             "A small flag and a big flag: why do they look the same shape?",
             "چھوٹا جھنڈا اور بڑا جھنڈا: دونوں ایک ہی شکل کے کیوں لگتے ہیں؟",
@@ -78,6 +98,10 @@ WHY = {
         ),
     },
     "g6-maths-06-rate": {
+        "define": T(
+            "Definition: a rate compares two different kinds of amounts, such as money and things, or distance and time. A unit rate tells how much for one unit. Rs 60 for 4 kg is Rs 60 ÷ 4 = Rs 15 per kg.",
+            "تعریف: شرح دو مختلف قسم کی مقداروں کا موازنہ ہے، جیسے پیسے اور چیزیں، یا فاصلہ اور وقت۔ اکائی شرح بتاتی ہے کہ ایک اکائی کے لیے کتنا۔ 4 کلو کے 60 روپے یعنی 60 ÷ 4 = 15 روپے فی کلو۔",
+        ),
         "say": T(
             "5 pens cost Rs 75 and 8 pens cost Rs 112. Which is the better buy?",
             "5 قلم 75 روپے کے ہیں اور 8 قلم 112 روپے کے۔ کون سا سودا بہتر ہے؟",
@@ -92,6 +116,10 @@ WHY = {
         ),
     },
     "g6-maths-06-unitary-method": {
+        "define": T(
+            "Method: first find the value of one unit by dividing. Then multiply to get the value of as many units as you need. If 3 kg cost Rs 90, then 1 kg costs 90 ÷ 3 = Rs 30, and 5 kg cost 5 × 30 = Rs 150.",
+            "طریقہ: پہلے تقسیم کر کے ایک اکائی کی قیمت نکالیں۔ پھر جتنی اکائیاں چاہییں اتنی سے ضرب دیں۔ اگر 3 کلو کے 90 روپے ہوں تو 1 کلو کے 90 ÷ 3 = 30 روپے، اور 5 کلو کے 5 × 30 = 150 روپے۔",
+        ),
         "say": T(
             "4 pens cost Rs 120. How do you find the price of 7 pens?",
             "4 قلم 120 روپے کے ہیں۔ 7 قلم کی قیمت کیسے نکالیں؟",
@@ -106,6 +134,10 @@ WHY = {
         ),
     },
     "g6-maths-06-speed": {
+        "define": T(
+            "Definition: speed is the distance travelled in one unit of time. Speed = distance ÷ time, so distance = speed × time and time = distance ÷ speed. Example: a car at 60 km per hour for 2 hours goes 60 × 2 = 120 km.",
+            "تعریف: رفتار وقت کی ایک اکائی میں طے کیا گیا فاصلہ ہے۔ رفتار = فاصلہ ÷ وقت، اس لیے فاصلہ = رفتار × وقت اور وقت = فاصلہ ÷ رفتار۔ مثال: 60 کلومیٹر فی گھنٹہ کی کار 2 گھنٹے میں 60 × 2 = 120 کلومیٹر جاتی ہے۔",
+        ),
         "say": T(
             "A van does 150 km in 3 hours. Will we reach before dark?",
             "ایک وین 3 گھنٹے میں 150 کلومیٹر چلتی ہے۔ کیا ہم اندھیرے سے پہلے پہنچ جائیں گے؟",
@@ -120,6 +152,10 @@ WHY = {
         ),
     },
     "g6-maths-06-24-hour-clock": {
+        "define": T(
+            "Definition: the 24-hour clock counts the hours from 00 to 23, with no am or pm. From 1 pm onwards, add 12 to the hour: 3:45 pm = 15:45. Midnight is 00:00 and noon is 12:00.",
+            "تعریف: 24 گھنٹے والی گھڑی گھنٹے 00 سے 23 تک گنتی ہے، اس میں صبح یا شام نہیں لکھتے۔ دوپہر 1 بجے کے بعد گھنٹے میں 12 جمع کریں: شام 3:45 = 15:45۔ آدھی رات 00:00 ہے اور دوپہر 12:00۔",
+        ),
         "say": T(
             "A train leaves at 5:00. Is that morning or evening?",
             "ٹرین 5:00 بجے چلتی ہے۔ صبح یا شام؟",

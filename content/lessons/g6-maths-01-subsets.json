@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-subsets",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -696,6 +696,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: A is a subset of B, written A ⊆ B, if every element of A is also an element of B. For example, {1, 2} ⊆ {1, 2, 3}. The empty set is a subset of every set, and every set is a subset of itself.",
+        "ur": "تعریف: اگر A کا ہر رکن B کا بھی رکن ہو تو A، B کا ذیلی سیٹ ہے، جسے A ⊆ B لکھتے ہیں۔ مثلاً {1, 2} ⊆ {1, 2, 3}۔ خالی سیٹ ہر سیٹ کا ذیلی سیٹ ہوتا ہے، اور ہر سیٹ اپنا ذیلی سیٹ بھی ہوتا ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

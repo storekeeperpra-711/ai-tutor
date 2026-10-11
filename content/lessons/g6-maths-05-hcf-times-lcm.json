@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-hcf-times-lcm",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -422,6 +422,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Rule: for any two numbers, HCF × LCM = the first number × the second number. Example: 4 and 6 have HCF 2 and LCM 12, and 2 × 12 = 24 = 4 × 6.",
+        "ur": "اصول: کسی بھی دو اعداد کے لیے عاد اعظم × ذو اضعاف اقل = پہلا عدد × دوسرا عدد۔ مثال: 4 اور 6 کا عاد اعظم 2 اور ذو اضعاف اقل 12 ہے، اور 2 × 12 = 24 = 4 × 6۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

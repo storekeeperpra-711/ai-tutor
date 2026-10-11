@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-sharing-in-a-ratio",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -497,6 +497,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Rule: to share a total in the ratio a : b, add the parts (a + b). Divide the total by this sum to get one part, then multiply by a and b. Example: Rs 60 in the ratio 1 : 2 has 3 parts of Rs 20, so the shares are Rs 20 and Rs 40.",
+        "ur": "اصول: کل مقدار کو نسبت a : b میں بانٹنے کے لیے حصے جمع کریں (a + b)۔ کل کو اس مجموعے سے تقسیم کر کے ایک حصہ نکالیں، پھر a اور b سے ضرب دیں۔ مثال: 60 روپے کو 1 : 2 میں بانٹیں تو 3 حصے، ہر حصہ 20 روپے، اس لیے حصے 20 اور 40 روپے ہیں۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

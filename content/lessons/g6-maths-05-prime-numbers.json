@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-prime-numbers",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -396,6 +396,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a prime number has exactly two factors, 1 and itself, like 7. A composite number has more than two factors, like 12. The number 1 is neither. Writing a number as primes multiplied gives its prime factors: 12 = 2 × 2 × 3.",
+        "ur": "تعریف: مفرد عدد کے ٹھیک دو جزو ضربی ہوتے ہیں، 1 اور وہ خود، جیسے 7۔ مرکب عدد کے دو سے زیادہ جزو ضربی ہوتے ہیں، جیسے 12۔ عدد 1 نہ مفرد ہے نہ مرکب۔ عدد کو مفرد اعداد کے حاصل ضرب کی شکل میں لکھیں تو مفرد اجزائے ضربی ملتے ہیں: 12 = 2 × 2 × 3۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

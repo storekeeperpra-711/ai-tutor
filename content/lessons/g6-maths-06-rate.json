@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-rate",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -455,6 +455,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a rate compares two different kinds of amounts, such as money and things, or distance and time. A unit rate tells how much for one unit. Rs 60 for 4 kg is Rs 60 ÷ 4 = Rs 15 per kg.",
+        "ur": "تعریف: شرح دو مختلف قسم کی مقداروں کا موازنہ ہے، جیسے پیسے اور چیزیں، یا فاصلہ اور وقت۔ اکائی شرح بتاتی ہے کہ ایک اکائی کے لیے کتنا۔ 4 کلو کے 60 روپے یعنی 60 ÷ 4 = 15 روپے فی کلو۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
