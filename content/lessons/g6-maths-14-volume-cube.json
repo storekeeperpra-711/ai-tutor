@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-volume-cube",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -370,6 +370,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a cube has all its edges equal, so its volume is edge × edge × edge. A cube with edge 3 cm has volume 3 × 3 × 3 = 27 cm³. Also, 1 litre = 1000 cm³.",
+        "ur": "تعریف: مکعب کے سب کنارے برابر ہوتے ہیں، اس لیے اس کا حجم کنارہ × کنارہ × کنارہ ہے۔ 3 سینٹی میٹر کنارے والے مکعب کا حجم 3 × 3 × 3 = 27 مکعب سینٹی میٹر ہے۔ نیز 1 لیٹر = 1000 مکعب سینٹی میٹر۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

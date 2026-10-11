@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-11-what-is-a-percent",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -238,6 +238,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a percent is a fraction whose bottom number is 100. The sign % means \"out of 100\". So 25% = 25/100 = 1/4.",
+        "ur": "تعریف: فیصد ایسی کسر ہے جس کا نیچے والا عدد 100 ہو۔ نشان % کا مطلب ہے \"100 میں سے\"۔ یوں 25% = 25/100 = 1/4۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

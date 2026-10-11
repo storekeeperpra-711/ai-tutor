@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-10-kinds-of-data": {
+        "define": T(
+            "Definition: data is information we collect, such as counts or measurements. Data we count in whole numbers is discrete, like the children in a class. Data we measure, which can take any value in between, is continuous, like height or time.",
+            "تعریف: مواد وہ معلومات ہیں جو ہم جمع کرتے ہیں، جیسے گنتی یا ناپ۔ جو مواد ہم پورے اعداد میں گنتے ہیں وہ منفصل ہے، جیسے جماعت کے بچے۔ جو مواد ہم ناپتے ہیں اور جو درمیان کی کوئی بھی قیمت ہو سکتا ہے وہ مسلسل ہے، جیسے قد یا وقت۔",
+        ),
         "say": T(
             "Why do we sort data into kinds before we use it?",
             "ہم مواد کو استعمال سے پہلے قسموں میں کیوں بانٹتے ہیں؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-10-tables-and-tallies": {
+        "define": T(
+            "Definition: a tally mark is a small line drawn for each item counted. Every fifth mark crosses the four before it, so IIII/ means 5. A table lists each group with its total.",
+            "تعریف: ٹیلی کا نشان ہر گنی ہوئی چیز کے لیے لگائی جانے والی چھوٹی لکیر ہے۔ ہر پانچواں نشان پہلے چار کو کاٹتا ہے، اس لیے IIII/ کا مطلب 5 ہے۔ جدول ہر گروہ کو اس کی کل تعداد کے ساتھ لکھتا ہے۔",
+        ),
         "say": T(
             "Votes are being counted at a class election. How do we not lose count?",
             "جماعت کے انتخاب میں ووٹ گنے جا رہے ہیں۔ گنتی کیسے نہ بھولیں؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-10-bar-graphs": {
+        "define": T(
+            "Definition: a bar graph shows data with bars. Each bar stands for one group, and the height of the bar is its number, read from the scale at the side. All the bars have the same width.",
+            "تعریف: بار گراف مواد کو ستونوں سے دکھاتا ہے۔ ہر ستون ایک گروہ کو ظاہر کرتا ہے اور ستون کی اونچائی اس کا عدد ہے، جو ساتھ والے پیمانے سے پڑھا جاتا ہے۔ سب ستونوں کی چوڑائی برابر ہوتی ہے۔",
+        ),
         "say": T(
             "A page of numbers is boring. Can a picture show who has the most?",
             "اعداد کا صفحہ بورنگ ہے۔ کیا تصویر دکھا سکتی ہے کہ کس کے پاس سب سے زیادہ ہے؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-10-pie-charts-and-multiple-bar-graphs": {
+        "define": T(
+            "Definition: a pie chart is a circle cut into slices to show how a whole is shared. The angle of a slice is its part of 360°: a quarter of the whole is 90°. A double bar graph has two bars side by side for each group.",
+            "تعریف: پائی چارٹ ٹکڑوں میں کٹا ہوا دائرہ ہے جو دکھاتا ہے کہ پورا کیسے بانٹا گیا۔ ٹکڑے کا زاویہ 360° کا اتنا ہی حصہ ہوتا ہے: پورے کا چوتھائی حصہ 90° ہے۔ دوہرے بار گراف میں ہر گروہ کے دو ستون ساتھ ساتھ ہوتے ہیں۔",
+        ),
         "say": T(
             "How can one circle show how a whole is shared out?",
             "ایک دائرہ یہ کیسے دکھا سکتا ہے کہ پورا کیسے بانٹا گیا؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-10-average-mean": {
+        "define": T(
+            "Definition: the mean, or average, is the total of the values divided by how many values there are. Mean = total ÷ number of values. For 2, 4 and 9: (2 + 4 + 9) ÷ 3 = 5.",
+            "تعریف: اوسط تمام قیمتوں کے کل کو قیمتوں کی تعداد سے تقسیم کرنے سے ملتی ہے۔ اوسط = کل ÷ قیمتوں کی تعداد۔ مثلاً 2، 4 اور 9 کے لیے: (2 + 4 + 9) ÷ 3 = 5۔",
+        ),
         "say": T(
             "Five friends have different sweets. How do we share them fairly?",
             "پانچ دوستوں کے پاس مختلف تعداد میں مٹھائیاں ہیں۔ انہیں برابر کیسے بانٹیں؟",
@@ -78,6 +98,10 @@ WHY = {
         ),
     },
     "g6-maths-10-median": {
+        "define": T(
+            "Definition: the median is the middle value when the values are put in order. For 3, 5, 9 it is 5. If two values are in the middle, the median is halfway between them: for 2, 4, 6, 10 it is (4 + 6) ÷ 2 = 5.",
+            "تعریف: وسطانیہ ترتیب میں لکھی قیمتوں کی بیچ والی قیمت ہے۔ 3، 5، 9 کا وسطانیہ 5 ہے۔ اگر بیچ میں دو قیمتیں ہوں تو وسطانیہ ان کے عین درمیان ہوتا ہے: 2، 4، 6، 10 کا وسطانیہ (4 + 6) ÷ 2 = 5 ہے۔",
+        ),
         "say": T(
             "One very rich man lives in a poor village. What is the village's usual income?",
             "ایک غریب گاؤں میں ایک بہت امیر آدمی رہتا ہے۔ گاؤں کی عام آمدنی کیا ہے؟",
@@ -92,6 +116,10 @@ WHY = {
         ),
     },
     "g6-maths-10-mode-and-range": {
+        "define": T(
+            "Definition: the mode is the value that appears most often. The range is the largest value minus the smallest. For 2, 3, 3, 7 the mode is 3 and the range is 7 − 2 = 5.",
+            "تعریف: موڈ وہ قیمت ہے جو سب سے زیادہ بار آئے۔ رینج سب سے بڑی قیمت منفی سب سے چھوٹی قیمت ہے۔ 2، 3، 3، 7 میں موڈ 3 ہے اور رینج 7 − 2 = 5 ہے۔",
+        ),
         "say": T(
             "A shoe seller must order stock. Which size should he buy most of?",
             "جوتے بیچنے والے کو مال منگوانا ہے۔ وہ کون سا سائز سب سے زیادہ منگوائے؟",

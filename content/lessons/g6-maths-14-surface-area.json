@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-surface-area",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -508,6 +508,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the surface area of a solid is the total area of all its faces, in square units. For a cuboid: 2 × (length × width + length × height + width × height). For 2 by 3 by 4: 2 × (6 + 8 + 12) = 52.",
+        "ur": "تعریف: ٹھوس چیز کا سطحی رقبہ اس کی تمام سطحوں کے رقبوں کا کل ہے، مربع اکائیوں میں۔ مکعب نما کے لیے: 2 × (لمبائی × چوڑائی + لمبائی × اونچائی + چوڑائی × اونچائی)۔ 2، 3، 4 والے کے لیے: 2 × (6 + 8 + 12) = 52۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

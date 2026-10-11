@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-14-volume-cuboid",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -706,6 +706,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the volume of a solid is the space inside it, in cubic units. For a cuboid: volume = length × width × height. A cuboid 4 by 3 by 2 has volume 4 × 3 × 2 = 24 cubic units.",
+        "ur": "تعریف: ٹھوس چیز کا حجم اس کے اندر کی جگہ ہے، مکعب اکائیوں میں۔ مکعب نما کے لیے: حجم = لمبائی × چوڑائی × اونچائی۔ 4، 3، 2 والے مکعب نما کا حجم 4 × 3 × 2 = 24 مکعب اکائیاں ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-median",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -516,6 +516,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the median is the middle value when the values are put in order. For 3, 5, 9 it is 5. If two values are in the middle, the median is halfway between them: for 2, 4, 6, 10 it is (4 + 6) ÷ 2 = 5.",
+        "ur": "تعریف: وسطانیہ ترتیب میں لکھی قیمتوں کی بیچ والی قیمت ہے۔ 3، 5، 9 کا وسطانیہ 5 ہے۔ اگر بیچ میں دو قیمتیں ہوں تو وسطانیہ ان کے عین درمیان ہوتا ہے: 2، 4، 6، 10 کا وسطانیہ (4 + 6) ÷ 2 = 5 ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

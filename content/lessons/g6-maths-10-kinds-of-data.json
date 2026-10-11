@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-10-kinds-of-data",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -699,6 +699,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: data is information we collect, such as counts or measurements. Data we count in whole numbers is discrete, like the children in a class. Data we measure, which can take any value in between, is continuous, like height or time.",
+        "ur": "تعریف: مواد وہ معلومات ہیں جو ہم جمع کرتے ہیں، جیسے گنتی یا ناپ۔ جو مواد ہم پورے اعداد میں گنتے ہیں وہ منفصل ہے، جیسے جماعت کے بچے۔ جو مواد ہم ناپتے ہیں اور جو درمیان کی کوئی بھی قیمت ہو سکتا ہے وہ مسلسل ہے، جیسے قد یا وقت۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

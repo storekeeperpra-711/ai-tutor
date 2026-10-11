@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-14-solids": {
+        "define": T(
+            "Definition: a solid is a shape that takes up space. Its flat sides are faces, the lines where two faces meet are edges, and the corners are vertices. A cuboid has 6 faces, 12 edges and 8 vertices.",
+            "تعریف: ٹھوس چیز وہ شکل ہے جو جگہ گھیرتی ہے۔ اس کے چپٹے پہلو سطحیں ہیں، جہاں دو سطحیں ملیں وہ لکیریں کنارے ہیں، اور کونے راس ہیں۔ مکعب نما کی 6 سطحیں، 12 کنارے اور 8 راس ہوتے ہیں۔",
+        ),
         "say": T(
             "A cricket ball and a brick are both solid. How are they different?",
             "کرکٹ کی گیند اور اینٹ دونوں ٹھوس ہیں۔ ان میں کیا فرق ہے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-14-surface-area": {
+        "define": T(
+            "Definition: the surface area of a solid is the total area of all its faces, in square units. For a cuboid: 2 × (length × width + length × height + width × height). For 2 by 3 by 4: 2 × (6 + 8 + 12) = 52.",
+            "تعریف: ٹھوس چیز کا سطحی رقبہ اس کی تمام سطحوں کے رقبوں کا کل ہے، مربع اکائیوں میں۔ مکعب نما کے لیے: 2 × (لمبائی × چوڑائی + لمبائی × اونچائی + چوڑائی × اونچائی)۔ 2، 3، 4 والے کے لیے: 2 × (6 + 8 + 12) = 52۔",
+        ),
         "say": T(
             "How much paper do we need to wrap a gift box?",
             "تحفے کے ڈبے کو لپیٹنے کے لیے کتنا کاغذ چاہیے؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-14-volume-cuboid": {
+        "define": T(
+            "Definition: the volume of a solid is the space inside it, in cubic units. For a cuboid: volume = length × width × height. A cuboid 4 by 3 by 2 has volume 4 × 3 × 2 = 24 cubic units.",
+            "تعریف: ٹھوس چیز کا حجم اس کے اندر کی جگہ ہے، مکعب اکائیوں میں۔ مکعب نما کے لیے: حجم = لمبائی × چوڑائی × اونچائی۔ 4، 3، 2 والے مکعب نما کا حجم 4 × 3 × 2 = 24 مکعب اکائیاں ہے۔",
+        ),
         "say": T(
             "How many cartons fit in a van, or how much water in a tank?",
             "وین میں کتنے کارٹن آئیں گے، یا ٹینکی میں کتنا پانی؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-14-volume-cube": {
+        "define": T(
+            "Definition: a cube has all its edges equal, so its volume is edge × edge × edge. A cube with edge 3 cm has volume 3 × 3 × 3 = 27 cm³. Also, 1 litre = 1000 cm³.",
+            "تعریف: مکعب کے سب کنارے برابر ہوتے ہیں، اس لیے اس کا حجم کنارہ × کنارہ × کنارہ ہے۔ 3 سینٹی میٹر کنارے والے مکعب کا حجم 3 × 3 × 3 = 27 مکعب سینٹی میٹر ہے۔ نیز 1 لیٹر = 1000 مکعب سینٹی میٹر۔",
+        ),
         "say": T(
             "A tank holds 1000 litres. How big is it?",
             "ایک ٹینکی میں 1000 لیٹر آتا ہے۔ وہ کتنی بڑی ہے؟",

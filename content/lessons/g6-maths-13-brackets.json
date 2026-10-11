@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-13-brackets",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -429,6 +429,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: brackets ( ) show the part of a sum to do first. BODMAS reminds us the order: brackets first, then division and multiplication, then addition and subtraction. So (2 + 3) × 10 = 5 × 10 = 50.",
+        "ur": "تعریف: قوسین ( ) سوال کا وہ حصہ بتاتی ہیں جو پہلے کرنا ہے۔ BODMAS ترتیب یاد دلاتا ہے: پہلے قوسین، پھر تقسیم اور ضرب، پھر جمع اور تفریق۔ یوں (2 + 3) × 10 = 5 × 10 = 50۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
