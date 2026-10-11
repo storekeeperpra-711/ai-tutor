@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-speed",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -244,6 +244,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: speed is the distance travelled in one unit of time. Speed = distance ÷ time, so distance = speed × time and time = distance ÷ speed. Example: a car at 60 km per hour for 2 hours goes 60 × 2 = 120 km.",
+        "ur": "تعریف: رفتار وقت کی ایک اکائی میں طے کیا گیا فاصلہ ہے۔ رفتار = فاصلہ ÷ وقت، اس لیے فاصلہ = رفتار × وقت اور وقت = فاصلہ ÷ رفتار۔ مثال: 60 کلومیٹر فی گھنٹہ کی کار 2 گھنٹے میں 60 × 2 = 120 کلومیٹر جاتی ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

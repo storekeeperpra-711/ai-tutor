@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-05-factors-and-multiples": {
+        "define": T(
+            "Definition: a factor of a number divides it exactly, with nothing left over. 3 is a factor of 12 because 12 ÷ 3 = 4. A multiple of a number is what you get by multiplying it by 1, 2, 3, …. The multiples of 3 are 3, 6, 9, 12, ….",
+            "تعریف: کسی عدد کا جزو ضربی اسے پورا تقسیم کرتا ہے اور کچھ باقی نہیں بچتا۔ 3، عدد 12 کا جزو ضربی ہے کیونکہ 12 ÷ 3 = 4۔ کسی عدد کے اضعاف وہ اعداد ہیں جو اسے 1، 2، 3، … سے ضرب دینے پر ملتے ہیں۔ 3 کے اضعاف 3، 6، 9، 12، … ہیں۔",
+        ),
         "say": T(
             "How can 12 laddoos be shared into equal rows with none left?",
             "12 لڈو برابر قطاروں میں کیسے بانٹیں کہ کوئی نہ بچے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-05-prime-numbers": {
+        "define": T(
+            "Definition: a prime number has exactly two factors, 1 and itself, like 7. A composite number has more than two factors, like 12. The number 1 is neither. Writing a number as primes multiplied gives its prime factors: 12 = 2 × 2 × 3.",
+            "تعریف: مفرد عدد کے ٹھیک دو جزو ضربی ہوتے ہیں، 1 اور وہ خود، جیسے 7۔ مرکب عدد کے دو سے زیادہ جزو ضربی ہوتے ہیں، جیسے 12۔ عدد 1 نہ مفرد ہے نہ مرکب۔ عدد کو مفرد اعداد کے حاصل ضرب کی شکل میں لکھیں تو مفرد اجزائے ضربی ملتے ہیں: 12 = 2 × 2 × 3۔",
+        ),
         "say": T(
             "Why can 13 laddoos never make equal rows, except one long row?",
             "13 لڈو ایک لمبی قطار کے سوا برابر قطاروں میں کیوں نہیں بٹتے؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-05-highest-common-factor": {
+        "define": T(
+            "Definition: the highest common factor (HCF) of two numbers is the biggest number that divides both exactly. For 8 and 12, the common factors are 1, 2 and 4, so the HCF is 4.",
+            "تعریف: دو اعداد کا عاد اعظم وہ سب سے بڑا عدد ہے جو دونوں کو پورا تقسیم کرے۔ 8 اور 12 کے مشترک اجزائے ضربی 1، 2 اور 4 ہیں، اس لیے عاد اعظم 4 ہے۔",
+        ),
         "say": T(
             "How can 12 roses and 18 marigolds make the most equal bunches?",
             "12 گلاب اور 18 گیندے سے زیادہ سے زیادہ برابر گچھے کیسے بنیں؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-05-lowest-common-multiple": {
+        "define": T(
+            "Definition: the lowest common multiple (LCM) of two numbers is the smallest number that is a multiple of both. The multiples of 6 are 6, 12, 18, 24 and of 8 are 8, 16, 24. The first one in both lists is 24, so the LCM is 24.",
+            "تعریف: دو اعداد کا ذو اضعاف اقل وہ سب سے چھوٹا عدد ہے جو دونوں کا ضعف ہو۔ 6 کے اضعاف 6، 12، 18، 24 اور 8 کے اضعاف 8، 16، 24 ہیں۔ دونوں فہرستوں میں پہلا مشترک عدد 24 ہے، اس لیے ذو اضعاف اقل 24 ہے۔",
+        ),
         "say": T(
             "Two buses leave together. When will they leave together again?",
             "دو بسیں ساتھ روانہ ہوئیں۔ وہ دوبارہ ساتھ کب روانہ ہوں گی؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-05-hcf-times-lcm": {
+        "define": T(
+            "Rule: for any two numbers, HCF × LCM = the first number × the second number. Example: 4 and 6 have HCF 2 and LCM 12, and 2 × 12 = 24 = 4 × 6.",
+            "اصول: کسی بھی دو اعداد کے لیے عاد اعظم × ذو اضعاف اقل = پہلا عدد × دوسرا عدد۔ مثال: 4 اور 6 کا عاد اعظم 2 اور ذو اضعاف اقل 12 ہے، اور 2 × 12 = 24 = 4 × 6۔",
+        ),
         "say": T(
             "Is there a shortcut that links the HCF, the LCM and the two numbers?",
             "کیا عاد اعظم، ذو اضعاف اقل اور دونوں اعداد کا کوئی آسان تعلق ہے؟",
@@ -78,6 +98,10 @@ WHY = {
         ),
     },
     "g6-maths-05-squares-and-index-notation": {
+        "define": T(
+            "Definition: a square number is a number multiplied by itself, like 5 × 5 = 5² = 25. In index form aⁿ, the base a is multiplied by itself n times, and n is the index (power). For example, 3⁴ = 3 × 3 × 3 × 3 = 81.",
+            "تعریف: مربع عدد وہ ہے جو کسی عدد کو اسی سے ضرب دینے پر ملے، جیسے 5 × 5 = 5² = 25۔ قوت کی شکل aⁿ میں اساس a کو n بار خود سے ضرب دیتے ہیں، اور n قوت ہے۔ مثلاً 3⁴ = 3 × 3 × 3 × 3 = 81۔",
+        ),
         "say": T(
             "How do we write 2 × 2 × 2 × 2 × 2 × 2 without writing it all out?",
             "2 × 2 × 2 × 2 × 2 × 2 کو پورا لکھے بغیر کیسے لکھیں؟",

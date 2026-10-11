@@ -8,6 +8,10 @@ def T(en, ur):
 
 WHY = {
     "g6-maths-01-what-is-a-set": {
+        "define": T(
+            "Definition: a set is a well-defined collection of things, called its elements. In braces: A = {2, 4, 6}. We write 4 ∈ A for \"4 is an element of A\", and 5 ∉ A for \"5 is not in A\".",
+            "تعریف: سیٹ چیزوں کا ایسا واضح گروہ ہے جس میں ہر چیز کے بارے میں طے ہو کہ وہ اس میں ہے یا نہیں۔ ان چیزوں کو رکن کہتے ہیں۔ قوسین { } میں: A = {2, 4, 6}۔ 4 ∈ A یعنی \"4، A کا رکن ہے\"، اور 5 ∉ A یعنی \"5، A میں نہیں\"۔",
+        ),
         "say": T(
             "How do you describe a group so clearly that nobody argues about it?",
             "کسی گروہ کو اتنا صاف کیسے بتائیں کہ کوئی بحث نہ کرے؟",
@@ -22,6 +26,10 @@ WHY = {
         ),
     },
     "g6-maths-01-kinds-of-sets": {
+        "define": T(
+            "Definition: an empty set has no elements, written { }. A finite set can be counted to the end, like {1, 2, 3}. An infinite set never ends, like {1, 2, 3, …}. Equal sets have exactly the same elements. Equivalent sets only have the same number of elements.",
+            "تعریف: خالی سیٹ میں کوئی رکن نہیں ہوتا، اسے { } لکھتے ہیں۔ محدود سیٹ گنتے گنتے ختم ہو جاتا ہے، جیسے {1, 2, 3}۔ لامحدود سیٹ کبھی ختم نہیں ہوتا، جیسے {1, 2, 3, …}۔ برابر سیٹوں کے ارکان بالکل ایک جیسے ہوتے ہیں۔ ہم قوت سیٹوں میں صرف ارکان کی تعداد برابر ہوتی ہے۔",
+        ),
         "say": T(
             "Can a group have nothing in it? Can a group never end?",
             "کیا کسی گروہ میں کچھ بھی نہ ہو سکتا ہے؟ کیا کوئی گروہ کبھی ختم نہ ہو؟",
@@ -36,6 +44,10 @@ WHY = {
         ),
     },
     "g6-maths-01-subsets": {
+        "define": T(
+            "Definition: A is a subset of B, written A ⊆ B, if every element of A is also an element of B. For example, {1, 2} ⊆ {1, 2, 3}. The empty set is a subset of every set, and every set is a subset of itself.",
+            "تعریف: اگر A کا ہر رکن B کا بھی رکن ہو تو A، B کا ذیلی سیٹ ہے، جسے A ⊆ B لکھتے ہیں۔ مثلاً {1, 2} ⊆ {1, 2, 3}۔ خالی سیٹ ہر سیٹ کا ذیلی سیٹ ہوتا ہے، اور ہر سیٹ اپنا ذیلی سیٹ بھی ہوتا ہے۔",
+        ),
         "say": T(
             "Girls in your class are also students of the school. Is that a rule?",
             "آپ کی جماعت کی لڑکیاں اسکول کی طالبات بھی ہیں۔ کیا یہ کوئی اصول ہے؟",
@@ -50,6 +62,10 @@ WHY = {
         ),
     },
     "g6-maths-01-union-and-intersection": {
+        "define": T(
+            "Definition: the union A ∪ B has all elements in A or B or both. The intersection A ∩ B has only elements in both. If A = {1, 2, 3} and B = {3, 4}, then A ∪ B = {1, 2, 3, 4} and A ∩ B = {3}.",
+            "تعریف: اجتماع A ∪ B میں A یا B یا دونوں کے سب ارکان ہوتے ہیں۔ تقاطع A ∩ B میں صرف وہ ارکان ہوتے ہیں جو دونوں میں ہوں۔ اگر A = {1, 2, 3} اور B = {3, 4} ہو تو A ∪ B = {1, 2, 3, 4} اور A ∩ B = {3}۔",
+        ),
         "say": T(
             "Ali likes cricket, Sara likes cricket and hockey. Who likes either game?",
             "علی کو کرکٹ پسند ہے، سارہ کو کرکٹ اور ہاکی۔ کسی ایک کھیل کو کون پسند کرتا ہے؟",
@@ -64,6 +80,10 @@ WHY = {
         ),
     },
     "g6-maths-01-universal-set-and-venn-diagrams": {
+        "define": T(
+            "Definition: the universal set U is the set of all the things we are talking about. A Venn diagram draws U as a box and each set as a circle inside it. Where two circles overlap, we see the elements that are in both sets.",
+            "تعریف: عالمی سیٹ U ان تمام چیزوں کا سیٹ ہے جن کی ہم بات کر رہے ہوں۔ وین ڈایاگرام میں U کو ڈبے کی شکل میں اور ہر سیٹ کو اس کے اندر دائرے کی شکل میں بناتے ہیں۔ جہاں دو دائرے ملتے ہیں وہاں وہ ارکان نظر آتے ہیں جو دونوں سیٹوں میں ہوں۔",
+        ),
         "say": T(
             "Can we draw a group so you can see who is in it?",
             "کیا ہم کسی گروہ کی تصویر بنا سکتے ہیں کہ دیکھ کر پتا چل جائے اس میں کون ہے؟",

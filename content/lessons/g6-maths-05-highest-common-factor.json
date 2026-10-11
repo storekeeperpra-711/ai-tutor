@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-highest-common-factor",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -556,6 +556,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the highest common factor (HCF) of two numbers is the biggest number that divides both exactly. For 8 and 12, the common factors are 1, 2 and 4, so the HCF is 4.",
+        "ur": "تعریف: دو اعداد کا عاد اعظم وہ سب سے بڑا عدد ہے جو دونوں کو پورا تقسیم کرے۔ 8 اور 12 کے مشترک اجزائے ضربی 1، 2 اور 4 ہیں، اس لیے عاد اعظم 4 ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

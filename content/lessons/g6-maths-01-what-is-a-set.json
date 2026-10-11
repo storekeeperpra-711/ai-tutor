@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-what-is-a-set",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -413,6 +413,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: a set is a well-defined collection of things, called its elements. In braces: A = {2, 4, 6}. We write 4 ∈ A for \"4 is an element of A\", and 5 ∉ A for \"5 is not in A\".",
+        "ur": "تعریف: سیٹ چیزوں کا ایسا واضح گروہ ہے جس میں ہر چیز کے بارے میں طے ہو کہ وہ اس میں ہے یا نہیں۔ ان چیزوں کو رکن کہتے ہیں۔ قوسین { } میں: A = {2, 4, 6}۔ 4 ∈ A یعنی \"4، A کا رکن ہے\"، اور 5 ∉ A یعنی \"5، A میں نہیں\"۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

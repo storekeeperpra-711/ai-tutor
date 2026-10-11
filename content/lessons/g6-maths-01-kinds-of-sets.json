@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-01-kinds-of-sets",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -569,6 +569,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: an empty set has no elements, written { }. A finite set can be counted to the end, like {1, 2, 3}. An infinite set never ends, like {1, 2, 3, …}. Equal sets have exactly the same elements. Equivalent sets only have the same number of elements.",
+        "ur": "تعریف: خالی سیٹ میں کوئی رکن نہیں ہوتا، اسے { } لکھتے ہیں۔ محدود سیٹ گنتے گنتے ختم ہو جاتا ہے، جیسے {1, 2, 3}۔ لامحدود سیٹ کبھی ختم نہیں ہوتا، جیسے {1, 2, 3, …}۔ برابر سیٹوں کے ارکان بالکل ایک جیسے ہوتے ہیں۔ ہم قوت سیٹوں میں صرف ارکان کی تعداد برابر ہوتی ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-05-lowest-common-multiple",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -368,6 +368,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the lowest common multiple (LCM) of two numbers is the smallest number that is a multiple of both. The multiples of 6 are 6, 12, 18, 24 and of 8 are 8, 16, 24. The first one in both lists is 24, so the LCM is 24.",
+        "ur": "تعریف: دو اعداد کا ذو اضعاف اقل وہ سب سے چھوٹا عدد ہے جو دونوں کا ضعف ہو۔ 6 کے اضعاف 6، 12، 18، 24 اور 8 کے اضعاف 8، 16، 24 ہیں۔ دونوں فہرستوں میں پہلا مشترک عدد 24 ہے، اس لیے ذو اضعاف اقل 24 ہے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

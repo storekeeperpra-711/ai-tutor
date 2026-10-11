@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-24-hour-clock",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -595,6 +595,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Definition: the 24-hour clock counts the hours from 00 to 23, with no am or pm. From 1 pm onwards, add 12 to the hour: 3:45 pm = 15:45. Midnight is 00:00 and noon is 12:00.",
+        "ur": "تعریف: 24 گھنٹے والی گھڑی گھنٹے 00 سے 23 تک گنتی ہے، اس میں صبح یا شام نہیں لکھتے۔ دوپہر 1 بجے کے بعد گھنٹے میں 12 جمع کریں: شام 3:45 = 15:45۔ آدھی رات 00:00 ہے اور دوپہر 12:00۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",

@@ -1,6 +1,6 @@
 {
   "id": "g6-maths-06-unitary-method",
-  "version": 2,
+  "version": 3,
   "schema": "0.2",
   "subject": "maths",
   "grade": 6,
@@ -557,6 +557,14 @@
     }
   ],
   "steps": [
+    {
+      "id": "s0_define",
+      "type": "explain",
+      "text": {
+        "en": "Method: first find the value of one unit by dividing. Then multiply to get the value of as many units as you need. If 3 kg cost Rs 90, then 1 kg costs 90 ÷ 3 = Rs 30, and 5 kg cost 5 × 30 = Rs 150.",
+        "ur": "طریقہ: پہلے تقسیم کر کے ایک اکائی کی قیمت نکالیں۔ پھر جتنی اکائیاں چاہییں اتنی سے ضرب دیں۔ اگر 3 کلو کے 90 روپے ہوں تو 1 کلو کے 90 ÷ 3 = 30 روپے، اور 5 کلو کے 5 × 30 = 150 روپے۔"
+      }
+    },
     {
       "id": "s0_why",
       "type": "explain",
